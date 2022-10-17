@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-06-18 10:08+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -100,17 +100,17 @@ msgstr "Начать новый сеанс"
 msgid "Filters"
 msgstr "Фильтры"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Выбор файла виджета Plasma"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Не удалось установить пакет %1."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "Ошибка установки"
@@ -125,7 +125,7 @@ msgstr "Все виджеты"
 msgid "Running"
 msgstr "Запущенные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -134,17 +134,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Возможно удалить"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "Категории:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Загрузить виджеты Plasma..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."

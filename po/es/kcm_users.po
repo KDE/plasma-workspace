@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-04-22 21:46+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -359,37 +359,37 @@ msgstr "Madera Dura"
 msgid "Choose File…"
 msgstr "Escoger archivo..."
 
-#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "No se ha encontrado ningún dispositivo de huella dactilar."
 
-#: src/fingerprintmodel.cpp:313
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Vuelva a escanear el dedo."
 
-#: src/fingerprintmodel.cpp:315
+#: src/fingerprintmodel.cpp:318
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Superficie muy pequeña. Vuelva a intentarlo."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:320
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "El dedo no está centrado en el lector. Vuelva a intentarlo."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Retire el dedo del lector y vuelva a probar."
 
-#: src/fingerprintmodel.cpp:327
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "El registro de la huella dactilar ha fallado."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:333
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -398,34 +398,34 @@ msgstr ""
 "No queda espacio para este dispositivo. Borre otras huellas dactilares para "
 "continuar."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "The device was disconnected."
 msgstr "El dispositivo estaba desconectado."
 
-#: src/fingerprintmodel.cpp:338
+#: src/fingerprintmodel.cpp:341
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Ha ocurrido un error desconocido."
 
-#: src/user.cpp:264
+#: src/user.cpp:267
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "No se ha podido obtener permiso para guardar el usuario %1"
 
-#: src/user.cpp:269
+#: src/user.cpp:272
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ha ocurrido un error al guardar los cambios"
 
-#: src/user.cpp:364
+#: src/user.cpp:368
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Ha ocurrido un error al cambiar el tamaño de la imagen: ha fallado la "
 "apertura del archivo temporal"
 
-#: src/user.cpp:372
+#: src/user.cpp:376
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

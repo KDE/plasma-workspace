@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-09-15 18:41+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -85,17 +85,17 @@ msgstr "Nové sedenie"
 msgid "Filters"
 msgstr "Filtre"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Inštalácia balíčka %1 zlyhala."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "Zlyhanie inštalácie"
@@ -110,7 +110,7 @@ msgstr "Všetky widgety"
 msgid "Running"
 msgstr "Beží"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -120,17 +120,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Odinštalovateľné"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "Kategórie:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Stiahnuť nové Plasma widgety"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."

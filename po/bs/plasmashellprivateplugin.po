@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2014-12-28 11:50+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -88,17 +88,17 @@ msgstr ""
 msgid "Filters"
 msgstr "Filteri"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Izaberi datoteku plazmoida"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Instaliranje paketa %1 nije prošlo."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "Neuspješno instaliranje"
@@ -113,7 +113,7 @@ msgstr "Sve grafičke kontrole"
 msgid "Running"
 msgstr "Pokretanje"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -122,17 +122,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr ""
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "Kategorije:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Preuzmi nove plazma grafičke kontrole"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"

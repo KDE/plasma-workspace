@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -85,17 +85,17 @@ msgstr "नया सत्र"
 msgid "Filters"
 msgstr "फ़िल्टर्स"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "प्लाज़्मॉइड फ़ाइल का चयन करें"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "पैकेज %1 को स्थापित करना विफल रहा।"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "संस्थापन त्रुटि"
@@ -110,7 +110,7 @@ msgstr "सभी विजेट"
 msgid "Running"
 msgstr "चल रहा है"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -120,17 +120,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "गैर संस्थापन योग्य"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "श्रेणियाँ :"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "नए प्लाज़्मा विजेटों को डाउनलोड करें"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "स्थानीय फ़ाइल से विजेट स्थापित करें…"

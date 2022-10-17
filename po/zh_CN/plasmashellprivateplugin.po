@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-10-02 15:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -86,17 +86,17 @@ msgstr "新建会话"
 msgid "Filters"
 msgstr "过滤"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "选择 Plasma 小程序文件"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "安装 %1 软件包失败。"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "安装失败"
@@ -111,7 +111,7 @@ msgstr "所有挂件"
 msgid "Running"
 msgstr "正在运行"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -120,17 +120,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "可卸载"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "分类："
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "下载新 Plasma 挂件"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "从本地文件安装挂件…"

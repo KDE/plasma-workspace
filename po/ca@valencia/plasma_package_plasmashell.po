@@ -50,7 +50,8 @@ msgstr ""
 #: shellpackage.cpp:43
 #, kde-format
 msgid "Error message shown when an applet fails to load"
-msgstr "Missatge d'error a mostrar quan una miniaplicació falle en carregar-se"
+msgstr ""
+"Missatge d'error que es mostrarà quan una miniaplicació falle en carregar-se"
 
 #: shellpackage.cpp:44
 #, kde-format

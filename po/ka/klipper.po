@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-09-12 07:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -129,7 +129,7 @@ msgstr "არაფერი"
 msgid "Options:"
 msgstr "პარამეტრები:"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:308
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -137,12 +137,12 @@ msgid ""
 "<interface>Actions Configuration</interface> page."
 msgstr ""
 
-#: configdialog.cpp:335
+#: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:365
+#: configdialog.cpp:367
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -151,34 +151,34 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr ""
 
-#: configdialog.cpp:380
+#: configdialog.cpp:382
 #, kde-format
 msgid "Add Action..."
 msgstr "ქმედების დამატება..."
 
-#: configdialog.cpp:384
+#: configdialog.cpp:386
 #, kde-format
 msgid "Edit Action..."
 msgstr "ქმედების ჩასწორება..."
 
-#: configdialog.cpp:389
+#: configdialog.cpp:391
 #, kde-format
 msgid "Delete Action"
 msgstr "ქმედების წაშლა"
 
-#: configdialog.cpp:396
+#: configdialog.cpp:398
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -186,7 +186,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:580
+#: configdialog.cpp:582
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,56 +194,56 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:583
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "წაშლის ქმედებსი დადასტურება"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ზოგადი"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgid "General Configuration"
 msgstr "ზოგადი კონფიგურაცია"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "ქმედებების მენიუ"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgid "Action Menu"
 msgstr "ქმედებების მენიუ"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ქმედებების მორგება"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgid "Actions Configuration"
 msgstr "ქმედებების მორგება"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "მალსახმობების მორგება"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:695
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -255,7 +255,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:706
+#: configdialog.cpp:708
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -371,13 +371,13 @@ msgstr "ბრძანების ჩასწორება..."
 msgid "Delete Command"
 msgstr "ბრძანების წაშლა"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr ""
 
-#: editactiondialog.cpp:390
+#: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "წაშლის ბრძანების დადასტურება"
@@ -447,67 +447,74 @@ msgstr "_ხატულა:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:153
+#: klipper.cpp:154
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr ""
 
-#: klipper.cpp:176
+#: klipper.cpp:177
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr ""
 
-#: klipper.cpp:183
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr ""
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&გასვლა"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr ""
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:218
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:222
+#: klipper.cpp:225
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr ""
 
-#: klipper.cpp:228
+#: klipper.cpp:232
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Open Klipper at Mouse Position"
+msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:540
+#: klipper.cpp:244
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Tool"
+msgstr "ბაფერში დამატება"
+
+#: klipper.cpp:556
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -515,62 +522,62 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:579
+#: klipper.cpp:595
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 
-#: klipper.cpp:580
+#: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr ""
 
-#: klipper.cpp:581
+#: klipper.cpp:597
 #, kde-format
 msgid "Start"
 msgstr "გაშვება"
 
-#: klipper.cpp:582
+#: klipper.cpp:598
 #, kde-format
 msgid "Do Not Start"
 msgstr "არ გაშვება"
 
-#: klipper.cpp:929
+#: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
 msgstr "შემცველობის ჩასწორება"
 
-#: klipper.cpp:996
+#: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "მობილური შტრიხკოდი"
 
-#: klipper.cpp:1043
+#: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:1044
+#: klipper.cpp:1060
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:1060 klipper.cpp:1069
+#: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:1086
+#: klipper.cpp:1102
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:1093
+#: klipper.cpp:1109
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:1100
+#: klipper.cpp:1116
 #, kde-format
 msgid "down"
 msgstr "დაბლა"
@@ -765,32 +772,29 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:110
-#, kde-format
-msgid "Klipper - Clipboard Tool"
-msgstr ""
+#: klipperpopup.cpp:105
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Items"
+msgstr "ბუფერის შემცველობა"
 
-#: klipperpopup.cpp:114
+#: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
 msgstr "ძებნა…"
 
-#: klipperpopup.cpp:123 main.cpp:29
-#, kde-format
-msgid "KDE cut & paste history utility"
-msgstr ""
-
-#: klipperpopup.cpp:187
+#: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
 
-#: klipperpopup.cpp:195
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"
@@ -799,6 +803,11 @@ msgstr "დამთხვევა არ არსებობს"
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
+
+#: main.cpp:29
+#, kde-format
+msgid "Plasma cut & paste history utility"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format

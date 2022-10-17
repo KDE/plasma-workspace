@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Options:"
 msgstr "مەشغۇلاتلار"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:308
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,12 +143,12 @@ msgid ""
 "<interface>Actions Configuration</interface> page."
 msgstr ""
 
-#: configdialog.cpp:335
+#: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:365
+#: configdialog.cpp:367
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -157,36 +157,36 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "چۈشەندۈرۈش"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:382
 #, kde-format
 msgid "Add Action..."
 msgstr "مەشغۇلات قوش…"
 
-#: configdialog.cpp:384
+#: configdialog.cpp:386
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Edit Action..."
 msgstr "مەشغۇلات قوش…"
 
-#: configdialog.cpp:389
+#: configdialog.cpp:391
 #, kde-format
 msgid "Delete Action"
 msgstr "مەشغۇلاتنى ئۆچۈرۈش"
 
-#: configdialog.cpp:396
+#: configdialog.cpp:398
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,7 +194,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:580
+#: configdialog.cpp:582
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -202,24 +202,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:583
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "مەشغۇلاتنى ئۆچۈرۈش"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ئادەتتىكى"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgid "General Configuration"
 msgstr "ئادەتتىكى سەپلىمە"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -227,37 +227,37 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "مەشغۇلاتلار"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "مەشغۇلاتلار"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, fuzzy, kde-format
 #| msgid "General Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ئادەتتىكى سەپلىمە"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgid "Actions Configuration"
 msgstr ""
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "تېزلەتمىلەر"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr ""
 
-#: configdialog.cpp:693
+#: configdialog.cpp:695
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -269,7 +269,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:706
+#: configdialog.cpp:708
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -388,13 +388,13 @@ msgstr "بۇيرۇق قوش"
 msgid "Delete Command"
 msgstr "بۇيرۇق"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr ""
 
-#: editactiondialog.cpp:390
+#: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr ""
@@ -467,28 +467,28 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:153
+#: klipper.cpp:154
 #, fuzzy, kde-format
 #| msgid "Action properties:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "مەشغۇلات خاسلىقى:"
 
-#: klipper.cpp:176
+#: klipper.cpp:177
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "چاپلاش تاختىسى ئىزى"
 
-#: klipper.cpp:183
+#: klipper.cpp:184
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper نى سەپلە(&C)"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Quit Klipper"
 #| msgid "&Quit"
@@ -496,45 +496,52 @@ msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "ئاخىرلاشتۇر(&Q)"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, fuzzy, kde-format
 #| msgid "&Edit Contents..."
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "مەزمۇنلارنى تەھرىرلە(&E)…"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:218
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:222
+#: klipper.cpp:225
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "مەسئۇل كىشى"
 
-#: klipper.cpp:228
+#: klipper.cpp:232
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Open Klipper at Mouse Position"
+msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:540
+#: klipper.cpp:244
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Tool"
+msgstr "چاپلاش تاختىسىغا قوش"
+
+#: klipper.cpp:556
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -542,63 +549,63 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:579
+#: klipper.cpp:595
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 
-#: klipper.cpp:580
+#: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr ""
 
-#: klipper.cpp:581
+#: klipper.cpp:597
 #, kde-format
 msgid "Start"
 msgstr "باشلاش"
 
-#: klipper.cpp:582
+#: klipper.cpp:598
 #, kde-format
 msgid "Do Not Start"
 msgstr "باشلىما"
 
-#: klipper.cpp:929
+#: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
 msgstr ""
 
-#: klipper.cpp:996
+#: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:1043
+#: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:1044
+#: klipper.cpp:1060
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear Clipboard History"
 msgstr "چاپلاش تاختىسى ئىزى"
 
-#: klipper.cpp:1060 klipper.cpp:1069
+#: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى ئىزى"
 
-#: klipper.cpp:1086
+#: klipper.cpp:1102
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:1093
+#: klipper.cpp:1109
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:1100
+#: klipper.cpp:1116
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
@@ -799,33 +806,30 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:110
-#, kde-format
-msgid "Klipper - Clipboard Tool"
-msgstr ""
+#: klipperpopup.cpp:105
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Items"
+msgstr "چاپلاش تاختىسى مەزمۇنلىرى"
 
-#: klipperpopup.cpp:114
+#: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
 msgstr ""
 
-#: klipperpopup.cpp:123 main.cpp:29
-#, kde-format
-msgid "KDE cut & paste history utility"
-msgstr ""
-
-#: klipperpopup.cpp:187
+#: klipperpopup.cpp:167
 #, fuzzy, kde-format
 #| msgid "Regular expression:"
 msgid "Invalid regular expression, %1"
 msgstr "مۇنتىزىم ئىپادە:"
 
-#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "چاپلاش تاختىسى قۇرۇق"
 
-#: klipperpopup.cpp:195
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "No matches"
 msgstr ""
@@ -834,6 +838,11 @@ msgstr ""
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
+
+#: main.cpp:29
+#, kde-format
+msgid "Plasma cut & paste history utility"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format

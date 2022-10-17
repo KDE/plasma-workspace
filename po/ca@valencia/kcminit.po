@@ -49,4 +49,4 @@ msgstr "Llista els mòduls que s'executen en iniciar"
 #: main.cpp:179
 #, kde-format
 msgid "Configuration module to run"
-msgstr "Mòdul de configuració a executar"
+msgstr "Mòdul de configuració que s'ha d'executar"

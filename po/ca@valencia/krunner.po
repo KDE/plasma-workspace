@@ -60,7 +60,8 @@ msgstr "Substituïx una instància existent"
 #: main.cpp:69
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr "La consulta a executar, només s'utilitza si no es proporciona «-c»"
+msgstr ""
+"La consulta que s'executarà, només s'utilitza si no es proporciona «-c»"
 
 #: qml/RunCommand.qml:75
 #, kde-format

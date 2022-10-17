@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 08:36+0300\n"
+"PO-Revision-Date: 2022-10-16 08:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -116,6 +116,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"%1 (%2)\n"
+"Клацніть середньою, щоб призупинити"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -123,16 +125,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Клацніть середньою, щоб призупинити"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "— %1 (призупинено, %2)"
+msgstr ""
+"%1 (призупинено, %2)\n"
+"Клацніть середньою, щоб відтворити"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -143,6 +147,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Призупинено (%1)\n"
+"Клацніть середньою, щоб відтворити"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-10-02 15:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -137,7 +137,7 @@ msgstr "无"
 msgid "Options:"
 msgstr "选项："
 
-#: configdialog.cpp:307
+#: configdialog.cpp:308
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,12 +146,12 @@ msgid ""
 msgstr ""
 "弹出菜单中显示的操作可在<interface>操作配置</interface>页面中进行配置。"
 
-#: configdialog.cpp:335
+#: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
 msgstr "排除窗口"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:367
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -162,34 +162,34 @@ msgstr ""
 "当<interface>匹配模式</interface>与剪贴板内容匹配时，可以执行它显示在 "
 "Klipper 弹出菜单中的<interface>命令</interface>。"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "匹配模式和命令"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "描述"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:382
 #, kde-format
 msgid "Add Action..."
 msgstr "添加操作..."
 
-#: configdialog.cpp:384
+#: configdialog.cpp:386
 #, kde-format
 msgid "Edit Action..."
 msgstr "编辑操作..."
 
-#: configdialog.cpp:389
+#: configdialog.cpp:391
 #, kde-format
 msgid "Delete Action"
 msgstr "删除操作"
 
-#: configdialog.cpp:396
+#: configdialog.cpp:398
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -198,7 +198,7 @@ msgid ""
 msgstr ""
 "弹出菜单中显示的操作可在<interface>操作菜单</interface>页面中进行配置。"
 
-#: configdialog.cpp:580
+#: configdialog.cpp:582
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -206,56 +206,56 @@ msgid ""
 "commands?"
 msgstr "删除选中的操作 <resource>%1</resource><nl/>和它的所有命令吗？"
 
-#: configdialog.cpp:581
+#: configdialog.cpp:583
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "确认删除操作"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "常规"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgid "General Configuration"
 msgstr "常规配置"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "操作菜单"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgid "Action Menu"
 msgstr "操作菜单"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "操作配置"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgid "Actions Configuration"
 msgstr "操作配置"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "快捷键配置"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:695
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -271,7 +271,7 @@ msgstr ""
 "弹出一次菜单。<nl/><nl/>如果某些应用程序中发生操作菜单意外弹出的情况，请将该"
 "程序添加到此列表。<link>点击查看如何确定应用程序的正确名称</link>。"
 
-#: configdialog.cpp:706
+#: configdialog.cpp:708
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -399,13 +399,13 @@ msgstr "编辑命令..."
 msgid "Delete Command"
 msgstr "删除命令"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "删除选中的命令 <resource>%1</resource> 吗？"
 
-#: editactiondialog.cpp:390
+#: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "确认删除命令"
@@ -478,67 +478,76 @@ msgstr "图标："
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 位/像素"
 
-#: klipper.cpp:153
+#: klipper.cpp:154
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "自动弹出操作菜单"
 
-#: klipper.cpp:176
+#: klipper.cpp:177
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪贴板历史(&L)"
 
-#: klipper.cpp:183
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "配置 Klipper(&C)…"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "退出(&Q)"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "在当前剪贴板上手动执行操作"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "编辑内容(&E)…"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "显示条形码(&S)…"
 
-#: klipper.cpp:218
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "下一条历史记录"
 
-#: klipper.cpp:222
+#: klipper.cpp:225
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "上一条历史记录"
 
-#: klipper.cpp:228
-#, kde-format
+#: klipper.cpp:232
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
-msgid "Open Klipper at Mouse Position"
+msgid "Show Items at Mouse Position"
 msgstr "在鼠标光标位置弹出 Klipper"
 
-#: klipper.cpp:540
+#: klipper.cpp:244
+#, fuzzy, kde-format
+#| msgid "Klipper - Clipboard Tool"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Tool"
+msgstr "Klipper - 剪贴板工具"
+
+#: klipper.cpp:556
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -548,62 +557,62 @@ msgstr ""
 "您可以稍后在剪贴板小程序的配置窗口中的<interface>操作</interface>页面启用 "
 "URL 操作。"
 
-#: klipper.cpp:579
+#: klipper.cpp:595
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "您想要在登录时自动启动 Klipper 吗？"
 
-#: klipper.cpp:580
+#: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "自动启动 Klipper 吗？"
 
-#: klipper.cpp:581
+#: klipper.cpp:597
 #, kde-format
 msgid "Start"
 msgstr "启动"
 
-#: klipper.cpp:582
+#: klipper.cpp:598
 #, kde-format
 msgid "Do Not Start"
 msgstr "不启动"
 
-#: klipper.cpp:929
+#: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
 msgstr "编辑内容"
 
-#: klipper.cpp:996
+#: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "移动条形码"
 
-#: klipper.cpp:1043
+#: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "您确定要清除剪贴板的所有历史记录吗？"
 
-#: klipper.cpp:1044
+#: klipper.cpp:1060
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "清除剪贴板历史记录"
 
-#: klipper.cpp:1060 klipper.cpp:1069
+#: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪贴板历史"
 
-#: klipper.cpp:1086
+#: klipper.cpp:1102
 #, kde-format
 msgid "up"
 msgstr "向上"
 
-#: klipper.cpp:1093
+#: klipper.cpp:1109
 #, kde-format
 msgid "current"
 msgstr "当前"
 
-#: klipper.cpp:1100
+#: klipper.cpp:1116
 #, kde-format
 msgid "down"
 msgstr "向下"
@@ -805,32 +814,29 @@ msgid ""
 msgstr ""
 "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"
 
-#: klipperpopup.cpp:110
-#, kde-format
-msgid "Klipper - Clipboard Tool"
-msgstr "Klipper - 剪贴板工具"
+#: klipperpopup.cpp:105
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Items"
+msgstr "剪贴板内容"
 
-#: klipperpopup.cpp:114
+#: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
 msgstr "搜索…"
 
-#: klipperpopup.cpp:123 main.cpp:29
-#, kde-format
-msgid "KDE cut & paste history utility"
-msgstr "KDE 剪切和粘贴历史工具"
-
-#: klipperpopup.cpp:187
+#: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "无效的正则表达式，%1"
 
-#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
 
-#: klipperpopup.cpp:195
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "No matches"
 msgstr "无匹配条目"
@@ -839,6 +845,12 @@ msgstr "无匹配条目"
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
+
+#: main.cpp:29
+#, fuzzy, kde-format
+#| msgid "KDE cut & paste history utility"
+msgid "Plasma cut & paste history utility"
+msgstr "KDE 剪切和粘贴历史工具"
 
 #: main.cpp:31
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-07-28 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -205,7 +205,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Text a mostrar:"
+msgstr "Text que s'ha de mostrar:"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
@@ -368,18 +368,18 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hui és %1"
 
-#: plugin/clipboardmenu.cpp:107
+#: plugin/clipboardmenu.cpp:110
 #, kde-format
 msgid "Other Calendars"
 msgstr "Altres calendaris"
 
-#: plugin/clipboardmenu.cpp:115
+#: plugin/clipboardmenu.cpp:118
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (Temps UNIX)"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:121
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
@@ -395,44 +395,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horària local del sistema"
-
-#~ msgctxt "Format: month year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgid "Keep Open"
-#~ msgstr "Mantín obert"
-
-#~ msgid "Days"
-#~ msgstr "Dies"
-
-#~ msgid "Months"
-#~ msgstr "Mesos"
-
-#~ msgid "Years"
-#~ msgstr "Anys"
-
-#~ msgid "Previous month"
-#~ msgstr "Mes anterior"
-
-#~ msgid "Previous year"
-#~ msgstr "Any anterior"
-
-#~ msgid "Previous decade"
-#~ msgstr "Dècada anterior"
-
-#~ msgctxt "Reset calendar to today"
-#~ msgid "Today"
-#~ msgstr "Hui"
-
-#~ msgid "Reset calendar to today"
-#~ msgstr "Restaura el calendari a hui"
-
-#~ msgid "Next month"
-#~ msgstr "Mes següent"
-
-#~ msgid "Next year"
-#~ msgstr "Any següent"
-
-#~ msgid "Next decade"
-#~ msgstr "Dècada següent"

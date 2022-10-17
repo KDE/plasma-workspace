@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-04-30 12:25+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -357,37 +357,37 @@ msgstr "Rich Hardwood"
 msgid "Choose File…"
 msgstr "Alege fișier…"
 
-#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Niciun dispozitiv de amprente găsit."
 
-#: src/fingerprintmodel.cpp:313
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Reîncercați scanarea degetului."
 
-#: src/fingerprintmodel.cpp:315
+#: src/fingerprintmodel.cpp:318
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Glisare prea scurtă. Reîncercați."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:320
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Degetul nu e centrat pe cititor. Reîncercați."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Luați degetul de pe cititor și reîncercați."
 
-#: src/fingerprintmodel.cpp:327
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Înrolarea amprentei a eșuat."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:333
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -396,33 +396,33 @@ msgstr ""
 "Nu a mai rămas spațiu pentru acest dispozitiv, ștergeți alte amprente pentru "
 "a continua."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Dispozitivul a fost deconectat."
 
-#: src/fingerprintmodel.cpp:338
+#: src/fingerprintmodel.cpp:341
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "A intervenit o eroare necunoscută."
 
-#: src/user.cpp:264
+#: src/user.cpp:267
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nu s-a putut obține permisiunea de a salva utilizatorul %1"
 
-#: src/user.cpp:269
+#: src/user.cpp:272
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "A intervenit o eroare la salvarea modificărilor"
 
-#: src/user.cpp:364
+#: src/user.cpp:368
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Redimensionarea imaginii a eșuat: deschiderea fișierului temporar a eșuat"
 
-#: src/user.cpp:372
+#: src/user.cpp:376
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

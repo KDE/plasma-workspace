@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-10-02 15:50\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -112,12 +112,12 @@ msgstr "打开主题"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "光标主题文件 (*.tar.gz *.tar.bz2)"
 
-#: plasma-apply-cursortheme.cpp:41
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "要求的大小“%1”不可用，将使用 %2 替代。"
 
-#: plasma-apply-cursortheme.cpp:62
+#: plasma-apply-cursortheme.cpp:63
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -127,7 +127,7 @@ msgstr ""
 "此工具用于设置当前 Plasma 会话的鼠标光标主题，并避免将其设置为不可用的或已经"
 "设置的主题。"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:67
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -136,50 +136,50 @@ msgstr ""
 "您想要为当前 Plasma 会话设置的鼠标光标主题的名称 (传递完整路径时将只使用路径"
 "的最后一部分)"
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "显示系统的所有可用主题 (含当前主题)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "使用指定的大小，而不是主题的默认大小"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:90
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "请求的主题“%1”已设置为当前 Plasma 会话的主题。"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "成功应用鼠标光标主题 %1 到当前 Plasma 会话"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
 msgstr "为了使刚刚应用的鼠标光标主题能够正确显示，您必须重启 Plasma 会话。"
 
-#: plasma-apply-cursortheme.cpp:112
+#: plasma-apply-cursortheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
 
-#: plasma-apply-cursortheme.cpp:120
+#: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "您的系统已安装以下鼠标光标主题："
 
-#: plasma-apply-cursortheme.cpp:125
+#: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(此 Plasma 会话的当前主题)"

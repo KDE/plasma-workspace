@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-08-16 20:27+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -153,7 +153,7 @@ msgstr "Bat ere ez"
 msgid "Options:"
 msgstr "Aukerak:"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:308
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -163,12 +163,12 @@ msgstr ""
 "Menu gainerakorrean erakutsitako ekintzak <interface>Ekintzak "
 "konfiguratzeko</interface> orrian konfigura daitezke."
 
-#: configdialog.cpp:335
+#: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Kanpoan utzi leihoak"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:367
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,34 +180,34 @@ msgstr ""
 "datorrenean, bere <interface>komandoak</interface> Klipper-ren menu "
 "gainerakorrean agertzen dira eta exekutatu daitezke."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Bat-etortze eredua eta komandoak"
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskribapena"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:382
 #, kde-format
 msgid "Add Action..."
 msgstr "Gehitu ekintza..."
 
-#: configdialog.cpp:384
+#: configdialog.cpp:386
 #, kde-format
 msgid "Edit Action..."
 msgstr "Editatu ekintza..."
 
-#: configdialog.cpp:389
+#: configdialog.cpp:391
 #, kde-format
 msgid "Delete Action"
 msgstr "Ezabatu ekintza"
 
-#: configdialog.cpp:396
+#: configdialog.cpp:398
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,7 +217,7 @@ msgstr ""
 "Ekintza hauek menu gainerakorrean agertzen dira, <interface>Ekintza menua</"
 "interface> orritik konfigura daitezkeelarik."
 
-#: configdialog.cpp:580
+#: configdialog.cpp:582
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,56 +227,56 @@ msgstr ""
 "Hautatutako <resource>%1</resource> ekintza<nl/>eta bere komando guztiak "
 "ezabatu?"
 
-#: configdialog.cpp:581
+#: configdialog.cpp:583
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Berretsi ezabatzeko ekintza"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Orokorra"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgid "General Configuration"
 msgstr "Konfigurazio orokorra"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Ekintza-menua"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgid "Action Menu"
 msgstr "Ekintza-menua"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Ekintzen konfigurazioa"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Ekintzen konfigurazioa"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Lasterbideen konfigurazioa"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:695
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 "jakin bat erabiltzean Ekintza-menua ustekabean agertzen bada, orduan gehitu "
 "ezazu zerrenda honetara. <link>Nola aurkitu sartu beharreko izena</link>."
 
-#: configdialog.cpp:706
+#: configdialog.cpp:708
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -427,13 +427,13 @@ msgstr "Editatu komandoa..."
 msgid "Delete Command"
 msgstr "Ezabatu komandoa"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Hautatutako <resource>%1</resource> komandoa ezabatu?"
 
-#: editactiondialog.cpp:390
+#: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Berretsi Ezabatzeko komandoa"
@@ -507,67 +507,76 @@ msgstr "Ikonoa:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:153
+#: klipper.cpp:154
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Ekintza automatikoaren menu gainerakorra"
 
-#: klipper.cpp:176
+#: klipper.cpp:177
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Garbitu arbeleko historia"
 
-#: klipper.cpp:183
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfiguratu Klipper..."
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Irten"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Eskuz deitu uneko arbeleko ekintzari"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Editatu edukia..."
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Erakut&si barra-kodea..."
 
-#: klipper.cpp:218
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Historiako hurrengo elementua"
 
-#: klipper.cpp:222
+#: klipper.cpp:225
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Historiako aurreko elementua"
 
-#: klipper.cpp:228
-#, kde-format
+#: klipper.cpp:232
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
-msgid "Open Klipper at Mouse Position"
+msgid "Show Items at Mouse Position"
 msgstr "Ireki Klipper saguaren kokalekuan"
 
-#: klipper.cpp:540
+#: klipper.cpp:244
+#, fuzzy, kde-format
+#| msgid "Klipper - Clipboard Tool"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Tool"
+msgstr "Klipper, arbeleko tresna"
+
+#: klipper.cpp:556
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -577,62 +586,62 @@ msgstr ""
 "URL ekintzak beranduago gaitu ditzakezu, Arbela aplikaziotxoa konfiguratzeko "
 "<interface>Ekintzak</interface> orrian"
 
-#: klipper.cpp:579
+#: klipper.cpp:595
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Klipper automatikoki abiarazi behar da saioa hasten duzunean?"
 
-#: klipper.cpp:580
+#: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Klipper automatikoki abiarazi nahi duzu?"
 
-#: klipper.cpp:581
+#: klipper.cpp:597
 #, kde-format
 msgid "Start"
 msgstr "Abiarazi"
 
-#: klipper.cpp:582
+#: klipper.cpp:598
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ez abiarazi"
 
-#: klipper.cpp:929
+#: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
 msgstr "Editatu edukia"
 
-#: klipper.cpp:996
+#: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mugikorretarako barra-kodea"
 
-#: klipper.cpp:1043
+#: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Benetan garbitu eta ezabatu nahi duzu arbeleko historia osoa?"
 
-#: klipper.cpp:1044
+#: klipper.cpp:1060
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Garbitu arbeleko historia"
 
-#: klipper.cpp:1060 klipper.cpp:1069
+#: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
 msgid "Clipboard history"
 msgstr "Arbeleko historia"
 
-#: klipper.cpp:1086
+#: klipper.cpp:1102
 #, kde-format
 msgid "up"
 msgstr "gora"
 
-#: klipper.cpp:1093
+#: klipper.cpp:1109
 #, kde-format
 msgid "current"
 msgstr "unekoa"
 
-#: klipper.cpp:1100
+#: klipper.cpp:1116
 #, kde-format
 msgid "down"
 msgstr "behera"
@@ -846,32 +855,29 @@ msgstr ""
 "Fitxategi-izen bat edo URL bat hautatzen bada, sartu bere MIME mota onar "
 "dezaketen aplikazioak menu gainerakorrean."
 
-#: klipperpopup.cpp:110
-#, kde-format
-msgid "Klipper - Clipboard Tool"
-msgstr "Klipper, arbeleko tresna"
+#: klipperpopup.cpp:105
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Items"
+msgstr "Arbeleko edukia"
 
-#: klipperpopup.cpp:114
+#: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
 msgstr "Bilatu..."
 
-#: klipperpopup.cpp:123 main.cpp:29
-#, kde-format
-msgid "KDE cut & paste history utility"
-msgstr "KDEren arbela kudeatzeko tresna"
-
-#: klipperpopup.cpp:187
+#: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr "Adierazpen erregular baliogabea, %1"
 
-#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Arbela hutsik dago"
 
-#: klipperpopup.cpp:195
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "No matches"
 msgstr "Ez dago bat datorrenik"
@@ -880,6 +886,12 @@ msgstr "Ez dago bat datorrenik"
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
+
+#: main.cpp:29
+#, fuzzy, kde-format
+#| msgid "KDE cut & paste history utility"
+msgid "Plasma cut & paste history utility"
+msgstr "KDEren arbela kudeatzeko tresna"
 
 #: main.cpp:31
 #, kde-format

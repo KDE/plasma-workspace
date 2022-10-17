@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 18:51+0200\n"
+"PO-Revision-Date: 2022-10-16 13:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Докато бъде ръчно деактивирано"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Приключва автоматично: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -305,20 +305,21 @@ msgstr[0] "%1 непрочетено известие"
 msgstr[1] "%1 непрочетени известия"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Не безпокойте до %1"
+msgstr "Не безпокойте до %1; за изход сега, натиснете среден бутон на мишката"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
+"Режим Не безпокойте е активен ; за изход сега, натиснете среден бутон на "
+"мишката"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Среден бутон на мишката за влизане в режим Не безпокойте"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -434,7 +435,3 @@ msgstr "Въвеждане на отговор…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Изпращане"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "До %1"

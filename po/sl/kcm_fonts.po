@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1636124 2022-10-15 01:36:22Z scripty $
+# $Id: kcm_fonts.po 1636231 2022-10-17 01:35:54Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-05-04 08:21+0200\n"
+"PO-Revision-Date: 2022-10-16 06:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
@@ -144,10 +144,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "Ta modul omogoča nastavitve sistemske pisave."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Pril&agodi vse pisave…"
+msgstr "Prilagodi globalno merilo…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -159,17 +158,13 @@ msgstr ""
 "novo zagnane programe."
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"Zelo velike pisave lahko dajo čudne rezultate. Razmislite raje o "
-"prilagoditvi globalnega merila velikosti zaslona namesto uporabe zelo velike "
-"velikosti pisave."
+"Zelo velike pisave dajo lahko čudne rezultate. Namesto uporabe zelo velikih "
+"velikosti pisav, razmislite raje o prilagoditvi globalnega merila zaslona."
 
 #: package/contents/ui/main.qml:72
 #, kde-format

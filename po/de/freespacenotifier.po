@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-05-26 07:05+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -72,7 +72,7 @@ msgstr ""
 "Der Speicherplatz in Ihrem Persönlichen Ordner wird knapp. Es verbleiben "
 "noch %1 MiB (%2 %)."
 
-#: module.cpp:46
+#: module.cpp:45
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
@@ -81,7 +81,7 @@ msgstr ""
 "Der Speicherplatz im Basisordner wird knapp. Es verbleiben noch %1 MiB (%2 "
 "%)."
 
-#: module.cpp:63
+#: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-12-12 15:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -358,37 +358,37 @@ msgstr "Prabangus kietmedis"
 msgid "Choose File…"
 msgstr "Pasirinkti failą…"
 
-#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Nerasta jokio piršto atspaudų įrenginio."
 
-#: src/fingerprintmodel.cpp:313
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Iš naujo pabandykite nuskaityti pirštą."
 
-#: src/fingerprintmodel.cpp:315
+#: src/fingerprintmodel.cpp:318
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Perbraukimas per trumpas. Bandykite dar kartą."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:320
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Pirštas nėra skaitytuvo viduryje. Bandykite dar kartą."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Patraukite pirštą nuo skaitytuvo ir bandykite dar kartą."
 
-#: src/fingerprintmodel.cpp:327
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Nepavyko įrašyti piršto."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:333
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -397,32 +397,32 @@ msgstr ""
 "Šiam įrenginiui nebeliko vietos. Norėdami tęsti, ištrinkite kitus piršto "
 "atspaudus."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Įrenginys buvo atjungtas."
 
-#: src/fingerprintmodel.cpp:338
+#: src/fingerprintmodel.cpp:341
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Įvyko nežinoma klaida."
 
-#: src/user.cpp:264
+#: src/user.cpp:267
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Nepavyko gauti leidimo įrašyti naudotoją %1"
 
-#: src/user.cpp:269
+#: src/user.cpp:272
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Įrašant pakeitimus, įvyko klaida"
 
-#: src/user.cpp:364
+#: src/user.cpp:368
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko atverti laikinojo failo"
 
-#: src/user.cpp:372
+#: src/user.cpp:376
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko rašyti į laikinąjį failą"

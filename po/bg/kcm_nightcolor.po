@@ -207,12 +207,3 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "Промените към дневни цветове започват в %1 и са напълно завършени в %2"
-
-#~ msgid "This is what day color temperature will look like when active."
-#~ msgstr "Така ще изглежда екранът, когато са активирани дневни цветове."
-
-#~ msgid "This is what night color temperature will look like when active."
-#~ msgstr "Така ще изглежда екранът, когато са активирани вечерни цветове."
-
-#~ msgid "Activate blue light filter"
-#~ msgstr "Активиране на филтъра за синя светлина"

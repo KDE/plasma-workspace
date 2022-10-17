@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:15+0200\n"
+"PO-Revision-Date: 2022-10-16 06:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -134,10 +134,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "ეს მოდული საშუალებას გაძლევთ მოირგოთ სისტემური ფონტები."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&ყველა ფონტის გასწორება…"
+msgstr "გლობალურის მასშტაბის გასწორება…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-03-19 19:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -129,12 +129,12 @@ msgstr "Temayı Aç"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "İmleç Tema Dosyaları (*.tar.gz *.tar.bz2)"
 
-#: plasma-apply-cursortheme.cpp:41
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "İstenen '%1' boyutu kullanılabilir değil, yerine '%2' kullanılıyor."
 
-#: plasma-apply-cursortheme.cpp:62
+#: plasma-apply-cursortheme.cpp:63
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -145,7 +145,7 @@ msgstr ""
 "ayarlamadan, geçerli Plasma oturumu için fare imleci temasını ayarlamanıza "
 "olanak tanır."
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:67
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -154,18 +154,18 @@ msgstr ""
 "Mevcut Plasma oturumunuz için ayarlamak istediğiniz imleç temasının adı (tam "
 "bir yolu girmek, yolun yalnızca son kısmını kullanır)"
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Sistemde mevcut olan tüm temaları göster (ve mevcut tema hangisi)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullanın"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:90
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -174,13 +174,13 @@ msgstr ""
 "İstenen tema \"%1\" , zaten geçerli Plasma oturumu için tema olarak "
 "ayarlanmış."
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "Fare imleç teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -189,7 +189,7 @@ msgstr ""
 "Yeni uygulanan fare imleci temanızın doğru şekilde görüntülenmesi için "
 "Plasma oturumunu yeniden başlatmanız gerekir."
 
-#: plasma-apply-cursortheme.cpp:112
+#: plasma-apply-cursortheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -197,12 +197,12 @@ msgid ""
 msgstr ""
 "\"%1\" teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
 
-#: plasma-apply-cursortheme.cpp:120
+#: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "Sisteminizde aşağıdaki fare imleci temaları var:"
 
-#: plasma-apply-cursortheme.cpp:125
+#: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bu Plasma oturumu için geçerli tema)"

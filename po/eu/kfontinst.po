@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-11-27 12:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -644,7 +644,7 @@ msgstr ""
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Huts egin du sistemaren daimon-a abiaraztean.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> lehendik ere badago."
@@ -1200,43 +1200,43 @@ msgstr "Ezin dira lekuz aldatu letra-tipoak"
 msgid "Only fonts may be deleted."
 msgstr "Letra-tipoak baino ezin dira ezabatu."
 
-#: kio/KioFonts.cpp:457
+#: kio/KioFonts.cpp:458
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\"(e)ko eta \"%2\"(e)ko letra-tipoak baino ezin dira kendu."
 
-#: kio/KioFonts.cpp:484
+#: kio/KioFonts.cpp:485
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Zehaztu \"%1\" edo \"%2\"."
 
-#: kio/KioFonts.cpp:504
+#: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
 msgstr "Ez da metodo berezirik onartzen."
 
-#: kio/KioFonts.cpp:578
+#: kio/KioFonts.cpp:579
 #, kde-format
 msgid "Fonts"
 msgstr "Letra-tipoak"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Huts egin du sistemaren daimon-a abiaraztean"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
 msgstr "Bizkarraldeko hil egin da"
 
-#: kio/KioFonts.cpp:713
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "%1 bit-mapako letra-tipo bat da, eta horiek sisteman desgaitu egin dira."
 
-#: kio/KioFonts.cpp:716
+#: kio/KioFonts.cpp:717
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1244,12 +1244,12 @@ msgstr ""
 "%1(e)k <b>%2</b> letra-tipoa dauka, eta letra-tipo hori dagoeneko "
 "instalatuta dago sisteman."
 
-#: kio/KioFonts.cpp:719
+#: kio/KioFonts.cpp:720
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ez da letra-tipo bat."
 
-#: kio/KioFonts.cpp:722
+#: kio/KioFonts.cpp:723
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Ezin izan dira kendu %1(r)ekin erlazionatutako fitxategi guztiak."
@@ -1633,17 +1633,17 @@ msgstr "Instalatu…"
 msgid "Change Text…"
 msgstr "Aldatu testua..."
 
-#: viewpart/FontViewPart.cpp:333
+#: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
 msgstr "Ezin izan da letra-tipoa irakurri."
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
 msgstr "Aurreikusi katea"
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Sartu kate berria:"

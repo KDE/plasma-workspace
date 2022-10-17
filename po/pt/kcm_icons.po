@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2021-06-07 15:30+0100\n"
+"PO-Revision-Date: 2022-10-16 11:45+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -127,7 +127,7 @@ msgstr "A instalar o tema %1…"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "Tamanho:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -161,8 +161,7 @@ msgid "Get New Icons…"
 msgstr "Obter Novos Ícones…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configurar os Tamanhos dos Ícones"
@@ -176,38 +175,3 @@ msgstr "Abrir um Tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Ficheiros de Temas (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Icon theme is already used"
-#~ msgstr "O tema de ícones já está a ser usado"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "José Nuno Pires,Pedro Morais"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "zepires@gmail.com,morais@kde.org"
-
-#~ msgid "Icons"
-#~ msgstr "Ícones"
-
-#~ msgid "Icons Control Panel Module"
-#~ msgstr "Módulo de Ícones do Painel de Controlo"
-
-#~ msgid "(c) 2000-2003 Geert Jansen"
-#~ msgstr "(c) 2000-2003 Geert Jansen"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Geert Jansen"
-
-#~ msgid "Antonio Larrosa Jimenez"
-#~ msgstr "Antonio Larrosa Jimenez"
-
-#~ msgid "Torsten Rahn"
-#~ msgstr "Torsten Rahn"
-
-#~ msgid "Jonathan Riddell"
-#~ msgstr "Jonathan Riddell"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"

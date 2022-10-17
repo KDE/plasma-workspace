@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 12:40+0200\n"
+"PO-Revision-Date: 2022-10-16 11:54+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -115,6 +115,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"by %1 (%2)\n"
+"Pulse con el botón central para pausar"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -122,16 +124,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Pulse con el botón central para pausar"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "por %1 (en pausa, %2)"
+msgstr ""
+"por %1 (en pausa, %2)\n"
+"Pulse con el botón central para reproducir"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -142,6 +146,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"En pausa (%1)\n"
+"Pulse con el botón central para reproducir"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

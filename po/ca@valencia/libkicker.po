@@ -94,12 +94,12 @@ msgstr "Aplicacions"
 #: plugin/appsmodel.cpp:151
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "Aplicacions a mostrar en este submenú"
+msgstr "Aplicacions que s'han de mostrar en este submenú"
 
 #: plugin/appsmodel.cpp:160
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "Aplicacions a mostrar en «%1»"
+msgstr "Aplicacions que s'han de mostrar en «%1»"
 
 #: plugin/computermodel.cpp:92
 #, kde-format

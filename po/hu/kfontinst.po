@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-10-15 11:16+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -626,7 +626,7 @@ msgstr "Nem sikerült eltávolítani az ehhez kapcsolódó összes fájlt: <i>%1
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Nem sikerült elindítani a rendszerdémont.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "A(z) <i>%1</i> már létezik."
@@ -1187,44 +1187,44 @@ msgstr "Nem lehet áthelyezni a betűtípusokat"
 msgid "Only fonts may be deleted."
 msgstr "Csak betűtípusok törölhetők."
 
-#: kio/KioFonts.cpp:457
+#: kio/KioFonts.cpp:458
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Csak innen távolíthatók el a betűtípusok: „%1” vagy „%2”."
 
-#: kio/KioFonts.cpp:484
+#: kio/KioFonts.cpp:485
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Válasszon egyet ezek közül: \"%1\" vagy \"%2\"."
 
-#: kio/KioFonts.cpp:504
+#: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
 msgstr "Speciális módszerek nem támogatottak."
 
-#: kio/KioFonts.cpp:578
+#: kio/KioFonts.cpp:579
 #, kde-format
 msgid "Fonts"
 msgstr "Betűtípusok"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Nem sikerült elindítani a rendszerdémont"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
 msgstr "A háttérprogram halott"
 
-#: kio/KioFonts.cpp:713
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "Nem lehet telepíteni a(z) %1 bittérképes betűtípust, mert ezek használata le "
 "van tiltva a rendszerben."
 
-#: kio/KioFonts.cpp:716
+#: kio/KioFonts.cpp:717
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1232,12 +1232,12 @@ msgstr ""
 "%1 tartalmazza a(z) <b>%2</b> betűtípust, amely már telepítve van a "
 "rendszerén."
 
-#: kio/KioFonts.cpp:719
+#: kio/KioFonts.cpp:720
 #, kde-format
 msgid "%1 is not a font."
 msgstr "A(z) %1 nem betűtípus."
 
-#: kio/KioFonts.cpp:722
+#: kio/KioFonts.cpp:723
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Nem sikerült eltávolítani az ehhez kapcsolódó összes fájlt: %1"
@@ -1619,17 +1619,17 @@ msgstr "Telepítés…"
 msgid "Change Text…"
 msgstr "A szöveg megváltoztatása…"
 
-#: viewpart/FontViewPart.cpp:333
+#: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
 msgstr "Nem sikerült beolvasni a betűtípust."
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
 msgstr "A sztring előnézete"
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Adja meg az új sztringet:"

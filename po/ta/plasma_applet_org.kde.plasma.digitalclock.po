@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-07-28 19:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -361,18 +361,18 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "இன்று %1 ஆகும்"
 
-#: plugin/clipboardmenu.cpp:107
+#: plugin/clipboardmenu.cpp:110
 #, kde-format
 msgid "Other Calendars"
 msgstr "மற்ற நாள்காட்டிகள்"
 
-#: plugin/clipboardmenu.cpp:115
+#: plugin/clipboardmenu.cpp:118
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (யூனிக்ஸ் நேரம்)"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:121
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

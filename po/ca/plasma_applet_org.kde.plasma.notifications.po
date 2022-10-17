@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 13:50+0200\n"
+"PO-Revision-Date: 2022-10-16 10:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -123,7 +123,7 @@ msgstr "Fins que es desactivi manualment"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Acaba automàticament: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -309,20 +309,19 @@ msgstr[0] "%1 notificació sense llegir"
 msgstr[1] "%1 notificacions sense llegir"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "No destorbar %1 fins %1"
+msgstr "No destorbar fins el %1; clic del mig per a sortir ara"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Mode no destorbar actiu; clic del mig per a sortir"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Clic del mig per a passar al mode no destorbar"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -438,7 +437,3 @@ msgstr "Teclegeu una resposta…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Envia"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "Fins %1"

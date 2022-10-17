@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-12 14:23+0300\n"
+"PO-Revision-Date: 2022-10-16 11:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr "Başlıksız"
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
 #, kde-format
 msgid "No media playing"
-msgstr "Oynatılan/çalınan ortam yok"
+msgstr "Oynatılan/Çalınan ortam yok"
 
 #: contents/ui/ConfigGeneral.qml:22
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "Duraklat"
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr "Oynat"
+msgstr "Oynat/Çal"
 
 #: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
@@ -105,7 +105,7 @@ msgstr "Çık"
 #: contents/ui/main.qml:241
 #, kde-format
 msgid "Choose player automatically"
-msgstr "Oynatıcıyı/çaları kendiliğinden seç"
+msgstr "Oynatıcıyı/Çaları kendiliğinden seç"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -114,6 +114,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"%1 tarafından (%2)\n"
+"Duraklatmak için orta tıklayın"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -121,16 +123,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Duraklatmak için orta tıklayın"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "%1 tarafından (duraklatıldı, %2)"
+msgstr ""
+"%1 tarafından (duraklatıldı, %2)\n"
+"Sürdürmek için orta tıklayın"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -141,6 +145,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Duraklatıldı (%1)\n"
+"Sürdürmek için orta tıklayın"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

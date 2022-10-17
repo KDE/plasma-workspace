@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-07 22:19+0200\n"
+"PO-Revision-Date: 2022-10-16 11:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Hasta que se desactive manualmente"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Finaliza automáticamente: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -309,20 +309,21 @@ msgstr[0] "%1 notificación sin leer"
 msgstr[1] "%1 notificaciones sin leer"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "No molestar hasta %1"
+msgstr "No molestar hasta %1; pulse con el botón central para salir ahora"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
+"El modo «no molestar» está activo; pulse con el botón central para salir de "
+"él"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Pulse con el botón central para entrar en el modo «no molestar»"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

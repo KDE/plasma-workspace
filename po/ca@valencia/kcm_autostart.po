@@ -55,7 +55,7 @@ msgstr "El fitxer «%1» ha de ser executable per a executar-se en eixir."
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr "El fitxer «%1» ha de ser executable per executar-se en entrar."
+msgstr "El fitxer «%1» ha de ser executable per a executar-se en entrar."
 
 #: package/contents/ui/main.qml:89
 #, kde-format

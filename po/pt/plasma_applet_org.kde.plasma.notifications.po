@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 04:53+0100\n"
+"PO-Revision-Date: 2022-10-16 11:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -115,7 +115,7 @@ msgstr "Até ser desactivado manualmente"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Termina automaticamente: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -301,20 +301,19 @@ msgstr[0] "%1 notificação não lida"
 msgstr[1] "%1 notificações não lidas"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Não incomodar até %1"
+msgstr "Não incomodar até %1; botão do meio para sair agora"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Modo de 'não incomodar' activo; botão do meio para sair"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Botão do meio para entrar no modo 'não incomodar'"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -430,7 +429,3 @@ msgstr "Escreva uma resposta…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Enviar"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "Até %1"

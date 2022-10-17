@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2014-09-14 09:18+0800\n"
 "Last-Translator: Franklin\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -80,7 +80,7 @@ msgid ""
 "(%2%)."
 msgstr "您的家目錄磁碟空間即將用完。您還剩 %1 MiB（%2%）"
 
-#: module.cpp:46
+#: module.cpp:45
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -93,7 +93,7 @@ msgid ""
 "(%2%)."
 msgstr "您的家目錄磁碟空間即將用完。您還剩 %1 MiB（%2%）"
 
-#: module.cpp:63
+#: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

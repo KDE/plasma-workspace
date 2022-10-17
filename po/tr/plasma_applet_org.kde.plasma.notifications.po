@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 11:41+0300\n"
+"PO-Revision-Date: 2022-10-16 11:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,18 +19,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.08.1\n"
 "X-POOTLE-MTIME: 1413102238.000000\n"
 
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
-msgstr "%1 ile aç"
+msgstr "%1 ile Aç"
 
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr "Birlikte aç…"
+msgstr "Birlikte Aç…"
 
 #: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Özellikler"
 #: globalshortcuts.cpp:23
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Rahatsız Etmeyin kipini aç/kapat"
+msgstr "Rahatsız Etmeyin Kipini Aç/Kapat"
 
 #: globalshortcuts.cpp:42
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "El ile devre dışı bırakılana kadar"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Kendiliğinden bitiş tarihi: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -310,20 +310,19 @@ msgstr[0] "%1 okunmamış bildirim"
 msgstr[1] "%1 okunmamış bildirim"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "%1 kadar rahatsız etmeyin"
+msgstr "Şuna değin rahatsız etme: %1, çıkmak için orta tıklayın"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Rahatsız etmeyin kipi etkin; çıkmak için orta tıklayın"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Rahatsız etmeyin kipine girmek için orta tıklayın"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

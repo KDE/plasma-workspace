@@ -113,6 +113,3 @@ msgstr "Последни заявки"
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
-
-#~ msgid "in category recent queries"
-#~ msgstr "в категория скорошни заявки"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-08-11 20:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -121,13 +121,13 @@ msgstr "Ireki gaia"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kurtsore-gai fitxategiak (*.tar.gz *.tar.bz2)"
 
-#: plasma-apply-cursortheme.cpp:41
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
 "Eskatutako «%1» neurria ez dago erabilgarri, horren ordez %2 erabiliko da."
 
-#: plasma-apply-cursortheme.cpp:62
+#: plasma-apply-cursortheme.cpp:63
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -138,7 +138,7 @@ msgstr ""
 "dezakezu, nahi gabe, erabilgarri ez dagoen edo ezarrita dagoen bat finkatu "
 "gabe."
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:67
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -147,32 +147,32 @@ msgstr ""
 "Zure uneko Plasma-saiorako ezarri nahi duzun kurtsore-gaiaren izena (bide-"
 "izen osoa pasatuta ere azken zatia baino ez da erabiliko)"
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Erakutsi sisteman erabilgarri dauden gai guztiak (eta uneko gaia zein den)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Erabili neurri jakin bat, gaiko neurri lehenetsiaren ordez"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:90
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Eskatutako «%1» gaia dagoeneko ezarrita dago Plasmaren uneko saiorako."
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "Saguaren «%1» kurtsore-gaia ondo ezarri zaio uneko zure Plasma-saioari"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -181,7 +181,7 @@ msgstr ""
 "Plasma-saioa berrabiarazi behar duzu ezarri berri duzun saguaren kurtsore-"
 "gaia ondo azaldu dadin."
 
-#: plasma-apply-cursortheme.cpp:112
+#: plasma-apply-cursortheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -190,12 +190,12 @@ msgstr ""
 "Ezin izan du «%1» gaia aurkitu. Gaia ondoko aukeretako bat izan beharko "
 "litzateke: %2"
 
-#: plasma-apply-cursortheme.cpp:120
+#: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "Zure sisteman saguaren ondoko kurtsore-gaiak dituzu:"
 
-#: plasma-apply-cursortheme.cpp:125
+#: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Plasma saio honetarako uneko gaia)"

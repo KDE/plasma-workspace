@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2009-02-05 17:58+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -615,7 +615,7 @@ msgstr "घटना के साथ कोनो समय सम्बद्�
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
 #, fuzzy, kde-format
 #| msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgid "<i>%1</i> already exists."
@@ -1187,56 +1187,56 @@ msgstr "मुद्रित नइ कर सकिस"
 msgid "Only fonts may be deleted."
 msgstr "सिरिफ फोंट इनस्टाल होही."
 
-#: kio/KioFonts.cpp:457
+#: kio/KioFonts.cpp:458
 #, fuzzy, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr ""
 "माफ करव, आप मन \"%1\" या \"%2\" के नाम नइ बदल सके, मिटा, खिसका या नकल नइ कर "
 "सकते."
 
-#: kio/KioFonts.cpp:484
+#: kio/KioFonts.cpp:485
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "किरपा करके, निरधारित करव \"%1\" या \"%2\"."
 
-#: kio/KioFonts.cpp:504
+#: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:578
+#: kio/KioFonts.cpp:579
 #, kde-format
 msgid "Fonts"
 msgstr "फोंट"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:708
 #, fuzzy, kde-format
 msgid "Failed to start the system daemon"
 msgstr "प्लेयर काम बन्द करे मं फेल."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:713
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:716
+#: kio/KioFonts.cpp:717
 #, fuzzy, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "ये नाम के कनेक्सन पहिली से ही मौजूद हे."
 
-#: kio/KioFonts.cpp:719
+#: kio/KioFonts.cpp:720
 #, fuzzy, kde-format
 #| msgid "Could not read font."
 msgid "%1 is not a font."
 msgstr "फोंट पढ़ नइ सकिस."
 
-#: kio/KioFonts.cpp:722
+#: kio/KioFonts.cpp:723
 #, fuzzy, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "घटना के साथ कोनो समय सम्बद्ध नइ"
@@ -1620,17 +1620,17 @@ msgstr "इनस्टाल करव"
 msgid "Change Text…"
 msgstr "पाठ बदलव..."
 
-#: viewpart/FontViewPart.cpp:333
+#: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
 msgstr "फोंट पढ़ नइ सकिस."
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
 msgstr "वाक्यांस प्रिव्यू"
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
 msgstr "किरपा करके, नवा वाक्यांस भरव:"

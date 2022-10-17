@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -612,7 +612,7 @@ msgstr "<i>%1</i>와(과) 연관된 모든 파일을 삭제할 수 없음"
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "시스템 데몬을 시작할 수 없습니다.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i>이(가) 이미 존재합니다."
@@ -1150,53 +1150,53 @@ msgstr "글꼴을 이동할 수 없음"
 msgid "Only fonts may be deleted."
 msgstr "글꼴만 삭제할 수 있습니다."
 
-#: kio/KioFonts.cpp:457
+#: kio/KioFonts.cpp:458
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\"(이)나 \"%2\" 중 한 곳에서만 글꼴을 삭제할 수 있습니다."
 
-#: kio/KioFonts.cpp:484
+#: kio/KioFonts.cpp:485
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "\"%1\" 또는 \"%2\"을(를) 지정하십시오."
 
-#: kio/KioFonts.cpp:504
+#: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
 msgstr "특별한 방식을 지원하지 않습니다."
 
-#: kio/KioFonts.cpp:578
+#: kio/KioFonts.cpp:579
 #, kde-format
 msgid "Fonts"
 msgstr "글꼴"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "시스템 데몬을 시작할 수 없음"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
 msgstr "백엔드가 종료됨"
 
-#: kio/KioFonts.cpp:713
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1은(는) 비트맵 글꼴이며 시스템에서 비활성화되었습니다."
 
-#: kio/KioFonts.cpp:716
+#: kio/KioFonts.cpp:717
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1은(는) 현재 시스템에 설치되어 있는 글꼴 <b>%2</b>을(를) 포함합니다."
 
-#: kio/KioFonts.cpp:719
+#: kio/KioFonts.cpp:720
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1은(는) 글꼴이 아닙니다."
 
-#: kio/KioFonts.cpp:722
+#: kio/KioFonts.cpp:723
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1와(과) 연관된 모든 파일을 삭제할 수 없음"
@@ -1579,17 +1579,17 @@ msgstr "설치 중…"
 msgid "Change Text…"
 msgstr "텍스트 변경…"
 
-#: viewpart/FontViewPart.cpp:333
+#: viewpart/FontViewPart.cpp:335
 #, kde-format
 msgid "Could not read font."
 msgstr "글꼴을 읽을 수 없습니다."
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
 msgstr "문자열 미리 보기"
 
-#: viewpart/FontViewPart.cpp:385
+#: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
 msgstr "새로운 문자열을 입력하십시오:"

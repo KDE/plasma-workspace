@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-07-31 09:24+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -365,18 +365,18 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Dzisiaj jest %1"
 
-#: plugin/clipboardmenu.cpp:107
+#: plugin/clipboardmenu.cpp:110
 #, kde-format
 msgid "Other Calendars"
 msgstr "Inne kalendarze"
 
-#: plugin/clipboardmenu.cpp:115
+#: plugin/clipboardmenu.cpp:118
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (Czas UNIX)"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:121
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
