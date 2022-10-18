@@ -22,6 +22,7 @@
 #include <KActivities/Stats/Query>
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
+#include <KFileItem>
 
 using namespace KActivities::Stats;
 using namespace KActivities::Stats::Terms;
@@ -71,7 +72,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
                                              QUrl::AssumeLocalFile);
         const auto name = result->data(index, ResultModel::TitleRole).toString();
 
-        if (!QFileInfo(url.toLocalFile()).exists()) {
+        if (!KFileItem(url).isSlow() && !QFileInfo(url.toLocalFile()).exists()) {
             continue;
         }
 
