@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-06-30 09:20+0300\n"
+"PO-Revision-Date: 2022-10-17 13:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -567,19 +567,16 @@ msgid "Previous History Item"
 msgstr "Попередній запис журналу"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Відкривати Klipper на позиції вказівника"
+msgstr "Показувати записи на позиції вказівника"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Утиліта кишені — Klipper"
+msgstr "%1 – утиліта буфера даних"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -868,11 +865,10 @@ msgstr ""
 "можуть обробляти відповідний тип MIME до записів у контекстному меню."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Вміст буфера обміну"
+msgstr "%1 – записи буфера даних"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -900,10 +896,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Утиліта історії кишені KDE"
+msgstr "Утиліта історії кишені Плазми"
 
 #: main.cpp:31
 #, kde-format

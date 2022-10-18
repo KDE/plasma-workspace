@@ -1,6 +1,6 @@
 # Translation for plasma_applet_org.kde.plasma.notifications.po to Euskara/Basque (eu).
-# Copyright (C) 2017, The Free Software Foundation.
-# Copyright (C) 2018-2022, This file is copyright:
+# Copyright (C) 2017 The Free Software Foundation.
+# Copyright (C) 2018-2022 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 08:08+0200\n"
+"PO-Revision-Date: 2022-10-17 06:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -120,11 +120,10 @@ msgid "Until manually disabled"
 msgstr "Eskuz ezgaitu arte"
 
 #: package/contents/ui/FullRepresentation.qml:205
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Automatikoki ezkutatu"
+msgstr "Automatikoki bukatzen da: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -310,20 +309,19 @@ msgstr[0] "Irakurri gabeko jakinarazpen %1"
 msgstr[1] "Irakurri gabeko %1 jakinarazpen"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Zaratarik ez %1-(e)ra arte"
+msgstr "Zaratarik ez %1(e)ra arte; erdiko-klik orain irteteko"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Zaratarik ez modua aktibatuta; erdiko-klik irteteko"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Erdiko-botoia «zaratarik ez» moduan sartzeko"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

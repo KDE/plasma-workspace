@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-06-30 14:31+0300\n"
+"PO-Revision-Date: 2022-10-17 12:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -124,14 +124,14 @@ msgid ""
 msgstr ""
 "Bir eylem kalıbıyla eşleşen metin seçildiğinde veya pano geçmişinden "
 "seçildiğinde, uygun eylemlerle birlikte açılır menüyü otomatik olarak "
-"gösterin. Burada otomatik menü kapalıysa veya hariç tutulan bir pencere için "
-"gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
+"gösterin. Burada otomatik menü kapalıysa veya dışarıda tutulan bir pencere "
+"için gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
 "görüntülenebilir."
 
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr "Pencereleri Hariç Tut"
+msgstr "Pencereleri Dışarıda Tut"
 
 #: configdialog.cpp:283
 #, kde-format
@@ -165,7 +165,7 @@ msgstr ""
 #: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
-msgstr "Pencereleri Hariç Tut"
+msgstr "Pencereleri Dışarıda Tut"
 
 #: configdialog.cpp:367
 #, kde-kuit-format
@@ -303,11 +303,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
-"Burada girilmesi gereken ad, hariç tutulacak pencerenin WM_CLASS adıdır. Bir "
-"pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
+"Burada girilmesi gereken ad, dışarıda tutulacak pencerenin WM_CLASS adıdır. "
+"Bir pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
 "komutu girin:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/"
-"><nl/>ve hariç tutmak istediğiniz pencereye tıklayın. Eşittir iminden sonra "
-"görüntülenen ilk ad, girmeniz gereken addır."
+"><nl/>ve dışarıda tutmak istediğiniz pencereye tıklayın. Eşittir iminden "
+"sonra görüntülenen ilk ad, girmeniz gereken addır."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:90
 #, kde-format
@@ -559,19 +559,16 @@ msgid "Previous History Item"
 msgstr "Önceki Geçmiş Ögesi"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Klipper Uygulamasını Fare Konumunda Aç"
+msgstr "Fare Konumundaki Ögeleri Göster"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Pano aracı"
+msgstr "%1 - Pano Aracı"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -855,11 +852,10 @@ msgstr ""
 "edebilen uygulamaları içer."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Pano İçeriği"
+msgstr "%1 - Pano Ögeleri"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -887,10 +883,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE kes & yapıştır geçmişi aracı"
+msgstr "Plasma kes ve yapıştır geçmişi izlencesi"
 
 #: main.cpp:31
 #, kde-format

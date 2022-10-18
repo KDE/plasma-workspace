@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-05-24 21:17+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -124,12 +124,12 @@ msgstr "Disinstallabile"
 msgid "Categories:"
 msgstr "Categorie:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Scarica nuovi oggetti di Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Installa oggetto da file locale…"

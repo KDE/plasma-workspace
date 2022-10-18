@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-04-15 04:59+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -123,12 +123,12 @@ msgstr "Nicht installierbar"
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Neue Miniprogramme herunterladen"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Miniprogramm aus lokaler Datei installieren ..."

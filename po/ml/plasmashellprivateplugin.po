@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -127,12 +127,12 @@ msgstr "അൺഇൻസ്റ്റാൾ ചെയ്യാവുന്നത�
 msgid "Categories:"
 msgstr "വിഭാഗങ്ങള്‍:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "പുതിയ പ്ലാസ്മ വിഡ്ജറ്റുകൾ ഡൗെൺലോഡ് ചെയ്യുക"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "തദ്ദേശ ഫയലിൽ നിന്ന് വിഡ്ജറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുക…"

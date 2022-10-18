@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2020-10-10 23:11-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -124,12 +124,12 @@ msgstr ""
 msgid "Categories:"
 msgstr "ਕੈਟਾਗਰੀ:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr ""

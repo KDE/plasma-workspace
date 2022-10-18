@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 06:45+0200\n"
+"PO-Revision-Date: 2022-10-17 07:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -26,7 +26,7 @@ msgstr "ზოგადი"
 #: contents/ui/AlbumArtStackView.qml:161
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "სათაურის გარეშე"
 
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
 #, kde-format
@@ -114,6 +114,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"ავტორი: %1 (%2)\n"
+"შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -121,16 +123,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "%1-სგან (შეჩერებული, %2)"
+msgstr ""
+"ავტორი %1 (შეჩერებული, %2)\n"
+"დასაკრავად გამოიყენეთ შუა-წკაპი"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -141,6 +145,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"შეჩერებული (%1)\n"
+"დასაკრავად გამოიყენეთ შუა-წკაპი"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

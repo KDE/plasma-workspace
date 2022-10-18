@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 08:43+0200\n"
+"PO-Revision-Date: 2022-10-17 06:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -117,6 +117,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"%1 (%2)\n"
+"Erdiko-klik etenaldirako"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -124,16 +126,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Erdiko-klik etenaldirako"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "Artista: %1 (etenda, %2)"
+msgstr ""
+"%1 (etenda, %2)\n"
+"Erdiko-klik jotzeko"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -144,6 +148,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Etenda (%1)\n"
+"Erdiko-klik jotzeko"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

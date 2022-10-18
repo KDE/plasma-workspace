@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-24 14:01+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2022-10-17 11:50+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -52,25 +53,25 @@ msgstr "A4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "представитель"
 
 #: exampleutility.cpp:65
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Корпорация «ACME»"
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Отдел разработки"
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Здание разработки"
 
 #: exampleutility.cpp:68
 #, kde-format
@@ -106,13 +107,13 @@ msgstr "Этаж 3"
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Деловой центр"
 
 #: exampleutility.cpp:76
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:77
 #, kde-format
@@ -136,7 +137,7 @@ msgstr "Фамилия"
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "ФАМИЛИЯ"
 
 #: exampleutility.cpp:93
 #, kde-format
@@ -148,7 +149,7 @@ msgstr "Имя"
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "Ф"
 
 #: exampleutility.cpp:95
 #, kde-format
@@ -160,21 +161,19 @@ msgstr "Имя"
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "Другое имя"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "Дополнительное имя"
 
 #: exampleutility.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "A4"
+#, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "A4"
+msgstr "Д. и."
 
 #: exampleutility.cpp:99
 #, kde-format
@@ -186,31 +185,31 @@ msgstr "Профессия"
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "Доктор"
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr ""
+msgstr "Д-р"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr ""
+msgstr "Д-р"
 
 #: exampleutility.cpp:103
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -218,7 +217,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Не удалось найти пример для этой локали"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -241,7 +240,7 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1 (Бразилия)"
 
 #: localegeneratorbase.cpp:16
 #, kde-format
@@ -251,6 +250,10 @@ msgid ""
 "locale generation on non-glibc systems, please refer to your distribution's "
 "manual to install fonts and generate locales"
 msgstr ""
+"Локаль настроена, но в текущей версии этого модуля управления не "
+"поддерживается автоматическая генерация локалей в системах, не использующих "
+"glibc. Обратитесь к руководству из дистрибутива, чтобы получить сведения об "
+"установке шрифтов и генерации локалей."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -262,13 +265,13 @@ msgstr "Не удалось найти исполняемый файл «check-l
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr ""
+msgstr "Ошибка check-language-support, вывод: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "Не удалось определить полный список недостающих пакетов! %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
@@ -279,12 +282,12 @@ msgstr "Ошибка установки пакета «%1»"
 #: localegenhelper/localegenhelper.cpp:46
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr ""
+msgstr "Уже запущен другой процесс, повторите попытку позднее"
 
 #: localegenhelper/localegenhelper.cpp:66
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr ""
+msgstr "Недостаточно прав для изменения файла конфигурации локали"
 
 #: localegenhelper/localegenhelper.cpp:116
 #, kde-format
@@ -299,12 +302,12 @@ msgstr "Не удалось найти исполняемый файл «locale-
 #: localegenhelper/localegenhelper.cpp:154
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 #: localelistmodel.cpp:35
 #, kde-format
 msgid "Default for System"
-msgstr ""
+msgstr "По умолчанию для системы"
 
 #: localelistmodel.cpp:35 localelistmodel.cpp:86
 #: package/contents/ui/main.qml:225
@@ -380,7 +383,7 @@ msgstr "Адрес"
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "Стиль имени"
 
 #: optionsmodel.cpp:32
 #, kde-format
@@ -392,7 +395,7 @@ msgstr "Телефонные номера"
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr ""
+msgstr "Системный параметр по умолчанию"
 
 #: optionsmodel.cpp:297
 #, kde-format
@@ -413,6 +416,9 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
+"При помещении американского английского на вершину списка некоторые "
+"приложения могут работать некорректно. Чтобы использовать в системе "
+"американский английский, удалите все остальные языки."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -423,7 +429,7 @@ msgstr "Язык «%1» не поддерживается"
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr ""
+msgstr "Добавьте языки в том порядке, в котором они должны быть в приложениях."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:83
 #, kde-format
@@ -466,13 +472,13 @@ msgstr "Добавление языков"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr ""
+msgstr "Добавить ещё…"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "Изменения вступят в силу при следующем входе в систему."
 
 #: package/contents/ui/main.qml:36
 #, kde-format
@@ -485,7 +491,7 @@ msgctxt "@info"
 msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
-msgstr ""
+msgstr "Генерация файлов локали и языковой поддержки; не выключайте компьютер."
 
 #: package/contents/ui/main.qml:59
 #, kde-format
@@ -496,6 +502,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"Файлы локали и языковой поддержки созданы, но не удалось автоматически "
+"установить специальные шрифты для указанного языка. Если для надлежащего "
+"отображения информации на указанном языке требуются специальные шрифты, "
+"будет необходимо найти и установить их самостоятельно."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
@@ -504,6 +514,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"Необходимые файлы локали и языковой поддержки установлены. Теперь можно "
+"безопасно выключить компьютер."
 
 #: package/contents/ui/main.qml:125
 #, kde-format
@@ -561,4 +573,4 @@ msgstr "Номер телефона"
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr ""
+msgstr "Наследовать по языку"

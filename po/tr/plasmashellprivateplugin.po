@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-05-21 12:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -125,12 +125,12 @@ msgstr "Kaldırılamaz"
 msgid "Categories:"
 msgstr "Kategoriler:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:201
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Yeni Plasma Araç Takımları İndir"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:210
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Yerel Dosyadan Araç Takımı Kur…"

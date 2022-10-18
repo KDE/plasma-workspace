@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-07-03 13:26+0200\n"
+"PO-Revision-Date: 2022-10-17 17:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:80
@@ -575,19 +575,16 @@ msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Abrir Klipper en la posición del ratón"
+msgstr "Mostrar elementos en la posición del ratón"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Herramienta del portapapeles"
+msgstr "%1 - Herramienta del portapapeles"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -875,11 +872,10 @@ msgstr ""
 "que pueden aceptar su tipo MIME en el menú emergente."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Contenido del portapapeles"
+msgstr "%1 - Elementos del portapapeles"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -907,10 +903,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Utilidad KDE de historial de cortar y pegar"
+msgstr "Utilidad de Plasma del historial de cortar y pegar"
 
 #: main.cpp:31
 #, kde-format

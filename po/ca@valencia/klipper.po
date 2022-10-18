@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-06-30 09:52+0200\n"
+"PO-Revision-Date: 2022-10-17 10:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -565,19 +565,16 @@ msgid "Previous History Item"
 msgstr "Element anterior de l'historial"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Obri Klipper a la posició del ratolí"
+msgstr "Mostra els elements a la posició del ratolí"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Eina de porta-retalls"
+msgstr "%1 - Eina de porta-retalls"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -865,11 +862,10 @@ msgstr ""
 "poden gestionar el seu tipus MIME en el menú emergent."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Contingut del porta-retalls"
+msgstr "%1 - Elements del porta-retalls"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -897,10 +893,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Utilitat de l'historial per a retallar i apegar de KDE"
+msgstr "Utilitat de l'historial per a retallar i apegar de Plasma"
 
 #: main.cpp:31
 #, kde-format

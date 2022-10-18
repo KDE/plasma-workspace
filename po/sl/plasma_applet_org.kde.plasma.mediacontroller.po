@@ -1,17 +1,17 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
+#
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2016, 2017.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
 # Martin Srebotnjak <miles@filmsi.net>, 2022.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-10 08:47+0200\n"
-"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"PO-Revision-Date: 2022-10-17 07:59+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -118,6 +118,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"po %1 (%2)\n"
+"Srednji klik za premor"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -125,16 +127,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Srednji klik za premor"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "od %1 (v premoru, %2)"
+msgstr ""
+"od %1 (v premoru, %2)\n"
+"Srednji klik za predvajanje"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -145,6 +149,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"V premoru (%1)\n"
+"Srednji klik za predvajanje"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"
