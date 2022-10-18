@@ -12,6 +12,7 @@
 #include <QUrl>
 
 #include <KApplicationTrader>
+#include <KFileItem>
 #include <KIO/DesktopExecParser>
 #include <KIO/Global>
 #include <KIO/OpenUrlJob>
@@ -54,7 +55,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     // The uri filter takes care of the shell expansion
     const QFileInfo fileInfo = QFileInfo(url.toLocalFile());
 
-    if (fileInfo.exists()) {
+    if (!KFileItem(url).isSlow() && fileInfo.exists()) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", context.query()));
