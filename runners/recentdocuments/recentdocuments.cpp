@@ -71,6 +71,10 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
                                              QUrl::AssumeLocalFile);
         const auto name = result->data(index, ResultModel::TitleRole).toString();
 
+        if (!QFileInfo(url.toLocalFile()).exists()) {
+            continue;
+        }
+
         Plasma::QueryMatch match(this);
 
         auto relevance = 0.5;
