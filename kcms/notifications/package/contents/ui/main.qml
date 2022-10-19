@@ -97,7 +97,7 @@ KCM.SimpleKCM {
 
             KQuickControls.KeySequenceItem {
                 keySequence: kcm.toggleDoNotDisturbShortcut
-                onKeySequenceChanged: kcm.toggleDoNotDisturbShortcut = keySequence
+                onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
             }
         }
 
