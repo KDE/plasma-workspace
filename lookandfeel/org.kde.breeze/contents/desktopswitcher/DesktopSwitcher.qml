@@ -5,7 +5,6 @@
 */
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kwin 2.0 as KWin
 
 KWin.Switcher {
@@ -46,9 +45,9 @@ KWin.Switcher {
                     id: delegateItem
                     width: listView.width
                     height: listView.rowHeight
-                    QIconItem {
+                    PlasmaCore.IconItem {
                         id: iconElement
-                        icon: "user-desktop"
+                        source: "user-desktop"
                         width: 32
                         height: 32
                         anchors {
@@ -144,8 +143,9 @@ KWin.Switcher {
             }
             Component {
                 id: clientIconDelegate
-                QIconItem {
-                    icon: model.icon
+                PlasmaCore.IconItem {
+                    source: model.icon
+                    usesPlasmaTheme: false
                     width: 16
                     height: 16
                 }
