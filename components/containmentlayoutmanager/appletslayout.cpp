@@ -84,6 +84,11 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
             } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
                 m_layoutManager->layoutGeometryChanged(newGeom, m_geometryBeforeResolutionChange);
                 m_geometryBeforeResolutionChange = QRectF();
+
+                // If the user doesn't move a widget after this is done, the widget positions won't be saved and they will be in the wrong
+                // places on next login, so save them now.
+
+                save();
             }
         }
         m_layoutChanges = NoChange;
