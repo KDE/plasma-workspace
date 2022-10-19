@@ -80,10 +80,6 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
             } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
                 m_layoutManager->layoutGeometryChanged(newGeom, m_geometryBeforeResolutionChange);
                 m_geometryBeforeResolutionChange = QRectF();
-
-                // Heuristically relayout items only when the plasma startup is fully completed
-            } else {
-                polish();
             }
         }
         m_layoutChanges = NoChange;
