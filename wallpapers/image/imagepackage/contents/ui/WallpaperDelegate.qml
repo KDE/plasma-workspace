@@ -61,11 +61,11 @@ KCM.GridDelegate {
         color: cfg_Color
         anchors.fill: parent
 
-        QIconItem {
+        Kirigami.Icon {
             anchors.centerIn: parent
             width: PlasmaCore.Units.iconSizes.large
             height: width
-            icon: "view-preview"
+            source: "view-preview"
             visible: !walliePreview.visible
         }
 
