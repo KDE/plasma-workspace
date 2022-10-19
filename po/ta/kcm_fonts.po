@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2021-09-19 13:57+0530\n"
+"PO-Revision-Date: 2022-10-18 21:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -132,25 +132,21 @@ msgid "This module lets you configure the system fonts."
 msgstr "கணினியின் எழுத்துருக்களை நீங்கள் அமைக்க இக்கூறு உதவும்."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&அனைத்து எழுத்துருக்களையும் திருத்து…"
+msgstr "முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்று…"
 
 #: package/contents/ui/main.qml:37
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"நீங்கள் மெருக்கு சம்பந்தமான அமைப்புக்களை மாற்றியுள்ளீர்கள்.\n"
-"இம்மாற்றங்கள் புதிய நிரல்களை மட்டுமே பாதிக்கும்."
+"Anti-aliasing மற்றும் DPI போன்ற மாற்றங்கள், புதிதாக திறக்கப்படும் செயலிகளுக்கு மட்டும் "
+"பொருந்தும்."
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."

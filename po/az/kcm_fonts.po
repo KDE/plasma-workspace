@@ -7,21 +7,21 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-05-03 20:01+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2022-10-18 13:15+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI Wayland"
-msgstr "Wayland üçün məcburi şrift DPI ölçüsü:"
+msgstr "Wayland üçün məcburi şrift ölçüləri"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
@@ -133,10 +133,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "Bu modul sizə sistem şriftini seçməyə imkan verir."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&Bütün Şriftləri Tənzimləyin..."
+msgstr "Ümumi miqyası tənzimləyin..."
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -148,10 +147,7 @@ msgstr ""
 "açıldığında görünəcəkdir."
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."

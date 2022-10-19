@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-07-26 15:47+0400\n"
+"PO-Revision-Date: 2022-10-18 13:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -201,7 +201,7 @@ msgstr "Kiliddən çıxartmaq"
 #: contents/lockscreen/MediaControls.qml:108
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Başlıqsız"
 
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format

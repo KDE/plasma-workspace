@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-09-12 07:45+0200\n"
+"PO-Revision-Date: 2022-10-18 05:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -508,11 +508,10 @@ msgid "Show Items at Mouse Position"
 msgstr ""
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "ბაფერში დამატება"
+msgstr "%1 - ბუფერის მმართველი"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -773,11 +772,10 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "ბუფერის შემცველობა"
+msgstr "%1 - ბუფერის ჩანაწერები"
 
 #: klipperpopup.cpp:109
 #, kde-format

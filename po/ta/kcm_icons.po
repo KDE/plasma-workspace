@@ -4,13 +4,13 @@
 #
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # Ambalam <tamilpc@ambalam.com>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2021-08-10 21:27+0530\n"
+"PO-Revision-Date: 2022-10-18 19:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -127,8 +127,7 @@ msgid "Installing %1 theme…"
 msgstr "%1 திட்டம் நிறுவப்படுகிறது…"
 
 #: package/contents/ui/IconSizePopup.qml:95
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "அளவு:"
@@ -164,11 +163,10 @@ msgid "Get New Icons…"
 msgstr "புதிய சின்னங்களை பெறு…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr "சின்னங்களின் அளவுகளை அமை"
+msgstr "சின்னங்களின் அளவுகளை அமைப்பது"
 
 #: package/contents/ui/main.qml:285
 #, kde-format

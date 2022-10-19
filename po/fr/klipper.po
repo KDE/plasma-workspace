@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-07-01 20:13+0200\n"
+"PO-Revision-Date: 2022-10-18 12:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -582,19 +582,16 @@ msgid "Previous History Item"
 msgstr "Élément précédent de l'historique"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Ouvrir Klipper à la position de la souris"
+msgstr "Afficher les éléments à la position de la souris"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Outil de presse-papier"
+msgstr "%1 - Outil de presse-papier"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -890,11 +887,10 @@ msgstr ""
 "pouvant traiter son type « MIME » dans le menu contextuel."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Contenus du presse-papier"
+msgstr "%1 - Éléments du presse-papier"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -922,10 +918,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Historique du presse-papier de KDE"
+msgstr "Coupe avec Plasma & Utilitaire d'historique de collage"
 
 #: main.cpp:31
 #, kde-format

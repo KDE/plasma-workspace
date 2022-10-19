@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-13 19:22+0530\n"
+"PO-Revision-Date: 2022-10-18 19:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -113,6 +113,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"இயற்றியவர் %1 (%2)\n"
+"இடைநிறுத்த நடு-கிளிக் செய்யவும்"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -120,16 +122,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"இடைநிறுத்த நடு-கிளிக் செய்யவும்"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "இயற்றியவர் %1 (இடைநிறுத்தப்பட்டது, %2)"
+msgstr ""
+"இயற்றியவர் %1 (இடைநிறுத்தப்பட்டது, %2)\n"
+"இயக்க நடு-கிளிக் செய்யவும்"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -140,6 +144,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"இடைநிறுத்தப்பட்டுள்ளது (%1)\n"
+"இயக்க நடு-கிளிக் செய்யவும்"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"
