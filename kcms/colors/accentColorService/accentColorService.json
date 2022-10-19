@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Applies extracted accent color from wallpaper on request",
         "Description[ar]": "تطبق لون التمييز المستخرج من صورة الخلفية عند الطلب",
+        "Description[az]": "Tələbə görə fərqləndirmə rəngini divar kağızındakı rəngə uyğun olaraq təyin edir",
         "Description[bg]": "Прилага извлечен цвят на акцента от тапета при заявка",
         "Description[ca@valencia]": "Aplica el color d'accent extret a partir del fons de pantalla a petició",
         "Description[ca]": "Aplica el color d'accent extret a partir del fons de pantalla a petició",
@@ -25,6 +26,7 @@
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
         "Name": "Accent Color",
         "Name[ar]": "لون التمييز",
+        "Name[az]": "Fərqləndirmə rəngi",
         "Name[bg]": "Цвят за акцентиране",
         "Name[ca@valencia]": "Color d'accent",
         "Name[ca]": "Color d'accent",
