@@ -29,8 +29,6 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    property int optimalSize: PlasmaCore.Units.largeSpacing
-
     function action_expanding() {
         Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
     }
@@ -56,85 +54,31 @@ Item {
         Plasmoid.removeAction("configure");
     }
 
-    property real middleItemsSizeHint: {
-        if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
-            optimalSize = horizontal ? Plasmoid.nativeInterface.containment.width : Plasmoid.nativeInterface.containment.height;
-            return 0;
-        }
-
-        var leftTwinParent = leftTwin.parent;
-        var rightTwinParent = rightTwin.parent;
-        if (!leftTwinParent || !rightTwinParent) {
-            return 0;
-        }
-        var firstSpacerFound = false;
-        var secondSpacerFound = false;
-        var leftItemsHint = 0;
-        var middleItemsHint = 0;
-        var rightItemsHint = 0;
-
+    property real optimalSize: {
+        if (!panelLayout || !Plasmoid.configuration.expanding) return Plasmoid.configuration.length;
+        let expandingSpacers = 0;
+        let thisSpacerIndex = null;
+        let sizeHints = [0];
         // Children order is guaranteed to be the same as the visual order of items in the layout
         for (var i in panelLayout.children) {
             var child = panelLayout.children[i];
-            if (!child.visible) {
-                continue;
-            } else if (child == leftTwinParent) {
-                firstSpacerFound = true;
-            } else if (child == rightTwinParent) {
-                secondSpacerFound = true;
-            } else if (secondSpacerFound) {
-                if (root.horizontal) {
-                    rightItemsHint += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumWidth, child.Layout.preferredWidth)) + panelLayout.rowSpacing;
-                } else {
-                    rightItemsHint += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumHeight, child.Layout.preferredHeight)) + panelLayout.columnSpacing;
+            if (!child.visible) continue;
+
+            if (child.applet && child.applet.pluginName === 'org.kde.plasma.panelspacer' && child.applet.configuration.expanding) {
+                if (child === Plasmoid.parent) {
+                    thisSpacerIndex = expandingSpacers
                 }
-            } else if (firstSpacerFound) {
-                if (root.horizontal) {
-                    middleItemsHint += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumWidth, child.Layout.preferredWidth)) + panelLayout.rowSpacing;
-                } else {
-                    middleItemsHint += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumHeight, child.Layout.preferredHeight)) + panelLayout.columnSpacing;
-                }
+                sizeHints.push(0)
+                expandingSpacers += 1
+            } else if (root.horizontal) {
+                sizeHints[sizeHints.length - 1] += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumWidth, child.Layout.preferredWidth)) + panelLayout.rowSpacing;
             } else {
-                if (root.horizontal) {
-                    leftItemsHint += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumWidth, child.Layout.preferredWidth)) + panelLayout.rowSpacing;
-                } else {
-                    leftItemsHint += Math.min(child.Layout.maximumHeight, Math.max(child.Layout.minimumHeight, child.Layout.preferredHeight)) + panelLayout.columnSpacing;
-                }
+                sizeHints[sizeHints.length - 1] += Math.min(child.Layout.maximumWidth, Math.max(child.Layout.minimumHeight, child.Layout.preferredHeight)) + panelLayout.columnSpacing;
             }
         }
-
-        var halfContainment = root.horizontal ?Plasmoid.nativeInterface.containment.width/2 : Plasmoid.nativeInterface.containment.height/2;
-
-        if (leftTwin == plasmoid) {
-            optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsHint/2 - leftItemsHint)
-        } else {
-            optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsHint/2 - rightItemsHint)
-        }
-        return middleItemsHint;
-    }
-
-    readonly property Item twinSpacer: Plasmoid.configuration.expanding && Plasmoid.nativeInterface.twinSpacer && Plasmoid.nativeInterface.twinSpacer.configuration.expanding ? Plasmoid.nativeInterface.twinSpacer : null
-    readonly property Item leftTwin: {
-        if (!twinSpacer) {
-            return null;
-        }
-
-        if (root.horizontal) {
-            return root.Kirigami.ScenePosition.x < twinSpacer.Kirigami.ScenePosition.x ? plasmoid : twinSpacer;
-        } else {
-            return root.Kirigami.ScenePosition.y < twinSpacer.Kirigami.ScenePosition.y ? plasmoid : twinSpacer;
-        }
-    }
-    readonly property Item rightTwin: {
-        if (!twinSpacer) {
-            return null;
-        }
-
-        if (root.horizontal) {
-            return root.Kirigami.ScenePosition.x >= twinSpacer.Kirigami.ScenePosition.x ? plasmoid : twinSpacer;
-        } else {
-            return root.Kirigami.ScenePosition.y >= twinSpacer.Kirigami.ScenePosition.y ? plasmoid : twinSpacer;
-        }
+        sizeHints[0] *= 2; sizeHints[sizeHints.length - 1] *= 2
+        let opt = Plasmoid.nativeInterface.containment.width / expandingSpacers - sizeHints[thisSpacerIndex] / 2 - sizeHints[thisSpacerIndex + 1] / 2
+        return Math.max(opt, 0)
     }
 
     Rectangle {
