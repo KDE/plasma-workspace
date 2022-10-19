@@ -29,7 +29,6 @@ MediaProxy::MediaProxy(QObject *parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
 {
-    useSingleImageDefaults();
 }
 
 void MediaProxy::classBegin()
@@ -57,7 +56,10 @@ QString MediaProxy::source() const
 void MediaProxy::setSource(const QString &url)
 {
     // New desktop has empty url
-    if (url.isEmpty() || m_source.toString() == url) {
+    if (url.isEmpty()) {
+        useSingleImageDefaults();
+        return;
+    } else if (m_source.toString() == url) {
         return;
     }
 
@@ -131,6 +133,7 @@ void MediaProxy::openModelImage()
 
 void MediaProxy::useSingleImageDefaults()
 {
+    m_source.clear(); // BUG 460692
     // Try from the look and feel package first, then from the plasma theme
     KPackage::Package lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
