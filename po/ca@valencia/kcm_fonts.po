@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-15 10:21+0200\n"
+"PO-Revision-Date: 2022-10-19 10:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -160,7 +160,7 @@ msgid ""
 msgstr ""
 "Els tipus de lletra molt grans poden produir resultats estranys. En lloc "
 "d'utilitzar una mida de tipus de lletra molt gran, considereu ajustar "
-"l'escala global de la pantalla ."
+"l'escala global de la pantalla."
 
 #: package/contents/ui/main.qml:72
 #, kde-format

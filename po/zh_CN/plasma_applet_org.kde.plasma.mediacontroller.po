@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -123,14 +123,12 @@ msgid ""
 msgstr ""
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "艺人：%1 (暂停，%2)"
+msgstr ""
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -141,11 +139,3 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
-
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "艺人：%1 (%2)"
-
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "暂停 (%1)"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-02 15:50\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -133,10 +133,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "您可以在此模块中配置系统字体。"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "调整所有字体(&A)…"
+msgstr ""
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -146,16 +145,11 @@ msgid ""
 msgstr "某些更改只影响之后启动的程序，例如抗锯齿或 DPI 等选项。"
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"字体过大可能会导致界面显示效果不佳。应避免使用超大字体，并转而使用全局屏幕缩"
-"放。"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -347,6 +341,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"
-
-#~ msgid "Change Display Scaling…"
-#~ msgstr "更改显示缩放…"

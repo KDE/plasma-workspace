@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-04-07 11:39-0300\n"
+"PO-Revision-Date: 2022-10-19 15:28-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -336,7 +336,7 @@ msgstr "&Configurar as notificações e ações dos eventos..."
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Agora"
 
 #: package/contents/ui/NotificationHeader.qml:126
 #, kde-format

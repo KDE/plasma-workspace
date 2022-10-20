@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2022-10-20 00:52+0000\n"
 "PO-Revision-Date: 2011-07-07 22:49+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:129
+#: calculatorrunner.cpp:133
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

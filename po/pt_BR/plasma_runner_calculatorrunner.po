@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2022-10-20 00:52+0000\n"
 "PO-Revision-Date: 2021-02-01 15:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Copy to Clipboard"
 msgstr "Copiar para a área de transferência"
 
-#: calculatorrunner.cpp:129
+#: calculatorrunner.cpp:133
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

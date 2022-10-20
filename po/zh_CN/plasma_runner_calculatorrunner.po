@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"POT-Creation-Date: 2022-10-20 00:52+0000\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -30,7 +30,7 @@ msgstr "计算 :q: 的值，:q: 由数字和诸如 +、-、/、*、! 和 ^ 的�
 msgid "Copy to Clipboard"
 msgstr "复制到剪贴板"
 
-#: calculatorrunner.cpp:129
+#: calculatorrunner.cpp:133
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

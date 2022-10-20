@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-08-19 15:33-0300\n"
+"PO-Revision-Date: 2022-10-19 15:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -205,7 +205,7 @@ msgstr "Desbloquear"
 #: contents/lockscreen/MediaControls.qml:108
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Sem título"
 
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format

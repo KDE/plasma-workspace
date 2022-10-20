@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -60,17 +60,17 @@ msgstr "要运行的查询，只在 -c 未提供时使用"
 #: qml/RunCommand.qml:75
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "配置"
 
 #: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "配置 KRunner 行为"
 
 #: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "配置 KRunner…"
 
 #: qml/RunCommand.qml:91
 #, kde-format
@@ -82,34 +82,34 @@ msgstr ""
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "搜索…"
 
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "显示使用方式帮助"
 
 #: qml/RunCommand.qml:239
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "固定"
 
 #: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "固定搜索"
 
 #: qml/RunCommand.qml:242
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "保持打开"
 
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "最近的命令"
 
 #: qml/RunCommand.qml:323
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "移除"

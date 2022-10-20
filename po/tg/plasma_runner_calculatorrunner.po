@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"POT-Creation-Date: 2022-10-20 00:52+0000\n"
 "PO-Revision-Date: 2019-11-12 21:02+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Copy to Clipboard"
 msgstr "Нусха бардоштан ба ҳофизаи муваққатӣ"
 
-#: calculatorrunner.cpp:129
+#: calculatorrunner.cpp:133
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

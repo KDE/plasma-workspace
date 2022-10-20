@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-09-17 08:49+0200\n"
+"PO-Revision-Date: 2022-10-19 12:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -560,19 +560,16 @@ msgid "Previous History Item"
 msgstr "Предишен елемент от историята"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Отваряне на Klipper в позицията на мишката"
+msgstr "Показване на елементи в позицията на мишката"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Системен буфер"
+msgstr "%1 - Инструмент за клипборд"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -859,11 +856,10 @@ msgstr ""
 "включват приложения, които могат да обработват неговия MIME тип."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Съдържание на буфера"
+msgstr "%1 - елементи на клипборда"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -891,10 +887,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Системен буфер"
+msgstr "Инструмент на Plasma за копиране и поставяне"
 
 #: main.cpp:31
 #, kde-format

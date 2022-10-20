@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -385,44 +385,3 @@ msgstr "本地"
 #, kde-format
 msgid "System's local time zone"
 msgstr "系统本地时区"
-
-#~ msgctxt "Format: month year"
-#~ msgid "%1 %2"
-#~ msgstr "%2年%1"
-
-#~ msgid "Keep Open"
-#~ msgstr "保持打开"
-
-#~ msgid "Days"
-#~ msgstr "日"
-
-#~ msgid "Months"
-#~ msgstr "月"
-
-#~ msgid "Years"
-#~ msgstr "年"
-
-#~ msgid "Previous month"
-#~ msgstr "上一月"
-
-#~ msgid "Previous year"
-#~ msgstr "上一年"
-
-#~ msgid "Previous decade"
-#~ msgstr "前十年"
-
-#~ msgctxt "Reset calendar to today"
-#~ msgid "Today"
-#~ msgstr "今天"
-
-#~ msgid "Reset calendar to today"
-#~ msgstr "重置日历到今天"
-
-#~ msgid "Next month"
-#~ msgstr "下一月"
-
-#~ msgid "Next year"
-#~ msgstr "下一年"
-
-#~ msgid "Next decade"
-#~ msgstr "后十年"

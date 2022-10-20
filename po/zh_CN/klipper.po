@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -533,19 +533,16 @@ msgid "Previous History Item"
 msgstr "上一条历史记录"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "在鼠标光标位置弹出 Klipper"
+msgstr ""
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - 剪贴板工具"
+msgstr ""
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -815,11 +812,10 @@ msgstr ""
 "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "剪贴板内容"
+msgstr ""
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -847,10 +843,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE 剪切和粘贴历史工具"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format

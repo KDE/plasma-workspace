@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-08-19 15:35-0300\n"
+"PO-Revision-Date: 2022-10-19 15:32-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -68,14 +68,9 @@ msgid "Longitude:"
 msgstr "Longitude:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"A cor noturna torna as cores na tela mais quentes para reduzir o cansaço "
-"visual na hora que você escolher"
+msgstr "O filtro de luz azul torna as cores na tela mais quentes."
 
 #: package/contents/ui/main.qml:98
 #, fuzzy, kde-format

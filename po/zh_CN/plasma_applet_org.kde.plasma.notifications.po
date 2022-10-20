@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -297,10 +297,9 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 条未读通知"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "切换到勿扰模式，直到 %1"
+msgstr ""
 
 #: package/contents/ui/main.qml:86
 #, kde-format
@@ -326,7 +325,7 @@ msgstr "配置事件通知和操作(&C)…"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "刚刚"
 
 #: package/contents/ui/NotificationHeader.qml:126
 #, kde-format
@@ -422,7 +421,3 @@ msgstr "输入回复…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "发送"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "直到 %1"

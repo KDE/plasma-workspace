@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-23 00:47+0000\n"
-"PO-Revision-Date: 2022-06-22 16:26-0300\n"
+"PO-Revision-Date: 2022-10-19 15:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -89,6 +89,8 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"A última cor de destaque personalizada usada antes do usuário mudar para a "
+"cor gerada pelo papel de parede ou cor padrão"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21

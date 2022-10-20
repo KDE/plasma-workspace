@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-06-22 16:26-0300\n"
+"PO-Revision-Date: 2022-10-19 16:17-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -27,7 +27,7 @@ msgstr "Geral"
 #: contents/ui/AlbumArtStackView.qml:161
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Sem título"
 
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
 #, kde-format
@@ -115,6 +115,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"por %1 (%2)\n"
+"Clique com o botão do meio para pausar"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -122,16 +124,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Clique com o botão do meio para pausar"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "por %1 (pausado, %2)"
+msgstr ""
+"por %1 (pausado, %2)\n"
+"Clique com o botão do meio para reproduzir"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -142,6 +146,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Pausado (%1)\n"
+"Clique com o botão do meio para reproduzir"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

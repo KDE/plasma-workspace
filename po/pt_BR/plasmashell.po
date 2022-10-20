@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-06-22 11:56-0300\n"
+"PO-Revision-Date: 2022-10-19 15:28-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -247,8 +247,7 @@ msgid "Add Panel"
 msgstr "Adicionar painel"
 
 #: shellcorona.cpp:1831
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "%1 vazio"
