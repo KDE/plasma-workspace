@@ -34,7 +34,7 @@
         "Description[sl]": "Opozori, ko v domači mapi primanjkuje prostora",
         "Description[sv]": "Varnar när utrymmet i hemkatalogen håller på att ta slut",
         "Description[ta]": "உங்கள் முகப்பு அடைவில் காலியிடம் குறைவாக இருந்தால் எச்சரிக்கும்",
-        "Description[tr]": "Ev dizininizde boş alan azaldığı zaman uyarır",
+        "Description[tr]": "Ana klasörünüzdeki boş alan azaldığı zaman uyarır",
         "Description[uk]": "Попереджає, якщо у домашній теці залишається мало місця",
         "Description[vi]": "Cảnh báo khi sắp hết không gian cho thư mục nhà của bạn",
         "Description[x-test]": "xxWarns when running out of space on your home folderxx",

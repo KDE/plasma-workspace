@@ -15,6 +15,7 @@
         "Description[nn]": "Juster fargetemperaturen basert på klokkeslettet",
         "Description[pl]": "Dostosuj temperaturę barw na podstawie czasu",
         "Description[pt]": "Ajustar a temperatura da cor com base na hora",
+        "Description[pt_BR]": "Ajusta a temperatura de cor baseado na hora",
         "Description[ru]": "Изменение цветовой температуры по расписанию",
         "Description[sk]": "Nastavenie teploty farieb v závislosti od času",
         "Description[sl]": "Prilagodi temperaturo barve glede na čas",
@@ -24,6 +25,7 @@
         "Description[uk]": "Коригування температури кольорів за часом",
         "Description[vi]": "Điều chỉnh nhiệt độ màu dựa vào thời gian",
         "Description[x-test]": "xxAdjust color temperature based on timexx",
+        "Description[zh_CN]": "根据时间调整色温",
         "FormFactors": [
             "tablet",
             "handset",

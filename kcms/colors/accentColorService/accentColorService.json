@@ -15,6 +15,7 @@
         "Description[nn]": "Tek i bruk uthenta kontrastfarge frå bakgrunnsbiletet ved førespurnad",
         "Description[pl]": "Stosuje wydobytą barwę akcentu z tapety na żądanie",
         "Description[pt]": "Aplica a cor acentuada extraída do papel de parede no pedido",
+        "Description[pt_BR]": "Aplica a cor de destaque extraída do papel de parede a pedido",
         "Description[ru]": "Определение и применение цвета выделения на основании используемых обоев",
         "Description[sk]": "Aplikuje extrahovanú farbu akcentu z tapety na požiadanie",
         "Description[sl]": "Uveljavi izločeno barvo poudarka iz ozadja na zahtevo",
@@ -24,6 +25,7 @@
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит",
         "Description[vi]": "Áp dụng màu chủ đạo trích xuất từ phông nền khi có yêu cầu",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
+        "Description[zh_CN]": "按照请求应用从壁纸中提取的强调色",
         "Name": "Accent Color",
         "Name[ar]": "لون التمييز",
         "Name[bg]": "Цвят за акцентиране",
@@ -41,6 +43,7 @@
         "Name[nn]": "Kontrast­farge",
         "Name[pl]": "Kolor akcentu",
         "Name[pt]": "Cor Acentuada",
+        "Name[pt_BR]": "Cor de destaque",
         "Name[ru]": "Служба цвета выделения",
         "Name[sk]": "Akcentová farba",
         "Name[sl]": "barva poudarka",
@@ -49,7 +52,8 @@
         "Name[tr]": "Vurgu Rengi",
         "Name[uk]": "Колір акценту",
         "Name[vi]": "Màu chủ đạo",
-        "Name[x-test]": "xxAccent Colorxx"
+        "Name[x-test]": "xxAccent Colorxx",
+        "Name[zh_CN]": "强调色"
     },
     "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true
