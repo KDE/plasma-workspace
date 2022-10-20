@@ -38,6 +38,32 @@ using namespace KActivities;
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
 
+/* These are listed here for extraction by intltool */
+#if 0
+i18n("Accessibility");
+i18n("Application Launchers");
+i18n("Astronomy");
+i18n("Date and Time");
+i18n("Development Tools");
+i18n("Education");
+i18n("Environment and Weather");
+i18n("Examples");
+i18n("File System");
+i18n("Fun and Games");
+i18n("Graphics");
+i18n("Language");
+i18n("Mapping");
+i18n("Miscellaneous");
+i18n("Multimedia");
+i18n("Online Services");
+i18n("Productivity");
+i18n("System Information");
+i18n("Utilities");
+i18n("Windows and Tasks");
+i18n("Clipboard");
+i18n("Tasks");
+#endif
+
 WidgetAction::WidgetAction(QObject *parent)
     : QAction(parent)
 {
@@ -147,7 +173,7 @@ void WidgetExplorerPrivate::initFilters()
             continue;
         }
 
-        filterModel.addFilter(i18nd("libplasma5", c.toLocal8Bit()), KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
+        filterModel.addFilter(i18n(c.toLocal8Bit()), KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
     }
 }
 
