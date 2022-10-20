@@ -41,7 +41,6 @@
         "Description[zh_CN]": "管理提供状态通知用户界面的服务",
         "Name": "Status Notifier Manager",
         "Name[ar]": "مدير مُخطِر الحالة",
-        "Name[ast]": "Xestor del avisador d'estaos",
         "Name[az]": "Vəziyyət Bildirişləri Meneceri",
         "Name[bg]": "Управление на Известия на състояние",
         "Name[bn]": "স্ট্যাটাস বিজ্ঞপ্তি ম্যানেজার",

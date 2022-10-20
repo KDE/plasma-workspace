@@ -2,7 +2,6 @@
 Type=Directory
 Name=Desktop
 Name[ar]=سطح المكتب
-Name[ast]=Escritoriu
 Name[az]=İş masası
 Name[bg]=Работен плот
 Name[bs]=Radna površina
@@ -63,7 +62,6 @@ Name[zh_TW]=桌面
 Icon=user-desktop
 Comment=Desktop
 Comment[ar]=سطح المكتب
-Comment[ast]=Escritoriu
 Comment[az]=İş masası
 Comment[bg]=Работен плот
 Comment[bs]=Radna površina

@@ -2,7 +2,6 @@
 Type=Directory
 Name=Utilities
 Name[ar]=الأدوات
-Name[ast]=Utilidaes
 Name[az]=Vasitələr
 Name[bg]=Помощни програми
 Name[bs]=Usluge
@@ -64,7 +63,6 @@ Name[zh_TW]=實用工具
 Icon=applications-utilities
 Comment=Utilities
 Comment[ar]=الأدوات
-Comment[ast]=Utilidaes
 Comment[az]=Vasitələr
 Comment[bg]=Помощни програми
 Comment[bs]=Usluge

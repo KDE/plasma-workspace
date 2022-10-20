@@ -2,7 +2,6 @@
 IconName=preferences-desktop-sound
 Comment=Multimedia System
 Comment[ar]=نظام الوسائط المتعدّدة
-Comment[ast]=Sistema multimedia
 Comment[az]=Mulimedia sistemi
 Comment[bg]=Мултимедийна система
 Comment[bn]=মাল্টিমিডিয়া সিস্টেম
@@ -76,7 +75,6 @@ Comment[zh_TW]=多媒體系統
 [Context/Application]
 Name=Application
 Name[ar]=التطبيق
-Name[ast]=Aplicación
 Name[az]=Tətbiq
 Name[bg]=Приложение
 Name[bs]=Aplikacija

@@ -41,7 +41,6 @@
         "Description[zh_CN]": "在主目录磁盘空间不足时发出警告",
         "Name": "Free Space Notifier",
         "Name[ar]": "مُخطِر المساحة الحرّة",
-        "Name[ast]": "Avisador d'espaciu llibre",
         "Name[az]": "Diskin boş sahəsinin izlənməsi",
         "Name[bg]": "Уведомяване за свободно пространство",
         "Name[bs]": "Izvještač o slobodnom prostoru",
