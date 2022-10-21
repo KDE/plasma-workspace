@@ -47,6 +47,7 @@ private:
 void KcmTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
+    qunsetenv("XDG_CONFIG_DIRS");
 
     m_configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
     m_configDir.removeRecursively();
