@@ -11,6 +11,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
+import org.kde.notificationmanager 1.0 as NotificationManager
 import org.kde.quickcharts 1.0 as Charts
 
 import "global"
@@ -111,6 +113,15 @@ MouseArea {
         opacity: 0
         scale: 2
         visible: opacity > 0
+    }
+
+    WorkspaceComponents.BadgeOverlay {
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        visible: Plasmoid.configuration.showUnread
+
+        text: root.actualUnread
+        icon: notificationIcon
     }
 
     states: [

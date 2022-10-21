@@ -43,6 +43,10 @@ Item {
 
     Plasmoid.status: effectiveStatus
 
+    // Any notification that is newer than "lastRead" is "unread"
+    // since it doesn't know the popup is on screen which makes the user see it
+    property int actualUnread: historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount
+
     Plasmoid.toolTipSubText: {
         var lines = [];
 
@@ -65,9 +69,6 @@ Item {
         if (!NotificationManager.Server.valid) {
             lines.push(i18n("Notification service not available"));
         } else {
-            // Any notification that is newer than "lastRead" is "unread"
-            // since it doesn't know the popup is on screen which makes the user see it
-            var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
             if (actualUnread > 0) {
                 lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
             }
@@ -182,6 +183,14 @@ Item {
         KQCAddons.KCMShell.openSystemSettings("kcm_notifications");
     }
 
+    function action_showUnread() {
+        if (!Plasmoid.configuration.showUnread) {
+            Plasmoid.configuration.showUnread = true;
+        } else {
+            Plasmoid.configuration.showUnread = false;
+        }
+    }
+
     Component.onCompleted: {
         // Use Plasmoid.self because Plasmoid will become an object in QML after it's deleted, while
         // Plasmoid.self will become null.
@@ -199,5 +208,8 @@ Item {
         Plasmoid.removeAction("configure");
         Plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
         Plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
+        Plasmoid.setAction("showUnread", i18n("Show Unread Notification Count on Icon"), "format-number-percent");
+        Plasmoid.action("showUnread").checkable = true;
+        Plasmoid.action("showUnread").checked = Qt.binding(() => Plasmoid.configuration.showUnread);
     }
 }
