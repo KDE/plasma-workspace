@@ -58,7 +58,7 @@ Dependencies:
     'plasma/kpipewire': '@same'
     'libraries/plasma-wayland-protocols': '@latest'
     'libraries/kuserfeedback': '@stable'
-    'graphics/libkexiv2': '@stable'
+    'graphics/libkexiv2': '@latest'
 
 - 'on': ['Linux']
   'require':
