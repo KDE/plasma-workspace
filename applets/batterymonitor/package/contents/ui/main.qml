@@ -369,6 +369,7 @@ Item {
 
         if (batterymonitor.kcmEnergyInformationAuthorized) {
             Plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
+            Plasmoid.action("energyinformationkcm").priority = Plasmoid.HighPriorityAction
         }
         Plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon When Not Fully Charged"), "format-number-percent");
         Plasmoid.action("showPercentage").checkable = true;
