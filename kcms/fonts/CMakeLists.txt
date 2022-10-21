@@ -6,6 +6,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_fonts\")
 add_library(kcm_fonts_static STATIC kxftconfig.cpp)
 target_link_libraries(kcm_fonts_static Qt::Xml KF5::I18n KF5::WindowSystem KF5::KCMUtils KF5::QuickAddons KF5::Declarative kfontinst krdb)
 
+set_property(TARGET kcm_fonts_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 if(HAVE_X11)
     target_link_libraries(kcm_fonts_static X11::X11 X11::Xft XCB::IMAGE)
     if (QT_MAJOR_VERSION EQUAL "5")

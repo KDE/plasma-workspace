@@ -28,6 +28,8 @@ ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
 
 add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
 
+set_property(TARGET plasma_wallpaper_imageplugin_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
     Qt::Quick

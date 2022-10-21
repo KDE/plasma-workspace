@@ -45,6 +45,8 @@ target_link_libraries(systemtraymodel_static
     KF5::WindowSystem
     dbusmenuqt)
 
+set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
 
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)

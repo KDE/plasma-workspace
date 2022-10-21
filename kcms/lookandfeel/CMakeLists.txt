@@ -36,6 +36,8 @@ kcmutils_generate_module_data(
 target_sources(lookandfeelmanager PRIVATE ${lookandfeeldata})
 kconfig_add_kcfg_files(lookandfeelmanager lookandfeelsettings.kcfgc GENERATE_MOC)
 
+set_property(TARGET lookandfeelmanager PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 target_link_libraries(lookandfeelmanager
     Qt::DBus
     KF5::ConfigCore
@@ -67,6 +69,8 @@ target_link_libraries(kcm_lookandfeel_objects
     KF5::QuickAddons
     PW::KWorkspace
 )
+
+set_property(TARGET kcm_lookandfeel_objects PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file(kcm_lookandfeel)
