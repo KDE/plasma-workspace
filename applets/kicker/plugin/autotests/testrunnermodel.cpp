@@ -44,9 +44,8 @@ void TestRunnerModel::testQuery()
     auto previousCount = model->count();
     model->setQuery(QStringLiteral("something that really shouldn't return any results"));
 
-    // Changing a query runs an internal timer that delays query execution. As
-    // there's nothing we can wait for here, just wait a short moment.
-    QTest::qWait(50);
+    QSignalSpy finishedSpy(model.get(), &RunnerModel::queryFinished);
+    finishedSpy.wait();
 
     QCOMPARE(model->count(), previousCount);
     QCOMPARE(countChangedSpy.count(), 1);
@@ -56,6 +55,9 @@ void TestRunnerModel::testQuery()
         QVERIFY(rowModel != nullptr);
         QVERIFY(rowModel->rowCount() == 0);
     }
+
+    finishedSpy.clear();
+    finishedSpy.wait();
 }
 
 void TestRunnerModel::testDeleteWhenEmpty()
@@ -89,6 +91,9 @@ void TestRunnerModel::testDeleteWhenEmpty()
     QTRY_VERIFY(model->count() == 0);
     QCOMPARE(countChangedSpy.count(), 4);
     QCOMPARE(model->count(), model->rowCount());
+
+    QSignalSpy finishedSpy(model.get(), &RunnerModel::queryFinished);
+    finishedSpy.wait();
 }
 
 void TestRunnerModel::testMergeResults()
@@ -106,6 +111,9 @@ void TestRunnerModel::testMergeResults()
 
     model->setQuery(QString{});
     QTRY_VERIFY(model->count() == 0);
+
+    QSignalSpy finishedSpy(model.get(), &RunnerModel::queryFinished);
+    finishedSpy.wait();
 }
 
 QTEST_MAIN(TestRunnerModel)
