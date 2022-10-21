@@ -64,7 +64,6 @@ Item {
                 text: i18nc("@action:button", "Go Back")
 
                 KeyNavigation.down: hiddenItemsView.visible ? hiddenLayout : container
-                KeyNavigation.right: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
 
                 onClicked: systemTrayState.setActiveApplet(null)
             }
@@ -75,6 +74,54 @@ Item {
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.title : i18n("Status and Notifications")
+            }
+
+            Repeater {
+                id: primaryActionButtons
+
+                model: {
+                    const primaryActions = [];
+                    for (let i in actionsButton.applet.contextualActions) {
+                        const action = actionsButton.applet.contextualActions[i];
+                        if (action.priority == Plasmoid.HighPriorityAction) {
+                            primaryActions.push(action);
+                        }
+                    }
+                    return primaryActions;
+                }
+
+                delegate: PlasmaComponents.ToolButton {
+                    // We cannot use `action` as it is already a QQuickAction property of the button
+                    property QtObject qAction: model.modelData
+
+                    visible: qAction && qAction.visible
+
+                    // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
+                    contentItem: PlasmaCore.IconItem {
+                        anchors.centerIn: parent
+                        active: parent.hovered
+                        implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
+                        implicitHeight: implicitWidth
+                        source: parent.qAction ? parent.qAction.icon : ""
+                    }
+
+                    checkable: qAction && qAction.checkable
+                    checked: qAction && qAction.checked
+                    display: PlasmaComponents.AbstractButton.IconOnly
+                    text: qAction ? qAction.text : ""
+
+                    KeyNavigation.down: backButton.KeyNavigation.down
+                    KeyNavigation.left: (index > 0) ? primaryActionButtons.itemAt(index - 1) : backButton
+                    KeyNavigation.right: (index < primaryActionButtons.count - 1) ? primaryActionButtons.itemAt(index + 1) :
+                                                            actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
+
+                    PlasmaComponents.ToolTip {
+                        text: parent.text
+                    }
+
+                    onClicked: qAction.trigger();
+                    onToggled: qAction.toggle();
+                }
             }
 
             PlasmaComponents.ToolButton {
@@ -95,7 +142,6 @@ Item {
                 Accessible.role: actionsButton.singleAction ? Accessible.Button : Accessible.ButtonMenu
 
                 KeyNavigation.down: backButton.KeyNavigation.down
-                KeyNavigation.left: backButton
                 KeyNavigation.right: configureButton.visible ? configureButton : configureButton.KeyNavigation.right
 
                 // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
@@ -138,7 +184,10 @@ Item {
                         let actions = [];
                         for (let i in actionsButton.applet.contextualActions) {
                             const action = actionsButton.applet.contextualActions[i];
-                            if (action.visible && action.priority > 0 && action !== actionsButton.applet.action("configure")) {
+                            if (action.visible
+                                    && action.priority > Plasmoid.LowPriorityAction
+                                    && !primaryActionButtons.model.includes(action)
+                                    && action !== actionsButton.applet.action("configure")) {
                                 actions.push(action);
                             }
                         }
