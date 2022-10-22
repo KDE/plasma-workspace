@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2021-05-27 18:43+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -19,13 +19,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Verktygsrad"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Huvudverktygsrad"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "&Andra färg:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -33,11 +34,6 @@ msgid "Small Icons"
 msgstr "Små ikoner"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panel"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Dialogrutor"
@@ -123,7 +119,22 @@ msgstr "Installerar ikonteman…"
 msgid "Installing %1 theme…"
 msgstr "Installerar tema %1…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -176,6 +187,12 @@ msgstr "Öppna tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Verktygsrad"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Ikontema används redan"
@@ -286,9 +303,6 @@ msgstr "Temafiler (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "&Färg:"
-
-#~ msgid "&Second color:"
-#~ msgstr "&Andra färg:"
 
 #~ msgid "Name"
 #~ msgstr "Namn"

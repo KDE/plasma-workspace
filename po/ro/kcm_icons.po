@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2021-07-25 13:26+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -20,13 +20,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Bara de unelte"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Bara de unelte principală"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "A &doua culoare:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -34,11 +35,6 @@ msgid "Small Icons"
 msgstr "Pictograme mici"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panou"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Dialoguri"
@@ -124,7 +120,22 @@ msgstr "Se instalează tematici de pictograme…"
 msgid "Installing %1 theme…"
 msgstr "Se instalează tematica %1…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -177,6 +188,12 @@ msgstr "Deschide tematica"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Bara de unelte"
+
+#~ msgid "Panel"
+#~ msgstr "Panou"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Tematica de pictograme e folosită deja"
@@ -281,9 +298,6 @@ msgstr "Fișiere cu tematici (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "&Culoare:"
-
-#~ msgid "&Second color:"
-#~ msgstr "A &doua culoare:"
 
 #~ msgid "Name"
 #~ msgstr "Nume"

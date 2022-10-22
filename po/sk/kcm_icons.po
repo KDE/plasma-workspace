@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2021-09-15 18:45+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -26,13 +26,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Panel nástrojov"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Hlavný panel nástrojov"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "&Druhá farba:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -40,11 +41,6 @@ msgid "Small Icons"
 msgstr "Malé ikony"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panel"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Dialógy"
@@ -130,7 +126,22 @@ msgstr "Inštalujem témy ikon..."
 msgid "Installing %1 theme…"
 msgstr "Inštalujem tému %1 ..."
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -183,6 +194,12 @@ msgstr "Otvoriť tému"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Súbory tém (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Panel nástrojov"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Téma ikon je už použitá"
@@ -290,9 +307,6 @@ msgstr "Súbory tém (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "&Farba:"
-
-#~ msgid "&Second color:"
-#~ msgstr "&Druhá farba:"
 
 #~ msgid "Name"
 #~ msgstr "Meno"

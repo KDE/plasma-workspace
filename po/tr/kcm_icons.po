@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2022-10-14 12:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,12 +29,13 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Araç Çubuğu"
+msgid "Main Toolbar"
+msgstr "Ana Araç Çubuğu"
 
 #: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Main Toolbar"
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Secondary Toolbars"
 msgstr "Ana Araç Çubuğu"
 
 #: iconsizecategorymodel.cpp:16
@@ -43,11 +44,6 @@ msgid "Small Icons"
 msgstr "Küçük Simgeler"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panel"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Pencereler"
@@ -132,7 +128,22 @@ msgstr "Simge teması kuruluyor…"
 msgid "Installing %1 theme…"
 msgstr "%1 teması kuruluyor…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
@@ -183,3 +194,9 @@ msgstr "Temayı Aç"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tema Dosyaları (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Araç Çubuğu"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"

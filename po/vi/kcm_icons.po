@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2022-10-14 18:32+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -22,12 +22,13 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Thanh công cụ"
+msgid "Main Toolbar"
+msgstr "Thanh công cụ chính"
 
 #: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Main Toolbar"
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Secondary Toolbars"
 msgstr "Thanh công cụ chính"
 
 #: iconsizecategorymodel.cpp:16
@@ -36,11 +37,6 @@ msgid "Small Icons"
 msgstr "Biểu tượng nhỏ"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Bảng"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Hộp thoại"
@@ -126,7 +122,22 @@ msgstr "Đang cài đặt các chủ đề của biểu tượng…"
 msgid "Installing %1 theme…"
 msgstr "Đang cài đặt chủ đề %1…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
@@ -177,6 +188,12 @@ msgstr "Mở chủ đề"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tệp chủ đề (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Thanh công cụ"
+
+#~ msgid "Panel"
+#~ msgstr "Bảng"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Chủ đề của biểu tượng này đang được sử dụng rồi"

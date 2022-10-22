@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2022-10-14 10:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -19,13 +19,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Werkbalk"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Hoofdwerkbalk"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "T&weede kleur:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -33,11 +34,6 @@ msgid "Small Icons"
 msgstr "Kleine pictogrammen"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Paneel"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Dialogen"
@@ -123,7 +119,22 @@ msgstr "Pictogramthema's installeren…"
 msgid "Installing %1 theme…"
 msgstr "Thema %1 wordt geïnstalleerd…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
@@ -176,6 +187,12 @@ msgstr "Thema openen"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Themabestanden (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Werkbalk"
+
+#~ msgid "Panel"
+#~ msgstr "Paneel"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Pictogramthema wordt al gebruikt"
@@ -286,9 +303,6 @@ msgstr "Themabestanden (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "K&leur:"
-
-#~ msgid "&Second color:"
-#~ msgstr "T&weede kleur:"
 
 #~ msgid "Name"
 #~ msgstr "Naam"

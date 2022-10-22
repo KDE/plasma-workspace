@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2022-10-14 07:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -28,13 +28,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Tresna-barra"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Tresna-barra nagusia"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "&Bigarren kolorea:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -42,11 +43,6 @@ msgid "Small Icons"
 msgstr "Ikono txikiak"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panela"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Elkarrizketa-koadroak"
@@ -132,7 +128,22 @@ msgstr "Ikono-gaiak instalatzen..."
 msgid "Installing %1 theme…"
 msgstr "%1 gaia instalatzen..."
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
@@ -183,6 +194,12 @@ msgstr "Ireki gaia"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Gai fitxategiak (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Tresna-barra"
+
+#~ msgid "Panel"
+#~ msgstr "Panela"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Ikonoen gaia dagoeneko erabiltzen da"
@@ -294,9 +311,6 @@ msgstr "Gai fitxategiak (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "Ko&lorea:"
-
-#~ msgid "&Second color:"
-#~ msgstr "&Bigarren kolorea:"
 
 #~ msgid "Name"
 #~ msgstr "Izena"

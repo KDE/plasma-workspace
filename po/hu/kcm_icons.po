@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2021-09-30 13:52+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -21,13 +21,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Eszköztár"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "Fő eszköztár"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "Más&odik szín:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -35,11 +36,6 @@ msgid "Small Icons"
 msgstr "Kis ikonok"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panel"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr "Párbeszédablakok"
@@ -125,7 +121,22 @@ msgstr "Ikontémák telepítése…"
 msgid "Installing %1 theme…"
 msgstr "A(z) %1 téma telepítése…"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -178,6 +189,12 @@ msgstr "Téma megnyitása"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Témafájlok (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Toolbar"
+#~ msgstr "Eszköztár"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"
 
 #~ msgid "Icon theme is already used"
 #~ msgstr "Az ikontéma már használatban van"
@@ -288,9 +305,6 @@ msgstr "Témafájlok (*.tar.gz *.tar.bz2)"
 
 #~ msgid "Co&lor:"
 #~ msgstr "&Szín:"
-
-#~ msgid "&Second color:"
-#~ msgstr "Más&odik szín:"
 
 #~ msgid "Name"
 #~ msgstr "Név"

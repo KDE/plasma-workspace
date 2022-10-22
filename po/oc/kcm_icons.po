@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -21,12 +21,13 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "Barra d'espleches"
+msgid "Main Toolbar"
+msgstr "Barra d'espleches principala"
 
 #: iconsizecategorymodel.cpp:15
-#, kde-format
-msgid "Main Toolbar"
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Secondary Toolbars"
 msgstr "Barra d'espleches principala"
 
 #: iconsizecategorymodel.cpp:16
@@ -35,11 +36,6 @@ msgid "Small Icons"
 msgstr ""
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "Panèl"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr ""
@@ -126,7 +122,22 @@ msgstr "Installar un tèma novèl..."
 msgid "Installing %1 theme…"
 msgstr "Installar un tèma novèl..."
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -180,6 +191,12 @@ msgstr ""
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Toolbar"
+#~ msgstr "Barra d'espleches"
+
+#~ msgid "Panel"
+#~ msgstr "Panèl"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

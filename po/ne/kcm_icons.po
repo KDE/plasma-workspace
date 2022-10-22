@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2007-11-04 18:53+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -21,13 +21,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "उपकरणपट्टी"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "मुख्य उपकरणपट्टी"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "दोस्रो रङ:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -35,11 +36,6 @@ msgid "Small Icons"
 msgstr "साना प्रतिमा"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "प्यानल"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr ""
@@ -129,7 +125,22 @@ msgstr "प्रतिमा विषयवस्तु स्थापना 
 msgid "Installing %1 theme…"
 msgstr "प्रतिमा विषयवस्तु स्थापना गर्दैछ"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -186,6 +197,12 @@ msgstr "विषयवस्तु हटाउँनुहोस्"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Toolbar"
+#~ msgstr "उपकरणपट्टी"
+
+#~ msgid "Panel"
+#~ msgstr "प्यानल"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -284,9 +301,6 @@ msgstr ""
 
 #~ msgid "Co&lor:"
 #~ msgstr "रङ:"
-
-#~ msgid "&Second color:"
-#~ msgstr "दोस्रो रङ:"
 
 #~ msgid "Name"
 #~ msgstr "नाम"

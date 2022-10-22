@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -20,13 +20,14 @@ msgstr ""
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
-msgid "Toolbar"
-msgstr "పనిముట్టుపట్టీ"
-
-#: iconsizecategorymodel.cpp:15
-#, kde-format
 msgid "Main Toolbar"
 msgstr "మెయిన్ పనిముట్లపట్టీ"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "&Second color:"
+msgid "Secondary Toolbars"
+msgstr "(&S) రెండవ రంగు:"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -34,11 +35,6 @@ msgid "Small Icons"
 msgstr "చిన్న ప్రతిమలు"
 
 #: iconsizecategorymodel.cpp:17
-#, kde-format
-msgid "Panel"
-msgstr "ప్యానల్"
-
-#: iconsizecategorymodel.cpp:18
 #, kde-format
 msgid "Dialogs"
 msgstr ""
@@ -127,7 +123,22 @@ msgstr "ప్రతిమ థీమ్‌లను సంస్థాపిస�
 msgid "Installing %1 theme…"
 msgstr "ప్రతిమ థీమ్‌లను సంస్థాపిస్తోంది"
 
-#: package/contents/ui/IconSizePopup.qml:95
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
@@ -184,6 +195,12 @@ msgstr "థీమ్‌ను తీసివేయి"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Toolbar"
+#~ msgstr "పనిముట్టుపట్టీ"
+
+#~ msgid "Panel"
+#~ msgstr "ప్యానల్"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -279,9 +296,6 @@ msgstr ""
 
 #~ msgid "Co&lor:"
 #~ msgstr "(&l) రంగు:"
-
-#~ msgid "&Second color:"
-#~ msgstr "(&S) రెండవ రంగు:"
 
 #~ msgid "Name"
 #~ msgstr "పేరు"
