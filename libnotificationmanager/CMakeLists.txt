@@ -114,7 +114,7 @@ install(FILES
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibNotificationManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
-set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibNotificationManager)
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_CMAKEPACKAGEDIR}/LibNotificationManager)
 
 configure_package_config_file(LibNotificationManagerConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibNotificationManagerConfig.cmake"

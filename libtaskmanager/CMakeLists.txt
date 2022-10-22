@@ -111,7 +111,7 @@ endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
-set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibTaskManager)
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_CMAKEPACKAGEDIR}/LibTaskManager)
 
 configure_package_config_file(LibTaskManagerConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake"
