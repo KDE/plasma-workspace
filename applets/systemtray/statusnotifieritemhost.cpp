@@ -34,7 +34,6 @@ StatusNotifierItemHost::StatusNotifierItemHost()
 
 StatusNotifierItemHost::~StatusNotifierItemHost()
 {
-    QDBusConnection::sessionBus().unregisterService(m_serviceName);
 }
 
 StatusNotifierItemHost *StatusNotifierItemHost::self()
