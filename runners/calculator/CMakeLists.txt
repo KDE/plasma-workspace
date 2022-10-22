@@ -25,8 +25,7 @@ kde_enable_exceptions()
 
 kcoreaddons_add_plugin(calculator SOURCES ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(calculator
-                      ${QALCULATE_LIBRARIES}
-                      ${CLN_LIBRARIES}
+                      PkgConfig::QALCULATE
                       ${EXTERNAL_LIBS}
 )
 
