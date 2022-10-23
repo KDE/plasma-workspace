@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 12:24+0200\n"
+"PO-Revision-Date: 2022-10-22 09:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -31,10 +31,9 @@ msgid "Main Toolbar"
 msgstr "Barra d'eines principal"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Barra d'eines principal"
+msgstr "Barres d'eines secundàries"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -136,11 +135,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aquí podeu configurar les mides predeterminades de diversos tipus d'icones a "
+"nivell de tot el sistema. Tingueu en compte que no totes les aplicacions "
+"respectaran aquests paràmetres.<nl/><nl/>Si trobeu que els objectes a la "
+"pantalla generalment són massa petits o massa grans, considereu ajustar "
+"l'escala global."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Ajusta l'escala global…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
@@ -193,9 +197,3 @@ msgstr "Obre un tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de temes (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Toolbar"
-#~ msgstr "Barra d'eines"
-
-#~ msgid "Panel"
-#~ msgstr "Plafó"

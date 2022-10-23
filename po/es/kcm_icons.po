@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 21:37+0200\n"
+"PO-Revision-Date: 2022-10-22 18:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -32,10 +32,9 @@ msgid "Main Toolbar"
 msgstr "Barra de herramientas principal"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Segundo color:"
+msgstr "Barras de herramientas secundarias"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -137,11 +136,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aquí puede configurar los tamaños predeterminados de varios tipos de iconos "
+"para todo el sistema. Tenga en cuenta que no todas las aplicaciones "
+"respetarán esta preferencias.<nl/><nl/>Si cree que los objetos de la "
+"pantalla son demasiado pequeños o muy grandes, considere la posibilidad de "
+"ajustar el escalado global."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Ajustar el escalado global..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

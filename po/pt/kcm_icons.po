@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-16 11:45+0100\n"
+"PO-Revision-Date: 2022-10-22 12:43+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -23,10 +23,9 @@ msgid "Main Toolbar"
 msgstr "Barra Principal"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Barra Principal"
+msgstr "Barras Secundárias"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -128,11 +127,15 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aqui poderá configurar os tamanhos predefinidos de vários tipos de ícones ao "
+"nível do sistema. Lembre-se que nem todas as aplicações irão respeitar estas "
+"definições.<nl/><nl/>Se achar que os objectos no ecrã são demasiado pequenos "
+"ou demasiado grandes, pense em ajustar a escala global como alternativa."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Ajustar a Escala Global…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
@@ -186,9 +189,3 @@ msgstr "Abrir um Tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Ficheiros de Temas (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Toolbar"
-#~ msgstr "Barra de Ferramentas"
-
-#~ msgid "Panel"
-#~ msgstr "Painel"

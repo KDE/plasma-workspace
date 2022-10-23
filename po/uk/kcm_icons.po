@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 17:08+0300\n"
+"PO-Revision-Date: 2022-10-22 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -29,10 +29,9 @@ msgid "Main Toolbar"
 msgstr "Головний пенал"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Другий колір:"
+msgstr "Вторинні панелі інструментів"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -134,11 +133,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Тут ви можете налаштувати типові розміри різноманітних типів піктограм на "
+"загальносистемному рівні. Зауважте, що підтримку цих параметрів передбачено "
+"не в усіх програмах.<nl/><nl/>Якщо ви вважаєте, що об'єкти на екрані загалом "
+"надто малі або надто великі, вам варто скоригувати загальне масштабування "
+"зображення на екрані."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Скоригувати загальний масштаб…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

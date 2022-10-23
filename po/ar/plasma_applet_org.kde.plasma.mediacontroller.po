@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 21:25+0400\n"
+"PO-Revision-Date: 2022-10-22 19:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -115,6 +115,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"بواسطة %1 (%2)\n"
+"انقر بالزر الأوسط للبث"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -122,16 +124,19 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"انقر بالزر الأوسط للبث"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "لِـ %1 (ملبثة، %2)"
+msgstr ""
+"بواسطة %1 (ملبث، %2)\n"
+"\n"
+"انقر بالزر الأوسط للتشغيل"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -142,6 +147,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"ملبث (%1)\n"
+"انقر بالزر الأوسط للتشغيل"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

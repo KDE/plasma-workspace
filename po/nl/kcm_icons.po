@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 10:15+0200\n"
+"PO-Revision-Date: 2022-10-22 09:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -23,10 +23,9 @@ msgid "Main Toolbar"
 msgstr "Hoofdwerkbalk"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "T&weede kleur:"
+msgstr "Secondaire werkbalken"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -128,11 +127,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Hier kunt u de standaard groottes van verschillende pictogram typen op een "
+"systeembreed niveau configureren. Merk op dat niet alle toepassingen deze "
+"instellingen respecteren.<nl/><nl/>Als u vindt dat objecten op het scherm in "
+"het algemeen te klein of te groot zijn, overweeg dan het aanpassen van de "
+"globale schaal."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Globale schaal aanpassen…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

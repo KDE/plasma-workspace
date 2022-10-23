@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-09-04 20:46+0400\n"
+"PO-Revision-Date: 2022-10-22 19:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "حتى تعطل يدوياً"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "ينتهي آليا: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -343,20 +343,19 @@ msgstr[4] "%1 إشعارا"
 msgstr[5] "%1 إشعار"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "لا تزعجني حتى %1"
+msgstr "لا تزعجني حتى %1، انقر الزر الأوسط للخروج الآن"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "نمط عدم الإزعاج نشط، انقر الزر الأوسط للخروج"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "انقر بالزر الأوسط للدخول إلى نمط عدم الإزعاج"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

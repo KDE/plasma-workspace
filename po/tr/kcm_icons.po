@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 12:05+0300\n"
+"PO-Revision-Date: 2022-10-22 13:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -33,10 +33,9 @@ msgid "Main Toolbar"
 msgstr "Ana Araç Çubuğu"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Ana Araç Çubuğu"
+msgstr "İkincil Araç Çubukları"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -137,11 +136,15 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Buradan, sistem genelinde kullanılan simgelerin öntanımlı boyutlarını "
+"yapılandırabilirsiniz. Bu ayarlara her uygulamanın uymayabileceğini göz "
+"önünde bulundurun.<nl/><nl/>Ekrandaki nesneler gözünüze pek ufak veya büyük "
+"görünüyorsa global ayarları değiştirmeyi deneyin."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Global Ölçeği Ayarla…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

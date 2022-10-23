@@ -13,16 +13,16 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-06-30 17:29+0400\n"
+"PO-Revision-Date: 2022-10-22 18:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -558,19 +558,16 @@ msgid "Previous History Item"
 msgstr "العنصر السابق في التاريخ"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "افتح كليبر عند موضع الفأرة"
+msgstr "اعرض العناصر عند موضع الفأرة"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - أداة الحافظة"
+msgstr "%1 - أداة حافظة"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -646,7 +643,7 @@ msgstr "أسفل"
 #: klipper.kcfg:10
 #, kde-format
 msgid "Klipper version"
-msgstr "إصدارة Klipper"
+msgstr "كليبر"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
@@ -849,11 +846,10 @@ msgstr ""
 "نوع MIME الخاص به في نافذة الإجراءات المنبثقة."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "محتويات الحافظة"
+msgstr "%1 - عناصر الحافظة"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -878,13 +874,12 @@ msgstr "لا يوجد تطابق"
 #: main.cpp:27 tray.cpp:22
 #, kde-format
 msgid "Klipper"
-msgstr "Klipper"
+msgstr "كليبر"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "أداة كدي لقص ولصق المحفوظات "
+msgstr "أداة كدي لمحفوظات اللقص واللصق"
 
 #: main.cpp:31
 #, kde-format
@@ -900,7 +895,7 @@ msgstr ""
 #: main.cpp:34
 #, kde-format
 msgid "Carsten Pfeiffer"
-msgstr "Carsten Pfeiffer"
+msgstr "كارستن فايفر"
 
 #: main.cpp:34
 #, kde-format

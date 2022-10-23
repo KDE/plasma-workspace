@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-16 13:15+0200\n"
+"PO-Revision-Date: 2022-10-22 06:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -25,10 +25,9 @@ msgid "Main Toolbar"
 msgstr "Главна лента с инструменти"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Главна лента с инструменти"
+msgstr "Допълнителна лента с инструменти"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -130,11 +129,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Тук можете да конфигурирате размерите по подразбиране на различни типове "
+"икони на системно ниво. Имайте предвид, че не всички приложения ще се "
+"съобразяват с тези настройки.<nl/><nl/>Ако установите, че обектите на екрана "
+"като цяло са твърде малки или твърде големи, обмислете дали вместо това не "
+"трябва да настроите глобалния мащаб."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Настройване на глобално скалиране…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
