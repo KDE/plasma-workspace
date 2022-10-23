@@ -32,29 +32,63 @@ void MediaMetadataFinder::run()
     KExiv2Iface::KExiv2 exivImage(m_path);
 
     // Extract title from XPTitle
-    metadata.title = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.XPTitle"));
+    {
+        const QByteArray titleByte = exivImage.getExifTagData("Exif.Image.XPTitle");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.title = QString::fromUtf8(titleByte);
+#else
+        metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
+#endif
+    }
 
     // Use documentName as title
     if (metadata.title.isEmpty()) {
-        metadata.title = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.DocumentName"));
+        const QByteArray titleByte = exivImage.getExifTagData("Exif.Image.DocumentName");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.title = QString::fromUtf8(titleByte);
+#else
+        metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
+#endif
     }
 
     // Use description as title
     if (metadata.title.isEmpty()) {
-        metadata.title = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.ImageDescription"));
+        const QByteArray titleByte = exivImage.getExifTagData("Exif.Image.ImageDescription");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.title = QString::fromUtf8(titleByte);
+#else
+        metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
+#endif
     }
 
     // Extract author from artist
-    metadata.author = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.Artist"));
+    {
+        const QByteArray authorByte = exivImage.getExifTagData("Exif.Image.Artist");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.author = QString::fromUtf8(authorByte);
+#else
+        metadata.author = QString::fromUtf8(authorByte).chopped(std::min<qsizetype>(authorByte.size(), 1));
+#endif
+    }
 
     // Extract author from XPAuthor
     if (metadata.author.isEmpty()) {
-        metadata.author = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.XPAuthor"));
+        const QByteArray authorByte = exivImage.getExifTagData("Exif.Image.XPAuthor");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.author = QString::fromUtf8(authorByte);
+#else
+        metadata.author = QString::fromUtf8(authorByte).chopped(std::min<qsizetype>(authorByte.size(), 1));
+#endif
     }
 
     // Extract author from copyright
     if (metadata.author.isEmpty()) {
-        metadata.author = QString::fromUtf8(exivImage.getExifTagData("Exif.Image.Copyright"));
+        const QByteArray authorByte = exivImage.getExifTagData("Exif.Image.Copyright");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        metadata.author = QString::fromUtf8(authorByte);
+#else
+        metadata.author = QString::fromUtf8(authorByte).chopped(std::min<qsizetype>(authorByte.size(), 1));
+#endif
     }
 #endif
 
