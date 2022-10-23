@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick 2.8
+import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 
 import org.kde.plasma.plasmoid 2.0
@@ -157,36 +157,13 @@ ColumnLayout {
 
             spacing: PlasmaCore.Units.smallSpacing
 
-            Item {
+            ColumnLayout {
                 Layout.fillWidth: true
-                Layout.preferredHeight: summaryRow.implicitHeight + bodyTextRow.implicitHeight
-
-                activeFocusOnTab: true
-
-                Accessible.name: summaryLabel.text
-                Accessible.description: bodyLabel.textItem.getText(0, notificationItem.body.length)
-                Accessible.role: Accessible.Notification
-                Keys.forwardTo: bodyLabel.textItem
-
-                Loader {
-                    anchors.fill: parent
-                    active: parent.activeFocus
-                    asynchronous: true
-                    z: -1
-
-                    sourceComponent: PlasmaExtras.Highlight {
-                        hovered: true
-                    }
-                }
+                spacing: 0
 
                 RowLayout {
                     id: summaryRow
-
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        top: parent.top
-                    }
+                    Layout.fillWidth: true
                     visible: summaryLabel.text !== ""
 
                     PlasmaExtras.Heading {
@@ -238,11 +215,7 @@ ColumnLayout {
                 RowLayout {
                     id: bodyTextRow
 
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        top: summaryRow.bottom
-                    }
+                    Layout.fillWidth: true
                     spacing: PlasmaCore.Units.smallSpacing
 
                     SelectableLabel {
