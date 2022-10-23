@@ -74,6 +74,7 @@ Item {
                     Layout.fillWidth: true
                     level: 2
                     wrapMode: Text.Wrap
+                    textFormat: Text.RichText
                     elide: Text.ElideRight
                 }
 
@@ -82,6 +83,7 @@ Item {
                     Layout.fillWidth: true
                     wrapMode: Text.Wrap
                     elide: Text.ElideRight
+                    textFormat: Text.RichText
                     visible: text.length > 0
                 }
             }
