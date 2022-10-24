@@ -21,6 +21,7 @@ int main(int argc, char **argv)
     // When the X server dies we get a HUP signal from xinit. We must ignore it
     // because we still need to do some cleanup.
     signal(SIGHUP, sighupHandler);
+    qputenv("QT_NO_XDG_DESKTOP_PORTAL", QByteArrayLiteral("1"));
 
     QCoreApplication app(argc, argv);
 
@@ -57,6 +58,11 @@ int main(int argc, char **argv)
         }
     }
 
+    // NOTE: Be very mindful of what you start this early in the process. The environment is not yet complete.
+    setupCursor(false);
+    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
+    Q_UNUSED(ksplash)
+
     runEnvironmentScripts();
 
     out << "startkde: Starting up...\n";
@@ -64,6 +70,7 @@ int main(int argc, char **argv)
     setupPlasmaEnvironment();
     setupX11();
 
+    qunsetenv("QT_NO_XDG_DESKTOP_PORTAL");
     auto oldSystemdEnvironment = getSystemdEnvironment();
     if (!syncDBusEnvironment()) {
         // Startup error
@@ -75,12 +82,6 @@ int main(int argc, char **argv)
     // Otherwise it may leads to some unwanted order of applying environment
     // variables (e.g. LANG and LC_*)
     importSystemdEnvrionment();
-
-    // NOTE: Do not start QGuiApplications before setting up the environment. We'd be at risk of dbus invoking other
-    // processes with an incomplete environment.
-    setupCursor(false);
-    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
-    Q_UNUSED(ksplash)
 
     if (!startPlasmaSession(false))
         return 1;
