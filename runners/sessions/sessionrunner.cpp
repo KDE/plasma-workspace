@@ -76,7 +76,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
 
     if (term.compare(i18nc("log out command", "logout"), Qt::CaseInsensitive) == 0 || term.compare(i18n("log out"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18nc("log out command", "Logout"));
+        match.setText(i18nc("log out command", "Log Out"));
+        match.setSubtext(i18n("Log out, exiting the current desktop session"));
         match.setIconName(QStringLiteral("system-log-out"));
         match.setData(LogoutAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
@@ -85,7 +86,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("restart computer command", "restart"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Restart the computer"));
+        match.setText(i18nc("restart computer command", "Log Out"));
+        match.setSubtext(i18n("Reboot the computer"));
         match.setIconName(QStringLiteral("system-reboot"));
         match.setData(RestartAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
@@ -94,7 +96,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("shut down computer command", "shut down"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Shut down the computer"));
+        match.setText(i18nc("shut down computer command", "Shut Down"));
+        match.setSubtext(i18n("Turn off the computer"));
         match.setIconName(QStringLiteral("system-shutdown"));
         match.setData(ShutdownAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
@@ -104,7 +107,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
                || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
-            match.setText(i18n("Lock the screen"));
+            match.setText(i18nc("lock screen command", "Lock"));
+            match.setSubtext(i18n("Lock the current sessions and start the screen saver"));
             match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
             match.setType(Plasma::QueryMatch::ExactMatch);
@@ -161,6 +165,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("system-switch-user"));
         match.setText(i18n("Switch User"));
+        match.setSubtext(i18n("Start a new session as a different user"));
         matches << match;
     }
 
@@ -198,6 +203,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
                 match.setRelevance(relevance);
                 match.setIconName(QStringLiteral("user-identity"));
                 match.setText(name);
+                match.setSubtext(i18n("Switch to session %1", name));
                 match.setData(QString::number(session.vt));
                 matches << match;
             }
