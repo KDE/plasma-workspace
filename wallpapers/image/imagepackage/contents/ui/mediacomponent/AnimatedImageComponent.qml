@@ -14,7 +14,7 @@ import org.kde.kwindowsystem 1.0
 BaseMediaComponent {
     id: animatedImageComponent
 
-    readonly property rect desktopRect: Qt.rect(Window.window.x, Window.window.y, Window.window.width, Window.window.height)
+    readonly property rect desktopRect: Window.window ? Qt.rect(Window.window.x, Window.window.y, Window.window.width, Window.window.height) : Qt.rect(0, 0, 0, 0)
     readonly property alias status: mainImage.status
 
     blurSource: blurLoader.item
