@@ -8,8 +8,7 @@
 
 #include <QIcon>
 #include <QStandardPaths>
-#include <QDBusConnection>
-#include <QDBusMessage>
+// #include <QDBusConnection>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -28,6 +27,15 @@ KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const
     qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightcolor", 1, 0, "NightColorMode", "Error: only enums");
 
     worldMapFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/nightcolor/worldmap.png"), QStandardPaths::LocateFile);
+
+    // QDBusReply<QStringList> reply = QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(
+    //     QStringLiteral("org.kde.plasmashell.colorScheme"),
+    //     QStringLiteral("/ColorScheme"),
+    //     QStringLiteral("org.kde.plasmashell.colorScheme"),
+    //     QStringLiteral("installedColorSchemes"
+    // )));
+    // installedColorSchemes = reply.isValid() ? reply.value() : QStringList();
+    // qDebug() << "nightcolor:" << "installed schemes" << installedColorSchemes;
 
     minDayTemp = nightColorSettings()->findItem("DayTemperature")->minValue().toInt();
     maxDayTemp = nightColorSettings()->findItem("DayTemperature")->maxValue().toInt();
