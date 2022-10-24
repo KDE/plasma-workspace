@@ -80,17 +80,17 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
 
-        if (term.size() >= 5
-            && (url.fileName().compare(term, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(term, Qt::CaseInsensitive) == 0)) {
-            relevance += 0.1;
-            type = Plasma::QueryMatch::ExactMatch;
-        } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
-            relevance += 0.1;
-            type = Plasma::QueryMatch::PossibleMatch;
-        }
-
         match.setRelevance(relevance);
         match.setType(type);
+        if (term.size() >= 5
+            && (url.fileName().compare(term, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(term, Qt::CaseInsensitive) == 0)) {
+            match.setRelevance(relevance + 0.1);
+            match.setType(Plasma::QueryMatch::ExactMatch);
+        } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
+            match.setRelevance(relevance + 0.1);
+            match.setType(Plasma::QueryMatch::PossibleMatch);
+        }
+
         match.setIconName(KIO::iconNameForUrl(url));
         match.setData(QVariant(url));
         match.setUrls({url});
