@@ -37,6 +37,10 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     rebootSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
     addSyntax(rebootSyntax);
 
+    Plasma::RunnerSyntax saveSyntax(i18nc("save session command", "save"), i18n("Saves the current session for session restoration"));
+    saveSyntax.addExampleQuery(i18nc("save session command", "save session"));
+    addSyntax(saveSyntax);
+
     m_triggerWord = i18nc("switch user command", "switch");
     addSyntax(Plasma::RunnerSyntax(i18nc("switch user command", "switch :q:"),
                                    i18n("Switches to the active session for the user :q:, "
@@ -97,6 +101,16 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             match.setRelevance(0.9);
             matches << match;
         }
+    } else if (term.compare(i18nc("save session command", "save"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0) {
+        Plasma::QueryMatch match(this);
+        match.setText(i18n("Save the session"));
+        match.setSubtext(i18n("Save the current session for session restoration"));
+        match.setIconName(QStringLiteral("system-save-session"));
+        match.setData(SaveAction);
+        match.setType(Plasma::QueryMatch::ExactMatch);
+        match.setRelevance(0.9);
+        matches << match;
     }
 }
 
@@ -196,6 +210,9 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
             break;
         case LockAction:
             m_session.lock();
+            break;
+        case SaveAction:
+            m_session.saveSession();
             break;
         }
         return;

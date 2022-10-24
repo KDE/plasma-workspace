@@ -31,6 +31,7 @@ public:
         ShutdownAction,
         RestartAction,
         LockAction,
+        SaveAction,
     };
 
 private:
