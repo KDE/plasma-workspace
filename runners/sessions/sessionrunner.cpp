@@ -25,21 +25,24 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
 
     m_canLogout = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (m_canLogout) {
-        addSyntax(Plasma::RunnerSyntax(i18nc("log out command", "logout"), i18n("Logs out, exiting the current desktop session")));
-        addSyntax(Plasma::RunnerSyntax(i18nc("shut down computer command", "shut down"), i18n("Turns off the computer")));
+        Plasma::RunnerSyntax logoutSyntax(i18nc("log out command", "logout"), i18n("Logs out, exiting the current desktop session"));
+        logoutSyntax.addExampleQuery(i18nc("log out command", "log out"));
+        addSyntax(logoutSyntax);
+
+        Plasma::RunnerSyntax shutdownSyntax(i18nc("shut down computer command", "shutdown"), i18n("Turns off the computer"));
+        shutdownSyntax.addExampleQuery(i18nc("shut down computer command", "shut down"));
+        addSyntax(shutdownSyntax);
+
+        Plasma::RunnerSyntax restartSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
+        logoutSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
+        addSyntax(restartSyntax);
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("lock_screen")) && m_canLogout) {
-        addSyntax(Plasma::RunnerSyntax(i18nc("lock screen command", "lock"), i18n("Locks the current sessions and starts the screen saver")));
+        Plasma::RunnerSyntax lockSyntax(i18nc("lock screen command", "lock"), i18n("Locks the current sessions and starts the screen saver"));
+        lockSyntax.addExampleQuery(i18nc("lock screen command", "lock screen"));
+        addSyntax(lockSyntax);
     }
-
-    Plasma::RunnerSyntax rebootSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
-    rebootSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
-    addSyntax(rebootSyntax);
-
-    Plasma::RunnerSyntax saveSyntax(i18nc("save session command", "save"), i18n("Saves the current session for session restoration"));
-    saveSyntax.addExampleQuery(i18nc("save session command", "save session"));
-    addSyntax(saveSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
     addSyntax(Plasma::RunnerSyntax(i18nc("switch user command", "switch :q:"),
@@ -51,7 +54,13 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     addSyntax(fastUserSwitchSyntax);
 
     //"SESSIONS" should not be translated; it's used programmaticaly
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
+    Plasma::RunnerSyntax listAllSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions"));
+    listAllSyntax.addExampleQuery(i18nc("list user sessions command", "sessions"));
+    listAllSyntax.addExampleQuery(i18nc("list user sessions command", "session"));
+    listAllSyntax.addExampleQuery(i18nc("list user sessions command", "desktop sessions"));
+    listAllSyntax.addExampleQuery(i18nc("list user sessions command", "desktop session"));
+    addSyntax(listAllSyntax);
+
     setMinLetterCount(3);
 }
 
@@ -82,8 +91,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
-    } else if (term.compare(i18nc("shut down computer command", "shut down"), Qt::CaseInsensitive) == 0
-               || term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("shut down computer command", "shut down"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Shut down the computer"));
         match.setIconName(QStringLiteral("system-shutdown"));
@@ -91,7 +100,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
-    } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
@@ -101,8 +111,8 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             match.setRelevance(0.9);
             matches << match;
         }
-    } else if (term.compare(i18nc("save session command", "save"), Qt::CaseInsensitive) == 0
-               || term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("save session command", "session"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Save the session"));
         match.setSubtext(i18n("Save the current session for session restoration"));
@@ -125,8 +135,11 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),
     // not as a user supplied query. and yes, "Ugh, magic strings"
-    bool listAll =
-        term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("User sessions", "sessions"), Qt::CaseInsensitive) == 0;
+    bool listAll = term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("list user sessions command", "sessions"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("list user sessions command", "session"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("list user sessions command", "desktop sessions"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("list user sessions command", "desktop session"), Qt::CaseInsensitive) == 0;
 
     if (!listAll) {
         // no luck, try the "switch" user command
