@@ -1,13 +1,12 @@
 /*
     SPDX-FileCopyrightText: 2006 Aaron Seigo <aseigo@kde.org>
+    SPDX-FileCopyrightText: 2022 Natalie Clarius <natalie_clarius@yahoo.de>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
 #include "sessionrunner.h"
 
-#include <KAuthorized>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDebug>
@@ -43,6 +42,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
         addSyntax(restartSyntax);
     }
 
+<<<<<<< HEAD
     if (m_session.canSwitchUser()) {
         Plasma::RunnerSyntax fastUserSwitchSyntax(i18n("switch user"), i18n("Starts a new session as a different user"));
         fastUserSwitchSyntax.addExampleQuery(i18n("new session"));
@@ -55,6 +55,27 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     listAllSyntax.addExampleQuery(i18nc("list user sessions command", "session"));
     listAllSyntax.addExampleQuery(i18nc("list user sessions command", "desktop sessions"));
     listAllSyntax.addExampleQuery(i18nc("list user sessions command", "desktop session"));
+=======
+    if (m_session.canLock()) {
+        Plasma::RunnerSyntax lockSyntax(i18nc("lock screen command", "lock"), i18n("Locks the current sessions and starts the screen saver"));
+        lockSyntax.addExampleQuery(i18nc("lock screen command", "lock screen"));
+        addSyntax(lockSyntax);
+    }
+
+    if (m_session.canSaveSession()) {
+        Plasma::RunnerSyntax saveSyntax(i18nc("save session command", "save"), i18n("Saves the current session for session restoration"));
+        saveSyntax.addExampleQuery(i18nc("save session command", "save session"));
+        addSyntax(saveSyntax);
+    }
+
+    if (m_session.canSwitchUser()) {
+        Plasma::RunnerSyntax fastUserSwitchSyntax(i18nc("switch user command", "switch user"), i18n("Starts a new session as a different user"));
+        fastUserSwitchSyntax.addExampleQuery(i18nc("new session command", "new session"));
+    addSyntax(fastUserSwitchSyntax);
+    }
+
+    Plasma::RunnerSyntax listAllSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")); //"SESSIONS" should not be translated; it's used programmaticaly
+>>>>>>> 62180222c (runners/sessions: fix condition check for matches)
     addSyntax(listAllSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
@@ -71,6 +92,7 @@ SessionRunner::~SessionRunner()
 
 void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QString &term)
 {
+<<<<<<< HEAD
     if (!m_canLogout) {
         return;
     }
@@ -106,6 +128,32 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         matches << match;
     } else if (term.compare(i18nc("restart computer command", "restart"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
+=======
+    if (term.compare(i18nc("log out command", "logout"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("log out command", "log out"), Qt::CaseInsensitive) == 0) {
+        if (m_session.canLogout()) {
+            Plasma::QueryMatch match(this);
+            match.setText(i18nc("log out command", "Logout"));
+            match.setIconName(QStringLiteral("system-log-out"));
+            match.setData(LogoutAction);
+            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setRelevance(0.9);
+            matches << match;
+        }
+    } else if (term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("shut down computer command", "shut down"), Qt::CaseInsensitive) == 0) {
+        if (m_session.canShutdown()) {
+            Plasma::QueryMatch match(this);
+            match.setText(i18n("Shut down the computer"));
+            match.setIconName(QStringLiteral("system-shutdown"));
+            match.setData(ShutdownAction);
+            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setRelevance(0.9);
+            matches << match;
+        }
+    } else if (term.compare(i18nc("restart computer command", "restart"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
+>>>>>>> 62180222c (runners/sessions: fix condition check for matches)
         if (m_session.canReboot()) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Restart the computer"));
@@ -115,6 +163,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             match.setRelevance(0.9);
             matches << match;
         }
+<<<<<<< HEAD
     } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
         if (m_session.canLock()) {
@@ -123,12 +172,21 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             match.setSubtext(i18n("Lock the current sessions and start the screen saver"));
             match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
+=======
+    } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
+        if (m_session.canLock()) {
+            Plasma::QueryMatch match(this);
+            match.setText(i18n("Restart the computer"));
+            match.setIconName(QStringLiteral("system-reboot"));
+            match.setData(RestartAction);
+>>>>>>> 62180222c (runners/sessions: fix condition check for matches)
             match.setType(Plasma::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     } else if (term.compare(i18nc("save session command", "save"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0) {
+<<<<<<< HEAD
         Plasma::QueryMatch match(this);
         match.setText(i18n("Save Session"));
         match.setSubtext(i18n("Save the current session for session restoration"));
@@ -137,6 +195,18 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
+=======
+        if (m_session.canSaveSession()) {
+            Plasma::QueryMatch match(this);
+            match.setText(i18n("Save the session"));
+            match.setSubtext(i18n("Save the current session for session restoration"));
+            match.setIconName(QStringLiteral("system-save-session"));
+            match.setData(SaveAction);
+            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setRelevance(0.9);
+            matches << match;
+        }
+>>>>>>> 62180222c (runners/sessions: fix condition check for matches)
     }
 }
 
@@ -170,7 +240,8 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    bool switchUser = listAll || term.compare(i18n("switch user"), Qt::CaseInsensitive) == 0 || term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
+    bool switchUser = listAll || term.compare(i18nc("switch user command", "switch user"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("switch user command", "new session"), Qt::CaseInsensitive) == 0;
 
     if (switchUser && m_session.canSwitchUser() && dm.isSwitchable() && dm.numReserve() >= 0) {
         Plasma::QueryMatch match(this);
