@@ -40,5 +40,4 @@ private:
     QString m_triggerWord;
     KDisplayManager dm;
     SessionManagement m_session;
-    bool m_canLogout;
 };
