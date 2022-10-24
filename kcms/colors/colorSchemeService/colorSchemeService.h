@@ -19,6 +19,7 @@ public:
     explicit ColorSchemeService(QObject *parent, const QList<QVariant> &);
 
 public Q_SLOTS:
+    QString colorScheme();
     void setColorScheme(QString colorScheme);
     QStringList installedColorSchemes();
 

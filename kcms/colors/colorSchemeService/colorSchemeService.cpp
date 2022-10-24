@@ -27,6 +27,12 @@ ColorSchemeService::ColorSchemeService(QObject *parent, const QList<QVariant> &)
     dbus.registerService("org.kde.plasmashell.colorScheme");
 }
 
+QString ColorSchemeService::colorScheme()
+{
+    m_settings->load();
+    return m_settings->colorScheme();
+}
+
 void ColorSchemeService::setColorScheme(QString colorScheme)
 {
     m_model->load();
