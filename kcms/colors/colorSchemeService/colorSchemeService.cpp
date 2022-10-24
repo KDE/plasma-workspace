@@ -6,8 +6,6 @@
 
 #include <KPluginFactory>
 #include <QDBusConnection>
-#include <algorithm>
-#include <qvector.h>
 
 #include "../../kcms-common_p.h"
 #include "colorSchemeService.h"
@@ -35,16 +33,7 @@ void ColorSchemeService::setColorScheme(QString colorScheme)
     m_settings->load();
     m_model->setSelectedScheme(m_settings->colorScheme());
 
-    if (m_settings->colorScheme() == colorScheme) {
-        // already set
-        return;
-    }
-
-    QStringList installedSchemes;
-    for (int i = 0; i < m_model->rowCount(QModelIndex()); ++i) {
-        installedSchemes << m_model->data(m_model->index(i, 0), ColorsModel::SchemeNameRole).toString();
-    }
-    if (!installedSchemes.contains(colorScheme)) {
+    if (!installedColorSchemes().contains(colorScheme)) {
         // not found
         return;
     }
@@ -65,6 +54,16 @@ void ColorSchemeService::setColorScheme(QString colorScheme)
     applyScheme(path, m_settings->config(), KConfig::Notify);
     m_settings->save();
     notifyKcmChange(GlobalChangeType::PaletteChanged);
+}
+
+QStringList ColorSchemeService::installedColorSchemes()
+{
+    m_model->load();
+    QStringList schemes;
+    for (int i = 0; i < m_model->rowCount(QModelIndex()); ++i) {
+        schemes << m_model->data(m_model->index(i, 0), ColorsModel::SchemeNameRole).toString();
+    }
+    return schemes;
 }
 
 #include "colorSchemeService.moc"
