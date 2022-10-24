@@ -20,6 +20,7 @@ public:
 
 public Q_SLOTS:
     void setColorScheme(QString colorScheme);
+    QStringList installedColorSchemes();
 
 private:
     ColorsSettings *m_settings;
