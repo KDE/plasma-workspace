@@ -112,6 +112,9 @@ void KCMRegionAndLang::save()
     if (!locales.isEmpty()) {
         Q_EMIT startGenerateLocale();
         m_generator->localesGenerate(locales);
+    } else {
+        // probably after clicking "defaults" so all the setting is default
+        saveToConfigFile();
     }
     Q_EMIT saveClicked();
 }
