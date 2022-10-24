@@ -440,14 +440,6 @@ SimpleKCM {
                                 anchors.margins: Kirigami.Units.smallSpacing
                                 color: modelData.color
 
-                                Rectangle {
-                                    anchors.fill: parent
-                                    gradient: Gradient {
-                                        GradientStop { position: 0.0; color: "transparent" }
-                                        GradientStop { position: 1.0; color: Qt.rgba(0, 0, 0, 0.3) }
-                                    }
-                                }
-
                                 Kirigami.Heading {
                                     anchors.centerIn: parent
                                     color: modelData.dark ? "white" : "black"
@@ -518,15 +510,6 @@ SimpleKCM {
                                 anchors.fill: parent
                                 anchors.margins: Kirigami.Units.smallSpacing
                                 color: modelData.color
-
-                                Rectangle {
-                                    anchors.fill: parent
-                                    visible: !Qt.colorEqual(modelData.color, "transparent")
-                                    gradient: Gradient {
-                                        GradientStop { position: 0.0; color: "transparent" }
-                                        GradientStop { position: 1.0; color: Qt.rgba(0, 0, 0, 0.3) }
-                                    }
-                                }
 
                                 Kirigami.Icon {
                                     source: "user-identity"
