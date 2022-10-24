@@ -6,6 +6,8 @@
 
 #include <KPluginFactory>
 #include <QDBusConnection>
+#include <algorithm>
+#include <qvector.h>
 
 #include "../../kcms-common_p.h"
 #include "colorSchemeService.h"
@@ -29,23 +31,26 @@ ColorSchemeService::ColorSchemeService(QObject *parent, const QList<QVariant> &)
 
 void ColorSchemeService::setColorScheme(QString colorScheme)
 {
-    qDebug() << "colorscheme:";
-    qDebug() << "colorscheme:"
-             << "setScheme" << colorScheme;
-
-    qDebug() << "colorscheme:"
-             << "load model";
     m_model->load();
-    qDebug() << "colorscheme:"
-             << "load settings";
     m_settings->load();
+    m_model->setSelectedScheme(m_settings->colorScheme());
 
-    qDebug() << "colorscheme:"
-             << "get path";
+    if (m_settings->colorScheme() == colorScheme) {
+        // already set
+        return;
+    }
+
+    QStringList installedSchemes;
+    for (int i = 0; i < m_model->rowCount(QModelIndex()); ++i) {
+        installedSchemes << m_model->data(m_model->index(i, 0), ColorsModel::SchemeNameRole).toString();
+    }
+    if (!installedSchemes.contains(colorScheme)) {
+        // not found
+        return;
+    }
+
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(colorScheme));
 
-    qDebug() << "colorscheme:"
-             << "blend changes";
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                               QStringLiteral("/org/kde/KWin/BlendChanges"),
                                               QStringLiteral("org.kde.KWin.BlendChanges"),
@@ -55,20 +60,10 @@ void ColorSchemeService::setColorScheme(QString colorScheme)
     // animation start event before we potentially trigger client side changes
     QDBusConnection::sessionBus().call(msg);
 
-    qDebug() << "colorscheme:"
-             << "set selected scheme";
     m_model->setSelectedScheme(colorScheme);
-    qDebug() << "colorscheme:"
-             << "set color scheme";
     m_settings->setColorScheme(colorScheme);
-    qDebug() << "colorscheme:"
-             << "apply scheme";
     applyScheme(path, m_settings->config(), KConfig::Notify);
-    qDebug() << "colorscheme:"
-             << "save";
     m_settings->save();
-    qDebug() << "colorscheme:"
-             << "notify";
     notifyKcmChange(GlobalChangeType::PaletteChanged);
 }
 
