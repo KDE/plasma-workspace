@@ -29,12 +29,12 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
         logoutSyntax.addExampleQuery(i18nc("log out command", "log out"));
         addSyntax(logoutSyntax);
 
-        Plasma::RunnerSyntax shutdownSyntax(i18nc("shut down computer command", "shutdown"), i18n("Turns off the computer"));
-        shutdownSyntax.addExampleQuery(i18nc("shut down computer command", "shut down"));
+        Plasma::RunnerSyntax shutdownSyntax(i18nc("shut down computer command", "shut down"), i18n("Turns off the computer"));
+        shutdownSyntax.addExampleQuery(i18nc("shut down computer command", "shutdown"));
         addSyntax(shutdownSyntax);
 
         Plasma::RunnerSyntax restartSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
-        restartSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
+        logoutSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
         addSyntax(restartSyntax);
     }
 
@@ -43,10 +43,6 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
         lockSyntax.addExampleQuery(i18nc("lock screen command", "lock screen"));
         addSyntax(lockSyntax);
     }
-
-    Plasma::RunnerSyntax saveSyntax(i18nc("save session command", "save"), i18n("Saves the current session for session restoration"));
-    saveSyntax.addExampleQuery(i18nc("save session command", "save session"));
-    addSyntax(saveSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
     addSyntax(Plasma::RunnerSyntax(i18nc("switch user command", "switch :q:"),
@@ -107,8 +103,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
-    } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0
-               || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("lock screen command", "lock screen"), Qt::CaseInsensitive) == 0) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
             match.setText(i18nc("lock screen command", "Lock"));
@@ -143,11 +138,8 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),
     // not as a user supplied query. and yes, "Ugh, magic strings"
-    bool listAll = term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0
-        || term.compare(i18nc("list user sessions command", "sessions"), Qt::CaseInsensitive) == 0
-        || term.compare(i18nc("list user sessions command", "session"), Qt::CaseInsensitive) == 0
-        || term.compare(i18nc("list user sessions command", "desktop sessions"), Qt::CaseInsensitive) == 0
-        || term.compare(i18nc("list user sessions command", "desktop session"), Qt::CaseInsensitive) == 0;
+    bool listAll =
+        term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("list user sessions command", "sessions"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("list user sessions command", "session"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("list user sessions command", "desktop sessions"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("list user sessions command", "desktop session"), Qt::CaseInsensitive) == 0;
 
     if (!listAll) {
         // no luck, try the "switch" user command
