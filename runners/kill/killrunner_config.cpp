@@ -45,7 +45,7 @@ void KillRunnerConfig::load()
     KCModule::load();
 
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    const KConfigGroup grp = cfg->group("Runners").group("Kill Runner");
+    const KConfigGroup grp = cfg->group("Runners").group(KRUNNER_PLUGIN_NAME);
 
     m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD, true));
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
@@ -59,7 +59,7 @@ void KillRunnerConfig::save()
     KCModule::save();
 
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg->group("Runners").group("Kill Runner");
+    KConfigGroup grp = cfg->group("Runners").group(KRUNNER_PLUGIN_NAME);
 
     grp.writeEntry(CONFIG_USE_TRIGGERWORD, m_ui->useTriggerWord->isChecked());
     grp.writeEntry(CONFIG_TRIGGERWORD, m_ui->triggerWord->text());
