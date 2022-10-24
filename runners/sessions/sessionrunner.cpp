@@ -34,7 +34,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
         addSyntax(shutdownSyntax);
 
         Plasma::RunnerSyntax restartSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
-        logoutSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
+        restartSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
         addSyntax(restartSyntax);
     }
 
@@ -43,6 +43,10 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
         lockSyntax.addExampleQuery(i18nc("lock screen command", "lock screen"));
         addSyntax(lockSyntax);
     }
+
+    Plasma::RunnerSyntax saveSyntax(i18nc("save session command", "save"), i18n("Saves the current session for session restoration"));
+    saveSyntax.addExampleQuery(i18nc("save session command", "save session"));
+    addSyntax(saveSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
     addSyntax(Plasma::RunnerSyntax(i18nc("switch user command", "switch :q:"),
@@ -86,7 +90,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("restart computer command", "restart"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18nc("restart computer command", "Log Out"));
+        match.setText(i18nc("restart computer command", "Restart"));
         match.setSubtext(i18n("Reboot the computer"));
         match.setIconName(QStringLiteral("system-reboot"));
         match.setData(RestartAction);
@@ -115,10 +119,10 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             match.setRelevance(0.9);
             matches << match;
         }
-    } else if (term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0
-               || term.compare(i18nc("save session command", "session"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("save session command", "save"), Qt::CaseInsensitive) == 0
+               || term.compare(i18nc("save session command", "save session"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Save the session"));
+        match.setText(i18n("Save Session"));
         match.setSubtext(i18n("Save the current session for session restoration"));
         match.setIconName(QStringLiteral("system-save-session"));
         match.setData(SaveAction);
