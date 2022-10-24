@@ -7,6 +7,7 @@ set(kcm_krunner_kill_SRCS
 
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
 kcoreaddons_add_plugin(kcm_krunner_kill SOURCES ${kcm_krunner_kill_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner/kcms")
+target_compile_definitions(kcm_krunner_kill PRIVATE -DKRUNNER_PLUGIN_NAME="krunner_kill")
 target_link_libraries(kcm_krunner_kill
     Qt::Core
     Qt::Gui
