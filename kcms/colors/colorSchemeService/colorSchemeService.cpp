@@ -35,9 +35,15 @@ QString ColorSchemeService::colorScheme()
 
 void ColorSchemeService::setColorScheme(QString colorScheme)
 {
+    qDebug() << "colorscheme:";
+    qDebug() << "colorScheme:"
+             << "setColorScheme" << colorScheme;
+
     m_model->load();
     m_settings->load();
     m_model->setSelectedScheme(m_settings->colorScheme());
+    qDebug() << "colorscheme:"
+             << "current" << m_settings->colorScheme();
 
     if (!installedColorSchemes().contains(colorScheme)) {
         // not found
@@ -55,11 +61,24 @@ void ColorSchemeService::setColorScheme(QString colorScheme)
     // animation start event before we potentially trigger client side changes
     QDBusConnection::sessionBus().call(msg);
 
-    m_model->setSelectedScheme(colorScheme);
+    qDebug() << "colorscheme:"
+             << "set selected";
+    qDebug() << "colorscheme:"
+             << "set scheme";
     m_settings->setColorScheme(colorScheme);
+    qDebug() << "colorscheme:"
+             << "apply scheme";
     applyScheme(path, m_settings->config(), KConfig::Notify);
+    qDebug() << "colorscheme:"
+             << "current" << m_settings->colorScheme();
+    qDebug() << "colorscheme:"
+             << "save";
     m_settings->save();
+    qDebug() << "colorscheme:"
+             << "notify";
     notifyKcmChange(GlobalChangeType::PaletteChanged);
+    qDebug() << "colorscheme:"
+             << "current" << m_settings->colorScheme();
 }
 
 QStringList ColorSchemeService::installedColorSchemes()
