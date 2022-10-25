@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Chrome Remote Desktop
+Exec=/usr/lib/brave-bin/brave --profile-directory=Default --app-id=efmjfjelnicpmdcmfikempdhlmainjcb
+StartupWMClass=crx_efmjfjelnicpmdcmfikempdhlmainjcb

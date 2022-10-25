@@ -60,6 +60,9 @@ void TaskToolsTest::initTestCase()
     QFile::copy(QFINDTESTDATA("data/applications/org.kde.gwenview_importer.desktop"),
                 dataDir + QLatin1String("/applications/org.kde.gwenview_importer.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/kcm_autostart.desktop"), dataDir + QLatin1String("/applications/kcm_autostart.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/brave-browser.desktop"), dataDir + QLatin1String("/applications/brave-browser.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"),
+                dataDir + QLatin1String("/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"));
 
     QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices5/kcm_kdeconnect.desktop"));
 
@@ -169,6 +172,9 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
     QTest::addRow("Gwenview Importer") << QStringLiteral("org.kde.gwenview_importer") << QStringLiteral("gwenview_importer")
                                        << QUrl(QStringLiteral("applications:org.kde.gwenview_importer.desktop"));
     QTest::addRow("kcm_autostart") << QStringLiteral("kcm_autostart") << QString() << QUrl(QStringLiteral("applications:kcm_autostart.desktop"));
+    QTest::addRow("brave") << QStringLiteral("Brave-browser") << QStringLiteral("brave-browser") << QUrl("applications:brave-browser.desktop");
+    QTest::addRow("brave_webapp") << QStringLiteral("Brave-browser") << QStringLiteral("crx_efmjfjelnicpmdcmfikempdhlmainjcb")
+                                  << QUrl("applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop");
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices5/kcm_kdeconnect") << QString()
