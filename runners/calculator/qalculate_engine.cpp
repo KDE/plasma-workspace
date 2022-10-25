@@ -134,6 +134,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 #endif
 
     CALCULATOR->setPrecision(16);
+#ifdef BASE_CUSTOM // v3.3.0 has setCustomOutputBase
     if (base == BASE_CUSTOM) {
         EvaluationOptions eo;
         eo.parse_options.base = 10;
@@ -147,6 +148,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
             base = BASE_DECIMAL;
         }
     }
+#endif
 
     MathStructure result = CALCULATOR->calculate(ctext, eo);
 
@@ -186,11 +188,14 @@ static const QMap<QString, int> s_commonBaseMappings = {
     {QStringLiteral("roman"), BASE_ROMAN_NUMERALS},
     {QStringLiteral("time"), BASE_TIME},
 
-    {QStringLiteral("bijective"), BASE_BIJECTIVE_26},
-    {QStringLiteral("b26"), BASE_BIJECTIVE_26},
+    {QStringLiteral("bin"), BASE_BINARY},
+    {QStringLiteral("oct"), BASE_OCTAL},
+    {QStringLiteral("dec"), BASE_DECIMAL},
+    {QStringLiteral("duo"), 12},
+    {QStringLiteral("hex"), BASE_HEXADECIMAL},
+    {QStringLiteral("sexa"), BASE_SEXAGESIMAL},
 
-    {QStringLiteral("bcd"), BASE_BINARY_DECIMAL},
-
+#ifdef BASE_CUSTOM // v3.3.0
     {QStringLiteral("pi"), BASE_PI},
     {QStringLiteral("e"), BASE_E},
     {QStringLiteral("sqrt2"), BASE_SQRT2},
@@ -198,21 +203,23 @@ static const QMap<QString, int> s_commonBaseMappings = {
     {QStringLiteral("golden"), BASE_GOLDEN_RATIO},
     {QStringLiteral("supergolden"), BASE_SUPER_GOLDEN_RATIO},
 
-    {QStringLiteral("bin"), BASE_BINARY},
-    {QStringLiteral("oct"), BASE_OCTAL},
-    {QStringLiteral("dec"), BASE_DECIMAL},
-    {QStringLiteral("duo"), 12},
-    {QStringLiteral("hex"), BASE_HEXADECIMAL},
+    {QStringLiteral("unicode"), BASE_UNICODE},
+#endif // v3.3.0
 
+#ifdef BASE_BIJECTIVE_26 // v3.5.0
+    {QStringLiteral("bijective"), BASE_BIJECTIVE_26},
+    {QStringLiteral("b26"), BASE_BIJECTIVE_26},
+#endif // v3.5.0
+
+#ifdef BASE_FP16 // v3.8.0
     {QStringLiteral("fp16"), BASE_FP16},
     {QStringLiteral("fp32"), BASE_FP32},
     {QStringLiteral("fp64"), BASE_FP64},
     {QStringLiteral("fp80"), BASE_FP80},
     {QStringLiteral("fp128"), BASE_FP128},
+#endif // v3.8.0
 
-    {QStringLiteral("unicode"), BASE_UNICODE},
-
-    {QStringLiteral("sexa"), BASE_SEXAGESIMAL},
+#ifdef BASE_SEXAGESIMAL_2 // v3.18.0
     {QStringLiteral("sexa2"), BASE_SEXAGESIMAL_2},
     {QStringLiteral("sexa3"), BASE_SEXAGESIMAL_3},
 
@@ -220,6 +227,11 @@ static const QMap<QString, int> s_commonBaseMappings = {
     {QStringLiteral("latitude2"), BASE_LATITUDE_2},
     {QStringLiteral("longitude"), BASE_LONGITUDE},
     {QStringLiteral("longitude2"), BASE_LONGITUDE_2},
+#endif
+
+#ifdef BASE_BINARY_DECIMAL // v4.2.0
+    {QStringLiteral("bcd"), BASE_BINARY_DECIMAL},
+#endif
 };
 
 bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customBase)
@@ -232,13 +244,13 @@ bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customB
         *base = s_commonBaseMappings[basePrefix];
         return true;
     }
-
+#ifdef BASE_CUSTOM // v3.3.0
     if (basePrefix.startsWith("base")) {
         *base = BASE_CUSTOM;
         *customBase = basePrefix.mid(4);
 
         return true;
     }
-
+#endif
     return false;
 }
