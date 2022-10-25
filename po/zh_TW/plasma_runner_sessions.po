@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"POT-Creation-Date: 2022-10-25 00:49+0000\n"
 "PO-Revision-Date: 2020-02-01 19:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 19.12.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
 msgctxt "log out command"
 msgid "logout"
@@ -31,7 +31,7 @@ msgstr "登出"
 msgid "Logs out, exiting the current desktop session"
 msgstr "登出，離開現有的桌面工作階段"
 
-#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#: sessionrunner.cpp:29 sessionrunner.cpp:85
 #, kde-format
 msgctxt "shut down computer command"
 msgid "shut down"
@@ -42,7 +42,7 @@ msgstr "關機"
 msgid "Turns off the computer"
 msgstr "關閉電腦"
 
-#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#: sessionrunner.cpp:33 sessionrunner.cpp:94
 #, kde-format
 msgctxt "lock screen command"
 msgid "lock"
@@ -53,7 +53,7 @@ msgstr "鎖定"
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "鎖定目前的工作階段，啟動螢幕保護程式"
 
-#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#: sessionrunner.cpp:36 sessionrunner.cpp:76
 #, kde-format
 msgctxt "restart computer command"
 msgid "restart"
@@ -64,101 +64,130 @@ msgstr "重新啟動"
 msgid "Reboots the computer"
 msgstr "重新開機"
 
-#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#: sessionrunner.cpp:37 sessionrunner.cpp:77
 #, kde-format
 msgctxt "restart computer command"
 msgid "reboot"
 msgstr "重開機"
 
+#: sessionrunner.cpp:40 sessionrunner.cpp:104
+#, kde-format
+msgctxt "save session command"
+msgid "save"
+msgstr ""
+
 #: sessionrunner.cpp:40
+#, kde-format
+msgid "Saves the current session for session restoration"
+msgstr ""
+
+#: sessionrunner.cpp:41 sessionrunner.cpp:105
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt "save session command"
+msgid "save session"
+msgstr "新工作階段"
+
+#: sessionrunner.cpp:44
 #, kde-format
 msgctxt "switch user command"
 msgid "switch"
 msgstr "切換"
 
-#: sessionrunner.cpp:41
+#: sessionrunner.cpp:45
 #, kde-format
 msgctxt "switch user command"
 msgid "switch :q:"
 msgstr "切換 :q:"
 
-#: sessionrunner.cpp:42
+#: sessionrunner.cpp:46
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
 "sessions if :q: is not provided"
 msgstr "切換到使用者 :q: 的工作階段，若沒有提供 :q: 則列出所有活躍中的工作階段"
 
-#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#: sessionrunner.cpp:49 sessionrunner.cpp:144
 #, kde-format
 msgid "switch user"
 msgstr "切換使用者"
 
-#: sessionrunner.cpp:45
+#: sessionrunner.cpp:49
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "用不同使用者開始新的工作階段"
 
-#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#: sessionrunner.cpp:50 sessionrunner.cpp:144
 #, kde-format
 msgid "new session"
 msgstr "新工作階段"
 
-#: sessionrunner.cpp:50
+#: sessionrunner.cpp:54
 #, kde-format
 msgid "Lists all sessions"
 msgstr "列出所有工作階段"
 
-#: sessionrunner.cpp:64
+#: sessionrunner.cpp:68
 #, kde-format
 msgid "log out"
 msgstr "登出"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:70
 #, kde-format
 msgctxt "log out command"
 msgid "Logout"
 msgstr "登出"
 
-#: sessionrunner.cpp:75
+#: sessionrunner.cpp:79
 #, kde-format
 msgid "Restart the computer"
 msgstr "重新開機"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:86
 #, kde-format
 msgctxt "shut down computer command"
 msgid "shutdown"
 msgstr "關機"
 
-#: sessionrunner.cpp:84
+#: sessionrunner.cpp:88
 #, kde-format
 msgid "Shut down the computer"
 msgstr "關閉電腦"
 
-#: sessionrunner.cpp:93
+#: sessionrunner.cpp:97
 #, kde-format
 msgid "Lock the screen"
 msgstr "鎖定螢幕"
 
-#: sessionrunner.cpp:115
+#: sessionrunner.cpp:107
+#, fuzzy, kde-format
+#| msgid "new session"
+msgid "Save the session"
+msgstr "新工作階段"
+
+#: sessionrunner.cpp:108
+#, kde-format
+msgid "Save the current session for session restoration"
+msgstr ""
+
+#: sessionrunner.cpp:129
 #, kde-format
 msgctxt "User sessions"
 msgid "sessions"
 msgstr "工作階段"
 
-#: sessionrunner.cpp:136
+#: sessionrunner.cpp:150
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "切換使用者"
 
-#: sessionrunner.cpp:211
+#: sessionrunner.cpp:228
 #, kde-format
 msgid "Warning - New Session"
 msgstr "警告─新工作階段"
 
-#: sessionrunner.cpp:212
+#: sessionrunner.cpp:229
 #, kde-format
 msgid ""
 "<p>You have chosen to open another desktop session.<br />The current session "

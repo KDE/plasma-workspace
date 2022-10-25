@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-15 06:23+0200\n"
+"PO-Revision-Date: 2022-10-24 06:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,18 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
 msgid "Main Toolbar"
-msgstr "ხელსაწყოთა მთავარი ზოლი"
+msgstr "ხელსაწყოების მთავარი ზოლი"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "ხელსაწყოთა მთავარი ზოლი"
+msgstr "ხელსაწყოების დამხმარე ზოლები"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format

@@ -1,7 +1,7 @@
 # translation of kcmicons.po to Slovenian
 # Translation of kcmicons.po to Slovenian
 # Copyright (C) 2001, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: kcm_icons.po 1636519 2022-10-22 01:31:20Z scripty $
+# $Id: kcm_icons.po 1636675 2022-10-25 01:33:34Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-15 10:00+0200\n"
+"PO-Revision-Date: 2022-10-24 08:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -33,10 +33,9 @@ msgid "Main Toolbar"
 msgstr "Glavna orodna vrstica"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Druga barva"
+msgstr "Sekundarne orodne vrstice"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -138,11 +137,15 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Tu lahko konfigurirate privzete velikosti različnih vrst ikon na sistemski "
+"ravni. Upoštevajte, da ne bodo vse aplikacije spoštovale teh nastavitev.<nl/"
+"><nl/>Če se vam zdi, da so predmeti na zaslonu na splošno premajhni ali "
+"preveliki, razmislite o prilagoditvi globalne lestvice."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Prilagodi globalno lestvico…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
