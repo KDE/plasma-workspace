@@ -23,6 +23,8 @@
 
 #include <KIO/CommandLauncherJob>
 #include <kterminallauncherjob.h>
+#include <optional>
+#include <qchar.h>
 
 K_PLUGIN_CLASS_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
@@ -48,15 +50,14 @@ ShellRunner::~ShellRunner()
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
     QStringList envs;
-    std::optional<QString> parsingResult = parseShellCommand(context.query(), envs);
-    if (parsingResult.has_value()) {
-        const QString command = parsingResult.value();
+    const QStringList commands = parseShellCommands(context.query(), envs);
+    if (!commands.isEmpty()) {
         Plasma::QueryMatch match(this);
-        match.setId(QStringLiteral("exec://") + command);
+        match.setId(QStringLiteral("exec://") + commands.join(QLatin1Char(' ')));
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", context.query()));
-        match.setData(QVariantList({command, envs}));
+        match.setData(QVariantList({commands, envs}));
         match.setRelevance(0.7);
         match.setActions(m_actionList);
         context.addMatch(match);
@@ -66,42 +67,61 @@ void ShellRunner::match(Plasma::RunnerContext &context)
 void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     const QVariantList data = match.data().toList();
-    const QStringList list = data.at(1).toStringList();
-    const QString command = data.at(0).toString();
+    const QStringList commands = data.at(0).toStringList();
+    const QStringList envs = data.at(1).toStringList();
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-    for (const auto &str : list) {
+    for (const auto &str : envs) {
         const int pos = str.indexOf('=');
         env.insert(str.left(pos), str.mid(pos + 1));
     }
 
     if (match.selectedAction()) {
-        auto job = new KTerminalLauncherJob(command);
-        job->setProcessEnvironment(env);
-        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        job->start();
+        for (const QString &command : commands) {
+            auto job = new KTerminalLauncherJob(command);
+            job->setProcessEnvironment(env);
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+            job->start();
+        }
     } else {
-        auto job = new KIO::CommandLauncherJob(command);
-        job->setProcessEnvironment(env);
-        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        job->start();
+        for (const QString &command : commands) {
+            auto job = new KIO::CommandLauncherJob(command);
+            job->setProcessEnvironment(env);
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+            job->start();
+        }
     }
 }
 
-std::optional<QString> ShellRunner::parseShellCommand(const QString &query, QStringList &envs)
+QStringList ShellRunner::parseShellCommands(const QString &query, QStringList &envs)
+{
+    QStringList commands;
+    QStringList lines = query.split(QLatin1Char(';'));
+    for (auto &line : lines) {
+        std::optional<QString> command = parseShellCommand(line, envs);
+        if (command.has_value()) {
+            commands << command.value();
+        } else {
+            return {};
+        }
+    }
+    return commands;
+}
+
+std::optional<QString> ShellRunner::parseShellCommand(QString &line, QStringList &envs)
 {
     const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
-    const QStringList split = KShell::splitArgs(query);
-    for (const auto &entry : split) {
-        const QString aliasExpansion = findAlias(entry);
-        const QString executablePath = QStandardPaths::findExecutable(KShell::tildeExpand(entry));
+    QStringList parts = KShell::splitArgs(line);
+    for (const auto &part : parts) {
+        const QString aliasExpansion = findAlias(part);
+        const QString executablePath = QStandardPaths::findExecutable(KShell::tildeExpand(part));
         if (!aliasExpansion.isEmpty()) {
-            return parseShellCommand(aliasExpansion + query.mid(query.indexOf(entry) + entry.length()), envs);
+            return parseShellCommand(line.replace(part, aliasExpansion), envs);
         } else if (!executablePath.isEmpty()) {
             QStringList executableParts{executablePath};
-            executableParts << split.mid(split.indexOf(entry) + 1);
+            executableParts << parts.mid(parts.indexOf(part) + 1);
             return KShell::joinArgs(executableParts);
-        } else if (envRegex.match(entry).hasMatch()) {
-            envs.append(entry);
+        } else if (envRegex.match(part).hasMatch()) {
+            envs.append(part);
         } else {
             return std::nullopt;
         }
