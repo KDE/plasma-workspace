@@ -60,6 +60,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     }
 
     Plasma::RunnerSyntax listAllSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")); //"SESSIONS" should not be translated; it's used programmaticaly
+    listAllSyntax.addExampleQuery(i18nc("list user sessions command", "sessions"));
     addSyntax(listAllSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
@@ -150,8 +151,8 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),
     // not as a user supplied query. and yes, "Ugh, magic strings"
-    bool listAll =
-        term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0 || term.compare(i18nc("User sessions", "sessions"), Qt::CaseInsensitive) == 0;
+    bool listAll = term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0
+        || term.compare(i18nc("list user sessions command", "sessions"), Qt::CaseInsensitive) == 0;
 
     if (!listAll) {
         // no luck, try the "switch" user command
