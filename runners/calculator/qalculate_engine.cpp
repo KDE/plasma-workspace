@@ -236,8 +236,9 @@ static const QMap<QString, int> s_commonBaseMappings = {
 
 bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customBase)
 {
-    if (basePrefix.isEmpty())
+    if (basePrefix.isEmpty()) {
         return true;
+    }
 
     basePrefix = basePrefix.toLower();
     if (s_commonBaseMappings.contains(basePrefix)) {
