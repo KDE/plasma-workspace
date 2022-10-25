@@ -70,7 +70,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
         Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::InformationalMatch);
+        match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
         match.setData(QStringLiteral("42"));
@@ -126,7 +126,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     QString result = calculate(cmd, &isApproximate, base, customBase);
     if (!result.isEmpty() && (foundPrefix || result != cmd)) {
         Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::InformationalMatch);
+        match.setType(Plasma::QueryMatch::HelperMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
         if (isApproximate) {
@@ -160,9 +160,10 @@ QString CalculatorRunner::calculate(const QString &term, bool *isApproximate, in
 
 void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(context)
     if (match.selectedAction()) {
         m_engine->copyToClipboard();
+    } else {
+        context.requestQueryStringUpdate(match.text(), match.text().length());
     }
 }
 
