@@ -317,7 +317,10 @@ AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *wind
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig, window->resourceName()));
+    AppData data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig, window->resourceName()));
+
+    if (window->resourceName().isEmpty())
+        data.icon = window->icon();
 
     appDataCache.insert(window, data);
 
