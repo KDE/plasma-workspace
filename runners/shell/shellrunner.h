@@ -27,6 +27,7 @@ public:
 
 private:
     std::optional<QString> parseShellCommand(const QString &query, QStringList &envs);
+    QString findAlias(const QString &entry);
     QList<QAction *> m_actionList;
     QIcon m_matchIcon;
 };
