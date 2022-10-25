@@ -198,6 +198,7 @@ Item {
 
         Plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
         var clearAction = Plasmoid.action("clearHistory");
+        clearAction.priority = 256;
         clearAction.visible = Qt.binding(function() {
             return historyModel.expiredNotificationsCount > 0;
         });

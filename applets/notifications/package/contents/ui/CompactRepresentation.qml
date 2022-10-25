@@ -118,7 +118,7 @@ MouseArea {
     WorkspaceComponents.BadgeOverlay {
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        visible: Plasmoid.configuration.showUnread
+        visible: Plasmoid.configuration.showUnread && root.actualUnread > 0
 
         text: root.actualUnread
         icon: notificationIcon
