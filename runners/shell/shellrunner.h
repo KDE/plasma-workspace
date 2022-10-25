@@ -26,7 +26,8 @@ public:
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 private:
-    std::optional<QString> parseShellCommand(const QString &query, QStringList &envs);
+    QStringList parseShellCommands(const QString &query, QStringList &envs);
+    std::optional<QString> parseShellCommand(QString &line, QStringList &envs);
     QString findAlias(const QString &entry);
     QList<QAction *> m_actionList;
     QIcon m_matchIcon;
