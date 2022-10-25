@@ -11,6 +11,7 @@ set(plasmashellprivateplugin_SRCS
 
 add_library(plasmashellprivateplugin SHARED ${plasmashellprivateplugin_SRCS})
 target_link_libraries(plasmashellprivateplugin
+        pthread
         Qt::Core
         Qt::Quick
         Qt::Qml

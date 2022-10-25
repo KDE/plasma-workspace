@@ -6,6 +6,8 @@
 
 #include "plasmaappletitemmodel_p.h"
 
+#include <thread>
+
 #include <QFileInfo>
 #include <QMimeData>
 #include <QStandardPaths>
@@ -247,6 +249,7 @@ QVariant PlasmaAppletItem::data(int role) const
 PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
     : QStandardItemModel(parent)
     , m_startupCompleted(false)
+    , m_isPopulatingModel(false)
 {
     setSortRole(Qt::DisplayRole);
 }
@@ -269,10 +272,8 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
     return newRoleNames;
 }
 
-void PlasmaAppletItemModel::populateModel()
+void PlasmaAppletItemModel::populateModelThreadRun()
 {
-    clear();
-
     auto filter = [this](const KPluginMetaData &plugin) -> bool {
         const QStringList provides = plugin.value(QStringLiteral("X-Plasma-Provides"), QStringList());
 
@@ -317,6 +318,19 @@ void PlasmaAppletItemModel::populateModel()
     }
 
     Q_EMIT modelPopulated();
+    m_isPopulatingModel = false;
+}
+
+void PlasmaAppletItemModel::populateModel()
+{
+    if (m_isPopulatingModel) {
+        return;
+    }
+
+    clear();
+
+    m_isPopulatingModel = true;
+    std::thread(&PlasmaAppletItemModel::populateModelThreadRun, this).detach();
 }
 
 void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)

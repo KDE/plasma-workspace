@@ -345,6 +345,11 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
     d->filterItemModel.setDynamicSortFilter(true);
     d->filterItemModel.setSourceModel(&d->itemModel);
     d->filterItemModel.sort(0);
+
+    connect(&d->itemModel, &PlasmaAppletItemModel::modelPopulated, this, [this] {
+        d->initFilters();
+        d->itemModel.setRunningApplets(d->runningApplets);
+    });
 }
 
 WidgetExplorer::~WidgetExplorer()
@@ -360,9 +365,7 @@ void WidgetExplorer::setApplication(const QString &app)
 
     d->application = app;
     d->itemModel.setApplication(app);
-    d->initFilters();
 
-    d->itemModel.setRunningApplets(d->runningApplets);
     Q_EMIT applicationChanged();
 }
 

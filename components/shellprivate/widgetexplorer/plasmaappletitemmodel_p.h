@@ -95,10 +95,13 @@ Q_SIGNALS:
     void modelPopulated();
 
 private:
+    void populateModelThreadRun();
+
     QString m_application;
     QStringList m_provides;
     KConfigGroup m_configGroup;
     bool m_startupCompleted : 1;
+    bool m_isPopulatingModel : 1;
 
 private Q_SLOTS:
     void populateModel();
