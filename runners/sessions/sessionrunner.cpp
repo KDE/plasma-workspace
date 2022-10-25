@@ -223,21 +223,18 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
         return;
     }
 
-    // TODO: this message is too verbose and too technical.
-    int result = QMessageBox::warning(nullptr,
-                                      i18n("Warning - New Session"),
-                                      i18n("<p>You have chosen to open another desktop session.<br />"
-                                           "The current session will be hidden "
-                                           "and a new login screen will be displayed.<br />"
-                                           "An F-key is assigned to each session; "
-                                           "F%1 is usually assigned to the first session, "
-                                           "F%2 to the second session and so on. "
-                                           "You can switch between sessions by pressing "
-                                           "Ctrl, Alt and the appropriate F-key at the same time. "
-                                           "Additionally, the Plasma Panel and Desktop menus have "
-                                           "actions for switching between sessions.</p>",
-                                           7,
-                                           8));
+    int result = QMessageBox::information(nullptr,
+                                          i18n("New Session"),
+                                          i18n("<p>You are about to enter a new desktop session.</p>"
+                                               "<p>A login screen will be displayed and the current session will be hidden.</p>"
+                                               "<p>You can switch between desktop sessions using:</p>"
+                                               "<ul>"
+                                               "<li>Ctrl+Alt+F{number of session}</li>"
+                                               "<li>Plasma search (type 'switch' or 'sessions')</li>"
+                                               "<li>Plasma widgets (such as the application launcher)</li>"
+                                               "</ul>"),
+                                          QMessageBox::Ok,
+                                          QMessageBox::Cancel);
 
     if (result == QMessageBox::Cancel) {
         return;
