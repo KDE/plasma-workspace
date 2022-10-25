@@ -24,6 +24,7 @@ public:
 private:
     void resetLocator();
     void sendLocation(double latitude, double longitude);
+    void disableSelf();
 
     ColorCorrect::CompositorAdaptor *const m_adaptor;
     ColorCorrect::Geolocator *m_locator = nullptr;

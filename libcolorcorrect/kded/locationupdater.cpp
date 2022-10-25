@@ -6,6 +6,9 @@
 
 #include "locationupdater.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+
 #include <KPluginFactory>
 
 #include "../compositorcoloradaptor.h"
@@ -35,12 +38,26 @@ void LocationUpdater::resetLocator()
     } else {
         delete m_locator;
         m_locator = nullptr;
+        // if automatic location isn't enabled, there's no need to keep running
+        // Night Color KCM will enable us again if user changes to automatic
+        disableSelf();
     }
 }
 
 void LocationUpdater::sendLocation(double latitude, double longitude)
 {
     m_adaptor->sendAutoLocationUpdate(latitude, longitude);
+}
+
+void LocationUpdater::disableSelf()
+{
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    QDBusMessage unloadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                            QStringLiteral("/kded"),
+                                                            QStringLiteral("org.kde.kded5"),
+                                                            QStringLiteral("unloadModule"));
+    unloadMsg.setArguments({QVariant(QStringLiteral("colorcorrectlocationupdater"))});
+    dbus.call(unloadMsg, QDBus::NoBlock);
 }
 
 #include "locationupdater.moc"

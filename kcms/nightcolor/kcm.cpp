@@ -8,6 +8,8 @@
 
 #include <QIcon>
 #include <QStandardPaths>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -46,6 +48,22 @@ bool KCMNightColor::isIconThemeBreeze()
 {
     return QIcon::themeName().contains(QStringLiteral("breeze"));
 }
-}
 
+void KCMNightColor::save()
+{
+    KQuickAddons::ManagedConfigModule::save();
+
+    // load/unload colorcorrectlocationupdater based on whether user set it to automatic location
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+
+    bool enableUpdater = (nightColorSettings()->mode() == NightColorMode::Automatic);
+
+    QDBusMessage loadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                          QStringLiteral("/kded"),
+                                                          QStringLiteral("org.kde.kded5"),
+                                                          (enableUpdater ? QStringLiteral("loadModule") : QStringLiteral("unloadModule")));
+    loadMsg.setArguments({QVariant(QStringLiteral("colorcorrectlocationupdater"))});
+    dbus.call(loadMsg, QDBus::NoBlock);
+}
+}
 #include "kcm.moc"
