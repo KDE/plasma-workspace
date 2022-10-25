@@ -141,7 +141,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 
         MathStructure m = CALCULATOR->calculate(customBase.toStdString(), eo);
 
-        if (m.isNumber() && (m.number().isPositive() || m.number().isInteger()) && (m.number() > 1 || m.number() < -1)) {
+        if (m.isNumber() && (m.number().isPositive() || m.number().isInteger()) && (m.number().isGreaterThan(1) || m.number().isLessThan(-1))) {
             CALCULATOR->setCustomOutputBase(m.number());
         } else {
             base = BASE_DECIMAL;
