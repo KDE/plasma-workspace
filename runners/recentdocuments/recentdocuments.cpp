@@ -56,7 +56,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             | Order::RecentlyUsedFirst
             | Agent::any()
             // we search only on file name, as KActivity does not support better options
-            | Url("/*/" + term + "*")
+            | Url("*" + term + "*")
             | Limit(20);
     // clang-format on
 
