@@ -89,6 +89,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
             match.setRelevance(relevance + 0.1);
             match.setType(Plasma::QueryMatch::PossibleMatch);
+        } else if (!url.fileName().contains(term)) {
+            continue;
         }
 
         match.setIconName(KIO::iconNameForUrl(url));
