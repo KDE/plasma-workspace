@@ -270,11 +270,8 @@ void ImageBackend::removeSlidePath(const QString &path)
         return;
     }
 
-    const QString result = m_slideshowModel->removeDir(path);
-
-    if (result.isEmpty()) {
-        return;
-    }
+    /* BUG 461003 check path is in the config*/
+    m_slideshowModel->removeDir(path);
 
     if (m_slidePaths.removeOne(path)) {
         Q_EMIT slidePathsChanged();
