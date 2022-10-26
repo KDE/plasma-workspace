@@ -109,8 +109,10 @@ ColumnLayout {
             }
 
             delegate: Kirigami.AbstractListItem {
+                id: listItem
+
+                background: null
                 highlighted: false
-                hoverEnabled: false
 
                 readonly property bool isPlasmoid: model.itemType === "Plasmoid"
 
@@ -127,6 +129,11 @@ ColumnLayout {
                         Layout.fillWidth: true
                         text: model.display
                         elide: Text.ElideRight
+
+                        QQC2.ToolTip {
+                            visible: listItem.hovered && parent.truncated
+                            text: parent.text
+                        }
                     }
 
                     QQC2.ComboBox {
