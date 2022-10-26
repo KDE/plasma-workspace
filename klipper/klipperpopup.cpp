@@ -195,7 +195,7 @@ void KlipperPopup::slotTopIsUserSelectedSet()
     }
 }
 
-void KlipperPopup::showEvent(QShowEvent *e)
+void KlipperPopup::showEvent(QShowEvent *)
 {
     popup(QCursor::pos());
 }
