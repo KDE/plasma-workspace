@@ -471,7 +471,7 @@ void IconApplet::processDrop(QObject *dropEvent)
                       static_cast<Qt::MouseButtons>(dropEvent->property("buttons").toInt()),
                       static_cast<Qt::KeyboardModifiers>(dropEvent->property("modifiers").toInt()));
 
-        KIO::DropJob *dropJob = KIO::drop(&de, m_url);
+        KIO::drop(&de, m_url);
         return;
     }
 }
