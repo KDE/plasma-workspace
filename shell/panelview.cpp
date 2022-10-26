@@ -533,6 +533,10 @@ QRect PanelView::geometryByDistance(int distance) const
     QPoint position;
     const QRect screenGeometry = s->geometry();
 
+    if (!containment()) {
+        return QRect();
+    }
+
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         switch (m_alignment) {
