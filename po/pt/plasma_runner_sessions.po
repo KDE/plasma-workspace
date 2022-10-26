@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
-"PO-Revision-Date: 2020-02-01 12:19+0000\n"
+"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"PO-Revision-Date: 2022-10-25 10:45+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -66,19 +66,18 @@ msgstr "reiniciar"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "gravar"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Gravar a sessão actual para a reposição da mesma"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "nova sessão"
+msgstr "gravar a sessão"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -154,15 +153,14 @@ msgid "Lock the screen"
 msgstr "Bloquear o ecrã"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "nova sessão"
+msgstr "Gravar a sessão"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Gravar a sessão actual para a reposição da mesma"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -175,28 +173,38 @@ msgstr "sessões"
 msgid "Switch User"
 msgstr "Mudar de Utilizador"
 
+#: sessionrunner.cpp:227
+#, fuzzy, kde-format
+#| msgid "new session"
+msgid "New Session"
+msgstr "nova sessão"
+
 #: sessionrunner.cpp:228
 #, kde-format
-msgid "Warning - New Session"
-msgstr "Aviso - Nova Sessão"
-
-#: sessionrunner.cpp:229
-#, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
+"(such as the application launcher)</li></ul>"
 msgstr ""
-"<p>Escolheu iniciar outra sessão.<br/>A sessão actual será escondida e será "
-"mostrado um novo ecrã de autenticação.<br/>É atribuída uma tecla de função a "
-"cada sessão; F%1 é normalmente atribuída à primeira sessão, F%2 à segunda "
-"sessão e assim por diante. Pode mudar de sessão carregando ao mesmo tempo em "
-"Ctrl, Alt e tecla de função respectiva. Para além disso, o Painel do Plasma "
-"e os menus dos Ecrãs têm acções para mudar de sessões.</p>"
 
-#~ msgid "New Session"
-#~ msgstr "Nova Sessão"
+#~ msgid "Warning - New Session"
+#~ msgstr "Aviso - Nova Sessão"
+
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>Escolheu iniciar outra sessão.<br/>A sessão actual será escondida e "
+#~ "será mostrado um novo ecrã de autenticação.<br/>É atribuída uma tecla de "
+#~ "função a cada sessão; F%1 é normalmente atribuída à primeira sessão, F%2 "
+#~ "à segunda sessão e assim por diante. Pode mudar de sessão carregando ao "
+#~ "mesmo tempo em Ctrl, Alt e tecla de função respectiva. Para além disso, o "
+#~ "Painel do Plasma e os menus dos Ecrãs têm acções para mudar de sessões.</"
+#~ "p>"

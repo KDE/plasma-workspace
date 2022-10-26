@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
-"PO-Revision-Date: 2022-04-11 21:52+0200\n"
+"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"PO-Revision-Date: 2022-10-25 08:57+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -75,19 +75,18 @@ msgstr "reinicia"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "desa"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Desa la sessió actual per a la restauració de sessions"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "sessió nova"
+msgstr "desa la sessió"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -163,15 +162,14 @@ msgid "Lock the screen"
 msgstr "Bloqueja la pantalla"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "sessió nova"
+msgstr "Desa la sessió"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Desa la sessió actual per a la restauració de sessions"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -184,29 +182,38 @@ msgstr "sessions"
 msgid "Switch User"
 msgstr "Commuta d'usuari"
 
+#: sessionrunner.cpp:227
+#, fuzzy, kde-format
+#| msgid "new session"
+msgid "New Session"
+msgstr "sessió nova"
+
 #: sessionrunner.cpp:228
 #, kde-format
-msgid "Warning - New Session"
-msgstr "Avís - Sessió nova"
-
-#: sessionrunner.cpp:229
-#, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
+"(such as the application launcher)</li></ul>"
 msgstr ""
-"<p>Heu triat d'obrir una altra sessió d'escriptori.<br />La sessió actual "
-"s'amagarà i es mostrarà una pantalla nova de connexió.<br />S'assigna una "
-"tecla «Fn» a cada sessió. «F%1» normalment s'assigna a la primera sessió, «F"
-"%2» a la segona sessió i així successivament. Podeu commutar entre les "
-"sessions prement simultàniament «Ctrl», «Alt» i la tecla «Fn» apropiada. De "
-"manera addicional, el plafó del Plasma i els menús d'escriptori tenen "
-"accions per a commutar entre les sessions.</p>"
 
-#~ msgid "New Session"
-#~ msgstr "Sessió nova"
+#~ msgid "Warning - New Session"
+#~ msgstr "Avís - Sessió nova"
+
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>Heu triat d'obrir una altra sessió d'escriptori.<br />La sessió actual "
+#~ "s'amagarà i es mostrarà una pantalla nova de connexió.<br />S'assigna una "
+#~ "tecla «Fn» a cada sessió. «F%1» normalment s'assigna a la primera sessió, "
+#~ "«F%2» a la segona sessió i així successivament. Podeu commutar entre les "
+#~ "sessions prement simultàniament «Ctrl», «Alt» i la tecla «Fn» apropiada. "
+#~ "De manera addicional, el plafó del Plasma i els menús d'escriptori tenen "
+#~ "accions per a commutar entre les sessions.</p>"

@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
-"PO-Revision-Date: 2022-02-01 11:47+0100\n"
+"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"PO-Revision-Date: 2022-10-26 01:17+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
@@ -75,19 +75,18 @@ msgstr "reiniciar"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "guardar"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Guarda la sesión actual para la restauración de sesiones"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "nueva sesión"
+msgstr "guardar sesión"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -163,15 +162,14 @@ msgid "Lock the screen"
 msgstr "Bloquear la pantalla"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "nueva sesión"
+msgstr "Guardar la sesión"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Guardar la sesión actual para la restauración de sesiones"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -184,32 +182,40 @@ msgstr "sesiones"
 msgid "Switch User"
 msgstr "Cambiar usuario"
 
+#: sessionrunner.cpp:227
+#, kde-format
+msgid "New Session"
+msgstr "Nueva sesión"
+
 #: sessionrunner.cpp:228
 #, kde-format
-msgid "Warning - New Session"
-msgstr "Advertencia: nueva sesión"
-
-#: sessionrunner.cpp:229
-#, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
+"(such as the application launcher)</li></ul>"
 msgstr ""
-"<p>Ha elegido abrir otra sesión de escritorio.<br />La sesión actual se "
-"ocultará y se mostrará una nueva pantalla de identificación.<br />Se "
-"asignará una tecla de función a cada sesión. F%1 suele asignarse a la "
-"primera sesión, F%2 a la segunda, y así sucesivamente. Puede cambiar entre "
-"sesiones pulsando simultáneamente las teclas Ctrl, Alt y la tecla de función "
-"adecuada. Además, dispone de acciones para cambiar de sesión en los menús "
-"del panel y del escritorio de Plasma.</p>"
 
-#~ msgid "New Session"
-#~ msgstr "Nueva sesión"
+#~ msgid "Warning - New Session"
+#~ msgstr "Advertencia: nueva sesión"
+
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>Ha elegido abrir otra sesión de escritorio.<br />La sesión actual se "
+#~ "ocultará y se mostrará una nueva pantalla de identificación.<br />Se "
+#~ "asignará una tecla de función a cada sesión. F%1 suele asignarse a la "
+#~ "primera sesión, F%2 a la segunda, y así sucesivamente. Puede cambiar "
+#~ "entre sesiones pulsando simultáneamente las teclas Ctrl, Alt y la tecla "
+#~ "de función adecuada. Además, dispone de acciones para cambiar de sesión "
+#~ "en los menús del panel y del escritorio de Plasma.</p>"
 
 #~ msgid "&Start New Session"
 #~ msgstr "Iniciar una nueva &sesión"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-18 19:48+0530\n"
+"PO-Revision-Date: 2022-10-25 19:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -26,10 +26,9 @@ msgid "Main Toolbar"
 msgstr "பிரதான கருவிப்பட்டை"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&இரண்டாவது வண்ணம்:"
+msgstr "இரண்டாம்பட்ச கருவிப்பட்டைகள்"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -131,11 +130,14 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"பல்வேறு வகையான சின்னங்களின் இயல்பிருப்பு அளவுகளை இங்கு நீங்கள் அமைக்கலாம். சில செயலிகள் "
+"இவ்வமைப்புகளை பொருட்படுத்தாமல் இருக்கலாம்.<nl/><nl/>திரையில் காட்டப்படுபவை அனைத்தின் "
+"அளவை மாற்ற, இத்தேர்வுக்கு பதிலாக முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்றுங்கள்."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்று…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

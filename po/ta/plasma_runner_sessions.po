@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
-"PO-Revision-Date: 2022-10-18 21:51+0530\n"
+"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"PO-Revision-Date: 2022-10-25 19:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -76,14 +76,13 @@ msgstr ""
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "தற்போதைய அமர்வை மீட்டமைக்கக்கூடிய வகையில் சேமிக்கும்"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "புதிய அமர்வு"
+msgstr ""
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -161,12 +160,12 @@ msgstr "திரையை பூட்டு"
 #: sessionrunner.cpp:107
 #, kde-format
 msgid "Save the session"
-msgstr ""
+msgstr "அமர்வை சேமி"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "தற்போதைய அமர்வை மீட்டமைக்கக்கூடிய வகையில் சேமி"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -179,25 +178,34 @@ msgstr ""
 msgid "Switch User"
 msgstr "பயனரை மாற்று"
 
-#: sessionrunner.cpp:228
-#, kde-format
-msgid "Warning - New Session"
+#: sessionrunner.cpp:227
+#, fuzzy, kde-format
+#| msgid "Warning - New Session"
+msgid "New Session"
 msgstr "எச்சரிக்கை - புதிய அமர்வு"
 
-#: sessionrunner.cpp:229
+#: sessionrunner.cpp:228
 #, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
+"(such as the application launcher)</li></ul>"
 msgstr ""
-"<p>நீங்கள் இன்னொரு பணிமேடை அமர்வை திறக்க கோரியுள்ளீர்கள்.<br /> தற்போதைய அமர்வு "
-"மறைக்கப்பட்டு ஒரு புதிய நுழைவுத் திரை காட்டப்படும்.<br /> ஒவ்வொரு அமர்வுக்கும் ஒரு F-"
-"விசை வகுக்கப்படும்; முதல் அமர்வுக்கு F%1, இரண்டாம் அமர்வுக்கு F%2 என்பன போல விசைகள் "
-"வகுக்கப்படும். அமர்வுகளுக்கிடையே தாவ,Ctrl, Alt மற்றும் தகுந்த F-விசையை ஒரே நேரத்தில் "
-"நீங்கள் அழுத்தலாம். மேலும், பிளாஸ்மா பலகைகள் மூலமும், பணிமேடை பட்டிகள் மூலமும் நீங்கள் "
-"அமர்வுகளுக்கிடையே தாவலாம்.</p>"
+
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>நீங்கள் இன்னொரு பணிமேடை அமர்வை திறக்க கோரியுள்ளீர்கள்.<br /> தற்போதைய அமர்வு "
+#~ "மறைக்கப்பட்டு ஒரு புதிய நுழைவுத் திரை காட்டப்படும்.<br /> ஒவ்வொரு அமர்வுக்கும் ஒரு F-"
+#~ "விசை வகுக்கப்படும்; முதல் அமர்வுக்கு F%1, இரண்டாம் அமர்வுக்கு F%2 என்பன போல விசைகள் "
+#~ "வகுக்கப்படும். அமர்வுகளுக்கிடையே தாவ,Ctrl, Alt மற்றும் தகுந்த F-விசையை ஒரே "
+#~ "நேரத்தில் நீங்கள் அழுத்தலாம். மேலும், பிளாஸ்மா பலகைகள் மூலமும், பணிமேடை பட்டிகள் "
+#~ "மூலமும் நீங்கள் அமர்வுகளுக்கிடையே தாவலாம்.</p>"

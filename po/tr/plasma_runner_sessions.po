@@ -3,20 +3,21 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
-"PO-Revision-Date: 2022-02-27 14:12+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"PO-Revision-Date: 2022-10-25 11:50+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
@@ -72,19 +73,18 @@ msgstr "yeniden başlat"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "kaydet"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Geçerli oturumu daha sonra geri yüklemek için kaydeder"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "yeni oturum"
+msgstr "oturumu kaydet"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -160,15 +160,14 @@ msgid "Lock the screen"
 msgstr "Ekranı kilitle"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "yeni oturum"
+msgstr "Oturumu kaydet"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Geçerli oturumu daha sonra geri yüklemek için kaydet"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -181,32 +180,40 @@ msgstr "oturumlar"
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
+#: sessionrunner.cpp:227
+#, kde-format
+msgid "New Session"
+msgstr "Yeni Oturum"
+
 #: sessionrunner.cpp:228
 #, kde-format
-msgid "Warning - New Session"
-msgstr "Uyarı - Yeni Oturum"
-
-#: sessionrunner.cpp:229
-#, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
+"(such as the application launcher)</li></ul>"
 msgstr ""
-"<p>Başka bir masaüstü oturumu açmak istediniz.<br />Bu işlem için güncel "
-"oturum gizlenecek ve bir giriş ekranı görüntülenecektir.<br />Ayrıca her "
-"oturum için bir işlev düğmesi tanımlanacaktır. Genellikle ilk oturum için F"
-"%1, ikincisi için F%2 .. tanımlanır. Oturumlar arasında gezmek için CTRL - "
-"Alt ve karşılık gelen düğmeye basmalısınız. Bunlara ek olarak, Plasma Panel "
-"menüsü ve Masaüstü menüsü de oturumlar arasında geçiş yapmanızı sağlayacak "
-"eylemleri barındırır.</p>"
 
-#~ msgid "New Session"
-#~ msgstr "Yeni Oturum"
+#~ msgid "Warning - New Session"
+#~ msgstr "Uyarı - Yeni Oturum"
+
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>Başka bir masaüstü oturumu açmak istediniz.<br />Bu işlem için güncel "
+#~ "oturum gizlenecek ve bir giriş ekranı görüntülenecektir.<br />Ayrıca her "
+#~ "oturum için bir işlev düğmesi tanımlanacaktır. Genellikle ilk oturum için "
+#~ "F%1, ikincisi için F%2 .. tanımlanır. Oturumlar arasında gezmek için CTRL "
+#~ "- Alt ve karşılık gelen düğmeye basmalısınız. Bunlara ek olarak, Plasma "
+#~ "Panel menüsü ve Masaüstü menüsü de oturumlar arasında geçiş yapmanızı "
+#~ "sağlayacak eylemleri barındırır.</p>"
 
 #~ msgid "&Start New Session"
 #~ msgstr "&Yeni Oturum Başlat"
