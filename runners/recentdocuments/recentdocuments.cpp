@@ -71,8 +71,9 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         QString path = result->data(index, ResultModel::ResourceRole).toString();
         // If the match is only in the path and not in the file name, use as the result the folder where the match occurs, i.e. if query "a" matches file
         // "a/b.txt", take folder "a"
-        if (int pos = path.indexOf(QLatin1Char('/'), path.lastIndexOf(term) + term.length()) > -1) {
-            path.truncate(pos);
+        int endMatchingDir = path.indexOf(QStringLiteral("/"), path.lastIndexOf(term, -1, Qt::CaseInsensitive) + term.length());
+        if (endMatchingDir > -1) {
+            path.truncate(endMatchingDir);
         }
 
         const QUrl url = QUrl::fromUserInput(path,
@@ -80,10 +81,6 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
                                              // We can assume local file thanks to the request Url
                                              QUrl::AssumeLocalFile);
         const QString name = url.fileName();
-
-        if (!QFileInfo(url.toLocalFile()).exists()) {
-            continue;
-        }
 
         Plasma::QueryMatch match(this);
 
