@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-09 19:04+0200\n"
+"PO-Revision-Date: 2022-10-18 09:41+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -112,6 +112,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"di %1 (%2)\n"
+"Clic centrale per sospendere"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -119,16 +121,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Clic centrale per sospendere"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "di %1 (in pausa, %2)"
+msgstr ""
+"di %1 (in pausa, %2)\n"
+"Clic centrale per riprodurre"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -139,6 +143,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Sospeso (%1)\n"
+"Clic centrale per riprodurre"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

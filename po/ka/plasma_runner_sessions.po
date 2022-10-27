@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:25+0200\n"
+"PO-Revision-Date: 2022-10-26 04:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
@@ -72,19 +72,18 @@ msgstr "გადატვირთვა"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "შენახვა"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "მიმდინარე სესიის აღდგენისთვის შენახვა"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "ახალი სესია"
+msgstr "სესიის შენახვა"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -160,15 +159,14 @@ msgid "Lock the screen"
 msgstr "ეკრანის ჩაკეტვა"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "ახალი სესია"
+msgstr "ამ სესიის შენახვა"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "მიმდინარე სესიის აღდგენისთვის შენახვა"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -182,8 +180,7 @@ msgid "Switch User"
 msgstr "მომხმარებლის გადართვა"
 
 #: sessionrunner.cpp:227
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "New Session"
 msgstr "ახალი სესია"
 

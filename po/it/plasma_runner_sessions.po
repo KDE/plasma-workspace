@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-02-03 02:13+0100\n"
+"PO-Revision-Date: 2022-10-26 11:30+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
 msgctxt "log out command"
 msgid "logout"
-msgstr "Chiudi sessione"
+msgstr "chiudi sessione"
 
 #: sessionrunner.cpp:28
 #, kde-format
@@ -72,19 +72,18 @@ msgstr "Riavvia"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "salva"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Salva la sessione attuale per il ripristino della sessione"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "Nuova sessione"
+msgstr "salva sessione"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -160,15 +159,14 @@ msgid "Lock the screen"
 msgstr "Blocca lo schermo"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "Nuova sessione"
+msgstr "Salva la sessione"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Salva la sessione attuale per il ripristino della sessione"
 
 #: sessionrunner.cpp:129
 #, kde-format

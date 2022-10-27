@@ -6,15 +6,17 @@
 > <!-- change language only here -->
 ]>
 
-<article id="translations" lang="&language;">
+<article id="region_language" lang="&language;">
 <articleinfo>
 <title
->Lingua</title>
+>Regione e lingua</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
 <othercredit role="translator"
 ><firstname
 >Vincenzo</firstname
@@ -32,10 +34,10 @@
 > 
  </authorgroup>
 
-	  <date
->9/4/2021</date>
-	  <releaseinfo
->Plasma 5.20</releaseinfo>
+          <date
+>23/6/2022</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
 
 	  <keywordset>
 		<keyword
@@ -49,17 +51,19 @@
 		<keyword
 >lingua</keyword>
 		<keyword
+>numero</keyword>
+                <keyword
 >traduzione</keyword>
 		<keyword
->Lingua</keyword>
+>valuta</keyword>
 	  </keywordset>
 </articleinfo>
 
 <para
->In questa pagina è possibile impostare le lingue preferite con le quali visualizzare l'area di lavoro di &plasma; e le applicazioni. </para>
+>In questa pagina puoi impostare le lingue e i formati preferiti in cui visualizzare l'area di lavoro e le applicazioni di &plasma;. </para>
 
 <para
->L'area di lavoro &plasma; e &kde; Applications sono scritte in inglese americano e sono tradotte in molte lingue diverse da squadre di volontari. Queste traduzioni devono essere installate prima di poterle utilizzare. </para>
+>Nella maggior parte dei casi, è possibile semplicemente selezionare la lingua e tutte le opzioni saranno impostate in modo appropriato. L'area di lavoro di &plasma; e &kde; Applications sono scritte in inglese americano e tradotte in molte lingue diverse da squadre di volontari. Queste traduzioni devono essere installate prima di poter scegliere di utilizzarle. </para>
 <note
 ><para
 >Assicurarsi che siano installati i pacchetti della lingua o le traduzioni di &plasma; per le le lingue che si desidera utilizzare.</para>
@@ -67,15 +71,17 @@
 >Poiché il software &plasma; è sviluppato con le librerie &Qt;, è necessario avere le traduzioni &Qt; per le lingue selezionate per avere un'interfaccia completamente localizzata.</para
 ></note>
 
-<para
->L'elenco mostra i nomi localizzati delle lingue che saranno utilizzate per visualizzare l'area di lavoro e le applicazioni di &plasma;. Poiché l'area di lavoro e le applicazioni di &plasma; potrebbero non essere tradotti completamente in ogni lingua, &plasma; proverà a trovare le traduzioni appropriate scorrendo l'elenco fino a trovare una traduzione. Se nessuna delle lingue preferite ha una traduzione richiesta, sarà utilizzata la versione dall'inglese americano originale. </para>
 
 <para
->È possibile aggiungere una lingua all'elenco principale facendo clic sul pulsante <guibutton
->Aggiungi lingue...</guibutton
->. Saranno visualizzati i nomi delle lingue localizzati delle traduzioni installate di &systemsettings; e disponibili sul proprio sistema. Se la lingua che si desidera utilizzare non è mostrata nell'elenco, sarà necessario installarla utilizzando il metodo utilizzato normalmente per il proprio sistema. Selezionare una o più lingue nell'elenco e fare clic su <guibutton
->Aggiungi</guibutton
->. </para>
+>Su ciascuna barra di selezione puoi vedere esempi di come appaiono le impostazioni e quali unità di misura vengono utilizzate. Oltre ai numeri, puoi vedere come vengono visualizzati i valori delle valute, le date e gli orari in formato lungo e breve. Quando modifichi una delle impostazioni, l'anteprima mostra gli effetti delle modifiche prima di applicarle. </para>
+
+<para
+>Il clic sul pulsante <guilabel
+>Aggiungi altro...</guilabel
+> nella sotto-pagina della lingua mostrerà l'elenco delle lingue disponibili e inizialmente mostrerà la lingua attualmente selezionata. Se la selezione mostra <quote
+>Nessuna lingua configurata</quote
+> allora non è stata impostata una nazione e si sta utilizzando la lingua predefinita dal sistema, normalmente C. Se la lingua che di desidera utilizzare non è mostrata in questo elenco, allora sarà necessario installarla con il solito metodo per il proprio sistema. </para>
+
 <para
 >È possibile rimuovere una lingua dall'elenco principale selezionandola e facendo poi clic sull'icona <inlinemediaobject
 ><imageobject
@@ -87,11 +93,23 @@
 ></inlinemediaobject
 >. </para>
 
+<para
+>Se si ha bisogno di diverse impostazioni di formato individuali, è possibile selezionare la localizzazione per <guilabel
+>Numeri</guilabel
+>, <guilabel
+>Ora</guilabel
+>, <guilabel
+>Valuta</guilabel
+> e <guilabel
+>Unità di misura</guilabel
+>. </para>
+
 <note>
 <para
->Lingua e formati sono impostazioni indipendenti. La modifica di una lingua <emphasis
->non</emphasis
-> cambia automaticamente le impostazioni per numeri, valuta, &etc; alla corrispondente nazione o regione. </para>
+>In precedenza, Lingua e formati erano impostazioni indipendenti. A partire da &plasma; 5.26, sono stati uniti in questo KCM chiamato Regione e lingua. La modifica di una lingua <emphasis
+>cambia automaticamente</emphasis
+> le impostazioni per numeri, valuta &etc; al paese o alla regione corrispondente. In ogni caso, questa modifica non interrompe la vecchia configurazione. Il file di configurazione si trova ancora in <emphasis
+>~/.config/plasma-localerc</emphasis
+>. </para>
 </note>
-
 </article>

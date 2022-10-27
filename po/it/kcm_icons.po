@@ -5,21 +5,21 @@
 # Federico Zenith <federico.zenith@member.fsf.org>, 2010, 2012, 2014.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2016.
 # Paolo Zamponi <zapaolo@email.it>, 2017, 2018, 2020, 2021.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2020.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2021-05-29 14:40+0200\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"PO-Revision-Date: 2022-10-24 16:25+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.04.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -27,10 +27,9 @@ msgid "Main Toolbar"
 msgstr "Barra principale"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Secondo colore:"
+msgstr "Barre degli strumenti secondarie"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -132,15 +131,19 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Qui puoi configurare le dimensioni predefinite di vari tipi di icone a "
+"livello di sistema. Tieni presente che non tutte le applicazioni "
+"rispetteranno queste impostazioni.<nl/><nl/>Se trovi che gli oggetti sullo "
+"schermo sono generalmente troppo piccoli o troppo grandi, considera invece "
+"di regolare la scala globale."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Regola la scala globale..."
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Dimensione:"
@@ -176,8 +179,7 @@ msgid "Get New Icons…"
 msgstr "Ottieni nuove icone…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configura le dimensioni delle icone"
