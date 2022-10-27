@@ -17,7 +17,6 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KRuntimePlatform>
-#include <KSycoca>
 
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     : AbstractItem()
@@ -249,8 +248,6 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
     : QStandardItemModel(parent)
     , m_startupCompleted(false)
 {
-    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &PlasmaAppletItemModel::populateModel);
-
     setSortRole(Qt::DisplayRole);
 }
 

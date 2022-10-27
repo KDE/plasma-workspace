@@ -21,7 +21,6 @@ target_link_libraries(plasmashellprivateplugin
         KF5::Plasma
         KF5::PlasmaQuick
         KF5::I18n
-        KF5::Service
         KF5::NewStuff
         KF5::KIOFileWidgets
         KF5::WindowSystem
