@@ -65,11 +65,19 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     for (int i = 0; i < result->rowCount(); ++i) {
         const auto index = result->index(i, 0);
 
-        const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
+        QString path = result->data(index, ResultModel::ResourceRole).toString();
+        // If the match is only in the path and not in the file name, use as the result the folder where the match occurs, i.e. if query "a" matches file
+        // "a/b.txt", take folder "a"
+        int endMatchingDir = path.indexOf(QStringLiteral("/"), path.lastIndexOf(term, -1, Qt::CaseInsensitive) + term.length());
+        if (endMatchingDir > -1) {
+            path.truncate(endMatchingDir);
+        }
+
+        const QUrl url = QUrl::fromUserInput(path,
                                              QString(),
                                              // We can assume local file thanks to the request Url
                                              QUrl::AssumeLocalFile);
-        const auto name = result->data(index, ResultModel::TitleRole).toString();
+        const QString name = url.fileName();
 
         Plasma::QueryMatch match(this);
 
