@@ -69,8 +69,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         const auto index = result->index(i, 0);
 
         QString path = result->data(index, ResultModel::ResourceRole).toString();
-        // If the match is only in the path and not in the file name, use as the result the folder where the match occurs, i.e. if query "a" matches file
-        // "a/b.txt", take folder "a"
+        // If the matching term is only in the path and not in the file name, use as the result the directory where the match occurs, i.e. if query "a" matches
+        // file "a/b.txt", return directory "a"
         int endMatchingDir = path.indexOf(QStringLiteral("/"), path.lastIndexOf(term, -1, Qt::CaseInsensitive) + term.length());
         if (endMatchingDir > -1) {
             path.truncate(endMatchingDir);
