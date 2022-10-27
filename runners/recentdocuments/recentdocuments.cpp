@@ -69,15 +69,17 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         const auto index = result->index(i, 0);
 
         QString path = result->data(index, ResultModel::ResourceRole).toString();
-        // Take take the lowest file or folder up the path that contains the search term, i.e. if query "a" matches file "a/b.txt", use folder "a" as the
-        // result; if the match is in the file name, this will be the file itself
-        path.truncate(path.indexOf(QLatin1Char('/'), path.lastIndexOf(term) + term.length()));
+        // If the match is only in the path and not in the file name, use as the result the folder where the match occurs, i.e. if query "a" matches file
+        // "a/b.txt", take folder "a"
+        if (int pos = path.indexOf(QLatin1Char('/'), path.lastIndexOf(term) + term.length()) > -1) {
+            path.truncate(pos);
+        }
 
-        QUrl url = QUrl::fromUserInput(path,
-                                       QString(),
-                                       // We can assume local file thanks to the request Url
-                                       QUrl::AssumeLocalFile);
-        QString name = url.fileName();
+        const QUrl url = QUrl::fromUserInput(path,
+                                             QString(),
+                                             // We can assume local file thanks to the request Url
+                                             QUrl::AssumeLocalFile);
+        const QString name = url.fileName();
 
         if (!QFileInfo(url.toLocalFile()).exists()) {
             continue;
