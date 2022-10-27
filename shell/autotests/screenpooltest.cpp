@@ -6,6 +6,7 @@
 
 #include <QObject>
 
+#include <QApplication>
 #include <QDir>
 #include <QScreen>
 #include <QSignalSpy>

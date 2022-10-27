@@ -56,7 +56,9 @@
 #include "osd.h"
 #include "panelview.h"
 #include "screenpool.h"
+#if USE_SCRIPTING
 #include "scripting/scriptengine.h"
+#endif
 #include "shellcontainmentconfig.h"
 
 #include "debug.h"
@@ -122,9 +124,11 @@ ShellCorona::ShellCorona(QObject *parent)
 
 void ShellCorona::init()
 {
+#if USE_SCRIPTING
     connect(this, &Plasma::Corona::containmentCreated, this, [this](Plasma::Containment *c) {
         executeSetupPlasmoidScript(c, c);
     });
+#endif
 
     connect(this, &Plasma::Corona::availableScreenRectChanged, this, &Plasma::Corona::availableScreenRegionChanged);
 
@@ -958,6 +962,7 @@ void ShellCorona::slotCyclePanelFocus()
 
 void ShellCorona::loadDefaultLayout()
 {
+#if USE_SCRIPTING
     // pre-startup scripts
     QString script = m_lookAndFeelPackage.filePath("layouts", shell() + "-prelayout.js");
     if (!script.isEmpty()) {
@@ -1022,12 +1027,13 @@ void ShellCorona::loadDefaultLayout()
             qCWarning(PLASMASHELL) << "failed to initialize layout properly:" << script;
         }
     }
-
+#endif
     Q_EMIT startupCompleted();
 }
 
 void ShellCorona::processUpdateScripts()
 {
+#if USE_SCRIPTING
     const QStringList scripts = WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this);
     if (scripts.isEmpty()) {
         return;
@@ -1051,6 +1057,7 @@ void ShellCorona::processUpdateScripts()
             qCWarning(PLASMASHELL) << "Unable to open the script file" << script << "for reading";
         }
     }
+#endif
 }
 
 int ShellCorona::numScreens() const
@@ -1416,6 +1423,7 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 
 void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet)
 {
+#if USE_SCRIPTING
     if (!applet->pluginMetaData().isValid() || !containment->pluginMetaData().isValid()) {
         return;
     }
@@ -1450,6 +1458,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
     scriptEngine.globalObject().setProperty(QStringLiteral("applet"), scriptEngine.wrap(applet));
     scriptEngine.globalObject().setProperty(QStringLiteral("containment"), scriptEngine.wrap(containment));
     scriptEngine.evaluateScript(script, scriptFile);
+#endif
 }
 
 void ShellCorona::toggleWidgetExplorer()
@@ -1542,6 +1551,7 @@ QRgb ShellCorona::color() const
 
 QString ShellCorona::evaluateScript(const QString &script)
 {
+#if USE_SCRIPTING
     if (calledFromDBus()) {
         if (immutability() == Plasma::Types::SystemImmutable) {
             sendErrorReply(QDBusError::Failed, QStringLiteral("Widgets are locked"));
@@ -1575,6 +1585,9 @@ QString ShellCorona::evaluateScript(const QString &script)
     }
 
     return buffer;
+#else
+    return QString();
+#endif
 }
 
 void ShellCorona::checkActivities()
@@ -1858,6 +1871,7 @@ void ShellCorona::addPanel()
 void ShellCorona::addPanel(QAction *action)
 {
     const QString plugin = action->data().toString();
+#if USE_SCRIPTING
     if (plugin.startsWith(QLatin1String("plasma-desktop-template:"))) {
         WorkspaceScripting::ScriptEngine scriptEngine(this);
 
@@ -1870,7 +1884,9 @@ void ShellCorona::addPanel(QAction *action)
         const QString templateName = plugin.right(plugin.length() - qstrlen("plasma-desktop-template:"));
 
         scriptEngine.evaluateScript(QStringLiteral("loadTemplate(\"%1\")").arg(templateName));
-    } else if (!plugin.isEmpty()) {
+    } else
+#endif
+        if (!plugin.isEmpty()) {
         addPanel(plugin);
     }
 }

@@ -31,8 +31,10 @@
 
 #include "corecompositor.h"
 #include "coreprotocol.h"
+#include "datadevice.h"
 #include "primaryoutput.h"
 #include "xdgoutputv1.h"
+#include "xdgshell.h"
 
 #include <QtGui/QGuiApplication>
 
@@ -47,15 +49,68 @@ public:
     {
         return getAll<Output>().value(i, nullptr);
     }
+    Pointer *pointer()
+    {
+        auto *seat = get<Seat>();
+        Q_ASSERT(seat);
+        return seat->m_pointer;
+    }
+    Touch *touch()
+    {
+        auto *seat = get<Seat>();
+        Q_ASSERT(seat);
+        return seat->m_touch;
+    }
+    Surface *cursorSurface()
+    {
+        auto *p = pointer();
+        return p ? p->cursorSurface() : nullptr;
+    }
+    Keyboard *keyboard()
+    {
+        auto *seat = get<Seat>();
+        Q_ASSERT(seat);
+        return seat->m_keyboard;
+    }
+    Surface *surface(int i = 0)
+    {
+        return get<WlCompositor>()->m_surfaces.value(i, nullptr);
+    }
+    XdgSurface *xdgSurface(int i = 0)
+    {
+        return get<XdgWmBase>()->m_xdgSurfaces.value(i, nullptr);
+    }
+    XdgToplevel *xdgToplevel(int i = 0)
+    {
+        return get<XdgWmBase>()->toplevel(i);
+    }
+    XdgPopup *xdgPopup(int i = 0)
+    {
+        return get<XdgWmBase>()->popup(i);
+    }
     XdgOutputV1 *xdgOutput(Output *out)
     {
         return get<XdgOutputManagerV1>()->getXdgOutput(out);
     }
+    uint sendXdgShellPing();
+    void xdgPingAndWaitForPong();
     PrimaryOutputV1 *primaryOutput()
     {
         auto *primary = get<PrimaryOutputV1>();
         Q_ASSERT(primary);
         return primary;
+    }
+    // Things that can be changed run-time without confusing the client (i.e. don't require separate tests)
+    struct Config {
+        bool autoEnter = true;
+        bool autoRelease = true;
+        bool autoConfigure = false;
+    } m_config;
+    void resetConfig()
+    {
+        exec([&] {
+            m_config = Config{};
+        });
     }
 };
 
@@ -91,7 +146,7 @@ public:
         setenv("XDG_CURRENT_DESKTOP", "qtwaylandtests", 1);                                                                                                    \
         setenv("QT_QPA_PLATFORM", "wayland", 1);                                                                                                               \
         test tc;                                                                                                                                               \
-        QGuiApplication app(argc, argv);                                                                                                                       \
+        QApplication app(argc, argv);                                                                                                                          \
         return QTest::qExec(&tc, argc, argv);                                                                                                                  \
     }
 

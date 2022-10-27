@@ -45,6 +45,7 @@ CoreCompositor::CoreCompositor()
     })
 {
     qputenv("WAYLAND_DISPLAY", m_socketName);
+    m_timer.start();
     Q_ASSERT(isClean());
 }
 
@@ -106,6 +107,12 @@ uint CoreCompositor::nextSerial()
 {
     warnIfNotLockedByThread(Q_FUNC_INFO);
     return wl_display_next_serial(m_display);
+}
+
+uint CoreCompositor::currentTimeMilliseconds()
+{
+    warnIfNotLockedByThread(Q_FUNC_INFO);
+    return uint(m_timer.elapsed());
 }
 
 wl_client *CoreCompositor::client(int index)

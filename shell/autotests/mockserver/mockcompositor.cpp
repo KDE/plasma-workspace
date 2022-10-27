@@ -35,13 +35,62 @@ DefaultCompositor::DefaultCompositor()
     {
         Lock l(this);
 
+        add<WlCompositor>();
         add<XdgOutputManagerV1>();
         auto *output = add<Output>();
         auto *primaryOutput = add<PrimaryOutputV1>();
         output->m_data.physicalSize = output->m_data.mode.physicalSizeForDpi(96);
+        add<Seat>(Seat::capability_pointer | Seat::capability_keyboard | Seat::capability_touch);
+        add<Shm>();
+        add<XdgWmBase>();
         primaryOutput->setPrimaryOutputName("WL-1");
+
+        QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
+            QObject::connect(surface, &Surface::bufferCommitted, [=] {
+                if (m_config.autoRelease) {
+                    // Pretend we made a copy of the buffer and just release it immediately
+                    surface->m_committed.buffer->send_release();
+                }
+                if (m_config.autoEnter && get<Output>() && surface->m_outputs.empty())
+                    surface->sendEnter(get<Output>());
+                wl_display_flush_clients(m_display);
+            });
+        });
+        QObject::connect(
+            get<XdgWmBase>(),
+            &XdgWmBase::toplevelCreated,
+            get<XdgWmBase>(),
+            [&](XdgToplevel *toplevel) {
+                if (m_config.autoConfigure)
+                    toplevel->sendCompleteConfigure();
+            },
+            Qt::DirectConnection);
     }
     Q_ASSERT(isClean());
+}
+
+uint DefaultCompositor::sendXdgShellPing()
+{
+    warnIfNotLockedByThread(Q_FUNC_INFO);
+    uint serial = nextSerial();
+    auto *base = get<XdgWmBase>();
+    const auto resourceMap = base->resourceMap();
+    Q_ASSERT(resourceMap.size() == 1); // binding more than once shouldn't be needed
+    base->send_ping(resourceMap.first()->handle, serial);
+    return serial;
+}
+
+void DefaultCompositor::xdgPingAndWaitForPong()
+{
+    QSignalSpy pongSpy(exec([=] {
+                           return get<XdgWmBase>();
+                       }),
+                       &XdgWmBase::pong);
+    uint serial = exec([=] {
+        return sendXdgShellPing();
+    });
+    QTRY_COMPARE(pongSpy.count(), 1);
+    QTRY_COMPARE(pongSpy.first().at(0).toUInt(), serial);
 }
 
 } // namespace MockCompositor

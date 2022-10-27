@@ -306,4 +306,5 @@ private:
 
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
+    friend class ShellTest;
 };

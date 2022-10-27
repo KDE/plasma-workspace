@@ -42,7 +42,7 @@ public:
     explicit XdgOutputV1(Output *output)
         : m_output(output)
         , m_logicalGeometry(m_output->m_data.position, QSize(m_output->m_data.mode.resolution / m_output->m_data.scale))
-        , m_name(QString("WL-%1").arg(s_nextId++))
+        , m_name(m_output->m_data.connector.isEmpty() ? QString("WL-%1").arg(s_nextId++) : m_output->m_data.connector)
     {
     }
 
@@ -70,9 +70,15 @@ public:
     QMap<Output *, XdgOutputV1 *> m_xdgOutputs;
     XdgOutputV1 *getXdgOutput(Output *output)
     {
-        if (auto *xdgOutput = m_xdgOutputs.value(output))
+        if (auto *xdgOutput = m_xdgOutputs.value(output)) {
             return xdgOutput;
-        return m_xdgOutputs[output] = new XdgOutputV1(output); // TODO: free memory
+        }
+        m_xdgOutputs[output] = new XdgOutputV1(output);
+        connect(output, &Output::destroyed, this, [this, output]() {
+            delete m_xdgOutputs[output];
+            m_xdgOutputs.remove(output);
+        });
+        return m_xdgOutputs[output];
     }
 
 protected:

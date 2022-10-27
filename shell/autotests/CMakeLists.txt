@@ -6,18 +6,54 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/.
 
 MACRO(PLASMASHELL_UNIT_TESTS)
        FOREACH(_testname ${ARGN})
+                ecm_qt_declare_logging_category(${_testname} HEADER debug.h
+                                               IDENTIFIER PLASMASHELL
+                                               CATEGORY_NAME kde.plasmashell
+                                               DEFAULT_SEVERITY Info)
+                set(USE_SCRIPTING 0)
+                configure_file(../config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
                 set(test_SRCS
-                    ${_testname}.cpp ../screenpool.cpp ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../primaryoutputwatcher.cpp
+                    ${_testname}.cpp
+                    debug.cpp
+                    ../alternativeshelper.cpp
+                    ../screenpool.cpp
+                    ../shellcorona.cpp
+                    ../strutmanager.cpp
+                    ../shellcontainmentconfig.cpp
+                    ../osd.cpp
+                    ../panelview.cpp
+                    ../panelconfigview.cpp
+                    ../containmentconfigview.cpp
+                    ../currentcontainmentactionsmodel.cpp
+                    ../panelshadows.cpp
+                    ../desktopview.cpp
+                    ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../primaryoutputwatcher.cpp
                         )
+               set(plasmashell_dbusXML ../dbus/org.kde.PlasmaShell.xml)
+               qt_add_dbus_adaptor(test_SRCS ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
+               set(krunner_xml ../../krunner/dbus/org.kde.krunner.App.xml)
+               qt_add_dbus_interface(test_SRCS ${krunner_xml} krunner_interface)
+
                include_directories(${CMAKE_CURRENT_BINARY_DIR}/../mockserver)
                add_executable(${_testname} ${test_SRCS})
                target_link_libraries(${_testname}
                             Qt::Test
                             Qt::Gui
+                            KF5::Activities
                             KF5::ConfigCore
+                            KF5::Declarative
                             KF5::Service
                             KF5::WaylandClient
                             KF5::WindowSystem
+                            KF5::Package
+                            KF5::Plasma
+                            KF5::PlasmaQuick
+                            KF5::QuickAddons
+                            KF5::XmlGui
+                            KF5::I18n
+                            KF5::GlobalAccel
+                            Qt::Quick
+                            Qt::DBus
                             Wayland::Client
                             Wayland::Server
                             SharedClientTest
@@ -40,4 +76,5 @@ ENDMACRO(PLASMASHELL_UNIT_TESTS)
 
 PLASMASHELL_UNIT_TESTS(
     screenpooltest
+    shelltest
 )

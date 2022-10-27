@@ -155,6 +155,7 @@ public:
     }
 
     uint nextSerial();
+    uint currentTimeMilliseconds();
     wl_client *client(int index = 0);
     void warnIfNotLockedByThread(const char *caller = "warnIfNotLockedbyThread");
 
@@ -203,6 +204,7 @@ protected:
     wl_event_loop *m_eventLoop = nullptr;
     bool m_running = true;
     QVector<Global *> m_globals;
+    QElapsedTimer m_timer;
 
 private:
     Lock *m_lock = nullptr;

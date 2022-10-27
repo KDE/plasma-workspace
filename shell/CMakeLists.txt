@@ -59,6 +59,8 @@ endif()
 
 kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
 
+set(USE_SCRIPTING 1)
+
 add_executable(plasmashell)
 if (QT_MAJOR_VERSION EQUAL "5")
     ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
