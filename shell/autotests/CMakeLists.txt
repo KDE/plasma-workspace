@@ -58,6 +58,9 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Wayland::Server
                             SharedClientTest
                                      )
+               if (QT_MAJOR_VERSION STREQUAL "6")
+                    target_link_libraries(${_testname} KF5::ConfigQml)
+               endif()
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)
                   if (QT_MAJOR_VERSION EQUAL "5")
