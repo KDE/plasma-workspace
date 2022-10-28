@@ -49,41 +49,55 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         return;
     }
 
-    // clang-format off
-    const QString term = context.query();
-    auto query = UsedResources
-            | Activity::current()
-            | Order::RecentlyUsedFirst
-            | Agent::any()
-            // we search only on file name, as KActivity does not support better options
-            | Url("*" + term + "*")
-            | Limit(20);
-    // clang-format on
+    const QStringList terms = context.query().split(QLatin1Char(' '));
 
-    const auto result = new ResultModel(query);
+    QList<QUrl> urls;
+    // fetch results for each query word
+    for (const QString &term : terms) {
+        // clang-format off
+        auto query = UsedResources
+                | Activity::current()
+                | Order::RecentlyUsedFirst
+                | Agent::any()
+                // we search only on file name, as KActivity does not support better options
+                | Url("*" + term + "*")
+                | Limit(20);
+        // clang-format on
 
-    for (int i = 0; i < result->rowCount(); ++i) {
-        const auto index = result->index(i, 0);
+        const auto result = new ResultModel(query);
+        for (int i = 0; i < result->rowCount(); ++i) {
+            const auto index = result->index(i, 0);
+            const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
+                                                 QString(),
+                                                 // We can assume local file thanks to the request Url
+                                                 QUrl::AssumeLocalFile);
 
-        const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
-                                             QString(),
-                                             // We can assume local file thanks to the request Url
-                                             QUrl::AssumeLocalFile);
-        const auto name = result->data(index, ResultModel::TitleRole).toString();
+            urls << url;
+        }
+    }
+
+    // filter the files so that the file name matchse all of the query words
+    for (const QUrl &url : urls) {
+        const QString name = url.fileName();
 
         Plasma::QueryMatch match(this);
 
-        auto relevance = 0.5;
-        match.setType(Plasma::QueryMatch::CompletionMatch);
-        if (term.size() >= 5 && url.fileName() == term) {
-            relevance = 1.0;
+        if (terms.size() >= 5 && name == context.query()) {
+            match.setRelevance(1.0);
             match.setType(Plasma::QueryMatch::ExactMatch);
-        } else if (url.fileName().startsWith(term)) {
-            relevance = 0.9;
+        } else if (name.startsWith(context.query())) {
+            match.setRelevance(0.9);
             match.setType(Plasma::QueryMatch::PossibleMatch);
+        } else if (std::all_of(terms.cbegin(), terms.cend(), [&name](const QString &term) {
+                       return name.contains(term, Qt::CaseInsensitive);
+                   })) {
+            match.setRelevance(0.5);
+            match.setType(Plasma::QueryMatch::CompletionMatch);
+        } else {
+            continue;
         }
+
         match.setIconName(KIO::iconNameForUrl(url));
-        match.setRelevance(relevance);
         match.setData(QVariant(url));
         match.setUrls({url});
         match.setId(url.toString());
@@ -91,8 +105,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             match.setActions(m_actions);
         }
         match.setText(name);
-
-        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
+        const QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
         match.setSubtext(destUrlString);
 
         context.addMatch(match);
