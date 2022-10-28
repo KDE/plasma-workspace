@@ -59,6 +59,8 @@ Item {
     readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
     readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
     readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
+    readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
+    readonly property bool isHeldOnPowerSaveMode: activeProfileHolds > 0 || actuallyActiveProfile === "power-saver"
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
@@ -77,6 +79,8 @@ Item {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    readonly property var activeProfileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
+    readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
     function action_configure() {
         KCMShell.openSystemSettings("kcm_powerdevilprofilesconfig");
@@ -123,6 +127,10 @@ Item {
                 // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
                  && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
             )){
+            return PlasmaCore.Types.ActiveStatus;
+        }
+
+        if (isSomehowInPerformanceMode || isHeldOnPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -176,6 +184,21 @@ Item {
         if (powermanagementDisabled) {
             parts.push(i18n("Automatic sleep and screen locking are disabled"));
         }
+
+        if (isSomehowInPerformanceMode) {
+            if (activeProfileHolds.length === 0) {
+                parts.push(i18n("Performance mode has been manually enabled"));
+            } else {
+                parts.push(i18np("An application has requested activating Performance mode",
+                                 "%1 applications have requested activating Performance mode",
+                                 activeProfileHolds.length));
+            }
+        } else if (isHeldOnPowerSaveMode) {
+            parts.push(i18np("An application has requested activating Power Save mode",
+                             "%1 applications have requested activating Power Save mode",
+                             activeProfileHolds.length));
+        }
+
         return parts.join("\n");
     }
 
@@ -214,6 +237,8 @@ Item {
     Plasmoid.compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
+        performanceMode: batterymonitor.isSomehowInPerformanceMode
+        heldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
 
         onWheel: {
             const delta = wheel.angleDelta.y || wheel.angleDelta.x
@@ -258,15 +283,13 @@ Item {
 
         pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
         remainingTime: batterymonitor.remainingTime
-
-        readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
-        activeProfile: actuallyActiveProfile
+        activeProfile: batterymonitor.actuallyActiveProfile
         inhibitions: batterymonitor.inhibitions
         inhibitsLidAction: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
         profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
         inhibitionReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Inhibited Reason"] || "") : ""
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""
-        profileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
+        profileHolds: batterymonitor.activeProfileHolds
 
         property int cookie1: -1
         property int cookie2: -1
