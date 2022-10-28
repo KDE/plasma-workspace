@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-02-01 17:15+0400\n"
+"PO-Revision-Date: 2022-10-27 10:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
@@ -34,7 +34,7 @@ msgstr "يخرج، مُنهِيًا جلسة سطح المكتب الحالية"
 #, kde-format
 msgctxt "shut down computer command"
 msgid "shut down"
-msgstr "أطفئ الحاسوب"
+msgstr "أطفئ"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -73,19 +73,18 @@ msgstr "أعد التشغيل"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "احفظ"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "يحفظ الجلسة الحالية حتى يمكن استعادتها"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "جلسة جديدة"
+msgstr "احفظ جلسة"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -147,7 +146,7 @@ msgstr "أعد تشغيل الحاسوب"
 #, kde-format
 msgctxt "shut down computer command"
 msgid "shutdown"
-msgstr "أطفئ الجهاز"
+msgstr "أطفئ"
 
 #: sessionrunner.cpp:88
 #, kde-format
@@ -160,26 +159,25 @@ msgid "Lock the screen"
 msgstr "اقفل الشاشة"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "جلسة جديدة"
+msgstr "احفظ الجلسة"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "احفظ الجلسة الحالية حتى يمكن استعادتها"
 
 #: sessionrunner.cpp:129
 #, kde-format
 msgctxt "User sessions"
 msgid "sessions"
-msgstr "الجلسات"
+msgstr "جلسات"
 
 #: sessionrunner.cpp:150
 #, kde-format
 msgid "Switch User"
-msgstr "بدّل المستخدم"
+msgstr "بدل المستخدم"
 
 #: sessionrunner.cpp:227
 #, kde-format
@@ -195,6 +193,10 @@ msgid ""
 "li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
 "(such as the application launcher)</li></ul>"
 msgstr ""
+"<p>أنت على وشك أن تدخل جلسة سطح مكتب جديدة.</p><p>ستعرض شاشة الولوج وستختفي "
+"الجلسة الحالية.</p><p>يمكنك التبديل بين جلسات الحاسوب باستخدام:</"
+"p><ul><li>Ctrl+Alt+F{رقم الجلسة}</li><li>بحث بلازما (اكتب 'بدل' أو 'جلسات')</"
+"li><li>بريمج سطح مكتب بلازما (مثل مطلق التطبيقات)</li></ul>"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "تحذير - جلسة جديدة"

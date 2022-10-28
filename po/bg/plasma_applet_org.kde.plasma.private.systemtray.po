@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-07-28 21:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -73,22 +73,22 @@ msgstr "Видимост"
 msgid "Keyboard Shortcut"
 msgstr "Клавишна комбинация"
 
-#: package/contents/ui/ConfigEntries.qml:222
+#: package/contents/ui/ConfigEntries.qml:229
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Показва се, когато е необходимо"
 
-#: package/contents/ui/ConfigEntries.qml:223
+#: package/contents/ui/ConfigEntries.qml:230
 #, kde-format
 msgid "Always shown"
 msgstr "Винаги показвано"
 
-#: package/contents/ui/ConfigEntries.qml:224
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Always hidden"
 msgstr "Винаги скрито"
 
-#: package/contents/ui/ConfigEntries.qml:225
+#: package/contents/ui/ConfigEntries.qml:232
 #, kde-format
 msgid "Disabled"
 msgstr "Забранено"

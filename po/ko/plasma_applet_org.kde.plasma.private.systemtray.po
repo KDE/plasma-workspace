@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-07-13 11:55+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -74,22 +74,22 @@ msgstr "표시 여부"
 msgid "Keyboard Shortcut"
 msgstr "키보드 단축키"
 
-#: package/contents/ui/ConfigEntries.qml:222
+#: package/contents/ui/ConfigEntries.qml:229
 #, kde-format
 msgid "Shown when relevant"
 msgstr "필요할 때 표시"
 
-#: package/contents/ui/ConfigEntries.qml:223
+#: package/contents/ui/ConfigEntries.qml:230
 #, kde-format
 msgid "Always shown"
 msgstr "항상 표시"
 
-#: package/contents/ui/ConfigEntries.qml:224
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Always hidden"
 msgstr "항상 숨김"
 
-#: package/contents/ui/ConfigEntries.qml:225
+#: package/contents/ui/ConfigEntries.qml:232
 #, kde-format
 msgid "Disabled"
 msgstr "비활성화됨"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2021-10-04 15:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -187,12 +187,12 @@ msgstr "Рекомендованные обои"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог с изображениями для слайд-шоу в качестве обоев"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "Открытие изображения"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "Файлы изображений"

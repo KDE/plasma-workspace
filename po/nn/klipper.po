@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-06-19 00:26+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -133,7 +133,7 @@ msgstr "Ingen"
 msgid "Options:"
 msgstr "Innstillingar:"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:308
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -141,12 +141,12 @@ msgid ""
 "<interface>Actions Configuration</interface> page."
 msgstr ""
 
-#: configdialog.cpp:335
+#: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Ekskluder vindauge"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:367
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -155,34 +155,34 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:374
+#: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Skildring"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:382
 #, kde-format
 msgid "Add Action..."
 msgstr "Legg til handling …"
 
-#: configdialog.cpp:384
+#: configdialog.cpp:386
 #, kde-format
 msgid "Edit Action..."
 msgstr "Rediger handling …"
 
-#: configdialog.cpp:389
+#: configdialog.cpp:391
 #, kde-format
 msgid "Delete Action"
 msgstr "Slett handling"
 
-#: configdialog.cpp:396
+#: configdialog.cpp:398
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -190,7 +190,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:580
+#: configdialog.cpp:582
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -198,56 +198,56 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:583
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Stadfest slettehandling"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Generelt"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:612
 #, kde-format
 msgid "General Configuration"
 msgstr "Generelt oppsett"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:613
 #, kde-format
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Oppsett for handlingar"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:614
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Oppsett for handlingar"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Snarvegar"
 
-#: configdialog.cpp:615
+#: configdialog.cpp:617
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Oppsett for snarvegar"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:695
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -259,7 +259,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:706
+#: configdialog.cpp:708
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -375,13 +375,13 @@ msgstr "Rediger kommando …"
 msgid "Delete Command"
 msgstr "Slett kommando"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Vil du sletta kommandoen <resource>%1</resource>?"
 
-#: editactiondialog.cpp:390
+#: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Stadfest sletting av kommando"
@@ -451,67 +451,73 @@ msgstr "Ikon:"
 msgid "%1x%2 %3bpp"
 msgstr "%1 × %2 %3 b/p"
 
-#: klipper.cpp:153
+#: klipper.cpp:154
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Sprett automatisk opp handlingsmeny"
 
-#: klipper.cpp:176
+#: klipper.cpp:177
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tøm utklippshistorikken"
 
-#: klipper.cpp:183
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Set opp Klipper …"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Avslutt"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Start handling på utklippstavla manuelt"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Rediger innhald …"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vis &strekkode …"
 
-#: klipper.cpp:218
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Neste historikkelement"
 
-#: klipper.cpp:222
+#: klipper.cpp:225
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Førre historikkelement"
 
-#: klipper.cpp:228
+#: klipper.cpp:232
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Open Klipper at Mouse Position"
-msgstr "Opna Klipper ved musepeikaren"
+msgid "Show Items at Mouse Position"
+msgstr ""
 
-#: klipper.cpp:540
+#: klipper.cpp:244
+#, kde-format
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Tool"
+msgstr ""
+
+#: klipper.cpp:556
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -519,62 +525,62 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:579
+#: klipper.cpp:595
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Skal Klipper startast automatisk når du loggar inn?"
 
-#: klipper.cpp:580
+#: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Automatisk start av Klipper?"
 
-#: klipper.cpp:581
+#: klipper.cpp:597
 #, kde-format
 msgid "Start"
 msgstr "Start"
 
-#: klipper.cpp:582
+#: klipper.cpp:598
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ikkje start"
 
-#: klipper.cpp:929
+#: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
 msgstr "Rediger innhald"
 
-#: klipper.cpp:996
+#: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil strekkode"
 
-#: klipper.cpp:1043
+#: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:1044
+#: klipper.cpp:1060
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Tøm utklippshistorikken"
 
-#: klipper.cpp:1060 klipper.cpp:1069
+#: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
 msgid "Clipboard history"
 msgstr "Utklippshistorikk"
 
-#: klipper.cpp:1086
+#: klipper.cpp:1102
 #, kde-format
 msgid "up"
 msgstr "opp"
 
-#: klipper.cpp:1093
+#: klipper.cpp:1109
 #, kde-format
 msgid "current"
 msgstr "gjeldande"
 
-#: klipper.cpp:1100
+#: klipper.cpp:1116
 #, kde-format
 msgid "down"
 msgstr "ned"
@@ -769,32 +775,28 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:110
+#: klipperpopup.cpp:105
 #, kde-format
-msgid "Klipper - Clipboard Tool"
-msgstr "Klipper – utklippstavleverktøy"
+msgctxt "%1 is application display name"
+msgid "%1 - Clipboard Items"
+msgstr ""
 
-#: klipperpopup.cpp:114
+#: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
 msgstr "Søk …"
 
-#: klipperpopup.cpp:123 main.cpp:29
-#, kde-format
-msgid "KDE cut & paste history utility"
-msgstr "Klipp- og lim-historie for KDE"
-
-#: klipperpopup.cpp:187
+#: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Utklippstavla er tom"
 
-#: klipperpopup.cpp:195
+#: klipperpopup.cpp:174
 #, kde-format
 msgid "No matches"
 msgstr "Ingen treff"
@@ -803,6 +805,11 @@ msgstr "Ingen treff"
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
+
+#: main.cpp:29
+#, kde-format
+msgid "Plasma cut & paste history utility"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format

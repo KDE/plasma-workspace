@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-08-12 13:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -77,22 +77,22 @@ msgstr "Ikusgaitasuna"
 msgid "Keyboard Shortcut"
 msgstr "Teklatuko lasterbidea"
 
-#: package/contents/ui/ConfigEntries.qml:222
+#: package/contents/ui/ConfigEntries.qml:229
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Erakutsi aproposa denean"
 
-#: package/contents/ui/ConfigEntries.qml:223
+#: package/contents/ui/ConfigEntries.qml:230
 #, kde-format
 msgid "Always shown"
 msgstr "Beti agerian"
 
-#: package/contents/ui/ConfigEntries.qml:224
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Always hidden"
 msgstr "Beti ezkutuan"
 
-#: package/contents/ui/ConfigEntries.qml:225
+#: package/contents/ui/ConfigEntries.qml:232
 #, kde-format
 msgid "Disabled"
 msgstr "Ezgaituta"

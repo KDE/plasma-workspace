@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-05-23 03:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -180,12 +180,12 @@ msgstr "Ficheiro recomendado de papel de parede"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "A pasta com o papel de parede de onde mostrar as imagens"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "Abrir a Imagem"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "Ficheiros de Imagem"

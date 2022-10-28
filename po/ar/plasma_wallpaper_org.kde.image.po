@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-06-06 18:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -175,12 +175,12 @@ msgstr "ملف الخلفيّة المستحسن"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "الدّليل الذي فيه الخلفيّات لعرض الشّرائح منه"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "افتح صورة"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "ملفّات الصّور"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-05-23 13:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -183,12 +183,12 @@ msgstr "Aanbevolen achtergrondbestand"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Map met de achtergrondafbeelding waar vanaf dia's getoond worden"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "Afbeelding openen"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "Afbeeldingsbestanden"

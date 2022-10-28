@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-08-08 21:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -75,22 +75,22 @@ msgstr "الظّهور"
 msgid "Keyboard Shortcut"
 msgstr "اختصار لوحة المفاتيح"
 
-#: package/contents/ui/ConfigEntries.qml:222
+#: package/contents/ui/ConfigEntries.qml:229
 #, kde-format
 msgid "Shown when relevant"
 msgstr "تظهر عند الاحتياج"
 
-#: package/contents/ui/ConfigEntries.qml:223
+#: package/contents/ui/ConfigEntries.qml:230
 #, kde-format
 msgid "Always shown"
 msgstr "دائما ظاهرة"
 
-#: package/contents/ui/ConfigEntries.qml:224
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Always hidden"
 msgstr "دائما مخفية"
 
-#: package/contents/ui/ConfigEntries.qml:225
+#: package/contents/ui/ConfigEntries.qml:232
 #, kde-format
 msgid "Disabled"
 msgstr "معطلة"

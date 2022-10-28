@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -175,13 +175,13 @@ msgstr ""
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Open Image"
 msgstr "చిత్రాలు"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Image Files"

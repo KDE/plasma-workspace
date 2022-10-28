@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-08-07 11:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -73,22 +73,22 @@ msgstr "Visibility"
 msgid "Keyboard Shortcut"
 msgstr "Keyboard Shortcut"
 
-#: package/contents/ui/ConfigEntries.qml:222
+#: package/contents/ui/ConfigEntries.qml:229
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Shown when relevant"
 
-#: package/contents/ui/ConfigEntries.qml:223
+#: package/contents/ui/ConfigEntries.qml:230
 #, kde-format
 msgid "Always shown"
 msgstr "Always shown"
 
-#: package/contents/ui/ConfigEntries.qml:224
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Always hidden"
 msgstr "Always hidden"
 
-#: package/contents/ui/ConfigEntries.qml:225
+#: package/contents/ui/ConfigEntries.qml:232
 #, kde-format
 msgid "Disabled"
 msgstr "Disabled"

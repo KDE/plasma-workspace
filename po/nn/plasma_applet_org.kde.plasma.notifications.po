@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-25 00:49+0000\n"
 "PO-Revision-Date: 2022-06-18 14:55+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -85,7 +85,6 @@ msgid "Select All"
 msgstr "Merk alt"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Ikkje forstyrr"
@@ -120,59 +119,59 @@ msgstr "Til måndag"
 msgid "Until manually disabled"
 msgstr "Til manuelt slått av"
 
-#: package/contents/ui/FullRepresentation.qml:203
+#: package/contents/ui/FullRepresentation.qml:205
 #, kde-format
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "Til %1"
+msgid "Automatically ends: %1"
+msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Mens %1 er aktiv (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Mens %1 er aktiv"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Skjermspegling pågår"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Lukk gruppe"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Vis færre"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Vis %1 fleire"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ingen ulesne varslingar"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Varslingstenesta ikkje tilgjengeleg"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -311,15 +310,25 @@ msgstr[1] "%1 ulesne varslingar"
 
 #: package/contents/ui/main.qml:83
 #, kde-format
-msgid "Do not disturb until %1"
-msgstr "Ikkje forstyrr før %1"
+msgid "Do not disturb until %1; middle-click to exit now"
+msgstr ""
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Tøm varslingar"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Set opp varslingar og handlingar for hendingar …"
@@ -383,35 +392,35 @@ msgstr "Minimer"
 msgid "Close"
 msgstr "Lukk"
 
-#: package/contents/ui/NotificationItem.qml:207
+#: package/contents/ui/NotificationItem.qml:184
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (pause)"
 
-#: package/contents/ui/NotificationItem.qml:212
+#: package/contents/ui/NotificationItem.qml:189
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (mislukka)"
 
-#: package/contents/ui/NotificationItem.qml:214
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgid "Job Failed"
 msgstr "Jobb mislukka"
 
-#: package/contents/ui/NotificationItem.qml:218
+#: package/contents/ui/NotificationItem.qml:195
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (ferdig)"
 
-#: package/contents/ui/NotificationItem.qml:220
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgid "Job Finished"
 msgstr "Jobb ferdig"
 
-#: package/contents/ui/NotificationItem.qml:367
+#: package/contents/ui/NotificationItem.qml:340
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

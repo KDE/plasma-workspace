@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-06-11 19:19+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -181,12 +181,12 @@ msgstr "Suositeltu taustakuvatiedosto"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Kansio, josta kuvia näytetään"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "Avaa kuva"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "Kuvatiedostot"

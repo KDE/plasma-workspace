@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2021-12-16 13:06+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -76,7 +76,7 @@ msgstr "QR-koden er for stor til å visast"
 msgid "Clipboard Contents"
 msgstr "Innhald på utklippstavla"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Utklippstavla er tom"
@@ -111,19 +111,19 @@ msgstr "Rediger innhald"
 msgid "Remove from history"
 msgstr "Fjern frå loggen"
 
-#: contents/ui/EditPage.qml:82
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Lagra"
 
-#: contents/ui/EditPage.qml:90
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: contents/ui/Menu.qml:84
+#: contents/ui/Menu.qml:94
 #, kde-format
 msgid "No matches"
 msgstr "Ingen treff"

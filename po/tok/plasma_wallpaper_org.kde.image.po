@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -171,12 +171,12 @@ msgstr ""
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr ""
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr ""

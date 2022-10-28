@@ -1,6 +1,6 @@
 # Translation for kcm_icons.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, Free Software Foundation.
-# Copyright (C) 2019-2022, This file is copyright:
+# Copyright (C) 2002-2018 Free Software Foundation.
+# Copyright (C) 2019-2022 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 07:06+0200\n"
+"PO-Revision-Date: 2022-10-27 06:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -32,10 +32,9 @@ msgid "Main Toolbar"
 msgstr "Tresna-barra nagusia"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Bigarren kolorea:"
+msgstr "Bigarren mailako tresna-barrak"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -137,11 +136,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Hemen sistema osoko hainbat ikono-motaren neurri lehenetsiak konfigura "
+"ditzakezu. Kontuan izan aplikazio guztiek ez dituztela ezarpen hauek "
+"errespetatuko<nl/><nl/>Pantailako objektuak orokorrean txikiegiak edo "
+"handiegiak direla iruditzen bazaizu, horren ordez, kontuan hartu eskala "
+"orokorra doitzeko aukera."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Doitu eskala orokorra..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

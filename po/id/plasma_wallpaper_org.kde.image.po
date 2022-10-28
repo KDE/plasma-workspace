@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-06-14 15:18+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -180,12 +180,12 @@ msgstr "File wallpaper yang direkomendasikan"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Direktori dengan wallpaper untuk menampilkan salindia"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Open Image"
 msgstr "Buka Citra"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, kde-format
 msgid "Image Files"
 msgstr "File Citra"

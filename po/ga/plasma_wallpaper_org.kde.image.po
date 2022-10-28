@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2008-08-25 10:51-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -173,13 +173,13 @@ msgstr ""
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgid "Open Image"
 msgstr "Oscail Íomhá Chúlbhrait"
 
-#: plugin/imagebackend.cpp:345
+#: plugin/imagebackend.cpp:342
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Image Files"

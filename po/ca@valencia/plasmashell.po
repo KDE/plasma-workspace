@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-10-28 00:47+0000\n"
 "PO-Revision-Date: 2022-09-19 10:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -199,57 +199,57 @@ msgstr "S'ha desactivat el teclat a la pantalla"
 msgid "Unknown %1"
 msgstr "Desconegut %1"
 
-#: shellcorona.cpp:170 shellcorona.cpp:172
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostra l'escriptori"
 
-#: shellcorona.cpp:172
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Oculta l'escriptori"
 
-#: shellcorona.cpp:187
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Para l'activitat actual"
 
-#: shellcorona.cpp:204
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:211
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:226
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
-#: shellcorona.cpp:252
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gestiona escriptoris i quadros..."
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els quadros"
 
-#: shellcorona.cpp:1795
+#: shellcorona.cpp:1808
 #, kde-format
 msgid "Add Panel"
 msgstr "Afig un quadro"
 
-#: shellcorona.cpp:1831
+#: shellcorona.cpp:1844
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

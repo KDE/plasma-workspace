@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2022-04-10 17:31+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -119,13 +119,13 @@ msgstr "Opna tema"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Peikartema-filer (*.tar.gz *.tar.bz2)"
 
-#: plasma-apply-cursortheme.cpp:41
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
 "Det førespurde storleiken «%1» er ikkje tilgjengeleg. Brukar i staden %2."
 
-#: plasma-apply-cursortheme.cpp:62
+#: plasma-apply-cursortheme.cpp:63
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -135,7 +135,7 @@ msgstr ""
 "Dette verktøyet lèt deg velja peikartema for den gjeldande Plasma-økta og "
 "hindrar deg i å velja eit tema som ikkje finst eller som alt er valt."
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:67
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -145,51 +145,51 @@ msgstr ""
 "oppgjev ei fullstendig filadresse, vert berre den siste delen av adressa "
 "brukt)"
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Vis alle temaa som finst på systemet (og marker kva som er gjeldande tema)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Bruk spesifikk storleik i staden for standard­storleiken i temaet"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:90
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Det valde temaet «%1» er alt i bruk som tema for gjelande Plasma-økt."
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "Peikartemaet %1 er no teke i bruk i gjeldande Plasma-økt."
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
 msgstr "Du må starta økta på nytt for at peikartemaet skal verta vist rett."
 
-#: plasma-apply-cursortheme.cpp:112
+#: plasma-apply-cursortheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "Fann ikkje temaet «%1». Temaet må vera eitt av følgjande: %2"
 
-#: plasma-apply-cursortheme.cpp:120
+#: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "Du har desse peikartemaa tilgjengeleg:"
 
-#: plasma-apply-cursortheme.cpp:125
+#: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(gjeldande tema for denne Plasma-økta)"
