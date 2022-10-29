@@ -102,6 +102,7 @@ Menu {
                 // always in the correct state on show.
                 focus: Plasmoid.expanded && !Kirigami.InputMethod.willShowOnActive
 
+                KeyNavigation.up: dialogItem.KeyNavigation.up
                 Keys.onUpPressed: clipboardMenu.arrowKeyPressed(event)
                 Keys.onDownPressed: clipboardMenu.arrowKeyPressed(event)
 
