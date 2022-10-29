@@ -107,7 +107,7 @@ PlasmaCore.Dialog {
         property bool wantsFocus: false
 
         width: notificationPopup.popupWidth
-        height: notificationItem.height + notificationItem.y
+        height: notificationItem.implicitHeight + notificationItem.y
 
         acceptedButtons: Qt.AllButtons
         hoverEnabled: true
