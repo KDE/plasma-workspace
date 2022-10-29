@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017, 2022.
 # Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2022.
 #
 # Larso, 2014.
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:47+0000\n"
-"PO-Revision-Date: 2022-03-18 23:14+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2022-10-17 01:31+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -247,8 +247,7 @@ msgid "Add Panel"
 msgstr "Lisää paneeli"
 
 #: shellcorona.cpp:1844
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Tyhjä %1|/|Tyhjä $[yleisnimi_pienellä %1]"
