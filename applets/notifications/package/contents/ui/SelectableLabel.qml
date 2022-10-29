@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
@@ -28,12 +28,11 @@ PlasmaComponents3.ScrollView {
     signal clicked(var mouse)
     signal linkActivated(string link)
 
-    implicitWidth: bodyText.paintedWidth
-    implicitHeight: bodyText.paintedHeight
+    leftPadding: mirrored && !Kirigami.Settings.isMobile ? PlasmaComponents3.ScrollBar.vertical.width : 0
+    rightPadding: !mirrored && !Kirigami.Settings.isMobile ? PlasmaComponents3.ScrollBar.vertical.width : 0
 
     // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-    contentWidth: availableWidth
 
     PlasmaComponents3.TextArea {
         id: bodyText
