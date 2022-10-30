@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+# SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Google Meet
+Exec=/snap/chromium/2136/usr/lib/chromium-browser/chrome --profile-directory=Default --app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan
+Icon=chrome-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default
+StartupWMClass=crx_kjgfgldnnfoeklkmfkjfagphfepbbdan
