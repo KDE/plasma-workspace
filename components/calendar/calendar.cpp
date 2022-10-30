@@ -25,6 +25,9 @@ public:
     int m_weeks = 0;
     int m_firstDayOfWeek;
     QString m_errorMessage;
+
+private:
+    Q_DISABLE_COPY(CalendarPrivate)
 };
 
 CalendarPrivate::CalendarPrivate(Calendar *q)
