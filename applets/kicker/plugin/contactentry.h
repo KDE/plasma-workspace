@@ -40,4 +40,6 @@ public:
 
 private:
     KPeople::PersonData *m_personData = nullptr;
+
+    Q_DISABLE_COPY(ContactEntry)
 };
