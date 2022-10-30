@@ -60,9 +60,14 @@ KCM.SimpleKCM {
                 && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
         }
 
+        Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("@title:group", "Do Not Disturb mode")
+            Kirigami.FormData.isSection: true
+        }
+
         QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Do Not Disturb mode:")
-            text: i18nc("Do not disturb when screens are mirrored", "Enable when screens are mirrored")
+            Kirigami.FormData.label: i18nc("Enable Do Not Disturb mode when screens are mirrored", "Enable:")
+            text: i18nc("Enable Do Not Disturb mode when screens are mirrored", "When screens are mirrored")
             checked: kcm.dndSettings.whenScreensMirrored
             onClicked: kcm.dndSettings.whenScreensMirrored = checked
 
@@ -74,7 +79,7 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            text: i18nc("Do not disturb while screen sharing", "Enable while screen sharing")
+            text: i18nc("Enable Do Not Disturb mode during screen sharing", "During screen sharing")
             checked: kcm.dndSettings.whenScreenSharing
             onClicked: kcm.dndSettings.whenScreenSharing = checked
             // Only applicable to Wayland where we can control who can cast the screen
@@ -88,20 +93,15 @@ KCM.SimpleKCM {
         }
 
 
-        RowLayout {
+        KQuickControls.KeySequenceItem {
+            Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Keyboard shortcut:")
             enabled: root.notificationsAvailable
-
-            QtControls.Label {
-                text: i18nc("Turn do not disturb mode on/off with keyboard shortcut", "Toggle with:")
-            }
-
-            KQuickControls.KeySequenceItem {
-                keySequence: kcm.toggleDoNotDisturbShortcut
-                onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
-            }
+            keySequence: kcm.toggleDoNotDisturbShortcut
+            onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("@title:group", "Visibility conditions")
             Kirigami.FormData.isSection: true
         }
 
@@ -162,13 +162,14 @@ KCM.SimpleKCM {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("@title:group As in: 'notification popups'", "Popups")
             Kirigami.FormData.isSection: true
         }
 
         QtControls.RadioButton {
             id: positionCloseToWidget
-            Kirigami.FormData.label: i18n("Popup:")
-            text: i18nc("Popup position near notification plasmoid", "Show near notification icon") // "widget"
+            Kirigami.FormData.label: i18nc("@label", "Location:")
+            text: i18nc("Popup position near notification plasmoid", "Near notification icon") // "widget"
             checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
                 // Force binding re-evaluation when user returns from position selector
                 + kcm.currentIndex * 0
@@ -217,40 +218,32 @@ KCM.SimpleKCM {
             text: i18np("%1 second", "%1 seconds", 888)
         }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            QtControls.Label {
-                text: i18nc("Part of a sentence like, 'Hide popup after n seconds'", "Hide after:")
+        QtControls.SpinBox {
+            id: timeoutSpinner
+            Kirigami.FormData.label: i18nc("Part of a sentence like, 'Hide popup after n seconds'", "Hide after:")
+            Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
+            from: 1000 // 1 second
+            to: 120000 // 2 minutes
+            stepSize: 1000
+            value: kcm.notificationSettings.popupTimeout
+            editable: true
+            valueFromText: function(text, locale) {
+                return parseInt(text) * 1000;
             }
+            textFromValue: function(value, locale) {
+                return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
+            }
+            onValueModified: kcm.notificationSettings.popupTimeout = value
 
-            QtControls.SpinBox {
-                id: timeoutSpinner
-                Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
-                from: 1000 // 1 second
-                to: 120000 // 2 minutes
-                stepSize: 1000
-                value: kcm.notificationSettings.popupTimeout
-                editable: true
-                valueFromText: function(text, locale) {
-                    return parseInt(text) * 1000;
-                }
-                textFromValue: function(value, locale) {
-                    return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
-                }
-                onValueModified: kcm.notificationSettings.popupTimeout = value
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.notificationSettings
-                    settingName: "PopupTimeout"
-                    extraEnabledConditions: root.notificationsAvailable
-                }
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "PopupTimeout"
+                extraEnabledConditions: root.notificationsAvailable
             }
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("@title:group", "Additional feedback")
             Kirigami.FormData.isSection: true
         }
 
@@ -294,10 +287,6 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
         QtControls.CheckBox {
             Kirigami.FormData.label: i18n("Notification badges:")
             text: i18n("Show in task manager")
@@ -311,11 +300,11 @@ KCM.SimpleKCM {
         }
 
         Kirigami.Separator {
+            Kirigami.FormData.label: i18nc("@title:group", "Application-specific settings")
             Kirigami.FormData.isSection: true
         }
 
         QtControls.Button {
-            Kirigami.FormData.label: i18n("Applications:")
             text: i18n("Configure…")
             icon.name: "configure"
             enabled: root.notificationsAvailable
