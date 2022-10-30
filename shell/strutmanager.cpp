@@ -77,7 +77,7 @@ void StrutManager::setAvailableScreenRegion(const QString &service, const QStrin
 {
     int id = m_plasmashellCorona->screenPool()->id(screenName);
     QRegion region;
-    foreach (QRect rect, rects) {
+    for (const QRect &rect : rects) {
         region += rect;
     }
 
