@@ -78,9 +78,7 @@ void SystemTrayContainer::ensureSystrayExists()
         m_innerContainment->setFormFactor(Plasma::Types::Horizontal);
     }
 
-    if (m_innerContainment) {
-        m_innerContainment->setLocation(location());
-    }
+    m_innerContainment->setLocation(location());
 
     m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
     Q_EMIT internalSystrayChanged();
