@@ -500,16 +500,16 @@ void CFontFileListView::openViewer()
 
 void CFontFileListView::properties()
 {
-    QList<QTreeWidgetItem *> items(selectedItems());
-    QTreeWidgetItem *item;
+    const QList<QTreeWidgetItem *> items(selectedItems());
     KFileItemList files;
     QMimeDatabase db;
 
-    foreach (item, items)
+    for (QTreeWidgetItem *const item : items) {
         if (item->parent()) {
             files.append(
                 KFileItem(QUrl::fromLocalFile(item->text(0)), db.mimeTypeForFile(item->text(0)).name(), item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
         }
+    }
 
     if (!files.isEmpty()) {
         KPropertiesDialog dlg(files, this);
