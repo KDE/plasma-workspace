@@ -61,6 +61,29 @@ KCM.GridDelegate {
         color: cfg_Color
         anchors.fill: parent
 
+        Drag.dragType: Drag.Automatic
+        Drag.supportedActions: Qt.CopyAction
+        Drag.mimeData: {
+            "text/x-fromplasmawallpaperplugin": "true",
+            "text/uri-list" : model.path,
+            "text/plain": model.path.toString(),
+        }
+
+        DragHandler {
+            id: dragHandler
+            enabled: walliePreview.visible
+
+            onActiveChanged: if (active) {
+                walliePreview.grabToImage((result) => {
+                    backgroundRect.Drag.imageSource = result.url;
+                    backgroundRect.Drag.active = dragHandler.active;
+                });
+            } else {
+                backgroundRect.Drag.active = false;
+                backgroundRect.Drag.imageSource = "";
+            }
+        }
+
         Kirigami.Icon {
             anchors.centerIn: parent
             width: PlasmaCore.Units.iconSizes.large
