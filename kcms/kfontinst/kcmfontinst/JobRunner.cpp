@@ -552,7 +552,6 @@ void CJobRunner::contineuToNext(bool cont)
             ++m_it;
         }
     } else {
-        m_urls.empty();
         m_it = m_end = m_urls.constEnd();
     }
     doNext();
