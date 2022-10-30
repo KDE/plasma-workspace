@@ -22,17 +22,16 @@
 
 SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent)
     : QDialog(parent)
+    , m_config(config)
 {
-    m_config = config;
     init();
 }
 
 SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     : QDialog(parent)
     , m_filePath(path)
+    , m_config(KSharedConfig::openConfig(path, KSharedConfig::SimpleConfig))
 {
-    m_config = KSharedConfig::openConfig(path, KSharedConfig::SimpleConfig);
-
     m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
     this->setWindowTitle(m_schemeName);
     init();

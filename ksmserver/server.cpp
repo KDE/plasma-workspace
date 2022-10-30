@@ -254,8 +254,8 @@ class KSMListener : public QSocketNotifier
 public:
     KSMListener(IceListenObj obj)
         : QSocketNotifier(IceGetListenConnectionNumber(obj), QSocketNotifier::Read)
+        , listenObj(obj)
     {
-        listenObj = obj;
     }
 
     IceListenObj listenObj;
@@ -266,8 +266,8 @@ class KSMConnection : public QSocketNotifier
 public:
     KSMConnection(IceConn conn)
         : QSocketNotifier(IceConnectionNumber(conn), QSocketNotifier::Read)
+        , iceConn(conn)
     {
-        iceConn = conn;
     }
 
     IceConn iceConn;

@@ -44,8 +44,8 @@ SessionBackend *SessionBackend::self()
 }
 
 SessionBackend::SessionBackend()
+    : m_kserverConfig(KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("ksmserverrc"))))
 {
-    m_kserverConfig = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("ksmserverrc")));
 }
 
 bool SessionBackend::confirmLogout() const

@@ -29,8 +29,8 @@
 extern KSMServer *the_server;
 
 KSMClient::KSMClient(SmsConn conn)
+    : smsConn(conn)
 {
-    smsConn = conn;
     id = nullptr;
     resetState();
 }

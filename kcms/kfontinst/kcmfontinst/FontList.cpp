@@ -213,12 +213,12 @@ void CFontItem::refresh()
 
 CFamilyItem::CFamilyItem(CFontList &p, const Family &f, bool sys)
     : CFontModelItem(nullptr)
+    , m_name(f.name())
     , m_status(ENABLED)
     , m_realStatus(ENABLED)
     , m_regularFont(nullptr)
     , m_parent(p)
 {
-    m_name = f.name();
     addFonts(f.styles(), sys);
     // updateStatus();
 }
