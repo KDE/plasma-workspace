@@ -543,13 +543,13 @@ void CFontFileListView::unmark()
 
 void CFontFileListView::selectionChanged()
 {
-    QList<QTreeWidgetItem *> items(selectedItems());
-    QTreeWidgetItem *item;
+    const QList<QTreeWidgetItem *> items(selectedItems());
 
-    foreach (item, items)
+    for (QTreeWidgetItem *const item : items) {
         if (!item->parent() && item->isSelected()) {
             item->setSelected(false);
         }
+    }
 }
 
 void CFontFileListView::clicked(QTreeWidgetItem *item, int col)
