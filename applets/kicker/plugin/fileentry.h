@@ -37,4 +37,6 @@ public:
 
 private:
     KFileItem *m_fileItem;
+
+    Q_DISABLE_COPY(FileEntry);
 };
