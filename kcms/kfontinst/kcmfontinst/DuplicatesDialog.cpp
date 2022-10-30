@@ -519,13 +519,13 @@ void CFontFileListView::properties()
 
 void CFontFileListView::mark()
 {
-    QList<QTreeWidgetItem *> items(selectedItems());
-    QTreeWidgetItem *item;
+    const QList<QTreeWidgetItem *> items(selectedItems());
 
-    foreach (item, items)
+    for (QTreeWidgetItem *const item : items) {
         if (item->parent()) {
             markItem(item);
         }
+    }
     checkFiles();
 }
 
