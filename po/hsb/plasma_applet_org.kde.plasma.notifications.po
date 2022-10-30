@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
+"POT-Creation-Date: 2022-10-30 00:48+0000\n"
 "PO-Revision-Date: 2021-11-22 18:59+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -417,35 +417,35 @@ msgstr "Minimalizować"
 msgid "Close"
 msgstr "Začinić"
 
-#: package/contents/ui/NotificationItem.qml:184
+#: package/contents/ui/NotificationItem.qml:183
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (pozastajene)"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (zwrěšćene)"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Failed"
 msgstr "Nadawk zwrěšćeny"
 
-#: package/contents/ui/NotificationItem.qml:195
+#: package/contents/ui/NotificationItem.qml:194
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Zakónčene)"
 
-#: package/contents/ui/NotificationItem.qml:197
+#: package/contents/ui/NotificationItem.qml:196
 #, kde-format
 msgid "Job Finished"
 msgstr "Nadawk zakónčeny"
 
-#: package/contents/ui/NotificationItem.qml:340
+#: package/contents/ui/NotificationItem.qml:339
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

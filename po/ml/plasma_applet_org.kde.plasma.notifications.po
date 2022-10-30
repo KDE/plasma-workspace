@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:49+0000\n"
+"POT-Creation-Date: 2022-10-30 00:48+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -395,35 +395,35 @@ msgstr "ചെറുതാക്കുക"
 msgid "Close"
 msgstr "അടയ്ക്കുക"
 
-#: package/contents/ui/NotificationItem.qml:184
+#: package/contents/ui/NotificationItem.qml:183
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു)"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (പരാജയപ്പെട്ടു)"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Failed"
 msgstr "ജോലി പരാജയപ്പെട്ടു"
 
-#: package/contents/ui/NotificationItem.qml:195
+#: package/contents/ui/NotificationItem.qml:194
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (പൂർത്തിയായി)"
 
-#: package/contents/ui/NotificationItem.qml:197
+#: package/contents/ui/NotificationItem.qml:196
 #, kde-format
 msgid "Job Finished"
 msgstr "ജോലി പൂർത്തിയായി"
 
-#: package/contents/ui/NotificationItem.qml:340
+#: package/contents/ui/NotificationItem.qml:339
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

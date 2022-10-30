@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-30 00:48+0000\n"
 "PO-Revision-Date: 2014-06-28 17:53+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Set flexible size"
 msgstr "Flexible Größe festlegen"

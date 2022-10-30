@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-30 00:48+0000\n"
 "PO-Revision-Date: 2014-09-14 09:40+0800\n"
 "Last-Translator: Franklin\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Set flexible size"
 msgstr "設定可調整大小"
