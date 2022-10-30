@@ -587,11 +587,13 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
         // Now continue...
         dbusStatus(getpid(), m_lastDBusStatus);
         break;
-    case PAGE_COMPLETE:
+    case PAGE_COMPLETE: {
         if (m_dontShowFinishedMsg) {
             KConfigGroup grp(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP));
             grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, m_dontShowFinishedMsg->isChecked());
         }
+        break;
+    }
     case PAGE_ERROR:
         QDialog::accept();
         break;
