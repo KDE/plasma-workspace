@@ -474,14 +474,14 @@ void CFontFileListView::openViewer()
     // Number of fonts user has selected, before we ask if they really want to view them all...
     static const int constMaxBeforePrompt = 10;
 
-    QList<QTreeWidgetItem *> items(selectedItems());
-    QTreeWidgetItem *item;
+    const QList<QTreeWidgetItem *> items(selectedItems());
     QSet<QString> files;
 
-    foreach (item, items)
+    for (QTreeWidgetItem *const item : items) {
         if (item->parent()) { // Then it is a file, not font name :-)
             files.insert(item->text(0));
         }
+    }
 
     if (!files.isEmpty()
         && (files.count() < constMaxBeforePrompt
