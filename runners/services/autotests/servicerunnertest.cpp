@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016-2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -36,6 +37,7 @@ private Q_SLOTS:
     void testCategories();
     void testJumpListActions();
     void testINotifyUsage();
+    void testChromiumPWA();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -283,6 +285,44 @@ void ServiceRunnerTest::testINotifyUsage()
     thread->deleteLater();
 
     QVERIFY(inotifyCountCool);
+}
+void ServiceRunnerTest::testChromiumPWA()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+
+    context.setQuery(QStringLiteral("meet"));
+    runner.match(context);
+
+    {
+        const QLatin1String pwaDesktopFile("chrome-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default");
+        const auto matches = context.matches();
+
+        const bool hasAtLeastOneMatch = matches.size() >= 1;
+        QVERIFY(hasAtLeastOneMatch);
+        const bool isGoogleMeetOrUsrFile = std::any_of(matches.begin(), matches.end(), [pwaDesktopFile](const Plasma::QueryMatch &match) {
+            const auto service = KService::serviceByStorageId(match.data().toUrl().path());
+            return service->entryPath().startsWith(QLatin1String("/usr/")) || service->desktopEntryName() == pwaDesktopFile;
+        });
+        QVERIFY(isGoogleMeetOrUsrFile);
+        const bool hasGoogleMeet = std::any_of(matches.begin(), matches.end(), [pwaDesktopFile](const Plasma::QueryMatch &match) {
+            return KService::serviceByStorageId(match.data().toUrl().path())->desktopEntryName() == pwaDesktopFile;
+        });
+        QVERIFY(hasGoogleMeet);
+    }
+
+    context.reset();
+    context.setQuery(QStringLiteral("dan"));
+    runner.match(context);
+
+    {
+        const auto matches = context.matches();
+        const bool isOnlyUsrFiles = std::all_of(matches.begin(), matches.end(), [](const Plasma::QueryMatch &match) {
+            const auto service = KService::serviceByStorageId(match.data().toUrl().path());
+            return service->entryPath().startsWith(QLatin1String("/usr/"));
+        });
+        QVERIFY(isOnlyUsrFiles);
+    }
 }
 
 QTEST_MAIN(ServiceRunnerTest)

@@ -119,6 +119,13 @@ private:
         return ret;
     }
 
+    bool shouldParseExec(const KService::Ptr &ptr)
+    {
+        // Do not parse the exec of Progressive Web Apps, see BUG 460796
+        const QLatin1String chromiumPwaWindowClassPrefix("crx_");
+        return !ptr->property(QStringLiteral("StartupWMClass")).toString().startsWith(chromiumPwaWindowClassPrefix);
+    }
+
     qreal increaseMatchRelavance(const KService::Ptr &service, const QStringList &strList, const QString &category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list
@@ -216,7 +223,7 @@ private:
     {
         const auto nameKeywordAndGenericNameFilter = [this](const KService::Ptr &service) {
             // Name
-            if (contains(service->name(), queryList) || contains(service->exec(), queryList)) {
+            if (contains(service->name(), queryList) || (weightedTermLength >= 3 && shouldParseExec(service) && contains(service->exec(), queryList))) {
                 return true;
             }
             // If the term length is < 3, no real point searching the Keywords and GenericName
