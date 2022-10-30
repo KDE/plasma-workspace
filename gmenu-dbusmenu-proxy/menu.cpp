@@ -148,7 +148,7 @@ GMenuItem Menu::getSection(int subscription, int section, bool *ok) const
     const auto menu = m_menus.value(subscription);
 
     auto it = std::find_if(menu.begin(), menu.end(), [section](const GMenuItem &item) {
-        return item.section == section;
+        return static_cast<int>(item.section) == section;
     });
 
     if (it == menu.end()) {
@@ -205,7 +205,7 @@ void Menu::onMenuChanged(const GMenuChangeList &changes)
             // Check if the amount of inserted items is identical to the items to be removed,
             // just update the existing items and signal a change for that.
             // LibreOffice tends to do that e.g. to update its Undo menu entry
-            if (change.itemsToRemoveCount == change.itemsToInsert.count()) {
+            if (change.itemsToRemoveCount == static_cast<uint>(change.itemsToInsert.count())) {
                 for (int i = 0; i < change.itemsToInsert.count(); ++i) {
                     const auto &newItem = change.itemsToInsert.at(i);
 
