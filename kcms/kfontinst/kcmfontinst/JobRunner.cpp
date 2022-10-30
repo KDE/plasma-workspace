@@ -595,6 +595,8 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
     case PAGE_ERROR:
         QDialog::accept();
         break;
+    default:
+        break;
     }
 }
 
