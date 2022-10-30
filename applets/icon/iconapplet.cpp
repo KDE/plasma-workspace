@@ -430,7 +430,8 @@ void IconApplet::run()
 void IconApplet::processDrop(QObject *dropEvent)
 {
     Q_ASSERT(dropEvent);
-    Q_ASSERT(isAcceptableDrag(dropEvent));
+    const bool isAcceptable = isAcceptableDrag(dropEvent);
+    Q_ASSERT(isAcceptable);
 
     const auto &urls = urlsFromDrop(dropEvent);
 
