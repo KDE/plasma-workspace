@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -617,24 +617,24 @@ msgstr "Ne mogu da pokrenem pozadinu."
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Pozadina se srušila, ali je ponovo pokrenuta. Pokušajte opet."
 
-#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Greška</h3>"
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<html>Ne mogu da preuzmem <filename>%1</filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "<html>Sistemska pozadina se srušila. Pokušajte opet.<br/><filename>%1</"
 "filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -642,7 +642,7 @@ msgstr ""
 "<html><filename>%1</filename> je bitmapski font, a oni su isključeni na "
 "sistemu.</html>."
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -652,50 +652,50 @@ msgstr ""
 "na sistemu.</html>|/|<html><filename>%1</filename> sadrži font <b>"
 "$[glavorepi nom %2]</b>, koji je već instaliran na sistemu.</html>."
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<html><filename>%1</filename> nije font.</html>."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 "<html>Ne mogu da uklonim sve datoteke vezane za <filename>%1</filename>.</"
 "html>"
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 "<html>Ne mogu da pokrenem sistemski demon.<br/><filename>%1</filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<html><filename>%1</filename> već postoji.</html>."
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<html><filename>%1</filename> ne postoji.</html>."
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "<html>Dozvola odbijena.<br/><filename>%1</filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "<html>Nepodržana radnja.<br/><filename>%1</filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "<html>Neuspjela autentifikacija.<br/><filename>%1</filename></html>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:722
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Nočekivana greška prilikom obrade: <i>%1</i>"

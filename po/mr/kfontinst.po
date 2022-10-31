@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2013-03-23 15:09+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -569,22 +569,22 @@ msgstr "बॅकएन्ड सुरु करू शकत नाही."
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "बॅकएन्ड मृत झाले होते. पण ते पुन्हा सुरु झाले आहे. कृपया पुन्हा प्रयत्न करा."
 
-#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>त्रुटी</h3>"
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> हे डाउनलोड करण्यास अपयश"
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "बॅकएन्ड मृत झाले आहे. कृपया पुन्हा प्रयत्न करा.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -592,7 +592,7 @@ msgstr ""
 "<i>%1</i> बीटमॅप फॉन्ट आहे. तुम्ही प्रणालीवर बीटमॅप फॉन्ट प्रतिष्ठापीत करू शकत नाही, "
 "कारण यांस प्रणालीवर अकार्यान्वित केले गेले आहे."
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -601,47 +601,47 @@ msgstr ""
 "<i>%1</i> अंतर्गत <b>%2</b> हा फॉन्ट समाविष्टीत आहे. या नावाचा फॉन्ट आधीपासूनच "
 "प्रतिष्ठापीत आहे."
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> हा फॉन्ट नाही."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> याच्याशी संबंधित सर्व फाईल्स काढून टाकु शकत नाही"
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "प्रणाली डीमन सुरु करण्यास अपयश.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<b>%1</b> आधीपासूनच अस्तित्वात आहे."
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> अस्तित्वात नाही."
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "परवानगी नाही.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "असमर्थीत पद्धत.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "अधिप्रमाणन असफल.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:722
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "हे प्रक्रीया करताना अनपेक्षीत त्रुटी : <i>%1</i>"

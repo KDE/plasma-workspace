@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2002-11-04 09:21SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -670,44 +670,44 @@ msgstr "Ibar yewonga Engasebenziyo"
 msgid "Inactive Titlebar Secondary"
 msgstr "Ibar yewonga Engasebenziyo"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled"
 msgstr "Iqhosha Lewonga Elingasebenziyo"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Gcina Umbala Wodweliso"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, fuzzy, kde-format
 #| msgid "Enter a name for the color scheme:"
 msgid "&Enter a name for the color scheme:"
 msgstr "Ngenisa igama lombala wodweliso:"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, fuzzy, kde-format
 #| msgid ""
 #| "A color scheme with the name '%1' already exists.\n"
@@ -719,17 +719,17 @@ msgstr ""
 "Udweliso olunombala onegama '%1' sele ukhona.\n"
 "Ufuna ukubhala ngaphezu kwayo?\n"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, fuzzy, kde-format
 #| msgid "Inactive window"
 msgid "Inactive"

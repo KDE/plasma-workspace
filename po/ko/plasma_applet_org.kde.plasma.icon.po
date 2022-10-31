@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-05 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:47+0000\n"
 "PO-Revision-Date: 2017-01-22 20:09+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "아이콘 위젯 데스크톱 파일을 '%1'에서 '%2'(으)로 복사�
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: iconapplet.cpp:565
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 속성"

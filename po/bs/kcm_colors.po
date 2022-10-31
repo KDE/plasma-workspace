@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2013-10-18 19:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -664,45 +664,45 @@ msgstr "Tekst neaktivnog naslova"
 msgid "Inactive Titlebar Secondary"
 msgstr "Sekundarna neaktivna traka naslova"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr "Opcije"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr "Boje"
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
 # >> @title:window
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Upisivanje šeme boja"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Unesite ime za šemu boja:"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -711,18 +711,18 @@ msgstr ""
 "Istoimena šema boja već postoji.\n"
 "Želite li da je prebrišete?"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Nemate dozvolu da prebrišete ovu šemu"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr "Greška"
 
 # >> @title:group Inactive window
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on inactive elements"
 #| msgid "Inactive"

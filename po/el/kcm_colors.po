@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2016-08-31 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -659,42 +659,42 @@ msgstr "Κείμενο μη ενεργής γραμμής τίτλου"
 msgid "Inactive Titlebar Secondary"
 msgstr "Μη ενεργή γραμμή τίτλου δευτερεύον"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr "Επιλογές"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr "Υπάρχουν μη αποθηκευμένες αλλαγές. Επιθυμείτε πραγματικά την έξοδο;"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Μη αποθηκευμένες αλλαγές"
 
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Αποθήκευση θέματος χρωμάτων"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Εισάγετε όνομα για το θέμα χρωμάτων:"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -703,17 +703,17 @@ msgstr ""
 "Ένα θέμα χρωμάτων με αυτό το όνομα υπάρχει ήδη.\n"
 "Επιθυμείτε την αντικατάστασή του;"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Δεν έχετε άδεια αντικατάστασης του θέματος αυτού"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, kde-format
 msgid "Inactive"
 msgstr "Ανενεργό"

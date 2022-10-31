@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-05 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:47+0000\n"
 "PO-Revision-Date: 2020-10-27 23:28+0100\n"
 "Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Il falleva a copiar file de scriptorio de widget de icone '%1'  a '%2'"
 msgid "Open Containing Folder"
 msgstr "Aperi dossier continente"
 
-#: iconapplet.cpp:565
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Proprietates pro %1"

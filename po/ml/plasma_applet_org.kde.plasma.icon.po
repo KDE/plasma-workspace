@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-05 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:47+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -34,7 +34,7 @@ msgstr "'%1' ൽ നിന്ന് '%2' ലേക്ക് ചിഹ്ന വ�
 msgid "Open Containing Folder"
 msgstr "ഇതടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
 
-#: iconapplet.cpp:565
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 ന്റെ ഗുണഗണങ്ങൾ"

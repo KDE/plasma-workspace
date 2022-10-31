@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-05 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:47+0000\n"
 "PO-Revision-Date: 2017-02-14 20:09+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -33,7 +33,7 @@ msgstr "فشل نسخ ملفّ سطح المكتب لودجة الأيقونة �
 msgid "Open Containing Folder"
 msgstr "افتح المجلّد المحتوي"
 
-#: iconapplet.cpp:565
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "خصائص %1"

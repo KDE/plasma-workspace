@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2011-07-11 23:37+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -652,44 +652,44 @@ msgstr "ನಿಷ್ಕ್ರಿಯ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿ ಪ
 msgid "Inactive Titlebar Secondary"
 msgstr "ನಿಷ್ಕ್ರಿಯ ಶೀರ್ಷಿಕೆ ಪಟ್ಟಿ ಪಠ್ಯ"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr "ಆಯ್ಕೆಗಳು"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr "ಬಣ್ಣಗಳು"
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled"
 msgstr "ಅಶಕ್ತಗೊಂಡ"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು (ಸ್ಕೀಮ್) ಉಳಿಸಿ"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "ಬಣ್ಣ ಪದ್ಧತಿಗೆ (ಸ್ಕೀಮ್) ಹೆಸರೊಂದನ್ನು ನಮೂದಿಸಿ(&E):"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, fuzzy, kde-format
 #| msgid ""
 #| "A color scheme with that name already exists.\n"
@@ -701,17 +701,17 @@ msgstr ""
 "'%1' ಹೆಸರಿನ ಬಣ್ಣ ಪದ್ಧತಿಯು (ಸ್ಕೀಮ್) ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ. \n"
 " ನೀವು ಅದನ್ನು ತಿದ್ದಿಬರೆಯಲು ಬಯಸುತ್ತೀರಾ?"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "ಆ ಬಣ್ಣ ಪದ್ಧತಿಯು (ಸ್ಕೀಮ್) ತಿದ್ದಿಬರೆಯಲು ನಿಮಗೆ ಅನುಮತಿ ಇಲ್ಲ"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr "ದೋಷ"
 
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on inactive elements"
 #| msgid "Inactive"
