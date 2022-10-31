@@ -129,9 +129,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::HelperMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
-        if (isApproximate) {
-            match.setSubtext(i18nc("The result of the calculation is only an approximation", "Approximation"));
-        }
+        match.setSubtext((isApproximate ? QString::fromUtf8("\u2248 ") : QStringLiteral("= ")) + cmd);
         match.setData(result);
         match.setId(term);
         match.setActions(m_actions);
