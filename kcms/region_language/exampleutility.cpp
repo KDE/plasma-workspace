@@ -137,14 +137,15 @@ QString Utility::resolveFieldDescriptors(QHash<QChar, QString> map, int langInfo
 
 QString Utility::getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &locale)
 {
-    const QString localeString = locale.name() + QLatin1String(".UTF-8");
-    const QByteArray localeByteArray = localeString.toUtf8();
-
     QString localeInfo = parseLocaleFile(locale.name(), langInfoFormat);
 
     if (localeInfo.isEmpty()) {
-        setlocale(lcFormat, localeByteArray);
-        localeInfo = QString::fromUtf8(nl_langinfo(langInfoFormat));
+        const QString localeString = locale.name() + QLatin1String(".UTF-8");
+        const QByteArray localeByteArray = localeString.toUtf8();
+
+        if (setlocale(lcFormat, localeByteArray)) {
+            localeInfo = QString::fromUtf8(nl_langinfo(langInfoFormat));
+        }
     }
 
     return localeInfo;
@@ -206,7 +207,7 @@ QFileInfo Utility::findLocaleInFolder(QString localeName, QString localeDirector
         }
 
         // If file is found, break the loop
-        if (fileInfo.fileName().contains(localeName)) {
+        if (fileInfo.fileName().startsWith(localeName)) {
             return fileInfo;
             break;
         }
@@ -235,16 +236,15 @@ QString Utility::getFormatToFetch(int langInfoFormat)
 
 QStringList Utility::getLangCodeFromLocale(QLocale locale)
 {
-    // Match letters from a-z before end of string OR -
-    QStringList list; // ki18nc takes only stringlists for langs
-    const QRegularExpression rx(R"(([a-z]*)($|[\-]).*)");
-    QRegularExpressionMatch match = rx.match(locale.bcp47Name());
-
-    if (match.hasMatch()) {
-        list.append(match.captured(1)); // Return first capture
-    } else {
-        list.append("en"); // Return the default "en"
+    QStringList languages;
+    for (QString language : locale.uiLanguages()) {
+        language.replace(QLatin1Char('-'), QLatin1Char('_'));
+        languages += language;
     }
-    return list;
+    // `uiLanguages` don't offer the minimal version for some locale, such as fr_DZ.
+    if (int pos = languages.last().indexOf(QLatin1Char('_')); pos >= 0) {
+        languages += languages.last().left(pos);
+    }
+    return languages;
 }
 #endif
