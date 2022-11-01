@@ -632,7 +632,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == MimeType) {
         return d->mimeType();
     } else if (role == MimeData) {
-        return QByteArray((char *)&window, sizeof(window));
+        return QByteArray(reinterpret_cast<const char *>(&window), sizeof(window));
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
