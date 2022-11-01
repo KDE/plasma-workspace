@@ -2,6 +2,7 @@
 Name=Desktop Search
 Name[ar]=بحث سطح المكتب
 Name[az]=İşarə və tərkibinə görə axtarış
+Name[be]=Пошук у працоўным асяроддзі
 Name[bg]=Търсене на работната среда
 Name[bs]=Pretraga radne površine
 Name[ca]=Cerca a l'escriptori
@@ -59,6 +60,7 @@ Name[zh_TW]=桌面搜尋
 Comment=Searches through files, emails and contacts
 Comment[ar]=يبحث في الملفات، والبريد الإلكتروني والمتراسلين
 Comment[az]=Fayllar, e-poçtlar və tərkiblər arası axtarış edir
+Comment[be]=Пошук у файлах, электронных лістах і кантактах
 Comment[bg]=Търсене във файлове,е-поща и контакти
 Comment[ca]=Cerca pels fitxers, correus electrònics i contactes
 Comment[ca@valencia]=Busca pels fitxers, correus electrònics i contactes

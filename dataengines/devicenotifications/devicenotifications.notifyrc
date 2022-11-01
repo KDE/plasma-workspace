@@ -2,6 +2,7 @@
 Name=Device Notifier
 Name[ar]=مُخطِر الأجهزة
 Name[az]=Cihaz qoşulmaları bildirişləri
+Name[be]=Апавяшчэнне пра прыладу
 Name[be@latin]=Infarmavańnie pra novyja pryłady
 Name[bg]=Уведомяване за нови устройства
 Name[bn]=ডিভাইস নোটিফায়ার
@@ -82,6 +83,7 @@ IconName=device-notifier
 Name=Device Status
 Name[ar]=حالة الأجهزة
 Name[az]=Qurğuların statusu
+Name[be]=Стан прылады
 Name[bg]=Статус на устройство
 Name[ca]=Estat del dispositiu
 Name[ca@valencia]=Estat del dispositiu

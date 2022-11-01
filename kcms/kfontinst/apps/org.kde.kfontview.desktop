@@ -2,6 +2,7 @@
 Name=KFontView
 Name[ar]=عارض الخط ك
 Name[az]=KFontView
+Name[be]=KFontView
 Name[bg]=KFontView
 Name[ca]=KFontView
 Name[ca@valencia]=KFontView
@@ -50,6 +51,7 @@ MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;
 GenericName=Font Viewer
 GenericName[ar]=عارض الخط
 GenericName[az]=Şriftə baxış vasitəsi
+GenericName[be]=Сродак прагляду шрыфту
 GenericName[bg]=Преглед на шрифтове
 GenericName[ca]=Visualitzador de tipus de lletra
 GenericName[ca@valencia]=Visor de tipus de lletra

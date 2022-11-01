@@ -2,6 +2,7 @@
 Name=Plastique
 Name[ar]=بلاستك
 Name[az]=Plastik
+Name[be]=Plastique
 Name[bg]=Пластик
 Name[bs]=Plastika KuT
 Name[ca]=Plastique
@@ -72,6 +73,7 @@ Name[zh_TW]=Plastique
 Comment=Built-in unthemed style similar to Plastik from KDE3
 Comment[ar]=نمط مدمج بدون سمة مشابه لبلاستك من كدي٣
 Comment[az]=KDE3-dəki Plastik-ə oxşar quraşdırılmış üslub
+Comment[be]=Убудаваны стыль, падобны на Plastik з KDE3
 Comment[bg]=Вграден стил, подобен на Plastik от KDE3
 Comment[bs]=Ugrađeni bestematski stil nalik na Plastiku iz KDE‑a 3
 Comment[ca]=Un estil sense tema integrat, similar Plastik del KDE 3

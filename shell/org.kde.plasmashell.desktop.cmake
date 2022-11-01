@@ -4,6 +4,7 @@ X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[ar]=مساحة عمل سطح مكتب بلازما
 Name[az]=Plasma İş masası Mühiti
+Name[be]=Працоўныя прасторы Plasma
 Name[bg]=Работен плот на Plasma
 Name[bs]=Radni prostor plazma radne površi
 Name[ca]=Espai de treball de l'escriptori Plasma

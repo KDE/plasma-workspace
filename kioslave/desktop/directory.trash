@@ -2,6 +2,7 @@
 Name=Trash
 Name[ar]=المهملات
 Name[az]=Səbət
+Name[be]=Сметніца
 Name[bg]=Кошче
 Name[ca]=Paperera
 Name[ca@valencia]=Paperera
@@ -57,6 +58,7 @@ Name[zh_TW]=垃圾桶
 Comment=Contains removed files
 Comment[ar]=يحوي ملفات مزالة
 Comment[az]=Silinən fayllar burada yerləşir
+Comment[be]=Змяшчае выдаленыя файлы
 Comment[bg]=Съдържа файлове,изпратени в кошчето
 Comment[ca]=Conté els fitxers eliminats
 Comment[ca@valencia]=Conté els fitxers eliminats
