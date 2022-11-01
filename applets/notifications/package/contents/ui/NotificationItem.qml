@@ -238,6 +238,7 @@ ColumnLayout {
             height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
             anchors {
                 top: notificationItem.inGroup ? bodyLabel.top : parent.top
+                topMargin: notificationItem.inGroup ? PlasmaCore.Units.smallSpacing : 0
                 right: parent.right
             }
             visible: iconItem.active
