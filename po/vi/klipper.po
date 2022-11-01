@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-07-11 19:58+0200\n"
+"PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -556,19 +556,16 @@ msgid "Previous History Item"
 msgstr "Mục lịch sử trước"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Mở Klipper tại vị trí con trỏ chuột"
+msgstr "Hiện các mục tại vị trí con trỏ chuột"
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - công cụ bảng nháp"
+msgstr "%1 - công cụ bảng nháp"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -851,11 +848,10 @@ msgstr ""
 "nhận kiểu MIME của nó vào trình đơn hành động."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Nội dung bảng nháp"
+msgstr "%1 - Các mục bảng nháp"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -883,10 +879,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Tiện ích lịch sử cắt & dán của KDE"
+msgstr "Tiện ích lịch sử cắt & dán của Plasma"
 
 #: main.cpp:31
 #, kde-format

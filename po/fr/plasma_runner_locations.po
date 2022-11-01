@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2013-04-25 16:21+0200\n"
 "Last-Translator: xavier <ktranslator31@yahoo.fr>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Recherche les dossiers et les fichiers locaux, les emplacements sur le "
 "réseau et les sites Internet dont l'emplacement correspond à « :q: »."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "Ouvrir %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-30 00:48+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -397,35 +397,35 @@ msgstr "ਘੱਟੋ-ਘੱਟ"
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:177
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (ਵਿਰਾਮ ਹੈ)"
 
-#: package/contents/ui/NotificationItem.qml:188
+#: package/contents/ui/NotificationItem.qml:182
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (ਫੇਲ੍ਹ ਹੈ)"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:184
 #, kde-format
 msgid "Job Failed"
 msgstr "ਜਾਬ ਅਸਫ਼ਲ ਹੋਈ"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (ਮੁਕੰਮਲ)"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Finished"
 msgstr "ਜਾਬ ਪੂਰੀ ਹੋਈ"
 
-#: package/contents/ui/NotificationItem.qml:339
+#: package/contents/ui/NotificationItem.qml:331
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2017-05-16 06:57-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "מוצא מיקומים של ספריות, קבצים, מיקומי קבצים ואתרי אינטרנט עם נתימים המתאימים "
 "אל :q:."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "פתח %1"

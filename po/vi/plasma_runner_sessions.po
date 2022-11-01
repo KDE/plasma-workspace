@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-02-09 18:23+0100\n"
+"PO-Revision-Date: 2022-10-31 12:08+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
@@ -71,19 +71,18 @@ msgstr "bat dau lai"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "luu"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Lưu phiên hiện tại để khôi phục về sau"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "phien moi"
+msgstr "luu phien"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -159,15 +158,14 @@ msgid "Lock the screen"
 msgstr "Khoá màn hình"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "phien moi"
+msgstr "Lưu phiên"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Lưu phiên hiện tại để khôi phục về sau"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -194,6 +192,11 @@ msgid ""
 "li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
 "(such as the application launcher)</li></ul>"
 msgstr ""
+"<p>Bạn sắp bắt đầu một phiên bàn làm việc mới.</p><p>Một màn hình đăng nhập "
+"sẽ được hiển thị và phiên hiện tại sẽ bị ẩn đi.</p><p>Bạn có thể chuyển giữa "
+"các phiên bàn làm việc bằng:</p><ul><li>Ctrl+Alt+F{chỉ số phiên}</"
+"li><li>Công cụ tìm kiếm Plasma (gõ 'chuyen' hoặc 'phien')</li><li>Các phụ "
+"kiện Plasma (chẳng hạn như trình khởi chạy ứng dụng)</li></ul>"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Cảnh báo - Phiên mới"

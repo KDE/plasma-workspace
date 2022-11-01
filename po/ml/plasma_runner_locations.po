@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -27,7 +27,7 @@ msgstr ""
 ":q: മായി പൊരുത്തപ്പെടുന്ന പാതകളുള്ള തദ്ദേശ ഡയറക്‌ടറികളും ഫയലുകളും ശൃംഖലാസ്ഥാനങ്ങളും ഇന്റർനെറ്റ് "
 "സൈറ്റുകളും കണ്ടെത്തുന്നു."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "%1 തുറക്കുക"

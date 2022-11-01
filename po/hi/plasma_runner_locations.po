@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -28,7 +28,7 @@ msgstr ""
 ":q: से मेल खाने वाले स्थानीय निर्देशिकाओं और फाइलों, नेटवर्क स्थानों और इंटरनेट साइटों को "
 "ढूँढता है।"
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "खोलें %1"

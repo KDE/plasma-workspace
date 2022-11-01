@@ -1,15 +1,13 @@
-# translation of klipper.po to Belarusian
-#
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: klipper\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2007-10-28 14:01+0200\n"
+"PO-Revision-Date: 2022-10-31 11:38\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,12 +16,16 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/klipper.po\n"
+"X-Crowdin-File-ID: 8553\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "&Забараніць пусты буфер абмену"
+msgstr "Абраныя элементы і буфер абмену:"
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -40,58 +42,62 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Калі тэкст або частка экрана абраныя мышшу або клавіятурай - гэта "
+"<emphasis>абраныя элементы</emphasis>. Іх можна ўставіць з дапамогай "
+"сярэдняй кнопкі мышы.<nl/><nl/>Калі абраныя элементы скапіяваныя з дапамогай "
+"дзеяння <interface>Капіяваць</interface> або <interface>Выразаць</"
+"interface>, яны захоўваюцца ў <emphasis>буферы абмену</emphasis>. Іх можна "
+"ўставіць з дапамогай дзеяння <interface>Уставіць</interface>. <nl/><nl/>Калі "
+"гэты параметр уключаны, абраныя элементы і буфер абмену будуць аднолькавымі, "
+"таму абраныя элементы можна адразу ўставіць любым спосабам. Калі ён "
+"адключаны, абраныя элементы ўсё яшчэ будуць захоўвацца ў гісторыі буфера "
+"абмену (з улікам параметраў ніжэй), але іх можна ўстаўляць толькі з "
+"дапамогай сярэдняй кнопкі мышы."
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Гісторыя буфера абмену:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
-msgstr[0] " элемент"
-msgstr[1] " элемент"
-msgstr[2] " элемент"
+msgstr[0] " запіс"
+msgstr[1] " запісы"
+msgstr[2] " запісаў"
+msgstr[3] " запісы"
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
+#, kde-format
 msgid "Always save in history"
-msgstr "&Паўтарыць дзеянні для элемента, выбранага са спісу"
+msgstr "Заўсёды захоўваць у гісторыі"
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Text selection:"
-msgstr "&Ігнараваць вылучэнне"
+msgstr "Абраны тэкст:"
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Толькі непасрэднае капіяванне"
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "А&чысціць часопіс буфера абмену"
+msgstr "Захаванне абранага тэксту ў гісторыі буфера абмену."
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "&Ігнараваць вылучэнне"
+msgstr "Абраныя нетэкставыя элементы:"
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
+#, kde-format
 msgid "Never save in history"
-msgstr "&Паўтарыць дзеянні для элемента, выбранага са спісу"
+msgstr "Ніколі не захоўваць у гісторыі"
 
 #: configdialog.cpp:185
 #, kde-format
@@ -99,12 +105,13 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Захаванне нетэкставых абраных элементаў (напрыклад, выяў) у гісторыі буфера "
+"абмену."
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "&Тэрмін чакання выплыўных меню:"
+msgstr "Паказ выплыўнога меню дзеянняў:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -116,33 +123,37 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Калі тэкст, які адпавядае шаблону дзеяння, абіраецца або бярэцца з гісторыі "
+"буфера абмену, будзе аўтаматычна паказвацца выплыўное меню з адпаведнымі "
+"дзеяннямі. Калі аўтаматычны вывад меню адключаны або дзеянне выконваецца з "
+"выключаным акном, то меню можна вывесці з дапамогай спалучэння клавіш "
+"<shortcut>%1</shortcut>."
 
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Выключыць вокны..."
 
 #: configdialog.cpp:283
-#, fuzzy, kde-format
-#| msgid " sec"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] " сек"
-msgstr[1] " сек"
-msgstr[2] " сек"
+msgstr[0] " секунда"
+msgstr[1] " секунды"
+msgstr[2] " секунд"
+msgstr[3] " секунды"
 
 #: configdialog.cpp:284
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgid "Options:"
-msgstr "&Дзеянні"
+msgstr "Параметры:"
 
 #: configdialog.cpp:308
 #, kde-kuit-format
@@ -151,11 +162,13 @@ msgid ""
 "The actions shown in the popup menu can be configured on the "
 "<interface>Actions Configuration</interface> page."
 msgstr ""
+"Дзеянні, якія паказваюцца ў выплыўным меню, можна наладзіць на старонцы "
+"<interface>Канфігурацыя дзеянняў</interface>."
 
 #: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Выключыць вокны"
 
 #: configdialog.cpp:367
 #, kde-kuit-format
@@ -165,37 +178,36 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Калі <interface>шаблон супадзення</interface> адпавядае змесціву буфера "
+"абмену, то гэтыя <interface>загады</interface> з'яўляюцца ў выплыўным меню "
+"Klipper."
 
 #: configdialog.cpp:376
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Шаблон супадзення і загады"
 
 #: configdialog.cpp:376
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Апісанне"
 
 #: configdialog.cpp:382
-#, fuzzy, kde-format
-#| msgid "&Add Action"
+#, kde-format
 msgid "Add Action..."
-msgstr "&Дадаць дзеянне"
+msgstr "Дадаць дзеянне..."
 
 #: configdialog.cpp:386
-#, fuzzy, kde-format
-#| msgid "&Add Action"
+#, kde-format
 msgid "Edit Action..."
-msgstr "&Дадаць дзеянне"
+msgstr "Рэдагаваць дзеянне..."
 
 #: configdialog.cpp:391
-#, fuzzy, kde-format
-#| msgid "&Delete Action"
+#, kde-format
 msgid "Delete Action"
-msgstr "&Выдаліць дзеянне"
+msgstr "Выдаліць дзеянне"
 
 #: configdialog.cpp:398
 #, kde-kuit-format
@@ -204,6 +216,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Гэтыя дзеянні, якія паказваюцца ў выплыўным меню, можна наладзіць на "
+"старонцы <interface>Меню дзеянняў</interface>."
 
 #: configdialog.cpp:582
 #, kde-kuit-format
@@ -211,65 +225,56 @@ msgctxt "@info"
 msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
-msgstr ""
+msgstr "Выдаліць абранае дзеянне <resource>%1</resource><nl/>і ўсе яго загады?"
 
 #: configdialog.cpp:583
-#, fuzzy, kde-format
-#| msgid "&Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "&Выдаліць дзеянне"
+msgstr "Пацвердзіць выдаленне дзеяння"
 
 #: configdialog.cpp:612
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgctxt "General Config"
 msgid "General"
-msgstr "&Асноўныя"
+msgstr "Асноўныя"
 
 #: configdialog.cpp:612
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgid "General Configuration"
-msgstr "&Асноўныя"
+msgstr "Асноўная канфігурацыя"
 
 #: configdialog.cpp:613
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "&Дзеянні"
+msgstr "Меню дзеянняў"
 
 #: configdialog.cpp:613
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgid "Action Menu"
-msgstr "&Дзеянні"
+msgstr "Меню дзеянняў"
 
 #: configdialog.cpp:614
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "&Дзеянні"
+msgstr "Канфігурацыя дзеянняў"
 
 #: configdialog.cpp:614
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgid "Actions Configuration"
-msgstr "&Дзеянні"
+msgstr "Канфігурацыя дзеянняў"
 
 #: configdialog.cpp:617
-#, fuzzy, kde-format
-#| msgid "&Shortcuts"
+#, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
-msgstr "&Скароты"
+msgstr "Спалучэнні клавіш"
 
 #: configdialog.cpp:617
-#, fuzzy, kde-format
-#| msgid "&Shortcuts"
+#, kde-format
 msgid "Shortcuts Configuration"
-msgstr "&Скароты"
+msgstr "Канфігурацыя спалучэнняў клавіш"
 
 #: configdialog.cpp:695
 #, kde-kuit-format
@@ -282,6 +287,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Выплыўное меню дзеянняў не будзе паказвацца для гэтых акон, нават калі меню "
+"ўключана. Напрыклад, гэтая функцыя карысная для вэб-браўзераў, бо ў іх "
+"падчас уводу ў адрасным радку можа абрацца URL-адрас, таму меню будзе "
+"паказвацца пры кожным націсканні клавішы.<nl/><nl/>Калі вы не хочаце, каб "
+"меню з'яўлялася ў нейкай праграме, дадайце яе ў гэты спіс. <link>Як знайсці "
+"назву</link>."
 
 #: configdialog.cpp:708
 #, kde-kuit-format
@@ -293,34 +304,36 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Назва, якую трэба ўвесці тут, каб выключыць акно - гэта WM_CLASS акна. Каб "
+"знайсці WM_CLASS акна, у іншым акне тэрмінала ўвядзіце загад:<nl/><nl/>&nbsp;"
+"&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>і націсніце на акно, "
+"якое вы хочаце выключыць. Вам патрэбная першая назва, якая паказваецца пасля "
+"знака \"=\"."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:90
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "Не зважаць"
 
 #: editactiondialog.cpp:36
-#, fuzzy, kde-format
-#| msgid "Clipboard"
+#, kde-format
 msgid "Replace Clipboard"
-msgstr "Буфер абмену"
+msgstr "Замяніць у буферы абмену"
 
 #: editactiondialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Clipboard"
+#, kde-format
 msgid "Add to Clipboard"
-msgstr "Буфер абмену"
+msgstr "Дадаць у буфер абмену"
 
 #: editactiondialog.cpp:122
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Command"
-msgstr "Дадаць каманду"
+msgstr "Загад"
 
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Вывад"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -330,7 +343,7 @@ msgstr "Апісанне"
 #: editactiondialog.cpp:179
 #, kde-format
 msgid "Action Properties"
-msgstr ""
+msgstr "Уласцівасці дзеяння"
 
 #: editactiondialog.cpp:191
 #, kde-kuit-format
@@ -341,16 +354,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Дзеянне выконваецца, калі яго <interface>шаблон супадзення</interface> "
+"адпавядае змесціву буфера абмену. Калі гэта адбываецца, <interface>загады</"
+"interface> дзеяння з'яўляюцца ў выплыўным меню Klipper; калі абіраецца адзін "
+"з іх, загад выконваецца."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Увядзіце шаблон супадзення з буферам абмену"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Шаблон супадзення:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -360,22 +377,24 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"Шаблон супадзення - гэта рэгулярны выраз. Каб даведацца падрабязней, "
+"глядзіце <link url=\"https://en.wikipedia.org/wiki/Regular_expression"
+"\">запіс у Вікіпедыі</link> па гэтай тэме."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Увядзіце апісанне дзеяння"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgid "Description:"
-msgstr "Апісанне"
+msgstr "Апісанне:"
 
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Уключыць у выплыўное меню"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -387,52 +406,52 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Загады для гэтага супадзення будуць дададзеныя ў выплыўное меню для дзеяння, "
+"калі меню ўключана на старонцы <interface>Меню дзеянняў</interface>. Калі "
+"гэты параметр адключаны, загады для гэтага супадзення не будуць дададзеныя ў "
+"выплыўное меню, але дададуцца, калі меню будзе актывавана з дапамогай "
+"спалучэння клавіш <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Дадаць каманду"
+msgstr "Дадаць загад..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Дадаць каманду"
+msgstr "Рэдагаваць загад..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Выдаліць каманду"
+msgstr "Выдаліць загад"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Выдаліць абраны загад <resource>%1</resource>?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Пацвердзіць выдаленне загаду"
 
 #: editcommanddialog.cpp:47
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
+#, kde-format
 msgid "Command Properties"
-msgstr "&Дзеянні"
+msgstr "Уласцівасці загаду"
 
 #: editcommanddialog.cpp:60
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Увядзіце загад і аргументы"
 
 #: editcommanddialog.cpp:63
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Command:"
-msgstr "Дадаць каманду"
+msgstr "Загад:"
 
 #: editcommanddialog.cpp:72
 #, kde-kuit-format
@@ -443,124 +462,118 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"Элемент <placeholder>&#37;s</placeholder> у загадзе заменіцца змесцівам "
+"буфера абмену. Ад <placeholder>&#37;0</placeholder> да <placeholder>&#37;9</"
+"placeholder> заменіцца тэкстамі з шаблона супадзення."
 
 #: editcommanddialog.cpp:82
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Увядзіце апісанне загаду"
 
 #: editcommanddialog.cpp:92
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Вывад загаду:"
 
 #: editcommanddialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Буфер абмену"
+msgstr "Замяніць у буферы абмену"
 
 #: editcommanddialog.cpp:98
-#, fuzzy, kde-format
-#| msgid "Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "Буфер абмену"
+msgstr "Дадаць у буфер абмену"
 
 #: editcommanddialog.cpp:102
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Паводзіны стандартнага вываду выкананага загаду."
 
 #: editcommanddialog.cpp:116
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Скінуць значок загаду да прадвызначанага значэння"
 
 #: editcommanddialog.cpp:122
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Значок:"
 
 #: historyimageitem.cpp:39
 #, kde-format
 msgid "%1x%2 %3bpp"
-msgstr ""
+msgstr "%1x%2 %3 бітаў/піксель"
 
 #: klipper.cpp:154
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "&Тэрмін чакання выплыўных меню:"
+msgstr "Выплыўное меню дзеянняў"
 
 #: klipper.cpp:177
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "А&чысціць часопіс буфера абмену"
+msgstr "&Ачысціць гісторыю буфера абмену"
 
 #: klipper.cpp:184
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Наладка Klipper..."
+msgstr "&Наладжванне Klipper…"
 
 #: klipper.cpp:190
-#, fuzzy, kde-format
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
-msgstr "&Выхад"
+msgstr "&Выйсці"
 
 #: klipper.cpp:195
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Самастойна выканаць дзеянне для цяперашняга зместу буфера абмену"
+msgstr "Уласнаручны выклік дзеяння ў бягучым буферы абмену"
 
 #: klipper.cpp:203
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Рэдагаваць змест"
+msgstr "&Рэдагаваць змесціва…"
 
 #: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr ""
+msgstr "&Паказаць штрых-код…"
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Наступны элемент гісторыі"
 
 #: klipper.cpp:225
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Папярэдні элемент гісторыі"
 
 #: klipper.cpp:232
 #, fuzzy, kde-format
-#| msgid "&Popup menu at mouse-cursor position"
+#| msgctxt "@action:inmenu"
+#| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "&Выплыўнае меню ў пазіцыі курсору мышы"
+msgstr "Адкрыць Klipper у месцы курсора мышы"
 
 #: klipper.cpp:244
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Буфер абмену"
+msgstr "Klipper - буфер абмену"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -569,21 +582,18 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"Вы можаце ўключыць URL-дзеянні пазней на старонцы <interface>Дзеянні</"
+"interface> акна канфігурацыі аплета буфера абмену"
 
 #: klipper.cpp:595
-#, fuzzy, kde-format
-#| msgid ""
-#| "Should Klipper start automatically\n"
-#| "when you login?"
+#, kde-format
 msgid "Should Klipper start automatically when you login?"
-msgstr ""
-"Ці павінны Klipper запускацца аўтаматычна\n"
-"падчас запуску KDE?"
+msgstr "Ці трэба аўтаматычна запускаць Klipper пры ўваходзе ў сістэму?"
 
 #: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr "Аўтаматычна запускаць Klipper?"
+msgstr "Запускаць Klipper аўтаматычна?"
 
 #: klipper.cpp:597
 #, kde-format
@@ -598,58 +608,54 @@ msgstr "Не запускаць"
 #: klipper.cpp:945
 #, kde-format
 msgid "Edit Contents"
-msgstr "Рэдагаваць змест"
+msgstr "Рэдагаваць змесціва"
 
 #: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
-msgstr ""
+msgstr "Мабільны штрых-код"
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "А&чысціць часопіс буфера абмену"
+msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "А&чысціць часопіс буфера абмену"
+msgstr "Ачысціць гісторыю буфера абмену"
 
 #: klipper.cpp:1076 klipper.cpp:1085
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard history"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Гісторыя буфера абмену"
 
 #: klipper.cpp:1102
 #, kde-format
 msgid "up"
-msgstr ""
+msgstr "уверх"
 
 #: klipper.cpp:1109
 #, kde-format
 msgid "current"
-msgstr ""
+msgstr "бягучая"
 
 #: klipper.cpp:1116
 #, kde-format
 msgid "down"
-msgstr ""
+msgstr "уніз"
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Klipper"
+#, kde-format
 msgid "Klipper version"
-msgstr "Klipper"
+msgstr "Версія Klipper"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Захоўваць гісторыю сеансаў"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -658,13 +664,14 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Захоўваць гісторыю буфера абмену, каб яна была даступная пры наступным "
+"уваходзе."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "&Забараніць пусты буфер абмену"
+msgstr "Забараніць ачышчэнне буфера абмену"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -672,14 +679,13 @@ msgstr "&Забараніць пусты буфер абмену"
 msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
-msgstr ""
+msgstr "Забараніць ачышчэнне буфера абмену. Напрыклад, пры выхадзе з праграмы."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "&Забараніць пусты буфер абмену"
+msgstr "Аўтаматычнае капіяванне абраных элементаў у буфер абмену"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -689,13 +695,16 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Змесціва, абранае курсорам, аўтаматычна капіюецца ў буфер абмену, каб яго "
+"можна было ўставіць з дапамогай дзеяння \"Уставіць\" або сярэдняй кнопкі "
+"мышы.<br/><a href=\"1\">Больш падрабязна пра абраныя элементы і буфер "
+"абмену</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
-msgstr "&Ігнараваць вылучэнне"
+msgstr "Ігнараванне абраных элементаў"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -705,13 +714,15 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Змесціва, абранае курсорам, але не скапіяванае ў буфер абмену, не "
+"захоўваецца ў гісторыі буфера абмену і можа быць устаўлена толькі з "
+"дапамогай сярэдняй кнопкі мышы."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Text selection only"
-msgstr "&Ігнараваць вылучэнне"
+msgstr "Толькі абраны тэкст"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -720,12 +731,14 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"У гісторыі буфера абмену будзе захоўвацца толькі абраны тэкст, а не выявы "
+"або любыя іншыя тыпы даных."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
 #, kde-format
 msgid "Always ignore images"
-msgstr ""
+msgstr "Заўсёды ігнараваць выявы"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -733,72 +746,68 @@ msgstr ""
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Не захоўваць выявы ў гісторыі буфера абмену, нават калі яны скапіяваныя."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
 #, kde-format
 msgid "Use graphical regexp editor"
-msgstr ""
+msgstr "Выкарыстоўваць графічны рэдактар regexp"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "&Ігнараваць вылучэнне"
+msgstr "Неадкладны вывад магчымых дзеянняў"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
-msgstr ""
+msgstr "Паказваць выплыўное меню дзеянняў адразу пасля таго, як нешта абрана."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
 #, kde-format
 msgid "No actions for WM_CLASS"
-msgstr ""
+msgstr "Няма дзеянняў для WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "&Тэрмін чакання выплыўных меню:"
+msgstr "Час меню дзеянняў:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "&Тэрмін чакання выплыўных меню:"
+msgstr "Час паказу выплыўнога меню дзеянняў."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Памер гісторыі:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "Колькасць элементаў гісторыі буфера абмену."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr ""
+msgstr "Пусты запіс для пазначэння зменаў у віджэце дрэва дзеянняў"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:87
-#, fuzzy, kde-format
-#| msgid "Remove whitespace when executing actions"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Выдаліць прагалы пры выкананні дзеяння"
+msgstr "Абразаць прагалы ў абраным"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:89
@@ -809,29 +818,31 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Перад выкананнем дзеяння выдаляць ​​усе прагалы ў пачатку і ў канцы абранага "
+"тэксту. Напрыклад, гэта карысна для URL-адраса, які трэба ўставіць у "
+"браўзер. Не ўплывае на тэкст, захаваны ў буферы абмену."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:92
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "&Паўтарыць дзеянні для элемента, выбранага са спісу"
+msgstr "Для элемента, абранага з гісторыі"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "А&чысціць часопіс буфера абмену"
+msgstr ""
+"Паказваць выплыўное меню дзеянняў для элементаў, абраных з гісторыі буфера "
+"абмену."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:97
-#, fuzzy, kde-format
-#| msgid "Enable/Disable Clipboard Actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Дазволіць/Забараніць дзеянні буфера абмену"
+msgstr "Дадаваць дзеянні паводле тыпаў MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:99
@@ -840,35 +851,35 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Калі абрана назва файла або URL-адрас, дадаваць у выплыўное меню праграмы, "
+"якія могуць апрацоўваць адпаведны тып MIME."
 
 #: klipperpopup.cpp:105
 #, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
+#| msgid "Clipboard Contents"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Захаваць змест буфера абмену пры &выхадзе"
+msgstr "Змесціва буфера абмену"
 
 #: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Пошук…"
 
 #: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
-msgstr ""
+msgstr "Хібны рэгулярны выраз, %1"
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard is empty"
-msgstr "Па&мер часопісу буфера абмену:"
+msgstr "Буфер абмену пусты"
 
 #: klipperpopup.cpp:174
-#, fuzzy, kde-format
-#| msgid "<no matches>"
+#, kde-format
 msgid "No matches"
-msgstr "<няма супадзенняў>"
+msgstr "Няма супадзенняў"
 
 #: main.cpp:27 tray.cpp:22
 #, kde-format
@@ -879,95 +890,90 @@ msgstr "Klipper"
 #, fuzzy, kde-format
 #| msgid "KDE cut & paste history utility"
 msgid "Plasma cut & paste history utility"
-msgstr "Службовая праграма KDE для працы з буферам абмену"
+msgstr "Утыліта KDE для працы з буферам абмену"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "(c) 1998, Andrew Stanley-Jones\n"
-#| "1998-2002, Carsten Pfeiffer\n"
-#| "2001, Patrick Dubroy"
+#, kde-format
 msgid ""
 "(c) 1998, Andrew Stanley-Jones\n"
 "1998-2002, Carsten Pfeiffer\n"
 "2001, Patrick Dubroy"
 msgstr ""
-"(c) 1998, Эндрю Стэнлі-Джонс\n"
-"1998-2002, Карстэн Пфіффер\n"
-"2001, Патрык Даброй"
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
 
 #: main.cpp:34
 #, kde-format
 msgid "Carsten Pfeiffer"
-msgstr "Карстэн Пфіффер"
+msgstr "Carsten Pfeiffer"
 
 #: main.cpp:34
 #, kde-format
 msgid "Author"
-msgstr "Аўтар"
+msgstr "Стваральнік"
 
 #: main.cpp:36
 #, kde-format
 msgid "Andrew Stanley-Jones"
-msgstr "Эндрю Стэнлі-Джонс"
+msgstr "Andrew Stanley-Jones"
 
 #: main.cpp:36
 #, kde-format
 msgid "Original Author"
-msgstr "Аўтар ідэі"
+msgstr "Першапачатковы стваральнік"
 
 #: main.cpp:38
 #, kde-format
 msgid "Patrick Dubroy"
-msgstr "Патрык Даброй"
+msgstr "Patrick Dubroy"
 
 #: main.cpp:38
 #, kde-format
 msgid "Contributor"
-msgstr "Дапамога"
+msgstr "Удзельнік"
 
 #: main.cpp:40
 #, kde-format
 msgid "Luboš Luňák"
-msgstr "Любаш Люнак"
+msgstr "Luboš Luňák"
 
 #: main.cpp:40
 #, kde-format
 msgid "Bugfixes and optimizations"
-msgstr "Аптымізацыя і выпраўленне памылак"
+msgstr "Аптымізацыя і выпраўленне хібаў"
 
 #: main.cpp:42
 #, kde-format
 msgid "Esben Mose Hansen"
-msgstr "Эсбен Мосе Гансен"
+msgstr "Esben Mose Hansen"
 
 #: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Адказны за выпуск"
+msgstr "Папярэдні суправаджальнік"
 
 #: main.cpp:44
 #, kde-format
 msgid "Martin Gräßlin"
-msgstr ""
+msgstr "Martin Gräßlin"
 
 #: main.cpp:44
 #, kde-format
 msgid "Maintainer"
-msgstr "Адказны за выпуск"
+msgstr "Суправаджальнік"
 
 #: main.cpp:46
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ігар Грачышка"
+msgstr "Ігар Грачышка, Antikruk"
 
 #: main.cpp:46
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ihar.hrachyshka@gmail.com"
+msgstr "ihar.hrachyshka@gmail.com, nashtlumach@gmail.com"
 
 #: popupproxy.cpp:145
 #, kde-format
@@ -975,15 +981,14 @@ msgid "&More"
 msgstr "&Яшчэ"
 
 #: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
+#, kde-format
 msgid "Clipboard Contents"
-msgstr "Захаваць змест буфера абмену пры &выхадзе"
+msgstr "Змесціва буфера абмену"
 
 #: urlgrabber.cpp:198
 #, kde-format
 msgid "Disable This Popup"
-msgstr "Выключыць гэтае выплыўнае акно"
+msgstr "Адключыць гэтае выплыўнае акно"
 
 #: urlgrabber.cpp:204
 #, kde-format

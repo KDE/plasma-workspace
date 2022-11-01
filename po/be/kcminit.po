@@ -1,16 +1,12 @@
-# translation of kcminit.po to Belarusian
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcminit\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-26 00:47+0000\n"
-"PO-Revision-Date: 2007-08-10 14:26+0000\n"
+"PO-Revision-Date: 2022-10-31 11:38\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,16 +15,21 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/kcminit.po\n"
+"X-Crowdin-File-ID: 8547\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Дарафей Праляскоўскі"
+msgstr "Дарафей Праляскоўскі, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "komzpa@licei2.com"
+msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
 
 #: main.cpp:170
 #, kde-format
@@ -36,20 +37,19 @@ msgid "KCMInit"
 msgstr "KCMInit"
 
 #: main.cpp:172
-#, fuzzy, kde-format
-#| msgid "KCMInit - runs startups initialization for Control Modules."
+#, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
-msgstr "KCMInit - запускае пачатковую ініцыялізацыю модуляў настаўлення."
+msgstr "KCMInit - ініцыялізацыя модуляў кіравання падчас запуску сістэмы."
 
 #: main.cpp:178
 #, kde-format
 msgid "List modules that are run at startup"
-msgstr "Паказаць спіс модуляў, якія загружаюцца пры запуску"
+msgstr "Паказаць спіс модуляў, якія запускаюцца падчас запуску"
 
 #: main.cpp:179
 #, kde-format
 msgid "Configuration module to run"
-msgstr "Запусціць модуль настаўленняў"
+msgstr "Модуль канфігурацыі для запуску"
 
 #~ msgid "Module %1 not found"
 #~ msgstr "Mодуль %1 не знойдзены"

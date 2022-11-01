@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2013-01-22 20:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Hittar lokala kataloger och filer, nätverksplatser och Internetplatser med "
 "sökvägar som motsvarar :q:."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "Öppna %1"

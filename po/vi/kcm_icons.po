@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-14 18:32+0200\n"
+"PO-Revision-Date: 2022-10-31 12:01+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -26,10 +26,9 @@ msgid "Main Toolbar"
 msgstr "Thanh công cụ chính"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Thanh công cụ chính"
+msgstr "Thanh công cụ phụ"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -131,11 +130,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Tại đây bạn có thể cấu hình cỡ mặc định ở cấp độ toàn hệ thống của các kiểu "
+"biểu tượng khác nhau. Lưu ý rằng không phải tất cả các ứng dụng đều tuân "
+"theo các thiết lập này.<nl/><nl/>Nếu bạn thấy các đối tượng trên màn hình "
+"nhìn chung là quá nhỏ hoặc quá lớn, hãy cân nhắc việc điều chỉnh tỉ lệ toàn "
+"cục thì tốt hơn."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Chỉnh tỉ lệ toàn cục…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

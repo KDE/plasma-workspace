@@ -1,18 +1,14 @@
-# translation of kcmstyle.po to Belarusian
-# Belarusian (classic spelling) translation of kcmstyle.pot
-# Copyright (C) 2002-2004 KDE Team.
-#
 # Eugene Zelenko <greendeath@mail.ru>, 2002-2004.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmstyle\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-02 00:47+0000\n"
-"PO-Revision-Date: 2007-08-22 12:31+0000\n"
+"PO-Revision-Date: 2022-10-31 11:38\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,143 +17,135 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/kcm_style.po\n"
+"X-Crowdin-File-ID: 8545\n"
 
 #: gtkpage.cpp:59
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 не ёсць прыдатным архівам тэмы GTK."
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "Адбылася памылка адкрыцця вакна настаўленняў гэтага стылю."
+msgstr ""
+"Падчас загрузкі дыялогава акна канфігурацыі для гэтага стылю адбылася "
+"памылка."
 
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "Не ўдалося ўжыць абраны стыль \"%1\"."
 
 #: package/contents/ui/EffectSettingsPopup.qml:32
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons:"
-msgstr "&Паказваць значкі на кнопках"
+msgstr "Паказваць значкі:"
 
 #: package/contents/ui/EffectSettingsPopup.qml:33
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "Кнопка-пераключальнік"
+msgstr "На кнопках"
 
 #: package/contents/ui/EffectSettingsPopup.qml:44
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "У меню"
 
 #: package/contents/ui/EffectSettingsPopup.qml:56
 #, kde-format
 msgid "Main toolbar label:"
-msgstr ""
+msgstr "Адмеціна галоўнай панэлі інструментаў:"
 
 #: package/contents/ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #: package/contents/ui/EffectSettingsPopup.qml:59
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "Толькі тэкст"
 
 #: package/contents/ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "Тэкст каля значак"
+msgstr "Побач са значкамі"
 
 #: package/contents/ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "Тэкст пад значкамі"
+msgstr "Пад значкамі"
 
 #: package/contents/ui/EffectSettingsPopup.qml:76
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr ""
+msgstr "Адмеціна другаснай панэлі інструментаў:"
 
 #: package/contents/ui/GtkStylePage.qml:18
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "На ўзроўні праграмы"
+msgstr "Стыль праграм GNOME/GTK"
 
 #: package/contents/ui/GtkStylePage.qml:44
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "Тэма GTK:"
 
 #: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Прагляд"
+msgstr "Папярэдні прагляд…"
 
 #: package/contents/ui/GtkStylePage.qml:88
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Усталяваць з файла…"
 
 #: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "На ўзроўні праграмы"
+msgstr "Атрымаць новыя стылі праграм GNOME/GTK…"
 
 #: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "Абраць архіў тэмы GTK"
 
 #: package/contents/ui/GtkStylePage.qml:111
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Архіў тэмы GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
+#, kde-format
 msgid ""
 "This module allows you to modify the visual appearance of applications' user "
 "interface elements."
-msgstr ""
-"<h1>Стыль</h1>Гэты модуль дазваляе змяняць вонкавы выгляд элементаў "
-"інтэрфейсу карыстальніка, напрыклад, стыль віджэтаў і эфекты."
+msgstr "Гэты модуль дазваляе змяняць выгляд элементаў інтэрфейсу праграм."
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "На&стаўленні..."
+msgstr "Наладжванне стылю…"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "Наладжванне значкоў і панэляў інструментаў"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "На&стаўленні..."
+msgstr "Наладжванне стылю праграм GNOME/GTK…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
 msgid "Configure %1"
-msgstr "Настаўленне %1"
+msgstr "Наладжванне \"%1\""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_1)
 #: stylepreview.ui:33
@@ -167,30 +155,28 @@ msgstr "Укладка 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
-msgstr "Кнопка"
+msgstr "Націснутая кнопка"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
-msgstr "Выпадаючае меню"
+msgstr "Выплыўное меню"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
 #, kde-format
 msgid "Checkbox"
-msgstr "Параметр выбару"
+msgstr "Адзнака"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
 #: stylepreview.ui:106 stylepreview.ui:116
 #, kde-format
 msgid "Radio button"
-msgstr "Кнопка-пераключальнік"
+msgstr "Кнопка выбару"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:133
@@ -200,36 +186,33 @@ msgstr "Укладка 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "Application style"
-msgstr "На ўзроўні праграмы"
+msgstr "Стыль праграм"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "&Паказваць значкі на кнопках"
+msgstr "Паказваць значкі на кнопках"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "&Паказваць значкі на кнопках"
+msgstr "Паказваць значкі ў меню"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
 #, kde-format
 msgid "Main toolbar label"
-msgstr ""
+msgstr "Адмеціна галоўнай панэлі інструментаў"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
-msgstr ""
+msgstr "Адмеціна другаснай панэлі інструментаў"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2009-08-18 10:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Traži lokalne direktorije i datoteke, mrežne lokacije i Internet stranice "
 "prema zadanoj putanji :q:."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "Otvori %1"

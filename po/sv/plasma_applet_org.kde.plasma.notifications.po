@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-30 00:48+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2022-09-24 15:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -391,35 +391,35 @@ msgstr "Minimera"
 msgid "Close"
 msgstr "Stäng"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:177
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (paus)"
 
-#: package/contents/ui/NotificationItem.qml:188
+#: package/contents/ui/NotificationItem.qml:182
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (misslyckades)"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:184
 #, kde-format
 msgid "Job Failed"
 msgstr "Jobb misslyckades"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (klart)"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Finished"
 msgstr "Jobb klart"
 
-#: package/contents/ui/NotificationItem.qml:339
+#: package/contents/ui/NotificationItem.qml:331
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

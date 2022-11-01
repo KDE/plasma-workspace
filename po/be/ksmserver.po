@@ -1,15 +1,13 @@
-# translation of ksmserver.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Darafei Praliaskouski <komzpa@licei2.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: ksmserver\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-22 00:47+0000\n"
-"PO-Revision-Date: 2007-08-17 10:15+0000\n"
+"PO-Revision-Date: 2022-10-31 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,56 +16,63 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/ksmserver.po\n"
+"X-Crowdin-File-ID: 8557\n"
 
 #: logout.cpp:344
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Выхад скасаваны '%1'"
+msgstr "Выхад скасаваны \"%1\""
 
 #: main.cpp:117
 #, kde-format
 msgid "$HOME not set!"
-msgstr ""
+msgstr "$HOME не вызначаны!"
 
 #: main.cpp:121 main.cpp:127
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr ""
+msgstr "Каталог $HOME (%1) не існуе."
 
 #: main.cpp:123
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
-msgstr ""
+msgstr "Вы не маеце правоў на запіс у каталог $HOME (%1)."
 
 #: main.cpp:129
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr ""
+msgstr "Вы не маеце правоў на чытанне з каталога $HOME (%1)."
 
 #: main.cpp:133
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr ""
+msgstr "На дыску, дзе знаходзіцца каталог $HOME (%1), не хапае вольнага месца."
 
 #: main.cpp:136
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
+msgstr "Спроба запісу ў каталог $HOME (%2) завяршылася памылкай \"%1\""
 
 #: main.cpp:149 main.cpp:184
 #, kde-format
 msgid "No write access to '%1'."
-msgstr ""
+msgstr "Вы не маеце правоў на запіс у \"%1\"."
 
 #: main.cpp:151 main.cpp:186
 #, kde-format
 msgid "No read access to '%1'."
-msgstr ""
+msgstr "Вы не маеце правоў на чытанне з \"%1\"."
 
 #: main.cpp:159 main.cpp:172
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr ""
+"На дыску, дзе знаходзіцца каталог часовых файлаў (%1), не хапае вольнага "
+"месца."
 
 #: main.cpp:162 main.cpp:175
 #, kde-format
@@ -75,6 +80,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
+"Спроба запісу ў каталог часовых файлаў (%2) завяршылася\n"
+"    памылкай \"%1\""
 
 #: main.cpp:190
 #, kde-format
@@ -82,6 +89,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Падчас спробы запуску Plasma была выяўленая наступная\n"
+"праблема ўсталявання:"
 
 #: main.cpp:193
 #, kde-format
@@ -90,38 +99,38 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"Немагчыма запусціць Plasma.\n"
 
 #: main.cpp:200
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr ""
+msgstr "Пры ўсталяванні працоўнага асяроддзя Plasma паўстала праблема!"
 
 #: main.cpp:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"Надзейны кіраўнік сеансаў KDE які размаўляе на звычайным пратаколу X11R6 \n"
-"кіравання сеансамі (XSMP)."
+"Надзейны кіраўнік сеансаў для Plasma, які дзейнічае па стандартным пратаколе "
+"кіравання сеансамі X11R6 (XSMP)."
 
 #: main.cpp:240
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Узнаўляе запісаны сеанс, калі ён даступны"
+msgstr "Аднаўляе захаваны сеанс, калі ён даступны"
 
 #: main.cpp:243
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "Таксама дазволіць аддаленыя злучэнні"
+msgstr "Таксама дазволіць адлеглыя падлучэнні"
 
 #: main.cpp:246
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr ""
+msgstr "Запускаць сеанс у заблакаваным рэжыме"
 
 #: main.cpp:250
 #, kde-format
@@ -129,33 +138,33 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Запускаць без падтрымкі экрана блакавання. Патрэбна, калі экран блакавання "
+"падаецца іншым кампанентам."
 
 #: server.cpp:873
-#, fuzzy, kde-format
-#| msgid "The KDE Session Manager"
+#, kde-format
 msgid "Session Management"
-msgstr "Кіраўнік сеансаў KDE"
+msgstr "Кіраванне сеансамі"
 
 #: server.cpp:876
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgid "Log Out"
-msgstr "Выйсці"
+msgstr "Выхад"
 
 #: server.cpp:881
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr ""
+msgstr "Выхад без пацвярджэння"
 
 #: server.cpp:886
 #, kde-format
 msgid "Halt Without Confirmation"
-msgstr ""
+msgstr "Прыпыненне без пацвярджэння"
 
 #: server.cpp:891
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr ""
+msgstr "Перазапуск без пацвярджэння"
 
 #, fuzzy
 #~| msgid ""

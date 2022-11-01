@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2009-10-23 20:03+0300\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Trovas lokaj dosierujojn kaj dosierojn, retaj lokoj kaj Interret-retejojn "
 "kun vojoj \tkongruantaj kun :q:."
 
-#: locationrunner.cpp:60
+#: locationrunner.cpp:59
 #, kde-format
 msgid "Open %1"
 msgstr "Malfermi %1"

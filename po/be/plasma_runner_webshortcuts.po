@@ -1,16 +1,12 @@
-# translation of krunner_webshortcutsrunner.po to Belarusian (Official spelling)
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Darafei Praliaskouski <komzpa@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-02 00:47+0000\n"
-"PO-Revision-Date: 2008-09-26 17:54+0300\n"
+"PO-Revision-Date: 2022-10-31 11:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
-"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,31 +15,36 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_webshortcuts.po\n"
+"X-Crowdin-File-ID: 8577\n"
 
 #: webshortcutrunner.cpp:58
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
-msgstr ""
+msgstr "Адкрывае \"%1\" у вэб-браўзеры з запытам :q:."
 
 #: webshortcutrunner.cpp:63
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Пошук з дапамогай сінтаксісу DuckDuckGo"
 
 #: webshortcutrunner.cpp:94
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "Пошук у прыватным акне"
 
 #: webshortcutrunner.cpp:94
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "Пошук у акне інкогніта"
 
 #: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
 #, kde-format
 msgid "Search %1 for %2"
-msgstr "Шукаць %2 у %1"
+msgstr "Пошук %2 у %1"
 
 #~ msgid "Web Shortcut"
 #~ msgstr "Скарот Web"

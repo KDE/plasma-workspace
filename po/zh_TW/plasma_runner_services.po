@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:47+0000\n"
+"POT-Creation-Date: 2022-11-01 00:49+0000\n"
 "PO-Revision-Date: 2020-05-15 00:06+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 20.04.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: servicerunner.cpp:349
+#: servicerunner.cpp:357
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -28,7 +28,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: servicerunner.cpp:394
+#: servicerunner.cpp:402
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "尋找名稱或描述符合 :q: 的應用程式"
