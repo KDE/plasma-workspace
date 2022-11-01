@@ -290,7 +290,7 @@ ColumnLayout {
     Item {
         id: actionContainer
         Layout.fillWidth: true
-        Layout.preferredHeight: Math.max(actionFlow.implicitHeight, replyLoader.height)
+        Layout.preferredHeight: childrenRect.height
         visible: actionRepeater.count > 0 && actionFlow.parent === this
 
         // Notification actions
