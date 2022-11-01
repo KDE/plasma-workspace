@@ -235,7 +235,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     connect(m_showOnMousePos, &QAction::triggered, this, &Klipper::slotPopupMenu);
 
     connect(history(), &History::topChanged, this, &Klipper::slotHistoryTopChanged);
-    connect(m_popup, &QMenu::aboutToShow, this, &Klipper::slotStartShowTimer);
 
     if (m_mode == KlipperMode::Standalone) {
         // system tray popup menu
@@ -257,6 +256,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
         Q_ASSERT(m_quitAction);
         m_actionsPopup->addAction(m_quitAction);
+        connect(m_actionsPopup, &QMenu::aboutToShow, this, &Klipper::slotStartShowTimer);
     }
 
     // session manager interaction
