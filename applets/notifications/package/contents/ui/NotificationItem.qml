@@ -403,6 +403,7 @@ ColumnLayout {
         Layout.topMargin: 0
         Layout.bottomMargin: notificationItem.thumbnailBottomPadding
         Layout.fillWidth: true
+        Layout.preferredHeight: item ? item.implicitHeight : 0
         active: notificationItem.urls.length > 0
         visible: active
         sourceComponent: ThumbnailStrip {
