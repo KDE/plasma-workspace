@@ -1074,12 +1074,18 @@ WId XWindowTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
     }
 
     QByteArray data(mimeData->data(Private::mimeType()));
-    if (data.size() != sizeof(WId)) {
-        return 0;
-    }
-
     WId id;
-    memcpy(&id, data.data(), sizeof(WId));
+    if (data.size() != sizeof(WId)) {
+        // Workaround for https://bugreports.qt.io/browse/QTBUG-71922
+        QString idString = QString::fromUtf8(data);
+        if (idString.startsWith(QLatin1String("strnum-"))) {
+            id = QString::fromUtf8(data).mid(7).toUInt();
+        } else {
+            return 0;
+        }
+    } else {
+        memcpy(&id, data.data(), sizeof(WId));
+    }
 
     if (ok) {
         *ok = true;
