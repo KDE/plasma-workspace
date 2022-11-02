@@ -67,7 +67,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     setColor(QColor(Qt::transparent));
     setScreen(screen);
 
-    if (KWindowSystem::isPlatformWayland()) {
+    if (KWindowSystem::isPlatformWayland() && !m_windowed) {
         if (auto w = LayerShellQt::Window::get(this)) {
             w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
             w->setExclusiveZone(-1);
@@ -193,8 +193,12 @@ void KSMShutdownDlg::init()
     // is too early and we don't have the root object yet
     const QColor backgroundColor = rootObject() ? rootObject()->property("backgroundColor").value<QColor>() : QColor();
     KWindowEffects::enableBackgroundContrast(this, true, 0.4, (backgroundColor.value() > 128 ? 1.6 : 0.3), 1.7);
-    KQuickAddons::QuickViewSharedEngine::showFullScreen();
-    setFlag(Qt::FramelessWindowHint);
+    if (m_windowed) {
+        show();
+    } else {
+        showFullScreen();
+        setFlag(Qt::FramelessWindowHint);
+    }
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);

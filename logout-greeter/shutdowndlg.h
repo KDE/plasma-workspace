@@ -22,6 +22,10 @@ class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
 public:
     KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen);
 
+    void setWindowed(bool windowed)
+    {
+        m_windowed = windowed;
+    }
     void init();
     bool result() const;
 
@@ -43,6 +47,7 @@ protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
+    bool m_windowed = false;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;

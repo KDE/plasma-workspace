@@ -37,7 +37,7 @@ Greeter::~Greeter()
 
 void Greeter::setupWaylandIntegration()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
+    if (!KWindowSystem::isPlatformWayland() || m_windowed) {
         return;
     }
     LayerShellQt::Shell::useLayerShell();
@@ -54,6 +54,12 @@ void Greeter::init()
     m_running = true;
 }
 
+void Greeter::enableWindowed()
+{
+    m_windowed = true;
+    promptLogout();
+}
+
 void Greeter::adoptScreen(QScreen *screen)
 {
     if (screen->geometry().isNull()) {
@@ -61,6 +67,7 @@ void Greeter::adoptScreen(QScreen *screen)
     }
     // TODO: last argument is the theme, maybe add command line option for it?
     KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, screen);
+    w->setWindowed(m_windowed);
     w->installEventFilter(this);
     m_dialogs << w;
 

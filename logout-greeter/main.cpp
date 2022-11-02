@@ -39,6 +39,15 @@ int main(int argc, char *argv[])
         return 0;
     }
 
+    bool windowed = false;
+    {
+        QCommandLineParser parser;
+        QCommandLineOption testingOption("windowed", "have the dialog show, windowed, regardless of the session state");
+        parser.addOption(testingOption);
+        parser.process(app);
+        windowed = parser.isSet(testingOption);
+    }
+
     // because we export stuff as horrific contextProperties we need to know "maysd" may shutdown, at the time of initial creation and can't update
     // later.
     // Force the backend to load everything now, then the shared backend will be cached when a new object is created later
@@ -53,11 +62,8 @@ int main(int argc, char *argv[])
     }
 
     Greeter greeter;
-
-    if (argc > 1) {
-        // special case, invoked from ksmserver from a former release which had a tonne of args
-        // shouldn't happen often
-        greeter.promptLogout();
+    if (windowed) {
+        greeter.enableWindowed();
     }
 
     return app.exec();

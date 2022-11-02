@@ -26,6 +26,7 @@ public:
     ~Greeter() override;
 
     void init();
+    void enableWindowed();
 
     bool eventFilter(QObject *watched, QEvent *event) override;
 
@@ -43,4 +44,5 @@ private:
 
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     QVector<KSMShutdownDlg *> m_dialogs;
+    bool m_windowed = false;
 };
