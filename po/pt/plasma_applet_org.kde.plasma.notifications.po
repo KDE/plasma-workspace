@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2022-11-02 00:51+0000\n"
 "PO-Revision-Date: 2022-10-16 11:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -412,7 +412,7 @@ msgstr "%1 (Terminada)"
 msgid "Job Finished"
 msgstr "Tarefa Terminada"
 
-#: package/contents/ui/NotificationItem.qml:331
+#: package/contents/ui/NotificationItem.qml:332
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

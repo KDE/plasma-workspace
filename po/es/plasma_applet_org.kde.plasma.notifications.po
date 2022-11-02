@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2022-11-02 00:51+0000\n"
 "PO-Revision-Date: 2022-10-16 11:56+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -422,7 +422,7 @@ msgstr "%1 (ha terminado)"
 msgid "Job Finished"
 msgstr "Trabajo terminado"
 
-#: package/contents/ui/NotificationItem.qml:331
+#: package/contents/ui/NotificationItem.qml:332
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

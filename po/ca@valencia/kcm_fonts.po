@@ -179,7 +179,7 @@ msgid ""
 "scaling feature."
 msgstr ""
 "La manera recomanada d'escalar la interfície d'usuari és emprant la "
-"funcionalitat d'escalat global de la pantalla."
+"característica d'escalat global de la pantalla."
 
 #: package/contents/ui/main.qml:106
 #, kde-format

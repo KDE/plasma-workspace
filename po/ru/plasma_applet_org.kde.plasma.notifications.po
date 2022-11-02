@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2022-11-02 00:51+0000\n"
 "PO-Revision-Date: 2022-09-24 14:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -452,7 +452,7 @@ msgstr "%1 (завершено)"
 msgid "Job Finished"
 msgstr "Задание завершено"
 
-#: package/contents/ui/NotificationItem.qml:331
+#: package/contents/ui/NotificationItem.qml:332
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

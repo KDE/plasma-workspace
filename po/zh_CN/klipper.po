@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-11-02 00:51+0000\n"
 "PO-Revision-Date: 2022-10-30 07:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -538,7 +538,7 @@ msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:244
+#: klipper.cpp:243
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"

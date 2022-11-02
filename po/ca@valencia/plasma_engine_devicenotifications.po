@@ -70,7 +70,7 @@ msgid_plural ""
 msgstr[0] ""
 "Un o més fitxers d'este dispositiu estan oberts en l'aplicació «%2»."
 msgstr[1] ""
-"Un o més fitxers d'este dispositiu estan oberts a les següents aplicacions: "
+"Un o més fitxers d'este dispositiu estan oberts en les aplicacions següents: "
 "%2."
 
 #: ksolidnotify.cpp:205
