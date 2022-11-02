@@ -29,9 +29,6 @@
 #include <QX11Info>
 #endif
 
-#include <KPackage/Package>
-#include <KPackage/PackageLoader>
-
 #include <KAuthorized>
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -151,19 +148,11 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     engine()->rootContext()->setContextObject(new KLocalizedContext(engine()));
 }
 
-void KSMShutdownDlg::init()
+void KSMShutdownDlg::init(const KPackage::Package &package)
 {
     rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
-    QString fileName;
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (!packageName.isEmpty()) {
-        package.setPath(packageName);
-    }
-
-    fileName = package.filePath("logoutmainscript");
+    const QString fileName = package.filePath("logoutmainscript");
 
     if (QFile::exists(fileName)) {
         setSource(package.fileUrl("logoutmainscript"));

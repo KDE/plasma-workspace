@@ -22,8 +22,9 @@
 #include <KWindowSystem>
 #include <LayerShellQt/Shell>
 
-Greeter::Greeter()
+Greeter::Greeter(const KPackage::Package &package)
     : QObject()
+    , m_package(package)
 {
     new LogoutPromptAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/LogoutPrompt"), this);
@@ -80,7 +81,7 @@ void Greeter::adoptScreen(QScreen *screen)
         QApplication::exit(1);
     });
     w->setGeometry(screen->geometry());
-    w->init();
+    w->init(m_package);
 }
 
 void Greeter::rejected()

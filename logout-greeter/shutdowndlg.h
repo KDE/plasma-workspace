@@ -14,6 +14,9 @@
 #include <kworkspace.h>
 #include <sessionmanagement.h>
 
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
+
 // The confirmation dialog
 class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
 {
@@ -26,7 +29,7 @@ public:
     {
         m_windowed = windowed;
     }
-    void init();
+    void init(const KPackage::Package &package);
     bool result() const;
 
 public Q_SLOTS:

@@ -5,6 +5,8 @@
 
     SPDX-License-Identifier: MIT
 */
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QLibraryInfo>
@@ -40,12 +42,20 @@ int main(int argc, char *argv[])
     }
 
     bool windowed = false;
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     {
         QCommandLineParser parser;
         QCommandLineOption testingOption("windowed", "have the dialog show, windowed, regardless of the session state");
+        QCommandLineOption lnfOption("lookandfeel", "The look and feel package name to use", "name", packageName);
         parser.addOption(testingOption);
+        parser.addOption(lnfOption);
+        parser.addHelpOption();
         parser.process(app);
         windowed = parser.isSet(testingOption);
+        if (parser.isSet(lnfOption)) {
+            packageName = parser.value(lnfOption);
+        }
     }
 
     // because we export stuff as horrific contextProperties we need to know "maysd" may shutdown, at the time of initial creation and can't update
@@ -61,7 +71,8 @@ int main(int argc, char *argv[])
         e.exec();
     }
 
-    Greeter greeter;
+    const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+    Greeter greeter(pkg);
     if (windowed) {
         greeter.enableWindowed();
     }

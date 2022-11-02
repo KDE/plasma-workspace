@@ -14,6 +14,9 @@
 
 #include <kworkspace.h>
 
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
+
 class KSMShutdownDlg;
 
 class QScreen;
@@ -22,7 +25,7 @@ class Greeter : public QObject
 {
     Q_OBJECT
 public:
-    Greeter();
+    Greeter(const KPackage::Package &package);
     ~Greeter() override;
 
     void init();
@@ -45,4 +48,5 @@ private:
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     QVector<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
+    KPackage::Package m_package;
 };
