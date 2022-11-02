@@ -34,13 +34,6 @@ int main(int argc, char *argv[])
     OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     QDBusPendingReply<bool> isShuttingDownPending = ksmserver.isShuttingDown();
 
-    isShuttingDownPending.waitForFinished();
-
-    // if ksmserver is shutting us down already, we don't want another prompt
-    if (isShuttingDownPending.value()) {
-        return 0;
-    }
-
     bool windowed = false;
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -73,6 +66,13 @@ int main(int argc, char *argv[])
 
     const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
     Greeter greeter(pkg);
+
+    isShuttingDownPending.waitForFinished();
+    // if ksmserver is shutting us down already, we don't want another prompt
+    if (isShuttingDownPending.value()) {
+        return 0;
+    }
+
     if (windowed) {
         greeter.enableWindowed();
     }
