@@ -20,6 +20,7 @@
 
 class Utility
 {
+    friend class ExampleUtilityTest;
 #ifdef LC_ADDRESS
     static QString resolveFieldDescriptors(QHash<QChar, QString> map, int langInfoFormat, int lcFormat, const QLocale &locale);
     static QString getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &locale);
@@ -27,6 +28,7 @@ class Utility
     static QFileInfo findLocaleInFolder(QString localeName, QString localeDirectory);
     static QString getFormatToFetch(int langInfoFormat);
     static QStringList getLangCodeFromLocale(QLocale locale);
+    static QString replaceASCIIUnicodeSymbol(const QString &string);
 #endif
 
 public:
