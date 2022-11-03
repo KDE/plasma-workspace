@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.10
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -245,6 +245,7 @@ PlasmaExtras.Representation {
             focus: true
             model: historyModel
             currentIndex: -1
+            reuseItems: count >= 20
 
             topMargin: PlasmaCore.Units.smallSpacing * 2
             bottomMargin: PlasmaCore.Units.smallSpacing * 2
@@ -326,6 +327,7 @@ PlasmaExtras.Representation {
             }
 
             add: Transition {
+                enabled: !list.reuseItems
                 SequentialAnimation {
                     PropertyAction { property: "opacity"; value: 0 }
                     PauseAnimation { duration: PlasmaCore.Units.longDuration }
@@ -336,11 +338,13 @@ PlasmaExtras.Representation {
                 }
             }
             addDisplaced: Transition {
+                enabled: !list.reuseItems
                 NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
             }
 
             remove: Transition {
                 id: removeTransition
+                enabled: !list.reuseItems
                 ParallelAnimation {
                     NumberAnimation { property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
                     NumberAnimation {
@@ -352,6 +356,7 @@ PlasmaExtras.Representation {
                 }
             }
             removeDisplaced: Transition {
+                enabled: !list.reuseItems
                 SequentialAnimation {
                     PauseAnimation { duration: PlasmaCore.Units.longDuration }
                     NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
@@ -368,6 +373,9 @@ PlasmaExtras.Representation {
                 id: delegate
                 width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
                 contentItem: delegateLoader
+
+                ListView.onPooled: height = 0
+                ListView.onReused: height = undefined
 
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
