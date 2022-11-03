@@ -118,7 +118,10 @@ private:
     {
         // Do not parse the exec of Progressive Web Apps, see BUG 460796
         const QLatin1String chromiumPwaWindowClassPrefix("crx_");
-        return !ptr->property(QStringLiteral("StartupWMClass")).toString().startsWith(chromiumPwaWindowClassPrefix);
+        // Also ignore Exec lines of flatpaks, those contain RDN identifiers that would cause false positives, BUG: 461241
+        const QLatin1String flatpakAppEntryPath("/flatpak/exports/share/");
+        return !ptr->entryPath().contains(flatpakAppEntryPath)
+            && !ptr->property(QStringLiteral("StartupWMClass")).toString().startsWith(chromiumPwaWindowClassPrefix);
     }
 
     qreal increaseMatchRelavance(const KService::Ptr &service, const QStringList &strList, const QString &category)
