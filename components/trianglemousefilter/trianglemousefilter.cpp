@@ -95,23 +95,15 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
             // if we are no longer inhibiting events and have previously intercepted a hover enter
             // we manually send the hover enter to that item
-            const auto targetPosition = mapToItem(item, position);
             if (event->type() == QEvent::HoverMove && m_interceptedHoverItem) {
+                const auto targetPosition = mapToItem(m_interceptedHoverItem, position);
+                QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+                qApp->sendEvent(m_interceptedHoverItem, &e);
                 m_interceptedHoverItem.clear();
-                QHoverEvent enterEvent(QEvent::HoverEnter, targetPosition, targetPosition);
-                qApp->sendEvent(item, &enterEvent);
             }
-            // In Kickoff, we have the special case of listening to HoverMove events to change the current selection,
-            // since HoverEnter events are also emitted during scroll actions or keyboard navigation.
-            // Therefore in order to replay intercepted mouse events we also have to emit a HoverMove event so that
-            // the delegate gets ultimately selected.
 
-            // Important to have a small deviation in the targetPosition, otherwise the HoverMove event will be neglected
-            QHoverEvent moveEvent(QEvent::HoverMove, targetPosition + QPointF(0.01, 0.01), targetPosition);
-            qApp->sendEvent(item, &moveEvent);
-
-            event->setAccepted(true);
-            return true;
+            event->setAccepted(false);
+            return false;
         }
     }
     default:
