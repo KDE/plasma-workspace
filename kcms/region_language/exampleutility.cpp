@@ -152,6 +152,17 @@ QString Utility::getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &
 
 QString Utility::parseLocaleFile(QString localeName, int langInfoFormat)
 {
+    static std::unordered_map<QString, QString> resultCache;
+
+    const QString formatToFetch = getFormatToFetch(langInfoFormat);
+    const auto cacheKey = formatToFetch + QStringLiteral("###") + localeName;
+    if (resultCache.count(cacheKey)) {
+        return resultCache[cacheKey];
+    }
+
+    // insert an empty value here, so we ensure one file only parsed once
+    resultCache.insert({cacheKey, QString()});
+
     QFileInfo localeFileInfo;
 
     // Get the locale file info from the first folder where it's found
@@ -171,7 +182,7 @@ QString Utility::parseLocaleFile(QString localeName, int langInfoFormat)
         }
 
         QTextStream textStream(&localeFile);
-        QString formatToFetch = getFormatToFetch(langInfoFormat);
+
         if (formatToFetch.isEmpty()) {
             return {};
         }
@@ -184,12 +195,54 @@ QString Utility::parseLocaleFile(QString localeName, int langInfoFormat)
             QRegularExpressionMatch match = rx.match(line);
             if (match.hasMatch()) {
                 // Return the first (and only) match
-                return match.captured(1);
+                const QString result = replaceASCIIUnicodeSymbol(match.captured(1));
+                resultCache[cacheKey] = result;
+                return result;
             }
         }
     }
 
     return {};
+}
+
+// Glibc store unicode char as ASCII symbol, 'T<U00FC>rkiye' for 'Türkiye'
+QString Utility::replaceASCIIUnicodeSymbol(const QString &string)
+{
+    int i = 0, literalStringStart = 0, unicodeStart = 0;
+    QString result;
+    result.reserve(string.size());
+    bool replacing = false;
+
+    /*
+     * T<U00FC>rkiye
+     * ||     ||-State 1
+     * ||     |- State 3, we check if the code block is valid, then added the converted char
+     * ||        to the result, reset literal string start to the position after itself
+     * ||- State 2, we add the literal string before it to the result, set 'unicodeStart' to the position after 'U'
+     * |- State 1, literal string state
+     * */
+    while (i < string.size()) {
+        if (replacing && i > unicodeStart && string[i] == QLatin1Char('>')) {
+            bool ok = false;
+            QStringView section(string);
+            // convert base 16 string to utf-16 value
+            auto unicodePoint = section.mid(unicodeStart, i - unicodeStart).toInt(&ok, 16);
+            if (ok && QChar::isPrint(unicodePoint)) {
+                result.append(QChar(unicodePoint));
+                literalStringStart = i + 1;
+            }
+            replacing = false;
+        } else if (string[i] == QLatin1Char('<') && i + 1 < string.size() && string[i + 1] == QLatin1Char('U')) {
+            // append literal string before unicode block
+            result.append(QStringView(string).mid(literalStringStart, i - literalStringStart));
+            replacing = true;
+            // <U00FF>, we ignore 'U'
+            unicodeStart = i + 2;
+        }
+        i++;
+    }
+    result.append(QStringView(string).mid(literalStringStart, i - literalStringStart));
+    return result;
 }
 
 QFileInfo Utility::findLocaleInFolder(QString localeName, QString localeDirectory)

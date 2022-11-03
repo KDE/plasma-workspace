@@ -5,11 +5,19 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_regionandlang\")
 ################## Set sources files #################
+set(kcm_regionandlang_example_SRCS
+    exampleutility.cpp
+)
+add_library(kcm_regionandlang_example_static STATIC ${kcm_regionandlang_example_SRCS})
+set_property(TARGET kcm_regionandlang_example_static PROPERTY POSITION_INDEPENDENT_CODE ON)
+target_link_libraries(kcm_regionandlang_example_static
+    KF5::I18n
+    KF5::CoreAddons
+)
 set(kcm_regionandlang_PART_SRCS
     settingtype.h
     kcmregionandlang.cpp
     localelistmodel.cpp
-    exampleutility.cpp
     optionsmodel.cpp
     languagelistmodel.cpp
     localegenerator.cpp
@@ -60,6 +68,7 @@ ecm_qt_install_logging_categories(
 
 ################# Link libraries ####################
 target_link_libraries(kcm_regionandlang
+    kcm_regionandlang_example_static
     Qt::Core
     Qt::DBus
     KF5::I18n
@@ -74,3 +83,8 @@ if(UBUNTU_PACKAGEKIT)
 endif()
 ########### install files ###############
 kpackage_install_package(package kcm_regionandlang kcms)
+
+########### unit tests ##############
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
