@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-10-25 08:50+0200\n"
+"PO-Revision-Date: 2022-11-02 18:49+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -181,10 +181,9 @@ msgid "Switch User"
 msgstr "Превключване на потребител"
 
 #: sessionrunner.cpp:227
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "New Session"
-msgstr "нова сесия"
+msgstr "Нова сесия"
 
 #: sessionrunner.cpp:228
 #, kde-format
@@ -195,6 +194,11 @@ msgid ""
 "li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
 "(such as the application launcher)</li></ul>"
 msgstr ""
+"<p>Ще влезете в нова сесия на работния плот.</p><p>Ще се появи екран за вход "
+"и текущата сесия ще бъде скрита.</p><p>Можете да превключвате между сесиите "
+"на работния плот, като използвате:</p><ul><li>Ctrl+Alt+F{номер на сесия}</"
+"li><li>Търсене на Plasma(въведте 'switch' или 'sessions')</li><li>Уиджети на "
+"Plasma (като например програмата за стартиране на приложения)</li></ul>"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Предупреждение - нова сесия"
