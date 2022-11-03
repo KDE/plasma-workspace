@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2021 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2022 Derek Christ <christ.derek@gmail.com>
+    SPDX-FileCopyrightText: 2022 Bharadwaj Raju <bharadwaj.raju777@protonmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -10,12 +12,16 @@
 
 TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
     : QQuickItem(parent)
+    , m_edgeLine()
+    , m_active(true)
+    , m_blockFirstEnter(false)
 {
     setFiltersChildMouseEvents(true);
 
     m_resetTimer.setSingleShot(true);
     connect(&m_resetTimer, &QTimer::timeout, this, [this]() {
         m_interceptionPos.reset();
+        update();
         if (!m_interceptedHoverItem) {
             return;
         }
@@ -33,6 +39,12 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 
 bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
+    update();
+    if (!m_active) {
+        event->setAccepted(false);
+        return false;
+    }
+
     switch (event->type()) {
     case QEvent::HoverLeave:
         if (!m_interceptedHoverItem) {
@@ -64,10 +76,9 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
             return true;
         } else {
-            // this clause means that we block focus when first entering a given position
-            // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
-            // if using this in a more general setting we might want to make this guarded by an option
-            if (event->type() == QEvent::HoverEnter && !m_interceptionPos) {
+            if (m_blockFirstEnter && event->type() == QEvent::HoverEnter && !m_interceptionPos) {
+                // this clause means that we block focus when first entering a given position
+                // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
                 m_interceptedHoverItem = item;
                 m_interceptedHoverEnterPosition = position;
                 if (m_filterTimeout > 0) {
@@ -87,11 +98,9 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             const auto targetPosition = mapToItem(item, position);
             if (event->type() == QEvent::HoverMove && m_interceptedHoverItem) {
                 m_interceptedHoverItem.clear();
-
                 QHoverEvent enterEvent(QEvent::HoverEnter, targetPosition, targetPosition);
                 qApp->sendEvent(item, &enterEvent);
             }
-
             // In Kickoff, we have the special case of listening to HoverMove events to change the current selection,
             // since HoverEnter events are also emitted during scroll actions or keyboard navigation.
             // Therefore in order to replay intercepted mouse events we also have to emit a HoverMove event so that
@@ -120,7 +129,8 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
     const int jitterThreshold = 3;
 
     // QPolygonF.contains returns false if we're on the edge, so we pad our main item
-    const QRectF shape = QRect(-1, -1, width() + 1, height() + 1);
+    const QRectF shape = (m_edgeLine.size() == 4) ? QRect(m_edgeLine[0] - 1, m_edgeLine[1] - 1, width() + m_edgeLine[2] + 1, height() + m_edgeLine[3] + 1)
+                                                  : QRect(-1, -1, width() + 1, height() + 1);
 
     QPolygonF poly;
 
@@ -138,5 +148,8 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
         poly << m_interceptionPos.value() + QPointF(0, jitterThreshold) << shape.bottomLeft() << shape.bottomRight();
     }
 
-    return poly.containsPoint(p, Qt::OddEvenFill);
+    bool firstCheck = poly.containsPoint(p, Qt::OddEvenFill);
+    poly.replace(0, m_secondaryPoint);
+    bool secondCheck = m_secondaryPoint != QPointF(0, 0) && poly.containsPoint(p, Qt::OddEvenFill);
+    return (firstCheck || secondCheck);
 }

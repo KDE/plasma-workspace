@@ -13,6 +13,7 @@
 #include "draghelper.h"
 #include "funnelmodel.h"
 #include "kastatsfavoritesmodel.h"
+#include "kickercompattrianglemousefilter.h"
 #include "processrunner.h"
 #include "recentusagemodel.h"
 #include "rootmodel.h"
@@ -21,7 +22,6 @@
 #include "submenu.h"
 #include "systemmodel.h"
 #include "systemsettings.h"
-#include "trianglemousefilter.h"
 #include "wheelinterceptor.h"
 #include "windowsystem.h"
 
@@ -46,7 +46,7 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
     qmlRegisterType<SystemModel>(uri, 0, 1, "SystemModel");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-    qmlRegisterType<TriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
+    qmlRegisterType<KickerCompatTriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
 }
