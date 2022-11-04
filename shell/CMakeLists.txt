@@ -1,3 +1,5 @@
+set(USE_SCRIPTING 1)
+
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
@@ -58,8 +60,6 @@ if (TARGET KUserFeedbackCore)
 endif()
 
 kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
-
-set(USE_SCRIPTING 1)
 
 add_executable(plasmashell)
 if (QT_MAJOR_VERSION EQUAL "5")
