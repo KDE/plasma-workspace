@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2020-05-10 22:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -587,22 +587,22 @@ msgstr "Klarar ikkje starta motoren."
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Motoren vart avslutta, men er starta igjen. Prøv ein gong til."
 
-#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Feil</h3>"
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Klarte ikkje lasta ned <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Systemmotoren vart avslutta. Prøv ein gong til.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -610,7 +610,7 @@ msgstr ""
 "<i>%1</i> er ei punktskrift, men du kan ikkje installera punktskrifter, "
 "fordi det valet er slått av på systemet ditt."
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -618,47 +618,47 @@ msgid ""
 msgstr ""
 "<i>%1</i> inneheld skrifta <b>%2</b>, som allereie er installert på systemet."
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> er ikkje ei skrift."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Klarte ikkje fjerna alle filene som er knytte til <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Klarte ikkje starta systemtenesta.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> finst allereie."
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> finst ikkje."
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Tilgang nekta.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Handlinga er ikkje støtta.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Feil ved autentisering.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:722
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Uventa feil under handsaming: <i>%1</i>"
@@ -859,8 +859,8 @@ msgstr "Ingenting å flytta"
 #: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to "
+"<i>%3</i>?</p>"
 msgstr ""
 "<p>Er du sikker på at du vil flytta</p><p>«<b>%1</b>»</p><p>frå <i>%2</i> "
 "til <i>%3</i>?</p>"
@@ -885,8 +885,8 @@ msgstr[0] ""
 "<p>Er du sikker på at du vil flytta denne skrifta frå <i>%2</i> til <i>%3</"
 "i>?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil flytta desse %1 skriftene frå <i>%2</i> til <i>"
-"%3</i>?</p>"
+"<p>Er du sikker på at du vil flytta desse %1 skriftene frå <i>%2</i> til "
+"<i>%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -958,26 +958,26 @@ msgstr[1] "%1 skrifter"
 #: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td "
+"align=\"right\">Partially enabled:</td><td>%3</td></tr><tr><td "
+"align=\"right\">Total:</td><td>%4</td></tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td align="
-"\"right\">Ute av bruk:</td><td>%2</td></tr><tr><td align=\"right\">Delvis i "
-"bruk:</td><td>%3</td></tr><tr><td align=\"right\">Til saman:</td><td>%4</"
-"td></tr></table>"
+"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Ute av bruk:</td><td>%2</td></tr><tr><td "
+"align=\"right\">Delvis i bruk:</td><td>%3</td></tr><tr><td "
+"align=\"right\">Til saman:</td><td>%4</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:912
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td align="
-"\"right\">Ute av bruk:</td><td>%2</td></tr><tr><td align=\"right\">Til saman:"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:"
 "</td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Ute av bruk:</td><td>%2</td></tr><tr><td align=\"right\">Til "
+"saman:</td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:989
 #, kde-format
@@ -1082,8 +1082,8 @@ msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
 msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
+"<p>Do you really want to enable these %1 fonts contained within group "
+"'<b>%2</b>'?</p>"
 msgstr[0] ""
 "<p>Vil du verkeleg ta i bruk denne skrifta som ligg i gruppa «<b>%2</b>»?</p>"
 msgstr[1] ""
@@ -1096,8 +1096,8 @@ msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
 msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
+"<p>Do you really want to disable these %1 fonts contained within group "
+"'<b>%2</b>'?</p>"
 msgstr[0] ""
 "<p>Vil du verkeleg ta denne skrifta som ligg i gruppa «<b>%2</b>» ut av bruk?"
 "</p>"
