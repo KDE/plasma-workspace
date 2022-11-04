@@ -44,7 +44,6 @@ private:
 
     void checkScreensMirrored();
 
-    KScreen::ConfigPtr m_screenConfiguration;
     bool m_screensMirrored = false;
 };
 
