@@ -214,6 +214,10 @@ public:
         KConfigGroup globalCfgGroup(cfg, globalGroupName);
 
         QStringList ordering = thisCfgGroup.readEntry("ordering", QStringList()) + globalCfgGroup.readEntry("ordering", QStringList());
+        // Normalizing all the ids
+        std::transform(ordering.begin(), ordering.end(), ordering.begin(), [&](const QString &item) {
+            return normalizedId(item).value();
+        });
 
         qCDebug(KICKER_DEBUG) << "Loading the ordering " << ordering;
 
@@ -226,10 +230,52 @@ public:
             addResult(result.resource(), -1, false, result.mimetype());
         }
 
-        // Normalizing all the ids
-        std::transform(ordering.begin(), ordering.end(), ordering.begin(), [&](const QString &item) {
-            return normalizedId(item).value();
-        });
+        if (ordering.length() == 0) {
+            // try again with other applets with highest instance number which has the matching apps
+            qCDebug(KICKER_DEBUG) << "No ordering for this applet found, trying others";
+            const auto allGroups = cfg->groupList();
+            int instanceHighest = -1;
+            for (const auto &groupName : allGroups) {
+                if (groupName.contains(QStringLiteral(".favorites.instance-"))
+                    && (groupName.endsWith(QStringLiteral("-global")) || groupName.endsWith(m_activities.currentActivity()))) {
+                    // the group names look like "Favorites-org.kde.plasma.kicker.favorites.instance-58-1bd5bb42-187c-4c77-a746-c9644c5da866"
+                    const QStringList split = groupName.split(QStringLiteral("-"));
+                    if (split.length() >= 3) {
+                        bool ok;
+                        int instanceN = split[2].toInt(&ok);
+                        if (!ok) {
+                            continue;
+                        }
+                        auto groupOrdering = KConfigGroup(cfg, groupName).readEntry("ordering", QStringList());
+                        if (groupOrdering.length() != m_items.length()) {
+                            continue;
+                        }
+                        std::transform(groupOrdering.begin(), groupOrdering.end(), groupOrdering.begin(), [&](const QString &item) {
+                            return normalizedId(item).value();
+                        });
+                        for (auto item : m_items) {
+                            if (!groupOrdering.contains(item.value())) {
+                                continue;
+                            }
+                        }
+                        if (instanceHighest == instanceN) {
+                            // we got a -global as well as -{activity uuid}
+                            // we add them
+                            if (groupName.endsWith(QStringLiteral("-global"))) {
+                                ordering += groupOrdering;
+                            } else {
+                                ordering = groupOrdering + ordering;
+                            }
+                            qCDebug(KICKER_DEBUG) << "adding ordering from: " << groupName;
+                        } else if (instanceN > instanceHighest) {
+                            instanceHighest = instanceN;
+                            ordering = (groupOrdering.length() != 0) ? groupOrdering : ordering;
+                            qCDebug(KICKER_DEBUG) << "taking ordering from: " << groupName;
+                        }
+                    }
+                }
+            }
+        }
 
         // Sorting the items in the cache
         std::sort(m_items.begin(), m_items.end(), [&](const NormalizedId &left, const NormalizedId &right) {
