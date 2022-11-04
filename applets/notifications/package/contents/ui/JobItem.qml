@@ -286,6 +286,15 @@ ColumnLayout {
 
     states: [
         State {
+            when: jobItem.jobState === NotificationManager.Notifications.JobStateRunning
+            PropertyChanges {
+                target: suspendButton
+                // Explicitly set it to false so it unchecks when pausing from applet
+                // and then the job unpauses programmatically elsewhere.
+                checked: false
+            }
+        },
+        State {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
                 target: suspendButton
