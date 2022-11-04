@@ -13,9 +13,12 @@
 #include <QQuickWindow>
 #include <QTimer>
 
+#include "debug.h"
+
 DragHelper::DragHelper(QObject *parent)
     : QObject(parent)
 {
+    qCWarning(KICKER_DEBUG) << "DragHelper is deprecated and will be removed in Plasma 6. Use Qt Quick Drag instead.";
 }
 
 DragHelper::~DragHelper()
