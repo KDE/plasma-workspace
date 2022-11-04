@@ -1076,7 +1076,7 @@ WId XWindowTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
     QByteArray data(mimeData->data(Private::mimeType()));
     WId id;
     if (data.size() != sizeof(WId)) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 4, 1)
+#if QT_VERSION < QT_VERSION_CHECK(6, 4, 2)
         // Workaround for https://bugreports.qt.io/browse/QTBUG-71922
         QString idString = QString::fromUtf8(data);
         if (idString.startsWith(QLatin1String("strnum-"))) {
