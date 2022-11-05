@@ -63,6 +63,19 @@ Item {
     readonly property bool isHeldOnPowerSaveMode: actuallyActiveProfile === "power-saver" && activeProfileHolds > 0
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
+    readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
+                                                   // When we are using a charge threshold, the kernel
+                                                   // may stop charging within a percentage point of the actual threshold
+                                                   // and this is considered correct behavior, so we have to handle
+                                                   // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
+                                                   (pmSource.data["AC Adapter"]["Plugged in"]
+                                                   && typeof pmSource.data["Battery"]["Charge Stop Threshold"] === "number"
+                                                   && (pmSource.data.Battery.Percent  >= pmSource.data["Battery"]["Charge Stop Threshold"] - 1
+                                                       && pmSource.data.Battery.Percent  <= pmSource.data["Battery"]["Charge Stop Threshold"] + 1)
+                                                   // Also, Upower may give us a status of "Not charging" rather than
+                                                   // "Fully charged", so we need to account for that as well. See
+                                                   // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
+                                                   && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
     property bool powermanagementDisabled: false
@@ -112,21 +125,7 @@ Item {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (pmSource.data.Battery["Has Cumulative"]
-            && !((pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
-                // When we are using a charge threshold, the kernel
-                // may stop charging within a percentage point of the actual threshold
-                // and this is considered correct behavior, so we have to handle
-                // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
-                (pmSource.data["AC Adapter"]["Plugged in"]
-                 && typeof pmSource.data["Battery"]["Charge Stop Threshold"] === "number"
-                 && (pmSource.data.Battery.Percent  >= pmSource.data["Battery"]["Charge Stop Threshold"] - 1
-                     && pmSource.data.Battery.Percent  <= pmSource.data["Battery"]["Charge Stop Threshold"] + 1)
-                // Also, Upower may give us a status of "Not charging" rather than
-                // "Fully charged", so we need to account for that as well. See
-                // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
-                 && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
-            )){
+        if (pmSource.data.Battery["Has Cumulative"] && !isSomehowFullyCharged) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -239,6 +238,7 @@ Item {
         batteries: batterymonitor.batteries
         performanceMode: batterymonitor.isSomehowInPerformanceMode
         heldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
+        isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
 
         onWheel: {
             const delta = wheel.angleDelta.y || wheel.angleDelta.x
