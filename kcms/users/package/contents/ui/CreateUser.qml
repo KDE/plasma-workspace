@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kcm 1.2 as KCM
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 KCM.SimpleKCM {
     title: i18n("Create User")
@@ -47,14 +47,12 @@ KCM.SimpleKCM {
 
             Kirigami.FormData.label: i18n("Account type:")
         }
-        QQC2.TextField {
+        Kirigami.PasswordField {
             id: passwordField
-            echoMode: TextInput.Password
             Kirigami.FormData.label: i18n("Password:")
         }
-        QQC2.TextField {
+        Kirigami.PasswordField {
             id: verifyField
-            echoMode: TextInput.Password
             Kirigami.FormData.label: i18n("Confirm password:")
         }
         Kirigami.InlineMessage {
