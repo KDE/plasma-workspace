@@ -21,17 +21,17 @@ class DaysModelPrivate
 public:
     explicit DaysModelPrivate();
 
-    QList<DayData> *m_data = nullptr;
-    QList<QObject *> m_qmlData;
-    QMultiHash<QDate, CalendarEvents::EventData> m_eventsData;
-    QHash<QDate /* Gregorian */, QDate> m_alternateDatesData;
-    QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> m_subLabelsData;
+    QList<DayData> *data = nullptr;
+    QList<QObject *> qmlData;
+    QMultiHash<QDate, CalendarEvents::EventData> eventsData;
+    QHash<QDate /* Gregorian */, QDate> alternateDatesData;
+    QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> subLabelsData;
 
-    QDate m_lastRequestedAgendaDate;
-    bool m_agendaNeedsUpdate = false;
+    QDate lastRequestedAgendaDate;
+    bool agendaNeedsUpdate = false;
 
     // QML Ownership
-    EventPluginsManager *m_pluginsManager = nullptr;
+    EventPluginsManager *pluginsManager = nullptr;
 };
 
 DaysModelPrivate::DaysModelPrivate()
@@ -51,9 +51,9 @@ DaysModel::~DaysModel()
 
 void DaysModel::setSourceData(QList<DayData> *data)
 {
-    if (d->m_data != data) {
+    if (d->data != data) {
         beginResetModel();
-        d->m_data = data;
+        d->data = data;
         endResetModel();
     }
 }
@@ -62,10 +62,10 @@ int DaysModel::rowCount(const QModelIndex &parent) const
 {
     if (!parent.isValid()) {
         // day count
-        if (d->m_data->size() <= 0) {
+        if (d->data->size() <= 0) {
             return 0;
         } else {
-            return d->m_data->size();
+            return d->data->size();
         }
     } else {
         // event count
@@ -91,18 +91,18 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
 
     if (!index.parent().isValid()) {
         // Fetch days in month
-        const DayData &currentData = d->m_data->at(row);
+        const DayData &currentData = d->data->at(row);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
 
         switch (role) {
         case isCurrent:
             return currentData.isCurrent;
         case containsEventItems:
-            return d->m_eventsData.contains(currentDate);
+            return d->eventsData.contains(currentDate);
         case Events:
-            return QVariant::fromValue(d->m_eventsData.values(currentDate));
+            return QVariant::fromValue(d->eventsData.values(currentDate));
         case EventCount:
-            return d->m_eventsData.values(currentDate).count();
+            return d->eventsData.values(currentDate).count();
         case containsMajorEventItems:
             return hasMajorEventAtDate(currentDate);
         case containsMinorEventItems:
@@ -117,29 +117,29 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
             break;
         }
 
-        if (d->m_alternateDatesData.count(currentDate)) {
+        if (d->alternateDatesData.count(currentDate)) {
             switch (role) {
             case AlternateYearNumber:
-                return d->m_alternateDatesData.value(currentDate).year();
+                return d->alternateDatesData.value(currentDate).year();
             case AlternateMonthNumber:
-                return d->m_alternateDatesData.value(currentDate).month();
+                return d->alternateDatesData.value(currentDate).month();
             case AlternateDayNumber:
-                return d->m_alternateDatesData.value(currentDate).day();
+                return d->alternateDatesData.value(currentDate).day();
             default:
                 break;
             }
         }
 
-        if (d->m_subLabelsData.count(currentDate)) {
+        if (d->subLabelsData.count(currentDate)) {
             switch (role) {
             case SubLabel:
-                return d->m_subLabelsData.value(currentDate).label;
+                return d->subLabelsData.value(currentDate).label;
             case SubYearLabel:
-                return d->m_subLabelsData.value(currentDate).yearLabel;
+                return d->subLabelsData.value(currentDate).yearLabel;
             case SubMonthLabel:
-                return d->m_subLabelsData.value(currentDate).monthLabel;
+                return d->subLabelsData.value(currentDate).monthLabel;
             case SubDayLabel:
-                return d->m_subLabelsData.value(currentDate).dayLabel;
+                return d->subLabelsData.value(currentDate).dayLabel;
             default:
                 break;
             }
@@ -162,7 +162,7 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
 
 void DaysModel::update()
 {
-    if (d->m_data->size() <= 0) {
+    if (d->data->size() <= 0) {
         return;
     }
 
@@ -170,33 +170,33 @@ void DaysModel::update()
     // and we can't remove the events manually with beginRemoveRows() since
     // we don't know where the old events were located.
     beginResetModel();
-    d->m_eventsData.clear();
-    d->m_alternateDatesData.clear();
-    d->m_subLabelsData.clear();
+    d->eventsData.clear();
+    d->alternateDatesData.clear();
+    d->subLabelsData.clear();
     endResetModel();
 
-    const QDate modelFirstDay(d->m_data->at(0).yearNumber, d->m_data->at(0).monthNumber, d->m_data->at(0).dayNumber);
+    const QDate modelFirstDay(d->data->at(0).yearNumber, d->data->at(0).monthNumber, d->data->at(0).dayNumber);
 
-    if (d->m_pluginsManager) {
-        const auto plugins = d->m_pluginsManager->plugins();
+    if (d->pluginsManager) {
+        const auto plugins = d->pluginsManager->plugins();
         for (CalendarEvents::CalendarEventsPlugin *eventsPlugin : plugins) {
             eventsPlugin->loadEventsForDateRange(modelFirstDay, modelFirstDay.addDays(42));
         }
     }
 
     // We always have 42 items (or weeks * num of days in week) so we only have to tell the view that the data changed.
-    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0));
+    Q_EMIT dataChanged(index(0, 0), index(d->data->count() - 1, 0));
 }
 
 void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &data)
 {
-    d->m_eventsData.reserve(d->m_eventsData.size() + data.size());
-    for (int i = 0; i < d->m_data->count(); i++) {
-        const DayData &currentData = d->m_data->at(i);
+    d->eventsData.reserve(d->eventsData.size() + data.size());
+    for (int i = 0; i < d->data->count(); i++) {
+        const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
         if (!data.values(currentDate).isEmpty()) {
             // Make sure we don't display more than maxEventDisplayed events.
-            const int currentCount = d->m_eventsData.values(currentDate).count();
+            const int currentCount = d->eventsData.values(currentDate).count();
             if (currentCount >= maxEventDisplayed) {
                 break;
             }
@@ -211,20 +211,18 @@ void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &
                     break;
                 }
                 stopCounter++;
-                d->m_eventsData.insert(currentDate, dataDay);
+                d->eventsData.insert(currentDate, dataDay);
             }
             endInsertRows();
         }
     }
 
     if (data.contains(QDate::currentDate())) {
-        d->m_agendaNeedsUpdate = true;
+        d->agendaNeedsUpdate = true;
     }
 
     // only the containsEventItems roles may have changed
-    Q_EMIT dataChanged(index(0, 0),
-                       index(d->m_data->count() - 1, 0),
-                       {containsEventItems, containsMajorEventItems, containsMinorEventItems, Events, EventCount});
+    Q_EMIT dataChanged(index(0, 0), index(d->data->count() - 1, 0), {containsEventItems, containsMajorEventItems, containsMinorEventItems, Events, EventCount});
 
     Q_EMIT agendaUpdated(QDate::currentDate());
 }
@@ -232,8 +230,8 @@ void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &
 void DaysModel::onEventModified(const CalendarEvents::EventData &data)
 {
     QList<QDate> updatesList;
-    auto i = d->m_eventsData.begin();
-    while (i != d->m_eventsData.end()) {
+    auto i = d->eventsData.begin();
+    while (i != d->eventsData.end()) {
         if (i->uid() == data.uid()) {
             *i = data;
             updatesList << i.key();
@@ -243,7 +241,7 @@ void DaysModel::onEventModified(const CalendarEvents::EventData &data)
     }
 
     if (!updatesList.isEmpty()) {
-        d->m_agendaNeedsUpdate = true;
+        d->agendaNeedsUpdate = true;
     }
 
     for (const QDate date : std::as_const(updatesList)) {
@@ -264,18 +262,18 @@ void DaysModel::onEventRemoved(const QString &uid)
     // and if not done correctly will introduce bugs.
     beginResetModel();
     QList<QDate> updatesList;
-    auto i = d->m_eventsData.begin();
-    while (i != d->m_eventsData.end()) {
+    auto i = d->eventsData.begin();
+    while (i != d->eventsData.end()) {
         if (i->uid() == uid) {
             updatesList << i.key();
-            i = d->m_eventsData.erase(i);
+            i = d->eventsData.erase(i);
         } else {
             ++i;
         }
     }
 
     if (!updatesList.isEmpty()) {
-        d->m_agendaNeedsUpdate = true;
+        d->agendaNeedsUpdate = true;
     }
 
     for (const QDate date : std::as_const(updatesList)) {
@@ -291,51 +289,51 @@ void DaysModel::onEventRemoved(const QString &uid)
 
 void DaysModel::onAlternateDateReady(const QHash<QDate, QDate> &data)
 {
-    d->m_alternateDatesData.reserve(d->m_alternateDatesData.size() + data.size());
-    for (int i = 0; i < d->m_data->count(); i++) {
-        const DayData &currentData = d->m_data->at(i);
+    d->alternateDatesData.reserve(d->alternateDatesData.size() + data.size());
+    for (int i = 0; i < d->data->count(); i++) {
+        const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
         if (data.count(currentDate) == 0) {
             continue;
         }
         // Add an alternate date
-        d->m_alternateDatesData.insert(currentDate, data.value(currentDate));
+        d->alternateDatesData.insert(currentDate, data.value(currentDate));
     }
 
-    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0), {AlternateYearNumber, AlternateMonthNumber, AlternateDayNumber});
+    Q_EMIT dataChanged(index(0, 0), index(d->data->count() - 1, 0), {AlternateYearNumber, AlternateMonthNumber, AlternateDayNumber});
 }
 
 void DaysModel::onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> &data)
 {
-    d->m_subLabelsData.reserve(d->m_subLabelsData.size() + data.size());
-    for (int i = 0; i < d->m_data->count(); i++) {
-        const DayData &currentData = d->m_data->at(i);
+    d->subLabelsData.reserve(d->subLabelsData.size() + data.size());
+    for (int i = 0; i < d->data->count(); i++) {
+        const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
         if (data.count(currentDate) == 0) {
             continue;
         }
         // Add/Overwrite a sub-label based on priority
-        if (const auto &value = data.value(currentDate); !d->m_subLabelsData.count(currentDate)
-            || (d->m_subLabelsData.count(currentDate) && value.priority > d->m_subLabelsData.value(currentDate).priority)) {
-            d->m_subLabelsData.insert(currentDate, value);
+        if (const auto &value = data.value(currentDate);
+            !d->subLabelsData.count(currentDate) || (d->subLabelsData.count(currentDate) && value.priority > d->subLabelsData.value(currentDate).priority)) {
+            d->subLabelsData.insert(currentDate, value);
         }
     }
 
-    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0), {SubLabel, SubYearLabel, SubMonthLabel, SubDayLabel});
+    Q_EMIT dataChanged(index(0, 0), index(d->data->count() - 1, 0), {SubLabel, SubYearLabel, SubMonthLabel, SubDayLabel});
 }
 
 QList<QObject *> DaysModel::eventsForDate(const QDate &date)
 {
-    if (d->m_lastRequestedAgendaDate == date && !d->m_agendaNeedsUpdate) {
-        return d->m_qmlData;
+    if (d->lastRequestedAgendaDate == date && !d->agendaNeedsUpdate) {
+        return d->qmlData;
     }
 
-    d->m_lastRequestedAgendaDate = date;
-    qDeleteAll(d->m_qmlData);
-    d->m_qmlData.clear();
+    d->lastRequestedAgendaDate = date;
+    qDeleteAll(d->qmlData);
+    d->qmlData.clear();
 
-    QList<CalendarEvents::EventData> events = d->m_eventsData.values(date);
-    d->m_qmlData.reserve(events.size());
+    QList<CalendarEvents::EventData> events = d->eventsData.values(date);
+    d->qmlData.reserve(events.size());
 
     // sort events by their time and type
     std::sort(events.begin(), events.end(), [](const CalendarEvents::EventData &a, const CalendarEvents::EventData &b) {
@@ -343,20 +341,20 @@ QList<QObject *> DaysModel::eventsForDate(const QDate &date)
     });
 
     for (const CalendarEvents::EventData &event : std::as_const(events)) {
-        d->m_qmlData << new EventDataDecorator(event, this);
+        d->qmlData << new EventDataDecorator(event, this);
     }
 
-    d->m_agendaNeedsUpdate = false;
-    return d->m_qmlData;
+    d->agendaNeedsUpdate = false;
+    return d->qmlData;
 }
 
 QModelIndex DaysModel::indexForDate(const QDate &date)
 {
-    if (!d->m_data) {
+    if (!d->data) {
         return QModelIndex();
     }
 
-    const DayData &firstDay = d->m_data->at(0);
+    const DayData &firstDay = d->data->at(0);
     const QDate firstDate(firstDay.yearNumber, firstDay.monthNumber, firstDay.dayNumber);
 
     qint64 daysTo = firstDate.daysTo(date);
@@ -366,8 +364,8 @@ QModelIndex DaysModel::indexForDate(const QDate &date)
 
 bool DaysModel::hasMajorEventAtDate(const QDate &date) const
 {
-    auto it = d->m_eventsData.find(date);
-    while (it != d->m_eventsData.end() && it.key() == date) {
+    auto it = d->eventsData.find(date);
+    while (it != d->eventsData.end() && it.key() == date) {
         if (!it.value().isMinor()) {
             return true;
         }
@@ -378,8 +376,8 @@ bool DaysModel::hasMajorEventAtDate(const QDate &date) const
 
 bool DaysModel::hasMinorEventAtDate(const QDate &date) const
 {
-    auto it = d->m_eventsData.find(date);
-    while (it != d->m_eventsData.end() && it.key() == date) {
+    auto it = d->eventsData.find(date);
+    while (it != d->eventsData.end() && it.key() == date) {
         if (it.value().isMinor()) {
             return true;
         }
@@ -390,8 +388,8 @@ bool DaysModel::hasMinorEventAtDate(const QDate &date) const
 
 void DaysModel::setPluginsManager(QObject *manager)
 {
-    if (d->m_pluginsManager) {
-        disconnect(d->m_pluginsManager, nullptr, this, nullptr);
+    if (d->pluginsManager) {
+        disconnect(d->pluginsManager, nullptr, this, nullptr);
     }
 
     EventPluginsManager *m = qobject_cast<EventPluginsManager *>(manager);
@@ -400,14 +398,14 @@ void DaysModel::setPluginsManager(QObject *manager)
         return;
     }
 
-    d->m_pluginsManager = m;
+    d->pluginsManager = m;
 
-    connect(d->m_pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
-    connect(d->m_pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
-    connect(d->m_pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
-    connect(d->m_pluginsManager, &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
-    connect(d->m_pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
-    connect(d->m_pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
+    connect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
+    connect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
+    connect(d->pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+    connect(d->pluginsManager, &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
+    connect(d->pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
+    connect(d->pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
 
     QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
 }

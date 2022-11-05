@@ -14,28 +14,28 @@ class CalendarPrivate
 public:
     explicit CalendarPrivate(Calendar *q);
 
-    QDate m_displayedDate;
-    QDate m_today;
-    Calendar::Types m_types;
-    QList<DayData> m_dayList;
-    DaysModel *m_daysModel;
-    QJsonArray m_weekList;
+    QDate displayedDate;
+    QDate today;
+    Calendar::Types types;
+    QList<DayData> dayList;
+    DaysModel *daysModel;
+    QJsonArray weekList;
 
-    int m_days = 0;
-    int m_weeks = 0;
-    int m_firstDayOfWeek;
-    QString m_errorMessage;
+    int days = 0;
+    int weeks = 0;
+    int firstDayOfWeek;
+    QString errorMessage;
 
 private:
     Q_DISABLE_COPY(CalendarPrivate)
 };
 
 CalendarPrivate::CalendarPrivate(Calendar *q)
-    : m_types(Calendar::Holiday | Calendar::Event | Calendar::Todo | Calendar::Journal)
-    , m_daysModel(new DaysModel(q))
-    , m_firstDayOfWeek(QLocale::system().firstDayOfWeek())
+    : types(Calendar::Holiday | Calendar::Event | Calendar::Todo | Calendar::Journal)
+    , daysModel(new DaysModel(q))
+    , firstDayOfWeek(QLocale::system().firstDayOfWeek())
 {
-    m_daysModel->setSourceData(&m_dayList);
+    daysModel->setSourceData(&dayList);
 }
 
 Calendar::Calendar(QObject *parent)
@@ -54,28 +54,28 @@ Calendar::~Calendar()
 
 QDateTime Calendar::displayedDate() const
 {
-    return d->m_displayedDate.startOfDay();
+    return d->displayedDate.startOfDay();
 }
 
 void Calendar::setDisplayedDate(const QDate &dateTime)
 {
-    if (d->m_displayedDate == dateTime) {
+    if (d->displayedDate == dateTime) {
         return;
     }
 
-    const int oldMonth = d->m_displayedDate.month();
-    const int oldYear = d->m_displayedDate.year();
+    const int oldMonth = d->displayedDate.month();
+    const int oldYear = d->displayedDate.year();
 
-    d->m_displayedDate = dateTime;
+    d->displayedDate = dateTime;
 
     //  m_dayHelper->setDate(m_displayedDate.year(), m_displayedDate.month());
 
     updateData();
     Q_EMIT displayedDateChanged();
-    if (oldMonth != d->m_displayedDate.month()) {
+    if (oldMonth != d->displayedDate.month()) {
         Q_EMIT monthNameChanged();
     }
-    if (oldYear != d->m_displayedDate.year()) {
+    if (oldYear != d->displayedDate.year()) {
         Q_EMIT yearChanged();
     }
 }
@@ -87,18 +87,18 @@ void Calendar::setDisplayedDate(const QDateTime &dateTime)
 
 QDateTime Calendar::today() const
 {
-    return d->m_today.startOfDay();
+    return d->today.startOfDay();
 }
 
 void Calendar::setToday(const QDateTime &dateTime)
 {
     QDate date = dateTime.date();
-    if (date == d->m_today) {
+    if (date == d->today) {
         return;
     }
 
-    d->m_today = date;
-    if (d->m_displayedDate.isNull()) {
+    d->today = date;
+    if (d->displayedDate.isNull()) {
         resetToToday();
     } else {
         // the else is to prevent calling updateData() twice
@@ -110,18 +110,18 @@ void Calendar::setToday(const QDateTime &dateTime)
 
 void Calendar::resetToToday()
 {
-    setDisplayedDate(d->m_today);
+    setDisplayedDate(d->today);
     updateData();
 }
 
 int Calendar::types() const
 {
-    return d->m_types;
+    return d->types;
 }
 
 void Calendar::setTypes(int types)
 {
-    if (d->m_types == static_cast<Types>(types)) {
+    if (d->types == static_cast<Types>(types)) {
         return;
     }
 
@@ -133,13 +133,13 @@ void Calendar::setTypes(int types)
 
 int Calendar::days()
 {
-    return d->m_days;
+    return d->days;
 }
 
 void Calendar::setDays(int days)
 {
-    if (d->m_days != days) {
-        d->m_days = days;
+    if (d->days != days) {
+        d->days = days;
         updateData();
         Q_EMIT daysChanged();
     }
@@ -147,13 +147,13 @@ void Calendar::setDays(int days)
 
 int Calendar::weeks() const
 {
-    return d->m_weeks;
+    return d->weeks;
 }
 
 void Calendar::setWeeks(int weeks)
 {
-    if (d->m_weeks != weeks) {
-        d->m_weeks = weeks;
+    if (d->weeks != weeks) {
+        d->weeks = weeks;
         updateData();
         Q_EMIT weeksChanged();
     }
@@ -162,7 +162,7 @@ void Calendar::setWeeks(int weeks)
 int Calendar::firstDayOfWeek() const
 {
     // QML has Sunday as 0, so we need to accommodate here
-    return d->m_firstDayOfWeek == 7 ? 0 : d->m_firstDayOfWeek;
+    return d->firstDayOfWeek == 7 ? 0 : d->firstDayOfWeek;
 }
 
 void Calendar::setFirstDayOfWeek(int day)
@@ -171,13 +171,13 @@ void Calendar::setFirstDayOfWeek(int day)
         return;
     }
 
-    if (d->m_firstDayOfWeek != day) {
+    if (d->firstDayOfWeek != day) {
         // QML has Sunday as 0, so we need to accommodate here
         // for QDate functions which have Sunday as 7
         if (day == 0) {
-            d->m_firstDayOfWeek = 7;
+            d->firstDayOfWeek = 7;
         } else {
-            d->m_firstDayOfWeek = day;
+            d->firstDayOfWeek = day;
         }
 
         updateData();
@@ -187,7 +187,7 @@ void Calendar::setFirstDayOfWeek(int day)
 
 QString Calendar::errorMessage() const
 {
-    return d->m_errorMessage;
+    return d->errorMessage;
 }
 
 int Calendar::currentWeek() const
@@ -217,58 +217,58 @@ QString Calendar::monthName() const
     if (QLocale().uiLanguages().length() > 0) {
         langLocale = QLocale(QLocale().uiLanguages().at(0));
     }
-    return langLocale.standaloneMonthName(d->m_displayedDate.month());
+    return langLocale.standaloneMonthName(d->displayedDate.month());
 }
 
 int Calendar::year() const
 {
-    return d->m_displayedDate.year();
+    return d->displayedDate.year();
 }
 
 int Calendar::month() const
 {
-    return d->m_displayedDate.month();
+    return d->displayedDate.month();
 }
 
 QAbstractItemModel *Calendar::daysModel() const
 {
-    return d->m_daysModel;
+    return d->daysModel;
 }
 QJsonArray Calendar::weeksModel() const
 {
-    return d->m_weekList;
+    return d->weekList;
 }
 
 void Calendar::updateData()
 {
-    if (d->m_days == 0 || d->m_weeks == 0) {
+    if (d->days == 0 || d->weeks == 0) {
         return;
     }
 
-    d->m_dayList.clear();
-    d->m_weekList = QJsonArray();
+    d->dayList.clear();
+    d->weekList = QJsonArray();
 
-    int totalDays = d->m_days * d->m_weeks;
+    int totalDays = d->days * d->weeks;
 
     int daysBeforeCurrentMonth = 0;
     int daysAfterCurrentMonth = 0;
 
-    QDate firstDay(d->m_displayedDate.year(), d->m_displayedDate.month(), 1);
+    QDate firstDay(d->displayedDate.year(), d->displayedDate.month(), 1);
 
     // If the first day is the same as the starting day then we add a complete row before it.
-    if (d->m_firstDayOfWeek < firstDay.dayOfWeek()) {
-        daysBeforeCurrentMonth = firstDay.dayOfWeek() - d->m_firstDayOfWeek;
+    if (d->firstDayOfWeek < firstDay.dayOfWeek()) {
+        daysBeforeCurrentMonth = firstDay.dayOfWeek() - d->firstDayOfWeek;
     } else {
-        daysBeforeCurrentMonth = days() - (d->m_firstDayOfWeek - firstDay.dayOfWeek());
+        daysBeforeCurrentMonth = days() - (d->firstDayOfWeek - firstDay.dayOfWeek());
     }
 
-    int daysThusFar = daysBeforeCurrentMonth + d->m_displayedDate.daysInMonth();
+    int daysThusFar = daysBeforeCurrentMonth + d->displayedDate.daysInMonth();
     if (daysThusFar < totalDays) {
         daysAfterCurrentMonth = totalDays - daysThusFar;
     }
 
     if (daysBeforeCurrentMonth > 0) {
-        QDate previousMonth = d->m_displayedDate.addMonths(-1);
+        QDate previousMonth = d->displayedDate.addMonths(-1);
         // QDate previousMonth(d->m_displayedDate.year(), d->m_displayedDate.month() - 1, 1);
         for (int i = 0; i < daysBeforeCurrentMonth; i++) {
             DayData day;
@@ -277,18 +277,18 @@ void Calendar::updateData()
             day.monthNumber = previousMonth.month();
             day.yearNumber = previousMonth.year();
             //      day.containsEventItems = false;
-            d->m_dayList << day;
+            d->dayList << day;
         }
     }
 
-    for (int i = 0; i < d->m_displayedDate.daysInMonth(); i++) {
+    for (int i = 0; i < d->displayedDate.daysInMonth(); i++) {
         DayData day;
         day.isCurrent = true;
         day.dayNumber = i + 1; // +1 to go form 0 based index to 1 based calendar dates
         //  day.containsEventItems = m_dayHelper->containsEventItems(i + 1);
-        day.monthNumber = d->m_displayedDate.month();
-        day.yearNumber = d->m_displayedDate.year();
-        d->m_dayList << day;
+        day.monthNumber = d->displayedDate.month();
+        day.yearNumber = d->displayedDate.year();
+        d->dayList << day;
     }
 
     if (daysAfterCurrentMonth > 0) {
@@ -297,18 +297,18 @@ void Calendar::updateData()
             day.isCurrent = false;
             day.dayNumber = i + 1; // +1 to go form 0 based index to 1 based calendar dates
             //   day.containsEventItems = false;
-            day.monthNumber = d->m_displayedDate.addMonths(1).month();
-            day.yearNumber = d->m_displayedDate.addMonths(1).year();
-            d->m_dayList << day;
+            day.monthNumber = d->displayedDate.addMonths(1).month();
+            day.yearNumber = d->displayedDate.addMonths(1).year();
+            d->dayList << day;
         }
     }
-    const int numOfDaysInCalendar = d->m_dayList.count();
+    const int numOfDaysInCalendar = d->dayList.count();
 
     // Week numbers are always counted from Mondays
     // so find which index is Monday
     int mondayOffset = 0;
-    if (!d->m_dayList.isEmpty()) {
-        const DayData &data = d->m_dayList.at(0);
+    if (!d->dayList.isEmpty()) {
+        const DayData &data = d->dayList.at(0);
         QDate firstDay(data.yearNumber, data.monthNumber, data.dayNumber);
         // If the first day is not already Monday, get offset for Monday
         if (firstDay.dayOfWeek() != 1) {
@@ -318,11 +318,11 @@ void Calendar::updateData()
 
     // Fill weeksModel with the week numbers
     for (int i = mondayOffset; i < numOfDaysInCalendar; i += 7) {
-        const DayData &data = d->m_dayList.at(i);
-        d->m_weekList.append(QDate(data.yearNumber, data.monthNumber, data.dayNumber).weekNumber());
+        const DayData &data = d->dayList.at(i);
+        d->weekList.append(QDate(data.yearNumber, data.monthNumber, data.dayNumber).weekNumber());
     }
     Q_EMIT weeksModelChanged();
-    d->m_daysModel->update();
+    d->daysModel->update();
 
     //    qDebug() << "---------------------------------------------------------------";
     //    qDebug() << "Date obj: " << d->m_displayedDate;
@@ -338,46 +338,46 @@ void Calendar::updateData()
 
 void Calendar::nextDecade()
 {
-    setDisplayedDate(d->m_displayedDate.addYears(10));
+    setDisplayedDate(d->displayedDate.addYears(10));
 }
 
 void Calendar::previousDecade()
 {
     // Negative years don't make sense
-    if (d->m_displayedDate.year() >= 10) {
-        setDisplayedDate(d->m_displayedDate.addYears(-10));
+    if (d->displayedDate.year() >= 10) {
+        setDisplayedDate(d->displayedDate.addYears(-10));
     }
 }
 
 void Calendar::nextYear()
 {
-    setDisplayedDate(d->m_displayedDate.addYears(1));
+    setDisplayedDate(d->displayedDate.addYears(1));
 }
 
 void Calendar::previousYear()
 {
     // Negative years don't make sense
-    if (d->m_displayedDate.year() >= 1) {
-        setDisplayedDate(d->m_displayedDate.addYears(-1));
+    if (d->displayedDate.year() >= 1) {
+        setDisplayedDate(d->displayedDate.addYears(-1));
     }
 }
 
 void Calendar::nextMonth()
 {
-    setDisplayedDate(d->m_displayedDate.addMonths(1));
+    setDisplayedDate(d->displayedDate.addMonths(1));
 }
 
 void Calendar::previousMonth()
 {
-    setDisplayedDate(d->m_displayedDate.addMonths(-1));
+    setDisplayedDate(d->displayedDate.addMonths(-1));
 }
 
 void Calendar::goToMonth(int month)
 {
-    setDisplayedDate(QDate(d->m_displayedDate.year(), month, 1));
+    setDisplayedDate(QDate(d->displayedDate.year(), month, 1));
 }
 
 void Calendar::goToYear(int year)
 {
-    setDisplayedDate(QDate(year, d->m_displayedDate.month(), 1));
+    setDisplayedDate(QDate(year, d->displayedDate.month(), 1));
 }
