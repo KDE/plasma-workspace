@@ -175,9 +175,8 @@ void DaysModel::update()
     d->subLabelsData.clear();
     endResetModel();
 
-    const QDate modelFirstDay(d->data->at(0).yearNumber, d->data->at(0).monthNumber, d->data->at(0).dayNumber);
-
     if (d->pluginsManager) {
+        const QDate modelFirstDay(d->data->at(0).yearNumber, d->data->at(0).monthNumber, d->data->at(0).dayNumber);
         const auto plugins = d->pluginsManager->plugins();
         for (CalendarEvents::CalendarEventsPlugin *eventsPlugin : plugins) {
             eventsPlugin->loadEventsForDateRange(modelFirstDay, modelFirstDay.addDays(42));
