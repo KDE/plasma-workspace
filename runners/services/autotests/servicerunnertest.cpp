@@ -103,13 +103,12 @@ void ServiceRunnerTest::testChromeAppsRelevance()
             QCOMPARE(match.relevance(), 0.8);
             chromeFound = true;
         } else if (match.text() == QLatin1String("Signal ServiceRunnerTest")) {
-            // Rates lower because it doesn't have it in the name.
-            QCOMPARE(match.relevance(), 0.7);
             signalFound = true;
         }
     }
     QVERIFY(chromeFound);
-    QVERIFY(signalFound);
+    // Do not parse the exec of Progressive Web Apps, see BUG 460796
+    QVERIFY(!signalFound);
 }
 
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
