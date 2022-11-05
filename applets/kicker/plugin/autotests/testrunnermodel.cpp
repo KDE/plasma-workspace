@@ -42,11 +42,11 @@ void TestRunnerModel::testQuery()
     // If we then change the query to something that shouldn't show anything,
     // the model should not change categories but matches should be gone.
     auto previousCount = model->count();
-    model->setQuery(QStringLiteral("something that really shouldn't return any results"));
+    model->setQuery(QStringLiteral("something_that_really_shouldn't_return_any_results"));
 
     // Changing a query runs an internal timer that delays query execution. As
     // there's nothing we can wait for here, just wait a short moment.
-    QTest::qWait(50);
+    QTest::qWait(500);
 
     QCOMPARE(model->count(), previousCount);
     QCOMPARE(countChangedSpy.count(), 1);
@@ -54,7 +54,7 @@ void TestRunnerModel::testQuery()
     for (int i = 0; i < model->count(); ++i) {
         auto rowModel = qobject_cast<RunnerMatchesModel *>(model->modelForRow(i));
         QVERIFY(rowModel != nullptr);
-        QVERIFY(rowModel->rowCount() == 0);
+        QCOMPARE(rowModel->rowCount(), 0);
     }
 }
 
