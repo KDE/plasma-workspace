@@ -364,7 +364,7 @@ Item {
         if (batterymonitor.kcmEnergyInformationAuthorized) {
             Plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
         }
-        Plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
+        Plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon When Not Fully Charged"), "format-number-percent");
         Plasmoid.action("showPercentage").checkable = true;
         Plasmoid.action("showPercentage").checked = Qt.binding(() => Plasmoid.configuration.showPercentage);
 

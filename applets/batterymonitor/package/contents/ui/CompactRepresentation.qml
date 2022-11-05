@@ -98,6 +98,19 @@ MouseArea {
                     anchors.right: parent.right
 
                     visible: Plasmoid.configuration.showPercentage
+                        && !((pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
+                        // When we are using a charge threshold, the kernel
+                        // may stop charging within a percentage point of the actual threshold
+                        // and this is considered correct behavior, so we have to handle
+                        // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
+                        (pmSource.data["AC Adapter"]["Plugged in"]
+                        && typeof pmSource.data["Battery"]["Charge Stop Threshold"] === "number"
+                        && (pmSource.data.Battery.Percent  >= pmSource.data["Battery"]["Charge Stop Threshold"] - 1
+                            && pmSource.data.Battery.Percent  <= pmSource.data["Battery"]["Charge Stop Threshold"] + 1)
+                        // Also, Upower may give us a status of "Not charging" rather than
+                        // "Fully charged", so we need to account for that as well. See
+                        // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
+                        && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged")))
 
                     text: i18nc("battery percentage below battery icon", "%1%", percent)
                     icon: batteryIcon
