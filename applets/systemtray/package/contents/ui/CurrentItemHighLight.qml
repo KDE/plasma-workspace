@@ -101,7 +101,7 @@ PlasmaCore.FrameSvgItem {
         if (systemTrayState.expanded) {
             if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent && systemTrayState.activeApplet.parent.inVisibleLayout) {
                 changeHighlightedItem(systemTrayState.activeApplet.parent.container, /*forceEdgeHighlight*/false);
-            } else { // 'Show hiden items' popup
+            } else { // 'Show hidden items' popup
                 changeHighlightedItem(parent, /*forceEdgeHighlight*/true);
             }
         } else {
