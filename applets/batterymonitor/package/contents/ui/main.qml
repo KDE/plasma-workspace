@@ -60,7 +60,7 @@ Item {
     readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
     readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
     readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
-    readonly property bool isHeldOnPowerSaveMode: activeProfileHolds > 0 || actuallyActiveProfile === "power-saver"
+    readonly property bool isHeldOnPowerSaveMode: actuallyActiveProfile === "power-saver" && activeProfileHolds > 0
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
