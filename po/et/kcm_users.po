@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2020-10-25 18:48+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -34,7 +34,7 @@ msgid "Confirm password"
 msgstr "Parooli kinnitus"
 
 #: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:63
 #, kde-format
 msgid "Passwords must match"
 msgstr "Paroolid peavad kattuma"
@@ -119,17 +119,17 @@ msgstr "Administraator"
 msgid "Account type:"
 msgstr "Konto tüüp:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:52
 #, kde-format
 msgid "Password:"
 msgstr "Parool:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Confirm password:"
 msgstr "Parooli kinnitus:"
 
-#: package/contents/ui/CreateUser.qml:69
+#: package/contents/ui/CreateUser.qml:67
 #, kde-format
 msgid "Create"
 msgstr "Loo"

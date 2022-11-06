@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2021-12-12 15:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -36,7 +36,7 @@ msgid "Confirm password"
 msgstr "Pakartokite slaptažodį"
 
 #: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:63
 #, kde-format
 msgid "Passwords must match"
 msgstr "Slaptažodžiai turi sutapti"
@@ -126,17 +126,17 @@ msgstr "Administratorius"
 msgid "Account type:"
 msgstr "Paskyros tipas:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:52
 #, kde-format
 msgid "Password:"
 msgstr "Slaptažodis:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Confirm password:"
 msgstr "Pakartokite slaptažodį:"
 
-#: package/contents/ui/CreateUser.qml:69
+#: package/contents/ui/CreateUser.qml:67
 #, kde-format
 msgid "Create"
 msgstr "Sukurti"

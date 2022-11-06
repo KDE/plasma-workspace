@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -35,7 +35,7 @@ msgid "Confirm password"
 msgstr "Komfirmasi sandi"
 
 #: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:63
 #, kde-format
 msgid "Passwords must match"
 msgstr "Sandi harus cocok"
@@ -125,17 +125,17 @@ msgstr "Administrator"
 msgid "Account type:"
 msgstr "Tipe akun:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:52
 #, kde-format
 msgid "Password:"
 msgstr "Sandi:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Confirm password:"
 msgstr "Konfirmasi sandi:"
 
-#: package/contents/ui/CreateUser.qml:69
+#: package/contents/ui/CreateUser.qml:67
 #, kde-format
 msgid "Create"
 msgstr "Buat"

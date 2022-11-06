@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-11-05 00:47+0000\n"
 "PO-Revision-Date: 2021-05-27 01:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -120,7 +120,7 @@ msgid "Show Contact Information…"
 msgstr "Mostrar información del contacto..."
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:502 plugin/rootmodel.cpp:416
+#: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
 #: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"

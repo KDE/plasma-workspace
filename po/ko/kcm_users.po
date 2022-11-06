@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
 "PO-Revision-Date: 2022-05-05 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -35,7 +35,7 @@ msgid "Confirm password"
 msgstr "암호 확인"
 
 #: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:63
 #, kde-format
 msgid "Passwords must match"
 msgstr "암호가 일치해야 함"
@@ -123,17 +123,17 @@ msgstr "관리자"
 msgid "Account type:"
 msgstr "계정 종류:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:52
 #, kde-format
 msgid "Password:"
 msgstr "암호:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Confirm password:"
 msgstr "암호 확인:"
 
-#: package/contents/ui/CreateUser.qml:69
+#: package/contents/ui/CreateUser.qml:67
 #, kde-format
 msgid "Create"
 msgstr "만들기"

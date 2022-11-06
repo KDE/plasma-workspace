@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-11-05 00:47+0000\n"
 "PO-Revision-Date: 2021-06-02 16:27+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -121,7 +121,7 @@ msgid "Show Contact Information…"
 msgstr "Zobrazit informace o kontaktu…"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:502 plugin/rootmodel.cpp:416
+#: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
 #: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"

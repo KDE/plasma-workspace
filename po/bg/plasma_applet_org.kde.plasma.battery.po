@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-06-19 20:09+0200\n"
+"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"PO-Revision-Date: 2022-11-05 17:36+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -66,7 +66,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:84
+#: package/contents/ui/CompactRepresentation.qml:102
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -77,7 +77,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "Разтоварване"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:136
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:144
 #, kde-format
 msgid "Fully Charged"
 msgstr "Напълно заредена"
@@ -98,100 +98,123 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Не е налична"
 
-#: package/contents/ui/main.qml:99 package/contents/ui/main.qml:327
+#: package/contents/ui/main.qml:103 package/contents/ui/main.qml:350
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Батерия и Яркост на екрана"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Brightness"
 msgstr "Яркост"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Battery"
 msgstr "Батерия"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Power Management"
 msgstr "Управление на енергията"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Батерия на %1%, не се зарежда"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Батерия на %1%, включена, но все още се разрежда"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Батерия на %1%, зареждане"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Батерия на %1%"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Захранването не е достатъчно мощно, за да зареди батерията"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Няма налични батерии"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 до пълно зареждане"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Остават %1"
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Not charging"
 msgstr "Не се зарежда"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Автоматичното приспиване и заключване на екрана са деактивирани"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:190
+#, kde-format
+msgid "Performance mode has been manually enabled"
+msgstr "Режимът на висока производителност е активиран ръчно"
+
+#: package/contents/ui/main.qml:192
+#, kde-format
+msgid "An application has requested activating Performance mode"
+msgid_plural "%1 applications have requested activating Performance mode"
+msgstr[0] ""
+"Едно приложение даде заявка за активиране на режим на висока производителност"
+msgstr[1] ""
+"%1 приложения дадоха заявка за активиране на режим на висока производителност"
+
+#: package/contents/ui/main.qml:197
+#, kde-format
+msgid "An application has requested activating Power Save mode"
+msgid_plural "%1 applications have requested activating Power Save mode"
+msgstr[0] ""
+"Едно приложение даде заявка за активиране на режим пестене на енергия"
+msgstr[1] ""
+"%1 приложения дадоха заявка за активиране на режим пестене на енергия"
+
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 "Аплетът на батерията е активирал системно намаление на производителността"
 
-#: package/contents/ui/main.qml:330
+#: package/contents/ui/main.qml:353
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Активирането на %1 не бе успешно"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Показване на информация за енергията…"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Show Battery Percentage on Icon"
 msgstr "Показване на проценти на батерията в иконата"
 
-#: package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:373
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Конфигуриране на пестене на енергия…"

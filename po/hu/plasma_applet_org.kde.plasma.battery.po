@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-05 00:47+0000\n"
 "PO-Revision-Date: 2022-02-18 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -67,7 +67,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:84
+#: package/contents/ui/CompactRepresentation.qml:102
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -78,7 +78,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "Kisütés"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:136
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:144
 #, kde-format
 msgid "Fully Charged"
 msgstr "Teljesen feltöltve"
@@ -99,99 +99,123 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Nincs jelen"
 
-#: package/contents/ui/main.qml:99 package/contents/ui/main.qml:327
+#: package/contents/ui/main.qml:103 package/contents/ui/main.qml:350
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Akkumulátor és fényerő"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Brightness"
 msgstr "Fényerő"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Battery"
 msgstr "Akkumulátor"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Power Management"
 msgstr "Energiakezelés"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Akkumulátor %1%-on, nincs töltés"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Akkumulátor %1%-on, csatlakoztatva, de még mindig kisülés alatt"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Akkumulátor %1%-on, töltés"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Akkumulátor %1%-on"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "A tápegység teljesítménye nem elég az akkumulátor töltéséhez"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Nincsenek akkumulátorok"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 a teljes feltöltésig"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 van hátra"
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Not charging"
 msgstr "Nincs töltés"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatikus felfüggesztés és képernyőzárolás kikapcsolva"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:190
+#, fuzzy, kde-format
+#| msgid "Performance mode is unavailable."
+msgid "Performance mode has been manually enabled"
+msgstr "A teljesítmény mód nem érhető el."
+
+#: package/contents/ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid "One application has requested activating %2:"
+#| msgid_plural "%1 applications have requested activating %2:"
+msgid "An application has requested activating Performance mode"
+msgid_plural "%1 applications have requested activating Performance mode"
+msgstr[0] "Egy alkalmazás a(z) %2 aktiválását kérte:"
+msgstr[1] "%1 alkalmazás a(z) %2 aktiválását kérte:"
+
+#: package/contents/ui/main.qml:197
+#, fuzzy, kde-format
+#| msgid "One application has requested activating %2:"
+#| msgid_plural "%1 applications have requested activating %2:"
+msgid "An application has requested activating Power Save mode"
+msgid_plural "%1 applications have requested activating Power Save mode"
+msgstr[0] "Egy alkalmazás a(z) %2 aktiválását kérte:"
+msgstr[1] "%1 alkalmazás a(z) %2 aktiválását kérte:"
+
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Az akkumulátor kisalkalmazás engedélyezte a rendszerszintű tiltást"
 
-#: package/contents/ui/main.qml:330
+#: package/contents/ui/main.qml:353
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Nem sikerült aktiválni a(z) %1 módot"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Energiakezelési jellemzők megjelenítése…"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Show Battery Percentage on Icon"
 msgstr "Százalékos érték megjelenítése az ikonon"
 
-#: package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:373
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Energiatakarékossági beállítások…"
