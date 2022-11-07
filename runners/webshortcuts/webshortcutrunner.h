@@ -35,4 +35,7 @@ private:
     QRegularExpression m_regex;
 
     KServiceAction m_privateAction;
+
+    Plasma::RunnerContext m_lastUsedContext;
+    QString m_defaultKey;
 };

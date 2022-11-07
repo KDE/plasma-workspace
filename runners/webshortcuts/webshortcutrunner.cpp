@@ -11,6 +11,7 @@
 #include <KIO/CommandLauncherJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
+#include <KRunner/RunnerManager>
 #include <KSharedConfig>
 #include <KShell>
 #include <KSycoca>
@@ -34,6 +35,19 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     configurePrivateBrowsingActions();
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WebshortcutRunner::configurePrivateBrowsingActions);
     setMinLetterCount(3);
+
+    connect(qobject_cast<Plasma::RunnerManager *>(parent), &Plasma::RunnerManager::queryFinished, this, [this]() {
+        if (m_lastUsedContext.isValid() && !m_defaultKey.isEmpty() && m_lastUsedContext.matches().isEmpty()) {
+            const QString queryWithDefaultProvider = m_defaultKey + m_delimiter + m_lastUsedContext.query();
+            KUriFilterData filterData(queryWithDefaultProvider);
+            if (KUriFilter::self()->filterSearchUri(filterData, KUriFilter::WebShortcutFilter)) {
+                m_match.setText(i18n("Search %1 for %2", filterData.searchProvider(), filterData.searchTerm()));
+                m_match.setData(filterData.uri());
+                m_match.setIconName(filterData.iconName());
+                m_lastUsedContext.addMatch(m_match);
+            }
+        }
+    });
 }
 
 WebshortcutRunner::~WebshortcutRunner()
@@ -68,6 +82,9 @@ void WebshortcutRunner::loadSyntaxes()
     m_lastFailedKey.clear();
     m_lastProvider.clear();
     m_lastKey.clear();
+
+    // When we reload the syntaxes, our WebShortcut config has changed or is initialized
+    m_defaultKey = KSharedConfig::openConfig(QStringLiteral("kuriikwsfilterrc"))->group("General").readEntry("DefaultWebShortcut");
 }
 
 void WebshortcutRunner::configurePrivateBrowsingActions()
@@ -101,6 +118,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 
 void WebshortcutRunner::match(Plasma::RunnerContext &context)
 {
+    m_lastUsedContext = context;
     const QString term = context.query();
     const static QRegularExpression bangRegex(QStringLiteral("!([^ ]+).*"));
     const auto bangMatch = bangRegex.match(term);
