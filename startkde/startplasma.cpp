@@ -706,7 +706,7 @@ bool startPlasmaSession(bool wayland)
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
         } else {
-            playStartupSound(&e);
+            playStartupSound();
         }
         if (wayland) {
             startKSplashViaSystemd();
@@ -745,7 +745,7 @@ void waitForKonqi()
     }
 }
 
-void playStartupSound(QObject *parent)
+void playStartupSound()
 {
     KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
@@ -753,7 +753,7 @@ void playStartupSound(QObject *parent)
         // no startup sound configured
         return;
     }
-    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, parent);
+    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory);
 
     QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
     if (soundFilename.isEmpty()) {
@@ -779,7 +779,7 @@ void playStartupSound(QObject *parent)
         return;
     }
 
-    Phonon::MediaObject *mediaObject = new Phonon::MediaObject(parent);
+    Phonon::MediaObject *mediaObject = new Phonon::MediaObject();
     Phonon::createPath(mediaObject, audioOutput);
     QObject::connect(mediaObject, &Phonon::MediaObject::finished, audioOutput, &QObject::deleteLater);
     QObject::connect(mediaObject, &Phonon::MediaObject::finished, mediaObject, &QObject::deleteLater);
