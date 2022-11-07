@@ -36,7 +36,7 @@ bool startPlasmaSession(bool wayland);
 
 void waitForKonqi();
 
-void playStartupSound(QObject *parent);
+void playStartupSound();
 
 void gentleTermination(QProcess *process);
 

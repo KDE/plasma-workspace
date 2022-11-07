@@ -223,7 +223,7 @@ void Startup::finishStartup()
     qCDebug(PLASMA_SESSION) << "Finished";
     upAndRunning(QStringLiteral("ready"));
 
-    playStartupSound(this);
+    playStartupSound();
     new SessionTrack(m_processes);
     deleteLater();
 }
