@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-09-12 07:52+0200\n"
+"PO-Revision-Date: 2022-11-06 05:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -170,28 +170,23 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "წარმადობის რეჟიმი ხელმიუწვდომელია."
+msgstr "წარმადობის რეჟიმი ხელითაა ჩართული"
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
-msgstr[1] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
+msgstr[0] "აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
+msgstr[1] "%1 აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
-msgstr[1] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
+msgstr[0] "აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
+msgstr[1] "%1 აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
 
 #: package/contents/ui/main.qml:299
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-02 00:51+0000\n"
-"PO-Revision-Date: 2022-10-18 05:42+0200\n"
+"PO-Revision-Date: 2022-11-06 05:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -92,7 +92,7 @@ msgstr ""
 #: configdialog.cpp:250
 #, kde-format
 msgid "Show action popup menu:"
-msgstr ""
+msgstr "ქმედების მხტუნარა მენიუში ჩვენება:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -161,7 +161,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
-msgstr ""
+msgstr "აღწერა"
 
 #: configdialog.cpp:382
 #, kde-format
@@ -333,7 +333,7 @@ msgstr ""
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "შეიყვანეთ ბრძანების აღწერა"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:84
 #, kde-format
@@ -343,7 +343,7 @@ msgstr "აღწერა:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "ავტომატურ მხტუნარაში ჩასმა"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -390,7 +390,7 @@ msgstr "ბრძანების თვისებები"
 #: editcommanddialog.cpp:60
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "შეიყვანეთ ბრძანება და არგუმენტები"
 
 #: editcommanddialog.cpp:63
 #, kde-format
@@ -410,22 +410,22 @@ msgstr ""
 #: editcommanddialog.cpp:82
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "შეიყვანეთ ბრძანების აღწერა"
 
 #: editcommanddialog.cpp:92
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "ბრძანების გამოტანილი ტექსტი:"
 
 #: editcommanddialog.cpp:94
 #, kde-format
 msgid "Replace current clipboard"
-msgstr ""
+msgstr "მიმდინარე ბუფერის ჩანაცვლება"
 
 #: editcommanddialog.cpp:98
 #, kde-format
 msgid "Append to clipboard"
-msgstr ""
+msgstr "ბუფერისთვის მიწერა"
 
 #: editcommanddialog.cpp:102
 #, kde-format
@@ -457,13 +457,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr ""
+msgstr "&ბუფერის ისტორიის გასუფთავება"
 
 #: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr ""
+msgstr "Klipper-ის &მორგება…"
 
 #: klipper.cpp:190
 #, kde-format
@@ -475,37 +475,37 @@ msgstr "&გასვლა"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr ""
+msgstr "მიმდინარე ბუფერზე ქმედების ხელით გაშვება"
 
 #: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr ""
+msgstr "შემცველობის &ჩასწორება…"
 
 #: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr ""
+msgstr "&ბარკოდის ჩვენება…"
 
 #: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr ""
+msgstr "ისტორიის შემდეგი ჩანაწერი"
 
 #: klipper.cpp:225
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr ""
+msgstr "ისტორიის წინა ჩანაწერი"
 
 #: klipper.cpp:232
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr ""
+msgstr "თაგუნას მდგომარეობაზე მყოფი ჩანაწერების ჩვენება"
 
 #: klipper.cpp:243
 #, kde-format
@@ -785,7 +785,7 @@ msgstr "ძებნა…"
 #: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
-msgstr ""
+msgstr "არასწორი რეგულარული გამოსახულება: %1"
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
@@ -805,7 +805,7 @@ msgstr "Klipper"
 #: main.cpp:29
 #, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr ""
+msgstr "Plasnma-ის ამოჭრის და ჩასმის ისტორიის პროგრამა"
 
 #: main.cpp:31
 #, kde-format
@@ -853,7 +853,7 @@ msgstr "Luboš Luňák"
 #: main.cpp:40
 #, kde-format
 msgid "Bugfixes and optimizations"
-msgstr ""
+msgstr "შეცდომების გასწორება და ოპტიმიზაციები"
 
 #: main.cpp:42
 #, kde-format

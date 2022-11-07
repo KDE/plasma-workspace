@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-05-22 10:13+0200\n"
+"PO-Revision-Date: 2022-11-05 10:55+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -176,28 +176,24 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "La suspensió automàtica i el bloqueig de pantalla estan desactivats"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "El mode rendiment no està disponible."
+msgstr "S'ha activat manualment el mode rendiment"
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Una aplicació ha sol·licitat l'activació de %2:"
-msgstr[1] "%1 aplicacions han sol·licitat l'activació de %2:"
+msgstr[0] "Una aplicació ha sol·licitat l'activació del mode rendiment"
+msgstr[1] "%1 aplicacions han sol·licitat l'activació del mode rendiment"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Una aplicació ha sol·licitat l'activació de %2:"
-msgstr[1] "%1 aplicacions han sol·licitat l'activació de %2:"
+msgstr[0] "Una aplicació ha sol·licitat l'activació del mode estalvi d'energia"
+msgstr[1] ""
+"%1 aplicacions han sol·licitat l'activació del mode estalvi d'energia"
 
 #: package/contents/ui/main.qml:299
 #, kde-format

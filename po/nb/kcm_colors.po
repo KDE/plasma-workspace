@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2015-04-30 22:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -644,42 +644,42 @@ msgstr "Tekst på inaktiv tittellinje"
 msgid "Inactive Titlebar Secondary"
 msgstr "Sekundær på inaktiv tittellinje"
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr "Valg"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr "Farger"
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Ulagrede endringer"
 
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Lagre fargeoppsettet"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Gi navn til fargeoppsettet:"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -688,17 +688,17 @@ msgstr ""
 "Et fargeoppsett med det navnet finnes fra før.\n"
 "Vil du skrive over dette?"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Du har ikke rettighet til å skrive over det oppsettet"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr "Feil"
 
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, kde-format
 msgid "Inactive"
 msgstr "Inaktiv"

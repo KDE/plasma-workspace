@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-10-30 07:48\n"
+"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"PO-Revision-Date: 2022-11-06 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -34,7 +34,7 @@ msgid "Confirm password"
 msgstr "确认密码"
 
 #: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:63
 #, kde-format
 msgid "Passwords must match"
 msgstr "两次输入的密码必须一致。"
@@ -122,17 +122,17 @@ msgstr "管理员"
 msgid "Account type:"
 msgstr "账号类型："
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:52
 #, kde-format
 msgid "Password:"
 msgstr "密码："
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Confirm password:"
 msgstr "确认密码："
 
-#: package/contents/ui/CreateUser.qml:69
+#: package/contents/ui/CreateUser.qml:67
 #, kde-format
 msgid "Create"
 msgstr "创建"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-02-18 10:31+0100\n"
+"PO-Revision-Date: 2022-11-06 15:58-0400\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -169,28 +169,23 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatisch slapen en vergrendelen van scherm zijn uitgeschakeld"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "Modus Prestatie is niet beschikbaar."
+msgstr "Modus Prestatie is handmatig ingeschakeld"
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Één toepassing heeft activering gevraagd van %2:"
-msgstr[1] "%1 toepassingen hebben activering gevraagd van %2:"
+msgstr[0] "Een toepassing heeft activering gevraagd van modus Prestatie"
+msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Prestatie"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Één toepassing heeft activering gevraagd van %2:"
-msgstr[1] "%1 toepassingen hebben activering gevraagd van %2:"
+msgstr[0] "Een toepassing heeft activering gevraagd van modus Energie sparen"
+msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Energie sparen"
 
 #: package/contents/ui/main.qml:299
 #, kde-format

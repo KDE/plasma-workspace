@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-10-30 07:48\n"
+"PO-Revision-Date: 2022-11-06 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -168,26 +168,21 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "自动睡眠和锁屏已禁用"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "性能模式不可用。"
+msgstr ""
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 款应用程序请求激活 %2："
+msgstr[0] ""
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 款应用程序请求激活 %2："
+msgstr[0] ""
 
 #: package/contents/ui/main.qml:299
 #, kde-format

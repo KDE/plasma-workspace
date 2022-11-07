@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-22 00:47+0000\n"
-"PO-Revision-Date: 2022-09-02 07:18+0200\n"
+"PO-Revision-Date: 2022-11-06 05:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: logout.cpp:344
 #, kde-format
@@ -46,12 +46,12 @@ msgstr "$HOME საქაღალდიდან (%1) წაკითხვი
 #: main.cpp:133
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr ""
+msgstr "$HOME საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
 #: main.cpp:136
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
+msgstr "$HOME საქაღალდეში (%2) ჩაწერა %1 შეცდომით დასრულდა"
 
 #: main.cpp:149 main.cpp:184
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "წაკითხვის წვდომის გარეშე: '%
 #: main.cpp:159 main.cpp:172
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr ""
+msgstr "დროებით საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
 #: main.cpp:162 main.cpp:175
 #, kde-format
@@ -74,6 +74,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
+"დროებით საქაღალდეში (%2) ჩაწერა შემდეგი\n"
+"   შეცდომით დასრულდა: %1"
 
 #: main.cpp:190
 #, kde-format
@@ -81,6 +83,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Plasma-ის გაშვებისას ნაპოვნია\n"
+"დაყენების შემდეგი პრობლემა:"
 
 #: main.cpp:193
 #, kde-format
@@ -96,7 +100,7 @@ msgstr ""
 #: main.cpp:200
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr ""
+msgstr "Plasma -ის დაყენების პრობლემა გაქვთ!"
 
 #: main.cpp:236
 #, kde-format
@@ -108,17 +112,17 @@ msgstr ""
 #: main.cpp:240
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr ""
+msgstr "შენახული მომხმარებლის სესიის აღდგენა, თუ ის ხელმისაწვდომია"
 
 #: main.cpp:243
 #, kde-format
 msgid "Also allow remote connections"
-msgstr ""
+msgstr "დაშორებული მიერთებების დაშვება"
 
 #: main.cpp:246
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr ""
+msgstr "სესიის დაბლოკილ რეჟიმში გაშვება"
 
 #: main.cpp:250
 #, kde-format

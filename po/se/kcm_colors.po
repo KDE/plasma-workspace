@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2007-12-20 11:19+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -635,42 +635,42 @@ msgstr "Ii-aktiivalaš namahusholgga teaksta"
 msgid "Inactive Titlebar Secondary"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:61
+#: editor/scmeditordialog.cpp:60
 #, kde-format
 msgid "Options"
 msgstr "Molssaeavttut"
 
-#: editor/scmeditordialog.cpp:62
+#: editor/scmeditordialog.cpp:61
 #, kde-format
 msgid "Colors"
 msgstr "Ivnnit"
 
-#: editor/scmeditordialog.cpp:63
+#: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
 msgstr "Geavatkeahttá"
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:95
+#: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Vurke ivdnečoahkádusa"
 
-#: editor/scmeditordialog.cpp:113
+#: editor/scmeditordialog.cpp:112
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Atte nama ivdnečoahkkádussii:"
 
-#: editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:136
 #, fuzzy, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -679,17 +679,17 @@ msgstr ""
 "Ivdnečoahkkádus mas lea «%1»-namma gávdno juo.\n"
 "Háliidat go buhttet?"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Dus eai leat vuoigatvuođat buhttet dien čoahkkádusa"
 
-#: editor/scmeditordialog.cpp:174
+#: editor/scmeditordialog.cpp:173
 #, kde-format
 msgid "Error"
 msgstr "Meattáhus"
 
-#: editor/scmeditordialog.cpp:189
+#: editor/scmeditordialog.cpp:188
 #, kde-format
 msgid "Inactive"
 msgstr "Ii-aktiivalaš"

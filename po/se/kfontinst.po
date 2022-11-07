@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-10-31 00:48+0000\n"
 "PO-Revision-Date: 2007-12-10 05:31+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -546,75 +546,75 @@ msgstr ""
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:722
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
@@ -801,8 +801,8 @@ msgstr "Ii mihkkiige maid sirdit"
 #: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to "
+"<i>%3</i>?</p>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:669
@@ -894,18 +894,18 @@ msgstr[1] "%1 fontta"
 #: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td "
+"align=\"right\">Partially enabled:</td><td>%3</td></tr><tr><td "
+"align=\"right\">Total:</td><td>%4</td></tr></table>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:912
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
+"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:"
+"</td><td>%3</td></tr></table>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:989
@@ -1007,8 +1007,8 @@ msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
 msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
+"<p>Do you really want to enable these %1 fonts contained within group "
+"'<b>%2</b>'?</p>"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1018,8 +1018,8 @@ msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
 msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
+"<p>Do you really want to disable these %1 fonts contained within group "
+"'<b>%2</b>'?</p>"
 msgstr[0] ""
 msgstr[1] ""
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-31 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 07:08+0200\n"
+"PO-Revision-Date: 2022-11-06 05:20+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,7 +92,7 @@ msgstr "KColorSchemeEditor"
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr ""
+msgstr "პროგრამა ფერის სქემების ჩასასწორებლად და შესაქმნელად"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "Olivier Churlaud"
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "პროგრამის შექმნა"
 
 #: editor/kcolorschemeeditor.cpp:30
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM კოდი (აქაც გამოიყენება)"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "ჩასასწორებელი ან საბაზისოდ გამოყენებადი სქემა."
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
@@ -130,6 +130,8 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"\"გამოყენების\" ღილაკის ჩვენება, რომელიც კითხვის გარეშე ('შენახვა, როგორც' "
+"ღილაკისგან განსხვავებით) შეინახავს ცვლილებებს"
 
 #: editor/kcolorschemeeditor.cpp:41
 #, kde-format
@@ -140,13 +142,13 @@ msgstr ""
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "სქემა ვერ ვიპოვე. ვუბრუნდები მიმდინარეს.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
 #, kde-format
 msgid "Window text on Window Background"
-msgstr ""
+msgstr "ფანჯრის ტექსტი ფანჯრის ფონზე"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -160,7 +162,7 @@ msgstr "ფანჯრის ტექსტი"
 #: editor/preview.ui:39
 #, kde-format
 msgid "Button text on Button Background"
-msgstr ""
+msgstr "ღილაკის ტექსტი ღილაკის ფონზე"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -783,13 +785,13 @@ msgstr "კონტრასტი:"
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr ""
+msgstr "ფერის გათიშული ეფექტის რაოდენობა"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
 #, kde-format
 msgid "Disabled intensity effect amount"
-msgstr ""
+msgstr "ინტენსივობის გათიშული ეფექტის რაოდენობა"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
@@ -834,13 +836,13 @@ msgstr "გათიშული კონტრასტის ტიპი"
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr ""
+msgstr "&ეფექტები არააქტიურ ფანჯრებზეც გავრცელდება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "&არააქტიური მონიშნულებისთვის განსხვავებული ფერების გამოყენება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
@@ -1329,4 +1331,4 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr ""
+msgstr " * %1 (მიმდინარე ფერის სქემა)"
