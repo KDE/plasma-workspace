@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-02-19 16:50+0100\n"
+"PO-Revision-Date: 2022-11-07 14:39+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -184,28 +184,25 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "La veille automatique et le verrouillage d'écran sont désactivés."
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "Le mode « Performance » est indisponible."
+msgstr "Le mode « Performance » a été activé manuellement."
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Une application a demandé l'activation de %2 :"
-msgstr[1] "%1 applications ont demandé l'activation de %2 :"
+msgstr[0] "Une application a demandé l'activation du mode « Performance »"
+msgstr[1] "%1 applications ont demandé l'activation du mode « Performance »"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Une application a demandé l'activation de %2 :"
-msgstr[1] "%1 applications ont demandé l'activation de %2 :"
+msgstr[0] ""
+"Une application a demandé l'activation du mode « Économie d'énergie »"
+msgstr[1] ""
+"%1 applications ont demandé l'activation du mode « Économie d'énergie »"
 
 #: package/contents/ui/main.qml:299
 #, kde-format

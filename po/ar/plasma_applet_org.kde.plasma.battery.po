@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-02-19 19:15+0400\n"
+"PO-Revision-Date: 2022-11-07 19:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -169,36 +169,31 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "عُطل السكون التلقائي وقفل الشاشة"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "وضع الأداء غير متوفر"
+msgstr "فُعّل وضع الأداء يدوياً"
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "تطبيق واحد طلب تنشيط %2:"
-msgstr[1] "تطبيق واحد طلب تنشيط %2:"
-msgstr[2] "تطبيقان طلبا تنشيط %2:"
-msgstr[3] "%1 تطبيقات طلبت تنشيط %2:"
-msgstr[4] "%1 تطبيقا طلب تنشيط %2:"
-msgstr[5] "%1 تطبيق طلب تنشيط %2:"
+msgstr[0] "تطبيق واحد طلب تنشيط وضع الأداء"
+msgstr[1] "تطبيق واحد طلب تنشيط وضع الأداء"
+msgstr[2] "تطبيقان طلبا تنشيط وضع الأداء"
+msgstr[3] "%1 تطبيقات طلبت تنشيط وضع الأداء"
+msgstr[4] "%1 تطبيقا طلب تنشيط وضع الأداء"
+msgstr[5] "%1 تطبيق طلب تنشيط وضع الأداء"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "تطبيق واحد طلب تنشيط %2:"
-msgstr[1] "تطبيق واحد طلب تنشيط %2:"
-msgstr[2] "تطبيقان طلبا تنشيط %2:"
-msgstr[3] "%1 تطبيقات طلبت تنشيط %2:"
-msgstr[4] "%1 تطبيقا طلب تنشيط %2:"
-msgstr[5] "%1 تطبيق طلب تنشيط %2:"
+msgstr[0] "تطبيق واحد طلب تنشيط وضع حفظ الطاقة"
+msgstr[1] "تطبيق واحد طلب تنشيط وضع حفظ الطاقة"
+msgstr[2] "تطبيقان طلبا تنشيط وضع حفظ الطاقة"
+msgstr[3] "%1 تطبيقات طلبت تنشيط وضع حفظ الطاقة"
+msgstr[4] "%1 تطبيقا طلب تنشيط وضع حفظ الطاقة"
+msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
