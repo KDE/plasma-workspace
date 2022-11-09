@@ -11,7 +11,9 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QPointer>
 #include <QQmlParserStatus>
+#include <QQmlPropertyMap>
 #include <QSize>
 #include <QTimer>
 #include <QUrl>
@@ -28,6 +30,11 @@ class ImageBackend : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
+
+    /**
+     * Used to save the current wallpaper in slideshow mode
+     */
+    Q_PROPERTY(QQmlPropertyMap *configMap READ configMap WRITE setConfigMap NOTIFY configMapChanged)
 
     Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig)
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
@@ -72,6 +79,9 @@ public:
 
     Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
 
+    QQmlPropertyMap *configMap() const;
+    void setConfigMap(QQmlPropertyMap *configMap);
+
     RenderingMode renderingMode() const;
     void setRenderingMode(RenderingMode mode);
 
@@ -115,6 +125,7 @@ Q_SIGNALS:
     void slideTimerChanged();
     void slidePathsChanged();
     void uncheckedSlidesChanged();
+    void configMapChanged();
     void loadingChanged();
 
     /**
@@ -132,12 +143,15 @@ protected Q_SLOTS:
 private:
     SlideModel *slideshowModel();
 
+    void saveCurrentWallpaper();
+
     bool m_ready = false;
     int m_delay = 10;
     QUrl m_image;
     QSize m_targetSize;
 
     bool m_usedInConfig = true;
+    QPointer<QQmlPropertyMap> m_configMap;
 
     RenderingMode m_mode = SingleImage;
     SortingMode::Mode m_slideshowMode = SortingMode::Random;
