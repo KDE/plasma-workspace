@@ -93,7 +93,7 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Label {
                     id: isPowerSupplyLabel
-                    text: Logic.stringForBatteryState(root.battery)
+                    text: Logic.stringForBatteryState(root.battery, pmSource)
                     // For non-power supply batteries only show label for known-good states
                     visible: root.isPowerSupply || ["Discharging", "FullyCharged", "Charging"].includes(root.battery.State)
                     enabled: false

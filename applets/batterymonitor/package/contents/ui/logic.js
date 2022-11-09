@@ -6,8 +6,24 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-function stringForBatteryState(batteryData) {
+function stringForBatteryState(batteryData, source) {
     if (batteryData["Plugged in"]) {
+        // When we are using a charge threshold, the kernel
+        // may stop charging within a percentage point of the actual threshold
+        // and this is considered correct behavior, so we have to handle
+        // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
+        if (typeof source.data["Battery"]["Charge Stop Threshold"] === "number"
+            && (source.data.Battery.Percent >= source.data["Battery"]["Charge Stop Threshold"] - 1
+            && source.data.Battery.Percent <= source.data["Battery"]["Charge Stop Threshold"] + 1)
+            // Also, Upower may give us a status of "Not charging" rather than
+            // "Fully charged", so we need to account for that as well. See
+            // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
+            && (source.data["Battery"]["State"] === "NoCharge" || source.data["Battery"]["State"] === "FullyCharged")
+        ) {
+            return i18n("Fully Charged");
+        }
+
+        // Otherwise, just look at the charge state
         switch(batteryData["State"]) {
             case "Discharging": return i18n("Discharging");
             case "FullyCharged": return i18n("Fully Charged");
