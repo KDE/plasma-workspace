@@ -168,6 +168,15 @@ SlideModel *ImageBackend::slideshowModel()
     return m_slideshowModel;
 }
 
+void ImageBackend::saveCurrentWallpaper()
+{
+    if (!m_ready || m_usedInConfig || m_mode != RenderingMode::SlideShow || m_configMap.isNull() || !m_image.isValid()) {
+        return;
+    }
+
+    QMetaObject::invokeMethod(this, "writeImageConfig", Qt::QueuedConnection, Q_ARG(QString, m_image.toString()));
+}
+
 QAbstractItemModel *ImageBackend::slideFilterModel()
 {
     if (!m_slideFilterModel->sourceModel()) {
@@ -312,8 +321,10 @@ void ImageBackend::backgroundsFound()
     }
 
     // start slideshow
-    m_currentSlide = -1;
     m_slideFilterModel->sort(0);
+    m_currentSlide = m_configMap.isNull() || m_slideshowMode == SortingMode::Random
+        ? -1
+        : m_slideFilterModel->indexOf(m_configMap->value(QStringLiteral("Image")).toString()) - 1;
     nextSlide();
 }
 
@@ -371,6 +382,27 @@ void ImageBackend::slotWallpaperBrowseCompleted()
     Q_EMIT settingsChanged();
 }
 
+QQmlPropertyMap *ImageBackend::configMap() const
+{
+    return m_configMap.data();
+}
+
+void ImageBackend::setConfigMap(QQmlPropertyMap *configMap)
+{
+    if (configMap == m_configMap.data()) {
+        return;
+    }
+
+    m_configMap = configMap;
+    Q_EMIT configMapChanged();
+
+    if (!m_configMap.isNull()) {
+        Q_ASSERT(m_configMap->contains(QStringLiteral("Image")));
+    }
+
+    saveCurrentWallpaper();
+}
+
 QString ImageBackend::addUsersWallpaper(const QUrl &url)
 {
     auto results = static_cast<ImageProxyModel *>(wallpaperModel())->addBackground(url.isLocalFile() ? url.toLocalFile() : url.toString());
@@ -425,6 +457,8 @@ void ImageBackend::nextSlide()
         m_image = QUrl(next);
         Q_EMIT imageChanged();
     }
+
+    saveCurrentWallpaper();
 }
 
 void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)

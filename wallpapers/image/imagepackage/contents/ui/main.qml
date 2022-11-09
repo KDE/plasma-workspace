@@ -73,6 +73,9 @@ QQC2.StackView {
 
     Wallpaper.ImageBackend {
         id: imageWallpaper
+
+        // Not using wallpaper.configuration.Image to avoid binding loop warnings
+        configMap: wallpaper.configuration
         usedInConfig: false
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
@@ -82,6 +85,11 @@ QQC2.StackView {
         slideshowMode: wallpaper.configuration.SlideshowMode
         slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
+
+        // Invoked from C++
+        function writeImageConfig(newImage: string) {
+            configMap.Image = newImage;
+        }
     }
 
     Wallpaper.MediaProxy {
