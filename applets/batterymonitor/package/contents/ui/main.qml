@@ -60,7 +60,9 @@ Item {
     readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
     readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
     readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
-    readonly property bool isHeldOnPowerSaveMode: actuallyActiveProfile === "power-saver" && activeProfileHolds.length > 0
+    readonly property bool isSomehowinPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
+    readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
+    readonly property bool isHeldOnPowerSaveMode: isSomehowinPowerSaveMode && activeProfileHolds.length > 0
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
     readonly property bool isSomehowFullyCharged: (pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]["State"] === "FullyCharged") ||
@@ -129,7 +131,7 @@ Item {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (isSomehowInPerformanceMode || isHeldOnPowerSaveMode) {
+        if (isHeldOnPerformanceMode || isHeldOnPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -139,7 +141,7 @@ Item {
     Plasmoid.toolTipMainText: {
         if (!hasBatteries) {
             return Plasmoid.title
-        } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
+        } else if (isSomehowFullyCharged) {
             return i18n("Fully Charged");
         }
 
@@ -176,7 +178,7 @@ Item {
             } else {
                 parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
             }
-        } else if (pmSource.data.Battery.State === "NoCharge") {
+        } else if (pmSource.data.Battery.State === "NoCharge" && !isSomehowFullyCharged) {
             parts.push(i18n("Not charging"));
         } // otherwise, don't add anything
 
@@ -185,17 +187,21 @@ Item {
         }
 
         if (isSomehowInPerformanceMode) {
-            if (activeProfileHolds.length === 0) {
-                parts.push(i18n("Performance mode has been manually enabled"));
-            } else {
+            if (isHeldOnPerformanceMode) {
                 parts.push(i18np("An application has requested activating Performance mode",
                                  "%1 applications have requested activating Performance mode",
                                  activeProfileHolds.length));
+            } else {
+                parts.push(i18n("System is in Performance mode"));
             }
-        } else if (isHeldOnPowerSaveMode) {
-            parts.push(i18np("An application has requested activating Power Save mode",
-                             "%1 applications have requested activating Power Save mode",
-                             activeProfileHolds.length));
+        } else if (isSomehowinPowerSaveMode) {
+            if (isHeldOnPowerSaveMode) {
+                parts.push(i18np("An application has requested activating Power Save mode",
+                                "%1 applications have requested activating Power Save mode",
+                                activeProfileHolds.length));
+            } else {
+                parts.push(i18n("System is in Power Save mode"));
+            }
         }
 
         return parts.join("\n");
@@ -236,8 +242,8 @@ Item {
     Plasmoid.compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
-        performanceMode: batterymonitor.isSomehowInPerformanceMode
-        heldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
+        isHeldOnPerformanceMode: batterymonitor.isHeldOnPerformanceMode
+        isHeldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
 
         onWheel: {

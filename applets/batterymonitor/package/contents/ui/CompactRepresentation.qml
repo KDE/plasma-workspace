@@ -21,8 +21,8 @@ MouseArea {
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
-    required property bool performanceMode
-    required property bool heldOnPowerSaveMode
+    required property bool isHeldOnPerformanceMode
+    required property bool isHeldOnPowerSaveMode
     required property bool isSomehowFullyCharged
 
     activeFocusOnTab: true
@@ -66,7 +66,7 @@ MouseArea {
 
                 property real iconSize: Math.min(width, height)
 
-                // "Power Profile mode activated while plugged in" use case; show the
+                // "Held on a Power Profile mode while plugged in" use case; show the
                 // icon of the active mode so the user can notice this at a glance
                 PlasmaCore.SvgItem {
                     id: powerProfileModeIcon
@@ -75,9 +75,9 @@ MouseArea {
                     height: batteryContainer.iconSize
                     width: height
 
-                    visible: batteryContainer.pluggedIn && (root.heldOnPowerSaveMode || root.performanceMode)
+                    visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
                     svg: PlasmaCore.Svg { imagePath: "icons/battery" }
-                    elementId: root.performanceMode ? "profile-performance" : "profile-powersave"
+                    elementId: root.isHeldOnPerformanceMode ? "profile-performance" : "profile-powersave"
                 }
 
                 // Show normal battery icon
