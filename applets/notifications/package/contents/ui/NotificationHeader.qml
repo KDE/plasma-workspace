@@ -109,7 +109,9 @@ RowLayout {
         Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
         function generateAgoText() {
-            if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
+            if (!time || isNaN(time.getTime())
+                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning
+                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateSuspended) {
                 return "";
             }
 
