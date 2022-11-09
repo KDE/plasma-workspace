@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-05 00:47+0000\n"
-"PO-Revision-Date: 2022-05-24 19:35+0530\n"
+"PO-Revision-Date: 2022-11-08 19:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -169,28 +169,23 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "தானியங்கி தூக்கம் மற்றும் திரை பூட்டுதல் முடங்கியுள்ளன"
 
 #: package/contents/ui/main.qml:190
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
+#, kde-format
 msgid "Performance mode has been manually enabled"
-msgstr "அதிவேக பயன்முறையை பயன்படுத்த முடியாது."
+msgstr "அதிவேக பயன்முறை கைமுறையாக இயக்கப்பட்டுள்ளது"
 
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "ஒரு செயலி %2 இயக்குமாறு கோரியுள்ளது:"
-msgstr[1] "%1 செயலிகள் %2 இயக்குமாறு கோரியுள்ளன:"
+msgstr[0] "ஒரு செயலி அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளது"
+msgstr[1] "%1 செயலிகள் அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
 #: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "ஒரு செயலி %2 இயக்குமாறு கோரியுள்ளது:"
-msgstr[1] "%1 செயலிகள் %2 இயக்குமாறு கோரியுள்ளன:"
+msgstr[0] "ஒரு செயலி ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளது"
+msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
