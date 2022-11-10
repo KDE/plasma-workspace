@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-02-19 10:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/CompactRepresentation.qml:102
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -75,7 +75,7 @@ msgstr "%1 %"
 msgid "Discharging"
 msgstr "Laddas ur"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:144
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
 #, kde-format
 msgid "Fully Charged"
 msgstr "Fulladdat"
@@ -96,85 +96,85 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Inte monterat"
 
-#: package/contents/ui/main.qml:103 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Batteri och ljusstyrka"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Brightness"
 msgstr "Ljusstyrka"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Battery"
 msgstr "Batteri"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Power Management"
 msgstr "Strömsparhantering"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Batteri %1 %, laddas inte"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Batteri %1 %, inkopplat med laddas fortfarande ur"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Batteri %1 %, laddas"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Batteri %1 %"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Kraftaggregatet är inte kraftfullt nog att ladda batteriet"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Inga batterier tillgängliga"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 till fulladdat"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 återstår"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Not charging"
 msgstr "Laddas inte"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatiskt viloläge och skärmlåsning är inaktiverade"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:189
 #, fuzzy, kde-format
 #| msgid "Performance mode is unavailable."
 msgid "Performance mode has been manually enabled"
 msgstr "Prestandaläge är inte tillgängligt."
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -183,7 +183,7 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Ett program har begärt att %2 aktiveras:"
 msgstr[1] "%1 program har begärt att %2 aktiveras:"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:196
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -208,8 +208,9 @@ msgid "&Show Energy Information…"
 msgstr "Vi&sa information om energi…"
 
 #: package/contents/ui/main.qml:367
-#, kde-format
-msgid "Show Battery Percentage on Icon"
+#, fuzzy, kde-format
+#| msgid "Show Battery Percentage on Icon"
+msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Visa batteriets procentvärde på ikon"
 
 #: package/contents/ui/main.qml:373

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-02-19 12:45+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -67,7 +67,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:102
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -78,7 +78,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "Discharging"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:144
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
 #, kde-format
 msgid "Fully Charged"
 msgstr "Fully Charged"
@@ -99,85 +99,85 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Not present"
 
-#: package/contents/ui/main.qml:103 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Battery and Brightness"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Brightness"
 msgstr "Brightness"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Battery"
 msgstr "Battery"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Power Management"
 msgstr "Power Management"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Battery at %1%, not Charging"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Battery at %1%, plugged in but still discharging"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Battery at %1%, Charging"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Battery at %1%"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "The power supply is not powerful enough to charge the battery"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "No Batteries Available"
 msgstr "No Batteries Available"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 until fully charged"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 remaining"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Not charging"
 msgstr "Not charging"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatic sleep and screen locking are disabled"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:189
 #, fuzzy, kde-format
 #| msgid "Performance mode is unavailable."
 msgid "Performance mode has been manually enabled"
 msgstr "Performance mode is unavailable."
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -186,7 +186,7 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "One application has requested activating %2:"
 msgstr[1] "%1 applications have requested activating %2:"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:196
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -211,8 +211,9 @@ msgid "&Show Energy Information…"
 msgstr "&Show Energy Information…"
 
 #: package/contents/ui/main.qml:367
-#, kde-format
-msgid "Show Battery Percentage on Icon"
+#, fuzzy, kde-format
+#| msgid "Show Battery Percentage on Icon"
+msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Show Battery Percentage on Icon"
 
 #: package/contents/ui/main.qml:373

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-05 00:47+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-11-05 20:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -73,7 +73,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%​%1"
 
-#: package/contents/ui/CompactRepresentation.qml:102
+#: package/contents/ui/CompactRepresentation.qml:103
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -84,7 +84,7 @@ msgstr "%​%1"
 msgid "Discharging"
 msgstr "Şarj Boşalıyor"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:144
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
 #, kde-format
 msgid "Fully Charged"
 msgstr "Şarj Dolu"
@@ -105,91 +105,91 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Mevcut değil"
 
-#: package/contents/ui/main.qml:103 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Pil ve Parlaklık"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Brightness"
 msgstr "Parlaklık"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Battery"
 msgstr "Pil"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Power Management"
 msgstr "Güç Yönetimi"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Pil %​%1, şarj olmuyor"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Pil %​%1, prize takılı; ancak hala boşalıyor"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Pil %​%1, şarj oluyor"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Pil %​%1"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Güç kaynağı pili şarj edecek kadar güçlü değil"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Kullanılabilir Pil Yok"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "Tamamen şarj olana kadar %1"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 kaldı"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Not charging"
 msgstr "Şarj olmuyor"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Otomatik uyku ve ekran kilitleme devre dışı bırakıldı"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgid "Performance mode has been manually enabled"
 msgstr "Başarım kipi elle etkinleştirildi"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "1 uygulama, başarım kipinin etkinleştirilmesini istedi"
 msgstr[1] "%1 uygulama, başarım kipinin etkinleştirilmesini istedi"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -212,8 +212,9 @@ msgid "&Show Energy Information…"
 msgstr "&Enerji Bilgisini Göster…"
 
 #: package/contents/ui/main.qml:367
-#, kde-format
-msgid "Show Battery Percentage on Icon"
+#, fuzzy, kde-format
+#| msgid "Show Battery Percentage on Icon"
+msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Pil Yüzdesini Simge Olarak Göster"
 
 #: package/contents/ui/main.qml:373
