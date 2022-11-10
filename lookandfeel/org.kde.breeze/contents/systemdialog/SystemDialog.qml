@@ -28,8 +28,8 @@ Item {
     property Window window
     implicitHeight: column.implicitHeight
     implicitWidth: column.implicitWidth
-    readonly property real minimumHeight: column.Layout.minimumHeight + mainItem.implicitHeight + footerButtonBox.implicitHeight
-    readonly property real minimumWidth: Math.min(Math.round(Screen.width / 3), column.Layout.minimumWidth + mainItem.implicitWidth + footerButtonBox.implicitWidth)
+    readonly property real minimumHeight: column.Layout.minimumHeight + (mainItem ? mainItem.implicitHeight : 0) + footerButtonBox.implicitHeight + root.spacing * 2
+    readonly property real minimumWidth: Math.min(Math.round(Screen.width / 3), column.Layout.minimumWidth + (mainItem ? mainItem.implicitWidth : 0) + footerButtonBox.implicitWidth) + root.spacing * 2
     readonly property int flags: Qt.Window
     property alias standardButtons: footerButtonBox.standardButtons
     readonly property int spacing: Kirigami.Units.largeSpacing // standard KDE dialog margins
