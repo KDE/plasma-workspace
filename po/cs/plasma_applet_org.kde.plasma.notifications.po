@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-11 00:48+0000\n"
 "PO-Revision-Date: 2022-06-29 12:14+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -339,13 +339,13 @@ msgstr "Vymazat všechna oznámení"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Nastavit upozornění na události a činnosti…"
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:122
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:128
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -354,7 +354,7 @@ msgstr[0] "Před %1 min"
 msgstr[1] "Před %1 min"
 msgstr[2] "Před %1 min"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:162
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -363,7 +363,7 @@ msgstr[0] "zbývá %1 s"
 msgstr[1] "zbývají %1 s"
 msgstr[2] "zbývá %1 s"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:166
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -372,7 +372,7 @@ msgstr[0] "Zbývá %1 m"
 msgstr[1] "Zbývají %1 m"
 msgstr[2] "Zbývá %1 m"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:171
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -381,23 +381,23 @@ msgstr[0] "Zbývá %1 h"
 msgstr[1] "Zbývají %1 h"
 msgstr[2] "Zbývá %1 h"
 
-#: package/contents/ui/NotificationHeader.qml:193
+#: package/contents/ui/NotificationHeader.qml:195
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
 
-#: package/contents/ui/NotificationHeader.qml:210
+#: package/contents/ui/NotificationHeader.qml:212
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Obnovit"
 
-#: package/contents/ui/NotificationHeader.qml:211
+#: package/contents/ui/NotificationHeader.qml:213
 #, kde-format
 msgid "Minimize"
 msgstr "Minimalizovat"
 
-#: package/contents/ui/NotificationHeader.qml:234
+#: package/contents/ui/NotificationHeader.qml:236
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"

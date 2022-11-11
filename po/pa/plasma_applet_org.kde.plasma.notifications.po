@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-11 00:48+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -336,7 +336,7 @@ msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "…ਈਵੈਂਟ ਸੂਚਨਾਵਾਂ ਤੇ ਕਾਰਵਾਈ ਸੰਰਚਨਾ(&C)"
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:122
 #, fuzzy, kde-format
 #| msgctxt "notification was just added, keep short"
 #| msgid "Just now"
@@ -344,7 +344,7 @@ msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "ਹੁਣੇ ਹੀ"
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:128
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -352,7 +352,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 ਮਿੰਟ ਪਹਿਲਾਂ"
 msgstr[1] "%1 ਮਿੰਟ ਪਹਿਲਾਂ"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:162
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -360,7 +360,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 ਸ ਬਾਕੀ"
 msgstr[1] "%1 ਸ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:166
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -368,7 +368,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 ਮਿੰਟ ਬਾਕੀ"
 msgstr[1] "%1 ਮਿੰਟ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:171
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -376,23 +376,23 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 ਘੰ ਬਾਕੀ"
 msgstr[1] "%1 ਘੰ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:193
+#: package/contents/ui/NotificationHeader.qml:195
 #, kde-format
 msgid "Configure"
 msgstr "ਸੰਰਚਨਾ"
 
-#: package/contents/ui/NotificationHeader.qml:210
+#: package/contents/ui/NotificationHeader.qml:212
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "ਬਹਾਲ ਕਰੋ"
 
-#: package/contents/ui/NotificationHeader.qml:211
+#: package/contents/ui/NotificationHeader.qml:213
 #, kde-format
 msgid "Minimize"
 msgstr "ਘੱਟੋ-ਘੱਟ"
 
-#: package/contents/ui/NotificationHeader.qml:234
+#: package/contents/ui/NotificationHeader.qml:236
 #, kde-format
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"

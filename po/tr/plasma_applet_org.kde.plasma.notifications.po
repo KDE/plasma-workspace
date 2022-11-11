@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-11 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 05:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -334,13 +334,13 @@ msgstr "Tüm Bildirimleri Temizle"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Olay Bildirimlerini ve Eylemleri Yapılandır…"
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:122
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Hemen şimdi"
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:128
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -348,7 +348,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 dk önce"
 msgstr[1] "%1 dk önce"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:162
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -356,7 +356,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 sn kaldı"
 msgstr[1] "%1 sn kaldı"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:166
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -364,7 +364,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 dk kaldı"
 msgstr[1] "%1 dk kaldı"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:171
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -372,23 +372,23 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 sa kaldı"
 msgstr[1] "%1 sa kaldı"
 
-#: package/contents/ui/NotificationHeader.qml:193
+#: package/contents/ui/NotificationHeader.qml:195
 #, kde-format
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: package/contents/ui/NotificationHeader.qml:210
+#: package/contents/ui/NotificationHeader.qml:212
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Geri Yükle"
 
-#: package/contents/ui/NotificationHeader.qml:211
+#: package/contents/ui/NotificationHeader.qml:213
 #, kde-format
 msgid "Minimize"
 msgstr "Simge Durumuna Küçült"
 
-#: package/contents/ui/NotificationHeader.qml:234
+#: package/contents/ui/NotificationHeader.qml:236
 #, kde-format
 msgid "Close"
 msgstr "Kapat"

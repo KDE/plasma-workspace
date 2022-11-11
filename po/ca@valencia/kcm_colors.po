@@ -59,7 +59,7 @@ msgstr "No s'ha pogut crear la carpeta de dades «color-scheme»."
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
-"No s'ha pogut copiar l'esquema de color en la carpeta de dades «color-"
+"No s'ha pogut copiar l'esquema de color a dins de la carpeta de dades «color-"
 "scheme»."
 
 #: colors.cpp:307

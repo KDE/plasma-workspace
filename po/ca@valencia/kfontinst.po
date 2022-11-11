@@ -767,7 +767,8 @@ msgstr ""
 "tipus de lletra TrueType, Type1 i Bitmap.</p><p>També podeu instal·lar tipus "
 "de lletra utilitzant Konqueror: teclegeu fonts:/ en la barra d'ubicació de "
 "Konqueror i mostrarà els tipus de lletra instal·lats. Per a instal·lar un "
-"tipus de lletra, senzillament copieu-ne un a la carpeta apropiada.</p>"
+"tipus de lletra, senzillament copieu-ne un a dins de la carpeta apropiada.</"
+"p>"
 
 #: kcmfontinst/KCmFontInst.cpp:382
 #, kde-format
@@ -783,9 +784,9 @@ msgstr ""
 "tipus de lletra TrueType, Type1, i Bitmap.</p><p>També podeu instal·lar "
 "tipus de lletra utilitzant Konqueror: teclejant fonts:/ en la barra "
 "d'ubicació de Konqueror es mostraran els tipus de lletra instal·lats. Per a "
-"instal·lar un tipus de lletra, senzillament copieu-lo a la carpeta apropiada "
-"-  «%1» sols per als vostres tipus de lletra, o «%2» per als tipus de lletra "
-"per a tot el sistema (disponibles per a tothom).</p>"
+"instal·lar un tipus de lletra, senzillament copieu-lo a dins de la carpeta "
+"apropiada -  «%1» sols per als vostres tipus de lletra, o «%2» per als tipus "
+"de lletra per a tot el sistema (disponibles per a tothom).</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:437
 #, kde-format

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-11-05 20:15+0100\n"
+"PO-Revision-Date: 2022-11-10 03:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -214,10 +214,11 @@ msgid "&Show Energy Information…"
 msgstr "Mo&strar información sobre la energía..."
 
 #: package/contents/ui/main.qml:367
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Mostrar el porcentaje de la batería en el icono"
+msgstr ""
+"Mostrar el porcentaje de la batería en el icono cuando no está completamente "
+"cargada"
 
 #: package/contents/ui/main.qml:373
 #, kde-format

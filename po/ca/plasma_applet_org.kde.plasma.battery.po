@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-11-05 10:55+0100\n"
+"PO-Revision-Date: 2022-11-10 09:28+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -211,10 +211,11 @@ msgid "&Show Energy Information…"
 msgstr "Mo&stra la informació de l'energia…"
 
 #: package/contents/ui/main.qml:367
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Mostra el percentatge de la bateria a la icona"
+msgstr ""
+"Mostra el percentatge de la bateria a la icona quan no estigui completament "
+"carregada"
 
 #: package/contents/ui/main.qml:373
 #, kde-format

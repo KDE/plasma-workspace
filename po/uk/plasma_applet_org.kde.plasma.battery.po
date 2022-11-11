@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-11-05 19:27+0200\n"
+"PO-Revision-Date: 2022-11-10 14:33+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -218,10 +218,9 @@ msgid "&Show Energy Information…"
 msgstr "&Показати дані щодо енергоспоживання…"
 
 #: package/contents/ui/main.qml:367
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Показувати заряд у відсотках на піктограмі"
+msgstr "Показувати заряд у відсотках на піктограмі, якщо заряджено не повністю"
 
 #: package/contents/ui/main.qml:373
 #, kde-format

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-11 00:48+0000\n"
 "PO-Revision-Date: 2022-04-28 08:49+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -343,7 +343,7 @@ msgstr "Vymazať všetky oznámenia"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Nastaviť pripomienky a akcie udalostí..."
 
-#: package/contents/ui/NotificationHeader.qml:120
+#: package/contents/ui/NotificationHeader.qml:122
 #, fuzzy, kde-format
 #| msgctxt "notification was just added, keep short"
 #| msgid "Just now"
@@ -351,7 +351,7 @@ msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Práve teraz"
 
-#: package/contents/ui/NotificationHeader.qml:126
+#: package/contents/ui/NotificationHeader.qml:128
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -360,7 +360,7 @@ msgstr[0] "Pred %1 minútou"
 msgstr[1] "Pred %1 minútami"
 msgstr[2] "Pred %1 minútami"
 
-#: package/contents/ui/NotificationHeader.qml:160
+#: package/contents/ui/NotificationHeader.qml:162
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -369,7 +369,7 @@ msgstr[0] "Zostáva %1 sekunda"
 msgstr[1] "Zostávajú %1 sekundy"
 msgstr[2] "Zostáva %1 sekúnd"
 
-#: package/contents/ui/NotificationHeader.qml:164
+#: package/contents/ui/NotificationHeader.qml:166
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -378,7 +378,7 @@ msgstr[0] "Zostáva %1 minúta"
 msgstr[1] "Zostávajú %1 minúty"
 msgstr[2] "Zostáva %1 minút"
 
-#: package/contents/ui/NotificationHeader.qml:169
+#: package/contents/ui/NotificationHeader.qml:171
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -387,23 +387,23 @@ msgstr[0] "Zostáva %1 hodina"
 msgstr[1] "Zostávajú %1 hodiny"
 msgstr[2] "Zostáva %1 hodín"
 
-#: package/contents/ui/NotificationHeader.qml:193
+#: package/contents/ui/NotificationHeader.qml:195
 #, kde-format
 msgid "Configure"
 msgstr "Nastaviť"
 
-#: package/contents/ui/NotificationHeader.qml:210
+#: package/contents/ui/NotificationHeader.qml:212
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Obnoviť"
 
-#: package/contents/ui/NotificationHeader.qml:211
+#: package/contents/ui/NotificationHeader.qml:213
 #, kde-format
 msgid "Minimize"
 msgstr "Minimalizovať"
 
-#: package/contents/ui/NotificationHeader.qml:234
+#: package/contents/ui/NotificationHeader.qml:236
 #, kde-format
 msgid "Close"
 msgstr "Zatvoriť"

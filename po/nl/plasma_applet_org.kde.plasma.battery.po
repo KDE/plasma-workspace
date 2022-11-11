@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-11-06 15:58-0400\n"
+"PO-Revision-Date: 2022-11-10 19:20-0400\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -203,10 +203,9 @@ msgid "&Show Energy Information…"
 msgstr "Energie-informatie &tonen…"
 
 #: package/contents/ui/main.qml:367
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Percentage batterij tonen op pictogram"
+msgstr "Percentage batterij tonen op pictogram indien niet volledig geladen"
 
 #: package/contents/ui/main.qml:373
 #, kde-format
