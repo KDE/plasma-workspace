@@ -57,7 +57,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
-    connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged, this, &DesktopView::coronaPackageChanged);
 
@@ -106,8 +105,13 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    if (m_screenToFollow) {
+        disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
+    }
     m_screenToFollow = screen;
     setScreen(screen);
+    connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
+
     adaptToScreen();
 }
 
@@ -121,21 +125,13 @@ void DesktopView::adaptToScreen()
     ensureWindowType();
 
     // This happens sometimes, when shutting down the process
-    if (!m_screenToFollow || m_oldScreen == m_screenToFollow) {
+    if (!m_screenToFollow) {
         return;
-    }
-
-    if (m_oldScreen) {
-        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
 
     if (m_windowType == Desktop || m_windowType == WindowedDesktop) {
         screenGeometryChanged();
-
-        connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
     }
-
-    m_oldScreen = m_screenToFollow;
 }
 
 bool DesktopView::usedInAccentColor() const

@@ -115,7 +115,6 @@ private:
 
     QColor m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
-    QPointer<QScreen> m_oldScreen;
     QPointer<QScreen> m_screenToFollow;
     WindowType m_windowType;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
