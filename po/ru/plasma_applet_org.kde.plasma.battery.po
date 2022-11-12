@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-02-22 10:17+0300\n"
+"POT-Creation-Date: 2022-11-12 00:49+0000\n"
+"PO-Revision-Date: 2022-11-11 15:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -89,7 +89,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "Разряжается"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "Полностью заряжена"
@@ -110,130 +110,129 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Отсутствует"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Батарея и яркость"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Brightness"
 msgstr "Яркость"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Battery"
 msgstr "Батарея"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
 msgstr "Управление питанием"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Заряд батареи %1%, не заряжается"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr ""
 "Заряд батареи %1%, внешние питание подключено, но батарея не заряжается"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Заряд батареи %1%, заряжается"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Заряд батареи %1%"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Мощности внешнего питания не достаточно для заряда батареи"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Нет данных о батареях"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 до полной зарядки"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Осталось %1"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
 msgstr "Не заряжается"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Автоматическое блокирование экрана и переход в спящий режим отключены"
 
-#: package/contents/ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
-msgid "Performance mode has been manually enabled"
-msgstr "Производительный режим не доступен."
-
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Использование профиля «%2» запрошено %1 приложением:"
-msgstr[1] "Использование профиля «%2» запрошено %1 приложениями:"
-msgstr[2] "Использование профиля «%2» запрошено %1 приложениями:"
-msgstr[3] "Использование профиля «%2» запрошено приложением"
+msgstr[0] "%1 приложение запросили включение производительного режима."
+msgstr[1] "%1 приложения запросили включение производительного режима."
+msgstr[2] "%1 приложений запросили включение производительного режима."
+msgstr[3] "Приложение запросило включение производительного режима."
 
-#: package/contents/ui/main.qml:196
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "System is in Performance mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Использование профиля «%2» запрошено %1 приложением:"
-msgstr[1] "Использование профиля «%2» запрошено %1 приложениями:"
-msgstr[2] "Использование профиля «%2» запрошено %1 приложениями:"
-msgstr[3] "Использование профиля «%2» запрошено приложением"
+msgstr[0] "%1 приложение запросили включение режима экономии энергии."
+msgstr[1] "%1 приложения запросили включение режима экономии энергии."
+msgstr[2] "%1 приложений запросили включение режима экономии энергии."
+msgstr[3] "Приложение запросило включение режима экономии энергии."
+
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "System is in Power Save mode"
+msgstr ""
 
 # BUGME: what is inhibition? --aspotashev
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплет управления питанием включил общесистемное замедление"
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не удалось активировать режим %1"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:371
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Информация об энергопотреблении..."
 
-#: package/contents/ui/main.qml:367
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
-msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Показывать на значке процент заряда"
-
 #: package/contents/ui/main.qml:373
+#, kde-format
+msgid "Show Battery Percentage on Icon When Not Fully Charged"
+msgstr "Показывать на значке процент заряда при неполной зарядке"
+
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "Н&астроить энергосбережение..."
@@ -252,7 +251,7 @@ msgstr "Яркость клавиатуры"
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
-msgstr "Запретить блокировку экрана и переход в спящий режим"
+msgstr "Запретить блокировку экрана и переход в ждущий режим"
 
 #: package/contents/ui/PowerManagementItem.qml:70
 #, kde-format
@@ -382,6 +381,10 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
+
+#~| msgid "Performance mode is unavailable."
+#~ msgid "Performance mode has been manually enabled"
+#~ msgstr "Производительный режим включён вручную"
 
 #~ msgid ""
 #~ "Performance mode is unavailable because the computer has detected it is "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-12 00:49+0000\n"
 "PO-Revision-Date: 2022-02-25 15:26+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -77,7 +77,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "Nonngecas"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "Tercas Penuh"
@@ -98,83 +98,77 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Tidak ada"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Baterai dan Kecerahan"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Brightness"
 msgstr "Kecerahan Layar"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Battery"
 msgstr "Baterai"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
 msgstr "Pengelolaan Daya"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Baterai %1%, tidak Mengecas"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Baterai %1%, padahal tercolok namun masih tidak mengecas"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Baterai %1%, Mengecas"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Baterai %1%"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Power supply tidak cukup hebat untuk mengecas baterai"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Tak Ada Baterai Tersedia"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 sampai tercas penuh"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Tersisa %1"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
 msgstr "Tidak mengecas"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Tidur otomatis dan penguncian layar dinonfungsikan"
-
-#: package/contents/ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
-msgid "Performance mode has been manually enabled"
-msgstr "Mode performa tidak tersedia."
 
 #: package/contents/ui/main.qml:191
 #, fuzzy, kde-format
@@ -185,7 +179,12 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Satu aplikasi telah meminta mengaktifkan %2:"
 msgstr[1] "%1 aplikasi telah meminta mengaktifkan %2:"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "System is in Performance mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -194,28 +193,33 @@ msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Satu aplikasi telah meminta mengaktifkan %2:"
 msgstr[1] "%1 aplikasi telah meminta mengaktifkan %2:"
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "System is in Power Save mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Applet baterai telah memfungsikan pencegahan seluruh sistem"
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Gagal mengaktifkan mode %1"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:371
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Tampilkan Informasi Energi..."
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:373
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Tampilkan Persentase Baterai pada Ikon"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Konfigurasikan Penghematan Daya..."
@@ -349,6 +353,11 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
+
+#, fuzzy
+#~| msgid "Performance mode is unavailable."
+#~ msgid "Performance mode has been manually enabled"
+#~ msgstr "Mode performa tidak tersedia."
 
 #~ msgid "General"
 #~ msgstr "Umum"

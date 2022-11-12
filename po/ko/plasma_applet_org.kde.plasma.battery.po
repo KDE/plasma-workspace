@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-12 00:49+0000\n"
 "PO-Revision-Date: 2022-02-20 22:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "방전 중"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "완전히 충전됨"
@@ -97,83 +97,77 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "없음"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "배터리와 밝기"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Brightness"
 msgstr "밝기"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Battery"
 msgstr "배터리"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
 msgstr "전원 관리"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "배터리 %1%, 충전하지 않음"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "배터리 %1%, 전원에 연결되어 있으나 방전 중"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "배터리 %1%, 충전 중"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
 msgstr "배터리 %1%"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "공급되는 전원이 배터리를 충전하기에 충분하지 않음"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
 msgstr "배터리 없음"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "완전히 충전되기까지 %1 남음"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 남음"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
 msgstr "충전하지 않음"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "자동 절전 모드 진입과 화면 잠금이 비활성화됨"
-
-#: package/contents/ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Performance mode is unavailable."
-msgid "Performance mode has been manually enabled"
-msgstr "성능 모드를 사용할 수 없습니다."
 
 #: package/contents/ui/main.qml:191
 #, fuzzy, kde-format
@@ -183,7 +177,12 @@ msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "System is in Performance mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -191,28 +190,33 @@ msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "System is in Power Save mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "배터리 애플릿은 시스템 전역 설정을 조정합니다"
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 모드를 활성화할 수 없음"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:371
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "에너지 정보 표시(&S)…"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:373
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "아이콘에 배터리 백분율 표시"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "절전 설정(&C)…"
@@ -343,6 +347,11 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
+
+#, fuzzy
+#~| msgid "Performance mode is unavailable."
+#~ msgid "Performance mode has been manually enabled"
+#~ msgstr "성능 모드를 사용할 수 없습니다."
 
 #~ msgid ""
 #~ "Performance mode is unavailable because the computer has detected it is "

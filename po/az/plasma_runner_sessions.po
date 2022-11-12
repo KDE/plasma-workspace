@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2022-07-03 13:56+0400\n"
+"PO-Revision-Date: 2022-11-11 11:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
 msgctxt "log out command"
 msgid "logout"
-msgstr "sesiyadan çıxış"
+msgstr "Sesiyadan çıxış"
 
 #: sessionrunner.cpp:28
 #, kde-format
@@ -71,19 +71,18 @@ msgstr "yenidən başlatmaq"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "saxla"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Sesiyanı bərpa etməyək üçün cari sesiyanı saxlayır"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "yeni sesiya"
+msgstr "sesiyanı saxla"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -159,15 +158,14 @@ msgid "Lock the screen"
 msgstr "Ekranı kilidləmək"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "yeni sesiya"
+msgstr "Sesiyanı saxlamaq"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Sesiyanın bərpa edilməsi üçün cari sesiyanı saxlamaq"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -194,6 +192,11 @@ msgid ""
 "li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
 "(such as the application launcher)</li></ul>"
 msgstr ""
+"<p>Siz yeni iş masası sesiyasına daxil olmaq üzrəsiniz.</p><p>Giriş ekran "
+"göstəriləcək və cari sesiya gizlədiləcəkdir.</p><p>Siz bunlardan istifadə "
+"edərək iş masası sesiyalarını dəyişə bilərsiniz:</p><ul>Ctrl+Alt+F{sesiyanın "
+"nömrəsi}<li></li>Plasma axtarışı (\"switch\" və ya \"sessions\" yazın)<li></"
+"li>Plasma vidjet (tətbiq başladıcısı kimi)<li></li>"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Diqqət: - Yeni Sesiya"

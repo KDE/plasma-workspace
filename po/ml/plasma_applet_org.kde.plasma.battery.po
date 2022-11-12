@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-12 00:49+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -80,7 +80,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "<b>ബാറ്ററി:</b> %1% (ചാര്‍ജ്ജ് ഉപയോഗിച്ചുകൊണ്ടിരിയ്ക്കുന്നു)<br />"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "മുഴുവനും ചാര്‍ജ്ജ് ചെയ്തിരിയ്ക്കുന്നു"
@@ -101,82 +101,77 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "കുത്തിവച്ചിരിയ്ക്കുന്നു"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "ബാറ്ററിയും വെളിച്ചവും"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:119
 #, fuzzy, kde-format
 msgid "Brightness"
 msgstr "തിരശ്ശീലയുടെ വെളിച്ചം"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 msgid "Battery"
 msgstr "ബാറ്ററി"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 msgid "Power Management"
 msgstr "വൈദ്യുതി നടത്തിപ്പു്"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "ബാറ്ററി %1%ൽ , ചാർജ്ജ് ആകുന്നില്ല"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "ബാറ്ററി %1%, കുത്തിവെച്ചിട്ടുണ്ടെങ്കിലും ഇപ്പോഴും ചാർജ് ഇറങ്ങിക്കൊണ്ടിരിക്കുന്നു"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "ബാറ്ററി %1%, ചാർജ് ചെയ്യുന്നു"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
 msgstr "ബാറ്ററി %1%"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "വൈദ്യുതി വിതരണം ബാറ്ററി ചാർജ് ചെയ്യാൻ പര്യാപ്തമല്ല"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "പൂർണ്ണമായി ചാർജ് ചെയ്യാൻ %1"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 ശേഷിക്കുന്നു"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
 msgstr "ചാർജ് ചെയ്യുന്നില്ല"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr ""
-
-#: package/contents/ui/main.qml:189
-#, fuzzy, kde-format
-msgid "Performance mode has been manually enabled"
-msgstr "വൈദ്യുതി നടത്തിപ്പു്"
 
 #: package/contents/ui/main.qml:191
 #, kde-format
@@ -185,35 +180,45 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "System is in Performance mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "System is in Power Save mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 രീതി സജീവമാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:371
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "ഊർജ്ജ വിവരങ്ങൾ കാണിക്കുക… (&S)"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:373
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ചിഹ്നത്തിൽ ബാറ്ററി ശതമാനം കാണിക്കുക"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "ഊർജ്ജ സംരക്ഷണം ക്രമീകരിക്കുക… (&C)"
@@ -346,6 +351,10 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Performance mode has been manually enabled"
+#~ msgstr "വൈദ്യുതി നടത്തിപ്പു്"
 
 #~ msgid "General"
 #~ msgstr "പൊതുവായ"

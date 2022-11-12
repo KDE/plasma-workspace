@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-18 13:16+0400\n"
+"PO-Revision-Date: 2022-11-11 11:32+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -23,10 +23,9 @@ msgid "Main Toolbar"
 msgstr "Əsas alətlər paneli"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Əsas alətlər paneli"
+msgstr "İkinci alətlər paneli"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -128,11 +127,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Burada siz müxtəlif nişan növlərinin ölçüsünü bütöv sistem üçün tənzimləyə "
+"bilərsiniz. Nəzərə alın ki bu ayar heç də bütün tətbiqlər tərəfindən lazımi "
+"şəkildə qarşılanmır.<nl/><nl/>Əgər görsəniz ki, hər hansı bir nişan ekranda "
+"çox kiçik və ya çox böyük görünür, o zaman qlobal miqyas parametrini tətbiq "
+"etməyi nəzərdən keçirin."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Qlobal miqyas təyin edin..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

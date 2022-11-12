@@ -1,32 +1,32 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-11 00:47+0000\n"
-"PO-Revision-Date: 2021-12-21 22:26+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2022-11-11 11:32+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: menu.cpp:99
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr "KRunner'i göstərmək"
+msgstr "KRunner-i göstər"
 
 #: menu.cpp:104
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "Terminalı aç"
 
 #: menu.cpp:108
 #, kde-format

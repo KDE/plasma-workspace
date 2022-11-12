@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-02 00:51+0000\n"
-"PO-Revision-Date: 2022-10-14 11:36+0000\n"
+"PO-Revision-Date: 2022-11-11 10:21+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -72,7 +72,7 @@ msgstr "Valinn texti:"
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Aðeins þegar er sérstaklega afritað"
 
 #: configdialog.cpp:142
 #, kde-format
@@ -511,19 +511,16 @@ msgid "Previous History Item"
 msgstr "Fyrra atriði í ferli"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Opna Klipper við bendil"
+msgstr "Birta atriði við bendil"
 
 #: klipper.cpp:243
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - klippispjaldstól"
+msgstr "%1 - Klippispjaldstól"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -786,11 +783,10 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Innihald klippispjalds"
+msgstr "%1 - Klippispjaldsatriði"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -818,10 +814,9 @@ msgid "Klipper"
 msgstr "Klippari"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE klippi og lími sögutól"
+msgstr "Plasma feriltól klippi- og líminga"
 
 #: main.cpp:31
 #, kde-format

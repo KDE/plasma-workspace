@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-12 00:49+0000\n"
 "PO-Revision-Date: 2022-11-10 19:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -75,7 +75,7 @@ msgstr "%1%"
 msgid "Discharging"
 msgstr "ஆற்றல் பயன்படுகிறது"
 
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:143
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "முழு ஆற்றல் உள்ளது"
@@ -96,82 +96,77 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "இல்லை"
 
-#: package/contents/ui/main.qml:116 package/contents/ui/main.qml:350
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "மின்கலமும் பிரகாசமும்"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Brightness"
 msgstr "பிரகாசம்"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Battery"
 msgstr "மின்கலம்"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
 msgstr "ஆற்றல் மேலாண்மை"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "மின்கலத்தில் %1% உள்ளது; ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:152
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "மின்கலத்தில் %1% உள்ளது; சொருகப்பட்டுள்ளது, ஆனால் ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "மின்கலத்தில் %1% உள்ளது; ஆற்றல் ஏறுகிறது"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
 msgstr "மின்கலத்தில் %1% உள்ளது"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "மின்கலத்தில் ஆற்றல் ஏற்றும் அளவுக்கு மின்னளிப்பு ஆற்றல்வாய்ந்ததல்ல"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
 msgstr "மின்கலங்கள் ஏதுமில்லை"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "முழுதாக ஆற்றல் ஏறும் வரை %1"
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "மீதம் %1"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
 msgstr "ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "தானியங்கி தூக்கம் மற்றும் திரை பூட்டுதல் முடங்கியுள்ளன"
-
-#: package/contents/ui/main.qml:189
-#, kde-format
-msgid "Performance mode has been manually enabled"
-msgstr "அதிவேக பயன்முறை கைமுறையாக இயக்கப்பட்டுள்ளது"
 
 #: package/contents/ui/main.qml:191
 #, kde-format
@@ -180,34 +175,44 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "ஒரு செயலி அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளது"
 msgstr[1] "%1 செயலிகள் அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "System is in Performance mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "ஒரு செயலி ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளது"
 msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:203
+#, kde-format
+msgid "System is in Power Save mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "கணினி முழுவதற்குமான ஆற்றல் சேமிப்பு, மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
 
-#: package/contents/ui/main.qml:353
+#: package/contents/ui/main.qml:359
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 பயன்முறையை இயக்குதல் தோல்வியடைந்தது"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:371
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "ஆற்றல் விவரங்களை காட்டு…"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:373
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ஆற்றல் நிறைந்திராத பட்சத்தில் சின்னத்தில் மின்கல சதவீதத்தைக் காட்டு"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:379
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&ஆற்றல் சேமிப்பை அமை…"
@@ -340,6 +345,9 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
+
+#~ msgid "Performance mode has been manually enabled"
+#~ msgstr "அதிவேக பயன்முறை கைமுறையாக இயக்கப்பட்டுள்ளது"
 
 #~ msgid "General"
 #~ msgstr "பொது"
