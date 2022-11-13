@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-10 09:28+0100\n"
+"PO-Revision-Date: 2022-11-12 09:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -185,20 +185,21 @@ msgstr[1] "%1 aplicacions han sol·licitat l'activació del mode rendiment"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "El sistema està en mode de rendiment"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Una aplicació ha sol·licitat l'activació del mode estalvi d'energia"
+msgstr[0] ""
+"Una aplicació ha sol·licitat l'activació del mode d'estalvi d'energia"
 msgstr[1] ""
-"%1 aplicacions han sol·licitat l'activació del mode estalvi d'energia"
+"%1 aplicacions han sol·licitat l'activació del mode d'estalvi d'energia"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "El sistema està en mode d'estalvi d'energia"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
@@ -313,20 +314,20 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
-"El mode rendiment s'ha desactivat per a reduir la generació de calor perquè "
-"l'ordinador ha detectat que podria estar a la falda."
+"El mode de rendiment s'ha desactivat per a reduir la generació de calor "
+"perquè l'ordinador ha detectat que podria estar a la falda."
 
 #: package/contents/ui/PowerProfileItem.qml:193
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr ""
-"El mode rendiment no està disponible perquè l'ordinador està massa calent."
+"El mode de rendiment no està disponible perquè l'ordinador està massa calent."
 
 #: package/contents/ui/PowerProfileItem.qml:195
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr "El mode rendiment no està disponible."
+msgstr "El mode de rendiment no està disponible."
 
 #: package/contents/ui/PowerProfileItem.qml:208
 #, kde-format
@@ -361,6 +362,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "S'ha activat manualment el mode rendiment"

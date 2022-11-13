@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-10 06:32+0100\n"
+"PO-Revision-Date: 2022-11-12 07:27+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -184,7 +184,7 @@ msgstr[1] "%1 aplikaziok Errendimendu modua aktibatzea eskatu dute"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistema Errendimendu moduan dago"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -196,7 +196,7 @@ msgstr[1] "%1 aplikaziok Energia aurrezteko modua aktibatzea eskatu dute"
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistema Energia aurrezteko moduan dago"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
