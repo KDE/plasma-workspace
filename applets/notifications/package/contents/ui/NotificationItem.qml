@@ -5,7 +5,6 @@
 */
 
 import QtQuick 2.8
-import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -16,7 +15,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
-ColumnLayout {
+Column {
     id: notificationItem
 
     property int maximumLineCount: 0
@@ -105,70 +104,82 @@ ColumnLayout {
     // Header
     Item {
         id: headingElement
-        Layout.fillWidth: true
-        Layout.preferredHeight: notificationHeading.implicitHeight
-        Layout.preferredWidth: notificationHeading.implicitWidth
-        Layout.bottomMargin: -parent.spacing
+        anchors {
+            left: parent.left
+            leftMargin: notificationItem.inHistory ? 0 : notificationItem.headingLeftPadding
+            right: parent.right
+            rightMargin: notificationItem.inHistory ? 0 : notificationItem.headingRightPadding
+        }
+        height: notificationHeading.implicitHeight - notificationItem.spacing
+        visible: !notificationItem.inGroup
 
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
         PlasmaCore.ColorScope.inherit: false
 
         PlasmaExtras.PlasmoidHeading {
             topInset: 0
-            anchors.fill: parent
-            visible: !notificationItem.inHistory
-        }
-
-        NotificationHeader {
-            id: notificationHeading
             anchors {
                 fill: parent
-                leftMargin: notificationItem.headingLeftPadding
-                rightMargin: notificationItem.headingRightPadding
+                bottomMargin: -notificationItem.spacing
             }
-
-            PlasmaCore.ColorScope.colorGroup: parent.PlasmaCore.ColorScope.colorGroup
-            PlasmaCore.ColorScope.inherit: false
-
-            inGroup: notificationItem.inGroup
-            inHistory: notificationItem.inHistory
-
-            notificationType: notificationItem.notificationType
-            jobState: notificationItem.jobState
-            jobDetails: notificationItem.jobDetails
-
-            onConfigureClicked: notificationItem.configureClicked()
-            onDismissClicked: notificationItem.dismissClicked()
-            onCloseClicked: notificationItem.closeClicked()
+            visible: !notificationItem.inHistory
         }
+    }
+
+    NotificationHeader {
+        id: notificationHeading
+        width: inGroup ? implicitWidth : parent.width
+
+        PlasmaCore.ColorScope.colorGroup: headingElement.PlasmaCore.ColorScope.colorGroup
+        PlasmaCore.ColorScope.inherit: false
+
+        parent: inGroup ? headerItemContainer : headingElement
+        inGroup: notificationItem.inGroup
+        inHistory: notificationItem.inHistory
+
+        notificationType: notificationItem.notificationType
+        jobState: notificationItem.jobState
+        jobDetails: notificationItem.jobDetails
+
+        onConfigureClicked: notificationItem.configureClicked()
+        onDismissClicked: notificationItem.dismissClicked()
+        onCloseClicked: notificationItem.closeClicked()
     }
 
     // Everything else that goes below the header
     // This is its own ColumnLayout-within-a-ColumnLayout because it lets us set
     // the left margin once rather than several times, in each of its children
     Item {
-        Layout.fillWidth: true
-        Layout.preferredHeight: childrenRect.height
-        Layout.leftMargin: notificationItem.extraSpaceForCriticalNotificationLine + (notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing)
+        id: bodyElement
+        anchors {
+            left: parent.left
+            right: parent.right
+            leftMargin: notificationItem.extraSpaceForCriticalNotificationLine + (notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing)
+        }
+        height: childrenRect.height
 
         Accessible.role: notificationItem.inHistory ? Accessible.NoRole : Accessible.Notification
         Accessible.name: summaryLabel.text
         Accessible.description: notificationItem.accessibleDescription
 
         // Notification body
-        RowLayout {
+        Item {
             id: summaryRow
             anchors {
                 left: parent.left
                 right: notificationItem.inGroup ? parent.right : iconContainer.left
                 rightMargin: notificationItem.inGroup ? 0 : notificationItem.spacing
             }
-            visible: summaryLabel.text !== ""
+            height: visible ? Math.max(summaryLabel.implicitHeight, headerItemContainer.height) : 0
+            visible: summaryLabel.text !== "" || notificationItem.inGroup
 
             PlasmaExtras.Heading {
                 id: summaryLabel
-                Layout.fillWidth: true
-                Layout.preferredHeight: implicitHeight
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    right: headerItemContainer.left
+                }
                 textFormat: Text.PlainText
                 maximumLineCount: 3
                 wrapMode: Text.WordWrap
@@ -209,6 +220,16 @@ ColumnLayout {
             }
 
             // inGroup headerItem is reparented here
+            Item {
+                id: headerItemContainer
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    leftMargin: notificationHeading.parent === headerItemContainer ? notificationItem.headingLeftPadding : 0
+                    right: parent.right
+                }
+                width: childrenRect.width
+                height: childrenRect.height
+            }
         }
 
         SelectableLabel {
@@ -220,7 +241,6 @@ ColumnLayout {
             height: truncated ? maximumHeight : implicitHeight
             anchors {
                 top: summaryRow.bottom
-                topMargin: summaryRow.visible && notificationItem.inGroup && iconContainer.visible ? notificationItem.spacing : 0
                 left: parent.left
                 right: iconContainer.left
                 rightMargin: iconContainer.visible ? notificationItem.spacing : 0
@@ -242,7 +262,7 @@ ColumnLayout {
             id: iconContainer
 
             width: visible ? iconItem.width : 0
-            height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + bodyLabel.anchors.topMargin + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
+            height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + bodyLabel.anchors.topMargin + (notificationItem.inGroup ? 0 : summaryRow.height)) : 0
             anchors {
                 top: notificationItem.inGroup ? bodyLabel.top : parent.top
                 right: parent.right
@@ -269,8 +289,8 @@ ColumnLayout {
     // Job progress reporting
     Loader {
         id: jobLoader
-        Layout.fillWidth: true
-        Layout.preferredHeight: item ? item.implicitHeight : 0
+        width: parent.width
+        height: item ? item.implicitHeight : 0
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
         visible: active
         sourceComponent: JobItem {
@@ -296,8 +316,8 @@ ColumnLayout {
     // Actions
     Item {
         id: actionContainer
-        Layout.fillWidth: true
-        Layout.preferredHeight: childrenRect.height
+        width: parent.width
+        height: childrenRect.height
         visible: actionRepeater.count > 0 && actionFlow.parent === this
 
         // Notification actions
@@ -404,47 +424,22 @@ ColumnLayout {
     // Thumbnails
     Loader {
         id: thumbnailStripLoader
-        Layout.leftMargin: notificationItem.thumbnailLeftPadding
-        Layout.rightMargin: notificationItem.thumbnailRightPadding
-        // no change in Layout.topMargin to keep spacing to notification text consistent
-        Layout.topMargin: 0
-        Layout.bottomMargin: notificationItem.thumbnailBottomPadding
-        Layout.fillWidth: true
-        Layout.preferredHeight: item ? item.implicitHeight : 0
+        anchors {
+            left: parent.left
+            leftMargin: notificationItem.thumbnailLeftPadding
+            right: parent.right
+            rightMargin: notificationItem.thumbnailRightPadding
+        }
+        height: item ? item.implicitHeight : 0
         active: notificationItem.urls.length > 0
         visible: active
         sourceComponent: ThumbnailStrip {
-            leftPadding: -thumbnailStripLoader.Layout.leftMargin
-            rightPadding: -thumbnailStripLoader.Layout.rightMargin
+            leftPadding: -thumbnailStripLoader.anchors.leftMargin
+            rightPadding: -thumbnailStripLoader.anchors.rightMargin
             topPadding: -notificationItem.thumbnailTopPadding
-            bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
             urls: notificationItem.urls
             onOpenUrl: notificationItem.openUrl(url)
             onFileActionInvoked: notificationItem.fileActionInvoked(action)
         }
     }
-
-    states: [
-         State {
-            when: notificationItem.inGroup
-            PropertyChanges {
-                target: headingElement
-                parent: summaryRow
-            }
-
-            PropertyChanges {
-                target: summaryRow
-                visible: true
-            }
-            PropertyChanges {
-                target: summaryLabel
-                visible: true
-            }
-
-            /*PropertyChanges {
-                target: bodyLabel.Label
-                alignment: Qt.AlignTop
-            }*/
-        }
-    ]
 }
