@@ -177,10 +177,6 @@ ColumnLayout {
             }
         }
         onDropped: {
-            if (drop.keys.indexOf("text/x-fromplasmawallpaperplugin") !== -1) {
-                return;
-            }
-
             drop.urls.forEach(function (url) {
                 if (configDialog.currentWallpaper === "org.kde.image") {
                     imageWallpaper.addUsersWallpaper(url);
