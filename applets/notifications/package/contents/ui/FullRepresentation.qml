@@ -243,7 +243,7 @@ PlasmaExtras.Representation {
         contentItem: ListView {
             id: list
             focus: true
-            model: historyModel
+            model: Plasmoid.expanded ? historyModel : null
             currentIndex: -1
 
             topMargin: PlasmaCore.Units.smallSpacing * 2
