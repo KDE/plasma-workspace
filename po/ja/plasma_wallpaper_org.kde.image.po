@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:47+0000\n"
 "PO-Revision-Date: 2020-01-17 19:18+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -85,13 +85,13 @@ msgid "Select Background Color"
 msgstr ""
 
 # ACCELERATOR changed by translator
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, fuzzy, kde-format
 #| msgid "Add Image..."
 msgid "Add Image…"
 msgstr "画像を追加..."
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."

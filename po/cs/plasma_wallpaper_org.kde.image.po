@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:47+0000\n"
 "PO-Revision-Date: 2022-06-29 14:21+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -82,12 +82,12 @@ msgstr "Plná barva"
 msgid "Select Background Color"
 msgstr "Vyberte barvu pozadí"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
 msgstr "Přidat obrázek…"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"

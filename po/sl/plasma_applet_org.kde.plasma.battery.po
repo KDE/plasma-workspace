@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-12 19:44+0100\n"
+"PO-Revision-Date: 2022-11-13 07:25+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -188,7 +188,7 @@ msgstr[3] "%1 aplikacij je zahtevalo aktiviranje učinkovitega načina"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistem je v učinkovitem načinu"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -202,7 +202,7 @@ msgstr[3] "%1 aplikacij je zahtevalo aktiviranje varčevalnega načina"
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistem je v načinu varčevanja"
 
 #: package/contents/ui/main.qml:305
 #, kde-format

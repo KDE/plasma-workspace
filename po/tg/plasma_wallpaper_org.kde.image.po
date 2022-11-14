@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:47+0000\n"
 "PO-Revision-Date: 2019-09-23 20:17+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -77,13 +77,13 @@ msgstr "Ранги яклухт"
 msgid "Select Background Color"
 msgstr "Интихоби ранги замина"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, fuzzy, kde-format
 #| msgid "Add Image..."
 msgid "Add Image…"
 msgstr "Илова кардани тасвир..."
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."

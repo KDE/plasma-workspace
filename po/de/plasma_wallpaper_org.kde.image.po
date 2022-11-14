@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:47+0000\n"
 "PO-Revision-Date: 2022-03-13 09:49+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -75,12 +75,12 @@ msgstr "Einfarbig"
 msgid "Select Background Color"
 msgstr "Hintergrundfarbe auswählen"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
 msgstr "Bild hinzufügen ..."
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"

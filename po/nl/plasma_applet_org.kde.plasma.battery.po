@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-10 19:20-0400\n"
+"PO-Revision-Date: 2022-11-13 15:39+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -178,7 +178,7 @@ msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Prestatie"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Systeem is in modus prestatie"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -190,7 +190,7 @@ msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Energie sparen"
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Systeem is in modus energie besparen"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
