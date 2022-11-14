@@ -147,7 +147,8 @@ ColumnLayout {
     Item {
         Layout.fillWidth: true
         Layout.preferredHeight: childrenRect.height
-        Layout.leftMargin: notificationItem.extraSpaceForCriticalNotificationLine
+        Layout.leftMargin: notificationItem.extraSpaceForCriticalNotificationLine + (notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing)
+        Layout.rightMargin: notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing
 
         // Notification body
         RowLayout {
