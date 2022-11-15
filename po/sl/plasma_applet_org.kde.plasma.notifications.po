@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2022-11-12 19:43+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -419,35 +419,35 @@ msgstr "Skrči"
 msgid "Close"
 msgstr "Zapri"
 
-#: package/contents/ui/NotificationItem.qml:177
+#: package/contents/ui/NotificationItem.qml:178
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (v premoru)"
 
-#: package/contents/ui/NotificationItem.qml:182
+#: package/contents/ui/NotificationItem.qml:183
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Spodletelo)"
 
-#: package/contents/ui/NotificationItem.qml:184
+#: package/contents/ui/NotificationItem.qml:185
 #, kde-format
 msgid "Job Failed"
 msgstr "Posel je spodletel"
 
-#: package/contents/ui/NotificationItem.qml:188
+#: package/contents/ui/NotificationItem.qml:189
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Zaključeno)"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgid "Job Finished"
 msgstr "Posel zaključen"
 
-#: package/contents/ui/NotificationItem.qml:332
+#: package/contents/ui/NotificationItem.qml:333
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

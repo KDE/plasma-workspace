@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:48+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2021-06-16 00:31+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -428,35 +428,35 @@ msgstr "Suskleisti"
 msgid "Close"
 msgstr "Užverti"
 
-#: package/contents/ui/NotificationItem.qml:177
+#: package/contents/ui/NotificationItem.qml:178
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (pristabdyta)"
 
-#: package/contents/ui/NotificationItem.qml:182
+#: package/contents/ui/NotificationItem.qml:183
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (nepavyko)"
 
-#: package/contents/ui/NotificationItem.qml:184
+#: package/contents/ui/NotificationItem.qml:185
 #, kde-format
 msgid "Job Failed"
 msgstr "Užduotis nepavyko"
 
-#: package/contents/ui/NotificationItem.qml:188
+#: package/contents/ui/NotificationItem.qml:189
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (užbaigta)"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgid "Job Finished"
 msgstr "Užduotis baigta"
 
-#: package/contents/ui/NotificationItem.qml:332
+#: package/contents/ui/NotificationItem.qml:333
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

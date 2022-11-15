@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2022-06-14 10:56+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "General"
 msgstr "Umum"
 
-#: contents/ui/AlbumArtStackView.qml:161
+#: contents/ui/AlbumArtStackView.qml:169
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:80
 #, kde-format
 msgid "No media playing"
 msgstr "Tidak ada media yang diputar"

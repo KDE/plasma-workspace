@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-15 00:48+0000\n"
 "PO-Revision-Date: 2018-04-03 17:10+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "General"
 msgstr "Obecné"
 
-#: contents/ui/AlbumArtStackView.qml:161
+#: contents/ui/AlbumArtStackView.qml:169
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:80
 #, kde-format
 msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
