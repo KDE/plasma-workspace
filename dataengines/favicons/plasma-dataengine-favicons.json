@@ -19,6 +19,7 @@
         "Description[de]": "Daten-Treiber zum Holen von Webseitensymbolen von Webseiten",
         "Description[en_GB]": "Data Engine for getting favicons of web sites",
         "Description[es]": "Motor de datos para obtener favicons de los sitios web",
+        "Description[et]": "Andmemootor veebilehekülgede saidiikoonide hankimiseks",
         "Description[eu]": "Webgunetako web-ikonoak eskuratzeko datu-motorra",
         "Description[fi]": "Tietomoottori verkkosivustokuvakkeiden noutoon",
         "Description[fr]": "Moteur de données permettant d'obtenir les émoticônes de sites Internet",

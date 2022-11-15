@@ -19,6 +19,7 @@
         "Description[de]": "Aktualisierung von Anwendungs-Aktionen (via kuiserver)",
         "Description[en_GB]": "Application job updates (via kuiserver)",
         "Description[es]": "Actualizaciones de la aplicación (vía kuiserver)",
+        "Description[et]": "Rakenduse töö uuendused (kuiserver'i kaudu)",
         "Description[eu]": "Aplikazio-lanen eguneratzea (kuiserver bidez)",
         "Description[fi]": "Sovellustyöpäivitykset (kuiserverin kautta)",
         "Description[fr]": "Mises à jours des tâches d'applications (grâce à « kuiserver »)",

@@ -19,6 +19,7 @@
         "Description[de]": "Stellt Informationen über Medienspieler unter Verwendung von MPRIS2 bereit und ermöglicht deren Steuerung",
         "Description[en_GB]": "Provides information from and control over media players via MPRIS2",
         "Description[es]": "Proporciona información y control sobre reproductores multimedia vía MPRIS2",
+        "Description[et]": "Teabe hankimine meediamängijatest ja nende juhtimine MPRIS2 kaudu",
         "Description[eu]": "Multimedia-jotzaileei buruzko informazioa ematen du eta haiek kontrolatzen ditu MPRIS2 bidez",
         "Description[fi]": "Tarjoaa mediasoitintiedot ja mediasoitinten hallinnan MPRIS2:n avulla",
         "Description[fr]": "Fournit des informations sur les lecteurs de média et les contrôle avec « MPRIS2 ».",

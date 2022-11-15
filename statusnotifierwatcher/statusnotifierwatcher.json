@@ -12,6 +12,7 @@
         "Description[de]": "Verwaltet Dienste, die eine Schnittstelle für Status-Informationen bereitstellen",
         "Description[en_GB]": "Manages services that provide status notifier user interfaces",
         "Description[es]": "Gestiona servicios que proporcionan interfaces de usuario para el notificador de estado",
+        "Description[et]": "Teenuste haldamine, mis pakuvad olekumärguannete kasutajaliidest",
         "Description[eu]": "Egora-jakinarazlerako erabiltzaile-interfazeak hornitzen dituen zerbitzuak kudeatzen ditu",
         "Description[fi]": "Hallitsee tilailmoitinkäyttöliittymän tarjoavia palveluja",
         "Description[fr]": "Gère les services fournissant des interfaces utilisateurs pour la notification d'état",

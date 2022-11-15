@@ -12,6 +12,7 @@
         "Description[de]": "Geolokalisierung mittels IP-Adresse.",
         "Description[en_GB]": "Geolocation from IP address.",
         "Description[es]": "Geolocalización desde una dirección IP.",
+        "Description[et]": "Geolokatsioon IP-aadressi põhjal",
         "Description[eu]": "Geokokapena IP helbidetik.",
         "Description[fi]": "Sijaintitieto IP-osoitteesta.",
         "Description[fr]": "Géo-localisation depuis une adresse IP.",

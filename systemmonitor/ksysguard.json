@@ -12,6 +12,7 @@
         "Description[de]": "Startet KSysguard mit Strg+Esc",
         "Description[en_GB]": "Launches KSysguard on Ctrl + Escape",
         "Description[es]": "Lanza KSysguard al pulsar Ctrl + Escape",
+        "Description[et]": "KSysguardi käivitamine Ctrl+Escape vajutamisel",
         "Description[eu]": "KSysguard jaurtitzen du Ktrl + Ihes sakatzean",
         "Description[fi]": "Käynnistää Ctrl+Esc-painalluksella KSysGuardin",
         "Description[fr]": "Lancer KSysguard avec « CTRL » + « Échap »",

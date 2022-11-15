@@ -12,6 +12,7 @@
         "Description[de]": "Die Systemzeitzone den Anwendungen zur Verfügung stellen",
         "Description[en_GB]": "Provides the system's time zone to applications",
         "Description[es]": "Proporciona la zona horaria del sistema a las aplicaciones",
+        "Description[et]": "Süsteemi ajavööndi edastamine rakendustele",
         "Description[eu]": "Aplikazioei sistemaren ordu-eremua adierazten die",
         "Description[fi]": "Tarjoaa ohjelmille järjestelmän aikavyöhyketiedon",
         "Description[fr]": "Fournit le fuseau horaire du système aux applications.",

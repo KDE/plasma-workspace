@@ -12,6 +12,7 @@
         "Description[de]": "Stellt eine Benutzeroberfläche für Hardwareereignisse zur Verfügung",
         "Description[en_GB]": "Provides a user interface for hardware events",
         "Description[es]": "Proporciona una interfaz de usuario para eventos del hardware",
+        "Description[et]": "Riistvarasündmuste kasutajaliides",
         "Description[eu]": "Hardware gertaerentzako erabiltzaile interfaze bat hornitzen du",
         "Description[fi]": "Tarjoaa käyttöliittymän laitteistotapahtumiin",
         "Description[fr]": "Fournit une interface utilisateur pour les évènements matériels",
