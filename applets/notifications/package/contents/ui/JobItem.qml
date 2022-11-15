@@ -204,6 +204,7 @@ ColumnLayout {
 
     Loader {
         Layout.fillWidth: true
+        Layout.preferredHeight: item ? item.implicitHeight : 0
         active: expandButton.checked
         // Loader doesn't reset its height when unloaded, just hide it altogether
         visible: active
