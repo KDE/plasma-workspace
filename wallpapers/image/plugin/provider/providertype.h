@@ -6,15 +6,14 @@
 
 #pragma once
 
-class Provider
+namespace Provider
 {
-    Q_GADGET
+Q_NAMESPACE
 
-public:
-    enum class Type {
-        Unknown,
-        Image,
-        Package,
-    };
-    Q_ENUM(Type)
+enum class Type {
+    Unknown,
+    Image,
+    Package,
 };
+Q_ENUM_NS(Type)
+}

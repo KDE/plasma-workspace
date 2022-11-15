@@ -258,12 +258,18 @@ void MediaProxy::determineProviderType()
 {
     QFileInfo info(m_formattedSource.toLocalFile());
 
+    auto oldType = m_providerType;
+
     if (info.isFile()) {
         m_providerType = Provider::Type::Image;
     } else if (info.isDir()) {
         m_providerType = Provider::Type::Package;
     } else {
         m_providerType = Provider::Type::Unknown;
+    }
+
+    if (oldType != m_providerType) {
+        Q_EMIT providerTypeChanged();
     }
 }
 

@@ -146,6 +146,12 @@ QQC2.StackView {
             pendingImage = null;
         }
 
+        if (mediaProxy.providerType == Wallpaper.Provider.Unknown) {
+            console.error("The backend got an unknown wallpaper provider type. The wallpaper will now fall back to the default. Please check your wallpaper configuration!");
+            mediaProxy.useSingleImageDefaults();
+            return;
+        }
+
         doesSkipAnimation = root.currentItem == undefined || !!skipAnimation;
         const baseImage = createBackgroundComponent();
         pendingImage = baseImage.createObject(root, {

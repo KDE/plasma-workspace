@@ -19,7 +19,7 @@
 /**
  * A proxy class that converts a provider url to a real resource url.
  */
-class MediaProxy : public QObject, public QQmlParserStatus, public Provider
+class MediaProxy : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
@@ -36,6 +36,11 @@ class MediaProxy : public QObject, public QQmlParserStatus, public Provider
      *      image://package/get? (KPackage)
      */
     Q_PROPERTY(QUrl modelImage READ modelImage NOTIFY modelImageChanged)
+
+    /**
+     * Type of the current background provider
+     */
+    Q_PROPERTY(Provider::Type providerType MEMBER m_providerType NOTIFY providerTypeChanged)
 
     /**
      * Type of the current wallpaper
@@ -89,6 +94,12 @@ Q_SIGNALS:
      * reload the wallpaper even if the image path is not changed.
      */
     void colorSchemeChanged();
+
+    /**
+     * Emitted when the type of the background provider changes.
+     * @see determineProviderType
+     */
+    void providerTypeChanged();
 
 private Q_SLOTS:
     /**
