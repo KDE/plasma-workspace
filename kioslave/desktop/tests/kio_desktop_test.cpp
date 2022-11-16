@@ -34,8 +34,6 @@ public:
 private Q_SLOTS:
     void initTestCase()
     {
-        setenv("KDE_FORK_SLAVES", "yes", true);
-
         // make KIOs use test mode too
         setenv("KIOSLAVE_ENABLE_TESTMODE", "1", 1);
         QStandardPaths::setTestModeEnabled(true);
