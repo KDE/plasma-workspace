@@ -8,7 +8,6 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtGraphicalEffects 1.15
 
 Rectangle {
     id: backgroundColor
@@ -35,9 +34,6 @@ Rectangle {
         active: blurEnabled
         visible: active
         z: 0
-        sourceComponent: FastBlur {
-            source: backgroundColor.blurSource
-            radius: 32
-        }
+        source: "BlurComponent.qml"
     }
 }
