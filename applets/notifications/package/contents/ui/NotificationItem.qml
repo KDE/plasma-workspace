@@ -214,6 +214,7 @@ ColumnLayout {
             height: truncated ? maximumHeight : implicitHeight
             anchors {
                 top: summaryRow.bottom
+                topMargin: summaryRow.visible && notificationItem.inGroup ? notificationItem.spacing : 0
                 left: parent.left
                 right: iconContainer.left
                 rightMargin: iconContainer.visible ? notificationItem.spacing : 0
@@ -235,10 +236,9 @@ ColumnLayout {
             id: iconContainer
 
             width: visible ? iconItem.width : 0
-            height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
+            height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + bodyLabel.anchors.topMargin + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
             anchors {
                 top: notificationItem.inGroup ? bodyLabel.top : parent.top
-                topMargin: notificationItem.inGroup ? PlasmaCore.Units.smallSpacing : 0
                 right: parent.right
             }
             visible: iconItem.active
