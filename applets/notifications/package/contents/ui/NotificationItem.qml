@@ -214,7 +214,7 @@ ColumnLayout {
             height: truncated ? maximumHeight : implicitHeight
             anchors {
                 top: summaryRow.bottom
-                topMargin: summaryRow.visible && notificationItem.inGroup ? notificationItem.spacing : 0
+                topMargin: summaryRow.visible && notificationItem.inGroup && iconContainer.visible ? notificationItem.spacing : 0
                 left: parent.left
                 right: iconContainer.left
                 rightMargin: iconContainer.visible ? notificationItem.spacing : 0
