@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2020-01-05 18:35+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -161,17 +161,17 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:77
+#: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Estado e notificacións"
 
-#: package/contents/ui/ExpandedRepresentation.qml:93
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:182
+#: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
 msgid "Keep Open"
 msgstr "Manter aberto"

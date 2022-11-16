@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-28 08:49+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Otvoriť s %1"
 msgid "Open with…"
 msgstr "Otvoriť s..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
@@ -276,13 +276,13 @@ msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Zobraziť podrobnosti"
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Viac možností..."
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "Otvoriť"

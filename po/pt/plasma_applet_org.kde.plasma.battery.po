@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-05 13:16+0000\n"
+"PO-Revision-Date: 2022-11-15 18:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -176,7 +176,7 @@ msgstr[1] "%1 aplicações pediram a activação do modo de performance"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "O sistema está no modo de Performance"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -188,7 +188,7 @@ msgstr[1] "%1 aplicações pediram a activação do modo de poupança de energia
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "O sistema está no modo de Poupança de Energia"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
@@ -206,10 +206,9 @@ msgid "&Show Energy Information…"
 msgstr "Mo&strar a Informação de Energia…"
 
 #: package/contents/ui/main.qml:373
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Mostrar a Percentagem da Bateria no Ícone"
+msgstr "Mostrar a Percentagem da Bateria no Ícone com a Carga Incompleta"
 
 #: package/contents/ui/main.qml:379
 #, kde-format
@@ -349,6 +348,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "O modo de performance foi activado manualmente"

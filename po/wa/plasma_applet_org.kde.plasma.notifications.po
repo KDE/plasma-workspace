@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2011-01-09 11:22+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -284,13 +284,13 @@ msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-28 08:49+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -158,17 +158,17 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:77
+#: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Stav a upozornenia"
 
-#: package/contents/ui/ExpandedRepresentation.qml:93
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Viac akcií"
 
-#: package/contents/ui/ExpandedRepresentation.qml:182
+#: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
 msgid "Keep Open"
 msgstr "Držať otvorené"

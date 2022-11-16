@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-05-30 11:02+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Buka dengan %1"
 msgid "Open with…"
 msgstr "Buka dengan..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Buka Folder Yang Mengandungnya"
@@ -270,13 +270,13 @@ msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Tampilkan Perincian"
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Opsi Selebihnya..."
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "Buka"

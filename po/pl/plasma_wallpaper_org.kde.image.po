@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-06-26 20:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -171,17 +171,17 @@ msgstr ""
 msgid "Recommended wallpaper file"
 msgstr "Polecany plik tapety"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalog z tapetami, z którego wyświetlać obrazy"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Open Image"
 msgstr "Otwórz obraz"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
 msgstr "Pliki obrazów"

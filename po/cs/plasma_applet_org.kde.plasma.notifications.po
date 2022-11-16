@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-06-29 12:14+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Otevřít pomocí %1"
 msgid "Open with…"
 msgstr "Otevřít pomocí..."
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otevřít odpovídající složku"
@@ -272,13 +272,13 @@ msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Zobrazit podrobnosti"
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:169
 #, kde-format
 msgid "More Options…"
 msgstr "Více možností…"
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "Otevřít"

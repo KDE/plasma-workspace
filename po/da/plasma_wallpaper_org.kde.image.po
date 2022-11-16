@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2021-09-27 20:54+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -174,17 +174,17 @@ msgstr ""
 msgid "Recommended wallpaper file"
 msgstr "Anbefalet baggrundsbillede-fil"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Mappe med baggrundsbilledet som der skal vises dias fra"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Open Image"
 msgstr "Åbn billede"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
 msgstr "Billedfiler"

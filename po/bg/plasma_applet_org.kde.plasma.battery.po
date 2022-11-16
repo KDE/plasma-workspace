@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-11 20:58+0100\n"
+"PO-Revision-Date: 2022-11-15 20:34+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -182,7 +182,7 @@ msgstr[1] ""
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Системата е в режим на висока производителност"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -196,7 +196,7 @@ msgstr[1] ""
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Системата е в режим на пестене на енергия"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
