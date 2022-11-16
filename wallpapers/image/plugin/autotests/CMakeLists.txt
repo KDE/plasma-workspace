@@ -48,3 +48,7 @@ add_test(NAME testimagebackend
     -input tst_imagebackend.qml
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+# ImageFrontend test
+ecm_add_test(tst_imagefrontend.cpp TEST_NAME testimagefrontend
+    LINK_LIBRARIES Qt::Qml Qt::QuickTest Qt::Test plasma_wallpaper_imageplugin_static)

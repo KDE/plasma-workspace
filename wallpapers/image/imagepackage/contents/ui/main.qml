@@ -7,31 +7,15 @@
 */
 
 import QtQuick 2.5
-import QtQuick.Controls 2.1 as QQC2
 import QtQuick.Window 2.2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
-import org.kde.plasma.core 2.0 as PlasmaCore
 
-QQC2.StackView {
+Item {
     id: root
 
-    readonly property url modelImage: mediaProxy.modelImage
-    readonly property int fillMode: wallpaper.configuration.FillMode
-    readonly property string configColor: wallpaper.configuration.Color
-    readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
-    /**
-     * Stores pending image here to avoid the default image overriding the true image.
-     *
-     * @see BUG 456189
-     */
-    property Item pendingImage
-
-    property bool doesSkipAnimation: true
-
-    // Ppublic API functions accessible from C++:
-
+    // Public API functions accessible from C++:
     // e.g. used by WallpaperInterface for drag and drop
     function setUrl(url) {
         if (wallpaper.pluginName === "org.kde.image") {
@@ -55,7 +39,7 @@ QQC2.StackView {
 
     // e.g. used by slideshow wallpaper plugin
     function action_open() {
-        mediaProxy.openModelImage();
+        view.mediaProxy.openModelImage();
     }
 
     //private
@@ -92,9 +76,13 @@ QQC2.StackView {
         }
     }
 
-    Wallpaper.MediaProxy {
-        id: mediaProxy
+    ImageStackView {
+        id: view
+        anchors.fill: parent
 
+        fillMode: wallpaper.configuration.FillMode
+        configColor: wallpaper.configuration.Color
+        blur: wallpaper.configuration.Blur
         source: {
             if (wallpaper.pluginName === "org.kde.slideshow") {
                 return imageWallpaper.image;
@@ -104,107 +92,7 @@ QQC2.StackView {
             }
             return wallpaper.configuration.Image;
         }
-        targetSize: root.sourceSize
-
-        onActualSizeChanged: Qt.callLater(loadImage);
-        onColorSchemeChanged: loadImageImmediately();
-    }
-
-    onFillModeChanged: Qt.callLater(loadImage);
-    onModelImageChanged: Qt.callLater(loadImage);
-    onConfigColorChanged: Qt.callLater(loadImage);
-    onBlurChanged: Qt.callLater(loadImage);
-
-    property Component staticImageComponent
-    property Component animatedImageComponent
-
-    function createBackgroundComponent() {
-        switch (mediaProxy.backgroundType) {
-        case Wallpaper.BackgroundType.Image: {
-            if (!staticImageComponent) {
-                staticImageComponent = Qt.createComponent("mediacomponent/StaticImageComponent.qml");
-            }
-            return staticImageComponent;
-        }
-        case Wallpaper.BackgroundType.AnimatedImage: {
-            if (!animatedImageComponent) {
-                animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
-            }
-            return animatedImageComponent;
-        }
-        }
-    }
-
-    function loadImageImmediately() {
-        loadImage(true);
-    }
-
-    function loadImage(skipAnimation) {
-        if (pendingImage) {
-            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
-            pendingImage.destroy();
-            pendingImage = null;
-        }
-
-        if (mediaProxy.providerType == Wallpaper.Provider.Unknown) {
-            console.error("The backend got an unknown wallpaper provider type. The wallpaper will now fall back to the default. Please check your wallpaper configuration!");
-            mediaProxy.useSingleImageDefaults();
-            return;
-        }
-
-        doesSkipAnimation = root.currentItem == undefined || !!skipAnimation;
-        const baseImage = createBackgroundComponent();
-        pendingImage = baseImage.createObject(root, {
-            // Use mediaProxy instead of root because colorSchemeChanged needs immediately update the wallpaper
-            "source": mediaProxy.modelImage,
-                        "fillMode": root.fillMode,
-                        "sourceSize": root.sourceSize,
-                        "color": root.configColor,
-                        "blur": root.blur,
-            "opacity": 0,
-            "width": root.width,
-            "height": root.height,
-        });
-
-        pendingImage.statusChanged.connect(replaceWhenLoaded);
-        replaceWhenLoaded();
-    }
-
-    function replaceWhenLoaded() {
-        if (pendingImage.status === Image.Loading) {
-            return;
-        }
-
-        pendingImage.statusChanged.disconnect(replaceWhenLoaded);
-        // BUG 454908: Update accent color
-        pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
-        pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
-        root.replace(pendingImage, {}, QQC2.StackView.Transition);
-
-        wallpaper.loading = false;
-
-        if (pendingImage.status !== Image.Ready) {
-            mediaProxy.useSingleImageDefaults();
-        }
-
-        pendingImage = null;
-    }
-
-    replaceEnter: Transition {
-        OpacityAnimator {
-            id: replaceEnterOpacityAnimator
-            from: 0
-            to: 1
-            // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
-            // 1 is HACK for https://bugreports.qt.io/browse/QTBUG-106797 to avoid flickering
-            duration: root.doesSkipAnimation ? 1 : Math.round(PlasmaCore.Units.veryLongDuration * 2.5)
-        }
-    }
-    // Keep the old image around till the new one is fully faded in
-    // If we fade both at the same time you can see the background behind glimpse through
-    replaceExit: Transition{
-        PauseAnimation {
-            duration: replaceEnterOpacityAnimator.duration
-        }
+        sourceSize: root.sourceSize
+        wallpaperInterface: wallpaper
     }
 }
