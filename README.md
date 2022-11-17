@@ -1,6 +1,6 @@
 ## Plasma Workspace
 
-Plasma Workspace is used as base for both Plama Desktop and Plasma Mobile.
+Plasma Workspace is used as the base for Plasma Desktop, Mobile, and Bigscreen.
 It contains shared KCMs, applets as well as multiple libraries.
 
 ### TaskManager Library
