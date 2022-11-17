@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-17 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 06:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -392,35 +392,35 @@ msgstr "Ikonotu"
 msgid "Close"
 msgstr "Itxi"
 
-#: package/contents/ui/NotificationItem.qml:178
+#: package/contents/ui/NotificationItem.qml:177
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (Etenda dago)"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:182
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (huts egin du)"
 
-#: package/contents/ui/NotificationItem.qml:185
+#: package/contents/ui/NotificationItem.qml:184
 #, kde-format
 msgid "Job Failed"
 msgstr "Atazak huts egin du"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Amaitu da)"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Finished"
 msgstr "Ataza amaituta"
 
-#: package/contents/ui/NotificationItem.qml:333
+#: package/contents/ui/NotificationItem.qml:332
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
