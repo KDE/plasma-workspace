@@ -17,6 +17,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QUrl>
+#include <kdesktopfile.h>
 
 namespace TaskManager
 {
@@ -123,6 +124,11 @@ void WaylandStartupTasksModel::Private::addActivation(KWayland::Client::PlasmaAc
 
         const QUrl launcherUrl(QStringLiteral("applications:") + desktopFileName);
         const AppData appData = appDataFromUrl(QUrl::fromLocalFile(desktopFilePath));
+
+        KDesktopFile desktop(desktopFilePath);
+        if (!desktop.desktopGroup().readEntry(QLatin1String("StartupNotify"), desktop.desktopGroup().readEntry(QLatin1String("X-KDE-StartupNotify"), true))) {
+            return;
+        }
 
         const int count = startups.count();
         q->beginInsertRows(QModelIndex(), count, count);
