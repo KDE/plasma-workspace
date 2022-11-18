@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:47+0000\n"
-"PO-Revision-Date: 2021-06-16 00:34+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:30+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "Rodyti pilną programos meniu"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "Atverti meniu"
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format

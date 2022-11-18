@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-27 00:45+0000\n"
-"PO-Revision-Date: 2020-12-16 20:09+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 00:54+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -76,27 +76,22 @@ msgid "Suspends the system to disk"
 msgstr "Pristabdo sistemą į diską"
 
 #: PowerDevilRunner.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword, it should end with a space"
-#| msgid "screen brightness "
+#, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
-msgstr "ekrano ryškumas "
+msgstr "ekrano ryškumas <procentinė reikšmė>"
 
 #: PowerDevilRunner.cpp:67
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "Lists screen brightness options or sets it to the brightness defined by :"
-#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
-#| "brightness"
+#, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
-"Išvardija ekrano ryškumo parinktis arba nustato jo ryškumą, apibrėžtą pagal :"
-"q:; pvz., ekrano ryškumas 50 pritemdys ekraną iki 50% maksimalaus ryškumo"
+"Išvardija ekrano ryškumo parinktis arba nustato jo ryškumą, apibrėžtą pagal "
+"paieškos užklausą; pvz., ekrano ryškumas 50 pritemdys ekraną iki 50% "
+"maksimalaus ryškumo"
 
 #: PowerDevilRunner.cpp:95
 #, kde-format

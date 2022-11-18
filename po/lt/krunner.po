@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:47+0000\n"
-"PO-Revision-Date: 2019-07-04 23:24+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:43+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -64,59 +64,59 @@ msgstr "Užklausa, kurią paleisti. Naudojama tik tuomet, jei nepateikta -c"
 #: qml/RunCommand.qml:75
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Konfigūruoti"
 
 #: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "Konfigūruoti KRunner elgseną"
 
 #: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "Konfigūruoti KRunner…"
 
 #: qml/RunCommand.qml:91
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "Ieškoti „%1“…"
 
 #: qml/RunCommand.qml:92
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "Ieškoti…"
 
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "Rodyti pagalbą, kaip naudotis"
 
 #: qml/RunCommand.qml:239
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "Prisegti"
 
 #: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "Prisegti paiešką"
 
 #: qml/RunCommand.qml:242
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Palikti atvertą"
 
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "Paskiausios užklausos"
 
 #: qml/RunCommand.qml:323
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Šalinti"
 
 #~ msgid "krunner"
 #~ msgstr "krunner"

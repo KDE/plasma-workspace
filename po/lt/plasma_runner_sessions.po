@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-26 00:48+0000\n"
-"PO-Revision-Date: 2020-02-02 00:19+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 00:51+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: sessionrunner.cpp:28 sessionrunner.cpp:68
 #, kde-format
@@ -74,19 +74,18 @@ msgstr "perkrauti"
 #, kde-format
 msgctxt "save session command"
 msgid "save"
-msgstr ""
+msgstr "įrašyti"
 
 #: sessionrunner.cpp:40
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Įrašo dabartinį seansą, kad jį galima būtų atkurti"
 
 #: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt "save session command"
 msgid "save session"
-msgstr "naujas seansas"
+msgstr "įrašyti seansą"
 
 #: sessionrunner.cpp:44
 #, kde-format
@@ -162,15 +161,14 @@ msgid "Lock the screen"
 msgstr "Užrakinti ekraną"
 
 #: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save the session"
-msgstr "naujas seansas"
+msgstr "Įrašyti seansą"
 
 #: sessionrunner.cpp:108
 #, kde-format
 msgid "Save the current session for session restoration"
-msgstr ""
+msgstr "Įrašyti dabartinį seansą, kad jį galima būtų atkurti"
 
 #: sessionrunner.cpp:129
 #, kde-format
@@ -179,10 +177,9 @@ msgid "sessions"
 msgstr "seansai"
 
 #: sessionrunner.cpp:150
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "perjungti naudotoją"
+msgstr "Perjungti naudotoją"
 
 #: sessionrunner.cpp:227
 #, kde-format
@@ -198,6 +195,11 @@ msgid ""
 "li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
 "(such as the application launcher)</li></ul>"
 msgstr ""
+"<p>Jūs ketinate įžengti į naują darbalaukio seansą.</p><p>Bus parodytas "
+"prisijungimo ekranas, o dabartinis seansas bus paslėptas.</p><p>Darbalaukio "
+"seansus galite perjungti, naudodami:</p><ul><li>Vald+Alt+F{seanso numeris}</"
+"li><li>Plasma paiešką (rašykite „perjungti“ arba „seansai“)</li><li>Plasma "
+"valdiklius (tokius kaip programų paleidyklė)</li></ul>"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Įspėjimas - Naujas seansas"

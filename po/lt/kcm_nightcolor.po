@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2021-09-06 23:00+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 02:02+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Bakstelėkite, norėdami pasirinkti savo vietą žemėlapyje."
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Spustelėkite, norėdami pasirinkti savo vietą žemėlapyje."
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Didinti"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -48,72 +48,60 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Modifikuota iš <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Pasaulinio vietų žemėlapio</"
+"link> pagal TUBS / Wikimedia Commons / <link url='https://creativecommons."
+"org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
-#, fuzzy, kde-format
-#| msgid "Latitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Platuma:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
-#, fuzzy, kde-format
-#| msgid "Longitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Ilguma:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Naktinė spalva padaro spalvas ekrane šiltesnes, kad jūsų pasirinktu "
-"laikotarpiu būtų sumažinta akių įtampa."
+msgstr "Mėlynos šviesos filtras padaro spalvas ekrane šiltesnes."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Aktyvavimo laikas:"
+msgstr "Perjungimo laikai:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Visada išjungta"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Nuo saulėlydžio iki saulėtekio esamoje vietoje"
+msgstr "Saulėlydis ir saulėtekis esamoje vietoje"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Nuo saulėlydžio iki saulėtekio pasirinktoje vietoje"
+msgstr "Saulėlydis ir saulėtekis pasirinktoje vietoje"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Tinkintas laikas"
+msgstr "Tinkinti laikai"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Visada įjungta"
+msgstr "Visada įjungta naktinė spalva"
 
 #: package/contents/ui/main.qml:156
-#, fuzzy, kde-kuit-format
-#| msgid ""
-#| "The device's location will be periodically updated using GPS (if "
-#| "available), or by sending network information to <a href=\"https://"
-#| "location.services.mozilla.com\">Mozilla Location Service</a>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "The device's location will be periodically updated using GPS (if available), "
@@ -121,15 +109,14 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 "Šio įrenginio vieta bus periodiškai atnaujinama naudojant GPS (jei "
-"prieinama) arba siunčiant tinklo informaciją į <a href=\"https://location."
-"services.mozilla.com\">„Mozilla“ vietos tarnybą (angl. Mozilla Location "
-"Service)</a>."
+"prieinama) arba siunčiant tinklo informaciją į <link url='https://location."
+"services.mozilla.com'>„Mozilla“ vietų tarnybą (angl. Mozilla Location "
+"Service)</link>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Naktinės spalvos temperatūra:"
+msgstr "Dieninės spalvos temperatūra:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -147,7 +134,7 @@ msgstr "Šilta"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Šalta (jokio filtro)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -156,8 +143,7 @@ msgid "Cool"
 msgstr "Šalta"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "Naktinės spalvos temperatūra:"
 
@@ -169,7 +155,7 @@ msgstr "Platuma: %1°   Ilguma: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Pradėti naktinę spalvą ties:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -179,7 +165,7 @@ msgstr "Įvesties formatas: VV:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Pradėti dieninę spalvą ties:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -206,27 +192,28 @@ msgid "Error: Transition time overlaps."
 msgstr "Klaida: Perėjimo laikas persidengia."
 
 #: package/contents/ui/main.qml:413
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr "Vieta"
+msgstr "Nustatoma vieta…"
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing back at %1"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Naktinė spalva pradės išsijunginėti %1"
+msgstr ""
+"Spalvų temperatūra %1 pradės keistis į naktinę spalvą, o iki %2 temperatūra "
+"bus pilnai pasikeitusi"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing back at %1"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Naktinė spalva pradės išsijunginėti %1"
+msgstr ""
+"Spalvų temperatūra %1 pradės keistis į dieninę spalvą, o iki %2 temperatūra "
+"bus pilnai pasikeitusi"
 
 #, fuzzy
 #~| msgid "Activate Night Color"

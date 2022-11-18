@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-10 19:47+0530\n"
+"PO-Revision-Date: 2022-11-17 19:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -178,7 +178,7 @@ msgstr[1] "%1 செயலிகள் அதிவேக பயன்முற�
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "கணினி அதிவேக பயன்முறையில் உள்ளது"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -190,7 +190,7 @@ msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்ப�
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "கணினி ஆற்றல் சேமிப்பு பயன்முறையில் உள்ளது"
 
 #: package/contents/ui/main.qml:305
 #, kde-format

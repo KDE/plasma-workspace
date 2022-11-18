@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-25 00:47+0000\n"
-"PO-Revision-Date: 2019-06-01 19:22+0000\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:31+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "Išvaizda"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
-msgstr ""
+msgstr "Dabar yra %1; Dabartinė data yra %2"
 
 #: contents/ui/configGeneral.qml:23
 #, kde-format

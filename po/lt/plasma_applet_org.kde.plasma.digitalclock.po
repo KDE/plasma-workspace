@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2021-12-12 14:51+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:27+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Pridėti…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Pridėti naują įvykį"
 
 #: package/contents/ui/CalendarView.qml:397
 #, kde-format
@@ -203,17 +203,16 @@ msgstr ""
 "\">Laiko formato dokumentacija</a>"
 
 #: package/contents/ui/configAppearance.qml:222
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Laiko rodymas:"
+msgstr "Teksto atvaizdavimas:"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatinis"
 
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format
@@ -221,34 +220,32 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"Tekstas naudos sistemos šriftą ir bus išplėstas, kad užpildytų prieinamą "
+"vietą."
 
 #: package/contents/ui/configAppearance.qml:237
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is a country name associated with a particular time zone in a zone "
-#| "selection dialog"
-#| msgid "Vanuatu"
+#, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr "Vanuatu"
+msgstr "Rankiniu būdu"
 
 #: package/contents/ui/configAppearance.qml:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Pasirinkti stilių…"
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1tšk. %2"
 
 #: package/contents/ui/configAppearance.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Pasirinkti šriftą"
 
 #: package/contents/ui/configCalendar.qml:44
 #, kde-format
@@ -365,12 +362,10 @@ msgid "Set Time Format…"
 msgstr "Nustatyti laiko formatą…"
 
 #: package/contents/ui/Tooltip.qml:31
-#, fuzzy, kde-format
-#| msgctxt "Reset calendar to today"
-#| msgid "Today"
+#, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "Šiandien"
+msgstr "Šiandien yra %1"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

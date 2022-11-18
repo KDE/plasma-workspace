@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-26 00:47+0000\n"
-"PO-Revision-Date: 2019-06-09 00:08+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 01:39+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: job_p.cpp:185
 #, kde-format
@@ -60,27 +60,24 @@ msgstr[2] "%1 failų"
 msgstr[3] "%1 failą"
 
 #: job_p.cpp:203
-#, fuzzy, kde-format
-#| msgctxt "Copying n of m files"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 iš %1 failo"
-msgstr[1] "%2 iš %1 failų"
-msgstr[2] "%2 iš %1 failų"
-msgstr[3] "%2 iš %1 failo"
+msgstr[0] "%2 iš %1 elemento"
+msgstr[1] "%2 iš %1 elementų"
+msgstr[2] "%2 iš %1 elementų"
+msgstr[3] "%2 iš %1 elemento"
 
 #: job_p.cpp:206 job_p.cpp:226
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 elementas"
+msgstr[1] "%1 elementai"
+msgstr[2] "%1 elementų"
+msgstr[3] "%1 elementas"
 
 #: job_p.cpp:213
 #, kde-format
@@ -89,17 +86,14 @@ msgid "%1 to %2"
 msgstr "%1 į %2"
 
 #: job_p.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
 msgstr[0] "%1 failą į %2"
-msgstr[1] "%1 failus į %2"
-msgstr[2] "%1 failų į %2"
-msgstr[3] "%1 failą į %2"
+msgstr[1] "%1 elementus į %2"
+msgstr[2] "%1 elementų į %2"
+msgstr[3] "%1 elementą į %2"
 
 #: job_p.cpp:236
 #, kde-format

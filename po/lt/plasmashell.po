@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-28 00:47+0000\n"
-"PO-Revision-Date: 2020-10-31 21:24+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 00:41+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -195,7 +195,7 @@ msgstr "Ekraninė klaviatūra išjungta"
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Unknown %1"
-msgstr ""
+msgstr "Nežinomas %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
@@ -235,12 +235,12 @@ msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 #: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr ""
+msgstr "Tvarkyti darbalaukius ir skydelius..."
 
 #: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
 #: shellcorona.cpp:1808
 #, kde-format
@@ -248,11 +248,10 @@ msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
 #: shellcorona.cpp:1844
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr "Tuščia %1"
+msgstr "Tuščias %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format
