@@ -176,17 +176,22 @@ PlasmaComponents3.ItemDelegate {
                     && root.remainingTime > 0
                     && root.battery["Is Power Supply"]
                     && ["Discharging", "Charging"].includes(root.battery.State)
+                readonly property bool isEstimatingRemainingTime: root.battery !== null
+                    && root.isPowerSupply
+                    && root.remainingTime === 0
+                    && root.battery.State === "Discharging"
 
                 LeftLabel {
                     text: root.battery.State === "Charging"
                         ? i18n("Time To Full:")
                         : i18n("Remaining Time:")
-                    visible: details.remainingTimeRowVisible
+                    visible: details.remainingTimeRowVisible || details.isEstimatingRemainingTime
                 }
 
                 RightLabel {
-                    text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
-                    visible: details.remainingTimeRowVisible
+                    text: details.isEstimatingRemainingTime ? i18nc("@info", "Estimating…")
+                        : KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
+                    visible: details.remainingTimeRowVisible || details.isEstimatingRemainingTime
                 }
 
                 readonly property bool healthRowVisible: root.battery !== null
