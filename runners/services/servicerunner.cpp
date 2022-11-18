@@ -176,7 +176,20 @@ private:
             const static QRegularExpression snapCleanupRegex(QStringLiteral("env BAMF_DESKTOP_FILE_HINT=.+ "));
             exec.remove(snapCleanupRegex);
         }
-        const QStringList resultingArgs = KIO::DesktopExecParser(KService(QString(), exec, QString()), {}).resultingArguments();
+
+        QStringList resultingArgs = KIO::DesktopExecParser(KService(QString(), exec, QString()), {}).resultingArguments();
+
+        // Remove special arguments that have no real impact on the application.
+        static const auto specialArgs = {QStringLiteral("-qwindowtitle"), QStringLiteral("-qwindowicon")};
+
+        for (const auto &specialArg : specialArgs) {
+            int index = resultingArgs.indexOf(specialArg);
+            if (index > -1 && resultingArgs.count() > index + 1) {
+                resultingArgs.removeAt(index);
+                resultingArgs.removeAt(index); // remove value, too
+            }
+        }
+
         match.setId(QStringLiteral("exec://") + resultingArgs.join(QLatin1Char(' ')));
         if (!service->genericName().isEmpty() && service->genericName() != name) {
             match.setSubtext(service->genericName());

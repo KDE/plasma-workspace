@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=KPatience
+Exec=kpat -qwindowtitle %c %u
+Type=Application
+Icon=kpat
+X-DocPath=kpat/index.html
+GenericName=Patience Card Game
+Comment=Solitaire card game
+X-DBUS-StartupType=Multi
+Categories=Qt;KDE;Game;CardGame;
+MimeType=application/vnd.kde.kpatience.savedstate;
+X-DBUS-ServiceName=org.kde.kpat

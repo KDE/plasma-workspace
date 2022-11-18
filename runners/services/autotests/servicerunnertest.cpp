@@ -38,6 +38,7 @@ private Q_SLOTS:
     void testJumpListActions();
     void testINotifyUsage();
     void testChromiumPWA();
+    void testSpecialArgs();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -322,6 +323,20 @@ void ServiceRunnerTest::testChromiumPWA()
         });
         QVERIFY(isOnlyUsrFiles);
     }
+}
+
+void ServiceRunnerTest::testSpecialArgs()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+
+    context.setQuery(QStringLiteral("kpat"));
+    runner.match(context);
+    auto matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        // Should have no -qwindowtitle at the end.
+        return match.id().endsWith(QLatin1String("kpat"));
+    }));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
