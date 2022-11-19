@@ -31,7 +31,7 @@ AbstractItem {
                     return model.AttentionIconName
                 }
             }
-            return model.Icon ? model.Icon : model.IconName
+            return model.Icon || model.IconName
         }
         active: taskIcon.containsMouse
     }
