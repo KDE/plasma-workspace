@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma_runner_webshortcuts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-02 00:47+0000\n"
-"PO-Revision-Date: 2020-10-31 21:31+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-19 00:05+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 "X-Generator: Lokalize 1.1\n"
 
 #: webshortcutrunner.cpp:58
@@ -27,7 +27,7 @@ msgstr "Atveria saityno naršyklėje „%1“ su užklausa :q:."
 #: webshortcutrunner.cpp:63
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Ieškoti naudojant „DuckDuckGo“ bang sintaksę"
 
 #: webshortcutrunner.cpp:94
 #, kde-format

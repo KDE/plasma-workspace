@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-19 00:47+0000\n"
 "PO-Revision-Date: 2022-10-18 13:07+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "Plasma"
 msgid "Plasma Shell"
 msgstr "Plasma örtüyü"
 
-#: main.cpp:100
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript sazlayıcısını aktiv etmək"
 
-#: main.cpp:103
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Çökdükdən sonra plasma üz qabığını avtomatik başlatmamaq"
 
-#: main.cpp:106
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Göstərilən modulun məcburi başladılması"
 
-#: main.cpp:111
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -66,12 +66,12 @@ msgstr ""
 "plasmashell-i müstəqil tətbiq kimi başlatmaq. \"--shell-pluqin\" ayarının "
 "verilməsi tələb olunur"
 
-#: main.cpp:113
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Cari başladılan əməliyyatı əvəz etmək"
 
-#: main.cpp:116
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -80,22 +80,22 @@ msgstr ""
 "Test rejimini aktiv edir və test mühitini qurmaq üçün layout javascript "
 "faylını təyin edir"
 
-#: main.cpp:117
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr "fayl"
 
-#: main.cpp:121
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "İstifadəçi rəyi üçün mövcud seçimlərin siyahısı"
 
-#: main.cpp:221
+#: main.cpp:231
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma başladıla bilmədi"
 
-#: main.cpp:222
+#: main.cpp:232
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -238,12 +238,12 @@ msgstr "İş masalarının və Panellərin idarə edilməsi..."
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:1808
+#: shellcorona.cpp:1810
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:1844
+#: shellcorona.cpp:1846
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

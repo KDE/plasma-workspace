@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-28 00:47+0000\n"
-"PO-Revision-Date: 2021-08-26 13:16+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 20:46+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
@@ -33,15 +33,7 @@ msgid "Plasma:"
 msgstr "Plasma:"
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about our "
-#| "privacy policy in the following link:"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -52,12 +44,13 @@ msgid ""
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
 "Galite padėti KDE tobulinti Plasma pateikdami informaciją apie tai, kaip "
-"naudojatės Plasma darbalaukiu. Tokiu būdu mes galėsime susitelkti ties "
-"dalykais, kurie yra jums svarbūs.<nl/><nl/>Šios informacijos pateikimas yra "
+"naudojatės Plasma darbalaukiu, kad tokiu būdu mes galėtume susitelkti ties "
+"dalykais, kurie yra svarbūs jums.<nl/><nl/>Šios informacijos pateikimas yra "
 "laisvanoriškas ir visiškai anoniminis. Mes niekada nerenkame jūsų asmeninių "
 "duomenų, jūsų naudojamų failų, jūsų aplankytų internetinių svetainių ar "
 "informacijos, kuri galėtų jus identifikuoti.<nl/><nl/>Galite perskaityti "
-"apie mūsų privatumo politiką apsilankę šiuo adresu:"
+"apie <link url='https://kde.org/privacypolicy-apps.php'>mūsų privatumo "
+"politiką čia.</link>"
 
 #: package/contents/ui/main.qml:112
 #, kde-format

@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-02 00:51+0000\n"
-"PO-Revision-Date: 2021-08-17 22:07+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-19 01:33+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +20,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "Žymėjimas ir iškarpinė"
+msgstr "Žymėjimas ir iškarpinė:"
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -45,15 +44,12 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Iškarpinės istorija"
+msgstr "Iškarpinės istorija:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -63,16 +59,14 @@ msgstr[2] " įrašų"
 msgstr[3] " įrašas"
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Always save in history"
-msgstr "Pakartoti veiksmą iš istorijos"
+msgstr "Visada įrašyti į istoriją"
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Text selection only"
+#, kde-format
 msgid "Text selection:"
-msgstr "Tik tekstinis žymėjimas"
+msgstr "Teksto žymėjimas:"
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
@@ -80,22 +74,19 @@ msgid "Only when explicitly copied"
 msgstr ""
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "Ar tikrai norite išvalyti visą iškarpinės istoriją?"
+msgstr "Ar teksto žymėjimai bus įrašomi į iškarpinės istoriją."
 
 #: configdialog.cpp:173
 #, fuzzy, kde-format
-#| msgid "Ignore selection"
 msgid "Non-text selection:"
-msgstr "Nepaisyti žymėjimo"
+msgstr "Ne teksto žymėjimai:"
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Never save in history"
-msgstr "Pakartoti veiksmą iš istorijos"
+msgstr "Niekada neįrašyti į istoriją"
 
 #: configdialog.cpp:185
 #, kde-format
@@ -124,7 +115,7 @@ msgstr ""
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Išskirti langus..."
 
 #: configdialog.cpp:283
 #, fuzzy, kde-format
@@ -142,14 +133,12 @@ msgstr[3] " sekundė"
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Veiksmai"
+msgstr "Parinktys:"
 
 #: configdialog.cpp:308
 #, kde-kuit-format
@@ -162,7 +151,7 @@ msgstr ""
 #: configdialog.cpp:337
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Išskirti langus"
 
 #: configdialog.cpp:367
 #, kde-kuit-format
@@ -180,8 +169,7 @@ msgid "Match pattern and commands"
 msgstr ""
 
 #: configdialog.cpp:376
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Aprašas"
@@ -235,23 +223,18 @@ msgid "General Configuration"
 msgstr "Bendra konfigūracija"
 
 #: configdialog.cpp:613
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Veiksmai"
+msgstr "Veiksmų meniu"
 
 #: configdialog.cpp:613
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Veiksmai"
+msgstr "Veiksmų meniu"
 
 #: configdialog.cpp:614
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
@@ -386,22 +369,19 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Pridėti komandą"
+msgstr "Pridėti komandą..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Pridėti komandą"
+msgstr "Taisyti komandą..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Šalinti komandą"
+msgstr "Ištrinti komandą"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
@@ -415,10 +395,9 @@ msgid "Confirm Delete Command"
 msgstr ""
 
 #: editcommanddialog.cpp:47
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Veiksmo savybės"
+msgstr "Komandos savybės"
 
 #: editcommanddialog.cpp:60
 #, kde-format
@@ -426,10 +405,9 @@ msgid "Enter the command and arguments"
 msgstr ""
 
 #: editcommanddialog.cpp:63
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Komanda"
+msgstr "Komanda:"
 
 #: editcommanddialog.cpp:72
 #, kde-kuit-format
@@ -476,7 +454,7 @@ msgstr ""
 #: editcommanddialog.cpp:122
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Piktograma:"
 
 #: historyimageitem.cpp:39
 #, kde-format
@@ -491,23 +469,19 @@ msgid "Automatic Action Popup Menu"
 msgstr "Iškylančiųjų veiksmų laiko limitas:"
 
 #: klipper.cpp:177
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "&Išvalyti iškarpinės istoriją"
+msgstr "Išva&lyti iškarpinės istoriją"
 
 #: klipper.cpp:184
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigūruoti Klipper…"
 
 #: klipper.cpp:190
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Išeiti"
@@ -520,29 +494,25 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Rankiniu būdu įvykdyti veiksmą su esamu iškarpinės turiniu"
 
 #: klipper.cpp:203
-#, fuzzy, kde-format
-#| msgid "&Edit Contents…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Taisyti turinį…"
 
 #: klipper.cpp:211
-#, fuzzy, kde-format
-#| msgid "&Show Barcode…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Rodyti brūkšninį kodą…"
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Kitas istorijos elementas"
 
 #: klipper.cpp:225
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Ankstesnis istorijos elementas"
@@ -555,11 +525,10 @@ msgid "Show Items at Mouse Position"
 msgstr "Atverti Klipper ties pelės pozicija"
 
 #: klipper.cpp:243
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper – iškarpinės įrankis"
+msgstr "%1 – Iškarpinės įrankis"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -602,16 +571,14 @@ msgid "Mobile Barcode"
 msgstr "Mobilusis brūkšninis kodas"
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Ar tikrai norite išvalyti visą iškarpinės istoriją?"
+msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "&Išvalyti iškarpinės istoriją"
+msgstr "Išvalyti iškarpinės istoriją"
 
 #: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
@@ -655,10 +622,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "Nelaikyti tuščios iškarpinės"
+msgstr "Neleisti išvalyti iškarpinės"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -686,8 +652,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
 msgstr "Nepaisyti žymėjimo"
 
@@ -716,10 +681,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore images"
+#, kde-format
 msgid "Always ignore images"
-msgstr "Nepaisyti paveikslų"
+msgstr "Visada nepaisyti paveikslų"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -770,10 +734,9 @@ msgstr "Iškylančiųjų veiksmų laiko limitas:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Iškarpinės istorijos dydis:"
+msgstr "Istorijos dydis:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71

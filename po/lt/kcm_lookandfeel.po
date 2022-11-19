@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2021-08-17 21:25+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 20:23+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -109,10 +109,9 @@ msgid "This module lets you choose the global look and feel."
 msgstr "Šis modulis leidžia jums pasirinkti visuotinę išvaizdą ir turinį."
 
 #: package/contents/ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Contains Desktop layout"
-msgstr "Atstatyti Plasma darbalaukio išdėstymą"
+msgstr "Turi darbalaukio išdėstymą"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -125,27 +124,27 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "Taikyti %1?"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "Pasirinkite, ką taikyti…"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "Rodyti mažiau parinkčių…"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Apply"
-msgstr ""
+msgstr "Taikyti"
 
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: package/contents/ui/main.qml:147
 #, kde-format
@@ -156,18 +155,17 @@ msgstr "Gauti naujus visuotinius apipavidalinimus…"
 #: package/contents/ui/MoreOptions.qml:31
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "Išdėstymo nuostatos:"
 
 #: package/contents/ui/MoreOptions.qml:32
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop layout"
-msgstr "Atstatyti Plasma darbalaukio išdėstymą"
+msgstr "Darbalaukio išdėstymas"
 
 #: package/contents/ui/MoreOptions.qml:53
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Antraštės juostos mygtukų išdėstymas"
 
 #: package/contents/ui/MoreOptions.qml:66
 #: package/contents/ui/SimpleOptions.qml:63
@@ -176,11 +174,13 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
+"Pritaikius darbalaukio išdėstymą, bus pakeista jūsų dabartinė darbalaukio, "
+"skydelių, dokų ir valdiklių konfigūracija"
 
 #: package/contents/ui/MoreOptions.qml:75
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "Išvaizdos nuostatos:"
 
 #: package/contents/ui/MoreOptions.qml:78
 #, kde-format
@@ -190,12 +190,12 @@ msgstr "Spalvos"
 #: package/contents/ui/MoreOptions.qml:79
 #, kde-format
 msgid "Application Style"
-msgstr ""
+msgstr "Programų stilius"
 
 #: package/contents/ui/MoreOptions.qml:80
 #, kde-format
 msgid "Window Decorations"
-msgstr ""
+msgstr "Langų dekoracijos"
 
 #: package/contents/ui/MoreOptions.qml:81
 #, kde-format
@@ -205,7 +205,7 @@ msgstr "Piktogramos"
 #: package/contents/ui/MoreOptions.qml:82
 #, kde-format
 msgid "Plasma Style"
-msgstr ""
+msgstr "Plasma stilius"
 
 #: package/contents/ui/MoreOptions.qml:83
 #, kde-format
@@ -220,46 +220,44 @@ msgstr "Šriftai"
 #: package/contents/ui/MoreOptions.qml:85
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "Užduočių perjungiklis"
 
 #: package/contents/ui/MoreOptions.qml:86
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "Prisistatymo langas"
 
 #: package/contents/ui/MoreOptions.qml:87
 #, kde-format
 msgid "Lock Screen"
-msgstr ""
+msgstr "Ekrano užraktas"
 
 #: package/contents/ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "Pagal šį visuotinį apipavidalinimą bus pritaikyti šie elementai:"
 
 #: package/contents/ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "Išvaizdos nuostatos"
 
 #: package/contents/ui/SimpleOptions.qml:42
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• Išvaizdos nuostatos"
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "Atstatyti Plasma darbalaukio išdėstymą"
+msgstr "Darbalaukio ir langų išdėstymas"
 
 #: package/contents/ui/SimpleOptions.qml:58
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "Atstatyti Plasma darbalaukio išdėstymą"
+msgstr "• Darbalaukio ir langų išdėstymas"
 
 #: package/contents/ui/SimpleOptions.qml:75
 #, kde-format
@@ -267,6 +265,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"Šis visuotinis apipavidalinimas nepateikia jokių nuostatų, kurias galima "
+"būtų pritaikyti. Susisiekite su šio visuotinio apipavidalinimo autoriumi, "
+"nes gali būti, jog apipavidalinimas yra sugadintas."
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

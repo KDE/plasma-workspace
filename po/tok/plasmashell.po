@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -46,22 +46,22 @@ msgstr "ilo Plasma"
 msgid "Plasma Shell"
 msgstr "ilo Plasmashell"
 
-#: main.cpp:100
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "o open e ilo pali pi ilo QML Javascript"
 
-#: main.cpp:103
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "o sin ala e ilo plasmashell moli"
 
-#: main.cpp:106
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "o kepeken wawa e ilo lili pana"
 
-#: main.cpp:111
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -70,34 +70,34 @@ msgstr ""
 "o open e ilo plasmashell lon leko sin. ni li wile e pana pi lawa \"shell-"
 "option\""
 
-#: main.cpp:113
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "o weka e ilo lon"
 
-#: main.cpp:116
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
 
-#: main.cpp:117
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr ""
 
-#: main.cpp:121
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:221
+#: main.cpp:231
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr ""
 
-#: main.cpp:222
+#: main.cpp:232
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -237,12 +237,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1808
+#: shellcorona.cpp:1810
 #, kde-format
 msgid "Add Panel"
 msgstr "o lon e palisa ilo sin"
 
-#: shellcorona.cpp:1844
+#: shellcorona.cpp:1846
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

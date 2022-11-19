@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-06-18 14:55+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -81,12 +81,12 @@ msgstr "Einsfarga"
 msgid "Select Background Color"
 msgstr "Vel bakgrunnsfarge"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
 msgstr "Legg til bilete …"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"
@@ -174,17 +174,17 @@ msgstr ""
 msgid "Recommended wallpaper file"
 msgstr "Anbefalt bakgrunnsbilete"
 
-#: plugin/imagebackend.cpp:234
+#: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Mappe med bakgrunnsbilete å visa lysbilete frå"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Open Image"
 msgstr "Opna bilete"
 
-#: plugin/imagebackend.cpp:342
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
 msgstr "Biletfiler"

@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:48+0000\n"
-"PO-Revision-Date: 2021-08-17 21:12+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-18 19:48+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -119,51 +119,45 @@ msgid "Scale with Panel width"
 msgstr "Keisti mastelį pagal skydelio plotį"
 
 #: package/contents/ui/ConfigGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "Automatically enabled when in tablet mode"
+#, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "Automatiškai įjungta, kai esama planšetės veiksenoje"
+msgstr "Automatiškai įjungta, kai esama lietimo veiksenoje"
 
 #: package/contents/ui/ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "Skydelio piktogramų dydis:"
+msgstr "Tarpai tarp skydelio piktogramų:"
 
 #: package/contents/ui/ConfigGeneral.qml:51
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr "Mažas"
+msgstr "Maži"
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Įprasti"
 
 #: package/contents/ui/ConfigGeneral.qml:59
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr "Didelis"
+msgstr "Dideli"
 
 #: package/contents/ui/ConfigGeneral.qml:82
-#, fuzzy, kde-format
-#| msgid "Automatically enabled when in tablet mode"
+#, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "Automatiškai įjungta, kai esama planšetės veiksenoje"
+msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Grįžti"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
@@ -183,12 +177,12 @@ msgstr "Palikti atvertą"
 #: package/contents/ui/ExpanderArrow.qml:22
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "Išskleisti sistemos dėklą"
 
 #: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "Rodyti visus sistemos dėklo elementus iškylančiajame lange"
 
 #: package/contents/ui/ExpanderArrow.qml:36
 #, kde-format

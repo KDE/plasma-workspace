@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-19 00:47+0000\n"
 "PO-Revision-Date: 2022-03-14 07:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -43,22 +43,22 @@ msgstr "Plasma"
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:100
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Fungsikan pendebug Javascript QML"
 
-#: main.cpp:103
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Jangan me-restart plasma-shell secara otomatis setelah mogok"
 
-#: main.cpp:106
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Paksa pemuatan plugin shell yang diberikan"
 
-#: main.cpp:111
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -67,12 +67,12 @@ msgstr ""
 "Muat plasmashell sebagai aplikasi tersendiri, memerlukan opsi shell-plugin "
 "untuk ketentuan"
 
-#: main.cpp:113
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ganti sebuah instansi yang ada"
 
-#: main.cpp:116
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -81,22 +81,22 @@ msgstr ""
 "Fungsikan mode uji dan ketentuan tataletak file javascript untuk "
 "mempersiapkan environment pengujian"
 
-#: main.cpp:117
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr "file"
 
-#: main.cpp:121
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Daftar opsi yang tersedia untuk tanggapan pengguna"
 
-#: main.cpp:221
+#: main.cpp:231
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Gagal Untuk Memulai"
 
-#: main.cpp:222
+#: main.cpp:232
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -239,12 +239,12 @@ msgstr "Kelola Desktop Dan Panel..."
 msgid "Move keyboard focus between panels"
 msgstr "Pindah fokus keyboard antar panel"
 
-#: shellcorona.cpp:1808
+#: shellcorona.cpp:1810
 #, kde-format
 msgid "Add Panel"
 msgstr "Tambahkan Panel"
 
-#: shellcorona.cpp:1844
+#: shellcorona.cpp:1846
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

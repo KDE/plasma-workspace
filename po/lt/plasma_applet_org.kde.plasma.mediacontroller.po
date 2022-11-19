@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:48+0000\n"
-"PO-Revision-Date: 2020-11-17 01:03+0200\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-19 01:14+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -29,7 +29,7 @@ msgstr "Bendra"
 #: contents/ui/AlbumArtStackView.qml:169
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Nėra pavadinimo"
 
 #: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:80
 #, kde-format
@@ -39,7 +39,7 @@ msgstr "Nieko neatkuriama"
 #: contents/ui/ConfigGeneral.qml:22
 #, kde-format
 msgid "Volume step:"
-msgstr ""
+msgstr "Garsinimo žingsnis:"
 
 #: contents/ui/ExpandedRepresentation.qml:361
 #: contents/ui/ExpandedRepresentation.qml:482
@@ -117,6 +117,8 @@ msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause"
 msgstr ""
+"pagal %1 (%2)\n"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
 
 #: contents/ui/main.qml:278
 #, kde-format
@@ -124,16 +126,18 @@ msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
+"%1\n"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play"
-msgstr "pagal %1 (pristabdyta, %2)"
+msgstr ""
+"pagal %1 (pristabdyta, %2)\n"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
 
 #: contents/ui/main.qml:289
 #, kde-format
@@ -144,6 +148,8 @@ msgid ""
 "Paused (%1)\n"
 "Middle-click to play"
 msgstr ""
+"Pristabdyta (%1)\n"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

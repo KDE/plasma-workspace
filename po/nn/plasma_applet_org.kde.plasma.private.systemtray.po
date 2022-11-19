@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-28 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-08-03 13:59+0200\n"
 "Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
 "com>\n"
@@ -159,17 +159,17 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Gå tilbake"
 
-#: package/contents/ui/ExpandedRepresentation.qml:77
+#: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Status og varslingar"
 
-#: package/contents/ui/ExpandedRepresentation.qml:93
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Fleire handlingar"
 
-#: package/contents/ui/ExpandedRepresentation.qml:182
+#: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
 msgid "Keep Open"
 msgstr "Hald open"
