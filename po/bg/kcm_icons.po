@@ -191,9 +191,3 @@ msgstr "Отваряне на тема"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Toolbar"
-#~ msgstr "Лента с инструменти"
-
-#~ msgid "Panel"
-#~ msgstr "Системен панел"

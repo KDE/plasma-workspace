@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-11-06 01:06\n"
+"PO-Revision-Date: 2022-11-19 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -25,7 +25,7 @@ msgstr "主工具栏"
 #: iconsizecategorymodel.cpp:15
 #, kde-format
 msgid "Secondary Toolbars"
-msgstr ""
+msgstr "副工具栏"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -125,17 +125,20 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"在此为各种图标类型配置系统级别的默认大小。请注意：并非所有应用程序都会遵守此"
+"处的设置。<nl/><nl/>如果您觉得屏幕显示的某些要素显得太大或者太小，可以尝试使"
+"用全局缩放。"
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "调整全局缩放…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "大小："
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -171,7 +174,7 @@ msgstr "获取新图标…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "配置图标大小"
 
 #: package/contents/ui/main.qml:285
 #, kde-format

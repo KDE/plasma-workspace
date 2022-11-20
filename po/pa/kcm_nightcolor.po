@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-06-14 21:01-0700\n"
+"PO-Revision-Date: 2022-11-19 05:51-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -15,27 +15,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "ਨਕਸ਼ੇ ਉੱਤੇ ਆਪਣੇ ਟਿਕਾਣੇ ਨੂੰ ਚੁਣਨ ਲਈ ਛੂਹੋ।"
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "ਨਕਸ਼ੇ ਉੱਤੇ ਆਪਣਾ ਟਿਕਾਣਾ ਚੁਣਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "ਜ਼ੂਮ ਇਨ"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -48,63 +48,51 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/LocationsFixedView.qml:235
-#, fuzzy, kde-format
-#| msgid "Latitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "ਵਿਥਕਾਰ:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
-#, fuzzy, kde-format
-#| msgid "Longitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "ਲੰਬਕਾਰ:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"ਰਾਤ ਦਾ ਰੰਗ ਸਕਰੀਨ ਦੇ ਰੰਗਾਂ ਨੂੰ ਵੱਧ ਨਿੱਘਾ ਬਣਾਉਂਦੇ ਹਨ ਤਾਂ ਕਿ ਤੁਹਾਡੇ ਵਲੋਂ ਚੁਣੇ ਵੇਲੇ ਦੌਰਾਨ ਅੱਖਾਂ ਉੱਤੇ ਬੋਝ "
-"ਘਟ ਸਕੇ।"
+msgstr "ਨੀਲੀ ਰੋਸ਼ਨੀ ਦੇ ਫਿਲਟਰ ਸਕਰੀਨ ਦੇ ਰੰਗਾਂ ਨੂੰ ਨਿੱਘਾ ਬਣਾਉਂਦੇ ਹਨ।"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "ਸਰਗਰਮ ਕਰਨ ਸਮਾਂ:"
+msgstr "ਬਦਲਣ ਦੇ ਵੇਲੇ:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "ਹਮੇਸ਼ਾ ਬੰਦ"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "ਮੌਜੂਦਾ ਟਿਕਾਣੇ ਲਈ ਸੂਰਜ-ਛਿਪਣ ਤੋਂ ਸੂਰਜ-ਚੜ੍ਹਨ ਤੱਕ"
+msgstr "ਮੌਜੂਦਾ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਸੂਰਜ-ਛਿਪਣ ਅਤੇ ਸੂਰਜ-ਚੜ੍ਹਨ"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "ਖੁਦ ਦੇ ਟਿਕਾਣੇ ਲਈ ਸੂਰਜ-ਛਿਪਣ ਤੋਂ ਸੂਰਜ-ਚੜ੍ਹਨ ਤੱਕ"
+msgstr "ਖੁਦ ਚੁਣੇ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਸੂਰਜ-ਛਿਪਣ ਤੋਂ ਸੂਰਜ-ਚੜ੍ਹਨ"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "ਕਸਟਮ ਸਮਾਂ"
+msgstr "ਪਸੰਦੀਦਾ ਵੇਲੇ"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "ਹਮੇਸ਼ਾ ਚਾਲੂ"
+msgstr "ਰਾਤ ਦੇ ਰੰਗ ਹਮੇਸ਼ਾ ਚਾਲੂ"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -115,14 +103,13 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 "ਡਿਵਾਈਸ ਦੇ ਟਿਕਾਣੇ ਨੂੰ ਜੀਪੀਐਸ (ਜੇ ਮੌਜੂਦ ਹੋਵੇ) ਰਾਹੀਂ ਜਾਂ <link url='https://location."
-"services.mozilla.com'>ਮੌਜ਼ੀਲਾ ਟਿਕਾਣਾ ਸੇਵਾ</link> ਨੂੰ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਨਿਯਮਤ ਰੂਪ ਭੇਜ ਕੇ "
-"ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ।"
+"services.mozilla.com'>Mozilla ਟਿਕਾਣਾ ਸੇਵਾ</link> ਨੂੰ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਨਿਯਮਤ ਰੂਪ ਭੇਜ "
+"ਕੇ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ।"
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
+msgstr "ਦਿਨ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -140,7 +127,7 @@ msgstr "ਨਿੱਘਾ"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "ਠੰਢਾ (ਕੋਈ ਫਿਲਟਰ ਨਹੀਂ)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -149,8 +136,7 @@ msgid "Cool"
 msgstr "ਠੰਢਾ"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦਾ ਤਾਪਮਾਨ:"
 
@@ -162,7 +148,7 @@ msgstr "ਵਿਥਕਾਰ: %1° ਲੰਬਕਾਰ: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "ਰਾਤ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -172,7 +158,7 @@ msgstr "ਇਨਪੁਟ ਫਾਰਮੈਟ: HH:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "ਦਿਨ ਦੇ ਰੰਗ ਸ਼ੁਰੂ ਕਰੋ:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -200,23 +186,23 @@ msgstr "ਗ਼ਲਤੀ: ਬਦਲਾਅ ਸਮੇਂ ਇੱਕ ਦੂਜੇ ਉ
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr ""
+msgstr "…ਲੱਭਿਆ ਜਾ ਰਿਹਾ ਹੈ"
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "ਰਾਤ ਦੀ ਰੌਸ਼ਨੀ %1 ਵਜੇ ਬਦਲਣਾ ਸ਼ੁਰੂ ਕਰਦੀ ਹੈ ਅਤੇ %2 ਵਜੇ ਤੱਕ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦੀ ਹੈ"
+msgstr ""
+"ਰੰਗ ਤਾਪਮਾਨ ਰਾਤ ਦੇ ਸਮੇਂ ਲਈ %1 ਵਜੇ ਬਦਲਣਾ ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ ਅਤੇ %2 ਵਜੇ ਤੱਕ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦਾ ਹੈ"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "ਰਾਤ ਦੀ ਰੌਸ਼ਨੀ %1 ਵਜੇ ਬਦਲਣਾ ਸ਼ੁਰੂ ਕਰਦੀ ਹੈ ਅਤੇ %2 ਵਜੇ ਤੱਕ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦੀ ਹੈ"
+msgstr ""
+"ਰੰਗ ਤਾਪਮਾਨ ਦਿਨ ਦੇ ਸਮੇਂ ਲਈ %1 ਵਜੇ ਬਦਲਣਾ ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ ਅਤੇ %2 ਵਜੇ ਤੱਕ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦਾ ਹੈ"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."
