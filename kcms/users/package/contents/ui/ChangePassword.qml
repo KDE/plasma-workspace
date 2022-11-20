@@ -39,6 +39,7 @@ Kirigami.OverlaySheet {
                 Layout.fillWidth: true
 
                 placeholderText: i18n("Password")
+                onTextChanged: debouncer.reset()
 
                 onAccepted: {
                     if (!passwordWarning.visible && verifyField.text && passwordField.text) {
@@ -53,6 +54,7 @@ Kirigami.OverlaySheet {
                 Layout.fillWidth: true
 
                 placeholderText: i18n("Confirm password")
+                onTextChanged: debouncer.reset()
 
                 onAccepted: {
                     if (!passwordWarning.visible && verifyField.text && passwordField.text) {
@@ -60,13 +62,16 @@ Kirigami.OverlaySheet {
                     }
                 }
             }
+            Debouncer {
+                id: debouncer
+            }
             Kirigami.InlineMessage {
                 id: passwordWarning
 
                 Layout.fillWidth: true
                 type: Kirigami.MessageType.Error
                 text: i18n("Passwords must match")
-                visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
+                visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text && debouncer.isTriggered
             }
             QQC2.Button {
                 id: passButton
@@ -75,6 +80,10 @@ Kirigami.OverlaySheet {
                 Layout.alignment: Qt.AlignLeft
                 onClicked: apply()
                 function apply() {
+                    if (passwordField.text != verifyField.text) {
+                        debouncer.isTriggered = true
+                        return
+                    }
                     user.password = passwordField.text
                     passwordRoot.close()
                 }

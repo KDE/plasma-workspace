@@ -49,10 +49,12 @@ KCM.SimpleKCM {
         }
         Kirigami.PasswordField {
             id: passwordField
+            onTextChanged: debouncer.reset()
             Kirigami.FormData.label: i18n("Password:")
         }
         Kirigami.PasswordField {
             id: verifyField
+            onTextChanged: debouncer.reset()
             Kirigami.FormData.label: i18n("Confirm password:")
         }
         Kirigami.InlineMessage {
@@ -61,12 +63,19 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             text: i18n("Passwords must match")
-            visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
+            visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text && debouncer.isTriggered
+        }
+        Debouncer {
+            id: debouncer
         }
         QQC2.Button {
             text: i18n("Create")
             enabled: !passwordWarning.visible && verifyField.text && passwordField.text && realNameField.text && userNameField.text
             onClicked: {
+                if (passwordField.text != verifyField.text) {
+                    debouncer.isTriggered = true
+                    return
+                }
                 kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator"))
             }
         }
