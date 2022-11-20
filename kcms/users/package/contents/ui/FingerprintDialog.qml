@@ -57,59 +57,63 @@ Kirigami.OverlaySheet {
         text: i18n("Configure Fingerprints")
     }
 
-    footer: RowLayout {
+    footer: Kirigami.ActionToolBar {
+        flat: false
+
         Item {
             Layout.fillWidth: true
         }
 
-        // FingerprintList State
-        QQC2.Button {
-            text: i18n("Clear Fingerprints")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-            enabled: fingerprintModel.enrolledFingerprints.length !== 0
-            icon.name: "delete"
-            onClicked: fingerprintModel.clearFingerprints();
-        }
-        QQC2.Button {
-            text: i18n("Add")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-            enabled: fingerprintModel.availableFingersToEnroll.length !== 0
-            icon.name: "list-add"
-            onClicked: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
-        }
+        actions: [
+            // FingerprintList State
+            Kirigami.Action {
+                text: i18n("Clear Fingerprints")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+                enabled: fingerprintModel.enrolledFingerprints.length !== 0
+                icon.name: "delete"
+                onTriggered: fingerprintModel.clearFingerprints();
+            },
+            Kirigami.Action {
+                text: i18n("Add")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+                enabled: fingerprintModel.availableFingersToEnroll.length !== 0
+                icon.name: "list-add"
+                onTriggered: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
+            },
 
-        // PickFinger State
-        QQC2.Button {
-            text: i18n("Cancel")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
-            icon.name: "dialog-cancel"
-            onClicked: fingerprintModel.dialogState = FingerprintDialog.DialogState.FingerprintList
-        }
-        QQC2.Button {
-            text: i18n("Continue")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
-            icon.name: "dialog-ok"
-            onClicked: {
-                fingerprintRoot.currentFinger = pickFingerBox.currentText
-                fingerprintModel.startEnrolling(pickFingerBox.currentValue);
+            // PickFinger State
+            Kirigami.Action {
+                text: i18n("Cancel")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
+                icon.name: "dialog-cancel"
+                onTriggered: fingerprintModel.dialogState = FingerprintDialog.DialogState.FingerprintList
+            },
+            Kirigami.Action {
+                text: i18n("Continue")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
+                icon.name: "dialog-ok"
+                onTriggered: {
+                    fingerprintRoot.currentFinger = pickFingerBox.currentText
+                    fingerprintModel.startEnrolling(pickFingerBox.currentValue);
+                }
+            },
+
+            // Enrolling State
+            Kirigami.Action {
+                text: i18n("Cancel")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
+                icon.name: "dialog-cancel"
+                onTriggered: fingerprintModel.stopEnrolling();
+            },
+
+            // EnrollComplete State
+            Kirigami.Action {
+                text: i18n("Done")
+                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+                icon.name: "dialog-ok"
+                onTriggered: fingerprintModel.stopEnrolling();
             }
-        }
-
-        // Enrolling State
-        QQC2.Button {
-            text: i18n("Cancel")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-            icon.name: "dialog-cancel"
-            onClicked: fingerprintModel.stopEnrolling();
-        }
-
-        // EnrollComplete State
-        QQC2.Button {
-            text: i18n("Done")
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-            icon.name: "dialog-ok"
-            onClicked: fingerprintModel.stopEnrolling();
-        }
+        ]
     }
 
     contentItem: Item {
