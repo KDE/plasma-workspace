@@ -13,6 +13,7 @@
 class OrgFreedesktopAccountsInterface;
 
 class QQuickView;
+class QQuickItemGrabResult;
 
 class KCMUser : public KQuickAddons::ConfigModule
 {
@@ -33,6 +34,7 @@ public:
 
     Q_SCRIPTABLE bool createUser(const QString &name, const QString &realName, const QString &password, bool admin);
     Q_SCRIPTABLE bool deleteUser(qint64 index, bool deleteHome);
+    Q_SCRIPTABLE QUrl recolorSVG(const QUrl &url, const QColor &color);
     // Grab the initials of a string
     Q_SCRIPTABLE QString initializeString(const QString &stringToGrabInitialsOf);
     Q_SCRIPTABLE QString plonkImageInTempfile(const QImage &image);

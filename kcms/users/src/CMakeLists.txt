@@ -1,5 +1,6 @@
 set(kcm_users_SRCS
     kcm.cpp
+    maskmousearea.cpp
     user.cpp
     usermodel.cpp
     fprintdevice.cpp

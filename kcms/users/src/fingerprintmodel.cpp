@@ -289,6 +289,20 @@ QVariantList FingerprintModel::availableFingersToEnroll()
     return list;
 }
 
+QVariantList FingerprintModel::unavailableFingersToEnroll()
+{
+    QVariantList list;
+    QStringList enrolled = enrolledFingerprintsRaw();
+
+    // add fingerprints to list that are in the enrolled list
+    for (Finger *finger : FINGERS) {
+        if (enrolledFingerprintsRaw().contains(finger->internalName())) {
+            list.append(QVariant::fromValue(finger));
+        }
+    }
+    return list;
+}
+
 void FingerprintModel::handleEnrollCompleted()
 {
     setEnrollStage(m_device->numOfEnrollStages());

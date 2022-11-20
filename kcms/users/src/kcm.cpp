@@ -15,12 +15,15 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QFontMetrics>
+#include <QImage>
 #include <QQmlProperty>
+#include <QQuickItemGrabResult>
 #include <QTemporaryFile>
 #include <QTimer>
 #include <QtQuick/QQuickItem>
 
 #include "accounts_interface.h"
+#include "maskmousearea.h"
 #include "user.h"
 
 Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
@@ -47,6 +50,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantLis
 {
     qmlRegisterUncreatableType<User>("org.kde.plasma.kcm.users", 1, 0, "User", QString());
     qmlRegisterType<Finger>("FingerprintModel", 1, 0, "Finger");
+    qmlRegisterType<MaskMouseArea>("org.kde.plasma.kcm.users", 1, 0, "MaskMouseArea");
     setButtons(Apply);
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);
@@ -127,6 +131,23 @@ QString KCMUser::plonkImageInTempfile(const QImage &image)
         image.save(file, "PNG");
     }
     return file->fileName();
+}
+
+QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
+{
+    static QMap<QUrl, QString> s_cache;
+
+    if (!s_cache.contains(url)) {
+        QFile at(url.toLocalFile());
+        if (!at.open(QFile::ReadOnly)) {
+            return QUrl();
+        }
+        s_cache[url] = QString::fromUtf8(at.readAll());
+    }
+
+    auto str = s_cache[url];
+    str.replace("fill:#000000", "fill:" + color.name());
+    return QUrl("data:image/svg+xml;utf8," + QUrl::toPercentEncoding(str));
 }
 
 void KCMUser::load()

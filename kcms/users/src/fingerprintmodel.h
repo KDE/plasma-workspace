@@ -70,6 +70,7 @@ class FingerprintModel : public QObject
     Q_PROPERTY(QString enrollFeedback READ enrollFeedback WRITE setEnrollFeedback NOTIFY enrollFeedbackChanged)
     Q_PROPERTY(QVariantList enrolledFingerprints READ enrolledFingerprints NOTIFY enrolledFingerprintsChanged)
     Q_PROPERTY(QVariantList availableFingersToEnroll READ availableFingersToEnroll NOTIFY enrolledFingerprintsChanged)
+    Q_PROPERTY(QVariantList unavailableFingersToEnroll READ unavailableFingersToEnroll NOTIFY enrolledFingerprintsChanged)
     Q_PROPERTY(bool deviceFound READ deviceFound NOTIFY devicesFoundChanged)
     Q_PROPERTY(bool currentlyEnrolling READ currentlyEnrolling NOTIFY currentlyEnrollingChanged)
     Q_PROPERTY(double enrollProgress READ enrollProgress NOTIFY enrollProgressChanged)
@@ -109,6 +110,7 @@ public:
     QStringList enrolledFingerprintsRaw();
     QVariantList enrolledFingerprints();
     QVariantList availableFingersToEnroll();
+    QVariantList unavailableFingersToEnroll();
 
     QString scanType();
     QString currentError();
