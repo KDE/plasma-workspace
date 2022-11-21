@@ -59,10 +59,7 @@ Kirigami.OverlaySheet {
 
     footer: Kirigami.ActionToolBar {
         flat: false
-
-        Item {
-            Layout.fillWidth: true
-        }
+        alignment: Qt.AlignRight
 
         actions: [
             // FingerprintList State
