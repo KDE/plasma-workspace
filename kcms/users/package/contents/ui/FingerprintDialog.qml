@@ -67,7 +67,7 @@ Kirigami.OverlaySheet {
         actions: [
             // FingerprintList State
             Kirigami.Action {
-                text: i18n("Clear Fingerprints")
+                text: i18nc("@action:button 'all' refers to fingerprints", "Clear All")
                 visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
                 enabled: fingerprintModel.enrolledFingerprints.length !== 0
                 icon.name: "delete"
