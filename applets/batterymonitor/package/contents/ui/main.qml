@@ -283,7 +283,7 @@ Item {
         Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
         Layout.preferredHeight: implicitHeight
 
-        model: Plasmoid.expanded ? batteries : null
+        model: batteries
 
         isBrightnessAvailable: batterymonitor.isBrightnessAvailable
         isKeyboardBrightnessAvailable: batterymonitor.isKeyboardBrightnessAvailable
