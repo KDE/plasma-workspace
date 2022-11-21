@@ -271,6 +271,8 @@ Item {
     }
 
     Plasmoid.fullRepresentation: PopupDialog {
+        id: dialogItem
+
         readonly property var appletInterface: Plasmoid.self
 
         Layout.minimumWidth: PlasmaCore.Units.gridUnit * 10
@@ -281,7 +283,6 @@ Item {
         Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
         Layout.preferredHeight: implicitHeight
 
-        id: dialogItem
         model: Plasmoid.expanded ? batteries : null
 
         isBrightnessAvailable: batterymonitor.isBrightnessAvailable
