@@ -5,7 +5,7 @@ set(PROJECT_VERSION "5.26.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.98.0")
+set(KF5_MIN_VERSION "5.101.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
@@ -400,7 +400,9 @@ endif()
 
 ki18n_install(po)
 
-install(FILES plasma-workspace.categories   DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
+
+install(FILES plasma-workspace.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 # add clang-format target for all our real source files
