@@ -41,10 +41,13 @@ int main(int argc, char **argv)
     parser->addPositionalArgument(
         QStringLiteral("colorscheme"),
         i18n("The name of the color scheme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
+
+    const auto listSchemes = QStringList({QStringLiteral("list-schemes"), QStringLiteral("l")});
+    parser->addOption(QCommandLineOption(listSchemes, i18n("Show all the color schemes available on the system (and which is the current theme)")));
+
+    const auto accentColor = QStringList({QStringLiteral("accent-color"), QStringLiteral("a")});
     parser->addOption(
-        QCommandLineOption(QStringLiteral("list-schemes"), i18n("Show all the color schemes available on the system (and which is the current theme)")));
-    parser->addOption(
-        QCommandLineOption(QStringLiteral("accent-color"),
+        QCommandLineOption(accentColor,
                            i18n("The name of the accent color you want to set. SVG color names (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) and hex "
                                 "color codes are supported. Quote the hex code if there is possibility of shell expansion"),
                            "accentColor",
@@ -117,11 +120,20 @@ int main(int argc, char **argv)
 
         if (QColor::isValidColor(accentColor)) {
             const QString path =
-                QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
-            settings->setAccentColor(accentColor);
-            settings->save();
-            applyScheme(path, settings->config());
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(settings->colorScheme()));
+
+            auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                      QStringLiteral("/org/kde/KWin/BlendChanges"),
+                                                      QStringLiteral("org.kde.KWin.BlendChanges"),
+                                                      QStringLiteral("start"));
+            msg << 300;
+            // This is deliberately blocking so that we ensure Kwin has processed the
+            // animation start event before we potentially trigger client side changes
+            QDBusConnection::sessionBus().call(msg);
+
+            applyScheme(path, settings->config(), KConfig::Notify, {accentColor});
             notifyKcmChange(GlobalChangeType::PaletteChanged);
+
             ts << i18n("Successfully applied the accent color %1", accentColor) << Qt::endl;
         } else {
             ts << i18n("Invalid accent color ") << accentColor << Qt::endl;
