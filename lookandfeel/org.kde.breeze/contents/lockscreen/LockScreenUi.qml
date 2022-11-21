@@ -56,6 +56,7 @@ PlasmaCore.ColorScope {
                 root.notification += "\n"
             }
             root.notification += msg;
+            lockScreenUi.hadPrompt = true;
         }
 
         function onErrorMessage(msg) {
