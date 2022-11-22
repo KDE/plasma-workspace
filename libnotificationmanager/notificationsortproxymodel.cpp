@@ -53,10 +53,14 @@ int sortScore(const QModelIndex &idx)
 {
     const auto urgency = idx.data(Notifications::UrgencyRole).toInt();
     if (urgency == Notifications::CriticalUrgency) {
-        return 3;
+        return 4;
     }
 
     if (idx.data(Notifications::TypeRole).toInt() == Notifications::JobType) {
+        const auto jobState = idx.data(Notifications::JobStateRole).toInt();
+        if (jobState == Notifications::JobStateRunning || jobState == Notifications::JobStateSuspended) {
+            return 3;
+        }
         return 2;
     }
 
