@@ -76,10 +76,6 @@ SplashApp::SplashApp(int &argc, char **argv)
         setStage(QStringLiteral("wm"));
     }
 
-    QPixmap cursor(32, 32);
-    cursor.fill(Qt::transparent);
-    setOverrideCursor(QCursor(cursor));
-
     if (m_testing) {
         m_timer.start(TEST_STEP_INTERVAL, this);
     }
