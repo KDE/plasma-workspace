@@ -30,6 +30,7 @@
 #include <QDBusMetaType>
 #include <QDBusPendingCallWatcher>
 #include <QDBusReply>
+#include <QIcon>
 
 #include "powermanagementservice.h"
 #include <Plasma/DataContainer>
@@ -833,6 +834,9 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
         } else {
             *prettyName = name;
             *icon = name.section(QLatin1Char('/'), -1).toLower();
+            if (!QIcon::hasThemeIcon(*icon)) {
+                *icon = QStringLiteral("application-x-executable");
+            }
         }
     }
 }
