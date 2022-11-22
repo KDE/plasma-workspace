@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-11-15 09:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,7 +42,7 @@ msgstr "Geslo"
 msgid "Log In"
 msgstr "Prijavi se"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:297
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vključen"
@@ -82,7 +82,7 @@ msgstr "Vnesite uporabniško ime in geslo"
 msgid "List Users"
 msgstr "Seznam uporabnikov"
 
-#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:572
+#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:573
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -161,37 +161,37 @@ msgstr "Kaži pod pozivom za odklepanje"
 msgid "Unlocking failed"
 msgstr "Odklepanje ni uspelo"
 
-#: contents/lockscreen/LockScreenUi.qml:311
+#: contents/lockscreen/LockScreenUi.qml:312
 #, kde-format
 msgid "Sleep"
 msgstr "Spanje"
 
-#: contents/lockscreen/LockScreenUi.qml:317 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:318 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "V mirovanje"
 
-#: contents/lockscreen/LockScreenUi.qml:323
+#: contents/lockscreen/LockScreenUi.qml:324
 #, kde-format
 msgid "Switch User"
 msgstr "Preklopi uporabnika"
 
-#: contents/lockscreen/LockScreenUi.qml:519
+#: contents/lockscreen/LockScreenUi.qml:520
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Preklopi na to sejo"
 
-#: contents/lockscreen/LockScreenUi.qml:527
+#: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Start New Session"
 msgstr "Začni novo sejo"
 
-#: contents/lockscreen/LockScreenUi.qml:540
+#: contents/lockscreen/LockScreenUi.qml:541
 #, kde-format
 msgid "Back"
 msgstr "Nazaj"
 
-#: contents/lockscreen/LockScreenUi.qml:586
+#: contents/lockscreen/LockScreenUi.qml:587
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

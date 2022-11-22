@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-06-30 09:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -1298,7 +1298,7 @@ msgstr ""
 "Плазми (якщо передати шлях повністю, буде використано лише останню частину "
 "шляху)"
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1307,7 +1307,7 @@ msgstr ""
 "Вивести список усіх схем кольорів, які доступні у системі (і те, яка з тем є "
 "поточною)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1319,27 +1319,27 @@ msgstr ""
 "шістнадцяткових кодів кольорів. Шістнадцяткові коди слід брати у лапки, якщо "
 "є ймовірність розгортання в командній оболонці"
 
-#: plasma-apply-colorscheme.cpp:75
+#: plasma-apply-colorscheme.cpp:78
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Бажану тему «%1» вже встановлено як тему для поточного сеансу Плазми."
 
-#: plasma-apply-colorscheme.cpp:98
+#: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "Схему кольорів %1 успішно застосовано до вашого поточного сеансу Плазми"
 
-#: plasma-apply-colorscheme.cpp:100
+#: plasma-apply-colorscheme.cpp:103
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "Не вдалося знайти тему «%1». Тему слід вибрати з таких варіантів: %2"
 
-#: plasma-apply-colorscheme.cpp:107
+#: plasma-apply-colorscheme.cpp:110
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1348,7 +1348,7 @@ msgstr ""
 "Вами наказано передати порожню назву схеми кольорів. Підтримки такої "
 "поведінки системи не передбачено."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1357,22 +1357,22 @@ msgstr ""
 "Не вдалося ідентифікувати файл, який ви намагаєтеся використати як вашу "
 "схему, %1, як файл схеми кольорів.."
 
-#: plasma-apply-colorscheme.cpp:125
+#: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Успішно застосовано колір акценту %1"
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:139
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Некоректний колір акценту"
 
-#: plasma-apply-colorscheme.cpp:132
+#: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "У вашій системі виявлено такі схеми кольорів:"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (поточна схема кольорів)"

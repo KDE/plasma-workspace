@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-12 00:49+0000\n"
-"PO-Revision-Date: 2022-11-07 19:51+0400\n"
+"PO-Revision-Date: 2022-11-21 18:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -182,7 +182,7 @@ msgstr[5] "%1 تطبيق طلب تنشيط وضع الأداء"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "النظام في وضع الأداء"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -198,7 +198,7 @@ msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "النطام في وضع توفير الطاقة"
 
 #: package/contents/ui/main.qml:305
 #, kde-format
@@ -216,10 +216,9 @@ msgid "&Show Energy Information…"
 msgstr "أ&ظهر معلومات الطاقة..."
 
 #: package/contents/ui/main.qml:373
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "إظهار نسبة البطارية على الأيقونة"
+msgstr "إظهار نسبة البطارية على الأيقونة إن لم يكن مشحون بالكامل"
 
 #: package/contents/ui/main.qml:379
 #, kde-format

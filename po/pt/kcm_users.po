@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-04-21 16:04+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -29,18 +29,18 @@ msgstr "Mudar a Senha"
 msgid "Password"
 msgstr "Senha"
 
-#: package/contents/ui/ChangePassword.qml:55
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Confirm password"
 msgstr "Confirmar a senha"
 
-#: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:63
+#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "As senhas devem ser iguais"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:78
 #, kde-format
 msgid "Set Password"
 msgstr "Definir a Senha"
@@ -125,17 +125,17 @@ msgstr "Administrador"
 msgid "Account type:"
 msgstr "Tipo de conta:"
 
-#: package/contents/ui/CreateUser.qml:52
+#: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Senha:"
 
-#: package/contents/ui/CreateUser.qml:56
+#: package/contents/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Confirmar a senha:"
 
-#: package/contents/ui/CreateUser.qml:67
+#: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
 msgstr "Criar"
@@ -147,8 +147,9 @@ msgstr "Configurar as Impressões Digitais"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
-msgid "Clear Fingerprints"
-msgstr "Limpar as Impressões Digitais"
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -171,12 +172,12 @@ msgstr "Continuar"
 msgid "Done"
 msgstr "Concluído"
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "A Reconhecer a Impressão Digital"
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -184,22 +185,22 @@ msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr ""
 "Por favor, %1 de forma repetida o seu %2 no sensor de impressões digitais."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Dedo Reconhecido"
 
-#: package/contents/ui/FingerprintDialog.qml:183
+#: package/contents/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Escolha o dedo a reconhecer"
 
-#: package/contents/ui/FingerprintDialog.qml:247
+#: package/contents/ui/FingerprintDialog.qml:248
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Reconhecer de novo o dedo"
 
-#: package/contents/ui/FingerprintDialog.qml:265
+#: package/contents/ui/FingerprintDialog.qml:266
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Sem impressões digitais adicionadas"
@@ -440,3 +441,6 @@ msgstr "A Sua Conta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Outras Contas"
+
+#~ msgid "Clear Fingerprints"
+#~ msgstr "Limpar as Impressões Digitais"

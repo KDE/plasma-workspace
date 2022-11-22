@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-06-29 11:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -1289,14 +1289,14 @@ msgstr ""
 "您希望為目前 Plasma 工作階段設定的配色方案名稱（若輸入完整路徑，將只會使用它"
 "尾端的部分）"
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "顯示系統上可用的配色方案（以及目前使用的方案）"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1307,55 +1307,55 @@ msgstr ""
 "html#ColorKeywords) 與十六進位色碼。如果 shell 可能會把色碼當成註解的話，請記"
 "得加引號"
 
-#: plasma-apply-colorscheme.cpp:75
+#: plasma-apply-colorscheme.cpp:78
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "您要求設定的配色主題「%1」已經是目前 Plasma 工作階段的配色主題了。"
 
-#: plasma-apply-colorscheme.cpp:98
+#: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "成功套用配色方案 %1 到您目前的 Plasma 工作階段"
 
-#: plasma-apply-colorscheme.cpp:100
+#: plasma-apply-colorscheme.cpp:103
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "找不到主題「%1」。主題應該要是以下選項之一：%2"
 
-#: plasma-apply-colorscheme.cpp:107
+#: plasma-apply-colorscheme.cpp:110
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "您提供了空白的配色方案名稱，而這不被支援。"
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "您嘗試設為配色的檔案 %1 看起來不是一個配色方案。"
 
-#: plasma-apply-colorscheme.cpp:125
+#: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "成功套用強調色 %1"
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:139
 #, kde-format
 msgid "Invalid accent color "
 msgstr "無效的強調色"
 
-#: plasma-apply-colorscheme.cpp:132
+#: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "您的系統中有下列的配色方案："
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (目前配色方案)"

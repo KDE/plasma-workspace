@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-06-29 12:09+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -28,18 +28,18 @@ msgstr "Změnit heslo"
 msgid "Password"
 msgstr "Heslo"
 
-#: package/contents/ui/ChangePassword.qml:55
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Confirm password"
 msgstr "Potvrdit heslo"
 
-#: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:63
+#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Hesla musí být stejná"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:78
 #, kde-format
 msgid "Set Password"
 msgstr "Nastavit heslo"
@@ -123,17 +123,17 @@ msgstr "Administrátor"
 msgid "Account type:"
 msgstr "Typ účtu:"
 
-#: package/contents/ui/CreateUser.qml:52
+#: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Heslo:"
 
-#: package/contents/ui/CreateUser.qml:56
+#: package/contents/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Potvrdit heslo:"
 
-#: package/contents/ui/CreateUser.qml:67
+#: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
 msgstr "Vytvořit"
@@ -145,8 +145,9 @@ msgstr "Nastavte otisky"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
-msgid "Clear Fingerprints"
-msgstr "Vymazat otisky"
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -169,34 +170,34 @@ msgstr "Pokračovat"
 msgid "Done"
 msgstr "Hotovo"
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid "Finger Enrolled"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:183
+#: package/contents/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:247
+#: package/contents/ui/FingerprintDialog.qml:248
 #, kde-format
 msgid "Re-enroll finger"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:265
+#: package/contents/ui/FingerprintDialog.qml:266
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nebyly přidány žádné otisky"
@@ -427,3 +428,6 @@ msgstr "Váš účet"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Jiné účty"
+
+#~ msgid "Clear Fingerprints"
+#~ msgstr "Vymazat otisky"

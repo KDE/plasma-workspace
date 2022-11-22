@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-04-22 12:42+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,18 +28,18 @@ msgstr "Şifrəni dəyişmək"
 msgid "Password"
 msgstr "Şifrə"
 
-#: package/contents/ui/ChangePassword.qml:55
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Confirm password"
 msgstr "Şifrəni təsdiq etmək"
 
-#: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:63
+#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Şifrələr eyni olmalıdır"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:78
 #, kde-format
 msgid "Set Password"
 msgstr "Şifrə yaratmaq"
@@ -124,17 +124,17 @@ msgstr "Administrator"
 msgid "Account type:"
 msgstr "Hesab növü:"
 
-#: package/contents/ui/CreateUser.qml:52
+#: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Şifrə:"
 
-#: package/contents/ui/CreateUser.qml:56
+#: package/contents/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Şifrəni təsdiq etmək:"
 
-#: package/contents/ui/CreateUser.qml:67
+#: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
 msgstr "Yaratmaq"
@@ -146,8 +146,9 @@ msgstr "Barmaq izlərini tənzimləyin"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
-msgid "Clear Fingerprints"
-msgstr "Barmaq izlərini tənzimləyin"
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -170,34 +171,34 @@ msgstr "Davam edin"
 msgid "Done"
 msgstr "Hazırdır"
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Barmaq izi qeydiyyatı"
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr "Lütfən barmaq izi sensorundakı %2 üçün %1 addımını təkrarlayın."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Barmaq izi qeyd olundu"
 
-#: package/contents/ui/FingerprintDialog.qml:183
+#: package/contents/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Qeydə alınacaq barmağınızı seçin"
 
-#: package/contents/ui/FingerprintDialog.qml:247
+#: package/contents/ui/FingerprintDialog.qml:248
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Təkrar qeydiyyatdan keçirin"
 
-#: package/contents/ui/FingerprintDialog.qml:265
+#: package/contents/ui/FingerprintDialog.qml:266
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Barmaq izləri əlavə olunmadı"
@@ -432,6 +433,9 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Digər hesablar"
+
+#~ msgid "Clear Fingerprints"
+#~ msgstr "Barmaq izlərini tənzimləyin"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Lütfən təkrarlayın "

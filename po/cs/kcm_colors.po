@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2021-09-02 14:38+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1294,7 +1294,7 @@ msgstr ""
 "Název barevného schématu, který si přejete nastavit pro vaše aktuální sezení "
 "Plasma (pokud zadáte celou cestu, bude použita jenom poslední část)"
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1303,7 +1303,7 @@ msgstr ""
 "Zobrazit všechna barevná schémata dostupná na systému (a který je aktuální "
 "motiv)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1311,7 +1311,7 @@ msgid ""
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:75
+#: plasma-apply-colorscheme.cpp:78
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1320,12 +1320,12 @@ msgstr ""
 "Požadovaný motiv \"%1\" je již nastaven jako motiv por současné sezení "
 "Plasma."
 
-#: plasma-apply-colorscheme.cpp:98
+#: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Barevné schéma %1 bylo ve vašem sezení Plasma úspěšně nastaveno"
 
-#: plasma-apply-colorscheme.cpp:100
+#: plasma-apply-colorscheme.cpp:103
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1333,7 +1333,7 @@ msgid ""
 msgstr ""
 "Nelze najít motiv \"%1\". Motiv by měl být jedna z následujících možností: %2"
 
-#: plasma-apply-colorscheme.cpp:107
+#: plasma-apply-colorscheme.cpp:110
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1342,7 +1342,7 @@ msgstr ""
 "Povedlo se vám předat prázdný název barevného schématu, což není podporované "
 "chování."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1351,22 +1351,22 @@ msgstr ""
 "Soubor %1, který jste se pokusili nastavit jako barevné schéma jako barevné "
 "schéma nebyl rozpoznán."
 
-#: plasma-apply-colorscheme.cpp:125
+#: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:139
 #, kde-format
 msgid "Invalid accent color "
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:132
+#: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Ve vašem systému jsou dostupná následující barevná schémata:"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuální barevné schéma)"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-07-18 22:19+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1309,7 +1309,7 @@ msgstr ""
 "Plasma-istuntoon haluamasi väriteeman nimi (täydestä polkunimestä käytetään "
 "vain viimeistä osaa)"
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1317,7 +1317,7 @@ msgid ""
 msgstr ""
 "Näytä kaikki järjestelmään asennetut väriteemat (ja mikä niistä on käytössä)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1328,33 +1328,33 @@ msgstr ""
 "SVG11/types.html#ColorKeywords) ja heksalukuarvoja. Lainaa heksakoodi "
 "tarvittaessa, jottei komentotulkki laajenna sitä"
 
-#: plasma-apply-colorscheme.cpp:75
+#: plasma-apply-colorscheme.cpp:78
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Pyydetty teema ”%1” on jo asetettu väriteemaksi."
 
-#: plasma-apply-colorscheme.cpp:98
+#: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Väriteeman %1 käyttöönotto nykyiseen Plasma-istuntoon onnistui"
 
-#: plasma-apply-colorscheme.cpp:100
+#: plasma-apply-colorscheme.cpp:103
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "Teemaa ”%1” ei löytynyt. Teeman tulisi olla yksi seuraavista: %2"
 
-#: plasma-apply-colorscheme.cpp:107
+#: plasma-apply-colorscheme.cpp:110
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "Olet onnistunut antamaan väriteeman nimen tyhjänä, mitä ei tueta."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1363,22 +1363,22 @@ msgstr ""
 "Tiedostoa (%1), jota yritetään asettaa teemaksi, ei voitu tunnistaa "
 "väriteemaksi."
 
-#: plasma-apply-colorscheme.cpp:125
+#: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Korostusväriksi asetettiin onnistuneesti %1"
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:139
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Virheellinen korostusväri"
 
-#: plasma-apply-colorscheme.cpp:132
+#: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Järjestelmään on asennettu seuraavat väriteemat:"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (nykyinen väriteema)"

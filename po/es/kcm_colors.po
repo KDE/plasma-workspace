@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-07-03 13:26+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1310,7 +1310,7 @@ msgstr ""
 "El nombre del esquema de color que desea asignar a la sesión de Plasma "
 "actual (si se pasa una ruta completa, solo se usará la última parte de ella)."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1319,7 +1319,7 @@ msgstr ""
 "Mostrar todos los esquemas de color disponibles en el sistema (y el que se "
 "usa actualmente)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1331,7 +1331,7 @@ msgstr ""
 "códigos de color en hexadecimal. Use comillas con el código hexadecimal si "
 "existe la posibilidad de que se pueda expandir en la línea de órdenes."
 
-#: plasma-apply-colorscheme.cpp:75
+#: plasma-apply-colorscheme.cpp:78
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1340,13 +1340,13 @@ msgstr ""
 "El tema solicitado «%1» ya se está usando como tema de la sesión de Plasma "
 "actual."
 
-#: plasma-apply-colorscheme.cpp:98
+#: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "Se ha aplicado con éxito el esquema de color %1 a la sesión actual de Plasma"
 
-#: plasma-apply-colorscheme.cpp:100
+#: plasma-apply-colorscheme.cpp:103
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1355,7 +1355,7 @@ msgstr ""
 "No se ha podido encontrar el tema «%1». El tema puede ser una de las "
 "siguientes opciones: %2"
 
-#: plasma-apply-colorscheme.cpp:107
+#: plasma-apply-colorscheme.cpp:110
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1364,7 +1364,7 @@ msgstr ""
 "Acaba de pasar un nombre de esquema de color vacío, que es un comportamiento "
 "no permitido."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1373,22 +1373,22 @@ msgstr ""
 "El archivo que está intentando definir como tema, %1, no se ha podido "
 "identificar como esquema de color."
 
-#: plasma-apply-colorscheme.cpp:125
+#: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Color de acentuación %1 aplicado correctamente"
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:139
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Color de acentuación no válido "
 
-#: plasma-apply-colorscheme.cpp:132
+#: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Su sistema tiene los siguientes esquemas de color:"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de color actual)"

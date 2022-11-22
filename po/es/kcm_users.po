@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-04-22 21:46+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -30,18 +30,18 @@ msgstr "Cambiar contraseña"
 msgid "Password"
 msgstr "Contraseña"
 
-#: package/contents/ui/ChangePassword.qml:55
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Confirm password"
 msgstr "Confirmar contraseña"
 
-#: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:63
+#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Las contraseñas deben coincidir"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:78
 #, kde-format
 msgid "Set Password"
 msgstr "Definir contraseña"
@@ -127,17 +127,17 @@ msgstr "Administrador"
 msgid "Account type:"
 msgstr "Tipo de cuenta:"
 
-#: package/contents/ui/CreateUser.qml:52
+#: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: package/contents/ui/CreateUser.qml:56
+#: package/contents/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Confirmar contraseña:"
 
-#: package/contents/ui/CreateUser.qml:67
+#: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
 msgstr "Crear"
@@ -149,8 +149,9 @@ msgstr "Configurar las huellas dactilares"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
-msgid "Clear Fingerprints"
-msgstr "Borrar las huellas dactilares"
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -173,34 +174,34 @@ msgstr "Continuar"
 msgid "Done"
 msgstr "Terminado"
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Registro de huella dactilar"
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr "Por favor, %1 repetidamente su %2 en el sensor de huellas."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Huella registrada"
 
-#: package/contents/ui/FingerprintDialog.qml:183
+#: package/contents/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Escoja el dedo a registrar"
 
-#: package/contents/ui/FingerprintDialog.qml:247
+#: package/contents/ui/FingerprintDialog.qml:248
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Volver a registrar dedo"
 
-#: package/contents/ui/FingerprintDialog.qml:265
+#: package/contents/ui/FingerprintDialog.qml:266
 #, kde-format
 msgid "No fingerprints added"
 msgstr "No se han añadido huellas dactilares"
@@ -441,6 +442,9 @@ msgstr "Su cuenta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Otras cuentas"
+
+#~ msgid "Clear Fingerprints"
+#~ msgstr "Borrar las huellas dactilares"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Pase el dedo repetidamente"

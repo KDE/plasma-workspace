@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:48+0000\n"
+"POT-Creation-Date: 2022-11-22 00:47+0000\n"
 "PO-Revision-Date: 2022-08-11 20:53+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,18 +31,18 @@ msgstr "Aldatu pasahitza"
 msgid "Password"
 msgstr "Pasahitza"
 
-#: package/contents/ui/ChangePassword.qml:55
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Confirm password"
 msgstr "Berretsi pasahitza:"
 
-#: package/contents/ui/ChangePassword.qml:68
-#: package/contents/ui/CreateUser.qml:63
+#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Pasahitzak bat etorri behar du"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:78
 #, kde-format
 msgid "Set Password"
 msgstr "Ezarri pasahitza"
@@ -128,17 +128,17 @@ msgstr "Administratzailea"
 msgid "Account type:"
 msgstr "Kontu mota:"
 
-#: package/contents/ui/CreateUser.qml:52
+#: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Pasahitza:"
 
-#: package/contents/ui/CreateUser.qml:56
+#: package/contents/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Berretsi pasahitza::"
 
-#: package/contents/ui/CreateUser.qml:67
+#: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
 msgstr "Sortu"
@@ -150,8 +150,9 @@ msgstr "Konfiguratu hatz-markak"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
-msgid "Clear Fingerprints"
-msgstr "Garbitu hatz-markak"
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -174,34 +175,34 @@ msgstr "Jarraitu"
 msgid "Done"
 msgstr "Eginda"
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Hatz-marka erroldatzea"
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Hatza erroldatu da"
 
-#: package/contents/ui/FingerprintDialog.qml:183
+#: package/contents/ui/FingerprintDialog.qml:184
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Hautatu hatz bat erroldatzeko"
 
-#: package/contents/ui/FingerprintDialog.qml:247
+#: package/contents/ui/FingerprintDialog.qml:248
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Hatza berriz erroldatu"
 
-#: package/contents/ui/FingerprintDialog.qml:265
+#: package/contents/ui/FingerprintDialog.qml:266
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Ez da hatz-markarik gehitu"
@@ -441,6 +442,9 @@ msgstr "Zure kontua"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Beste kontu batzuk"
+
+#~ msgid "Clear Fingerprints"
+#~ msgstr "Garbitu hatz-markak"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Mesedez, behin eta berriz"

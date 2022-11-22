@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-02 00:51+0000\n"
-"PO-Revision-Date: 2022-10-17 12:35+0300\n"
+"PO-Revision-Date: 2022-11-21 22:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -538,7 +538,7 @@ msgstr "Geçerli Panoda Elle İşlem Yap"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "İçeriği &Düzenle…"
+msgstr "İçeriği Dü&zenle…"
 
 #: klipper.cpp:211
 #, kde-format
