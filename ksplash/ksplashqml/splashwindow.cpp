@@ -40,9 +40,7 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
         }
     }
 
-    QPixmap cursor(32, 32);
-    cursor.fill(Qt::transparent);
-    setCursor(QCursor(cursor));
+    setCursor(Qt::BlankCursor);
     setScreen(screen);
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
