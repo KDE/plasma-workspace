@@ -9,6 +9,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.kquickcontrolsaddons 2.1
+import org.kde.kwindowsystem 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
@@ -29,6 +30,10 @@ ColumnLayout {
     // }]
     property var inhibitions: []
     property bool inhibitsLidAction
+
+    KWindowSystem {
+        id: kwindowsystem
+    }
 
     // UI to manually inhibit sleep and screen locking
     PlasmaComponents3.CheckBox {
@@ -93,6 +98,7 @@ ColumnLayout {
 
             InhibitionHint {
                 property string icon: modelData.Icon
+                    || (kwindowsystem.isPlatformWayland ? "wayland" : "xorg")
                 property string name: modelData.Name
                 property string reason: modelData.Reason
 
