@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-11-06 05:20+0100\n"
+"PO-Revision-Date: 2022-11-22 07:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -848,7 +848,7 @@ msgstr "&არააქტიური მონიშნულებისთ�
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr ""
+msgstr "&სიებში დალაგებული სვეტების დაჩრდილვა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
@@ -1316,7 +1316,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "აქცენტის ფერი %1 წარმატებით გადატარდა"
 
 #: plasma-apply-colorscheme.cpp:139
 #, kde-format
@@ -1326,7 +1326,7 @@ msgstr "აქცენტის არასწორი ფერი "
 #: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "თქვენს სისტემაში გაქვთ შემდეგი ფერის სქემები:"
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format

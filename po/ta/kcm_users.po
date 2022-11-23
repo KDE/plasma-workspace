@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-04-07 19:26+0530\n"
+"PO-Revision-Date: 2022-11-22 19:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/ChangePassword.qml:26
 #: package/contents/ui/UserDetailsPage.qml:166
@@ -141,7 +141,7 @@ msgstr "கைரேகைகளை அமை"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "அனைத்தையும் நீக்கு"
 
 #: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
@@ -170,11 +170,11 @@ msgid "Enrolling Fingerprint"
 msgstr "கைரேகை பதிவிடப்படுகிறது"
 
 #: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgstr ""
+msgstr "உங்கள் %2 தனை கைரேகை உணரியின்மீது %1 செய்யவும்."
 
 #: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
