@@ -145,6 +145,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
 
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));
     m_match.setData(filterData.uri());
+    m_match.setUrls(QList<QUrl>{filterData.uri()});
     context.addMatch(m_match);
 }
 
