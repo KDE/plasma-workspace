@@ -1171,16 +1171,8 @@ void PanelView::updateMask()
         if (rootObject) {
             const QVariant maskProperty = rootObject->property("panelMask");
             if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
-                QRegion rawMask = maskProperty.value<QRegion>();
-                rawMask.translate(rootObject->property("maskOffsetX").toInt(),
-                                   rootObject->property("maskOffsetY").toInt());
-                // This makes the mask slightly smaller than the frame. Since the svg will have antialiasing and the mask not,
-                // there will be artifacts at the corners. I make the mask smaller by moving by 1px in each direction and
-                // then intersecting.
-                mask = rawMask.translated(1, 1);
-                mask = mask.intersected(rawMask.translated(-1, 1));
-                mask = mask.intersected(rawMask.translated(-1, -1));
-                mask = mask.intersected(rawMask.translated(1, -1));
+                mask = maskProperty.value<QRegion>();
+                mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
             }
         }
         KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
