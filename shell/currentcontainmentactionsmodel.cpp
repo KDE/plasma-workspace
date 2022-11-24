@@ -78,9 +78,13 @@ QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int mo
     return string;
 }
 
-QString CurrentContainmentActionsModel::wheelEventString(const QPointF &delta, int mouseButtons, int modifiers)
+QString CurrentContainmentActionsModel::wheelEventString(QObject *quickWheelEvent)
 {
-    QWheelEvent wheel(QPointF(), QPointF(), delta.toPoint(), {}, Qt::MouseButtons(mouseButtons), Qt::KeyboardModifiers(modifiers), Qt::NoScrollPhase, false);
+    const QPoint angleDelta = quickWheelEvent->property("angleDelta").toPoint();
+    const auto buttons = Qt::MouseButtons(quickWheelEvent->property("buttons").toInt());
+    const auto modifiers = Qt::KeyboardModifiers(quickWheelEvent->property("modifiers").toInt());
+
+    QWheelEvent wheel(QPointF(), QPointF(), QPoint(), angleDelta, buttons, modifiers, Qt::NoScrollPhase, false);
 
     return Plasma::ContainmentActions::eventToString(&wheel);
 }

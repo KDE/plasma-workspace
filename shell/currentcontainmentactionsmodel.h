@@ -39,7 +39,7 @@ public:
 
     Q_INVOKABLE bool isTriggerUsed(const QString &trigger);
     Q_INVOKABLE QString mouseEventString(int mouseButtons, int modifiers);
-    Q_INVOKABLE QString wheelEventString(const QPointF &delta, int mouseButtons, int modifiers);
+    Q_INVOKABLE QString wheelEventString(QObject *quickWheelEvent);
     Q_INVOKABLE bool append(const QString &action, const QString &plugin);
     Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
     Q_INVOKABLE void remove(int row);
