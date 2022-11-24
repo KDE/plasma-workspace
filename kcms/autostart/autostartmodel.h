@@ -23,9 +23,10 @@ public:
     explicit AutostartModel(QObject *parent = nullptr);
 
     enum Roles {
-        Name = Qt::DisplayRole,
+        Name,
         IconName = Qt::DecorationRole,
         Enabled = Qt::UserRole + 1,
+        TargetFileDirPath,
         Source,
         FileName,
         OnlyInPlasma,
@@ -60,7 +61,9 @@ Q_SIGNALS:
 private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
-    void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
+    void insertScriptEntry(int index, const QString &name, const QString &targetFileDirPath, const QString &path, AutostartModel::AutostartEntrySource kind);
+    QString makeSuggestedName(const QString &oldName);
+    QString suggestName(const QUrl &baseUrl, const QString &oldName);
     static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
 
     QDir m_xdgConfigPath;
@@ -69,7 +72,9 @@ private:
 };
 
 struct AutostartEntry {
-    QString name; // Human readable name or script file path. In case of symlinks the target file path
+    QString name; // Human readable name of file
+    QString targetFileDirPath; // Script file Path without filename. In case of symlinks the target file path without filename. In case of application, Just the
+                               // name of the application
     AutostartModel::AutostartEntrySource source;
     bool enabled;
     QString fileName; // the file backing the entry

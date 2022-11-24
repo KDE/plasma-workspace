@@ -16,7 +16,15 @@
 #include <QStandardPaths>
 #include <QWindow>
 
+#include <QDirIterator>
+#include <QFileInfo>
+#include <QMimeDatabase>
+#include <QRegularExpression>
+
+#include <set>
+
 #include <KFileItem>
+#include <KFileUtils>
 #include <KIO/CopyJob>
 #include <KIO/DeleteJob>
 #include <KLocalizedString>
@@ -44,7 +52,6 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
     KDesktopFile config(fileName);
     const KConfigGroup grp = config.desktopGroup();
     const auto name = config.readName();
-
     const bool hidden = grp.readEntry("Hidden", false);
 
     if (hidden) {
@@ -72,7 +79,15 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
         return {};
     }
 
-    return AutostartEntry{name, kind, enabled, fileName, onlyInPlasma, iconName};
+    if (kind == XdgScripts) {
+        const QString targetScriptPath = grp.readEntry("Exec");
+        const QString targetFileName = QUrl::fromLocalFile(targetScriptPath).fileName();
+        const QString targetScriptDir = QFileInfo(targetScriptPath).absoluteDir().path();
+
+        return AutostartEntry{targetFileName, targetScriptDir, kind, enabled, fileName, onlyInPlasma, iconName};
+    }
+
+    return AutostartEntry{name, name, kind, enabled, fileName, onlyInPlasma, iconName};
 }
 
 AutostartModel::AutostartModel(QObject *parent)
@@ -129,13 +144,18 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
 
     const auto autostartDirFilesInfo = dir.entryInfoList(QDir::Files);
     for (const QFileInfo &fi : autostartDirFilesInfo) {
-        QString fileName = fi.absoluteFilePath();
+        QString targetFileDir = fi.absoluteDir().path();
+        QString targetFilePath = fi.absoluteFilePath();
+        QString fileName = QUrl::fromLocalFile(targetFilePath).fileName();
         const bool isSymlink = fi.isSymLink();
         if (isSymlink) {
-            fileName = fi.symLinkTarget();
+            targetFilePath = fi.symLinkTarget();
+            QFileInfo symLinkTarget(targetFilePath);
+            targetFileDir = symLinkTarget.absoluteDir().path();
+            fileName = symLinkTarget.fileName();
         }
 
-        m_entries.push_back({fileName, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        m_entries.push_back({fileName, targetFileDir, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
     }
 }
 
@@ -174,7 +194,7 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
     const auto &entry = m_entries.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole:
+    case Name:
         return entry.name;
     case Enabled:
         return entry.enabled;
@@ -186,6 +206,8 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
         return entry.onlyInPlasma;
     case IconName:
         return entry.iconName;
+    case TargetFileDirPath:
+        return entry.targetFileDirPath;
     }
 
     return QVariant();
@@ -202,6 +224,12 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         // create a new desktop file in s_desktopPath
         desktopPath = m_xdgAutoStartPath.filePath(service->name() + QStringLiteral(".desktop"));
 
+        if (QFileInfo::exists(desktopPath)) {
+            QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
+            QString newName = suggestName(baseUrl, service->name() + QStringLiteral(".desktop"));
+            desktopPath = m_xdgAutoStartPath.filePath(newName);
+        }
+
         KDesktopFile desktopFile(desktopPath);
         KConfigGroup kcg = desktopFile.desktopGroup();
         kcg.writeEntry("Name", service->name());
@@ -215,17 +243,23 @@ void AutostartModel::addApplication(const KService::Ptr &service)
     } else {
         desktopPath = m_xdgAutoStartPath.filePath(service->storageId());
 
-        QFile::remove(desktopPath);
+        KDesktopFile desktopFile(service->entryPath());
+
+        if (QFileInfo::exists(desktopPath)) {
+            QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
+            QString newName = suggestName(baseUrl, service->storageId());
+            desktopPath = m_xdgAutoStartPath.filePath(newName);
+        }
 
         // copy original desktop file to new path
-        KDesktopFile desktopFile(service->entryPath());
-        auto newDeskTopFile = desktopFile.copyTo(desktopPath);
-        newDeskTopFile->sync();
+        auto newDesktopFile = desktopFile.copyTo(desktopPath);
+        newDesktopFile->sync();
     }
 
     const QString iconName = !service->icon().isEmpty() ? service->icon() : QStringLiteral("dialog-scripts");
 
     const auto entry = AutostartEntry{service->name(),
+                                      service->name(),
                                       AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                       true,
                                       desktopPath,
@@ -315,8 +349,24 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
             ++lastLoginScript;
         }
 
-        AutostartScriptDesktopFile desktopFile(fileName, file.filePath());
-        insertScriptEntry(lastLoginScript + 1, fileName, desktopFile.fileName(), kind);
+        // path of the desktop file that is about to be created
+        const QString newFilePath = m_xdgAutoStartPath.absoluteFilePath(fileName + QStringLiteral(".desktop"));
+
+        if (QFileInfo::exists(newFilePath)) {
+            const QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
+            QString newName = suggestName(baseUrl, fileName + QStringLiteral(".desktop"));
+
+            // remove the .desktop part from String
+            newName.chop(8);
+
+            AutostartScriptDesktopFile desktopFile(newName, file.filePath());
+            insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
+
+        } else {
+            AutostartScriptDesktopFile desktopFile(fileName, file.filePath());
+            insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
+        }
+
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
         const QUrl destinationScript = QUrl::fromLocalFile(QDir(m_xdgConfigPath.filePath(QStringLiteral("plasma-workspace/shutdown/"))).filePath(fileName));
         KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
@@ -335,7 +385,11 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
                 return;
             }
             const QUrl dest = theJob->property("finalUrl").toUrl();
-            insertScriptEntry(m_entries.size(), dest.fileName(), dest.path(), kind);
+            const QFileInfo destFile(dest.path());
+            const QString symLinkFileName = QUrl::fromLocalFile(destFile.symLinkTarget()).fileName();
+            const QFileInfo symLinkTarget{destFile.symLinkTarget()};
+            const QString symLinkTargetDir = symLinkTarget.absoluteDir().path();
+            insertScriptEntry(m_entries.size(), symLinkFileName, symLinkTargetDir, dest.path(), kind);
         });
 
         job->start();
@@ -344,11 +398,11 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     }
 }
 
-void AutostartModel::insertScriptEntry(int index, const QString &name, const QString &path, AutostartEntrySource kind)
+void AutostartModel::insertScriptEntry(int index, const QString &name, const QString &targetFileDirPath, const QString &path, AutostartEntrySource kind)
 {
     beginInsertRows(QModelIndex(), index, index);
 
-    AutostartEntry entry = AutostartEntry{name, kind, true, path, false, QStringLiteral("dialog-scripts")};
+    AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, QStringLiteral("dialog-scripts")};
 
     m_entries.insert(index, entry);
 
@@ -386,6 +440,7 @@ QHash<int, QByteArray> AutostartModel::roleNames() const
     roleNames.insert(FileName, QByteArrayLiteral("fileName"));
     roleNames.insert(OnlyInPlasma, QByteArrayLiteral("onlyInPlasma"));
     roleNames.insert(IconName, QByteArrayLiteral("iconName"));
+    roleNames.insert(TargetFileDirPath, QByteArrayLiteral("targetFileDirPath"));
 
     return roleNames;
 }
@@ -422,4 +477,59 @@ void AutostartModel::makeFileExecutable(const QString &fileName)
     QFile file(fileName);
 
     file.setPermissions(file.permissions() | QFile::ExeUser);
+}
+
+// Use slightly modified code copied from frameworks KFileUtils because desktop filenames cannot contain '(' or ' '.
+QString AutostartModel::makeSuggestedName(const QString &oldName)
+{
+    QString basename;
+
+    // Extract the original file extension from the filename
+    QMimeDatabase db;
+    QString nameSuffix = db.suffixForFileName(oldName);
+
+    if (oldName.lastIndexOf(QLatin1Char('.')) == 0) {
+        basename = QStringLiteral(".");
+        nameSuffix = oldName;
+    } else if (nameSuffix.isEmpty()) {
+        const int lastDot = oldName.lastIndexOf(QLatin1Char('.'));
+        if (lastDot == -1) {
+            basename = oldName;
+        } else {
+            basename = oldName.left(lastDot);
+            nameSuffix = oldName.mid(lastDot);
+        }
+    } else {
+        nameSuffix.prepend(QLatin1Char('.'));
+        basename = oldName.left(oldName.length() - nameSuffix.length());
+    }
+
+    // check if (number) exists at the end of the oldName and increment that number
+    const QRegularExpression re(QStringLiteral("_(\\d+)_"));
+    QRegularExpressionMatch rmatch;
+    oldName.lastIndexOf(re, -1, &rmatch);
+    if (rmatch.hasMatch()) {
+        const int currentNum = rmatch.captured(1).toInt();
+        const QString number = QString::number(currentNum + 1);
+        basename.replace(rmatch.capturedStart(1), rmatch.capturedLength(1), number);
+    } else {
+        // number does not exist, so just append " _1_" to filename
+        basename += QLatin1String("_1_");
+    }
+
+    return basename + nameSuffix;
+}
+
+QString AutostartModel::suggestName(const QUrl &baseURL, const QString &oldName)
+{
+    QString suggestedName = makeSuggestedName(oldName);
+
+    if (baseURL.isLocalFile()) {
+        const QString basePath = baseURL.toLocalFile() + QLatin1Char('/');
+        while (QFileInfo::exists(basePath + suggestedName)) {
+            suggestedName = makeSuggestedName(suggestedName);
+        }
+    }
+
+    return suggestedName;
 }

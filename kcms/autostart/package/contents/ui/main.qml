@@ -61,27 +61,31 @@ KCM.ScrollViewKCM {
     }
 
     view: ListView {
+        id: listView
         clip: true
         model: kcm.model
 
         delegate: Kirigami.SwipeListItem {
+            id: baseListItem
+            width: listView.width
+            // content item includes its own padding
+            padding: 0
+            // Don't want a background highlight effect or click highlight effect, but we can't just
+            // set hoverEnabled to false, because it still shows highlight color when clicked
+            // never appear!
+            activeBackgroundColor: "transparent"
+            activeTextColor: Kirigami.Theme.textColor
 
-            Item {
-                Kirigami.Icon {
-                    id: appIcon
-                    source: model.iconName
-                    width: Kirigami.Units.iconSizes.medium
-                    height: Kirigami.Units.iconSizes.medium
-                }
-
-                Label {
-                    height: appIcon.height
-                    text: model.name
-                    elide: Text.ElideRight
-                    anchors.left: appIcon.right
-                    anchors.leftMargin: Kirigami.Units.largeSpacing
-                    anchors.right: parent.right
-                }
+            contentItem: Kirigami.BasicListItem {
+                icon: model.iconName
+                iconSelected: false // prevent icon flickering now that we've disabled background color changes
+                reserveSpaceForSubtitle: true
+                //same reason as parent for disabling highlight this way
+                activeBackgroundColor: "transparent"
+                activeTextColor: Kirigami.Theme.textColor
+                separatorVisible: false
+                label: model.name
+                subtitle: model.source === AutostartModel.PlasmaShutdown || model.source === AutostartModel.XdgScripts ? model.targetFileDirPath : ""
             }
 
             actions: [
