@@ -1,6 +1,8 @@
+# SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: CC0-1.0
 [Desktop Entry]
 Name=KPatience
-Exec=kpat -qwindowtitle %c %u
+Exec=true -qwindowtitle %c %u
 Type=Application
 Icon=kpat
 X-DocPath=kpat/index.html
