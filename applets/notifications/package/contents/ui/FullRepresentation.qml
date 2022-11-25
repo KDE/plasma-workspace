@@ -239,19 +239,16 @@ PlasmaExtras.Representation {
         anchors.fill: parent
         background: null
         focus: true
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         contentItem: ListView {
             id: list
+            width: scrollView.availableWidth
             focus: true
             model: Plasmoid.expanded ? historyModel : null
             currentIndex: -1
 
             topMargin: PlasmaCore.Units.smallSpacing * 2
             bottomMargin: PlasmaCore.Units.smallSpacing * 2
-            leftMargin: PlasmaCore.Units.smallSpacing * 2
-            rightMargin: PlasmaCore.Units.smallSpacing * 2
             spacing: PlasmaCore.Units.smallSpacing
 
             KeyNavigation.up: dndCheck
@@ -335,7 +332,7 @@ PlasmaExtras.Representation {
 
             delegate: DraggableDelegate {
                 id: delegate
-                width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
+                width: ListView.view.width
                 contentItem: delegateLoader
 
                 // NOTE: The following animations replace the Transitions in the ListView
@@ -414,7 +411,12 @@ PlasmaExtras.Representation {
 
                 Loader {
                     id: delegateLoader
-                    width: delegate.width
+                    anchors {
+                        left: parent.left
+                        leftMargin: PlasmaCore.Units.smallSpacing * 2
+                        right: parent.right
+                        rightMargin: PlasmaCore.Units.smallSpacing * 2
+                    }
                     sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
                     Component {

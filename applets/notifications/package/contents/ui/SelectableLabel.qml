@@ -30,9 +30,6 @@ PlasmaComponents3.ScrollView {
     leftPadding: mirrored && !Kirigami.Settings.isMobile ? PlasmaComponents3.ScrollBar.vertical.width : 0
     rightPadding: !mirrored && !Kirigami.Settings.isMobile ? PlasmaComponents3.ScrollBar.vertical.width : 0
 
-    // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
     PlasmaComponents3.TextArea {
         id: bodyText
         enabled: !Kirigami.Settings.isMobile
