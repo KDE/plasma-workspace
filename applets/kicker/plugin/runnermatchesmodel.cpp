@@ -207,7 +207,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return false; // We don't want to close Kicker, BUG: 390585
     } else if (Kicker::handleEditApplicationAction(actionId, service)) {
         return true;
-    } else if (Kicker::handleAppstreamActions(actionId, argument)) {
+    } else if (Kicker::handleAppstreamActions(actionId, service)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
         auto job = new KIO::CommandLauncherJob(argument.toString());

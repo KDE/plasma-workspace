@@ -426,36 +426,35 @@ QVariantList appstreamActions(const KService::Ptr &service)
         }
     }
 
+    QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
+                                                           appStreamHandler->icon(),
+                                                           QStringLiteral("manageApplication"));
+    return {appstreamAction};
+#else
+    Q_UNUSED(service)
+    return {};
+#endif
+}
+
+bool handleAppstreamActions(const QString &actionId, const KService::Ptr &service)
+{
+    if (actionId != QLatin1String("manageApplication")) {
+        return false;
+    }
+#ifdef HAVE_APPSTREAMQT
     if (!appstreamPool.exists()) {
         appstreamPool->load();
     }
 
     const auto components =
         appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop"));
-    for (const auto &component : components) {
-        const QString componentId = component.id();
-
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
-                                                               appStreamHandler->icon(),
-                                                               QStringLiteral("manageApplication"),
-                                                               QVariant(QLatin1String("appstream://") + componentId));
-        // Only process the first element. In case we have system provided and flatpack sources we would end up with duplicated entries
-        return {appstreamAction};
+    if (components.empty()) {
+        return false;
     }
+    return QDesktopServices::openUrl(QUrl(QLatin1String("appstream://") + components[0].id()));
 #else
-    Q_UNUSED(service)
-#endif
-
-    return {};
-}
-
-bool handleAppstreamActions(const QString &actionId, const QVariant &argument)
-{
-    if (actionId == QLatin1String("manageApplication")) {
-        return QDesktopServices::openUrl(QUrl(argument.toString()));
-    }
-
     return false;
+#endif
 }
 
 static QList<KServiceAction> additionalActions(const KService::Ptr &service)

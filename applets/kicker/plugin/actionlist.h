@@ -54,7 +54,7 @@ QVariantList editApplicationAction(const KService::Ptr &service);
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service);
 
 QVariantList appstreamActions(const KService::Ptr &service);
-bool handleAppstreamActions(const QString &actionId, const QVariant &argument);
+bool handleAppstreamActions(const QString &actionId, const KService::Ptr &service);
 
 QVariantList additionalAppActions(const KService::Ptr &service);
 bool handleAdditionalAppActions(const QString &actionId, const KService::Ptr &service, const QVariant &argument);
