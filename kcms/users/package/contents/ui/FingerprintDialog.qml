@@ -24,11 +24,11 @@ import QtQuick.Layouts 1.3
 import QtQuick.Shapes 1.12
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.kcm.users 1.0
 import FingerprintModel 1.0
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: fingerprintRoot
 
     property var account
@@ -47,64 +47,76 @@ Kirigami.OverlaySheet {
         this.open();
     }
 
-    onSheetOpenChanged: {
-        if (sheetOpen && fingerprintModel.currentlyEnrolling) {
+    onVisibleChanged: {
+        if (visible && fingerprintModel.currentlyEnrolling) {
             fingerprintModel.stopEnrolling();
         }
     }
+    
+    title: i18n("Configure Fingerprints")
+    
+    standardButtons: Kirigami.Dialog.NoButton
 
-    header: Kirigami.Heading {
-        level: 2
-        text: i18n("Configure Fingerprints")
+    // FingerprintList State
+    property var clearAllAction: Kirigami.Action {
+        text: i18nc("@action:button 'all' refers to fingerprints", "Clear All")
+        visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+        enabled: fingerprintModel.enrolledFingerprints.length !== 0
+        icon.name: "delete"
+        onTriggered: fingerprintModel.clearFingerprints();
+    }
+    
+    property var addAction: Kirigami.Action {
+        text: i18n("Add")
+        visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+        enabled: fingerprintModel.availableFingersToEnroll.length !== 0
+        icon.name: "list-add"
+        onTriggered: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
     }
 
-    footer: Kirigami.ActionToolBar {
-        flat: false
-        alignment: Qt.AlignRight
-
-        actions: [
-            // FingerprintList State
-            Kirigami.Action {
-                text: i18nc("@action:button 'all' refers to fingerprints", "Clear All")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-                enabled: fingerprintModel.enrolledFingerprints.length !== 0
-                icon.name: "delete"
-                onTriggered: fingerprintModel.clearFingerprints();
-            },
-            Kirigami.Action {
-                text: i18n("Add")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-                enabled: fingerprintModel.availableFingersToEnroll.length !== 0
-                icon.name: "list-add"
-                onTriggered: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
-            },
-
-            // Enrolling State
-            Kirigami.Action {
-                text: i18n("Cancel")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-                icon.name: "dialog-cancel"
-                onTriggered: fingerprintModel.stopEnrolling();
-            },
-
-            // EnrollComplete State
-            Kirigami.Action {
-                text: i18n("Done")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-                icon.name: "dialog-ok"
-                onTriggered: fingerprintModel.stopEnrolling();
-            }
-        ]
+    // Enrolling State
+    property var cancelAction: Kirigami.Action {
+        text: i18n("Cancel")
+        visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
+        icon.name: "dialog-cancel"
+        onTriggered: fingerprintModel.stopEnrolling();
     }
 
-    contentItem: Item {
+    // EnrollComplete State
+    property var doneAction: Kirigami.Action {
+        text: i18n("Done")
+        visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+        icon.name: "dialog-ok"
+        onTriggered: fingerprintModel.stopEnrolling();
+    }
+    
+    customFooterActions: {
+        // HACK: unfortunately, it seems that Kirigami.Dialog's footer has a bug
+        // where buttons that aren't visible still get space reserved for them (bug in QQC2 DialogButtonBox)
+        let array = [];
+        if (fingerprintRoot.clearAllAction.visible) {
+            array.push(fingerprintRoot.clearAllAction);
+        }
+        if (fingerprintRoot.addAction.visible) {
+            array.push(fingerprintRoot.addAction);
+        }
+        if (fingerprintRoot.cancelAction.visible) {
+            array.push(fingerprintRoot.cancelAction);
+        }
+        if (fingerprintRoot.doneAction.visible) {
+            array.push(fingerprintRoot.doneAction);
+        }
+        return array;
+    }
+
+    padding: Kirigami.Units.smallSpacing
+    preferredWidth: Kirigami.Units.gridUnit * 24
+    preferredHeight: Kirigami.Units.gridUnit * 18
+    
+    Item {
         id: rootPanel
-        implicitWidth: Kirigami.Units.gridUnit * 12
-        Layout.maximumWidth: Kirigami.Units.gridUnit * 24
-        Layout.leftMargin: Kirigami.Units.smallSpacing
-        Layout.rightMargin: Kirigami.Units.smallSpacing
-        height: Kirigami.Units.gridUnit * 18
-
+        anchors.fill: parent
+        
         ColumnLayout {
             id: enrollFeedback
             spacing: Kirigami.Units.largeSpacing * 2
@@ -277,16 +289,14 @@ Kirigami.OverlaySheet {
                                 fingerprintModel.startEnrolling(finger.internalName);
                             }
                             tooltip: i18n("Re-enroll finger")
-                        }//,
-                        // TODO uncomment when fprintd releases with the delete fingerprint dbus call 
-                        // (it's in their documentation but not released as of 04/30/2021)
-                        //Kirigami.Action {
-                            //iconName: "entry-delete"
-                            //onTriggered: {
-                                //fingerprintModel.deleteFingerprint(finger.internalName);
-                            //}
-                            //tooltip: i18n("Delete fingerprint")
-                        //}
+                        },
+                        Kirigami.Action {
+                            iconName: "entry-delete"
+                            onTriggered: {
+                                fingerprintModel.deleteFingerprint(finger.internalName);
+                            }
+                            tooltip: i18n("Delete fingerprint")
+                        }
                     ]
                 }
 
