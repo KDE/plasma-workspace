@@ -59,9 +59,6 @@ ColumnLayout {
         Layout.rightMargin: PlasmaComponents3.ScrollBar.vertical.visible ? 0 : PlasmaCore.Units.smallSpacing * 2
         Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
 
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
         PlasmaComponents3.TextArea {
             id: textArea
             wrapMode: Text.Wrap
