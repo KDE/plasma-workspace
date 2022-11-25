@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-12 00:49+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-11-19 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -224,13 +224,13 @@ msgstr "显示器亮度"
 msgid "Keyboard Brightness"
 msgstr "键盘亮度"
 
-#: package/contents/ui/PowerManagementItem.qml:37
+#: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "禁止自动锁屏和睡眠"
 
-#: package/contents/ui/PowerManagementItem.qml:70
+#: package/contents/ui/PowerManagementItem.qml:75
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -238,29 +238,29 @@ msgid ""
 "external monitor is connected."
 msgstr "您的笔记本电脑已被配置为在连接了外接显示器时，合上笔记本盖不会睡眠。"
 
-#: package/contents/ui/PowerManagementItem.qml:83
+#: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "有 %1 个应用程序正在阻止睡眠和锁屏："
 
-#: package/contents/ui/PowerManagementItem.qml:103
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 正在阻止睡眠和锁屏 (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:104
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 正在阻止睡眠和锁屏 (未知原因)"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1：%2"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"

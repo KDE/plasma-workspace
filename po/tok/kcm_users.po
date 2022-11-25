@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -141,66 +141,60 @@ msgstr "nimi len lon nanpa tu:"
 msgid "Create"
 msgstr "o lon e sijelo"
 
-#: package/contents/ui/FingerprintDialog.qml:57
+#: package/contents/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "o lawa e nimi len luka"
 
-#: package/contents/ui/FingerprintDialog.qml:67
+#: package/contents/ui/FingerprintDialog.qml:68
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:74
+#: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
 msgid "Add"
 msgstr "o lon e nimi len luka"
 
-#: package/contents/ui/FingerprintDialog.qml:83
-#: package/contents/ui/FingerprintDialog.qml:100
+#: package/contents/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Cancel"
 msgstr "o ala"
 
-#: package/contents/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid "Continue"
-msgstr "o awen tawa"
-
-#: package/contents/ui/FingerprintDialog.qml:108
+#: package/contents/ui/FingerprintDialog.qml:92
 #, kde-format
 msgid "Done"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:132
+#: package/contents/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "mi pana e sona pi nimi len luka sin tawa ilo"
 
-#: package/contents/ui/FingerprintDialog.qml:138
+#: package/contents/ui/FingerprintDialog.qml:122
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:148
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "ilo li kama sona e nimi len luka"
 
-#: package/contents/ui/FingerprintDialog.qml:184
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:248
+#: package/contents/ui/FingerprintDialog.qml:279
 #, kde-format
 msgid "Re-enroll finger"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:266
+#: package/contents/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "No fingerprints added"
 msgstr ""
@@ -360,44 +354,44 @@ msgstr ""
 msgid "No fingerprint device found."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:316
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:318
+#: src/fingerprintmodel.cpp:332
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:320
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:322
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:344
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:347
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:336
+#: src/fingerprintmodel.cpp:350
 #, kde-format
 msgid "The device was disconnected."
 msgstr ""
 
-#: src/fingerprintmodel.cpp:341
+#: src/fingerprintmodel.cpp:355
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr ""
@@ -431,6 +425,9 @@ msgstr ""
 #, kde-format
 msgid "Other Accounts"
 msgstr ""
+
+#~ msgid "Continue"
+#~ msgstr "o awen tawa"
 
 #~ msgid "Clear Fingerprints"
 #~ msgstr "o weak e nimi len luka ale"

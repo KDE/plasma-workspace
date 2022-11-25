@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-04-21 16:04+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -140,44 +140,38 @@ msgstr "Confirmar a senha:"
 msgid "Create"
 msgstr "Criar"
 
-#: package/contents/ui/FingerprintDialog.qml:57
+#: package/contents/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Configurar as Impressões Digitais"
 
-#: package/contents/ui/FingerprintDialog.qml:67
+#: package/contents/ui/FingerprintDialog.qml:68
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:74
+#: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: package/contents/ui/FingerprintDialog.qml:83
-#: package/contents/ui/FingerprintDialog.qml:100
+#: package/contents/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: package/contents/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid "Continue"
-msgstr "Continuar"
-
-#: package/contents/ui/FingerprintDialog.qml:108
+#: package/contents/ui/FingerprintDialog.qml:92
 #, kde-format
 msgid "Done"
 msgstr "Concluído"
 
-#: package/contents/ui/FingerprintDialog.qml:132
+#: package/contents/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "A Reconhecer a Impressão Digital"
 
-#: package/contents/ui/FingerprintDialog.qml:138
+#: package/contents/ui/FingerprintDialog.qml:122
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -185,22 +179,22 @@ msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr ""
 "Por favor, %1 de forma repetida o seu %2 no sensor de impressões digitais."
 
-#: package/contents/ui/FingerprintDialog.qml:148
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Dedo Reconhecido"
 
-#: package/contents/ui/FingerprintDialog.qml:184
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Escolha o dedo a reconhecer"
 
-#: package/contents/ui/FingerprintDialog.qml:248
+#: package/contents/ui/FingerprintDialog.qml:279
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Reconhecer de novo o dedo"
 
-#: package/contents/ui/FingerprintDialog.qml:266
+#: package/contents/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Sem impressões digitais adicionadas"
@@ -364,32 +358,32 @@ msgstr "Escolher o Ficheiro…"
 msgid "No fingerprint device found."
 msgstr "Não foi detectado nenhum dispositivo de impressões digitais."
 
-#: src/fingerprintmodel.cpp:316
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Repita o reconhecimento do seu dedo."
 
-#: src/fingerprintmodel.cpp:318
+#: src/fingerprintmodel.cpp:332
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "A passagem foi demasiado curta. Tente de novo."
 
-#: src/fingerprintmodel.cpp:320
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "O dedo não está centrado no leitor. Tente de novo."
 
-#: src/fingerprintmodel.cpp:322
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Remova o seu dedo do leitor e tente de novo."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:344
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Não foi possível fazer o reconhecimento da impressão digital."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:347
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -398,12 +392,12 @@ msgstr ""
 "Não há mais espaço disponível neste dispositivo. Apague outras impressões "
 "digitais para continuar."
 
-#: src/fingerprintmodel.cpp:336
+#: src/fingerprintmodel.cpp:350
 #, kde-format
 msgid "The device was disconnected."
 msgstr "O dispositivo foi desligado."
 
-#: src/fingerprintmodel.cpp:341
+#: src/fingerprintmodel.cpp:355
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
@@ -441,6 +435,9 @@ msgstr "A Sua Conta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Outras Contas"
+
+#~ msgid "Continue"
+#~ msgstr "Continuar"
 
 #~ msgid "Clear Fingerprints"
 #~ msgstr "Limpar as Impressões Digitais"

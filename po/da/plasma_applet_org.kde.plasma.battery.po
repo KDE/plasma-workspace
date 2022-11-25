@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-12 00:49+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-05-14 17:13+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -234,13 +234,13 @@ msgstr "Skærmens lysstyrke"
 msgid "Keyboard Brightness"
 msgstr "Tastaturets lysstyrke"
 
-#: package/contents/ui/PowerManagementItem.qml:37
+#: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Forhindr manuelt slumring og låsning af skærm"
 
-#: package/contents/ui/PowerManagementItem.qml:70
+#: package/contents/ui/PowerManagementItem.qml:75
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid ""
@@ -254,30 +254,30 @@ msgstr ""
 "Din bærbare er konfigureret til ikke at slumre når låget lukkes, mens en "
 "ekstern skærm er tilsluttet."
 
-#: package/contents/ui/PowerManagementItem.qml:83
+#: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 program forhindrer i øjeblikket slumring og låsning af skærm:"
 msgstr[1] "%1 programmer forhindrer i øjeblikket slumring og låsning af skærm:"
 
-#: package/contents/ui/PowerManagementItem.qml:103
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 forhindrer i øjeblikket slumring og låsning af skærm (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:104
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 forhindrer i øjeblikket slumring og låsning af skærm (ukendt årsag)"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"

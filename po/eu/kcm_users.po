@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-08-11 20:53+0200\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"PO-Revision-Date: 2022-11-24 05:05+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/ChangePassword.qml:26
 #: package/contents/ui/UserDetailsPage.qml:166
@@ -143,66 +143,60 @@ msgstr "Berretsi pasahitza::"
 msgid "Create"
 msgstr "Sortu"
 
-#: package/contents/ui/FingerprintDialog.qml:57
+#: package/contents/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Konfiguratu hatz-markak"
 
-#: package/contents/ui/FingerprintDialog.qml:67
+#: package/contents/ui/FingerprintDialog.qml:68
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Garbitu dena"
 
-#: package/contents/ui/FingerprintDialog.qml:74
+#: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
 msgid "Add"
 msgstr "Gehitu"
 
-#: package/contents/ui/FingerprintDialog.qml:83
-#: package/contents/ui/FingerprintDialog.qml:100
+#: package/contents/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
 
-#: package/contents/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid "Continue"
-msgstr "Jarraitu"
-
-#: package/contents/ui/FingerprintDialog.qml:108
+#: package/contents/ui/FingerprintDialog.qml:92
 #, kde-format
 msgid "Done"
 msgstr "Eginda"
 
-#: package/contents/ui/FingerprintDialog.qml:132
+#: package/contents/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Hatz-marka erroldatzea"
 
-#: package/contents/ui/FingerprintDialog.qml:138
+#: package/contents/ui/FingerprintDialog.qml:122
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
 
-#: package/contents/ui/FingerprintDialog.qml:148
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Hatza erroldatu da"
 
-#: package/contents/ui/FingerprintDialog.qml:184
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Hautatu hatz bat erroldatzeko"
 
-#: package/contents/ui/FingerprintDialog.qml:248
+#: package/contents/ui/FingerprintDialog.qml:279
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Hatza berriz erroldatu"
 
-#: package/contents/ui/FingerprintDialog.qml:266
+#: package/contents/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Ez da hatz-markarik gehitu"
@@ -365,32 +359,32 @@ msgstr "Hautatu fitxategia..."
 msgid "No fingerprint device found."
 msgstr "Ez da hatz-marka gailurik aurkitu."
 
-#: src/fingerprintmodel.cpp:316
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Saia zaitez zure hatza berriz eskaneatzen."
 
-#: src/fingerprintmodel.cpp:318
+#: src/fingerprintmodel.cpp:332
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Hatz pasaera laburregia. Berriz saiatu."
 
-#: src/fingerprintmodel.cpp:320
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Hatza ez dago irakurgailuan erdiratuta. Berriz saiatu."
 
-#: src/fingerprintmodel.cpp:322
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Kendu zure hatza irakurgailutik eta berriz saiatu."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:344
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Hatz-marka erroldatzea huts egin du."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:347
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -399,12 +393,12 @@ msgstr ""
 "Ez dago gailu honetarako lekurik, ezabatu beste hatz-marka batzuk "
 "jarraitzeko."
 
-#: src/fingerprintmodel.cpp:336
+#: src/fingerprintmodel.cpp:350
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Gailua deskonektatuta zegoen."
 
-#: src/fingerprintmodel.cpp:341
+#: src/fingerprintmodel.cpp:355
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Errore ezezagun bat gertatu da."
@@ -442,6 +436,9 @@ msgstr "Zure kontua"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Beste kontu batzuk"
+
+#~ msgid "Continue"
+#~ msgstr "Jarraitu"
 
 #~ msgid "Clear Fingerprints"
 #~ msgstr "Garbitu hatz-markak"

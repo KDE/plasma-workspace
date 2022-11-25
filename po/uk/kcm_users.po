@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-11-22 22:32+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -145,66 +145,60 @@ msgstr "Підтвердження пароля:"
 msgid "Create"
 msgstr "Створити"
 
-#: package/contents/ui/FingerprintDialog.qml:57
+#: package/contents/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Налаштувати відбитки"
 
-#: package/contents/ui/FingerprintDialog.qml:67
+#: package/contents/ui/FingerprintDialog.qml:68
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Вилучити все"
 
-#: package/contents/ui/FingerprintDialog.qml:74
+#: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
 msgid "Add"
 msgstr "Додати"
 
-#: package/contents/ui/FingerprintDialog.qml:83
-#: package/contents/ui/FingerprintDialog.qml:100
+#: package/contents/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: package/contents/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid "Continue"
-msgstr "Продовжити"
-
-#: package/contents/ui/FingerprintDialog.qml:108
+#: package/contents/ui/FingerprintDialog.qml:92
 #, kde-format
 msgid "Done"
 msgstr "Виконано"
 
-#: package/contents/ui/FingerprintDialog.qml:132
+#: package/contents/ui/FingerprintDialog.qml:116
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Реєстрація відбитка"
 
-#: package/contents/ui/FingerprintDialog.qml:138
+#: package/contents/ui/FingerprintDialog.qml:122
 #, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgstr "Будь ласка, виконайте дію «%1» для вашого %2 на датчику відбитків."
 
-#: package/contents/ui/FingerprintDialog.qml:148
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Палець зареєстровано"
 
-#: package/contents/ui/FingerprintDialog.qml:184
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Виберіть палець для реєстрації"
 
-#: package/contents/ui/FingerprintDialog.qml:248
+#: package/contents/ui/FingerprintDialog.qml:279
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Повторна реєстрація пальця"
 
-#: package/contents/ui/FingerprintDialog.qml:266
+#: package/contents/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не додано жодного відбитка"
@@ -368,33 +362,33 @@ msgstr "Виберіть файл…"
 msgid "No fingerprint device found."
 msgstr "Не знайдено пристроїв для зчитування відбитків."
 
-#: src/fingerprintmodel.cpp:316
+#: src/fingerprintmodel.cpp:330
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Повторіть сканування вашого пальця."
 
-#: src/fingerprintmodel.cpp:318
+#: src/fingerprintmodel.cpp:332
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Торкання було надто коротким. Повторіть спробу."
 
-#: src/fingerprintmodel.cpp:320
+#: src/fingerprintmodel.cpp:334
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr ""
 "Палець не розташовано за центром пристрою для зчитування. Повторіть спробу."
 
-#: src/fingerprintmodel.cpp:322
+#: src/fingerprintmodel.cpp:336
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Приберіть ваш палець з пристрою для зчитування і повторіть спробу."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:344
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Помилка під час спроби реєстрації відбитка."
 
-#: src/fingerprintmodel.cpp:333
+#: src/fingerprintmodel.cpp:347
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -403,12 +397,12 @@ msgstr ""
 "На цьому пристрої не лишилося вільного місця. Вилучіть інші відбитки, щоб "
 "продовжити роботу з ним."
 
-#: src/fingerprintmodel.cpp:336
+#: src/fingerprintmodel.cpp:350
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Пристрій було від'єднано."
 
-#: src/fingerprintmodel.cpp:341
+#: src/fingerprintmodel.cpp:355
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Сталася невідома програмі помилка."
@@ -446,6 +440,9 @@ msgstr "Ваш обліковий запис"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Інші облікові записи"
+
+#~ msgid "Continue"
+#~ msgstr "Продовжити"
 
 #~ msgid "Clear Fingerprints"
 #~ msgstr "Вилучити відбитки"

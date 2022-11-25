@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-05-23 07:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -101,12 +101,12 @@ msgstr "Ajouter une image..."
 msgid "Get New Wallpapers…"
 msgstr "Obtenir de nouveaux fonds d'écran..."
 
-#: imagepackage/contents/ui/main.qml:69
+#: imagepackage/contents/ui/main.qml:53
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Ouvrir l'image de fond d'écran"
 
-#: imagepackage/contents/ui/main.qml:70
+#: imagepackage/contents/ui/main.qml:54
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Image de fond d'écran suivante"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -91,12 +91,12 @@ msgstr "Kép hozzáadása…"
 msgid "Get New Wallpapers…"
 msgstr "Háttérképek letöltése…"
 
-#: imagepackage/contents/ui/main.qml:69
+#: imagepackage/contents/ui/main.qml:53
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Háttérkép megnyitása"
 
-#: imagepackage/contents/ui/main.qml:70
+#: imagepackage/contents/ui/main.qml:54
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Következő háttérkép"

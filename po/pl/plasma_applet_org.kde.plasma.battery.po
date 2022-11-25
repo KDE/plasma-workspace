@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-12 00:49+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-03-13 11:09+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -238,13 +238,13 @@ msgstr "Jasność wyświetlacza"
 msgid "Keyboard Brightness"
 msgstr "Jasność klawiatury"
 
-#: package/contents/ui/PowerManagementItem.qml:37
+#: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Ręcznie zablokuj usypianie blokowanie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:70
+#: package/contents/ui/PowerManagementItem.qml:75
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -254,7 +254,7 @@ msgstr ""
 "Twój laptop jest ustawiony tak, że nie przejdzie w stan uśpienia po "
 "zamknięciu pokrywy, gdy podłączony jest monitor zewnętrzny."
 
-#: package/contents/ui/PowerManagementItem.qml:83
+#: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -262,23 +262,23 @@ msgstr[0] "Obecnie %1 program zapobiega uśpieniu i blokadzie ekranu:"
 msgstr[1] "Obecnie %1 programy zapobiegają uśpieniu i blokadzie ekranu:"
 msgstr[2] "Obecnie %1 programów zapobiega uśpieniu i blokadzie ekranu:"
 
-#: package/contents/ui/PowerManagementItem.qml:103
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "Obecnie %1 zapobiega uśpieniu i blokadzie ekranu (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:104
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "Obecnie %1 zapobiega (z nieznanego powodu) uśpieniu i blokadzie ekranu"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"

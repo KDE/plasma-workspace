@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2008-12-22 17:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -91,13 +91,13 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr "পটভূমির জন্য নতুন ছবি প্রাপ্ত করুন..."
 
-#: imagepackage/contents/ui/main.qml:69
+#: imagepackage/contents/ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgid "Open Wallpaper Image"
 msgstr "পটভূমির জন্য ছবির ফাইল নির্বাচন করুন"
 
-#: imagepackage/contents/ui/main.qml:70
+#: imagepackage/contents/ui/main.qml:54
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgid "Next Wallpaper Image"

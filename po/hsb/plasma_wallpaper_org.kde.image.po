@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -88,12 +88,12 @@ msgstr ""
 msgid "Get New Wallpapers…"
 msgstr ""
 
-#: imagepackage/contents/ui/main.qml:69
+#: imagepackage/contents/ui/main.qml:53
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr ""
 
-#: imagepackage/contents/ui/main.qml:70
+#: imagepackage/contents/ui/main.qml:54
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr ""

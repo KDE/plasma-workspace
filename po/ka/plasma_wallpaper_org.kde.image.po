@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-25 00:49+0000\n"
 "PO-Revision-Date: 2022-09-12 07:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -89,12 +89,12 @@ msgstr "გამოსახულების დამატება…"
 msgid "Get New Wallpapers…"
 msgstr "ფონის ახალი სურათების მიღება…"
 
-#: imagepackage/contents/ui/main.qml:69
+#: imagepackage/contents/ui/main.qml:53
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "ფონის გამოსახულების გახსნა"
 
-#: imagepackage/contents/ui/main.qml:70
+#: imagepackage/contents/ui/main.qml:54
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "ფონის შემდეგი გამოსახულება"
