@@ -122,9 +122,6 @@ PlasmaExtras.Representation {
     PlasmaComponents3.ScrollView {
         id: scrollView
 
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
         anchors.fill: parent
         contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
