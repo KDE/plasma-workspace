@@ -74,9 +74,6 @@
         <label>Dummy entry for indicating changes in an action's tree widget</label>
         <default>-1</default>
     </entry>
-    <entry name="PopupInfoMessageShown" type="Bool">
-        <default>true</default>
-    </entry>
     <entry name="ActionsInfoMessageShown" type="Bool">
         <default>true</default>
     </entry>

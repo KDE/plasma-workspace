@@ -301,23 +301,6 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
     layout->addRow(QString(), new QLabel(this));
-
-    // Where to configure the actions
-    if (KlipperSettings::popupInfoMessageShown()) {
-        KMessageWidget *msg = new KMessageWidget(xi18nc("@info",
-                                                        "The actions shown in the popup menu \
-can be configured on the <interface>Actions Configuration</interface> page."),
-                                                 this);
-        msg->setMessageType(KMessageWidget::Information);
-        msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
-        msg->setWordWrap(true);
-        msg->setCloseButtonVisible(true);
-
-        connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
-            KlipperSettings::setPopupInfoMessageShown(false);
-        });
-        layout->addRow(msg);
-    }
 }
 
 void PopupWidget::setExcludedWMClasses(const QStringList &excludedWMClasses)
@@ -625,6 +608,8 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
+
+    setMinimumHeight(550);
 }
 
 void ConfigDialog::updateSettings()
