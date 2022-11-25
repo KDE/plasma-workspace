@@ -26,10 +26,6 @@ PlasmaComponents3.ScrollView {
     }
     background: null
 
-    // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-    PlasmaComponents3.ScrollBar.vertical.policy: systemTrayState.activeApplet ? PlasmaComponents3.ScrollBar.AlwaysOff : PlasmaComponents3.ScrollBar.AsNeeded
-
     GridView {
         id: hiddenTasks
 
