@@ -243,9 +243,6 @@ PlasmaExtras.Representation {
                 id: holidaysView
                 anchors.fill: parent
 
-                // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-                PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
                 ListView {
                     id: holidaysList
 
@@ -464,9 +461,6 @@ PlasmaExtras.Representation {
             Layout.fillHeight: !agenda.visible
             Layout.minimumHeight: visible ? PlasmaCore.Units.gridUnit * 7 : 0
             Layout.maximumHeight: agenda.visible ? PlasmaCore.Units.gridUnit * 10 : -1
-
-            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
             ListView {
                 id: clocksList
