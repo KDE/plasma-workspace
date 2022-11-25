@@ -277,16 +277,14 @@ Kirigami.OverlaySheet {
                                 fingerprintModel.startEnrolling(finger.internalName);
                             }
                             tooltip: i18n("Re-enroll finger")
-                        }//,
-                        // TODO uncomment when fprintd releases with the delete fingerprint dbus call 
-                        // (it's in their documentation but not released as of 04/30/2021)
-                        //Kirigami.Action {
-                            //iconName: "entry-delete"
-                            //onTriggered: {
-                                //fingerprintModel.deleteFingerprint(finger.internalName);
-                            //}
-                            //tooltip: i18n("Delete fingerprint")
-                        //}
+                        },
+                        Kirigami.Action {
+                            iconName: "entry-delete"
+                            onTriggered: {
+                                fingerprintModel.deleteFingerprint(finger.internalName);
+                            }
+                            tooltip: i18n("Delete fingerprint")
+                        }
                     ]
                 }
 
