@@ -8,6 +8,8 @@
 
 #include "sessionmanagementbackend.h"
 
+#include <QDBusServiceWatcher>
+
 #include <KAuthorized>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -17,6 +19,8 @@
 #include "logoutprompt_interface.h"
 #include "screenlocker_interface.h"
 #include "shutdown_interface.h"
+
+#include "libkworkspace_debug.h"
 
 // add a constructor with the service names and paths pre-populated
 class LogoutPromptIface : public OrgKdeLogoutPromptInterface
@@ -39,8 +43,70 @@ public:
     }
 };
 
+class SessionManagementPrivate
+{
+public:
+    explicit SessionManagementPrivate(SessionManagement *q);
+
+    bool isKSMServerRunning = false;
+
+private:
+    void emitSignals();
+
+    QDBusServiceWatcher serviceWatcher;
+    static QTimer *shutdownMessageTimer;
+    SessionManagement *q = nullptr;
+};
+
+QTimer *SessionManagementPrivate::shutdownMessageTimer = nullptr;
+
+SessionManagementPrivate::SessionManagementPrivate(SessionManagement *q)
+    : q(q)
+{
+    // Only create single timer to avoid duplicate debug messages
+    if (!shutdownMessageTimer) {
+        shutdownMessageTimer = new QTimer();
+        shutdownMessageTimer->setInterval(500);
+        shutdownMessageTimer->setSingleShot(true);
+        QObject::connect(shutdownMessageTimer, &QTimer::timeout, shutdownMessageTimer, [] {
+            qCCritical(LIBKWORKSPACE_DEBUG) << "KSMServer is not running. Logout/Reboot/Shutdown is now disabled. To re-enable session management, run "
+                                               "`systemctl --user start plasma-ksmserver.service`";
+        });
+    }
+
+    // Monitor the running status of ksmserver
+    serviceWatcher.setConnection(QDBusConnection::sessionBus());
+    serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration);
+
+    q->connect(&serviceWatcher, &QDBusServiceWatcher::serviceRegistered, q, [this] {
+        isKSMServerRunning = true;
+        emitSignals();
+    });
+    q->connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, q, [this] {
+        shutdownMessageTimer->start();
+        isKSMServerRunning = false;
+        emitSignals();
+    });
+
+    // Check initial running status
+    isKSMServerRunning = QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.kde.ksmserver"));
+    if (!isKSMServerRunning) {
+        shutdownMessageTimer->start();
+    }
+}
+
+void SessionManagementPrivate::emitSignals()
+{
+    Q_EMIT q->canLogoutChanged();
+    Q_EMIT q->canRebootChanged();
+    Q_EMIT q->canShutdownChanged();
+    Q_EMIT q->canSaveSessionChanged();
+}
+
 SessionManagement::SessionManagement(QObject *parent)
     : QObject(parent)
+    , d(new SessionManagementPrivate(this))
 {
     auto backend = SessionBackend::self();
     connect(backend, &SessionBackend::stateChanged, this, &SessionManagement::stateChanged);
@@ -51,6 +117,11 @@ SessionManagement::SessionManagement(QObject *parent)
     connect(backend, &SessionBackend::canHibernateChanged, this, &SessionManagement::canHibernateChanged);
     connect(backend, &SessionBackend::aboutToSuspend, this, &SessionManagement::aboutToSuspend);
     connect(backend, &SessionBackend::resumingFromSuspend, this, &SessionManagement::resumingFromSuspend);
+}
+
+SessionManagement::~SessionManagement()
+{
+    delete static_cast<SessionManagementPrivate *>(d);
 }
 
 bool SessionManagement::canShutdown() const
@@ -67,7 +138,8 @@ bool SessionManagement::canLogout() const
 {
     // checking both is for compatibility with old kiosk configs
     // authorizeAction is the "correct" one
-    return KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
+    return static_cast<SessionManagementPrivate *>(d)->isKSMServerRunning && KAuthorized::authorizeAction(QStringLiteral("logout"))
+        && KAuthorized::authorize(QStringLiteral("logout"));
 }
 
 bool SessionManagement::canSuspend() const
