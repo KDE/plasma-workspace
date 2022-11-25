@@ -67,9 +67,6 @@ PlasmaExtras.Representation {
 
         focus: false
 
-        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-
         function positionViewAtItem(item) {
             if (!PlasmaComponents3.ScrollBar.vertical.visible) {
                 return;
