@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     isShuttingDownPending.waitForFinished();
 
     // if ksmserver is shutting us down already, we don't want another prompt
-    if (isShuttingDownPending.value()) {
+    if (isShuttingDownPending.isValid() && !isShuttingDownPending.value()) {
         return 0;
     }
 
