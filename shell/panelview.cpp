@@ -532,76 +532,56 @@ QRect PanelView::geometryByDistance(int distance) const
     QScreen *s = m_screenToFollow;
     QPoint position;
     const QRect screenGeometry = s->geometry();
+    QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
 
     if (!containment()) {
         return QRect();
     }
 
-    switch (containment()->location()) {
-    case Plasma::Types::TopEdge:
+    if (formFactor() == Plasma::Types::Horizontal) {
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.top()) + QPoint(m_offset - width() / 2, distance));
+            r.moveCenter(screenGeometry.center() - QPoint(m_offset, 0));
             break;
         case Qt::AlignRight:
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(m_offset + width(), distance));
+            r.moveRight(screenGeometry.right() - m_offset);
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(screenGeometry.topLeft() + QPoint(m_offset, distance));
+            r.moveLeft(screenGeometry.left() + m_offset);
         }
+    } else {
+        switch (m_alignment) {
+        case Qt::AlignCenter:
+            r.moveCenter(screenGeometry.center() - QPoint(0, m_offset));
+            break;
+        case Qt::AlignRight:
+            r.moveBottom(screenGeometry.bottom() - m_offset);
+            break;
+        case Qt::AlignLeft:
+        default:
+            r.moveTop(screenGeometry.top() + m_offset);
+        }
+    }
+
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        r.moveTop(screenGeometry.top() + distance);
         break;
 
     case Plasma::Types::LeftEdge:
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.center().y()) + QPoint(distance, m_offset - height() / 2));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.y() + screenGeometry.height()) - QPoint(distance, m_offset + height()));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(screenGeometry.topLeft() + QPoint(distance, m_offset));
-        }
+        r.moveLeft(screenGeometry.left() + distance);
         break;
 
     case Plasma::Types::RightEdge:
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            // Never use rect.right(); for historical reasons it returns left() + width() - 1; see https://doc.qt.io/qt-5/qrect.html#right
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.center().y()) - QPoint(totalThickness() + distance, 0)
-                              + QPoint(0, m_offset - height() / 2));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y() + screenGeometry.height())
-                              - QPoint(totalThickness() + distance, 0) - QPoint(0, m_offset + height()));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position =
-                QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(totalThickness() + distance, 0) + QPoint(0, m_offset));
-        }
+        r.moveRight(screenGeometry.right() - distance);
         break;
 
     case Plasma::Types::BottomEdge:
     default:
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.bottom() - totalThickness() - distance) + QPoint(m_offset - width() / 2, 1));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(screenGeometry.bottomRight() - QPoint(0, totalThickness() + distance) - QPoint(m_offset + width(), -1));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(screenGeometry.bottomLeft() - QPoint(0, totalThickness() + distance) + QPoint(m_offset, 1));
-        }
+        r.moveBottom(screenGeometry.bottom() - distance);
     }
-    QRect ret =
-        formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(totalThickness(), height())) : QRect(position, QSize(width(), totalThickness()));
-    ret = ret.intersected(screenGeometry);
-    return ret;
+    return r.intersected(screenGeometry);
 }
 
 void PanelView::resizePanel()
