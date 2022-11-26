@@ -2,11 +2,13 @@
 Description=KDE Session Management Server
 PartOf=graphical-session.target
 After=plasma-kwin_wayland.service plasma-kcminit.service
+ReloadPropagatedFrom=plasma-kwin_wayland.service
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/ksmserver
 BusName=org.kde.ksmserver
 Slice=session.slice
+Restart=on-failure
 
 [Install]
 WantedBy=plasma-core.target
