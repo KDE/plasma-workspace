@@ -269,7 +269,7 @@ void PanelView::setThickness(int value)
     m_thickness = value;
     Q_EMIT thicknessChanged();
 
-    config().writeEntry("thickness", value);
+    // For thickness, always use the default thickness value for horizontal/vertical panel
     configDefaults().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     resizePanel();
