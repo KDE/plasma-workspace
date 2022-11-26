@@ -15,7 +15,6 @@
 
 #include "shutdowndlg.h"
 
-#include "ksmserveriface.h"
 #include "logoutpromptadaptor.h"
 
 #include <KQuickAddons/QtQuickSettings>

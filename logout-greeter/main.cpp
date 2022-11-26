@@ -9,11 +9,11 @@
 #include <KSharedConfig>
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
 #include <QLibraryInfo>
 #include <QQuickWindow>
 #include <QSurfaceFormat>
-
-#include "ksmserveriface.h"
 
 #include "greeter.h"
 
@@ -31,13 +31,8 @@ int main(int argc, char *argv[])
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
 
-    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    QDBusPendingReply<bool> isShuttingDownPending = ksmserver.isShuttingDown();
-
-    isShuttingDownPending.waitForFinished();
-
-    // if ksmserver is shutting us down already, we don't want another prompt
-    if (isShuttingDownPending.value()) {
+    // If we're already shutting down we don't need another prompt
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.Shutdown")) {
         return 0;
     }
 
