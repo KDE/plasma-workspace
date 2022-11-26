@@ -342,6 +342,7 @@ option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma
 
 if(KF5DocTools_FOUND)
   add_subdirectory(doc)
+  kdoctools_install(po)
 endif()
 add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
