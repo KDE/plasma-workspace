@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-04-19 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -192,7 +192,13 @@ msgstr "Välj ett finger att registrera"
 msgid "Re-enroll finger"
 msgstr "Registrera finger igen"
 
-#: package/contents/ui/FingerprintDialog.qml:297
+#: package/contents/ui/FingerprintDialog.qml:286
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Rensa fingeravtryck"
+
+#: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
 msgid "No fingerprints added"
 msgstr "inga fingeravtryck tillagda"
@@ -434,9 +440,6 @@ msgstr "Övriga konton"
 
 #~ msgid "Continue"
 #~ msgstr "Fortsätt"
-
-#~ msgid "Clear Fingerprints"
-#~ msgstr "Rensa fingeravtryck"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Upprepade gånger "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 13:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -146,22 +146,12 @@ msgstr "Heç biri"
 msgid "Options:"
 msgstr "Seçimlər:"
 
-#: configdialog.cpp:308
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The actions shown in the popup menu can be configured on the "
-"<interface>Actions Configuration</interface> page."
-msgstr ""
-"Sürüşüb açılan pəncərədə göstərilən fəaliyyət <interface>Fəaliyyətləri "
-"tənzimləmək</interface> səhifəsində tənzimlənə bilər."
-
-#: configdialog.cpp:337
+#: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Pəncərəni istisna edin"
 
-#: configdialog.cpp:367
+#: configdialog.cpp:350
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -173,34 +163,34 @@ msgstr ""
 "oxşar olduqda, onun <interface>əmrləri</interface> Klipper açılan menyusunda "
 "görünür və oradan icra oluna bilər."
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Oxşar nümunə və əmrlər"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Təsviri"
 
-#: configdialog.cpp:382
+#: configdialog.cpp:365
 #, kde-format
 msgid "Add Action..."
 msgstr "Fəaliyyət əlavə etmək..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:369
 #, kde-format
 msgid "Edit Action..."
 msgstr "Fəaliyyətə düzəliş etmək..."
 
-#: configdialog.cpp:391
+#: configdialog.cpp:374
 #, kde-format
 msgid "Delete Action"
 msgstr "Fəaliyyəti silmək"
 
-#: configdialog.cpp:398
+#: configdialog.cpp:381
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -210,7 +200,7 @@ msgstr ""
 "Bu əməllər açılan menyuda görünür, hansılar ki, <interface>Fəaliyyət "
 "menyusu</interface> səhifəsində tənzimlənə bilər."
 
-#: configdialog.cpp:582
+#: configdialog.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -219,56 +209,56 @@ msgid ""
 msgstr ""
 "Seçilmiş <resource>%1</resource> əməlini və onun bütün əmrlərini silək?"
 
-#: configdialog.cpp:583
+#: configdialog.cpp:566
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Silimə əməlini təsdiq edin"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Əsas"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgid "General Configuration"
 msgstr "Əsas Tənzimləmələr"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Fəaliyyət menyusu"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, kde-format
 msgid "Action Menu"
 msgstr "Fəaliyyət menyusu"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Fəaliyyətləri tənzimləmək"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Fəaliyyətləri Tənzimləmək"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Qısayollar"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Qısayollar Tənzimləməsi"
 
-#: configdialog.cpp:695
+#: configdialog.cpp:680
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -286,7 +276,7 @@ msgstr ""
 "gözlənilmədən ortaya çıxarsa o zaman onu bu siyahıya əlavə edin. <link>Daxil "
 "olmaq üçün adı necə tapmalı</link>."
 
-#: configdialog.cpp:708
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -800,13 +790,13 @@ msgstr ""
 "element"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:84
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Seçim kənarlarındakı ara boşluqlarını çıxarın"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:86
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -820,13 +810,13 @@ msgstr ""
 "təsir etməyəcək."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:89
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Tarixçədən seçilmiş element üçün"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:91
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -836,13 +826,13 @@ msgstr ""
 "açılan menyusu göstərilsin."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:97
+#: klipper.kcfg:94
 #, kde-format
 msgid "Include MIME actions"
 msgstr "MİME fəaliyyətlərini daxil edin"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:99
+#: klipper.kcfg:96
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -989,6 +979,14 @@ msgstr "Bu menyu pəncərəsini bağlamaq"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The actions shown in the popup menu can be configured on the "
+#~ "<interface>Actions Configuration</interface> page."
+#~ msgstr ""
+#~ "Sürüşüb açılan pəncərədə göstərilən fəaliyyət <interface>Fəaliyyətləri "
+#~ "tənzimləmək</interface> səhifəsində tənzimlənə bilər."
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Mübadilə tarixçəsi silinsin?"

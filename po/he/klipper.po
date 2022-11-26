@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -153,20 +153,12 @@ msgstr ""
 msgid "Options:"
 msgstr "פעולות"
 
-#: configdialog.cpp:308
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The actions shown in the popup menu can be configured on the "
-"<interface>Actions Configuration</interface> page."
-msgstr ""
-
-#: configdialog.cpp:337
+#: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:367
+#: configdialog.cpp:350
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -175,35 +167,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "תיאור"
 
-#: configdialog.cpp:382
+#: configdialog.cpp:365
 #, kde-format
 msgid "Add Action..."
 msgstr "הוסף פעולה..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:369
 #, kde-format
 msgid "Edit Action..."
 msgstr "ערוך פעולה..."
 
-#: configdialog.cpp:391
+#: configdialog.cpp:374
 #, kde-format
 msgid "Delete Action"
 msgstr "מחק פעולה"
 
-#: configdialog.cpp:398
+#: configdialog.cpp:381
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -211,7 +203,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:582
+#: configdialog.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -219,24 +211,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:583
+#: configdialog.cpp:566
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "מחק פעולה"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -244,37 +236,37 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "פעולות"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "פעולות"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"
 
-#: configdialog.cpp:695
+#: configdialog.cpp:680
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -286,7 +278,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:708
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -788,14 +780,14 @@ msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "כניסת דמה להצגת שינויים בפעולות של פקד העץ"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:84
 #, fuzzy, kde-format
 #| msgid "Strip whitespace when executing an action"
 msgid "Trim whitespace from selection"
 msgstr "הסר רווחים בעת ביצוע פעולות"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:86
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -805,14 +797,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:89
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "החל פעם נוספת פעולות על פריט הנבחר מההיסטוריה"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:91
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid ""
@@ -821,14 +813,14 @@ msgid ""
 msgstr "האים באמת למחוק את כל היסטורית לוח העריכה?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:97
+#: klipper.kcfg:94
 #, fuzzy, kde-format
 #| msgid "Enable MIME-based actions"
 msgid "Include MIME actions"
 msgstr "אפשר פעולות מבוססות על טיפוסי נתונים (MIME Type)"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:99
+#: klipper.kcfg:96
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "

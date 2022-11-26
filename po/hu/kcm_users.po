@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-02-24 09:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -192,7 +192,13 @@ msgstr "Válassza ki a regisztrálandó ujjat"
 msgid "Re-enroll finger"
 msgstr "Ujj újraregisztrálása"
 
-#: package/contents/ui/FingerprintDialog.qml:297
+#: package/contents/ui/FingerprintDialog.qml:286
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Ujjlenyomatok törlése"
+
+#: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nincsenek hozzáadva ujjlenyomatok"
@@ -433,9 +439,6 @@ msgstr "Egyéb fiókok"
 
 #~ msgid "Continue"
 #~ msgstr "Folytatás"
-
-#~ msgid "Clear Fingerprints"
-#~ msgstr "Ujjlenyomatok törlése"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Kérjük ismételten "

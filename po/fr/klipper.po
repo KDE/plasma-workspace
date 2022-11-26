@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:51+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 12:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -166,22 +166,12 @@ msgstr "Aucun"
 msgid "Options:"
 msgstr "Options :"
 
-#: configdialog.cpp:308
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The actions shown in the popup menu can be configured on the "
-"<interface>Actions Configuration</interface> page."
-msgstr ""
-"Les actions affichées dans le menu contextuel peuvent être configurées sur "
-"la page <interface>Configuration des actions</interface>."
-
-#: configdialog.cpp:337
+#: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Exclure des fenêtres"
 
-#: configdialog.cpp:367
+#: configdialog.cpp:350
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -193,34 +183,34 @@ msgstr ""
 "contenu du presse-papier, ses <interface>commandes</interface> apparaissent "
 "dans le menu contextuel de Klipper et peuvent être être exécutées."
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Schéma et commandes de correspondance "
 
-#: configdialog.cpp:376
+#: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Description"
 
-#: configdialog.cpp:382
+#: configdialog.cpp:365
 #, kde-format
 msgid "Add Action..."
 msgstr "Ajouter une action..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:369
 #, kde-format
 msgid "Edit Action..."
 msgstr "Modifier l'action..."
 
-#: configdialog.cpp:391
+#: configdialog.cpp:374
 #, kde-format
 msgid "Delete Action"
 msgstr "Supprimer l'action"
 
-#: configdialog.cpp:398
+#: configdialog.cpp:381
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -230,7 +220,7 @@ msgstr ""
 "Ces actions sont affichées dans le menu contextuel qui peut être configuré "
 "sur la page <interface>Configuration des actions</interface>."
 
-#: configdialog.cpp:582
+#: configdialog.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -240,56 +230,56 @@ msgstr ""
 "Supprimer l'action sélectionnée <resource>%1</resource><nl/>et toutes ses "
 "commandes ?"
 
-#: configdialog.cpp:583
+#: configdialog.cpp:566
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirmer l'action de suppression"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Général"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:595
 #, kde-format
 msgid "General Configuration"
 msgstr "Configuration générale"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu d'action"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:596
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu d'action"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuration des actions"
 
-#: configdialog.cpp:614
+#: configdialog.cpp:597
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configuration des actions"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: configdialog.cpp:617
+#: configdialog.cpp:600
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configuration des raccourcis clavier"
 
-#: configdialog.cpp:695
+#: configdialog.cpp:680
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -308,7 +298,7 @@ msgstr ""
 "d'une application particulière, alors, ajoutez-le à cette liste. "
 "<link>Comment trouver le nom à saisir</link>."
 
-#: configdialog.cpp:708
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -835,13 +825,13 @@ msgstr ""
 "affichant l'arborescence des actions"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:84
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Supprimer les espaces lors de la sélection"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:86
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -855,13 +845,13 @@ msgstr ""
 "papier n’est pas affecté."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:89
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Pour un élément sélectionné dans l'historique"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:91
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -871,13 +861,13 @@ msgstr ""
 "sélectionnée dans l'historique du presse-papier."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:97
+#: klipper.kcfg:94
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Inclure des actions relatives au type « MIME »"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:99
+#: klipper.kcfg:96
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -1024,6 +1014,14 @@ msgstr "Désactiver cette boîte de dialogue"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuler"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The actions shown in the popup menu can be configured on the "
+#~ "<interface>Actions Configuration</interface> page."
+#~ msgstr ""
+#~ "Les actions affichées dans le menu contextuel peuvent être configurées "
+#~ "sur la page <interface>Configuration des actions</interface>."
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Supprimer l'historique du presse-papier ?"

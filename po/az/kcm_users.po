@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-04-22 12:42+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -192,7 +192,13 @@ msgstr "Qeydə alınacaq barmağınızı seçin"
 msgid "Re-enroll finger"
 msgstr "Təkrar qeydiyyatdan keçirin"
 
-#: package/contents/ui/FingerprintDialog.qml:297
+#: package/contents/ui/FingerprintDialog.qml:286
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Barmaq izlərini tənzimləyin"
+
+#: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Barmaq izləri əlavə olunmadı"
@@ -430,9 +436,6 @@ msgstr "Digər hesablar"
 
 #~ msgid "Continue"
 #~ msgstr "Davam edin"
-
-#~ msgid "Clear Fingerprints"
-#~ msgstr "Barmaq izlərini tənzimləyin"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Lütfən təkrarlayın "

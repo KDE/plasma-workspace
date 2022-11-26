@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-04-23 14:24+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -192,7 +192,13 @@ msgstr "Pick a finger to enroll"
 msgid "Re-enroll finger"
 msgstr "Re-enroll finger"
 
-#: package/contents/ui/FingerprintDialog.qml:297
+#: package/contents/ui/FingerprintDialog.qml:286
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Clear Fingerprints"
+
+#: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
 msgid "No fingerprints added"
 msgstr "No fingerprints added"
@@ -432,9 +438,6 @@ msgstr "Other Accounts"
 
 #~ msgid "Continue"
 #~ msgstr "Continue"
-
-#~ msgid "Clear Fingerprints"
-#~ msgstr "Clear Fingerprints"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "Please repeatedly "

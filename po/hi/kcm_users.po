@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-26 00:48+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -191,7 +191,13 @@ msgstr "दाखिल करने के लिए एक उँगली च
 msgid "Re-enroll finger"
 msgstr "उँगली का दाखिला पुनः करें"
 
-#: package/contents/ui/FingerprintDialog.qml:297
+#: package/contents/ui/FingerprintDialog.qml:286
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "अंगुलि छाप साफ करें"
+
+#: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
 msgid "No fingerprints added"
 msgstr "कोई अंगुलि छाप नहीं जोड़ा गया"
@@ -428,9 +434,6 @@ msgstr "अन्य खाते"
 
 #~ msgid "Continue"
 #~ msgstr "जारी रखें"
-
-#~ msgid "Clear Fingerprints"
-#~ msgstr "अंगुलि छाप साफ करें"
 
 #~ msgid "Please repeatedly "
 #~ msgstr "कृपया बार-बार "
