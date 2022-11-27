@@ -1713,7 +1713,12 @@ void CFontListView::view()
 
     if (fonts.count()
         && (fonts.count() < constMaxBeforePrompt
-            || KMessageBox::Yes == KMessageBox::questionYesNo(this, i18n("Open all %1 fonts in font viewer?", fonts.count())))) {
+            || KMessageBox::PrimaryAction
+                == KMessageBox::questionTwoActions(this,
+                                                   i18n("Open all %1 fonts in font viewer?", fonts.count()),
+                                                   QString(),
+                                                   KStandardGuiItem::open(),
+                                                   KStandardGuiItem::cancel()))) {
         QSet<CFontItem *>::ConstIterator it(fonts.begin()), end(fonts.end());
         QStringList args;
 

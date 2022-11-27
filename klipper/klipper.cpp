@@ -591,18 +591,18 @@ void Klipper::slotQuit()
     }
 
     saveSession();
-    int autoStart = KMessageBox::questionYesNoCancel(nullptr,
-                                                     i18n("Should Klipper start automatically when you login?"),
-                                                     i18n("Automatically Start Klipper?"),
-                                                     KGuiItem(i18n("Start")),
-                                                     KGuiItem(i18n("Do Not Start")),
-                                                     KStandardGuiItem::cancel(),
-                                                     QStringLiteral("StartAutomatically"));
+    int autoStart = KMessageBox::questionTwoActionsCancel(nullptr,
+                                                          i18n("Should Klipper start automatically when you login?"),
+                                                          i18n("Automatically Start Klipper?"),
+                                                          KGuiItem(i18n("Start")),
+                                                          KGuiItem(i18n("Do Not Start")),
+                                                          KStandardGuiItem::cancel(),
+                                                          QStringLiteral("StartAutomatically"));
 
     KConfigGroup config(KSharedConfig::openConfig(), "General");
-    if (autoStart == KMessageBox::Yes) {
+    if (autoStart == KMessageBox::PrimaryAction) {
         config.writeEntry("AutoStart", true);
-    } else if (autoStart == KMessageBox::No) {
+    } else if (autoStart == KMessageBox::SecondaryAction) {
         config.writeEntry("AutoStart", false);
     } else // cancel chosen don't quit
         return;

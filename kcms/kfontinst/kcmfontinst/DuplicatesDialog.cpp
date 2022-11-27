@@ -182,8 +182,19 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
         QSet<QString> files = m_view->getMarkedFiles();
         int fCount = files.count();
 
-        if (1 == fCount ? KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete:\n%1", *files.begin()))
-                        : KMessageBox::Yes == KMessageBox::warningYesNoList(this, i18n("Are you sure you wish to delete:"), files.values())) {
+        if (1 == fCount ? KMessageBox::PrimaryAction
+                    == KMessageBox::warningTwoActions(this,
+                                                      i18n("Are you sure you wish to delete:\n%1", *files.begin()),
+                                                      QString(),
+                                                      KStandardGuiItem::del(),
+                                                      KStandardGuiItem::cancel())
+                        : KMessageBox::PrimaryAction
+                    == KMessageBox::warningTwoActionsList(this,
+                                                          i18n("Are you sure you wish to delete:"),
+                                                          files.values(),
+                                                          QString(),
+                                                          KStandardGuiItem::del(),
+                                                          KStandardGuiItem::cancel())) {
             m_fontList->setSlowUpdates(true);
 
             CJobRunner runner(this);
@@ -206,7 +217,8 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
     case QDialogButtonBox::Close:
         if (!m_fontFileList->wasTerminated()) {
             if (m_fontFileList->isRunning()) {
-                if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Cancel font scan?"))) {
+                if (KMessageBox::PrimaryAction
+                    == KMessageBox::warningTwoActions(this, i18n("Cancel font scan?"), QString(), KStandardGuiItem::cancel(), KStandardGuiItem::cont())) {
                     m_label->setText(i18n("Canceling…"));
 
                     if (m_fontFileList->isRunning()) {
@@ -485,7 +497,12 @@ void CFontFileListView::openViewer()
 
     if (!files.isEmpty()
         && (files.count() < constMaxBeforePrompt
-            || KMessageBox::Yes == KMessageBox::questionYesNo(this, i18np("Open font in font viewer?", "Open all %1 fonts in font viewer?", files.count())))) {
+            || KMessageBox::PrimaryAction
+                == KMessageBox::questionTwoActions(this,
+                                                   i18np("Open font in font viewer?", "Open all %1 fonts in font viewer?", files.count()),
+                                                   QString(),
+                                                   KStandardGuiItem::open(),
+                                                   KStandardGuiItem::cancel()))) {
         QSet<QString>::ConstIterator it(files.begin()), end(files.end());
 
         for (; it != end; ++it) {

@@ -90,9 +90,12 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
         saveScheme(true /*overwrite*/);
     } else if (buttonBox->standardButton(button) == QDialogButtonBox::Close) {
         if (m_unsavedChanges) {
-            KMessageBox::ButtonCode ans =
-                KMessageBox::questionYesNo(this, i18n("You have unsaved changes. Do you really want to quit?"), i18n("Unsaved changes"));
-            if (ans == KMessageBox::No) {
+            KMessageBox::ButtonCode ans = KMessageBox::questionTwoActions(this,
+                                                                          i18n("You have unsaved changes. Do you really want to quit?"),
+                                                                          i18n("Unsaved changes"),
+                                                                          KStandardGuiItem::quit(),
+                                                                          KStandardGuiItem::cancel());
+            if (ans == KMessageBox::SecondaryAction) {
                 return;
             }
         }
@@ -132,14 +135,14 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
     // or if we can overwrite it if it exists
     if (path.isEmpty() || !file.exists() || canWrite) {
         if (canWrite && !overwrite) {
-            int ret = KMessageBox::questionYesNo(this,
-                                                 i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
-                                                 i18n("Save Color Scheme"),
-                                                 KStandardGuiItem::overwrite(),
-                                                 KStandardGuiItem::cancel());
+            int ret = KMessageBox::questionTwoActions(this,
+                                                      i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
+                                                      i18n("Save Color Scheme"),
+                                                      KStandardGuiItem::overwrite(),
+                                                      KStandardGuiItem::cancel());
 
             // on don't overwrite, call again the function
-            if (ret == KMessageBox::No) {
+            if (ret == KMessageBox::SecondaryAction) {
                 this->saveScheme(overwrite);
                 return;
             }

@@ -31,14 +31,14 @@ int CInstaller::install(const QSet<QUrl> &urls)
     CJobRunner::startDbusService();
 
     if (!Misc::root()) {
-        switch (KMessageBox::questionYesNoCancel(m_parent,
-                                                 i18n("Do you wish to install the font(s) for personal use "
-                                                      "(only available to you), or "
-                                                      "system-wide (available to all users)?"),
-                                                 i18n("Where to Install"),
-                                                 KGuiItem(KFI_KIO_FONTS_USER.toString()),
-                                                 KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
-        case KMessageBox::No:
+        switch (KMessageBox::questionTwoActionsCancel(m_parent,
+                                                      i18n("Do you wish to install the font(s) for personal use "
+                                                           "(only available to you), or "
+                                                           "system-wide (available to all users)?"),
+                                                      i18n("Where to Install"),
+                                                      KGuiItem(KFI_KIO_FONTS_USER.toString()),
+                                                      KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
+        case KMessageBox::SecondaryAction:
             sysInstall = true;
             break;
         case KMessageBox::Cancel:

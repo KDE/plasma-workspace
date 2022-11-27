@@ -952,17 +952,17 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
             switch (m_groupListView->getType()) {
             case CGroupListItem::ALL:
             case CGroupListItem::UNCLASSIFIED:
-                switch (KMessageBox::questionYesNoCancel(this,
-                                                         i18n("Do you wish to install the font(s) for personal use "
-                                                              "(only available to you), or "
-                                                              "system-wide (available to all users)?"),
-                                                         i18n("Where to Install"),
-                                                         KGuiItem(KFI_KIO_FONTS_USER.toString()),
-                                                         KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
-                case KMessageBox::Yes:
+                switch (KMessageBox::questionTwoActionsCancel(this,
+                                                              i18n("Do you wish to install the font(s) for personal use "
+                                                                   "(only available to you), or "
+                                                                   "system-wide (available to all users)?"),
+                                                              i18n("Where to Install"),
+                                                              KGuiItem(KFI_KIO_FONTS_USER.toString()),
+                                                              KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
+                case KMessageBox::PrimaryAction:
                     system = false;
                     break;
-                case KMessageBox::No:
+                case KMessageBox::SecondaryAction:
                     system = true;
                     break;
                 default:
