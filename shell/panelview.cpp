@@ -529,14 +529,14 @@ void PanelView::positionPanel()
 
 QRect PanelView::geometryByDistance(int distance) const
 {
+    if (!containment()) {
+        return QRect();
+    }
+
     QScreen *s = m_screenToFollow;
     QPoint position;
     const QRect screenGeometry = s->geometry();
     QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
-
-    if (!containment()) {
-        return QRect();
-    }
 
     if (formFactor() == Plasma::Types::Horizontal) {
         switch (m_alignment) {
