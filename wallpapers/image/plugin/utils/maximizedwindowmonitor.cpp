@@ -49,15 +49,15 @@ void MaximizedWindowMonitor::Private::init()
     q->setSortMode(SortMode::SortActivity);
     q->setGroupMode(GroupMode::GroupDisabled);
 
-    q->setActivity(m_activityInfo->currentActivity());
-    q->connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged, q, [this] {
-        q->setActivity(m_activityInfo->currentActivity());
-    });
+    auto currentActivity = std::bind(&TaskManager::ActivityInfo::currentActivity, m_activityInfo);
+    auto setCurrentActivity = std::bind(&TaskManager::TasksModel::setActivity, q, currentActivity);
+    setCurrentActivity();
+    q->connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged, q, setCurrentActivity);
 
-    q->setVirtualDesktop(m_virtualDesktopInfo->currentDesktop());
-    q->connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, q, [this]() {
-        q->setVirtualDesktop(m_virtualDesktopInfo->currentDesktop());
-    });
+    auto currentDesktop = std::bind(&TaskManager::VirtualDesktopInfo::currentDesktop, m_virtualDesktopInfo);
+    auto setCurrentDesktop = std::bind(&TaskManager::TasksModel::setVirtualDesktop, q, currentDesktop);
+    setCurrentDesktop();
+    q->connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, q, setCurrentDesktop);
 
     q->setFilterByActivity(true);
     q->setFilterByVirtualDesktop(true);
