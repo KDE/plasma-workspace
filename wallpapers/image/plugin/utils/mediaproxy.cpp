@@ -6,6 +6,7 @@
 
 #include "mediaproxy.h"
 
+#include <QBuffer>
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QMimeDatabase>
@@ -259,7 +260,12 @@ void MediaProxy::determineBackgroundType(KPackage::Package &package)
     QMimeDatabase db;
     const QString type = db.mimeTypeForFile(filePath).name();
 
-    if (QMovie::supportedFormats().contains(QFileInfo(filePath).suffix().toLower().toLatin1())) {
+    QBuffer dummyBuffer;
+    dummyBuffer.open(QIODevice::ReadOnly);
+    // Don't use QMovie::supportedFormats() as it loads all available image plugins
+    const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
+
+    if (isAnimated) {
         // Derived from the suffix
         m_backgroundType = BackgroundType::Type::AnimatedImage;
     } else if (type.startsWith(QLatin1String("image/"))) {
