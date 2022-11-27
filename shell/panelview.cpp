@@ -534,7 +534,6 @@ QRect PanelView::geometryByDistance(int distance) const
     }
 
     QScreen *s = m_screenToFollow;
-    QPoint position;
     const QRect screenGeometry = s->geometry();
     QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
 
