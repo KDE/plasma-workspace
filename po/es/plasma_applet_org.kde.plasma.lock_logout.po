@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2019, 2020, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2021-05-27 01:05+0200\n"
+"PO-Revision-Date: 2022-11-26 14:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 22.11.80\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Hibernar"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Dormir"
+msgstr "Reposo"
 
 #: contents/ui/data.js:6
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Terminar la sesión"
 #: contents/ui/data.js:40
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "Dormir (suspender en memoria)"
+msgstr "Reposo (suspender en memoria)"
 
 #: contents/ui/data.js:47
 #, kde-format

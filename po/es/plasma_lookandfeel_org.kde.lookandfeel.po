@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-09 12:40+0200\n"
+"PO-Revision-Date: 2022-11-26 14:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.11.80\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -49,7 +49,7 @@ msgstr "El bloqueo de mayúsculas está activado"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Dormir"
+msgstr "Reposo"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
 #: contents/logout/Logout.qml:181
@@ -162,7 +162,7 @@ msgstr "Desbloqueo fallido"
 #: contents/lockscreen/LockScreenUi.qml:312
 #, kde-format
 msgid "Sleep"
-msgstr "Dormir"
+msgstr "Reposo"
 
 #: contents/lockscreen/LockScreenUi.qml:318 contents/logout/Logout.qml:172
 #, kde-format

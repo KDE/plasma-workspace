@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-22 22:32+0200\n"
+"PO-Revision-Date: 2022-11-26 11:01+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -199,10 +199,9 @@ msgid "Re-enroll finger"
 msgstr "Повторна реєстрація пальця"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Вилучити відбитки"
+msgstr "Вилучити відбиток"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

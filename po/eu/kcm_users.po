@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-24 05:05+0100\n"
+"PO-Revision-Date: 2022-11-26 09:28+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -197,10 +197,9 @@ msgid "Re-enroll finger"
 msgstr "Hatza berriz erroldatu"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Garbitu hatz-markak"
+msgstr "Ezabatu hatz-markak"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

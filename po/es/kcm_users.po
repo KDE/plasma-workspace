@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-22 12:27+0100\n"
+"PO-Revision-Date: 2022-11-26 13:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -196,10 +196,9 @@ msgid "Re-enroll finger"
 msgstr "Volver a registrar dedo"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Borrar las huellas dactilares"
+msgstr "Borrar huella dactilar"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-22 11:40+0100\n"
+"PO-Revision-Date: 2022-11-26 17:49+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -193,10 +193,9 @@ msgid "Re-enroll finger"
 msgstr "Vinger opnieuw invoeren"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Vingerafdrukken wissen"
+msgstr "Vingerafdruk verwijderen"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
