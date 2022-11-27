@@ -42,6 +42,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF5::KIOGui
     KF5::NewStuff
     KF5::Notifications
+    KF5::Package
     PW::LibTaskManager
     )
 

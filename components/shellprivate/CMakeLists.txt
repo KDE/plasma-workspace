@@ -26,6 +26,7 @@ target_link_libraries(plasmashellprivateplugin
         KF5::WindowSystem
         KF5::Activities
         KF5::TextWidgets
+        KF5::Package
 )
 
 install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)

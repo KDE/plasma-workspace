@@ -23,6 +23,7 @@ target_link_libraries(
     KF5::Plasma
     KF5::DBusAddons
     KF5::Notifications
+    KF5::Package
 )
 
 install(TARGETS plasmawindowed ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
