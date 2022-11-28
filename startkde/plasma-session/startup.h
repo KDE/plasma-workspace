@@ -29,7 +29,6 @@ public:
         return s_self;
     }
 
-    bool startDetached(const QString &program, const QStringList &args);
     bool startDetached(QProcess *process);
 
 public Q_SLOTS:

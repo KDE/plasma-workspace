@@ -25,7 +25,7 @@
 #include <KCompositeJob>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KIO/DesktopExecParser>
+#include <KIO/ApplicationLauncherJob>
 #include <KProcess>
 #include <KService>
 
@@ -233,14 +233,6 @@ void Startup::updateLaunchEnv(const QString &key, const QString &value)
     qputenv(key.toLatin1(), value.toLatin1());
 }
 
-bool Startup::startDetached(const QString &program, const QStringList &args)
-{
-    QProcess *p = new QProcess();
-    p->setProgram(program);
-    p->setArguments(args);
-    return startDetached(p);
-}
-
 bool Startup::startDetached(QProcess *process)
 {
     process->setProcessChannelMode(QProcess::ForwardedChannels);
@@ -327,16 +319,8 @@ void AutoStartAppsJob::start()
                 emitResult();
                 return;
             }
-            KService service(serviceName);
-            auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
-            if (arguments.isEmpty()) {
-                qCWarning(PLASMA_SESSION) << "failed to parse" << serviceName << "for autostart";
-                continue;
-            }
-            qCInfo(PLASMA_SESSION) << "Starting autostart service " << serviceName << arguments;
-            auto program = arguments.takeFirst();
-            if (!Startup::self()->startDetached(program, arguments))
-                qCWarning(PLASMA_SESSION) << "could not start" << serviceName << ":" << program << arguments;
+            auto job = new KIO::ApplicationLauncherJob(KService::Ptr(new KService(serviceName)), this);
+            job->start();
         } while (true);
     });
 }
