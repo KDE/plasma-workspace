@@ -28,7 +28,7 @@
 #include <QX11Info>
 #endif
 #include <netwm.h>
-#endif
+#endif // HAVE_X11
 
 namespace TaskManager
 {
@@ -236,7 +236,7 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
         info.setNumberOfDesktops(info.numberOfDesktops() - 1);
     }
 }
-#endif
+#endif // HAVE_X11
 
 class Q_DECL_HIDDEN VirtualDesktopInfo::WaylandPrivate : public VirtualDesktopInfo::Private
 {
@@ -442,7 +442,7 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent)
         if (KWindowSystem::isPlatformX11()) {
             d = new VirtualDesktopInfo::XWindowPrivate;
         } else
-#endif
+#endif // HAVE_X11
         {
             d = new VirtualDesktopInfo::WaylandPrivate;
         }
