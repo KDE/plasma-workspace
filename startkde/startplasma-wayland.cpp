@@ -66,7 +66,7 @@ int main(int argc, char **argv)
     }
     setupPlasmaEnvironment();
     runStartupConfig();
-    qputenv("PLASMA_USE_QT_SCALING", "1");
+    qunsetenv("PLASMA_DISABLE_QT_SCALING");
     qputenv("XDG_SESSION_TYPE", "wayland");
 
     auto oldSystemdEnvironment = getSystemdEnvironment();
