@@ -59,6 +59,7 @@ void MaximizedWindowMonitor::Private::init()
     setCurrentDesktop();
     q->connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, q, setCurrentDesktop);
 
+    q->setFilterMinimized(true);
     q->setFilterByActivity(true);
     q->setFilterByVirtualDesktop(true);
 }
@@ -94,11 +95,6 @@ void MaximizedWindowMonitor::setTargetRect(const QRect &rect)
 bool MaximizedWindowMonitor::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     const QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0);
-
-    // Filter out minimized "maximized" windows
-    if (sourceIndex.data(TaskManager::AbstractTasksModel::IsMinimized).toBool()) {
-        return false;
-    }
 
     if (!TaskManager::TasksModel::filterAcceptsRow(sourceRow, sourceParent)) {
         return false;
