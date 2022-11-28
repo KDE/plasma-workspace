@@ -84,7 +84,8 @@ void WebshortcutRunner::loadSyntaxes()
     m_lastKey.clear();
 
     // When we reload the syntaxes, our WebShortcut config has changed or is initialized
-    m_defaultKey = KSharedConfig::openConfig(QStringLiteral("kuriikwsfilterrc"))->group("General").readEntry("DefaultWebShortcut");
+    const KConfigGroup grp = KSharedConfig::openConfig(QStringLiteral("kuriikwsfilterrc"))->group("General");
+    m_defaultKey = grp.readEntry("DefaultWebShortcut", QStringLiteral("duckduckgo"));
 }
 
 void WebshortcutRunner::configurePrivateBrowsingActions()
