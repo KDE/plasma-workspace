@@ -57,6 +57,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
+    Q_PROPERTY(bool filterMinimized READ filterMinimized WRITE setFilterMinimized NOTIFY filterMinimizedChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
     Q_PROPERTY(bool filterNotMaximized READ filterNotMaximized WRITE setFilterNotMaximized NOTIFY filterNotMaximizedChanged)
     Q_PROPERTY(bool filterHidden READ filterHidden WRITE setFilterHidden NOTIFY filterHiddenChanged)
@@ -266,6 +267,25 @@ public:
      * @param filter Whether tasks should be filtered by activity.
      **/
     void setFilterByActivity(bool filter);
+
+    /**
+     * Whether minimized tasks should be filtered out. Defaults to
+     * @c false.
+     *
+     * @returns @c true if minimized tasks should be filtered out.
+     * @see setFilterMinimized
+     * @since 5.27
+     **/
+    bool filterMinimized() const;
+
+    /**
+     * Sets whether non-minimized tasks should be filtered out.
+     *
+     * @param filter Whether minimized tasks should be filtered out.
+     * @see filterMinimized
+     * @since 5.27
+     **/
+    void setFilterMinimized(bool filter);
 
     /**
      * Whether non-minimized tasks should be filtered. Defaults to
@@ -884,6 +904,7 @@ Q_SIGNALS:
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
+    void filterMinimizedChanged();
     void filterNotMinimizedChanged() const;
     void filterNotMaximizedChanged() const;
     void filterHiddenChanged() const;

@@ -25,6 +25,7 @@ public:
     bool filterByVirtualDesktop = false;
     bool filterByScreen = false;
     bool filterByActivity = false;
+    bool filterMinimized = false;
     bool filterNotMinimized = false;
     bool filterNotMaximized = false;
     bool filterHidden = false;
@@ -155,6 +156,23 @@ void TaskFilterProxyModel::setFilterByActivity(bool filter)
 
         Q_EMIT filterByActivityChanged();
     }
+}
+
+bool TaskFilterProxyModel::filterMinimized() const
+{
+    return d->filterMinimized;
+}
+
+void TaskFilterProxyModel::setFilterMinimized(bool filter)
+{
+    if (d->filterMinimized == filter) {
+        return;
+    }
+
+    d->filterMinimized = filter;
+    invalidateFilter();
+
+    Q_EMIT filterMinimizedChanged();
 }
 
 bool TaskFilterProxyModel::filterNotMinimized() const
@@ -317,6 +335,15 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
         bool isMinimized = sourceIdx.data(AbstractTasksModel::IsMinimized).toBool();
 
         if (!isMinimized) {
+            return false;
+        }
+    }
+
+    // Filter out minimized windows
+    if (d->filterMinimized) {
+        const bool isMinimized = sourceIdx.data(AbstractTasksModel::IsMinimized).toBool();
+
+        if (isMinimized) {
             return false;
         }
     }

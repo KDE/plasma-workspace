@@ -285,6 +285,7 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByVirtualDesktopChanged, q, &TasksModel::filterByVirtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByScreenChanged, q, &TasksModel::filterByScreenChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByActivityChanged, q, &TasksModel::filterByActivityChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterMinimizedChanged, q, &TasksModel::filterMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMinimizedChanged, q, &TasksModel::filterNotMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMaximizedChanged, q, &TasksModel::filterNotMaximizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterHiddenChanged, q, &TasksModel::filterHiddenChanged);
@@ -1149,6 +1150,16 @@ bool TasksModel::filterByActivity() const
 void TasksModel::setFilterByActivity(bool filter)
 {
     d->filterProxyModel->setFilterByActivity(filter);
+}
+
+bool TasksModel::filterMinimized() const
+{
+    return d->filterProxyModel->filterMinimized();
+}
+
+void TasksModel::setFilterMinimized(bool filter)
+{
+    d->filterProxyModel->setFilterMinimized(filter);
 }
 
 bool TasksModel::filterNotMinimized() const
