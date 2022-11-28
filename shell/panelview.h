@@ -112,6 +112,12 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(int floating READ floating WRITE setFloating NOTIFY floatingChanged)
 
+    /**
+     * The minimum thickness in pixels that the panel can have.
+     * @since 5.27
+     */
+    Q_PROPERTY(int minThickness READ minThickness NOTIFY minThicknessChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -163,6 +169,8 @@ public:
     bool floating() const;
     void setFloating(bool floating);
 
+    int minThickness() const;
+
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
@@ -212,6 +220,7 @@ Q_SIGNALS:
     void backgroundHintsChanged();
     void enabledBordersChanged();
     void floatingChanged();
+    void minThicknessChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
@@ -267,6 +276,8 @@ private:
     int m_topFloatingPadding;
     int m_leftFloatingPadding;
     int m_rightFloatingPadding;
+    int m_minDrawingWidth;
+    int m_minDrawingHeight;
     bool m_initCompleted;
     bool m_floating;
     bool m_containsMouse = false;
