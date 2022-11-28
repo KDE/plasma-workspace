@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-06 05:28+0100\n"
+"PO-Revision-Date: 2022-11-27 07:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -65,22 +65,22 @@ msgstr "ტექტის მონიშვნა:"
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "მხოლოდ, როცა აშკარად კოპირდება"
 
 #: configdialog.cpp:142
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
+msgstr "შეინახება თუ მონიშნული ტექსტი ბუფერის ისტორიაში."
 
 #: configdialog.cpp:173
 #, kde-format
 msgid "Non-text selection:"
-msgstr ""
+msgstr "არა-ტექსტური მონიშვნა:"
 
 #: configdialog.cpp:180
 #, kde-format
 msgid "Never save in history"
-msgstr ""
+msgstr "არასდროს შეინახო ისტორიაში"
 
 #: configdialog.cpp:185
 #, kde-format
@@ -108,7 +108,7 @@ msgstr ""
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "ფანჯრების გამორიცხვა..."
 
 #: configdialog.cpp:283
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "პარამეტრები:"
 #: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "ფანჯრების გამორიცხვა"
 
 #: configdialog.cpp:350
 #, kde-kuit-format
@@ -147,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "შაბლონებისა და ბრძანებების დამთხვევა"
 
 #: configdialog.cpp:359
 #, kde-format
@@ -311,7 +311,7 @@ msgstr ""
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "ნიმუშის დამთხვევა:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -521,7 +521,7 @@ msgstr ""
 #: klipper.cpp:596
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr ""
+msgstr "გავუშვა Klipper-ი ავტომატურად?"
 
 #: klipper.cpp:597
 #, kde-format
@@ -626,7 +626,7 @@ msgstr ""
 #: klipper.kcfg:32
 #, kde-format
 msgid "Ignore the selection"
-msgstr ""
+msgstr "მონიშნულის იგნორირება"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -641,7 +641,7 @@ msgstr ""
 #: klipper.kcfg:37
 #, kde-format
 msgid "Text selection only"
-msgstr ""
+msgstr "მხოლოდ ტექსტური მონიშვნა"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -655,7 +655,7 @@ msgstr ""
 #: klipper.kcfg:42
 #, kde-format
 msgid "Always ignore images"
-msgstr ""
+msgstr "გამოსახულებები ყოველთვის დაიგნორდება"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -668,13 +668,13 @@ msgstr ""
 #: klipper.kcfg:47
 #, kde-format
 msgid "Use graphical regexp editor"
-msgstr ""
+msgstr "რეგგამოს-ის გრაფიკული რედაქტორი"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
 #, kde-format
 msgid "Immediately on selection"
-msgstr ""
+msgstr "მონიშვნისას, დაუყოვნებლივ"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -753,7 +753,7 @@ msgstr ""
 #: klipper.kcfg:94
 #, kde-format
 msgid "Include MIME actions"
-msgstr ""
+msgstr "MIME ქმედებების ჩათვლა"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
