@@ -12,6 +12,7 @@
 #include <QDebug>
 
 #include <KJob>
+#include <KLocalizedString>
 
 #include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>
@@ -104,6 +105,8 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         return job->summary();
     case Notifications::BodyRole:
         return job->text();
+    case Qt::AccessibleDescriptionRole:
+        return i18nc("@info %1 notification body %2 job name", "%1 from %2", job->text(), job->applicationName());
     case Notifications::DesktopEntryRole:
         return job->desktopEntry();
     case Notifications::ApplicationNameRole:

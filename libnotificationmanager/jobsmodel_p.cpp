@@ -330,6 +330,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
     });
     connect(job, &Job::textChanged, this, [this, job] {
         scheduleUpdate(job, Notifications::BodyRole);
+        scheduleUpdate(job, Qt::AccessibleDescriptionRole);
     });
     connect(job, &Job::stateChanged, this, [this, job] {
         scheduleUpdate(job, Notifications::JobStateRole);
@@ -479,7 +480,7 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
     Q_ASSERT(!m_serviceWatcher->watchedServices().contains(serviceName));
 }
 
-void JobsModelPrivate::scheduleUpdate(Job *job, Notifications::Roles role)
+void JobsModelPrivate::scheduleUpdate(Job *job, int role)
 {
     m_pendingDirtyRoles[job].append(role);
     m_compressUpdatesTimer->start();

@@ -14,7 +14,9 @@
 
 #include <QDebug>
 #include <QProcess>
+#include <QTextDocumentFragment>
 
+#include <KLocalizedString>
 #include <KShell>
 
 #include <algorithm>
@@ -286,6 +288,11 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.summary();
     case Notifications::BodyRole:
         return notification.body();
+    case Qt::AccessibleDescriptionRole:
+        return i18nc("@info %1 notification body %2 application name",
+                     "%1 from %2",
+                     QTextDocumentFragment::fromHtml(notification.body()).toPlainText(),
+                     notification.applicationName());
     case Notifications::IconNameRole:
         if (notification.image().isNull()) {
             return notification.icon();

@@ -35,6 +35,7 @@ QHash<int, QByteArray> Utils::roleNames()
         // Qt built-in roles we use
         s_roles.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
         s_roles.insert(Qt::DecorationRole, QByteArrayLiteral("decoration"));
+        s_roles.insert(Qt::AccessibleDescriptionRole, QByteArrayLiteral("accessibleDescription"));
 
         for (int i = 0; i < e.keyCount(); ++i) {
             const int value = e.value(i);

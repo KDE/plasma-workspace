@@ -470,6 +470,7 @@ QtObject {
 
             summary: model.summary
             body: model.body || ""
+            accessibleDescription: model.accessibleDescription
             icon: model.image || model.iconName
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout

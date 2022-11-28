@@ -29,6 +29,7 @@ PlasmaCore.Dialog {
 
     property alias summary: notificationItem.summary
     property alias body: notificationItem.body
+    property alias accessibleDescription: notificationItem.accessibleDescription
     property alias icon: notificationItem.icon
     property alias urls: notificationItem.urls
 

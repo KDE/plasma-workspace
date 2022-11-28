@@ -455,7 +455,8 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
             return false;
 
         // Combine all notifications into one for some basic grouping
-        case Notifications::BodyRole: {
+        case Notifications::BodyRole:
+        case Qt::AccessibleDescriptionRole: {
             QString body;
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
                 const QString stringData = index(i, 0, proxyIndex).data(role).toString();

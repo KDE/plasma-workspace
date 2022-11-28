@@ -71,7 +71,7 @@ private:
     void updateApplicationPercentage(const QString &desktopEntry);
 
     QStringList jobUrls() const;
-    void scheduleUpdate(Job *job, Notifications::Roles role);
+    void scheduleUpdate(Job *job, int role);
 
     QDBusServiceWatcher *m_serviceWatcher = nullptr;
     // Job -> serviceName

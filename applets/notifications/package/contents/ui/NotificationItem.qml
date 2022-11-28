@@ -42,6 +42,7 @@ ColumnLayout {
 
     // This isn't an alias because TextEdit RichText adds some HTML tags to it
     property string body
+    property string accessibleDescription
     property var icon
     property var urls: []
 
@@ -149,6 +150,10 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.preferredHeight: childrenRect.height
         Layout.leftMargin: notificationItem.extraSpaceForCriticalNotificationLine + (notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing)
+
+        Accessible.role: notificationItem.inHistory ? Accessible.NoRole : Accessible.Notification
+        Accessible.name: summaryLabel.text
+        Accessible.description: notificationItem.accessibleDescription
 
         // Notification body
         RowLayout {
