@@ -159,6 +159,8 @@ KCM.ScrollViewKCM {
             implicitWidth: 18 * Kirigami.Units.gridUnit
             model: languageListModel
             delegate: addLanguageItemComponent
+            cacheBuffer: Math.max(0, contentHeight)
+            reuseItems: true
         }
         onSheetOpenChanged: {
             if (!sheetOpen) {
