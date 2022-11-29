@@ -20,7 +20,6 @@
 #include <QSurfaceFormat>
 
 #include <KAboutData>
-#include <KRuntimePlatform>
 
 #ifdef WITH_KUSERFEEDBACKCORE
 #include "userfeedback.h"
@@ -95,11 +94,10 @@ int main(int argc, char *argv[])
     bool replace = false;
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (app.platformName() == QStringLiteral("wayland") && !KRuntimePlatform::runtimePlatform().contains("phone")) {
+    if (app.platformName() == QStringLiteral("wayland")) {
         // Use the basic rendering loop on wayland, because the threaded render
         // loop can cause problems because a surface gets destroyed while still
         // being used by the render thread.
-        // Specifically don't do this for Plasma Mobile because it causes the panels to not load for some reason.
         // TODO KF6: Remove this as the problem has been fixed in Qt6
         qputenv("QSG_RENDER_LOOP", "basic");
     }
