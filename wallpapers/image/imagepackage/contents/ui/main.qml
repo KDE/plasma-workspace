@@ -10,10 +10,23 @@ import QtQuick 2.5
 import QtQuick.Window 2.2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 
-Item {
+ImageStackView {
     id: root
 
-    readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+    fillMode: wallpaper.configuration.FillMode
+    configColor: wallpaper.configuration.Color
+    blur: wallpaper.configuration.Blur
+    source: {
+        if (wallpaper.pluginName === "org.kde.slideshow") {
+            return imageWallpaper.image;
+        }
+        if (wallpaper.configuration.PreviewImage !== "null") {
+            return wallpaper.configuration.PreviewImage;
+        }
+        return wallpaper.configuration.Image;
+    }
+    sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+    wallpaperInterface: wallpaper
 
     // Public API functions accessible from C++:
     // e.g. used by WallpaperInterface for drag and drop
@@ -39,7 +52,7 @@ Item {
 
     // e.g. used by slideshow wallpaper plugin
     function action_open() {
-        view.mediaProxy.openModelImage();
+        mediaProxy.openModelImage();
     }
 
     //private
@@ -74,25 +87,5 @@ Item {
         function writeImageConfig(newImage: string) {
             configMap.Image = newImage;
         }
-    }
-
-    ImageStackView {
-        id: view
-        anchors.fill: parent
-
-        fillMode: wallpaper.configuration.FillMode
-        configColor: wallpaper.configuration.Color
-        blur: wallpaper.configuration.Blur
-        source: {
-            if (wallpaper.pluginName === "org.kde.slideshow") {
-                return imageWallpaper.image;
-            }
-            if (wallpaper.configuration.PreviewImage !== "null") {
-                return wallpaper.configuration.PreviewImage;
-            }
-            return wallpaper.configuration.Image;
-        }
-        sourceSize: root.sourceSize
-        wallpaperInterface: wallpaper
     }
 }
