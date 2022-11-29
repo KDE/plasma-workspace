@@ -141,7 +141,6 @@ Q_SIGNALS:
     void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
     void accentColorFromWallpaperEnabledChanged();
     void colorChanged(const QColor &color);
-    void loaded();
 
 public Q_SLOTS:
     /**
