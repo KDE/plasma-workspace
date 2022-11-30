@@ -128,11 +128,16 @@ PlasmaExtras.ExpandableListItem {
         if (!hasStorageAccess || !isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
+            operation.predicate = "test-predicate-openinwindow.desktop";
+
             const supportsMTP = supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
-            if (!hasStorageAccess && hasPortableMediaPlayer && supportsMTP) {
-                operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
-            } else {
-                operation.predicate = "test-predicate-openinwindow.desktop";
+            const supportsAFC = supportedProtocols && supportedProtocols.includes("afc");
+            if (!hasStorageAccess && hasPortableMediaPlayer) {
+                if (supportsMTP) {
+                    operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
+                } else if (supportsAFC) {
+                    operation.predicate = "solid_afc.desktop" // this lives in kio-extras!
+                }
             }
         } else {
             service = sdSource.serviceForSource(udi);
