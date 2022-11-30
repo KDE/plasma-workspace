@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2019-09-23 20:17+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -90,12 +90,12 @@ msgstr "Илова кардани тасвир..."
 msgid "Get New Wallpapers…"
 msgstr "Гирифтани тасвири заминаи нав..."
 
-#: imagepackage/contents/ui/main.qml:53
+#: imagepackage/contents/ui/main.qml:66
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Кушодани тавсири замина"
 
-#: imagepackage/contents/ui/main.qml:54
+#: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Тасвири заминаи навбатӣ"

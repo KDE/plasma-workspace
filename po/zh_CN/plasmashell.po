@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-11-19 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,7 +29,7 @@ msgstr ""
 "kde-china@kde.org, CoelacanthusHex@kde.org, i@guoyunhe.me, tysontan@tysontan."
 "com"
 
-#: currentcontainmentactionsmodel.cpp:201
+#: currentcontainmentactionsmodel.cpp:205
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "配置鼠标操作插件"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:47+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-09-24 14:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -42,7 +42,7 @@ msgid "Your emails"
 msgstr "shafff@ukr.net, darkstar@altlinux.ru"
 
 # @title:window --aspotashev
-#: currentcontainmentactionsmodel.cpp:201
+#: currentcontainmentactionsmodel.cpp:205
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Настройка модуля действий мыши"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-08-18 08:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -463,13 +463,13 @@ msgid "No Language Configured"
 msgstr "Мову не налаштовано"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:147
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:165
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Додавання мов"
 
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:174
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

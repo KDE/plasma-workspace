@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-03-13 09:49+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -86,12 +86,12 @@ msgstr "Bild hinzufügen ..."
 msgid "Get New Wallpapers…"
 msgstr "Neue Hintergrundbilder holen ..."
 
-#: imagepackage/contents/ui/main.qml:53
+#: imagepackage/contents/ui/main.qml:66
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Hintergrundbild öffnen"
 
-#: imagepackage/contents/ui/main.qml:54
+#: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Nächstes Hintergrundbild"

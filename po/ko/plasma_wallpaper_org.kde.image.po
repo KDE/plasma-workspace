@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-07-13 11:55+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -88,12 +88,12 @@ msgstr "그림 추가…"
 msgid "Get New Wallpapers…"
 msgstr "새 배경 그림 가져오기…"
 
-#: imagepackage/contents/ui/main.qml:53
+#: imagepackage/contents/ui/main.qml:66
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "배경 그림 파일 열기"
 
-#: imagepackage/contents/ui/main.qml:54
+#: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "다음 배경 그림 파일"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-30 00:49+0000\n"
 "PO-Revision-Date: 2022-08-18 20:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -466,13 +466,13 @@ msgid "No Language Configured"
 msgstr "Ez da hizkuntzarik konfiguratu"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:147
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:165
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Gehitu hizkuntzak"
 
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:174
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
