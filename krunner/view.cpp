@@ -23,6 +23,7 @@
 #include <KService>
 #include <KWindowEffects>
 #include <KWindowSystem>
+#include <KX11Extras>
 
 #include <kdeclarative/qmlobject.h>
 
@@ -92,7 +93,7 @@ View::View(QWindow *)
     connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
 
-    connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
+    connect(KX11Extras::self(), &KX11Extras::workAreaChanged, this, &View::resetScreenPos);
 
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
@@ -177,7 +178,7 @@ void View::resizeEvent(QResizeEvent *event)
 
 void View::showEvent(QShowEvent *event)
 {
-    KWindowSystem::setOnAllDesktops(winId(), true);
+    KX11Extras::setOnAllDesktops(winId(), true);
     Dialog::showEvent(event);
     positionOnScreen();
     requestActivate();
@@ -259,20 +260,20 @@ void View::positionOnScreen()
         PlasmaQuick::Dialog::setVisible(true);
 
         if (m_floating) {
-            KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+            KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
             KWindowSystem::setType(winId(), NET::Normal);
         } else {
-            KWindowSystem::setOnAllDesktops(winId(), true);
+            KX11Extras::setOnAllDesktops(winId(), true);
         }
 
-        KWindowSystem::forceActiveWindow(winId());
+        KX11Extras::forceActiveWindow(winId());
     });
 }
 
 void View::toggleDisplay()
 {
     if (isVisible() && !QGuiApplication::focusWindow()) {
-        KWindowSystem::forceActiveWindow(winId());
+        KX11Extras::forceActiveWindow(winId());
         return;
     }
     setVisible(!isVisible());

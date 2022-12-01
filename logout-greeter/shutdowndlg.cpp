@@ -36,6 +36,7 @@
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
+#include <KX11Extras>
 #include <LayerShellQt/Window>
 
 #include <netwm.h>
@@ -200,7 +201,7 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 {
     KQuickAddons::QuickViewSharedEngine::resizeEvent(e);
 
-    if (KWindowSystem::compositingActive()) {
+    if (KX11Extras::compositingActive()) {
         // TODO: reenable window mask when we are without composite?
         //        clearMask();
     } else {

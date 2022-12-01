@@ -20,7 +20,7 @@
 
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KWindowSystem>
+#include <KX11Extras>
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     : KMainWindow(parent)
@@ -53,8 +53,8 @@ void KSystemActivityDialog::run()
 {
     show();
     raise();
-    KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
-    KWindowSystem::forceActiveWindow(winId());
+    KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
+    KX11Extras::forceActiveWindow(winId());
 }
 
 void KSystemActivityDialog::setFilterText(const QString &filterText)

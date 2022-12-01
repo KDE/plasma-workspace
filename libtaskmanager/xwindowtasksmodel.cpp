@@ -17,7 +17,7 @@
 #include <KStartupInfo>
 #include <KSycoca>
 #include <KWindowInfo>
-#include <KWindowSystem>
+#include <KX11Extras>
 
 #include <QBuffer>
 #include <QDir>
@@ -122,7 +122,7 @@ void XWindowTasksModel::Private::init()
                                            AbstractTasksModel::SkipTaskbar});
     };
 
-    cachedStackingOrder = KWindowSystem::stackingOrder();
+    cachedStackingOrder = KX11Extras::stackingOrder();
 
     sycocaChangeTimer.setSingleShot(true);
     sycocaChangeTimer.setInterval(100ms);
@@ -164,7 +164,7 @@ void XWindowTasksModel::Private::init()
     });
 
     // Update IsActive for previously- and newly-active windows.
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, q, [this](WId window) {
+    QObject::connect(KX11Extras::self(), &KX11Extras::activeWindowChanged, q, [this](WId window) {
         const WId oldActiveWindow = activeWindow;
 
         const auto leader = transients.value(window, XCB_WINDOW_NONE);
@@ -188,21 +188,21 @@ void XWindowTasksModel::Private::init()
         }
     });
 
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q, [this]() {
+    QObject::connect(KX11Extras::self(), &KX11Extras::stackingOrderChanged, q, [this]() {
         // No need to do anything if the model is empty. This avoids calling q->dataChanged with an invalid QModelIndex.
         if (q->rowCount() == 0) {
             return;
         }
-        cachedStackingOrder = KWindowSystem::stackingOrder();
+        cachedStackingOrder = KX11Extras::stackingOrder();
         Q_ASSERT(q->hasIndex(0, 0));
         Q_ASSERT(q->hasIndex(q->rowCount() - 1, 0));
         Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{StackingOrder});
     });
 
-    activeWindow = KWindowSystem::activeWindow();
+    activeWindow = KX11Extras::activeWindow();
 
     // Add existing windows.
-    foreach (const WId window, KWindowSystem::windows()) {
+    foreach (const WId window, KX11Extras::windows()) {
         addWindow(window);
     }
 }
@@ -480,10 +480,10 @@ QIcon XWindowTasksModel::Private::icon(WId window)
 
     QIcon icon;
 
-    icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeSmall, KIconLoader::SizeSmall, false));
-    icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium, false));
-    icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeMedium, KIconLoader::SizeMedium, false));
-    icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false));
+    icon.addPixmap(KX11Extras::icon(window, KIconLoader::SizeSmall, KIconLoader::SizeSmall, false));
+    icon.addPixmap(KX11Extras::icon(window, KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium, false));
+    icon.addPixmap(KX11Extras::icon(window, KIconLoader::SizeMedium, KIconLoader::SizeMedium, false));
+    icon.addPixmap(KX11Extras::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false));
 
     appDataCache[window].icon = icon;
     usingFallbackIcon.insert(window);
@@ -567,7 +567,7 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
     }
 
     if (pixmap.isNull()) {
-        pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
+        pixmap = KX11Extras::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
     }
 
     if (pixmap.isNull()) {
@@ -740,7 +740,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
             }
         }
 
-        KWindowSystem::forceActiveWindow(window);
+        KX11Extras::forceActiveWindow(window);
     }
 }
 
@@ -784,12 +784,12 @@ void XWindowTasksModel::requestMove(const QModelIndex &index)
     bool onCurrent = info->isOnCurrentDesktop();
 
     if (!onCurrent) {
-        KWindowSystem::setCurrentDesktop(info->desktop());
-        KWindowSystem::forceActiveWindow(window);
+        KX11Extras::setCurrentDesktop(info->desktop());
+        KX11Extras::forceActiveWindow(window);
     }
 
     if (info->isMinimized()) {
-        KWindowSystem::unminimizeWindow(window);
+        KX11Extras::unminimizeWindow(window);
     }
 
     const QRect &geom = info->geometry();
@@ -810,12 +810,12 @@ void XWindowTasksModel::requestResize(const QModelIndex &index)
     bool onCurrent = info->isOnCurrentDesktop();
 
     if (!onCurrent) {
-        KWindowSystem::setCurrentDesktop(info->desktop());
-        KWindowSystem::forceActiveWindow(window);
+        KX11Extras::setCurrentDesktop(info->desktop());
+        KX11Extras::forceActiveWindow(window);
     }
 
     if (info->isMinimized()) {
-        KWindowSystem::unminimizeWindow(window);
+        KX11Extras::unminimizeWindow(window);
     }
 
     const QRect &geom = info->geometry();
@@ -838,16 +838,16 @@ void XWindowTasksModel::requestToggleMinimized(const QModelIndex &index)
 
         // FIXME: Move logic up into proxy? (See also others.)
         if (!onCurrent) {
-            KWindowSystem::setCurrentDesktop(info->desktop());
+            KX11Extras::setCurrentDesktop(info->desktop());
         }
 
-        KWindowSystem::unminimizeWindow(window);
+        KX11Extras::unminimizeWindow(window);
 
         if (onCurrent) {
-            KWindowSystem::forceActiveWindow(window);
+            KX11Extras::forceActiveWindow(window);
         }
     } else {
-        KWindowSystem::minimizeWindow(window);
+        KX11Extras::minimizeWindow(window);
     }
 }
 
@@ -864,11 +864,11 @@ void XWindowTasksModel::requestToggleMaximized(const QModelIndex &index)
 
     // FIXME: Move logic up into proxy? (See also others.)
     if (!onCurrent) {
-        KWindowSystem::setCurrentDesktop(info->desktop());
+        KX11Extras::setCurrentDesktop(info->desktop());
     }
 
     if (info->isMinimized()) {
-        KWindowSystem::unminimizeWindow(window);
+        KX11Extras::unminimizeWindow(window);
     }
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
@@ -880,7 +880,7 @@ void XWindowTasksModel::requestToggleMaximized(const QModelIndex &index)
     }
 
     if (!onCurrent) {
-        KWindowSystem::forceActiveWindow(window);
+        KX11Extras::forceActiveWindow(window);
     }
 }
 
@@ -974,7 +974,7 @@ void XWindowTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
         }
     }
 
-    if (desktop > KWindowSystem::numberOfDesktops()) {
+    if (desktop > KX11Extras::numberOfDesktops()) {
         return;
     }
 
@@ -983,19 +983,19 @@ void XWindowTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
 
     if (desktop == 0) {
         if (info->onAllDesktops()) {
-            KWindowSystem::setOnDesktop(window, KWindowSystem::currentDesktop());
-            KWindowSystem::forceActiveWindow(window);
+            KX11Extras::setOnDesktop(window, KX11Extras::currentDesktop());
+            KX11Extras::forceActiveWindow(window);
         } else {
-            KWindowSystem::setOnAllDesktops(window, true);
+            KX11Extras::setOnAllDesktops(window, true);
         }
 
         return;
     }
 
-    KWindowSystem::setOnDesktop(window, desktop);
+    KX11Extras::setOnDesktop(window, desktop);
 
-    if (desktop == KWindowSystem::currentDesktop()) {
-        KWindowSystem::forceActiveWindow(window);
+    if (desktop == KX11Extras::currentDesktop()) {
+        KX11Extras::forceActiveWindow(window);
     }
 }
 
@@ -1006,7 +1006,7 @@ void XWindowTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
     }
 
     const WId window = d->windows.at(index.row());
-    const int desktop = KWindowSystem::numberOfDesktops() + 1;
+    const int desktop = KX11Extras::numberOfDesktops() + 1;
 
     // FIXME Arbitrary limit of 20 copied from old code.
     if (desktop > 20) {
@@ -1016,7 +1016,7 @@ void XWindowTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
     NETRootInfo ri(QX11Info::connection(), NET::NumberOfDesktops);
     ri.setNumberOfDesktops(desktop);
 
-    KWindowSystem::setOnDesktop(window, desktop);
+    KX11Extras::setOnDesktop(window, desktop);
 }
 
 void XWindowTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
@@ -1027,7 +1027,7 @@ void XWindowTasksModel::requestActivities(const QModelIndex &index, const QStrin
 
     const WId window = d->windows.at(index.row());
 
-    KWindowSystem::setOnActivities(window, activities);
+    KX11Extras::setOnActivities(window, activities);
 }
 
 void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)

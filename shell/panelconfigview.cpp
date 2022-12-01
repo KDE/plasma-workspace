@@ -18,6 +18,7 @@
 
 #include <KActionCollection>
 #include <KWindowSystem>
+#include <KX11Extras>
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
 
@@ -54,7 +55,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     KWindowSystem::setType(winId(), NET::Dock);
     KWindowSystem::setState(winId(), NET::KeepAbove);
-    KWindowSystem::forceActiveWindow(winId());
+    KX11Extras::forceActiveWindow(winId());
 
     updateBlurBehindAndContrast();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateBlurBehindAndContrast);
@@ -193,7 +194,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)) | Qt::X11BypassWindowManagerHint
              | Qt::WindowStaysOnTopHint);
     KWindowSystem::setState(winId(), NET::KeepAbove);
-    KWindowSystem::forceActiveWindow(winId());
+    KX11Extras::forceActiveWindow(winId());
     updateBlurBehindAndContrast();
     syncGeometry();
     syncLocation();

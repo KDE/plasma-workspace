@@ -22,7 +22,8 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
-#include <KWindowSystem>
+#include <KWindowInfo>
+#include <KX11Extras>
 
 #include "clipcommandprocess.h"
 #include "klippersettings.h"
@@ -303,7 +304,7 @@ void URLGrabber::saveSettings() const
 // find out whether the active window's WM_CLASS is in our avoid-list
 bool URLGrabber::isAvoidedWindow() const
 {
-    const WId active = KWindowSystem::activeWindow();
+    const WId active = KX11Extras::activeWindow();
     if (!active) {
         return false;
     }

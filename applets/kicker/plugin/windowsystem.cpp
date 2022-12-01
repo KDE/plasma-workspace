@@ -9,6 +9,7 @@
 #include <QQuickItem>
 
 #include <KWindowSystem>
+#include <KX11Extras>
 
 WindowSystem::WindowSystem(QObject *parent)
     : QObject(parent)
@@ -35,7 +36,7 @@ void WindowSystem::forceActive(QQuickItem *item)
         return;
     }
 
-    KWindowSystem::forceActiveWindow(item->window()->winId());
+    KX11Extras::forceActiveWindow(item->window()->winId());
     KWindowSystem::raiseWindow(item->window()->winId());
 }
 

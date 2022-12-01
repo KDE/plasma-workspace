@@ -37,7 +37,7 @@
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
-#include <KWindowSystem>
+#include <KX11Extras>
 #include <klocalizedstring.h>
 
 #include <KPackage/Package>
@@ -278,7 +278,7 @@ void InteractiveConsole::showEvent(QShowEvent *)
         m_editor->setFocus();
     }
 
-    KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+    KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
     Q_EMIT visibleChanged(true);
 }
 

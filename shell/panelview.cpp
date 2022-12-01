@@ -23,6 +23,7 @@
 #include <QRegularExpression>
 #include <QScreen>
 
+#include <KX11Extras>
 #include <kactioncollection.h>
 #include <kwindoweffects.h>
 #include <kwindowsystem.h>
@@ -898,7 +899,7 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 void PanelView::integrateScreen()
 {
     updateMask();
-    KWindowSystem::setOnAllDesktops(winId(), true);
+    KX11Extras::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
 #if HAVE_X11
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -1183,7 +1184,7 @@ void PanelView::updateMask()
                                                  m_theme.backgroundSaturation(),
                                                  mask);
 
-        if (KWindowSystem::compositingActive()) {
+        if (KX11Extras::compositingActive()) {
             setMask(QRegion());
         } else {
             setMask(mask);
@@ -1269,7 +1270,7 @@ void PanelView::updateStruts()
         const QRect wholeScreen = QRect(QPoint(0, 0), m_screenToFollow->virtualSize());
 
         if (!canSetStrut()) {
-            KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            KX11Extras::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             return;
         }
         // extended struts are to the combined screen geoms, not the single screen
@@ -1314,19 +1315,19 @@ void PanelView::updateStruts()
         }
     }
 
-    KWindowSystem::setExtendedStrut(winId(),
-                                    strut.left_width,
-                                    strut.left_start,
-                                    strut.left_end,
-                                    strut.right_width,
-                                    strut.right_start,
-                                    strut.right_end,
-                                    strut.top_width,
-                                    strut.top_start,
-                                    strut.top_end,
-                                    strut.bottom_width,
-                                    strut.bottom_start,
-                                    strut.bottom_end);
+    KX11Extras::setExtendedStrut(winId(),
+                                 strut.left_width,
+                                 strut.left_start,
+                                 strut.left_end,
+                                 strut.right_width,
+                                 strut.right_start,
+                                 strut.right_end,
+                                 strut.top_width,
+                                 strut.top_start,
+                                 strut.top_end,
+                                 strut.bottom_width,
+                                 strut.bottom_start,
+                                 strut.bottom_end);
 }
 
 void PanelView::refreshContainment()
@@ -1409,7 +1410,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
 #ifdef HAVE_X11
-        KWindowSystem::forceActiveWindow(winId());
+        KX11Extras::forceActiveWindow(winId());
 #endif
         if (m_shellSurface) {
             m_shellSurface->setPanelTakesFocus(true);

@@ -16,7 +16,7 @@
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KNewStuff3/KNS3/QtQuickDialogWrapper>
-#include <KWindowSystem>
+#include <KX11Extras>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -464,7 +464,7 @@ void WidgetExplorer::openWidgetFile()
         d->openAssistant = assistant;
     }
 
-    KWindowSystem::setOnDesktop(assistant->winId(), KWindowSystem::currentDesktop());
+    KX11Extras::setOnDesktop(assistant->winId(), KX11Extras::currentDesktop());
     assistant->setAttribute(Qt::WA_DeleteOnClose, true);
     assistant->show();
     assistant->raise();

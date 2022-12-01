@@ -35,6 +35,7 @@
 #include <KGlobalAccel>
 #include <KMessageBox>
 #include <KWindowSystem>
+#include <KX11Extras>
 #include <kactivities/consumer.h>
 #include <kactivities/controller.h>
 #include <kdeclarative/kdeclarative.h>
@@ -902,7 +903,7 @@ void ShellCorona::slotCyclePanelFocus()
 
 #if HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
-            m_previousWId = KWindowSystem::activeWindow();
+            m_previousWId = KX11Extras::activeWindow();
         }
 #endif
         if (m_waylandWindowManagement) {
@@ -1196,7 +1197,7 @@ void ShellCorona::restorePreviousWindow()
 
 #if HAVE_X11
     if (KWindowSystem::isPlatformX11() && m_previousWId) {
-        KWindowSystem::forceActiveWindow(m_previousWId);
+        KX11Extras::forceActiveWindow(m_previousWId);
     }
 #endif
     if (m_previousPlasmaWindow) {

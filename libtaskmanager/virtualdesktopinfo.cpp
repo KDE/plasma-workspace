@@ -12,6 +12,7 @@
 #include <KWayland/Client/plasmavirtualdesktop.h>
 #include <KWayland/Client/registry.h>
 #include <KWindowSystem>
+#include <KX11Extras>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -140,11 +141,11 @@ VirtualDesktopInfo::XWindowPrivate::XWindowPrivate()
 
 void VirtualDesktopInfo::XWindowPrivate::init()
 {
-    connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &VirtualDesktopInfo::XWindowPrivate::currentDesktopChanged);
+    connect(KX11Extras::self(), &KX11Extras::currentDesktopChanged, this, &VirtualDesktopInfo::XWindowPrivate::currentDesktopChanged);
 
-    connect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged, this, &VirtualDesktopInfo::XWindowPrivate::numberOfDesktopsChanged);
+    connect(KX11Extras::self(), &KX11Extras::numberOfDesktopsChanged, this, &VirtualDesktopInfo::XWindowPrivate::numberOfDesktopsChanged);
 
-    connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged, this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
+    connect(KX11Extras::self(), &KX11Extras::desktopNamesChanged, this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.connect(QString(),
@@ -157,19 +158,19 @@ void VirtualDesktopInfo::XWindowPrivate::init()
 
 QVariant VirtualDesktopInfo::XWindowPrivate::currentDesktop() const
 {
-    return KWindowSystem::currentDesktop();
+    return KX11Extras::currentDesktop();
 }
 
 int VirtualDesktopInfo::XWindowPrivate::numberOfDesktops() const
 {
-    return KWindowSystem::numberOfDesktops();
+    return KX11Extras::numberOfDesktops();
 }
 
 QVariantList VirtualDesktopInfo::XWindowPrivate::desktopIds() const
 {
     QVariantList ids;
 
-    for (int i = 1; i <= KWindowSystem::numberOfDesktops(); ++i) {
+    for (int i = 1; i <= KX11Extras::numberOfDesktops(); ++i) {
         ids << i;
     }
 
@@ -181,8 +182,8 @@ QStringList VirtualDesktopInfo::XWindowPrivate::desktopNames() const
     QStringList names;
 
     // Virtual desktop numbers start at 1.
-    for (int i = 1; i <= KWindowSystem::numberOfDesktops(); ++i) {
-        names << KWindowSystem::desktopName(i);
+    for (int i = 1; i <= KX11Extras::numberOfDesktops(); ++i) {
+        names << KX11Extras::desktopName(i);
     }
 
     return names;
@@ -213,8 +214,8 @@ void VirtualDesktopInfo::XWindowPrivate::requestActivate(const QVariant &desktop
     const int desktopNumber = desktop.toInt(&ok);
 
     // Virtual desktop numbers start at 1.
-    if (ok && desktopNumber > 0 && desktopNumber <= KWindowSystem::numberOfDesktops()) {
-        KWindowSystem::setCurrentDesktop(desktopNumber);
+    if (ok && desktopNumber > 0 && desktopNumber <= KX11Extras::numberOfDesktops()) {
+        KX11Extras::setCurrentDesktop(desktopNumber);
     }
 }
 

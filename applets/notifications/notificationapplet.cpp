@@ -10,7 +10,7 @@
 #include <QQuickWindow>
 #include <QScreen>
 
-#include <KWindowSystem>
+#include <KX11Extras>
 
 #include <Plasma/Containment>
 #include <PlasmaQuick/Dialog>
@@ -97,7 +97,7 @@ bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
 void NotificationApplet::forceActivateWindow(QWindow *window)
 {
     if (window && window->winId()) {
-        KWindowSystem::forceActiveWindow(window->winId());
+        KX11Extras::forceActiveWindow(window->winId());
     }
 }
 

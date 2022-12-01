@@ -12,6 +12,7 @@
 
 #include <KWindowEffects>
 #include <KWindowSystem>
+#include <KX11Extras>
 
 DashboardWindow::DashboardWindow(QQuickItem *parent)
     : QQuickWindow(parent ? parent->window() : nullptr)
@@ -114,7 +115,7 @@ void DashboardWindow::toggle()
     } else {
         resize(screen()->size());
         showFullScreen();
-        KWindowSystem::forceActiveWindow(winId());
+        KX11Extras::forceActiveWindow(winId());
     }
 }
 
@@ -143,7 +144,7 @@ bool DashboardWindow::event(QEvent *event)
     } else if (event->type() == QEvent::FocusOut) {
         if (isVisible()) {
             KWindowSystem::raiseWindow(winId());
-            KWindowSystem::forceActiveWindow(winId());
+            KX11Extras::forceActiveWindow(winId());
         }
     }
 
