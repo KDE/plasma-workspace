@@ -128,10 +128,18 @@ bool LocaleGenHelper::editLocaleGen()
         localegen.write(locale.toUtf8() + ".UTF-8 UTF-8\n");
     }
 
-    QString locale_gen = QStandardPaths::findExecutable(QStringLiteral("locale-gen"));
-    if (!locale_gen.isEmpty()) {
+    QString localeGenPath = QStandardPaths::findExecutable(QStringLiteral("locale-gen"));
+    if (localeGenPath.isEmpty()) {
+        localeGenPath = QStandardPaths::findExecutable(QStringLiteral("locale-gen"),
+                                                       {
+                                                           QStringLiteral("/usr/sbin"),
+                                                           QStringLiteral("/sbin"),
+                                                           QStringLiteral("/usr/local/sbin"),
+                                                       });
+    }
+    if (!localeGenPath.isEmpty()) {
         auto *process = new QProcess(this);
-        process->setProgram(QStringLiteral("locale-gen"));
+        process->setProgram(localeGenPath);
         connect(process, &QProcess::finished, this, [this, process](int statusCode, QProcess::ExitStatus status) {
             handleLocaleGen(statusCode, status, process);
         });
