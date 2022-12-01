@@ -24,7 +24,7 @@ void ImageFinder::run()
     QStringList images;
 
     QDir dir;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Readable);
+    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Readable | QDir::NoDotAndDotDot);
     dir.setNameFilters(suffixes());
 
     const auto filterCondition = [](const QFileInfo &info) {
@@ -64,10 +64,6 @@ void ImageFinder::run()
                     images.append(realwp.filePath());
                 }
             } else if (realwp.isDir()) {
-                if (realwp.fileName().startsWith(QLatin1Char('.'))) {
-                    continue;
-                }
-
                 // add this to the directories we should be looking at
                 if (!m_paths.contains(realwp.filePath())) {
                     m_paths.append(realwp.filePath());

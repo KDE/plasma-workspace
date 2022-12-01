@@ -29,7 +29,7 @@ void PackageFinder::run()
     QStringList folders;
 
     QDir dir;
-    dir.setFilter(QDir::Dirs | QDir::Readable);
+    dir.setFilter(QDir::Dirs | QDir::Readable | QDir::NoDotAndDotDot);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
@@ -90,10 +90,6 @@ void PackageFinder::run()
         const QFileInfoList files = dir.entryInfoList();
 
         for (const QFileInfo &wp : files) {
-            if (wp.fileName().startsWith(QLatin1Char('.'))) {
-                continue;
-            }
-
             if (!addPackage(wp.filePath())) {
                 // Add this to the directories we should be looking at
                 m_paths.append(wp.filePath());
