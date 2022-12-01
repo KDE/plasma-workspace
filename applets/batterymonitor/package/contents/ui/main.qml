@@ -375,8 +375,8 @@ Item {
         Plasmoid.action("showPercentage").checkable = true;
         Plasmoid.action("showPercentage").checked = Qt.binding(() => Plasmoid.configuration.showPercentage);
 
+        Plasmoid.removeAction("configure");
         if (batterymonitor.kcmAuthorized) {
-            Plasmoid.removeAction("configure");
             Plasmoid.setAction("configure", i18n("&Configure Energy Saving…"), "configure", "alt+d, s");
         }
     }
