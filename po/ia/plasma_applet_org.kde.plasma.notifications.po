@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-06-06 21:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -390,35 +390,35 @@ msgstr "Minimisa"
 msgid "Close"
 msgstr "Claude"
 
-#: package/contents/ui/NotificationItem.qml:178
+#: package/contents/ui/NotificationItem.qml:183
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (In pausa)"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:188
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Fallite)"
 
-#: package/contents/ui/NotificationItem.qml:185
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Failed"
 msgstr "Carga Fallite"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:194
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Finite)"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:196
 #, kde-format
 msgid "Job Finished"
 msgstr "Carga Terminate"
 
-#: package/contents/ui/NotificationItem.qml:333
+#: package/contents/ui/NotificationItem.qml:338
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

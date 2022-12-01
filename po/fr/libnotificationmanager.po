@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-26 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-07-21 21:55+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -17,6 +17,15 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: abstractnotificationsmodel.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 application name"
+msgid "%1 from %2"
+msgstr "%1 fichier vers %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -86,7 +95,16 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "à %1"
 
-#: jobsmodel_p.cpp:476
+#: jobsmodel.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 job name"
+msgid "%1 from %2"
+msgstr "%1 fichier vers %2"
+
+#: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "L'application vient de se terminer de façon inattendue"

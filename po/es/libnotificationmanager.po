@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-26 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-07-21 18:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,6 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
+
+#: abstractnotificationsmodel.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 application name"
+msgid "%1 from %2"
+msgstr "%1 archivo a %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -87,7 +96,16 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "a %1"
 
-#: jobsmodel_p.cpp:476
+#: jobsmodel.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 job name"
+msgid "%1 from %2"
+msgstr "%1 archivo a %2"
+
+#: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "La aplicación se ha cerrado de forma no esperada."

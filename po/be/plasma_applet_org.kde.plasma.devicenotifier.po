@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-10-31 11:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,13 +23,13 @@ msgstr ""
 "devicenotifier.po\n"
 "X-Crowdin-File-ID: 8571\n"
 
-#: package/contents/ui/DeviceItem.qml:180
+#: package/contents/ui/DeviceItem.qml:185
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "Вольна %1 з %2"
 
-#: package/contents/ui/DeviceItem.qml:184
+#: package/contents/ui/DeviceItem.qml:189
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -37,7 +37,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Атрыманне доступу…"
 
-#: package/contents/ui/DeviceItem.qml:187
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -45,32 +45,32 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Выманне…"
 
-#: package/contents/ui/DeviceItem.qml:190
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr "Не адлучайце! Выконваецца перадача файлаў..."
 
-#: package/contents/ui/DeviceItem.qml:221
+#: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Адкрыць у кіраўніку файлаў"
 
-#: package/contents/ui/DeviceItem.qml:224
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
 msgstr "Прымантаваць і адкрыць"
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
 msgstr "Выняць"
 
-#: package/contents/ui/DeviceItem.qml:228
+#: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
 msgstr "Бяспечнае выманне"
 
-#: package/contents/ui/DeviceItem.qml:270
+#: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
 msgstr "Прымантаваць"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-26 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -18,6 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.3.2\n"
+
+#: abstractnotificationsmodel.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 application name"
+msgid "%1 from %2"
+msgstr "%1 ഫയൽ %2 ലേക്ക്"
 
 #: job_p.cpp:185
 #, kde-format
@@ -93,7 +102,16 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "%1 ലേക്ക്"
 
-#: jobsmodel_p.cpp:476
+#: jobsmodel.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "Copying n files to location"
+#| msgid "%1 file to %2"
+#| msgid_plural "%1 files to %2"
+msgctxt "@info %1 notification body %2 job name"
+msgid "%1 from %2"
+msgstr "%1 ഫയൽ %2 ലേക്ക്"
+
+#: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "പ്രയോഗം അപ്രതീക്ഷിതമായി അടഞ്ഞു."

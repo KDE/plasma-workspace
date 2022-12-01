@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-01-24 20:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: package/contents/ui/DeviceItem.qml:180
+#: package/contents/ui/DeviceItem.qml:185
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 wolnych z %2"
 
-#: package/contents/ui/DeviceItem.qml:184
+#: package/contents/ui/DeviceItem.qml:189
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -34,7 +34,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Podpinanie..."
 
-#: package/contents/ui/DeviceItem.qml:187
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -42,32 +42,32 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Odpinanie..."
 
-#: package/contents/ui/DeviceItem.qml:190
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr "Nie wysuwaj! Pliki są jeszcze przesyłane..."
 
-#: package/contents/ui/DeviceItem.qml:221
+#: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Otwórz w przeglądarce plików"
 
-#: package/contents/ui/DeviceItem.qml:224
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
 msgstr "Podepnij i otwórz"
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
 msgstr "Wysuń"
 
-#: package/contents/ui/DeviceItem.qml:228
+#: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
 msgstr "Wysuń bezpiecznie"
 
-#: package/contents/ui/DeviceItem.qml:270
+#: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
 msgstr "Podepnij"

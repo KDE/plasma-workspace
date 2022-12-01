@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-04-19 17:59+0200\n"
+"PO-Revision-Date: 2022-11-28 00:06+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/ChangePassword.qml:26
 #: package/contents/ui/UserDetailsPage.qml:166
@@ -148,7 +148,7 @@ msgstr "Configura le impronte digitali"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Pulisci tutto"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -193,10 +193,9 @@ msgid "Re-enroll finger"
 msgstr "Registra nuovamente il dito"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Cancella le impronte digitali"
+msgstr "Elimina le impronte digitali"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

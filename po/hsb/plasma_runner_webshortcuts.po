@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-11-17 23:57+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: webshortcutrunner.cpp:58
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Pytam w %1 za %2"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr ""
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr ""
-
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "Pytam w %1 za %2"
 
 #, fuzzy
 #~| msgctxt ""

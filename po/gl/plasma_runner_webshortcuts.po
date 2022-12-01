@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2011-01-10 19:02+0100\n"
 "Last-Translator: Marce Villarino <mvillarino@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: webshortcutrunner.cpp:58
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Buscar %2 en %1"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Abre «%1» nun navegador web coa consulta :q:."
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr ""
-
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "Buscar %2 en %1"

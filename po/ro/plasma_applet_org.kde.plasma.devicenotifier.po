@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-02-04 17:20+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -21,13 +21,13 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: package/contents/ui/DeviceItem.qml:180
+#: package/contents/ui/DeviceItem.qml:185
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 liber din %2"
 
-#: package/contents/ui/DeviceItem.qml:184
+#: package/contents/ui/DeviceItem.qml:189
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -35,7 +35,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Se accesează…"
 
-#: package/contents/ui/DeviceItem.qml:187
+#: package/contents/ui/DeviceItem.qml:192
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -43,32 +43,32 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Se elimină…"
 
-#: package/contents/ui/DeviceItem.qml:190
+#: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
 msgstr "Încă nu deconectați! Fișierele sunt în curs de transferare…"
 
-#: package/contents/ui/DeviceItem.qml:221
+#: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Deschide cu gestionar de fișiere"
 
-#: package/contents/ui/DeviceItem.qml:224
+#: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
 msgstr "Montează și deschide"
 
-#: package/contents/ui/DeviceItem.qml:226
+#: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
 msgstr "Scoate suportul"
 
-#: package/contents/ui/DeviceItem.qml:228
+#: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
 msgstr "Scoate în siguranță"
 
-#: package/contents/ui/DeviceItem.qml:270
+#: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
 msgstr "Montează"

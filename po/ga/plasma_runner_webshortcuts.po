@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/krunner_webshortcutsrunner.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2008-01-02 22:29-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: webshortcutrunner.cpp:58
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Cuardaigh %1 do %2"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Osclaíonn sé \"%1\" i mbrabhsálaí Gréasáin leis an iarratas :q:."
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr ""
-
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "Cuardaigh %1 do %2"
 
 #~ msgctxt "A web shortcut and its name"
 #~ msgid "%1: %2"

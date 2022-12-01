@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2017-09-08 16:25+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -439,7 +439,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: package/contents/ui/NotificationItem.qml:178
+#: package/contents/ui/NotificationItem.qml:183
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -447,7 +447,7 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (σε παύση)"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:188
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, failed to complete"
 #| msgid "%1: Failed"
@@ -455,12 +455,12 @@ msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1: Απέτυχε"
 
-#: package/contents/ui/NotificationItem.qml:185
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgid "Job Failed"
 msgstr "Αποτυχία εργασίας"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:194
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, has finished"
 #| msgid "%1: Finished"
@@ -468,12 +468,12 @@ msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1: Ολοκληρώθηκε"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:196
 #, kde-format
 msgid "Job Finished"
 msgstr "Η εργασία ολοκληρώθηκε"
 
-#: package/contents/ui/NotificationItem.qml:333
+#: package/contents/ui/NotificationItem.qml:338
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

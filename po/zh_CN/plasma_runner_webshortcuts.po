@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-11-19 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,27 +18,27 @@ msgstr ""
 "plasma_runner_webshortcuts.pot\n"
 "X-Crowdin-File-ID: 4727\n"
 
-#: webshortcutrunner.cpp:58
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "在 %1 上搜索 %2"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "以查询内容 :q: 在网络浏览器中打开“%1”。"
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "使用 DuckDuckGo bang 语法搜索"
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr "在隐私窗口中搜索"
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr "在隐身窗口搜索"
-
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "在 %1 上搜索 %2"

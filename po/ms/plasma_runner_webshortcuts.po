@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_webshortcuts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2010-05-07 23:21+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=1;\n"
 
-#: webshortcutrunner.cpp:58
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Carian %1 untuk %2"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Buka \"%1\" dalam pelayar web dengan carian :q:."
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr ""
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr ""
-
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "Carian %1 untuk %2"

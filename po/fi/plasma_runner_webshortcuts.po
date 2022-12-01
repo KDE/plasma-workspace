@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_webshortcuts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"POT-Creation-Date: 2022-12-01 00:48+0000\n"
 "PO-Revision-Date: 2022-01-10 21:15+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -24,33 +24,33 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:37+0000\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: webshortcutrunner.cpp:58
+# Esimerkiksi: $[hakumuoto Google] = ”Googlella” ja $[hakumuoto Wikipedia] = ”Wikipediasta”
+#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Etsi hakukoneella %1: %2|/|Etsi $[hakumuoto %1]: %2"
+
+#: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr ""
 "Avaa palvelun %1 selaimeen kyselyllä :q:.|/|Avaa $[gen %1] selaimeen "
 "kyselyllä :q:."
 
-#: webshortcutrunner.cpp:63
+#: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Etsi DuckDuckGo’n huutomerkkisyntaksilla"
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
 msgstr "Etsi yksityisikkunassa"
 
-#: webshortcutrunner.cpp:94
+#: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Etsi yksityisikkunassa"
-
-# Esimerkiksi: $[hakumuoto Google] = ”Googlella” ja $[hakumuoto Wikipedia] = ”Wikipediasta”
-#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
-#, kde-format
-msgid "Search %1 for %2"
-msgstr "Etsi hakukoneella %1: %2|/|Etsi $[hakumuoto %1]: %2"
 
 #~ msgctxt "A web shortcut and its name"
 #~ msgid "%1: %2"
