@@ -18,6 +18,8 @@ Kirigami.Page {
     id: sourcesPage
     title: i18n("Application Settings")
 
+    padding: Kirigami.Units.mediumSpacing
+
     Component.onCompleted: {
         var idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
         if (!idx.valid) {
