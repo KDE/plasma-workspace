@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2008-11-10 23:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -690,22 +690,22 @@ msgstr "Znjepřistupnjene"
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
 msgstr ""
 
-#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Barbnu šemu zawěsćić"
 
-#: editor/scmeditordialog.cpp:112
+#: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Zapodajće mjeno za barbnu šemu:"
 
-#: editor/scmeditordialog.cpp:136
+#: editor/scmeditordialog.cpp:139
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -714,17 +714,17 @@ msgstr ""
 "Barbna šema z tutym mjenom hižo eksistuje.\n"
 "Chceće ju přepisać?"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Nimaće dowolnosć, tutu šemu přepisać"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "Error"
 msgstr "Zmylk"
 
-#: editor/scmeditordialog.cpp:188
+#: editor/scmeditordialog.cpp:191
 #, fuzzy, kde-format
 #| msgid "Inactive"
 msgid "Inactive"

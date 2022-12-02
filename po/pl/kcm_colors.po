@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1638709 $
+# Version: $Revision: 1639295 $
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-07-30 19:24+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -667,22 +667,22 @@ msgstr "Wyłączone"
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr "Masz niezapisane zmiany. Czy na pewno chcesz wyjść?"
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Niezapisane zmiany"
 
-#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Zapisz zestaw kolorów"
 
-#: editor/scmeditordialog.cpp:112
+#: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "Podaj nazwę dla z&estawu kolorów:"
 
-#: editor/scmeditordialog.cpp:136
+#: editor/scmeditordialog.cpp:139
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -691,17 +691,17 @@ msgstr ""
 "Zestaw kolorów o tej nazwie już istnieje.\n"
 "Czy chcesz go zastąpić?"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Nie masz uprawnień do zastąpienia tego zestawu"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "Error"
 msgstr "Błąd"
 
-#: editor/scmeditordialog.cpp:188
+#: editor/scmeditordialog.cpp:191
 #, kde-format
 msgid "Inactive"
 msgstr "Nieaktywne"

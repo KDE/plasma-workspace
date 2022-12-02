@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-11-12 09:27+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -99,7 +99,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Немає"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Акумулятор і яскравість дисплея"
@@ -207,27 +207,27 @@ msgstr[3] "Програмою надіслано запит щодо актив�
 msgid "System is in Power Save mode"
 msgstr "Система перебуває у режимі енергозаощадження"
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплетом акумулятора було увімкнено загальносистемний стан блокування"
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не вдалося задіяти режим %1"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Показати дані щодо енергоспоживання…"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Показувати заряд у відсотках на піктограмі, якщо заряджено не повністю"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Налаштувати заощадження енергії…"

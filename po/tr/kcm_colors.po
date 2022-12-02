@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-06-30 14:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -671,22 +671,22 @@ msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
 "Kaydedilmemiş değişiklikleriniz var. Gerçekten ayrılmak istiyor musunuz?"
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Kaydedilmemiş değişiklikler"
 
-#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Renk Şemasını Kaydet"
 
-#: editor/scmeditordialog.cpp:112
+#: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "Renk ş&eması için bir ad girin:"
 
-#: editor/scmeditordialog.cpp:136
+#: editor/scmeditordialog.cpp:139
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -695,17 +695,17 @@ msgstr ""
 "Aynı adlı bir renk şeması zaten var.\n"
 "Üzerine yazmak istiyor musunuz?"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Bu renk şemasının üzerine yazmak için izniniz yok"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "Error"
 msgstr "Hata"
 
-#: editor/scmeditordialog.cpp:188
+#: editor/scmeditordialog.cpp:191
 #, kde-format
 msgid "Inactive"
 msgstr "Etkin değil"

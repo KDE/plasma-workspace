@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 19:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "பொதுவானவை"
 msgid "No title"
 msgstr "தலைப்பில்லாத‍து"
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:80
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
 msgstr "எந்த ஊடகமும் இயக்கப்படவில்லை"
@@ -49,25 +49,25 @@ msgstr "-%1"
 msgid "Shuffle"
 msgstr "கலக்கு"
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "முந்தைய பாடல்"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "பொறு"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "இயக்கு"
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -83,30 +83,30 @@ msgstr "பாடலை மறுபடியும் இயக்கு"
 msgid "Repeat"
 msgstr "மறுபடியும்"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:90
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "திற"
 
-#: contents/ui/main.qml:123
+#: contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "நிறுத்து"
 
-#: contents/ui/main.qml:131
+#: contents/ui/main.qml:125
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "வெளியேறு"
 
-#: contents/ui/main.qml:241
+#: contents/ui/main.qml:237
 #, kde-format
 msgid "Choose player automatically"
 msgstr "இயக்கியை தானாக தேர்ந்தெடு"
 
-#: contents/ui/main.qml:278
+#: contents/ui/main.qml:274
 #, kde-format
 msgctxt "by Artist (player name)"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "இயற்றியவர் %1 (%2)\n"
 "இடைநிறுத்த நடு-கிளிக் செய்யவும்"
 
-#: contents/ui/main.qml:278
+#: contents/ui/main.qml:274
 #, kde-format
 msgid ""
 "%1\n"
@@ -125,7 +125,7 @@ msgstr ""
 "%1\n"
 "இடைநிறுத்த நடு-கிளிக் செய்யவும்"
 
-#: contents/ui/main.qml:289
+#: contents/ui/main.qml:285
 #, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
@@ -135,7 +135,7 @@ msgstr ""
 "இயற்றியவர் %1 (இடைநிறுத்தப்பட்டது, %2)\n"
 "இயக்க நடு-கிளிக் செய்யவும்"
 
-#: contents/ui/main.qml:289
+#: contents/ui/main.qml:285
 #, kde-format
 msgctxt ""
 "Paused (player name)\n"

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-08-02 22:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -983,12 +983,12 @@ msgstr "&Lisää"
 msgid "Clipboard Contents"
 msgstr "Leikepöydän sisältö"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Älä näytä tätä ponnahdusikkunaa"
 
-#: urlgrabber.cpp:204
+#: urlgrabber.cpp:205
 #, kde-format
 msgid "&Cancel"
 msgstr "&Peru"

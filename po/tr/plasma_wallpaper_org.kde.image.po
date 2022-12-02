@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-02-27 14:14+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr ""
 "Duvar kağıdı olarak ayarlanmak istenen dosya yok veya onu duvar kağıdı "
 "olarak tanımlayamıyoruz: %1"
 
-#: plugin/finder/packagefinder.cpp:152
+#: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
 msgstr "Önerilen duvar kağıdı dosyası"

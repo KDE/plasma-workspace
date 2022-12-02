@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-08-22 17:36+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -291,12 +291,12 @@ msgstr "Unauthorised to edit locale configuration file"
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "Cannot open file `/etc/locale.gen`"
 
-#: localegenhelper/localegenhelper.cpp:141
+#: localegenhelper/localegenhelper.cpp:149
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "Cannot locate executable `locale-gen`"
 
-#: localegenhelper/localegenhelper.cpp:154
+#: localegenhelper/localegenhelper.cpp:162
 #, kde-format
 msgid "Unknown"
 msgstr "Unknown"

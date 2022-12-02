@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-22 19:52+0530\n"
+"PO-Revision-Date: 2022-12-01 19:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -186,10 +186,9 @@ msgid "Re-enroll finger"
 msgstr "விரலை மறுபதிவு செய்"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "கைரேகைகளை நீக்கு"
+msgstr "கைரேகையை நீக்கு"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

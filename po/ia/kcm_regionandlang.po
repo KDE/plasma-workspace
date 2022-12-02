@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-07-15 12:17+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -288,12 +288,12 @@ msgstr ""
 msgid "Can't open file `/etc/locale.gen`"
 msgstr ""
 
-#: localegenhelper/localegenhelper.cpp:141
+#: localegenhelper/localegenhelper.cpp:149
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr ""
 
-#: localegenhelper/localegenhelper.cpp:154
+#: localegenhelper/localegenhelper.cpp:162
 #, kde-format
 msgid "Unknown"
 msgstr "Incognite"

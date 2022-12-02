@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-06-29 12:12+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -902,12 +902,12 @@ msgstr "&Více"
 msgid "Clipboard Contents"
 msgstr "Obsah schránky"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Zakázat toto okno"
 
-#: urlgrabber.cpp:204
+#: urlgrabber.cpp:205
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"

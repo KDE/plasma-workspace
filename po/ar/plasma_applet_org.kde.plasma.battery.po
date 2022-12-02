@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-11-21 18:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -96,7 +96,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "غير موجودة"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "البطّاريّة والسّطوع"
@@ -200,27 +200,27 @@ msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 msgid "System is in Power Save mode"
 msgstr "النطام في وضع توفير الطاقة"
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "فعّل بريمج البطّاريّة الكبت على مستوى النّظام"
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "فشل تفعيل نمط %1"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "أ&ظهر معلومات الطاقة..."
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "إظهار نسبة البطارية على الأيقونة إن لم يكن مشحون بالكامل"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "ا&ضبط حفظ الطّاقة..."

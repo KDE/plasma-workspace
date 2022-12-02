@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2020-07-21 18:29+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,87 +17,113 @@ msgstr ""
 "X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: sessionrunner.cpp:28 sessionrunner.cpp:68
-#, kde-format
-msgctxt "log out command"
-msgid "logout"
+#: sessionrunner.cpp:26
+#, fuzzy, kde-format
+#| msgid "log out"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to log out of the "
+"session"
+msgid "logout;log out"
 msgstr "log ud"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Logger ud, forlader den aktuelle skrivebordssession"
 
-#: sessionrunner.cpp:29 sessionrunner.cpp:85
-#, kde-format
-msgctxt "shut down computer command"
-msgid "shut down"
+#: sessionrunner.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to shut down the "
+"computer"
+msgid "shutdown;shut down"
 msgstr "luk ned"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:39
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Slukker computeren"
 
-#: sessionrunner.cpp:33 sessionrunner.cpp:94
-#, kde-format
-msgctxt "lock screen command"
-msgid "lock"
-msgstr "lås"
-
-#: sessionrunner.cpp:33
-#, kde-format
-msgid "Locks the current sessions and starts the screen saver"
-msgstr "Låser de aktuelle sessioner og starter pauseskærmen"
-
-#: sessionrunner.cpp:36 sessionrunner.cpp:76
-#, kde-format
-msgctxt "restart computer command"
-msgid "restart"
+#: sessionrunner.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to restart the "
+"computer"
+msgid "restart;reboot"
 msgstr "genstart"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:49
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Genstarter computeren"
 
-#: sessionrunner.cpp:37 sessionrunner.cpp:77
-#, kde-format
-msgctxt "restart computer command"
-msgid "reboot"
-msgstr "genstart"
+#: sessionrunner.cpp:57
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to lock the screen"
+msgid "lock;lock screen"
+msgstr "Lås skærmen"
 
-#: sessionrunner.cpp:40 sessionrunner.cpp:104
+#: sessionrunner.cpp:59
 #, kde-format
-msgctxt "save session command"
-msgid "save"
-msgstr ""
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Låser de aktuelle sessioner og starter pauseskærmen"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:66
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to save the "
+"desktop session"
+msgid "save;save session"
+msgstr "ny session"
+
+#: sessionrunner.cpp:69
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:41 sessionrunner.cpp:105
+#: sessionrunner.cpp:76
 #, fuzzy, kde-format
-#| msgid "new session"
-msgctxt "save session command"
-msgid "save session"
-msgstr "ny session"
+#| msgid "switch user"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to switch user "
+"sessions"
+msgid "switch user;new session"
+msgstr "skift bruger"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:79
 #, kde-format
-msgctxt "switch user command"
+msgid "Starts a new session as a different user"
+msgstr "Starter en ny session som en anden bruger"
+
+#: sessionrunner.cpp:86
+#, fuzzy, kde-format
+#| msgctxt "User sessions"
+#| msgid "sessions"
+msgctxt "KRunner keyword to list user sessions"
+msgid "sessions"
+msgstr "sessioner"
+
+#: sessionrunner.cpp:87
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Oplister alle sessioner"
+
+#: sessionrunner.cpp:90
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
+msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "skift"
 
-#: sessionrunner.cpp:45
-#, kde-format
-msgctxt "switch user command"
-msgid "switch :q:"
-msgstr "skift :q:"
-
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:92
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -106,95 +132,98 @@ msgstr ""
 "Skifter til den aktive session for brugeren :q:, eller viser en liste over "
 "aktive sessioner hvis :q: ikke angives"
 
-#: sessionrunner.cpp:49 sessionrunner.cpp:144
-#, kde-format
-msgid "switch user"
-msgstr "skift bruger"
-
-#: sessionrunner.cpp:49
-#, kde-format
-msgid "Starts a new session as a different user"
-msgstr "Starter en ny session som en anden bruger"
-
-#: sessionrunner.cpp:50 sessionrunner.cpp:144
-#, kde-format
-msgid "new session"
-msgstr "ny session"
-
-#: sessionrunner.cpp:54
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Oplister alle sessioner"
-
-#: sessionrunner.cpp:68
-#, kde-format
-msgid "log out"
-msgstr "log ud"
-
-#: sessionrunner.cpp:70
+#: sessionrunner.cpp:114
 #, kde-format
 msgctxt "log out command"
-msgid "Logout"
-msgstr "Log ud"
-
-#: sessionrunner.cpp:79
-#, kde-format
-msgid "Restart the computer"
-msgstr "Genstart computeren"
-
-#: sessionrunner.cpp:86
-#, kde-format
-msgctxt "shut down computer command"
-msgid "shutdown"
-msgstr "slut"
-
-#: sessionrunner.cpp:88
-#, kde-format
-msgid "Shut down the computer"
-msgstr "Luk computeren ned"
-
-#: sessionrunner.cpp:97
-#, kde-format
-msgid "Lock the screen"
-msgstr "Lås skærmen"
-
-#: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
-msgid "Save the session"
-msgstr "ny session"
-
-#: sessionrunner.cpp:108
-#, kde-format
-msgid "Save the current session for session restoration"
+msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:129
-#, kde-format
-msgctxt "User sessions"
-msgid "sessions"
-msgstr "sessioner"
+#: sessionrunner.cpp:124
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
+msgctxt "turn off computer command"
+msgid "Shut Down"
+msgstr "luk ned"
 
-#: sessionrunner.cpp:150
+#: sessionrunner.cpp:134
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt "restart computer command"
+msgid "Restart"
+msgstr "genstart"
+
+#: sessionrunner.cpp:144
+#, kde-format
+msgctxt "lock screen command"
+msgid "Lock"
+msgstr ""
+
+#: sessionrunner.cpp:154
+#, fuzzy, kde-format
+#| msgid "new session"
+msgid "Save Session"
+msgstr "ny session"
+
+#: sessionrunner.cpp:197
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "skift bruger"
 
-#: sessionrunner.cpp:227
+#: sessionrunner.cpp:274
 #, kde-format
 msgid "New Session"
 msgstr "Ny session"
 
-#: sessionrunner.cpp:228
+#: sessionrunner.cpp:275
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
 "between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
-"(such as the application launcher)</li></ul>"
+"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
+"application launcher)</li></ul>"
 msgstr ""
+
+#~ msgctxt "log out command"
+#~ msgid "logout"
+#~ msgstr "log ud"
+
+#~ msgctxt "lock screen command"
+#~ msgid "lock"
+#~ msgstr "lås"
+
+#~ msgctxt "restart computer command"
+#~ msgid "reboot"
+#~ msgstr "genstart"
+
+#~ msgctxt "switch user command"
+#~ msgid "switch :q:"
+#~ msgstr "skift :q:"
+
+#~ msgid "new session"
+#~ msgstr "ny session"
+
+#~ msgctxt "log out command"
+#~ msgid "Logout"
+#~ msgstr "Log ud"
+
+#~ msgid "Restart the computer"
+#~ msgstr "Genstart computeren"
+
+#~ msgctxt "shut down computer command"
+#~ msgid "shutdown"
+#~ msgstr "slut"
+
+#~ msgid "Shut down the computer"
+#~ msgstr "Luk computeren ned"
+
+#, fuzzy
+#~| msgid "new session"
+#~ msgid "Save the session"
+#~ msgstr "ny session"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Advarsel - ny session"

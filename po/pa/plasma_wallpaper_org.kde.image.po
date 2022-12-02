@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2021-06-08 22:51-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -157,7 +157,7 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/finder/packagefinder.cpp:152
+#: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
 msgstr "ਸਿਫਾਰਸ਼ੀ ਵਾਲਪੇਪਰ ਫਾਈਲ"

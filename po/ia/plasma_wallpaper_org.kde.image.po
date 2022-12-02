@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-06-06 21:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -172,7 +172,7 @@ msgstr ""
 "Le file passate per esser fixate como tapete de papiro non exite, o nos non "
 "pote identificar lo como tapete de papiro: %1"
 
-#: plugin/finder/packagefinder.cpp:152
+#: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
 msgstr "Reccomendate file de tapete de papiro"

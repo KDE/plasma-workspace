@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-05-24 21:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -161,7 +161,7 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr "பின்புல படமாக நீங்கள் குறிப்பிட்ட கோப்பு இல்லை, அல்லது அக்கோப்பு ஓர் படம் இல்லை: %1"
 
-#: plugin/finder/packagefinder.cpp:152
+#: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
 msgstr "பரிந்துரைக்கப்படும் பின்னணிப் படம்"

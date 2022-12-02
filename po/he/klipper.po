@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -961,12 +961,12 @@ msgstr "&עוד"
 msgid "Clipboard Contents"
 msgstr "תוכן לוח העריכה"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
 msgstr "בטל תפריט מוקפץ זה"
 
-#: urlgrabber.cpp:204
+#: urlgrabber.cpp:205
 #, kde-format
 msgid "&Cancel"
 msgstr "&בטל"

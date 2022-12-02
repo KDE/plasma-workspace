@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-02-28 09:40+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -100,7 +100,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Absent"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Acumulator și luminozitate"
@@ -203,28 +203,28 @@ msgstr[2] "%1 de aplicații au cerut activarea %2:"
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Miniaplicația de acumulator a activat inhibiția întregului sistem"
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Activarea regimului %1 a eșuat"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Arată informații de&spre energie…"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Arată procentajul acumulatorului pe pictogramă"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Configurează economisirea energiei…"

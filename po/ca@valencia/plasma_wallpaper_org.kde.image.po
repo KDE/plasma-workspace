@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-05-22 10:15+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -176,7 +176,7 @@ msgstr ""
 "El fitxer passat per a definir com a fons de pantalla no existix, o no s'ha "
 "pogut identificar com a fons de pantalla: %1"
 
-#: plugin/finder/packagefinder.cpp:152
+#: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
 msgstr "Fitxer de fons de pantalla recomanat"

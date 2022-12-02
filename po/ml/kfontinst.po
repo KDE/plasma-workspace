@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -72,7 +72,7 @@ msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നത�
 msgid "Print"
 msgstr "അച്ചടിയ്ക്കുക"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
 msgstr "റദ്ദാക്കുന്നു…"
@@ -176,7 +176,7 @@ msgid_plural "%1 duplicate fonts found."
 msgstr[0] "%1 ആവര്‍ത്തന അക്ഷരസഞ്ചയം ലഭ്യമായില്ല."
 msgstr[1] "%1 ആവര്‍ത്തന അക്ഷരസഞ്ചയങ്ങള്‍ ലഭ്യമായില്ല."
 
-#: kcmfontinst/DuplicatesDialog.cpp:185
+#: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
 msgid ""
 "Are you sure you wish to delete:\n"
@@ -185,57 +185,57 @@ msgstr ""
 "നിങ്ങള്‍ക്കിതു് വെട്ടിമാറ്റണമെന്നുറപ്പാണോ:\n"
 "%1"
 
-#: kcmfontinst/DuplicatesDialog.cpp:186
+#: kcmfontinst/DuplicatesDialog.cpp:193
 #, kde-format
 msgid "Are you sure you wish to delete:"
 msgstr "നിങ്ങള്‍ക്കിതു് വെട്ടിമാറ്റണമെന്നുറപ്പാണോ:"
 
-#: kcmfontinst/DuplicatesDialog.cpp:209
+#: kcmfontinst/DuplicatesDialog.cpp:221
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള തെരച്ചില്‍ നിര്‍ത്തണമോ?"
 
-#: kcmfontinst/DuplicatesDialog.cpp:370
+#: kcmfontinst/DuplicatesDialog.cpp:382
 #, kde-format
 msgid "Font/File"
 msgstr "അക്ഷരസഞ്ചയം/ഫയല്‍"
 
-#: kcmfontinst/DuplicatesDialog.cpp:372
+#: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
 msgid "Size"
 msgstr "വലിപ്പം"
 
-#: kcmfontinst/DuplicatesDialog.cpp:373
+#: kcmfontinst/DuplicatesDialog.cpp:385
 #, kde-format
 msgid "Date"
 msgstr "തീയതി"
 
-#: kcmfontinst/DuplicatesDialog.cpp:374
+#: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Links To"
 msgstr "എവിടേക്കു് ബന്ധങ്ങളുണ്ടാക്കണം"
 
-#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "അക്ഷരസഞ്ചയദര്‍ശിനിയില്‍ തുറക്കുക"
 
-#: kcmfontinst/DuplicatesDialog.cpp:389
+#: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങള്‍"
 
-#: kcmfontinst/DuplicatesDialog.cpp:391
+#: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
 msgid "Unmark for Deletion"
 msgstr "നീക്കം ചെയ്യാനായി അടയാളപ്പെടുത്തിയതില്‍നിന്നു മാറ്റുക"
 
-#: kcmfontinst/DuplicatesDialog.cpp:392
+#: kcmfontinst/DuplicatesDialog.cpp:404
 #, kde-format
 msgid "Mark for Deletion"
 msgstr "നീക്കം ചെയ്യാനായി അടയാളപ്പെടുത്തുക"
 
-#: kcmfontinst/DuplicatesDialog.cpp:488
+#: kcmfontinst/DuplicatesDialog.cpp:502
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
@@ -364,7 +364,7 @@ msgstr "അച്ചടിയ്ക്കുക…"
 msgid "Reload"
 msgstr "വീണ്ടും ലഭ്യമാക്കുക"
 
-#: kcmfontinst/FontList.cpp:1716
+#: kcmfontinst/FontList.cpp:1718
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "എല്ലാം %1 അക്ഷരസഞ്ചങ്ങളും അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"

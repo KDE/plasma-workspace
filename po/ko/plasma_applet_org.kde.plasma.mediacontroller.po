@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-07-13 11:55+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "일반"
 msgid "No title"
 msgstr ""
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:80
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
@@ -49,25 +49,25 @@ msgstr "-%1"
 msgid "Shuffle"
 msgstr "무순서 재생"
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "이전 트랙"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "일시 정지"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "재생"
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -83,30 +83,30 @@ msgstr "트랙 반복"
 msgid "Repeat"
 msgstr "반복"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:90
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "열기"
 
-#: contents/ui/main.qml:123
+#: contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "정지"
 
-#: contents/ui/main.qml:131
+#: contents/ui/main.qml:125
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "끝내기"
 
-#: contents/ui/main.qml:241
+#: contents/ui/main.qml:237
 #, kde-format
 msgid "Choose player automatically"
 msgstr "자동으로 재생기 선택"
 
-#: contents/ui/main.qml:278
+#: contents/ui/main.qml:274
 #, kde-format
 msgctxt "by Artist (player name)"
 msgid ""
@@ -114,14 +114,14 @@ msgid ""
 "Middle-click to pause"
 msgstr ""
 
-#: contents/ui/main.qml:278
+#: contents/ui/main.qml:274
 #, kde-format
 msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
 
-#: contents/ui/main.qml:289
+#: contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -131,7 +131,7 @@ msgid ""
 "Middle-click to play"
 msgstr "%1 부름(일시 정지됨, %2)"
 
-#: contents/ui/main.qml:289
+#: contents/ui/main.qml:285
 #, kde-format
 msgctxt ""
 "Paused (player name)\n"

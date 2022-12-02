@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -95,7 +95,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr ""
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr ""
@@ -191,27 +191,27 @@ msgstr[1] ""
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr ""
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr ""

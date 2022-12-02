@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-08-18 20:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -297,12 +297,12 @@ msgstr "Tokiko konfigurazio fitxategia editatzeko baimenik gabe"
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "Ezin ireki `/etc/locale.gen` fitxategia"
 
-#: localegenhelper/localegenhelper.cpp:141
+#: localegenhelper/localegenhelper.cpp:149
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "Ezin aurkitu `locale-gen` exekutagarria"
 
-#: localegenhelper/localegenhelper.cpp:154
+#: localegenhelper/localegenhelper.cpp:162
 #, kde-format
 msgid "Unknown"
 msgstr "Ezezaguna"

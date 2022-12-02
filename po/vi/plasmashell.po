@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-30 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-10-01 17:36+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -194,57 +194,57 @@ msgstr "Bàn phím trên màn hình: Tắt"
 msgid "Unknown %1"
 msgstr "%1 không rõ"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:175 shellcorona.cpp:177
 #, kde-format
 msgid "Show Desktop"
 msgstr "Hiện bàn làm việc"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:177
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Ẩn bàn làm việc"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Hiện trình chuyển Hoạt động"
 
-#: shellcorona.cpp:201
+#: shellcorona.cpp:202
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Dừng Hoạt động hiện tại"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Chuyển sang Hoạt động trước"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Chuyển sang Hoạt động sau"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Mở mục %1 của trình quản lí tác vụ"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Quản lí các bảng và bàn làm việc..."
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Di chuyển nhắm của bàn phím giữa các bảng"
 
-#: shellcorona.cpp:1810
+#: shellcorona.cpp:1811
 #, kde-format
 msgid "Add Panel"
 msgstr "Thêm bảng"
 
-#: shellcorona.cpp:1846
+#: shellcorona.cpp:1847
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

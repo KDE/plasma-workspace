@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2009-12-13 00:28+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -20,89 +20,112 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: sessionrunner.cpp:28 sessionrunner.cpp:68
-#, kde-format
-msgctxt "log out command"
-msgid "logout"
+#: sessionrunner.cpp:26
+#, fuzzy, kde-format
+#| msgid "log out"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to log out of the "
+"session"
+msgid "logout;log out"
 msgstr "wëlogòwanié"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Wëlogòwùje, wëchôdô z biéżny sesëji pùltu"
 
-#: sessionrunner.cpp:29 sessionrunner.cpp:85
+#: sessionrunner.cpp:36
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
-msgctxt "shut down computer command"
-msgid "shut down"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to shut down the "
+"computer"
+msgid "shutdown;shut down"
 msgstr "zamkniãcé"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:39
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Wëłączô kòmpùtr"
 
-#: sessionrunner.cpp:33 sessionrunner.cpp:94
-#, kde-format
-msgctxt "lock screen command"
-msgid "lock"
-msgstr "blokada"
-
-#: sessionrunner.cpp:33
-#, kde-format
-msgid "Locks the current sessions and starts the screen saver"
-msgstr "Blokùje biéżną sesëj@ ë startëje wëgaszôcz ekranu"
-
-#: sessionrunner.cpp:36 sessionrunner.cpp:76
-#, kde-format
-msgctxt "restart computer command"
-msgid "restart"
+#: sessionrunner.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to restart the "
+"computer"
+msgid "restart;reboot"
 msgstr "restart"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:49
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Pònowné zrëszenié kòmpùtra"
 
-#: sessionrunner.cpp:37 sessionrunner.cpp:77
-#, kde-format
-msgctxt "restart computer command"
-msgid "reboot"
-msgstr "reboot"
+#: sessionrunner.cpp:57
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to lock the screen"
+msgid "lock;lock screen"
+msgstr "Blokùje ekran"
 
-#: sessionrunner.cpp:40 sessionrunner.cpp:104
+#: sessionrunner.cpp:59
 #, kde-format
-msgctxt "save session command"
-msgid "save"
-msgstr ""
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Blokùje biéżną sesëj@ ë startëje wëgaszôcz ekranu"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:66
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to save the "
+"desktop session"
+msgid "save;save session"
+msgstr "nowô sesja"
+
+#: sessionrunner.cpp:69
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:41 sessionrunner.cpp:105
+#: sessionrunner.cpp:76
 #, fuzzy, kde-format
-#| msgid "new session"
-msgctxt "save session command"
-msgid "save session"
-msgstr "nowô sesja"
+#| msgid "switch user"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to switch user "
+"sessions"
+msgid "switch user;new session"
+msgstr "przełączô brëkòwnika"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:79
 #, kde-format
-msgctxt "switch user command"
+msgid "Starts a new session as a different user"
+msgstr "Startëje nową sesëjã jakno jiny brëkòwnik"
+
+#: sessionrunner.cpp:86
+#, fuzzy, kde-format
+#| msgid "Sessions"
+msgctxt "KRunner keyword to list user sessions"
+msgid "sessions"
+msgstr "Sesëjë"
+
+#: sessionrunner.cpp:87
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Lëstë wszëtczich sesëji"
+
+#: sessionrunner.cpp:90
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
+msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "przełączë"
 
-#: sessionrunner.cpp:45
-#, kde-format
-msgctxt "switch user command"
-msgid "switch :q:"
-msgstr "przełączë :q:"
-
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:92
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -111,99 +134,103 @@ msgstr ""
 "Przełącziwô do aktiwny sesëji brëkòwnika :q:, abò lëstëje wszëtczé aktiwne "
 "sesëje, jeżlë :q: nie je pòdóny"
 
-#: sessionrunner.cpp:49 sessionrunner.cpp:144
-#, kde-format
-msgid "switch user"
-msgstr "przełączô brëkòwnika"
-
-#: sessionrunner.cpp:49
-#, kde-format
-msgid "Starts a new session as a different user"
-msgstr "Startëje nową sesëjã jakno jiny brëkòwnik"
-
-#: sessionrunner.cpp:50 sessionrunner.cpp:144
-#, kde-format
-msgid "new session"
-msgstr "nowô sesja"
-
-#: sessionrunner.cpp:54
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Lëstë wszëtczich sesëji"
-
-#: sessionrunner.cpp:68
-#, kde-format
-msgid "log out"
-msgstr "wëlogòwanié"
-
-#: sessionrunner.cpp:70
+#: sessionrunner.cpp:114
 #, kde-format
 msgctxt "log out command"
-msgid "Logout"
-msgstr "Wëlogòwanié"
+msgid "Log Out"
+msgstr ""
 
-#: sessionrunner.cpp:79
-#, kde-format
-msgid "Restart the computer"
-msgstr "Pònowné zrëszenié kòmpùtra"
-
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:124
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
-msgctxt "shut down computer command"
-msgid "shutdown"
+msgctxt "turn off computer command"
+msgid "Shut Down"
 msgstr "zamkniãcé"
 
-#: sessionrunner.cpp:88
+#: sessionrunner.cpp:134
 #, fuzzy, kde-format
-#| msgid "Shutdown the computer"
-msgid "Shut down the computer"
-msgstr "Zamëkô kòmpùtr"
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt "restart computer command"
+msgid "Restart"
+msgstr "restart"
 
-#: sessionrunner.cpp:97
+#: sessionrunner.cpp:144
 #, kde-format
-msgid "Lock the screen"
-msgstr "Blokùje ekran"
-
-#: sessionrunner.cpp:107
-#, fuzzy, kde-format
-#| msgid "new session"
-msgid "Save the session"
-msgstr "nowô sesja"
-
-#: sessionrunner.cpp:108
-#, kde-format
-msgid "Save the current session for session restoration"
+msgctxt "lock screen command"
+msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:129
+#: sessionrunner.cpp:154
 #, fuzzy, kde-format
-#| msgid "Sessions"
-msgctxt "User sessions"
-msgid "sessions"
-msgstr "Sesëjë"
+#| msgid "new session"
+msgid "Save Session"
+msgstr "nowô sesja"
 
-#: sessionrunner.cpp:150
+#: sessionrunner.cpp:197
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "przełączô brëkòwnika"
 
-#: sessionrunner.cpp:227
+#: sessionrunner.cpp:274
 #, kde-format
 msgid "New Session"
 msgstr "Nowô sesja"
 
-#: sessionrunner.cpp:228
+#: sessionrunner.cpp:275
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
 "between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
-"(such as the application launcher)</li></ul>"
+"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
+"application launcher)</li></ul>"
 msgstr ""
+
+#~ msgctxt "log out command"
+#~ msgid "logout"
+#~ msgstr "wëlogòwanié"
+
+#~ msgctxt "lock screen command"
+#~ msgid "lock"
+#~ msgstr "blokada"
+
+#~ msgctxt "restart computer command"
+#~ msgid "reboot"
+#~ msgstr "reboot"
+
+#~ msgctxt "switch user command"
+#~ msgid "switch :q:"
+#~ msgstr "przełączë :q:"
+
+#~ msgid "new session"
+#~ msgstr "nowô sesja"
+
+#~ msgctxt "log out command"
+#~ msgid "Logout"
+#~ msgstr "Wëlogòwanié"
+
+#~ msgid "Restart the computer"
+#~ msgstr "Pònowné zrëszenié kòmpùtra"
+
+#, fuzzy
+#~| msgctxt "shutdown computer command"
+#~| msgid "shutdown"
+#~ msgctxt "shut down computer command"
+#~ msgid "shutdown"
+#~ msgstr "zamkniãcé"
+
+#, fuzzy
+#~| msgid "Shutdown the computer"
+#~ msgid "Shut down the computer"
+#~ msgstr "Zamëkô kòmpùtr"
+
+#, fuzzy
+#~| msgid "new session"
+#~ msgid "Save the session"
+#~ msgstr "nowô sesja"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "Òstrzéga - Nowô sesja"

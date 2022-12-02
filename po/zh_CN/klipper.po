@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
-"PO-Revision-Date: 2022-11-19 14:48\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"PO-Revision-Date: 2022-12-01 06:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -931,19 +931,12 @@ msgstr "更多(&M)"
 msgid "Clipboard Contents"
 msgstr "剪贴板内容"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
 msgstr "禁用此弹出菜单"
 
-#: urlgrabber.cpp:204
+#: urlgrabber.cpp:205
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The actions shown in the popup menu can be configured on the "
-#~ "<interface>Actions Configuration</interface> page."
-#~ msgstr ""
-#~ "弹出菜单中显示的操作可在<interface>操作配置</interface>页面中进行配置。"

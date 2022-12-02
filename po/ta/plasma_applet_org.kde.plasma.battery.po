@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-11-17 19:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -96,7 +96,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "இல்லை"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "மின்கலமும் பிரகாசமும்"
@@ -192,27 +192,27 @@ msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்ப�
 msgid "System is in Power Save mode"
 msgstr "கணினி ஆற்றல் சேமிப்பு பயன்முறையில் உள்ளது"
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "கணினி முழுவதற்குமான ஆற்றல் சேமிப்பு, மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 பயன்முறையை இயக்குதல் தோல்வியடைந்தது"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "ஆற்றல் விவரங்களை காட்டு…"
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ஆற்றல் நிறைந்திராத பட்சத்தில் சின்னத்தில் மின்கல சதவீதத்தைக் காட்டு"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&ஆற்றல் சேமிப்பை அமை…"

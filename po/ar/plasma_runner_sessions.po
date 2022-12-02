@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-10-27 10:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,86 +19,114 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: sessionrunner.cpp:28 sessionrunner.cpp:68
-#, kde-format
-msgctxt "log out command"
-msgid "logout"
+#: sessionrunner.cpp:26
+#, fuzzy, kde-format
+#| msgid "log out"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to log out of the "
+"session"
+msgid "logout;log out"
 msgstr "اخرج"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "يخرج، مُنهِيًا جلسة سطح المكتب الحالية"
 
-#: sessionrunner.cpp:29 sessionrunner.cpp:85
-#, kde-format
-msgctxt "shut down computer command"
-msgid "shut down"
+#: sessionrunner.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to shut down the "
+"computer"
+msgid "shutdown;shut down"
 msgstr "أطفئ"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:39
 #, kde-format
 msgid "Turns off the computer"
 msgstr "يطفئ الحاسوب"
 
-#: sessionrunner.cpp:33 sessionrunner.cpp:94
-#, kde-format
-msgctxt "lock screen command"
-msgid "lock"
-msgstr "اقفل"
-
-#: sessionrunner.cpp:33
-#, kde-format
-msgid "Locks the current sessions and starts the screen saver"
-msgstr "يقفل الجلسات الحالية ويبدأ حافظ الشاشة"
-
-#: sessionrunner.cpp:36 sessionrunner.cpp:76
-#, kde-format
-msgctxt "restart computer command"
-msgid "restart"
+#: sessionrunner.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to restart the "
+"computer"
+msgid "restart;reboot"
 msgstr "أعد التشغيل"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:49
 #, kde-format
 msgid "Reboots the computer"
 msgstr "يعيد تشغيل الحاسوب"
 
-#: sessionrunner.cpp:37 sessionrunner.cpp:77
-#, kde-format
-msgctxt "restart computer command"
-msgid "reboot"
-msgstr "أعد التشغيل"
+#: sessionrunner.cpp:57
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to lock the screen"
+msgid "lock;lock screen"
+msgstr "اقفل الشاشة"
 
-#: sessionrunner.cpp:40 sessionrunner.cpp:104
+#: sessionrunner.cpp:59
 #, kde-format
-msgctxt "save session command"
-msgid "save"
-msgstr "احفظ"
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "يقفل الجلسات الحالية ويبدأ حافظ الشاشة"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:66
+#, fuzzy, kde-format
+#| msgctxt "save session command"
+#| msgid "save session"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to save the "
+"desktop session"
+msgid "save;save session"
+msgstr "احفظ جلسة"
+
+#: sessionrunner.cpp:69
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "يحفظ الجلسة الحالية حتى يمكن استعادتها"
 
-#: sessionrunner.cpp:41 sessionrunner.cpp:105
-#, kde-format
-msgctxt "save session command"
-msgid "save session"
-msgstr "احفظ جلسة"
+#: sessionrunner.cpp:76
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to switch user "
+"sessions"
+msgid "switch user;new session"
+msgstr "بدل المستخدم"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:79
 #, kde-format
-msgctxt "switch user command"
+msgid "Starts a new session as a different user"
+msgstr "يبدأ جلسة جديدة كمستخدِم مختلف"
+
+#: sessionrunner.cpp:86
+#, fuzzy, kde-format
+#| msgctxt "User sessions"
+#| msgid "sessions"
+msgctxt "KRunner keyword to list user sessions"
+msgid "sessions"
+msgstr "جلسات"
+
+#: sessionrunner.cpp:87
+#, kde-format
+msgid "Lists all sessions"
+msgstr "يسرد كلّ الجلسات"
+
+#: sessionrunner.cpp:90
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
+msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "بدل"
 
-#: sessionrunner.cpp:45
-#, kde-format
-msgctxt "switch user command"
-msgid "switch :q:"
-msgstr "بدل :q:"
-
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:92
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -106,97 +134,113 @@ msgid ""
 msgstr ""
 "يبدّل إلى الجلسة النشطة للمستخدِم :q:، أو يسرد الجلسات النشطة إن لم يُوفَّر :q:"
 
-#: sessionrunner.cpp:49 sessionrunner.cpp:144
-#, kde-format
-msgid "switch user"
-msgstr "بدل المستخدم"
-
-#: sessionrunner.cpp:49
-#, kde-format
-msgid "Starts a new session as a different user"
-msgstr "يبدأ جلسة جديدة كمستخدِم مختلف"
-
-#: sessionrunner.cpp:50 sessionrunner.cpp:144
-#, kde-format
-msgid "new session"
-msgstr "جلسة جديدة"
-
-#: sessionrunner.cpp:54
-#, kde-format
-msgid "Lists all sessions"
-msgstr "يسرد كلّ الجلسات"
-
-#: sessionrunner.cpp:68
-#, kde-format
-msgid "log out"
-msgstr "اخرج"
-
-#: sessionrunner.cpp:70
+#: sessionrunner.cpp:114
 #, kde-format
 msgctxt "log out command"
-msgid "Logout"
-msgstr "اخرج"
+msgid "Log Out"
+msgstr ""
 
-#: sessionrunner.cpp:79
-#, kde-format
-msgid "Restart the computer"
-msgstr "أعد تشغيل الحاسوب"
-
-#: sessionrunner.cpp:86
-#, kde-format
-msgctxt "shut down computer command"
-msgid "shutdown"
+#: sessionrunner.cpp:124
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
+msgctxt "turn off computer command"
+msgid "Shut Down"
 msgstr "أطفئ"
 
-#: sessionrunner.cpp:88
-#, kde-format
-msgid "Shut down the computer"
-msgstr "أطفئ الحاسوب"
+#: sessionrunner.cpp:134
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt "restart computer command"
+msgid "Restart"
+msgstr "أعد التشغيل"
 
-#: sessionrunner.cpp:97
+#: sessionrunner.cpp:144
 #, kde-format
-msgid "Lock the screen"
-msgstr "اقفل الشاشة"
+msgctxt "lock screen command"
+msgid "Lock"
+msgstr ""
 
-#: sessionrunner.cpp:107
-#, kde-format
-msgid "Save the session"
-msgstr "احفظ الجلسة"
+#: sessionrunner.cpp:154
+#, fuzzy, kde-format
+#| msgctxt "save session command"
+#| msgid "save session"
+msgid "Save Session"
+msgstr "احفظ جلسة"
 
-#: sessionrunner.cpp:108
-#, kde-format
-msgid "Save the current session for session restoration"
-msgstr "احفظ الجلسة الحالية حتى يمكن استعادتها"
-
-#: sessionrunner.cpp:129
-#, kde-format
-msgctxt "User sessions"
-msgid "sessions"
-msgstr "جلسات"
-
-#: sessionrunner.cpp:150
+#: sessionrunner.cpp:197
 #, kde-format
 msgid "Switch User"
 msgstr "بدل المستخدم"
 
-#: sessionrunner.cpp:227
+#: sessionrunner.cpp:274
 #, kde-format
 msgid "New Session"
 msgstr "جلسة جديدة"
 
-#: sessionrunner.cpp:228
-#, kde-format
+#: sessionrunner.cpp:275
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#| "will be displayed and the current session will be hidden.</p><p>You can "
+#| "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#| "session}</li><li>Plasma search (type 'switch' or 'sessions')</"
+#| "li><li>Plasma widgets (such as the application launcher)</li></ul>"
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
 "between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type 'switch' or 'sessions')</li><li>Plasma widgets "
-"(such as the application launcher)</li></ul>"
+"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
+"application launcher)</li></ul>"
 msgstr ""
 "<p>أنت على وشك أن تدخل جلسة سطح مكتب جديدة.</p><p>ستعرض شاشة الولوج وستختفي "
 "الجلسة الحالية.</p><p>يمكنك التبديل بين جلسات الحاسوب باستخدام:</"
 "p><ul><li>Ctrl+Alt+F{رقم الجلسة}</li><li>بحث بلازما (اكتب 'بدل' أو 'جلسات')</"
 "li><li>بريمج سطح مكتب بلازما (مثل مطلق التطبيقات)</li></ul>"
+
+#~ msgctxt "log out command"
+#~ msgid "logout"
+#~ msgstr "اخرج"
+
+#~ msgctxt "lock screen command"
+#~ msgid "lock"
+#~ msgstr "اقفل"
+
+#~ msgctxt "restart computer command"
+#~ msgid "reboot"
+#~ msgstr "أعد التشغيل"
+
+#~ msgctxt "save session command"
+#~ msgid "save"
+#~ msgstr "احفظ"
+
+#~ msgctxt "switch user command"
+#~ msgid "switch :q:"
+#~ msgstr "بدل :q:"
+
+#~ msgid "new session"
+#~ msgstr "جلسة جديدة"
+
+#~ msgctxt "log out command"
+#~ msgid "Logout"
+#~ msgstr "اخرج"
+
+#~ msgid "Restart the computer"
+#~ msgstr "أعد تشغيل الحاسوب"
+
+#~ msgctxt "shut down computer command"
+#~ msgid "shutdown"
+#~ msgstr "أطفئ"
+
+#~ msgid "Shut down the computer"
+#~ msgstr "أطفئ الحاسوب"
+
+#~ msgid "Save the session"
+#~ msgstr "احفظ الجلسة"
+
+#~ msgid "Save the current session for session restoration"
+#~ msgstr "احفظ الجلسة الحالية حتى يمكن استعادتها"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "تحذير - جلسة جديدة"

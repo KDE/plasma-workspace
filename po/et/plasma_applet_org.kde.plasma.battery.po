@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2020-10-08 10:11+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -103,7 +103,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Puudub"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Aku ja heledus"
@@ -202,29 +202,29 @@ msgstr[1] ""
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Akuaplett on lülitanud sisse süsteemsed piirangud"
 
-#: package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:360
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "&Show Energy Information..."
 msgid "&Show Energy Information…"
 msgstr "Aku lae&tuse näitamine ..."
 
-#: package/contents/ui/main.qml:373
+#: package/contents/ui/main.qml:374
 #, fuzzy, kde-format
 #| msgid "Show percentage"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Protsendi näitamine"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "&Configure Power Saving..."
 msgid "&Configure Energy Saving…"

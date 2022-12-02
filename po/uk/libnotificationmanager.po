@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-07-21 09:14+0300\n"
+"PO-Revision-Date: 2022-12-01 10:51+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -21,13 +21,10 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 
 #: abstractnotificationsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 файл до %2"
+msgstr "%1 від %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -112,13 +109,10 @@ msgid "to %1"
 msgstr "до %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 файл до %2"
+msgstr "%1 від %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format
