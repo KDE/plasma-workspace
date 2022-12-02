@@ -2121,11 +2121,11 @@ void ShellCorona::grabContainmentPreview(Plasma::Containment *containment)
         if (result) {
             connect(result.data(), &QQuickItemGrabResult::ready, this, [this, result, containment]() {
                 // DataLocation is plasmashell, we need just "plasma"
-                QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/plasma/");
+                QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
                 QDir dir(path);
-                dir.mkdir(QStringLiteral("containmentpreviews"));
-                path +=
-                    QStringLiteral("containmentpreviews/") + QString::number(containment->id()) + QChar('-') + containment->activity() + QStringLiteral(".png");
+                path += QStringLiteral("/plasma/containmentpreviews/");
+                dir.mkpath(path);
+                path += QString::number(containment->id()) + QChar('-') + containment->activity() + QStringLiteral(".png");
                 result->saveToFile(path);
                 emit containmentPreviewReady(containment, path);
             });
