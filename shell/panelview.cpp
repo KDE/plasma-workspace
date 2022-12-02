@@ -621,14 +621,14 @@ void PanelView::resizePanel()
         maxSize = qMax(minSize, maxSize);
         targetMinSize = QSize(totalThickness(), minSize);
         targetMaxSize = QSize(totalThickness(), maxSize);
-        targetSize = QSize(totalThickness(), std::clamp(m_contentLength, minSize, maxSize));
+        targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
         int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
         maxSize = qMax(minSize, maxSize);
         targetMinSize = QSize(minSize, totalThickness());
         targetMaxSize = QSize(maxSize, totalThickness());
-        targetSize = QSize(std::clamp(m_contentLength, minSize, maxSize), totalThickness());
+        targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
     }
     if (minimumSize() != targetMinSize) {
         setMinimumSize(targetMinSize);
