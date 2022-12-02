@@ -58,7 +58,7 @@ PlasmaExtras.Representation {
             inhibitions: dialog.inhibitions
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
-            onDisabledChanged: powerManagementChanged(disabled)
+            onDisabledChanged: dialog.powerManagementChanged(disabled)
         }
     }
 
@@ -115,7 +115,7 @@ PlasmaExtras.Representation {
 
                 icon.name: "video-display-brightness"
                 text: i18n("Display Brightness")
-                visible: isBrightnessAvailable
+                visible: dialog.isBrightnessAvailable
                 value: batterymonitor.screenBrightness
                 maximumValue: batterymonitor.maximumScreenBrightness
 
@@ -147,7 +147,7 @@ PlasmaExtras.Representation {
                 showPercentage: false
                 value: batterymonitor.keyboardBrightness
                 maximumValue: batterymonitor.maximumKeyboardBrightness
-                visible: isKeyboardBrightnessAvailable
+                visible: dialog.isKeyboardBrightnessAvailable
 
                 KeyNavigation.up: brightnessSlider.visible ? brightnessSlider : brightnessSlider.KeyNavigation.up
                 KeyNavigation.down: powerProfileItem.visible ? powerProfileItem : powerProfileItem.KeyNavigation.down
