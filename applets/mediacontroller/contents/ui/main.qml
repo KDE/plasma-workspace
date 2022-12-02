@@ -41,15 +41,10 @@ Item {
             return ""
         }
         var xesamArtist = currentMetadata["xesam:artist"]
-        if (!xesamArtist) {
-            return "";
+        if (!xesamArtist || xesamArtist.length === 0) {
+            xesamArtist = currentMetadata["xesam:albumArtist"] || []
         }
-
-        if (typeof xesamArtist == "string") {
-            return xesamArtist
-        } else {
-            return xesamArtist.join(", ")
-        }
+        return xesamArtist.join(", ")
     }
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
 
