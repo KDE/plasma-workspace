@@ -163,7 +163,7 @@ int AppMenuModel::rowCount(const QModelIndex &parent) const
 
 void AppMenuModel::removeSearchActionsFromMenu()
 {
-    for (const auto &action : std::as_const(m_currentSearchActions)) {
+    for (auto action : std::as_const(m_currentSearchActions)) {
         m_searchAction->menu()->removeAction(action);
     }
     m_currentSearchActions = QList<QAction *>();
