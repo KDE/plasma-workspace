@@ -68,6 +68,12 @@ private Q_SLOTS:
     void updatePowerProfileHolds(const QList<QVariantMap> &holds);
 
 private:
+    template<typename ReplyType>
+    inline void createPowerManagementDBusMethodCallAndNotifyChanged(const QString &method, std::function<void(ReplyType)> &&callback);
+
+    template<typename ReplyType>
+    inline void createPowerProfileDBusMethodCallAndNotifyChanged(const QString &method, std::function<void(ReplyType)> &&callback);
+
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
     QString batteryTypeToString(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
