@@ -1771,16 +1771,18 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
                 if (row > newPos && newPos - 1 >= 0 && newPos + 2 < d->sortedPreFilterRows.size()) {
                     const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0); // [pinned 2 (launcher)]
                     const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 2), 0); // [pinned 2 (window)]
+                    const bool hasLauncher = beforeIdx.data(AbstractTasksModel::IsLauncher).toBool() || afterIdx.data(AbstractTasksModel::IsLauncher).toBool();
 
-                    if (appsMatch(beforeIdx, afterIdx)) {
+                    if (hasLauncher && appsMatch(beforeIdx, afterIdx)) {
                         // Move [pinned 2 (launcher)] before [pinned 2 (window)]
                         d->sortedPreFilterRows.move(newPos - 1, newPos + 2);
                     }
                 } else if (row < newPos && newPos - 2 >= 0 && newPos + 1 < d->sortedPreFilterRows.size()) {
                     const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 2), 0); // [pinned 2 (window)]
                     const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0); // [pinned 2 (launcher)]
+                    const bool hasLauncher = beforeIdx.data(AbstractTasksModel::IsLauncher).toBool() || afterIdx.data(AbstractTasksModel::IsLauncher).toBool();
 
-                    if (appsMatch(beforeIdx, afterIdx)) {
+                    if (hasLauncher && appsMatch(beforeIdx, afterIdx)) {
                         // Move [pinned 2 (launcher)] before [pinned 2 (window)]
                         d->sortedPreFilterRows.move(newPos + 1, newPos - 2);
                     }
@@ -1810,8 +1812,10 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
              */
             const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0, parent);
             const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0, parent);
+            // BUG 462508: check if any item is a launcher
+            const bool hasLauncher = beforeIdx.data(AbstractTasksModel::IsLauncher).toBool() || afterIdx.data(AbstractTasksModel::IsLauncher).toBool();
 
-            if (appsMatch(beforeIdx, afterIdx)) {
+            if (hasLauncher && appsMatch(beforeIdx, afterIdx)) {
                 // after adjusting: [unpinned] [pinned 1 (launcher item)] [pinned 1]
                 d->sortedPreFilterRows.move(newPos, newPos + (row < newPos ? 1 : -1));
             }
