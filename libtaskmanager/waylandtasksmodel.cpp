@@ -689,7 +689,7 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
 
     const QQuickItem *item = qobject_cast<const QQuickItem *>(delegate);
 
-    if (!item || !item->parentItem() || !item->window()) {
+    if (!item || !item->parentItem()) {
         return;
     }
 
