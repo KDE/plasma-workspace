@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-10-26 17:04+0300\n"
+"PO-Revision-Date: 2022-12-02 16:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -21,13 +21,12 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "вийти"
+msgstr "logout;log out;вийти"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -35,14 +34,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Завершує поточний сеанс стільниці"
 
 #: sessionrunner.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "shut down"
+msgstr "shutdown;shut down;вимкнути;вимикання"
 
 #: sessionrunner.cpp:39
 #, kde-format
@@ -50,14 +47,12 @@ msgid "Turns off the computer"
 msgstr "Вимикає комп’ютер"
 
 #: sessionrunner.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "restart"
+msgstr "restart;reboot"
 
 #: sessionrunner.cpp:49
 #, kde-format
@@ -65,12 +60,11 @@ msgid "Reboots the computer"
 msgstr "Перезавантажує комп’ютер"
 
 #: sessionrunner.cpp:57
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Заблокувати екран"
+msgstr "lock;lock screen;заблокувати;заблокувати екран"
 
 #: sessionrunner.cpp:59
 #, kde-format
@@ -78,14 +72,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Заблоковує поточні сеанси і запускає зберігач екрана"
 
 #: sessionrunner.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "save session"
+msgstr "save;save session;зберегти;зберегти сеанс"
 
 #: sessionrunner.cpp:69
 #, kde-format
@@ -93,13 +85,12 @@ msgid "Saves the current session for session restoration"
 msgstr "Зберігає поточний сеанс для відновлення згодом"
 
 #: sessionrunner.cpp:76
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "перемкнути користувача"
+msgstr "switch user;new session;перемкнути користувача;новий сеанс"
 
 #: sessionrunner.cpp:79
 #, kde-format
@@ -107,9 +98,7 @@ msgid "Starts a new session as a different user"
 msgstr "Запускає новий сеанс від імені іншого користувача"
 
 #: sessionrunner.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "сеанси"
@@ -120,12 +109,10 @@ msgid "Lists all sessions"
 msgstr "Список усіх сеансів"
 
 #: sessionrunner.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "switch"
+msgstr "switch;перемкнути"
 
 #: sessionrunner.cpp:92
 #, kde-format
@@ -140,36 +127,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Вийти"
 
 #: sessionrunner.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "shut down"
+msgstr "Вимкнути"
 
 #: sessionrunner.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "restart"
+msgstr "Перезапустити"
 
 #: sessionrunner.cpp:144
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Заблокувати"
 
 #: sessionrunner.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgid "Save Session"
-msgstr "save session"
+msgstr "Зберегти сеанс"
 
 #: sessionrunner.cpp:197
 #, kde-format
@@ -182,13 +163,7 @@ msgid "New Session"
 msgstr "Новий сеанс"
 
 #: sessionrunner.cpp:275
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#| "will be displayed and the current session will be hidden.</p><p>You can "
-#| "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#| "session}</li><li>Plasma search (type 'switch' or 'sessions')</"
-#| "li><li>Plasma widgets (such as the application launcher)</li></ul>"
+#, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
@@ -199,8 +174,8 @@ msgstr ""
 "<p>Ви на порозі входу до нового стільничного сеансу.</p><p>Буде показано "
 "вікно вітання, а поточний сеанс буде приховано.</p><p>Перемикатися між "
 "стільничними сеансами можна за допомогою таких засобів:</p><ul><li>Ctrl+Alt"
-"+F{номер сеансу}</li><li>Пошуку Плазми (введіть «switch» або «sessions»)</"
-"li><li>Віджетів Плазми (зокрема віджета запуску програм)</li></ul>"
+"+F{номер сеансу}</li><li>Пошуку Плазми (введіть «%1»)</li><li>Віджетів "
+"Плазми (зокрема віджета запуску програм)</li></ul>"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

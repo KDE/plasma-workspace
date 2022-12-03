@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2019-10-10 07:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -223,22 +223,22 @@ msgstr "Мавқеъи пайдошавии равзана"
 msgid "Application Settings"
 msgstr "Танзимоти барнома"
 
-#: package/contents/ui/SourcesPage.qml:91
+#: package/contents/ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "Барномаҳо"
 
-#: package/contents/ui/SourcesPage.qml:92
+#: package/contents/ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "Хизматҳои низомӣ"
 
-#: package/contents/ui/SourcesPage.qml:130
+#: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr ""
 
-#: package/contents/ui/SourcesPage.qml:150
+#: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

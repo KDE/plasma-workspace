@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-08-20 11:20+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -290,12 +290,12 @@ msgstr ""
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "Klarte ikkje opna fila «/etc/locale.gen»"
 
-#: localegenhelper/localegenhelper.cpp:141
+#: localegenhelper/localegenhelper.cpp:149
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "Fann ikkje programfila «locale-gen»"
 
-#: localegenhelper/localegenhelper.cpp:154
+#: localegenhelper/localegenhelper.cpp:162
 #, kde-format
 msgid "Unknown"
 msgstr "Ukjend"
@@ -456,13 +456,13 @@ msgid "No Language Configured"
 msgstr "Ingen språk er sette opp"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:147
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:165
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Fleire språk"
 
-#: package/contents/ui/AdvancedLanguageSelectPage.qml:174
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

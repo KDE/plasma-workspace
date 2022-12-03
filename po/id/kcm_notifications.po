@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -217,23 +217,23 @@ msgstr "Posisi Sembulan"
 msgid "Application Settings"
 msgstr "Pengaturan Aplikasi"
 
-#: package/contents/ui/SourcesPage.qml:91
+#: package/contents/ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: package/contents/ui/SourcesPage.qml:92
+#: package/contents/ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "Layanan Sistem"
 
-#: package/contents/ui/SourcesPage.qml:130
+#: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr ""
 "Tidak ada aplikasi atau peristiwa yang cocok dengan istilah yang kamu cari."
 
-#: package/contents/ui/SourcesPage.qml:150
+#: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

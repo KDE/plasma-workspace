@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-31 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2012-09-03 08:51+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -79,7 +79,7 @@ msgstr "URL som skal installeres"
 msgid "Print"
 msgstr "Skriv ut"
 
-#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
 msgstr ""
@@ -180,7 +180,7 @@ msgid_plural "%1 duplicate fonts found."
 msgstr[0] "%1 duplisert skrift funnet."
 msgstr[1] "%1 dupliserte skrifter funnet."
 
-#: kcmfontinst/DuplicatesDialog.cpp:185
+#: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
 msgid ""
 "Are you sure you wish to delete:\n"
@@ -189,57 +189,57 @@ msgstr ""
 "Er du sikker på at du vil slette:\n"
 "%1"
 
-#: kcmfontinst/DuplicatesDialog.cpp:186
+#: kcmfontinst/DuplicatesDialog.cpp:193
 #, kde-format
 msgid "Are you sure you wish to delete:"
 msgstr "Er du sikker på at du vil slette:"
 
-#: kcmfontinst/DuplicatesDialog.cpp:209
+#: kcmfontinst/DuplicatesDialog.cpp:221
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Kansellere skriftsøking?"
 
-#: kcmfontinst/DuplicatesDialog.cpp:370
+#: kcmfontinst/DuplicatesDialog.cpp:382
 #, kde-format
 msgid "Font/File"
 msgstr "Skrift/fil"
 
-#: kcmfontinst/DuplicatesDialog.cpp:372
+#: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
 msgid "Size"
 msgstr "Størrelse"
 
-#: kcmfontinst/DuplicatesDialog.cpp:373
+#: kcmfontinst/DuplicatesDialog.cpp:385
 #, kde-format
 msgid "Date"
 msgstr "Dato"
 
-#: kcmfontinst/DuplicatesDialog.cpp:374
+#: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Links To"
 msgstr "Lenker til"
 
-#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "Åpne i skriftviser"
 
-#: kcmfontinst/DuplicatesDialog.cpp:389
+#: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: kcmfontinst/DuplicatesDialog.cpp:391
+#: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
 msgid "Unmark for Deletion"
 msgstr "Ta vekk merke for sletting"
 
-#: kcmfontinst/DuplicatesDialog.cpp:392
+#: kcmfontinst/DuplicatesDialog.cpp:404
 #, kde-format
 msgid "Mark for Deletion"
 msgstr "Merk for sletting"
 
-#: kcmfontinst/DuplicatesDialog.cpp:488
+#: kcmfontinst/DuplicatesDialog.cpp:502
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Reload"
 msgstr "Last på nytt"
 
-#: kcmfontinst/FontList.cpp:1716
+#: kcmfontinst/FontList.cpp:1718
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Åpne alle %1 skrifter i skriftviseren?"

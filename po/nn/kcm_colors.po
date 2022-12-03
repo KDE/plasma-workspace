@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-06-19 00:01+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -662,22 +662,22 @@ msgstr "Uverksam"
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr "Du har ulagra endringar. Er du sikker på at du vil avslutta?"
 
-#: editor/scmeditordialog.cpp:94
+#: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
 msgstr "Ulagra endringar"
 
-#: editor/scmeditordialog.cpp:112 editor/scmeditordialog.cpp:137
+#: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
 msgstr "Lagra fargeoppsett"
 
-#: editor/scmeditordialog.cpp:112
+#: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
 msgstr "&Skriv inn eit namn på fargeoppsettet:"
 
-#: editor/scmeditordialog.cpp:136
+#: editor/scmeditordialog.cpp:139
 #, kde-format
 msgid ""
 "A color scheme with that name already exists.\n"
@@ -686,17 +686,17 @@ msgstr ""
 "Det finst alt eit fargeoppsett med dette namnet.\n"
 "Vil du skriva over det?"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
 msgstr "Du har ikkje løyve til å overskriva det oppsettet"
 
-#: editor/scmeditordialog.cpp:173
+#: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "Error"
 msgstr "Feil"
 
-#: editor/scmeditordialog.cpp:188
+#: editor/scmeditordialog.cpp:191
 #, kde-format
 msgid "Inactive"
 msgstr "Inaktivt"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2022-08-19 15:36-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -265,32 +265,41 @@ msgstr "Primeiro dia da semana:"
 msgid "Available Plugins:"
 msgstr "Plugins disponíveis:"
 
-#: package/contents/ui/configTimeZones.qml:90
+#: package/contents/ui/configTimeZones.qml:95
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "O relógio atualmente está usando este fuso horário"
 
-#: package/contents/ui/configTimeZones.qml:100
+#: package/contents/ui/configTimeZones.qml:97
+#, kde-format
+msgctxt ""
+"@label This list item shows a time zone city name that is identical to the "
+"local time zone's city, and will be hidden in the timezone display in the "
+"plasmoid's popup"
+msgid "Hidden while this is the local time zone's city"
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:111
 #, kde-format
 msgid "Switch Local Time Zone…"
 msgstr "Mudar para o fuso horário local..."
 
-#: package/contents/ui/configTimeZones.qml:109
+#: package/contents/ui/configTimeZones.qml:120
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Remover este fuso horário"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "System's Local Time Zone"
 msgstr "Fuso horário local do sistema"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fusos horários adicionais"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:142
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -299,17 +308,17 @@ msgstr ""
 "Adicione mais fusos horários para exibir todos eles no miniaplicativo "
 "flutuante ou use um deles para o próprio relógio"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Adicionar fusos horários..."
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:160
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Mudar o fuso horário exibido rolando sobre o miniaplicativo do relógio"
 
-#: package/contents/ui/configTimeZones.qml:160
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Note that using a different time zone for the clock does not change the "
@@ -319,12 +328,12 @@ msgstr ""
 "Note que usar um fuso horário diferente para o relógio não altera o fuso "
 "horário local do sistema. Quando você viaja, mude o fuso horário local."
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Adicionar mais fusos horários"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:211
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -333,12 +342,12 @@ msgstr ""
 "Pelo menos um fuso horário precisa ser habilitado. Seu fuso horário local "
 "foi habilitado automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -358,11 +367,17 @@ msgstr "Ajustar data e hora..."
 msgid "Set Time Format…"
 msgstr "Definir o formato das horas..."
 
-#: package/contents/ui/Tooltip.qml:31
+#: package/contents/ui/Tooltip.qml:32
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hoje é %1"
+
+#: package/contents/ui/Tooltip.qml:103
+#, kde-format
+msgctxt "@label %1 is a city or time zone name"
+msgid "%1:"
+msgstr ""
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

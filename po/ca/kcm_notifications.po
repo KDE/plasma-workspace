@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2021-11-04 12:30+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -227,22 +227,22 @@ msgstr "Posició del missatge emergent"
 msgid "Application Settings"
 msgstr "Configuració de l'aplicació"
 
-#: package/contents/ui/SourcesPage.qml:91
+#: package/contents/ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: package/contents/ui/SourcesPage.qml:92
+#: package/contents/ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "Serveis del sistema"
 
-#: package/contents/ui/SourcesPage.qml:130
+#: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "Cap aplicació ni esdeveniment coincideix amb el terme de cerca."
 
-#: package/contents/ui/SourcesPage.qml:150
+#: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

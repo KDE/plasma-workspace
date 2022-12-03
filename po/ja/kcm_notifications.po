@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2022-08-18 18:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -216,22 +216,22 @@ msgstr "ポップアップの位置"
 msgid "Application Settings"
 msgstr "アプリケーションの設定"
 
-#: package/contents/ui/SourcesPage.qml:91
+#: package/contents/ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: package/contents/ui/SourcesPage.qml:92
+#: package/contents/ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "システムサービス"
 
-#: package/contents/ui/SourcesPage.qml:130
+#: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "検索語に一致するアプリケーションおよびイベントはありません。"
 
-#: package/contents/ui/SourcesPage.qml:150
+#: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

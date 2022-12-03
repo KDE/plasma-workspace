@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2021-08-05 11:13+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -217,22 +217,22 @@ msgstr "Umístění vyskakovacího okna"
 msgid "Application Settings"
 msgstr "Nastavení aplikace"
 
-#: package/contents/ui/SourcesPage.qml:91
+#: package/contents/ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "Aplikace"
 
-#: package/contents/ui/SourcesPage.qml:92
+#: package/contents/ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: package/contents/ui/SourcesPage.qml:130
+#: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "Vyhledávanému termínu neodpovídá žádná aplikace ani událost."
 
-#: package/contents/ui/SourcesPage.qml:150
+#: package/contents/ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

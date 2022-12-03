@@ -4,14 +4,14 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-10-26 08:54+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2022-12-02 17:01+0100\n"
+"Last-Translator: Antoni Bella <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -22,13 +22,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "sortida"
+msgstr "sortida;desconnexió"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -36,9 +35,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Surt, desconnectant la sessió actual d'escriptori"
 
 #: sessionrunner.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
@@ -51,9 +48,7 @@ msgid "Turns off the computer"
 msgstr "Apaga l'ordinador"
 
 #: sessionrunner.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
@@ -66,12 +61,11 @@ msgid "Reboots the computer"
 msgstr "Torna a arrencar l'ordinador"
 
 #: sessionrunner.cpp:57
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Bloqueja la pantalla"
+msgstr "bloqueig;bloqueig de pantalla"
 
 #: sessionrunner.cpp:59
 #, kde-format
@@ -79,14 +73,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Bloqueja les sessions actuals i engega l'estalvi de pantalla"
 
 #: sessionrunner.cpp:66
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "desa la sessió"
+msgstr "desa;desa la sessió"
 
 #: sessionrunner.cpp:69
 #, kde-format
@@ -94,13 +86,12 @@ msgid "Saves the current session for session restoration"
 msgstr "Desa la sessió actual per a la restauració de sessions"
 
 #: sessionrunner.cpp:76
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "commuta d'usuari"
+msgstr "commuta d'usuari;sessió nova"
 
 #: sessionrunner.cpp:79
 #, kde-format
@@ -108,9 +99,7 @@ msgid "Starts a new session as a different user"
 msgstr "Inicia una sessió nova amb un usuari diferent"
 
 #: sessionrunner.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sessions"
@@ -121,9 +110,7 @@ msgid "Lists all sessions"
 msgstr "Llista totes les sessions"
 
 #: sessionrunner.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "commuta"
@@ -141,36 +128,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Surt"
 
 #: sessionrunner.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "aturada"
+msgstr "Atura"
 
 #: sessionrunner.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "reinici"
+msgstr "Reinicia"
 
 #: sessionrunner.cpp:144
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Bloqueja"
 
 #: sessionrunner.cpp:154
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgid "Save Session"
-msgstr "desa la sessió"
+msgstr "Desa la sessió"
 
 #: sessionrunner.cpp:197
 #, kde-format
@@ -183,13 +164,7 @@ msgid "New Session"
 msgstr "Sessió nova"
 
 #: sessionrunner.cpp:275
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#| "will be displayed and the current session will be hidden.</p><p>You can "
-#| "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#| "session}</li><li>Plasma search (type 'switch' or 'sessions')</"
-#| "li><li>Plasma widgets (such as the application launcher)</li></ul>"
+#, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
@@ -200,48 +175,5 @@ msgstr ""
 "<p>Esteu a punt d'obrir una sessió d'escriptori nova.</p><p>La sessió actual "
 "s'amagarà i es mostrarà una pantalla nova de connexió.</p><p>Podeu commutar "
 "entre les sessions usant:</p><ul><li>Ctrl+Alt+F{número de sessió}</"
-"li><li>Cerca del Plasma (teclegeu «commutar» o «sessions»)</li><li>Ginys "
-"dels Plasma (com el llançador d'aplicacions)</li></ul>"
-
-#~ msgctxt "log out command"
-#~ msgid "logout"
-#~ msgstr "sortida"
-
-#~ msgctxt "lock screen command"
-#~ msgid "lock"
-#~ msgstr "bloqueja"
-
-#~ msgctxt "restart computer command"
-#~ msgid "reboot"
-#~ msgstr "reinicia"
-
-#~ msgctxt "save session command"
-#~ msgid "save"
-#~ msgstr "desa"
-
-#~ msgctxt "switch user command"
-#~ msgid "switch :q:"
-#~ msgstr "commuta :q:"
-
-#~ msgid "new session"
-#~ msgstr "sessió nova"
-
-#~ msgctxt "log out command"
-#~ msgid "Logout"
-#~ msgstr "Sortida"
-
-#~ msgid "Restart the computer"
-#~ msgstr "Torna a engegar l'ordinador"
-
-#~ msgctxt "shut down computer command"
-#~ msgid "shutdown"
-#~ msgstr "aturada"
-
-#~ msgid "Shut down the computer"
-#~ msgstr "Atura l'ordinador"
-
-#~ msgid "Save the session"
-#~ msgstr "Desa la sessió"
-
-#~ msgid "Save the current session for session restoration"
-#~ msgstr "Desa la sessió actual per a la restauració de sessions"
+"li><li>Cerca del Plasma (teclegeu «%1»)</li><li>Ginys del Plasma (com el "
+"llançador d'aplicacions)</li></ul>"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2021-03-05 12:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -263,32 +263,41 @@ msgstr "ആഴ്ചയിലെ ആദ്യ ദിവസം:"
 msgid "Available Plugins:"
 msgstr "ലഭ്യമായ സംയോജകങ്ങൾ"
 
-#: package/contents/ui/configTimeZones.qml:90
+#: package/contents/ui/configTimeZones.qml:95
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:100
+#: package/contents/ui/configTimeZones.qml:97
+#, kde-format
+msgctxt ""
+"@label This list item shows a time zone city name that is identical to the "
+"local time zone's city, and will be hidden in the timezone display in the "
+"plasmoid's popup"
+msgid "Hidden while this is the local time zone's city"
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:111
 #, kde-format
 msgid "Switch Local Time Zone…"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:109
+#: package/contents/ui/configTimeZones.qml:120
 #, kde-format
 msgid "Remove this time zone"
 msgstr "ഈ സമയ മേഖല കളയുക"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "System's Local Time Zone"
 msgstr "സിസ്റ്റത്തിന്റെ പ്രാദേശിക സമയ മേഖല"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "അധിക സമയ മേഖലകൾ"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:142
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -297,17 +306,17 @@ msgstr ""
 "എല്ലാ സമയ മേഖലകളും പോപ്പ്അപ്പിൽ പ്രദർശിപ്പിക്കുന്നതിന് കൂടുതൽ സമയ മേഖലകൾ ചേർക്കുക, അല്ലെങ്കിൽ "
 "ക്ലോക്കിനായി അവയിലൊന്ന് ഉപയോഗിക്കുക"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:160
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:160
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Note that using a different time zone for the clock does not change the "
@@ -317,12 +326,12 @@ msgstr ""
 "ക്ലോക്കിനായി മറ്റൊരു സമയ മേഖല ഉപയോഗിക്കുന്നത് സിസ്റ്റം മുഴുവനായുള്ള പ്രാദേശിക സമയ മേഖലയെ "
 "മാറ്റില്ലെന്നത് ശ്രദ്ധിക്കുക. നിങ്ങൾ യാത്ര ചെയ്യുമ്പോൾ, പകരം പ്രാദേശിക സമയ മേഖല മാറ്റുക."
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Add More Timezones"
 msgstr "കൂടുതൽ സമയ മേഖലകൾ കൂട്ടിച്ചേര്‍ക്കുക"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:211
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -331,12 +340,12 @@ msgstr ""
 "കുറഞ്ഞത് ഒരു സമയ മേഖലയെങ്കിലും പ്രവർത്തനക്ഷമമാക്കേണ്ടതുണ്ട്. നിങ്ങളുടെ പ്രാദേശിക സമയമേഖല "
 "യാന്ത്രികമായി പ്രവർത്തനക്ഷമമാക്കി."
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -356,10 +365,16 @@ msgstr ""
 msgid "Set Time Format…"
 msgstr ""
 
-#: package/contents/ui/Tooltip.qml:31
+#: package/contents/ui/Tooltip.qml:32
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
+msgstr ""
+
+#: package/contents/ui/Tooltip.qml:103
+#, kde-format
+msgctxt "@label %1 is a city or time zone name"
+msgid "%1:"
 msgstr ""
 
 #: plugin/clipboardmenu.cpp:110

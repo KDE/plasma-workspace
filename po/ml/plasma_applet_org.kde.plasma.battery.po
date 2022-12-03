@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -75,27 +75,28 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/logic.js:12
-#, fuzzy, kde-format
-msgid "Discharging"
-msgstr "<b>ബാറ്ററി:</b> %1% (ചാര്‍ജ്ജ് ഉപയോഗിച്ചുകൊണ്ടിരിയ്ക്കുന്നു)<br />"
-
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
+#: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr "മുഴുവനും ചാര്‍ജ്ജ് ചെയ്തിരിയ്ക്കുന്നു"
 
-#: package/contents/ui/logic.js:14
+#: package/contents/ui/logic.js:28
+#, fuzzy, kde-format
+msgid "Discharging"
+msgstr "<b>ബാറ്ററി:</b> %1% (ചാര്‍ജ്ജ് ഉപയോഗിച്ചുകൊണ്ടിരിയ്ക്കുന്നു)<br />"
+
+#: package/contents/ui/logic.js:30
 #, kde-format
 msgid "Charging"
 msgstr "ചാർജ് ചെയ്യുന്നു"
 
-#: package/contents/ui/logic.js:16
+#: package/contents/ui/logic.js:32
 #, kde-format
 msgid "Not Charging"
 msgstr "ചാർജ് ആകുന്നില്ല"
 
-#: package/contents/ui/logic.js:19
+#: package/contents/ui/logic.js:35
 #, fuzzy, kde-format
 msgctxt "Battery is currently not present in the bay"
 msgid "Not present"

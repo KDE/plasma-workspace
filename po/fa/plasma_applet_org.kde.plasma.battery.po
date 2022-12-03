@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -66,27 +66,28 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/logic.js:12
-#, kde-format
-msgid "Discharging"
-msgstr ""
-
-#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:145
+#: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
 msgstr ""
 
-#: package/contents/ui/logic.js:14
+#: package/contents/ui/logic.js:28
+#, kde-format
+msgid "Discharging"
+msgstr ""
+
+#: package/contents/ui/logic.js:30
 #, kde-format
 msgid "Charging"
 msgstr ""
 
-#: package/contents/ui/logic.js:16
+#: package/contents/ui/logic.js:32
 #, kde-format
 msgid "Not Charging"
 msgstr ""
 
-#: package/contents/ui/logic.js:19
+#: package/contents/ui/logic.js:35
 #, fuzzy, kde-format
 #| msgid "Plugged in"
 msgctxt "Battery is currently not present in the bay"

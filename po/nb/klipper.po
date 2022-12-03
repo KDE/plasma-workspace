@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2014-08-11 19:22+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -898,12 +898,12 @@ msgstr "&Flere"
 msgid "Clipboard Contents"
 msgstr "Innhold i utklippstavla"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Skru av denne sprettoppmenyen"
 
-#: urlgrabber.cpp:204
+#: urlgrabber.cpp:205
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"

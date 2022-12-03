@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:48+0000\n"
 "PO-Revision-Date: 2022-07-28 21:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -262,32 +262,41 @@ msgstr "Първи ден от седмицата:"
 msgid "Available Plugins:"
 msgstr "Налични приставки:"
 
-#: package/contents/ui/configTimeZones.qml:90
+#: package/contents/ui/configTimeZones.qml:95
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Часовникът използва понастоящем тази часова зона"
 
-#: package/contents/ui/configTimeZones.qml:100
+#: package/contents/ui/configTimeZones.qml:97
+#, kde-format
+msgctxt ""
+"@label This list item shows a time zone city name that is identical to the "
+"local time zone's city, and will be hidden in the timezone display in the "
+"plasmoid's popup"
+msgid "Hidden while this is the local time zone's city"
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:111
 #, kde-format
 msgid "Switch Local Time Zone…"
 msgstr "Превключване на местната часова зона…"
 
-#: package/contents/ui/configTimeZones.qml:109
+#: package/contents/ui/configTimeZones.qml:120
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Премахване на часова зона"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "System's Local Time Zone"
 msgstr "Системна местна часова зона"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:129
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Допълнителни часови зони"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:142
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -296,19 +305,19 @@ msgstr ""
 "Добавете още часови зони, за да се показват всички от тях в изскачащия "
 "прозорец на аплета, или използвайте една от тях за самия часовник"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Добавяне на часови зони…"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:160
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Превключване на показаната часова зона чрез превъртане над аплета на "
 "часовника"
 
-#: package/contents/ui/configTimeZones.qml:160
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Note that using a different time zone for the clock does not change the "
@@ -319,12 +328,12 @@ msgstr ""
 "променя локалната часова зона в цялата система. Когато пътувате, вместо това "
 "превключете местната часова зона."
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Добавяне на още часови зони"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:211
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -333,12 +342,12 @@ msgstr ""
 "Трябва да бъде активирана поне една часова зона. Местната ви часова зона "
 "беше активирана автоматично."
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:236
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -358,11 +367,17 @@ msgstr "Сверяване на дата и час…"
 msgid "Set Time Format…"
 msgstr "Задаване на формат на времето…"
 
-#: package/contents/ui/Tooltip.qml:31
+#: package/contents/ui/Tooltip.qml:32
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Днес е %1"
+
+#: package/contents/ui/Tooltip.qml:103
+#, kde-format
+msgctxt "@label %1 is a city or time zone name"
+msgid "%1:"
+msgstr ""
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
