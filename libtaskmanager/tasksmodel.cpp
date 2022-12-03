@@ -1760,31 +1760,22 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
                 const int sortIndex = d->sortedPreFilterRows.indexOf(d->concatProxyModel->mapFromSource(launcherIndex).row());
                 d->sortedPreFilterRows.move(sortIndex, newPos);
 
-                /*
-                 * Before moving:
-                 * [pinned 2 (launcher)] [pinned 2 (window)] [pinned 1 (launcher)] [pinned 1 (window)]
-                 * After moving [pinned 1], sortedPreFilterRows may become:
-                 *  - row > newPos: [pinned 2 (launcher)] [pinned 1 (launcher)] [pinned 1 (window)] [pinned 2 (window)]
-                 *  - row < newPos: [pinned 2 (window)] [pinned 1 (window)] [pinned 1 (launcher)] [pinned 2 (launcher)]
-                 * We need to move [pinned 2 (launcher)] to the left of [pinned 2 (window)]
-                 */
-                if (row > newPos && newPos - 1 >= 0 && newPos + 2 < d->sortedPreFilterRows.size()) {
-                    const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0); // [pinned 2 (launcher)]
-                    const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 2), 0); // [pinned 2 (window)]
-                    const bool hasLauncher = beforeIdx.data(AbstractTasksModel::IsLauncher).toBool() || afterIdx.data(AbstractTasksModel::IsLauncher).toBool();
+                if (row > newPos && newPos >= 1) {
+                    const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0);
+                    if (beforeIdx.data(AbstractTasksModel::IsLauncher).toBool()) {
+                        // Search forward to skip grouped tasks
+                        int afterPos = newPos + 1;
+                        for (; afterPos < d->sortedPreFilterRows.size(); ++afterPos) {
+                            const QModelIndex tempIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(afterPos), 0);
+                            if (!appsMatch(idx, tempIdx)) {
+                                break;
+                            }
+                        }
 
-                    if (hasLauncher && appsMatch(beforeIdx, afterIdx)) {
-                        // Move [pinned 2 (launcher)] before [pinned 2 (window)]
-                        d->sortedPreFilterRows.move(newPos - 1, newPos + 2);
-                    }
-                } else if (row < newPos && newPos - 2 >= 0 && newPos + 1 < d->sortedPreFilterRows.size()) {
-                    const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 2), 0); // [pinned 2 (window)]
-                    const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0); // [pinned 2 (launcher)]
-                    const bool hasLauncher = beforeIdx.data(AbstractTasksModel::IsLauncher).toBool() || afterIdx.data(AbstractTasksModel::IsLauncher).toBool();
-
-                    if (hasLauncher && appsMatch(beforeIdx, afterIdx)) {
-                        // Move [pinned 2 (launcher)] before [pinned 2 (window)]
-                        d->sortedPreFilterRows.move(newPos + 1, newPos - 2);
+                        const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(afterPos), 0);
+                        if (appsMatch(beforeIdx, afterIdx)) {
+                            d->sortedPreFilterRows.move(newPos - 1, afterPos - 1);
+                        }
                     }
                 }
                 // Otherwise move matching windows to after the launcher task (they are
