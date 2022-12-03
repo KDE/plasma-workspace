@@ -49,6 +49,9 @@ void ScreencastingRequest::setUuid(const QString &uuid)
     if (!d->m_uuid.isEmpty()) {
         auto screencasting = new Screencasting(this);
         auto stream = screencasting->createWindowStream(d->m_uuid, Screencasting::CursorMode::Hidden);
+        if (!stream) {
+            return;
+        }
         adopt(stream);
     }
 }
@@ -66,6 +69,9 @@ void ScreencastingRequest::setOutputName(const QString &outputName)
     if (!d->m_outputName.isEmpty()) {
         auto screencasting = new Screencasting(this);
         auto stream = screencasting->createOutputStream(d->m_outputName, Screencasting::CursorMode::Hidden);
+        if (!stream) {
+            return;
+        }
         adopt(stream);
         stream->setObjectName(d->m_outputName);
     }

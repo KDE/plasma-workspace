@@ -82,7 +82,9 @@ public:
 
     ~ScreencastingPrivate()
     {
-        destroy();
+        if (isActive()) {
+            destroy();
+        }
     }
 
     Screencasting *const q;
@@ -98,6 +100,10 @@ Screencasting::~Screencasting() = default;
 
 ScreencastingStream *Screencasting::createOutputStream(const QString &outputName, Screencasting::CursorMode mode)
 {
+    if (!d->isActive()) {
+        return nullptr;
+    }
+
     wl_output *output = nullptr;
     for (auto screen : qGuiApp->screens()) {
         if (screen->name() == outputName) {
@@ -117,6 +123,9 @@ ScreencastingStream *Screencasting::createOutputStream(const QString &outputName
 
 ScreencastingStream *Screencasting::createWindowStream(const QString &uuid, CursorMode mode)
 {
+    if (!d->isActive()) {
+        return nullptr;
+    }
     auto stream = new ScreencastingStream(this);
     stream->d->init(d->stream_window(uuid, mode));
     return stream;
