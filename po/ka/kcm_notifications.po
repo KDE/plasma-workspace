@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-03 00:48+0000\n"
-"PO-Revision-Date: 2022-11-06 05:23+0100\n"
+"PO-Revision-Date: 2022-12-03 06:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -60,11 +60,13 @@ msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
 msgstr ""
+"ამ აპლიკაციას თითოეული მოვლენის გაფრთხილებების მორგების საშუალება არ გააჩნია."
 
 #: package/contents/ui/main.qml:18
 #, kde-format
 msgid "This module lets you manage application and system notifications."
 msgstr ""
+"ეს მოდული საშუალებას გაძლევთ აპლიკაციისა და სისტემის გაფრთხილებები მოირგოთ."
 
 #: package/contents/ui/main.qml:42
 #, kde-format
@@ -73,6 +75,8 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
+"ვიჯეტი 'გაფრთხილებები', რომელიც გაფრთხილებების საჩვენებლადაა საჭირო, ვერ "
+"ვიპოვე. დარწმუნდით, რომ ის ჩართულია."
 
 #: package/contents/ui/main.qml:53
 #, kde-format
@@ -235,6 +239,8 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
+"სიიდან აირჩიეთ აპლიკაცია, რომლისთვისაც გაფრთხილების მორგებისა და ქცევის "
+"კონფიგურაციაც გნებავთ."
 
 #: sourcesmodel.cpp:363
 #, kde-format

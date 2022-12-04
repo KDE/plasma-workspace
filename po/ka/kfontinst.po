@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-09-12 07:44+0200\n"
+"PO-Revision-Date: 2022-12-03 06:17+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -88,7 +88,7 @@ msgstr "ფონტის მარტივი დაბეჭდვა"
 #: apps/Printer.cpp:337
 #, kde-format
 msgid "Size index to print fonts"
-msgstr ""
+msgstr "ზომის ინდექსი ფონტების დასაბეჭდად"
 
 #: apps/Printer.cpp:341
 #, kde-format
@@ -562,7 +562,7 @@ msgstr "<i>%1</i>-ის გადმოწერის შეცდომა"
 #: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
+msgstr "სისტემური უკანაბოლო მოკვდა. თავიდან სცადეთ.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
@@ -1336,43 +1336,43 @@ msgstr "ირიბი"
 
 #: lib/KfiConstants.h:93
 msgid "Ultra Condensed"
-msgstr ""
+msgstr "ულტრა შესქელებული"
 
 #: lib/KfiConstants.h:94
 msgid "Extra Condensed"
-msgstr ""
+msgstr "ექსტრა შესქელებული"
 
 #: lib/KfiConstants.h:95
 msgid "Condensed"
-msgstr ""
+msgstr "შესქელებული"
 
 #: lib/KfiConstants.h:96
 msgid "Semi Condensed"
-msgstr ""
+msgstr "ნახევრად-შესქელებული"
 
 #: lib/KfiConstants.h:98
 msgid "Semi Expanded"
-msgstr ""
+msgstr "ნახევრად-გაფართოებული"
 
 #: lib/KfiConstants.h:99
 msgid "Expanded"
-msgstr ""
+msgstr "გაფართოებული"
 
 #: lib/KfiConstants.h:100
 msgid "Extra Expanded"
-msgstr ""
+msgstr "ექსტრა გაფართოებული"
 
 #: lib/KfiConstants.h:101
 msgid "Ultra Expanded"
-msgstr ""
+msgstr "ულტრა გაფართოებული"
 
 #: lib/KfiConstants.h:103
 msgid "Monospaced"
-msgstr ""
+msgstr "ერთგვაროვანი"
 
 #: lib/KfiConstants.h:104
 msgid "Charcell"
-msgstr ""
+msgstr "სიმბოლოს უჯრედი"
 
 #: lib/KfiConstants.h:105
 msgid "Proportional"
@@ -1884,7 +1884,7 @@ msgstr "სიმბოლოების ოპტიკური გამო�
 
 #: viewpart/UnicodeBlocks.h:84
 msgid "Enclosed Alphanumerics"
-msgstr ""
+msgstr "ჩასმული ასოები და რიცხვები"
 
 #: viewpart/UnicodeBlocks.h:85
 msgid "Box Drawing"
@@ -1928,11 +1928,11 @@ msgstr "სხვადასხვა მათემატიკური ს�
 
 #: viewpart/UnicodeBlocks.h:95
 msgid "Supplemental Mathematical Operators"
-msgstr ""
+msgstr "დამატებითი მათემატიკური ოპერატორები"
 
 #: viewpart/UnicodeBlocks.h:96
 msgid "Miscellaneous Symbols and Arrows"
-msgstr ""
+msgstr "სხვადასხვა სიმბოლოები და ისრები"
 
 #: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
 msgid "Glagolitic"
@@ -1940,7 +1940,7 @@ msgstr "გლაგოლიტური"
 
 #: viewpart/UnicodeBlocks.h:98
 msgid "Latin Extended-C"
-msgstr ""
+msgstr "ლათინური გაფართოებული-C"
 
 #: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
 msgid "Coptic"
@@ -2012,7 +2012,7 @@ msgstr "კატაკანის ფონეტიკური გაფა�
 
 #: viewpart/UnicodeBlocks.h:116
 msgid "Enclosed CJK Letters and Months"
-msgstr ""
+msgstr "დახურული CJK ასოები და თვეებ"
 
 #: viewpart/UnicodeBlocks.h:117
 msgid "CJK Compatibility"
@@ -2020,11 +2020,11 @@ msgstr "CJK-სთან თავსებადობა"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
-msgstr ""
+msgstr "CJK გაერთიანებული იდეოგრაფების გაფართოება A"
 
 #: viewpart/UnicodeBlocks.h:119
 msgid "Yijing Hexagram Symbols"
-msgstr ""
+msgstr "იჩინგის ჰექსაგრამული სიბოლოები"
 
 #: viewpart/UnicodeBlocks.h:120
 msgid "CJK Unified Ideographs"
@@ -2032,63 +2032,63 @@ msgstr "CJK გაფართოებული იდეოგრაფებ�
 
 #: viewpart/UnicodeBlocks.h:121
 msgid "Yi Syllables"
-msgstr ""
+msgstr "იჩიგის მარცვლები"
 
 #: viewpart/UnicodeBlocks.h:122
 msgid "Yi Radicals"
-msgstr ""
+msgstr "იჩინგის რადიკალები"
 
 #: viewpart/UnicodeBlocks.h:123
 msgid "Modifier Tone Letters"
-msgstr ""
+msgstr "ტონის მოდიფიკატორი სიმბოლოები"
 
 #: viewpart/UnicodeBlocks.h:124
 msgid "Latin Extended-D"
-msgstr ""
+msgstr "ლათინური გაფართოებული-D"
 
 #: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
 msgid "Syloti Nagri"
-msgstr ""
+msgstr "Syloti Nagri"
 
 #: viewpart/UnicodeBlocks.h:126
 msgid "Phags-pa"
-msgstr ""
+msgstr "Phags-pa"
 
 #: viewpart/UnicodeBlocks.h:127
 msgid "Hangul Syllables"
-msgstr ""
+msgstr "ჰანგულის მარცვლები"
 
 #: viewpart/UnicodeBlocks.h:128
 msgid "High Surrogates"
-msgstr ""
+msgstr "მაღალი სუროგატები"
 
 #: viewpart/UnicodeBlocks.h:129
 msgid "High Private Use Surrogates"
-msgstr ""
+msgstr "მაღალი პირადი გამოყენების სუროგატები"
 
 #: viewpart/UnicodeBlocks.h:130
 msgid "Low Surrogates"
-msgstr ""
+msgstr "დაბალი სუროგატები"
 
 #: viewpart/UnicodeBlocks.h:131
 msgid "Private Use Area"
-msgstr ""
+msgstr "პირადი გამოყენების ადგილი"
 
 #: viewpart/UnicodeBlocks.h:132
 msgid "CJK Compatibility Ideographs"
-msgstr ""
+msgstr "CJK თავსებადი იდეოგრაფები"
 
 #: viewpart/UnicodeBlocks.h:133
 msgid "Alphabetic Presentation Forms"
-msgstr ""
+msgstr "ანბანური წარმოდგენის ფორმები"
 
 #: viewpart/UnicodeBlocks.h:134
 msgid "Arabic Presentation Forms-A"
-msgstr ""
+msgstr "ფორმების არაბული პრეზენტაცია-A"
 
 #: viewpart/UnicodeBlocks.h:135
 msgid "Variation Selectors"
-msgstr ""
+msgstr "ვარიაციული სელექტორები"
 
 #: viewpart/UnicodeBlocks.h:136
 msgid "Vertical Forms"
@@ -2096,23 +2096,23 @@ msgstr "ვერტიკალური ფორმები"
 
 #: viewpart/UnicodeBlocks.h:137
 msgid "Combining Half Marks"
-msgstr ""
+msgstr "ნახევრადსანიშნების კომბინირება"
 
 #: viewpart/UnicodeBlocks.h:138
 msgid "CJK Compatibility Forms"
-msgstr ""
+msgstr "CJK თავსებადობის ფორმები"
 
 #: viewpart/UnicodeBlocks.h:139
 msgid "Small Form Variants"
-msgstr ""
+msgstr "პატარა ფორმის ვარიანტები"
 
 #: viewpart/UnicodeBlocks.h:140
 msgid "Arabic Presentation Forms-B"
-msgstr ""
+msgstr "ფორმების არაბული პრეზენტაცია-"
 
 #: viewpart/UnicodeBlocks.h:141
 msgid "Half-Width and Full-Width Forms"
-msgstr ""
+msgstr "სრული-სიგანის და ნახევარი-სიგანის ფორმები"
 
 #: viewpart/UnicodeBlocks.h:142
 msgid "Specials"
@@ -2220,15 +2220,15 @@ msgstr "ჭდეები"
 
 #: viewpart/UnicodeBlocks.h:168
 msgid "Variation Selectors Supplement"
-msgstr ""
+msgstr "ვარიაციული სელექტორების დამატება"
 
 #: viewpart/UnicodeBlocks.h:169
 msgid "Supplementary Private Use Area-A"
-msgstr ""
+msgstr "პირადი გამოყენების ადგილი-A"
 
 #: viewpart/UnicodeBlocks.h:170
 msgid "Supplementary Private Use Area-B"
-msgstr ""
+msgstr "პირადი გამოყენების ადგილი-B"
 
 #: viewpart/UnicodeScripts.h:20
 msgid "Braille"

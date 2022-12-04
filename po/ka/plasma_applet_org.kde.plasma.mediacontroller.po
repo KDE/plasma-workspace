@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-04 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 07:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "ზოგადი"
 msgid "No title"
 msgstr "სათაურის გარეშე"
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:82
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:77
 #, kde-format
 msgid "No media playing"
 msgstr "არაფერს ვუკრავ"
@@ -50,25 +50,25 @@ msgstr "-%1"
 msgid "Shuffle"
 msgstr "შემთხვევით"
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:94
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:89
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "წინა აუდიობილიკი"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:95
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "შეჩერება"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:105
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "დაკვრა"
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:110
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:105
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -84,30 +84,30 @@ msgstr "აუდიობილიკის გამეორება"
 msgid "Repeat"
 msgstr "გამეორება"
 
-#: contents/ui/main.qml:90
+#: contents/ui/main.qml:85
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "გახსნა"
 
-#: contents/ui/main.qml:116
+#: contents/ui/main.qml:111
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "შეჩერება"
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:120
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "&გასვლა"
 
-#: contents/ui/main.qml:237
+#: contents/ui/main.qml:232
 #, kde-format
 msgid "Choose player automatically"
 msgstr "დამკვრელის ავტომატური შერჩევა"
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgctxt "by Artist (player name)"
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 "ავტორი: %1 (%2)\n"
 "შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgid ""
 "%1\n"
@@ -126,7 +126,7 @@ msgstr ""
 "%1\n"
 "შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 "ავტორი %1 (შეჩერებული, %2)\n"
 "დასაკრავად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, kde-format
 msgctxt ""
 "Paused (player name)\n"

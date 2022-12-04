@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-04 00:48+0000\n"
 "PO-Revision-Date: 2022-10-16 11:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Genel"
 msgid "No title"
 msgstr "Başlıksız"
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:82
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:77
 #, kde-format
 msgid "No media playing"
 msgstr "Oynatılan/Çalınan ortam yok"
@@ -50,25 +50,25 @@ msgstr "-%1"
 msgid "Shuffle"
 msgstr "Karıştır"
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:94
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:89
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Önceki Parça"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:95
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Duraklat"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:105
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Oynat/Çal"
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:110
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:105
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -84,30 +84,30 @@ msgstr "Parçayı Yinele"
 msgid "Repeat"
 msgstr "Yinele"
 
-#: contents/ui/main.qml:90
+#: contents/ui/main.qml:85
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Aç"
 
-#: contents/ui/main.qml:116
+#: contents/ui/main.qml:111
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Durdur"
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:120
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Çık"
 
-#: contents/ui/main.qml:237
+#: contents/ui/main.qml:232
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Oynatıcıyı/Çaları kendiliğinden seç"
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgctxt "by Artist (player name)"
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 "%1 tarafından (%2)\n"
 "Duraklatmak için orta tıklayın"
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgid ""
 "%1\n"
@@ -126,7 +126,7 @@ msgstr ""
 "%1\n"
 "Duraklatmak için orta tıklayın"
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, kde-format
 msgctxt "by Artist (paused, player name)"
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 "%1 tarafından (duraklatıldı, %2)\n"
 "Sürdürmek için orta tıklayın"
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, kde-format
 msgctxt ""
 "Paused (player name)\n"

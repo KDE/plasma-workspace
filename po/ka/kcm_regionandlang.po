@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-11-06 05:24+0100\n"
+"PO-Revision-Date: 2022-12-03 06:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "განვითარების დეპარტამენტ�
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Dev-Building"
 
 #: exampleutility.cpp:68
 #, kde-format
@@ -106,7 +106,7 @@ msgstr "სართული 3"
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "ქალაქის ცენტრი"
 
 #: exampleutility.cpp:76
 #, kde-format
@@ -420,7 +420,7 @@ msgstr "ენა %1 მხარდაუჭერელია"
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr ""
+msgstr "დაამატეთ ენები მიმდევრობით, რომლითაც მათი აპლიკაციებში ხილვა გნებავთ."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:83
 #, kde-format
@@ -469,7 +469,7 @@ msgstr "მეტის დამატება…"
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "ცვლილებების ეფექტს შემდეგ შესვლაზე დაინახავთ."
 
 #: package/contents/ui/main.qml:36
 #, kde-format
@@ -482,7 +482,7 @@ msgctxt "@info"
 msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
-msgstr ""
+msgstr "ენის მხარდაჭერის ფაილების გენერაცია. ნუ გამორთავთ კომპიუტერს."
 
 #: package/contents/ui/main.qml:59
 #, kde-format

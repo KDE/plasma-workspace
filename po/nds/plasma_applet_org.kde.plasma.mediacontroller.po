@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-04 00:48+0000\n"
 "PO-Revision-Date: 2014-09-18 16:10+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "No title"
 msgstr ""
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:82
+#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:77
 #, kde-format
 msgid "No media playing"
 msgstr "Opstunns warrt nix afspeelt"
@@ -49,26 +49,26 @@ msgstr ""
 msgid "Shuffle"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:94
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:89
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Anhollen"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:105
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:110
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:105
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Repeat"
 msgstr ""
 
-#: contents/ui/main.qml:90
+#: contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgctxt "Bring the window of player %1 to the front"
 #| msgid "Open %1"
@@ -92,24 +92,24 @@ msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "%1 opmaken"
 
-#: contents/ui/main.qml:116
+#: contents/ui/main.qml:111
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr ""
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:120
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr ""
 
-#: contents/ui/main.qml:237
+#: contents/ui/main.qml:232
 #, kde-format
 msgid "Choose player automatically"
 msgstr ""
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgctxt "by Artist (player name)"
 msgid ""
@@ -117,14 +117,14 @@ msgid ""
 "Middle-click to pause"
 msgstr ""
 
-#: contents/ui/main.qml:274
+#: contents/ui/main.qml:269
 #, kde-format
 msgid ""
 "%1\n"
 "Middle-click to pause"
 msgstr ""
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -134,7 +134,7 @@ msgid ""
 "Middle-click to play"
 msgstr "vun %1 (anhollen)"
 
-#: contents/ui/main.qml:285
+#: contents/ui/main.qml:280
 #, kde-format
 msgctxt ""
 "Paused (player name)\n"

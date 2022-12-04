@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-03 00:48+0000\n"
-"PO-Revision-Date: 2022-07-28 10:18+0200\n"
+"PO-Revision-Date: 2022-12-03 12:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -278,7 +278,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Oculta mentre aquesta sigui la ciutat de la zona horària local"
 
 #: package/contents/ui/configTimeZones.qml:111
 #, kde-format
@@ -381,7 +381,7 @@ msgstr "Avui és %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -410,57 +410,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horària local del sistema"
-
-#~ msgctxt "Format: month year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgid "Keep Open"
-#~ msgstr "Mantén obert"
-
-#~ msgid "Days"
-#~ msgstr "Dies"
-
-#~ msgid "Months"
-#~ msgstr "Mesos"
-
-#~ msgid "Years"
-#~ msgstr "Anys"
-
-#~ msgid "Previous month"
-#~ msgstr "Mes anterior"
-
-#~ msgid "Previous year"
-#~ msgstr "Any anterior"
-
-#~ msgid "Previous decade"
-#~ msgstr "Dècada anterior"
-
-#~ msgctxt "Reset calendar to today"
-#~ msgid "Today"
-#~ msgstr "Avui"
-
-#~ msgid "Reset calendar to today"
-#~ msgstr "Restaura el calendari a avui"
-
-#~ msgid "Next month"
-#~ msgstr "Mes següent"
-
-#~ msgid "Next year"
-#~ msgstr "Any següent"
-
-#~ msgid "Next decade"
-#~ msgstr "Dècada següent"
-
-#~ msgctxt "Use default font"
-#~ msgid "Default"
-#~ msgstr "Omissió"
-
-#~ msgid "Font style:"
-#~ msgstr "Estil del tipus de lletra:"
-
-#~ msgid "Bold text"
-#~ msgstr "Text en negreta"
-
-#~ msgid "Italic text"
-#~ msgstr "Text en cursiva"
