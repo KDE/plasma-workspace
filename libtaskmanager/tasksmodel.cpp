@@ -1698,11 +1698,12 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         // Update sort mappings.
         d->sortedPreFilterRows.move(row, newPos);
 
+        endMoveRows();
+
         if (groupingRowIndexParent.isValid()) {
             d->consolidateManualSortMapForGroup(groupingRowIndexParent);
         }
 
-        endMoveRows();
     } else {
         beginMoveRows(parent, row, row, parent, (newPos > row) ? newPos + 1 : newPos);
 
@@ -1726,20 +1727,27 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         // Update sort mapping.
         d->sortedPreFilterRows.move(row, newPos);
 
+        endMoveRows();
+
         // If we moved a group parent, consolidate sort map for children.
         if (groupNotDisabled) {
             if (d->groupingProxyModel->rowCount(groupingRowIndex)) {
                 d->consolidateManualSortMapForGroup(groupingRowIndex);
             }
             // Special case: Before moving, the task at newPos is a group parent
-            // Before moving: [Task] [Group parent]
-            // After moving: [Group parent (not consolidated yet)] [Task]
-            if (adjacentGroupingRowIndex.isValid() && d->groupingProxyModel->rowCount(adjacentGroupingRowIndex)) {
+            // Before moving: [Task] [Group parent] [Other task in group]
+            // After moving: [Group parent (not consolidated yet)] [Task, newPos] [Other task in group]
+            if (int childCount = d->groupingProxyModel->rowCount(adjacentGroupingRowIndex); childCount && adjacentGroupingRowIndex.isValid()) {
                 d->consolidateManualSortMapForGroup(adjacentGroupingRowIndex);
+                if (newPos > row) {
+                    newPos += childCount - 1;
+                    // After consolidation: [Group parent (not consolidated yet)] [Other task in group] [Task, newPos]
+                }
+                // No need to consider newPos < row
+                // Before moving: [Group parent, newPos] [Other task in group] [Task]
+                // After moving: [Task, newPos] [Group parent] [Other task in group]
             }
         }
-
-        endMoveRows();
     }
 
     // Resort.
