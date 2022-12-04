@@ -221,26 +221,15 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
     configDlg->show();
 }
 
-void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
+QVariant CurrentContainmentActionsModel::aboutMetaData(int row) const
 {
     const QString action = itemData(index(row, 0)).value(ActionRole).toString();
 
     if (!m_plugins.contains(action)) {
-        return;
+        return QVariant();
     }
 
-    KPluginMetaData info = m_plugins[action]->metadata();
-
-    auto aboutDialog = new KAboutPluginDialog(info, qobject_cast<QWidget *>(parent()));
-    aboutDialog->setWindowIcon(QIcon::fromTheme(info.iconName()));
-    aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
-
-    if (ctx && ctx->window()) {
-        aboutDialog->setWindowModality(Qt::WindowModal);
-        aboutDialog->winId(); // so it creates the windowHandle();
-        aboutDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-    aboutDialog->show();
+    return QVariant::fromValue(m_plugins[action]->metadata());
 }
 
 void CurrentContainmentActionsModel::save()

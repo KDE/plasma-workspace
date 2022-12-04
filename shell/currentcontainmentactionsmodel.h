@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
     Q_INVOKABLE void remove(int row);
     Q_INVOKABLE void showConfiguration(int row, QQuickItem *ctx = nullptr);
-    Q_INVOKABLE void showAbout(int row, QQuickItem *ctx = nullptr);
+    Q_INVOKABLE QVariant aboutMetaData(int row) const;
     Q_INVOKABLE void save();
 
 Q_SIGNALS:
