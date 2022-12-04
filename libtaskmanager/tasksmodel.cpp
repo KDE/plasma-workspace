@@ -1618,6 +1618,13 @@ void TasksModel::requestToggleGrouping(const QModelIndex &index)
 
 bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
 {
+    /*
+     * NOTE After doing any modification in TasksModel::move, make sure fixes listed below are not regressed.
+     * - https://bugs.kde.org/444816
+     * - https://bugs.kde.org/448912
+     * - https://invent.kde.org/plasma/plasma-workspace/-/commit/ea51795e8c571513e1ff583350ab8649bc857fc2
+     */
+
     if (d->sortMode != SortManual || row == newPos || newPos < 0 || newPos >= rowCount(parent)) {
         return false;
     }
