@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
+    app.setDesktopFileName(QStringLiteral("org.kde.ksmserver.greeter"));
 
     bool windowed = false;
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"KDE"_s);
