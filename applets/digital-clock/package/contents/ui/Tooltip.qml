@@ -66,12 +66,14 @@ Item {
             visible: !clocks.visible
         }
 
-        Kirigami.FormLayout {
+        GridLayout {
             id: clocks
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
-            Layout.maximumHeight: childrenRect.height
-            visible: timezoneRepeater.count > 0
+            Layout.minimumHeight: childrenRect.height
+            visible: timezoneRepeater.count > 1
+            columns: 2
+            rowSpacing: 0
 
             Repeater {
                 id: timezoneRepeater
@@ -93,6 +95,7 @@ Item {
                          */
                         if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
                             timezones.push(thisTzData);
+                            timezones.push(thisTzData);
                         }
                     }
 
@@ -100,10 +103,12 @@ Item {
                 }
 
                 PlasmaComponents3.Label {
-                    Kirigami.FormData.label: i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData))
-                    wrapMode: Text.NoWrap
-                    text: timeForZone(modelData)
+                    // Layout.fillWidth is buggy here
+                    Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
+                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData)) : timeForZone(modelData)
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
+                    wrapMode: Text.NoWrap
+                    elide: Text.ElideNone
                 }
             }
         }
