@@ -255,7 +255,7 @@ ColumnLayout {
                         visible: isPlasmoid
                         enabled: visibilityComboBox.currentValue !== "disabled"
                         keySequence: model.applet ? model.applet.globalShortcut : ""
-                        onKeySequenceChanged: {
+                        onCaptureFinished: {
                             if (model.applet && keySequence !== model.applet.globalShortcut) {
                                 model.applet.globalShortcut = keySequence
 
