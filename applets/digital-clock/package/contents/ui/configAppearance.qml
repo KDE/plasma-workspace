@@ -8,7 +8,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
+import QtQuick.Layouts 1.15
 import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -18,7 +18,7 @@ import org.kde.kirigami 2.5 as Kirigami
 
 
 
-QtLayouts.ColumnLayout {
+ColumnLayout {
     id: appearancePage
 
     property alias cfg_autoFontAndSize: autoFontAndSizeRadioButton.checked
@@ -45,9 +45,9 @@ QtLayouts.ColumnLayout {
     property alias cfg_dateDisplayFormat: dateDisplayFormat.currentIndex
 
     Kirigami.FormLayout {
-        QtLayouts.Layout.fillWidth: true
+        Layout.fillWidth: true
 
-        QtLayouts.RowLayout {
+        RowLayout {
             Kirigami.FormData.label: i18n("Information:")
 
             QtControls.CheckBox {
@@ -77,7 +77,7 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18n("Show time zone:")
             Kirigami.FormData.buddyFor: showLocalTimeZoneWhenDifferent
 
@@ -96,7 +96,7 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.RowLayout {
+        RowLayout {
             Kirigami.FormData.label: i18n("Display time zone as:")
 
             QtControls.ComboBox {
@@ -114,8 +114,8 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.RowLayout {
-            QtLayouts.Layout.fillWidth: true
+        RowLayout {
+            Layout.fillWidth: true
             Kirigami.FormData.label: i18n("Time display:")
 
             QtControls.ComboBox {
@@ -140,7 +140,7 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.RowLayout {
+        RowLayout {
             Kirigami.FormData.label: i18n("Date format:")
             enabled: showDate.checked
 
@@ -180,7 +180,7 @@ QtLayouts.ColumnLayout {
             }
 
             QtControls.Label {
-                QtLayouts.Layout.fillWidth: true
+                Layout.fillWidth: true
                 textFormat: Text.PlainText
                 text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
                                                                             : dateFormat.model[dateFormat.currentIndex].format)
@@ -189,7 +189,7 @@ QtLayouts.ColumnLayout {
 
         QtControls.TextField {
             id: customDateFormat
-            QtLayouts.Layout.fillWidth: true
+            Layout.fillWidth: true
             enabled: showDate.checked
             visible: cfg_dateFormat == "custom"
         }
@@ -199,8 +199,8 @@ QtLayouts.ColumnLayout {
             enabled: showDate.checked
             visible: cfg_dateFormat == "custom"
             wrapMode: Text.Wrap
-            QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
-            QtLayouts.Layout.maximumWidth: Kirigami.Units.gridUnit * 16
+            Layout.preferredWidth: Layout.maximumWidth
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
 
             onLinkActivated: Qt.openUrlExternally(link)
             MouseArea {
@@ -226,12 +226,12 @@ QtLayouts.ColumnLayout {
 
         QtControls.Label {
             text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
-            QtLayouts.Layout.fillWidth: true
+            Layout.fillWidth: true
             wrapMode: Text.Wrap
             font: PlasmaCore.Theme.smallestFont
         }
 
-        QtLayouts.RowLayout {
+        RowLayout {
             QtControls.RadioButton {
                 id: manualFontAndSizeRadioButton
                 text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")
@@ -263,7 +263,7 @@ QtLayouts.ColumnLayout {
     }
 
     Item {
-        QtLayouts.Layout.fillHeight: true
+        Layout.fillHeight: true
     }
 
     QtDialogs.FontDialog {
