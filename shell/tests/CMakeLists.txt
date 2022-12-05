@@ -21,6 +21,7 @@ target_sources(screenpoolmanualtest PRIVATE ${screenpoolmanualtest_SRCS})
 target_link_libraries(screenpoolmanualtest
             Qt::Test
             Qt::Gui
+            Qt::Widgets
             KF5::ConfigCore
             KF5::Service
             KF5::WindowSystem

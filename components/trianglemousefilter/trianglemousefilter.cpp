@@ -101,7 +101,6 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
                 qApp->sendEvent(m_interceptedHoverItem, &e);
                 m_interceptedHoverItem.clear();
             }
-
             event->setAccepted(false);
             return false;
         }
