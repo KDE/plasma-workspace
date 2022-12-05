@@ -117,174 +117,183 @@ ColumnLayout {
 
                 readonly property bool isPlasmoid: model.itemType === "Plasmoid"
 
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing
+                contentItem: FocusScope {
+                    implicitHeight: childrenRect.height
 
-                    Kirigami.Icon {
-                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                        source: model.decoration
+                    onActiveFocusChanged: if (activeFocus) {
+                        listItem.ListView.view.positionViewAtIndex(index, ListView.Contain);
                     }
 
-                    QQC2.Label {
-                        Layout.fillWidth: true
-                        text: model.display
-                        elide: Text.ElideRight
+                    RowLayout {
+                        width: parent.width
+                        spacing: Kirigami.Units.smallSpacing
 
-                        QQC2.ToolTip {
-                            visible: listItem.hovered && parent.truncated
-                            text: parent.text
-                        }
-                    }
-
-                    QQC2.ComboBox {
-                        id: visibilityComboBox
-
-                        property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                                                             implicitContentWidth + leftPadding + rightPadding)
-                        implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
-                        Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
-
-                        enabled: (!showAllCheckBox.checked || isPlasmoid) && itemId
-                        textRole: "text"
-                        valueRole: "value"
-                        model: comboBoxModel()
-
-                        currentIndex: {
-                            let value
-
-                            if (cfg_shownItems.indexOf(itemId) !== -1) {
-                                value = "shown"
-                            } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
-                                value = "hidden"
-                            } else if (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) {
-                                value = "disabled"
-                            } else {
-                                value = "auto"
-                            }
-
-                            for (let i = 0; i < model.length; i++) {
-                                if (model[i].value === value) {
-                                    return i
-                                }
-                            }
-
-                            return 0
+                        Kirigami.Icon {
+                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                            source: model.decoration
                         }
 
-                        onActivated: {
-                            const shownIndex = cfg_shownItems.indexOf(itemId)
-                            const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
-                            const extraIndex = cfg_extraItems.indexOf(itemId)
+                        QQC2.Label {
+                            Layout.fillWidth: true
+                            text: model.display
+                            elide: Text.ElideRight
 
-                            switch (currentValue) {
-                            case "auto":
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                }
-                                break
-                            case "shown":
-                                if (shownIndex === -1) {
-                                    cfg_shownItems.push(itemId)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                }
-                                break
-                            case "hidden":
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex === -1) {
-                                    cfg_hiddenItems.push(itemId)
-                                }
-                                if (extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                }
-                                break
-                            case "disabled":
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (extraIndex > -1) {
-                                    cfg_extraItems.splice(extraIndex, 1)
-                                }
-                                break
+                            QQC2.ToolTip {
+                                visible: listItem.hovered && parent.truncated
+                                text: parent.text
                             }
-                            iconsPage.configurationChanged()
                         }
 
-                        function comboBoxModel() {
-                            const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
-                            const shownElement = {"value": "shown", "text": i18n("Always shown")}
-                            const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
-                            const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+                        QQC2.ComboBox {
+                            id: visibilityComboBox
 
-                            if (showAllCheckBox.checked) {
-                                if (isPlasmoid) {
-                                    return [autoElement, disabledElement]
+                            property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                                                                implicitContentWidth + leftPadding + rightPadding)
+                            implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
+                            Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+
+                            enabled: (!showAllCheckBox.checked || isPlasmoid) && itemId
+                            textRole: "text"
+                            valueRole: "value"
+                            model: comboBoxModel()
+
+                            currentIndex: {
+                                let value
+
+                                if (cfg_shownItems.indexOf(itemId) !== -1) {
+                                    value = "shown"
+                                } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                                    value = "hidden"
+                                } else if (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) {
+                                    value = "disabled"
                                 } else {
-                                    return [shownElement]
+                                    value = "auto"
                                 }
-                            } else {
-                                if (isPlasmoid) {
-                                    return [autoElement, shownElement, hiddenElement, disabledElement]
+
+                                for (let i = 0; i < model.length; i++) {
+                                    if (model[i].value === value) {
+                                        return i
+                                    }
+                                }
+
+                                return 0
+                            }
+
+                            onActivated: {
+                                const shownIndex = cfg_shownItems.indexOf(itemId)
+                                const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
+                                const extraIndex = cfg_extraItems.indexOf(itemId)
+
+                                switch (currentValue) {
+                                case "auto":
+                                    if (shownIndex > -1) {
+                                        cfg_shownItems.splice(shownIndex, 1)
+                                    }
+                                    if (hiddenIndex > -1) {
+                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                    }
+                                    if (extraIndex === -1) {
+                                        cfg_extraItems.push(itemId)
+                                    }
+                                    break
+                                case "shown":
+                                    if (shownIndex === -1) {
+                                        cfg_shownItems.push(itemId)
+                                    }
+                                    if (hiddenIndex > -1) {
+                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                    }
+                                    if (extraIndex === -1) {
+                                        cfg_extraItems.push(itemId)
+                                    }
+                                    break
+                                case "hidden":
+                                    if (shownIndex > -1) {
+                                        cfg_shownItems.splice(shownIndex, 1)
+                                    }
+                                    if (hiddenIndex === -1) {
+                                        cfg_hiddenItems.push(itemId)
+                                    }
+                                    if (extraIndex === -1) {
+                                        cfg_extraItems.push(itemId)
+                                    }
+                                    break
+                                case "disabled":
+                                    if (shownIndex > -1) {
+                                        cfg_shownItems.splice(shownIndex, 1)
+                                    }
+                                    if (hiddenIndex > -1) {
+                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                    }
+                                    if (extraIndex > -1) {
+                                        cfg_extraItems.splice(extraIndex, 1)
+                                    }
+                                    break
+                                }
+                                iconsPage.configurationChanged()
+                            }
+
+                            function comboBoxModel() {
+                                const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
+                                const shownElement = {"value": "shown", "text": i18n("Always shown")}
+                                const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
+                                const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+
+                                if (showAllCheckBox.checked) {
+                                    if (isPlasmoid) {
+                                        return [autoElement, disabledElement]
+                                    } else {
+                                        return [shownElement]
+                                    }
                                 } else {
-                                    return [autoElement, shownElement, hiddenElement]
+                                    if (isPlasmoid) {
+                                        return [autoElement, shownElement, hiddenElement, disabledElement]
+                                    } else {
+                                        return [autoElement, shownElement, hiddenElement]
+                                    }
                                 }
                             }
                         }
-                    }
-                    KQC.KeySequenceItem {
-                        id: keySequenceItem
-                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
-                        Layout.preferredWidth: itemsList.keySequenceColumnWidth
-                        Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                        KQC.KeySequenceItem {
+                            id: keySequenceItem
+                            Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                            Layout.preferredWidth: itemsList.keySequenceColumnWidth
+                            Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
 
-                        visible: isPlasmoid
-                        enabled: visibilityComboBox.currentValue !== "disabled"
-                        keySequence: model.applet ? model.applet.globalShortcut : ""
-                        onCaptureFinished: {
-                            if (model.applet && keySequence !== model.applet.globalShortcut) {
-                                model.applet.globalShortcut = keySequence
+                            visible: isPlasmoid
+                            enabled: visibilityComboBox.currentValue !== "disabled"
+                            keySequence: model.applet ? model.applet.globalShortcut : ""
+                            onCaptureFinished: {
+                                if (model.applet && keySequence !== model.applet.globalShortcut) {
+                                    model.applet.globalShortcut = keySequence
 
-                                itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                                    itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                                }
                             }
                         }
-                    }
-                    // Placeholder for when KeySequenceItem is not visible
-                    Item {
-                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
-                        Layout.maximumWidth: itemsList.keySequenceColumnWidth
-                        visible: !keySequenceItem.visible
-                    }
+                        // Placeholder for when KeySequenceItem is not visible
+                        Item {
+                            Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                            Layout.maximumWidth: itemsList.keySequenceColumnWidth
+                            visible: !keySequenceItem.visible
+                        }
 
-                    QQC2.Button {
-                        readonly property QtObject configureAction: (model.applet && model.applet.action("configure")) || null
+                        QQC2.Button {
+                            readonly property QtObject configureAction: (model.applet && model.applet.action("configure")) || null
 
-                        Accessible.name: configureAction ? configureAction.text : ""
-                        icon.name: "configure"
-                        enabled: configureAction && configureAction.visible && configureAction.enabled
-                        // Still reserve layout space, so not setting visible to false
-                        opacity: enabled ? 1 : 0
-                        onClicked: configureAction.trigger()
+                            Accessible.name: configureAction ? configureAction.text : ""
+                            icon.name: "configure"
+                            enabled: configureAction && configureAction.visible && configureAction.enabled
+                            // Still reserve layout space, so not setting visible to false
+                            opacity: enabled ? 1 : 0
+                            onClicked: configureAction.trigger()
 
-                        QQC2.ToolTip {
-                            // Strip out ampersands right before non-whitespace characters, i.e.
-                            // those used to determine the alt key shortcut
-                            text: parent.Accessible.name.replace(/&(?=\S)/g, "")
+                            QQC2.ToolTip {
+                                // Strip out ampersands right before non-whitespace characters, i.e.
+                                // those used to determine the alt key shortcut
+                                text: parent.Accessible.name.replace(/&(?=\S)/g, "")
+                            }
                         }
                     }
                 }
