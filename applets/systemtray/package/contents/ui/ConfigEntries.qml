@@ -6,7 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
+import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
@@ -68,6 +68,7 @@ ColumnLayout {
             clip: true
 
             model: Plasmoid.nativeInterface.configSystemTrayModel
+            reuseItems: true
 
             header: Kirigami.AbstractListItem {
 
