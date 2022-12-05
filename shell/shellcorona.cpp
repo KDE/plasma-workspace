@@ -277,7 +277,6 @@ void ShellCorona::init()
     QAction *cyclePanelFocusAction = actions()->addAction(QStringLiteral("cycle-panels"));
     cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
     KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
-
     connect(cyclePanelFocusAction, &QAction::triggered, this, &ShellCorona::slotCyclePanelFocus);
 
     unload();

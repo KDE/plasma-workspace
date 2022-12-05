@@ -160,8 +160,7 @@ ContainmentLayoutManager.AppletContainer {
     Component {
         id: maskComponent
 
-        // Stored in a property, not as a child, because it is reparented anyway.
-        property Item mask: OpacityMask {
+        OpacityMask {
             id: mask
 
             readonly property rect appletContainerScreenRect: {
