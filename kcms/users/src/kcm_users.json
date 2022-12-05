@@ -1,10 +1,5 @@
 {
     "KPlugin": {
-        "FormFactors": [
-            "tablet",
-            "handset",
-            "desktop"
-        ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_users",
         "Description": "Manage user accounts",
         "Description[ar]": "أدِر حسابات المستخدمين",
@@ -48,6 +43,11 @@
         "Description[vi]": "Quản lí các danh khoản người dùng",
         "Description[x-test]": "xxManage user accountsxx",
         "Description[zh_CN]": "管理用户账户",
+        "FormFactors": [
+            "tablet",
+            "handset",
+            "desktop"
+        ],
         "Icon": "preferences-system-users",
         "Name": "Users",
         "Name[ar]": "المستخدمين",
