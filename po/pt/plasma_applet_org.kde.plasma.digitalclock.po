@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-03 00:48+0000\n"
-"PO-Revision-Date: 2022-07-28 09:25+0100\n"
+"PO-Revision-Date: 2022-12-04 12:07+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -1021,7 +1021,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Escondido enquanto esta é a cidade do fuso-horário local"
 
 #: package/contents/ui/configTimeZones.qml:111
 #, kde-format
@@ -1122,7 +1122,7 @@ msgstr "Hoje é %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -1151,44 +1151,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Fuso-horário local do sistema"
-
-#~ msgctxt "Format: month year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 de %2"
-
-#~ msgid "Keep Open"
-#~ msgstr "Manter Aberto"
-
-#~ msgid "Days"
-#~ msgstr "Dias"
-
-#~ msgid "Months"
-#~ msgstr "Meses"
-
-#~ msgid "Years"
-#~ msgstr "Anos"
-
-#~ msgid "Previous month"
-#~ msgstr "Mês anterior"
-
-#~ msgid "Previous year"
-#~ msgstr "Ano anterior"
-
-#~ msgid "Previous decade"
-#~ msgstr "Década anterior"
-
-#~ msgctxt "Reset calendar to today"
-#~ msgid "Today"
-#~ msgstr "Hoje"
-
-#~ msgid "Reset calendar to today"
-#~ msgstr "Repor o calendário para hoje"
-
-#~ msgid "Next month"
-#~ msgstr "Mês seguinte"
-
-#~ msgid "Next year"
-#~ msgstr "Ano seguinte"
-
-#~ msgid "Next decade"
-#~ msgstr "Década seguinte"
