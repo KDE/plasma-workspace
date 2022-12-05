@@ -20,8 +20,11 @@ target_link_libraries(ksmserver-logout-greeter
     KF6::Package
     KF6::WindowSystem
     KF6::ConfigCore
+    Qt::WaylandClient
+    Qt::WaylandClientPrivate
     X11::X11
     LayerShellQt::Interface
+    Wayland::Client
 )
 
 if(PACKAGEKIT_OFFLINE_UPDATES)
@@ -29,7 +32,13 @@ if(PACKAGEKIT_OFFLINE_UPDATES)
     target_compile_definitions(ksmserver-logout-greeter PRIVATE PACKAGEKIT_OFFLINE_UPDATES)
 endif()
 
+qt6_generate_wayland_protocol_client_sources(ksmserver-logout-greeter FILES
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-lockscreen-overlay-v1.xml
+)
+
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+configure_file(org.kde.ksmserver.greeter.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ksmserver.greeter.desktop @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ksmserver.greeter.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kdbusaddons_generate_dbus_service_file(ksmserver-logout-greeter org.kde.LogoutPrompt ${KDE_INSTALL_FULL_LIBEXECDIR})
 
 if(BUILD_TESTING)
