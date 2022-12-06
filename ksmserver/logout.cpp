@@ -98,11 +98,7 @@ bool KSMServer::closeSession()
 
 bool KSMServer::canShutdown()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    config->reparseConfiguration(); // config may have changed in the KControl module
-    KConfigGroup cg(config, "General");
-
-    return cg.readEntry("offerShutdown", true) && KDisplayManager().canShutdown();
+    return KDisplayManager().canShutdown();
 }
 
 bool KSMServer::isShuttingDown() const
