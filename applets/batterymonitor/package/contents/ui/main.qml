@@ -204,6 +204,8 @@ Item {
             }
         }
 
+        parts.push(i18n("Scroll to adjust screen brightness"));
+
         return parts.join("\n");
     }
 

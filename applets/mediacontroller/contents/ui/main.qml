@@ -266,7 +266,7 @@ Item {
                 target: Plasmoid.self
                 icon: "media-playback-playing"
                 toolTipMainText: track
-                toolTipSubText: artist ? i18nc("by Artist (player name)", "by %1 (%2)\nMiddle-click to pause", artist, identity) : i18n("%1\nMiddle-click to pause", identity)
+                toolTipSubText: artist ? i18nc("by Artist (player name)", "by %1 (%2)\nMiddle-click to pause\nScroll to adjust volume", artist, identity) : i18n("%1\nMiddle-click to pause\nScroll to adjust volume", identity)
             }
         },
         State {
@@ -277,7 +277,7 @@ Item {
                 target: Plasmoid.self
                 icon: "media-playback-paused"
                 toolTipMainText: track
-                toolTipSubText: artist ? i18nc("by Artist (paused, player name)", "by %1 (paused, %2)\nMiddle-click to play", artist, identity) : i18nc("Paused (player name)\nMiddle-click to play", "Paused (%1)\nMiddle-click to play", identity)
+                toolTipSubText: artist ? i18nc("by Artist (paused, player name)", "by %1 (paused, %2)\nMiddle-click to play\nScroll to adjust volume", artist, identity) : i18nc("Paused (player name)\nMiddle-click to play\nScroll to adjust volume", "Paused (%1)\nMiddle-click to play\nScroll to adjust volume", identity)
             }
         }
     ]
