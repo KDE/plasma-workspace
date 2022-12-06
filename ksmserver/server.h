@@ -13,9 +13,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xmd.h>
 extern "C" {
-#include <X11/ICE/ICEmsg.h>
-#include <X11/ICE/ICEproto.h>
-#include <X11/ICE/ICEutil.h>
 #include <X11/SM/SM.h>
 #include <X11/SM/SMlib.h>
 }

@@ -88,6 +88,17 @@
 
 #include <updatelaunchenvjob.h>
 
+extern "C" {
+#include <X11/ICE/ICEmsg.h>
+#include <X11/ICE/ICEproto.h>
+#include <X11/ICE/ICEutil.h>
+}
+
+// ICEmsg.h has a static_assert macro, which conflicts with C++'s static_assert.
+#ifdef static_assert
+#undef static_assert
+#endif
+
 KSMServer *the_server = nullptr;
 
 KSMServer *KSMServer::self()
