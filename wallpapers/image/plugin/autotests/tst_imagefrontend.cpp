@@ -91,9 +91,11 @@ private Q_SLOTS:
 
     void testLoadWallpaper_data();
     void testLoadWallpaper();
+    void testReloadWallpaperOnScreenSizeChanged();
 
 private:
     QPointer<QQuickView> m_view;
+    QPointer<MockWallpaperInterface> m_wallpaperInterface;
 
     QDir m_dataDir;
 };
@@ -108,9 +110,10 @@ void ImageFrontendTest::initTestCase()
 
 void ImageFrontendTest::init()
 {
-    Q_ASSERT(!m_view);
+    Q_ASSERT(!m_view && !m_wallpaperInterface);
     m_view = new QQuickView();
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/")));
+    m_wallpaperInterface = new MockWallpaperInterface(m_view);
 }
 
 void ImageFrontendTest::cleanup()
@@ -165,12 +168,11 @@ void ImageFrontendTest::testLoadWallpaper()
     initialProperties.insert(QStringLiteral("sourceSize"), sourceSize);
     initialProperties.insert(QStringLiteral("width"), sourceSize.width());
     initialProperties.insert(QStringLiteral("height"), sourceSize.height());
-    auto wpGraphicObject = new MockWallpaperInterface(m_view);
-    initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(wpGraphicObject));
+    initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
     m_view->setInitialProperties(initialProperties);
 
     // When repaintNeeded is emitted, the transition animation has finished.
-    QSignalSpy repaintSpy(wpGraphicObject, &MockWallpaperInterface::repaintNeeded);
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
 
     QByteArray errorMessage;
     QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
@@ -182,7 +184,7 @@ void ImageFrontendTest::testLoadWallpaper()
     QVERIFY(rootObject);
 
     // Wait loaded
-    QVERIFY(wpGraphicObject->m_repainted || repaintSpy.wait());
+    QVERIFY(m_wallpaperInterface->m_repainted || repaintSpy.wait());
     auto currentItem = evaluate<QQuickItem *>(rootObject, "currentItem");
     QVERIFY(currentItem);
 
@@ -214,12 +216,94 @@ void ImageFrontendTest::testLoadWallpaper()
 
     // Other checks
     // Check wallpaper interface
-    QCOMPARE(rootObject->property("wallpaperInterface").value<MockWallpaperInterface *>(), wpGraphicObject);
+    QCOMPARE(rootObject->property("wallpaperInterface").value<MockWallpaperInterface *>(), m_wallpaperInterface.data());
     // Check item type
     QCOMPARE(evaluate<bool>(rootObject, "this instanceof QQC2.StackView"), true);
     QCOMPARE(evaluate<bool>(currentItem, "this instanceof Rectangle"), true);
     // Check item size
     QCOMPARE(m_view->rootObject()->size().toSize(), sourceSize);
+}
+
+void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
+{
+    // Set required properties and window size
+    QVariantMap initialProperties;
+    initialProperties.insert(QStringLiteral("fillMode"), 1 /* PreserveAspectFit */);
+    initialProperties.insert(QStringLiteral("configColor"), QStringLiteral("black"));
+    initialProperties.insert(QStringLiteral("blur"), false);
+    // Set a package that contains different resolutions
+    initialProperties.insert(QStringLiteral("source"), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
+    QSize sourceSize(1024, 768);
+    initialProperties.insert(QStringLiteral("sourceSize"), sourceSize);
+    initialProperties.insert(QStringLiteral("width"), sourceSize.width());
+    initialProperties.insert(QStringLiteral("height"), sourceSize.height());
+    initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
+    m_view->setInitialProperties(initialProperties);
+
+    // When repaintNeeded is emitted, the transition animation has finished.
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
+
+    QByteArray errorMessage;
+    QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
+             errorMessage.constData());
+
+    m_view->show();
+    QVERIFY(QTest::qWaitForWindowExposed(m_view));
+    QQuickItem *rootObject = m_view->rootObject();
+    QVERIFY(rootObject);
+
+    // Wait loaded
+    QVERIFY(m_wallpaperInterface->m_repainted || repaintSpy.wait());
+    auto firstItem = evaluate<QQuickItem *>(rootObject, "currentItem");
+    QVERIFY(firstItem);
+    QSignalSpy firstItemDestroySpy(firstItem, &QObject::destroyed);
+
+    // Case 1: 1024x768
+    QUrl source = evaluate<QUrl>(firstItem, "source");
+    QVERIFY(source.toString().contains(QLatin1String("targetWidth=1024&targetHeight=768")));
+    QCOMPARE(evaluate<QSizeF>(firstItem, "sourceSize"), QSizeF(1024, 768));
+
+    // Change sourceSize
+    evaluate<void>(rootObject, "sourceSize = Qt.size(1920, 1080);");
+    // Qt.callLater
+    QVERIFY(repaintSpy.wait());
+    // The first item should be destroyed, otherwise there will be a memory leak
+    QVERIFY(firstItemDestroySpy.wait());
+    auto secondItem = evaluate<QQuickItem *>(rootObject, "currentItem");
+    QVERIFY(secondItem);
+    QSignalSpy secondItemDestroySpy(secondItem, &QObject::destroyed);
+    // Case 2: 1920x1080
+    source = evaluate<QUrl>(secondItem, "source");
+    QVERIFY(source.toString().contains(QLatin1String("targetWidth=1920&targetHeight=1080")));
+    QCOMPARE(evaluate<QSizeF>(secondItem, "sourceSize"), QSizeF(1920, 1080));
+
+    // Now set a single image to test if the frontend will still reload the wallpaper in different sizes
+    const QString singleImagePath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
+    QVERIFY(QFileInfo::exists(singleImagePath));
+    rootObject->setProperty("source", singleImagePath);
+    rootObject->setProperty("sourceSize", QSizeF(320, 240));
+    // Qt.callLater
+    QVERIFY(repaintSpy.wait());
+    // The second item should also be destroyed, otherwise there will be a memory leak
+    QVERIFY(secondItemDestroySpy.wait());
+    auto thirdItem = evaluate<QQuickItem *>(rootObject, "currentItem");
+    QVERIFY(thirdItem);
+    QSignalSpy thirdItemDestroySpy(thirdItem, &QObject::destroyed);
+    source = evaluate<QUrl>(thirdItem, "source");
+    QCOMPARE(source, QUrl::fromLocalFile(singleImagePath));
+    QCOMPARE(evaluate<QSizeF>(thirdItem, "sourceSize"), QSizeF(320, 240));
+
+    // Now change to 1920x1080
+    evaluate<void>(rootObject, "sourceSize = Qt.size(1920, 1080);");
+    // Qt.callLater
+    QVERIFY(repaintSpy.wait());
+    // The third item should also be destroyed, otherwise there will be a memory leak
+    QVERIFY(thirdItemDestroySpy.wait());
+    auto fourthItem = evaluate<QQuickItem *>(rootObject, "currentItem");
+    QVERIFY(fourthItem);
+    source = evaluate<QUrl>(fourthItem, "source");
+    QCOMPARE(source, QUrl::fromLocalFile(singleImagePath));
+    QCOMPARE(evaluate<QSizeF>(fourthItem, "sourceSize"), QSizeF(1920, 1080));
 }
 
 QTEST_MAIN(ImageFrontendTest)
