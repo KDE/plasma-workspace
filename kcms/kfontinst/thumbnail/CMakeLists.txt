@@ -1,14 +1,8 @@
-set(fontthumbnail_PART_SRCS FontThumbnail.cpp )
+kcoreaddons_add_plugin(fontthumbnail SOURCES FontThumbnail.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
-ecm_qt_declare_logging_category(fontthumbnail_PART_SRCS
+ecm_qt_declare_logging_category(fontthumbnail
     HEADER debug.h
     IDENTIFIER KCM_KFONTINST_THUMBNAIL
     CATEGORY_NAME org.kde.kcm_kfontinst.thumbnail)
 
-add_library(fontthumbnail MODULE ${fontthumbnail_PART_SRCS})
-
 target_link_libraries(fontthumbnail KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinstui kfontinst )
-
-install(TARGETS fontthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install( FILES fontthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR} )
-

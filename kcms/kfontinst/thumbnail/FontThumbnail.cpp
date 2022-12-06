@@ -5,7 +5,9 @@
 
 #include "FontThumbnail.h"
 #include "KfiConstants.h"
+#include <KPluginFactory>
 #include <KZip>
+
 #include <QApplication>
 #include <QDebug>
 #include <QDir>
@@ -17,21 +19,16 @@
 
 #include "debug.h"
 
-extern "C" {
-Q_DECL_EXPORT ThumbCreator *new_creator()
-{
-    return new KFI::CFontThumbnail;
-}
-}
-
-namespace KFI
-{
-CFontThumbnail::CFontThumbnail()
+CFontThumbnail::CFontThumbnail(QObject *parent, const QVariantList &args)
+    : KIO::ThumbnailCreator(parent, args)
 {
 }
 
-bool CFontThumbnail::create(const QString &path, int width, int height, QImage &img)
+CFontThumbnail::~CFontThumbnail() = default;
+
+KIO::ThumbnailResult CFontThumbnail::create(const KIO::ThumbnailRequest &request)
 {
+    const QString &path = request.url().toLocalFile();
     QString realPath(path);
     QTemporaryDir *tempDir = nullptr;
 
@@ -39,7 +36,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;
-    if (Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
+    if (KFI::Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
         KZip zip(path);
 
         if (zip.open(QIODevice::ReadOnly)) {
@@ -80,9 +77,19 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     QColor bgnd(Qt::black);
 
     bgnd.setAlpha(0);
-    img = m_engine.draw(realPath, KFI_NO_STYLE_INFO, 0, QApplication::palette().text().color(), bgnd, width, height, true);
+    QImage img = m_engine.draw(realPath,
+                               KFI_NO_STYLE_INFO,
+                               0,
+                               QApplication::palette().text().color(),
+                               bgnd,
+                               request.targetSize().width(),
+                               request.targetSize().height(),
+                               true);
 
     delete tempDir;
-    return !img.isNull();
+    return !img.isNull() ? KIO::ThumbnailResult::pass(img) : KIO::ThumbnailResult::fail();
 }
-}
+
+K_PLUGIN_CLASS_WITH_JSON(CFontThumbnail, "fontthumbnail.json")
+
+#include "FontThumbnail.moc"
