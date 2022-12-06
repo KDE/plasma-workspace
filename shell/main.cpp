@@ -93,16 +93,6 @@ int main(int argc, char *argv[])
 
     bool replace = false;
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (app.platformName() == QStringLiteral("wayland")) {
-        // Use the basic rendering loop on wayland, because the threaded render
-        // loop can cause problems because a surface gets destroyed while still
-        // being used by the render thread.
-        // TODO KF6: Remove this as the problem has been fixed in Qt6
-        qputenv("QSG_RENDER_LOOP", "basic");
-    }
-#endif
-
     ShellCorona *corona;
     {
         QCommandLineParser cliOptions;
@@ -241,16 +231,6 @@ int main(int argc, char *argv[])
 
     corona->init();
     SoftwareRendererNotifier::notifyIfRelevant();
-
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (app.platformName() == QStringLiteral("wayland")) {
-        QObject::connect(corona, &ShellCorona::loaded, corona, []() {
-            // Clear the forced render loop so we avoid leaking it into other
-            // processes that get started by Plasma.
-            qunsetenv("QSG_RENDER_LOOP");
-        });
-    }
-#endif
 
     return app.exec();
 }

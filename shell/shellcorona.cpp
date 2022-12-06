@@ -739,8 +739,6 @@ void ShellCorona::load()
         KConfigGroup coronaConfig(config(), "General");
         setImmutability((Plasma::Types::ImmutabilityType)coronaConfig.readEntry("immutability", static_cast<int>(Plasma::Types::Mutable)));
     }
-
-    Q_EMIT loaded();
 }
 
 void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
