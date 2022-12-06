@@ -40,7 +40,6 @@ QQC2.StackView {
     onModelImageChanged: Qt.callLater(loadImage);
     onConfigColorChanged: Qt.callLater(loadImage);
     onBlurChanged: Qt.callLater(loadImage);
-    onSourceSizeChanged: Qt.callLater(loadImage);
 
     function createBackgroundComponent() {
         switch (mediaProxy.backgroundType) {
@@ -134,6 +133,8 @@ QQC2.StackView {
 
     Wallpaper.MediaProxy {
         id: mediaProxy
+
+        targetSize: view.sourceSize
 
         onActualSizeChanged: Qt.callLater(loadImage);
         onColorSchemeChanged: loadImageImmediately();
