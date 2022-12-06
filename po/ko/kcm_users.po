@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-05-05 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:166
 #, kde-format
 msgid "Change Password"
 msgstr "암호 변경"
 
-#: package/contents/ui/ChangePassword.qml:41
+#: package/contents/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "암호 설정"
+
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "암호"
 
-#: package/contents/ui/ChangePassword.qml:56
+#: package/contents/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "암호 확인"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:90
 #: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "암호가 일치해야 함"
-
-#: package/contents/ui/ChangePassword.qml:78
-#, kde-format
-msgid "Set Password"
-msgstr "암호 설정"
 
 #: package/contents/ui/ChangeWalletPassword.qml:17
 #, kde-format

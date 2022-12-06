@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-11-26 14:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,32 +20,32 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "X-Accelerator-Marker: &\n"
 
-#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:166
 #, kde-format
 msgid "Change Password"
 msgstr "Canvi de contrasenya"
 
-#: package/contents/ui/ChangePassword.qml:41
+#: package/contents/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Establix la contrasenya"
+
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "Contrasenya"
 
-#: package/contents/ui/ChangePassword.qml:56
+#: package/contents/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "Confirma la contrasenya"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:90
 #: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Cal que les contrasenyes coincidisquen"
-
-#: package/contents/ui/ChangePassword.qml:78
-#, kde-format
-msgid "Set Password"
-msgstr "Establix la contrasenya"
 
 #: package/contents/ui/ChangeWalletPassword.qml:17
 #, kde-format

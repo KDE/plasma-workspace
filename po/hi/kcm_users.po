@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-26 00:48+0000\n"
+"POT-Creation-Date: 2022-12-06 00:47+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:166
 #, kde-format
 msgid "Change Password"
 msgstr "कूटशब्द बदलें"
 
-#: package/contents/ui/ChangePassword.qml:41
+#: package/contents/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "कूटशब्द नियत करें"
+
+#: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "कूटशब्द"
 
-#: package/contents/ui/ChangePassword.qml:56
+#: package/contents/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "कूटशब्द की पुष्टि करें"
 
-#: package/contents/ui/ChangePassword.qml:73
+#: package/contents/ui/ChangePassword.qml:90
 #: package/contents/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "कूटशब्दों का मेल खाना चाहिए"
-
-#: package/contents/ui/ChangePassword.qml:78
-#, kde-format
-msgid "Set Password"
-msgstr "कूटशब्द नियत करें"
 
 #: package/contents/ui/ChangeWalletPassword.qml:17
 #, kde-format
