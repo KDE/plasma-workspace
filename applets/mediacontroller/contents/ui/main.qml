@@ -234,6 +234,7 @@ Item {
             'source': mpris2Source.multiplexSource
         }]
 
+        var proxyPIDs = [];  // for things like plasma-browser-integration
         var sources = mpris2Source.sources
         for (var i = 0, length = sources.length; i < length; ++i) {
             var source = sources[i]
@@ -252,7 +253,23 @@ Item {
                 'icon': playerData["Desktop Icon Name"] || playerData["DesktopEntry"] || "emblem-music-symbolic",
                 'source': source
             });
+
+
+            if ("kde:pid" in playerData["Metadata"]) {
+                var proxyPID = playerData["Metadata"]["kde:pid"];
+                if (!proxyPIDs.includes(proxyPID)) {
+                    proxyPIDs.push(proxyPID);
+                }
+            }
         }
+
+        // prefer proxy controls like plasma-browser-integration over browser built-in controls
+        model = model.filter( item => {
+            if (mpris2Source.data[item["source"]] && "InstancePid" in mpris2Source.data[item["source"]]) {
+                return !(proxyPIDs.includes(mpris2Source.data[item["source"]]["InstancePid"]));
+            }
+            return true;
+        });
 
         root.mprisSourcesModel = model;
     }
