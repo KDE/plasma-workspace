@@ -17,6 +17,7 @@
 #include <KColorScheme>
 #include <KDesktopFile>
 #include <KPluginMetaData>
+#include <kcoreaddons_version.h>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -181,7 +182,11 @@ void ThemesModel::load()
         QString comment;
 
         if (theme.endsWith(QLatin1String(".json"))) {
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5, 91, 0)
             KPluginMetaData data = KPluginMetaData::fromJsonFile(theme);
+#else
+            KPluginMetaData data(theme);
+#endif
             name = data.name();
             comment = data.description();
         } else {
