@@ -54,7 +54,7 @@ Kirigami.AbstractApplicationWindow {
      *
      * Useful to be able to set it as dialogButtonBox will be null as the object gets built
      */
-    property variant standardButtons: contentDialog.item ? contentDialog.item.dialogButtonBox.standardButtons : undefined
+    property var standardButtons: contentDialog.item ? contentDialog.item.dialogButtonBox.standardButtons : undefined
 
     /**
      * Controls whether the accept button is enabled
@@ -96,8 +96,8 @@ Kirigami.AbstractApplicationWindow {
         if (!visible && !accepted) {
             root.reject()
         }
-        width = Qt.binding(() => { return contentDialog.implicitWidth })
-        height = Qt.binding(() => { return contentDialog.implicitHeight })
+        width = Qt.binding(() => contentDialog.implicitWidth)
+        height = Qt.binding(() => contentDialog.implicitHeight)
     }
 
     Binding {
