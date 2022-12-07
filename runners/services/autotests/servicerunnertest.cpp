@@ -39,6 +39,7 @@ private Q_SLOTS:
     void testINotifyUsage();
     void testChromiumPWA();
     void testSpecialArgs();
+    void testEnv();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -335,6 +336,20 @@ void ServiceRunnerTest::testSpecialArgs()
     auto matches = context.matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
         // Should have no -qwindowtitle at the end. Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
+        return match.id().endsWith(QLatin1String("/bin/true"));
+    }));
+}
+
+void ServiceRunnerTest::testEnv()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+
+    context.setQuery(QStringLiteral("audacity"));
+    runner.match(context);
+    auto matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        // Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
     }));
 }

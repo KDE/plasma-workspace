@@ -25,6 +25,7 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KServiceAction>
+#include <KShell>
 #include <KStringHandler>
 #include <KSycoca>
 
@@ -171,13 +172,20 @@ private:
         match.setUrls({QUrl::fromLocalFile(path)});
 
         QString exec = service->exec();
-        // We have a snap, remove the ENV variable
-        if (exec.contains(QLatin1String("BAMF_DESKTOP_FILE_HINT"))) {
-            const static QRegularExpression snapCleanupRegex(QStringLiteral("env BAMF_DESKTOP_FILE_HINT=.+ "));
-            exec.remove(snapCleanupRegex);
-        }
 
         QStringList resultingArgs = KIO::DesktopExecParser(KService(QString(), exec, QString()), {}).resultingArguments();
+
+        // Remove any environment variables.
+        if (KIO::DesktopExecParser::executableName(exec) == QLatin1String("env")) {
+            resultingArgs.removeFirst(); // remove "env".
+
+            while (!resultingArgs.isEmpty() && resultingArgs.first().contains(QLatin1Char('='))) {
+                resultingArgs.removeFirst();
+            }
+
+            // Now parse it again to resolve the path.
+            resultingArgs = KIO::DesktopExecParser(KService(QString(), KShell::joinArgs(resultingArgs), QString()), {}).resultingArguments();
+        }
 
         // Remove special arguments that have no real impact on the application.
         static const auto specialArgs = {QStringLiteral("-qwindowtitle"), QStringLiteral("-qwindowicon")};
