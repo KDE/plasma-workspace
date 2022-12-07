@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.private.mediacontroller 1.0
 
 Item {
     id: root
@@ -69,7 +70,11 @@ Item {
     readonly property var loopStatus: !root.noPlayer && typeof mpris2Source.currentData.LoopStatus === "string"
                                       ? mpris2Source.currentData.LoopStatus : undefined
 
-    readonly property int volumePercentStep: Plasmoid.configuration.volumeStep
+    GlobalConfig {
+        id: config
+    }
+
+    readonly property int volumePercentStep: config.volumeStep
 
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
@@ -172,6 +177,7 @@ Item {
     }
 
     Component.onCompleted: {
+        plasmoid.removeAction("configure");
         mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
         updateMprisSourcesModel()
         populateContextualActions()

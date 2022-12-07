@@ -2,7 +2,6 @@ plasma_install_package(activitybar org.kde.plasma.activitybar)
 add_subdirectory(icon)
 
 plasma_install_package(analog-clock org.kde.plasma.analogclock)
-plasma_install_package(mediacontroller org.kde.plasma.mediacontroller)
 plasma_install_package(lock_logout org.kde.plasma.lock_logout)
 plasma_install_package(manage-inputmethod org.kde.plasma.manage-inputmethod)
 
@@ -13,6 +12,7 @@ add_subdirectory(calendar)
 add_subdirectory(devicenotifier)
 add_subdirectory(digital-clock)
 add_subdirectory(kicker)
+add_subdirectory(mediacontroller)
 add_subdirectory(panelspacer)
 
 plasma_install_package(clipboard org.kde.plasma.clipboard)

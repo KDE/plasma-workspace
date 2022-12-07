@@ -77,12 +77,24 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
     hoverEnabled: true
 
+    property int wheelDelta: 0
+
     onWheel: {
         const service = mpris2Source.serviceForSource(mpris2Source.current)
         const operation = service.operationDescription("ChangeVolume")
-        operation.delta = (wheel.angleDelta.y / 120) * (volumePercentStep / 100)
-        operation.showOSD = true
-        service.startOperationCall(operation)
+        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x
+        while (wheelDelta >= 120) {
+            wheelDelta -= 120;
+            operation.delta = volumePercentStep / 100;
+            operation.showOSD = true;
+            service.startOperationCall(operation);
+        }
+        while (wheelDelta <= -120) {
+            wheelDelta += 120;
+            operation.delta = -volumePercentStep / 100;
+            operation.showOSD = true;
+            service.startOperationCall(operation);
+        }
     }
 
     onClicked: {
