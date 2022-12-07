@@ -14,6 +14,7 @@
 #include <KShell>
 #include <KTerminalLauncherJob>
 #include <QAction>
+#include <QFileInfo>
 #include <QProcessEnvironment>
 #include <QRegularExpression>
 #include <QStandardPaths>
@@ -48,7 +49,17 @@ void ShellRunner::match(Plasma::RunnerContext &context)
     if (parsingResult.has_value()) {
         const QString command = parsingResult.value();
         Plasma::QueryMatch match(this);
-        match.setId(QStringLiteral("exec://") + command);
+
+        QString id = QStringLiteral("exec://");
+
+        QFileInfo fi(command);
+        if (fi.isSymbolicLink()) {
+            id.append(fi.symLinkTarget());
+        } else {
+            id.append(command);
+        }
+
+        match.setId(id);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", context.query()));
