@@ -30,14 +30,12 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testExcutableExactMatch();
-    void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testSystemSettings2();
     void testCategories();
     void testJumpListActions();
     void testINotifyUsage();
-    void testChromiumPWA();
     void testSpecialArgs();
     void testEnv();
 };
@@ -82,35 +80,6 @@ void ServiceRunnerTest::testExcutableExactMatch()
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
         return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
     }));
-}
-
-void ServiceRunnerTest::testChromeAppsRelevance()
-{
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-    context.setQuery(QStringLiteral("chrome"));
-
-    runner.match(context);
-
-    bool chromeFound = false;
-    bool signalFound = false;
-    const auto matches = context.matches();
-    for (const auto &match : matches) {
-        qDebug() << "matched" << match.text();
-        if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
-            continue;
-        }
-
-        if (match.text() == QLatin1String("Google Chrome ServiceRunnerTest")) {
-            QCOMPARE(match.relevance(), 0.8);
-            chromeFound = true;
-        } else if (match.text() == QLatin1String("Signal ServiceRunnerTest")) {
-            signalFound = true;
-        }
-    }
-    QVERIFY(chromeFound);
-    // Do not parse the exec of Progressive Web Apps, see BUG 460796
-    QVERIFY(!signalFound);
 }
 
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
@@ -286,44 +255,6 @@ void ServiceRunnerTest::testINotifyUsage()
     thread->deleteLater();
 
     QVERIFY(inotifyCountCool);
-}
-void ServiceRunnerTest::testChromiumPWA()
-{
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-
-    context.setQuery(QStringLiteral("meet"));
-    runner.match(context);
-
-    {
-        const QLatin1String pwaDesktopFile("chrome-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default");
-        const auto matches = context.matches();
-
-        const bool hasAtLeastOneMatch = matches.size() >= 1;
-        QVERIFY(hasAtLeastOneMatch);
-        const bool isGoogleMeetOrUsrFile = std::any_of(matches.begin(), matches.end(), [pwaDesktopFile](const Plasma::QueryMatch &match) {
-            const auto service = KService::serviceByStorageId(match.data().toUrl().path());
-            return service->entryPath().startsWith(QLatin1String("/usr/")) || service->desktopEntryName() == pwaDesktopFile;
-        });
-        QVERIFY(isGoogleMeetOrUsrFile);
-        const bool hasGoogleMeet = std::any_of(matches.begin(), matches.end(), [pwaDesktopFile](const Plasma::QueryMatch &match) {
-            return KService::serviceByStorageId(match.data().toUrl().path())->desktopEntryName() == pwaDesktopFile;
-        });
-        QVERIFY(hasGoogleMeet);
-    }
-
-    context.reset();
-    context.setQuery(QStringLiteral("dan"));
-    runner.match(context);
-
-    {
-        const auto matches = context.matches();
-        const bool isOnlyUsrFiles = std::all_of(matches.begin(), matches.end(), [](const Plasma::QueryMatch &match) {
-            const auto service = KService::serviceByStorageId(match.data().toUrl().path());
-            return service->entryPath().startsWith(QLatin1String("/usr/"));
-        });
-        QVERIFY(isOnlyUsrFiles);
-    }
 }
 
 void ServiceRunnerTest::testSpecialArgs()
