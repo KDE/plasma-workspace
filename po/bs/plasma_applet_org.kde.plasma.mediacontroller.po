@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2015-01-04 13:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -113,39 +113,46 @@ msgid "Choose player automatically"
 msgstr ""
 
 #: contents/ui/main.qml:269
-#, kde-format
-msgctxt "by Artist (player name)"
+#, fuzzy, kde-format
+#| msgctxt "Artist of the song"
+#| msgid "by %1 (paused)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
-"Middle-click to pause"
-msgstr ""
+"Middle-click to pause\n"
+"Scroll to adjust volume"
+msgstr "od %1 (pauzirano)"
 
 #: contents/ui/main.qml:269
 #, kde-format
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
-"Middle-click to pause"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
-msgctxt "by Artist (paused, player name)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
-"Middle-click to play"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 msgstr "od %1 (pauzirano)"
 
 #: contents/ui/main.qml:280
-#, kde-format
-msgctxt ""
-"Paused (player name)\n"
-"Middle-click to play"
+#, fuzzy, kde-format
+#| msgctxt "Artist of the song"
+#| msgid "by %1 (paused)"
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
-"Middle-click to play"
-msgstr ""
+"Middle-click to play\n"
+"Scroll to adjust volume"
+msgstr "od %1 (pauzirano)"
 
 #, fuzzy
 #~| msgctxt "Artist of the song"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-07-25 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -57,38 +57,38 @@ msgstr "Hardwarebesturing"
 msgid "Miscellaneous"
 msgstr "Diversen"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Item"
 
-#: package/contents/ui/ConfigEntries.qml:85
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Visibility"
 msgstr "Zichtbaarheid"
 
-#: package/contents/ui/ConfigEntries.qml:91
+#: package/contents/ui/ConfigEntries.qml:92
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Sneltoets"
 
-#: package/contents/ui/ConfigEntries.qml:229
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Indien relevant tonen"
 
-#: package/contents/ui/ConfigEntries.qml:230
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "Altijd tonen"
 
-#: package/contents/ui/ConfigEntries.qml:231
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "Altijd verborgen"
 
-#: package/contents/ui/ConfigEntries.qml:232
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "Uitgeschakeld"

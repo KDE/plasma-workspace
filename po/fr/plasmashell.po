@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-10-09 17:42+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -49,22 +49,22 @@ msgstr "Plasma"
 msgid "Plasma Shell"
 msgstr "Shell Plasma"
 
-#: main.cpp:110
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activer le débogueur JavaScript QML"
 
-#: main.cpp:113
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne pas relancer plasma-shell automatiquement après un plantage"
 
-#: main.cpp:116
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forcer le chargement d'un module externe donné du shell"
 
-#: main.cpp:121
+#: main.cpp:111
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -73,12 +73,12 @@ msgstr ""
 "Charger plasmashell comme une application autonome ; l'option « shell-"
 "plugin » est nécessaire"
 
-#: main.cpp:123
+#: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Remplacer une instance existante"
 
-#: main.cpp:126
+#: main.cpp:116
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -87,22 +87,22 @@ msgstr ""
 "Active le mode de test et spécifie le fichier « JavaScript » de disposition "
 "pour la mise en place l'environnement de test."
 
-#: main.cpp:127
+#: main.cpp:117
 #, kde-format
 msgid "file"
 msgstr "fichier"
 
-#: main.cpp:131
+#: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Liste les options disponibles pour les retours des utilisateurs"
 
-#: main.cpp:231
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma ne peut pas démarrer"
 
-#: main.cpp:232
+#: main.cpp:222
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -246,12 +246,12 @@ msgstr "Gérer les bureaux et les panneaux..."
 msgid "Move keyboard focus between panels"
 msgstr "Déplacer le focus de clavier entre les panneaux"
 
-#: shellcorona.cpp:1811
+#: shellcorona.cpp:1809
 #, kde-format
 msgid "Add Panel"
 msgstr "Ajouter un panneau"
 
-#: shellcorona.cpp:1847
+#: shellcorona.cpp:1845
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

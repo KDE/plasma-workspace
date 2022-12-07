@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-08-26 17:16+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -39,28 +39,34 @@ msgstr ""
 "このバッテリーの正常性は%1%であり、交換が推奨されます。製造元へお問い合わせく"
 "ださい。"
 
-#: package/contents/ui/BatteryItem.qml:182
+#: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Time To Full:"
 msgstr "満充電まで:"
 
-#: package/contents/ui/BatteryItem.qml:183
+#: package/contents/ui/BatteryItem.qml:187
 #, kde-format
 msgid "Remaining Time:"
 msgstr "残り時間:"
 
-#: package/contents/ui/BatteryItem.qml:199
+#: package/contents/ui/BatteryItem.qml:192
+#, kde-format
+msgctxt "@info"
+msgid "Estimating…"
+msgstr ""
+
+#: package/contents/ui/BatteryItem.qml:204
 #, kde-format
 msgid "Battery Health:"
 msgstr "バッテリの正常性:"
 
-#: package/contents/ui/BatteryItem.qml:205
+#: package/contents/ui/BatteryItem.qml:210
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:219
+#: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "バッテリはおよそ %1% まで充電されるように設定されています。"
@@ -104,7 +110,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "装着されていません"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "バッテリと輝度"
@@ -204,28 +210,33 @@ msgstr[1] "%1 つのアプリケーションが %2 のアクティベートを�
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:306
+#: package/contents/ui/main.qml:207
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr ""
+
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "バッテリー アプレットがシステム全体の抑制を有効化しました"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 モードの有効化に失敗しました"
 
-#: package/contents/ui/main.qml:372
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "充電情報を表示(&S)…"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "アイコンにバッテリのパーセンテージを表示する"
 
-#: package/contents/ui/main.qml:380
+#: package/contents/ui/main.qml:382
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "省エネルギーを設定(&C)…"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-10-27 19:46+0530\n"
+"PO-Revision-Date: 2022-12-06 19:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -57,12 +57,11 @@ msgid "Reboots the computer"
 msgstr "கணினியை மறுபடியும் துவக்கும்"
 
 #: sessionrunner.cpp:57
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "திரையை பூட்டு"
+msgstr ""
 
 #: sessionrunner.cpp:59
 #, kde-format
@@ -70,13 +69,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "நடப்பு அமர்வுகளை பூட்டும்"
 
 #: sessionrunner.cpp:66
-#, fuzzy, kde-format
-#| msgid "Save the session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "அமர்வை சேமி"
+msgstr ""
 
 #: sessionrunner.cpp:69
 #, kde-format
@@ -97,11 +95,10 @@ msgid "Starts a new session as a different user"
 msgstr "வேறு பயனராக புதிய அமர்வை துவக்கும்"
 
 #: sessionrunner.cpp:86
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "புதிய அமர்வு"
+msgstr ""
 
 #: sessionrunner.cpp:87
 #, kde-format
@@ -127,29 +124,28 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "அமர்விலிருந்து வெளியேறு"
 
 #: sessionrunner.cpp:124
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr ""
+msgstr "கணினியை நிறுத்து"
 
 #: sessionrunner.cpp:134
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr ""
+msgstr "மீள்துவக்கு"
 
 #: sessionrunner.cpp:144
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "பூட்டு"
 
 #: sessionrunner.cpp:154
-#, fuzzy, kde-format
-#| msgid "Save the session"
+#, kde-format
 msgid "Save Session"
 msgstr "அமர்வை சேமி"
 
@@ -164,13 +160,7 @@ msgid "New Session"
 msgstr "புதிய அமர்வு"
 
 #: sessionrunner.cpp:275
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#| "will be displayed and the current session will be hidden.</p><p>You can "
-#| "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#| "session}</li><li>Plasma search (type 'switch' or 'sessions')</"
-#| "li><li>Plasma widgets (such as the application launcher)</li></ul>"
+#, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
@@ -180,9 +170,8 @@ msgid ""
 msgstr ""
 "<p>நீங்கள் ஓர் புதிய பணிமேடை அமர்வுக்குள் நுழையவுள்ளீர்கள்.</p><p>தற்போதைய திரை "
 "மறைக்கப்பட்டு, ஓர் நுழைவுச்சாளரம் காட்டப்படும்.</p><p>பணிமேடை அமர்வுகளுக்கிடையே "
-"பின்வருமாறு தாவலாம்:</p><ul><li>Ctrl+Alt+F{அமர்வின் எண்}</li> <li>பிளாஸ்மா தேடல் "
-"('switch' அல்லது 'sessions' என்று தேடுங்கள்)</li> <li>பிளாஸ்மாய்டுகள் (எ.கா. செயலி "
-"ஏவி)</li></ul>"
+"பின்வருபவற்றைக் கொண்டு தாவலாம்:</p><ul><li>Ctrl+Alt+F{அமர்வின் எண்}</li> <li>பிளாஸ்மா "
+"தேடல் ('%1' என்று தேடுங்கள்)</li> <li>பிளாஸ்மாய்டுகள் (எ.கா. செயலி ஏவி)</li></ul>"
 
 #~ msgctxt "log out command"
 #~ msgid "Logout"

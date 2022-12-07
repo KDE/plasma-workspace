@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-11-18 19:48+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -61,38 +61,38 @@ msgstr "Aparatinės įrangos valdymas"
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Elementas"
 
-#: package/contents/ui/ConfigEntries.qml:85
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Visibility"
 msgstr "Matomumas"
 
-#: package/contents/ui/ConfigEntries.qml:91
+#: package/contents/ui/ConfigEntries.qml:92
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Spartieji klavišai"
 
-#: package/contents/ui/ConfigEntries.qml:229
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Rodomas, kai aktualus"
 
-#: package/contents/ui/ConfigEntries.qml:230
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "Visada rodomas"
 
-#: package/contents/ui/ConfigEntries.qml:231
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "Visada slepiamas"
 
-#: package/contents/ui/ConfigEntries.qml:232
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "Išjungtas"

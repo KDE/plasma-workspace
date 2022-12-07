@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-10-23 16:30+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -59,38 +59,38 @@ msgstr "Kontrol Perangkat Keras"
 msgid "Miscellaneous"
 msgstr "Beraneka"
 
-#: package/contents/ui/ConfigEntries.qml:80
+#: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Entri"
 
-#: package/contents/ui/ConfigEntries.qml:85
+#: package/contents/ui/ConfigEntries.qml:86
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilitas"
 
-#: package/contents/ui/ConfigEntries.qml:91
+#: package/contents/ui/ConfigEntries.qml:92
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Pintasan Keyboard"
 
-#: package/contents/ui/ConfigEntries.qml:229
+#: package/contents/ui/ConfigEntries.qml:238
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Tampilkan ketika relevan"
 
-#: package/contents/ui/ConfigEntries.qml:230
+#: package/contents/ui/ConfigEntries.qml:239
 #, kde-format
 msgid "Always shown"
 msgstr "Selalu tampilkan"
 
-#: package/contents/ui/ConfigEntries.qml:231
+#: package/contents/ui/ConfigEntries.qml:240
 #, kde-format
 msgid "Always hidden"
 msgstr "Selalu sembunyi"
 
-#: package/contents/ui/ConfigEntries.qml:232
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Disabled"
 msgstr "Dinonfungsikan"

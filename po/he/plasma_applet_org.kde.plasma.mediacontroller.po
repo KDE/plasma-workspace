@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2017-05-22 05:26-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -110,39 +110,46 @@ msgid "Choose player automatically"
 msgstr "בחר נגן אוטומטית"
 
 #: contents/ui/main.qml:269
-#, kde-format
-msgctxt "by Artist (player name)"
+#, fuzzy, kde-format
+#| msgctxt "Artist of the song"
+#| msgid "by %1 (paused)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
-"Middle-click to pause"
-msgstr ""
+"Middle-click to pause\n"
+"Scroll to adjust volume"
+msgstr "על ידי %1 (מושהה)"
 
 #: contents/ui/main.qml:269
 #, kde-format
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
-"Middle-click to pause"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
-msgctxt "by Artist (paused, player name)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
-"Middle-click to play"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 msgstr "על ידי %1 (מושהה)"
 
 #: contents/ui/main.qml:280
-#, kde-format
-msgctxt ""
-"Paused (player name)\n"
-"Middle-click to play"
+#, fuzzy, kde-format
+#| msgctxt "Artist of the song"
+#| msgid "by %1 (paused)"
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
-"Middle-click to play"
-msgstr ""
+"Middle-click to play\n"
+"Scroll to adjust volume"
+msgstr "על ידי %1 (מושהה)"
 
 #, fuzzy
 #~| msgctxt "Artist of the song"

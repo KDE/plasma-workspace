@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-09-20 19:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -42,56 +42,56 @@ msgstr "பிளாஸ்மா"
 msgid "Plasma Shell"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr ""
 
-#: main.cpp:113
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "பிளாஸ்மா முறிவடைந்தால் அதை தானாக மறுபடியும் துவக்காதே"
 
-#: main.cpp:116
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr ""
 
-#: main.cpp:121
+#: main.cpp:111
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
 msgstr ""
 
-#: main.cpp:123
+#: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ஏற்கனவே உள்ளதற்கு பதிலாக இது இயங்கட்டும்"
 
-#: main.cpp:126
+#: main.cpp:116
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
 
-#: main.cpp:127
+#: main.cpp:117
 #, kde-format
 msgid "file"
 msgstr "கோப்பு"
 
-#: main.cpp:131
+#: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "பயனர் பின்னூட்டத்துக்கு உள்ள விருப்பத்தேர்வுகளை பட்டியலிடும்"
 
-#: main.cpp:231
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "பிளாஸ்மாவை துவக்குதல் தோல்வியடைந்தது"
 
-#: main.cpp:232
+#: main.cpp:222
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -231,12 +231,12 @@ msgstr "பணிமேடைகளையும் பலகைகளையு�
 msgid "Move keyboard focus between panels"
 msgstr "விசைப்பலகை குவியத்தை வேறு பலகைக்கு மாற்று"
 
-#: shellcorona.cpp:1811
+#: shellcorona.cpp:1809
 #, kde-format
 msgid "Add Panel"
 msgstr "பலகையைச் சேர்"
 
-#: shellcorona.cpp:1847
+#: shellcorona.cpp:1845
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

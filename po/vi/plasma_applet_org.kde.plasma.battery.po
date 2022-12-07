@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-11-14 14:40+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -33,28 +33,34 @@ msgstr ""
 "Sức chứa của cục pin này chỉ còn %1%, nó nên được thay. Hãy liên hệ với nhà "
 "sản xuất."
 
-#: package/contents/ui/BatteryItem.qml:182
+#: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Time To Full:"
 msgstr "Thời gian đến khi đầy:"
 
-#: package/contents/ui/BatteryItem.qml:183
+#: package/contents/ui/BatteryItem.qml:187
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Thời gian còn lại"
 
-#: package/contents/ui/BatteryItem.qml:199
+#: package/contents/ui/BatteryItem.qml:192
+#, kde-format
+msgctxt "@info"
+msgid "Estimating…"
+msgstr ""
+
+#: package/contents/ui/BatteryItem.qml:204
 #, kde-format
 msgid "Battery Health:"
 msgstr "Sức chứa của pin:"
 
-#: package/contents/ui/BatteryItem.qml:205
+#: package/contents/ui/BatteryItem.qml:210
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:219
+#: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Pin được cấu hình để sạc đến khoảng %1%."
@@ -98,7 +104,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Không có"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Pin và độ sáng"
@@ -192,27 +198,32 @@ msgstr[0] "%1 ứng dụng đã yêu cầu kích hoạt chế độ \"Tiết ki�
 msgid "System is in Power Save mode"
 msgstr "Hệ thống đang trong chế độ \"Tiết kiệm điện\""
 
-#: package/contents/ui/main.qml:306
+#: package/contents/ui/main.qml:207
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr ""
+
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Tiểu ứng dụng pin đã bật điều khiển ức chế toàn hệ thống"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Kích hoạt chế độ %1 thất bại"
 
-#: package/contents/ui/main.qml:372
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Hiện thông tin năng lượng…"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Hiện phần trăm pin trên biểu tượng khi chưa sạc đầy"
 
-#: package/contents/ui/main.qml:380
+#: package/contents/ui/main.qml:382
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Cấu hình việc tiết kiệm năng lượng…"

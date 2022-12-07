@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-10-31 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -37,28 +37,34 @@ msgstr ""
 "Зарад гэтай батарэі складае ўсяго %1%, яе трэба замяніць. Звярніцеся да "
 "вытворцы."
 
-#: package/contents/ui/BatteryItem.qml:182
+#: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Time To Full:"
 msgstr "Часу да поўнага:"
 
-#: package/contents/ui/BatteryItem.qml:183
+#: package/contents/ui/BatteryItem.qml:187
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Засталося часу:"
 
-#: package/contents/ui/BatteryItem.qml:199
+#: package/contents/ui/BatteryItem.qml:192
+#, kde-format
+msgctxt "@info"
+msgid "Estimating…"
+msgstr ""
+
+#: package/contents/ui/BatteryItem.qml:204
 #, kde-format
 msgid "Battery Health:"
 msgstr "Узровень зараду батарэі:"
 
-#: package/contents/ui/BatteryItem.qml:205
+#: package/contents/ui/BatteryItem.qml:210
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:219
+#: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Батарэя наладжаная на зараджэнне прыблізна да %1%."
@@ -102,7 +108,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Няма"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:357
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Батарэя і яркасць"
@@ -206,28 +212,33 @@ msgstr[3] "%1 праграмы запытваюць актывацыю %2:"
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:306
+#: package/contents/ui/main.qml:207
+#, kde-format
+msgid "Scroll to adjust screen brightness"
+msgstr ""
+
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплет батарэі ўключыў агульнасістэмнае стрымліванне"
 
-#: package/contents/ui/main.qml:360
+#: package/contents/ui/main.qml:362
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не ўдалося актываваць %1 рэжым"
 
-#: package/contents/ui/main.qml:372
+#: package/contents/ui/main.qml:374
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Паказаць інфармацыю пра сілкаванне…"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Паказваць на значку ўзровень зараду батарэі"
 
-#: package/contents/ui/main.qml:380
+#: package/contents/ui/main.qml:382
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Наладжванне энергазберажэння…"

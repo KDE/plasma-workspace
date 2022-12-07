@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2020-11-16 11:31+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -107,39 +107,46 @@ msgid "Choose player automatically"
 msgstr "Lejátszó automatikus kiválasztása"
 
 #: contents/ui/main.qml:269
-#, kde-format
-msgctxt "by Artist (player name)"
+#, fuzzy, kde-format
+#| msgctxt "by Artist (paused, player name)"
+#| msgid "by %1 (paused, %2)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
-"Middle-click to pause"
-msgstr ""
+"Middle-click to pause\n"
+"Scroll to adjust volume"
+msgstr "előadó: %1 (szüneteltetve, %2)"
 
 #: contents/ui/main.qml:269
 #, kde-format
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
-"Middle-click to pause"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:280
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
-msgctxt "by Artist (paused, player name)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
-"Middle-click to play"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 msgstr "előadó: %1 (szüneteltetve, %2)"
 
 #: contents/ui/main.qml:280
-#, kde-format
-msgctxt ""
-"Paused (player name)\n"
-"Middle-click to play"
+#, fuzzy, kde-format
+#| msgctxt "by Artist (paused, player name)"
+#| msgid "by %1 (paused, %2)"
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
-"Middle-click to play"
-msgstr ""
+"Middle-click to play\n"
+"Scroll to adjust volume"
+msgstr "előadó: %1 (szüneteltetve, %2)"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"
