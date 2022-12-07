@@ -448,11 +448,9 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
         const Notification &notification = d->notifications.at(i);
 
         if (flags.testFlag(Notifications::ClearExpired) && notification.expired()) {
-            rowsToRemove.append(i);
+            close(notification.id());
         }
     }
-
-    d->removeRows(rowsToRemove);
 }
 
 void AbstractNotificationsModel::onNotificationAdded(const Notification &notification)
