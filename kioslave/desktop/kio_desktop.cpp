@@ -43,7 +43,7 @@ int Q_DECL_EXPORT kdemain(int argc, char **argv)
 }
 
 DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
-    : KIO::ForwardingSlaveBase(protocol, pool, app)
+    : KIO::ForwardingWorkerBase(protocol, pool, app)
 {
     checkLocalInstall();
 
@@ -115,15 +115,17 @@ bool DesktopProtocol::rewriteUrl(const QUrl &url, QUrl &newUrl)
     return true;
 }
 
-void DesktopProtocol::listDir(const QUrl &url)
+KIO::WorkerResult DesktopProtocol::listDir(const QUrl &url)
 {
-    KIO::ForwardingSlaveBase::listDir(url);
+    const auto result = KIO::ForwardingWorkerBase::listDir(url);
 
     QUrl actual;
     rewriteUrl(url, actual);
 
     org::kde::DesktopNotifier kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QDBusConnection::sessionBus());
     kded.watchDir(actual.path());
+
+    return result;
 }
 
 QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
@@ -149,9 +151,9 @@ QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
     return QString();
 }
 
-void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
+void DesktopProtocol::adjustUDSEntry(KIO::UDSEntry &entry, UDSEntryCreationMode creationMode) const
 {
-    ForwardingSlaveBase::prepareUDSEntry(entry, listing);
+    ForwardingWorkerBase::adjustUDSEntry(entry, creationMode);
     const QString path = desktopFile(entry);
 
     if (!path.isEmpty()) {
@@ -175,13 +177,12 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
     entry.replace(KIO::UDSEntry::UDS_TARGET_URL, localUrl.toString());
 }
 
-void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags flags)
+KIO::WorkerResult DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags flags)
 {
     Q_UNUSED(flags)
 
     if (_src == _dest) {
-        finished();
-        return;
+        return KIO::WorkerResult::pass();
     }
 
     QUrl src;
@@ -215,25 +216,13 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
 
     if (QFile(srcPath).rename(destPath)) {
         org::kde::KDirNotify::emitFileRenamedWithLocalPath(_src, reported_dest, destPath);
-        finished();
+        return KIO::WorkerResult::pass();
     } else {
-        error(KIO::ERR_CANNOT_RENAME, srcPath);
+        return KIO::WorkerResult::fail(KIO::ERR_CANNOT_RENAME, srcPath);
     }
 }
 
-void DesktopProtocol::virtual_hook(int id, void *data)
-{
-    switch (id) {
-    case SlaveBase::GetFileSystemFreeSpace: {
-        QUrl *url = static_cast<QUrl *>(data);
-        fileSystemFreeSpace(*url);
-    } break;
-    default:
-        SlaveBase::virtual_hook(id, data);
-    }
-}
-
-void DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
+KIO::WorkerResult DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
 {
     Q_UNUSED(url)
 
@@ -242,9 +231,9 @@ void DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
     if (storageInfo.isValid() && storageInfo.isReady()) {
         setMetaData(QStringLiteral("total"), QString::number(storageInfo.bytesTotal()));
         setMetaData(QStringLiteral("available"), QString::number(storageInfo.bytesAvailable()));
-        finished();
+        return KIO::WorkerResult::pass();
     } else {
-        error(KIO::ERR_CANNOT_STAT, desktopPath);
+        return KIO::WorkerResult::fail(KIO::ERR_CANNOT_STAT, desktopPath);
     }
 }
 
