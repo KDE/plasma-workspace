@@ -19,6 +19,7 @@
 
 #include "server.h"
 #include <KLocalizedString>
+#include <KRuntimePlatform>
 #include <KSharedConfig>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
@@ -292,6 +293,11 @@ int main(int argc, char *argv[])
     KConfigGroup config(KSharedConfig::openConfig(), "General");
 
     QString loginMode = config.readEntry("loginMode", "restorePreviousLogout");
+
+    // we don't need session restoring in Plasma Mobile
+    if (KRuntimePlatform::runtimePlatform().contains(QStringLiteral("phone"))) {
+        loginMode = QStringLiteral("emptySession");
+    }
 
     if (parser.isSet(restoreOption))
         server->setRestoreSession(QStringLiteral(SESSION_BY_USER));
