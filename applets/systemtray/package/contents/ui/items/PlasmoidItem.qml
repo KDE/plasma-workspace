@@ -102,7 +102,7 @@ AbstractItem {
     function preloadFullRepresentationItem(fullRepresentationItem) {
         if (fullRepresentationItem && fullRepresentationItem.parent === null) {
             fullRepresentationItem.width = expandedRepresentation.width
-            fullRepresentationItem.width = expandedRepresentation.height
+            fullRepresentationItem.height = expandedRepresentation.height
             fullRepresentationItem.parent = preloadedStorage;
         }
     }
