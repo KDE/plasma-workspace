@@ -41,11 +41,15 @@ Item {
         if (!currentMetadata) {
             return ""
         }
-        var xesamArtist = currentMetadata["xesam:artist"]
-        if (!xesamArtist || xesamArtist.length === 0) {
-            xesamArtist = currentMetadata["xesam:albumArtist"] || [""]
+        const xesamArtist = currentMetadata["xesam:artist"]
+        if (xesamArtist) {
+            return xesamArtist;
         }
-        return xesamArtist.join(", ")
+        const albumArtist = currentMetadata["xesam:albumArtist"];
+        if (albumArtist && albumArtist.lenght > 0) {
+            return albumArt.join(", ");
+        }
+        return "";
     }
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
 
