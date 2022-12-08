@@ -56,6 +56,7 @@ StatusNotifierTest::StatusNotifierTest(QWidget *parent)
 
 void StatusNotifierTest::init()
 {
+    QGuiApplication::setDesktopFileName(QStringLiteral("org.kde.statusnotifiertest"));
     d->systemNotifier = new KStatusNotifierItem(this);
     // d->systemNotifier->setCategory(KStatusNotifierItem::SystemServices);
     // d->systemNotifier->setCategory(KStatusNotifierItem::Hardware);
