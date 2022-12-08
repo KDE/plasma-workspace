@@ -207,7 +207,7 @@ Item {
                 visible: actionsButton.applet && actionsButton.applet.action("configure")
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: actionsButton.applet.action("configure").text
+                text: actionsButton.applet.action("configure") ? actionsButton.applet.action("configure").text : ""
 
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.left: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.left
