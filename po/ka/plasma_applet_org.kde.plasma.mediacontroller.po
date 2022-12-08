@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 07:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -107,7 +107,7 @@ msgstr "&გასვლა"
 msgid "Choose player automatically"
 msgstr "დამკვრელის ავტომატური შერჩევა"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 "ავტორი: %1 (%2)\n"
 "შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -136,7 +136,7 @@ msgstr ""
 "%1\n"
 "შესაჩერებლად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 "ავტორი %1 (შეჩერებული, %2)\n"
 "დასაკრავად გამოიყენეთ შუა-წკაპი"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"

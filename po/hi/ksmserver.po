@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2021-07-06 20:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -137,27 +137,27 @@ msgstr ""
 "तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
 "स्क्रीन प्रदान करें।"
 
-#: server.cpp:873
+#: server.cpp:884
 #, kde-format
 msgid "Session Management"
 msgstr "सत्र प्रबंधन"
 
-#: server.cpp:876
+#: server.cpp:887
 #, kde-format
 msgid "Log Out"
 msgstr "लॉग-आउट"
 
-#: server.cpp:881
+#: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "पुष्टि किए बिना लॉग आउट करें"
 
-#: server.cpp:886
+#: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "पुष्टि किए बिना रोक दें"
 
-#: server.cpp:891
+#: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "पुष्टि किए बिना पुनः प्रारंभ करें"

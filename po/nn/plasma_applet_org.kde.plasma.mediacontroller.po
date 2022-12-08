@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-04 00:48+0000\n"
+"POT-Creation-Date: 2022-12-07 00:49+0000\n"
 "PO-Revision-Date: 2022-06-18 14:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -111,33 +111,36 @@ msgstr "Vel spelar automatisk"
 
 #: contents/ui/main.qml:269
 #, kde-format
-msgctxt "by Artist (player name)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
-"Middle-click to pause"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:269
 #, kde-format
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
-"Middle-click to pause"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:280
 #, kde-format
-msgctxt "by Artist (paused, player name)"
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
-"Middle-click to play"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 msgstr ""
 
 #: contents/ui/main.qml:280
 #, kde-format
-msgctxt ""
-"Paused (player name)\n"
-"Middle-click to play"
+msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
-"Middle-click to play"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 msgstr ""

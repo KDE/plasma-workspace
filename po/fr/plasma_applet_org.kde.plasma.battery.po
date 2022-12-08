@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-11-13 19:52+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -117,7 +117,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Absente"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Batterie et luminosité"
@@ -216,35 +216,35 @@ msgstr[1] ""
 msgid "System is in Power Save mode"
 msgstr "Le système est en mode « Économie »."
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Screen Brightness:"
 msgid "Scroll to adjust screen brightness"
 msgstr "Luminosité de l'écran :"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "La gestion de l'énergie a été inhibée au niveau du système"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Impossible d'activer le mode %1"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Afficher les informations &sur l'énergie..."
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Afficher le pourcentage de batterie sur l'icône lorsque non totalement "
 "chargée"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Configurer l'économie d'énergie…"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-10-16 22:49+0200\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 11:17+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -106,12 +106,8 @@ msgstr "Afsluiten"
 msgid "Choose player automatically"
 msgstr "Speler automatisch kiezen"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -119,13 +115,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "door %1 (%2)\n"
-"Midden-klik om te pauzeren"
+"Midden-klik om te pauzeren\n"
+"Schuiven om volume aan te passen"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -133,14 +127,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Midden-klik om te pauzeren"
+"Midden-klik om te pauzeren\n"
+"Schuiven om volume aan te passen"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -148,16 +139,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "door %1 (gepauzeerd, %2)\n"
-"Midden-klik om af te spelen"
+"Midden-klik om af te spelen\n"
+"Schuiven om volume aan te passen"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -165,7 +151,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Gepauzeerd (%1)\n"
-"Midden-klik om af te spelen"
+"Midden-klik om af te spelen Schuiven om volume aan te passen"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-11-12 19:54+0300\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 17:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -55,7 +55,7 @@ msgstr "Kalan Süre:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Tahmin ediliyor…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -112,7 +112,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Mevcut değil"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Pil ve Parlaklık"
@@ -208,32 +208,32 @@ msgstr[1] "%1 uygulama, Güç Tasarrufu kipinin etkinleştirilmesini istedi"
 msgid "System is in Power Save mode"
 msgstr "Sistem, Güç Tasarrufu kipinde"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Ekran parlaklığını ayarlamak için sar"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Pil uygulamacığı, sistem geneli kısıtlamayı etkinleştirdi"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 kipi etkinleştirilemedi"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Enerji Bilgisini Göster…"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Tam Dolu Değilken Pil Yüzdesini Simge Üzerinde Göster"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Enerji Tasarrufunu Yapılandır…"

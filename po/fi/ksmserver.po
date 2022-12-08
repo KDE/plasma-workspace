@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2021-07-22 13:44+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -147,27 +147,27 @@ msgstr ""
 "Käynnistyy ilman lukitusnäyttötukea. Tarvitaan vain, jos jokin toinen "
 "komponentti tarjoaa lukitusnäytön."
 
-#: server.cpp:873
+#: server.cpp:884
 #, kde-format
 msgid "Session Management"
 msgstr "Istunnonhallinta"
 
-#: server.cpp:876
+#: server.cpp:887
 #, kde-format
 msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
-#: server.cpp:881
+#: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Kirjaudu kyselemättä ulos"
 
-#: server.cpp:886
+#: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Sammuta kyselemättä"
 
-#: server.cpp:891
+#: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Käynnistä kyselemättä uudelleen"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2018-04-03 17:10+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -108,7 +108,7 @@ msgstr "Ukončit"
 msgid "Choose player automatically"
 msgstr "Automaticky vybrat přehrávač"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -119,7 +119,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "od %1 (pozastaveno, %2)"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -128,7 +128,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -139,7 +139,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "od %1 (pozastaveno, %2)"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"

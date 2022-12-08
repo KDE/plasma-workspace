@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2021-07-06 19:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -106,7 +106,7 @@ msgstr "बाहर जाएँ"
 msgid "Choose player automatically"
 msgstr "स्वचालित रूप से वादक चुनें"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -117,7 +117,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 के द्वारा (ठहरा हुआ, %2)"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -137,7 +137,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 के द्वारा (ठहरा हुआ, %2)"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"

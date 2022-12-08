@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2020-11-04 15:27+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -135,27 +135,27 @@ msgstr ""
 "Indítás képernyőzárolás támogatása nélkül. Csak akkor szükséges, ha más "
 "komponens biztosítja a képernyőzárolást."
 
-#: server.cpp:873
+#: server.cpp:884
 #, kde-format
 msgid "Session Management"
 msgstr "Munkamenetkezelés"
 
-#: server.cpp:876
+#: server.cpp:887
 #, kde-format
 msgid "Log Out"
 msgstr "Kijelentkezés"
 
-#: server.cpp:881
+#: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Kijelentkezés megerősítés nélkül"
 
-#: server.cpp:886
+#: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Leállítás megerősítés nélkül"
 
-#: server.cpp:891
+#: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Újraindítás megerősítés nélkül"

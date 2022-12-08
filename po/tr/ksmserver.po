@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-02-27 14:01+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -137,27 +137,27 @@ msgstr ""
 "Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
 "ekranını sağlarsa gereklidir."
 
-#: server.cpp:873
+#: server.cpp:884
 #, kde-format
 msgid "Session Management"
 msgstr "Oturum Yönetimi"
 
-#: server.cpp:876
+#: server.cpp:887
 #, kde-format
 msgid "Log Out"
 msgstr "Çık"
 
-#: server.cpp:881
+#: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Onaylama Olmaksızın Çık"
 
-#: server.cpp:886
+#: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Onaylama Olmaksızın Kapat"
 
-#: server.cpp:891
+#: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Onaylama Olmaksızın Yeniden Başlat"

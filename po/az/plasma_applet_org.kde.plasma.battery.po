@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-11-11 11:25+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Mövcud deyil"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Batareya və Parlaqlıq"
@@ -199,32 +199,32 @@ msgstr[1] "%1 tətbiq enerjiyə nəzarət rejiminin aktiv edilməsini tələb ed
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr ""
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Batareya tətbiqi ümumi sistem əngəllənməsini aktiv etdi"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 rejimi aktiv eddilə bilmədi"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Enerji məlumatlarını göstərmək..."
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Tam dolmadıqda batareyanın faizi nişanda göstərilsin"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Enerjiyə qənaət rejimini tənzimləyin..."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 09:41+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "Esci"
 msgid "Choose player automatically"
 msgstr "Scegli automaticamente il lettore"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -120,7 +120,7 @@ msgstr ""
 "di %1 (%2)\n"
 "Clic centrale per sospendere"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -134,7 +134,7 @@ msgstr ""
 "%1\n"
 "Clic centrale per sospendere"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -149,7 +149,7 @@ msgstr ""
 "di %1 (in pausa, %2)\n"
 "Clic centrale per riprodurre"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"

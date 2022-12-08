@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-10-16 11:54+0200\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 21:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.11.90\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -108,26 +108,20 @@ msgstr "Salir"
 msgid "Choose player automatically"
 msgstr "Escoger el reproductor automáticamente"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
-"by %1 (%2)\n"
-"Pulse con el botón central para pausar"
+"por %1 (%2)\n"
+"Pulse con el botón central para pausar\n"
+"Desplace para ajustar el volumen"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -135,14 +129,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Pulse con el botón central para pausar"
+"Pulse con el botón central para pausar\n"
+"Desplace para ajustar el volumen"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -150,16 +141,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "por %1 (en pausa, %2)\n"
-"Pulse con el botón central para reproducir"
+"Pulse con el botón central para reproducir\n"
+"Desplace para ajustar el volumen"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -167,7 +153,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "En pausa (%1)\n"
-"Pulse con el botón central para reproducir"
+"Pulse con el botón central para reproducir\n"
+"Desplace para ajustar el volumen"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

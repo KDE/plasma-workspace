@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-10-16 13:21+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -106,7 +106,7 @@ msgstr "Изход"
 msgid "Choose player automatically"
 msgstr "Автоматично избиране на медийно устройство"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 "на %1 (%2)\n"
 "Среден бутон на мишката за пауза"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -135,7 +135,7 @@ msgstr ""
 "%1\n"
 "Среден бутон на мишката за пауза"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -150,7 +150,7 @@ msgstr ""
 "на %1 (на пауза, %2)\n"
 "Среден бутон на мишката за пауза"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"

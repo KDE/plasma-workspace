@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-10-16 08:46+0300\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 07:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -109,12 +109,8 @@ msgstr "Вийти"
 msgid "Choose player automatically"
 msgstr "Вибрати програвач автоматично"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -122,13 +118,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1 (%2)\n"
-"Клацніть середньою, щоб призупинити"
+"Клацніть середньою, щоб призупинити\n"
+"Прокрутіть, щоб скоригувати гучність"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -136,14 +130,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Клацніть середньою, щоб призупинити"
+"Клацніть середньою, щоб призупинити\n"
+"Прокрутіть, щоб скоригувати гучність"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -151,16 +142,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1 (призупинено, %2)\n"
-"Клацніть середньою, щоб відтворити"
+"Клацніть середньою, щоб відтворити\n"
+"Прокрутіть, щоб скоригувати гучність"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -168,7 +154,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Призупинено (%1)\n"
-"Клацніть середньою, щоб відтворити"
+"Клацніть середньою, щоб відтворити\n"
+"Прокрутіть, щоб скоригувати гучність"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

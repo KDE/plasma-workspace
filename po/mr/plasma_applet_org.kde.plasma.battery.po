@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2013-02-05 18:22+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -121,7 +121,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "<b>उपस्थित नाही</b>"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, fuzzy, kde-format
 #| msgid "Screen Brightness"
 msgid "Battery and Brightness"
@@ -233,34 +233,34 @@ msgstr[1] ""
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Screen Brightness:"
 msgid "Scroll to adjust screen brightness"
 msgstr "स्क्रीन प्रखरता :"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "या बॅटरी एप्लेटने पूर्ण प्रणालीभर अवरोध कार्यान्वित केला आहे"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "Show charge &information"
 msgid "&Show Energy Information…"
 msgstr "चार्जची माहिती दर्शवा (&I)"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, fuzzy, kde-format
 #| msgid "More..."
 msgid "&Configure Energy Saving…"

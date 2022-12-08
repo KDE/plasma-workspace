@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-11-12 09:27+0200\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 07:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -49,7 +49,7 @@ msgstr "Час, що залишився:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Оцінювання…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -106,7 +106,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Немає"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Акумулятор і яскравість дисплея"
@@ -214,32 +214,32 @@ msgstr[3] "Програмою надіслано запит щодо актив�
 msgid "System is in Power Save mode"
 msgstr "Система перебуває у режимі енергозаощадження"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Прокрутіть, щоб скоригувати яскравість екрана"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплетом акумулятора було увімкнено загальносистемний стан блокування"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не вдалося задіяти режим %1"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Показати дані щодо енергоспоживання…"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Показувати заряд у відсотках на піктограмі, якщо заряджено не повністю"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Налаштувати заощадження енергії…"

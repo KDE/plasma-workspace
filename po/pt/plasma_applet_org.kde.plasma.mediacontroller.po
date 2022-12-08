@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-10-16 11:47+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -101,7 +101,7 @@ msgstr "Sair"
 msgid "Choose player automatically"
 msgstr "Escolher automaticamente o leitor"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "de %1 (%2)\n"
 "Botão do meio para pausar"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -130,7 +130,7 @@ msgstr ""
 "%1\n"
 "Botão do meio para pausar"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 "de %1 (em pausa, %2)\n"
 "Botão do meio para reproduzir"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"

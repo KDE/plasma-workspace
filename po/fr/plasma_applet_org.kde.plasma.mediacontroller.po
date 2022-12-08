@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 12:36+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "Quitter"
 msgid "Choose player automatically"
 msgstr "Sélectionner un lecteur automatiquement"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -127,7 +127,7 @@ msgstr ""
 "par %1 (%2)\n"
 "Faites un clic central pour mettre en pause"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -142,7 +142,7 @@ msgstr ""
 "Faites un clic central pour mettre en pause"
 
 # Faut-il écrire « par » ou « de » ?
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -157,7 +157,7 @@ msgstr ""
 "par %1 (mis en pause, %2)\n"
 "Faites un clic central pour lire"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"

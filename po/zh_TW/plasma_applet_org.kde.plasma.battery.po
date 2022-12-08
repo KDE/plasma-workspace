@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2020-05-14 23:48+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -111,7 +111,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "不存在"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "電池與亮度"
@@ -209,34 +209,34 @@ msgstr[0] ""
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr ""
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "電池小程式已開啟系統睡眠模式"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "&Show Energy Information..."
 msgid "&Show Energy Information…"
 msgstr "顯示能源資訊(&S)…"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Show percentage"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "顯示百分比"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, fuzzy, kde-format
 #| msgid "&Configure Power Saving..."
 msgid "&Configure Energy Saving…"

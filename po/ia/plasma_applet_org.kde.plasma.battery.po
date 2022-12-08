@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2022-02-18 23:12+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Non presente"
 
-#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:359
+#: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Intensitate de illumination e batteria"
@@ -203,34 +203,34 @@ msgstr[1] "%1 applicationes ha requirite activar %2:"
 msgid "System is in Power Save mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Screen Brightness:"
 msgid "Scroll to adjust screen brightness"
 msgstr "Intensitate de illumination de schermo:"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Le applet de batteria ha habilitate le inhibition pro omne le systema"
 
-#: package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Falleva a activar modo %1"
 
-#: package/contents/ui/main.qml:374
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Monstra &information de energia..."
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Monstra percentage de batteria sur Icone"
 
-#: package/contents/ui/main.qml:382
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Configura sparnio de energia…"

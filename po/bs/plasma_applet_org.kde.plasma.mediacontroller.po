@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
 "PO-Revision-Date: 2015-01-04 13:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Choose player automatically"
 msgstr ""
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -123,7 +123,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "od %1 (pauzirano)"
 
-#: contents/ui/main.qml:269
+#: contents/ui/main.qml:286
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -132,7 +132,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -143,7 +143,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "od %1 (pauzirano)"
 
-#: contents/ui/main.qml:280
+#: contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"

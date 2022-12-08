@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-10-16 10:26+0200\n"
+"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"PO-Revision-Date: 2022-12-07 13:25+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -110,12 +110,8 @@ msgstr "Surt"
 msgid "Choose player automatically"
 msgstr "Tria automàticament el reproductor"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -123,26 +119,23 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "de %1 (%2)\n"
-"Clic del mig per a fer una pausa"
+"Clic del mig per a fer una pausa\n"
+"Desplaceu per ajustar el volum"
 
-#: contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#: contents/ui/main.qml:286
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "%1nClic del mig per a fer una pausa"
+msgstr ""
+"%1\n"
+"Clic del mig per a fer una pausa\n"
+"Desplaceu per ajustar el volum"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -150,16 +143,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "de %1 (en pausa, %2)\n"
-"Clic del mig per a reproduir"
+"Clic del mig per a reproduir\n"
+"Desplaceu per ajustar el volum"
 
-#: contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#: contents/ui/main.qml:297
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -167,4 +155,5 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "En pausa (%1)\n"
-"Clic del mig per a reproduir"
+"Clic del mig per a reproduir\n"
+"Desplaceu per ajustar el volum"
