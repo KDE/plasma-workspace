@@ -129,6 +129,15 @@ void PowermanagementEngine::init()
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                    SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("smoothedBatteryRemainingTimeChanged"),
+                                                   this,
+                                                   SLOT(smoothedBatteryRemainingTimeChanged(qulonglong)))) {
+            qDebug() << "error connecting to smoothed remaining time changes";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                   SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("chargeStopThresholdChanged"),
                                                    this,
                                                    SLOT(chargeStopThresholdChanged(int)))) {
@@ -242,19 +251,36 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData(QStringLiteral("Battery"), QStringLiteral("Sources"), batterySources);
         setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !batterySources.isEmpty());
         if (!batterySources.isEmpty()) {
-            QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                              QStringLiteral("/org/kde/Solid/PowerManagement"),
-                                                              SOLID_POWERMANAGEMENT_SERVICE,
-                                                              QStringLiteral("batteryRemainingTime"));
-            QDBusPendingReply<qulonglong> reply = QDBusConnection::sessionBus().asyncCall(msg);
-            QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-            QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-                QDBusPendingReply<qulonglong> reply = *watcher;
-                if (!reply.isError()) {
-                    batteryRemainingTimeChanged(reply.value());
-                }
-                watcher->deleteLater();
-            });
+            {
+                QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                  QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                                  SOLID_POWERMANAGEMENT_SERVICE,
+                                                                  QStringLiteral("batteryRemainingTime"));
+                QDBusPendingReply<qulonglong> reply = QDBusConnection::sessionBus().asyncCall(msg);
+                QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+                QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+                    QDBusPendingReply<qulonglong> reply = *watcher;
+                    if (!reply.isError()) {
+                        batteryRemainingTimeChanged(reply.value());
+                    }
+                    watcher->deleteLater();
+                });
+            }
+            {
+                QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                  QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                                  SOLID_POWERMANAGEMENT_SERVICE,
+                                                                  QStringLiteral("smoothedBatteryRemainingTime"));
+                QDBusPendingReply<qulonglong> reply = QDBusConnection::sessionBus().asyncCall(msg);
+                QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+                QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+                    QDBusPendingReply<qulonglong> reply = *watcher;
+                    if (!reply.isError()) {
+                        smoothedBatteryRemainingTimeChanged(reply.value());
+                    }
+                    watcher->deleteLater();
+                });
+            }
         }
 
         QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
@@ -769,6 +795,11 @@ void PowermanagementEngine::batteryRemainingTimeChanged(qulonglong time)
 {
     // qDebug() << "Remaining time 2:" << time;
     setData(QStringLiteral("Battery"), QStringLiteral("Remaining msec"), time);
+}
+
+void PowermanagementEngine::smoothedBatteryRemainingTimeChanged(qulonglong time)
+{
+    setData(QStringLiteral("Battery"), QStringLiteral("Smoothed Remaining msec"), time);
 }
 
 void PowermanagementEngine::screenBrightnessChanged(int brightness)

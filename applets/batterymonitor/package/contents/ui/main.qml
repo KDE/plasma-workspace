@@ -78,7 +78,7 @@ Item {
                                                    // "Fully charged", so we need to account for that as well. See
                                                    // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
                                                    && (pmSource.data["Battery"]["State"] === "NoCharge" || pmSource.data["Battery"]["State"] === "FullyCharged"))
-    readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
+    readonly property int remainingTime: Number(pmSource.data["Battery"]["Smoothed Remaining msec"])
 
     property bool powermanagementDisabled: false
     property bool disableBrightnessUpdate: true

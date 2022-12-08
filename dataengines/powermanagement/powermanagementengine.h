@@ -52,6 +52,7 @@ private Q_SLOTS:
     void deviceRemoved(const QString &udi);
     void deviceAdded(const QString &udi);
     void batteryRemainingTimeChanged(qulonglong time);
+    void smoothedBatteryRemainingTimeChanged(qulonglong time);
     void screenBrightnessChanged(int brightness);
     void maximumScreenBrightnessChanged(int maximumBrightness);
     void keyboardBrightnessChanged(int brightness);
