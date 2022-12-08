@@ -56,6 +56,7 @@ Item {
                 return decodeURIComponent(lastUrlPart)
             }
             readonly property var artists: currentMetadata["xesam:artist"] || [] // stringlist
+            readonly property var albumArtists: currentMetadata["xesam:albumArtist"] || [] // stringlist
             readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
 
             engine: "mpris2"
@@ -117,7 +118,7 @@ Item {
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
                 // if no artist is given, show player name instead
-                text: mpris2Source.artists.length > 0 ? mpris2Source.artists.join(", ") : mpris2Source.identity
+                text: mpris2Source.artists.length > 0 ? mpris2Source.artists.join(", ") : (mpris2Source.albumArtists.length > 0 ? mpris2Source.albumArtists.join(", ") : mpris2Source.identity)
                 textFormat: Text.PlainText
                 font.pointSize: PlasmaCore.Theme.smallestFont.pointSize + 1
                 maximumLineCount: 1
