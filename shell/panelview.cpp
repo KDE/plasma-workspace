@@ -556,7 +556,7 @@ QRect PanelView::geometryByDistance(int distance) const
     if (formFactor() == Plasma::Types::Horizontal) {
         switch (m_alignment) {
         case Qt::AlignCenter:
-            r.moveCenter(screenGeometry.center() - QPoint(m_offset, 0));
+            r.moveCenter(screenGeometry.center() + QPoint(m_offset, 0));
             break;
         case Qt::AlignRight:
             r.moveRight(screenGeometry.right() - m_offset);
@@ -568,7 +568,7 @@ QRect PanelView::geometryByDistance(int distance) const
     } else {
         switch (m_alignment) {
         case Qt::AlignCenter:
-            r.moveCenter(screenGeometry.center() - QPoint(0, m_offset));
+            r.moveCenter(screenGeometry.center() + QPoint(0, m_offset));
             break;
         case Qt::AlignRight:
             r.moveBottom(screenGeometry.bottom() - m_offset);
