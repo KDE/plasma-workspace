@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-11-19 01:14+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,96 +21,91 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.1\n"
 
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Bendra"
-
-#: contents/ui/AlbumArtStackView.qml:169
+#: package/contents/ui/AlbumArtStackView.qml:169
 #, kde-format
 msgid "No title"
 msgstr "Nėra pavadinimo"
 
-#: contents/ui/AlbumArtStackView.qml:169 contents/ui/main.qml:77
+#: package/contents/ui/AlbumArtStackView.qml:169
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
 msgstr "Nieko neatkuriama"
 
-#: contents/ui/ConfigGeneral.qml:22
-#, kde-format
-msgid "Volume step:"
-msgstr "Garsinimo žingsnis:"
-
-#: contents/ui/ExpandedRepresentation.qml:361
-#: contents/ui/ExpandedRepresentation.qml:482
+#: package/contents/ui/ExpandedRepresentation.qml:361
+#: package/contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/ExpandedRepresentation.qml:511
+#: package/contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr "Maišyti"
 
-#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:89
+#: package/contents/ui/ExpandedRepresentation.qml:537
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Ankstesnis takelis"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:95
+#: package/contents/ui/ExpandedRepresentation.qml:559
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:100
+#: package/contents/ui/ExpandedRepresentation.qml:559
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Groti"
 
-#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:105
+#: package/contents/ui/ExpandedRepresentation.qml:577
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Kitas takelis"
 
-#: contents/ui/ExpandedRepresentation.qml:600
+#: package/contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat Track"
 msgstr "Kartoti takelį"
 
-#: contents/ui/ExpandedRepresentation.qml:600
+#: package/contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr "Kartoti"
 
-#: contents/ui/main.qml:85
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Atverti"
 
-#: contents/ui/main.qml:111
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Stabdyti"
 
-#: contents/ui/main.qml:120
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Baigti"
 
-#: contents/ui/main.qml:232
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Automatiškai parinkti leistuvę"
 
-#: contents/ui/main.qml:286
+#: package/contents/ui/main.qml:292
 #, fuzzy, kde-format
 #| msgctxt "by Artist (player name)"
 #| msgid ""
@@ -125,7 +120,7 @@ msgstr ""
 "pagal %1 (%2)\n"
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
 
-#: contents/ui/main.qml:286
+#: package/contents/ui/main.qml:292
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -139,7 +134,7 @@ msgstr ""
 "%1\n"
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
 
-#: contents/ui/main.qml:297
+#: package/contents/ui/main.qml:303
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid ""
@@ -154,7 +149,7 @@ msgstr ""
 "pagal %1 (pristabdyta, %2)\n"
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
 
-#: contents/ui/main.qml:297
+#: package/contents/ui/main.qml:303
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Paused (player name)\n"
@@ -170,6 +165,12 @@ msgid ""
 msgstr ""
 "Pristabdyta (%1)\n"
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
+
+#~ msgid "General"
+#~ msgstr "Bendra"
+
+#~ msgid "Volume step:"
+#~ msgstr "Garsinimo žingsnis:"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

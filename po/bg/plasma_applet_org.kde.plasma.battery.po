@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-15 20:34+0100\n"
+"PO-Revision-Date: 2022-12-07 19:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -48,7 +48,7 @@ msgstr "Оставащо време:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Изчисляване..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Системата е в режим на пестене на енерг�
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Скролиране за регулиране на яркостта на екрана"
 
 #: package/contents/ui/main.qml:310
 #, kde-format

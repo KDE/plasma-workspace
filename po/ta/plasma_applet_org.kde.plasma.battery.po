@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-17 19:38+0530\n"
+"PO-Revision-Date: 2022-12-08 21:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.11.90\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -46,7 +46,7 @@ msgstr "மீதமுள்ள நேரம்:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "கணிக்கப்படுகிறது…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -202,7 +202,7 @@ msgstr "கணினி ஆற்றல் சேமிப்பு பயன்
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "திரையின் பிரகாசத்தை மாற்ற உருளவும்"
 
 #: package/contents/ui/main.qml:310
 #, kde-format

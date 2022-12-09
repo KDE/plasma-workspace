@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-12 07:27+0100\n"
+"PO-Revision-Date: 2022-12-08 22:15+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language-Team: Basque\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgstr "Geratzen den denbora:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Kalkulatzen..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Sistema Energia aurrezteko moduan dago"
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Kiribildu pantailaren distira doitzeko"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
