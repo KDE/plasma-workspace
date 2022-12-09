@@ -1264,6 +1264,27 @@ void PanelView::updateStruts()
             KX11Extras::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             return;
         }
+
+        if (m_shellSurface) {
+            // This sets the screen side to reserve the space for
+            switch (location()) {
+            case Plasma::Types::TopEdge:
+                m_shellSurface->setAnchor(KWayland::Client::PlasmaShellSurface::Anchor::Top);
+                break;
+            case Plasma::Types::BottomEdge:
+                m_shellSurface->setAnchor(KWayland::Client::PlasmaShellSurface::Anchor::Bottom);
+                break;
+            case Plasma::Types::RightEdge:
+                m_shellSurface->setAnchor(KWayland::Client::PlasmaShellSurface::Anchor::Right);
+                break;
+            case Plasma::Types::LeftEdge:
+                m_shellSurface->setAnchor(KWayland::Client::PlasmaShellSurface::Anchor::Left);
+                break;
+            default:
+                break;
+            }
+            m_shellSurface->setExclusiveZone(thickness());
+        }
         // extended struts are to the combined screen geoms, not the single screen
         int leftOffset = thisScreen.x();
         int rightOffset = wholeScreen.right() - thisScreen.right();
@@ -1273,28 +1294,28 @@ void PanelView::updateStruts()
 
         switch (location()) {
         case Plasma::Types::TopEdge:
-            strut.top_width = totalThickness() + topOffset;
+            strut.top_width = thickness() + topOffset;
             strut.top_start = x();
             strut.top_end = x() + width() - 1;
             //                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
             break;
 
         case Plasma::Types::BottomEdge:
-            strut.bottom_width = totalThickness() + bottomOffset;
+            strut.bottom_width = thickness() + bottomOffset;
             strut.bottom_start = x();
             strut.bottom_end = x() + width() - 1;
             //                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
             break;
 
         case Plasma::Types::RightEdge:
-            strut.right_width = totalThickness() + rightOffset;
+            strut.right_width = thickness() + rightOffset;
             strut.right_start = y();
             strut.right_end = y() + height() - 1;
             //                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
             break;
 
         case Plasma::Types::LeftEdge:
-            strut.left_width = totalThickness() + leftOffset;
+            strut.left_width = thickness() + leftOffset;
             strut.left_start = y();
             strut.left_end = y() + height() - 1;
             //                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
