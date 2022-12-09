@@ -41,6 +41,9 @@ ColumnLayout {
         if (QQC2.StackView.status === QQC2.StackView.Active) {
             textArea.forceActiveFocus(Qt.ActiveWindowFocusReason);
             textArea.cursorPosition = textArea.text.length;
+            main.editing = true;
+        } else {
+            main.editing = false;
         }
     }
 
