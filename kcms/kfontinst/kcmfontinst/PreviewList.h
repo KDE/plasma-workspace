@@ -85,7 +85,7 @@ class CPreviewListView : public QTreeView
     Q_OBJECT
 
 public:
-    CPreviewListView(CFcEngine *eng, QWidget *parent);
+    CPreviewListView(QWidget *parent);
     ~CPreviewListView() override
     {
     }

@@ -161,10 +161,12 @@ public:
     static const int constBorder = 4;
 };
 
-CPreviewListView::CPreviewListView(CFcEngine *eng, QWidget *parent)
+CPreviewListView::CPreviewListView(QWidget *parent)
     : QTreeView(parent)
 {
-    theFcEngine = eng;
+    if (!theFcEngine) {
+        theFcEngine = new KFI::CFcEngine;
+    }
 
     QFont font;
     int pixelSize((int)(((font.pointSizeF() * QX11Info::appDpiY()) / 72.0) + 0.5));

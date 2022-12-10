@@ -43,6 +43,9 @@
 #include <QProgressBar>
 #include <QProgressDialog>
 #include <QPushButton>
+#include <QQmlContext> // For KI18n
+#include <QQuickItem>
+#include <QQuickWidget>
 #include <QSplitter>
 #include <QStandardPaths>
 #include <QTemporaryDir>
@@ -53,6 +56,8 @@
 #define CFG_PREVIEW_SPLITTER_SIZES "PreviewSplitterSizes"
 #define CFG_GROUP_SPLITTER_SIZES "GroupSplitterSizes"
 #define CFG_FONT_SIZE "FontSize"
+#define KFI_PREVIEW_GROUP "KFontInst Preview Settings"
+#define KFI_PREVIEW_STRING_KEY "String"
 
 K_PLUGIN_CLASS_WITH_JSON(KFI::CKCmFontInst, "kcm_fontinst.json")
 
@@ -153,7 +158,6 @@ int CPushButton::theirHeight = 0;
 
 CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     : KCModule(parent)
-    , m_preview(nullptr)
     , m_config(KFI_UI_CFG_FILE)
     , m_job(nullptr)
     , m_progress(nullptr)
@@ -229,17 +233,40 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     previewFrame->setFrameShadow(QFrame::Sunken);
     previewFrame->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
-    m_preview = new CFontPreview(previewFrame);
-    m_preview->setWhatsThis(i18n("This displays a preview of the selected font."));
+    // Preview widget pop-up menu
+    QAction *changeTextAct = new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text…"), this);
+
+    m_preview = new QQuickWidget(previewFrame);
     m_preview->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_preview->setResizeMode(QQuickWidget::SizeRootObjectToView);
     previewFrameLayout->addWidget(m_preview);
+    auto *localizedContext = new KLocalizedContext(this);
+    localizedContext->setTranslationDomain(QStringLiteral("kfontinst"));
+    m_preview->rootContext()->setContextObject(localizedContext);
+    m_preview->setSource(QUrl("qrc:/package/contents/ui/FontPreview.qml"));
+
+    auto previewLoaded = [this, changeTextAct](QQuickWidget::Status status) {
+        if (status != QQuickWidget::Ready) {
+            return;
+        }
+        const QString previewString = m_config.group(KFI_PREVIEW_GROUP).readEntry(KFI_PREVIEW_STRING_KEY, QString());
+        m_preview->rootObject()->setProperty("text", previewString);
+        connect(m_preview->rootObject(), SIGNAL(requestChangePreviewText()), changeTextAct, SLOT(trigger()));
+    };
+    if (m_preview->status() == QQuickWidget::Ready) {
+        previewLoaded(QQuickWidget::Ready);
+    } else {
+        connect(m_preview, &QQuickWidget::statusChanged, m_preview, previewLoaded);
+    }
     previewWidgetLayout->addWidget(previewFrame);
-    m_preview->engine()->readConfig(m_config);
 
     // List-style preview...
-    m_previewList = new CPreviewListView(m_preview->engine(), m_previewWidget);
+    m_previewList = new CPreviewListView(m_previewWidget);
     previewWidgetLayout->addWidget(m_previewList);
     m_previewList->setVisible(false);
+    // Menu
+    m_previewListMenu = new QMenu(m_previewList);
+    m_previewListMenu->addAction(changeTextAct);
 
     // Font List...
     m_fontList = new CFontList(fontWidget);
@@ -293,33 +320,14 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     defaultSizes += 300;
     defaultSizes += 220;
     m_previewSplitter->setSizes(cg.readEntry(CFG_PREVIEW_SPLITTER_SIZES, defaultSizes));
-    m_previewHidden = m_previewSplitter->sizes().at(1) < 8;
+    m_previewHidden = m_previewSplitter->sizes().at(1) < 4;
 
     defaultSizes.clear();
     defaultSizes += 110;
     defaultSizes += 350;
     m_groupSplitter->setSizes(cg.readEntry(CFG_GROUP_SPLITTER_SIZES, defaultSizes));
 
-    // Preview widget pop-up menu
-    m_previewMenu = new QMenu(m_preview);
-    QAction *zoomIn = KStandardAction::create(KStandardAction::ZoomIn, m_preview, SLOT(zoomIn()), this),
-            *zoomOut = KStandardAction::create(KStandardAction::ZoomOut, m_preview, SLOT(zoomOut()), this);
-
-    m_previewMenu->addAction(zoomIn);
-    m_previewMenu->addAction(zoomOut);
-    m_previewMenu->addSeparator();
-    CPreviewSelectAction *prevSel = new CPreviewSelectAction(m_previewMenu);
-    m_previewMenu->addAction(prevSel);
-    QAction *changeTextAct = new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text…"), this);
-    m_previewMenu->addAction(changeTextAct),
-
-        m_previewListMenu = new QMenu(m_previewList);
-    m_previewListMenu->addAction(changeTextAct),
-
-        // Connect signals...
-        connect(m_preview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
-    connect(m_preview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
-    connect(prevSel, &CPreviewSelectAction::range, m_preview, &CFontPreview::setUnicodeRange);
+    // Connect signals...
     connect(changeTextAct, &QAction::triggered, this, &CKCmFontInst::changeText);
     connect(m_filter, &CFontFilter::queryChanged, m_fontListView, &CFontListView::filterText);
     connect(m_filter, &CFontFilter::criteriaChanged, m_fontListView, &CFontListView::filterCriteria);
@@ -351,7 +359,6 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     connect(m_deleteFontControl, &QAbstractButton::clicked, this, &CKCmFontInst::deleteFonts);
     connect(m_scanDuplicateFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::duplicateFonts);
     // connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
-    connect(m_preview, &QWidget::customContextMenuRequested, this, &CKCmFontInst::previewMenu);
     connect(m_previewList, &CPreviewListView::showMenu, this, &CKCmFontInst::previewMenu);
     connect(m_previewSplitter, &QSplitter::splitterMoved, this, &CKCmFontInst::splitterMoved);
 
@@ -393,11 +400,7 @@ QString CKCmFontInst::quickHelp() const
 
 void CKCmFontInst::previewMenu(const QPoint &pos)
 {
-    if (m_previewList->isHidden()) {
-        m_previewMenu->popup(m_preview->mapToGlobal(pos));
-    } else {
-        m_previewListMenu->popup(m_previewList->mapToGlobal(pos));
-    }
+    m_previewListMenu->popup(m_previewList->mapToGlobal(pos));
 }
 
 void CKCmFontInst::splitterMoved()
@@ -417,9 +420,11 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
             if (list.count() < 2) {
                 CFontModelItem *mi = static_cast<CFontModelItem *>(list.last().internalPointer());
                 CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
-
                 if (font) {
-                    m_preview->showFont(font->isEnabled() ? font->family() : font->fileName(), font->styleInfo(), font->index());
+                    auto rootObject = m_preview->rootObject();
+                    rootObject->setProperty("name", font->isEnabled() ? font->family() : font->fileName());
+                    rootObject->setProperty("styleInfo", font->styleInfo());
+                    rootObject->setProperty("face", font->index());
                 }
             } else {
                 m_previewList->showFonts(list);
@@ -773,15 +778,16 @@ void CKCmFontInst::disableGroup()
 void CKCmFontInst::changeText()
 {
     bool status;
-    QString oldStr(m_preview->engine()->getPreviewString()),
-        newStr(QInputDialog::getText(this, i18n("Preview Text"), i18n("Please enter new text:"), QLineEdit::Normal, oldStr, &status));
+    QString oldStr = m_preview->rootObject()->property("text").toString(),
+            newStr(QInputDialog::getText(this, i18n("Preview Text"), i18n("Please enter new text:"), QLineEdit::Normal, oldStr, &status));
 
     if (status && oldStr != newStr) {
-        m_preview->engine()->setPreviewString(newStr);
-
-        m_preview->showFont();
+        m_preview->rootObject()->setProperty("text", newStr);
+        // Will be updated automatically
         m_previewList->refreshPreviews();
     }
+
+    m_config.group(KFI_PREVIEW_GROUP).writeEntry(KFI_PREVIEW_STRING_KEY, newStr);
 }
 
 void CKCmFontInst::duplicateFonts()

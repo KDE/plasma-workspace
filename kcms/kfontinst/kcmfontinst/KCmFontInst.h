@@ -21,13 +21,13 @@ class QAction;
 class QLabel;
 class QMenu;
 class QProcess;
+class QQuickWidget;
 class QSplitter;
 
 namespace KFI
 {
 class CFontFilter;
 class CFontList;
-class CFontPreview;
 class CUpdateDialog;
 class CFontListView;
 class CProgressBar;
@@ -82,7 +82,7 @@ private:
 
 private:
     QSplitter *m_groupSplitter, *m_previewSplitter;
-    CFontPreview *m_preview;
+    QQuickWidget *m_preview = nullptr;
     CPreviewListView *m_previewList;
     KConfig m_config;
     QLabel *m_statusLabel;
@@ -103,7 +103,7 @@ private:
     QSet<QString> m_deletedFonts;
     QList<QUrl> m_modifiedUrls;
     CJobRunner *m_runner;
-    QMenu *m_previewMenu, *m_previewListMenu;
+    QMenu *m_previewListMenu;
     QWidget *m_previewWidget;
     bool m_previewHidden;
 };

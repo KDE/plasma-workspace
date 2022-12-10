@@ -1,12 +1,15 @@
 set(kcm_fontinst_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstjobrunner_SRCS} ${libkfontinstdbusiface_SRCS}
     DuplicatesDialog.cpp FontList.cpp GroupList.cpp KCmFontInst.cpp PrintDialog.cpp
-    FontFilter.cpp FontFilterProxyStyle.cpp FcQuery.cpp PreviewList.cpp)
+    FontFilter.cpp FontFilterProxyStyle.cpp FcQuery.cpp PreviewList.cpp
+    KCmFontInst.qrc
+)
 # qt_add_dbus_interface(kcm_fontinst_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 
 kcoreaddons_add_plugin(kcm_fontinst SOURCES ${kcm_fontinst_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
 kcmutils_generate_desktop_file(kcm_fontinst)
 
 target_link_libraries(kcm_fontinst
+    Qt::QuickWidgets
     KF5::Archive
     KF5::KCMUtils
     KF5::IconThemes
