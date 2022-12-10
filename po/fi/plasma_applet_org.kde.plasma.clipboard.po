@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: 2021-11-29 22:09+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -69,22 +69,22 @@ msgstr "QR-koodin luonti epäonnistui"
 msgid "The QR code is too large to be displayed"
 msgstr "QR-koodi on näytettäväksi liian suuri"
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Leikepöydän sisältö"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Leikepöydän asetukset…"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
 msgstr "Tyhjennä historia"
@@ -109,13 +109,13 @@ msgstr "Muokkaa sisältöä"
 msgid "Remove from history"
 msgstr "Poista historiasta"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Tallenna"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

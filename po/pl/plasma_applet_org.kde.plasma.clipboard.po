@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: 2021-10-30 09:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -69,22 +69,22 @@ msgstr "Nie udało się utworzyć kodu QR"
 msgid "The QR code is too large to be displayed"
 msgstr "Kod QR jest zbyt duży, aby go wyświetlić"
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Zawartość schowka"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Ustawienia schowka..."
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
 msgstr "Wyczyść historię"
@@ -109,13 +109,13 @@ msgstr "Edytuj zawartość"
 msgid "Remove from history"
 msgstr "Usuń z historii"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

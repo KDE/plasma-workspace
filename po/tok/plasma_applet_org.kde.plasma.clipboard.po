@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -67,22 +67,22 @@ msgstr ""
 msgid "The QR code is too large to be displayed"
 msgstr ""
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr ""
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr ""
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
 msgstr ""
@@ -107,13 +107,13 @@ msgstr ""
 msgid "Remove from history"
 msgstr ""
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

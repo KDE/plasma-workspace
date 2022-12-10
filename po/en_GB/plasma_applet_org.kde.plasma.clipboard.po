@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: 2022-01-01 16:31+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -68,22 +68,22 @@ msgstr "Creating QR code failed"
 msgid "The QR code is too large to be displayed"
 msgstr "The QR code is too large to be displayed"
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Clipboard Contents"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Clipboard is empty"
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configure Clipboard…"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
 msgstr "Clear History"
@@ -108,13 +108,13 @@ msgstr "Edit contents"
 msgid "Remove from history"
 msgstr "Remove from history"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Save"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

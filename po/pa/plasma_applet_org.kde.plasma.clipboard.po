@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: 2022-06-14 20:57-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -68,22 +68,22 @@ msgstr "QR ਕੋਡ ਬਣਾਉਣ ਲਈ ਅਸਫ਼ਲ"
 msgid "The QR code is too large to be displayed"
 msgstr "ਦਿਖਾਉਣ ਲਈ QR ਕੋਡ ਬਹੁਤ ਵੱਡਾ ਹੈ"
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਸਾਫ਼ ਕਰੋ"
@@ -108,13 +108,13 @@ msgstr "ਸਮੱਗਰੀ ਸੋਧ"
 msgid "Remove from history"
 msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "ਸੰਭਾਲੋ"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

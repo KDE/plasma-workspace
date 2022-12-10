@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-10-18 09:41+0200\n"
+"PO-Revision-Date: 2022-12-07 19:18+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:169
 #, kde-format
@@ -101,11 +101,7 @@ msgid "Choose player automatically"
 msgstr "Scegli automaticamente il lettore"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -113,13 +109,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "di %1 (%2)\n"
-"Clic centrale per sospendere"
+"Clic centrale per sospendere\n"
+"Scorri per regolare il volume"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -127,14 +121,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Clic centrale per sospendere"
+"Clic centrale per sospendere\n"
+"Scorri per regolare il volume"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -142,16 +133,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "di %1 (in pausa, %2)\n"
-"Clic centrale per riprodurre"
+"Clic centrale per riprodurre\n"
+"Scorri per regolare il volume"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -159,7 +145,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Sospeso (%1)\n"
-"Clic centrale per riprodurre"
+"Clic centrale per riprodurre\n"
+"Scorri per regolare il volume"
 
 #~ msgid "General"
 #~ msgstr "Generale"

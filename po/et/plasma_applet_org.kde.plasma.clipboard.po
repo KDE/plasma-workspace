@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
 "PO-Revision-Date: 2020-10-08 10:12+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -72,23 +72,23 @@ msgstr "Ribakoodi loomine nurjus"
 msgid "The QR code is too large to be displayed"
 msgstr "Ribakood on kuvamiseks liiga suur"
 
-#: contents/ui/clipboard.qml:26
+#: contents/ui/clipboard.qml:27
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Lõikepuhvri sisu"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Lõikepuhver on tühi"
 
-#: contents/ui/clipboard.qml:55
+#: contents/ui/clipboard.qml:56
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "Seadista lõikepuhvrit ..."
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
@@ -115,13 +115,13 @@ msgstr "Sisu muutmine"
 msgid "Remove from history"
 msgstr "Eemaldamine ajaloost"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

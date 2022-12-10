@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-14 09:04+0100\n"
+"PO-Revision-Date: 2022-12-07 19:18+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -50,7 +50,7 @@ msgstr "Tempo restante:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Stima..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -211,10 +211,9 @@ msgid "System is in Power Save mode"
 msgstr "Il sistema è in modalità di risparmio energetico"
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Luminosità schermo:"
+msgstr "Scorri per regolare la luminosità dello schermo"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
