@@ -11,6 +11,7 @@
 #include <KDesktopFile>
 
 #include <QCoreApplication>
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 
@@ -111,18 +112,22 @@ bool PlasmaAutostart::isStartConditionMet(const QString &condition)
     }
 
     const QStringList list = condition.split(QLatin1Char(':'));
+    qDebug() << "a" << list;
     if (list.count() < 4) {
         return true;
     }
 
+    qDebug() << "b";
     if (list[0].isEmpty() || list[2].isEmpty()) {
         return true;
     }
 
     KConfig config(list[0], KConfig::NoGlobals);
     KConfigGroup cg(&config, list[1]);
+    Q_ASSERT(cg.isValid());
 
     const bool defaultValue = (list[3].toLower() == QLatin1String("true"));
+    qDebug() << "c" << config.hasGroup(list[3]) <<  list[2] << cg.readEntry(list[2], defaultValue);
     return cg.readEntry(list[2], defaultValue);
 }
 

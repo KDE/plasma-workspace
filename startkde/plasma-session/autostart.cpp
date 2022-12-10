@@ -8,6 +8,7 @@
 
 #include "../plasmaautostart/plasmaautostart.h"
 
+#include <QDebug>
 #include <QDir>
 #include <QHash>
 #include <QStandardPaths>
@@ -69,8 +70,10 @@ void AutoStart::loadAutoStartList()
     for (auto it = files.constBegin(); it != files.constEnd(); ++it) {
         PlasmaAutostart config(*it);
         if (!config.autostarts(QStringLiteral("KDE"), PlasmaAutostart::CheckAll)) {
+            qDebug() << "skipping..." << config.command();
             continue;
         }
+        qDebug() << "ADDING..." << config.command();
 
         AutoStartItem item;
         item.service = *it;
