@@ -482,6 +482,11 @@ QString createStyleName(int weight, int width, int slant)
     if (KFI_NULL_SETTING != width) {
         widthString = widthStr(width);
     }
+
+    // To follow QFontDatabase::styles, width string should be the first string
+    if (!widthString.isEmpty()) {
+        name += widthString;
+    }
 #endif
 
     if (KFI_NULL_SETTING != slant) {
@@ -494,25 +499,21 @@ QString createStyleName(int weight, int width, int slant)
         weightString = weightStr(weight, !slantString.isEmpty() || !widthString.isEmpty());
 
         if (!weightString.isEmpty()) {
-            name = weightString;
+            if (!name.isEmpty()) {
+                name += QChar(' ');
+            }
+            name += weightString;
         }
     }
 
-#ifndef KFI_FC_NO_WIDTHS
-    if (!widthString.isEmpty()) {
-        if (!name.isEmpty()) {
-            name += QChar(' ');
-        }
-        name += widthString;
-    }
-#endif
-
+    // To follow QFontDatabase::styles, slantString should be the last string
     if (!slantString.isEmpty()) {
         if (!name.isEmpty()) {
             name += QChar(' ');
         }
         name += slantString;
     }
+
     return name;
 }
 

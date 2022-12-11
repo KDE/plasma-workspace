@@ -1,6 +1,7 @@
 <RCC>
     <qresource>
+        <file>package/contents/ui/CharacterPreview.qml</file>
         <file>package/contents/ui/FontPreview.qml</file>
-        <file>package/contents/ui/WaylandFontPreview.qml</file>
+        <file>package/contents/ui/StandardFontPreview.qml</file>
     </qresource>
 </RCC>

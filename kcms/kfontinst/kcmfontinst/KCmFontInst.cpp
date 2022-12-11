@@ -422,8 +422,8 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
                 CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
                 if (font) {
                     auto rootObject = m_preview->rootObject();
-                    rootObject->setProperty("name", font->isEnabled() ? font->family() : font->fileName());
-                    rootObject->setProperty("styleInfo", font->styleInfo());
+                    rootObject->setProperty("fontName", font->isEnabled() ? font->family() : font->fileName());
+                    rootObject->setProperty("styleName", font->style());
                     rootObject->setProperty("face", font->index());
                 }
             } else {

@@ -6,11 +6,11 @@
 
 #include "quickfontpreviewplugin.h"
 
-#include "quickfontpreviewitem.h"
+#include "quickfontpreviewbackend.h"
 
 void FontPreviewPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QByteArray("org.kde.plasma.private.fontview"));
 
-    qmlRegisterType<FontPreviewItem>(uri, 0, 1, "FontPreviewItem");
+    qmlRegisterType<FontPreviewBackend>(uri, 0, 1, "FontPreviewBackend");
 }

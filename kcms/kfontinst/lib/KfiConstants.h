@@ -72,17 +72,17 @@ enum EUdsExtraEntries {
 
 // Font name...
 constexpr const auto KFI_WEIGHT_THIN = kli18n("Thin");
-constexpr const auto KFI_WEIGHT_EXTRALIGHT = kli18n("Extra Light");
-constexpr const auto KFI_WEIGHT_ULTRALIGHT = kli18n("Ultra Light");
+constexpr const auto KFI_WEIGHT_EXTRALIGHT = kli18n("ExtraLight");
+constexpr const auto KFI_WEIGHT_ULTRALIGHT = kli18n("UltraLight");
 constexpr const auto KFI_WEIGHT_LIGHT = kli18n("Light");
 constexpr const auto KFI_WEIGHT_REGULAR = kli18n("Regular");
 constexpr const auto KFI_WEIGHT_NORMAL = kli18n("Normal");
 constexpr const auto KFI_WEIGHT_MEDIUM = kli18n("Medium");
-constexpr const auto KFI_WEIGHT_DEMIBOLD = kli18n("Demi Bold");
-constexpr const auto KFI_WEIGHT_SEMIBOLD = kli18n("Semi Bold");
+constexpr const auto KFI_WEIGHT_DEMIBOLD = kli18n("DemiBold");
+constexpr const auto KFI_WEIGHT_SEMIBOLD = kli18n("SemiBold");
 constexpr const auto KFI_WEIGHT_BOLD = kli18n("Bold");
-constexpr const auto KFI_WEIGHT_EXTRABOLD = kli18n("Extra Bold");
-constexpr const auto KFI_WEIGHT_ULTRABOLD = kli18n("Ultra Bold");
+constexpr const auto KFI_WEIGHT_EXTRABOLD = kli18n("ExtraBold");
+constexpr const auto KFI_WEIGHT_ULTRABOLD = kli18n("UltraBold");
 constexpr const auto KFI_WEIGHT_BLACK = kli18n("Black");
 constexpr const auto KFI_WEIGHT_HEAVY = kli18n("Heavy");
 
@@ -90,15 +90,15 @@ constexpr const auto KFI_SLANT_ROMAN = kli18n("Roman");
 constexpr const auto KFI_SLANT_ITALIC = kli18n("Italic");
 constexpr const auto KFI_SLANT_OBLIQUE = kli18n("Oblique");
 
-constexpr const auto KFI_WIDTH_ULTRACONDENSED = kli18n("Ultra Condensed");
-constexpr const auto KFI_WIDTH_EXTRACONDENSED = kli18n("Extra Condensed");
+constexpr const auto KFI_WIDTH_ULTRACONDENSED = kli18n("UltraCondensed");
+constexpr const auto KFI_WIDTH_EXTRACONDENSED = kli18n("ExtraCondensed");
 constexpr const auto KFI_WIDTH_CONDENSED = kli18n("Condensed");
-constexpr const auto KFI_WIDTH_SEMICONDENSED = kli18n("Semi Condensed");
+constexpr const auto KFI_WIDTH_SEMICONDENSED = kli18n("SemiCondensed");
 constexpr const auto KFI_WIDTH_NORMAL = kli18n("Normal");
-constexpr const auto KFI_WIDTH_SEMIEXPANDED = kli18n("Semi Expanded");
+constexpr const auto KFI_WIDTH_SEMIEXPANDED = kli18n("SemiExpanded");
 constexpr const auto KFI_WIDTH_EXPANDED = kli18n("Expanded");
-constexpr const auto KFI_WIDTH_EXTRAEXPANDED = kli18n("Extra Expanded");
-constexpr const auto KFI_WIDTH_ULTRAEXPANDED = kli18n("Ultra Expanded");
+constexpr const auto KFI_WIDTH_EXTRAEXPANDED = kli18n("ExtraExpanded");
+constexpr const auto KFI_WIDTH_ULTRAEXPANDED = kli18n("UltraExpanded");
 
 constexpr const auto KFI_SPACING_MONO = kli18n("Monospaced");
 constexpr const auto KFI_SPACING_CHARCELL = kli18n("Charcell");

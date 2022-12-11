@@ -8,19 +8,46 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kwindowsystem 1.0
 import org.kde.plasma.private.fontview 0.1
 
-FontPreviewItem {
+Column {
     id: preview
+
+    readonly property string fontFamily: sourceLoader.status === FontLoader.Ready ? sourceLoader.name : fontName
+    readonly property bool atMax: fontSize === 128
+    readonly property bool atMin: fontSize === 8
+
+    property int face: 0
+    property real fontSize: 14
+    property string fontName
+    property string styleName
+    property string text
+
+    spacing: 0
 
     Accessible.description: i18nc("@info:whatsthis", "This displays a preview of the selected font.")
 
     // For C++ side to open dialog
     signal requestChangePreviewText()
 
-    KWindowSystem {
-        id: kwindowsystem
+    function zoomIn() {
+        fontSize = Math.min(128, fontSize + 4);
+    }
+
+    function zoomOut() {
+        fontSize = Math.max(8, fontSize - 4);
+    }
+
+    FontPreviewBackend {
+        id: backend
+        name: preview.fontName
+        face: preview.face
+        previewCount: preview.width * preview.height / preview.fontSize / preview.fontSize / 1.2
+    }
+
+    FontLoader {
+        id: sourceLoader
+        source: preview.fontName
     }
 
     TapHandler {
@@ -30,7 +57,6 @@ FontPreviewItem {
 
     WheelHandler {
         property int angleDelta: 0
-        enabled: kwindowsystem.isPlatformX11
         onWheel: {
             angleDelta += event.angleDelta.y;
             if (angleDelta >= 120) {
@@ -49,41 +75,39 @@ FontPreviewItem {
 
         QQC2.MenuItem {
             action: QQC2.Action {
-                enabled: (kwindowsystem.isPlatformX11 && !preview.atMax) || (waylandPreviewLoader.active && !waylandPreviewLoader.item.atMax)
-                icon.name: "zoom-in"
+                enabled: !preview.atMax
                 text: i18nc("@item:inmenu", "Zoom In")
                 shortcut: StandardKey.ZoomIn
-                onTriggered: waylandPreviewLoader.active ? waylandPreviewLoader.item.zoomIn() : preview.zoomIn()
+                onTriggered: preview.zoomIn()
             }
         }
 
         QQC2.MenuItem {
             action: QQC2.Action {
-                enabled: (kwindowsystem.isPlatformX11 && !preview.atMin) || (waylandPreviewLoader.active && !waylandPreviewLoader.item.atMin)
+                enabled: !preview.atMin
                 icon.name: "zoom-out"
                 text: i18nc("@item:inmenu", "Zoom Out")
                 shortcut: StandardKey.ZoomOut
-                onTriggered: waylandPreviewLoader.active ? waylandPreviewLoader.item.zoomOut() : preview.zoomOut()
+                onTriggered: preview.zoomOut()
             }
         }
 
         QQC2.MenuSeparator { }
 
         QQC2.Menu {
-            enabled: kwindowsystem.isPlatformX11
             title: i18nc("@item:inmenu", "Preview Type")
 
             Repeater {
-                model: preview.unicodeRangeNames
+                model: backend.unicodeRangeNames
 
                 delegate: QQC2.MenuItem {
                     checkable: true
-                    checked: preview.unicodeRangeIndex === index
+                    checked: backend.unicodeRangeIndex === index
 
                     text: modelData
 
                     onToggled: if (checked) {
-                        preview.unicodeRangeIndex = index;
+                        backend.unicodeRangeIndex = index;
                     }
                 }
             }
@@ -91,6 +115,7 @@ FontPreviewItem {
 
         QQC2.MenuItem {
             action: QQC2.Action {
+                enabled: backend.unicodeRangeIndex === 0
                 icon.name: "edit-rename"
                 text: i18nc("@item:inmenu", "Change Preview Text…")
                 onTriggered: {
@@ -101,11 +126,18 @@ FontPreviewItem {
         }
     }
 
-    Loader {
-        id: waylandPreviewLoader
-        anchors.fill: parent
+    Text {
+        font.pointSize: 10
+        text: preview.fontFamily.length > 0 ? `${preview.fontFamily} ${preview.styleName}` : i18nc("@label", "ERROR: Could not determine font's name.")
+    }
 
-        active: kwindowsystem.isPlatformWayland
-        source: "WaylandFontPreview.qml"
+    Kirigami.Separator {
+        width: parent.width
+    }
+
+    Loader {
+        width: parent.width
+        asynchronous: true
+        source: backend.unicodeRangeIndex === 0 ? "StandardFontPreview.qml" : "CharacterPreview.qml"
     }
 }

@@ -1,5 +1,5 @@
 set(quickfontviewplugin_SRCS
-    quickfontpreviewitem.cpp
+    quickfontpreviewbackend.cpp
     quickfontpreviewplugin.cpp
 )
 
@@ -8,8 +8,9 @@ target_link_libraries(quickfontviewplugin
     Qt::Core
     Qt::Qml
     Qt::Quick
-    KF5::WindowSystem
-    kfontinstui
+    Fontconfig::Fontconfig
+    Freetype::Freetype
+    KF5::I18n
 )
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/fontview)
