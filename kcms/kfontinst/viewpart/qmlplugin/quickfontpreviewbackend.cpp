@@ -8,6 +8,7 @@
 #include "quickfontpreviewbackend.h"
 
 #include <QFile>
+#include <QtConcurrent>
 
 #include <KLocalizedString>
 
@@ -143,6 +144,12 @@ void FontPreviewBackend::updateBlockRange()
         return;
     }
 
+    if (m_futureWatcher) {
+        m_futureWatcher->cancel();
+        m_futureWatcher->deleteLater();
+        m_futureWatcher = nullptr;
+    }
+
     m_unicodeRangeNames = QStringList{i18n("Standard Preview"), i18n("All Characters")};
 
     switch (m_mode) {
@@ -197,52 +204,68 @@ void FontPreviewBackend::updateBlockRange()
     }
 
     m_characters.clear();
-
-    switch (m_unicodeRangeIndex) {
-    case 0: // Standard Preview
+    if (m_unicodeRangeIndex == 0) {
+        Q_EMIT charactersChanged();
         return;
+    }
 
-    case 1: {
-        FT_UInt index;
-        unsigned charcode = FT_Get_First_Char(m_ftFace, &index);
+    QFuture<QString> future = QtConcurrent::run([this] {
+        QString characters;
 
-        if (!index) {
+        switch (m_unicodeRangeIndex) {
+        case 0: // Standard Preview
+            Q_UNREACHABLE();
+
+        case 1: {
+            FT_UInt index;
+            unsigned charcode = FT_Get_First_Char(m_ftFace, &index);
+
+            if (!index) {
+                break;
+            }
+
+            characters += QChar(charcode);
+
+            do {
+                charcode = FT_Get_Next_Char(m_ftFace, charcode, &index);
+                characters += QChar(charcode);
+                // if FT_Get_Next_Char writes 0 to index then no more characters in font face
+            } while (index && unsigned(m_characters.size()) < m_previewCount);
+
             break;
         }
 
-        m_characters += QChar(charcode);
-
-        do {
-            charcode = FT_Get_Next_Char(m_ftFace, charcode, &index);
-            m_characters += QChar(charcode);
-            // if FT_Get_Next_Char writes 0 to index then no more characters in font face
-        } while (index && unsigned(m_characters.size()) < m_previewCount);
-
-        break;
-    }
-
-    default: {
-        Q_ASSERT(m_unicodeRangeIndex >= 2); // Should be checked by setUnicodeRange
-        if (m_unicodeRangeIndex < m_unicodeRangeNames.size()) {
-            const auto &unicodeBlock = constUnicodeBlocks[m_unicodeRangeIndex - 2];
-            for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
-                m_characters += QChar(charcode);
-            }
-        } else {
-            int scriptIndex = m_unicodeRangeIndex - m_unicodeRangeNames.size();
-
-            for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
-                if (constUnicodeScripts[i].scriptIndex != scriptIndex) {
-                    continue;
-                }
-                const auto &unicodeBlock = constUnicodeScripts[i];
+        default: {
+            Q_ASSERT(m_unicodeRangeIndex >= 2); // Should be checked by setUnicodeRange
+            if (m_unicodeRangeIndex < m_unicodeRangeNames.size()) {
+                const auto &unicodeBlock = constUnicodeBlocks[m_unicodeRangeIndex - 2];
                 for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
-                    m_characters += QChar(charcode);
+                    characters += QChar(charcode);
+                }
+            } else {
+                int scriptIndex = m_unicodeRangeIndex - m_unicodeRangeNames.size();
+
+                for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
+                    if (constUnicodeScripts[i].scriptIndex != scriptIndex) {
+                        continue;
+                    }
+                    const auto &unicodeBlock = constUnicodeScripts[i];
+                    for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
+                        characters += QChar(charcode);
+                    }
                 }
             }
         }
-    }
-    }
+        }
+        return characters;
+    });
 
-    Q_EMIT charactersChanged();
+    m_futureWatcher = new QFutureWatcher<QString>(this);
+    connect(m_futureWatcher, &QFutureWatcher<QString>::finished, m_futureWatcher, [this] {
+        m_characters = m_futureWatcher->future().result();
+        m_futureWatcher->deleteLater();
+        m_futureWatcher = nullptr;
+        Q_EMIT charactersChanged();
+    });
+    m_futureWatcher->setFuture(future);
 }

@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QFutureWatcher>
 #include <QObject>
 #include <QQmlParserStatus>
 
@@ -97,4 +98,6 @@ private:
     FT_Error m_ftError = 0;
     FT_Library m_ftLibrary = nullptr;
     FT_Face m_ftFace = nullptr;
+
+    QFutureWatcher<QString> *m_futureWatcher = nullptr;
 };

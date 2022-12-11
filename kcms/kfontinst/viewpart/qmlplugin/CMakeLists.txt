@@ -8,6 +8,7 @@ target_link_libraries(quickfontviewplugin
     Qt::Core
     Qt::Qml
     Qt::Quick
+    Qt::Concurrent
     Fontconfig::Fontconfig
     Freetype::Freetype
     KF5::I18n
