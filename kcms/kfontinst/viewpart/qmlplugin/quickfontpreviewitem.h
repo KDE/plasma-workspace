@@ -9,7 +9,7 @@
 #include <QImage>
 #include <QQuickPaintedItem>
 
-#include "FcEngine.h"
+#include <freetype/freetype.h>
 
 /**
  * Provides a preview area for fonts that supports zoom in/out
@@ -29,10 +29,7 @@ class FontPreviewItem : public QQuickPaintedItem
     Q_PROPERTY(QStringList unicodeRangeNames READ unicodeRangeNames NOTIFY unicodeRangeNamesChanged)
 
     Q_PROPERTY(QString text READ previewText WRITE setPreviewText NOTIFY textChanged)
-
-    Q_PROPERTY(bool isNull READ isNull NOTIFY isNullChanged)
-    Q_PROPERTY(bool atMax READ atMax NOTIFY atMaxChanged)
-    Q_PROPERTY(bool atMin READ atMin NOTIFY atMinChanged)
+    Q_PROPERTY(int pixelSize READ fontPixelSize WRITE setFontPixelSize NOTIFY pixelSizeChanged)
 
 public:
     enum Mode {
@@ -46,7 +43,6 @@ public:
     ~FontPreviewItem() override;
 
     void componentComplete() override;
-    void paint(QPainter *painter) override;
 
     QString fontName() const;
     void setFontName(const QString &name);
@@ -71,13 +67,10 @@ public:
     QString previewText() const;
     void setPreviewText(const QString &text);
 
-    bool isNull() const;
+    int fontPixelSize() const;
+    void setFontPixelSize(int newSize);
 
-    bool atMax() const;
-    bool atMin() const;
-
-    Q_INVOKABLE void zoomIn();
-    Q_INVOKABLE void zoomOut();
+    void paint(QPainter *painter) override;
 
 Q_SIGNALS:
     void nameChanged();
@@ -87,30 +80,18 @@ Q_SIGNALS:
     void unicodeRangeChanged();
     void unicodeRangeNamesChanged();
     void textChanged();
-
-    /**
-     * Emitted when font preview becomes ready or invalid
-     */
-    void isNullChanged();
-
-    void atMaxChanged();
-    void atMinChanged();
+    void pixelSizeChanged();
 
 protected:
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#else
-    void geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#endif
     void updatePolish() override;
 
 private:
+    void showFont();
+
     /**
      * @see KFI::CPreviewSelectAction::selected
      */
     void updateBlockRange();
-
-    std::unique_ptr<KFI::CFcEngine> m_engine;
 
     bool m_ready = false;
     QString m_fontName;
@@ -124,9 +105,12 @@ private:
     Mode m_mode = Basic;
     QStringList m_unicodeRangeNames;
     int m_unicodeRangeIndex = 0;
-    QList<KFI::CFcEngine::TRange> m_range;
-    QList<KFI::CFcEngine::TChar> m_chars;
-    KFI::CFcEngine::TChar m_lastChar;
+    FT_Error m_ftError = 0;
+    FT_Library m_ftLibrary = nullptr;
+    FT_Face m_ftFace = nullptr;
+    std::vector<unsigned> m_characters;
+    bool m_unicodeRangeChanged = true;
 
     QString m_previewString;
+    int m_fontPixelSize = 10;
 };

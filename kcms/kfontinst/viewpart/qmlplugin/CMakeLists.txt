@@ -8,7 +8,9 @@ target_link_libraries(quickfontviewplugin
     Qt::Core
     Qt::Qml
     Qt::Quick
+    KF5::I18n
     KF5::WindowSystem
+    Freetype::Freetype
     kfontinstui
 )
 
