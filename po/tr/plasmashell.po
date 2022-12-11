@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-07 00:49+0000\n"
-"PO-Revision-Date: 2022-10-12 15:10+0300\n"
+"PO-Revision-Date: 2022-12-10 18:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -252,19 +252,19 @@ msgstr "Boşalt: %1"
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "Kullanımdaki Yazılım Gerçekleyici"
+msgstr "Kullanımdaki Yazılımsal Sunucu"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "Kullanımdaki Yazılım Gerçekleyici"
+msgstr "Kullanımdaki Yazılımsal Sunucu"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr "Gerçekleme kalitesi düşebilir"
+msgstr "Sunum kalitesi düşebilir"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format

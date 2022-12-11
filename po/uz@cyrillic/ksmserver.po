@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2009-10-16 00:04+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -22,66 +22,66 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Тизимдан чиқиш '%1' томонидан бекор қилинди"
 
-#: main.cpp:117
+#: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
 msgstr ""
 
-#: main.cpp:121 main.cpp:127
+#: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr ""
 
-#: main.cpp:123
+#: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr ""
 
-#: main.cpp:129
+#: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr ""
 
-#: main.cpp:133
+#: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:136
+#: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 
-#: main.cpp:149 main.cpp:184
+#: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
 msgstr ""
 
-#: main.cpp:151 main.cpp:186
+#: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
 msgstr ""
 
-#: main.cpp:159 main.cpp:172
+#: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr ""
 
-#: main.cpp:162 main.cpp:175
+#: main.cpp:163 main.cpp:176
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
 
-#: main.cpp:190
+#: main.cpp:191
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "\n"
@@ -89,34 +89,34 @@ msgid ""
 "Plasma is unable to start.\n"
 msgstr ""
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr ""
 
-#: main.cpp:236
+#: main.cpp:237
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
 
-#: main.cpp:240
+#: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Агар иложи бўлса фойдаланувчининг сақланган сеансини қайта тиклайди"
 
-#: main.cpp:243
+#: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Масофадан уланишга ҳам рухсат бериш"
 
-#: main.cpp:246
+#: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr ""
 
-#: main.cpp:250
+#: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

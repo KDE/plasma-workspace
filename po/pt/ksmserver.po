@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2020-04-25 01:43+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -20,52 +20,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Encerramento cancelado por '%1'"
 
-#: main.cpp:117
+#: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
 msgstr "A $HOME não está definida!"
 
-#: main.cpp:121 main.cpp:127
+#: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "A pasta da $HOME (%1) não existe."
 
-#: main.cpp:123
+#: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "Não tem acesso de escrita para a pasta da $HOME (%1)."
 
-#: main.cpp:129
+#: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Não tem acesso de leitura para a pasta da $HOME (%1)."
 
-#: main.cpp:133
+#: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "A pasta da $HOME (%1) não tem espaço livre em disco."
 
-#: main.cpp:136
+#: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "A gravação na pasta da $HOME (%2) falhou com o erro '%1'"
 
-#: main.cpp:149 main.cpp:184
+#: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Não tem acesso de escrita em '%1'."
 
-#: main.cpp:151 main.cpp:186
+#: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Não tem acesso de leitura em '%1'."
 
-#: main.cpp:159 main.cpp:172
+#: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "A pasta temporária (%1) não tem espaço livre no disco."
 
-#: main.cpp:162 main.cpp:175
+#: main.cpp:163 main.cpp:176
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -74,7 +74,7 @@ msgstr ""
 "A gravação na pasta temporária (%2) falhou com\n"
 "o erro '%1'"
 
-#: main.cpp:190
+#: main.cpp:191
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -83,7 +83,7 @@ msgstr ""
 "Foi detectado o seguinte problema de instalação\n"
 "ao tentar iniciar o Plasma:"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "\n"
@@ -94,12 +94,12 @@ msgstr ""
 "\n"
 "O Plasma não consegue iniciar.\n"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problema de instalação na Área de Trabalho do Plasma!"
 
-#: main.cpp:236
+#: main.cpp:237
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -108,22 +108,22 @@ msgstr ""
 "O gestor de sessões do Plasma que sabe falar o protocolo normalizado\n"
 "de gestão de sessões do X11R6 (XSMP)."
 
-#: main.cpp:240
+#: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restaura a sessão gravada do utilizador, se disponível"
 
-#: main.cpp:243
+#: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permitir também as ligações remotas"
 
-#: main.cpp:246
+#: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Inicia a sessão no modo bloqueado"
 
-#: main.cpp:250
+#: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

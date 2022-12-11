@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2022-02-24 21:49+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -23,52 +23,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "வெளியேறுவதை '%1' ரத்து செய்தது"
 
-#: main.cpp:117
+#: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME அமைக்கப்படவில்லை!"
 
-#: main.cpp:121 main.cpp:127
+#: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME அடைவு (%1) இல்லை."
 
-#: main.cpp:123
+#: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "$HOME (%1) அடைவிற்கு எழுத முடியவில்லை."
 
-#: main.cpp:129
+#: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME (%1) அடைவை படிக்க முடியவில்லை."
 
-#: main.cpp:133
+#: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
 
-#: main.cpp:136
+#: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME (%2) அடைவிற்கு எழுதுதல், '%1' என்ற சிக்கலை தெரிவித்து தோல்வியடைந்தது"
 
-#: main.cpp:149 main.cpp:184
+#: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' என்பதற்கு எழுத அனுமதி இல்லை."
 
-#: main.cpp:151 main.cpp:186
+#: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' என்பதை படிக்க அனுமதி இல்லை."
 
-#: main.cpp:159 main.cpp:172
+#: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "தற்காலிக (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
 
-#: main.cpp:162 main.cpp:175
+#: main.cpp:163 main.cpp:176
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -77,7 +77,7 @@ msgstr ""
 "தற்காலிக (%2) அடைவிற்கு எழுதுதல், கீழ்வரும்  சிக்கலை தெரிவித்து தோல்வியடைந்தது:\n"
 "'%1'"
 
-#: main.cpp:190
+#: main.cpp:191
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -86,7 +86,7 @@ msgstr ""
 "பிளாஸ்மாவை துவக்க முயற்சிக்கும்போது கீழ்வரும்\n"
 " நிறுவல்நேர பிரச்சனை கண்டறியப்பட்டது:"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "\n"
@@ -97,12 +97,12 @@ msgstr ""
 "\n"
 "பிளாஸ்மாவை துவக்க முடியவில்லை.\n"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "பிளாஸ்மா பணிமேடையை நிறுவியதில் பிரச்சனை!"
 
-#: main.cpp:236
+#: main.cpp:237
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -111,22 +111,22 @@ msgstr ""
 "செந்தர X11R6 அமர்வு மேலாண் வரைமுறை (XSMP) யின் நம்பகதக்க பிளாஸ்மா \n"
 "அமர்வு மேலாளர்."
 
-#: main.cpp:240
+#: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "முந்தைய அமர்வு இருந்தால் அதை தொடரும்"
 
-#: main.cpp:243
+#: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "தொலை இணைப்புகளையும் அனுமதி"
 
-#: main.cpp:246
+#: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "அமர்வை பூட்டிய நிலையில் தொடங்கும்"
 
-#: main.cpp:250
+#: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2020-04-27 18:36+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,52 +26,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Odhlásenie zrušil '%1'"
 
-#: main.cpp:117
+#: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nie je nastavený!"
 
-#: main.cpp:121 main.cpp:127
+#: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Adresár $HOME (%1) neexistuje."
 
-#: main.cpp:123
+#: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "Nie je právo na zápis do adresára $HOME (%1)."
 
-#: main.cpp:129
+#: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Nie je právo na čítanie do adresára $HOME (%1)."
 
-#: main.cpp:133
+#: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Adresár $HOME (%1) nemá dosť miesta na disku."
 
-#: main.cpp:136
+#: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Zápis do adresára $HOME (%2) zlyhal s chybou '%1'"
 
-#: main.cpp:149 main.cpp:184
+#: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nie je prístup na zápis do '%1'."
 
-#: main.cpp:151 main.cpp:186
+#: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nie je prístup na čítanie do '%1'."
 
-#: main.cpp:159 main.cpp:172
+#: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Dočasný adresár (%1) nemá dosť miesta na disku."
 
-#: main.cpp:162 main.cpp:175
+#: main.cpp:163 main.cpp:176
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -80,7 +80,7 @@ msgstr ""
 "Zápis do dočasného adresára (%2) zlyhal\n"
 "    s chybou '%1'"
 
-#: main.cpp:190
+#: main.cpp:191
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -89,7 +89,7 @@ msgstr ""
 "Boli zistené nasledovné problémy inštalácie\n"
 "pri pokuse spustiť Plasmu:"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "\n"
@@ -100,12 +100,12 @@ msgstr ""
 "\n"
 "Plasmu nie je možné spustiť.\n"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problém s inštaláciou pracovnej plochy Plasma!"
 
-#: main.cpp:236
+#: main.cpp:237
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -114,22 +114,22 @@ msgstr ""
 "Spoľahlivý správca KDE sedení, ktorý komunikuje štandardným X11R6 \n"
 "protokolom správy sedenia (XSMP)."
 
-#: main.cpp:240
+#: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnoví uložené užívateľské sedenie, ak je dostupné"
 
-#: main.cpp:243
+#: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Povolí aj vzdialené pripojenia"
 
-#: main.cpp:246
+#: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Spustí sedenie v zamknutom režime"
 
-#: main.cpp:250
+#: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

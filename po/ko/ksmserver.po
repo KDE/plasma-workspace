@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-11 00:49+0000\n"
 "PO-Revision-Date: 2020-06-15 19:06+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -24,52 +24,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "'%1'에서 로그아웃 취소함"
 
-#: main.cpp:117
+#: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME이 설정되지 않음!"
 
-#: main.cpp:121 main.cpp:127
+#: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME 디렉터리(%1)이(가) 없습니다."
 
-#: main.cpp:123
+#: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "$HOME 디렉터리(%1)에 쓰기 권한이 없습니다."
 
-#: main.cpp:129
+#: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME 디렉터리(%1)에 읽기 권한이 없습니다."
 
-#: main.cpp:133
+#: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME 디렉터리(%1)의 공간이 부족합니다."
 
-#: main.cpp:136
+#: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME 디렉터리(%2)에 기록하는 중 오류가 발생했습니다: '%1'"
 
-#: main.cpp:149 main.cpp:184
+#: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1'에 쓰기 권한이 없습니다."
 
-#: main.cpp:151 main.cpp:186
+#: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1'에 읽기 권한이 없습니다."
 
-#: main.cpp:159 main.cpp:172
+#: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Temp 디렉터리(%1)의 공간이 부족합니다."
 
-#: main.cpp:162 main.cpp:175
+#: main.cpp:163 main.cpp:176
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -78,7 +78,7 @@ msgstr ""
 "Temp 디렉터리(%2)에 기록하는 중 오류가 발생했습니다: \n"
 "  '%1'"
 
-#: main.cpp:190
+#: main.cpp:191
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -87,7 +87,7 @@ msgstr ""
 "Plasma를 시작하는 중 다음 설치 오류를\n"
 "발견했습니다:"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "\n"
@@ -98,12 +98,12 @@ msgstr ""
 "\n"
 "Plasma를 시작할 수 없습니다.\n"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma 작업 공간 설치 문제!"
 
-#: main.cpp:236
+#: main.cpp:237
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -112,22 +112,22 @@ msgstr ""
 "믿을 수 있는 Plasma 세션 관리자는 표준 X11R6 세션 관리 프로토콜\n"
 "XSMP와 통신합니다."
 
-#: main.cpp:240
+#: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "사용 가능한 경우 저장된 사용자 세션 복구"
 
-#: main.cpp:243
+#: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "원격 접속을 허용합니다"
 
-#: main.cpp:246
+#: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "세션을 잠근 상태로 시작하기"
 
-#: main.cpp:250
+#: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

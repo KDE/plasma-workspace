@@ -5,20 +5,21 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2021, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-02-27 14:14+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2022-12-10 18:43+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,7 +64,7 @@ msgstr "Döşenmiş"
 #: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Background:"
-msgstr "Arkaplan:"
+msgstr "Arka plan:"
 
 #: imagepackage/contents/ui/config.qml:142
 #, kde-format
@@ -78,12 +79,12 @@ msgstr "Katı renk"
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr "Arkaplan Rengini Seç"
+msgstr "Arka Plan Rengini Seç"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
-msgstr "Resim Ekle…"
+msgstr "Görsel Ekle…"
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
@@ -99,7 +100,7 @@ msgstr "Duvar Kağıdı Resmi Aç"
 #: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Sonraki Duvar Kağıdı Resmi"
+msgstr "Sonraki Duvar Kağıdı Görseli"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -109,7 +110,7 @@ msgstr "İçeren Klasörü Aç"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Duvar kağıdını eski durumuna getir"
+msgstr "Duvar kağıdını geri yükle"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
@@ -121,8 +122,8 @@ msgstr "Duvar Kağıdını Kaldır"
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
-"Bu araç, Plasma oturumu için bir resmi duvar kağıdı olarak ayarlamanıza izin "
-"verir."
+"Bu araç, Plasma oturumu için bir görseli duvar kağıdı olarak ayarlamanıza "
+"izin verir."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -130,7 +131,7 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
-"Bir resim dosyası veya kurulu bir duvar kağıdı kpackage'ını Plasma duvar "
+"Bir görseli dosyası veya kurulu bir duvar kağıdı kpackage'ını Plasma duvar "
 "kağıdı olarak ayarlayabilirsiniz"
 
 #: plasma-apply-wallpaperimage.cpp:45
@@ -159,7 +160,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr "Tüm masaüstleri için duvar kağıdı %1 resmi olarak ayarlandı"
+msgstr "Tüm masaüstleri için duvar kağıdı %1 görseli olarak ayarlandı"
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
@@ -183,12 +184,12 @@ msgstr "Duvar kağıdını içeren slaytların gösterileceği dizin"
 #: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Open Image"
-msgstr "Resim Aç"
+msgstr "Görsel Aç"
 
 #: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
-msgstr "Resim Dosyaları"
+msgstr "Görsel Dosyaları"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format

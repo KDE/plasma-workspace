@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-12-03 09:48+0100\n"
+"PO-Revision-Date: 2022-12-10 11:37+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -103,11 +103,7 @@ msgid "Choose player automatically"
 msgstr "Samoczynnie wybierz odtwarzacz"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -115,13 +111,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "autorstwa %1 (%2)\n"
-"Środkowy wstrzymuje"
+"Środkowy wstrzymuje\n"
+"Kółko dostosowuje głośność"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -129,14 +123,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Środkowy wstrzymuje"
+"Środkowy wstrzymuje\n"
+"Kółko dostosowuje głośność"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -144,16 +135,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "autorstwa %1 (wstrzymany, %2)\n"
-"Środkowy odtwarza"
+"Środkowy odtwarza\n"
+"Kółko dostosowuje głośność"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -161,7 +147,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Wstrzymany (%1)\n"
-"Środkowy odtwarza"
+"Środkowy odtwarza\n"
+"Kółko dostosowuje głośność"
 
 #~ msgid "General"
 #~ msgstr "Ogólne"
