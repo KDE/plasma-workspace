@@ -8,25 +8,19 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kwindowsystem 1.0
 import org.kde.plasma.private.fontview 0.1
 
 FontPreviewItem {
     id: preview
-
-    readonly property bool atMax: pixelSize === 128
-    readonly property bool atMin: pixelSize === 4
 
     Accessible.description: i18nc("@info:whatsthis", "This displays a preview of the selected font.")
 
     // For C++ side to open dialog
     signal requestChangePreviewText()
 
-    function zoomIn() {
-        pixelSize = Math.min(128, pixelSize + 4);
-    }
-
-    function zoomOut() {
-        pixelSize = Math.max(4, pixelSize - 4);
+    KWindowSystem {
+        id: kwindowsystem
     }
 
     TapHandler {
@@ -36,6 +30,7 @@ FontPreviewItem {
 
     WheelHandler {
         property int angleDelta: 0
+        enabled: kwindowsystem.isPlatformX11
         onWheel: {
             angleDelta += event.angleDelta.y;
             if (angleDelta >= 120) {
@@ -54,7 +49,7 @@ FontPreviewItem {
 
         QQC2.MenuItem {
             action: QQC2.Action {
-                enabled: !preview.atMax
+                enabled: (kwindowsystem.isPlatformX11 && !preview.atMax) || (waylandPreviewLoader.active && !waylandPreviewLoader.item.atMax)
                 icon.name: "zoom-in"
                 text: i18nc("@item:inmenu", "Zoom In")
                 shortcut: StandardKey.ZoomIn
@@ -64,7 +59,7 @@ FontPreviewItem {
 
         QQC2.MenuItem {
             action: QQC2.Action {
-                enabled: !preview.atMin
+                enabled: (kwindowsystem.isPlatformX11 && !preview.atMin) || (waylandPreviewLoader.active && !waylandPreviewLoader.item.atMin)
                 icon.name: "zoom-out"
                 text: i18nc("@item:inmenu", "Zoom Out")
                 shortcut: StandardKey.ZoomOut
@@ -75,6 +70,7 @@ FontPreviewItem {
         QQC2.MenuSeparator { }
 
         QQC2.Menu {
+            enabled: kwindowsystem.isPlatformX11
             title: i18nc("@item:inmenu", "Preview Type")
 
             Repeater {
@@ -103,5 +99,13 @@ FontPreviewItem {
                 }
             }
         }
+    }
+
+    Loader {
+        id: waylandPreviewLoader
+        anchors.fill: parent
+
+        active: kwindowsystem.isPlatformWayland
+        source: "WaylandFontPreview.qml"
     }
 }
