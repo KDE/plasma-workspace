@@ -398,7 +398,7 @@ if(KF5Holidays_FOUND)
     add_subdirectory(plasmacalendarintegration)
 endif()
 
-# ki18n_install(po)
+ki18n_install(po)
 
 install(FILES plasma-workspace.categories   DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

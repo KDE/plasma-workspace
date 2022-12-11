@@ -8,7 +8,6 @@
 #include "quickfontpreviewbackend.h"
 
 #include <QFile>
-#include <QtConcurrent>
 
 #include <KLocalizedString>
 
@@ -39,7 +38,7 @@ void FontPreviewBackend::classBegin()
 void FontPreviewBackend::componentComplete()
 {
     m_ready = m_ftError == 0;
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 int FontPreviewBackend::fontFace() const
@@ -56,7 +55,7 @@ void FontPreviewBackend::setFontFace(int id)
     m_fontFace = id;
     Q_EMIT faceChanged();
 
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 unsigned FontPreviewBackend::previewCount() const
@@ -73,7 +72,7 @@ void FontPreviewBackend::setPreviewCount(unsigned value)
     m_previewCount = value;
     Q_EMIT previewCountChanged();
 
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 QString FontPreviewBackend::fontName() const
@@ -90,7 +89,7 @@ void FontPreviewBackend::setFontName(const QString &name)
     m_fontName = name;
     Q_EMIT nameChanged();
 
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 FontPreviewBackend::Mode FontPreviewBackend::mode() const
@@ -108,7 +107,7 @@ void FontPreviewBackend::setMode(FontPreviewBackend::Mode newMode)
 
     Q_EMIT modeChanged();
 
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 QStringList FontPreviewBackend::unicodeRangeNames() const
@@ -130,7 +129,7 @@ void FontPreviewBackend::setUnicodeRangeIndex(int rangeId)
     m_unicodeRangeIndex = rangeId;
     Q_EMIT unicodeRangeChanged();
 
-    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange);
+    QMetaObject::invokeMethod(this, &FontPreviewBackend::updateBlockRange, Qt::QueuedConnection);
 }
 
 QString FontPreviewBackend::characters() const
@@ -142,12 +141,6 @@ void FontPreviewBackend::updateBlockRange()
 {
     if (!m_ready) {
         return;
-    }
-
-    if (m_futureWatcher) {
-        m_futureWatcher->cancel();
-        m_futureWatcher->deleteLater();
-        m_futureWatcher = nullptr;
     }
 
     m_unicodeRangeNames = QStringList{i18n("Standard Preview"), i18n("All Characters")};
@@ -175,6 +168,7 @@ void FontPreviewBackend::updateBlockRange()
 
     if (m_ftFace) {
         FT_Done_Face(m_ftFace);
+        m_ftFace = nullptr;
     }
 
     // FT_New_Face requires absolute font path
@@ -204,68 +198,52 @@ void FontPreviewBackend::updateBlockRange()
     }
 
     m_characters.clear();
-    if (m_unicodeRangeIndex == 0) {
-        Q_EMIT charactersChanged();
+
+    switch (m_unicodeRangeIndex) {
+    case 0: // Standard Preview
         return;
-    }
 
-    QFuture<QString> future = QtConcurrent::run([this] {
-        QString characters;
+    case 1: {
+        FT_UInt index;
+        unsigned charcode = FT_Get_First_Char(m_ftFace, &index);
 
-        switch (m_unicodeRangeIndex) {
-        case 0: // Standard Preview
-            Q_UNREACHABLE();
-
-        case 1: {
-            FT_UInt index;
-            unsigned charcode = FT_Get_First_Char(m_ftFace, &index);
-
-            if (!index) {
-                break;
-            }
-
-            characters += QChar(charcode);
-
-            do {
-                charcode = FT_Get_Next_Char(m_ftFace, charcode, &index);
-                characters += QChar(charcode);
-                // if FT_Get_Next_Char writes 0 to index then no more characters in font face
-            } while (index && unsigned(m_characters.size()) < m_previewCount);
-
+        if (!index) {
             break;
         }
 
-        default: {
-            Q_ASSERT(m_unicodeRangeIndex >= 2); // Should be checked by setUnicodeRange
-            if (m_unicodeRangeIndex < m_unicodeRangeNames.size()) {
-                const auto &unicodeBlock = constUnicodeBlocks[m_unicodeRangeIndex - 2];
-                for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
-                    characters += QChar(charcode);
-                }
-            } else {
-                int scriptIndex = m_unicodeRangeIndex - m_unicodeRangeNames.size();
+        m_characters += QChar(charcode);
 
-                for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
-                    if (constUnicodeScripts[i].scriptIndex != scriptIndex) {
-                        continue;
-                    }
-                    const auto &unicodeBlock = constUnicodeScripts[i];
-                    for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
-                        characters += QChar(charcode);
-                    }
+        do {
+            charcode = FT_Get_Next_Char(m_ftFace, charcode, &index);
+            m_characters += QChar(charcode);
+            // if FT_Get_Next_Char writes 0 to index then no more characters in font face
+        } while (index && unsigned(m_characters.size()) < m_previewCount);
+
+        break;
+    }
+
+    default: {
+        Q_ASSERT(m_unicodeRangeIndex >= 2); // Should be checked by setUnicodeRange
+        if (m_unicodeRangeIndex < m_unicodeRangeNames.size()) {
+            const auto &unicodeBlock = constUnicodeBlocks[m_unicodeRangeIndex - 2];
+            for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
+                m_characters += QChar(charcode);
+            }
+        } else {
+            int scriptIndex = m_unicodeRangeIndex - m_unicodeRangeNames.size();
+
+            for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
+                if (constUnicodeScripts[i].scriptIndex != scriptIndex) {
+                    continue;
+                }
+                const auto &unicodeBlock = constUnicodeScripts[i];
+                for (unsigned charcode = unicodeBlock.start; charcode < unicodeBlock.end; ++charcode) {
+                    m_characters += QChar(charcode);
                 }
             }
         }
-        }
-        return characters;
-    });
+    }
+    }
 
-    m_futureWatcher = new QFutureWatcher<QString>(this);
-    connect(m_futureWatcher, &QFutureWatcher<QString>::finished, m_futureWatcher, [this] {
-        m_characters = m_futureWatcher->future().result();
-        m_futureWatcher->deleteLater();
-        m_futureWatcher = nullptr;
-        Q_EMIT charactersChanged();
-    });
-    m_futureWatcher->setFuture(future);
+    Q_EMIT charactersChanged();
 }
