@@ -18,8 +18,10 @@
 
 Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
     : QObject(parent)
-    , m_dbCacheFile(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite"))
-    , m_dbCacheFile_fav(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite"))
+    , m_dbCacheFile(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
+                    + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxdbfile.sqlite"))
+    , m_dbCacheFile_fav(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
+                        + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxfavdbfile.sqlite"))
     , m_favicon(new FallbackFavicon(this))
     , m_fetchsqlite(nullptr)
     , m_fetchsqlite_fav(nullptr)

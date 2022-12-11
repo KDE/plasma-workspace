@@ -21,7 +21,8 @@ public:
     {
         // Remove "Bookmarks" from end of path
         m_faviconSource = path.chopped(9) + QStringLiteral("Favicons");
-        m_faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), name);
+        m_faviconCache = QStringLiteral("%1/bookmarksrunner/KRunner-Chrome-Favicons-%2.sqlite")
+                             .arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), name);
     }
     inline QString path() const
     {

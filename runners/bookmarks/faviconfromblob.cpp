@@ -24,8 +24,8 @@
 FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObject *parent)
 {
     QString profileName = QFileInfo(profileDirectory).fileName();
-    QString faviconCache =
-        QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
+    QString faviconCache = QStringLiteral("%1/bookmarksrunner/KRunner-Chrome-Favicons-%2.sqlite")
+                               .arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), profileName);
     FetchSqlite *fetchSqlite = new FetchSqlite(faviconCache, parent);
 
     QString faviconQuery;
@@ -69,7 +69,8 @@ FaviconFromBlob::FaviconFromBlob(const QString &profileName, const QString &quer
     , m_blobcolumn(blobColumn)
     , m_fetchsqlite(fetchSqlite)
 {
-    m_profileCacheDirectory = QStringLiteral("%1/KRunner-Favicons-%2").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
+    m_profileCacheDirectory =
+        QStringLiteral("%1/bookmarksrunner/KRunner-Favicons-%2").arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), profileName);
     // qDebug() << "got cache directory: " << m_profileCacheDirectory;
     cleanCacheDirectory();
     QDir().mkpath(m_profileCacheDirectory);
