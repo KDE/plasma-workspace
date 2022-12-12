@@ -152,9 +152,3 @@ msgstr ""
 "En pausa (%1)\n"
 "Clic del mig per a reproduir\n"
 "Desplaceu per a ajustar el volum"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Volume step:"
-#~ msgstr "Pas del volum:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-06 00:47+0000\n"
-"PO-Revision-Date: 2022-11-26 18:47+0300\n"
+"PO-Revision-Date: 2022-12-11 20:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:166
@@ -393,8 +393,7 @@ msgstr "Parmak izi kaydı başarısız oldu."
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
-msgstr ""
-"Bu aygıt için yer kalmadı, devam etmek için diğer parmak izlerini silin."
+msgstr "Bu aygıt için yer kalmadı, sürdürmek için diğer parmak izlerini silin."
 
 #: src/fingerprintmodel.cpp:350
 #, kde-format

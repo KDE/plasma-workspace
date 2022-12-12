@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-12 00:49+0000\n"
 "PO-Revision-Date: 2010-01-29 13:24+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: servicerunner.cpp:381
+#: servicerunner.cpp:364
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -26,7 +26,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr ""
 
-#: servicerunner.cpp:426
+#: servicerunner.cpp:409
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr ":q:ಗೆ ತಾಳೆಯಾಗುವ ಹೆಸರು ಅಥವಾ ವಿವರಣೆಯನ್ನು ಹೊಂದಿರುವ ಅನ್ವಯಗಳನ್ನು ಹುಡುಕುತ್ತದೆ"
