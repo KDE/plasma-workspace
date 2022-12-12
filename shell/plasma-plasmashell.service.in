@@ -2,6 +2,8 @@
 Description=KDE Plasma Workspace
 After=plasma-ksmserver.service plasma-kcminit.service
 PartOf=graphical-session.target
+StartLimitIntervalSec=60s
+StartLimitBurst=3
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasmashell --no-respawn
