@@ -5,11 +5,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 AbstractItem {
@@ -120,7 +120,7 @@ AbstractItem {
     }
 
     Connections {
-        target: applet
+        target: plasmoidContainer.applet
 
         //activation using global keyboard shortcut
         function onActivated() {
@@ -129,7 +129,7 @@ AbstractItem {
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                systemTrayState.setActiveApplet(applet, model.row)
+                systemTrayState.setActiveApplet(plasmoidContainer.applet, model.row)
                 plasmoidContainer.startActivatedAnimation()
             }
         }
