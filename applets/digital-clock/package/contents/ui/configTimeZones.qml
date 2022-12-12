@@ -34,6 +34,12 @@ ColumnLayout {
         }
     }
 
+    QQC2.Label {
+        Layout.fillWidth: true
+        text: i18n("Tip: if you travel frequently, add another entry for your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
+        wrapMode: Text.Wrap
+    }
+
     QQC2.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
@@ -108,7 +114,7 @@ ColumnLayout {
                 trailing: RowLayout {
                     QQC2.Button {
                         visible: model.isLocalTimeZone && KCMShell.authorize("kcm_clock.desktop").length > 0
-                        text: i18n("Switch Local Time Zone…")
+                        text: i18n("Switch Systemwide Time Zone…")
                         icon.name: "preferences-system-time"
                         onClicked: KCMShell.openSystemSettings("kcm_clock")
                     }
@@ -126,7 +132,7 @@ ColumnLayout {
             section {
                 property: "isLocalTimeZone"
                 delegate: Kirigami.ListSectionHeader {
-                    label: section == "true" ? i18n("System's Local Time Zone") : i18n("Additional Time Zones")
+                    label: section == "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
                 }
             }
 
@@ -156,19 +162,14 @@ ColumnLayout {
         enabled: configuredTimezoneList.count > 1
         Layout.fillWidth: true
         Layout.topMargin: Kirigami.Units.largeSpacing
-        Layout.bottomMargin: Kirigami.Units.largeSpacing
         text: i18n("Switch displayed time zone by scrolling over clock applet")
-    }
-
-    Kirigami.Separator {
-        Layout.fillWidth: true
     }
 
     QQC2.Label {
         Layout.fillWidth: true
         Layout.leftMargin: Kirigami.Units.largeSpacing * 2
         Layout.rightMargin: Kirigami.Units.largeSpacing * 2
-        text: i18n("Note that using a different time zone for the clock does not change the systemwide local time zone. When you travel, switch the local time zone instead.")
+        text: i18n("Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead.")
         font: Kirigami.Theme.smallFont
         wrapMode: Text.Wrap
     }
