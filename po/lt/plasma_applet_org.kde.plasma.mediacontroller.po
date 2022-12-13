@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-11-19 01:14+0200\n"
+"PO-Revision-Date: 2022-12-12 20:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:169
 #, kde-format
@@ -106,11 +106,7 @@ msgid "Choose player automatically"
 msgstr "Automatiškai parinkti leistuvę"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -118,13 +114,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "pagal %1 (%2)\n"
-"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti\n"
+"Slinkite, norėdami reguliuoti garsumą"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -132,14 +126,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti\n"
+"Slinkite, norėdami reguliuoti garsumą"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -147,16 +138,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "pagal %1 (pristabdyta, %2)\n"
-"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą\n"
+"Slinkite, norėdami reguliuoti garsumą"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -164,7 +150,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Pristabdyta (%1)\n"
-"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą"
+"Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą\n"
+"Slinkite, norėdami reguliuoti garsumą"
 
 #~ msgid "General"
 #~ msgstr "Bendra"

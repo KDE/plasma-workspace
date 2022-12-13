@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-18 19:16+0200\n"
+"PO-Revision-Date: 2022-12-12 20:04+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Liko laiko:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Apskaičiuojama…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -213,7 +213,7 @@ msgstr "Sistema yra energijos taupymo veiksenoje"
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Slinkite norėdami derinti ekrano ryškumą"
 
 #: package/contents/ui/main.qml:310
 #, kde-format

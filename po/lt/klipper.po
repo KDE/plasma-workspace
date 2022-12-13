@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-11-19 01:33+0200\n"
+"PO-Revision-Date: 2022-12-12 21:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Teksto žymėjimas:"
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Tik tada, kai sąmoningai nukopijuotas"
 
 #: configdialog.cpp:142
 #, kde-format
@@ -79,7 +79,7 @@ msgid "Whether text selections are saved in the clipboard history."
 msgstr "Ar teksto žymėjimai bus įrašomi į iškarpinės istoriją."
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
+#, kde-format
 msgid "Non-text selection:"
 msgstr "Ne teksto žymėjimai:"
 
@@ -94,12 +94,12 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Ar ne teksto žymėjimai (pvz., paveikslai) bus įrašomi į iškarpinės istoriją."
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Iškylančiųjų veiksmų laiko limitas:"
+msgstr "Rodyti veiksmų iškylantįjį meniu:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -118,9 +118,7 @@ msgid "Exclude Windows..."
 msgstr "Išskirti langus..."
 
 #: configdialog.cpp:283
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
@@ -153,12 +151,15 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Kai <interface>match pattern</interface> matches the clipboard contents, its "
+"<interface>commands</interface> appear in the Klipper popup menu and can be "
+"executed."
 
 #: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Atitikimo šablonas ir komandos"
 
 #: configdialog.cpp:359
 #, kde-format
@@ -188,6 +189,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Šie veiksmai atsiras iškylančiajame meniu, kurį galima konfigūruoti "
+"<interface>Veiksmų meniu</interface> puslapyje."
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -196,12 +199,12 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Ištrinti pažymėtą veiksmą <resource>%1</resource><nl/>ir visas jo komandas?"
 
 #: configdialog.cpp:566
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Ištrinti veiksmą"
+msgstr "Patvirtinti veiksmo ištrynimą"
 
 #: configdialog.cpp:595
 #, kde-format
@@ -293,7 +296,7 @@ msgstr "Komanda"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Išvestis"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -318,12 +321,12 @@ msgstr ""
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Įveskite šabloną, pagal kurį iškarpinėje bus ieškoma atitikmens"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Atitikimo šablonas:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -333,11 +336,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"Atitikimo šablonas yra reguliarusis reiškinys. Išsamesnei informacijai, "
+"žiūrėkite šia tema <link url=\"https://en.wikipedia.org/wiki/"
+"Regular_expression\">irašą Vikipedijoje</link> (anglų kalba)."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Įveskite veiksmo aprašą"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:84
 #, kde-format
@@ -347,7 +353,7 @@ msgstr "Aprašas:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Įtraukti į automatinį iškylantįjį langą"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -379,12 +385,12 @@ msgstr "Ištrinti komandą"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Ištrinti pažymėtą komandą iš <resource>%1</resource>?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Patvirtinti komandos ištrynimą"
 
 #: editcommanddialog.cpp:47
 #, kde-format
@@ -394,7 +400,7 @@ msgstr "Komandos savybės"
 #: editcommanddialog.cpp:60
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Įveskite komandą ir argumentus"
 
 #: editcommanddialog.cpp:63
 #, kde-format
@@ -414,34 +420,32 @@ msgstr ""
 #: editcommanddialog.cpp:82
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Įveskite komandos aprašą"
 
 #: editcommanddialog.cpp:92
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Išvestis iš komandos:"
 
 #: editcommanddialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Pakeisti iškarpinę"
+msgstr "Pakeisti esamą iškarpinės turinį"
 
 #: editcommanddialog.cpp:98
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
 msgstr "Pridėti į iškarpinę"
 
 #: editcommanddialog.cpp:102
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Kas nutiks su standartine vykdomos komandos išvestimi."
 
 #: editcommanddialog.cpp:116
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Atstatyti komandai skirtą piktogramą į numatytąją"
 
 #: editcommanddialog.cpp:122
 #, kde-format
@@ -454,11 +458,10 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:154
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Iškylančiųjų veiksmų laiko limitas:"
+msgstr "Automatinis iškylantysis veiksmų meniu"
 
 #: klipper.cpp:177
 #, kde-format
@@ -510,11 +513,10 @@ msgid "Previous History Item"
 msgstr "Ankstesnis istorijos elementas"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Atverti Klipper ties pelės pozicija"
+msgstr "Rodyti elementus ties pelės vieta"
 
 #: klipper.cpp:243
 #, kde-format
@@ -602,7 +604,7 @@ msgstr "Klipper versija"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Įrašyti istoriją tarp darbalaukio seansų"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -611,6 +613,8 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Išsaugoti iškarpinės istoriją, kad kitą kartą jums prisijungus, ji būtų "
+"prieinama."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
@@ -625,13 +629,14 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"Neleisti iškarpinės turiniui būti išvalytam, pavyzdžiui, kai programa baigia "
+"darbą."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Žymėjimas ir iškarpinė"
+msgstr "Išlaikyti žymėjimą ir iškarpinės turinį vienodus"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -641,6 +646,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Pelės žymekliu pažymėtas turinys bus automatiškai nukopijuotas į iškarpinę, "
+"kad galėtų būti įdėtas naudojant Įdėjimo veiksmą arba vidurinįjį pelės "
+"mygtuką.<br/><a href=\"1\">Daugiau apie žymėjimą ir turinį</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -683,6 +691,8 @@ msgstr "Visada nepaisyti paveikslų"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Nelaikyti paveikslų iškarpinės istorijoje, net jeigu jie sąmoningai "
+"nukopijuoti."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -692,10 +702,9 @@ msgstr "Naudoti grafinį įprastųjų išraiškų (regexp) redaktorių"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Nepaisyti žymėjimo"
+msgstr "Iš karto atlikus žymėjimą"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -712,17 +721,15 @@ msgstr "WM_CLASS neturi veiksmų"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "Iškylančiųjų veiksmų laiko limitas:"
+msgstr "Automatinio veiksmų meniu laikas:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Iškylančiųjų veiksmų laiko limitas:"
+msgstr "Tiek laiko rodyti automatinį iškylantįjį veiksmų meniu."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
@@ -734,7 +741,7 @@ msgstr "Istorijos dydis:"
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "Iškarpinės istorijoje bus laikoma štai tiek elementų."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
@@ -744,10 +751,9 @@ msgstr "Fiktyvus įrašas, nurodantis pakeitimus veiksmo medžio valdiklyje"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Vykdant veiksmus panaikinti tarpus"
+msgstr "Panaikinti tarpus iš žymėjimo"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -761,10 +767,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Pakartoti veiksmus iš istorijos pasirinktam objektui"
+msgstr "Iš istorijos pasirinktiems elementams"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
@@ -777,10 +782,9 @@ msgstr "Ar tikrai norite išvalyti visą iškarpinės istoriją?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Įjungti MIME pagrįstus veiksmus"
+msgstr "Įtraukti MIME pagrįstus veiksmus"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -791,11 +795,10 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Iškarpinės turinys"
+msgstr "%1 - Iškarpinės elementai"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -803,10 +806,9 @@ msgid "Search…"
 msgstr "Ieškoti…"
 
 #: klipperpopup.cpp:167
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Įprastoji išraiška:"
+msgstr "Neteisingas reguliarusis reiškinys, %1"
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
@@ -824,10 +826,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE iškirpimo ir įdėjimo istorijos paslaugų programa"
+msgstr "Plasma iškirpimo ir įdėjimo istorijos paslaugų programa"
 
 #: main.cpp:31
 #, kde-format

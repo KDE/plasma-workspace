@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-13 19:52+0100\n"
+"PO-Revision-Date: 2022-12-11 20:37+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -60,7 +60,7 @@ msgstr "Temps restant :"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Estimation en cours..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -217,10 +217,9 @@ msgid "System is in Power Save mode"
 msgstr "Le système est en mode « Économie »."
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Luminosité de l'écran :"
+msgstr "Faire défiler pour ajuster la luminosité de l'écran"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
