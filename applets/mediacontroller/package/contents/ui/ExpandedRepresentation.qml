@@ -149,9 +149,61 @@ PlasmaExtras.Representation {
         }
     }
 
-    Item { // Album Art Background + Details
+    // Album Art Background + Details + Touch area to adjust position or volume
+    MultiPointTouchArea {
+        id: touchArea
         anchors.fill: parent
         clip: true
+
+        maximumTouchPoints: 1
+        minimumTouchPoints: 1
+        mouseEnabled: false
+        touchPoints: [
+            TouchPoint {
+                id: point1
+
+                property bool seeking: false
+                property bool adjustingVolume: false
+
+                onPressedChanged: if (!pressed) {
+                    seeking = false;
+                    adjustingVolume = false;
+                }
+                onSeekingChanged: if (seeking) {
+                    queuedPositionUpdate.stop();
+                } else {
+                    seekSlider.moved();
+                }
+            }
+        ]
+
+        Connections {
+            enabled: seekSlider.visible && point1.pressed && !point1.adjustingVolume
+            target: point1
+            // Control seek slider
+            function onXChanged() {
+                if (!point1.seeking && Math.abs(point1.x - point1.startX) < touchArea.width / 20) {
+                    return;
+                }
+                point1.seeking = true;
+                seekSlider.value = seekSlider.valueAt(Math.max(0, Math.min(1, seekSlider.position + (point1.x - point1.previousX) / touchArea.width))); // microseconds
+            }
+        }
+
+        Connections {
+            enabled: point1.pressed && !point1.seeking
+            target: point1
+            function onYChanged() {
+                if (!point1.adjustingVolume && Math.abs(point1.y - point1.startY) < touchArea.height / 20) {
+                    return;
+                }
+                point1.adjustingVolume = true;
+                const service = mpris2Source.serviceForSource(mpris2Source.current);
+                const operation = service.operationDescription("ChangeVolume");
+                operation.delta = (point1.previousY - point1.y) / touchArea.height;
+                service.startOperationCall(operation);
+            }
+        }
 
         ShaderEffect {
             id: backgroundImage
