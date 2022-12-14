@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-11 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:49+0000\n"
 "PO-Revision-Date: 2010-05-30 16:39+0200\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: logout.cpp:344
+#: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Odjavu zaustavio/la '%1'"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-11 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:49+0000\n"
 "PO-Revision-Date: 2020-06-06 14:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.1\n"
 
-#: logout.cpp:344
+#: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Logout cancelled by '%1'"

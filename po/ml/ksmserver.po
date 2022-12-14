@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-11 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:49+0000\n"
 "PO-Revision-Date: 2021-04-11 13:39+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.4\n"
 
-#: logout.cpp:344
+#: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "പുറത്തിറങ്ങുന്നതു് %1 റദ്ദാക്കി"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:49+0000\n"
 "PO-Revision-Date: 2021-11-16 02:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -265,12 +265,20 @@ msgstr "일주일의 시작 요일:"
 msgid "Available Plugins:"
 msgstr "사용 가능한 플러그인:"
 
-#: package/contents/ui/configTimeZones.qml:95
+#: package/contents/ui/configTimeZones.qml:39
+#, kde-format
+msgid ""
+"Tip: if you travel frequently, add another entry for your home time zone to "
+"this list. It will only appear when you change the systemwide time zone to "
+"something else."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:101
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "시계에서 현재 다음 시간대 사용 중"
 
-#: package/contents/ui/configTimeZones.qml:97
+#: package/contents/ui/configTimeZones.qml:103
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -279,27 +287,29 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:111
-#, kde-format
-msgid "Switch Local Time Zone…"
+#: package/contents/ui/configTimeZones.qml:117
+#, fuzzy, kde-format
+#| msgid "Switch Local Time Zone…"
+msgid "Switch Systemwide Time Zone…"
 msgstr "지역 시간대 변경…"
 
-#: package/contents/ui/configTimeZones.qml:120
+#: package/contents/ui/configTimeZones.qml:126
 #, kde-format
 msgid "Remove this time zone"
 msgstr "이 시간대 삭제"
 
-#: package/contents/ui/configTimeZones.qml:129
-#, kde-format
-msgid "System's Local Time Zone"
+#: package/contents/ui/configTimeZones.qml:135
+#, fuzzy, kde-format
+#| msgid "System's Local Time Zone"
+msgid "Systemwide Time Zone"
 msgstr "시스템의 지역 시간대"
 
-#: package/contents/ui/configTimeZones.qml:129
+#: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "추가 시간대"
 
-#: package/contents/ui/configTimeZones.qml:142
+#: package/contents/ui/configTimeZones.qml:148
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -307,32 +317,35 @@ msgid ""
 msgstr ""
 "시간대를 더 추가하면 애플릿 팝업에 표시하거나 시계에 바로 표시할 수 있음"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "시간대 추가…"
 
-#: package/contents/ui/configTimeZones.qml:160
+#: package/contents/ui/configTimeZones.qml:165
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "시계 애플릿에서 스크롤할 때 표시되는 시간대 전환"
 
-#: package/contents/ui/configTimeZones.qml:171
-#, kde-format
+#: package/contents/ui/configTimeZones.qml:172
+#, fuzzy, kde-format
+#| msgid ""
+#| "Note that using a different time zone for the clock does not change the "
+#| "systemwide local time zone. When you travel, switch the local time zone "
+#| "instead."
 msgid ""
-"Note that using a different time zone for the clock does not change the "
-"systemwide local time zone. When you travel, switch the local time zone "
-"instead."
+"Using this feature does not change the systemwide time zone. When you "
+"travel, switch the systemwide time zone instead."
 msgstr ""
 "시계의 시간대를 변경해도 시스템 기본 지역 시간대를 변경하지 않습니다. 여행할 "
 "때에는 지역 시간대만 변경하십시오."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
 msgstr "더 많은 시간대 추가"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -341,12 +354,12 @@ msgstr ""
 "최소한 하나의 시간대를 선택해야 합니다. 현재 지역 시간대가 자동으로 선택되었"
 "습니다."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2(%3)"
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

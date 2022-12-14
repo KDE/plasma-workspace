@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2022-12-14 00:49+0000\n"
 "PO-Revision-Date: 2015-02-05 00:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -270,12 +270,20 @@ msgstr ""
 msgid "Available Plugins:"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:95
+#: package/contents/ui/configTimeZones.qml:39
+#, kde-format
+msgid ""
+"Tip: if you travel frequently, add another entry for your home time zone to "
+"this list. It will only appear when you change the systemwide time zone to "
+"something else."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:101
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:97
+#: package/contents/ui/configTimeZones.qml:103
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -284,62 +292,61 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:111
+#: package/contents/ui/configTimeZones.qml:117
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
-msgid "Switch Local Time Zone…"
+msgid "Switch Systemwide Time Zone…"
 msgstr "Pokaži lokalnu vremensku zonu"
 
-#: package/contents/ui/configTimeZones.qml:120
+#: package/contents/ui/configTimeZones.qml:126
 #, fuzzy, kde-format
 #| msgid "Your system time zone"
 msgid "Remove this time zone"
 msgstr "Sistemska vremenska zona"
 
-#: package/contents/ui/configTimeZones.qml:129
+#: package/contents/ui/configTimeZones.qml:135
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
-msgid "System's Local Time Zone"
+msgid "Systemwide Time Zone"
 msgstr "Pokaži lokalnu vremensku zonu"
 
-#: package/contents/ui/configTimeZones.qml:129
+#: package/contents/ui/configTimeZones.qml:135
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Additional Time Zones"
 msgstr "Vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:142
+#: package/contents/ui/configTimeZones.qml:148
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:155
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Add Time Zones…"
 msgstr "Vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:160
+#: package/contents/ui/configTimeZones.qml:165
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:171
+#: package/contents/ui/configTimeZones.qml:172
 #, kde-format
 msgid ""
-"Note that using a different time zone for the clock does not change the "
-"systemwide local time zone. When you travel, switch the local time zone "
-"instead."
+"Using this feature does not change the systemwide time zone. When you "
+"travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:212
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. 'Local' was enabled "
@@ -351,12 +358,12 @@ msgstr ""
 "Makar jedna vremenska zona mora biti odabrana. \"Lokalno\" je odabrano "
 "automatski."
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:236
+#: package/contents/ui/configTimeZones.qml:237
 #, kde-format
 msgid "%1, %2"
 msgstr ""

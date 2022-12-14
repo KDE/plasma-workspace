@@ -142,17 +142,3 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr "by %1 (一時停止中、%2)"
-
-#~ msgid "General"
-#~ msgstr "全体"
-
-#~ msgid "Volume step:"
-#~ msgstr "音量ステップ:"
-
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "by %1 (%2)"
-
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "一時停止中 (%1)"

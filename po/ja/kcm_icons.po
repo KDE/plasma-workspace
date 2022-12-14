@@ -203,9 +203,3 @@ msgstr "テーマを削除"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#~ msgid "Toolbar"
-#~ msgstr "ツールバー"
-
-#~ msgid "Panel"
-#~ msgstr "パネル"

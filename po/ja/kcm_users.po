@@ -433,6 +433,3 @@ msgstr "あなたのアカウント"
 #, kde-format
 msgid "Other Accounts"
 msgstr "他のアカウント"
-
-#~ msgid "Continue"
-#~ msgstr "続行"

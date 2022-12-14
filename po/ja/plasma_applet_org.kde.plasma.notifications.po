@@ -436,7 +436,3 @@ msgstr "返信を入力…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "送信"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "%1 まで"

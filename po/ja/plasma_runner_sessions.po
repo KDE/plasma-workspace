@@ -175,8 +175,7 @@ msgid "Switch User"
 msgstr "ユーザを切り替え"
 
 #: sessionrunner.cpp:274
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "New Session"
 msgstr "新しいセッション"
 
@@ -189,61 +188,3 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
-
-#~ msgctxt "log out command"
-#~ msgid "logout"
-#~ msgstr "logout"
-
-#~ msgctxt "lock screen command"
-#~ msgid "lock"
-#~ msgstr "lock"
-
-#~ msgctxt "restart computer command"
-#~ msgid "reboot"
-#~ msgstr "reboot"
-
-#~ msgctxt "switch user command"
-#~ msgid "switch :q:"
-#~ msgstr "switch :q:"
-
-#~ msgid "new session"
-#~ msgstr "新しいセッション"
-
-#~ msgctxt "log out command"
-#~ msgid "Logout"
-#~ msgstr "Logout"
-
-#~ msgid "Restart the computer"
-#~ msgstr "コンピュータを再起動"
-
-#~ msgctxt "shut down computer command"
-#~ msgid "shutdown"
-#~ msgstr "shutdown"
-
-#~ msgid "Shut down the computer"
-#~ msgstr "コンピュータを停止"
-
-#, fuzzy
-#~| msgid "new session"
-#~ msgid "Save the session"
-#~ msgstr "新しいセッション"
-
-#~ msgid "Warning - New Session"
-#~ msgstr "警告 - 新しいセッション"
-
-#~ msgid ""
-#~ "<p>You have chosen to open another desktop session.<br />The current "
-#~ "session will be hidden and a new login screen will be displayed.<br />An "
-#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
-#~ "session, F%2 to the second session and so on. You can switch between "
-#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
-#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
-#~ "switching between sessions.</p>"
-#~ msgstr ""
-#~ "<p>別のデスクトップセッションを開くことを選択しました。<br />現在のセッ"
-#~ "ションは隠されて、新たにログインスクリーンが表示されます。<br />各セッショ"
-#~ "ンにはファンクションキーが一つずつ割り当てられます。通常、F%1 は一番最初の"
-#~ "セッション、F%2 は二番目のセッション、というふうに割り当てられます。セッ"
-#~ "ションを切り替えるには、Ctrl と Alt と該当するファンクションキーを同時に押"
-#~ "します。Plasma パネルとデスクトップメニューからセッションを切り替えること"
-#~ "もできます。</p>"
