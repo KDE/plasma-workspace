@@ -41,7 +41,7 @@ Menu {
                 if (clipboardMenu.view.currentIndex >= 0) {
                     var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
                     if (uuid) {
-                        clipboardSource.service(uuid, "select")
+                        clipboardSource.service(uuid, "select").start()
                         if (Plasmoid.hideOnWindowDeactivate) {
                             Plasmoid.expanded = false;
                         }
@@ -148,7 +148,12 @@ Menu {
         }
         return true;
     }
-    onItemSelected: clipboardSource.service(uuid, "select")
+    onItemSelected: {
+        clipboardSource.service(uuid, "select").start()
+        if (Plasmoid.hideOnWindowDeactivate) {
+            Plasmoid.expanded = false;
+        }
+    }
     onRemove: clipboardSource.service(uuid, "remove")
     onEdit: {
         stack.push(Qt.resolvedUrl("EditPage.qml"), {
