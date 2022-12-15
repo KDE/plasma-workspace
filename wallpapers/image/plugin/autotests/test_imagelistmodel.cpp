@@ -110,7 +110,8 @@ void ImageListModelTest::testImageListModelData()
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::ResolutionRole);
 
     QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
-    if (!KIO::PreviewJob::availablePlugins().empty()) {
+    const QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
+    if (availablePlugins.contains(QLatin1String("imagethumbnail"))) {
         m_dataSpy->wait();
         QCOMPARE(m_dataSpy->size(), 1);
         QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::ScreenshotRole);
