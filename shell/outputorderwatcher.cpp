@@ -256,7 +256,7 @@ void X11OutputOrderWatcher::refresh()
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
 #else
-bool OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
+bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
 #endif
 {
     Q_UNUSED(result);
