@@ -76,7 +76,7 @@ public:
             return QVariant();
         }
 
-        const auto it = d->availablePlugins.cbegin() + index.row();
+        const auto it = std::next(d->availablePlugins.cbegin(), index.row());
         const QString currentPlugin = it.key();
         const EventPluginsManagerPrivate::PluginData metadata = it.value();
 
