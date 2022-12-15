@@ -104,13 +104,13 @@ bool PlasmaAutostart::checkStartCondition() const
     return PlasmaAutostart::isStartConditionMet(df->desktopGroup().readEntry("X-KDE-autostart-condition"));
 }
 
-bool PlasmaAutostart::isStartConditionMet(const QString &condition)
+bool PlasmaAutostart::isStartConditionMet(QStringView condition)
 {
     if (condition.isEmpty()) {
         return true;
     }
 
-    const QStringList list = condition.split(QLatin1Char(':'));
+    const auto list = condition.split(QLatin1Char(':'));
     if (list.count() < 4) {
         return true;
     }
@@ -119,11 +119,11 @@ bool PlasmaAutostart::isStartConditionMet(const QString &condition)
         return true;
     }
 
-    KConfig config(list[0], KConfig::NoGlobals);
-    KConfigGroup cg(&config, list[1]);
+    KConfig config(list[0].toString(), KConfig::NoGlobals);
+    KConfigGroup cg(&config, list[1].toString());
 
-    const bool defaultValue = (list[3].toLower() == QLatin1String("true"));
-    return cg.readEntry(list[2], defaultValue);
+    const bool defaultValue = (list[3].toString().toLower() == QLatin1String("true"));
+    return cg.readEntry(list[2].toString(), defaultValue);
 }
 
 bool PlasmaAutostart::checkAllowedEnvironment(const QString &environment) const
