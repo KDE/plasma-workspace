@@ -8,14 +8,15 @@ import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.calendar 2.0
 
-Item {
-    id: root
+
+ListView {
+    id: infiniteList
+
+    readonly property double cellHeight: currentItem ? currentItem.cellHeight : 0
+    readonly property double cellWidth: currentItem ? currentItem.cellWidth : 0
 
     required property var backend
     required property int viewType
-    property QtObject eventPluginsManager
-    property alias delegate: infiniteRepeater.delegate
-    readonly property alias currentItem: infiniteList.currentItem
 
     enum ViewType {
         DayView,
@@ -23,243 +24,235 @@ Item {
         DecadeView
     }
 
-    enum AnimationDirection {
-        Upward,
-        Downward
+    property bool changeDate: false // To control whether to animate or animate + date change after start up complete. Should always be false on start up.
+    property bool dragHandled: false
+
+    highlightRangeMode: ListView.StrictlyEnforceRange
+    snapMode: ListView.SnapToItem
+    highlightMoveDuration: PlasmaCore.Units.longDuration
+    highlightMoveVelocity: -1
+    reuseItems: true
+    model: 3
+    keyNavigationEnabled: false // It's actually enabled. The default behaviour is not desirable
+
+    function focusFirstCellOfView() {
+        currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
     }
 
-    SwipeView {
-        id: infiniteList
+    function resetViewPosition() {
+        positionViewAtIndex(1, ListView.Beginning);
+        currentIndex = 1;
+    }
 
-        anchors.fill: parent
-        orientation: Qt.Vertical
-        currentIndex: 1 //middle of the view, currentIndex always returns back to middle so that user can flick both upward and downward
-
-        property bool handlingIndexChange: false // This var is used to prevent date change ⇆ index change loop
-        property var highlightMoveDuration: PlasmaCore.Units.longDuration
-        property int lastMonth: -1
-        property int lastYear: -1
-
-        Connections {
-            id: dateToViewSynchroniser
-            target: root.backend
-
-            // Animation is done by moving to the edge with zero animation
-            // duration and then coming with a non-zero animation duration
-            function onMonthChanged() {
-                infiniteList.animateDateChange()
-            }
-            function onYearChanged() {
-                infiniteList.animateDateChange()
+    // prevents keep changing the date by dragging and holding; returns true if date should not change else returns false
+    function handleDrag() {
+        if (dragHandled) { // if already date changed for dragging once (drag still going on like streams) then
+            resetViewPosition(); //reset so that further dragging is not broken when this dragging session is over
+            return true;        // return true so that still ongoing drags do not change date
+        } else { //  else if drag not handled then
+            if (draggingVertically) { // if reached view edge because of drag (and not wheel or buttons) then
+                dragHandled = true; // mark as drag handled so that next drags in stream are ignored
             }
         }
+        return false; // return false because we need to change date either for first drag or for view changed by some means other than drag
+    }
 
-        Repeater {
-            id: infiniteRepeater
-            model: 3
-        }
-
-        onCurrentIndexChanged: adjustDate()
-
-        Component.onCompleted: {
-            //init vars. last* vars are for tracking whether date changed toward future or past
-            contentItem.highlightMoveDuration = highlightMoveDuration;
-            lastMonth = root.backend.month - 1;
-            lastYear = root.backend.year;
-
-            // set up alternative model for delegates at edges
-            // so that they can be set up to always shows the last state of the main model
-            // date here means what the respective views should show(e.g. MonthView date -> month)
-            // this prevents them from showing the current date when they are being animated out of view
-            // since different years don't have different names for months, we don't need to set up alternative models for YearView
-            var alternativeModel = undefined;
-            if (root.viewType === InfiniteList.ViewType.DayView) {
-                alternativeModel = backend.daysModel;
-            } else if (root.viewType === InfiniteList.ViewType.DecadeView) {
-                alternativeModel = yearModel;
-            }
-            if (alternativeModel !== undefined) {
-                infiniteRepeater.itemAt(0).gridModel = alternativeModel;
-                infiniteRepeater.itemAt(2).gridModel = alternativeModel;
-            }
-        }
-
-/*----------------------------------------------------- helper functions ---------------------------------------------------------------*/
-
-        function resetIndexTo(index: int, duration = 0) {
-            contentItem.highlightMoveDuration = duration;
-            if (currentIndex !== index) {
-                currentIndex = index;
-            }
-        }
-
-        function changeDateOfView() {
-            const swipedUp = currentIndex == 2;
-
-            switch(root.viewType) {
-                case InfiniteList.ViewType.DayView:
-                    swipedUp ? root.backend.nextMonth() : root.backend.previousMonth();
-                    break;
-
-                case InfiniteList.ViewType.YearView:
-                    swipedUp ? root.backend.nextYear() : root.backend.previousYear();
-                    break;
-
-                case InfiniteList.ViewType.DecadeView:
-                    swipedUp ? root.backend.nextDecade() : root.backend.previousDecade();
-                    break;
-            }
-        }
-
-        function adjustDate() {
-            const inMiddle = currentIndex == 1;
-            if (handlingIndexChange || inMiddle) return;
-
-            handlingIndexChange = true;
-            changeDateOfView();
-            resetIndexTo(1); //back to middle
-            handlingIndexChange = false;
-        }
-
-        function animate(direction) {
-            if (handlingIndexChange) return;
-
-            const targetIndex = (direction === InfiniteList.AnimationDirection.Upward) ? 0 : 2;
-
-            handlingIndexChange = true;
-            resetIndexTo(targetIndex); //move to edge from middle
-            resetIndexTo(1, highlightMoveDuration); // come back to middle with non-zero animation duration
-            handlingIndexChange = false;
-        }
-
-        function animateDateChange(toFuture = undefined) {
-            const month = root.backend.month - 1;
-            const year = root.backend.year;
-            let goToFuture = false;
-
-            if(toFuture === undefined) {
-                switch(root.viewType) {
-                    case InfiniteList.ViewType.DayView:
-                        if (month === lastMonth) return;
-                        goToFuture = (month > lastMonth || year > lastYear) && !(year < lastYear);
-                        break;
-
-                    default:
-                        if (year === lastYear) return;
-                        goToFuture = year > lastYear;
-                        break;
-                }
-            } else {
-                goToFuture = toFuture;
-            }
-
-
-            if (goToFuture) {
-                animate(InfiniteList.AnimationDirection.Upward);
-            } else {
-                animate(InfiniteList.AnimationDirection.Downward);
-            }
-
-            lastMonth = month;
-            lastYear = year;
-        }
-
-        // used to update the alternative decadeview models when year changes
-        function updateDecadeOverview() {
-            const date = backend.displayedDate;
-            const day = date.getDate();
-            const month = date.getMonth() + 1;
-            const year = date.getFullYear();
-            const decade = year - year % 10;
-
-            for (let i = 0, j = yearModel.count; i < j; ++i) {
-                const label = decade - 1 + i;
-                yearModel.setProperty(i, "yearNumber", label);
-                yearModel.setProperty(i, "label", label);
-            }
-        }
-/*----------------------------------------------------- alternative models ---------------------------------------------------------------*/
-
-        Calendar {
-            id: backend
-
-            days: root.backend.days
-            weeks: root.backend.weeks
-            firstDayOfWeek: root.backend.firstDayOfWeek
-            today: root.backend.today
-
-            Component.onCompleted: {
-                daysModel.setPluginsManager(root.eventPluginsManager);
-            }
-        }
-
-        ListModel {
-            id: yearModel
-
-            Component.onCompleted: {
-                for (let i = 0; i < 12; ++i) {
-                    append({
-                        label: 2050, // this value will be overwritten, but it set the type of the property to int
-                        yearNumber: 2050,
-                        isCurrent: (i > 0 && i < 11) // first and last year are outside the decade
-                    })
-                }
-                infiniteList.updateDecadeOverview();
-            }
+    // These signal handlers animate the view. They are the only ones through which date (and should as well) changes.
+    onAtYEndChanged: {
+        if (atYEnd) {
+            if (handleDrag()) return;
+            changeDate ? nextView() : changeDate = true;
+            resetViewPosition();
         }
     }
 
-/*----------------------------------------------------- public functions ---------------------------------------------------------------*/
+    onAtYBeginningChanged: {
+        if (atYBeginning) {
+            if (handleDrag()) return;
+            changeDate ? previousView() : changeDate = true;
+            resetViewPosition();
+        }
+    }
 
-    function nextView() {
-        switch(root.viewType) {
+    onDraggingVerticallyChanged: if (draggingVertically === false) dragHandled = false; //reset the value when drag ends
+
+    Component.onCompleted: {
+        // set up alternative model for delegates at edges
+        // so that they can be set up to always show the right date (top: previous date; bottom: next date)
+        // date here means what the respective views should show(e.g. MonthView date -> month)
+        // this prevents them from showing the current date when they are being animated out of/into view
+        // since different years don't have different names for months, we don't need to set up alternative models for YearView
+
+        switch(infiniteList.viewType) {
             case InfiniteList.ViewType.DayView:
-                backend.goToMonth(root.backend.month);
-                backend.goToYear(root.backend.year);
-                root.backend.nextMonth();
-                break;
-
-            case InfiniteList.ViewType.YearView:
-                root.backend.nextYear();
+                infiniteList.itemAtIndex(0).gridModel = previousAlternativeBackend.item.daysModel;
+                infiniteList.itemAtIndex(2).gridModel = nextAlternativeBackend.item.daysModel;
                 break;
 
             case InfiniteList.ViewType.DecadeView:
-                backend.goToYear(root.backend.year);
-                infiniteList.updateDecadeOverview();
-                root.backend.nextDecade();
+                infiniteList.itemAtIndex(0).gridModel = previousYearModel.item;
+                infiniteList.itemAtIndex(2).gridModel = nextYearModel.item;
                 break;
         }
+    }
+
+    /* ------------------------------- UI ENDS ----------------- MODEL MANIPULATING FUNCTIONS ----------------------------------- */
+
+
+    // used to update the alternative decadeview models when year changes
+    function updateDecadeOverview(offset) {
+        if (Math.abs(offset) !== 1) return;
+
+        const model = offset == 1 ? nextYearModel.item: previousYearModel.item;
+        const year = backend.year + (10 * offset) // Increase or decrease year by a decade
+        const decade = year - year % 10;
+
+        for (let i = 0, j = model.count; i < j; ++i) { // aware
+            const label = decade - 1 + i;
+
+            model.setProperty(i, "yearNumber", label);
+            model.setProperty(i, "label", label);
+        }
+    }
+
+    function initYearModel(offset) {
+        if (Math.abs(offset) !== 1) return;
+
+        const model = offset == 1 ? nextYearModel.item: previousYearModel.item;
+        for (let i = 0; i < 12; ++i) {
+            model.append({
+                label: 2050, // this value will be overwritten, but it set the type of the property to int
+                yearNumber: 2050,
+                isCurrent: (i > 0 && i < 11) // first and last year are outside the decade
+            })
+        }
+
+        infiniteList.updateDecadeOverview(offset);
+    }
+
+    function modulo(a:int, n: int) { // always keep the 'a' between [1, n]
+        return ((((a - 1) % n) + n) % n) + 1;
     }
 
     function previousView() {
-        switch(root.viewType) {
+        switch(infiniteList.viewType) {
             case InfiniteList.ViewType.DayView:
-                backend.goToMonth(root.backend.month);
-                backend.goToYear(root.backend.year);
-                root.backend.previousMonth();
+                backend.previousMonth();
                 break;
 
             case InfiniteList.ViewType.YearView:
-                root.backend.previousYear();
+                backend.previousYear();
                 break;
 
             case InfiniteList.ViewType.DecadeView:
-                backend.goToYear(root.backend.year);
-                infiniteList.updateDecadeOverview();
-                root.backend.previousDecade();
+                backend.previousDecade();
                 break;
         }
     }
 
-    function resetToToday() {
-        backend.goToMonth(root.backend.month);
-        backend.goToYear(root.backend.year);
-        root.backend.resetToToday();
+    function nextView() {
+        switch(infiniteList.viewType) {
+            case InfiniteList.ViewType.DayView:
+                backend.nextMonth();
+                break;
+
+            case InfiniteList.ViewType.YearView:
+                backend.nextYear();
+                break;
+
+            case InfiniteList.ViewType.DecadeView:
+                backend.nextDecade();
+                break;
+        }
     }
 
-    function focusFirstCellOfView() {
-        infiniteList.currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
-        infiniteList.resetIndexTo(1)
-        infiniteList.currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
+    /*----------------------------------------------------- alternative models ---------------------------------------------------------------*/
+
+    Loader {
+        id: previousAlternativeBackend
+
+        active: infiniteList.viewType === InfiniteList.ViewType.DayView
+        asynchronous: true
+
+        sourceComponent: Calendar {
+            days: backend.days
+            weeks: backend.weeks
+            firstDayOfWeek: backend.firstDayOfWeek
+            today: backend.today
+
+            function goToPreviousView() {
+               const month = modulo(backend.month - 1, 12)
+               const year = month === 12 ? backend.year - 1 : backend.year
+               goToYear(year);
+               goToMonth(month);
+           }
+       }
+       onStatusChanged: if (status === Loader.Ready) item.goToPreviousView();
+    }
+
+    Loader {
+        id: nextAlternativeBackend
+
+        active: infiniteList.viewType === InfiniteList.ViewType.DayView
+        asynchronous: true
+
+        sourceComponent: Calendar {
+            days: backend.days
+            weeks: backend.weeks
+            firstDayOfWeek: backend.firstDayOfWeek
+            today: backend.today
+
+            function goToNextView() {
+                const month = modulo(backend.month + 1, 12)
+                const year = month === 1 ? backend.year + 1 : backend.year
+                goToYear(year);
+                goToMonth(month);
+            }
+        }
+        onStatusChanged: if (status === Loader.Ready) item.goToNextView(); //clear other model names
+    }
+
+    Loader {
+        id: nextYearModel
+
+        active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+        asynchronous: true
+
+        function update() { infiniteList.updateDecadeOverview(1) }
+
+        sourceComponent: ListModel {}
+        onStatusChanged: if (nextYearModel.status === Loader.Ready) infiniteList.initYearModel(1);
+    }
+
+    Loader {
+        id: previousYearModel
+
+        active: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+        asynchronous: true
+
+        function update() { infiniteList.updateDecadeOverview(-1) }
+
+        sourceComponent: ListModel {}
+        onStatusChanged: if (previousYearModel.status === Loader.Ready) infiniteList.initYearModel(-1);
+    }
+
+    Connections {
+        target: backend
+        enabled: infiniteList.viewType === InfiniteList.ViewType.DayView
+
+        function onMonthChanged() {
+            previousAlternativeBackend.item.goToPreviousView();
+            nextAlternativeBackend.item.goToNextView();
+        }
+    }
+
+    Connections {
+        target: backend
+        enabled: infiniteList.viewType === InfiniteList.ViewType.DecadeView
+
+        function onYearChanged() {
+            nextYearModel.update();
+            previousYearModel.update();
+        }
     }
 }

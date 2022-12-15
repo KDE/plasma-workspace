@@ -146,10 +146,6 @@ Item {
                 KeyNavigation.tab: daysCalendar.KeyNavigation.tab
 
                 Keys.onUpPressed: {
-                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
-                        event.accepted = false;
-                        return;
-                    }
                     if (index >= daysCalendar.columns) {
                         repeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     } else {
@@ -157,10 +153,6 @@ Item {
                     }
                 }
                 Keys.onDownPressed: {
-                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
-                        event.accepted = false;
-                        return;
-                    }
                     if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
                         repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     }

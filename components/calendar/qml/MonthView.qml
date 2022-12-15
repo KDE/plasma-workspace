@@ -88,16 +88,6 @@ Item {
         return Qt.formatDate(d, "dddd dd MMM yyyy");
     }
 
-    /**
-     * Move calendar to month view showing today's date.
-     */
-    function resetToToday() {
-        mainDaysCalendar.resetToToday();
-        root.currentDate = root.today;
-        root.currentDateAuxilliaryText = root.todayAuxilliaryText;
-        swipeView.currentIndex = 0;
-    }
-
     function updateYearOverview() {
         const date = calendarBackend.displayedDate;
         const day = date.getDate();
@@ -132,18 +122,22 @@ Item {
     }
 
     /**
+     * Move calendar to month view showing today's date.
+     */
+    function resetToToday() {
+        calendarBackend.resetToToday();
+        root.currentDate = root.today;
+        root.currentDateAuxilliaryText = root.todayAuxilliaryText;
+        swipeView.currentIndex = 0;
+    }
+
+    /**
      * Go to the next month/year/decade depending on the current
      * calendar view displayed.
      */
     function nextView() {
-        if (swipeView.currentIndex === 0) {
-            mainDaysCalendar.nextView();
-        } else if (swipeView.currentIndex === 1) {
-            yearView.nextView();
-        } else if (swipeView.currentIndex === 2) {
-            decadeView.nextView();
-        }
-
+        swipeView.currentItem.resetViewPosition();
+        swipeView.currentItem.incrementCurrentIndex();
     }
 
     /**
@@ -151,15 +145,9 @@ Item {
      * calendar view displayed.
      */
     function previousView() {
-        if (swipeView.currentIndex === 0) {
-            mainDaysCalendar.previousView();
-        } else if (swipeView.currentIndex === 1) {
-            yearView.previousView();
-        } else if (swipeView.currentIndex === 2) {
-            decadeView.previousView();
-        }
+        swipeView.currentItem.resetViewPosition();
+        swipeView.currentItem.decrementCurrentIndex();
     }
-
 
     /**
      * \return CalendarView
@@ -284,12 +272,6 @@ Item {
         InfiniteList {
            id: mainDaysCalendar
 
-           readonly property double cellHeight: currentItem ? currentItem.cellHeight : 0
-
-           backend: calendarBackend
-           viewType: InfiniteList.ViewType.DayView
-           eventPluginsManager: root.eventPluginsManager
-
            function handleUpPress(event) {
                 if(root.showDigitalClockHeader) {
                     root.upPressed(event);
@@ -298,10 +280,14 @@ Item {
                 swipeView.Keys.onUpPressed(event);
             }
 
+           backend: calendarBackend
+           viewType: InfiniteList.ViewType.DayView
+
            delegate: DaysCalendar {
                 columns: calendarBackend.days
                 rows: calendarBackend.weeks
-
+                width: mainDaysCalendar.width
+                height: mainDaysCalendar.height
                 showWeekNumbers: root.showWeekNumbers
 
                 headerModel: calendarBackend.days
@@ -338,7 +324,8 @@ Item {
                 rows: 4
 
                 dateMatchingPrecision: Calendar.MatchYearAndMonth
-
+                width: yearView.width
+                height: yearView.height
                 gridModel: monthModel
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
