@@ -32,7 +32,7 @@
 #include "corecompositor.h"
 #include "coreprotocol.h"
 #include "datadevice.h"
-#include "primaryoutput.h"
+#include "outputorder.h"
 #include "xdgoutputv1.h"
 #include "xdgshell.h"
 
@@ -94,11 +94,12 @@ public:
     }
     uint sendXdgShellPing();
     void xdgPingAndWaitForPong();
-    PrimaryOutputV1 *primaryOutput()
+
+    OutputOrder *outputOrder()
     {
-        auto *primary = get<PrimaryOutputV1>();
-        Q_ASSERT(primary);
-        return primary;
+        auto *order = get<OutputOrder>();
+        Q_ASSERT(order);
+        return order;
     }
     // Things that can be changed run-time without confusing the client (i.e. don't require separate tests)
     struct Config {
@@ -115,7 +116,6 @@ public:
 };
 
 // addOutput(OutputData)
-// setPrimary()
 
 } // namespace MockCompositor
 

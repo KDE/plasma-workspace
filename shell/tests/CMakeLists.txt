@@ -5,23 +5,25 @@ set(screenpoolmanualtest_SRCS
     screenpooltest.cpp
     ../screenpool.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp
-    ../primaryoutputwatcher.cpp
+    ../outputorderwatcher.cpp
     )
 add_executable(screenpoolmanualtest)
 if (QT_MAJOR_VERSION EQUAL "5")
     ecm_add_qtwayland_client_protocol(screenpoolmanualtest_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-        BASENAME kde-primary-output-v1
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        BASENAME kde-output-order-v1
     )
 else()
     qt6_generate_wayland_protocol_client_sources(screenpoolmanualtest FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml)
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml)
 endif()
+
 target_sources(screenpoolmanualtest PRIVATE ${screenpoolmanualtest_SRCS})
 target_link_libraries(screenpoolmanualtest
             Qt::Test
             Qt::Gui
             Qt::Widgets
+            Qt::WaylandClient
             KF5::ConfigCore
             KF5::Service
             KF5::WindowSystem

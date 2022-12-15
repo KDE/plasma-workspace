@@ -48,7 +48,7 @@ QRect StrutManager::availableScreenRect(int id) const
 
 QRect StrutManager::availableScreenRect(const QString &screenName) const
 {
-    return availableScreenRect(m_plasmashellCorona->screenPool()->id(screenName));
+    return availableScreenRect(m_plasmashellCorona->screenPool()->idForName(screenName));
 }
 
 QRegion StrutManager::availableScreenRegion(int id) const
@@ -65,7 +65,7 @@ QRegion StrutManager::availableScreenRegion(int id) const
 
 void StrutManager::setAvailableScreenRect(const QString &service, const QString &screenName, const QRect &rect)
 {
-    int id = m_plasmashellCorona->screenPool()->id(screenName);
+    int id = m_plasmashellCorona->screenPool()->idForName(screenName);
     if (id == -1 || m_availableScreenRects.value(service).value(id) == rect || !addWatchedService(service)) {
         return;
     }
@@ -75,7 +75,7 @@ void StrutManager::setAvailableScreenRect(const QString &service, const QString 
 
 void StrutManager::setAvailableScreenRegion(const QString &service, const QString &screenName, const QList<QRect> &rects)
 {
-    int id = m_plasmashellCorona->screenPool()->id(screenName);
+    int id = m_plasmashellCorona->screenPool()->idForName(screenName);
     QRegion region;
     for (const QRect &rect : rects) {
         region += rect;

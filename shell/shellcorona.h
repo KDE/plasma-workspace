@@ -141,6 +141,8 @@ Q_SIGNALS:
     void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
     void accentColorFromWallpaperEnabledChanged();
     void colorChanged(const QColor &color);
+    // This API is used only by autotests, do we need something else?
+    void screenOrderChanged(QList<QScreen *> screens);
 
 public Q_SLOTS:
     /**
@@ -238,17 +240,16 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryScreenChanged(QScreen *oldScreen, QScreen *newScreen);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
+    void handleScreenOrderChanged(QList<QScreen *> screens);
 
     void activateTaskManagerEntry(int index);
 
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
-    QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
@@ -275,7 +276,7 @@ private:
     KActivities::Controller *m_activityController;
     QMap<const Plasma::Containment *, PanelView *> m_panelViews;
     // map from QScreen to desktop view
-    QHash<const QScreen *, DesktopView *> m_desktopViewForScreen;
+    QHash<int, DesktopView *> m_desktopViewForScreen;
     QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
@@ -302,6 +303,7 @@ private:
     KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
     KWayland::Client::PlasmaWindow *m_previousPlasmaWindow = nullptr;
     bool m_closingDown : 1;
+    bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;

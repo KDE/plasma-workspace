@@ -1,7 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2022 Marco Martin <mart@kde.org>
-** Copyright (C) 2019 The Qt Company Ltd.
+** Copyright (C) 2020 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the test suite of the Qt Toolkit.
@@ -27,31 +26,33 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_PRIMARYOUTPUT_H
-#define MOCKCOMPOSITOR_PRIMARYOUTPUT_H
-
-#include "coreprotocol.h"
-#include <qwayland-server-kde-primary-output-v1.h>
-
-#include <QtGui/qpa/qplatformnativeinterface.h>
+#include "outputorder.h"
 
 namespace MockCompositor
 {
-class PrimaryOutputV1 : public Global, public QtWaylandServer::kde_primary_output_v1
+OutputOrder::OutputOrder(CoreCompositor *compositor)
+    : QtWaylandServer::kde_output_order_v1(compositor->m_display, 1)
 {
-    Q_OBJECT
-public:
-    explicit PrimaryOutputV1(CoreCompositor *compositor, int version = 1);
+}
 
-    void setPrimaryOutputName(const QString &primaryName);
+void OutputOrder::setList(const QStringList &list)
+{
+    m_list = list;
+    const auto resources = resourceMap();
+    for (auto *resource : resources) {
+        for (const auto &s : std::as_const(list)) {
+            send_output(resource->handle, s);
+        }
+        send_done(resource->handle);
+    }
+}
 
-protected:
-    void kde_primary_output_v1_bind_resource(Resource *resource) override;
-
-private:
-    QString m_primaryName;
-};
+void OutputOrder::kde_output_order_v1_bind_resource(Resource *resource)
+{
+    for (const auto &s : std::as_const(m_list)) {
+        send_output(resource->handle, s);
+    }
+    send_done(resource->handle);
+}
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_PRIMARYOUTPUT_H

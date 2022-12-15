@@ -13,7 +13,7 @@ set(SharedClientTest_LIB_SRCS
     mockcompositor.cpp mockcompositor.h
     xdgoutputv1.cpp xdgoutputv1.h
     xdgshell.cpp xdgshell.h
-    primaryoutput.cpp primaryoutput.h
+    outputorder.cpp outputorder.h
 )
 
 add_library(SharedClientTest OBJECT)
@@ -32,13 +32,13 @@ if (QT_MAJOR_VERSION EQUAL "5")
         PROTOCOL ${WaylandProtocols_DATADIR}/stable/xdg-shell/xdg-shell.xml
         BASENAME xdg-shell
     )
-    ecm_add_qtwayland_client_protocol(SharedClientTest_LIB_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-        BASENAME kde-primary-output-v1
-    )
     ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-        BASENAME kde-primary-output-v1
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        BASENAME kde-output-order-v1
+    )
+    ecm_add_qtwayland_client_protocol(SharedClientTest_LIB_SRCS
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        BASENAME kde-output-order-v1
     )
 
 else()
@@ -50,8 +50,10 @@ else()
         ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
         ${WaylandProtocols_DATADIR}/stable/xdg-shell/xdg-shell.xml
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
     )
 endif()
+
 
 target_sources(SharedClientTest PRIVATE ${SharedClientTest_LIB_SRCS})
 

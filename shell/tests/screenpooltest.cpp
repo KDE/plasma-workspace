@@ -19,40 +19,32 @@ public:
     ScreenPoolTester(QObject *parent = nullptr);
 
 private:
-    void handleScreenAdded(QScreen *screen);
     void handleScreenRemoved(QScreen *screen);
-    void handlePrimaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary);
+    void handleScreenOrderChanged(QList<QScreen *> screens);
 
     ScreenPool *m_screenPool = nullptr;
 };
 
 ScreenPoolTester::ScreenPoolTester(QObject *parent)
     : QObject(parent)
-    , m_screenPool(new ScreenPool(KSharedConfig::openConfig("plasmashellrc")))
+    , m_screenPool(new ScreenPool)
 {
-    connect(m_screenPool, &ScreenPool::screenAdded, this, &ScreenPoolTester::handleScreenAdded);
     connect(m_screenPool, &ScreenPool::screenRemoved, this, &ScreenPoolTester::handleScreenRemoved);
-    connect(m_screenPool, &ScreenPool::primaryScreenChanged, this, &ScreenPoolTester::handlePrimaryScreenChanged);
-    m_screenPool->load();
-    qWarning() << "Load completed";
-    qWarning() << m_screenPool;
-}
+    connect(m_screenPool, &ScreenPool::screenOrderChanged, this, &ScreenPoolTester::handleScreenOrderChanged);
 
-void ScreenPoolTester::handleScreenAdded(QScreen *screen)
-{
-    qWarning() << "SCREEN ADDED" << screen;
+    qWarning() << "Screenpool started";
     qWarning() << m_screenPool;
 }
 
 void ScreenPoolTester::handleScreenRemoved(QScreen *screen)
 {
-    qWarning() << "SCREEN REMOVED" << screen;
+    qWarning() << "SCREEN REMOVED, not reacting yet" << screen;
     qWarning() << m_screenPool;
 }
 
-void ScreenPoolTester::handlePrimaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
+void ScreenPoolTester::handleScreenOrderChanged(QList<QScreen *> screens)
 {
-    qWarning() << "PRIMARY SCREEN CHANGED:" << oldPrimary << "-->" << newPrimary;
+    qWarning() << "SCREEN ORDER CHANGED:" << screens;
     qWarning() << m_screenPool;
 }
 

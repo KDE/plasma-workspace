@@ -27,7 +27,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                     ../currentcontainmentactionsmodel.cpp
                     ../panelshadows.cpp
                     ../desktopview.cpp
-                    ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../primaryoutputwatcher.cpp
+                    ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../outputorderwatcher.cpp
                         )
                set(plasmashell_dbusXML ../dbus/org.kde.PlasmaShell.xml)
                qt_add_dbus_adaptor(test_SRCS ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
@@ -39,6 +39,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                target_link_libraries(${_testname}
                             Qt::Test
                             Qt::Gui
+                            Qt::WaylandClient
                             KF5::Activities
                             KF5::ConfigCore
                             KF5::Declarative

@@ -38,7 +38,7 @@ set (plasma_shell_SRCS
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
-    primaryoutputwatcher.cpp
+    outputorderwatcher.cpp
     shellcorona.cpp
     standaloneappcorona.cpp
     osd.cpp
@@ -64,12 +64,12 @@ kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GEN
 add_executable(plasmashell)
 if (QT_MAJOR_VERSION EQUAL "5")
     ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-        BASENAME kde-primary-output-v1
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        BASENAME kde-output-order-v1
     )
 else()
     qt6_generate_wayland_protocol_client_sources(plasmashell FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
     )
 endif()
 
@@ -82,6 +82,7 @@ target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 target_link_libraries(plasmashell
  Qt::Quick
  Qt::DBus
+ Qt::WaylandClient
  KF5::KIOCore
  KF5::WindowSystem
  KF5::ConfigCore # Activate KRunner on the desktop

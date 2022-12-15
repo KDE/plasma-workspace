@@ -38,12 +38,12 @@ DefaultCompositor::DefaultCompositor()
         add<WlCompositor>();
         add<XdgOutputManagerV1>();
         auto *output = add<Output>();
-        auto *primaryOutput = add<PrimaryOutputV1>();
+        auto *outputOrder = add<OutputOrder>();
         output->m_data.physicalSize = output->m_data.mode.physicalSizeForDpi(96);
         add<Seat>(Seat::capability_pointer | Seat::capability_keyboard | Seat::capability_touch);
         add<Shm>();
         add<XdgWmBase>();
-        primaryOutput->setPrimaryOutputName("WL-1");
+        outputOrder->setList({"WL-1"});
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
             QObject::connect(surface, &Surface::bufferCommitted, [=] {

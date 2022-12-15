@@ -92,21 +92,20 @@ void ScreenPoolModel::load()
     for (auto *cont : m_corona->containments()) {
         unknownScreenIds.insert(cont->lastScreen());
     }
-    for (auto &knownId : m_corona->screenPool()->knownIds()) {
+    int knownId = 0;
+    for (QScreen *screen : m_corona->screenPool()->screenOrder()) {
         Data d;
         unknownScreenIds.remove(knownId);
         d.id = knownId;
-        d.name = m_corona->screenPool()->connector(knownId);
-        d.primary = knownId == 0;
-        d.enabled = false;
-        // TODO: add a m_corona->screenPool()->screenForId() method instead of this loop, but needs the whole primary screen tracking be moved from shellcorona
-        // to screenpool
-        for (QScreen *screen : qGuiApp->screens()) {
-            if (screen->name() == d.name) {
-                d.enabled = true;
-                break;
-            }
+        if (screen->name().contains(QStringLiteral("eDP"))) {
+            d.name = i18n("Internal Screen on %1", screen->name());
+        } else if (screen->model().contains(screen->name())) {
+            d.name = screen->model();
+        } else {
+            d.name = i18nc("Screen manufacturer and model on connector", "%1 %2 on %3", screen->manufacturer(), screen->model(), screen->name());
         }
+        d.primary = knownId == 0;
+        d.enabled = true;
 
         auto *conts = new ShellContainmentModel(m_corona, knownId, this);
         conts->load();
@@ -118,6 +117,7 @@ void ScreenPoolModel::load()
         } else {
             delete conts;
         }
+        ++knownId;
     }
 
     QList sortedIds = unknownScreenIds.values();
@@ -126,7 +126,7 @@ void ScreenPoolModel::load()
     for (int id : sortedIds) {
         Data d;
         d.id = id;
-        d.name = i18n("Unknown %1", i);
+        d.name = i18n("Disconnected Screen %1", id + 1);
         d.primary = id == 0;
         d.enabled = false;
 

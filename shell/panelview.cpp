@@ -545,7 +545,7 @@ void PanelView::positionPanel()
 
 QRect PanelView::geometryByDistance(int distance) const
 {
-    if (!containment()) {
+    if (!containment() || !m_screenToFollow) {
         return QRect();
     }
 
