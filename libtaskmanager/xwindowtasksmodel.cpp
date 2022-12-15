@@ -14,7 +14,6 @@
 #include <KIconLoader>
 #include <KService>
 #include <KSharedConfig>
-#include <KStartupInfo>
 #include <KSycoca>
 #include <KWindowInfo>
 #include <KX11Extras>
