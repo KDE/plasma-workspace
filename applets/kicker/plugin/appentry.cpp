@@ -10,19 +10,10 @@
 #include "containmentinterface.h"
 #include <config-workspace.h>
 
-#include <config-X11.h>
-
 #include <QFileInfo>
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
-#if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
-#endif
 
 #include <KActivities/ResourceInstance>
 #include <KApplicationTrader>
@@ -34,7 +25,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KSharedConfig>
 #include <KShell>
-#include <KStartupInfo>
 #include <KSycoca>
 #include <KWindowSystem>
 
@@ -332,20 +322,9 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     }
 
     if (actionId.isEmpty()) {
-        quint32 timeStamp = 0;
-
-#if HAVE_X11
-        if (QX11Info::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
-        }
-#endif
-
         auto *job = new KIO::ApplicationLauncherJob(m_service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->setRunFlags(KIO::ApplicationLauncherJob::DeleteTemporaryFiles);
-        if (KWindowSystem::isPlatformX11()) {
-            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-        }
         job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()), QStringLiteral("org.kde.plasma.kicker"));

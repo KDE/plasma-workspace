@@ -82,11 +82,6 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::WindowSystem
                       PW::KWorkspace)
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kickerplugin Qt::X11Extras)
-else()
-    target_link_libraries(kickerplugin Qt::GuiPrivate)
-endif()
 
 if (${HAVE_APPSTREAMQT})
 target_link_libraries(kickerplugin AppStreamQt)

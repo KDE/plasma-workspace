@@ -10,7 +10,6 @@
 #include <KDesktopFile>
 #include <KNotificationJobUiDelegate>
 #include <KService>
-#include <KStartupInfo>
 #include <KSycoca>
 #include <KWindowSystem>
 
@@ -19,20 +18,11 @@
 
 #include <KIO/ApplicationLauncherJob>
 
-#include <config-X11.h>
-
 #include <QHash>
 #include <QIcon>
 #include <QSet>
 #include <QTimer>
 #include <QUrlQuery>
-#if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
-#endif
 
 #include "launchertasksmodel_p.h"
 #include <chrono>
@@ -567,14 +557,6 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
 
     const QUrl &url = d->launchersOrder.at(index.row());
 
-    quint32 timeStamp = 0;
-
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        timeStamp = QX11Info::appUserTime();
-    }
-#endif
-
     KService::Ptr service;
 
     if (url.scheme() == QLatin1String("applications")) {
@@ -592,9 +574,7 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
     auto *job = new KIO::ApplicationLauncherJob(service);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setUrls(urls);
-    if (KWindowSystem::isPlatformX11()) {
-        job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-    }
+
     job->start();
 
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.libtaskmanager"));

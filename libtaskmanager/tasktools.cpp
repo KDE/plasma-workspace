@@ -14,14 +14,11 @@
 #include <KFileItem>
 #include <KNotificationJobUiDelegate>
 #include <KProcessList>
-#include <KStartupInfo>
 #include <KWindowSystem>
 #include <kemailsettings.h>
 
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/OpenUrlJob>
-
-#include <config-X11.h>
 
 #include <QDir>
 #include <QGuiApplication>
@@ -29,13 +26,6 @@
 #include <QScreen>
 #include <QUrlQuery>
 #include <qnamespace.h>
-#if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
-#endif
 
 namespace TaskManager
 {
@@ -730,14 +720,6 @@ QRect screenGeometry(const QPoint &pos)
 void runApp(const AppData &appData, const QList<QUrl> &urls)
 {
     if (appData.url.isValid()) {
-        quint32 timeStamp = 0;
-
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
-        }
-#endif
-
         KService::Ptr service;
 
         // applications: URLs are used to refer to applications by their KService::menuId
@@ -754,9 +736,6 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             auto *job = new KIO::ApplicationLauncherJob(service);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
             job->setUrls(urls);
-            if (KWindowSystem::isPlatformX11()) {
-                job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-            }
             job->start();
 
             KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
@@ -764,9 +743,6 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
         } else {
             auto *job = new KIO::OpenUrlJob(appData.url);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-            if (KWindowSystem::isPlatformX11()) {
-                job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-            }
             job->setRunExecutables(true);
             job->start();
 

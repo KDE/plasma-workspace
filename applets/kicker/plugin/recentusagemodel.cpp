@@ -12,21 +12,12 @@
 #include "kastatsfavoritesmodel.h"
 #include <kio_version.h>
 
-#include <config-X11.h>
-
 #include <QApplication>
 #include <QDir>
 #include <QIcon>
 #include <QMimeDatabase>
 #include <QQmlEngine>
 #include <QTimer>
-#if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
-#endif
 
 #include <KActivities/ResourceInstance>
 #include <KFileItem>
@@ -39,7 +30,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KService/KApplicationTrader>
 #include <KService>
-#include <KStartupInfo>
 
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/Terms>
@@ -382,14 +372,6 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
             return false;
         }
 
-        quint32 timeStamp = 0;
-
-#if HAVE_X11
-        if (QX11Info::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
-        }
-#endif
-
         // prevents using a service file that does not support opening a mime type for a file it created
         // for instance a screenshot tool
         if (!mimeType.simplified().isEmpty()) {
@@ -408,9 +390,6 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         auto *job = new KIO::ApplicationLauncherJob(service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        if (KWindowSystem::isPlatformX11()) {
-            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-        }
         job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId), QStringLiteral("org.kde.plasma.kicker"));
