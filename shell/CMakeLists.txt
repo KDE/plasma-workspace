@@ -69,7 +69,7 @@ if (QT_MAJOR_VERSION EQUAL "5")
     )
 else()
     qt6_generate_wayland_protocol_client_sources(plasmashell FILES
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
     )
 endif()
 
