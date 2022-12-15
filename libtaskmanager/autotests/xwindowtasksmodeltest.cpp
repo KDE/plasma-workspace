@@ -4,7 +4,11 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#include <QTest>
+#include <QDateTime>
+#include <QQmlApplicationEngine>
+#include <QtTest>
+
+#include <KWindowSystem>
 
 #include "xwindowtasksmodel.h"
 
@@ -22,6 +26,8 @@ private Q_SLOTS:
     void test_winIdFromMimeData();
     void test_winIdsFromMimeData_data();
     void test_winIdsFromMimeData();
+
+    void test_openCloseWindow();
 
 private:
     WId m_WId = 12345;
@@ -64,6 +70,8 @@ void XWindowTasksModelTest::initTestCase()
     }
     m_insufficientWIds = QByteArray(insufficientWIdsData, sizeof(int) + sizeof(WId) * insufficientCount);
     delete[] insufficientWIdsData;
+
+    QGuiApplication::setQuitOnLastWindowClosed(false);
 }
 
 void XWindowTasksModelTest::test_winIdFromMimeData_data()
@@ -153,6 +161,60 @@ void XWindowTasksModelTest::test_winIdsFromMimeData()
         });
         QVERIFY(verified);
     }
+}
+
+void XWindowTasksModelTest::test_openCloseWindow()
+{
+    if (!KWindowSystem::isPlatformX11()) {
+        QSKIP("Test is not running on X11.");
+    }
+
+    XWindowTasksModel model;
+
+    auto findWindow = [&model](const QString &windowTitle) {
+        for (int i = 0; i < model.rowCount(); ++i) {
+            const QString title = model.index(i, 0).data(Qt::DisplayRole).toString();
+            if (title == windowTitle) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    int modelCount = model.rowCount();
+
+    // Create a window to test if XWindowTasksModel can receive it
+    QSignalSpy rowInsertedSpy(&model, &XWindowTasksModel::rowsInserted);
+
+    const QString qmlFileName = QFINDTESTDATA("data/windows/SampleWindow.qml");
+    QQmlApplicationEngine engine;
+    QVariantMap initialProperties;
+    initialProperties.insert(QStringLiteral("title"), QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString()));
+    engine.setInitialProperties(initialProperties);
+    engine.load(qmlFileName);
+
+    // A new window appears
+    QVERIFY(rowInsertedSpy.wait());
+    QCOMPARE(modelCount + 1, model.rowCount());
+    // Find the window in the model
+    QVERIFY(findWindow(initialProperties[QStringLiteral("title")].toString()));
+
+    // Change the title of the window
+    QSignalSpy dataChangedSpy(&model, &XWindowTasksModel::dataChanged);
+    const QString newTitle = initialProperties[QStringLiteral("title")].toString() + QStringLiteral("__newtitle__");
+    QVERIFY(engine.rootObjects().at(0)->setProperty("title", newTitle));
+    QVERIFY(dataChangedSpy.wait());
+    QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
+    // Make sure the title is updated
+    QVERIFY(!findWindow(initialProperties[QStringLiteral("title")].toString()));
+    QVERIFY(findWindow(newTitle));
+
+    // Now close the window
+    modelCount = model.rowCount();
+    QSignalSpy rowsRemovedSpy(&model, &XWindowTasksModel::rowsRemoved);
+    QMetaObject::invokeMethod(engine.rootObjects().at(0), "close", Qt::QueuedConnection);
+    QVERIFY(rowsRemovedSpy.wait());
+    QCOMPARE(modelCount - 1, model.rowCount());
 }
 
 QTEST_MAIN(XWindowTasksModelTest)
