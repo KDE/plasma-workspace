@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-05 00:15+0100\n"
+"PO-Revision-Date: 2022-12-14 20:13+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:19
@@ -269,6 +269,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Съвет: ако пътувате често, добавете още един запис за домашната си часова "
+"зона към този списък. Той ще се появи само когато промените общосистемната "
+"часова зона на друга."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -285,10 +288,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Скрит, докато това е местната часова зона на града"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Превключване на местната часова зона…"
+msgstr "Превключване на системната часова зона…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,10 +298,9 @@ msgid "Remove this time zone"
 msgstr "Премахване на часова зона"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Системна местна часова зона"
+msgstr "Системна часова зона"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -328,18 +329,13 @@ msgstr ""
 "часовника"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Имайте предвид, че използването на различна часова зона за часовника не "
-"променя локалната часова зона в цялата система. Когато пътувате, вместо това "
-"превключете местната часова зона."
+"Използването на тази функция не води до промяна на часовата зона в цялата "
+"система. Когато пътувате, вместо това превключете часовата зона на системата."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -418,4 +414,4 @@ msgstr "Местно"
 #: plugin/timezonemodel.cpp:143
 #, kde-format
 msgid "System's local time zone"
-msgstr "Системна местна часова зона"
+msgstr "Местна часова зона на системата"

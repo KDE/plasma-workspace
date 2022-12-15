@@ -983,11 +983,3 @@ msgstr "Изключване на този изскачащ прозорец"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The actions shown in the popup menu can be configured on the "
-#~ "<interface>Actions Configuration</interface> page."
-#~ msgstr ""
-#~ "Действията, показани в изскачащото меню, могат да бъдат конфигурирани в "
-#~ "<interface>Конфигурация на действията</interface>."
