@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-06 19:44+0530\n"
+"PO-Revision-Date: 2022-12-15 21:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "நாள்காட்டி"
 #: package/contents/ui/CalendarView.qml:431
 #, kde-format
 msgid "Time Zones"
-msgstr "கால மண்டலங்கள்"
+msgstr "நேரமண்டலங்கள்"
 
 #: package/contents/ui/CalendarView.qml:110
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "மாற்று..."
 #: package/contents/ui/CalendarView.qml:444
 #, kde-format
 msgid "Switch to another timezone"
-msgstr "இன்னொரு கால மண்டலத்துக்கு மாற்று"
+msgstr "இன்னொரு நேரமண்டலத்துக்கு மாற்று"
 
 #: package/contents/ui/configAppearance.qml:51
 #, kde-format
@@ -104,12 +104,12 @@ msgstr "நொடிகளை காட்டு"
 #: package/contents/ui/configAppearance.qml:81
 #, kde-format
 msgid "Show time zone:"
-msgstr "கால மண்டலத்தை காட்டு:"
+msgstr "நேரமண்டலத்தை காட்டுவது:"
 
 #: package/contents/ui/configAppearance.qml:86
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "தற்போதைய இருப்பிடத்தின் கால மண்டலமாக இல்லாத போது மட்டும்"
+msgstr "தற்போதைய இருப்பிடத்தின் நேரமண்டலமாக இல்லாத போது மட்டும்"
 
 #: package/contents/ui/configAppearance.qml:91
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "எப்போதும்"
 #: package/contents/ui/configAppearance.qml:100
 #, kde-format
 msgid "Display time zone as:"
-msgstr "கால மண்டலத்தை இவ்வாறு காட்டு:"
+msgstr "நேரமண்டலத்தை இவ்வாறு காட்டு:"
 
 #: package/contents/ui/configAppearance.qml:105
 #, kde-format
@@ -269,11 +269,14 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"குறிப்பு: பிற நாடுகளுக்கு நீங்கள் அடிக்கடி பயணித்தால், உங்கள் தாய் நேரமண்டலத்திற்கான "
+"பதிவையும் இப்பட்டியலில் சேருங்கள். கணினி முழுவதற்குமான நேரமண்டலமாக அது இல்லாத "
+"பட்சத்தில், இப்பட்டியலில் அதுவும் காட்டப்படும்."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
 msgid "Clock is currently using this time zone"
-msgstr "கடிகாரம் இப்போது இந்த கால மண்டலத்தை பயன்படுத்துகிறது"
+msgstr "கடிகாரம் இப்போது இந்த நேரமண்டலத்தை பயன்படுத்துகிறது"
 
 #: package/contents/ui/configTimeZones.qml:103
 #, kde-format
@@ -285,26 +288,24 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "தற்போதைய நேரமண்டலமாக உள்ளபோது காட்டப்படாது"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "வட்டார கால மண்டலத்தை மாற்று..."
+msgstr "கணினி முழுவதற்குமான நேர மண்டலத்தை மாற்று..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
 msgid "Remove this time zone"
-msgstr "இந்த கால மண்டலத்தை நீக்கு"
+msgstr "இந்த நேரமண்டலத்தை நீக்கு"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "கணினியின் வட்டார கால மண்டலம்"
+msgstr "கணினி முழுவதற்குமான நேரமண்டலம்"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Additional Time Zones"
-msgstr "கூடுதல் கால மண்டலங்கள்"
+msgstr "கூடுதல் நேரமண்டலங்கள்"
 
 #: package/contents/ui/configTimeZones.qml:148
 #, kde-format
@@ -312,36 +313,32 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"கூடுதல் கால மண்டலங்களை சேர்த்து அவற்றை கடிகாரத்தின் தெரித்தெழும் பட்டியில் காணுங்கள், "
-"அல்லது அவற்றில் ஒன்றை கடிகாரத்திற்கே பயன்படுத்துங்கள்"
+"கூடுதல் நேரமண்டலங்களை சேர்த்து அவற்றை கடிகாரத்தின் தெரித்தெழும் பட்டியில் காணுங்கள், அல்லது "
+"அவற்றில் ஒன்றை கடிகாரத்திற்கே பயன்படுத்துங்கள்"
 
 #: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "கால மண்டலங்களை சேர்…"
+msgstr "நேரமண்டலங்களை சேர்…"
 
 #: package/contents/ui/configTimeZones.qml:165
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr "கடிகாரத்தின் மீது சுட்டியின் சக்கரத்தை உருட்டி காட்டப்படும் கால மண்டலத்தை மாற்றுங்கள்"
+msgstr "கடிகாரத்தின் மீது சுட்டியின் சக்கரத்தை உருட்டி காட்டப்படும் நேரமண்டலத்தை மாற்றுங்கள்"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"கடிகாரத்தின் கால மண்டலத்தை மாற்றுதல், கணினியின் கால மண்டலத்தை மாற்றாது என்பதை நினைவில் "
-"கொள்ளுங்கள். பயணிக்கும்போது, பதிலாக கணினியின் வட்டார கால மண்டலத்தையே மாற்றி அமையுங்கள்."
+"இந்த அம்சம், கணினியின் கால மண்டலத்தை மாற்றாது. பயணிக்கும்போது, இதற்கு பதிலாக கணினி "
+"முழுவதற்குமான நேரமண்டலத்தையே மாற்றி அமையுங்கள்."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
-msgstr "கூடுதல் கால மண்டலங்களை சேர்த்தல்"
+msgstr "கூடுதல் நேரமண்டலங்களை சேர்த்தல்"
 
 #: package/contents/ui/configTimeZones.qml:212
 #, kde-format
@@ -349,8 +346,8 @@ msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
 "automatically."
 msgstr ""
-"ஒரு கால மண்டலமாவது இயக்கப்பட்டிருக்க வேண்டும். உங்கள் வட்டார கால மண்டலம் தானாக "
-"இயக்கப்பட்டது."
+"ஒரு நேரமண்டலமாவது இயக்கப்பட்டிருக்க வேண்டும். உங்கள் வட்டார நேரமண்டலம் தானாக "
+"இயக்கப்பட்டுள்ளது."
 
 #: package/contents/ui/configTimeZones.qml:237
 #, kde-format
@@ -415,7 +412,7 @@ msgstr "வட்டாரம்"
 #: plugin/timezonemodel.cpp:143
 #, kde-format
 msgid "System's local time zone"
-msgstr "கணினியின் வட்டார கால மண்டலம்"
+msgstr "கணினியின் வட்டார நேரமண்டலம்"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"

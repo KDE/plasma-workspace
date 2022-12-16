@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-11-27 07:17+0100\n"
+"PO-Revision-Date: 2022-12-15 07:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "დარჩენილი დრო:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "დაახლოებით…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "სისტემა ენერგიის დაზოგვის 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "ეკრანის სიკაშკაშის მოსარგები ჩოჩია"
 
 #: package/contents/ui/main.qml:310
 #, kde-format

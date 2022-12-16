@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-03 00:48+0000\n"
-"PO-Revision-Date: 2022-12-03 06:04+0100\n"
+"PO-Revision-Date: 2022-12-15 07:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -140,12 +140,12 @@ msgstr "დაბალი პრიორიტეტის გაფრთხ�
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Show popup"
-msgstr "მხტუნავის ჩვენება"
+msgstr "მხტუნარას ჩვენება"
 
 #: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Popup:"
-msgstr "მხტუნავი:"
+msgstr "მხტუნარა:"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "მორგება…"
 #: package/contents/ui/PopupPositionPage.qml:15
 #, kde-format
 msgid "Popup Position"
-msgstr "მხტუნავის პოზიცია"
+msgstr "მხტუნარას მდებარეობა"
 
 #: package/contents/ui/SourcesPage.qml:19
 #, kde-format

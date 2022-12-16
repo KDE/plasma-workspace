@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-16 00:52+0000\n"
 "PO-Revision-Date: 2022-09-20 12:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -188,62 +188,73 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Екранна клавиатура е деактивирана"
 
+#: shellcontainmentconfig.cpp:101
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr ""
+
+#: shellcontainmentconfig.cpp:105
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr ""
+
 #: shellcontainmentconfig.cpp:129
 #, kde-format
-msgid "Unknown %1"
-msgstr "Неизвестно %1"
+msgid "Disconnected Screen %1"
+msgstr ""
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:178
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:193
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:203
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Спиране на текущата дейност"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:210
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активиране на запис от управление на задачите %1"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Настройване на работния плот и панелите..."
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:1809
+#: shellcorona.cpp:1836
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:1845
+#: shellcorona.cpp:1872
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -280,3 +291,6 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
+
+#~ msgid "Unknown %1"
+#~ msgstr "Неизвестно %1"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-04 07:56+0100\n"
+"PO-Revision-Date: 2022-12-15 08:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -272,6 +272,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Namig: Če pogosto potujete, dodajte še en vnos za vaš domači časovni pas v "
+"ta seznam. Prikazan bo samo, kadar spremenite sistemski časovni pas v nekega "
+"drugega."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -288,10 +291,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Skrito, ko je to mesto lokalne časovne cone"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Preklopi lokalni časovni pas…"
+msgstr "Preklopi sistemski časovni pas…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -299,10 +301,9 @@ msgid "Remove this time zone"
 msgstr "Odstrani ta časovni pas"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Sistemski lokalni časovni pas"
+msgstr "Sistemski časovni pas"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -330,18 +331,13 @@ msgstr ""
 "Prikazani časovni pas preklapljate tako, da se pomaknete nad apletom ure"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Upoštevajte, da uporaba drugega časovnega pasu za uro ne spremeni lokalnega "
-"sistemskega časovnega pasu. Ko potujete, namesto tega preklopite lokalni "
-"časovni pas."
+"Uporaba te možnosti ne spremeni sistemskega časovnega pasu. Ko potujete, "
+"namesto tega preklopite sistemski časovni pas."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format

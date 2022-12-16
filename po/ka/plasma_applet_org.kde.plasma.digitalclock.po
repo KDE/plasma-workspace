@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-10-01 16:29+0200\n"
+"PO-Revision-Date: 2022-12-15 07:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -270,6 +270,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"მინიშნება: თუ ხშირად მოგზაურობთ, დაამატეთ ახალი ველი თქვენი სახლის დროის "
+"სარტყელისთვის. ის მხოლოდ მაშინ გამოჩნდება, როცა მთელი სისტემის დროის "
+"სარტყელს რამე სხვა მნიშვნელობაზე გადართავთ."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -283,13 +286,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "დამალულია, რადგან ეს ლოკალური დროის სარტყელი ქალაქია"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "დროის ლოკალურ სარტყელზე გადართვა…"
+msgstr "დროის სარტყელის მთელი სისტემისთვის შეცვლა…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -297,10 +299,9 @@ msgid "Remove this time zone"
 msgstr "დროის ამ სარტყლის წაშლა"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "სისტემის ლოკალური დროის სარტყელი"
+msgstr "მთელი სისტემის დროის სარტყელი"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -329,17 +330,13 @@ msgstr ""
 "შეგიძლიათ"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"დაიმახსოვრეთ, რომ დროის სხვა სარტყლის გამოყენება არ ცვლის სისტემის ლოკალურ "
-"დროის სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
+"დაიმახსოვრეთ, რომ ამ ფუნქციის გამოყენება არ ცვლის სისტემის ლოკალურ დროის "
+"სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -390,7 +387,7 @@ msgstr "დღეს %1-ა"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

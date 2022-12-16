@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2022-12-03 06:21+0100\n"
+"PO-Revision-Date: 2022-12-15 07:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -333,7 +333,7 @@ msgstr "clear"
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear intervals"
-msgstr ""
+msgstr "ღია ცის ინტერვალები"
 
 #: bbcukmet_i18n.dat:53
 #, kde-format
@@ -351,25 +351,25 @@ msgstr "მოღრუბლული"
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with hail"
-msgstr ""
+msgstr "მოღრუბლული სეტყვით"
 
 #: bbcukmet_i18n.dat:56
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with heavy snow"
-msgstr ""
+msgstr "მოღრუბლული ძლიერი თოვლით"
 
 #: bbcukmet_i18n.dat:57
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with light snow"
-msgstr ""
+msgstr "მოღრუბლული სუსტი თოვლით"
 
 #: bbcukmet_i18n.dat:58
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with sleet"
-msgstr ""
+msgstr "მოღრუბლული ჭყაპით"
 
 #: bbcukmet_i18n.dat:59
 #, kde-format
@@ -387,13 +387,13 @@ msgstr "ნისლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "foggy"
-msgstr ""
+msgstr "ნისლიანი"
 
 #: bbcukmet_i18n.dat:62
 #, kde-format
 msgctxt "weather forecast"
 msgid "grey cloud"
-msgstr ""
+msgstr "ნაცრისფერი ღრუბლები"
 
 #: bbcukmet_i18n.dat:63
 #, kde-format
@@ -405,7 +405,7 @@ msgstr "სეტყვა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "hail shower"
-msgstr ""
+msgstr "სეტყვიანი წვმა"
 
 #: bbcukmet_i18n.dat:65
 #, kde-format
@@ -417,7 +417,7 @@ msgstr "ხოშკაკალი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "hazy"
-msgstr ""
+msgstr "ბურუსიანი"
 
 #: bbcukmet_i18n.dat:67
 #, kde-format
@@ -429,25 +429,25 @@ msgstr "თავსხმა წვიმა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain shower"
-msgstr ""
+msgstr "თავსხმა წვიმა"
 
 #: bbcukmet_i18n.dat:69
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr ""
+msgstr "თავსხმა წვიმები"
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy shower"
-msgstr ""
+msgstr "თავსხმა წვიმა"
 
 #: bbcukmet_i18n.dat:71
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy showers"
-msgstr ""
+msgstr "თავსხმა წვიმები"
 
 #: bbcukmet_i18n.dat:72
 #, kde-format
@@ -459,19 +459,19 @@ msgstr "ძლიერი თოვლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy snow shower"
-msgstr ""
+msgstr "ძლიერი თოვლი"
 
 #: bbcukmet_i18n.dat:74
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy snow showers"
-msgstr ""
+msgstr "ძლიერი თოვლი"
 
 #: bbcukmet_i18n.dat:75
 #, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr ""
+msgstr "მსუბუქად მოღრუბლული"
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
@@ -1131,7 +1131,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Sunny"
-msgstr ""
+msgstr "მზიანი"
 
 #: envcan_i18n.dat:82
 #, kde-format
@@ -4400,7 +4400,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Windy"
-msgstr ""
+msgstr "ქარიანი"
 
 #: noaa_i18n.dat:265
 #, kde-format
@@ -4772,13 +4772,13 @@ msgstr "თხელი ნისლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blowing Sand"
-msgstr ""
+msgstr "ქვიშიანი ქარი"
 
 #: noaa_i18n.dat:333
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blowing Dust"
-msgstr ""
+msgstr "მტვრიანი ქარი"
 
 #: noaa_i18n.dat:334
 #, kde-format
