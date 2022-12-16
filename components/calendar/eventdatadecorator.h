@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTDATADECORATOR_H
-#define EVENTDATADECORATOR_H
+#pragma once
 
 #include <QDateTime>
 #include <QObject>
@@ -43,5 +42,3 @@ Q_SIGNALS:
 private:
     CalendarEvents::EventData m_data;
 };
-
-#endif

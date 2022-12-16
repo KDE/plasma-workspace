@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CALENDAR_H
-#define CALENDAR_H
+#pragma once
 
 #include <QDate>
 #include <QJsonArray>
@@ -204,5 +203,3 @@ public Q_SLOTS:
 private:
     CalendarPrivate *const d;
 };
-
-#endif // CALENDAR_H

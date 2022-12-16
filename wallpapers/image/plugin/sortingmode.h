@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SORTINGMODE_H
-#define SORTINGMODE_H
+#pragma once
 
 namespace SortingMode
 {
@@ -20,5 +19,3 @@ enum Mode {
 };
 Q_ENUM_NS(Mode)
 }
-
-#endif

@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_OUTPUTORDER_H
-#define MOCKCOMPOSITOR_OUTPUTORDER_H
+#pragma once
 
 #include "coreprotocol.h"
 
@@ -51,5 +50,3 @@ private:
 };
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_OutputOrder_H

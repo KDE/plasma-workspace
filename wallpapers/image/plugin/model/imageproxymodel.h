@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMAGEPROXYMODEL_H
-#define IMAGEPROXYMODEL_H
+#pragma once
 
 #include <QConcatenateTablesProxyModel>
 #include <QSize>
@@ -78,5 +77,3 @@ private:
 
     friend class ImageProxyModelTest;
 };
-
-#endif // IMAGEPROXYMODEL_H

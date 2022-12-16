@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MEDIAMETADATAFINDER_H
-#define MEDIAMETADATAFINDER_H
+#pragma once
 
 #include <QObject>
 #include <QRunnable>
@@ -36,5 +35,3 @@ Q_SIGNALS:
 private:
     QString m_path;
 };
-
-#endif // MEDIAMETADATAFINDER_H

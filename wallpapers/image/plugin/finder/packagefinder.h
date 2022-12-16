@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PACKAGEFINDER_H
-#define PACKAGEFINDER_H
+#pragma once
 
 #include <QObject>
 #include <QRunnable>
@@ -36,5 +35,3 @@ private:
     QStringList m_paths;
     QSize m_targetSize;
 };
-
-#endif // PACKAGEFINDER_H

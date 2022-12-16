@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PACKAGELISTMODEL_H
-#define PACKAGELISTMODEL_H
+#pragma once
 
 #include "abstractimagelistmodel.h"
 
@@ -45,5 +44,3 @@ private:
 
     friend class PackageListModelTest;
 };
-
-#endif // PACKAGELISTMODEL_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MAXIMIZEDWINDOWMONITOR_H
-#define MAXIMIZEDWINDOWMONITOR_H
+#pragma once
 
 #include <memory>
 
@@ -43,5 +42,3 @@ private:
 
     std::unique_ptr<Private> d;
 };
-
-#endif // MAXIMIZEDWINDOWMONITOR_H

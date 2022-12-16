@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_COREPROTOCOL_H
-#define MOCKCOMPOSITOR_COREPROTOCOL_H
+#pragma once
 
 #include "corecompositor.h"
 
@@ -463,5 +462,3 @@ public:
 };
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_COREPROTOCOL_H

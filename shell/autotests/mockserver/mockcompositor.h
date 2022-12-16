@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_H
-#define MOCKCOMPOSITOR_H
+#pragma once
 
 #include "corecompositor.h"
 #include "coreprotocol.h"
@@ -149,5 +148,3 @@ public:
         QApplication app(argc, argv);                                                                                                                          \
         return QTest::qExec(&tc, argc, argv);                                                                                                                  \
     }
-
-#endif

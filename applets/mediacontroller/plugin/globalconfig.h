@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#ifndef GLOBALCONFIG_H
-#define GLOBALCONFIG_H
+#pragma once
 
 #include <KConfigWatcher>
 #include <KSharedConfig>
@@ -34,5 +33,3 @@ private:
 private Q_SLOTS:
     void configChanged();
 };
-
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CALENDARPLUGIN_H
-#define CALENDARPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -19,5 +18,3 @@ class CalendarPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif

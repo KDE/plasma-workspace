@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PACKAGEIMAGEPROVIDER_H
-#define PACKAGEIMAGEPROVIDER_H
+#pragma once
 
 #include <QQuickAsyncImageProvider>
 #include <QThreadPool>
@@ -23,5 +22,3 @@ public:
 private:
     QThreadPool m_pool;
 };
-
-#endif // PACKAGEIMAGEPROVIDER_H

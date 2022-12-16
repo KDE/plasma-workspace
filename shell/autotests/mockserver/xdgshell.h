@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_XDGSHELL_H
-#define MOCKCOMPOSITOR_XDGSHELL_H
+#pragma once
 
 #include "coreprotocol.h"
 #include <qwayland-server-xdg-shell.h>
@@ -172,5 +171,3 @@ protected:
 };
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_XDGSHELL_H

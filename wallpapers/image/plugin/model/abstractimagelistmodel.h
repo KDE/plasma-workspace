@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTIMAGELISTMODEL_H
-#define ABSTRACTIMAGELISTMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QCache>
@@ -99,5 +98,3 @@ private Q_SLOTS:
     void slotHandlePreview(const KFileItem &item, const QPixmap &preview);
     void slotHandlePreviewFailed(const KFileItem &item);
 };
-
-#endif // ABSTRACTIMAGELISTMODEL_H

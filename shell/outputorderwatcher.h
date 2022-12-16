@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef OUTPUTORDERWATCHER_H
-#define OUTPUTORDERWATCHER_H
+#pragma once
 
 #include <QAbstractNativeEventFilter>
 #include <QObject>
@@ -111,5 +110,3 @@ private:
     bool hasAllScreens() const;
     QStringList m_pendingOutputOrder;
 };
-
-#endif // OutputOrderWatcher_H

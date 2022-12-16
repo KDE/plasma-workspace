@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SHELLCONTAINMENTCONFIG_H
-#define SHELLCONTAINMENTCONFIG_H
+#pragma once
 
 #include <QAbstractTableModel>
 #include <QHash>
@@ -142,5 +141,3 @@ private:
     ShellCorona *m_corona;
     ScreenPoolModel *m_model;
 };
-
-#endif // SHELLCONTAINMENTCONFIG_H

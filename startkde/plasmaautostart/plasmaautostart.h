@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KDELIBS_KAUTOSTART_H
-#define KDELIBS_KAUTOSTART_H
+#pragma once
 
 #include <QObject>
 #include <QStringList>
@@ -196,4 +195,3 @@ private:
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(PlasmaAutostart::Conditions)
-#endif

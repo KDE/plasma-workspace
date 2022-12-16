@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MEDIAPROXY_H
-#define MEDIAPROXY_H
+#pragma once
 
 #include <QObject>
 #include <QPalette>
@@ -137,5 +136,3 @@ private:
 
     bool m_isDarkColorScheme;
 };
-
-#endif // MEDIAPROXY_H

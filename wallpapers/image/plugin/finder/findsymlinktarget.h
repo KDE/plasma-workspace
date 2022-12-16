@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FINDSYMLINKTARGET_H
-#define FINDSYMLINKTARGET_H
+#pragma once
 
 #include <QFileInfo>
 
@@ -29,5 +28,3 @@ static QString findSymlinkTarget(const QFileInfo &info)
 
     return target;
 }
-
-#endif

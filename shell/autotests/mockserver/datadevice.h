@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_DATADEVICE_H
-#define MOCKCOMPOSITOR_DATADEVICE_H
+#pragma once
 
 // TODO: need this?
 #include "coreprotocol.h"
@@ -110,5 +109,3 @@ protected:
 };
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_DATADEVICE_H

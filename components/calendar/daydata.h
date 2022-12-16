@@ -2,8 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DAYDATA_H
-#define DAYDATA_H
+#pragma once
 
 class DayData
 {
@@ -17,5 +16,3 @@ public:
     int monthNumber;
     int yearNumber;
 };
-
-#endif // DAYDATA_H

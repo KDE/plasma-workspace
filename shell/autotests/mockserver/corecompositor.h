@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_CORECOMPOSITOR_H
-#define MOCKCOMPOSITOR_CORECOMPOSITOR_H
+#pragma once
 
 #include <QtTest/QtTest>
 
@@ -227,5 +226,3 @@ return_type *fromResource(::wl_resource *resource)
 }
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_CORECOMPOSITOR_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMAGEROLES_H
-#define IMAGEROLES_H
+#pragma once
 
 class ImageRoles
 {
@@ -24,5 +23,3 @@ public:
     };
     Q_ENUM(RoleType)
 };
-
-#endif

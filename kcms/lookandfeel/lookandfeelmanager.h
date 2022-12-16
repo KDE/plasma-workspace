@@ -8,8 +8,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#ifndef LOOKANDFEELMANAGER_H
-#define LOOKANDFEELMANAGER_H
+#pragma once
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -139,5 +138,3 @@ private:
 };
 Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::AppearanceToApply)
 Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::LayoutToApply)
-
-#endif // LOOKANDFEELMANAGER_H

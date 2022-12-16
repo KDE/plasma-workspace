@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CALCULATEDISTANCE_H
-#define CALCULATEDISTANCE_H
+#pragma once
 
 class QSize;
 class QString;
@@ -19,5 +18,3 @@ float distance(const QSize &size, const QSize &desired);
  * @return size from the filename
  */
 QSize resSize(const QString &str);
-
-#endif

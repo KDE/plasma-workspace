@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMAGEFINDER_H
-#define IMAGEFINDER_H
+#pragma once
 
 #include <QObject>
 #include <QRunnable>
@@ -29,5 +28,3 @@ Q_SIGNALS:
 private:
     QStringList m_paths;
 };
-
-#endif // IMAGEFINDER_H

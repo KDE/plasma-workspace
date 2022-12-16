@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DAYSMODEL_H
-#define DAYSMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QPointer>
@@ -82,5 +81,3 @@ private:
     bool hasMajorEventAtDate(const QDate &date) const;
     bool hasMinorEventAtDate(const QDate &date) const;
 };
-
-#endif // DAYSMODEL_H

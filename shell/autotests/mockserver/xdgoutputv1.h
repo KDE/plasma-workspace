@@ -26,8 +26,7 @@
 **
 ****************************************************************************/
 
-#ifndef MOCKCOMPOSITOR_XDGOUTPUTV1_H
-#define MOCKCOMPOSITOR_XDGOUTPUTV1_H
+#pragma once
 
 #include "coreprotocol.h"
 
@@ -91,5 +90,3 @@ protected:
 };
 
 } // namespace MockCompositor
-
-#endif // MOCKCOMPOSITOR_XDGOUTPUTV1_H
