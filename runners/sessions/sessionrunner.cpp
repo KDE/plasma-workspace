@@ -7,13 +7,10 @@
 
 #include "sessionrunner.h"
 
+#include <KGuiItem>
 #include <KLocalizedString>
-#include <QDebug>
-#include <QMessageBox>
-
-#include "kworkspace.h"
-
-#include "screensaver_interface.h"
+#include <KMessageBox>
+#include <KSharedConfig>
 
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
@@ -270,26 +267,31 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
         return;
     }
 
-    int result = QMessageBox::information(nullptr,
-                                          i18n("New Session"),
-                                          i18n("<p>You are about to enter a new desktop session.</p>"
-                                               "<p>A login screen will be displayed and the current session will be hidden.</p>"
-                                               "<p>You can switch between desktop sessions using:</p>"
-                                               "<ul>"
-                                               "<li>Ctrl+Alt+F{number of session}</li>"
-                                               "<li>Plasma search (type '%1')</li>"
-                                               "<li>Plasma widgets (such as the application launcher)</li>"
-                                               "</ul>",
-                                               m_switchKeyword),
-                                          QMessageBox::Ok,
-                                          QMessageBox::Cancel);
-
-    if (result == QMessageBox::Cancel) {
-        return;
+    const auto config = KSharedConfig::openConfig(QStringLiteral("ksmserverrc"));
+    KMessageBox::setDontShowAgainConfig(config.data());
+    KGuiItem continueButton = KStandardGuiItem::cont();
+    continueButton.setText("Enter new session");
+    KGuiItem cancelButton = KStandardGuiItem::cancel();
+    cancelButton.setText("Stay in current session");
+    KMessageBox::ButtonCode confirmNewSession =
+        KMessageBox::warningContinueCancel(nullptr,
+                                           i18n("<p>You are about to enter a new desktop session.</p>"
+                                                "<p>A login screen will be displayed and the current session will be hidden.</p>"
+                                                "<p>You can switch between desktop sessions using:</p>"
+                                                "<ul>"
+                                                "<li>Ctrl+Alt+F{number of session}</li>"
+                                                "<li>Plasma search (type '%1')</li>"
+                                                "<li>Plasma widgets (such as the application launcher)</li>"
+                                                "</ul>",
+                                                m_switchKeyword),
+                                           i18n("New Desktop Session"),
+                                           continueButton,
+                                           cancelButton,
+                                           QStringLiteral("ConfirmNewSession"));
+    if (confirmNewSession == KMessageBox::Continue) {
+        m_session.lock();
+        dm.startReserve();
     }
-    m_session.lock();
-
-    dm.startReserve();
 }
 
 #include "sessionrunner.moc"
