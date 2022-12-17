@@ -1603,7 +1603,7 @@ void TasksModel::requestActivities(const QModelIndex &index, const QStringList &
 
 void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
-    if (!index.isValid() || index.model() == this || !index.data(AbstractTasksModel::IsWindow).toBool()) {
+    if (!index.isValid() || index.model() != this || !index.data(AbstractTasksModel::IsWindow).toBool()) {
         return;
     }
     d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
