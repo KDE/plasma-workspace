@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 00:51+0000\n"
 "PO-Revision-Date: 2021-06-16 00:40+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -66,26 +66,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Šalinti ar tvarkyti papildinius…"
 
-#: plugin/appentry.cpp:319
+#: plugin/appentry.cpp:309
 #, kde-format
 msgid "Hide Application"
 msgstr "Slėpti programą"
 
-#: plugin/appentry.cpp:390
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:392
+#: plugin/appentry.cpp:371
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
-#: plugin/recentusagemodel.cpp:226
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
+#: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "Programos"
@@ -142,42 +142,42 @@ msgstr "Pamiršti adresatą"
 msgid "Forget All Contacts"
 msgstr "Pamiršti visus adresatus"
 
-#: plugin/recentusagemodel.cpp:161
+#: plugin/recentusagemodel.cpp:151
 #, kde-format
 msgid "Recently Used"
 msgstr "Paskiausiai naudoti"
 
-#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
 #, kde-format
 msgid "Files"
 msgstr "Failai"
 
-#: plugin/recentusagemodel.cpp:248
+#: plugin/recentusagemodel.cpp:238
 #, kde-format
 msgid "Forget Application"
 msgstr "Pamiršti programą"
 
-#: plugin/recentusagemodel.cpp:342
+#: plugin/recentusagemodel.cpp:332
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: plugin/recentusagemodel.cpp:345
+#: plugin/recentusagemodel.cpp:335
 #, kde-format
 msgid "Forget File"
 msgstr "Pamiršti failą"
 
-#: plugin/recentusagemodel.cpp:495
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All"
 msgstr "Viską pamiršti"
 
-#: plugin/recentusagemodel.cpp:497
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Pamiršti visas programas"
 
-#: plugin/recentusagemodel.cpp:500
+#: plugin/recentusagemodel.cpp:479
 #, kde-format
 msgid "Forget All Files"
 msgstr "Pamiršti visus failus"

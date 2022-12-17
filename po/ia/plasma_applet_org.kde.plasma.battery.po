@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-02-18 23:12+0100\n"
+"PO-Revision-Date: 2022-12-16 22:24+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -46,7 +46,7 @@ msgstr "Tempore remanente:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Estimante..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -176,38 +176,33 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Somno automatic e bloco de schermo es dishabilitate"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Un application ha requirite activar %2:"
-msgstr[1] "%1 applicationes ha requirite activar %2:"
+msgstr[0] "Un application ha requirite activar modo de Prestationes"
+msgstr[1] "%1 applicationes ha requirite activar modo de Prestationes"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Systema es in modo de Prestationes "
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Un application ha requirite activar %2:"
-msgstr[1] "%1 applicationes ha requirite activar %2:"
+msgstr[0] "Un application ha requirite activar Modo de Sparnio de Energia"
+msgstr[1] "%1 applicationes ha requirite activar Modo de Sparnio de Energia"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Systema es in mod de Sparnio de Energia"
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Intensitate de illumination de schermo:"
+msgstr "Rola pro adjustar luminositate de schermo"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -225,10 +220,10 @@ msgid "&Show Energy Information…"
 msgstr "Monstra &information de energia..."
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Monstra percentage de batteria sur Icone"
+msgstr ""
+"Monstra percentage de batteria sur Icone quando non completemente cargate"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

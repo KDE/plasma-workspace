@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-02-05 23:07+0100\n"
+"PO-Revision-Date: 2022-12-16 22:38+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:26
@@ -103,9 +103,7 @@ msgid "Starts a new session as a different user"
 msgstr "Il initia un nove session como differente usator"
 
 #: sessionrunner.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sessiones"
@@ -116,9 +114,7 @@ msgid "Lists all sessions"
 msgstr "Il lista omne sessiones"
 
 #: sessionrunner.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "commuta"
@@ -136,7 +132,7 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Claude session"
 
 #: sessionrunner.cpp:124
 #, fuzzy, kde-format
@@ -144,7 +140,7 @@ msgstr ""
 #| msgid "shut down"
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "arresto (shutdown)"
+msgstr "Stoppa (shut down)"
 
 #: sessionrunner.cpp:134
 #, fuzzy, kde-format
@@ -152,19 +148,18 @@ msgstr "arresto (shutdown)"
 #| msgid "restart"
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "re-starta"
+msgstr "Re-Initia"
 
 #: sessionrunner.cpp:144
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Bloca"
 
 #: sessionrunner.cpp:154
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "nove session"
+msgstr "Salveguarda session"
 
 #: sessionrunner.cpp:197
 #, kde-format

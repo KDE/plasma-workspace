@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-06-06 21:48+0200\n"
+"PO-Revision-Date: 2022-12-16 22:41+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Toca per seliger tu location sur le mappa."
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
@@ -35,7 +35,7 @@ msgstr ""
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Zoom in (aggrandi)"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -46,41 +46,37 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Modificate ex <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> per "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
-#, fuzzy, kde-format
-#| msgid "Latitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
-#, fuzzy, kde-format
-#| msgid "Longitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Longitude:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Night Color (Color de Nocte) face le colores sur le schermo plus calide per "
-"reducer effortio de oculo al tempore de tu selectionar."
+msgstr "Filtro de blau legier face le colores sur le schermo plus calide."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Tempore de activation:"
+msgstr "Commuta Tempores:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Sempre Off"
 
 #: package/contents/ui/main.qml:101
 #, fuzzy, kde-format
@@ -140,7 +136,7 @@ msgstr "Calide"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Fresc (necun filtro)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -162,7 +158,7 @@ msgstr "Latitude: %1°   Longitude: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Initia color de nocte a :"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -172,7 +168,7 @@ msgstr "Formato de ingresso: HH:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Initia color de die a:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -200,23 +196,25 @@ msgstr "Error: tempore de transition imbrica"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr ""
+msgstr "Locante..."
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Color de nocte initia a cambiar a %1 e escompletemente cambiate ex %2 "
+msgstr ""
+"Temperatura de color initia a cambiar le tempore de nocte a %1 e es "
+"completemente  cambiate ab %2 "
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Color de nocte initia a cambiar a %1 e escompletemente cambiate ex %2 "
+msgstr ""
+"Temperatura de color initia a cambiar le tempore del die a %1 e es "
+"completemente  cambiate ab %2 "
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

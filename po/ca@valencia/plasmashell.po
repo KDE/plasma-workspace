@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-09-19 10:51+0200\n"
+"PO-Revision-Date: 2022-12-16 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -197,18 +197,18 @@ msgstr "S'ha desactivat el teclat a la pantalla"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Pantalla interna en %1"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 en %3"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Pantalla desconnectada %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
@@ -297,6 +297,3 @@ msgstr "Nombre de quadros"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els quadros"
-
-#~ msgid "Unknown %1"
-#~ msgstr "Desconegut %1"

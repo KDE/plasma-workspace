@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-07-15 12:18+0200\n"
+"PO-Revision-Date: 2022-12-16 22:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:169
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Necun titulo"
 
 #: package/contents/ui/AlbumArtStackView.qml:169
 #: package/contents/ui/main.qml:82
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "Selige reproductor automaticamente"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "per %1 (in pausa, %2)"
+msgstr ""
+"per %1 (%2)\n"
+"Pulsa in le medie per pausar\n"
+"Rola pro adjustr volumine"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,28 +121,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Pulsa in le medie per pausar\n"
+"Rola per adjustar volumine"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "per %1 (in pausa, %2)"
+msgstr ""
+"per %1 (in pausa, %2)\n"
+"Pulsa in le medieper sonar\n"
+"Rola per adjustar volumine"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "per %1 (in pausa, %2)"
+msgstr ""
+"In Pausa (%1)\n"
+"Pulsa in le medie per sonar\n"
+"Rola per adjustar volumine"
 
 #~ msgid "General"
 #~ msgstr "General"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 00:51+0000\n"
 "PO-Revision-Date: 2021-05-26 07:11+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -62,26 +62,26 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Erweiterungen deinstallieren oder verwalten ..."
 
-#: plugin/appentry.cpp:319
+#: plugin/appentry.cpp:309
 #, kde-format
 msgid "Hide Application"
 msgstr "Anwendung ausblenden"
 
-#: plugin/appentry.cpp:390
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:392
+#: plugin/appentry.cpp:371
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
-#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
-#: plugin/recentusagemodel.cpp:226
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
+#: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "Anwendungen"
@@ -138,42 +138,42 @@ msgstr "Kontakt vergessen"
 msgid "Forget All Contacts"
 msgstr "Alle Kontakte vergessen"
 
-#: plugin/recentusagemodel.cpp:161
+#: plugin/recentusagemodel.cpp:151
 #, kde-format
 msgid "Recently Used"
 msgstr "Kürzlich benutzt"
 
-#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
 #, kde-format
 msgid "Files"
 msgstr "Dateien"
 
-#: plugin/recentusagemodel.cpp:248
+#: plugin/recentusagemodel.cpp:238
 #, kde-format
 msgid "Forget Application"
 msgstr "Anwendung vergessen"
 
-#: plugin/recentusagemodel.cpp:342
+#: plugin/recentusagemodel.cpp:332
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: plugin/recentusagemodel.cpp:345
+#: plugin/recentusagemodel.cpp:335
 #, kde-format
 msgid "Forget File"
 msgstr "Datei vergessen"
 
-#: plugin/recentusagemodel.cpp:495
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All"
 msgstr "Alles vergessen"
 
-#: plugin/recentusagemodel.cpp:497
+#: plugin/recentusagemodel.cpp:476
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Alle Anwendungen vergessen"
 
-#: plugin/recentusagemodel.cpp:500
+#: plugin/recentusagemodel.cpp:479
 #, kde-format
 msgid "Forget All Files"
 msgstr "Alle Dateien vergessen"

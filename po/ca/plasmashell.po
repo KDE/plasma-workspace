@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-09-19 10:51+0200\n"
+"PO-Revision-Date: 2022-12-16 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -198,18 +198,18 @@ msgstr "S'ha desactivat el teclat a la pantalla"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Pantalla interna a %1"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 a %3"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Pantalla desconnectada %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
@@ -298,98 +298,3 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
-
-#~ msgid "Unknown %1"
-#~ msgstr "Desconegut %1"
-
-#~ msgid "Unable to load script file: %1"
-#~ msgstr "No s'ha pogut carregar el fitxer de script: %1"
-
-#~ msgid "Activities..."
-#~ msgstr "Activitats..."
-
-#~ msgctxt "Fatal error message title"
-#~ msgid "Plasma Cannot Start"
-#~ msgstr "No s'ha pogut iniciar el Plasma"
-
-#~ msgid "Main Script File"
-#~ msgstr "Fitxer principal de script"
-
-#~ msgid "Force a windowed view for testing purposes"
-#~ msgstr "Força una vista de finestres per a realitzar proves"
-
-#~ msgid "Deprecated, does nothing"
-#~ msgstr "Desaprovat, no es farà res"
-
-#~ msgid ""
-#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
-#~ "now."
-#~ msgstr ""
-#~ "El maquinari de gràfics no permet OpenGL (ES) 2. Plasma s'interromprà ara."
-
-#~ msgid "Incompatible OpenGL version detected"
-#~ msgstr "S'ha detectat una versió incompatible de l'OpenGL"
-
-#~ msgid "Recent number of crashes"
-#~ msgstr "Nombre de fallades recents"
-
-#~ msgid "Show Dashboard"
-#~ msgstr "Mostra el tauler"
-
-#~ msgid "Hide Dashboard"
-#~ msgstr "Oculta el tauler"
-
-#~ msgid "Shuts up the output"
-#~ msgstr "Silencia la sortida"
-
-#~ msgid "&Execute"
-#~ msgstr "&Executa"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "KWin"
-
-#~ msgid "Templates"
-#~ msgstr "Plantilles"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Consola per crear scripts d'intèrpret d'ordres per a l'escriptori"
-
-#~ msgid "Editor"
-#~ msgstr "Editor"
-
-#~ msgid "Load"
-#~ msgstr "Carrega"
-
-#~ msgid "Use"
-#~ msgstr "Usa"
-
-#~ msgid "Output"
-#~ msgstr "Sortida"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "No s'ha pogut carregar el fitxer de script <b>%1</b>"
-
-#~ msgid "Save Script File"
-#~ msgstr "Desa un fitxer de script"
-
-#~ msgid "Executing script at %1"
-#~ msgstr "S'està executant l'script a %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Temps d'execució: %1ms"
-
-#~ msgid "No plugins found, check your installation."
-#~ msgstr "No s'han trobat connectors, comproveu la instal·lació."
-
-#~ msgctxt "About mouse action"
-#~ msgid "About"
-#~ msgstr "Quant a"
-
-#~ msgctxt "Configure mouse action"
-#~ msgid "Configure"
-#~ msgstr "Configura"
-
-#~ msgctxt "Remove mouse action"
-#~ msgid "Remove"
-#~ msgstr "Elimina"

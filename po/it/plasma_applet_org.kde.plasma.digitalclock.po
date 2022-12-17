@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-03 23:22+0100\n"
+"PO-Revision-Date: 2022-12-16 10:55+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -269,6 +269,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Suggerimento: se viaggi spesso, aggiungi un'altra voce per il fuso orario di "
+"casa a questo elenco. Apparirà solo quando cambi il fuso orario a livello di "
+"sistema con qualcos'altro."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -285,10 +288,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Nascosto se questa è la città del fuso orario locale"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Passa al fuso orario locale..."
+msgstr "Passa al fuso orario di sistema..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,10 +298,9 @@ msgid "Remove this time zone"
 msgstr "Rimuovi questo fuso orario"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Fuso orario locale di sistema"
+msgstr "Fuso orario di sistema"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -326,18 +327,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Cambia il fuso orario visualizzato scorrendo sull'applet dell'orologio"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Nota che l'utilizzo di un fuso orario diverso per l'orologio non modifica il "
-"fuso orario locale a livello di sistema. Quando viaggi, cambia invece il "
-"fuso orario locale."
+"L'utilizzo di questa funzionalità non modifica il fuso orario a livello di "
+"sistema. Quando viaggi, cambia invece il fuso orario di sistema."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format

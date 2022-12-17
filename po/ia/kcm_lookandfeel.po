@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2022-06-06 21:48+0200\n"
+"PO-Revision-Date: 2022-12-16 22:41+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -163,20 +163,17 @@ msgstr "Disposition de scriptorio"
 #: package/contents/ui/MoreOptions.qml:53
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Disposition de buttones de barra de titulo"
 
 #: package/contents/ui/MoreOptions.qml:66
 #: package/contents/ui/SimpleOptions.qml:63
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
 "Applicar un disposition de Scriptorio reimplacia tu configuration currente "
-"de scriptorios, pannellos, e widgets"
+"de scriptorios, pannellos, docks e widgets"
 
 #: package/contents/ui/MoreOptions.qml:75
 #, kde-format
@@ -250,18 +247,15 @@ msgid "• Appearance settings"
 msgstr "• Preferentias de apparentia"
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "Disposition de scriptorio"
+msgstr "Disposition de scriptorio e fenestra"
 
 #: package/contents/ui/SimpleOptions.qml:58
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "* disposition de scriptorio"
+msgstr "* disposition de Scriptorio e fenestra"
 
 #: package/contents/ui/SimpleOptions.qml:75
 #, kde-format

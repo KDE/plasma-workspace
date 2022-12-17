@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-12-10 18:17+0300\n"
+"PO-Revision-Date: 2022-12-16 19:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,17 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kaan Özdinçer, M. Hayseme Karamuk"
+msgstr "Kaan Özdinçer, M. Hayseme Karamuk, Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kaanozdincer@gmail.com, a_developer_2002@outlook.com"
+msgstr ""
+"kaanozdincer@gmail.com, a_developer_2002@outlook.com, emir_sari@icloud.com"
 
 #: currentcontainmentactionsmodel.cpp:205
 #, kde-format
@@ -51,7 +52,7 @@ msgstr "Plasma Kabuğu"
 #: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "Çökmeden sonra plasma kabuğunu otomatik olarak baştan başlatma"
+msgstr "Çökme sonrası plasma-shell'i otomatik olarak yeniden başlatma"
 
 #: main.cpp:106
 #, kde-format
@@ -64,13 +65,13 @@ msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
 msgstr ""
-"Plasma kabuğunu bağımsız bir uygulama olarak yükle, kabuk eklentisi "
-"seçeneğinde belirtilmelidir"
+"Plasma kabuğunu bağımsız bir uygulama olarak yükle, shell-plugin seçeneğinin "
+"belirtilmiş olmasını gerektirir"
 
 #: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "Mevcut bir örneği değiştirin"
+msgstr "Var olan bir örneği değiştir"
 
 #: main.cpp:116
 #, kde-format
@@ -89,7 +90,7 @@ msgstr "dosya"
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "Kullanıcı geri bildirimi için mevcut seçenekleri listeler"
+msgstr "Kullanıcı geri bildirimi için kullanılabilir seçenekleri listeler"
 
 #: main.cpp:221
 #, kde-format
@@ -164,13 +165,13 @@ msgstr "Bluetooth Kapalı"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Mobil İnternet Açık"
+msgstr "Taşınabilir İnternet Açık"
 
 #: osd.cpp:139
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Mobil İnternet Kapalı"
+msgstr "Taşınabilir İnternet Kapalı"
 
 #: osd.cpp:147
 #, kde-format
@@ -191,18 +192,18 @@ msgstr "Ekran Klavyesi Kapalı"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "%1 Üzerindeki Dahili Ekran"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%3 Üzerindeki %1 %2"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "%1 Ekranı Bağlantısı Kesildi"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
