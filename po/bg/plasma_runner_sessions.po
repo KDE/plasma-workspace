@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 11:11+0000\n"
 "PO-Revision-Date: 2022-12-05 00:55+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.2.1\n"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:23
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -27,12 +27,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "изход"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Излизане от текущата сесия на работния плот"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:33
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -40,12 +40,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "изключване"
 
-#: sessionrunner.cpp:39
+#: sessionrunner.cpp:36
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Изключване на компютъра"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:43
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +53,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "рестартиране"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Рестартиране на компютъра"
 
-#: sessionrunner.cpp:57
+#: sessionrunner.cpp:54
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "заключване на екрана"
 
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Заключване на текущата сесия и включване на екранния предпазител"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:63
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +78,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "запазване на сесията"
 
-#: sessionrunner.cpp:69
+#: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Запазване на текущата сесия за последващо възстановяване"
 
-#: sessionrunner.cpp:76
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,29 +91,29 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "превключване на потребител"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "Стартиране на нова сесия като друг потребител"
 
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "сесии"
 
-#: sessionrunner.cpp:87
+#: sessionrunner.cpp:84
 #, kde-format
 msgid "Lists all sessions"
 msgstr "Списък на всички сесии"
 
-#: sessionrunner.cpp:90
+#: sessionrunner.cpp:87
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "превключване"
 
-#: sessionrunner.cpp:92
+#: sessionrunner.cpp:89
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -122,46 +122,41 @@ msgstr ""
 "Превключване към активната сесия на потребителя :q: или показване на списък "
 "с всички активни сесии, ако не е зададен :q:"
 
-#: sessionrunner.cpp:114
+#: sessionrunner.cpp:111
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Излизане от сесия"
 
-#: sessionrunner.cpp:124
+#: sessionrunner.cpp:121
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Изключване"
 
-#: sessionrunner.cpp:134
+#: sessionrunner.cpp:131
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Рестартиране"
 
-#: sessionrunner.cpp:144
+#: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Заключване"
 
-#: sessionrunner.cpp:154
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Save Session"
 msgstr "Запазване на сесията"
 
-#: sessionrunner.cpp:197
+#: sessionrunner.cpp:194
 #, kde-format
 msgid "Switch User"
 msgstr "Превключване на потребител"
 
-#: sessionrunner.cpp:274
-#, kde-format
-msgid "New Session"
-msgstr "Нова сесия"
-
-#: sessionrunner.cpp:275
+#: sessionrunner.cpp:278
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -175,3 +170,9 @@ msgstr ""
 "на работния плот, като използвате:</p><ul><li>Ctrl+Alt+F{номер на сесия}</"
 "li><li>Търсене на Plasma (въведете '%1')</li><li>Уиджети на Plasma (като "
 "например програмата за стартиране на приложения)</li></ul>"
+
+#: sessionrunner.cpp:287
+#, fuzzy, kde-format
+#| msgid "New Session"
+msgid "New Desktop Session"
+msgstr "Нова сесия"

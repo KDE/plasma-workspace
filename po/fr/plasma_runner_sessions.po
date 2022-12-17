@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 11:11+0000\n"
 "PO-Revision-Date: 2022-12-05 20:04+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:23
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -33,12 +33,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "se déconnecter ; déconnexion"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Se déconnecte, ferme la session actuelle du bureau"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:33
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -46,12 +46,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "éteindre ; extinction"
 
-#: sessionrunner.cpp:39
+#: sessionrunner.cpp:36
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Éteint l'ordinateur"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:43
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -59,24 +59,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "redémarrer ; re-démarrage"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Redémarre l'ordinateur"
 
-#: sessionrunner.cpp:57
+#: sessionrunner.cpp:54
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "Verrouiller l'écran ; verrouillage"
 
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Verrouille les sessions courantes et lance l'écran de veille"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:63
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -84,12 +84,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "Enregistrer une session ; enregistrer"
 
-#: sessionrunner.cpp:69
+#: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Enregistre la session courante pour sa restauration ultérieure"
 
-#: sessionrunner.cpp:76
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -97,29 +97,29 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "changer d'utilisateur ; nouvelle session"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "Démarre une nouvelle session comme utilisateur différent"
 
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sessions"
 
-#: sessionrunner.cpp:87
+#: sessionrunner.cpp:84
 #, kde-format
 msgid "Lists all sessions"
 msgstr "Affiche la liste des sessions"
 
-#: sessionrunner.cpp:90
+#: sessionrunner.cpp:87
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "basculer"
 
-#: sessionrunner.cpp:92
+#: sessionrunner.cpp:89
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -128,46 +128,41 @@ msgstr ""
 "Bascule vers la session active de l'utilisateur « :q: » ou liste l'ensemble "
 "des sessions actives si « :q: » n'est pas disponible"
 
-#: sessionrunner.cpp:114
+#: sessionrunner.cpp:111
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Se déconnecter"
 
-#: sessionrunner.cpp:124
+#: sessionrunner.cpp:121
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Éteindre"
 
-#: sessionrunner.cpp:134
+#: sessionrunner.cpp:131
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: sessionrunner.cpp:144
+#: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Verrouiller"
 
-#: sessionrunner.cpp:154
+#: sessionrunner.cpp:151
 #, kde-format
 msgid "Save Session"
 msgstr "Enregistrer une session"
 
-#: sessionrunner.cpp:197
+#: sessionrunner.cpp:194
 #, kde-format
 msgid "Switch User"
 msgstr "Changer d'utilisateur"
 
-#: sessionrunner.cpp:274
-#, kde-format
-msgid "New Session"
-msgstr "Nouvelle session"
-
-#: sessionrunner.cpp:275
+#: sessionrunner.cpp:278
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -182,6 +177,12 @@ msgstr ""
 "p><ul><li>Le raccourci « CTRL » + « ALT »+ « F » {numéro de session}</"
 "li><li>Recherche de Plasma (Saisir « %1 )</li><li>Composants graphique de "
 "Plasma (tel que le lanceur d’application)</li></ul>"
+
+#: sessionrunner.cpp:287
+#, fuzzy, kde-format
+#| msgid "New Session"
+msgid "New Desktop Session"
+msgstr "Nouvelle session"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

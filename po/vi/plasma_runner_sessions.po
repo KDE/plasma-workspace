@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-17 11:11+0000\n"
 "PO-Revision-Date: 2022-10-31 12:08+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.08.1\n"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:23
 #, fuzzy, kde-format
 #| msgid "log out"
 msgctxt ""
@@ -26,12 +26,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "dang xuat"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Đăng xuất, thoát khỏi phiên bàn làm việc hiện tại"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:33
 #, fuzzy, kde-format
 #| msgctxt "shut down computer command"
 #| msgid "shut down"
@@ -41,12 +41,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "tat"
 
-#: sessionrunner.cpp:39
+#: sessionrunner.cpp:36
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Tắt máy tính"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:43
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -56,12 +56,12 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "khoi dong lai"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Khởi động lại máy tính"
 
-#: sessionrunner.cpp:57
+#: sessionrunner.cpp:54
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt ""
@@ -69,12 +69,12 @@ msgctxt ""
 msgid "lock;lock screen"
 msgstr "Khoá màn hình"
 
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Khoá các phiên hiện tại và khởi động trình bảo vệ màn hình"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:63
 #, fuzzy, kde-format
 #| msgctxt "save session command"
 #| msgid "save session"
@@ -84,12 +84,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "luu phien"
 
-#: sessionrunner.cpp:69
+#: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Lưu phiên hiện tại để khôi phục về sau"
 
-#: sessionrunner.cpp:76
+#: sessionrunner.cpp:73
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgctxt ""
@@ -98,12 +98,12 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "chuyen nguoi dung"
 
-#: sessionrunner.cpp:79
+#: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "Bắt đầu một phiên mới với vai trò một người dùng khác"
 
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:83
 #, fuzzy, kde-format
 #| msgctxt "User sessions"
 #| msgid "sessions"
@@ -111,12 +111,12 @@ msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "phien"
 
-#: sessionrunner.cpp:87
+#: sessionrunner.cpp:84
 #, kde-format
 msgid "Lists all sessions"
 msgstr "Liệt kê tất cả các phiên"
 
-#: sessionrunner.cpp:90
+#: sessionrunner.cpp:87
 #, fuzzy, kde-format
 #| msgctxt "switch user command"
 #| msgid "switch"
@@ -124,7 +124,7 @@ msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "chuyen"
 
-#: sessionrunner.cpp:92
+#: sessionrunner.cpp:89
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -133,13 +133,13 @@ msgstr ""
 "Chuyển sang phiên hoạt động cho người dùng :q:, hoặc liệt kê tất cả các "
 "phiên hoạt động nếu không có :q:"
 
-#: sessionrunner.cpp:114
+#: sessionrunner.cpp:111
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:124
+#: sessionrunner.cpp:121
 #, fuzzy, kde-format
 #| msgctxt "shut down computer command"
 #| msgid "shut down"
@@ -147,7 +147,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "tat"
 
-#: sessionrunner.cpp:134
+#: sessionrunner.cpp:131
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -155,30 +155,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "khoi dong lai"
 
-#: sessionrunner.cpp:144
+#: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:154
+#: sessionrunner.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "save session command"
 #| msgid "save session"
 msgid "Save Session"
 msgstr "luu phien"
 
-#: sessionrunner.cpp:197
+#: sessionrunner.cpp:194
 #, kde-format
 msgid "Switch User"
 msgstr "Chuyển người dùng"
 
-#: sessionrunner.cpp:274
-#, kde-format
-msgid "New Session"
-msgstr "Phiên mới"
-
-#: sessionrunner.cpp:275
+#: sessionrunner.cpp:278
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>You are about to enter a new desktop session.</p><p>A login screen "
@@ -198,6 +193,12 @@ msgstr ""
 "các phiên bàn làm việc bằng:</p><ul><li>Ctrl+Alt+F{chỉ số phiên}</"
 "li><li>Công cụ tìm kiếm Plasma (gõ 'chuyen' hoặc 'phien')</li><li>Các phụ "
 "kiện Plasma (chẳng hạn như trình khởi chạy ứng dụng)</li></ul>"
+
+#: sessionrunner.cpp:287
+#, fuzzy, kde-format
+#| msgid "New Session"
+msgid "New Desktop Session"
+msgstr "Phiên mới"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

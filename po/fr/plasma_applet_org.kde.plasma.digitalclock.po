@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-05 19:50+0100\n"
+"PO-Revision-Date: 2022-12-16 21:05+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.11.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -275,6 +275,10 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Astuce : si vous voyagez fréquemment, ajoutez une autre entrée à votre "
+"fuseau horaire de votre emplacement à cette liste. Elle n’apparaîtra que "
+"lors d'un changement de fuseau horaire applicable à l'ensemble du système "
+"vers un autre fuseau."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -291,10 +295,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Masqué tant que ceci est la ville du fuseau horaire local"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Basculer vers le fuseau horaire local..."
+msgstr "Basculer vers le fuseau horaire applicable à l'ensemble du système..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -302,10 +305,9 @@ msgid "Remove this time zone"
 msgstr "Supprimer ce fuseau horaire"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Fuseau horaire local du système"
+msgstr "Fuseau horaire applicable à l'ensemble du système"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -334,18 +336,14 @@ msgstr ""
 "composant graphique d'horloge."
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Remarque : l'utilisation d'un fuseau horaire différent de l'horloge ne "
-"modifie pas le fuseau horaire local du système. Lorsque vous voyagez, "
-"basculer le fuseau horaire local à la place."
+"L'utilisation de cette fonctionnalité ne modifie pas le fuseau horaire "
+"applicable à l'ensemble du système. Lorsque vous voyagez, veuillez basculer "
+"vers le fuseau horaire applicable à l'ensemble du système."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format

@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-03 16:23+0100\n"
+"PO-Revision-Date: 2022-12-17 10:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language-Team: Basque\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -273,6 +273,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Aholkua: maiz bidaiatzen baduzu, gehitu zerrenda honetan beste sarrera bat "
+"zure etxeko ordu-eremurako. Sistema osorako ordu-eremua beste zerbaitera "
+"aldatzen duzunean bakarrik agertuko da."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -289,10 +292,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Ezkutuan ordu eremu lokalaren hiria denean"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Aldatu tokiko ordu-eremua..."
+msgstr "Aldatu sistema osorako ordu-eremua..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -300,10 +302,9 @@ msgid "Remove this time zone"
 msgstr "Kendu ordu-eremu hau"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Sistemaren tokiko ordu-eremua"
+msgstr "Sistema osorako ordu-eremua"
 
 # euskalterm
 #: package/contents/ui/configTimeZones.qml:135
@@ -334,18 +335,13 @@ msgstr ""
 "kiribilduz"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Kontuan izan ordularian beste ordu-eremu bat erabiltzeak ez duela aldatzen "
-"sistemaren tokiko ordu-eremua. Bidaiatzean, horren ordez, aldatu tokiko ordu-"
-"eremua."
+"Ezaugarri hau erabiltzeak ez du aldatzen sistema osorako ordu-eremua. "
+"Bidaiatzean, horren ordez, aldatu sistema osorako ordu-eremua."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
