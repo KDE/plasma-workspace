@@ -11,11 +11,8 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <QFile>
-#include <QTimer>
 
 #include <chrono>
-#include <set>
 
 LocaleGenHelper::LocaleGenHelper()
     : m_authority(PolkitQt1::Authority::instance())

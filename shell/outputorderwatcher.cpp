@@ -8,8 +8,6 @@
 #include "outputorderwatcher.h"
 #include "debug.h"
 
-#include <config-plasma.h>
-
 #include <QGuiApplication>
 #include <QScreen>
 #include <QTimer>
@@ -28,7 +26,6 @@
 #endif
 
 #include <xcb/randr.h>
-#include <xcb/xcb.h>
 #include <xcb/xcb_event.h>
 #endif // HAVE_X11
 

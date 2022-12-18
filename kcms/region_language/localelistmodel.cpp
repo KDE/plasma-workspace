@@ -20,7 +20,6 @@
 #include "localelistmodel.h"
 #include "exampleutility.h"
 #include "kcmregionandlang.h"
-#include "settingtype.h"
 
 #include <QTextCodec>
 

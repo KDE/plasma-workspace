@@ -22,7 +22,6 @@
 #include "klipper_debug.h"
 
 #include "configdialog.h"
-#include "urlgrabber.h"
 
 static void setIconForCommand(ClipCommand *cmd)
 {
