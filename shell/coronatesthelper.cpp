@@ -43,7 +43,7 @@ void CoronaTestHelper::processApplet(Plasma::Applet *applet)
 
     auto testObject = obj->testItem();
     if (!testObject) {
-        qCWarning(PLASMASHELL) << "no test for" << applet->title() << applet->kPackage().path();
+        qCWarning(PLASMASHELL) << "no test for" << applet->title();
         return;
     }
     integrateTest(testObject);
