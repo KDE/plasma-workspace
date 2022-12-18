@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-18 00:56+0000\n"
 "PO-Revision-Date: 2019-11-26 23:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -205,27 +205,27 @@ msgstr "Cambiar a disposición"
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: contents/lockscreen/MediaControls.qml:108
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:109
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No media playing"
 msgstr "Non se está a reproducir nada."
 
-#: contents/lockscreen/MediaControls.qml:138
+#: contents/lockscreen/MediaControls.qml:139
 #, kde-format
 msgid "Previous track"
 msgstr "Pista anterior"
 
-#: contents/lockscreen/MediaControls.qml:150
+#: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Reproducir ou deter o contido multimedia"
 
-#: contents/lockscreen/MediaControls.qml:164
+#: contents/lockscreen/MediaControls.qml:165
 #, kde-format
 msgid "Next track"
 msgstr "Seguinte pista"

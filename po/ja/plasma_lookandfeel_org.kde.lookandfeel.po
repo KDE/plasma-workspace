@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-18 00:56+0000\n"
 "PO-Revision-Date: 2022-08-20 23:20-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -200,27 +200,27 @@ msgstr "配列を切り替え"
 msgid "Unlock"
 msgstr "ロック解除"
 
-#: contents/lockscreen/MediaControls.qml:108
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:109
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No media playing"
 msgstr "再生中のメディアはありません"
 
-#: contents/lockscreen/MediaControls.qml:138
+#: contents/lockscreen/MediaControls.qml:139
 #, kde-format
 msgid "Previous track"
 msgstr "前のトラック"
 
-#: contents/lockscreen/MediaControls.qml:150
+#: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
 msgstr "メディアを再生/一時停止"
 
-#: contents/lockscreen/MediaControls.qml:164
+#: contents/lockscreen/MediaControls.qml:165
 #, kde-format
 msgid "Next track"
 msgstr "次のトラック"

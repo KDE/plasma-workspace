@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-18 00:56+0000\n"
 "PO-Revision-Date: 2022-12-16 22:37+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -198,27 +198,27 @@ msgstr "Commuta disposition"
 msgid "Unlock"
 msgstr "Disbloca"
 
-#: contents/lockscreen/MediaControls.qml:108
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
 msgstr "Necun titulo"
 
-#: contents/lockscreen/MediaControls.qml:109
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No media playing"
 msgstr "Necun media reproducente"
 
-#: contents/lockscreen/MediaControls.qml:138
+#: contents/lockscreen/MediaControls.qml:139
 #, kde-format
 msgid "Previous track"
 msgstr "Previe tracia"
 
-#: contents/lockscreen/MediaControls.qml:150
+#: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Reproduce o pone in pausa dispositivo de multimedia"
 
-#: contents/lockscreen/MediaControls.qml:164
+#: contents/lockscreen/MediaControls.qml:165
 #, kde-format
 msgid "Next track"
 msgstr "Proxime tracia"

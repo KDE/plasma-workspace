@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-12-11 14:24+0300\n"
+"PO-Revision-Date: 2022-12-17 18:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -480,12 +480,12 @@ msgstr "<qt><b>'%1'</b> adlı bir grup zaten var.</qt>"
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
 msgid "Rename…"
-msgstr "Yeniden adlandır…"
+msgstr "Yeniden Adlandır…"
 
 #: kcmfontinst/GroupList.cpp:801
 #, kde-format
 msgid "Export…"
-msgstr "Dışarıya aktar…"
+msgstr "Dışa Aktar…"
 
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
@@ -901,7 +901,7 @@ msgstr "Yazıtip(ler)i taşınıyor…"
 #: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "Export Group"
-msgstr "Grubu Dışarıya Aktar"
+msgstr "Grubu Dışa Aktar"
 
 #: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
@@ -1428,7 +1428,7 @@ msgstr "Daha Çok Genişletilmiş"
 
 #: lib/KfiConstants.h:103
 msgid "Monospaced"
-msgstr "Sabit Genişlikli"
+msgstr "Eş Aralıklı"
 
 #: lib/KfiConstants.h:104
 msgid "Charcell"

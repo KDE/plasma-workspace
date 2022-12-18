@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-02 16:07+0200\n"
+"PO-Revision-Date: 2022-12-17 17:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -173,10 +173,9 @@ msgstr ""
 "Плазми (зокрема віджета запуску програм)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Новий сеанс"
+msgstr "Новий стільничний сеанс"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

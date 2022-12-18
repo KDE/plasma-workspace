@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-22 00:47+0000\n"
+"POT-Creation-Date: 2022-12-18 00:56+0000\n"
 "PO-Revision-Date: 2022-10-09 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -201,27 +201,27 @@ msgstr "Змінити розкладку"
 msgid "Unlock"
 msgstr "Розблокувати"
 
-#: contents/lockscreen/MediaControls.qml:108
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
 msgstr "Без заголовка"
 
-#: contents/lockscreen/MediaControls.qml:109
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No media playing"
 msgstr "Нічого не відтворюється"
 
-#: contents/lockscreen/MediaControls.qml:138
+#: contents/lockscreen/MediaControls.qml:139
 #, kde-format
 msgid "Previous track"
 msgstr "Попередня композиція"
 
-#: contents/lockscreen/MediaControls.qml:150
+#: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Почати або призупинити відтворення"
 
-#: contents/lockscreen/MediaControls.qml:164
+#: contents/lockscreen/MediaControls.qml:165
 #, kde-format
 msgid "Next track"
 msgstr "Наступна композиція"
