@@ -270,7 +270,7 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
         const QString desktopId = desktopEntry + QLatin1String(".desktop");
 
         const auto services = KApplicationTrader::query([&desktopId](const KService::Ptr &app) -> bool {
-            const QString renamedFrom = app->property(QStringLiteral("X-Flatpak-RenamedFrom"), QVariant::String).toString();
+            const QString renamedFrom = app->property(QStringLiteral("X-Flatpak-RenamedFrom"), QMetaType::QString).toString();
 
             if (renamedFrom.isEmpty()) {
                 return false;

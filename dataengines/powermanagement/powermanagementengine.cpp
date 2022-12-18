@@ -858,7 +858,7 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
     } else {
         KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
         if (service) {
-            *prettyName = service->property(QStringLiteral("Name"), QVariant::Invalid).toString(); // cannot be null
+            *prettyName = service->name(); // cannot be null
             *icon = service->icon();
 
             m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));
