@@ -374,7 +374,7 @@ add_subdirectory(applets)
 add_subdirectory(dataengines)
 add_subdirectory(wallpapers)
 
-add_subdirectory(kioslave)
+add_subdirectory(kioworkers)
 add_subdirectory(ktimezoned)
 add_subdirectory(menu)
 add_subdirectory(phonon)
