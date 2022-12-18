@@ -178,13 +178,17 @@ private:
         }
 
         // Remove special arguments that have no real impact on the application.
-        static const auto specialArgs = {QStringLiteral("-qwindowtitle"), QStringLiteral("-qwindowicon")};
+        static const auto specialArgs = {QStringLiteral("-qwindowtitle"), QStringLiteral("-qwindowicon"), QStringLiteral("--started-from-file")};
 
         for (const auto &specialArg : specialArgs) {
             int index = resultingArgs.indexOf(specialArg);
-            if (index > -1 && resultingArgs.count() > index + 1) {
-                resultingArgs.removeAt(index);
-                resultingArgs.removeAt(index); // remove value, too
+            if (index > -1) {
+                if (resultingArgs.count() > index) {
+                    resultingArgs.removeAt(index);
+                }
+                if (resultingArgs.count() > index) {
+                    resultingArgs.removeAt(index); // remove value, too, if any.
+                }
             }
         }
 
