@@ -8,11 +8,10 @@
 #include "splashapp.h"
 #include "splashwindow.h"
 
+#include <QLoggingCategory>
 #include <QCommandLineParser>
 #include <QCursor>
 #include <QDBusConnection>
-#include <QDate>
-#include <QDebug>
 #include <QPixmap>
 #include <qscreen.h>
 
@@ -22,6 +21,8 @@
 #include <KSharedConfig>
 
 #include <LayerShellQt/Shell>
+
+Q_LOGGING_CATEGORY(ksplashqml, "org.kde.plasma.ksplashqml", QtWarningMsg)
 
 #define TEST_STEP_INTERVAL 2000
 
@@ -101,6 +102,8 @@ void SplashApp::timerEvent(QTimerEvent *event)
 
 void SplashApp::setStage(const QString &stage)
 {
+    qCDebug(ksplashqml) << "Loading stage " << stage << ", current count " << m_stages.count();
+
     if (m_stages.contains(stage)) {
         return;
     }
