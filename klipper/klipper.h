@@ -237,7 +237,7 @@ private:
     KActionCollection *m_collection;
     QMenu *m_actionsPopup;
     KlipperMode m_mode;
-    QTimer *m_saveFileTimer = nullptr;
+    QTimer *m_saveFileTimer;
     QPointer<KNotification> m_notification;
     KWayland::Client::PlasmaShell *m_plasmashell;
 };

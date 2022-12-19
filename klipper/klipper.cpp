@@ -121,6 +121,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     , m_config(config)
     , m_pendingContentsCheck(false)
     , m_mode(mode)
+    , m_saveFileTimer(nullptr)
     , m_plasmashell(nullptr)
 {
     if (m_mode == KlipperMode::Standalone) {
@@ -171,6 +172,22 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     if (m_bKeepContents) {
         loadHistory();
     }
+
+    m_saveFileTimer = new QTimer(this);
+    m_saveFileTimer->setSingleShot(true);
+    m_saveFileTimer->setInterval(5s);
+    connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        QtConcurrent::run(this, &Klipper::saveHistory, false);
+#else
+        QtConcurrent::run(&Klipper::saveHistory, this, false);
+#endif
+    });
+    connect(m_history, &History::changed, this, [this] {
+        if (m_bKeepContents) {
+            m_saveFileTimer->start();
+        }
+    }); // only connect this signal after loading the history, to avoid the action of loading triggering a save
 
     m_clearHistoryAction = m_collection->addAction(QStringLiteral("clear-history"));
     m_clearHistoryAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
@@ -389,23 +406,6 @@ void Klipper::loadSettings()
         item->setProperty(3);
         KlipperSettings::self()->save();
         KlipperSettings::self()->load();
-    }
-
-    if (m_bKeepContents && !m_saveFileTimer) {
-        m_saveFileTimer = new QTimer(this);
-        m_saveFileTimer->setSingleShot(true);
-        m_saveFileTimer->setInterval(5s);
-        connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-            QtConcurrent::run(this, &Klipper::saveHistory, false);
-#else
-            QtConcurrent::run(&Klipper::saveHistory, this, false);
-#endif
-        });
-        connect(m_history, &History::changed, m_saveFileTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
-    } else {
-        delete m_saveFileTimer;
-        m_saveFileTimer = nullptr;
     }
 }
 
