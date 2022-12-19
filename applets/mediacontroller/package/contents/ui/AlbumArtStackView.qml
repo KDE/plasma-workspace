@@ -8,6 +8,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Window 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -34,6 +35,9 @@ Item {
      */
     readonly property alias albumArt: albumArt
 
+    onWidthChanged: geometryChangeTimer.restart();
+    onHeightChanged: geometryChangeTimer.restart();
+
     function loadAlbumArt() {
         if (!root.albumArt) {
             albumArt.clear(StackView.PopTransition);
@@ -43,6 +47,7 @@ Item {
         const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
         const pendingImage = albumArtComponent.createObject(albumArt, {
             "source": root.albumArt,
+            "sourceSize": Qt.size(container.width * Screen.devicePixelRatio, container.height * Screen.devicePixelRatio),
             "opacity": 0,
         });
 
@@ -65,6 +70,13 @@ Item {
 
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
+    }
+
+    // Reload album art when size of container changes
+    Timer {
+        id: geometryChangeTimer
+        interval: 250
+        onTriggered: container.loadAlbumArt();
     }
 
     StackView {
