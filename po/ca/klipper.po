@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 10:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -302,7 +302,7 @@ msgstr ""
 "El primer nom que es mostra després del signe d'igual és el que heu "
 "d'introduir."
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "Ignora"
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr "Introduïu una descripció de l'acció"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Descripció:"
@@ -431,22 +431,22 @@ msgstr "Suprimeixo l'ordre seleccionada <resource>%1</resource>?"
 msgid "Confirm Delete Command"
 msgstr "Confirma l'ordre de supressió"
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, kde-format
 msgid "Command Properties"
 msgstr "Propietats de l'ordre"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Introduïu l'ordre i els arguments"
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
 msgstr "Ordre:"
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -460,37 +460,37 @@ msgstr ""
 "<placeholder>&#37;9</placeholder> seran substituïts pels textos capturats "
 "corresponents del patró de coincidència."
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Introduïu una descripció de l'ordre"
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr "Sortida de l'ordre:"
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Substitueix al porta-retalls actual"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Afegeix al porta-retalls"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "Què passa a la sortida estàndard de l'ordre executada."
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Reinicia la icona al valor predeterminat per a l'ordre."
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr "Icona:"

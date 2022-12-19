@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -285,7 +285,7 @@ msgid ""
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "Abaikan"
@@ -354,7 +354,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr ""
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Deskripsi:"
@@ -404,24 +404,24 @@ msgstr ""
 msgid "Confirm Delete Command"
 msgstr ""
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, fuzzy, kde-format
 #| msgid "Action Properties"
 msgid "Command Properties"
 msgstr "Properti Aksi"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr ""
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Command"
 msgid "Command:"
 msgstr "Perintah"
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -431,39 +431,39 @@ msgid ""
 "captured texts from the match pattern."
 msgstr ""
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr ""
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr ""
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, fuzzy, kde-format
 #| msgid "Replace Clipboard"
 msgid "Replace current clipboard"
 msgstr "Ganti Papan-klip"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, fuzzy, kde-format
 #| msgid "Add to Clipboard"
 msgid "Append to clipboard"
 msgstr "Tambah ke Papan-klip"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr ""
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr ""
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr ""

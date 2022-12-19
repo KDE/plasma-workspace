@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 12:08+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -308,7 +308,7 @@ msgstr ""
 "De eerste naam die getoond wordt na het is-teken is degene die u moet "
 "invoeren."
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "Negeren"
@@ -384,7 +384,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr "Voer een beschrijving in voor de actie"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Beschrijving:"
@@ -437,22 +437,22 @@ msgstr "Het geselecteerde commando <resource>%1</resource> verwijderen?"
 msgid "Confirm Delete Command"
 msgstr "Commando verwijderen bevestigen"
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, kde-format
 msgid "Command Properties"
 msgstr "Commando-eigenschappen"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Voer het commando en argumenten in"
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
 msgstr "Commando:"
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -466,37 +466,37 @@ msgstr ""
 "tot <placeholder>&#37;9</placeholder> zal vervagen worden door de "
 "overeenkomstige gevangen teksten uit het overeenkomstpatroon."
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Voer een beschrijving in voor het commando"
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr "Uitvoer van commando:"
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Huidige klembord vervangen"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Aan klembord toevoegen"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "Wat er gebeurt met de standaard uitvoer van het uitgevoerde commando."
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Het pictogram resetten naar de standaard voor het commando"
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr "Pictogram:"

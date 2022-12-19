@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-08-24 17:45+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -277,43 +277,43 @@ msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
 msgstr "%1 paketini quraşdırmaq mümkün olmadı"
 
-#: localegenhelper/localegenhelper.cpp:46
+#: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr "Başqa əməliyyat artıq icra olunur. lütfən sonra cəhd edin"
 
-#: localegenhelper/localegenhelper.cpp:66
+#: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr "Yerli dil tənzimləmə faylına düzəliş səlahiyyətiniz yoxdur"
 
-#: localegenhelper/localegenhelper.cpp:116
+#: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "\"/etc/locale.gen\" faylını açmaq mükün olmadı"
 
-#: localegenhelper/localegenhelper.cpp:149
+#: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "\"locate-gen\" icra faylını tapmaq mümkün olmadı"
 
-#: localegenhelper/localegenhelper.cpp:162
+#: localegenhelper/localegenhelper.cpp:159
 #, kde-format
 msgid "Unknown"
 msgstr "Naməlum"
 
-#: localelistmodel.cpp:35
+#: localelistmodel.cpp:34
 #, kde-format
 msgid "Default for System"
 msgstr "Sistemin standart dili"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:86
+#: localelistmodel.cpp:34 localelistmodel.cpp:85
 #: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "Standart"
 
-#: localelistmodel.cpp:82
+#: localelistmodel.cpp:81
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -321,14 +321,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:164
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Sistemin standart dili C"
 
-#: localelistmodel.cpp:167
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

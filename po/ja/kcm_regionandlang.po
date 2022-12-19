@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-08-18 22:15+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -274,43 +274,43 @@ msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
 msgstr "パッケージ %1 のインストールに失敗しました"
 
-#: localegenhelper/localegenhelper.cpp:46
+#: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr "他のプロセスが既に実行されています。後で再試行してください。"
 
-#: localegenhelper/localegenhelper.cpp:66
+#: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr "ロケールの設定ファイルを編集する権限がありません。"
 
-#: localegenhelper/localegenhelper.cpp:116
+#: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "`/etc/locale.gen` を開けません"
 
-#: localegenhelper/localegenhelper.cpp:149
+#: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "実行ファイル `locale-gen` が見つかりません"
 
-#: localegenhelper/localegenhelper.cpp:162
+#: localegenhelper/localegenhelper.cpp:159
 #, kde-format
 msgid "Unknown"
 msgstr "未知"
 
-#: localelistmodel.cpp:35
+#: localelistmodel.cpp:34
 #, kde-format
 msgid "Default for System"
 msgstr "システムのデフォルト"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:86
+#: localelistmodel.cpp:34 localelistmodel.cpp:85
 #: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "デフォルト"
 
-#: localelistmodel.cpp:82
+#: localelistmodel.cpp:81
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -318,14 +318,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:164
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "システムのデフォルト C"
 
-#: localelistmodel.cpp:167
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

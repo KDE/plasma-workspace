@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-09-19 09:40+0100\n"
+"PO-Revision-Date: 2022-12-18 12:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -193,18 +193,18 @@ msgstr "Teclado no Ecrã Inactivo"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Ecrã Interno no %1"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 no %3"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Ecrã %1 Desligado"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
@@ -293,6 +293,3 @@ msgstr "Número de Painéis"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Conta os painéis"
-
-#~ msgid "Unknown %1"
-#~ msgstr "%1 Desconhecido"

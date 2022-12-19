@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2017-05-16 12:13-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kio_desktop.cpp:170
+#: kio_desktop.cpp:171
 #, kde-format
 msgid "Desktop Folder"
 msgstr "תיקית שולחן עבודה"

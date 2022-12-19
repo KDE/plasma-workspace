@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-10-18 13:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -292,7 +292,7 @@ msgstr ""
 "><nl/> və istisna etmək istədiyiniz pəncərənin üzərinə vurun. Bərabər "
 "işarəsindən sonra görünən ilk ad daxil etməniz lazım olan addır."
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "İmtina"
@@ -368,7 +368,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr "Əməlin təsvirini daxil edin"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "İzahatı:"
@@ -421,22 +421,22 @@ msgstr "Seçilmiş <resource>%1</resource> əmri silinsin?"
 msgid "Confirm Delete Command"
 msgstr "Əmrin silinməsini təsdiq edin"
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, kde-format
 msgid "Command Properties"
 msgstr "Əmr xüsusiyyətləri"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Əmri və arqumenləri daxil edin"
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
 msgstr "Əmr:"
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -450,37 +450,37 @@ msgstr ""
 "<placeholder>&#37;9</placeholder> ilə oxşar nümunədən götürülmüş mətnə uyğun "
 "olaraq əvəzlənəcəkdir."
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Əmrin təsvirini daxil edin"
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr "Əmrdən çıxarış:"
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Cari mübadilə yaddaşındakı ilə əvəzləyin"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Mübadilə yaddaşına əlavə edin"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "İcra olunmuş əmrin standart çıxarışında baş verənlər."
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Əmr üçün nişanı standart vəziyyətinə qaytarın"
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr "Nişan:"

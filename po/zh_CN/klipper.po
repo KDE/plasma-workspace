@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-12-13 12:21\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -277,7 +277,7 @@ msgstr ""
 "WM_CLASS</icode><nl/><nl/>然后点击需要排除的窗口。在等号后面显示的第一个名称"
 "就是需要输入的名称。"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "忽略"
@@ -351,7 +351,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr "输入此操作的描述"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "描述："
@@ -401,22 +401,22 @@ msgstr "删除选中的命令 <resource>%1</resource> 吗？"
 msgid "Confirm Delete Command"
 msgstr "确认删除命令"
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, kde-format
 msgid "Command Properties"
 msgstr "命令属性"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "输入命令和参数"
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
 msgstr "命令："
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -429,37 +429,37 @@ msgstr ""
 "<placeholder>&#37;0</placeholder> 到 <placeholder>&#37;9</placeholder> 将被替"
 "换为按照匹配模式捕获的文本。"
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "输入此命令的描述"
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr "命令的输出："
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "替换当前剪贴板"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, kde-format
 msgid "Append to clipboard"
 msgstr "添加到剪贴板"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "在所执行命令的标准输出中发生的内容。"
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "重置图标为命令的默认值"
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr "图标："

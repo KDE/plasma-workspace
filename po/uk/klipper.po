@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 13:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -304,7 +304,7 @@ msgstr ""
 ">і клацніть на вікні, яке ви хочете виключити. Перша назва, яку буде "
 "показано після символу рівності, і є потрібною вам назвою."
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
 msgstr "Ігнорувати"
@@ -380,7 +380,7 @@ msgstr ""
 msgid "Enter a description for the action"
 msgstr "Введіть опис дії"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Опис:"
@@ -433,22 +433,22 @@ msgstr "Вилучити позначену команду <resource>%1</resourc
 msgid "Confirm Delete Command"
 msgstr "Підтвердження вилучення команди"
 
-#: editcommanddialog.cpp:47
+#: editcommanddialog.cpp:46
 #, kde-format
 msgid "Command Properties"
 msgstr "Властивості команди"
 
-#: editcommanddialog.cpp:60
+#: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Введіть команду і аргументи"
 
-#: editcommanddialog.cpp:63
+#: editcommanddialog.cpp:62
 #, kde-format
 msgid "Command:"
 msgstr "Команда:"
 
-#: editcommanddialog.cpp:72
+#: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -462,37 +462,37 @@ msgstr ""
 "<placeholder>&#37;9</placeholder> буде замінено на відповідні захоплені "
 "фрагменти тексту зі взірця відповідності."
 
-#: editcommanddialog.cpp:82
+#: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Введіть опис команди"
 
-#: editcommanddialog.cpp:92
+#: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
 msgstr "Виведення від команди:"
 
-#: editcommanddialog.cpp:94
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Замінити поточний вміст буфера"
 
-#: editcommanddialog.cpp:98
+#: editcommanddialog.cpp:97
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Дописати до буфера обміну"
 
-#: editcommanddialog.cpp:102
+#: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "Визначити дію зі стандартним виведенням виконаної команди."
 
-#: editcommanddialog.cpp:116
+#: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Скинути піктограму до типової для команди"
 
-#: editcommanddialog.cpp:122
+#: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
 msgstr "Піктограма:"
