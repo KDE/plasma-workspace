@@ -14,7 +14,7 @@
 class HistoryImageItem : public HistoryItem
 {
 public:
-    explicit HistoryImageItem(const QPixmap &data);
+    explicit HistoryImageItem(const QImage &data);
     ~HistoryImageItem() override
     {
     }

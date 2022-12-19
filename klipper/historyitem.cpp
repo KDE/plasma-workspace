@@ -49,7 +49,7 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data)
         if (image.isNull()) {
             return HistoryItemPtr();
         }
-        return HistoryItemPtr(new HistoryImageItem(QPixmap::fromImage(image)));
+        return HistoryItemPtr(new HistoryImageItem(image));
     }
 
     return HistoryItemPtr(); // Failed.
@@ -77,7 +77,7 @@ HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
         return HistoryItemPtr(new HistoryStringItem(text));
     }
     if (type == QLatin1String("image")) {
-        QPixmap image;
+        QImage image;
         dataStream >> image;
         return HistoryItemPtr(new HistoryImageItem(image));
     }

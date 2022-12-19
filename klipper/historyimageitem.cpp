@@ -17,19 +17,16 @@
 
 namespace
 {
-QByteArray compute_uuid(const QPixmap &data)
+QByteArray compute_uuid(const QImage &data)
 {
-    QByteArray buffer;
-    QDataStream out(&buffer, QIODevice::WriteOnly);
-    out << data;
-    return QCryptographicHash::hash(buffer, QCryptographicHash::Sha1);
+    return QCryptographicHash::hash(QByteArray::fromRawData(reinterpret_cast<const char *>(data.constBits()), data.sizeInBytes()), QCryptographicHash::Sha1);
 }
 
 }
 
-HistoryImageItem::HistoryImageItem(const QPixmap &data)
+HistoryImageItem::HistoryImageItem(const QImage &data)
     : HistoryItem(compute_uuid(data))
-    , m_data(data)
+    , m_data(QPixmap::fromImage(data))
 {
 }
 
@@ -44,7 +41,7 @@ QString HistoryImageItem::text() const
 /* virtual */
 void HistoryImageItem::write(QDataStream &stream) const
 {
-    stream << QStringLiteral("image") << m_data;
+    stream << QStringLiteral("image") << m_data.toImage();
 }
 
 QMimeData *HistoryImageItem::mimeData() const
