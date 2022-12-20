@@ -8,22 +8,22 @@
 
 #include <QFileInfo>
 
-static QString findSymlinkTarget(const QFileInfo &info)
+static QFileInfo findSymlinkTarget(const QFileInfo &info)
 {
     if (!info.isSymLink()) {
-        return info.filePath();
+        return info;
     }
 
     int count = 0;
-    QString target = info.symLinkTarget();
+    QFileInfo target(info.symLinkTarget());
 
-    while (count < 10 && QFileInfo(target).isSymLink()) {
-        target = info.symLinkTarget();
+    while (count < 10 && target.isSymLink()) {
+        target = QFileInfo(target.symLinkTarget());
         count += 1;
     }
 
     if (QFileInfo(target).isSymLink()) {
-        return QString();
+        return info;
     }
 
     return target;
