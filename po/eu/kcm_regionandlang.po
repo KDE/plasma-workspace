@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-08-18 20:08+0200\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2022-12-17 11:42+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -282,43 +282,43 @@ msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
 msgstr "%1 paketea instalatzea huts egin du"
 
-#: localegenhelper/localegenhelper.cpp:46
+#: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr "Beste prozesu bat abian da, mesedez, saiatu geroago"
 
-#: localegenhelper/localegenhelper.cpp:66
+#: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr "Tokiko konfigurazio fitxategia editatzeko baimenik gabe"
 
-#: localegenhelper/localegenhelper.cpp:116
+#: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "Ezin ireki `/etc/locale.gen` fitxategia"
 
-#: localegenhelper/localegenhelper.cpp:149
+#: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "Ezin aurkitu `locale-gen` exekutagarria"
 
-#: localegenhelper/localegenhelper.cpp:162
+#: localegenhelper/localegenhelper.cpp:159
 #, kde-format
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: localelistmodel.cpp:35
+#: localelistmodel.cpp:34
 #, kde-format
 msgid "Default for System"
 msgstr "Sistemaren lehenetsia"
 
-#: localelistmodel.cpp:35 localelistmodel.cpp:86
+#: localelistmodel.cpp:34 localelistmodel.cpp:85
 #: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "Lehenetsia"
 
-#: localelistmodel.cpp:82
+#: localelistmodel.cpp:81
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -326,14 +326,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:164
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Sistemako C lehenetsia"
 
-#: localelistmodel.cpp:167
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
@@ -405,7 +405,7 @@ msgstr "Sistemako lehenetsia"
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr " (%1(e)ren formatu estandarra)"
+msgstr " (%1ren formatu estandarra)"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
