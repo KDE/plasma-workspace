@@ -36,9 +36,16 @@ PlasmaCore.ToolTipArea {
 
     subText: systemTrayState.expanded ? i18n("Close popup") : i18n("Show hidden icons")
 
+    property bool wasExpanded
+
     TapHandler {
+        onPressedChanged: {
+            if (pressed) {
+                tooltip.wasExpanded = systemTrayState.expanded;
+            }
+        }
         onTapped: {
-            systemTrayState.expanded = !systemTrayState.expanded;
+            systemTrayState.expanded = !tooltip.wasExpanded;
             expandedRepresentation.hiddenLayout.currentIndex = -1;
         }
     }
