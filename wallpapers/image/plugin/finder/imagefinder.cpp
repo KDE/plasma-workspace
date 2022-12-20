@@ -37,8 +37,8 @@ void ImageFinder::run()
 
     for (i = 0; i < m_paths.size(); ++i) {
         const QString &path = m_paths.at(i);
-        const QString target = findSymlinkTarget(QFileInfo(path));
-        const QFileInfo info(target);
+        const QFileInfo info(findSymlinkTarget(QFileInfo(path)));
+        const QString target = info.absoluteFilePath();
 
         if (!info.exists() || !filterCondition(info)) {
             // is in a package

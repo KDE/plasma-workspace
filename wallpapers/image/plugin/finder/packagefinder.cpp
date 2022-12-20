@@ -34,7 +34,7 @@ void PackageFinder::run()
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
     const auto addPackage = [this, &package, &packages, &folders](const QString &_folderPath) {
-        const QString folderPath = findSymlinkTarget(_folderPath);
+        const QString folderPath = findSymlinkTarget(QFileInfo(_folderPath)).absoluteFilePath();
 
         if (folders.contains(folderPath)) {
             // The folder has been added, return true to skip it.
