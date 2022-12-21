@@ -90,6 +90,7 @@
         "Description[vi]": "Xem tình trạng nguồn điện của pin",
         "Description[x-test]": "xxSee the power status of your batteryxx",
         "Description[zh_CN]": "查看电池的电量状态",
+        "Description[zh_TW]": "查看您的電池的電力狀態",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

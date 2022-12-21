@@ -89,6 +89,7 @@
         "Description[vi]": "Thực hiện các lệnh vỏ",
         "Description[x-test]": "xxExecutes shell commandsxx",
         "Description[zh_CN]": "执行 Shell 命令",
+        "Description[zh_TW]": "執行 shell 命令",
         "EnabledByDefault": true,
         "Icon": "system-run",
         "Id": "shell",

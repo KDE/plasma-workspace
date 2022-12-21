@@ -88,6 +88,7 @@
         "Description[vi]": "Hiển thị một biểu đồ cấu hình được của một cảm biến giám sát hệ thống",
         "Description[x-test]": "xxDisplays a configurable chart of a system monitor sensorxx",
         "Description[zh_CN]": "显示系统监视器的可配置图表",
+        "Description[zh_TW]": "顯示一個可自訂的系統監控偵測器圖表",
         "FormFactors": [
             "desktop"
         ],

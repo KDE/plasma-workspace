@@ -95,7 +95,8 @@
         "Name[uk]": "Піктограми",
         "Name[vi]": "Biểu tượng",
         "Name[x-test]": "xxIconsxx",
-        "Name[zh_CN]": "图标"
+        "Name[zh_CN]": "图标",
+        "Name[zh_TW]": "圖示"
     },
     "X-DocPath": "kcontrol/icons/index.html",
     "X-KDE-Keywords": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography",

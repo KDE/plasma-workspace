@@ -88,6 +88,7 @@
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng bộ nhớ vật lí",
         "Description[x-test]": "xxSystem monitor Widget that shows physical memory usagexx",
         "Description[zh_CN]": "显示物理内存使用率的系统监视挂件",
+        "Description[zh_TW]": "顯示實體記憶體用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

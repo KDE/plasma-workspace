@@ -89,6 +89,7 @@
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng của phân vùng gốc",
         "Description[x-test]": "xxSystem monitor Widget that shows the usage of the root partitionxx",
         "Description[zh_CN]": "显示根分区占用率的系统监视挂件",
+        "Description[zh_TW]": "顯示 root 分割區用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

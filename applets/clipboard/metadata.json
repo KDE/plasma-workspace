@@ -90,6 +90,7 @@
         "Description[vi]": "Cho phép truy cập lịch sử bảng nháp",
         "Description[x-test]": "xxProvides access to the clipboard historyxx",
         "Description[zh_CN]": "访问剪贴板历史",
+        "Description[zh_TW]": "提供剪貼簿歷史紀錄的存取",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

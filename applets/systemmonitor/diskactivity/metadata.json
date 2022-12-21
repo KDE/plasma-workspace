@@ -90,6 +90,7 @@
         "Description[vi]": "Một tiểu ứng dụng giám sát vào/ra và thông lượng của đĩa cứng",
         "Description[x-test]": "xxAn applet that monitors hard disk throughput and input/outputxx",
         "Description[zh_CN]": "监视硬盘吞吐量和输入输出情况的小程序",
+        "Description[zh_TW]": "監視硬碟效能與 I/O 的小程式",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

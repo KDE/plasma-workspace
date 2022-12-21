@@ -89,6 +89,7 @@
         "Description[vi]": "Cho phép bạn tìm phần mềm",
         "Description[x-test]": "xxLets you find softwarexx",
         "Description[zh_CN]": "协助用户查找软件",
+        "Description[zh_TW]": "讓您尋找軟體",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "appstream",

@@ -42,6 +42,7 @@
         "Description[vi]": "Định vị địa lí từ địa chỉ GPS.",
         "Description[x-test]": "xxGeolocation from GPS address.xx",
         "Description[zh_CN]": "通过 GPS 地址确定的地理位置。",
+        "Description[zh_TW]": "從 GPS 位址取得地理位置。",
         "Icon": "applications-internet",
         "Id": "gps",
         "Name": "Geolocation GPS",

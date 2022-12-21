@@ -88,6 +88,7 @@
         "Description[vi]": "Chuyển sang một bàn làm việc ảo khác",
         "Description[x-test]": "xxSwitch to another virtual desktopxx",
         "Description[zh_CN]": "切换到另一个虚拟桌面",
+        "Description[zh_TW]": "切換到其他虛擬桌面",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
         "Id": "org.kde.switchdesktop",

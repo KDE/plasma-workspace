@@ -86,6 +86,7 @@
         "Description[vi]": "Dụng cụ cấp thông tin về trạng thái ứng dụng, dựa trên giao thức \"Trình thông báo trạng thái\".",
         "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
         "Description[zh_CN]": "用于提供应用程序状态信息的引擎，基于状态通知协议。",
+        "Description[zh_TW]": "提供應用程式狀態的資訊引擎，使用狀態通知器協定。",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-notification",
         "Id": "statusnotifieritem",

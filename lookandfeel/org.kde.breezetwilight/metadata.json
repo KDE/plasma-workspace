@@ -85,6 +85,7 @@
         "Description[vi]": "Breeze Chạng vạng, do KDE VDG",
         "Description[x-test]": "xxBreeze Twilight by the KDE VDGxx",
         "Description[zh_CN]": "Breeze 微风阴阳主题，由 KDE VDG (视觉设计团队) 设计制作",
+        "Description[zh_TW]": "由 KDE VDG 設計的 Breeze Twilight",
         "Id": "org.kde.breezetwilight.desktop",
         "License": "GPLv2+",
         "Name": "Breeze Twilight",

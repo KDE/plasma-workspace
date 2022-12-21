@@ -41,6 +41,7 @@
         "Description[vi]": "Quản lí các dịch vụ cung cấp giao diện thông báo trạng thái",
         "Description[x-test]": "xxManages services that provide status notifier user interfacesxx",
         "Description[zh_CN]": "管理提供状态通知用户界面的服务",
+        "Description[zh_TW]": "管理提供狀態通知使用者介面的服務",
         "Name": "Status Notifier Manager",
         "Name[ar]": "مدير مُخطِر الحالة",
         "Name[az]": "Vəziyyət Bildirişləri Meneceri",

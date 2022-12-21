@@ -89,6 +89,7 @@
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng các lõi CPU riêng lẻ",
         "Description[x-test]": "xxSystem monitor Widget that shows usage of individual CPU coresxx",
         "Description[zh_CN]": "显示单个 CPU 核心使用情况的系统监视挂件",
+        "Description[zh_TW]": "顯示個別 CPU 核心用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

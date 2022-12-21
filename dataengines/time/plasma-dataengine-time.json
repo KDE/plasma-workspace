@@ -89,6 +89,7 @@
         "Description[vi]": "Ngày giờ theo múi giờ",
         "Description[x-test]": "xxDate and time by timezonexx",
         "Description[zh_CN]": "根据时区提供日期和时间",
+        "Description[zh_TW]": "各時區的日期和時間",
         "EnabledByDefault": true,
         "Icon": "preferences-system-time",
         "Id": "time",

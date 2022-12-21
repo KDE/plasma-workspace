@@ -41,6 +41,7 @@
         "Description[vi]": "Cung cấp múi giờ hệ thống cho các ứng dụng",
         "Description[x-test]": "xxProvides the system's time zone to applicationsxx",
         "Description[zh_CN]": "为应用程序提供系统时区信息",
+        "Description[zh_TW]": "提供系統的時區給應用程式",
         "Name": "Time Zone",
         "Name[ar]": "المنطقة الزمنية",
         "Name[az]": "Saat Qurşağı",

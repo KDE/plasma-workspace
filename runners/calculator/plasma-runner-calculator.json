@@ -89,6 +89,7 @@
         "Description[vi]": "Tính biểu thức",
         "Description[x-test]": "xxCalculate expressionsxx",
         "Description[zh_CN]": "计算表达式",
+        "Description[zh_TW]": "進行算式的計算",
         "EnabledByDefault": true,
         "Icon": "accessories-calculator",
         "Id": "calculator",

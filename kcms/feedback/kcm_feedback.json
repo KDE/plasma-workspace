@@ -43,6 +43,7 @@
         "Description[vi]": "Cấu hình các thiết lập phản hồi của người dùng",
         "Description[x-test]": "xxConfigure user feedback settingsxx",
         "Description[zh_CN]": "配置用户反馈设置",
+        "Description[zh_TW]": "設定使用者意見回應",
         "FormFactors": [
             "tablet",
             "handset",

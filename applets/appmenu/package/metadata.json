@@ -89,6 +89,7 @@
         "Description[vi]": "Thanh trình đơn toàn cục ở bàn làm việc Plasma của bạn",
         "Description[x-test]": "xxGlobal menubar in your Plasma Desktopxx",
         "Description[zh_CN]": "Plasma 桌面上的全局菜单",
+        "Description[zh_TW]": "您的 Plasma 桌面用的全域選單列",
         "FormFactors": [
             "desktop"
         ],

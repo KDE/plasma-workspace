@@ -88,6 +88,7 @@
         "Description[vi]": "Chuyển sang một Hoạt động khác",
         "Description[x-test]": "xxSwitch to another activityxx",
         "Description[zh_CN]": "切换到另一个活动",
+        "Description[zh_TW]": "切換到其他活動",
         "EnabledByDefault": true,
         "Icon": "dashboard-show",
         "Id": "switchactivity",

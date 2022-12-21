@@ -49,6 +49,7 @@
         "Description[vi]": "Thông tin pin, củ sạc, chế độ ngủ và PowerDevil.",
         "Description[x-test]": "xxBattery, AC, sleep and PowerDevil information.xx",
         "Description[zh_CN]": "提供电池、交流适配器、系统睡眠及 PowerDevil 信息。",
+        "Description[zh_TW]": "電池、市電電源、睡眠模式與 PowerDevil 資訊。",
         "Icon": "preferences-system-power-management",
         "Id": "powermanagement",
         "Name": "Power Management",

@@ -90,6 +90,7 @@
         "Description[vi]": "Thông báo và cách truy cập cho các thiết bị",
         "Description[x-test]": "xxNotifications and access for devicesxx",
         "Description[zh_CN]": "设备的通知和访问",
+        "Description[zh_TW]": "新裝置的通知與存取",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

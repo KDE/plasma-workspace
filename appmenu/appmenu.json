@@ -42,6 +42,7 @@
         "Description[vi]": "Chuyển trình đơn của ứng dụng ra bàn làm việc",
         "Description[x-test]": "xxTransfers application's menu to the desktopxx",
         "Description[zh_CN]": "将应用程序的菜单转移到桌面上",
+        "Description[zh_TW]": "將應用程式選單移動到桌面上",
         "Name": "Application menus daemon",
         "Name[ar]": "عفريت قوائم التطبيقات",
         "Name[az]": "Tətbiqlər menyusu fon xidməti",

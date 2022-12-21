@@ -90,6 +90,7 @@
         "Description[vi]": "Hiển thị tháng với các buổi hẹn và sự kiện của bạn",
         "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "Description[zh_CN]": "按月显示您的预约和事件",
+        "Description[zh_TW]": "顯示您的約定與事件的月曆",
         "FormFactors": [
             "tablet",
             "handset",

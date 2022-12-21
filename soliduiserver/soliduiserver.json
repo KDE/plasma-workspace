@@ -42,6 +42,7 @@
         "Description[vi]": "Cung cấp một giao diện người dùng cho các sự kiện phần cứng",
         "Description[x-test]": "xxProvides a user interface for hardware eventsxx",
         "Description[zh_CN]": "为硬件事件提供用户界面",
+        "Description[zh_TW]": "提供硬體事件的使用者介面",
         "Name": "Hardware Detection",
         "Name[ar]": "اكتشاف العتاد",
         "Name[az]": "Avadanlığın aşkar edilməsi",

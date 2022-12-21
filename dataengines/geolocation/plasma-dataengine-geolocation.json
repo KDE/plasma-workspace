@@ -89,6 +89,7 @@
         "Description[vi]": "Dụng cụ dữ liệu định vị địa lí",
         "Description[x-test]": "xxGeolocation Data Enginexx",
         "Description[zh_CN]": "地理位置数据引擎",
+        "Description[zh_TW]": "地理位置資料引擎",
         "Icon": "applications-internet",
         "Id": "geolocation",
         "Name": "Geolocation",

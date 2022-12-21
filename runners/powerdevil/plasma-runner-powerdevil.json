@@ -88,6 +88,7 @@
         "Description[vi]": "Các thao tác cơ bản để quản lí nguồn điện",
         "Description[x-test]": "xxBasic Power Management Operationsxx",
         "Description[zh_CN]": "基本电源管理操作",
+        "Description[zh_TW]": "基本的電源管理操作",
         "EnabledByDefault": true,
         "Icon": "preferences-system-power-management",
         "Id": "PowerDevil",

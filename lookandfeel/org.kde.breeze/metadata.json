@@ -87,6 +87,7 @@
         "Description[vi]": "Breeze, do KDE VDG",
         "Description[x-test]": "xxBreeze by the KDE VDGxx",
         "Description[zh_CN]": "Breeze 微风主题，由 KDE VDG (视觉设计团队) 设计制作",
+        "Description[zh_TW]": "由 KDE VDG 設計的 Breeze",
         "Id": "org.kde.breeze.desktop",
         "License": "GPLv2+",
         "Name": "Breeze",

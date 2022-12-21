@@ -42,6 +42,7 @@
         "Description[vi]": "Giám sát thay đổi ở các thư mục",
         "Description[x-test]": "xxMonitors directories for changesxx",
         "Description[zh_CN]": "监视目录的更改",
+        "Description[zh_TW]": "監控目錄的變更",
         "Name": "Directory Watcher",
         "Name[ar]": "مراقب الأدلة",
         "Name[az]": "Qovluqlara nəzarət",

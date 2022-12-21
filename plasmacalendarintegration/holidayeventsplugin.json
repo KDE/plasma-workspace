@@ -85,6 +85,7 @@
         "Description[vi]": "Phần cài cắm lịch để hiển thị các ngày lễ quốc gia",
         "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
         "Description[zh_CN]": "显示公共节假日的日历插件",
+        "Description[zh_TW]": "用於顯示例假日的行事曆外掛程式",
         "Icon": "view-calendar-holiday",
         "Name": "Holidays",
         "Name[ar]": "العُطل",

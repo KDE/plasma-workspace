@@ -91,6 +91,7 @@
         "Description[vi]": "Giữ các khoảng trống trong bảng.",
         "Description[x-test]": "xxReserve empty spaces within the panel.xx",
         "Description[zh_CN]": "在面板中预留空白。",
+        "Description[zh_TW]": "在面板內保留空間。",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.panelspacer",
         "License": "GPL-2.0+",

@@ -89,6 +89,7 @@
         "Description[vi]": "Dụng cụ dữ liệu PackageKit",
         "Description[x-test]": "xxPackageKit Data Enginexx",
         "Description[zh_CN]": "PackageKit 数据引擎",
+        "Description[zh_TW]": "PackageKit 資料引擎",
         "Icon": "package-x-generic",
         "Id": "packagekit",
         "License": "GPL",

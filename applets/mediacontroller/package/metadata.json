@@ -91,6 +91,7 @@
         "Description[vi]": "Các điều khiển của trình phát phương tiện",
         "Description[x-test]": "xxMedia Player Controlsxx",
         "Description[zh_CN]": "媒体播放器控件",
+        "Description[zh_TW]": "媒體播放器控制",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

@@ -89,6 +89,7 @@
         "Description[vi]": "Công cụ bảng nháp.",
         "Description[x-test]": "xxClipboard Tool.xx",
         "Description[zh_CN]": "剪贴板工具。",
+        "Description[zh_TW]": "剪貼簿工具。",
         "EnabledByDefault": true,
         "Icon": "klipper",
         "Id": "org.kde.plasma.clipboard",

@@ -90,6 +90,7 @@
         "Description[vi]": "Dữ liệu về thiết bị thông qua Solid",
         "Description[x-test]": "xxDevice data via Solidxx",
         "Description[zh_CN]": "通过 Solid 获得设备数据",
+        "Description[zh_TW]": "來自 Solid 的裝置資料",
         "Icon": "drive-harddisk",
         "Id": "soliddevice",
         "Name": "Device Information",

@@ -91,6 +91,7 @@
         "Description[vi]": "Khoá màn hình hoặc đăng xuất",
         "Description[x-test]": "xxLock the screen or log outxx",
         "Description[zh_CN]": "锁屏或注销",
+        "Description[zh_TW]": "鎖定螢幕或登出",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

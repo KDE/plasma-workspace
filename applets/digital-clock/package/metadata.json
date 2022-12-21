@@ -90,6 +90,7 @@
         "Description[vi]": "Thời gian hiển thị ở dạng số",
         "Description[x-test]": "xxTime displayed in a digital formatxx",
         "Description[zh_CN]": "以数字格式显示时间",
+        "Description[zh_TW]": "以數位格式顯示時間",
         "FormFactors": [
             "tablet",
             "handset",

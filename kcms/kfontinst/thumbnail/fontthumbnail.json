@@ -52,7 +52,8 @@
         "Name[tr]": "Yazıtipi Dosyaları",
         "Name[uk]": "Файли шрифтів",
         "Name[vi]": "Tệp phông chữ",
-        "Name[x-test]": "xxFont Filesxx"
+        "Name[x-test]": "xxFont Filesxx",
+        "Name[zh_TW]": "字型檔案"
     },
     "MimeType": "application/x-font-ttf;application/x-font-type1;application/x-font-bdf;application/x-font-pcf;application/x-font-otf;fonts/package;font/ttf;font/otf;font/collection;"
 }

@@ -88,6 +88,7 @@
         "Description[vi]": "Mở thiết bị và dấu nhớ thư mục",
         "Description[x-test]": "xxOpen devices and folder bookmarksxx",
         "Description[zh_CN]": "打开设备和文件夹书签",
+        "Description[zh_TW]": "開啟裝置與資料夾書籤",
         "EnabledByDefault": true,
         "Icon": "user-home",
         "Id": "places",

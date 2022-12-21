@@ -43,7 +43,7 @@
         "Description[vi]": "Cấu hình phông chữ trong giao diện người dùng",
         "Description[x-test]": "xxConfigure user interface fontsxx",
         "Description[zh_CN]": "配置用户界面字体",
-        "Description[zh_TW]": "設定使用者介面所使用字型",
+        "Description[zh_TW]": "設定使用者介面所使用的字型",
         "FormFactors": [
             "tablet",
             "handset",

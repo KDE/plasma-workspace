@@ -89,6 +89,7 @@
         "Description[vi]": "Trạng thái phím bổ trợ và nút chuột",
         "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
         "Description[zh_CN]": "显示键盘修饰健及鼠标按键状态",
+        "Description[zh_TW]": "鍵盤組合鍵與滑鼠按鍵狀態",
         "EnabledByDefault": true,
         "Icon": "input-keyboard",
         "Id": "keystate",

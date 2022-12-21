@@ -41,6 +41,7 @@
         "Description[vi]": "Tự động xuất các ổ ra khi nút rút của chúng được ấn",
         "Description[x-test]": "xxAutomatically releases drives when their eject button is pushedxx",
         "Description[zh_CN]": "当按下弹出按钮时自动释放驱动器",
+        "Description[zh_TW]": "在按下退出鍵時自動釋放碟片",
         "Name": "Drive Ejector",
         "Name[ar]": "مُخرِج الأجهزة",
         "Name[az]": "Daşıyıcıların Çıxarılması",

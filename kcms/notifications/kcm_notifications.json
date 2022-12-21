@@ -43,6 +43,7 @@
         "Description[vi]": "Thông báo và hành động cho sự kiện",
         "Description[x-test]": "xxEvent Notifications and Actionsxx",
         "Description[zh_CN]": "事件通知和操作",
+        "Description[zh_TW]": "事件通知與動作",
         "FormFactors": [
             "tablet",
             "handset",

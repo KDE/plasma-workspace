@@ -88,6 +88,7 @@
         "Description[vi]": "Dừng các ứng dụng đang chạy",
         "Description[x-test]": "xxStop applications that are currently runningxx",
         "Description[zh_CN]": "停止正在运行的应用程序",
+        "Description[zh_TW]": "停止目前執行中的應用程式",
         "EnabledByDefault": true,
         "Icon": "application-exit",
         "License": "LGPL",

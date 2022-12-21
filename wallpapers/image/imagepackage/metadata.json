@@ -89,6 +89,7 @@
         "Description[vi]": "Khung xem phông nền cho các ảnh",
         "Description[x-test]": "xxWallpaper view for imagesxx",
         "Description[zh_CN]": "图像壁纸视图",
+        "Description[zh_TW]": "使用圖片的桌布檢視",
         "Icon": "preferences-desktop-wallpaper",
         "Id": "org.kde.image",
         "License": "GPLv2+",

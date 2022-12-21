@@ -29,6 +29,7 @@
         "Description[vi]": "Áp dụng màu chủ đạo trích xuất từ phông nền khi có yêu cầu",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
         "Description[zh_CN]": "按照请求应用从壁纸中提取的强调色",
+        "Description[zh_TW]": "要求時從桌布取出強調色並套用",
         "Name": "Accent Color",
         "Name[ar]": "لون التمييز",
         "Name[az]": "Fərqləndirmə rəngi",
@@ -59,7 +60,8 @@
         "Name[uk]": "Колір акценту",
         "Name[vi]": "Màu chủ đạo",
         "Name[x-test]": "xxAccent Colorxx",
-        "Name[zh_CN]": "强调色"
+        "Name[zh_CN]": "强调色",
+        "Name[zh_TW]": "強調色"
     },
     "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true

@@ -91,6 +91,7 @@
         "Description[vi]": "Một đồng hồ với các kim",
         "Description[x-test]": "xxA clock with handsxx",
         "Description[zh_CN]": "带指针的时钟",
+        "Description[zh_TW]": "有指針的時鐘",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

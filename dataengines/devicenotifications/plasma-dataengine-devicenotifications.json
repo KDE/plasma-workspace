@@ -88,6 +88,7 @@
         "Description[vi]": "Thông báo thiết bị thụ động dành cho người dùng.",
         "Description[x-test]": "xxPassive device notifications for the user.xx",
         "Description[zh_CN]": "为用户提供被动出现的设备通知。",
+        "Description[zh_TW]": "給使用者的被動裝置通知。",
         "Icon": "device-notifier",
         "Id": "devicenotifications",
         "Name": "Device Notifications",

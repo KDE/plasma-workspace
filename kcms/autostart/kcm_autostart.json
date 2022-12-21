@@ -43,6 +43,7 @@
         "Description[vi]": "Các ứng dụng được khởi động tự động",
         "Description[x-test]": "xxAutomatically Started Applicationsxx",
         "Description[zh_CN]": "自动启动的应用程序",
+        "Description[zh_TW]": "自動啟動的應用程式",
         "FormFactors": [
             "tablet",
             "handset",

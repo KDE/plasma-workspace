@@ -49,6 +49,7 @@
         "Description[vi]": "Tra nghĩa của từ",
         "Description[x-test]": "xxLook up word meaningsxx",
         "Description[zh_CN]": "查询单词含义",
+        "Description[zh_TW]": "查詢單字的定義",
         "Icon": "accessories-dictionary",
         "Id": "dict",
         "License": "",

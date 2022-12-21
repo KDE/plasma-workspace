@@ -90,6 +90,7 @@
         "Description[vi]": "Truy cập các ứng dụng ẩn được thu nhỏ trong khay hệ thống",
         "Description[x-test]": "xxAccess hidden applications minimized in the system trayxx",
         "Description[zh_CN]": "访问在系统托盘中最小化隐藏的应用程序",
+        "Description[zh_TW]": "存取最小化後隱藏在系統匣內的應用程式",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

@@ -41,6 +41,7 @@
         "Description[vi]": "Cảnh báo khi sắp hết không gian cho thư mục nhà của bạn",
         "Description[x-test]": "xxWarns when running out of space on your home folderxx",
         "Description[zh_CN]": "在主目录磁盘空间不足时发出警告",
+        "Description[zh_TW]": "當您的家目錄剩餘空間即將不足時警告您",
         "Name": "Free Space Notifier",
         "Name[ar]": "مُخطِر المساحة الحرّة",
         "Name[az]": "Diskin boş sahəsinin izlənməsi",

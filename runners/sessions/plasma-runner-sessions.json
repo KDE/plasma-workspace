@@ -89,6 +89,7 @@
         "Description[vi]": "Chuyển người dùng nhanh",
         "Description[x-test]": "xxFast user switchingxx",
         "Description[zh_CN]": "快速用户切换",
+        "Description[zh_TW]": "快速切換使用者",
         "EnabledByDefault": true,
         "Icon": "system-shutdown",
         "Id": "desktopsessions",

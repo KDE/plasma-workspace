@@ -89,6 +89,7 @@
         "Description[vi]": "Trình mở tệp và URL",
         "Description[x-test]": "xxFile and URL openerxx",
         "Description[zh_CN]": "文件和链接打开程序",
+        "Description[zh_TW]": "檔案與網址開啟器",
         "EnabledByDefault": true,
         "Icon": "system-file-manager",
         "Id": "locations",

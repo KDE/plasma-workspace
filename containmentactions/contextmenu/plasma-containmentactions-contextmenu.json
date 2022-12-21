@@ -88,6 +88,7 @@
         "Description[vi]": "Trình đơn thường thấy khi bấm phải",
         "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
         "Description[zh_CN]": "通常在点击右键时显示的菜单",
+        "Description[zh_TW]": "通常由滑鼠右鍵叫出的選單",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
         "Id": "org.kde.contextmenu",

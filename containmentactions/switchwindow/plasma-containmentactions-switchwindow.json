@@ -87,6 +87,7 @@
         "Description[vi]": "Hiện một danh sách các cửa sổ để chuyển",
         "Description[x-test]": "xxShow a list of windows to switch toxx",
         "Description[zh_CN]": "显示可供切换的窗口列表",
+        "Description[zh_TW]": "列出視窗並切換",
         "EnabledByDefault": true,
         "Icon": "preferences-system-windows",
         "Id": "switchwindow",

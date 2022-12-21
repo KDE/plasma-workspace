@@ -87,6 +87,7 @@
         "Description[vi]": "Thông tin và việc khởi chạy của tất cả các ứng dụng trong trình đơn ứng dụng.",
         "Description[x-test]": "xxInformation and launching of all applications in the app menu.xx",
         "Description[zh_CN]": "显示信息或启动菜单中的所有应用程序。",
+        "Description[zh_TW]": "查看應用程式選單中所有應用程式的資訊，或是啟動它們。",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
         "Id": "apps",

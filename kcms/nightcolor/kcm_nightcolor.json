@@ -30,6 +30,7 @@
         "Description[vi]": "Điều chỉnh nhiệt độ màu dựa vào thời gian",
         "Description[x-test]": "xxAdjust color temperature based on timexx",
         "Description[zh_CN]": "根据时间调整色温",
+        "Description[zh_TW]": "依時間調整色溫",
         "FormFactors": [
             "tablet",
             "handset",

@@ -43,6 +43,7 @@
         "Description[vi]": "Quản lí các danh khoản người dùng",
         "Description[x-test]": "xxManage user accountsxx",
         "Description[zh_CN]": "管理用户账户",
+        "Description[zh_TW]": "管理使用者帳號",
         "FormFactors": [
             "tablet",
             "handset",

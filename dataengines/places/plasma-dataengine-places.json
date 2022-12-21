@@ -88,6 +88,7 @@
         "Description[vi]": "Địa điểm, như trong trình quản lí tệp và các hộp thoại tệp.",
         "Description[x-test]": "xxPlaces, as seen in the file manager and in file dialogs.xx",
         "Description[zh_CN]": "提供文件管理器和文件对话框中显示的常用位置列表。",
+        "Description[zh_TW]": "在檔案管理員與檔案對話框中看到的「書籤」項目。",
         "EnabledByDefault": true,
         "Icon": "folder-favorites",
         "Id": "places",

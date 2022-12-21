@@ -34,6 +34,7 @@
         "Description[vi]": "Thiết lập ngôn ngữ, định dạng số, tiền tệ và thời gian",
         "Description[x-test]": "xxLanguage Setting, Numeric, Currency and Time Formatsxx",
         "Description[zh_CN]": "语言设置、数字、货币和时间格式",
+        "Description[zh_TW]": "語言設定、數值、貨幣與時間格式",
         "FormFactors": [
             "tablet",
             "handset",
@@ -75,7 +76,8 @@
         "Name[uk]": "Регіон та мова",
         "Name[vi]": "Vùng & ngôn ngữ",
         "Name[x-test]": "xxRegion & Languagexx",
-        "Name[zh_CN]": "区域和语言"
+        "Name[zh_CN]": "区域和语言",
+        "Name[zh_TW]": "區域與語言"
     },
     "X-DocPath": "kcontrol/region_language/index.html",
     "X-KDE-Keywords": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format",

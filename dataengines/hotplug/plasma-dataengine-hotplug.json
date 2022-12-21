@@ -89,6 +89,7 @@
         "Description[vi]": "Theo dõi các thiết bị cắm nóng được khi chúng xuất hiện và biến mất.",
         "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",
+        "Description[zh_TW]": "追蹤熱插拔裝置的插入與拔除。",
         "Icon": "drive-removable-media-usb",
         "Id": "hotplug",
         "License": "",

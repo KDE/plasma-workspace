@@ -87,6 +87,7 @@
         "Description[vi]": "Tạo một phụ kiện từ nội dung của bảng nháp",
         "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
         "Description[zh_CN]": "创建基于剪贴板内容的挂件",
+        "Description[zh_TW]": "會使用剪貼簿內容建立一個新元件",
         "EnabledByDefault": true,
         "Icon": "edit-paste",
         "Id": "org.kde.paste",

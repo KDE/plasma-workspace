@@ -89,6 +89,7 @@
         "Description[vi]": "Thông tin về chức năng Hoạt động của Plasma",
         "Description[x-test]": "xxInformation on Plasma Activitiesxx",
         "Description[zh_CN]": "关于 Plasma 活动的信息",
+        "Description[zh_TW]": "Plasma 活動的資訊",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-activities",
         "Id": "org.kde.activities",

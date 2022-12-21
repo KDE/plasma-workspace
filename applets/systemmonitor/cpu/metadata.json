@@ -89,6 +89,7 @@
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tổng lượng dùng CPU",
         "Description[x-test]": "xxSystem monitor Widget that shows the total CPU usagexx",
         "Description[zh_CN]": "显示总 CPU 使用率的系统监视挂件",
+        "Description[zh_TW]": "顯示總 CPU 用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

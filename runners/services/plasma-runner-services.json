@@ -89,6 +89,7 @@
         "Description[vi]": "Tìm ứng dụng, bảng điều khiển và dịch vụ",
         "Description[x-test]": "xxFind applications, control panels and servicesxx",
         "Description[zh_CN]": "查找应用程序、控制面板和服务",
+        "Description[zh_TW]": "尋找應用程式、控制面板與服務",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "services",

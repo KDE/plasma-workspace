@@ -81,6 +81,7 @@
         "Description[vi]": "Hiện thông tin trợ giúp về các trình chạy khi gõ \"?\" hoặc \"help\"",
         "Description[x-test]": "xxShows help information about runners when typing \"?\" or \"help\"xx",
         "Description[zh_CN]": "输入“?”或“help”时显示关于运行程序的帮助信息",
+        "Description[zh_TW]": "輸入 \"?\" 或 \"help\" 時顯示 runner 的說明資訊",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
         "Name": "Help Runner",
@@ -123,6 +124,7 @@
         "Name[vi]": "Trình chạy \"Trợ giúp\"",
         "Name[x-test]": "xxHelp Runnerxx",
         "Name[zh_CN]": "帮助运行程序",
+        "Name[zh_TW]": "說明 Runner",
         "ServiceTypes": [
             "Plasma/Runner"
         ]
