@@ -54,7 +54,6 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KSharedConfig>
-#include <KUserTimestamp>
 #include <kdisplaymanager.h>
 
 #include "kwinsession_interface.h"
