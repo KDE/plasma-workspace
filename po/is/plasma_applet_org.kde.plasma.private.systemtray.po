@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:48+0000\n"
 "PO-Revision-Date: 2022-08-24 15:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -170,22 +170,22 @@ msgstr "Fleiri aðgerðir"
 msgid "Keep Open"
 msgstr "Halda opnu"
 
-#: package/contents/ui/ExpanderArrow.qml:22
+#: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Útvíkka kerfisbakka"
 
-#: package/contents/ui/ExpanderArrow.qml:23
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Birta öll atriði úr kerfisbakka í sprettglugga"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Close popup"
 msgstr "Loka sprettglugga"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Birta faldar táknmyndir"

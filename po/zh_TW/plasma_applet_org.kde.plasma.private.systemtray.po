@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:48+0000\n"
 "PO-Revision-Date: 2020-01-16 14:27+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -172,22 +172,22 @@ msgstr ""
 msgid "Keep Open"
 msgstr "保持開啟"
 
-#: package/contents/ui/ExpanderArrow.qml:22
+#: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:23
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Close popup"
 msgstr "關閉彈出式視窗"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
 msgstr "顯示隱藏圖示"

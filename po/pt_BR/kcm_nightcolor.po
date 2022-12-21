@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-10-19 15:32-0300\n"
+"PO-Revision-Date: 2022-12-20 09:49-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -81,25 +81,22 @@ msgstr "Hora de ativação:"
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Sempre desligado"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Pôr do sol até nascer do sol na localização atual"
+msgstr "Pôr do sol e nascer do sol na localização atual"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Pôr do sol até nascer do sol na localização manual"
+msgstr "Pôr do sol e nascer do sol na localização manual"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Hora personalizada"
+msgstr "Horários personalizados"
 
 #: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
@@ -120,10 +117,9 @@ msgstr ""
 "location.services.mozilla.com'>Mozilla Location Service</link>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Temperatura da cor noturna:"
+msgstr "Temperatura da cor diurna:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -150,8 +146,7 @@ msgid "Cool"
 msgstr "Fria"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "Temperatura da cor noturna:"
 

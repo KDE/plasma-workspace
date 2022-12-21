@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:48+0000\n"
 "PO-Revision-Date: 2022-07-25 12:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -172,22 +172,22 @@ msgstr "Daha fazla eylem"
 msgid "Keep Open"
 msgstr "Açık Tut"
 
-#: package/contents/ui/ExpanderArrow.qml:22
+#: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Sistem Tepsisini Genişlet"
 
-#: package/contents/ui/ExpanderArrow.qml:23
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Sistem tepsisindeki tüm ögeleri açılır pencerede göster"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Close popup"
 msgstr "Açılır pencereyi kapat"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Gizli simgeleri göster"

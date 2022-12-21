@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:48+0000\n"
 "PO-Revision-Date: 2022-07-25 17:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -170,22 +170,22 @@ msgstr "Daha çox fəaliyyətlər"
 msgid "Keep Open"
 msgstr "Açıq saxlamaq"
 
-#: package/contents/ui/ExpanderArrow.qml:22
+#: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
 msgstr "Sistem çəkməcəsini açın"
 
-#: package/contents/ui/ExpanderArrow.qml:23
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Bütün sistem çəkməcəsi elementlərini açılan pəncərədə göstərmək"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Close popup"
 msgstr "Bidiriş pəncərəsini bağlamaq"
 
-#: package/contents/ui/ExpanderArrow.qml:36
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Gizli ikonları göstərmək"

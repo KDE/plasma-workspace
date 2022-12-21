@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-08-19 15:33-0300\n"
+"PO-Revision-Date: 2022-12-20 11:30-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,13 +20,10 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: abstractnotificationsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 arquivo para %2"
+msgstr "%1 de %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -97,13 +94,10 @@ msgid "to %1"
 msgstr "para %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 arquivo para %2"
+msgstr "%1 de %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format
