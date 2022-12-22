@@ -11,6 +11,7 @@ target_link_libraries(plasma-apply-wallpaperimage
 )
 
 add_subdirectory(plugin)
+add_subdirectory(wallpaperfileitemactionplugin)
 
 install(TARGETS plasma-apply-wallpaperimage DESTINATION ${KDE_INSTALL_BINDIR})
 
@@ -18,8 +19,5 @@ install(FILES wallpaper.knsrc wallpaper-mobile.knsrc DESTINATION ${KDE_INSTALL_K
 
 plasma_install_package(imagepackage org.kde.image wallpapers wallpaper)
 plasma_install_package(slideshowpackage org.kde.slideshow wallpapers wallpaper)
-
-configure_file(setaswallpaper.desktop.in setaswallpaper.desktop)
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/setaswallpaper.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kio/servicemenus)
 
 install(DIRECTORY imagepackage/contents/ui DESTINATION ${PLASMA_DATA_INSTALL_DIR}/wallpapers/org.kde.slideshow/contents PATTERN .svn EXCLUDE PATTERN CMakeLists.txt EXCLUDE PATTERN Messages.sh EXCLUDE)

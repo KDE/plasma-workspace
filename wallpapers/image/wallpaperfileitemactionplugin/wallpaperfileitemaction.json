@@ -1,0 +1,27 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Julius Zint"
+            }
+        ],
+        "Category": "Utilities",
+        "License": "GPL",
+        "MimeTypes": [
+            "image/avif",
+            "image/gif",
+            "image/heif",
+            "image/jpeg",
+            "image/png",
+            "image/svg+xml",
+            "image/svg+xml-compressed",
+            "image/bmp",
+            "image/webp",
+            "image/tiff"
+        ],
+
+        "Description": "Set image as (lockscreen) wallpaper",
+
+        "Name": "Set as"
+    }
+}
