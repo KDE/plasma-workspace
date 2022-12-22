@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:49+0000\n"
+"POT-Creation-Date: 2022-12-22 00:49+0000\n"
 "PO-Revision-Date: 2022-08-25 10:06+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -25,7 +25,7 @@ msgstr ""
 "\n"
 "\n"
 
-#: logout.cpp:340
+#: logout.cpp:339
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Hætt við útskráningu af '%1'"
