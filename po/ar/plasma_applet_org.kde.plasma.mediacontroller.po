@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-21 00:48+0000\n"
-"PO-Revision-Date: 2022-10-22 19:03+0400\n"
+"PO-Revision-Date: 2022-12-22 09:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -104,11 +104,7 @@ msgid "Choose player automatically"
 msgstr "اختر المشّغل آليًّا"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -116,28 +112,21 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "بواسطة %1 (%2)\n"
-"انقر بالزر الأوسط للبث"
+"انقر بالزر الأوسط اللبثتمرير لضبط الصوت"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
-"%1\n"
-"انقر بالزر الأوسط للبث"
+"‏%1\n"
+"انقر بالزر الأوسط اللبثتمرير لضبط الصوت"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -145,17 +134,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "بواسطة %1 (ملبث، %2)\n"
-"\n"
-"انقر بالزر الأوسط للتشغيل"
+"انقر بالزر الأوسط للتشغيل\n"
+"تمرير لضبط الصوت"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -163,7 +146,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "ملبث (%1)\n"
-"انقر بالزر الأوسط للتشغيل"
+"انقر بالزر الأوسط للتشغيل\n"
+"تمرير لضبط الصوت"
 
 #~ msgid "General"
 #~ msgstr "عامّ"

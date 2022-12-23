@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-08-08 22:20+0400\n"
+"PO-Revision-Date: 2022-12-22 13:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -269,6 +269,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"نصيحة: إذا كنت تسافر بشكل متكرر، فأضف إدخالًا آخر للمنطقة الزمنية لمنزلك إلى "
+"هذه القائمة. لن تظهر إلا عند تغيير المنطقة الزمنية على مستوى النظام إلى شيء "
+"آخر."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -282,13 +285,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "مخفي عندما يكون هذا هو المنطقة الزمنية المحلية للمدينة"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "بدل المنطقة الزّمنيّة المحليّة..."
+msgstr "بدل المنطقة الزّمنيّة لكل النظام..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,10 +298,9 @@ msgid "Remove this time zone"
 msgstr "أزل هذه المنطقة الزمنية"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "المنطقة الزّمنيّة المحليّة للنظام"
+msgstr "المنطقة الزّمنيّة لكل النظام"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -326,17 +327,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "بدل المنطقة الزمنية المعروضة عن طريق التمرير فوق بريمج الساعة"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"لاحظ أن استخدام منطقة زمنية مختلفة للساعة لا يغير المنطقة الزمنية المحلية "
-"على مستوى النظام. عند السفر ، بدّل المنطقة الزمنية المحلية بدلاً من ذلك."
+"استخدام هذه الميزة لن يغير المنطقة الزمنية لكل النظام. عندما تسافر، بدّل "
+"المنطقة الزمنية لكامل النظام بدلاً من ذلك."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -386,7 +383,7 @@ msgstr "اليوم %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "‏%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
