@@ -400,7 +400,11 @@ endif()
 
 ki18n_install(po)
 
-install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
+install(FILES
+        completions/zsh/_plasma_packages
+        completions/zsh/_plasmashell
+        completions/zsh/_plasmawindowed
+    DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
 
 install(FILES plasma-workspace.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

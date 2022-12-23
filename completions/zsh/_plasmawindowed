@@ -1,0 +1,13 @@
+#compdef plasmawindowed
+
+# SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+_arguments -s \
+  '(- *)'{-h,--help}'[Displays help on commandline options]' \
+  '(- *)'{-v,--version}'[Displays version information]' \
+  \
+  '(- *)--statusnotifier[Makes the plasmoid stay alive in the Notification Area, even when the window is closed.]' \
+  '1:applet: _plasma_packages applets applet' \
+  '2::args:'
