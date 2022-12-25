@@ -195,7 +195,7 @@ void ImageFrontendTest::testLoadWallpaper()
     QCOMPARE(evaluate<QColor>(currentItem, "color"), QColor(configColor));
     QCOMPARE(evaluate<bool>(rootObject, "blur"), blur);
     QCOMPARE(evaluate<bool>(currentItem, "blur"), blur);
-    QCOMPARE(evaluate<QString>(rootObject, "source"), source);
+    QCOMPARE(evaluate<QString>(rootObject, "source"), QUrl::fromUserInput(source).toString());
     QCOMPARE(evaluate<QSize>(rootObject, "sourceSize"), sourceSize);
     QCOMPARE(evaluate<QSize>(currentItem, "sourceSize"), sourceSize);
 

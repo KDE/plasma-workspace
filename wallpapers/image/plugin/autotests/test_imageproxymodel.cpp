@@ -56,6 +56,7 @@ void ImageProxyModelTest::initTestCase()
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3);
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4);
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5);
     m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1);
 
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
@@ -117,6 +118,7 @@ void ImageProxyModelTest::testImageProxyModelIndexOf()
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(2)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(3)) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(4)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
@@ -223,6 +225,8 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(0)));
     QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(1)));
     QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(2)));
+    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(3)));
+    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(4)));
     QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(0)));
     QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(1)));
 

@@ -57,6 +57,7 @@ void ImageFinderTest::testImageFinderCanFindImages()
     QTRY_COMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2)), 1);
     QCOMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3)), 1);
     QCOMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4)), 1);
+    QCOMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5)), 1);
     QCOMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultHiddenImageFileName)), 0);
 }
 

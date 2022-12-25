@@ -47,7 +47,7 @@ void MediaProxy::componentComplete()
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
 
     auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_formattedSource.toLocalFile());
+    package.setPath(m_source.toLocalFile());
 
     updateModelImage(package);
 }
@@ -63,12 +63,14 @@ void MediaProxy::setSource(const QString &url)
     if (url.isEmpty()) {
         useSingleImageDefaults();
         return;
-    } else if (m_source.toString() == url) {
+    }
+
+    const QUrl sanitizedUrl = QUrl::fromUserInput(url);
+    if (m_source == sanitizedUrl) {
         return;
     }
 
-    m_source = QUrl(url);
-    m_formattedSource = formatUrl(m_source);
+    m_source = sanitizedUrl;
     Q_EMIT sourceChanged();
 
     determineProviderType();
@@ -76,7 +78,7 @@ void MediaProxy::setSource(const QString &url)
     KPackage::Package package;
     if (m_providerType == Provider::Type::Package) {
         package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-        package.setPath(m_formattedSource.toLocalFile());
+        package.setPath(m_source.toLocalFile());
     }
 
     determineBackgroundType(package);
@@ -104,7 +106,7 @@ void MediaProxy::setTargetSize(const QSize &size)
 
     if (m_providerType == Provider::Type::Package) {
         auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-        package.setPath(m_formattedSource.toLocalFile());
+        package.setPath(m_source.toLocalFile());
 
         determineBackgroundType(package); // In case file format changes after size changes
         updateModelImage(package);
@@ -132,7 +134,7 @@ void MediaProxy::openModelImage()
 
     case Provider::Type::Package: {
         auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-        package.setPath(m_formattedSource.toLocalFile());
+        package.setPath(m_source.toLocalFile());
 
         url = findPreferredImageInPackage(package);
         break;
@@ -197,22 +199,11 @@ void MediaProxy::useSingleImageDefaults()
         return;
     }
 
-    m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
     determineProviderType();
     determineBackgroundType(package);
     updateModelImage(package);
-}
-
-QUrl MediaProxy::formatUrl(const QUrl &url)
-{
-    if (url.isLocalFile()) {
-        return url;
-    }
-
-    // The url can be without file://, try again.
-    return QUrl::fromLocalFile(url.toString());
 }
 
 void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
@@ -232,7 +223,7 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
 
     if (m_providerType == Provider::Type::Package) {
         auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-        package.setPath(m_formattedSource.toLocalFile());
+        package.setPath(m_source.toLocalFile());
         updateModelImageWithoutSignal(package);
     }
 
@@ -254,7 +245,7 @@ void MediaProxy::determineBackgroundType(KPackage::Package &package)
     if (m_providerType == Provider::Type::Package) {
         filePath = findPreferredImageInPackage(package).toLocalFile();
     } else {
-        filePath = m_formattedSource.toLocalFile();
+        filePath = m_source.toLocalFile();
     }
 
     QMimeDatabase db;
@@ -279,7 +270,7 @@ void MediaProxy::determineBackgroundType(KPackage::Package &package)
 
 void MediaProxy::determineProviderType()
 {
-    QFileInfo info(m_formattedSource.toLocalFile());
+    QFileInfo info(m_source.toLocalFile());
 
     auto oldType = m_providerType;
 
@@ -328,7 +319,7 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
 
     switch (m_providerType) {
     case Provider::Type::Image: {
-        newRealSource = m_formattedSource;
+        newRealSource = m_source;
         break;
     }
 
@@ -343,7 +334,7 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
         QUrl composedUrl(QStringLiteral("image://package/get"));
 
         QUrlQuery urlQuery(composedUrl);
-        urlQuery.addQueryItem(QStringLiteral("dir"), m_formattedSource.toLocalFile());
+        urlQuery.addQueryItem(QStringLiteral("dir"), m_source.toLocalFile());
         // To make modelImageChaged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));

@@ -55,6 +55,7 @@ void ImageListModelTest::initTestCase()
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3);
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4);
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5);
     m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1);
 
     m_targetSize = QSize(1920, 1080);
@@ -140,6 +141,7 @@ void ImageListModelTest::testImageListModelIndexOf()
     QTRY_VERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QTRY_VERIFY(m_model->indexOf(m_wallpaperPaths.at(2)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(3)) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(4)) >= 0);
     QTRY_VERIFY(m_model->indexOf(QUrl::fromLocalFile(m_wallpaperPaths.at(0)).toString()) >= 0);
     QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))), -1);
 }

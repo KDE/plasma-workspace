@@ -63,11 +63,11 @@ QString ImageBackend::image() const
 
 void ImageBackend::setImage(const QString &url)
 {
-    if (url.isEmpty() || m_image == QUrl(url)) {
+    if (url.isEmpty() || m_image == QUrl::fromUserInput(url)) {
         return;
     }
 
-    m_image = QUrl(url);
+    m_image = QUrl::fromUserInput(url);
     Q_EMIT imageChanged();
 }
 
@@ -452,9 +452,9 @@ void ImageBackend::nextSlide()
     m_timer.stop();
     m_timer.start(m_delay * 1000);
     if (next.isEmpty()) {
-        m_image = QUrl(previousPath);
+        m_image = QUrl::fromLocalFile(previousPath);
     } else {
-        m_image = QUrl(next);
+        m_image = QUrl::fromLocalFile(next);
         Q_EMIT imageChanged();
     }
 

@@ -73,8 +73,6 @@ public:
 
     Q_INVOKABLE void useSingleImageDefaults();
 
-    static QUrl formatUrl(const QUrl &url);
-
 Q_SIGNALS:
     void sourceChanged();
     void modelImageChanged();
@@ -127,7 +125,6 @@ private:
     bool m_ready = false;
 
     QUrl m_source;
-    QUrl m_formattedSource;
     QUrl m_modelImage;
     BackgroundType::Type m_backgroundType = BackgroundType::Type::Unknown;
     Provider::Type m_providerType = Provider::Type::Unknown;

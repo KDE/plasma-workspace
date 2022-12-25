@@ -112,6 +112,20 @@ TestCase {
         compare(modelImageChangedSignalSpy.count, 1);
     }
 
+    function test_setBizzareFileName() {
+        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage;
+
+        verify(testBizzareFileName.length > 0);
+        modelImageChangedSignalSpy.clear();
+        mediaProxy.source = testBizzareFileName;
+        compare(modelImageChangedSignalSpy.count, 1);
+        compare(mediaProxy.providerType, Wallpaper.Provider.Image);
+        compare(mediaProxy.modelImage, testBizzareFileName_modelImage);
+        console.debug(mediaProxy.modelImage);
+
+        mediaProxy.source = Qt.binding(() => imageWallpaper.image);
+    }
+
     function test_startSlideShow() {
         verify(testDirs[0].length > 0);
 
