@@ -147,7 +147,8 @@ void WidgetExplorerPrivate::initFilters()
             continue;
         }
 
-        filterModel.addFilter(i18nd("libplasma5", c.toLocal8Bit()), KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
+        filterModel.addFilter(i18nd("plasmashellprivateplugin", c.toLocal8Bit()),
+                              KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
     }
 }
 
