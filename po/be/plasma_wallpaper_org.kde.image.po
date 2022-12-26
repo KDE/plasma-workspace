@@ -1,0 +1,280 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"PO-Revision-Date: 2022-12-22 19:52\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_wallpaper_org.kde.image.po\n"
+"X-Crowdin-File-ID: 8888\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Antikruk"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nashtlumach@gmail.com"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Становішча:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Маштабавана і абрэзана"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Маштабавана"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Маштабавана, прапорцыі захаваныя"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Па цэнтры"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Скампанавана"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Фон:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Размыццё"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Суцэльны колер"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Абраць колер фону"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Дадаць выяву…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Атрымаць новыя шпалеры…"
+
+#: imagepackage/contents/ui/main.qml:66
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Адкрыць выяву шпалер"
+
+#: imagepackage/contents/ui/main.qml:67
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Наступная выява шпалер"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Адкрыць каталог змесціва"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Аднавіць шпалеры"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Выдаліць шпалеры"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr "Гэты інструмент дазваляе вызначыць шпалеры для сеанса Plasma."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Файл выявы або ўсталяваны пакунак шпалер, які вы хочаце вызначыць шпалерамі "
+"для сеанса Plasma"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"У назве файла гэтых шпалер ёсць толькі адзін знак двукосся (')- звярніцеся "
+"да аўтара шпалер, каб выправіць гэта, або змяніце назву файла самастойна: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Падчас выканання спробы вызначэння шпалер Plasma адбылася памылка:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr "Пакунак %1 паспяхова вызначаны шпалерамі для ўсіх працоўных сталоў"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "Выява %1 паспяхова вызначаная шпалерамі для ўсіх працоўных сталоў"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"Пададзены для шпалеры файл не існуе, або яго немагчыма распазнаць як "
+"шпалеры: %1"
+
+#: plugin/finder/packagefinder.cpp:148
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Рэкамендаваны файл шпалер"
+
+#: plugin/imagebackend.cpp:243
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Каталог са шпалерамі для паказу слайдаў"
+
+#: plugin/imagebackend.cpp:353
+#, kde-format
+msgid "Open Image"
+msgstr "Адкрыць выяву"
+
+#: plugin/imagebackend.cpp:353
+#, kde-format
+msgid "Image Files"
+msgstr "Файлы выяў"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Парадак:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Выпадкова"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "А - Я"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Я - А"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Дата змены (спачатку навейшыя)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Дата змены (спачатку старэйшыя)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Групаваць па каталогах"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Змяняць кожныя:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 гадзіна"
+msgstr[1] "%1 гадзіны"
+msgstr[2] "%1 гадзін"
+msgstr[3] "%1 гадзіны"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 хвіліна"
+msgstr[1] "%1 хвіліны"
+msgstr[2] "%1 хвіліны"
+msgstr[3] "%1 хвілін"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунды"
+msgstr[2] "%1 секунд"
+msgstr[3] "%1 секунды"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Каталогі"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Выдаліць каталог"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Адкрыць каталог"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Размяшчэнні шпалер не наладжаныя"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Дадаць каталог…"

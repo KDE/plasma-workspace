@@ -1,0 +1,267 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-12-13 15:30\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/kcm_lookandfeel.po\n"
+"X-Crowdin-File-ID: 8786\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Antikruk"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nashtlumach@gmail.com"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Каб змены набылі моц, трэба перазапусціць сеанс Plasma."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Налады курсора змененыя"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Інструмент глабальнай тэмы"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "Інструмент загаднага радка для ўжывання пакункаў глабальных тэмаў."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Аўтарскія правы 2017, Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Суправаджальнік"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Спіс даступных пакункаў глабальных тэмаў"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Ужыць глабальны пакунак тэмы. Гэта можа быць назва пакунка або поўны шлях да "
+"ўсталяванага пакунка. Інструмент пераканаецца, што па шляху знаходзіцца "
+"пакунак глабальнай тэмы, а потым паспрабуе ўжыць яго"
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "packagename"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Скінуць макет працоўнага стала Plasma"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Глабальны выгляд"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "Гэты модуль дазваляе абраць глабальны выгляд."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "Змяшчае макет працоўнага стала"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "Папярэдні прагляд тэмы"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "Ужыць %1?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Абраць, што ўжываць…"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Паказаць менш параметраў…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "Ужыць"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "Атрымаць новыя глабальныя тэмы…"
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "Налады макета:"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "Макет працоўнага стала"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr "Макет кнопак панэляў загалоўкаў"
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"Калі ўжыць макет працоўнага стала, то заменіцца бягучая канфігурацыя "
+"працоўных сталоў, панэляў, док-панэляў і віджэтаў"
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Налады выгляду:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "Колеры"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "Стыль праграм"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "Аздабленне акон"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "Значкі"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Стыль Plasma"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "Курсоры"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "Шрыфты"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "Сродак пераключэння задач"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "Застаўка"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "Экран блакавання"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "У гэтай глабальнай тэме будзе ўжыта наступнае:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Налады выгляду"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Налады выгляду"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, kde-format
+msgid "Desktop and window layout"
+msgstr "Макет працоўнага стала і акон"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, kde-format
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• Макет працоўнага стала і акон"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"У гэтай глабальнай тэмы няма прыдатных налад. Калі ласка, звяжыцеся з "
+"распрацоўнікам гэтай глабальнай тэмы, бо яна можа быць пашкоджанай."

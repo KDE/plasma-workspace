@@ -1,0 +1,138 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-10 00:47+0000\n"
+"PO-Revision-Date: 2022-12-16 16:46\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma."
+"clipboard.po\n"
+"X-Crowdin-File-ID: 8812\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Вярнуцца да буфера абмену"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "QR-код"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Матрыца даных"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Ацтэкскі"
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Код 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Код 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Code 128"
+msgstr "Код 128"
+
+#: contents/ui/BarcodePage.qml:85
+#, kde-format
+msgid "Change the QR code type"
+msgstr "Змяніць тып QR-кода"
+
+#: contents/ui/BarcodePage.qml:114
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "Не ўдалося стварыць QR-код"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr "QR-код занадта вялікі для паказу"
+
+#: contents/ui/clipboard.qml:27
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Змесціва буфера абмену"
+
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Буфер абмену пусты"
+
+#: contents/ui/clipboard.qml:56
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Наладжванне буфера абмену…"
+
+#: contents/ui/clipboard.qml:58
+#, kde-format
+msgid "Clear History"
+msgstr "Ачысціць гісторыю"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Выклікаць дзеянне"
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, kde-format
+msgid "Show QR code"
+msgstr "Паказваць QR-код"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Рэдагаваць змесціва"
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Выдаліць з гісторыі"
+
+#: contents/ui/EditPage.qml:86
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Захаваць"
+
+#: contents/ui/EditPage.qml:94
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: contents/ui/Menu.qml:94
+#, kde-format
+msgid "No matches"
+msgstr "Няма супадзенняў"
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"

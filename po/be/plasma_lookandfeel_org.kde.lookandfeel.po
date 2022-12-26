@@ -1,0 +1,317 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-18 00:56+0000\n"
+"PO-Revision-Date: 2022-12-20 17:01\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_lookandfeel_org.kde."
+"lookandfeel.po\n"
+"X-Crowdin-File-ID: 8858\n"
+
+#: ../sddm-theme/KeyboardButton.qml:19
+#, kde-format
+msgid "Keyboard Layout: %1"
+msgstr "Раскладка клавіятуры: %1"
+
+#: ../sddm-theme/Login.qml:75
+#, kde-format
+msgid "Username"
+msgstr "Імя карыстальніка"
+
+#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#, kde-format
+msgid "Password"
+msgstr "Пароль"
+
+#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#, kde-format
+msgid "Log In"
+msgstr "Увайсці"
+
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:298
+#, kde-format
+msgid "Caps Lock is on"
+msgstr "Caps Lock уключаны"
+
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
+#: contents/logout/Logout.qml:163
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Прыпыніць"
+
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
+#: contents/logout/Logout.qml:181
+#, kde-format
+msgid "Restart"
+msgstr "Перазапусціць"
+
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
+#: contents/logout/Logout.qml:191
+#, kde-format
+msgid "Shut Down"
+msgstr "Выключыць"
+
+#: ../sddm-theme/Main.qml:233
+#, kde-format
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Іншае…"
+
+#: ../sddm-theme/Main.qml:448
+#, kde-format
+msgid "Type in Username and Password"
+msgstr "Увядзіце імя карыстальніка і пароль"
+
+#: ../sddm-theme/Main.qml:482
+#, kde-format
+msgid "List Users"
+msgstr "Спіс карыстальнікаў"
+
+#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:573
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Віртуальная клавіятура"
+
+#: ../sddm-theme/Main.qml:590
+#, kde-format
+msgid "Login Failed"
+msgstr "Не ўдалося ўвайсці"
+
+#: ../sddm-theme/SessionButton.qml:18
+#, kde-format
+msgid "Desktop Session: %1"
+msgstr "Сеанс: %1"
+
+#: contents/components/Battery.qml:53
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+#, kde-format
+msgid "Battery at %1%"
+msgstr "Узровень зараду %1%"
+
+#: contents/components/UserList.qml:71
+#, kde-format
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "Не выкарыстоўваецца"
+
+#: contents/components/UserList.qml:77
+#, kde-format
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "TTY %1"
+
+#: contents/components/UserList.qml:79
+#, kde-format
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "TTY %1 (Дысплэй %2)"
+
+#: contents/components/UserList.qml:83
+#, kde-format
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:19
+#, kde-format
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr "Гадзіннік:"
+
+#: contents/lockscreen/config.qml:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr "Пакідаць бачным, калі знікае падказка пра разблакаванне"
+
+#: contents/lockscreen/config.qml:33
+#, kde-format
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr "Кіраванне прайграваннем медыяфайлаў:"
+
+#: contents/lockscreen/config.qml:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr "Паказваць пад запытам разблакавання"
+
+#: contents/lockscreen/LockScreenUi.qml:37
+#, kde-format
+msgid "Unlocking failed"
+msgstr "Не ўдалося разблакаваць"
+
+#: contents/lockscreen/LockScreenUi.qml:312
+#, kde-format
+msgid "Sleep"
+msgstr "Прыпыніць"
+
+#: contents/lockscreen/LockScreenUi.qml:318 contents/logout/Logout.qml:172
+#, kde-format
+msgid "Hibernate"
+msgstr "Перавесці ў рэжым сну"
+
+#: contents/lockscreen/LockScreenUi.qml:324
+#, kde-format
+msgid "Switch User"
+msgstr "Пераключыць карыстальніка"
+
+#: contents/lockscreen/LockScreenUi.qml:520
+#, kde-format
+msgid "Switch to This Session"
+msgstr "Пераключыцца на гэты сеанс"
+
+#: contents/lockscreen/LockScreenUi.qml:528
+#, kde-format
+msgid "Start New Session"
+msgstr "Запусціць новы сеанс"
+
+#: contents/lockscreen/LockScreenUi.qml:541
+#, kde-format
+msgid "Back"
+msgstr "Назад"
+
+#: contents/lockscreen/LockScreenUi.qml:587
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Пераключыць раскладку"
+
+#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgid "Unlock"
+msgstr "Разблакаваць"
+
+#: contents/lockscreen/MediaControls.qml:109
+#, kde-format
+msgid "No title"
+msgstr "Без назвы"
+
+#: contents/lockscreen/MediaControls.qml:110
+#, kde-format
+msgid "No media playing"
+msgstr "Медыяфайлы не прайграюцца"
+
+#: contents/lockscreen/MediaControls.qml:139
+#, kde-format
+msgid "Previous track"
+msgstr "Папярэдняя кампазіцыя"
+
+#: contents/lockscreen/MediaControls.qml:151
+#, kde-format
+msgid "Play or Pause media"
+msgstr "Прайграць або прыпыніць"
+
+#: contents/lockscreen/MediaControls.qml:165
+#, kde-format
+msgid "Next track"
+msgstr "Наступная кампазіцыя"
+
+#: contents/logout/Logout.qml:139
+#, kde-format
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Зараз працуе яшчэ %1 карыстальнік. Калі выключыць або перазапусціць "
+"камп'ютар, гэты карыстальнік можа страціць даныя."
+msgstr[1] ""
+"Зараз працуюць яшчэ %1 карыстальнікі. Калі выключыць або перазапусціць "
+"камп'ютар, гэтыя карыстальнікі можа страціць даныя."
+msgstr[2] ""
+"Зараз працуюць яшчэ %1 карыстальнікаў. Калі выключыць або перазапусціць "
+"камп'ютар, гэтыя карыстальнікі можа страціць даныя."
+msgstr[3] ""
+"Зараз працуюць яшчэ %1 карыстальнікі. Калі выключыць або перазапусціць "
+"камп'ютар, гэтыя карыстальнікі можа страціць даныя."
+
+#: contents/logout/Logout.qml:153
+#, kde-format
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "Пасля перазапуску камп'ютара адкрыецца праграма кіравання прашыўкай."
+
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgid "Log Out"
+msgstr "Выхад"
+
+#: contents/logout/Logout.qml:224
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Перазапуск праз %1 секунду"
+msgstr[1] "Перазапуск праз %1 секунды"
+msgstr[2] "Перазапуск праз %1 секунд"
+msgstr[3] "Перазапуск праз %1 секунды"
+
+#: contents/logout/Logout.qml:226
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Выключэнне праз %1 секунду"
+msgstr[1] "Выключэнне праз %1 секунды"
+msgstr[2] "Выключэнне праз %1 секунд"
+msgstr[3] "Выключэнне праз %1 секунды"
+
+#: contents/logout/Logout.qml:228
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Выхад праз %1 секунду"
+msgstr[1] "Выхад праз %1 секунды"
+msgstr[2] "Выхад праз %1 секунд"
+msgstr[3] "Выхад праз %1 секунды"
+
+#: contents/logout/Logout.qml:239
+#, kde-format
+msgid "OK"
+msgstr "Добра"
+
+#: contents/logout/Logout.qml:245
+#, kde-format
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: contents/osd/OsdItem.qml:66
+#, kde-format
+msgid "100%"
+msgstr "100%"
+
+#: contents/osd/OsdItem.qml:80
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/splash/Splash.qml:81
+#, kde-format
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Plasma ад KDE"

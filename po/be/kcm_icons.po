@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-31 11:38\n"
+"PO-Revision-Date: 2022-12-13 15:30\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -29,10 +29,9 @@ msgid "Main Toolbar"
 msgstr "Галоўная панэль інструментаў"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Другі колер:"
+msgstr "Другасныя панэлі інструментаў"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -134,15 +133,19 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Тут вы можаце наладзіць прадвызначаныя памеры розных тыпаў значкоў на "
+"агульнасістэмным узроўні. Звярніце ўвагу, што не ўсе праграмы будуць "
+"выкарыстоўваць гэтыя налады.<nl/><nl/>Калі вы выявіце, што элементы на "
+"экране занадта малыя або занадта вялікія, паспрабуйце падладзіць глабальнае "
+"маштабаванне."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Падладжванне глабальнага маштабавання…"
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Памер:"
@@ -178,8 +181,7 @@ msgid "Get New Icons…"
 msgstr "Атрымаць новыя значкі…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Наладжванне тэмы значкоў"

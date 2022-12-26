@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2022-10-31 11:38\n"
+"PO-Revision-Date: 2022-12-15 10:32\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -551,19 +551,16 @@ msgid "Previous History Item"
 msgstr "Папярэдні элемент гісторыі"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Адкрыць Klipper у месцы курсора мышы"
+msgstr "Паказваць элементы ў месцы курсора мышы"
 
 #: klipper.cpp:243
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - буфер абмену"
+msgstr "%1 - інструмент буфер абмену"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -845,11 +842,10 @@ msgstr ""
 "якія могуць апрацоўваць адпаведны тып MIME."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Змесціва буфера абмену"
+msgstr "%1 - элементы буфера абмену"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -877,10 +873,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Утыліта KDE для працы з буферам абмену"
+msgstr "Утыліта Plasma для працы з гісторыяй выразання і устаўляння"
 
 #: main.cpp:31
 #, kde-format

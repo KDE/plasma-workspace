@@ -4,15 +4,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-06 00:47+0000\n"
-"PO-Revision-Date: 2022-06-08 19:45+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2022-12-26 04:01+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:166
@@ -141,7 +141,7 @@ msgstr "設定指紋"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "全部清除"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -186,10 +186,9 @@ msgid "Re-enroll finger"
 msgstr "重新登錄手指"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "清除指紋"
+msgstr "刪除指紋"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

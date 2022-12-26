@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2022-06-29 12:41+0900\n"
+"PO-Revision-Date: 2022-12-26 04:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -162,18 +162,15 @@ msgstr "桌面佈局"
 #: package/contents/ui/MoreOptions.qml:53
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "標題列按鈕配置"
 
 #: package/contents/ui/MoreOptions.qml:66
 #: package/contents/ui/SimpleOptions.qml:63
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
-msgstr "套用桌面佈局將會取代您目前的桌面、面板，和元件"
+msgstr "套用桌面佈局將會取代您目前的桌面、面板、dock 和元件的設定"
 
 #: package/contents/ui/MoreOptions.qml:75
 #, kde-format
@@ -247,18 +244,15 @@ msgid "• Appearance settings"
 msgstr "• 外觀設定"
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "桌面佈局"
+msgstr "桌面與視窗佈局"
 
 #: package/contents/ui/SimpleOptions.qml:58
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• 桌面佈局"
+msgstr "• 桌面與視窗佈局"
 
 #: package/contents/ui/SimpleOptions.qml:75
 #, kde-format

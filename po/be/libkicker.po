@@ -1,0 +1,322 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"PO-Revision-Date: 2022-12-16 16:46\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/libkicker.po\n"
+"X-Crowdin-File-ID: 8802\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Адкрыць у:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Уласцівасці"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Дадаць на працоўны стол"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Дадаць на панэль (віджэт)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Замацаваць у кіраўніку задач"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Нядаўнія файлы"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Забыць нядаўнія файлы"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Рэдагаваць праграму…"
+
+#: plugin/actionlist.cpp:429
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Выдаленне або кіраванне дапаўненнямі…"
+
+#: plugin/appentry.cpp:309
+#, kde-format
+msgid "Hide Application"
+msgstr "Схаваць праграму"
+
+#: plugin/appentry.cpp:369
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:371
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
+#: plugin/recentusagemodel.cpp:216
+#, kde-format
+msgid "Applications"
+msgstr "Праграмы"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Паказваць праграмы ў гэтым падменю"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Паказваць праграмы ў \"%1\""
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Паказаць KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Пошук, разбор або запуск загадаў"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Камп'ютар"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Паказаць кантактную інфармацыю…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Улюбёнае"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Кантакты"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Забыцца на кантакт"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Забыцца на ўсе кантакты"
+
+#: plugin/recentusagemodel.cpp:151
+#, kde-format
+msgid "Recently Used"
+msgstr "Нядаўнія"
+
+#: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
+#, kde-format
+msgid "Files"
+msgstr "Файлы"
+
+#: plugin/recentusagemodel.cpp:238
+#, kde-format
+msgid "Forget Application"
+msgstr "Забыцца на праграму"
+
+#: plugin/recentusagemodel.cpp:332
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Адкрыць каталог змесціва"
+
+#: plugin/recentusagemodel.cpp:335
+#, kde-format
+msgid "Forget File"
+msgstr "Забыцца на файл"
+
+#: plugin/recentusagemodel.cpp:474
+#, kde-format
+msgid "Forget All"
+msgstr "Забыцца на ўсе"
+
+#: plugin/recentusagemodel.cpp:476
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Забыцца на ўсе праграмы"
+
+#: plugin/recentusagemodel.cpp:479
+#, kde-format
+msgid "Forget All Files"
+msgstr "Забыцца на ўсе файлы"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Схаваць %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Усе праграмы"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Гэта мусіць быць бачна! Выкарыстоўвайце KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Нядаўнія кантакты"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Файлы, якія часта выкарыстоўваюцца"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Нядаўнія праграмы"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Праграмы, якія часта выкарыстоўваюцца"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Сілкаванне / сеанс"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Вынікі пошуку"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Заблакаваць"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Выхад"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Захаваць сеанс"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Пераключыць карыстальніка"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Прыпыніць"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Перавесці ў рэжым сну"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Перазапусціць"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Выключыць"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Сеанс"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Сістэма"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Заблакаваць экран"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Скончыць сеанс"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Запусціць паралельны сеанс ад імя іншага карыстальніка"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Прыпыніць з кэшаваннем у аператыўную памяць"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Прыпыніць з кэшаваннем на цвёрды дыск"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Перазапусціць камп'ютар"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Выключыць камп'ютар"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Сістэмныя дзеянні"

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-06-12 09:59+0900\n"
+"PO-Revision-Date: 2022-12-26 04:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -142,10 +142,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "此模組能讓您設定系統字型。"
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "調整所有字型...(&A)"
+msgstr "調整全域縮放…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -155,10 +154,7 @@ msgid ""
 msgstr "有一些像是防鋸齒或 DPI 設定上的變更，只會對於新啟動的程式有作用。"
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."

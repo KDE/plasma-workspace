@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-06-29 11:12+0900\n"
+"PO-Revision-Date: 2022-12-26 04:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: iconsizecategorymodel.cpp:14
@@ -34,10 +34,9 @@ msgid "Main Toolbar"
 msgstr "主工具列"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "主工具列"
+msgstr "次工具列"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -141,13 +140,13 @@ msgstr ""
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "調整全域縮放…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "大小："
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -180,8 +179,7 @@ msgid "Get New Icons…"
 msgstr "取得新圖示…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "設定圖示大小"

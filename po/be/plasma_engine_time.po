@@ -1,0 +1,70 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2022-12-20 17:01\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_engine_time.po\n"
+"X-Crowdin-File-ID: 8856\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Мясцовы"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Часавы пояс"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Горад часавага пояса"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Кантынент часавага пояса"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Краіна часавага пояса"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Зрух"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Абрэвіятура часавага пояса"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Дата і час"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Шырата"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Даўгата"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Сонца"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Месяц"

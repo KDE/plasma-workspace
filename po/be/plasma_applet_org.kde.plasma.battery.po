@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-10-31 11:39\n"
+"PO-Revision-Date: 2022-12-16 16:46\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -181,36 +181,32 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Аўтаматычны пераход у рэжым сну і блакаванне экрана адключаныя"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 праграма запытвае актывацыю %2:"
-msgstr[1] "%1 праграмы запытваюць актывацыю %2:"
-msgstr[2] "%1 праграм запытваюць актывацыю %2:"
-msgstr[3] "%1 праграмы запытваюць актывацыю %2:"
+msgstr[0] "%1 праграма запытала актывацыю прадукцыйнага рэжыму"
+msgstr[1] "%1 праграмы запыталі актывацыю прадукцыйнага рэжыму"
+msgstr[2] "%1 праграм запыталі актывацыю прадукцыйнага рэжыму"
+msgstr[3] "%1 праграмы запыталі актывацыю прадукцыйнага рэжыму"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Сістэма працуе ў прадукцыйным рэжыме"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 праграма запытвае актывацыю %2:"
-msgstr[1] "%1 праграмы запытваюць актывацыю %2:"
-msgstr[2] "%1 праграм запытваюць актывацыю %2:"
-msgstr[3] "%1 праграмы запытваюць актывацыю %2:"
+msgstr[0] "%1 праграма запытала актывацыю энергазберагальнага рэжыму"
+msgstr[1] "%1 праграмы запыталі актывацыю энергазберагальнага рэжыму"
+msgstr[2] "%1 праграм запыталі актывацыю энергазберагальнага рэжыму"
+msgstr[3] "%1 праграмы запыталі актывацыю энергазберагальнага рэжыму"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Сістэма працуе ў энергазберагальным рэжыме"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
@@ -233,10 +229,10 @@ msgid "&Show Energy Information…"
 msgstr "&Паказаць інфармацыю пра сілкаванне…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Паказваць на значку ўзровень зараду батарэі"
+msgstr ""
+"Паказваць на значку ўзровень зараду батарэі, калі яна зараджаная не поўнасцю"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

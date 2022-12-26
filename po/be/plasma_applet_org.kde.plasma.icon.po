@@ -1,0 +1,48 @@
+# Zmicier <zmicerturok@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-31 00:47+0000\n"
+"PO-Revision-Date: 2022-12-19 15:31\n"
+"Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Generator: Lokalize 22.08.3\n"
+"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
+"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma.icon."
+"po\n"
+"X-Crowdin-File-ID: 8816\n"
+
+#: iconapplet.cpp:92
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "Не ўдалося стварыць каталог значкоў віджэтаў \"%1\""
+
+#: iconapplet.cpp:138
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr "Не ўдалося скапіяваць файл значка віджэта з \"%1\" у \"%2\""
+
+#: iconapplet.cpp:385
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Адкрыць каталог змесціва"
+
+#: iconapplet.cpp:566
+#, kde-format
+msgid "Properties for %1"
+msgstr "Уласцівасці для %1"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid "Properties"
+msgstr "Уласцівасці"
