@@ -59,6 +59,38 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     qmlRegisterType<LanguageListModel>("kcmregionandlang", 1, 0, "LanguageListModel");
     qRegisterMetaType<KCM_RegionAndLang::SettingType>();
     qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject, "kcmregionandlang", 1, 0, "SettingType", "Error: SettingType is an enum");
+
+    // fedora pre generate locales, fetch available locales from localectl. /usr/share/i18n/locales is empty in fedora
+    QDir glibcLocaleDir(localeFileDirPath());
+    if (glibcLocaleDir.isEmpty()) {
+        auto localectlPath = QStandardPaths::findExecutable(QStringLiteral("localectl"));
+        if (!localectlPath.isEmpty()) {
+            m_localectl = new QProcess(this);
+            m_localectl->setProgram(localectlPath);
+            m_localectl->setArguments({QStringLiteral("list-locales")});
+            connect(m_localectl, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus status) {
+                m_enabled = true; // set to true even if failed. otherwise our failed notification is also grey out
+                if (exitCode != 0 || status != QProcess::NormalExit) {
+                    Q_EMIT encountedError(failedFindLocalesMessage());
+                }
+                Q_EMIT enabledChanged();
+            });
+            m_localectl->start();
+        }
+    } else {
+        m_enabled = true;
+    }
+}
+
+QString KCMRegionAndLang::failedFindLocalesMessage()
+{
+    return xi18nc("@info this will be shown as an error message",
+                 "Could not find the system's available locales using the <command>localectl</command> tool. Please file a bug report about this at <link>https://bugs.kde.org</link>");
+}
+
+QString KCMRegionAndLang::localeFileDirPath()
+{
+    return QStringLiteral("/usr/share/i18n/locales");
 }
 
 void KCMRegionAndLang::save()
@@ -189,6 +221,11 @@ bool KCMRegionAndLang::isGlibc()
 #endif
 }
 
+bool KCMRegionAndLang::enabled() const
+{
+    return m_enabled;
+}
+
 QString KCMRegionAndLang::toGlibcLocale(const QString &lang)
 {
     static bool inited = false;
@@ -210,11 +247,17 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 {
     std::unordered_map<QString, QString> localeMap;
 
-    QDir glibcLocaleDir(QStringLiteral("/usr/share/i18n/locales"));
+    QDir glibcLocaleDir(localeFileDirPath());
     auto availableLocales = glibcLocaleDir.entryList(QDir::Files);
     // not glibc system or corrupted system
-    if (availableLocales.size() == 0) {
-        return localeMap;
+    if (availableLocales.isEmpty()) {
+        if (m_localectl) {
+            availableLocales = QString(m_localectl->readAllStandardOutput()).split('\n');
+        }
+        if (availableLocales.isEmpty()) {
+            Q_EMIT encountedError(failedFindLocalesMessage());
+            return localeMap;
+        }
     }
 
     // map base locale code to actual glibc locale filename: "en" => ["en_US", "en_GB"]

@@ -16,6 +16,8 @@ KCM.ScrollViewKCM {
     id: root
     implicitHeight: Kirigami.Units.gridUnit * 40
     implicitWidth: Kirigami.Units.gridUnit * 20
+    enabled: kcm.enabled
+
     header: ColumnLayout {
         id: messagesLayout
 
@@ -72,6 +74,13 @@ KCM.ScrollViewKCM {
 
             text: i18nc("@info", "Necessary locale and language support files have been installed. It is now safe to turn off the computer.")
         }
+
+        Kirigami.InlineMessage {
+            id: encountedErrorMsg
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Error
+        }
     }
 
     Connections {
@@ -100,6 +109,10 @@ KCM.ScrollViewKCM {
         }
         function onTakeEffectNextTime() {
             takeEffectNextTimeMsg.visible = true;
+        }
+        function onEncountedError(reason) {
+            encountedErrorMsg.text = reason;
+            encountedErrorMsg.visible = true;
         }
     }
 

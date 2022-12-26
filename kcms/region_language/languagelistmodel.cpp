@@ -155,12 +155,14 @@ QString LanguageListModel::metric() const
     return exampleHelper(Utility::measurementExample);
 }
 
-void LanguageListModel::setRegionAndLangSettings(QObject *settings)
+void LanguageListModel::setRegionAndLangSettings(QObject *settings, QObject *kcm)
 {
-    if (auto *regionandlangsettings = dynamic_cast<RegionAndLangSettings *>(settings)) {
-        m_settings = regionandlangsettings;
-        m_selectedLanguageModel->setRegionAndLangSettings(regionandlangsettings);
-        Q_EMIT exampleChanged();
+    if (auto *regionandlangsettings = qobject_cast<RegionAndLangSettings *>(settings)) {
+        if (auto *regionandlangkcm = qobject_cast<KCMRegionAndLang *>(kcm)) {
+            m_settings = regionandlangsettings;
+            m_selectedLanguageModel->setRegionAndLangSettings(regionandlangsettings, regionandlangkcm);
+            Q_EMIT exampleChanged();
+        }
     }
 }
 
@@ -174,9 +176,10 @@ void LanguageListModel::setIsPreviewExample(bool preview)
     m_isPreviewExample = preview;
 }
 
-void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *settings)
+void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *settings, KCMRegionAndLang *kcm)
 {
     m_settings = settings;
+    m_kcm = kcm;
 
     beginResetModel();
     if (m_settings->language().isEmpty() && m_settings->isDefaultSetting(SettingType::Lang)) {
@@ -206,7 +209,7 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
     endResetModel();
 
     // check for invalid lang
-    if (const QString lang = KCMRegionAndLang::toGlibcLocale(m_selectedLanguages.front()); lang.isEmpty()) {
+    if (const QString lang = m_kcm->toGlibcLocale(m_selectedLanguages.front()); lang.isEmpty()) {
         m_unsupportedLanguage = m_selectedLanguages.front();
         Q_EMIT unsupportedLanguageChanged();
     } else if (!m_unsupportedLanguage.isEmpty()) {
@@ -343,7 +346,7 @@ void SelectedLanguageModel::saveLanguages()
         m_settings->config()->group(QStringLiteral("Formats")).deleteEntry("lang");
         m_settings->config()->group(QStringLiteral("Translations")).deleteEntry("language");
     } else {
-        QString lang = KCMRegionAndLang::toGlibcLocale(m_selectedLanguages.front());
+        QString lang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
         if (lang.isEmpty()) {
             m_unsupportedLanguage = m_selectedLanguages.front();
             Q_EMIT unsupportedLanguageChanged();

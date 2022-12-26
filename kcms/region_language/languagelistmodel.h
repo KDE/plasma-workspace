@@ -11,7 +11,7 @@
 
 class SelectedLanguageModel;
 class RegionAndLangSettings;
-
+class KCMRegionAndLang;
 class LanguageListModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -49,7 +49,7 @@ public:
     bool isPreviewExample() const;
     void setIsPreviewExample(bool preview);
 
-    Q_INVOKABLE void setRegionAndLangSettings(QObject *settings);
+    Q_INVOKABLE void setRegionAndLangSettings(QObject *settings, QObject *kcm);
 Q_SIGNALS:
     void currentIndexChanged();
     void exampleChanged();
@@ -79,7 +79,7 @@ public:
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    void setRegionAndLangSettings(RegionAndLangSettings *settings);
+    void setRegionAndLangSettings(RegionAndLangSettings *settings, KCMRegionAndLang *kcm);
 
     bool shouldWarnMultipleLang() const;
     bool hasImplicitLang() const;
@@ -99,8 +99,9 @@ private:
     QString envLang() const;
     QString envLanguage() const;
     void saveLanguages();
-    RegionAndLangSettings *m_settings{nullptr};
+    RegionAndLangSettings *m_settings = nullptr;
     QList<QString> m_selectedLanguages;
-    bool m_hasImplicitLang{false};
+    bool m_hasImplicitLang = false;
     QString m_unsupportedLanguage;
+    KCMRegionAndLang *m_kcm = nullptr;
 };

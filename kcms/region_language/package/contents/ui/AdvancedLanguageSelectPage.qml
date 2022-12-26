@@ -21,7 +21,7 @@ KCM.ScrollViewKCM {
     LanguageListModel {
         id: languageListModel
         Component.onCompleted: {
-            languageListModel.setRegionAndLangSettings(kcm.settings);
+            languageListModel.setRegionAndLangSettings(kcm.settings, kcm);
         }
     }
     header: ColumnLayout {

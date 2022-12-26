@@ -24,6 +24,7 @@ class KCMRegionAndLang : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(RegionAndLangSettings *settings READ settings CONSTANT)
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
+    Q_PROPERTY(bool enabled READ enabled NOTIFY enabledChanged)
 
 public:
     explicit KCMRegionAndLang(QObject *parent, const KPluginMetaData &data, const QVariantList &list = QVariantList());
@@ -32,9 +33,10 @@ public:
     RegionAndLangSettings *settings() const;
 
     OptionsModel *optionsModel() const;
+    bool enabled() const;
     static bool isGlibc();
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting);
-    Q_INVOKABLE static QString toGlibcLocale(const QString &lang);
+    Q_INVOKABLE QString toGlibcLocale(const QString &lang);
     Q_INVOKABLE void reboot();
 Q_SIGNALS:
     void saveClicked();
@@ -42,17 +44,23 @@ Q_SIGNALS:
     void startGenerateLocale();
     void generateFinished();
     void requireInstallFont();
+    void enabledChanged();
+    void encountedError(const QString &reason);
     void userHasToGenerateManually(const QString &reason);
 
 private Q_SLOTS:
     void saveToConfigFile();
 
 private:
-    static std::unordered_map<QString, QString> constructGlibcLocaleMap();
+    std::unordered_map<QString, QString> constructGlibcLocaleMap();
+    static QString failedFindLocalesMessage();
+    static QString localeFileDirPath();
 
     QHash<QString, QString> m_cachedFlags;
 
     RegionAndLangSettings *m_settings;
     OptionsModel *m_optionsModel;
     LocaleGeneratorBase *m_generator = nullptr;
+    QProcess *m_localectl = nullptr;
+    bool m_enabled = false;
 };
