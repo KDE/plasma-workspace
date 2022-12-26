@@ -12,8 +12,6 @@
 #include <QDateTime>
 #include <QTimer>
 
-class QTimer;
-
 namespace NotificationManager
 {
 class Q_DECL_HIDDEN AbstractNotificationsModel::Private

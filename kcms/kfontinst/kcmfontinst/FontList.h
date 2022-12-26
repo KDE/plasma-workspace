@@ -25,7 +25,6 @@
 #include <QUrl>
 #include <QVariant>
 
-class KFileItem;
 class QMenu;
 class QMimeData;
 class QTimer;

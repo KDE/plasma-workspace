@@ -7,7 +7,6 @@
 #include <QLabel>
 
 class QTimer;
-class QLabel;
 
 namespace KFI
 {

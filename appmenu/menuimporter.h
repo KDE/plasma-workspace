@@ -15,7 +15,6 @@
 #include <QObject>
 #include <QWidget> // For WId
 
-class QDBusObjectPath;
 class QDBusServiceWatcher;
 
 class MenuImporter : public QObject, protected QDBusContext

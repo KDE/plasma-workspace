@@ -15,7 +15,6 @@
 #include "ui_config.h"
 
 class QAction;
-class QMenu;
 
 class AppLauncher : public Plasma::ContainmentActions
 {
