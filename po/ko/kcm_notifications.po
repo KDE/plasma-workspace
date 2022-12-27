@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2021-08-09 22:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -87,27 +87,45 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "현재 Plasma에서 알림을 표시하지 않고 있습니다."
 
 #: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Do Not Disturb mode:"
+#, fuzzy, kde-format
+#| msgid "Do Not Disturb mode:"
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
 msgstr "방해 금지 모드:"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:69
 #, kde-format
-msgctxt "Do not disturb when screens are mirrored"
-msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable:"
+msgstr ""
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb when screens are mirrored"
+#| msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
 msgstr "화면을 미러링할 때 활성화"
 
-#: package/contents/ui/main.qml:77
-#, kde-format
-msgctxt "Do not disturb while screen sharing"
-msgid "Enable while screen sharing"
+#: package/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb while screen sharing"
+#| msgid "Enable while screen sharing"
+msgctxt "Enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
 msgstr "화면 공유 중일 때 활성화"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:97
 #, kde-format
-msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-msgid "Toggle with:"
-msgstr "다음으로 전환:"
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr ""
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -139,67 +157,86 @@ msgstr "낮은 우선 순위 알림:"
 msgid "Show popup"
 msgstr "팝업 창 보기"
 
-#: package/contents/ui/main.qml:170
-#, kde-format
-msgid "Popup:"
+#: package/contents/ui/main.qml:165
+#, fuzzy, kde-format
+#| msgid "Popup:"
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
 msgstr "팝업:"
 
 #: package/contents/ui/main.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications:"
+msgctxt "@label"
+msgid "Location:"
+msgstr "프로그램:"
+
+#: package/contents/ui/main.qml:172
+#, fuzzy, kde-format
+#| msgctxt "Popup position near notification plasmoid"
+#| msgid "Show near notification icon"
 msgctxt "Popup position near notification plasmoid"
-msgid "Show near notification icon"
+msgid "Near notification icon"
 msgstr "알림 아이콘 근처에 표시"
 
-#: package/contents/ui/main.qml:208
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "사용자 정의 위치 선택…"
 
-#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1초"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:223
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "다음 시간 이후 숨기기:"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Application progress:"
 msgstr "프로그램 진행 상황:"
 
-#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:252 package/contents/ui/main.qml:292
 #, kde-format
 msgid "Show in task manager"
 msgstr "작업 관리자에 표시"
 
-#: package/contents/ui/main.qml:271
+#: package/contents/ui/main.qml:264
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "알림에 표시"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:278
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "진행 중에 알림 열어 두기"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Notification badges:"
 msgstr "알림 배지:"
 
-#: package/contents/ui/main.qml:318
-#, kde-format
-msgid "Applications:"
-msgstr "프로그램:"
+#: package/contents/ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@title:group"
+msgid "Application-specific settings"
+msgstr "프로그램 설정"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
 msgstr "설정…"
@@ -240,6 +277,10 @@ msgstr "알림 설정과 행동을 설정할 프로그램을 선택하십시오.
 #, kde-format
 msgid "Other Applications"
 msgstr "다른 프로그램"
+
+#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+#~ msgid "Toggle with:"
+#~ msgstr "다음으로 전환:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

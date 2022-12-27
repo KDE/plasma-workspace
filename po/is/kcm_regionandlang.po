@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-09-02 10:22+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -226,6 +226,15 @@ msgstr ""
 "Hér getur þú stillt sniðin sem notuð eru fyrir tíma, dagsetningar, "
 "peningaupphæðir og aðrar tölur."
 
+#: kcmregionandlang.cpp:88
+#, kde-kuit-format
+msgctxt "@info this will be shown as an error message"
+msgid ""
+"Could not find the system's available locales using the <command>localectl</"
+"command> tool. Please file a bug report about this at <link>https://bugs.kde."
+"org</link>"
+msgstr ""
+
 #: languagelistmodel.cpp:72
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
@@ -307,7 +316,7 @@ msgid "Default for System"
 msgstr "Sjálfgefið fyrir kerfið"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Default"
 msgstr "Sjálfgefið"
@@ -472,18 +481,18 @@ msgctxt "@action:button"
 msgid "Add More…"
 msgstr "Bæta við fleiru…"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
 msgstr "Breytingar taka gildi við næstu innskráningu."
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Restart now"
 msgstr "Endurræsa núna"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:52
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -493,7 +502,7 @@ msgstr ""
 "Útbý stuðningsskrár fyrir staðfærslu og tungumál; ekki slökkva á vélinni "
 "strax."
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +516,7 @@ msgstr ""
 "krefst að sérstakt letur sé birt á réttan hátt, þá þarftu að komast að því "
 "um hvaða letur sé að ræða og setja þau upp sjálf/ur."
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -517,50 +526,50 @@ msgstr ""
 "Nauðsynlegar stuðningsskrár fyrir staðfærslu og tungumál hafa verið settar "
 "upp. Núna er öruggt slökkva á vélinni."
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Breyta…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "Numbers"
 msgstr "Tölur"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Time"
 msgstr "Tími"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Currency"
 msgstr "Gjaldmiðill"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Measurements"
 msgstr "Mælingar"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "Paper Size"
 msgstr "Pappírsstærð"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Heimilisfang"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Nafn"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2018-10-31 00:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -127,12 +127,12 @@ msgstr "無法安裝"
 msgid "Categories:"
 msgstr "類別："
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "下載新的 Plasma 元件"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"

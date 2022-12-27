@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-07-10 16:39+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -124,12 +124,12 @@ msgstr "Възможно деинсталиране"
 msgid "Categories:"
 msgstr "Категории:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Изтегляне на нови уиджети на Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Инсталиране на уиджет от локален файл…"

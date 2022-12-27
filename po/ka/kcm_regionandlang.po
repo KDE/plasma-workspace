@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-12-03 06:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -226,6 +226,15 @@ msgid ""
 msgstr ""
 "აქ შეგიძლიათ დროის, თარიღის, ფულის და სხვა რიცხვების ფორმატები მოირგოთ."
 
+#: kcmregionandlang.cpp:88
+#, kde-kuit-format
+msgctxt "@info this will be shown as an error message"
+msgid ""
+"Could not find the system's available locales using the <command>localectl</"
+"command> tool. Please file a bug report about this at <link>https://bugs.kde."
+"org</link>"
+msgstr ""
+
 #: languagelistmodel.cpp:72
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
@@ -304,7 +313,7 @@ msgid "Default for System"
 msgstr "ნაგულისხმები სისტემისთვის"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Default"
 msgstr "სტანდარტული"
@@ -465,18 +474,18 @@ msgctxt "@action:button"
 msgid "Add More…"
 msgstr "მეტის დამატება…"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
 msgstr "ცვლილებების ეფექტს შემდეგ შესვლაზე დაინახავთ."
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Restart now"
 msgstr "ახლა გადატვირთვა"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:52
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -484,7 +493,7 @@ msgid ""
 "yet."
 msgstr "ენის მხარდაჭერის ფაილების გენერაცია. ნუ გამორთავთ კომპიუტერს."
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -494,7 +503,7 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -502,50 +511,50 @@ msgid ""
 "safe to turn off the computer."
 msgstr ""
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "შეცვლა…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "Numbers"
 msgstr "რიცხვები"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Time"
 msgstr "დრო"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Currency"
 msgstr "ფული"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Measurements"
 msgstr "გაბარიტები"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "Paper Size"
 msgstr "ქაღალდის ზომა"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "მისამართი"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "სახელი"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

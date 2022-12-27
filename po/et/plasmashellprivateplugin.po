@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2020-10-08 10:41+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -126,12 +126,12 @@ msgstr "Mittepaigaldatavad"
 msgid "Categories:"
 msgstr "Kategooriad:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Laadi alla uusi Plasma vidinaid"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"

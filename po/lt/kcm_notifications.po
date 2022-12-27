@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2021-08-17 21:21+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -92,27 +92,45 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Šiuo metu, Plasma neteikia pranešimų."
 
 #: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Do Not Disturb mode:"
+#, fuzzy, kde-format
+#| msgid "Do Not Disturb mode:"
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
 msgstr "Netrukdymo veiksena:"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:69
 #, kde-format
-msgctxt "Do not disturb when screens are mirrored"
-msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable:"
+msgstr ""
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb when screens are mirrored"
+#| msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
 msgstr "Įjungti, kai ekranai yra suvienyti"
 
-#: package/contents/ui/main.qml:77
-#, kde-format
-msgctxt "Do not disturb while screen sharing"
-msgid "Enable while screen sharing"
+#: package/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb while screen sharing"
+#| msgid "Enable while screen sharing"
+msgctxt "Enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
 msgstr "Įjungti, bendrinant ekraną"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:97
 #, kde-format
-msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-msgid "Toggle with:"
-msgstr "Perjungti naudojant:"
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr ""
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -144,23 +162,34 @@ msgstr "Žemos pirmenybės pranešimai:"
 msgid "Show popup"
 msgstr "Rodyti iškylantįjį langą"
 
-#: package/contents/ui/main.qml:170
-#, kde-format
-msgid "Popup:"
+#: package/contents/ui/main.qml:165
+#, fuzzy, kde-format
+#| msgid "Popup:"
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
 msgstr "Iškylantysis langas:"
 
 #: package/contents/ui/main.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications:"
+msgctxt "@label"
+msgid "Location:"
+msgstr "Programos:"
+
+#: package/contents/ui/main.qml:172
+#, fuzzy, kde-format
+#| msgctxt "Popup position near notification plasmoid"
+#| msgid "Show near notification icon"
 msgctxt "Popup position near notification plasmoid"
-msgid "Show near notification icon"
+msgid "Near notification icon"
 msgstr "Rodyti šalia pranešimų piktogramos"
 
-#: package/contents/ui/main.qml:208
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Pasirinkti tinkintą vietą…"
 
-#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -169,45 +198,53 @@ msgstr[1] "%1 sekundžių"
 msgstr[2] "%1 sekundžių"
 msgstr[3] "%1 sekundės"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:223
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Slėpti po:"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Application progress:"
 msgstr "Programos eiga:"
 
-#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:252 package/contents/ui/main.qml:292
 #, kde-format
 msgid "Show in task manager"
 msgstr "Rodyti užduočių tvarkytuvėje"
 
-#: package/contents/ui/main.qml:271
+#: package/contents/ui/main.qml:264
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Rodyti pranešimuose"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:278
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Išlaikyti iškylantįjį langą atvertą visos eigos metu"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Notification badges:"
 msgstr "Pranešimų ženkleliai:"
 
-#: package/contents/ui/main.qml:318
-#, kde-format
-msgid "Applications:"
-msgstr "Programos:"
+#: package/contents/ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@title:group"
+msgid "Application-specific settings"
+msgstr "Programos nuostatos"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
 msgstr "Konfigūruoti…"
@@ -250,6 +287,10 @@ msgstr ""
 #, kde-format
 msgid "Other Applications"
 msgstr "Kitos programos"
+
+#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+#~ msgid "Toggle with:"
+#~ msgstr "Perjungti naudojant:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

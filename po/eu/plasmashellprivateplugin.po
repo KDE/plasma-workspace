@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-08-12 18:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -128,12 +128,12 @@ msgstr "Desinstalagaitza"
 msgid "Categories:"
 msgstr "Kategoriak: "
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:196
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Jaitsi Plasma trepeta berriak"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:205
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalatu trepeta fitxategi lokal batetik..."

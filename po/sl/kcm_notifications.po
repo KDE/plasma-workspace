@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-03 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-12-08 09:53+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -89,27 +89,45 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Obvestil trenutno ne zagotavlja Plazma."
 
 #: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Do Not Disturb mode:"
+#, fuzzy, kde-format
+#| msgid "Do Not Disturb mode:"
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
 msgstr "Način 'Ne moti':"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:69
 #, kde-format
-msgctxt "Do not disturb when screens are mirrored"
-msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable:"
+msgstr ""
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb when screens are mirrored"
+#| msgid "Enable when screens are mirrored"
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
 msgstr "Omogoči, ko so zasloni zrcaljeni"
 
-#: package/contents/ui/main.qml:77
-#, kde-format
-msgctxt "Do not disturb while screen sharing"
-msgid "Enable while screen sharing"
+#: package/contents/ui/main.qml:82
+#, fuzzy, kde-format
+#| msgctxt "Do not disturb while screen sharing"
+#| msgid "Enable while screen sharing"
+msgctxt "Enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
 msgstr "Omogoči, kadar so zasloni deljeni"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:97
 #, kde-format
-msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-msgid "Toggle with:"
-msgstr "Preklopi z:"
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr ""
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -141,23 +159,34 @@ msgstr "Obvestila z nizko prioriteto:"
 msgid "Show popup"
 msgstr "Pokaži pojavno okno"
 
-#: package/contents/ui/main.qml:170
-#, kde-format
-msgid "Popup:"
+#: package/contents/ui/main.qml:165
+#, fuzzy, kde-format
+#| msgid "Popup:"
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
 msgstr "Pojavno okno:"
 
 #: package/contents/ui/main.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications:"
+msgctxt "@label"
+msgid "Location:"
+msgstr "Aplikacije:"
+
+#: package/contents/ui/main.qml:172
+#, fuzzy, kde-format
+#| msgctxt "Popup position near notification plasmoid"
+#| msgid "Show near notification icon"
 msgctxt "Popup position near notification plasmoid"
-msgid "Show near notification icon"
+msgid "Near notification icon"
 msgstr "Kaži bližnjo ikono obvestila"
 
-#: package/contents/ui/main.qml:208
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Izberite položaj po meri…"
 
-#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -166,45 +195,53 @@ msgstr[1] "%1 sekundi"
 msgstr[2] "%1 sekunde"
 msgstr[3] "%1 sekund"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:223
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Skrij po:"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Application progress:"
 msgstr "Napredek aplikacije:"
 
-#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:252 package/contents/ui/main.qml:292
 #, kde-format
 msgid "Show in task manager"
 msgstr "Kaži v upravitelju opravil"
 
-#: package/contents/ui/main.qml:271
+#: package/contents/ui/main.qml:264
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Kaži med obvestili"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:278
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Vzdržuj odprto pojavno okno med napredovanjem"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Notification badges:"
 msgstr "Značke z obvestili:"
 
-#: package/contents/ui/main.qml:318
-#, kde-format
-msgid "Applications:"
-msgstr "Aplikacije:"
+#: package/contents/ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt "@title:group"
+msgid "Application-specific settings"
+msgstr "Nastavitve aplikacij"
 
-#: package/contents/ui/main.qml:319
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
 msgstr "Nastavi…"
@@ -247,6 +284,10 @@ msgstr ""
 #, kde-format
 msgid "Other Applications"
 msgstr "Ostale aplikacije"
+
+#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+#~ msgid "Toggle with:"
+#~ msgstr "Preklopi z:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

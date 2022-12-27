@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2022-10-17 11:50+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -228,6 +228,15 @@ msgstr ""
 "Здесь можно настроить форматы записи времени, дат, денежных сумм и других "
 "числовых значений."
 
+#: kcmregionandlang.cpp:88
+#, kde-kuit-format
+msgctxt "@info this will be shown as an error message"
+msgid ""
+"Could not find the system's available locales using the <command>localectl</"
+"command> tool. Please file a bug report about this at <link>https://bugs.kde."
+"org</link>"
+msgstr ""
+
 #: languagelistmodel.cpp:72
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
@@ -310,7 +319,7 @@ msgid "Default for System"
 msgstr "По умолчанию для системы"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Default"
 msgstr "По умолчанию"
@@ -474,18 +483,18 @@ msgctxt "@action:button"
 msgid "Add More…"
 msgstr "Добавить ещё…"
 
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
 msgstr "Изменения вступят в силу при следующем входе в систему."
 
-#: package/contents/ui/main.qml:36
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Restart now"
 msgstr "Перезагрузить сейчас"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:52
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -493,7 +502,7 @@ msgid ""
 "yet."
 msgstr "Генерация файлов локали и языковой поддержки; не выключайте компьютер."
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +516,7 @@ msgstr ""
 "отображения информации на указанном языке требуются специальные шрифты, "
 "будет необходимо найти и установить их самостоятельно."
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -517,50 +526,50 @@ msgstr ""
 "Необходимые файлы локали и языковой поддержки установлены. Теперь можно "
 "безопасно выключить компьютер."
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Изменить…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "Numbers"
 msgstr "Числа"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Time"
 msgstr "Время"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Currency"
 msgstr "Валюта"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Measurements"
 msgstr "Числовые значения"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "Paper Size"
 msgstr "Размер бумаги"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:189
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Адрес"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Имя"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
