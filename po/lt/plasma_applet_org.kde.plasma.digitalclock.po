@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-12 20:00+0200\n"
+"PO-Revision-Date: 2022-12-28 02:39+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -274,6 +274,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Patarimas: Jei dažnai keliaujate, pridėkite į šį sąrašą kitą įrašą su jūsų "
+"namų laiko juosta. Jis bus rodomas tik tuomet, kai pakeisite sistemos masto "
+"laiko juostą į kažkurią kitą."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -290,10 +293,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr "Paslėpta tol, kol tai yra vietinės laiko juostos miestas"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Perjungti vietinę laiko juostą…"
+msgstr "Perjungti sistemos masto laiko juostą…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -301,10 +303,9 @@ msgid "Remove this time zone"
 msgstr "Šalinti šią laiko juostą"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Sistemos vietinė laiko juosta"
+msgstr "Sistemos masto laiko juosta"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -331,18 +332,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Perjungti rodomas laiko juostas slenkant virš laikrodžio programėlės"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Turėkite omenyje, kad kitokios laiko juostos laikrodyje naudojimas nekeičia "
-"vietinės laiko juostos sistemos mastu. Keliaudami, vietoje to, perjunkite "
-"vietinę laiko juostą."
+"Šios ypatybės naudojimas nekeičia sistemos masto laiko juostos. Keliaudami, "
+"vietoje to, perjunkite sistemos masto laiko juostą."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-10 21:25+0530\n"
+"PO-Revision-Date: 2022-12-27 21:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -87,50 +87,45 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "தற்போது அறிவிப்புகளை பிளாஸ்மா வழங்கவில்லை."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "தொந்தரவு செய்யாத பயன்முறை:"
+msgstr "தொந்தரவு செய்யாத பயன்முறை"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "இயக்குவது:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "காட்சிக் கருவிகள் பிரதிபலிக்கப்படும்போது இயக்கு"
+msgstr "காட்சிக் கருவிகள் பிரதிபலிக்கப்படும்போது"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "காட்சிக் கருவியைப் பகிரும்போது இயக்கு"
+msgstr "காட்சிக் கருவியைப் பகிரும்போது"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "விசைப்பலகை சுருக்குவழி:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "எப்போது காட்ட வேண்டும்"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
 msgid "Critical notifications:"
-msgstr "முக்கியமான அறிவிப்புகள்"
+msgstr "முக்கியமான அறிவிப்புகள்:"
 
 #: package/contents/ui/main.qml:110
 #, kde-format
@@ -158,26 +153,22 @@ msgid "Show popup"
 msgstr "தெரித்தெழும் அறிவிப்பை காட்டு"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "தெரித்தெழும் அறிவிப்பு:"
+msgstr "தெரித்தெழும் அறிவிப்புகள்"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "செயலிகள்:"
+msgstr "இருப்பிடம்:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "அறிவிப்பு சின்னத்திற்கு அருகில் காட்டு"
+msgstr "அறிவிப்பு சின்னத்திற்கு அருகில்"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -201,7 +192,7 @@ msgstr "இதற்கு பிறகு மறை:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "மேம்பட்ட பின்னூட்டம்"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -231,11 +222,10 @@ msgid "Notification badges:"
 msgstr "அறிவிப்பு அடையாளக்குறிகள்:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "செயலி அமைப்புகள்"
+msgstr "தனிப்பட்ட செயலிகளுக்கான அமைப்புகள்"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

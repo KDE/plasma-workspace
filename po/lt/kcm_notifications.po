@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-17 21:21+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-12-28 02:47+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Perjungti \"Netrukdyti\" veikseną"
+msgstr "Perjungti „Netrukdyti“ veikseną"
 
 #: kcm.cpp:192
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "Rodyti iškylančiuosius langus"
 #: package/contents/ui/ApplicationConfiguration.qml:77
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr "Rodyti \"Netrukdyti\" veiksenoje"
+msgstr "Rodyti „Netrukdyti“ veiksenoje"
 
 #: package/contents/ui/ApplicationConfiguration.qml:90
 #: package/contents/ui/main.qml:148
@@ -92,45 +92,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Šiuo metu, Plasma neteikia pranešimų."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Netrukdymo veiksena:"
+msgstr "Netrukdymo veiksena"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Įjungti:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Įjungti, kai ekranai yra suvienyti"
+msgstr "Kai ekranai yra suvienyti"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Įjungti, bendrinant ekraną"
+msgstr "Bendrinant ekraną"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Spartusis klavišas:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Matomumo sąlygos"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -163,26 +158,22 @@ msgid "Show popup"
 msgstr "Rodyti iškylantįjį langą"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Iškylantysis langas:"
+msgstr "Iškylantieji langai"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Programos:"
+msgstr "Vieta:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Rodyti šalia pranešimų piktogramos"
+msgstr "Šalia pranešimų piktogramos"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -208,7 +199,7 @@ msgstr "Slėpti po:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Papildomas grįžtamasis ryšys"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -238,11 +229,10 @@ msgid "Notification badges:"
 msgstr "Pranešimų ženkleliai:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Programos nuostatos"
+msgstr "Konkrečių programų nuostatos"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

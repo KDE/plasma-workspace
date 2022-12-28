@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-18 19:16+0200\n"
+"PO-Revision-Date: 2022-12-27 10:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -234,6 +234,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Kon de in het systeem beschikbare codes voor taalregio niet vinden met het "
+"hulpmiddel <command>localectl</command>. Dien hierover een bugrapport in op "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:72
 #, kde-format

@@ -1,9 +1,9 @@
 # Translation of kcm_notifications.po to Catalan
-# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# Copyright (C) 2019-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-11-04 12:30+0100\n"
+"PO-Revision-Date: 2022-12-27 14:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -99,45 +99,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Actualment les notificacions no són proporcionades pel Plasma."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Mode no destorbar:"
+msgstr "Mode no destorbar"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Actiu:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Activa quan les pantalles s'emmirallen"
+msgstr "Quan les pantalles s'emmirallen"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Activa en compartir la pantalla"
+msgstr "En compartir la pantalla"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Drecera del teclat:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Condicions de visibilitat"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -170,26 +165,22 @@ msgid "Show popup"
 msgstr "Mostra una finestra emergent"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Finestra emergent:"
+msgstr "Missatges emergents"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Aplicacions:"
+msgstr "Ubicació:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Mostra prop de la icona de la notificació"
+msgstr "Prop de la icona de la notificació"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -213,7 +204,7 @@ msgstr "Oculta després de:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Confirmació addicional"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -243,11 +234,10 @@ msgid "Notification badges:"
 msgstr "Distintius de notificació:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Configuració de l'aplicació"
+msgstr "Configuració específica d'aplicació"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
@@ -292,30 +282,3 @@ msgstr ""
 #, kde-format
 msgid "Other Applications"
 msgstr "Altres aplicacions"
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "Commuta amb:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Notifications"
-#~ msgstr "Notificacions"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"
-
-#~ msgid "Show critical notifications"
-#~ msgstr "Mostra les notificacions crítiques"
-
-#~ msgid "Always keep on top"
-#~ msgstr "Mantén sempre a dalt"
-
-#~ msgid "Popup position:"
-#~ msgstr "Posició del missatge emergent:"

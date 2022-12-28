@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-21 17:39+0200\n"
+"PO-Revision-Date: 2022-12-27 14:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -238,6 +238,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"No s'han pogut trobar les configuracions regionals disponibles del sistema "
+"utilitzant l'eina <command>localectl</command>. Informeu d'aquest error a "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:72
 #, kde-format

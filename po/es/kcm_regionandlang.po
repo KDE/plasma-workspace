@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-23 18:48+0200\n"
+"PO-Revision-Date: 2022-12-27 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -236,6 +236,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"No se han encontrado las configuraciones regionales disponibles del sistema "
+"usando la herramienta <command>localectl</command>. Considere informar de "
+"este fallo en <link>https://bugs.kde.org</link>."
 
 #: languagelistmodel.cpp:72
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-12 20:17+0200\n"
+"PO-Revision-Date: 2022-12-28 02:28+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -102,7 +102,7 @@ msgstr "Pradeda naują kito naudotojo seansą"
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "Seansai"
+msgstr "seansai"
 
 #: sessionrunner.cpp:84
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Išvardija visus seansus"
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "Perjungti"
+msgstr "perjungti"
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -174,10 +174,9 @@ msgstr ""
 "programų paleidyklė)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Naujas seansas"
+msgstr "Naujas darbalaukio seansas"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"
