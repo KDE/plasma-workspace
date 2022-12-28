@@ -381,12 +381,13 @@ bool Klipper::loadHistory()
 {
     static const char failed_load_warning[] = "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
-    QFile history_file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst")));
-    if (!history_file.exists()) {
+    QString history_file_path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst"));
+    if (history_file_path.isNull() || history_file_path.isEmpty()) {
         qCWarning(KLIPPER_LOG) << failed_load_warning << ": "
                                << "History file does not exist";
         return false;
     }
+    QFile history_file(history_file_path);
     if (!history_file.open(QIODevice::ReadOnly)) {
         qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << history_file.errorString();
         return false;
