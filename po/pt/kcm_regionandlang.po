@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-21 18:37+0100\n"
+"PO-Revision-Date: 2022-12-28 18:40+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: GB check language support KCM locale gen XPTO NP\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-POFile-SpellExtra: NomePróprio OutroNome NomeAdicional\n"
+"X-POFile-SpellExtra: NomePróprio OutroNome NomeAdicional localectl\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -236,6 +236,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Não foi possível encontrar as regiões disponíveis do sistema com a "
+"ferramenta <command>localectl</command>. Por favor, comunique um relatório "
+"de erros sobre isto em <link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:72
 #, kde-format
