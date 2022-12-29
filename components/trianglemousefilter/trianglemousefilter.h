@@ -87,12 +87,19 @@ protected:
     bool childMouseEventFilter(QQuickItem *item, QEvent *event) override;
 
 private:
+    static constexpr double VELOCITY_THRESHOLD = 0.1;
+    static constexpr int JITTER_THRESHOLD = 1;
+
     bool filterContains(const QPointF &p) const;
+    void resendHoverEvents(const QHoverEvent &event, QPointF cursorPosition);
+
     QTimer m_resetTimer;
     std::optional<QPointF> m_interceptionPos; // point where we started intercepting
-    QPointF m_lastCursorPosition;
+    std::optional<QPointF> m_lastCursorPosition;
+    std::optional<ulong> m_lastTimestamp;
     QPointer<QQuickItem> m_interceptedHoverItem; // item newly entered but the enter event was intercepted
     std::optional<QPointF> m_interceptedHoverEnterPosition; // position of intercepted enter events
+    bool m_firstEntered = false;
     Qt::Edge m_edge = Qt::RightEdge;
     QVector<int> m_edgeLine;
     int m_filterTimeout = 300;
