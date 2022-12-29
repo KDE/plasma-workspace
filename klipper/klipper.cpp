@@ -382,7 +382,7 @@ bool Klipper::loadHistory()
     static const char failed_load_warning[] = "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
     QString history_file_path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst"));
-    if (history_file_path.isNull() || history_file_path.isEmpty()) {
+    if (history_file_path.isEmpty()) {
         qCWarning(KLIPPER_LOG) << failed_load_warning << ": "
                                << "History file does not exist";
         return false;
@@ -432,7 +432,7 @@ void Klipper::saveHistory(bool empty)
     static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved.";
     // don't use "appdata", klipper is also a kicker applet
     QString history_file_name(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst")));
-    if (history_file_name.isNull() || history_file_name.isEmpty()) {
+    if (history_file_name.isEmpty()) {
         // try creating the file
         QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
         if (!dir.mkpath(QStringLiteral("klipper"))) {
@@ -441,7 +441,7 @@ void Klipper::saveHistory(bool empty)
         }
         history_file_name = dir.absoluteFilePath(QStringLiteral("klipper/history2.lst"));
     }
-    if (history_file_name.isNull() || history_file_name.isEmpty()) {
+    if (history_file_name.isEmpty()) {
         qCWarning(KLIPPER_LOG) << failed_save_warning;
         return;
     }
