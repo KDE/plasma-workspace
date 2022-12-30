@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-workspace
+Upstream-Contact: KDE <community@kde.org>
+Source: https://invent.kde.org/plasma/plasma-workspace
+
+Files: wallpapers/image/plugin/autotests/testdata/*
+Copyright: None
+License: CC0-1.0
+
+Files: wallpapers/image/imagepackage/metadata.json
+       wallpapers/image/slideshowpackage/metadata.json
+Copyright: 2023 Marco Martin <mart@kde.org>
+License: CC0-1.0
+

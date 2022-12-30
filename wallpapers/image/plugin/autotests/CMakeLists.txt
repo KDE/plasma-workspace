@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
 include(ECMMarkAsTest)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 

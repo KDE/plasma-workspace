@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
+# SPDX-License-Identifier: BSD-2-Clause
+
 set(image_SRCS
     imagebackend.cpp
     slidemodel.cpp

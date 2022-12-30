@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
+# SPDX-License-Identifier: BSD-2-Clause
+
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_wallpaper_org.kde.image\")
 
 set(plasma-apply-wallpaperimage_SRCS
