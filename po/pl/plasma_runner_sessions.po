@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-03 09:57+0100\n"
+"PO-Revision-Date: 2022-12-29 10:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -32,7 +32,7 @@ msgstr "wyloguj;wyloguj"
 #: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
-msgstr "Wylogowuje kończąc bieżącą sesję"
+msgstr "Wylogowuje kończąc bieżące posiedzenie"
 
 #: sessionrunner.cpp:33
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "zablokuj;zablokuj ekran"
 #: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
-msgstr "Blokuje bieżącą sesję i włącza wygaszacz ekranu"
+msgstr "Blokuje bieżące posiedzenie i włącza wygaszacz ekranu"
 
 #: sessionrunner.cpp:63
 #, kde-format
@@ -78,12 +78,12 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "zapisz;zapisz sesję"
+msgstr "zapisz;zapisz posiedzenie"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr "Zapisuje bieżącą sesję, aby później ją przywrócić"
+msgstr "Zapisuje bieżące posiedzenie, aby później je przywrócić"
 
 #: sessionrunner.cpp:73
 #, kde-format
@@ -91,23 +91,23 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "przełącz użytkownika;nowa sesja"
+msgstr "przełącz użytkownika;nowe posiedzenie"
 
 #: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
-msgstr "Uruchamia nową sesję jako inny użytkownik"
+msgstr "Uruchamia nowe posiedzenie jako inny użytkownik"
 
 #: sessionrunner.cpp:83
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "sesje"
+msgstr "posiedzenia"
 
 #: sessionrunner.cpp:84
 #, kde-format
 msgid "Lists all sessions"
-msgstr "Pokaż wszystkie sesje"
+msgstr "Pokaż wszystkie posiedzenia"
 
 #: sessionrunner.cpp:87
 #, kde-format
@@ -121,8 +121,8 @@ msgid ""
 "Switches to the active session for the user :q:, or lists all active "
 "sessions if :q: is not provided"
 msgstr ""
-"Przełącza na aktywną sesję użytkownika :q: lub listę użytkowników jeśli nie "
-"podano :q:."
+"Przełącza na bieżące posiedzenie użytkownika :q: lub listę użytkowników "
+"jeśli nie podano :q:."
 
 #: sessionrunner.cpp:111
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "Zablokuj"
 #: sessionrunner.cpp:151
 #, kde-format
 msgid "Save Session"
-msgstr "Zapisz sesję"
+msgstr "Zapisz posiedzenie"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -167,17 +167,16 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
-"<p>Masz zamiar rozpocząć nową sesję pulpitu.</p><p>Zostanie pokazany ekran "
-"logowania, a bieżąca sesja zostanie ukryta.</p><p>Aby przełączy między "
-"sesjami pulpitu naciśnij:</p><ul><li>Ctrl+Alt+F{numer sesji}</"
+"<p>Masz zamiar rozpocząć nową posiedzenie pulpitu.</p><p>Zostanie pokazany "
+"ekran logowania, a bieżące posiedzenie zostanie ukryte.</p><p>Aby przełączy "
+"między sesjami pulpitu naciśnij:</p><ul><li>Ctrl+Alt+F{numer sesji}</"
 "li><li>Wyszukiwarka Plazmy (wpisz %1)</li><li>Elementy interfejsu Plazmy "
 "(takie jak uruchamiacze aplikacji)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Nowa sesja"
+msgstr "Nowe posiedzenie pulpitu"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2022-08-15 02:31+0100\n"
+"PO-Revision-Date: 2022-12-29 17:31+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -536,19 +536,16 @@ msgid "Previous History Item"
 msgstr "Precedentul element din istoric"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Deschide Klipper la poziția mausului"
+msgstr "Arată elementele la poziția mausului"
 
 #: klipper.cpp:243
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Utilitar clipboard"
+msgstr "%1 - Utilitar de clipboard"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -834,11 +831,10 @@ msgstr ""
 "accepta acest tip MIME în meniul contextual."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Conținutul clipboard-ului"
+msgstr "%1 - Elementele clipboard-ului"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -866,10 +862,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Utilitar KDE de decupare și lipire istoric"
+msgstr "Utilitar Plasma de istoric al decupării și lipirii"
 
 #: main.cpp:31
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-06 00:47+0000\n"
-"PO-Revision-Date: 2022-04-30 12:25+0100\n"
+"PO-Revision-Date: 2022-12-29 17:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -149,7 +149,7 @@ msgstr "Configurează amprente"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Curăță tot"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -194,10 +194,9 @@ msgid "Re-enroll finger"
 msgstr "Reînrolează degetul"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Șterge amprentele"
+msgstr "Șterge amprenta"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

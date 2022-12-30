@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-09-23 10:40+0200\n"
+"PO-Revision-Date: 2022-12-29 10:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -192,18 +192,18 @@ msgstr "Wyłączono ekranową klawiaturę"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Wewnętrzny ekran na %1"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 na %3"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Rozłączony ekran %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format

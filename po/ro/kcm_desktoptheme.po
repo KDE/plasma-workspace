@@ -81,7 +81,7 @@ msgid "Follows color scheme"
 msgstr "Urmează schema de culori"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "Edit Theme…"
 msgstr "Modifică tematica…"
 
@@ -96,12 +96,12 @@ msgid "Restore Theme"
 msgstr "Restabilește tematica"
 
 #: package/contents/ui/main.qml:174
-#, fuzzy, kde-format
+#, kde-format
 msgid "Install from File…"
 msgstr "Instalează din fișier…"
 
 #: package/contents/ui/main.qml:179
-#, fuzzy, kde-format
+#, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Obține stiluri Plasma noi…"
 
@@ -116,7 +116,7 @@ msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
 "accidentally setting it to one that is either not available, or which is "
@@ -126,7 +126,7 @@ msgstr ""
 "fără a o stabili din greșeală la una indisponibilă sau care e deja stabilită."
 
 #: plasma-apply-desktoptheme.cpp:35
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
@@ -136,13 +136,13 @@ msgstr ""
 "componente a căii)"
 
 #: plasma-apply-desktoptheme.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Arată toate tematicile disponibile în sistem (și care e cea actuală)"
 
 #: plasma-apply-desktoptheme.cpp:49
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
@@ -151,12 +151,12 @@ msgstr ""
 "actuală."
 
 #: plasma-apply-desktoptheme.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "Tematica sesiunii Plasma actuale a fost stabilită la %1"
 
 #: plasma-apply-desktoptheme.cpp:67
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
@@ -165,7 +165,7 @@ msgstr ""
 "următoarele opțiuni: %2"
 
 #: plasma-apply-desktoptheme.cpp:75
-#, fuzzy, kde-format
+#, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Aveți următoarele tematici Plasma în sistem:"
 

@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2021-07-25 13:26+0100\n"
+"PO-Revision-Date: 2022-12-29 17:29+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Main Toolbar"
 msgstr "Bara de unelte principală"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "A &doua culoare:"
+msgstr "Bare de unelte secundare"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -129,18 +128,22 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aici puteți configura dimensiunile implicite ale diferitelor tipuri de "
+"pictograme la nivelul întregului sistem.Rețineți că nu toate aplicațiile vor "
+"respecta aceste configurări.<nl/><nl/>Dacă credeți că obiectele de pe ecran "
+"sunt în general prea mici sau prea mari, încercați să ajustați scalarea "
+"globală în schimb."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Ajustează scalarea globală…"
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr "Mărime:"
+msgstr "Dimensiune:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -173,11 +176,10 @@ msgid "Get New Icons…"
 msgstr "Obține pictograme noi…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr "Configurează dimensiunea pictogramelor"
+msgstr "Configurează dimensiunile pictogramelor"
 
 #: package/contents/ui/main.qml:285
 #, kde-format

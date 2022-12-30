@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-02-28 09:40+0000\n"
+"PO-Revision-Date: 2022-12-29 17:37+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Timp rămas:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Se estimează…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -181,40 +181,35 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Adormirea și blocarea ecranului automate sunt dezactivate"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "O aplicație a cerut activarea %2:"
-msgstr[1] "%1 aplicații au cerut activarea %2:"
-msgstr[2] "%1 de aplicații au cerut activarea %2:"
+msgstr[0] "O aplicație a cerut activarea regimului de performanță"
+msgstr[1] "%1 aplicații au cerut activarea regimului de performanță"
+msgstr[2] "%1 de aplicații au cerut activarea regimului de performanță"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistemul e în regim de performanță"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "O aplicație a cerut activarea %2:"
-msgstr[1] "%1 aplicații au cerut activarea %2:"
-msgstr[2] "%1 de aplicații au cerut activarea %2:"
+msgstr[0] "O aplicație a cerut activarea regimului de economisire"
+msgstr[1] "%1 aplicații au cerut activarea regimului de economisire"
+msgstr[2] "%1 de aplicații au cerut activarea regimului de economisire"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistemul e în regim de economisire"
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Luminozitate ecran:"
+msgstr "Derulați pentru a ajusta luminozitatea ecranului"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -232,10 +227,10 @@ msgid "&Show Energy Information…"
 msgstr "Arată informații de&spre energie…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Arată procentajul acumulatorului pe pictogramă"
+msgstr ""
+"Arată procentajul acumulatorului pe pictogramă când nu e încărcat complet"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
