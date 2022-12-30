@@ -18,6 +18,7 @@ PlasmaComponents3.ScrollView {
     property alias view: menuListView
     property alias model: menuListView.model
     property bool supportsBarcodes
+    readonly property int pageUpPageDownSkipCount: 6
 
     background: null
 
@@ -31,6 +32,37 @@ PlasmaComponents3.ScrollView {
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
     contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
+
+    Keys.onPressed: {
+        if (menuListView.count !== 0) {
+            switch (event.key) {
+                case Qt.Key_Home: {
+                    menuListView.currentIndex = 0;
+                    event.accepted = true;
+                    break;
+                }
+                case Qt.Key_End: {
+                    menuListView.currentIndex = menuListView.count - 1;
+                    event.accepted = true;
+                    break;
+                }
+                case Qt.Key_PageUp: {
+                    menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
+                    event.accepted = true;
+                    break;
+                }
+                case Qt.Key_PageDown: {
+                    menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
+                    event.accepted = true;
+                    break;
+                }
+                default: {
+                    event.accepted = false;
+                    break;
+                }
+            }
+        }
+    }
 
     contentItem: ListView {
         id: menuListView
