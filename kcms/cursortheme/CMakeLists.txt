@@ -21,12 +21,13 @@ kcmutils_generate_module_data(
     kcm_cursortheme_PART_SRCS
     MODULE_DATA_HEADER cursorthemedata.h
     MODULE_DATA_CLASS_NAME CursorThemeData
-    SETTINGS_HEADERS cursorthemesettings.h
-    SETTINGS_CLASSES CursorThemeSettings
+    SETTINGS_HEADERS cursorthemesettings.h launchfeedbacksettings.h
+    SETTINGS_CLASSES CursorThemeSettings LaunchFeedbackSettings
 )
 
 
 kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS launchfeedbacksettings.kcfgc GENERATE_MOC)
 kcoreaddons_add_plugin(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file (kcm_cursortheme)
 
@@ -97,6 +98,7 @@ install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 ########### install files ###############
 
 install(FILES cursorthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES launchfeedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES delete_cursor_old_default_size.upd delete_cursor_old_default_size.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 

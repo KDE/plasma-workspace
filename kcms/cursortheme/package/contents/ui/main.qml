@@ -131,6 +131,17 @@ KCM.GridViewKCM {
                 alignment: Qt.AlignRight
                 actions: [
                     Kirigami.Action {
+                        text: i18nc("@action:button", "&Configure Launch Feedback…")
+                        icon.name: "preferences-desktop-launch-feedback"
+                        onTriggered: {
+                            const component = Qt.createComponent("LaunchFeedbackDialog.qml");
+                            component.incubateObject(root, {
+                                "parent": root,
+                            });
+                            component.destroy();
+                        }
+                    },
+                    Kirigami.Action {
                         text: i18n("&Install from File…")
                         icon.name: "document-import"
                         onTriggered: fileDialogLoader.active = true

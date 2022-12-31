@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2017 Eike Hein <hein@kde.org>
+# SPDX-License-Identifier: LGPL-2.0-only
+
+File=launchfeedbacksettings.kcfg
+ClassName=LaunchFeedbackSettings
+Mutators=true
+DefaultValueGetters=true
+GenerateProperties=true
+ParentInConstructor=true
+Notifiers=true

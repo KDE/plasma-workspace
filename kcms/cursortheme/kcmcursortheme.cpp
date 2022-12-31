@@ -58,6 +58,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterAnonymousType<SortProxyModel>("SortProxyModel", 1);
     qmlRegisterAnonymousType<CursorThemeSettings>("CursorThemeSettings", 1);
+    qmlRegisterAnonymousType<LaunchFeedbackSettings>("LaunchFeedbackSettings", 1);
 
     m_themeModel = new CursorThemeModel(this);
 
@@ -91,7 +92,12 @@ CursorThemeConfig::~CursorThemeConfig()
 
 CursorThemeSettings *CursorThemeConfig::cursorThemeSettings() const
 {
-    return m_data->settings();
+    return m_data->cursorThemeSettings();
+}
+
+LaunchFeedbackSettings *CursorThemeConfig::launchFeedbackSettings() const
+{
+    return m_data->launchFeedbackSettings();
 }
 
 void CursorThemeConfig::setCanInstall(bool can)
