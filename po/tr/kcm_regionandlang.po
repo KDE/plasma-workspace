@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-18 14:01+0300\n"
+"PO-Revision-Date: 2022-12-31 00:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -234,6 +234,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Sistemdeki kullanılabilir yerel ayarlar <command>localectl</command> aracı "
+"kullanılarak bulunamadı. Bununla ilgili olarak, lütfen <link>https://bugs."
+"kde.org</link> adresinde bir hata kaydı girin"
 
 #: languagelistmodel.cpp:72
 #, kde-format
@@ -342,7 +345,7 @@ msgstr "Sistem C Öntanımlısı"
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr "%1 için Öntanımlı"
+msgstr "%1 Öntanımlısı"
 
 #: optionsmodel.cpp:23
 #, kde-format

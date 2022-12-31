@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-02-27 13:56+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2022-12-31 00:06+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -89,45 +90,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Bildirimler şu anda Plasma tarafından sağlanmıyor."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Rahatsız Etmeyin kipi:"
+msgstr "Rahatsız Etmeyin kipi"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Etkinleştir:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Ekranlar yansıtıldığında etkinleştir"
+msgstr "Ekranlar yansıtıldığında"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Ekran paylaşırken etkinleştir"
+msgstr "Ekran paylaşımı sırasında"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Klavye kısayolu:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Görünürlük koşulları"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -160,26 +156,22 @@ msgid "Show popup"
 msgstr "Açılır pencere göster"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Açılır pencere:"
+msgstr "Açılır pencereler"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Uygulamalar:"
+msgstr "Konum:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Bildirim simgesi yakınında göster"
+msgstr "Bildirim simgesi yakınında"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -203,7 +195,7 @@ msgstr "Şundan sonra gizle:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Ek geri bildirim"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -233,11 +225,10 @@ msgid "Notification badges:"
 msgstr "Bildirim rozetleri:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Uygulama Ayarları"
+msgstr "Uygulamaya özel ayarlar"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
