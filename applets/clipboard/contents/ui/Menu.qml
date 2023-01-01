@@ -18,7 +18,7 @@ PlasmaComponents3.ScrollView {
     property alias view: menuListView
     property alias model: menuListView.model
     property bool supportsBarcodes
-    readonly property int pageUpPageDownSkipCount: 6
+    readonly property int pageUpPageDownSkipCount: menuListView.visibleArea.heightRatio * menuListView.count
 
     background: null
 
