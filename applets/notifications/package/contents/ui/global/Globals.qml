@@ -161,8 +161,16 @@ QtObject {
     }
     onVisualParentChanged: positionPopups()
 
+    property QtObject obstructingDialog: null
     readonly property QtObject focusDialog: plasmoid.nativeInterface ? plasmoid.nativeInterface.focussedPlasmaDialog : null
-    onFocusDialogChanged: positionPopups()
+    onFocusDialogChanged: {
+        if (focusDialog && !(focusDialog instanceof NotificationPopup)) {
+            // keep around the last focusDialog so notifications don't jump around if there is an open but unfocused (eg pinned) Plasma dialog
+            // and exclude NotificationPopups so that notifications don't jump down on close when the focusDialog becomes NotificationPopup
+            obstructingDialog = focusDialog;
+        }
+        positionPopups()
+    }
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
@@ -350,9 +358,9 @@ QtObject {
             if (effectivePopupLocation & Qt.AlignTop) {
                 // We want to calculate the new position based on its original target position to avoid positioning it and then
                 // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
-                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
-                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
-                    y = focusDialog.y + focusDialog.height + popupEdgeDistance;
+                if (obstructingDialog && obstructingDialog.visible
+                        && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                    y = obstructingDialog.y + obstructingDialog.height + popupEdgeDistance;
                 }
                 popup.y = y;
                 // If the popup isn't ready yet, ignore its occupied space for now.
@@ -360,9 +368,9 @@ QtObject {
                 y += popup.height + (popup.height > 0 ? popupSpacing : 0);
             } else {
                 y -= popup.height;
-                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
-                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
-                    y = focusDialog.y - popup.height - popupEdgeDistance;
+                if (obstructingDialog && obstructingDialog.visible
+                        && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                    y = obstructingDialog.y - popup.height - popupEdgeDistance;
                 }
                 popup.y = y;
                 if (popup.height > 0) {
