@@ -55,8 +55,8 @@ QQC2.TextField {
     onTextChanged: updateBackendFromText()
     inputMask: "00:00"
     selectByMouse: false
-    inputMethodHints: Qt.ImhPreferNumbers
-    validator: RegularExpressionValidator { regularExpression: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/ }
+    inputMethodHints: Qt.ImhTime
+    validator: RegularExpressionValidator { regularExpression: /^[0-2]?[0-9]:[0-5][0-9]$/ }
 
     onEditingFinished: submit()
 }
