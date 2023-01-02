@@ -19,57 +19,23 @@ Kirigami.OverlaySheet {
         Kirigami.FormLayout {
             id: formLayout
 
-            readonly property bool cursorImmutable: kcm.launchFeedbackSettings.isBusyCursorImmutable || kcm.launchFeedbackSettings.isBlinkingImmutable || kcm.launchFeedbackSettings.isBouncingImmutable
-
-            QQC2.ButtonGroup {
-                id: busyCursorGroup
-                onCheckedButtonChanged: {
-                    kcm.launchFeedbackSettings.busyCursor = busyCursorStatic.checked || busyCursorBlinking.checked || busyCursorBouncing.checked;
-                    kcm.launchFeedbackSettings.blinking = busyCursorBlinking.checked;
-                    kcm.launchFeedbackSettings.bouncing = busyCursorBouncing.checked;
-                }
-            }
-
-            QQC2.RadioButton {
-                id: busyCursorDisabled
-
-                Kirigami.FormData.label: i18nc("@label", "Cursor:")
-                text: i18nc("@option:radio", "No Feedback")
-                checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
-                enabled: !formLayout.cursorImmutable
-                QQC2.ButtonGroup.group: busyCursorGroup
-            }
-
-            QQC2.RadioButton {
-                id: busyCursorStatic
-
-                text: i18nc("@option:radio", "Static")
-                checked: kcm.launchFeedbackSettings.busyCursor && !busyCursorBlinking.checked && !busyCursorBouncing.checked
-                enabled: !formLayout.cursorImmutable
-                QQC2.ButtonGroup.group: busyCursorGroup
-            }
-
-            QQC2.RadioButton {
-                id: busyCursorBlinking
-
-                text: i18nc("@option:radio", "Blinking")
-                checked: kcm.launchFeedbackSettings.blinking
-                enabled: !formLayout.cursorImmutable
-                QQC2.ButtonGroup.group: busyCursorGroup
-            }
-
-            QQC2.RadioButton {
+            QQC2.CheckBox {
                 id: busyCursorBouncing
 
-                text: i18nc("@option:radio", "Bouncing")
-                checked: kcm.launchFeedbackSettings.bouncing
-                enabled: !formLayout.cursorImmutable
-                QQC2.ButtonGroup.group: busyCursorGroup
+                Kirigami.FormData.label: i18nc("@label", "Cursor:")
+                text: i18nc("@option:check", "Enable bouncing feedback")
+                checked: kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && kcm.launchFeedbackSettings.bouncing
+                enabled: !kcm.launchFeedbackSettings.isBusyCursorImmutable && !kcm.launchFeedbackSettings.isBouncingImmutable && !kcm.launchFeedbackSettings.isBlinkingImmutable
+
+                onToggled: {
+                    kcm.launchFeedbackSettings.busyCursor = kcm.launchFeedbackSettings.bouncing = busyCursorBouncing.checked;
+                    kcm.launchFeedbackSettings.blinking = false; // TODO Plasma 6 Remove
+                }
 
                 KCM.SettingStateBinding {
                     configObject: kcm.launchFeedbackSettings
                     settingName: "bouncing"
-                    extraEnabledConditions: !formLayout.cursorImmutable
+                    extraEnabledConditions: !busyCursorBouncing.enabled
                 }
             }
 
