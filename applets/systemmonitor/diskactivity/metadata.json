@@ -68,7 +68,7 @@
         "Description[hu]": "Egy kisalkalmazás, amely figyeli a merevlemez átvitelét és a bemenetet/kimenetet",
         "Description[ia]": "Un applet que que monitora le prestation (throughput) e ingresso/egresso de disco dur",
         "Description[id]": "Sebuah applet yang memantau lalu-lalang dan input/output hard disk",
-        "Description[is]": "Smáforrit sem fylgist með afköstum harðra diska og ílagi/frálagi",
+        "Description[is]": "Smáforrit sem fylgist með afköstum harðra diska og inntaki/úttaki",
         "Description[it]": "Un'applet che controlla le prestazioni e l'uso del disco fisso",
         "Description[ja]": "ハードディスクのスループットと入力/出力を監視するアプレット",
         "Description[ko]": "하드디스크 대역폭 및 I/O 상태를 보여 주는 애플릿",

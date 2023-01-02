@@ -65,6 +65,7 @@
         "Description[hu]": "Az állaporértesítés protokollon alapuló  modul az alkalmazások állapotértesítési információihoz.",
         "Description[ia]": "Motor pro information de stato de applicationes basate sur le protocollo de Notificator de Stato",
         "Description[id]": "Mesin untuk informasi status aplikasi, berbasis protokol Notifikasi Status.",
+        "Description[is]": "Vél fyrir stöðuupplýsingar forrits, byggt á Status Notifier-samskiptareglunni",
         "Description[it]": "Motore per le informazioni di stato delle applicazioni, basato sul protocollo del notificatore di stato.",
         "Description[ja]": "ステータス通知プロトコルに基づくアプリケーションステータス情報エンジン。",
         "Description[ko]": "상태 알림 프로토콜을 사용하는 프로그램 상태 정보 엔진입니다.",

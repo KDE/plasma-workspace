@@ -61,6 +61,7 @@
         "Description[hu]": "Súgóinformációk megjelenítése az indítókról „?” vagy „súgó” gépelésekor",
         "Description[ia]": "Monstra information de adjuta re executores quando on typa \"?\" o \"help\"",
         "Description[id]": "Menampilkan informasi bantuan tentang runners ketika mengetik \"?\" atau \"bantuan\"",
+        "Description[is]": "Sýnir hjálparupplýsingar um KRunner-tilvik með því að slá inn \"?\" eða \"help\" (\"hjálp\")",
         "Description[it]": "Mostra le informazioni di aiuto sugli esecutori quando digiti «?» o «help»",
         "Description[ja]": "\"?\" もしくは \"help\" と入力したときヘルプ情報を表示します",
         "Description[ko]": "\"?\", \"도움말\"을 입력했을 때 실행기 정보 표시",

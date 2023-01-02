@@ -66,7 +66,7 @@
         "Description[hu]": "Rendszermonitor elem, amely az egyes logikai processzorok használatát mutatja",
         "Description[ia]": "Widget de supervision de systema que monstra le uso del nucleos individual",
         "Description[id]": "Widget pemantau sistem yang menampilkan penggunaan core CPU individual",
-        "Description[is]": "Viðmótshluti kerfiseftirlits sem sýnir notkun á einstökum kjörnum örgjörva",
+        "Description[is]": "Kerfisvöktunargræja sem sýnir notkun á einstökum örgjörvakjörnum",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo dei singoli core del processore",
         "Description[ja]": "CPU の各コアの使用率を表示するシステムモニタウィジェット",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც CPU-ის ბირთვებს სათითაოდ აჩვენებს",
