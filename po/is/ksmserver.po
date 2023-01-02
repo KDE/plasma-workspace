@@ -8,19 +8,20 @@
 # Arnar Leósson <leosson@frisurf.no>, 2003.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:49+0000\n"
-"PO-Revision-Date: 2022-08-25 10:06+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 18:28+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -33,22 +34,22 @@ msgstr "Hætt við útskráningu af '%1'"
 #: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
-msgstr ""
+msgstr "$HOME ekki stillt!"
 
 #: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr ""
+msgstr "$HOME-mappan (%1) er ekki til."
 
 #: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
-msgstr ""
+msgstr "Enginn skrifaðgangur að $HOME-möppunni (%1)."
 
 #: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr ""
+msgstr "Enginn lesaðgangur að $HOME-möppunni (%1)."
 
 #: main.cpp:134
 #, kde-format
@@ -58,7 +59,7 @@ msgstr "HOME-möppu (%1) vantar diskpláss."
 #: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
+msgstr "Mistókst að skrifa í $HOME-möppuna (%2) með villunni '%1'"
 
 #: main.cpp:150 main.cpp:185
 #, kde-format
@@ -81,6 +82,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
+"Mistókst að skrifa í bráðabirðgamöppuna (%2) með\n"
+"    villunni'%1'"
 
 #: main.cpp:191
 #, kde-format
@@ -88,6 +91,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Eftirfarandi uppsetningarvandamál fundust\n"
+"þegar reynt var að keyra Plasma:"
 
 #: main.cpp:194
 #, kde-format
@@ -111,14 +116,13 @@ msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"Áreiðanlegi Plasma setustjórinn sem skilur almenna X11R6 "
-"setustjórnunarstaðalinn \n"
-"(e. session management protocol, XSMP)."
+"Áreiðanlegi Plasma setustjórinn sem skilur almenna X11R6 \n"
+"setustjórnunarstaðalinn (e. session management protocol, XSMP)."
 
 #: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Heldur áfram með síðustu setu, ef hægt er"
+msgstr "Endurheimtir síðustu setu notanda, ef hægt er"
 
 #: main.cpp:244
 #, kde-format
@@ -128,7 +132,7 @@ msgstr "Leyfa einnig utanaðkomandi tengingar"
 #: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr ""
+msgstr "Byrja setuna í læstri stillingu"
 
 #: main.cpp:251
 #, kde-format
@@ -136,6 +140,8 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Byrjar án stuðnings við lásskjá. Einungis er þörf á þessu ef aðrir hlutar "
+"útvega lásskjáinn."
 
 #: server.cpp:884
 #, kde-format

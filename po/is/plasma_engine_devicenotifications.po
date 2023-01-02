@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2022-08-21 19:35+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 19:01+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: ksolidnotify.cpp:149
 #, kde-format
@@ -25,7 +26,7 @@ msgstr "Staða tækis"
 #: ksolidnotify.cpp:149
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr "Tæki má núna fjarlægja á öruggan máta"
+msgstr "Hægt er að fjarlægja tæki núna á öruggan máta"
 
 #: ksolidnotify.cpp:150
 #, kde-format
@@ -35,7 +36,7 @@ msgstr "Þetta tæki má núna fjarlægja á öruggan máta."
 #: ksolidnotify.cpp:157
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Þú hefur ekki heimild til að aftengja þetta tæki."
+msgstr "Þú hefur ekki heimild til að tengja þetta tæki."
 
 #: ksolidnotify.cpp:160
 #, kde-format
@@ -46,7 +47,7 @@ msgstr "Þú hefur ekki heimild til að fjarlægja þetta tæki."
 #: ksolidnotify.cpp:163
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Þú hefur ekki heimild til að spýta út þessum diski."
+msgstr "Þú hefur ekki heimild til að ýta þessum diski úr."
 
 #: ksolidnotify.cpp:170
 #, kde-format
@@ -56,7 +57,7 @@ msgstr "Gat ekki tengt þetta tæki því það er upptekið."
 #: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Ein eða fleiri skrár á þessu tæki eru opnar í forritum."
+msgstr "Ein eða fleiri skrár á þessu tæki eru opnar í forriti."
 
 #: ksolidnotify.cpp:202
 #, kde-format
@@ -87,4 +88,4 @@ msgstr "Gat ekki fjarlægt þetta tæki."
 #: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
-msgstr "Gat ekki spýtt út þessum diski."
+msgstr "Gat ekki ýtt þessum diski úr."

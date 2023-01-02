@@ -1,13 +1,14 @@
 # Translation of kded_susefreespacenotifier into esperanto.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-01 21:06+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,41 +20,41 @@ msgstr ""
 #: freespacenotifier.cpp:91
 #, kde-format
 msgid "Configure Warning…"
-msgstr ""
+msgstr "Agordi Averton…"
 
 #: freespacenotifier.cpp:95
 #, kde-format
 msgid "Open in Filelight"
-msgstr ""
+msgstr "Malfermi en Filelight"
 
 #: freespacenotifier.cpp:98
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "Malfermi en File Manager"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
 #, kde-format
 msgid "Minimum free space before user starts being notified."
-msgstr ""
+msgstr "Minimuma libera spaco antaŭ kiu uzanto ekhavos atentigojn."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:15
 #, kde-format
 msgid "Is the free space notification enabled."
-msgstr ""
+msgstr "Ĉu la atentigo pri libera spaco estas enŝaltata."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
 #: freespacenotifier_prefs_base.ui:17
 #, kde-format
 msgid "Enable low disk space warning"
-msgstr ""
+msgstr "Enŝalti averton pri malmulta liberspaco"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
 #: freespacenotifier_prefs_base.ui:27
 #, kde-format
 msgid "Warn when free space is below:"
-msgstr ""
+msgstr "Averti kiam libera spaco malpliiĝas ol:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
 #: freespacenotifier_prefs_base.ui:37
@@ -67,6 +68,7 @@ msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"Via 'Home' teko estas perdanta diskospacon, vi havas ankoraŭ %1 MiB (%2%)."
 
 #: module.cpp:45
 #, kde-format
@@ -74,15 +76,11 @@ msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
+"Via 'Root' subdisko estas perdanta diskospacon, vi havas ankoraŭ %1 MiB "
+"(%2%)."
 
 #: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Ĝeneralo"
-
-#, fuzzy
-#~| msgid "Do Nothing"
-#~ msgctxt "Closes the notification"
-#~ msgid "Do Nothing"
-#~ msgstr "Nenion fari"

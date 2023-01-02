@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-06 00:47+0000\n"
-"PO-Revision-Date: 2022-04-23 14:24+0100\n"
+"PO-Revision-Date: 2022-12-31 16:56+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,7 +148,7 @@ msgstr "Configure Fingerprints"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Clear All"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -193,10 +193,9 @@ msgid "Re-enroll finger"
 msgstr "Re-enroll finger"
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Clear Fingerprints"
+msgstr "Delete fingerprint"
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format

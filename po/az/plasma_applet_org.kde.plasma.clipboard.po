@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:47+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2021-11-02 17:10+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr "Göstərmək üçün bu QR kod çox böyükdür"
 msgid "Clipboard Contents"
 msgstr "Mübadilə buferi tərkibləri"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Mübadilə buferi boşdur"
@@ -120,7 +120,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İmtina"
 
-#: contents/ui/Menu.qml:94
+#: contents/ui/Menu.qml:126
 #, kde-format
 msgid "No matches"
 msgstr "Oxşarları yoxdur"

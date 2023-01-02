@@ -7,19 +7,20 @@
 # Börkur Ingi Jónsson <berkz@internet.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2004, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2012, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-08-21 18:52+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 15:21+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -38,54 +39,54 @@ msgstr "&Seinni litur:"
 #: iconsizecategorymodel.cpp:16
 #, kde-format
 msgid "Small Icons"
-msgstr "Litlar táknmyndir"
+msgstr "Lítil tákn"
 
 #: iconsizecategorymodel.cpp:17
 #, kde-format
 msgid "Dialogs"
-msgstr "Samskiptagluggar"
+msgstr "Svargluggar"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr "Heiti á núverandi táknmyndaþema"
+msgstr "Heiti á núverandi táknaþema"
 
 #. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
 #: iconssettingsbase.kcfg:15
 #, kde-format
 msgid "Desktop icons size"
-msgstr "Stærð táknmynda á skjáborði"
+msgstr "Stærð tákna á skjáborði"
 
 #. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
 #: iconssettingsbase.kcfg:21
 #, kde-format
 msgid "Toolbar icons size"
-msgstr "Stærð táknmynda á verkfærastiku"
+msgstr "Stærð tákna á verkfærastiku"
 
 #. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
 #: iconssettingsbase.kcfg:27
 #, kde-format
 msgid "Main toolbar icons size"
-msgstr "Stærð táknmynda á aðalverkfærastiku"
+msgstr "Stærð tákna á aðalverkfærastiku"
 
 #. i18n: ectx: label, entry (smallSize), group (SmallIcons)
 #: iconssettingsbase.kcfg:33
 #, kde-format
 msgid "Small icons size"
-msgstr "Stærð lítilla táknmynda"
+msgstr "Stærð lítilla tákna"
 
 #. i18n: ectx: label, entry (panelSize), group (PanelIcons)
 #: iconssettingsbase.kcfg:39
 #, kde-format
 msgid "Panel icons size"
-msgstr "Stærð táknmynda á spjaldi"
+msgstr "Stærð tákna á skjáborðsstiku"
 
 #. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
 #: iconssettingsbase.kcfg:45
 #, kde-format
 msgid "Dialog icons size"
-msgstr "Stærð táknmynda í samskiptagluggum"
+msgstr "Stærð tákna í svargluggum"
 
 #: main.cpp:182
 #, kde-format
@@ -95,12 +96,12 @@ msgstr "Mistókst að búa til bráðabirgðaskrá."
 #: main.cpp:193
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Get ekki sótt táknmyndaþemasafnið: %1"
+msgstr "Tókst ekki að sækja táknaþemusafnið: %1"
 
 #: main.cpp:207
 #, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr "Þessi skrá er ekki gilt táknmyndaþemusafn."
+msgstr "Þessi skrá er ekki gilt táknaþemusafn."
 
 #: main.cpp:212
 #, kde-format
@@ -108,8 +109,8 @@ msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr ""
-"Vandamál komu upp við uppsetningu; þó hafa flestar þemur í safninu verið "
-"settar upp."
+"Vandamál komu upp við uppsetningu. Hins vegar hafa flest þemu í safninu "
+"verið sett upp."
 
 #: main.cpp:216
 #, kde-format
@@ -119,12 +120,12 @@ msgstr "Uppsetningu þema er lokið."
 #: main.cpp:260
 #, kde-format
 msgid "Installing icon themes…"
-msgstr "Set inn táknmyndaþemu…"
+msgstr "Set upp táknmyndaþemu…"
 
 #: main.cpp:270
 #, kde-format
 msgid "Installing %1 theme…"
-msgstr "Set inn %1 þema"
+msgstr "Set upp %1 þema"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -151,22 +152,22 @@ msgstr "Stærð:"
 #: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
-msgstr "Þessi eining gerir þér kleift að velja táknmyndir fyrir kerfið þitt."
+msgstr "Þessi eining gerir þér kleift að velja tákn fyrir skjáborðið þitt."
 
 #: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
-msgstr "Fjarlægja táknmyndaþema"
+msgstr "Fjarlægja táknaþema"
 
 #: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
-msgstr "Endurheimta táknmyndaþema"
+msgstr "Endurheimta táknaþema"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
-msgstr "Stilla stærð táknmynda"
+msgstr "Stilla stærð tákna"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
@@ -176,14 +177,14 @@ msgstr "Setja inn úr skrá…"
 #: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Get New Icons…"
-msgstr "Sækja nýjar táknmyndir..."
+msgstr "Sækja ný tákn..."
 
 #: package/contents/ui/main.qml:273
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr "Stilla stærð táknmynda"
+msgstr "Stilla stærð tákna"
 
 #: package/contents/ui/main.qml:285
 #, kde-format
@@ -199,7 +200,7 @@ msgstr "Þemaskrár (*.tar.gz *.tar.bz2)"
 #~ msgstr "Verkfærastika"
 
 #~ msgid "Panel"
-#~ msgstr "Spjald"
+#~ msgstr "Skjáborðsstika"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

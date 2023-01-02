@@ -5,19 +5,20 @@
 # Svanur Palsson <svanur@tern.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2010, 2011, 2016, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-09-21 12:07+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 18:23+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -25,12 +26,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Svanur Pálsson, Sveinn í Felli"
+msgstr "Richard Allen, Svanur Pálsson, Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, svanur@tern.is, sv1@fellsnet.is"
+msgstr "ra@ra.is, svanur@tern.is, sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Leturuppsetning"
 #: apps/Installer.cpp:112
 #, kde-format
 msgid "Simple font installer"
-msgstr "Einfaldur leturuppsetjari"
+msgstr "Einfalt uppsetningarforrit fyrir letur"
 
 #: apps/Installer.cpp:114 apps/Printer.cpp:329
 #, kde-format
@@ -64,12 +65,12 @@ msgstr "(C) Craig Drummond, 2007"
 #: apps/Installer.cpp:120 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "Umbreytir glugganum fyrir X forrit sem skilgreint er með winid"
+msgstr "Gerir gluggann skammvinnan fyrir X forrit sem winid skilgreinir"
 
 #: apps/Installer.cpp:122
 #, kde-format
 msgid "URL to install"
-msgstr "Slóð sem setja skal inn"
+msgstr "Slóð sem á að setja upp"
 
 #: apps/Printer.cpp:238
 #, kde-format
@@ -94,7 +95,7 @@ msgstr "Einfaldur leturprentari"
 #: apps/Printer.cpp:337
 #, kde-format
 msgid "Size index to print fonts"
-msgstr "Stærð yfirlits til prentunar á letri"
+msgstr "Stærðarvísir til prentunar á letri"
 
 #: apps/Printer.cpp:341
 #, kde-format
@@ -154,7 +155,7 @@ msgstr "(C) Craig Drummond, 2004-2007"
 #: kcmfontinst/DuplicatesDialog.cpp:47
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr "Letur í tvítaki"
+msgstr "Tvítekið letur"
 
 #: kcmfontinst/DuplicatesDialog.cpp:77
 #, kde-format
@@ -164,7 +165,7 @@ msgstr "Leita að tvíteknu letri. Bíddu aðeins..."
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
 msgid "No duplicate fonts found."
-msgstr "Fann engin tvítekin letur."
+msgstr "Fann engar tvíteknar leturgerðir."
 
 #: kcmfontinst/DuplicatesDialog.cpp:104
 #, kde-format
@@ -175,8 +176,8 @@ msgstr "Eyða merktum skrám"
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
-msgstr[0] "%1 tvítekið letur fannst."
-msgstr[1] "%1 tvítekið letur fannst."
+msgstr[0] "%1 tvítekin leturgerð fannst."
+msgstr[1] "%1 tvíteknar leturgerðir fundust."
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -215,12 +216,12 @@ msgstr "Dagsetning"
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Links To"
-msgstr "Tenglar við"
+msgstr "Tengir við"
 
 #: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1315
 #, kde-format
 msgid "Open in Font Viewer"
-msgstr "Opna í leturbirti"
+msgstr "Opna í leturskoðara"
 
 #: kcmfontinst/DuplicatesDialog.cpp:401
 #, kde-format
@@ -241,13 +242,13 @@ msgstr "Merkja til eyðingar"
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Opna öll %1 letrin í leturbirti?"
-msgstr[1] "Opna öll %1 letrin í leturbirti?"
+msgstr[0] "Opna letur í leturskoðara?"
+msgstr[1] "Opna öll %1 letur í leturskoðara?"
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
 msgid "Family"
-msgstr "Ætt"
+msgstr "Leturfjölskylda"
 
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
@@ -257,7 +258,7 @@ msgstr "Stíll"
 #: kcmfontinst/FontFilter.cpp:107
 #, kde-format
 msgid "Foundry"
-msgstr "Fjölskylda"
+msgstr "Smíði"
 
 #: kcmfontinst/FontFilter.cpp:109
 #, kde-format
@@ -267,12 +268,12 @@ msgstr "FontConfig samsvörun"
 #: kcmfontinst/FontFilter.cpp:111
 #, kde-format
 msgid "File Type"
-msgstr "Skráartegund"
+msgstr "Skrárgerð"
 
 #: kcmfontinst/FontFilter.cpp:113
 #, kde-format
 msgid "File Name"
-msgstr "Skráarheiti"
+msgstr "Skrárheiti"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
@@ -287,7 +288,7 @@ msgstr "Skrifkerfi"
 #: kcmfontinst/FontFilter.cpp:129
 #, kde-format
 msgid "Set Criteria"
-msgstr "Setja forsendur"
+msgstr "Velja forsendur"
 
 #: kcmfontinst/FontFilter.cpp:188
 #, kde-format
@@ -324,10 +325,10 @@ msgid ""
 "the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
-"<p>Þessi listi sýnir uppsett letur. Letrið er hópað eftir leturfjölskyldum "
+"<p>Þessi listi sýnir uppsett letur. Letrið er flokkað eftir leturfjölskyldum "
 "og sýnir talan sem er innan hornklofa fjölda tiltækra stíla, t.d. </"
-"p><ul><li>Times [4]<ul><li>Venjulegt</li><li>Feitletrað</li><li>Feit-"
-"Skáletrað</li><li>Skáletrað</li></ul></li></ul>"
+"p><ul><li>Times [4]<ul><li>Venjulegt</li><li>Feitletur</"
+"li><li>Feittskáletur</li><li>Skáletur</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, kde-format
@@ -369,17 +370,17 @@ msgstr "Endurlesa"
 #: kcmfontinst/FontList.cpp:1718
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
-msgstr "Opna öll %1 letrin í leturbirti?"
+msgstr "Opna öll %1 letrin í leturskoðara?"
 
 #: kcmfontinst/GroupList.cpp:59
 #, kde-format
 msgid "All Fonts"
-msgstr "Allt letur"
+msgstr "Allar leturgerðir"
 
 #: kcmfontinst/GroupList.cpp:62
 #, kde-format
 msgid "Personal Fonts"
-msgstr "Einkaletur"
+msgstr "Eigin letur"
 
 #: kcmfontinst/GroupList.cpp:65
 #, kde-format
@@ -394,7 +395,7 @@ msgstr "Óflokkað"
 #: kcmfontinst/GroupList.cpp:350
 #, kde-format
 msgid "Group"
-msgstr "Hópur"
+msgstr "Flokkur"
 
 #: kcmfontinst/GroupList.cpp:535
 #, kde-format
@@ -403,12 +404,12 @@ msgid ""
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
 "<p>Viltu í alvörunni fjarlægja '<b>%1</b>'?</p><p><i>Þetta fjarlægir "
-"einungis hópinn, en ekki sjálft letrið.</i></p>"
+"einungis flokkinn, en ekki sjálft letrið.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
 #, kde-format
 msgid "Remove Group"
-msgstr "Fjarlægja hóp"
+msgstr "Fjarlægja flokk"
 
 #: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
 #, kde-format
@@ -418,7 +419,7 @@ msgstr "Fjarlægja"
 #: kcmfontinst/GroupList.cpp:540
 #, kde-format
 msgid "Remove group"
-msgstr "Fjarlægja hóp"
+msgstr "Fjarlægja flokk"
 
 #: kcmfontinst/GroupList.cpp:586
 #, kde-format
@@ -431,13 +432,13 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>Leturhópar</h3><p>Þessi listi sýnir þá leturhópa sem tiltækir eru á "
-"kerfinu þínu. Til eru 2 megingerðir leturhópa:<ul><li><b>Staðlað</b> eru "
-"sérstakir hópar sem notaðir eru af leturstýringunni.<ul>%1</ul></"
-"li><li><b>Sérsniðið</b> eru hópar sem þý hefur búið til. Til að bæta letri í "
-"einhvern þeirra hópa er letrið einfaldlega dregið úr listanum og sleppt á "
-"hópinn. Til að fjarlægja leturfjölskyldu úr hóp er það dregið og sleppt á "
-"hópinn \"Allt letur\".</li></ul></p>"
+"<h3>Leturflokkar</h3><p>Þessi listi sýnir leturflokkana sem eru tiltækir á "
+"kerfinu þínu. Til eru 2 megingerðir leturflokka:<ul><li><b>Staðlað</b> eru "
+"sérstakir flokkar sem notaðir eru af leturstýringunni.<ul>%1</ul></"
+"li><li><b>Sérsniðið</b> eru flokkar sem þú hefur búið til. Til að bæta letri "
+"í einhvern þeirra flokka er letrið einfaldlega dregið úr listanum og sleppt "
+"á flokkinn. Til að fjarlægja leturfjölskyldu úr flokki er hún dregin og "
+"sleppt á flokkinn \"Allt letur\".</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
 #, kde-format
@@ -448,7 +449,7 @@ msgid ""
 msgstr ""
 "<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu.</"
 "li><li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
-"\"sérsniðinn\" hóp.</li>"
+"\"sérsniðinn\" flokk.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -461,16 +462,16 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu - bæði "
-"\"Kerfisletur\" og \"Persónulegt letur\".</li> <li><i>Kerfisletur</i> "
-"inniheldur allt letur sem hefur verið sett upp kerfislægt (þ.e. tiltækt "
-"öllum notendum).</li> <li><i>Persónulegt letur</i> inniheldur einkaletrið "
-"þitt.</li> <li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið "
-"sett í \"sérsniðinn\" hóp.</li>"
+"\"Kerfisletur\" og \"Eigið letur\".</li> <li><i>Kerfisletur</i> inniheldur "
+"allt letur sem hefur verið sett upp kerfislægt (þ.e. tiltækt öllum notendum)."
+"</li> <li><i>Eigið letur</i> inniheldur leturgerðirna þínar.</li> "
+"<li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
+"\"sérsniðinn\" flokk.</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Leturhópur með heitinu <b>'%1'</b> er þegar til.</qt>"
+msgstr "<qt>Leturflokkur sem heitir <b>'%1'</b> er þegar til.</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
@@ -490,7 +491,7 @@ msgstr "Bæta við \"%1\"."
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Remove from current group."
-msgstr "Fjarlægja úr núverandi hóp."
+msgstr "Fjarlægja úr núverandi flokki."
 
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
@@ -523,8 +524,8 @@ msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
-"<h3>Lokið</h3><p>Vinsamlegast athugaðu að forrit sem eru opin þarf að ræsa "
-"upp aftur svo breytingarnar verði virkar í þeim.</p>"
+"<h3>Lokið</h3><p>Vinsamlegast athugaðu að það þarf að endurræsa forrit sem "
+"eru opin svo breytingarnar verði virkar í þeim.</p>"
 
 #: kcmfontinst/JobRunner.cpp:211
 #, kde-format
@@ -534,12 +535,12 @@ msgstr "Ekki sýna þessi skilaboð aftur"
 #: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Installing"
-msgstr "Setja upp"
+msgstr "Set upp"
 
 #: kcmfontinst/JobRunner.cpp:324
 #, kde-format
 msgid "Uninstalling"
-msgstr "Taka út"
+msgstr "Tek út"
 
 #: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
 #, kde-format
@@ -574,12 +575,12 @@ msgstr "Uppfæri leturstillingar. Bíddu aðeins..."
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
 msgid "Unable to start backend."
-msgstr "Get ekki ræst bakenda."
+msgstr "Tókst ekki að ræsa bakenda."
 
 #: kcmfontinst/JobRunner.cpp:460
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr "Bakendinn dó, en hefur verið endurræstur. Reyndu aftur."
+msgstr "Bakendinn dó en hefur verið endurræstur. Reyndu aftur."
 
 #: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
 #, kde-format
@@ -595,14 +596,15 @@ msgstr "Tókst ekki að sækja <i>%1</i>"
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
-"Kerfisbakendinn dó, en hefur verið endurræstur. Reyndu aftur.<br><i>%1</i>"
+"Kerfisbakendinn dó en hefur verið endurræstur. Reyndu aftur.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"<i>%1</i> er bitamyndaletur, slíkt hefur verið gert óvirkt á kerfinu þínu."
+"<i>%1</i> er bitamyndaletur (bitmap font), en það hefur verið gert óvirkt á "
+"kerfinu þínu."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
@@ -610,13 +612,13 @@ msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"<i>%1</i> inniheldur letrið <i>%2</i>, letur með þessu nafni er þegar "
-"uppsett á kerfinu þínu."
+"<i>%1</i> inniheldur leturgerðina <i>%2</i>, sem er nú þegar uppsett á "
+"kerfinu þínu."
 
 #: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> er ekki letur."
+msgstr "<i>%1</i> er ekki leturgerð."
 
 #: kcmfontinst/JobRunner.cpp:706
 #, kde-format
@@ -661,7 +663,7 @@ msgstr "Óvænt villa við vinnslu: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:169
 #, kde-format
 msgid "Font Management"
-msgstr "Umsýsla leturs"
+msgstr "Umsjón með leturgerðum"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
@@ -681,27 +683,27 @@ msgstr "Forritun og viðhald"
 #: kcmfontinst/KCmFontInst.cpp:202
 #, kde-format
 msgid "Create New Group…"
-msgstr "Búa til nýjan hóp…"
+msgstr "Búa til nýjan flokk…"
 
 #: kcmfontinst/KCmFontInst.cpp:204
 #, kde-format
 msgid "Remove Group…"
-msgstr "Fjarlægja hóp…"
+msgstr "Fjarlægja flokk…"
 
 #: kcmfontinst/KCmFontInst.cpp:206
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Virkja letur í hópi…"
+msgstr "Virkja leturgerðir í flokki…"
 
 #: kcmfontinst/KCmFontInst.cpp:208
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Afvirkja letur í hópi…"
+msgstr "Afvirkja leturgerðir í flokki…"
 
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Þetta birtir forsýn af valda letrinu."
+msgstr "Þetta birtir forskoðun af völdu leturgerðinni."
 
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
@@ -711,37 +713,37 @@ msgstr "Finna tvítekningar…"
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Leita að letri í tvítaki…"
+msgstr "Leita að tvíteknum leturgerðum..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install from File…"
-msgstr "Setja inn úr skrá…"
+msgstr "Setja upp úr skrá…"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr "Setja inn úr skrá af tölvunni"
+msgstr "Setja upp úr skrá á tölvunni"
 
 #: kcmfontinst/KCmFontInst.cpp:252
 #, kde-format
 msgid "Get New Fonts…"
-msgstr "Ná í nýtt letur…"
+msgstr "Sækja nýjar leturgerðir…"
 
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
 msgid "Download new fonts"
-msgstr "Sækja nýtt letur"
+msgstr "Sækja nýjar leturgerðir"
 
 #: kcmfontinst/KCmFontInst.cpp:255
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Eyða út völdu letri…"
+msgstr "Eyða völdum leturgerðum…"
 
 #: kcmfontinst/KCmFontInst.cpp:313
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Breyta forsýndum texta..."
+msgstr "Breyta forskoðunartexta..."
 
 #: kcmfontinst/KCmFontInst.cpp:375
 #, kde-format
@@ -751,11 +753,11 @@ msgid ""
 "type fonts:/ into Konqueror's location bar and this will display your "
 "installed fonts. To install a font, simply copy one into the folder.</p>"
 msgstr ""
-"<h1>Innsetning leturgerða</h1><p> Þessi eining leyfir þér að setja inn "
-"TrueType, Type1 og Bitmap leturgerðir.</p><p>Þú getur líka sett inn "
-"leturgerður í Konqueror: sláðu inn fonts:/ í staðsetningarslá Konqueror og "
-"þá birtast þær leturgerðir sem þú hefur sett inn. Til að setja inn nýja "
-"leturgerð geturðu einfaldlega afritað hana í viðkomandi möppu.</p>"
+"<h1>Uppsetning leturgerða</h1><p> Með þessari einingu getur þú sett upp "
+"TrueType, Type1 og Bitmap leturgerðir.</p><p>Þú getur líka sett upp letur "
+"með Konqueror: sláðu inn fonts:/ í staðsetningarstiku Konqueror og þá "
+"birtast þær leturgerðir sem þú hefur sett inn. Til að setja inn nýja "
+"leturgerð þarftu einfaldlega að afrita hana í möppuna.</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:382
 #, kde-format
@@ -767,13 +769,12 @@ msgid ""
 "folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
 "wide fonts (available to all).</p>"
 msgstr ""
-"<h1>Innsetning leturgerða</h1><p> Þessi eining leyfir þér að setja inn "
-"TrueType, Type1 og Bitmap leturgerðir.</p><p>Þú getur líka sett inn "
-"leturgerður í Konqueror: sláðu inn fonts:/ í staðsetningarslá Konqueror og "
-"þá birtast þær leturgerðir sem þú hefur sett inn. Til að setja inn nýja "
-"leturgerð geturðu einfaldlega afritað hana í viðkomandi möppu -  \"%1\" "
-"fyrir letur sem aðeins er aðgengilegt þér sjálfum, eða  \"%2\" fyrir "
-"kerfislægt letur (aðgengilegt öllum).</p>"
+"<h1>Uppsetning leturgerða</h1><p> Með þessari einingu geturðu sett upp "
+"TrueType, Type1 og Bitmap leturgerðir.</p><p>Þú getur líka sett upp letur í "
+"Konqueror: sláðu inn fonts:/ í staðsetningarstiku Konqueror og þá birtast "
+"uppsettar leturgerðir. Til að setja upp nýja leturgerð þarftu einfaldlega að "
+"afrita hana í möppuna -  \"%1\" fyrir letur sem aðeins er aðgengilegt þér, "
+"eða  \"%2\" fyrir kerfislægt letur (aðgengilegt öllum).</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:437
 #, kde-format
@@ -796,7 +797,7 @@ msgid ""
 "There are no printable fonts.\n"
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
-"Það er ekkert prentanlegt letur.\n"
+"Það er ekkert prenthæft letur.\n"
 "Þú getur bara prentað letur sem er virkt og ekki er bitamyndaletur (bitmap)."
 
 #: kcmfontinst/KCmFontInst.cpp:592
@@ -894,7 +895,7 @@ msgstr "Færi letur…"
 #: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "Export Group"
-msgstr "Flytja út hóp"
+msgstr "Flytja út flokk"
 
 #: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
@@ -904,22 +905,22 @@ msgstr "Engar skrár?"
 #: kcmfontinst/KCmFontInst.cpp:729
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr "Mistókst að opna %1 til skrifunar"
+msgstr "Mistókst að opna %1 til að skrifa í"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
 msgid "Create New Group"
-msgstr "Búa til nýjan hóp"
+msgstr "Búa til nýjan flokk"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
 msgid "Name of new group:"
-msgstr "Nafn nýja hópsins:"
+msgstr "Nafn nýja flokksins:"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
 msgid "New Group"
-msgstr "Nýr hópur"
+msgstr "Nýr flokkur"
 
 #: kcmfontinst/KCmFontInst.cpp:777
 #, kde-format
@@ -995,7 +996,7 @@ msgstr "Leita að öllum skrám tengdum %1"
 #: kcmfontinst/KCmFontInst.cpp:1037
 #, kde-format
 msgid "Installing font(s)…"
-msgstr "Set inn letur..."
+msgstr "Set upp letur..."
 
 #: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
@@ -1033,8 +1034,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Viltu örugglega virkja</p><p>'<b>%1</b>', sem er innan hópsins '<b>%2</"
-"b>'?</p>"
+"<p>Viltu örugglega virkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?</"
+"p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
@@ -1042,8 +1043,8 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>', sem er innan hópsins '<b>%2</"
-"b>'?</p>"
+"<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?"
+"</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
@@ -1078,10 +1079,10 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>Viltu örugglega virkja þetta letur innan hópsins '<b>%2</b>'?</p>"
+"<p>Viltu örugglega virkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
 msgstr[1] ""
-"<p>Viltu örugglega virkja þessar %1 leturgerðir innan hópsins '<b>%2</b>'?</"
-"p>"
+"<p>Viltu örugglega virkja þessar %1 leturgerðir sem er í flokknum '<b>%2</"
+"b>'?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
@@ -1092,10 +1093,10 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
-"<p>Viltu örugglega afvirkja þetta letur innan hópsins '<b>%2</b>'?</p>"
+"<p>Viltu örugglega afvirkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
 msgstr[1] ""
-"<p>Viltu örugglega afvirkja þessar %1 leturgerðir innan hópsins '<b>%2</b>'?"
-"</p>"
+"<p>Viltu örugglega afvirkja þessar %1 leturgerðir sem eru í flokknum '<b>%2</"
+"b>'?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
@@ -1125,7 +1126,7 @@ msgstr "Sýnishorn af útprentun"
 #: kcmfontinst/PrintDialog.cpp:37
 #, kde-format
 msgid "Select size to print font:"
-msgstr "Veldu stærð til prentunar á letri:"
+msgstr "Veldu stærð til að prenta letur:"
 
 #: kcmfontinst/PrintDialog.cpp:41
 #, kde-format
@@ -1219,7 +1220,7 @@ msgstr "Bakendinn dó"
 #: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
-msgstr "%1 er bitamyndaletur, slíkt hefur verið gert óvirkt á kerfinu þínu."
+msgstr "%1 er bitamyndaletur sem hefur verið gert óvirkt á kerfinu þínu."
 
 #: kio/KioFonts.cpp:717
 #, kde-format
@@ -1254,7 +1255,7 @@ msgstr "Aa"
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
-msgstr "AaÁáBbDdÐðEeEéFfGgHhIiÍíJjKkLlMmNnOoÓóPpRrSsTtUuÚúVvXxYyZzÞþÆæÖö0123456789"
+msgstr "AaÁáBbDdÐðEeÉéFfGgHhIiÍíJjKkLlMmNnOoÓóPpRrSsTtUuÚúVvXxYyÞþÆæÖö0123456789"
 
 #: lib/FcEngine.cpp:1022
 #, kde-format
@@ -1271,13 +1272,13 @@ msgstr "Öll dýrin í skóginum eiga að vera vinir"
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVWXYÝÞÆÖ"
 
 #: lib/FcEngine.cpp:1070
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
-msgstr "abcdefghijklmnopqrstuvwxyz"
+msgstr "aábdðeéfghiíjklmnoóprstuúvwxyýþæö"
 
 #: lib/FcEngine.cpp:1075
 #, kde-format
@@ -1294,8 +1295,8 @@ msgstr "Villa: Gat ekki ákvarðað nafn letursins."
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
-msgstr[0] "%2 [1 punktur]"
-msgstr[1] "%2 [%1 punktar]"
+msgstr[0] "%2 [1 díll]"
+msgstr[1] "%2 [%1 dílar]"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"
@@ -1315,7 +1316,7 @@ msgstr "Kerfisstjóri"
 
 #: lib/KfiConstants.h:74
 msgid "Thin"
-msgstr "Þunnt"
+msgstr "Mjótt"
 
 #: lib/KfiConstants.h:75
 msgid "Extra Light"
@@ -1351,7 +1352,7 @@ msgstr "Næstum-feitletrað"
 
 #: lib/KfiConstants.h:83
 msgid "Bold"
-msgstr "Feitletrað"
+msgstr "Feitletur"
 
 #: lib/KfiConstants.h:84
 msgid "Extra Bold"
@@ -1375,7 +1376,7 @@ msgstr "Rómanskt"
 
 #: lib/KfiConstants.h:90
 msgid "Italic"
-msgstr "Skálétrað"
+msgstr "Skáletur"
 
 #: lib/KfiConstants.h:91
 msgid "Oblique"
@@ -1395,11 +1396,11 @@ msgstr "Þétt"
 
 #: lib/KfiConstants.h:96
 msgid "Semi Condensed"
-msgstr "Næstum-þétt"
+msgstr "Næstum þétt"
 
 #: lib/KfiConstants.h:98
 msgid "Semi Expanded"
-msgstr "Næstum-vítt"
+msgstr "Hálf útvíkkað"
 
 #: lib/KfiConstants.h:99
 msgid "Expanded"
@@ -1407,11 +1408,11 @@ msgstr "Útvíkkað"
 
 #: lib/KfiConstants.h:100
 msgid "Extra Expanded"
-msgstr "Mjög-vítt"
+msgstr "Mjög útvíkkað"
 
 #: lib/KfiConstants.h:101
 msgid "Ultra Expanded"
-msgstr "Verulega-vítt"
+msgstr "Verulega útvíkkað"
 
 #: lib/KfiConstants.h:103
 msgid "Monospaced"
@@ -1488,7 +1489,7 @@ msgstr "Merki, afmörkun"
 #: viewpart/CharTip.cpp:66
 #, kde-format
 msgid "Mark, Non-Spacing"
-msgstr "Merki, ekki-bil"
+msgstr "Merki, stafmerki"
 
 #: viewpart/CharTip.cpp:68
 #, kde-format
@@ -1568,7 +1569,7 @@ msgstr "Skiltákn, lína"
 #: viewpart/CharTip.cpp:98
 #, kde-format
 msgid "Separator, Paragraph"
-msgstr "Skiltákn, málsgrein"
+msgstr "Skiltákn, efnisgrein"
 
 #: viewpart/CharTip.cpp:100
 #, kde-format
@@ -1623,28 +1624,28 @@ msgstr "Gat ekki lesið letrið."
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
-msgstr "Forsýnsstrengur"
+msgstr "Forskoðunarstrengur"
 
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Vinsamlegast sláðu inn nýjan streng:"
+msgstr "Sláðu inn nýjan streng:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
 #, kde-format
 msgid "&Main Toolbar"
-msgstr "&Aðaltækjaslá"
+msgstr "&Aðaltækjastika"
 
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
-msgstr "Tegund forsýnar"
+msgstr "Tegund forskoðunar"
 
 #: viewpart/PreviewSelectAction.cpp:31
 #, kde-format
 msgid "Standard Preview"
-msgstr "Venjuleg forsýning"
+msgstr "Venjuleg forskoðun"
 
 #: viewpart/PreviewSelectAction.cpp:32
 #, kde-format
@@ -1663,19 +1664,19 @@ msgstr "Unicode skrift: %1"
 
 #: viewpart/UnicodeBlocks.h:17
 msgid "Basic Latin"
-msgstr "Grunn-latneskt"
+msgstr "Basic Latin"
 
 #: viewpart/UnicodeBlocks.h:18
 msgid "Latin-1 Supplement"
-msgstr "Latínu-1 viðauki"
+msgstr "Latin-1 Supplement"
 
 #: viewpart/UnicodeBlocks.h:19
 msgid "Latin Extended-A"
-msgstr "Útvíkkað-A latneskt"
+msgstr "Latin Extended-A"
 
 #: viewpart/UnicodeBlocks.h:20
 msgid "Latin Extended-B"
-msgstr "Útvíkkað-B latneskt"
+msgstr "Latin Extended-B"
 
 #: viewpart/UnicodeBlocks.h:21
 msgid "IPA Extensions"
@@ -1695,11 +1696,11 @@ msgstr "Grískt og Koptískt"
 
 #: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
 msgid "Cyrillic"
-msgstr "Kýrílskt"
+msgstr "Kýrilískt"
 
 #: viewpart/UnicodeBlocks.h:26
 msgid "Cyrillic Supplement"
-msgstr "Kýrílskt viðauki"
+msgstr "Kýrilískt viðauki"
 
 #: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
 msgid "Armenian"
@@ -1751,7 +1752,7 @@ msgstr "Oryanskt"
 
 #: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
 msgid "Tamil"
-msgstr "Tamíl"
+msgstr "Tamílskt"
 
 #: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
 msgid "Telugu"
@@ -1807,7 +1808,7 @@ msgstr "Cherokee"
 
 #: viewpart/UnicodeBlocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Samræmd kanadísk atkvæðaskrift"
+msgstr "Samræmd atkvæðaskrift kanadískra frumbyggja"
 
 #: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
 msgid "Ogham"
@@ -1815,7 +1816,7 @@ msgstr "Oghamskt"
 
 #: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
 msgid "Runic"
-msgstr "Rúnir"
+msgstr "Rúnaletur"
 
 #: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
 msgid "Tagalog"
@@ -1863,7 +1864,7 @@ msgstr "Buginískt"
 
 #: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
 msgid "Balinese"
-msgstr "Balískt"
+msgstr "Balinískt"
 
 #: viewpart/UnicodeBlocks.h:68
 msgid "Phonetic Extensions"
@@ -1879,7 +1880,7 @@ msgstr "Viðbótar samsett broddstafamerki"
 
 #: viewpart/UnicodeBlocks.h:71
 msgid "Latin Extended Additional"
-msgstr "Latína aukalegir viðaukar"
+msgstr "Latneskt aukalegir viðaukar"
 
 #: viewpart/UnicodeBlocks.h:72
 msgid "Greek Extended"
@@ -1899,7 +1900,7 @@ msgstr "Gjaldmiðlatákn"
 
 #: viewpart/UnicodeBlocks.h:76
 msgid "Combining Diacritical Marks for Symbols"
-msgstr "Samlögun brodda fyrir tákn"
+msgstr "Samsetning brodda fyrir tákn"
 
 #: viewpart/UnicodeBlocks.h:77
 msgid "Letter-Like Symbols"
@@ -1951,7 +1952,7 @@ msgstr "Ýmis tákn"
 
 #: viewpart/UnicodeBlocks.h:89
 msgid "Dingbats"
-msgstr "Dingbats tákn"
+msgstr "Dingbats-tákn"
 
 #: viewpart/UnicodeBlocks.h:90
 msgid "Miscellaneous Mathematical Symbols-A"
@@ -2027,7 +2028,7 @@ msgstr "CJK tákn og greinarmerki"
 
 #: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
 msgid "Hiragana"
-msgstr "Hiraganískt"
+msgstr "Hiragana"
 
 #: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
 msgid "Katakana"
@@ -2183,7 +2184,7 @@ msgstr "Forngrískar tölur"
 
 #: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
 msgid "Old Italic"
-msgstr "Forn-ítalska"
+msgstr "Fornítalska"
 
 #: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
 msgid "Gothic"
@@ -2195,7 +2196,7 @@ msgstr "Ugaritískt"
 
 #: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
 msgid "Old Persian"
-msgstr "Forn-persneska"
+msgstr "Fornpersneska"
 
 #: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
 msgid "Deseret"
@@ -2223,11 +2224,11 @@ msgstr "Kharoshthi"
 
 #: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
 msgid "Cuneiform"
-msgstr "Leirtöfluskrift"
+msgstr "Cuneiform"
 
 #: viewpart/UnicodeBlocks.h:158
 msgid "Cuneiform Numbers and Punctuation"
-msgstr "Cuneiform-leitöfluskriftar tölur og greinarmerki"
+msgstr "Cuneiform tölur og greinarmerki"
 
 #: viewpart/UnicodeBlocks.h:159
 msgid "Byzantine Musical Symbols"

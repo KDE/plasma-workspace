@@ -6,21 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:48+0000\n"
-"PO-Revision-Date: 2022-07-22 19:25+0100\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"PO-Revision-Date: 2022-12-31 16:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "No title"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82
@@ -28,52 +28,52 @@ msgstr ""
 msgid "No media playing"
 msgstr "No media playing"
 
-#: package/contents/ui/ExpandedRepresentation.qml:361
-#: package/contents/ui/ExpandedRepresentation.qml:482
+#: package/contents/ui/ExpandedRepresentation.qml:413
+#: package/contents/ui/ExpandedRepresentation.qml:534
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:511
+#: package/contents/ui/ExpandedRepresentation.qml:563
 #, kde-format
 msgid "Shuffle"
 msgstr "Shuffle"
 
-#: package/contents/ui/ExpandedRepresentation.qml:537
+#: package/contents/ui/ExpandedRepresentation.qml:589
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Previous Track"
 
-#: package/contents/ui/ExpandedRepresentation.qml:559
+#: package/contents/ui/ExpandedRepresentation.qml:611
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/ExpandedRepresentation.qml:559
+#: package/contents/ui/ExpandedRepresentation.qml:611
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Play"
 
-#: package/contents/ui/ExpandedRepresentation.qml:577
+#: package/contents/ui/ExpandedRepresentation.qml:629
 #: package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Next Track"
 
-#: package/contents/ui/ExpandedRepresentation.qml:600
+#: package/contents/ui/ExpandedRepresentation.qml:652
 #, kde-format
 msgid "Repeat Track"
 msgstr "Repeat Track"
 
-#: package/contents/ui/ExpandedRepresentation.qml:600
+#: package/contents/ui/ExpandedRepresentation.qml:652
 #, kde-format
 msgid "Repeat"
 msgstr "Repeat"
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "Choose player automatically"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "by %1 (paused, %2)"
+msgstr ""
+"by %1 (%2)\n"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,28 +121,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "by %1 (paused, %2)"
+msgstr ""
+"by %1 (paused, %2)\n"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "by %1 (paused, %2)"
+msgstr ""
+"Paused (%1)\n"
+"Middle-click to play\n"
+"Scroll to adjust volume"
 
 #~ msgid "General"
 #~ msgstr "General"

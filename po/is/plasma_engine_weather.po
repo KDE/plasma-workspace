@@ -2,24 +2,27 @@
 # Copyright (C) 2009, 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
+#
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2022-08-21 19:06+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-10 15:53+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"\n"
-"\n"
-"\n"
+"X-Generator: Lokalize 22.08.3\n"
+"Plural-Forms: nplurals=2; plural=(n % 100 != 1 && n % 100 != 21 && n % 100 !"
+"= 31 && n % 100 != 41 && n % 100 != 51 && n % 100 != 61 && n % 100 != 71 && "
+"n % 100 != 81 && n % 100 != 91)\n"
+"X-Language: is_IS\n"
+"X-Source-Language: C\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -50,25 +53,25 @@ msgstr "skýjað"
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with hail"
-msgstr "skýjað með hagli"
+msgstr "skýjað og hagl"
 
 #: bbcukmet_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with heavy snow"
-msgstr "skýjað með mikilli snjókomu"
+msgstr "skýjað og mikil snjókoma"
 
 #: bbcukmet_i18n.dat:7
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with light snow"
-msgstr "skýjað með dálítilli snjókomu"
+msgstr "skýjað og lítils háttar snjókoma"
 
 #: bbcukmet_i18n.dat:8
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with sleet"
-msgstr "skýjað með slyddu"
+msgstr "skýjað og slydda"
 
 #: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
 #: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
@@ -117,39 +120,37 @@ msgstr "haglél"
 #, kde-format
 msgctxt "weather condition"
 msgid "hazy"
-msgstr "mistur"
+msgstr "móða"
 
 #: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain"
-msgstr "úrfelli"
+msgstr "úrhelli"
 
 #: bbcukmet_i18n.dat:18
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain shower"
-msgstr "úrfelli á köflum"
+msgstr "úrhelli með köflum"
 
 #: bbcukmet_i18n.dat:19
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "úrfelli á köflum"
+msgstr "úrhelli með köflum"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy shower"
-msgstr "mikill skúr"
+msgstr "mikil skúr"
 
 #: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:191
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy showers"
-msgstr "miklir skúrir"
+msgstr "miklar skúrir"
 
 #: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:187
 #, kde-format
@@ -170,76 +171,72 @@ msgid "heavy snow showers"
 msgstr "mikil snjóél"
 
 #: bbcukmet_i18n.dat:25
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr "skýjahula"
+msgstr "léttskýjað"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain"
-msgstr "dálítil rigning"
+msgstr "lítils háttar rigning"
 
 #: bbcukmet_i18n.dat:27
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain shower"
-msgstr "dálítill regnskúr"
+msgstr "lítils háttar skúr"
 
 #: bbcukmet_i18n.dat:28
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr "dálítill regnskúr"
+msgstr "lítils háttar skúrir"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "light shower"
-msgstr "dálítill skúr"
+msgstr "lítils háttar skúr"
 
 #: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
 #, kde-format
 msgctxt "weather condition"
 msgid "light showers"
-msgstr "dálitlar skúrir"
+msgstr "lítils háttar skúrir"
 
 #: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
 #: ions/wetter.com/ion_wettercom.cpp:185
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow"
-msgstr "dálítil snjókoma"
+msgstr "lítils háttar snjókoma"
 
 #: bbcukmet_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow shower"
-msgstr "dálítið snjóél"
+msgstr "lítils háttar snjóél"
 
 #: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
-msgstr "dálítil snjóél"
+msgstr "lítils háttar snjóél"
 
 #: bbcukmet_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "mist"
-msgstr "mistur"
+msgstr "þokumóða"
 
 #: bbcukmet_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr "mistur"
+msgstr "þokumóða"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
 #, kde-format
@@ -257,7 +254,7 @@ msgstr "e/t"
 #, kde-format
 msgctxt "weather condition"
 msgid "partly cloudy"
-msgstr "léttskýjað"
+msgstr "hálfskýjað"
 
 #: bbcukmet_i18n.dat:39
 #, kde-format
@@ -293,15 +290,13 @@ msgstr "sólskin"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr "sól með köflum"
+msgstr "sólskin með köflum"
 
 #: bbcukmet_i18n.dat:45
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr "skýjahula"
+msgstr "þungskýjað"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
@@ -317,9 +312,7 @@ msgid "thundery shower"
 msgstr "þrumuskúrir"
 
 #: bbcukmet_i18n.dat:48
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
 msgstr "þrumuskúrir"
@@ -364,25 +357,25 @@ msgstr "skýjað"
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with hail"
-msgstr "skýjað með hagli"
+msgstr "skýjað og hagl"
 
 #: bbcukmet_i18n.dat:56
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with heavy snow"
-msgstr "skýjað með mikilli snjókomu"
+msgstr "skýjað og mikil snjókoma"
 
 #: bbcukmet_i18n.dat:57
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with light snow"
-msgstr "skýjað með dálítilli snjókomu"
+msgstr "skýjað og lítils háttar snjókoma"
 
 #: bbcukmet_i18n.dat:58
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with sleet"
-msgstr "skýjað með slyddu"
+msgstr "skýjað og slydda"
 
 #: bbcukmet_i18n.dat:59
 #, kde-format
@@ -424,7 +417,7 @@ msgstr "haglél"
 #, kde-format
 msgctxt "weather forecast"
 msgid "hail showers"
-msgstr "dreifð haglél"
+msgstr "haglél"
 
 #: bbcukmet_i18n.dat:66
 #, kde-format
@@ -436,33 +429,31 @@ msgstr "mistur"
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain"
-msgstr "úrfelli"
+msgstr "úrhelli"
 
 #: bbcukmet_i18n.dat:68
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain shower"
-msgstr "úrfelli á köflum"
+msgstr "úrhellisrigning"
 
 #: bbcukmet_i18n.dat:69
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr "úrfelli á köflum"
+msgstr "úrhellisrigning"
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy shower"
-msgstr "mikill skúr"
+msgstr "mikil skúr"
 
 #: bbcukmet_i18n.dat:71
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy showers"
-msgstr "miklir skúrir"
+msgstr "miklar skúrir"
 
 #: bbcukmet_i18n.dat:72
 #, kde-format
@@ -483,74 +474,70 @@ msgid "heavy snow showers"
 msgstr "mikil snjóél"
 
 #: bbcukmet_i18n.dat:75
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr "hvít ský"
+msgstr "léttskýjað"
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain"
-msgstr "dálítil rigning"
+msgstr "lítils háttar rigning"
 
 #: bbcukmet_i18n.dat:77
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain shower"
-msgstr "dálítill regnskúr"
+msgstr "lítils háttar skúr"
 
 #: bbcukmet_i18n.dat:78
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr "dálítill regnskúr"
+msgstr "lítils háttar skúrir"
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
 msgctxt "weather forecast"
 msgid "light shower"
-msgstr "dálítill skúr"
+msgstr "lítils háttar skúr"
 
 #: bbcukmet_i18n.dat:80
 #, kde-format
 msgctxt "weather forecast"
 msgid "light showers"
-msgstr "dálitlar skúrir"
+msgstr "lítils háttar skúrir"
 
 #: bbcukmet_i18n.dat:81
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow"
-msgstr "dálítil snjókoma"
+msgstr "lítils háttar snjókoma"
 
 #: bbcukmet_i18n.dat:82
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow shower"
-msgstr "dálítið snjóél"
+msgstr "lítils háttar snjóél"
 
 #: bbcukmet_i18n.dat:83
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow showers"
-msgstr "dálítil snjóél"
+msgstr "lítils háttar snjóél"
 
 #: bbcukmet_i18n.dat:84
 #, kde-format
 msgctxt "weather forecast"
 msgid "mist"
-msgstr "mistur"
+msgstr "þokumóða"
 
 #: bbcukmet_i18n.dat:85
 #, kde-format
 msgctxt "weather forecast"
 msgid "misty"
-msgstr "mistur"
+msgstr "þokumóða"
 
 #: bbcukmet_i18n.dat:86
 #, kde-format
@@ -562,7 +549,7 @@ msgstr "e/t"
 #, kde-format
 msgctxt "weather forecast"
 msgid "partly cloudy"
-msgstr "léttskýjað"
+msgstr "hálfskýjað"
 
 #: bbcukmet_i18n.dat:88
 #, kde-format
@@ -598,20 +585,16 @@ msgstr "sólskin"
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny intervals"
-msgstr "sól með köflum"
+msgstr "sólskin með köflum"
 
 #: bbcukmet_i18n.dat:94
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr "hvít ský"
+msgstr "skýjaþykkni"
 
 #: bbcukmet_i18n.dat:95
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thunderstorm"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thunderstorm"
 msgstr "þrumuveður"
@@ -620,12 +603,10 @@ msgstr "þrumuveður"
 #, kde-format
 msgctxt "weather forecast"
 msgid "thundery shower"
-msgstr "þrumuskúrir"
+msgstr "þrumuskúr"
 
 #: bbcukmet_i18n.dat:97
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
 msgstr "þrumuskúrir"
@@ -646,12 +627,10 @@ msgstr "hvít ský"
 #, kde-format
 msgctxt "visibility"
 msgid "Excellent"
-msgstr ""
+msgstr "Afbragðsgott"
 
 #: bbcukmet_i18n.dat:101
-#, fuzzy, kde-format
-#| msgctxt "visibility"
-#| msgid "Very good"
+#, kde-format
 msgctxt "visibility"
 msgid "Very Good"
 msgstr "Mjög gott"
@@ -675,9 +654,7 @@ msgid "Poor"
 msgstr "Lélegt"
 
 #: bbcukmet_i18n.dat:105
-#, fuzzy, kde-format
-#| msgctxt "visibility"
-#| msgid "Very poor"
+#, kde-format
 msgctxt "visibility"
 msgid "Very Poor"
 msgstr "Mjög lélegt"
@@ -686,13 +663,13 @@ msgstr "Mjög lélegt"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow"
-msgstr "Snjóbylur"
+msgstr "Skafrenningur"
 
 #: envcan_i18n.dat:3 noaa_i18n.dat:10
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear"
-msgstr "Bjart"
+msgstr "Léttskýjað"
 
 #: envcan_i18n.dat:4
 #, kde-format
@@ -716,7 +693,7 @@ msgstr "Úrkoma í grennd"
 #, kde-format
 msgctxt "weather condition"
 msgid "Drifting Snow"
-msgstr "Skafrenningur"
+msgstr "Lágur skafrenningur"
 
 #: envcan_i18n.dat:8 noaa_i18n.dat:13
 #, kde-format
@@ -734,7 +711,7 @@ msgstr "Ryk"
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Devils"
-msgstr "Rykhvirflar"
+msgstr "Rykstrókar"
 
 #: envcan_i18n.dat:11 noaa_i18n.dat:27
 #, kde-format
@@ -758,7 +735,7 @@ msgstr "Ísþoka"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Patches"
-msgstr "Þokudreif"
+msgstr "Þokuflákar"
 
 #: envcan_i18n.dat:15
 #, kde-format
@@ -794,13 +771,13 @@ msgstr "Mistur"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Blowing Snow"
-msgstr "Mikið snjókóf"
+msgstr "Snjókóf"
 
 #: envcan_i18n.dat:21
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drifting Snow"
-msgstr "Mikill skafrenningur"
+msgstr "Mikill lágur skafrenningur"
 
 #: envcan_i18n.dat:22 noaa_i18n.dat:46
 #, kde-format
@@ -818,31 +795,31 @@ msgstr "Mikil haglél"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Mixed Rain and Drizzle"
-msgstr ""
+msgstr "Mikil blönduð rigning og súld"
 
 #: envcan_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Mixed Rain and Snow Shower"
-msgstr ""
+msgstr "Mikil blönduð rigning og snjóél"
 
 #: envcan_i18n.dat:26 noaa_i18n.dat:62
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain"
-msgstr "Úrfelli"
+msgstr "Úrhelli"
 
 #: envcan_i18n.dat:27
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain and Snow"
-msgstr "Úrfelli og snjókoma"
+msgstr "Úrhelli og snjókoma"
 
 #: envcan_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rainshower"
-msgstr "Miklar skúrir"
+msgstr "Miklar regnskúrir"
 
 #: envcan_i18n.dat:29 noaa_i18n.dat:78
 #, kde-format
@@ -872,13 +849,13 @@ msgstr "Þrumuveður"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm with Hail"
-msgstr ""
+msgstr "Mikið þrumuveður og hagl"
 
 #: envcan_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm with Rain"
-msgstr ""
+msgstr "Mikið þrumuveður og rigning"
 
 #: envcan_i18n.dat:35 noaa_i18n.dat:101
 #, kde-format
@@ -902,49 +879,49 @@ msgstr "Aukin skýjahula"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle"
-msgstr "Dálítil súld"
+msgstr "Lítils háttar súld"
 
 #: envcan_i18n.dat:39 noaa_i18n.dat:111
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle"
-msgstr ""
+msgstr "Lítils háttar frostsúld"
 
 #: envcan_i18n.dat:40 noaa_i18n.dat:115
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain"
-msgstr ""
+msgstr "Lítils háttar frostrigning"
 
 #: envcan_i18n.dat:41 noaa_i18n.dat:121
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain"
-msgstr "Dálítil rigning"
+msgstr "Lítils háttar rigning"
 
 #: envcan_i18n.dat:42
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rainshower"
-msgstr "Dálitlar skúrir"
+msgstr "Lítils háttar skúrir"
 
 #: envcan_i18n.dat:43 noaa_i18n.dat:137
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow"
-msgstr "Dálítil snjókoma"
+msgstr "Lítils háttar snjókoma"
 
 #: envcan_i18n.dat:44
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Pellets"
-msgstr "Dálítill kornsnjór"
+msgstr "Lítils háttar kornsnjór"
 
 #: envcan_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snowshower"
-msgstr "Dálítil snjóél"
+msgstr "Lítils háttar snjóél"
 
 #: envcan_i18n.dat:46
 #, kde-format
@@ -956,37 +933,37 @@ msgstr "Sýnilegar eldingar"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Clear"
-msgstr "Að mestu leyti bjart"
+msgstr "Léttskýjað að mestu"
 
 #: envcan_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Sunny"
-msgstr "Að mestu leyti bjart"
+msgstr "Sólskin að mestu"
 
 #: envcan_i18n.dat:49
 #, kde-format
 msgctxt "weather condition"
 msgid "Mist"
-msgstr "Mistur"
+msgstr "Þokumóða"
 
 #: envcan_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "Mixed Rain and Drizzle"
-msgstr ""
+msgstr "Blönduð rigning og súld"
 
 #: envcan_i18n.dat:51
 #, kde-format
 msgctxt "weather condition"
 msgid "Mixed Rain and Snow Shower"
-msgstr ""
+msgstr "Blönduð rigning og él"
 
 #: envcan_i18n.dat:52 noaa_i18n.dat:164
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy"
-msgstr "Alskýjað"
+msgstr "Skýjað að mestu"
 
 #: envcan_i18n.dat:53
 #, kde-format
@@ -1010,7 +987,7 @@ msgstr "Rigning"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain and Snow"
-msgstr "Regn og snjókoma"
+msgstr "Rigning og snjókoma"
 
 #: envcan_i18n.dat:57
 #, kde-format
@@ -1022,109 +999,109 @@ msgstr "Regnskúrir"
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Drizzle"
-msgstr ""
+msgstr "Súld á síðustu klst."
 
 #: envcan_i18n.dat:59
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Dust or Sand Storm"
-msgstr ""
+msgstr "Moldrok eða sandfok á síðustu klst."
 
 #: envcan_i18n.dat:60
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Fog"
-msgstr ""
+msgstr "Þoka á síðustu klst."
 
 #: envcan_i18n.dat:61
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Freezing Precipitation"
-msgstr ""
+msgstr "Frostregn á síðustu klst."
 
 #: envcan_i18n.dat:62
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Hail"
-msgstr ""
+msgstr "Hagl á síðustu klst."
 
 #: envcan_i18n.dat:63
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rain"
-msgstr ""
+msgstr "Rigning á síðustu klst."
 
 #: envcan_i18n.dat:64
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rain and Snow"
-msgstr ""
+msgstr "Rigning og snjókoma á síðustu klst."
 
 #: envcan_i18n.dat:65
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rainshower"
-msgstr ""
+msgstr "Regnskúr á síðustu klst."
 
 #: envcan_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Snow"
-msgstr ""
+msgstr "Snjókoma á síðustu klst."
 
 #: envcan_i18n.dat:67
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Snowshower"
-msgstr ""
+msgstr "Snjóél á síðustu klst."
 
 #: envcan_i18n.dat:68
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm"
-msgstr ""
+msgstr "Þrumuveður á síðustu klst."
 
 #: envcan_i18n.dat:69
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Hail"
-msgstr ""
+msgstr "Þrumuveður með hagli á síðustu klst."
 
 #: envcan_i18n.dat:70
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Heavy Hail"
-msgstr ""
+msgstr "Þrumuveður með miklu hagli á síðustu klst."
 
 #: envcan_i18n.dat:71
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Heavy Rain"
-msgstr ""
+msgstr "Þrumuveður með úrhelli á síðustu klst."
 
 #: envcan_i18n.dat:72
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Rain"
-msgstr ""
+msgstr "Þrumuveður með rigningu á síðustu klst."
 
 #: envcan_i18n.dat:73
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand or Dust Storm"
-msgstr ""
+msgstr "Sandfok eða moldrok"
 
 #: envcan_i18n.dat:74
 #, kde-format
 msgctxt "weather condition"
 msgid "Severe Sand or Dust Storm"
-msgstr ""
+msgstr "Mikið sandfok eða moldrok"
 
 #: envcan_i18n.dat:75 noaa_i18n.dat:194
 #, kde-format
 msgctxt "weather condition"
 msgid "Shallow Fog"
-msgstr "Þokumóða"
+msgstr "Lágþoka"
 
 #: envcan_i18n.dat:76 noaa_i18n.dat:208
 #, kde-format
@@ -1154,7 +1131,7 @@ msgstr "Kornsnjór"
 #, kde-format
 msgctxt "weather condition"
 msgid "Squalls"
-msgstr ""
+msgstr "Rokur"
 
 #: envcan_i18n.dat:81
 #, kde-format
@@ -1166,41 +1143,37 @@ msgstr "Sólskin"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Hail"
-msgstr ""
+msgstr "Þrumuveður og hagl"
 
 #: envcan_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Rain"
-msgstr ""
+msgstr "Þrumuveður og rigning"
 
 #: envcan_i18n.dat:84
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr "dálítill regnskúr"
+msgstr "Þrumuveður og lítils háttar skúrir"
 
 #: envcan_i18n.dat:85
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr "úrfelli á köflum"
+msgstr "Þrumuveður og úrhellisskúrir"
 
 #: envcan_i18n.dat:86
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Sand or Dust Storm"
-msgstr ""
+msgstr "Þrumuveður og sandfok eða moldrok"
 
 #: envcan_i18n.dat:87
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm without Precipitation"
-msgstr ""
+msgstr "Þrumuveður án úrkomu"
 
 #: envcan_i18n.dat:88
 #, kde-format
@@ -1212,445 +1185,445 @@ msgstr "Hvirfilbylur"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few clouds"
-msgstr ""
+msgstr "Léttskýjað"
 
 #: envcan_i18n.dat:90
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries"
-msgstr ""
+msgstr "Lítils háttar snjómugga"
 
 #: envcan_i18n.dat:91
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries mixed with ice pellets"
-msgstr ""
+msgstr "Lítils háttar snjómugga blandað ískornum"
 
 #: envcan_i18n.dat:92
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries or rain showers"
-msgstr ""
+msgstr "Lítils háttar snjómugga eða skúrir"
 
 #: envcan_i18n.dat:93
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries or thundershowers"
-msgstr ""
+msgstr "Lítils háttar snjómugga eða þrumuveður"
 
 #: envcan_i18n.dat:94
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few rain showers or flurries"
-msgstr ""
+msgstr "Lítils háttar regnskúrir eða snjómugga"
 
 #: envcan_i18n.dat:95
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few rain showers or wet flurries"
-msgstr ""
+msgstr "Lítils háttar skúrir eða slyddumugga"
 
 #: envcan_i18n.dat:96
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers"
-msgstr ""
+msgstr "Lítils háttar skúrir"
 
 #: envcan_i18n.dat:97
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or drizzle"
-msgstr ""
+msgstr "Lítils háttar skúrir eða súld"
 
 #: envcan_i18n.dat:98
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or thundershowers"
-msgstr ""
+msgstr "Lítils háttar skúrir eða þrumuskúrir"
 
 #: envcan_i18n.dat:99
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or thunderstorms"
-msgstr ""
+msgstr "Lítils háttar skúrir eða þrumuveður"
 
 #: envcan_i18n.dat:100
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few thundershowers"
-msgstr ""
+msgstr "Lítils háttar þrumuskúrir"
 
 #: envcan_i18n.dat:101
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few thunderstorms"
-msgstr ""
+msgstr "Lítils háttar þrumuveður"
 
 #: envcan_i18n.dat:102
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few wet flurries"
-msgstr ""
+msgstr "Lítils háttar slyddumugga"
 
 #: envcan_i18n.dat:103
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few wet flurries or rain showers"
-msgstr ""
+msgstr "Lítils háttar slyddumugga eða skúrir"
 
 #: envcan_i18n.dat:104
 #, kde-format
 msgctxt "weather forecast"
 msgid "A mix of sun and cloud"
-msgstr ""
+msgstr "Skýjað með köflum"
 
 #: envcan_i18n.dat:105
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blizzard"
-msgstr "Snjóbylur"
+msgstr "Hríðarbylur"
 
 #: envcan_i18n.dat:106
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle"
-msgstr ""
+msgstr "Horfur á súld"
 
 #: envcan_i18n.dat:107
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "Horfur á súld með frostsúld í bland"
 
 #: envcan_i18n.dat:108
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with rain"
-msgstr ""
+msgstr "Horfur á súld með rigningu í bland"
 
 #: envcan_i18n.dat:109
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle or rain"
-msgstr ""
+msgstr "Horfur á súld eða rigningu"
 
 #: envcan_i18n.dat:110
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries"
-msgstr ""
+msgstr "Horfur á snjómuggu"
 
 #: envcan_i18n.dat:111
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries at times heavy"
-msgstr ""
+msgstr "Horfur á snjómuggu, jafnvel mikilli"
 
 #: envcan_i18n.dat:112
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries mixed with ice pellets"
-msgstr ""
+msgstr "Horfur á snjómuggu með ískornum í bland"
 
 #: envcan_i18n.dat:113
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or ice pellets"
-msgstr ""
+msgstr "Horfur á snjómuggu eða ískornum"
 
 #: envcan_i18n.dat:114
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or rain showers"
-msgstr ""
+msgstr "Horfur á snjómuggu eða skúrum"
 
 #: envcan_i18n.dat:115
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or thundershowers"
-msgstr ""
+msgstr "Horfur á snjómuggu eða þrumuskúrum"
 
 #: envcan_i18n.dat:116
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing drizzle"
-msgstr ""
+msgstr "Horfur á frostsúld"
 
 #: envcan_i18n.dat:117
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain"
-msgstr ""
+msgstr "Horfur á frostrigningu"
 
 #: envcan_i18n.dat:118
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain mixed with snow"
-msgstr ""
+msgstr "Horfur á frostrigningu með snjókomu í bland"
 
 #: envcan_i18n.dat:119
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or rain"
-msgstr ""
+msgstr "Horfur á frostrigningu eða rigningu"
 
 #: envcan_i18n.dat:120
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or snow"
-msgstr ""
+msgstr "Horfur á frostrigningu eða snjókomu"
 
 #: envcan_i18n.dat:121
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu"
 
 #: envcan_i18n.dat:122
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow and blowing snow"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu og skafrenningi"
 
 #: envcan_i18n.dat:123
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu með frostsúld í bland"
 
 #: envcan_i18n.dat:124
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with ice pellets"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu með ískornum"
 
 #: envcan_i18n.dat:125
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with rain"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu með rigningu í bland"
 
 #: envcan_i18n.dat:126
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or freezing rain"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu eða frostrigningu"
 
 #: envcan_i18n.dat:127
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or ice pellets"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu eða ískornum"
 
 #: envcan_i18n.dat:128
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or rain"
-msgstr ""
+msgstr "Horfur á lítils háttar snjókomu eða rigningu"
 
 #: envcan_i18n.dat:129
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light wet snow"
-msgstr ""
+msgstr "Horfur á lítils háttar slyddu"
 
 #: envcan_i18n.dat:130
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain"
-msgstr ""
+msgstr "Horfur á rigningu"
 
 #: envcan_i18n.dat:131
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain at times heavy"
-msgstr ""
+msgstr "Horfur á rigningu, jafnvel úrhelli"
 
 #: envcan_i18n.dat:132
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain mixed with snow"
-msgstr ""
+msgstr "Horfur á rigningu með snjókomu í bland"
 
 #: envcan_i18n.dat:133
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or drizzle"
-msgstr ""
+msgstr "Horfur á rigningu eða súld"
 
 #: envcan_i18n.dat:134
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or freezing rain"
-msgstr ""
+msgstr "Horfur á rigningu eða frostrigningu"
 
 #: envcan_i18n.dat:135
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or snow"
-msgstr ""
+msgstr "Horfur á rigningu eða snjókomu"
 
 #: envcan_i18n.dat:136
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain showers or flurries"
-msgstr ""
+msgstr "Horfur á regnskúrum eða snjómuggu"
 
 #: envcan_i18n.dat:137
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain showers or wet flurries"
-msgstr ""
+msgstr "Horfur á regnskúrum eða slyddumuggu"
 
 #: envcan_i18n.dat:138
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of severe thunderstorms"
-msgstr ""
+msgstr "Horfur á miklu þrumuveðri"
 
 #: envcan_i18n.dat:139
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers"
-msgstr ""
+msgstr "Horfur á regnskúrum"
 
 #: envcan_i18n.dat:140
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy"
-msgstr ""
+msgstr "Horfur á skúrum, jafnvel úrhelli"
 
 #: envcan_i18n.dat:141
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thundershowers"
-msgstr ""
+msgstr "Horfur á skúrum, jafnvel úrhelli eða þrumuskúrum"
 
 #: envcan_i18n.dat:142
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thunderstorms"
-msgstr ""
+msgstr "Horfur á skúrum, jafnvel úrhelli eða þrumuveðri"
 
 #: envcan_i18n.dat:143
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or drizzle"
-msgstr ""
+msgstr "Horfur á skúrum eða súld"
 
 #: envcan_i18n.dat:144
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or thundershowers"
-msgstr ""
+msgstr "Horfur á skúrum eða þrumuskúrum"
 
 #: envcan_i18n.dat:145
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or thunderstorms"
-msgstr ""
+msgstr "Horfur á skúrum eða þrumuveðri"
 
 #: envcan_i18n.dat:146
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow"
-msgstr ""
+msgstr "Horfur á snjókomu"
 
 #: envcan_i18n.dat:147
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow and blizzard"
-msgstr ""
+msgstr "Horfur á snjókomu og hríðarbyl"
 
 #: envcan_i18n.dat:148
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Horfur á snjókomu með frostsúld í bland"
 
 #: envcan_i18n.dat:149
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing rain"
-msgstr ""
+msgstr "Horfur á snjókomu með frostrigningu í bland"
 
 #: envcan_i18n.dat:150
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with rain"
-msgstr ""
+msgstr "Horfur á snjókomu með rigningu"
 
 #: envcan_i18n.dat:151
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow or rain"
-msgstr ""
+msgstr "Horfur á snjókomu eða rigningu"
 
 #: envcan_i18n.dat:152
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow squalls"
-msgstr ""
+msgstr "Horfur á snjórokum"
 
 #: envcan_i18n.dat:153
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thundershowers"
-msgstr ""
+msgstr "Horfur á þrumuskúrum"
 
 #: envcan_i18n.dat:154
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms"
-msgstr ""
+msgstr "Horfur á þrumuveðri"
 
 #: envcan_i18n.dat:155
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms and possible hail"
-msgstr ""
+msgstr "Horfur á þrumuveðri og hugsanlega hagléli"
 
 #: envcan_i18n.dat:156
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries"
-msgstr ""
+msgstr "Horfur á slyddumuggu"
 
 #: envcan_i18n.dat:157
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries at times heavy"
-msgstr ""
+msgstr "Horfur á slyddumuggu, jafnvel mikilli"
 
 #: envcan_i18n.dat:158
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries or rain showers"
-msgstr ""
+msgstr "Horfur á slyddumuggu eða regnskúrum"
 
 #: envcan_i18n.dat:159
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow"
-msgstr ""
+msgstr "Horfur á slyddusnjókomu"
 
 #: envcan_i18n.dat:160
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow mixed with rain"
-msgstr ""
+msgstr "Horfur á slyddusnjókomu með rigningu"
 
 #: envcan_i18n.dat:161
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow or rain"
-msgstr ""
+msgstr "Horfur á slyddusnjókomu eða rigningu"
 
 #: envcan_i18n.dat:162 noaa_i18n.dat:355
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clear"
-msgstr "Bjart"
+msgstr "Léttskýjað"
 
 #: envcan_i18n.dat:163 noaa_i18n.dat:350
 #, kde-format
@@ -1665,20 +1638,16 @@ msgid "Cloudy"
 msgstr "Skýjað"
 
 #: envcan_i18n.dat:165
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
-msgstr "léttskýjað"
+msgstr "Hálfskýjað"
 
 #: envcan_i18n.dat:166
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr "léttskýjað"
+msgstr "Skýjað að mestu"
 
 #: envcan_i18n.dat:167
 #, kde-format
@@ -1702,67 +1671,67 @@ msgstr "Súld"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "Súld með frostsúld í bland"
 
 #: envcan_i18n.dat:171
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with rain"
-msgstr ""
+msgstr "Súld með rigningu í bland"
 
 #: envcan_i18n.dat:172
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or freezing drizzle"
-msgstr ""
+msgstr "Súld eða frostsúld"
 
 #: envcan_i18n.dat:173
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or rain"
-msgstr ""
+msgstr "Súld eða rigning"
 
 #: envcan_i18n.dat:174 noaa_i18n.dat:309
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries"
-msgstr "Snjófjúk"
+msgstr "Snjómugga"
 
 #: envcan_i18n.dat:175
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries at times heavy"
-msgstr ""
+msgstr "Snjómugga, jafnvel snjókóf"
 
 #: envcan_i18n.dat:176
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries at times heavy or rain showers"
-msgstr ""
+msgstr "Snjómugga, jafnvel snjókóf eða regnskúrir"
 
 #: envcan_i18n.dat:177
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries mixed with ice pellets"
-msgstr ""
+msgstr "Snjómugga blönduð ískornum"
 
 #: envcan_i18n.dat:178
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or ice pellets"
-msgstr ""
+msgstr "Snjómugga eða ískorn"
 
 #: envcan_i18n.dat:179
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or rain showers"
-msgstr ""
+msgstr "Snjómugga eða skúrir"
 
 #: envcan_i18n.dat:180
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or thundershowers"
-msgstr ""
+msgstr "Snjómugga eða þrumuveður"
 
 #: envcan_i18n.dat:181 noaa_i18n.dat:336
 #, kde-format
@@ -1774,19 +1743,19 @@ msgstr "Þoka"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog developing"
-msgstr ""
+msgstr "Þoka að myndast"
 
 #: envcan_i18n.dat:183
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog dissipating"
-msgstr ""
+msgstr "Þoka að dreifast"
 
 #: envcan_i18n.dat:184
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog patches"
-msgstr "Þokudreif"
+msgstr "Þokuflákar"
 
 #: envcan_i18n.dat:185
 #, kde-format
@@ -1804,37 +1773,37 @@ msgstr "Frostrigning"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with ice pellets"
-msgstr ""
+msgstr "Frostrigning með ískornum í bland"
 
 #: envcan_i18n.dat:188
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with rain"
-msgstr ""
+msgstr "Frostrigning með rigningu í bland"
 
 #: envcan_i18n.dat:189
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with snow"
-msgstr ""
+msgstr "Frostrigning með snjókomu í bland"
 
 #: envcan_i18n.dat:190
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or ice pellets"
-msgstr ""
+msgstr "Frostrigning eða ískorn"
 
 #: envcan_i18n.dat:191
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or rain"
-msgstr ""
+msgstr "Frostrigning eða rigning"
 
 #: envcan_i18n.dat:192
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or snow"
-msgstr ""
+msgstr "Frostrigning eða snjókoma"
 
 #: envcan_i18n.dat:193
 #, kde-format
@@ -1846,159 +1815,151 @@ msgstr "Ísingarþoka"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice fog developing"
-msgstr ""
+msgstr "Ísingarþoka að myndast"
 
 #: envcan_i18n.dat:195
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice fog dissipating"
-msgstr ""
+msgstr "Ísingarþoka að dreifast"
 
 #: envcan_i18n.dat:196
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Ice Pellets"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
 msgstr "Ískorn"
 
 #: envcan_i18n.dat:197
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr "dálítil frostrigning"
+msgstr "Ískorn blönduð frostrigningu"
 
 #: envcan_i18n.dat:198
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with snow"
-msgstr ""
+msgstr "Ískorn blönduð snjókomu"
 
 #: envcan_i18n.dat:199
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr "dálítil frostrigning"
+msgstr "Ískorn eða frostrigning"
 
 #: envcan_i18n.dat:200
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Ice Pellets"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
-msgstr "Ískorn"
+msgstr "Ískorn eða snjókoma"
 
 #: envcan_i18n.dat:201
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing cloudiness"
-msgstr ""
+msgstr "Aukin skýjahula"
 
 #: envcan_i18n.dat:202
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing clouds"
-msgstr ""
+msgstr "Aukin skýjahula"
 
 #: envcan_i18n.dat:203
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow"
-msgstr "Dálítil snjókoma"
+msgstr "Lítils háttar snjókoma"
 
 #: envcan_i18n.dat:204
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blizzard"
-msgstr ""
+msgstr "Lítils háttar snjókoma og hríðarbylur"
 
 #: envcan_i18n.dat:205
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blizzard and blowing snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma og hríðarbylur og skafrenningur"
 
 #: envcan_i18n.dat:206
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blowing snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma eða skafrenningur"
 
 #: envcan_i18n.dat:207
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma með frostsúld í bland"
 
 #: envcan_i18n.dat:208
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með frostrigningu"
 
 #: envcan_i18n.dat:209
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with ice pellets"
-msgstr ""
+msgstr "Lítils háttar snjókoma með ískornum í bland"
 
 #: envcan_i18n.dat:210
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með rigningu í bland"
 
 #: envcan_i18n.dat:211
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma eða frostsúld"
 
 #: envcan_i18n.dat:212
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma eða frostrigning"
 
 #: envcan_i18n.dat:213
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or ice pellets"
-msgstr ""
+msgstr "Lítils háttar snjókoma eða ískorn"
 
 #: envcan_i18n.dat:214
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma eða rigning"
 
 #: envcan_i18n.dat:215
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light wet snow"
-msgstr ""
+msgstr "Lítils háttar slyddusnjókoma"
 
 #: envcan_i18n.dat:216
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light wet snow or rain"
-msgstr ""
+msgstr "Lítils háttar slyddusnjókoma eða rigning"
 
 #: envcan_i18n.dat:217
 #, kde-format
 msgctxt "weather forecast"
 msgid "Local snow squalls"
-msgstr ""
+msgstr "Staðbundnar snjórokur"
 
 #: envcan_i18n.dat:218
 #, kde-format
 msgctxt "weather forecast"
 msgid "Near blizzard"
-msgstr ""
+msgstr "Næstum hríðarbylur"
 
 #: envcan_i18n.dat:219
 #, kde-format
@@ -2010,349 +1971,349 @@ msgstr "Alskýjað"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle"
-msgstr ""
+msgstr "Súld með köflum"
 
 #: envcan_i18n.dat:221
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "Súld með köflum með frostsúld í bland"
 
 #: envcan_i18n.dat:222
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with rain"
-msgstr ""
+msgstr "Súld með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:223
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or freezing drizzle"
-msgstr ""
+msgstr "Súld eða frostsúld með köflum"
 
 #: envcan_i18n.dat:224
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or rain"
-msgstr ""
+msgstr "Súld eða rigning með köflum"
 
 #: envcan_i18n.dat:225
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle"
-msgstr ""
+msgstr "Frostsúld með köflum"
 
 #: envcan_i18n.dat:226
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or drizzle"
-msgstr ""
+msgstr "Frostsúld eða súld með köflum"
 
 #: envcan_i18n.dat:227
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or rain"
-msgstr ""
+msgstr "Frostsúld eða rigning með köflum"
 
 #: envcan_i18n.dat:228
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain"
-msgstr ""
+msgstr "Frostrigning með köflum"
 
 #: envcan_i18n.dat:229
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with ice pellets"
-msgstr ""
+msgstr "Frostrigning með köflum með ískornum í bland"
 
 #: envcan_i18n.dat:230
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with rain"
-msgstr ""
+msgstr "Frostrigning með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:231
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with snow"
-msgstr ""
+msgstr "Frostrigning með köflum með snjókomu í bland"
 
 #: envcan_i18n.dat:232
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or ice pellets"
-msgstr ""
+msgstr "Frostrigning eða ískorn með köflum"
 
 #: envcan_i18n.dat:233
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or rain"
-msgstr ""
+msgstr "Frostrigning eða rigning með köflum"
 
 #: envcan_i18n.dat:234
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or snow"
-msgstr ""
+msgstr "Frostrigning eða snjókoma með köflum"
 
 #: envcan_i18n.dat:235
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr ""
+msgstr "Ískorn með köflum"
 
 #: envcan_i18n.dat:236
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr ""
+msgstr "Ískorn með köflum með frostrigningu"
 
 #: envcan_i18n.dat:237
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr ""
+msgstr "Ískorn með köflum með snjókomu í bland"
 
 #: envcan_i18n.dat:238
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr ""
+msgstr "Ískorn með köflum eða frostrigning"
 
 #: envcan_i18n.dat:239
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr ""
+msgstr "Ískorn með köflum eða snjókoma"
 
 #: envcan_i18n.dat:240
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum"
 
 #: envcan_i18n.dat:241
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum og hríðarbylur"
 
 #: envcan_i18n.dat:242
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard and blowing snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum og hríðarbylur og skafrenningur"
 
 #: envcan_i18n.dat:243
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blowing snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum og skafrenningur"
 
 #: envcan_i18n.dat:244
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum með frostsúld í bland"
 
 #: envcan_i18n.dat:245
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum með frostrigningu"
 
 #: envcan_i18n.dat:246
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with ice pellets"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum með ískornum í bland"
 
 #: envcan_i18n.dat:247
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:248
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum eða frostsúld"
 
 #: envcan_i18n.dat:249
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum eða frostrigning"
 
 #: envcan_i18n.dat:250
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or ice pellets"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum eða ískorn"
 
 #: envcan_i18n.dat:251
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma með köflum eða rigning"
 
 #: envcan_i18n.dat:252
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow"
-msgstr ""
+msgstr "Lítils háttar slyddusnjókoma með köflum"
 
 #: envcan_i18n.dat:253
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow mixed with rain"
-msgstr ""
+msgstr "Lítils háttar slyddusnjókoma með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:254
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow or rain"
-msgstr ""
+msgstr "Lítils háttar slyddusnjókoma með köflum eða rigning"
 
 #: envcan_i18n.dat:255
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain"
-msgstr ""
+msgstr "Rigning með köflum"
 
 #: envcan_i18n.dat:256
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain mixed with freezing rain"
-msgstr ""
+msgstr "Rigning með köflum með frostrigningu í bland"
 
 #: envcan_i18n.dat:257
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain mixed with snow"
-msgstr ""
+msgstr "Rigning með köflum með snjókomu í bland"
 
 #: envcan_i18n.dat:258
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or drizzle"
-msgstr ""
+msgstr "Rigning með köflum eða súld"
 
 #: envcan_i18n.dat:259
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or freezing rain"
-msgstr ""
+msgstr "Rigning með köflum eða frostrigning"
 
 #: envcan_i18n.dat:260
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or snow"
-msgstr ""
+msgstr "Rigning með köflum eða snjór"
 
 #: envcan_i18n.dat:261
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or thundershowers"
-msgstr ""
+msgstr "Rigning með köflum eða þrumuskúrir"
 
 #: envcan_i18n.dat:262
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or thunderstorms"
-msgstr ""
+msgstr "Rigning með köflum eða þrumuskúrir"
 
 #: envcan_i18n.dat:263
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow"
-msgstr ""
+msgstr "Snjókoma með köflum"
 
 #: envcan_i18n.dat:264
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blizzard"
-msgstr ""
+msgstr "Snjókoma með köflum og hríðarbylur"
 
 #: envcan_i18n.dat:265
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blizzard and blowing snow"
-msgstr ""
+msgstr "Snjókoma með köflum og hríðarbylur og skafrenningur"
 
 #: envcan_i18n.dat:266
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blowing snow"
-msgstr ""
+msgstr "Snjókoma með köflum og skafrenningur"
 
 #: envcan_i18n.dat:267
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Snjókoma með köflum og frostsúld í bland"
 
 #: envcan_i18n.dat:268
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing rain"
-msgstr ""
+msgstr "Snjókoma með köflum með frostrigningu"
 
 #: envcan_i18n.dat:269
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with ice pellets"
-msgstr ""
+msgstr "Snjókoma með köflum með ískornum í bland"
 
 #: envcan_i18n.dat:270
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with rain"
-msgstr ""
+msgstr "Snjókoma með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing drizzle"
-msgstr ""
+msgstr "Snjókoma með köflum eða frostsúld"
 
 #: envcan_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing rain"
-msgstr ""
+msgstr "Snjókoma með köflum eða frostrigning"
 
 #: envcan_i18n.dat:273
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or ice pellets"
-msgstr ""
+msgstr "Snjókoma með köflum eða ískorn"
 
 #: envcan_i18n.dat:274
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or rain"
-msgstr ""
+msgstr "Snjókoma með köflum eða rigning"
 
 #: envcan_i18n.dat:275
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow"
-msgstr ""
+msgstr "Slyddusnjókoma með köflum"
 
 #: envcan_i18n.dat:276
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow mixed with rain"
-msgstr ""
+msgstr "Slyddusnjókoma með köflum með rigningu í bland"
 
 #: envcan_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow or rain"
-msgstr ""
+msgstr "Slyddusnjókoma með köflum eða rigning"
 
 #: envcan_i18n.dat:278 noaa_i18n.dat:321
 #, kde-format
@@ -2364,103 +2325,103 @@ msgstr "Rigning"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli"
 
 #: envcan_i18n.dat:280
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy mixed with freezing rain"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, með frostrigningu"
 
 #: envcan_i18n.dat:281
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy mixed with snow"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, með snjókomu í bland"
 
 #: envcan_i18n.dat:282
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or drizzle"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, eða súld"
 
 #: envcan_i18n.dat:283
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or freezing rain"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, eða frostrigning"
 
 #: envcan_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or snow"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, eða snjókoma"
 
 #: envcan_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or thundershowers"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, eða þrumuskúrir"
 
 #: envcan_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or thunderstorms"
-msgstr ""
+msgstr "Rigning, jafnvel úrhelli, eða þrumuveður"
 
 #: envcan_i18n.dat:287
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain mixed with freezing rain"
-msgstr ""
+msgstr "Rigning með frostrigningu í bland"
 
 #: envcan_i18n.dat:288
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain mixed with snow"
-msgstr ""
+msgstr "Rigning með snjókomu í bland"
 
 #: envcan_i18n.dat:289
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or drizzle"
-msgstr ""
+msgstr "Rigning eða súld"
 
 #: envcan_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or freezing rain"
-msgstr ""
+msgstr "Rigning eða frostrigning"
 
 #: envcan_i18n.dat:291
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or snow"
-msgstr ""
+msgstr "Rigning eða snjór"
 
 #: envcan_i18n.dat:292
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or thundershowers"
-msgstr ""
+msgstr "Rigning eða þrumuskúrir"
 
 #: envcan_i18n.dat:293
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or thunderstorms"
-msgstr ""
+msgstr "Rigning eða þrumuveður"
 
 #: envcan_i18n.dat:294
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain showers or flurries"
-msgstr ""
+msgstr "Skúrir eða snjómugga"
 
 #: envcan_i18n.dat:295
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain showers or wet flurries"
-msgstr ""
+msgstr "Skúrir eða lítils háttar slyddumugga"
 
 #: envcan_i18n.dat:296
 #, kde-format
@@ -2472,37 +2433,37 @@ msgstr "Skúrir"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy"
-msgstr ""
+msgstr "Skúrir, jafnvel úrhelli"
 
 #: envcan_i18n.dat:298
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy or thundershowers"
-msgstr ""
+msgstr "Skúrir, jafnvel úrhelli eða þrumuskúrir"
 
 #: envcan_i18n.dat:299
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy or thunderstorms"
-msgstr ""
+msgstr "Skúrir, jafnvel úrhelli eða þrumuveður"
 
 #: envcan_i18n.dat:300
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or drizzle"
-msgstr ""
+msgstr "Skúrir eða súld"
 
 #: envcan_i18n.dat:301
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or thundershowers"
-msgstr ""
+msgstr "Skúrir eða þrumuskúrir"
 
 #: envcan_i18n.dat:302
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or thunderstorms"
-msgstr ""
+msgstr "Skúrir eða þrumuveður"
 
 #: envcan_i18n.dat:303 noaa_i18n.dat:328
 #, kde-format
@@ -2520,121 +2481,121 @@ msgstr "Snjókoma"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blizzard"
-msgstr ""
+msgstr "Snjókoma og hríðarbylur"
 
 #: envcan_i18n.dat:306
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blizzard and blowing snow"
-msgstr ""
+msgstr "Snjókoma og hríðarbylur og skafrenningur"
 
 #: envcan_i18n.dat:307
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blowing snow"
-msgstr ""
+msgstr "Snjókoma og skafrenningur"
 
 #: envcan_i18n.dat:308
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi"
 
 #: envcan_i18n.dat:309
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy and blizzard"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi og hríðarbylur"
 
 #: envcan_i18n.dat:310
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy and blowing snow"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi og skafrenningur"
 
 #: envcan_i18n.dat:311
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing drizzle"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi og frostsúld í bland"
 
 #: envcan_i18n.dat:312
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing rain"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, og frostrigning"
 
 #: envcan_i18n.dat:313
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with ice pellets"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, og ískorn í bland"
 
 #: envcan_i18n.dat:314
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with rain"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, og rigning í bland"
 
 #: envcan_i18n.dat:315
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or freezing rain"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, eða frostrigning"
 
 #: envcan_i18n.dat:316
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or ice pellets"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, eða ískorn"
 
 #: envcan_i18n.dat:317
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or rain"
-msgstr ""
+msgstr "Snjókoma, jafnvel fannkyngi, eða rigning"
 
 #: envcan_i18n.dat:318
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing drizzle"
-msgstr ""
+msgstr "Snjókoma og frostsúld í bland"
 
 #: envcan_i18n.dat:319
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing rain"
-msgstr ""
+msgstr "Snjókoma og frostrigning"
 
 #: envcan_i18n.dat:320
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with ice pellets"
-msgstr ""
+msgstr "Snjókoma og ískorn í bland"
 
 #: envcan_i18n.dat:321
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with rain"
-msgstr ""
+msgstr "Snjókoma og rigning í bland"
 
 #: envcan_i18n.dat:322
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing drizzle"
-msgstr ""
+msgstr "Snjókoma eða frostsúld"
 
 #: envcan_i18n.dat:323
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing rain"
-msgstr ""
+msgstr "Snjókoma eða frostrigning"
 
 #: envcan_i18n.dat:324
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or ice pellets"
-msgstr ""
+msgstr "Snjókoma eða ískorn"
 
 #: envcan_i18n.dat:325
 #, kde-format
@@ -2646,7 +2607,7 @@ msgstr "Snjókoma eða rigning"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow squalls"
-msgstr ""
+msgstr "Snjórokur"
 
 #: envcan_i18n.dat:327 noaa_i18n.dat:347
 #, kde-format
@@ -2658,101 +2619,101 @@ msgstr "Sólskin"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mainly sunny"
-msgstr "Að mestu leyti bjart"
+msgstr "Sólskin að mestu"
 
 #: envcan_i18n.dat:329
 #, kde-format
 msgctxt "weather forecast"
 msgid "Sunny with cloudy periods"
-msgstr ""
+msgstr "Sólskin og skýjað með köflum"
 
 #: envcan_i18n.dat:330 noaa_i18n.dat:273
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms"
-msgstr ""
+msgstr "Þrumuveður"
 
 #: envcan_i18n.dat:331
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms and possible hail"
-msgstr ""
+msgstr "Þrumuveður og horfur á hagli"
 
 #: envcan_i18n.dat:332
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries"
-msgstr ""
+msgstr "Slyddumugga"
 
 #: envcan_i18n.dat:333
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries at times heavy"
-msgstr ""
+msgstr "Slyddumugga, jafnvel mikil"
 
 #: envcan_i18n.dat:334
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries at times heavy or rain showers"
-msgstr ""
+msgstr "Slyddumugga, jafnvel mikil, eða regnskúrir"
 
 #: envcan_i18n.dat:335
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries or rain showers"
-msgstr ""
+msgstr "Slyddumugga eða regnskúrir"
 
 #: envcan_i18n.dat:336
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow"
-msgstr ""
+msgstr "Slyddusnjókoma"
 
 #: envcan_i18n.dat:337
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow at times heavy"
-msgstr ""
+msgstr "Slyddusnjókoma, jafnvel mikil"
 
 #: envcan_i18n.dat:338
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow at times heavy mixed with rain"
-msgstr ""
+msgstr "Slyddusnjókoma, jafnvel mikil, með rigningu í bland"
 
 #: envcan_i18n.dat:339
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow mixed with rain"
-msgstr ""
+msgstr "Slyddusnjókoma með rigningu í bland"
 
 #: envcan_i18n.dat:340
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow or rain"
-msgstr "Blautur snjór eða regn"
+msgstr "Slyddusnjókoma eða rigning"
 
 #: envcan_i18n.dat:341 noaa_i18n.dat:337
 #, kde-format
 msgctxt "weather forecast"
 msgid "Windy"
-msgstr "Vindasamt"
+msgstr "Strekkingur"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:563
 #, kde-format
 msgid "UK"
-msgstr "UK"
+msgstr "Bretland"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:564
 #, kde-format
 msgid "USA"
-msgstr "USA"
+msgstr "Bandaríkin"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:664
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
-msgstr ""
+msgstr "Í dag"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1010
 #, kde-format
@@ -2813,13 +2774,13 @@ msgstr "Fös"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
-msgstr ""
+msgstr "Gögn frá BBC Weather"
 
 #: ions/dwd/ion_dwd.cpp:686
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "Heimild: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
 #: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
@@ -2850,17 +2811,16 @@ msgstr "nótt"
 #, kde-format
 msgctxt "precipitation total, very little"
 msgid "Trace"
-msgstr "Rekja"
+msgstr "Vottur"
 
 #: ions/envcan/ion_envcan.cpp:1607
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr ""
+msgstr "Gögn frá Environment and Climate Change Canada"
 
 #: ions/noaa/ion_noaa.cpp:633
-#, fuzzy, kde-format
-#| msgid "Data provided by NOAA National Weather Service"
+#, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
 msgstr "Gögn frá NOAA National Weather Service"
@@ -2894,7 +2854,7 @@ msgstr "þoka með ísingu"
 #, kde-format
 msgctxt "weather condition"
 msgid "light drizzle"
-msgstr "dálítil súld"
+msgstr "lítils háttar súld"
 
 #: ions/wetter.com/ion_wettercom.cpp:171
 #, kde-format
@@ -2930,7 +2890,7 @@ msgstr "miðlungs rigning"
 #, kde-format
 msgctxt "weather condition"
 msgid "light freezing rain"
-msgstr "dálítil frostrigning"
+msgstr "lítils háttar frostrigning"
 
 #: ions/wetter.com/ion_wettercom.cpp:180
 #, kde-format
@@ -2942,13 +2902,13 @@ msgstr "frostrigning"
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain snow"
-msgstr "dálítill regn/snjóskúr"
+msgstr "lítils háttar rigning, snjókoma"
 
 #: ions/wetter.com/ion_wettercom.cpp:182
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain snow"
-msgstr "Mikill regn/snjóskúr"
+msgstr "Úrhelli, snjókoma"
 
 #: ions/wetter.com/ion_wettercom.cpp:183
 #, kde-format
@@ -2960,7 +2920,7 @@ msgstr "snjókoma"
 #, kde-format
 msgctxt "weather condition"
 msgid "moderate snow"
-msgstr "miðlungs snjókoma"
+msgstr "snjókoma í meðallagi"
 
 #: ions/wetter.com/ion_wettercom.cpp:188 ions/wetter.com/ion_wettercom.cpp:190
 #, kde-format
@@ -2972,13 +2932,13 @@ msgstr "skúrir"
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow rain showers"
-msgstr "dálítil regn/snjóél"
+msgstr "lítils háttar snjókoma, skúrir"
 
 #: ions/wetter.com/ion_wettercom.cpp:193
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow rain showers"
-msgstr "mikil regn/snjóél"
+msgstr "mikil snjóél og rigning"
 
 #: ions/wetter.com/ion_wettercom.cpp:195
 #, kde-format
@@ -2990,7 +2950,7 @@ msgstr "snjóél"
 #, kde-format
 msgctxt "weather condition"
 msgid "light thunderstorm"
-msgstr "dálítið þrumuveður"
+msgstr "lítils háttar þrumuveður"
 
 #: ions/wetter.com/ion_wettercom.cpp:199
 #, kde-format
@@ -3030,25 +2990,25 @@ msgstr "Nótt"
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds"
-msgstr ""
+msgstr "Fáein ský"
 
 #: noaa_i18n.dat:2
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds and Breezy"
-msgstr ""
+msgstr "Fáein ský og gola"
 
 #: noaa_i18n.dat:3
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds and Windy"
-msgstr ""
+msgstr "Fáein ský og strekkingur"
 
 #: noaa_i18n.dat:4
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds with Haze"
-msgstr ""
+msgstr "Fáein ský og mistur"
 
 #: noaa_i18n.dat:5
 #, kde-format
@@ -3066,73 +3026,73 @@ msgstr "Sandfok"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow in Vicinity"
-msgstr ""
+msgstr "Skafrenningur í grennd"
 
 #: noaa_i18n.dat:9
 #, kde-format
 msgctxt "weather condition"
 msgid "Breezy"
-msgstr "Gjóla"
+msgstr "Gola"
 
 #: noaa_i18n.dat:11
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear and Breezy"
-msgstr ""
+msgstr "Heiðskírt og gola"
 
 #: noaa_i18n.dat:12
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear with Haze"
-msgstr ""
+msgstr "Heiðskírt og mistur"
 
 #: noaa_i18n.dat:14
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Fog"
-msgstr ""
+msgstr "Súld, þoka"
 
 #: noaa_i18n.dat:15
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Fog/Mist"
-msgstr ""
+msgstr "Súld, þoka/þokumóða"
 
 #: noaa_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Ice Pellets"
-msgstr ""
+msgstr "Súld, ískorn"
 
 #: noaa_i18n.dat:17
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Snow"
-msgstr ""
+msgstr "Súld, snjókoma"
 
 #: noaa_i18n.dat:19
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust/Sand Whirls"
-msgstr ""
+msgstr "Moldar-/sandhvirflar"
 
 #: noaa_i18n.dat:20
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust/Sand Whirls in Vicinity"
-msgstr ""
+msgstr "Moldar-/sandhvirflar í grennd"
 
 #: noaa_i18n.dat:21
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Storm"
-msgstr "Rykstormur"
+msgstr "Moldrok"
 
 #: noaa_i18n.dat:22
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Storm in Vicinity"
-msgstr ""
+msgstr "Moldrok í grennd"
 
 #: noaa_i18n.dat:23
 #, kde-format
@@ -3144,55 +3104,55 @@ msgstr "Bjartviðri"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Breezy"
-msgstr ""
+msgstr "Bjart og gola"
 
 #: noaa_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Windy"
-msgstr ""
+msgstr "Bjart og strekkingur"
 
 #: noaa_i18n.dat:26
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair with Haze"
-msgstr ""
+msgstr "Bjart og mistur"
 
 #: noaa_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog in Vicinity"
-msgstr ""
+msgstr "Þoka í grennd"
 
 #: noaa_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog/Mist"
-msgstr "Þoka/Mistur"
+msgstr "Þoka/þokumóða"
 
 #: noaa_i18n.dat:30
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle"
-msgstr ""
+msgstr "Frostsúld"
 
 #: noaa_i18n.dat:31
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle in Vicinity"
-msgstr ""
+msgstr "Frostsúld í grennd"
 
 #: noaa_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Rain"
-msgstr ""
+msgstr "Frostsúld, rigning"
 
 #: noaa_i18n.dat:33
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Snow"
-msgstr ""
+msgstr "Frostsúld, snjókoma"
 
 #: noaa_i18n.dat:34
 #, kde-format
@@ -3204,115 +3164,115 @@ msgstr "Frostþoka"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog in Vicinity"
-msgstr ""
+msgstr "Frostþoka í grennd"
 
 #: noaa_i18n.dat:36
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain"
-msgstr ""
+msgstr "Frostrigning"
 
 #: noaa_i18n.dat:37
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain in Vicinity"
-msgstr ""
+msgstr "Frostrigning í grennd"
 
 #: noaa_i18n.dat:38
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Rain"
-msgstr ""
+msgstr "Frostrigning, rigning"
 
 #: noaa_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Snow"
-msgstr ""
+msgstr "Frostrigning, snjókoma"
 
 #: noaa_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud in Vicinity"
-msgstr ""
+msgstr "Strokkský í grennd"
 
 #: noaa_i18n.dat:43
 #, kde-format
 msgctxt "weather condition"
 msgid "Hail Showers"
-msgstr "Dreifð haglél"
+msgstr "Haglél"
 
 #: noaa_i18n.dat:47
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog"
-msgstr ""
+msgstr "Mikil súld, þoka"
 
 #: noaa_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog/Mist"
-msgstr ""
+msgstr "Mikil súld, þoka/þokumóða"
 
 #: noaa_i18n.dat:49
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Ice Pellets"
-msgstr ""
+msgstr "Mikil súld, ískorn"
 
 #: noaa_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Snow"
-msgstr ""
+msgstr "Mikil súld, snjókoma"
 
 #: noaa_i18n.dat:51
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Dust Storm"
-msgstr ""
+msgstr "Mikið moldrok"
 
 #: noaa_i18n.dat:52
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle"
-msgstr ""
+msgstr "Mikil frostsúld"
 
 #: noaa_i18n.dat:53
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Rain"
-msgstr ""
+msgstr "Mikil frostsúld, rigning"
 
 #: noaa_i18n.dat:54
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Snow"
-msgstr ""
+msgstr "Mikil frostsúld, snjókoma"
 
 #: noaa_i18n.dat:55
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Fog"
-msgstr ""
+msgstr "Mikil frostþoka"
 
 #: noaa_i18n.dat:56
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain"
-msgstr ""
+msgstr "Mikil frostrigning"
 
 #: noaa_i18n.dat:57
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Rain"
-msgstr ""
+msgstr "Mikil frostrigning, rigning"
 
 #: noaa_i18n.dat:58
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Snow"
-msgstr ""
+msgstr "Mikil frostrigning, snjókoma"
 
 #: noaa_i18n.dat:59
 #, kde-format
@@ -3324,589 +3284,589 @@ msgstr "Mikil ískorn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Drizzle"
-msgstr ""
+msgstr "Mikil ískorn, súld"
 
 #: noaa_i18n.dat:61
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Rain"
-msgstr ""
+msgstr "Mikil ískorn, rigning"
 
 #: noaa_i18n.dat:63
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog"
-msgstr ""
+msgstr "Úrhellisrigning, þoka"
 
 #: noaa_i18n.dat:64
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog/Mist"
-msgstr ""
+msgstr "Úrhellisrigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:65
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Drizzle"
-msgstr ""
+msgstr "Úrhellisrigning, frostsúld"
 
 #: noaa_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Rain"
-msgstr ""
+msgstr "Úrhelli, frostrigning"
 
 #: noaa_i18n.dat:67
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Ice Pellets"
-msgstr ""
+msgstr "Úrhelli, ískorn"
 
 #: noaa_i18n.dat:68
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Showers"
-msgstr ""
+msgstr "Úrhelli, skúrir"
 
 #: noaa_i18n.dat:69
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Showers Fog/Mist"
-msgstr ""
+msgstr "Úrhelli, skúrir, þoka/þokumóða"
 
 #: noaa_i18n.dat:70
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Snow"
-msgstr ""
+msgstr "Úrhelli, snjókoma"
 
 #: noaa_i18n.dat:71
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Sand Storm"
-msgstr ""
+msgstr "Mikið sandfok"
 
 #: noaa_i18n.dat:72
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain"
-msgstr ""
+msgstr "Úrhellisskúrir, rigning"
 
 #: noaa_i18n.dat:73
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain Fog/Mist"
-msgstr ""
+msgstr "Úrhellisskúrir, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:74
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow"
-msgstr ""
+msgstr "Úrhellisskúrir, snjókoma"
 
 #: noaa_i18n.dat:75
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog"
-msgstr ""
+msgstr "Miklar skúrir, snjókoma, þoka"
 
 #: noaa_i18n.dat:76
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog/Mist"
-msgstr ""
+msgstr "Miklar skúrir, snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:77
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy small Hail/Snow Pellets"
-msgstr ""
+msgstr "Mikið smágert hagl/kornsnjór"
 
 #: noaa_i18n.dat:79
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Blowing Snow"
-msgstr ""
+msgstr "Mikil snjókoma, skafrenningur"
 
 #: noaa_i18n.dat:80
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog"
-msgstr ""
+msgstr "Mikil snjókoma, þoka"
 
 #: noaa_i18n.dat:81
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog/Mist"
-msgstr ""
+msgstr "Mikil snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:82
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Drizzle"
-msgstr ""
+msgstr "Mikil snjókoma, frostsúld"
 
 #: noaa_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Rain"
-msgstr ""
+msgstr "Mikil snjókoma, frostrigning"
 
 #: noaa_i18n.dat:84
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Grains"
-msgstr ""
+msgstr "Mikill kornsnjór"
 
 #: noaa_i18n.dat:85
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Low Drifting Snow"
-msgstr ""
+msgstr "Mikil snjókoma, lágur skafrenningur"
 
 #: noaa_i18n.dat:86
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Rain"
-msgstr ""
+msgstr "Mikil snjókoma, rigning"
 
 #: noaa_i18n.dat:87
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers"
-msgstr ""
+msgstr "Mikil snjókoma, skúrir"
 
 #: noaa_i18n.dat:88
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog"
-msgstr ""
+msgstr "Mikil snjókoma, skúrir, þoka"
 
 #: noaa_i18n.dat:89
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog/Mist"
-msgstr ""
+msgstr "Mikil snjókoma, skúrir, þoka/þokumóða"
 
 #: noaa_i18n.dat:90
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning"
 
 #: noaa_i18n.dat:91
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, þoka"
 
 #: noaa_i18n.dat:92
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog and Windy"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, þoka og strekkingur"
 
 #: noaa_i18n.dat:93
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:94
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, hagl"
 
 #: noaa_i18n.dat:95
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, hagl, þoka"
 
 #: noaa_i18n.dat:96
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog/Hail"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, hagl, þoka/hagl"
 
 #: noaa_i18n.dat:97
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Haze"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, hagl, mistur"
 
 #: noaa_i18n.dat:98
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Haze"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, mistur"
 
 #: noaa_i18n.dat:99
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Mikið þrumuveður, rigning, smágert hagl/kornsnjór"
 
 #: noaa_i18n.dat:100
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Snow"
-msgstr ""
+msgstr "Mikið þrumuveður, snjókoma"
 
 #: noaa_i18n.dat:103
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets Drizzle"
-msgstr ""
+msgstr "Ískorn, súld"
 
 #: noaa_i18n.dat:104
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets in Vicinity"
-msgstr ""
+msgstr "Ískorn í grennd"
 
 #: noaa_i18n.dat:105
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets Rain"
-msgstr ""
+msgstr "Ískorn, rigning"
 
 #: noaa_i18n.dat:107
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog"
-msgstr ""
+msgstr "Lítils háttar súld, þoka"
 
 #: noaa_i18n.dat:108
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar súld, þoka/þokumóða"
 
 #: noaa_i18n.dat:109
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Ice Pellets"
-msgstr ""
+msgstr "Lítils háttar súld, ískorn"
 
 #: noaa_i18n.dat:110
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Snow"
-msgstr ""
+msgstr "Lítils háttar súld, snjókoma"
 
 #: noaa_i18n.dat:112
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Rain"
-msgstr ""
+msgstr "Lítils háttar frostsúld, rigning"
 
 #: noaa_i18n.dat:113
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Snow"
-msgstr ""
+msgstr "Lítils háttar frostsúld, snjókoma"
 
 #: noaa_i18n.dat:114
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Fog"
-msgstr ""
+msgstr "Lítils háttar frostþoka"
 
 #: noaa_i18n.dat:116
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Rain"
-msgstr ""
+msgstr "Lítils háttar frostrigning, rigning"
 
 #: noaa_i18n.dat:117
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Snow"
-msgstr ""
+msgstr "Lítils háttar frostrigning, snjókoma"
 
 #: noaa_i18n.dat:118
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets"
-msgstr ""
+msgstr "Lítils háttar ískorn"
 
 #: noaa_i18n.dat:119
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Drizzle"
-msgstr ""
+msgstr "Lítils háttar ískorn, súld"
 
 #: noaa_i18n.dat:120
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Rain"
-msgstr ""
+msgstr "Lítils háttar ískorn, rigning"
 
 #: noaa_i18n.dat:122
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain and Breezy"
-msgstr ""
+msgstr "Lítils háttar rigning og gola"
 
 #: noaa_i18n.dat:123
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog"
-msgstr ""
+msgstr "Lítils háttar rigning, þoka"
 
 #: noaa_i18n.dat:124
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:125
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Drizzle"
-msgstr ""
+msgstr "Lítils háttar rigning, súld"
 
 #: noaa_i18n.dat:126
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Rain"
-msgstr ""
+msgstr "Lítils háttar rigning, frostrigning"
 
 #: noaa_i18n.dat:127
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Ice Pellets"
-msgstr ""
+msgstr "Lítils háttar rigning, ískorn"
 
 #: noaa_i18n.dat:128
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Showers"
-msgstr ""
+msgstr "Lítils háttar regnskúrir"
 
 #: noaa_i18n.dat:129
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Showers Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar regnskúrir, þoka/þokumóða"
 
 #: noaa_i18n.dat:130
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Snow"
-msgstr ""
+msgstr "Lítils háttar rigning, snjókoma"
 
 #: noaa_i18n.dat:131
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain"
-msgstr ""
+msgstr "Lítils háttar skúrir, rigning"
 
 #: noaa_i18n.dat:132
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar skúrir, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:133
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow"
-msgstr ""
+msgstr "Lítils háttar skúrir, snjókoma"
 
 #: noaa_i18n.dat:134
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog"
-msgstr ""
+msgstr "Lítils háttar skúrir, snjókoma, þoka"
 
 #: noaa_i18n.dat:135
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar skúrir, snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:136
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Lítils háttar smágert hagl/kornsnjór"
 
 #: noaa_i18n.dat:138
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma, skafrenningur"
 
 #: noaa_i18n.dat:139
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar snókoma, skafrenningur, þoka/þokumóða"
 
 #: noaa_i18n.dat:140
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma, súld"
 
 #: noaa_i18n.dat:141
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog"
-msgstr ""
+msgstr "Lítils háttar snjókoma, þoka"
 
 #: noaa_i18n.dat:142
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:143
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Drizzle"
-msgstr ""
+msgstr "Lítils háttar snjókoma, frostsúld"
 
 #: noaa_i18n.dat:144
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma, frostrigning"
 
 #: noaa_i18n.dat:145
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Grains"
-msgstr "Dálítill kornsnjór"
+msgstr "Lítils háttar kornsnjór"
 
 #: noaa_i18n.dat:146
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Low Drifting Snow"
-msgstr ""
+msgstr "Lítils háttar snjókoma, lágur skafrenningur"
 
 #: noaa_i18n.dat:147
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Rain"
-msgstr ""
+msgstr "Lítils háttar snjókoma, rigning"
 
 #: noaa_i18n.dat:148
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers"
-msgstr "Dálítil snjóél"
+msgstr "Lítils háttar snjóél"
 
 #: noaa_i18n.dat:149
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog"
-msgstr ""
+msgstr "Lítils háttar snjóél, þoka"
 
 #: noaa_i18n.dat:150
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar snjóél, þoka/þokumóða"
 
 #: noaa_i18n.dat:151
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning"
 
 #: noaa_i18n.dat:152
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, þoka"
 
 #: noaa_i18n.dat:153
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:154
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, hagl"
 
 #: noaa_i18n.dat:155
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, hagl, þoka"
 
 #: noaa_i18n.dat:156
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog/Mist"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, hagl, þoka/þokumóða"
 
 #: noaa_i18n.dat:157
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Haze"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, hagl, mistur"
 
 #: noaa_i18n.dat:158
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Haze"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, mistur"
 
 #: noaa_i18n.dat:159
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, rigning, smágert hagl/kornsnjór"
 
 #: noaa_i18n.dat:160
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Snow"
-msgstr ""
+msgstr "Lítils háttar þrumuveður, snjókoma"
 
 #: noaa_i18n.dat:161
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Dust"
-msgstr ""
+msgstr "Moldrenningur"
 
 #: noaa_i18n.dat:162
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Sand"
-msgstr ""
+msgstr "Sandrenningur"
 
 #: noaa_i18n.dat:163
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Snow"
-msgstr ""
+msgstr "Lágur skafrenningur"
 
 #: noaa_i18n.dat:165
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Breezy"
-msgstr ""
+msgstr "Skýjað að mestu og gola"
 
 #: noaa_i18n.dat:166
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Windy"
-msgstr ""
+msgstr "Skýjað að mestu og strekkingur"
 
 #: noaa_i18n.dat:167
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy with Haze"
-msgstr ""
+msgstr "Skýjað að mestu og mistur"
 
 #: noaa_i18n.dat:168
 #, kde-format
@@ -3918,19 +3878,19 @@ msgstr "Alskýjað"
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Breezy"
-msgstr "Alskýjað og gjóla"
+msgstr "Alskýjað og gola"
 
 #: noaa_i18n.dat:170
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Windy"
-msgstr "Alskýjað og vindur"
+msgstr "Alskýjað og strekkingur"
 
 #: noaa_i18n.dat:171
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast with Haze"
-msgstr "Alskýjað með móðu"
+msgstr "Alskýjað og mistur"
 
 #: noaa_i18n.dat:172
 #, kde-format
@@ -3948,27 +3908,25 @@ msgstr "Þokudreif í grennd"
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Breezy"
-msgstr ""
+msgstr "Hálfskýjað og gola"
 
 #: noaa_i18n.dat:176
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Windy"
-msgstr ""
+msgstr "Hálfskýjað og strekkingur"
 
 #: noaa_i18n.dat:177
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy with Haze"
-msgstr ""
+msgstr "Hálfskýjað og mistur"
 
 #: noaa_i18n.dat:178
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Freezing Fog"
+#, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr "Frostþoka"
+msgstr "Frostþoka á köflum"
 
 #: noaa_i18n.dat:179
 #, kde-format
@@ -3980,7 +3938,7 @@ msgstr "Þokudreifar"
 #, kde-format
 msgctxt "weather condition"
 msgid "Patches of Fog in Vicinity"
-msgstr ""
+msgstr "Þokudreifar í grennd"
 
 #: noaa_i18n.dat:181
 #, kde-format
@@ -3992,55 +3950,55 @@ msgstr "Regnþoka"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Fog/Mist"
-msgstr ""
+msgstr "Regnþoka/þokumóða"
 
 #: noaa_i18n.dat:183
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Drizzle"
-msgstr ""
+msgstr "Rigning eða frostsúld"
 
 #: noaa_i18n.dat:184
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Rain"
-msgstr ""
+msgstr "Rigning eða frostrigning"
 
 #: noaa_i18n.dat:185
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Ice Pellets"
-msgstr ""
+msgstr "Rigning eða ískorn"
 
 #: noaa_i18n.dat:186
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers"
-msgstr "Skúrir"
+msgstr "Regnskúrir"
 
 #: noaa_i18n.dat:187
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers Fog/Mist"
-msgstr ""
+msgstr "Regnskúrir og þoka/þokumóða"
 
 #: noaa_i18n.dat:188
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity"
-msgstr ""
+msgstr "Regnskúrir í grennd"
 
 #: noaa_i18n.dat:189
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity Fog/Mist"
-msgstr ""
+msgstr "Regnskúrir í grennd, þoka/þokumóða"
 
 #: noaa_i18n.dat:190
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Snow"
-msgstr ""
+msgstr "Rigning, snjókoma"
 
 #: noaa_i18n.dat:191
 #, kde-format
@@ -4058,133 +4016,133 @@ msgstr "Sandfok"
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand Storm in Vicinity"
-msgstr ""
+msgstr "Sandfok í grennd"
 
 #: noaa_i18n.dat:195
 #, kde-format
 msgctxt "weather condition"
 msgid "Shallow Fog in Vicinity"
-msgstr ""
+msgstr "Lágþoka í grennd"
 
 #: noaa_i18n.dat:196
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Hail"
-msgstr ""
+msgstr "Skúrir, haglél"
 
 #: noaa_i18n.dat:197
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Ice Pellets"
-msgstr ""
+msgstr "Skúrir, ískorn"
 
 #: noaa_i18n.dat:198
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Fog"
-msgstr ""
+msgstr "Skúrir í grennd, þoka"
 
 #: noaa_i18n.dat:199
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Snow"
-msgstr ""
+msgstr "Skúrir í grennd, snjókoma"
 
 #: noaa_i18n.dat:200
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain"
-msgstr ""
+msgstr "Skúrir, rigning"
 
 #: noaa_i18n.dat:201
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain Fog/Mist"
-msgstr ""
+msgstr "Skúrir, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:202
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity"
-msgstr ""
+msgstr "Skúrir, rigning í grennd"
 
 #: noaa_i18n.dat:203
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity Fog/Mist"
-msgstr ""
+msgstr "Skúrir, rigning í grennd, þoka/þokumóða"
 
 #: noaa_i18n.dat:204
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow"
-msgstr ""
+msgstr "Skúrir, snjókoma"
 
 #: noaa_i18n.dat:205
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog"
-msgstr ""
+msgstr "Skúrir, snjókoma, þoka"
 
 #: noaa_i18n.dat:206
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog/Mist"
-msgstr ""
+msgstr "Skúrir, snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:207
 #, kde-format
 msgctxt "weather condition"
 msgid "Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Smágert hagl/kornsnjór"
 
 #: noaa_i18n.dat:210
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Blowing Snow"
-msgstr ""
+msgstr "Snjókoma, skafrenningur"
 
 #: noaa_i18n.dat:211
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Drizzle"
-msgstr "Snjósúld"
+msgstr "Snjókoma, súld"
 
 #: noaa_i18n.dat:212
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog"
-msgstr "Snjóþoka"
+msgstr "Snjókoma, þoka"
 
 #: noaa_i18n.dat:213
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog/Mist"
-msgstr ""
+msgstr "Snjókoma, þoka/þokumóða"
 
 #: noaa_i18n.dat:214
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Drizzle"
-msgstr ""
+msgstr "Snjókoma, snjósúld"
 
 #: noaa_i18n.dat:215
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Rain"
-msgstr ""
+msgstr "Snjókoma, frostrigning"
 
 #: noaa_i18n.dat:217
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Low Drifting Snow"
-msgstr ""
+msgstr "Snjókoma, lágur skafrenningur"
 
 #: noaa_i18n.dat:218
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Rain"
-msgstr ""
+msgstr "Snjókoma, rigning"
 
 #: noaa_i18n.dat:219
 #, kde-format
@@ -4196,259 +4154,259 @@ msgstr "Snjóél"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers Fog"
-msgstr ""
+msgstr "Snjóél, þoka"
 
 #: noaa_i18n.dat:221
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers Fog/Mist"
-msgstr ""
+msgstr "Snjóél, þoka/þokumóða"
 
 #: noaa_i18n.dat:222
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity"
-msgstr ""
+msgstr "Snjóél í grennd"
 
 #: noaa_i18n.dat:223
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog"
-msgstr ""
+msgstr "Snjóél í grennd, þoka"
 
 #: noaa_i18n.dat:224
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog/Mist"
-msgstr ""
+msgstr "Snjóél í grennd, þoka/þokumóða"
 
 #: noaa_i18n.dat:226
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Fog"
-msgstr ""
+msgstr "Þrumuveður, þoka"
 
 #: noaa_i18n.dat:227
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Hail"
-msgstr ""
+msgstr "Þrumuveður, hagl"
 
 #: noaa_i18n.dat:228
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Hail Fog"
-msgstr ""
+msgstr "Þrumuveður, hagl, þoka"
 
 #: noaa_i18n.dat:229
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity"
-msgstr ""
+msgstr "Þrumuveður, mistur í grennd"
 
 #: noaa_i18n.dat:230
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity Hail"
-msgstr ""
+msgstr "Þrumuveður, mistur í grennd, hagl"
 
 #: noaa_i18n.dat:231
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain"
-msgstr ""
+msgstr "Þrumuveður, úrhelli"
 
 #: noaa_i18n.dat:232
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, þoka"
 
 #: noaa_i18n.dat:233
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, þoka/þokumóða"
 
 #: noaa_i18n.dat:234
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, hagl"
 
 #: noaa_i18n.dat:235
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, hagl, þoka"
 
 #: noaa_i18n.dat:236
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, hagl, þoka/þokumóða"
 
 #: noaa_i18n.dat:237
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Haze"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, hagl, mistur"
 
 #: noaa_i18n.dat:238
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Haze"
-msgstr ""
+msgstr "Þrumuveður, úrhelli, mistur"
 
 #: noaa_i18n.dat:239
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Ice Pellets"
-msgstr ""
+msgstr "Þrumuveður, ískorn"
 
 #: noaa_i18n.dat:240
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity"
-msgstr ""
+msgstr "Þrumuveður í grennd"
 
 #: noaa_i18n.dat:241
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Fog"
-msgstr ""
+msgstr "Þrumuveður í grennd, þoka"
 
 #: noaa_i18n.dat:242
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður í grennd, þoka/þokumóða"
 
 #: noaa_i18n.dat:243
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Hail"
-msgstr ""
+msgstr "Þrumuveður í grennd, hagl"
 
 #: noaa_i18n.dat:244
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Hail Haze"
-msgstr ""
+msgstr "Þrumuveður í grennd, hagl, mistur"
 
 #: noaa_i18n.dat:245
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Haze"
-msgstr ""
+msgstr "Þrumuveður í grennd, mistur"
 
 #: noaa_i18n.dat:246
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning"
 
 #: noaa_i18n.dat:247
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Fog"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, þoka"
 
 #: noaa_i18n.dat:248
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:249
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, hagl"
 
 #: noaa_i18n.dat:250
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Fog"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, hagl, þoka"
 
 #: noaa_i18n.dat:251
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, hagl, þoka/þokumóða"
 
 #: noaa_i18n.dat:252
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Haze"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, hagl, mistur"
 
 #: noaa_i18n.dat:253
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Haze"
-msgstr ""
+msgstr "Þrumuveður, lítils háttar rigning, mistur"
 
 #: noaa_i18n.dat:254
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain"
-msgstr ""
+msgstr "Þrumuveður, rigning"
 
 #: noaa_i18n.dat:255
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, rigning, þoka/þokumóða"
 
 #: noaa_i18n.dat:256
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Hail Fog/Mist"
-msgstr ""
+msgstr "Þrumuveður, rigning, hagl, þoka/þokumóða"
 
 #: noaa_i18n.dat:257
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Þrumuveður, rigning, smátt hagl/ískorn"
 
 #: noaa_i18n.dat:258
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Showers in Vicinity"
-msgstr ""
+msgstr "Þrumuveður, skúrir í grennd"
 
 #: noaa_i18n.dat:259
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Showers in Vicinity Hail"
-msgstr ""
+msgstr "Þrumuveður, skúrir í grennd, hagl"
 
 #: noaa_i18n.dat:260
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Small Hail/Snow Pellets"
-msgstr ""
+msgstr "Þrumuveður, smátt hagl/ískorn"
 
 #: noaa_i18n.dat:261
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Snow"
-msgstr ""
+msgstr "Þrumuveður, snjókoma"
 
 #: noaa_i18n.dat:262
 #, kde-format
 msgctxt "weather condition"
 msgid "Tornado/Water Spout"
-msgstr ""
+msgstr "Hvirfilbylur/vatnsstrókur"
 
 #: noaa_i18n.dat:263
 #, kde-format
 msgctxt "weather condition"
 msgid "Windy"
-msgstr "Vindasamt"
+msgstr "Strekkingur"
 
 #: noaa_i18n.dat:265
 #, kde-format
@@ -4466,7 +4424,7 @@ msgstr "Gosaska"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Water Spout"
-msgstr ""
+msgstr "Vatnstrókur"
 
 #: noaa_i18n.dat:268
 #, kde-format
@@ -4484,45 +4442,43 @@ msgstr "Frost"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Thunderstorms"
-msgstr "Mögulegt þrumuveður"
+msgstr "Örlitlar horfur á þrumuveðri"
 
 #: noaa_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Thunderstorms"
-msgstr ""
+msgstr "Horfur á þrumuveðri"
 
 #: noaa_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms Likely"
-msgstr ""
+msgstr "Líkur á þrumuveðri"
 
 #: noaa_i18n.dat:274
 #, kde-format
 msgctxt "weather forecast"
 msgid "Severe Tstms"
-msgstr ""
+msgstr "Mikið þrumuveður"
 
 #: noaa_i18n.dat:275
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr "Möguleg snjókoma"
+msgstr "Örlitlar horfur á snjókomu/slyddu"
 
 #: noaa_i18n.dat:276
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow/Sleet"
-msgstr ""
+msgstr "Horfur á snjókomu/slyddu"
 
 #: noaa_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet Likely"
-msgstr ""
+msgstr "Líkur á snjókomu/slyddu"
 
 #: noaa_i18n.dat:278
 #, kde-format
@@ -4531,24 +4487,22 @@ msgid "Snow/Sleet"
 msgstr "Snjókoma/Slydda"
 
 #: noaa_i18n.dat:279
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu/slyddu"
 
 #: noaa_i18n.dat:280
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Sleet"
-msgstr ""
+msgstr "Horfur á rigningu/slyddu"
 
 #: noaa_i18n.dat:281
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet Likely"
-msgstr ""
+msgstr "Líkur á rigningu/slyddu"
 
 #: noaa_i18n.dat:282
 #, kde-format
@@ -4557,142 +4511,130 @@ msgid "Rain/Sleet"
 msgstr "Rigning/Slydda"
 
 #: noaa_i18n.dat:283
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu/frostrigningu"
 
 #: noaa_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Freezing Rain"
-msgstr ""
+msgstr "Horfur á rigningu/frostrigningu"
 
 #: noaa_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain Likely"
-msgstr ""
+msgstr "Líkur á rigningu/frostrigningu"
 
 #: noaa_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain"
-msgstr "Rigning/Frostrigning"
+msgstr "Rigning/frostrigning"
 
 #: noaa_i18n.dat:287
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Rain Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr "Líkur á rigningu"
+msgstr "Líkur á vetrarveðri"
 
 #: noaa_i18n.dat:288
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix"
-msgstr ""
+msgstr "Vetrarveður"
 
 #: noaa_i18n.dat:289
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu"
 
 #: noaa_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Drizzle"
-msgstr ""
+msgstr "Horfur á frostsúld"
 
 #: noaa_i18n.dat:291
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle Likely"
-msgstr ""
+msgstr "Líkur á frostsúld"
 
 #: noaa_i18n.dat:292
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle"
-msgstr ""
+msgstr "Frostsúld"
 
 #: noaa_i18n.dat:293
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu"
 
 #: noaa_i18n.dat:294
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Rain"
-msgstr ""
+msgstr "Horfur á frostrigningu"
 
 #: noaa_i18n.dat:295
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain Likely"
-msgstr ""
+msgstr "Líkur á frostrigningu"
 
 #: noaa_i18n.dat:296
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain"
-msgstr ""
+msgstr "Frostrigning"
 
 #: noaa_i18n.dat:297
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu"
 
 #: noaa_i18n.dat:298
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Snow"
-msgstr ""
+msgstr "Horfur á rigningu/snjókomu"
 
 #: noaa_i18n.dat:299
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow Likely"
-msgstr ""
+msgstr "Líkur á rigningu/snjókomu"
 
 #: noaa_i18n.dat:300
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow"
-msgstr "Rigning/Snjókoma"
+msgstr "Rigning/snjókoma"
 
 #: noaa_i18n.dat:301
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr "Möguleg snjókoma"
+msgstr "Örlitlar horfur á snjókomu"
 
 #: noaa_i18n.dat:302
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow"
-msgstr "Möguleg snjókoma"
+msgstr "Horfur á snjókomu"
 
 #: noaa_i18n.dat:303
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Likely"
-msgstr "Líkur á sjókomu"
+msgstr "Líkur á snjókomu"
 
 #: noaa_i18n.dat:305
 #, kde-format
@@ -4701,38 +4643,34 @@ msgid "Heavy Snow"
 msgstr "Mikil snjókoma"
 
 #: noaa_i18n.dat:306
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á snjómuggu"
 
 #: noaa_i18n.dat:307
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Flurries"
-msgstr ""
+msgstr "Horfur á snjómuggu"
 
 #: noaa_i18n.dat:308
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries Likely"
-msgstr ""
+msgstr "Líkur á snjómuggu"
 
 #: noaa_i18n.dat:310
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr "Möguleiki á snjóéljum"
+msgstr "Örlitlar horfur á snjóéljum"
 
 #: noaa_i18n.dat:311
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow Showers"
-msgstr "Möguleiki á snjóéljum"
+msgstr "Horfur á snjóéljum"
 
 #: noaa_i18n.dat:312
 #, kde-format
@@ -4747,18 +4685,16 @@ msgid "Snow Showers"
 msgstr "Snjóél"
 
 #: noaa_i18n.dat:314
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "Möguleg súld"
+msgstr "Örlitlar horfur á súld"
 
 #: noaa_i18n.dat:315
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Drizzle"
-msgstr "Möguleg súld"
+msgstr "Horfur á súld"
 
 #: noaa_i18n.dat:316
 #, kde-format
@@ -4767,18 +4703,16 @@ msgid "Drizzle Likely"
 msgstr "Líkur á súld"
 
 #: noaa_i18n.dat:318
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "Möguleg rigning"
+msgstr "Örlitlar horfur á rigningu"
 
 #: noaa_i18n.dat:319
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain"
-msgstr "Möguleg rigning"
+msgstr "Horfur á rigningu"
 
 #: noaa_i18n.dat:320
 #, kde-format
@@ -4793,18 +4727,16 @@ msgid "Heavy Rain"
 msgstr "Úrfelli"
 
 #: noaa_i18n.dat:323
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "Möguleiki á snjóéljum"
+msgstr "Örlitlar horfur á skúrum"
 
 #: noaa_i18n.dat:324
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain Showers"
-msgstr "Möguleiki á skúraveðri"
+msgstr "Horfur á skúraveðri"
 
 #: noaa_i18n.dat:325
 #, kde-format
@@ -4816,7 +4748,7 @@ msgstr "Líkur á skúraveðri"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Showers"
-msgstr "Skúrir"
+msgstr "Regnskúrir"
 
 #: noaa_i18n.dat:327
 #, kde-format
@@ -4840,7 +4772,7 @@ msgstr "Ísingarþoka"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Haze"
-msgstr "Hitamóða"
+msgstr "Mistur"
 
 #: noaa_i18n.dat:332
 #, kde-format
@@ -4858,7 +4790,7 @@ msgstr "Moldrok"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blowing Snow"
-msgstr "Snjóbylur"
+msgstr "Skafrenningur"
 
 #: noaa_i18n.dat:335
 #, kde-format
@@ -4870,13 +4802,13 @@ msgstr "Þétt þoka"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blustery"
-msgstr ""
+msgstr "Stormasamt"
 
 #: noaa_i18n.dat:339
 #, kde-format
 msgctxt "weather forecast"
 msgid "Breezy"
-msgstr "Gjóla"
+msgstr "Gola"
 
 #: noaa_i18n.dat:340
 #, kde-format
@@ -4894,13 +4826,13 @@ msgstr "Heitt"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Cloudy"
-msgstr "Alskýjað"
+msgstr "Skýjað að mestu"
 
 #: noaa_i18n.dat:344
 #, kde-format
 msgctxt "weather forecast"
 msgid "Partly Cloudy"
-msgstr "Skýjað"
+msgstr "Hálfskýjað"
 
 #: noaa_i18n.dat:345
 #, kde-format
@@ -4930,7 +4862,7 @@ msgstr "Þykknar upp"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Gradual Clearing"
-msgstr "Léttir til"
+msgstr "Léttir til smám saman"
 
 #: noaa_i18n.dat:352
 #, kde-format
@@ -4954,7 +4886,7 @@ msgstr "Gengur í sólskin"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr "Að mestu leyti bjart"
+msgstr "Bjart að mestu"
 
 #~ msgctxt "weather condition"
 #~ msgid "weather condition"

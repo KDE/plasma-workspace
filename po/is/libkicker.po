@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2022-08-21 18:42+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-22 16:31+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: plugin/actionlist.cpp:86
 #, kde-format
@@ -35,12 +36,12 @@ msgstr "Bæta á skjáborð"
 #: plugin/actionlist.cpp:151
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Bæta við stiku (viðmótshluti)"
+msgstr "Bæta við skjáborðsstiku (viðmótshluti)"
 
 #: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Pin to Task Manager"
-msgstr "Festa í verkefnastjóra"
+msgstr "Festa á verkefnastjóra"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
 #, kde-format
@@ -61,7 +62,7 @@ msgstr "Breyta forriti…"
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr "Sýsla með eða fjarlægja viðbætur…"
+msgstr "Fjarlægja eða vinna með viðbætur…"
 
 #: plugin/appentry.cpp:309
 #, kde-format
@@ -100,7 +101,7 @@ msgstr "Ekki fela forrit í '%1'"
 #: plugin/computermodel.cpp:92
 #, kde-format
 msgid "Show KRunner"
-msgstr "Birta KRunner"
+msgstr "Sýna KRunner"
 
 #: plugin/computermodel.cpp:96
 #, kde-format
@@ -157,7 +158,7 @@ msgstr "Gleyma forriti"
 #: plugin/recentusagemodel.cpp:332
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Opna umlykjandi möppu"
+msgstr "Opna möppu sem skráin er í"
 
 #: plugin/recentusagemodel.cpp:335
 #, kde-format
@@ -290,17 +291,17 @@ msgstr "Ljúka setu"
 #: plugin/systementry.cpp:272
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "Hefja samhliða setu sem annar notandi"
+msgstr "Byrja samhliða setu sem annar notandi"
 
 #: plugin/systementry.cpp:275
 #, kde-format
 msgid "Suspend to RAM"
-msgstr "Svæfa í minni"
+msgstr "Setja í hvíld í minni"
 
 #: plugin/systementry.cpp:278
 #, kde-format
 msgid "Suspend to disk"
-msgstr "Svæfa á disk"
+msgstr "Setja í dvala á diski"
 
 #: plugin/systementry.cpp:281
 #, kde-format

@@ -2,32 +2,33 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-09-02 10:22+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-22 16:58+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr "Breskt Imperial kerfi"
+msgstr "Breskt Imperial-kerfi"
 
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr "Bandarískt Imperial kerfi"
+msgstr "Bandarískt Imperial-kerfi"
 
 #: exampleutility.cpp:33
 #, kde-format
@@ -39,7 +40,7 @@ msgstr "Metrakerfi"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr "US bréfsefni"
+msgstr "Letter"
 
 #: exampleutility.cpp:49
 #, kde-format
@@ -57,7 +58,7 @@ msgstr "b/t"
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr "Hrifsir og Gleypir Group"
+msgstr "Bóla heilsuvörur hf."
 
 #: exampleutility.cpp:66
 #, kde-format
@@ -117,19 +118,19 @@ msgstr "123456"
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr "Borg/Sveitarfélag"
+msgstr "Borg/sveitarfélag"
 
 #: exampleutility.cpp:78
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr "Hérað/Fylki"
+msgstr "Hérað/fylki"
 
 #: exampleutility.cpp:91
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr "EftirNafn"
+msgstr "Eftirnafn"
 
 #: exampleutility.cpp:92
 #, kde-format
@@ -141,7 +142,7 @@ msgstr "EFTIRNAFN"
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr "EiginNafn"
+msgstr "Eiginnafn"
 
 #: exampleutility.cpp:94
 #, kde-format
@@ -153,19 +154,19 @@ msgstr "N"
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr "EiginNafn"
+msgstr "Eiginnafn"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr "AnnaðNafn"
+msgstr "Annaðnafn"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr "ViðbótaNafn"
+msgstr "Viðbótarnafn"
 
 #: exampleutility.cpp:98
 #, kde-format
@@ -215,7 +216,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr "Gat ekki fundið dæmi um þessa staðfærslu"
+msgstr "Gat ekki fundið dæmi fyrir þennan landsstaðal"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -257,9 +258,10 @@ msgid ""
 "locale generation on non-glibc systems, please refer to your distribution's "
 "manual to install fonts and generate locales"
 msgstr ""
-"Staðfærsla hefur verið stillt, en þessi útgáfa KCM ræður ekki við sjálfvirka "
-"uppsetningu staðfærslna á kerfum sem ekki nota glibc, skoðaðu hjálparskjöl "
-"dreifingarinnar þinnar hvernig eigi að setja upp letur og útbúa staðfærslur"
+"Landsstaðall hefur verið stilltur, en þessi útgáfa KCM ræður ekki við "
+"sjálfvirka uppsetningu landsstaðla á kerfum sem ekki nota glibc, skoðaðu "
+"hjálparskjöl dreifingarinnar þinnar hvernig eigi að setja upp letur og útbúa "
+"landsstaðla"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -271,7 +273,7 @@ msgstr "Finn ekki keyrsluskrána `check-language-support`"
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr "check-language-support brást, frálag: %1"
+msgstr "check-language-support brást, úttak: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
@@ -293,7 +295,7 @@ msgstr "Annað ferli er þegar í keyrslu, prófaðu aftur síðar"
 #: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr "Ekki heimilt að breyta stillingarskrá staðfærslunnar"
+msgstr "Ekki heimilt að breyta grunnstillingaskrá landsstaðals"
 
 #: localegenhelper/localegenhelper.cpp:113
 #, kde-format
@@ -371,7 +373,7 @@ msgstr "Gjaldmiðill"
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
-msgstr "Mælingar"
+msgstr "Mælingeiningar"
 
 #: optionsmodel.cpp:28
 #, kde-format
@@ -422,9 +424,9 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
-"Sé Bandarísk-enska sett fyrir ofan önnur tungumál mun það hafa óæskilegar "
-"afleiðingar í sumum forritum. Ef þú vilt að kerfið þitt noti Bandaríska-"
-"ensku, ættirðu að fjarlægja öll önnur tungumál."
+"Sé bandarísk enska sett fyrir ofan önnur tungumál mun það hafa óæskilegar "
+"afleiðingar í sumum forritum. Ef þú vilt að kerfið þitt noti bandaríska "
+"ensku ættirðu að fjarlægja öll önnur tungumál."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -466,7 +468,7 @@ msgstr "Fjarlægja"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
-msgstr "Ekkert tungumál er stillt"
+msgstr "Ekkert tungumál grunnstillt"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:147
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:167
@@ -499,7 +501,7 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
-"Útbý stuðningsskrár fyrir staðfærslu og tungumál; ekki slökkva á vélinni "
+"Útbý stuðningsskrár fyrir landsstaðla og tungumál; ekki slökkva á vélinni "
 "strax."
 
 #: package/contents/ui/main.qml:61
@@ -511,10 +513,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
-"Stuðningsskrár staðfærslu og tungumála hafa verið útbúnar, en ekki var hægt "
-"að setja upp sérstakar tungumálatengdar leturgerðir. Ef tungumálið þitt "
-"krefst að sérstakt letur sé birt á réttan hátt, þá þarftu að komast að því "
-"um hvaða letur sé að ræða og setja þau upp sjálf/ur."
+"Stuðningsskrár landsstaðla og tungumála hafa verið útbúnar en ekki tókst að "
+"setja sjálfkrafa upp tungumálatengdar leturgerðir. Ef tungumálið þitt krefst "
+"þess að sérstakt letur sé birt á réttan hátt, þá þarftu að komast að því um "
+"hvaða letur sé að ræða og setja það upp sjálf/ur."
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -523,8 +525,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
-"Nauðsynlegar stuðningsskrár fyrir staðfærslu og tungumál hafa verið settar "
-"upp. Núna er öruggt slökkva á vélinni."
+"Nauðsynlegar stuðningsskrár fyrir landsstaðla og tungumál hafa verið settar "
+"upp. Núna er öruggt að slökkva á vélinni."
 
 #: package/contents/ui/main.qml:138
 #, kde-format
@@ -550,7 +552,7 @@ msgstr "Gjaldmiðill"
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgid "Measurements"
-msgstr "Mælingar"
+msgstr "Mælingeiningar"
 
 #: package/contents/ui/main.qml:187
 #, kde-format

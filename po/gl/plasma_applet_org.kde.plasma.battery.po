@@ -74,7 +74,9 @@ msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
 #: package/contents/ui/BrightnessItem.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Placeholder is brightness percentage"
+#| msgid "%1%"
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"

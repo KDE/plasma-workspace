@@ -5,13 +5,13 @@
 # Leonid Kanter <leon@asplinux.ru>, 2008.
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2011.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-02-06 18:10+0300\n"
+"PO-Revision-Date: 2023-01-01 23:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -26,13 +26,12 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "завершить сеанс"
+msgstr "logout;log out;завершить сеанс;выйти"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -40,14 +39,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Завершить текущий сеанс пользователя"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "выключить"
+msgstr "shutdown;shut down;выключить;завершение работы"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -55,14 +52,12 @@ msgid "Turns off the computer"
 msgstr "Выключить компьютер"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "перезапустить"
+msgstr "restart;reboot;перезапустить;перезагрузить"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -70,12 +65,11 @@ msgid "Reboots the computer"
 msgstr "Перезагрузить компьютер"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Заблокировать экран"
+msgstr "lock;lock screen;заблокировать экран"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -83,27 +77,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Заблокировать текущий сеанс"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "новый сеанс"
+msgstr "save;save session;сохранить;сохранить сеанс"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Сохранить текущий сеанс для последующего восстановления"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "переключить пользователя"
+msgstr "switch user;new session;переключить пользователя;новый сеанс"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -111,12 +103,10 @@ msgid "Starts a new session as a different user"
 msgstr "Начать новый сеанс"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "сеансы"
+msgstr "sessions;сеансы"
 
 #: sessionrunner.cpp:84
 #, kde-format
@@ -124,12 +114,10 @@ msgid "Lists all sessions"
 msgstr "Показать все сеансы"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "переключить"
+msgstr "switch;переключить"
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -144,35 +132,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Завершить сеанс"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "выключить"
+msgstr "Выключить"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "перезапустить"
+msgstr "Перезагрузить"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Заблокировать"
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "новый сеанс"
+msgstr "Сохранить сеанс"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -190,10 +173,9 @@ msgid ""
 msgstr ""
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Новый сеанс"
+msgstr "Новый графический сеанс"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

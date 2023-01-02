@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-09-10 11:04+0100\n"
+"PO-Revision-Date: 2022-12-31 16:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -117,11 +117,10 @@ msgid "Until manually disabled"
 msgstr "Until manually disabled"
 
 #: package/contents/ui/FullRepresentation.qml:205
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Automatically hide"
+msgstr "Automatically ends: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -307,20 +306,19 @@ msgstr[0] "%1 unread notification"
 msgstr[1] "%1 unread notifications"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Do not disturb until %1"
+msgstr "Do not disturb until %1; middle-click to exit now"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Do not disturb mode active; middle-click to exit"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Middle-click to enter do not disturb mode"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-18 00:56+0000\n"
-"PO-Revision-Date: 2022-08-24 16:59+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-22 16:30+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -70,7 +71,7 @@ msgstr "Annað…"
 #: ../sddm-theme/Main.qml:448
 #, kde-format
 msgid "Type in Username and Password"
-msgstr "Settu inn notandanafn og lykilorð"
+msgstr "Sláðu inn notandanafn og lykilorð"
 
 #: ../sddm-theme/Main.qml:482
 #, kde-format
@@ -149,7 +150,7 @@ msgstr "Margmiðlunarstýringar:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr "Birta undir aflæsingarkvaðningu"
+msgstr "Sýna undir aflæsingarkvaðningu"
 
 #: contents/lockscreen/LockScreenUi.qml:37
 #, kde-format
@@ -211,17 +212,17 @@ msgstr "Ekkert efni í spilun"
 #: contents/lockscreen/MediaControls.qml:139
 #, kde-format
 msgid "Previous track"
-msgstr "Fyrra spor"
+msgstr "Fyrra lag"
 
 #: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
-msgstr "Spila eða setja efni í bið"
+msgstr "Spila eða setja á pásu"
 
 #: contents/lockscreen/MediaControls.qml:165
 #, kde-format
 msgid "Next track"
-msgstr "Næsta spor"
+msgstr "Næsta lag"
 
 #: contents/logout/Logout.qml:139
 #, kde-format
@@ -233,10 +234,10 @@ msgid_plural ""
 "restarted, those users may lose work."
 msgstr[0] ""
 "Einn annar notandi er ennþá skráður inn. Ef slökkt er á tölvunni eða hún "
-"endurræst, gæti viðkomandi tapað gögnum."
+"endurræst gæti viðkomandi tapað gögnum."
 msgstr[1] ""
 "%1 aðrir notendur eru ennþá skráðir inn. Ef slökkt er á tölvunni eða hún "
-"endurræst, gætu viðkomandi tapað gögnum."
+"endurræst gætu viðkomandi tapað gögnum."
 
 #: contents/logout/Logout.qml:153
 #, kde-format

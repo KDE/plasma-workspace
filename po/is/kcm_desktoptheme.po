@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2011, 2016, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2022-09-02 17:54+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 15:15+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -35,22 +36,22 @@ msgstr "Mistókst að búa til bráðabirgðaskrá."
 #: kcm.cpp:121
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr "Get ekki sótt þema: %1"
+msgstr "Ekki tókst að sækja þemað: %1"
 
 #: kcm.cpp:146
 #, kde-format
 msgid "Theme installed successfully."
-msgstr "Uppsetningu þema er lokið."
+msgstr "Uppsetningu á þema er lokið."
 
 #: kcm.cpp:149 kcm.cpp:155
 #, kde-format
 msgid "Theme installation failed."
-msgstr "Innsetning á þema mistókst."
+msgstr "Uppsetning á þema mistókst."
 
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "Mistókst að fjarlægja þema: %1"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -100,7 +101,7 @@ msgstr "Endurheimta þema"
 #: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
-msgstr "Setja inn úr skrá…"
+msgstr "Setja upp úr skrá…"
 
 #: package/contents/ui/main.qml:179
 #, kde-format
@@ -115,7 +116,7 @@ msgstr "Opna þema"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Þemaskrár (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Þemuskrár (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -124,6 +125,9 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"Með þessu verkfæri geturðu valið þema fyrir núverandi Plasma-setu, án þess "
+"að velja fyrir slysni þema sem er annað hvort ekki til eða sem búið er að "
+"velja nú þegar."
 
 #: plasma-apply-desktoptheme.cpp:35
 #, kde-format
@@ -131,12 +135,15 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Heiti þemans sem þú vilt nota fyrir núverandi Plasma-setu (ef öll slóðin er "
+"sett inn er einungis síðasti hluti hennar notaður)"
 
 #: plasma-apply-desktoptheme.cpp:36
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"Sýna öll þemu sem eru í boði í tölvunni (og hvert þeirra er núverandi þema)"
 
 #: plasma-apply-desktoptheme.cpp:49
 #, kde-format
@@ -144,11 +151,12 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Umbeðið þema \"%1\" er nú þegar valið sem þema fyrir núverandi Plasma-setu."
 
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "Núverandi þema fyrir þessa Plasma-setu var stillt á %1"
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
@@ -156,11 +164,13 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Tókst ekki að finna þemað \"%1\". Þemað þarf að vera einn af eftirfarandi "
+"valkostum: %2"
 
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "Þú ert með eftirfarandi Plasma-þemu í tölvunni þinni:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:47+0000\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2021-10-30 09:14+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr "Kod QR jest zbyt duży, aby go wyświetlić"
 msgid "Clipboard Contents"
 msgstr "Zawartość schowka"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:94
+#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"
@@ -121,7 +121,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: contents/ui/Menu.qml:94
+#: contents/ui/Menu.qml:126
 #, kde-format
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"

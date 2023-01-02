@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2011.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2011-06-20 07:26+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2022-10-18 01:25+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -32,12 +33,12 @@ msgstr "skrá út"
 #: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
-msgstr "Útskráning, hættir í núverandi skjáborðssetu"
+msgstr "Skráir út, hættir í núverandi skjáborðssetu"
 
 #: sessionrunner.cpp:33
 #, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
@@ -75,7 +76,7 @@ msgstr "Læsa skjánum"
 #: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
-msgstr "Læsir núverandi skjáborðssetu og ræsir skjáhvílu"
+msgstr "Læsir núverandi skjáborðssetu og opnar skjáhvílu"
 
 #: sessionrunner.cpp:63
 #, fuzzy, kde-format
@@ -103,7 +104,7 @@ msgstr "skipta um notanda"
 #: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
-msgstr "Hefur nýja skjáborðssetu sem annar notandi"
+msgstr "Byrjar nýja skjáborðssetu sem annar notandi"
 
 #: sessionrunner.cpp:83
 #, fuzzy, kde-format
@@ -143,8 +144,8 @@ msgstr ""
 
 #: sessionrunner.cpp:121
 #, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "slökkva"
@@ -165,15 +166,14 @@ msgstr ""
 
 #: sessionrunner.cpp:151
 #, fuzzy, kde-format
-#| msgid "new session"
+#| msgid "New Session"
 msgid "Save Session"
-msgstr "ný seta"
+msgstr "Ný seta"
 
 #: sessionrunner.cpp:194
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "skipta um notanda"
+msgstr "Skipta um notanda"
 
 #: sessionrunner.cpp:278
 #, kde-format
@@ -207,9 +207,6 @@ msgstr "Ný seta"
 #~ msgid "switch :q:"
 #~ msgstr "skipta :q:"
 
-#~ msgid "new session"
-#~ msgstr "ný seta"
-
 #~ msgctxt "log out command"
 #~ msgid "Logout"
 #~ msgstr "Útskráning"
@@ -217,27 +214,19 @@ msgstr "Ný seta"
 #~ msgid "Restart the computer"
 #~ msgstr "Endurræsa tölvuna"
 
-#, fuzzy
 #~| msgctxt "shutdown computer command"
 #~| msgid "shutdown"
 #~ msgctxt "shut down computer command"
 #~ msgid "shutdown"
 #~ msgstr "slökkva"
 
-#, fuzzy
 #~| msgid "Shutdown the computer"
 #~ msgid "Shut down the computer"
 #~ msgstr "Slökkva á tölvunni"
 
-#, fuzzy
-#~| msgid "new session"
-#~ msgid "Save the session"
-#~ msgstr "ný seta"
-
 #~ msgid "Warning - New Session"
-#~ msgstr "Aðvörun - Ný seta"
+#~ msgstr "Aðvörun - ný seta"
 
-#, fuzzy
 #~| msgid ""
 #~| "<p>You have chosen to open another desktop session.<br />The current "
 #~| "session will be hidden and a new login screen will be displayed.<br />An "
@@ -255,13 +244,12 @@ msgstr "Ný seta"
 #~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
 #~ "switching between sessions.</p>"
 #~ msgstr ""
-#~ "<p>Þú hefur ákveðið að hefja nýja setu í stað þess að halda áfram í "
-#~ "þeirri sem þegar er í gangi.<br />Sú seta verður falin og nýr "
-#~ "innskráningargluggi mun birtast.<br />Einum F-lykli er úthlutað á hverja "
-#~ "setu; F%1 er venjulega fyrir fyrstu setuna, F%2 fyrir þá næstu, o.s.frv. "
-#~ "Þú getur skipt á milli seta með því að ýta í einu á Ctrl, Alt viðkomandi "
-#~ "F-lykil. Að auki hafa KDE Spjaldið og valgluggar Skjáborðsins "
-#~ "valmöguleika til að skipta á milli seta..</p>"
+#~ "<p>Þú hefur ákveðið að byrja aðra skjáborðssetu.<br />Setan sem er í "
+#~ "gangi verður falin og nýr innskráningargluggi mun birtast.<br />Einum F-"
+#~ "lykli er úthlutað á hverja setu; F%1 er venjulega fyrir fyrstu setuna, F"
+#~ "%2 fyrir þá næstu, o.s.frv. Þú getur skipt á milli seta með því að ýta "
+#~ "samtímis á Ctrl, Alt og viðeigandi F-lykil. Að auki eru aðgerðir á KDE "
+#~ "skjáborðsstikunni og í skjáborðsvalmyndum til að skipta á milli seta.</p>"
 
 #~ msgid "&Start New Session"
 #~ msgstr "Hefja nýja &setu"

@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2010, 2015, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-08-25 09:01+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-25 13:02+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -25,12 +26,12 @@ msgstr ""
 #: freespacenotifier.cpp:91
 #, kde-format
 msgid "Configure Warning…"
-msgstr "Stilla aðvaranir…"
+msgstr "Grunnstilla viðvaranir…"
 
 #: freespacenotifier.cpp:95
 #, kde-format
 msgid "Open in Filelight"
-msgstr "Skoða í Filelight"
+msgstr "Opna í Filelight"
 
 #: freespacenotifier.cpp:98
 #, kde-format
@@ -41,25 +42,25 @@ msgstr "Opna í skráastjóra"
 #: freespacenotifier.kcfg:9
 #, kde-format
 msgid "Minimum free space before user starts being notified."
-msgstr "Minnsta laust pláss áður en byrjað er að aðvara notandann."
+msgstr "Minnsta laust pláss áður en byrjað er að vara notandann við."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:15
 #, kde-format
 msgid "Is the free space notification enabled."
-msgstr "Eru aðvaranir vegna plássleysis á diskum virkar."
+msgstr "Eru viðvaranir vegna plássleysis á diskum virkar."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
 #: freespacenotifier_prefs_base.ui:17
 #, kde-format
 msgid "Enable low disk space warning"
-msgstr "Virkja aðvörun vegna lítils diskpláss"
+msgstr "Virkja viðvörun vegna lítils diskpláss"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
 #: freespacenotifier_prefs_base.ui:27
 #, kde-format
 msgid "Warn when free space is below:"
-msgstr "Aðvara þegar laust pláss er undir:"
+msgstr "Vara við þegar laust pláss er minna en:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
 #: freespacenotifier_prefs_base.ui:37

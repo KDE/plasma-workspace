@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 17:43+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-12-07 00:03+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -24,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "gudmundure@gmail.com"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
@@ -39,27 +40,27 @@ msgstr "Staðsetning:"
 #: imagepackage/contents/ui/config.qml:97
 #, kde-format
 msgid "Scaled and Cropped"
-msgstr "Teygt og sniðið af"
+msgstr "Fylla skjá og skera af"
 
 #: imagepackage/contents/ui/config.qml:101
 #, kde-format
 msgid "Scaled"
-msgstr "Teygt"
+msgstr "Fylla skjá"
 
 #: imagepackage/contents/ui/config.qml:105
 #, kde-format
 msgid "Scaled, Keep Proportions"
-msgstr "Teygt, halda hlutföllum"
+msgstr "Fylla skjá, halda hlutföllum"
 
 #: imagepackage/contents/ui/config.qml:109
 #, kde-format
 msgid "Centered"
-msgstr "Miðjað"
+msgstr "Miðja"
 
 #: imagepackage/contents/ui/config.qml:113
 #, kde-format
 msgid "Tiled"
-msgstr "Flísalagt"
+msgstr "Flísaleggja"
 
 #: imagepackage/contents/ui/config.qml:141
 #, kde-format
@@ -74,12 +75,12 @@ msgstr "Móða"
 #: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Solid color"
-msgstr "Heillitaður"
+msgstr "Hreinn litur"
 
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr "Veldu bakgrunnslit"
+msgstr "Velja bakgrunnslit"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
@@ -90,38 +91,39 @@ msgstr "Bæta við mynd…"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"
-msgstr "Ná í nýjar bakgrunnsmyndir..."
+msgstr "Ná í nýtt veggfóður..."
 
 #: imagepackage/contents/ui/main.qml:66
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Opna myndskrá fyrir bakgrunn"
+msgstr "Opna veggfóðursmynd"
 
 #: imagepackage/contents/ui/main.qml:67
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Næsta bakgrunnsmynd"
+msgstr "Næsta veggfóðursmynd"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Opna umlykjandi möppu"
+msgstr "Opna möppu sem skráin er í"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Endurheimta bakgrunnsmynd"
+msgstr "Endurheimta veggfóður"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Fjarlægja bakgrunnsmynd"
+msgstr "Fjarlægja veggfóður"
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
+"Með þessu verkfæri getur þú valið mynd sem veggfóður fyrir Plasma-setuna."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -129,6 +131,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Myndskrá eða uppsettur kpackage-veggfóðurspakki sem þú vilt velja sem "
+"veggfóður fyrir Plasma-setuna"
 
 #: plasma-apply-wallpaperimage.cpp:45
 #, kde-format
@@ -137,22 +141,24 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"Það er stök einföld gæsalöpp í skrárheiti veggfóðursins ('). Hafðu samband "
+"við höfund veggfóðursins til að laga þetta, eða gefðu skránni nýtt heiti: %1"
 
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Villa kom upp þegar reynt var að velja Plasma-veggfóður:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
-msgstr ""
+msgstr "Tókst að stilla veggfóður fyrir öll skjáborð á KPackage-pakkann %1"
 
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Tókst að stilla veggfóður allra skjáborða á myndina %1"
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
@@ -160,16 +166,18 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"Skráin sem átti að velja sem veggfóður er ekki til, eða við getum ekki séð "
+"að hún geti verið veggfóður: %1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
-msgstr "Bakgrunnsmynd sem mælt er með"
+msgstr "Veggfóðursskrá sem mælt er með"
 
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "Mappa með veggfóðursmyndum sem á að sýna sem skyggnusýningu"
 
 #: plugin/imagebackend.cpp:353
 #, kde-format
@@ -179,7 +187,7 @@ msgstr "Opna mynd"
 #: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
-msgstr ""
+msgstr "Myndskrár"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format
@@ -204,7 +212,7 @@ msgstr "Ö til A"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:57
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr "Breytingardagsetning (nýjast fyrst)"
+msgstr "Breytingardagsetning (nýjasta fyrst)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:61
 #, kde-format
@@ -214,12 +222,12 @@ msgstr "Breytingardagsetning (elsta fyrst)"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr "Hópa eftir möppum"
+msgstr "Flokka eftir möppum"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
 #, kde-format
 msgid "Change every:"
-msgstr "Skipta um á:"
+msgstr "Skipta eftir:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
@@ -232,14 +240,14 @@ msgstr[1] "%1 klukkustundir"
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 mínúta"
+msgstr[0] "%1 mínútu"
 msgstr[1] "%1 mínútur"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "%1 sekúnda"
+msgstr[0] "%1 sekúndu"
 msgstr[1] "%1 sekúndur"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
@@ -260,7 +268,7 @@ msgstr "Opna möppu"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr "Engar staðsetningar bakgrunnsmynda eru stilltar"
+msgstr "Engar staðsetningar veggfóðurs eru stilltar"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, kde-format

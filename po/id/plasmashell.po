@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2020, 2022.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2020, 2022, 2023.
 # Linerly <linerly@protonmail.com>, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-16 00:52+0000\n"
-"PO-Revision-Date: 2022-03-14 07:44+0700\n"
+"PO-Revision-Date: 2023-01-02 07:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,7 +89,7 @@ msgstr "file"
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "Daftar opsi yang tersedia untuk tanggapan pengguna"
+msgstr "Daftar opsi yang tersedia untuk umpan balik pengguna"
 
 #: main.cpp:221
 #, kde-format

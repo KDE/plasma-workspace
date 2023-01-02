@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-27 00:45+0000\n"
-"PO-Revision-Date: 2022-08-24 18:28+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-22 16:30+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -62,8 +63,8 @@ msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr ""
-"Listar alla möguleika á kerfishvíld (t.d. svæfa, leggja í dvala) og gerir "
-"kleift að virkja þá"
+"Telur upp alla möguleika á kerfishvíld (t.d. hvíldarstöðu, leggja í dvala) "
+"og gerir kleift að virkja þá"
 
 #: PowerDevilRunner.cpp:57
 #, kde-format
@@ -89,14 +90,14 @@ msgid ""
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
-"Listar möguleika á birtustillingum skjás eða setur stillingar birtustigs á "
-"það sem er tilgreint í leitarstrengnum :q:; t.d. birta skjás í 50 myndi "
-"dimma skjáinn í 50% af mestu birtu"
+"Telur upp möguleika á birtustillingum skjás eða stillir birtustig á það sem "
+"er tilgreint í leitarstrengnum; t.d. birta skjás í 50 myndi dimma skjáinn í "
+"50% af mestu birtu"
 
 #: PowerDevilRunner.cpp:95
 #, kde-format
 msgid "Set Brightness to %1%"
-msgstr "Setja birtustigið á %1"
+msgstr "Stilla birtustigið á %1"
 
 #: PowerDevilRunner.cpp:104
 #, kde-format
@@ -134,7 +135,7 @@ msgstr "Svæfa á disk"
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
-msgstr "birta skjás"
+msgstr "birtustig skjás"
 
 #: PowerDevilRunner.cpp:220
 #, kde-format

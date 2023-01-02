@@ -7,19 +7,20 @@
 # Richard Allen <ra@ra.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2015, 2016, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-08-25 16:16+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 16:26+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -27,12 +28,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Arnar Leósson, Richard Allen, Sveinn í Felli"
+msgstr "Arnar Leósson, Richard Allen, Sveinn í Felli,Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "leosson@frisurf.no, ra@ra.is, sv1@fellsnet.is"
+msgstr "leosson@frisurf.no, ra@ra.is, sv1@fellsnet.is,gudmundure@gmail.com"
 
 #: colors.cpp:233
 #, kde-format
@@ -42,22 +43,22 @@ msgstr "Mistókst að búa til bráðabirgðaskrá."
 #: colors.cpp:246
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "Gat ekki sótt litastefið: %1"
+msgstr "Tókst ekki að sækja litastefið: %1"
 
 #: colors.cpp:264
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Þetta er ekki gild litastefsskrá."
+msgstr "Þetta er ekki litastefsskrá."
 
 #: colors.cpp:283
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "Gat ekki búið til 'color-scheme' gagnamöppuna."
+msgstr "Tókst ekki að búa til 'color-scheme' gagnamöppuna."
 
 #: colors.cpp:290
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr "Gat ekki afritað litastef inn í 'color-scheme' gagnamöppuna."
+msgstr "Tókst ekki að afrita litastef inn í 'color-scheme' gagnamöppuna."
 
 #: colors.cpp:307
 #, kde-format
@@ -83,14 +84,14 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"Síðast notaður sérsniðinn áherslulitur áður en notandi skipti yfir í lit frá "
-"bakgrunnsmynd eða sjálfgefinn lit"
+"Síðast notaði sérstillti áhersluliturinn áður en notandi skipti yfir í lit "
+"frá veggfóðri eða sjálfgefinn lit"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr "Hvort beita eigi áherslulit úr bakgrunnsmynd"
+msgstr "Hvort nota eigi áherslulit úr veggfóðri"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -138,17 +139,21 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"Sýna hnappinn 'Nota' sem vistar breytingar án þess að spyrja (ólíkt "
+"hnappinum 'Vista sem')"
 
 #: editor/kcolorschemeeditor.cpp:41
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr ""
+"Gerir sprettigluggann skammlífan fyrir annan forritsglugga sem hald "
+"tilgreinir"
 
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr "Litastef fannst ekki, nota í staðinn fyrirliggjandi litastef.\n"
+msgstr "Litastef fannst ekki, nota núverandi litastef í staðinn .\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -182,7 +187,7 @@ msgstr "Hnappur"
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Venjulegur texti vals á stöðluðum bakgrunni vals"
+msgstr "Venjulegur texti í vali á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -196,7 +201,7 @@ msgstr "Valinn texti"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "Valinn texti tengla á stöðluðum bakgrunni vals"
+msgstr "Valinn tenglatexti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -212,7 +217,7 @@ msgstr "tengill"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Valinn heimsóttur texti á stöðluðum bakgrunni vals"
+msgstr "Valinn heimsóttur texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -228,7 +233,7 @@ msgstr "heimsótt"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "Valinn virkur texti á stöðluðum bakgrunni vals"
+msgstr "Valinn virkur texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -244,7 +249,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Valinn óvirkur texti á stöðluðum bakgrunni vals"
+msgstr "Valinn óvirkur texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -260,7 +265,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Valinn neikvæður texti á stöðluðum bakgrunni vals"
+msgstr "Valinn neikvæður texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -276,7 +281,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Valinn hlutlaus texti á stöðluðum bakgrunni vals"
+msgstr "Valinn hlutlaus texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -292,7 +297,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Valinn jákvæður texti á stöðluðum bakgrunni vals"
+msgstr "Valinn jákvæður texti á venjulegum bakgrunni í vali"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -308,7 +313,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "Birta venjulegan texta á stöðluðum bakgrunni sýnar"
+msgstr "Venjulegur texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -322,48 +327,48 @@ msgstr "Venjulegur texti"
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "Birta texta tengla á stöðluðum bakgrunni sýnar"
+msgstr "Tenglatexti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "Birta heimsóttan texta á stöðluðum bakgrunni sýnar"
+msgstr "Heimsóttu texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "Birta virkan texta á stöðluðum bakgrunni sýnar"
+msgstr "Virkur texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Birta óvirkan texta á stöðluðum bakgrunni sýnar"
+msgstr "Óvirkur texta í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "Birta neikvæðan texta á stöðluðum bakgrunni sýnar"
+msgstr "Neikvæður texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "Birta hlutlausan texta á stöðluðum bakgrunni sýnar"
+msgstr "Hlutlaus texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "Birta jákvæðan texta á stöðluðum bakgrunni sýnar"
+msgstr "Jákvæður texti í yfirliti á venjulegum bakgrunni yfirlits"
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
-msgstr "Breytanlegt"
+msgstr "Breytilegt"
 
 #: editor/scmeditorcolors.cpp:99
 #, kde-format
@@ -432,7 +437,7 @@ msgstr "Myndbrellur við fókus"
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
-msgstr "Myndbrellur við lyftingu"
+msgstr "Myndbrellur við sveim"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: editor/scmeditorcolors.ui:23
@@ -460,7 +465,7 @@ msgstr "Sameiginlegir litir"
 #, kde-format
 msgctxt "color-sets"
 msgid "View"
-msgstr "Sýn"
+msgstr "Yfirlit"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -544,13 +549,13 @@ msgstr "1"
 #: editor/scmeditorcolors.ui:258
 #, kde-format
 msgid "View Background"
-msgstr "Skoða bakgrunn"
+msgstr "Bakgrunnur yfirlits"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:263
 #, kde-format
 msgid "View Text"
-msgstr "Skoða texta"
+msgstr "Texti yfirlits"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:268
@@ -592,7 +597,7 @@ msgstr "Texti í vali"
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "Val óvirks texta"
+msgstr "Texti í óvirku vali"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
@@ -604,43 +609,43 @@ msgstr "Bakgrunnur vísbendingar"
 #: editor/scmeditorcolors.ui:353
 #, kde-format
 msgid "Tooltip Text"
-msgstr "Texti á vísbendingum"
+msgstr "Texti í vísbendingum"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:358
 #, kde-format
 msgid "Active Titlebar"
-msgstr "Virk titilslá"
+msgstr "Virk titilstika"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:363
 #, kde-format
 msgid "Active Titlebar Text"
-msgstr "Texti virkrar titilslár"
+msgstr "Texti virkrar titilstiku"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
 #, kde-format
 msgid "Active Titlebar Secondary"
-msgstr "Aukalitur texta virkrar titilslár"
+msgstr "Aukalitur texta virkrar titilstiku"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
 #, kde-format
 msgid "Inactive Titlebar"
-msgstr "Óvirk titilslá"
+msgstr "Óvirk titilstika"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:378
 #, kde-format
 msgid "Inactive Titlebar Text"
-msgstr "Texti óvirkrar titilslár"
+msgstr "Texti óvirkrar titilstiku"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
 #, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr "Aukalitur texta óvirkrar titilslár"
+msgstr "Aukalitur texta óvirkrar titilstiku"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -675,7 +680,7 @@ msgstr "Vista litastef"
 #: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "&Veldu heiti fyrir litastef:"
+msgstr "&Sláðu inn heiti fyrir litastef:"
 
 #: editor/scmeditordialog.cpp:139
 #, kde-format
@@ -689,7 +694,7 @@ msgstr ""
 #: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
-msgstr "Þú hefur ekki heimild til að skrifa yfir þettta litastef"
+msgstr "Þú hefur ekki heimild til að skrifa yfir þetta litastef"
 
 #: editor/scmeditordialog.cpp:176
 #, kde-format
@@ -854,7 +859,7 @@ msgstr "Not&a mismunandi liti fyrir óvirkt val"
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "Skyggja flokkaða dálka í l&istum"
+msgstr "Skyggja raðaða dálka í l&istum"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
@@ -1093,7 +1098,7 @@ msgstr "Óvirkur texti á varabakgrunni"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "alternate"
-msgstr "varaleið"
+msgstr "til vara"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
 #: editor/setpreview.ui:283
@@ -1135,7 +1140,7 @@ msgstr ""
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "Fókus á venjulegan bakgrunn"
+msgstr "Fókus á venjulegum bakgrunni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
@@ -1148,13 +1153,13 @@ msgstr "fókus"
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
-msgstr "Þessi eining gerir þér kleift að velja litastef."
+msgstr "Í þessari einingu geturðu valið litastef."
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "Litastefið '%1' er ekki uppsett. Vel sjálfgefið þema í staðinn."
+msgstr "Litastefið '%1' er ekki uppsett. Sjálfgefið þema valið í staðinn."
 
 #: package/contents/ui/main.qml:108
 #, kde-format
@@ -1185,7 +1190,7 @@ msgstr "Úr núverandi litastefi"
 #, kde-format
 msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
-msgstr "Úr núverandi bakgrunnsmynd"
+msgstr "Úr núverandi veggfóðursmynd"
 
 #: package/contents/ui/main.qml:254
 #, kde-format
@@ -1272,7 +1277,7 @@ msgstr "Opna litastef"
 #: package/contents/ui/main.qml:539
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr "Litastefsskemaskrár (*.colors)"
+msgstr "Litastefsskrár (*.colors)"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
@@ -1281,6 +1286,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Með þessu verkfæri geturðu valið litastef fyrir núverandi Plasma-setu, án "
+"þess að velja fyrir slysni litastef sem er annað hvort ekki til eða sem búið "
+"er að velja nú þegar."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1288,6 +1296,8 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Heiti litastefsins sem þú vilt nota fyrir núverandi Plasma-setu (ef öll "
+"slóðin er sett inn er einungis síðasti hluti hennar notaður)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1295,6 +1305,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Sýna öll litastef sem eru í boði í tölvunni (og hvert þeirra er núverandi "
+"þema)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1303,6 +1315,9 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Heiti áherslulitarins sem þú vilt nota. SVG-litaheiti (https://www.w3.org/TR/"
+"SVG11/types.html#ColorKeywords) og hex-litakóðar eru studd. Vísaðu í hex-"
+"kóðann ef einhver möguleiki er á skeljaútvíkkun"
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1310,11 +1325,12 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Umbeðna þemað \"%1\" er nú þegar valið sem þema fyrir núverandi Plasma-setu."
 
 #: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "Það tókst að setja upp litastefið %1 í núverandi Plasma-setu þína"
 
 #: plasma-apply-colorscheme.cpp:103
 #, kde-format
@@ -1322,6 +1338,8 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Þemað \"%1\" fannst ekki. Þemað ætti að vera einn af eftirfarandi valkostum: "
+"%2"
 
 #: plasma-apply-colorscheme.cpp:110
 #, kde-format
@@ -1329,6 +1347,7 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
+"Þér tókst að setja inn tómt litastefsheiti, en slík hegðun er ekki studd."
 
 #: plasma-apply-colorscheme.cpp:114
 #, kde-format
@@ -1336,11 +1355,13 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Skráin %1, sem þú ert að reyna að nota sem litastef, virðist ekki vera "
+"litastef."
 
 #: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr "Tókst að beita áherslulitnum %1"
+msgstr "Tókst að nota áherslulitinn %1"
 
 #: plasma-apply-colorscheme.cpp:139
 #, kde-format

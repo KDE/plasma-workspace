@@ -1,5 +1,5 @@
 # Translation for kcm_regionandlang.po to Euskara/Basque (eu).
-# Copyright (C) 2022, This file is copyright:
+# Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-17 11:42+0100\n"
+"PO-Revision-Date: 2022-12-31 23:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -239,6 +239,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Ezin izan ditu sistemaren tokiko ezarpen erabilgarriak <command>localectl</"
+"command> tresna erabiliz aurkitu. Mesedez, bete honi buruzko akats txosten "
+"bat <link>https://bugs.kde.org</link> lekuan."
 
 #: languagelistmodel.cpp:72
 #, kde-format

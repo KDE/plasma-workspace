@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-08-26 10:08+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic\n"
+"PO-Revision-Date: 2022-10-17 16:01+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -35,7 +36,7 @@ msgstr "Smelltu til að velja staðsetningu þína á kortinu."
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr "Renna að"
+msgstr "Auka aðdrátt"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -64,49 +65,39 @@ msgid "Longitude:"
 msgstr "Breiddargráða:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Næturlitir þýðir að skjárinn sé stilltur á hlýrri liti til að minnka þreytu "
-"í augum og svefntruflanir, á þeim tímum sólarhringsins sem þú kýst."
+msgstr "Bláljósasía stillir skjáinn á hlýrri liti."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
 msgstr "Virkjunartími:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Alltaf slökkt"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Sólarlag til sólarupprásar á núverandi staðsetningu"
+msgstr "Frá sólarlagi til sólarupprásar á núverandi staðsetningu"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Sólarlag til sólarupprásar á handvirkri staðsetningu"
+msgstr "Frá sólarlagi til sólarupprásar á handvirkri staðsetningu"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Sérsniðinn tími"
+msgstr "Sérstilltur tími"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Alltaf á"
+msgstr "Alltaf kveikt á næturlitum"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -121,10 +112,9 @@ msgstr ""
 "services.mozilla.com'>Mozilla-staðsetningarþjónustunnar</link>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Lithitastig næturlita:"
+msgstr "Lithitastig dagslita:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -142,7 +132,7 @@ msgstr "Hlýtt"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Svalt (engin sía)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -151,8 +141,7 @@ msgid "Cool"
 msgstr "Svalt"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "Lithitastig næturlita:"
 
@@ -164,7 +153,7 @@ msgstr "Breiddargráða: %1°   Lengdargráða: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Byrja næturliti kl.:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -174,12 +163,12 @@ msgstr "Inntakssnið: HH:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Byrja dagsliti kl.:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
 msgid "Transition duration:"
-msgstr "Tímalengd millifærslu:"
+msgstr "Tímalengd yfirfærslu:"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
@@ -191,12 +180,12 @@ msgstr[1] "%1 mínútur"
 #: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr "Settu inn mínútur - lágm. 1, hám. 600"
+msgstr "Sláðu inn mínútur - lágm. 1, hám. 600"
 
 #: package/contents/ui/main.qml:393
 #, kde-format
 msgid "Error: Transition time overlaps."
-msgstr "Villa: Millifærslutímar skarast."
+msgstr "Villa: Yfirfærslutímar skarast."
 
 #: package/contents/ui/main.qml:413
 #, kde-format
@@ -205,27 +194,25 @@ msgid "Locating…"
 msgstr "Staðset…"
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Næturlitir byrja að breytast kl. %1 og eru að fullu virkir kl. %2"
+msgstr ""
+"Lithitastig byrjar að breytast í næturtíma kl. %1 og er að fullu virkt kl. %2"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Næturlitir byrja að breytast kl. %1 og eru að fullu virkir kl. %2"
+msgstr ""
+"Lithitastig byrjar að breytast í dagtíma kl. %1 og er að fullu virkt kl. %2"
 
-#, fuzzy
 #~| msgid "This is what Night Color will look like when active."
 #~ msgid "This is what day color temperature will look like when active."
-#~ msgstr "Svona munu næturlitir líta út þegar þeir eru virkir."
+#~ msgstr "Svona munu dagslitir líta út þegar þeir eru virkir."
 
-#, fuzzy
 #~| msgid "This is what Night Color will look like when active."
 #~ msgid "This is what night color temperature will look like when active."
 #~ msgstr "Svona munu næturlitir líta út þegar þeir eru virkir."
