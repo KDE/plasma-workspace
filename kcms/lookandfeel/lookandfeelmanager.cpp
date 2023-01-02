@@ -18,6 +18,8 @@
 #include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QStyle>
+#include <QStyleFactory>
 
 #ifdef HAVE_XCURSOR
 #include "../cursortheme/xcursor/xcursortheme.h"
@@ -175,6 +177,13 @@ void LookAndFeelManager::setBorderlessMaximized(const QString &value)
 void LookAndFeelManager::setWidgetStyle(const QString &style)
 {
     if (style.isEmpty()) {
+        return;
+    }
+
+    // Some global themes use styles that may not be installed.
+    // Test if style can be installed before updating the config.
+    std::unique_ptr<QStyle> testStyle(QStyleFactory::create(style));
+    if (!testStyle) {
         return;
     }
 

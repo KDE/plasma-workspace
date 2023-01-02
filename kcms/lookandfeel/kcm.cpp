@@ -28,8 +28,6 @@
 #include <QQuickWindow>
 #include <QStandardItemModel>
 #include <QStandardPaths>
-#include <QStyle>
-#include <QStyleFactory>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #else
@@ -524,21 +522,12 @@ void KCMLookandFeel::save()
         std::make_pair(LookAndFeelManager::WindowSwitcher, HasWindowSwitcherRole),
         std::make_pair(LookAndFeelManager::SplashScreen, HasSplashRole),
         std::make_pair(LookAndFeelManager::LockScreen, HasLockScreenRole),
+        std::make_pair(LookAndFeelManager::WidgetStyle, HasWidgetStyleRole),
     };
     for (const auto &pair : appearancePairs) {
         if (m_lnf->appearanceToApply().testFlag(pair.first)) {
             appearanceApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
         }
-    }
-    if (m_lnf->appearanceToApply().testFlag(LookAndFeelManager::WidgetStyle)) {
-        // Some global themes use styles that may not be installed.
-        // Test if style can be installed before updating the config.
-        KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
-        KConfigGroup cg(conf, "kdeglobals");
-        std::unique_ptr<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
-        appearanceApplyFlags.setFlag(LookAndFeelManager::WidgetStyle,
-                                     (newStyle != nullptr && m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); // Widget Style isn't in
-        // the loop above since it has all of this extra checking too for it
     }
     m_lnf->setAppearanceToApply(appearanceApplyFlags);
 

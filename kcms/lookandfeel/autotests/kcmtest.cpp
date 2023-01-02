@@ -89,16 +89,20 @@ void KcmTest::cleanupTestCase()
 
 void KcmTest::testWidgetStyle()
 {
+    // We have to use an actual theme name here because setWidgetStyle checks
+    // if the theme can actually be used before it changes the config
     m_KCMLookandFeel->lookAndFeel()->setWidgetStyle(QStringLiteral("Fusion"));
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "KDE");
-    // We have to use an actual theme name here because setWidgetStyle checks
-    // if the theme can actually be used before it changes the config
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString());
 
     KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, "KDE");
+    QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
+
+    // Test that a fake style is not actually written to config
+    m_KCMLookandFeel->lookAndFeel()->setWidgetStyle(QStringLiteral("customStyle"));
     QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 }
 
