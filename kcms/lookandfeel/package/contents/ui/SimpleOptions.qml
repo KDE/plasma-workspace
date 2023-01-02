@@ -13,7 +13,6 @@ import org.kde.kirigami 2.8 as Kirigami
 import org.kde.private.kcms.lookandfeel 1.0 as Private
 
 ColumnLayout {
-    id: main
 
     Kirigami.Heading {
         Layout.fillWidth: true
@@ -31,11 +30,10 @@ ColumnLayout {
         QtControls.CheckBox {
             visible: root.hasAppearance && root.hasLayout
             text: i18n("Appearance settings")
-            checked: kcm.appearanceToApply & Private.LookandFeelManager.AppearanceSettings
-            onToggled: kcm.appearanceToApply ^= Private.LookandFeelManager.AppearanceSettings
-            enabled: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasGlobalThemeRole) //enabled is needed because lblsub can make it invisible
+            checked: kcm.selectedContents & Private.LookandFeelManager.AppearanceSettings
+            onToggled: kcm.selectedContents ^= Private.LookandFeelManager.AppearanceSettings
         }
-        QtControls.Label { //These labels sub in for the checkboxes when they're the only visible checkbox in this page
+        QtControls.Label { // These labels sub in for the checkboxes when they're the only visible checkbox in this page
             Layout.fillWidth: true
             visible: root.hasAppearance && !root.hasLayout
             text: i18nc("List item", "• Appearance settings")
@@ -45,10 +43,8 @@ ColumnLayout {
         QtControls.CheckBox {
             visible: root.hasAppearance && root.hasLayout
             text: i18n("Desktop and window layout")
-            checked: kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings
-            onToggled: kcm.layoutToApply ^= Private.LookandFeelManager.LayoutSettings
-            enabled: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasLayoutSettingsRole) ||
-                view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
+            checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
+            onToggled: kcm.selectedContents ^= Private.LookandFeelManager.LayoutSettings
         }
         QtControls.Label {
             Layout.fillWidth: true

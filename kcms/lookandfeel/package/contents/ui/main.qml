@@ -37,8 +37,7 @@ KCM.GridViewKCM {
         proceedButton.forceActiveFocus()
     }
     function resetCheckboxes() { //This call is used whenever you switch pages (More/Less Options) or trigger the Kirigami Sheet
-        kcm.appearanceToApply = undefined //triggers RESET
-        kcm.layoutToApply = undefined
+        kcm.selectedItems = undefined //triggers RESET
     }
     Connections {
         target: kcm
@@ -170,9 +169,9 @@ KCM.GridViewKCM {
                         globalThemeConfirmSheet.close()
                         view.forceActiveFocus() //Prevent further button presses via keyboard
                     }
-                    enabled: kcm.appearanceToApply & Private.LookandFeelManager.AppearanceSettings ||
-                        kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings ||
-                        kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
+                    enabled: kcm.selectedContents & (Private.LookandFeelManager.AppearanceSettings
+                                                      | Private.LookandFeelManager.LayoutSettings
+                                                      | Private.LookandFeelManager.DesktopLayout)
                 }
                 QtControls.Button {
                     text: i18n("Cancel")

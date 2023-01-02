@@ -36,9 +36,9 @@ ColumnLayout {
                 delegate: QtControls.CheckBox {
                     required property var modelData
                     text: modelData.text
-                    checked: kcm.layoutToApply & modelData.flag
+                    checked: kcm.selectedContents & modelData.flag
                     visible: view.model.data(view.model.index(view.currentIndex, 0), modelData.role)
-                    onToggled: kcm.layoutToApply ^= modelData.flag
+                    onToggled: kcm.selectedContents ^= modelData.flag
                 }
             }
         }
@@ -71,9 +71,9 @@ ColumnLayout {
                 delegate: QtControls.CheckBox {
                     required property var modelData
                     text: modelData.text
-                    checked: kcm.appearanceToApply & modelData.flag
+                    checked: kcm.selectedContents & modelData.flag
                     visible: view.model.data(view.model.index(view.currentIndex, 0), modelData.role)
-                    onToggled: kcm.appearanceToApply ^= modelData.flag
+                    onToggled: kcm.selectedContents ^= modelData.flag
                 }
             }
         }

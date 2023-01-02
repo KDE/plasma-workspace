@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
     SPDX-FileCopyrightText: 2021 Benjamin Port <benjamin.port@enioka.com>
     SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
+    SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -57,6 +58,7 @@
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_lnf(new LookAndFeelManager(this))
+    , m_selectedContents(LookAndFeelManager::AppearanceSettings)
 {
     constexpr char uri[] = "org.kde.private.kcms.lookandfeel";
     qmlRegisterAnonymousType<LookAndFeelSettings>("", 1);
@@ -94,9 +96,6 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
 
     m_model->setItemRoleNames(roles);
     loadModel();
-
-    connect(m_lnf, &LookAndFeelManager::appearanceToApplyChanged, this, &KCMLookandFeel::appearanceToApplyChanged);
-    connect(m_lnf, &LookAndFeelManager::layoutToApplyChanged, this, &KCMLookandFeel::layoutToApplyChanged);
 
     connect(m_lnf, &LookAndFeelManager::refreshServices, this, [](const QStringList &toStop, const QList<KService::Ptr> &toStart) {
         for (const auto &serviceName : toStop) {
@@ -494,25 +493,16 @@ void KCMLookandFeel::save()
     }
 
     // Disable unavailable flags to prevent unintentional applies
+    // TODO: Make this check in LookAndFeelManager
     const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    auto layoutApplyFlags = m_lnf->layoutToApply();
+    auto itemsToApply = m_selectedContents;
     // Layout Options:
-    constexpr std::array layoutPairs{
+    constexpr std::array flagRolePairs{
         std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::TitlebarLayout, HasTitlebarLayoutRole),
         std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::ShellPackage, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
-    };
-    for (const auto &pair : layoutPairs) {
-        if (m_lnf->layoutToApply().testFlag(pair.first)) {
-            layoutApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
-        }
-    }
-    m_lnf->setLayoutToApply(layoutApplyFlags);
-    // Appearance Options:
-    auto appearanceApplyFlags = m_lnf->appearanceToApply();
-    constexpr std::array appearancePairs{
         std::make_pair(LookAndFeelManager::Colors, HasColorsRole),
         std::make_pair(LookAndFeelManager::WindowDecoration, HasWindowDecorationRole),
         std::make_pair(LookAndFeelManager::Icons, HasIconsRole),
@@ -524,15 +514,14 @@ void KCMLookandFeel::save()
         std::make_pair(LookAndFeelManager::LockScreen, HasLockScreenRole),
         std::make_pair(LookAndFeelManager::WidgetStyle, HasWidgetStyleRole),
     };
-    for (const auto &pair : appearancePairs) {
-        if (m_lnf->appearanceToApply().testFlag(pair.first)) {
-            appearanceApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
+    for (const auto &pair : flagRolePairs) {
+        if (m_selectedContents.testFlag(pair.first)) {
+            itemsToApply.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
         }
     }
-    m_lnf->setAppearanceToApply(appearanceApplyFlags);
 
     ManagedConfigModule::save();
-    m_lnf->save(package, m_package);
+    m_lnf->save(package, m_package, itemsToApply);
     m_package.setPath(newLnfPackage);
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }
@@ -543,49 +532,28 @@ void KCMLookandFeel::defaults()
     Q_EMIT showConfirmation();
 }
 
-LookAndFeelManager::AppearanceToApply KCMLookandFeel::appearanceToApply() const
+LookAndFeelManager::Contents KCMLookandFeel::selectedContents() const
 {
-    return m_lnf->appearanceToApply();
+    return m_selectedContents;
 }
 
-void KCMLookandFeel::setAppearanceToApply(LookAndFeelManager::AppearanceToApply items)
+void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
 {
-    m_lnf->setAppearanceToApply(items);
-}
-
-void KCMLookandFeel::resetAppearanceToApply()
-{
-    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    auto applyFlags = appearanceToApply();
-
-    applyFlags.setFlag(LookAndFeelManager::AppearanceSettings, m_model->data(m_model->index(index, 0), HasGlobalThemeRole).toBool());
-
-    m_lnf->setAppearanceToApply(applyFlags); // emits over in lookandfeelmananager
-}
-
-LookAndFeelManager::LayoutToApply KCMLookandFeel::layoutToApply() const
-{
-    return m_lnf->layoutToApply();
-}
-
-void KCMLookandFeel::setLayoutToApply(LookAndFeelManager::LayoutToApply items)
-{
-    m_lnf->setLayoutToApply(items);
-}
-
-void KCMLookandFeel::resetLayoutToApply()
-{
-    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    auto applyFlags = layoutToApply();
-
-    if (m_model->data(m_model->index(index, 0), HasGlobalThemeRole).toBool()) {
-        m_lnf->setLayoutToApply({}); // Don't enable by default if Global Theme is available
+    if (selectedContents() == items) {
         return;
     }
 
-    applyFlags.setFlag(LookAndFeelManager::LayoutSettings, m_model->data(m_model->index(index, 0), HasLayoutSettingsRole).toBool());
+    m_selectedContents = items;
+    Q_EMIT selectedContentsChanged();
+}
 
-    m_lnf->setLayoutToApply(applyFlags); // emits over in lookandfeelmananager
+void KCMLookandFeel::resetSelectedContents()
+{
+    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
+    const bool hasGlobalTheme = m_model->index(index, 0).data(HasGlobalThemeRole).toBool();
+
+    // Disable Layout by default if there are other settings
+    setSelectedContents(hasGlobalTheme ? LookAndFeelManager::AppearanceSettings : LookAndFeelManager::LayoutSettings);
 }
 
 QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)

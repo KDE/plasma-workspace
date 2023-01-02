@@ -95,13 +95,13 @@ int main(int argc, char **argv)
 
         KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData(), QVariantList());
         kcm->load();
-        if (parser.isSet(_resetLayout)) {
-            kcm->setLayoutToApply(LookAndFeelManager::LayoutToApply(LookAndFeelManager::LayoutSettings));
-        } else {
-            kcm->setLayoutToApply({});
-        }
-        kcm->setAppearanceToApply(LookAndFeelManager::AppearanceToApply(LookAndFeelManager::AppearanceSettings));
         kcm->lookAndFeelSettings()->setLookAndFeelPackage(requestedTheme);
+        // By default do not modify the layout, unless explicitely specified
+        LookAndFeelManager::Contents selection = LookAndFeelManager::AppearanceSettings;
+        if (parser.isSet(_resetLayout)) {
+            selection |= LookAndFeelManager::LayoutSettings;
+        }
+        kcm->setSelectedContents(selection);
         // Save manually as we aren't in an event loop
         kcm->lookAndFeelSettings()->save();
         kcm->save();

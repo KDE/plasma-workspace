@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
     SPDX-FileCopyrightText: 2021 Benjamin Port <benjamin.port@enioka.com>
     SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
+    SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -32,9 +33,9 @@ class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
-    Q_PROPERTY(LookAndFeelManager::AppearanceToApply appearanceToApply READ appearanceToApply WRITE setAppearanceToApply NOTIFY appearanceToApplyChanged RESET
-                   resetAppearanceToApply)
-    Q_PROPERTY(LookAndFeelManager::LayoutToApply layoutToApply READ layoutToApply WRITE setLayoutToApply NOTIFY layoutToApplyChanged RESET resetLayoutToApply)
+
+    Q_PROPERTY(LookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
+                   selectedContentsChanged)
 
 public:
     enum Roles {
@@ -95,12 +96,9 @@ public:
 
     bool isSaveNeeded() const override;
 
-    LookAndFeelManager::AppearanceToApply appearanceToApply() const;
-    void setAppearanceToApply(LookAndFeelManager::AppearanceToApply items);
-    void resetAppearanceToApply();
-    LookAndFeelManager::LayoutToApply layoutToApply() const;
-    void setLayoutToApply(LookAndFeelManager::LayoutToApply items);
-    void resetLayoutToApply();
+    LookAndFeelManager::Contents selectedContents() const;
+    void setSelectedContents(LookAndFeelManager::Contents items);
+    void resetSelectedContents();
 
 public Q_SLOTS:
     void load() override;
@@ -109,8 +107,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void showConfirmation();
-    void appearanceToApplyChanged();
-    void layoutToApplyChanged();
+    void selectedContentsChanged();
 
 private:
     // List only packages which provide at least one of the components
@@ -121,6 +118,8 @@ private:
     void cursorsChanged(const QString &name);
 
     LookAndFeelManager *const m_lnf;
+
+    LookAndFeelManager::Contents m_selectedContents;
 
     QStandardItemModel *m_model;
     KPackage::Package m_package;
