@@ -16,6 +16,14 @@ Kirigami.OverlaySheet {
     title: i18nc("@title", "Launch Feedback")
 
     contentItem: ColumnLayout {
+        spacing: Kirigami.Units.largeSpacing
+
+        QQC2.Label {
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 20
+            text: i18nc("@info:usagetip", "Configure the animations played while an application is launching.")
+            wrapMode: Text.Wrap
+        }
+
         Kirigami.FormLayout {
             id: formLayout
 
@@ -33,8 +41,8 @@ Kirigami.OverlaySheet {
             QQC2.RadioButton {
                 id: busyCursorDisabled
 
-                Kirigami.FormData.label: i18nc("@label", "Cursor:")
-                text: i18nc("@option:radio", "No Feedback")
+                Kirigami.FormData.label: i18nc("@label", "Cursor feedback:")
+                text: i18nc("@option:radio No cursor feedback when launching apps", "None")
                 checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
                 enabled: !formLayout.cursorImmutable
                 QQC2.ButtonGroup.group: busyCursorGroup
@@ -73,14 +81,10 @@ Kirigami.OverlaySheet {
                 }
             }
 
-            Item {
-                Kirigami.FormData.isSection: true
-            }
-
             QQC2.CheckBox {
                 id: taskManagerNotification
 
-                Kirigami.FormData.label: i18nc("@label", "Task Manager:")
+                Kirigami.FormData.label: i18nc("@label", "Task Manager feedback:")
 
                 text: i18nc("@option:check", "Enable animation")
 
@@ -94,10 +98,14 @@ Kirigami.OverlaySheet {
                 }
             }
 
+            Item {
+                Kirigami.FormData.isSection: true
+            }
+
             QQC2.SpinBox {
                 id: notificationTimeout
                 Layout.preferredWidth: notificationTimeoutMetrics.implicitWidth + leftPadding + rightPadding
-                Kirigami.FormData.label: i18nc("@label", "Stop animation after:")
+                Kirigami.FormData.label: i18nc("@label", "Stop animations after:")
 
                 enabled: !kcm.launchFeedbackSettings.isCursorTimeoutImmutable || !kcm.launchFeedbackSettings.isTaskbarTimeoutImmutable
                 from: 1
