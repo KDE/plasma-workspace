@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <KLocalizedString>
 #include <QObject>
 
 class LocaleGeneratorBase : public QObject
@@ -20,4 +21,13 @@ Q_SIGNALS:
     void success();
     void needsFont();
     void userHasToGenerateManually(const QString &reason);
+
+protected:
+    static inline QString defaultManuallyGenerateMessage()
+    {
+        return i18nc("@info:warning",
+                     "Locale has been configured, but this KCM currently "
+                     "doesn't support auto locale generation on your system, "
+                     "please refer to your distribution's manual to install fonts and generate locales");
+    }
 };

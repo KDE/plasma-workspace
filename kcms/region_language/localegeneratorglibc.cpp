@@ -28,5 +28,17 @@ void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
         return;
     }
     qCDebug(KCM_REGIONANDLANG) << "send polkit request";
-    m_interface->enableLocales(list);
+    auto reply = m_interface->enableLocales(list);
+    if (reply.isError()) {
+        Q_EMIT userHasToGenerateManually(defaultManuallyGenerateMessage());
+    }
+
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        if (watcher->isError()) {
+            Q_EMIT userHasToGenerateManually(defaultManuallyGenerateMessage());
+        }
+        watcher->deleteLater();
+    });
 }
