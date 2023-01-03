@@ -54,8 +54,8 @@ WaylandStartupTasksModel::Private::Private(WaylandStartupTasksModel *q)
 
 void WaylandStartupTasksModel::Private::init()
 {
-    configWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("klaunchrc")));
-    QObject::connect(configWatcher.data(), &KConfigWatcher::configChanged, q, [this]() {
+    configWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("klaunchrc"), KConfig::NoGlobals));
+    QObject::connect(configWatcher.data(), &KConfigWatcher::configChanged, q, [this] {
         loadConfig();
     });
 
