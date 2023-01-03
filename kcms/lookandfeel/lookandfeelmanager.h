@@ -65,11 +65,13 @@ public:
 
     void setMode(Mode mode);
     /**
-     * Apply the theme represented by package, with oldPackage being the currently active package.
-     * Effects depend upon the Mode of this object. If Mode is Defaults, oldPackage is ignored.
-     * @p selectionMask filters the package contents that will be applied.
+     * Apply the theme represented by @p package, with @p previousPackage being the currently active package.
+     * Effects depend upon the Mode of this object. If Mode is Defaults, @p previousPackage is ignored.
+     * @p applyMask filters the package contents that will be applied.
      */
-    void save(const KPackage::Package &package, const KPackage::Package &oldPackage, Contents selectionMask = AllSettings);
+    void save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents applyMask = AllSettings);
+
+    Contents packageContents(const KPackage::Package &package) const;
 
     QString colorSchemeFile(const QString &schemeName) const;
 

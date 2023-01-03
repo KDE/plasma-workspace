@@ -217,6 +217,13 @@ void KcmTest::testDesktopSwitcher()
 
 void KcmTest::testKCMSave()
 {
+    // TODO: Previous bussiness code was effectively filtering every item from
+    // getting save, so the values would remain those set in the previous tests.
+    // This is the simpler fix to emulate the old behavior.
+    // Ideally we would test for the real items in the default theme or better,
+    // in a custom-made test package.
+    m_KCMLookandFeel->setSelectedContents(LookAndFeelManager::Empty);
+
     m_KCMLookandFeel->save();
 
     // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)

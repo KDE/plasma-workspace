@@ -492,36 +492,8 @@ void KCMLookandFeel::save()
         return;
     }
 
-    // Disable unavailable flags to prevent unintentional applies
-    // TODO: Make this check in LookAndFeelManager
-    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    auto itemsToApply = m_selectedContents;
-    // Layout Options:
-    constexpr std::array flagRolePairs{
-        std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::TitlebarLayout, HasTitlebarLayoutRole),
-        std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::ShellPackage, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::Colors, HasColorsRole),
-        std::make_pair(LookAndFeelManager::WindowDecoration, HasWindowDecorationRole),
-        std::make_pair(LookAndFeelManager::Icons, HasIconsRole),
-        std::make_pair(LookAndFeelManager::PlasmaTheme, HasPlasmaThemeRole),
-        std::make_pair(LookAndFeelManager::Cursors, HasCursorsRole),
-        std::make_pair(LookAndFeelManager::Fonts, HasFontsRole),
-        std::make_pair(LookAndFeelManager::WindowSwitcher, HasWindowSwitcherRole),
-        std::make_pair(LookAndFeelManager::SplashScreen, HasSplashRole),
-        std::make_pair(LookAndFeelManager::LockScreen, HasLockScreenRole),
-        std::make_pair(LookAndFeelManager::WidgetStyle, HasWidgetStyleRole),
-    };
-    for (const auto &pair : flagRolePairs) {
-        if (m_selectedContents.testFlag(pair.first)) {
-            itemsToApply.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
-        }
-    }
-
     ManagedConfigModule::save();
-    m_lnf->save(package, m_package, itemsToApply);
+    m_lnf->save(package, m_package, m_selectedContents);
     m_package.setPath(newLnfPackage);
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }

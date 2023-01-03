@@ -27,6 +27,31 @@
 #include <X11/Xcursor/Xcursor.h>
 #endif
 
+namespace
+{
+// Helper methods to retrieve wheter a certain group contains any of a list of possible entries
+
+bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QStringList &entries)
+{
+    // Navigate through the group hierarchy
+    QStringList groups = groupPath.split(QLatin1Char('/'));
+    KConfigGroup cg(config, groups.takeAt(0));
+    for (const QString &group : groups) {
+        cg = KConfigGroup(&cg, group);
+    }
+
+    return std::any_of(entries.cbegin(), entries.cend(), [cg](const QString &entry) {
+        return !cg.readEntry(entry, QString()).isEmpty();
+    });
+}
+
+bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QString &entry)
+{
+    return configProvides(config, groupPath, QStringList{entry});
+}
+
+} // Anonymouse namespace
+
 LookAndFeelManager::LookAndFeelManager(QObject *parent)
     : QObject(parent)
     , m_data(new LookAndFeelData(this))
@@ -39,6 +64,52 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
 LookAndFeelSettings *LookAndFeelManager::settings() const
 {
     return m_data->settings();
+}
+
+LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage::Package &pkg) const
+{
+    Contents contents = Empty;
+
+    contents.setFlag(SplashScreen, !pkg.filePath("splashmainscript").isEmpty());
+    contents.setFlag(LockScreen, !pkg.filePath("lockscreenmainscript").isEmpty());
+
+    contents.setFlag(DesktopLayout, !pkg.filePath("layouts").isEmpty());
+
+    // TODO: Those seem unused... are deprecated?
+    contents.setFlag(RunCommand, !pkg.filePath("runcommandmainscript").isEmpty());
+    contents.setFlag(LogOutScript, !pkg.filePath("logoutmainscript").isEmpty());
+
+    if (!pkg.filePath("layoutdefaults").isEmpty()) {
+        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("layoutdefaults"));
+        contents.setFlag(TitlebarLayout, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"ButtonsOnLeft", "ButtonsOnRight"}));
+    }
+
+    if (!pkg.filePath("defaults").isEmpty()) {
+        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
+
+        contents.setFlag(Colors, configProvides(conf, "kdeglobals/General", "ColorScheme") || !pkg.filePath("colors").isEmpty());
+        contents.setFlag(WidgetStyle, configProvides(conf, "kdeglobals/KDE", "widgetStyle"));
+        contents.setFlag(Icons, configProvides(conf, "kdeglobals/Icons", "Theme"));
+
+        contents.setFlag(PlasmaTheme, configProvides(conf, "plasmarc/Theme", "name"));
+        contents.setFlag(Cursors, configProvides(conf, "kcminputrc/Mouse", "cursorTheme"));
+
+        contents.setFlag(WindowSwitcher, configProvides(conf, "kwinrc/WindowSwitcher", "LayoutName"));
+        contents.setFlag(DesktopSwitcher, configProvides(conf, "kwinrc/DesktopSwitcher", "LayoutName"));
+        contents.setFlag(WindowDecoration, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"library", "NoPlugin"}));
+
+        contents.setFlag(Fonts,
+                         configProvides(conf, "kdeglobals/WM", {"font", "fixed", "smallestReadableFont", "toolBarFont", "menuFont"})
+                             || configProvides(conf, "kdeglobals/General", "activeFont"));
+
+        contents.setFlag(WindowPlacement, configProvides(conf, "kwinrc/Windows", "Placement"));
+        contents.setFlag(ShellPackage, configProvides(conf, "plasmashellrc/Shell", "ShellPackage"));
+
+        // TODO: Currently managed together within the "DesktopLayout" content
+        // contents.setFlag(Autostart, configProvides(conf, "Autostart", "Services"));
+    }
+
+    return contents;
 }
 
 void LookAndFeelManager::setSplashScreen(const QString &theme)
@@ -358,8 +429,11 @@ QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
     return QString();
 }
 
-void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents itemsToApply)
+void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents applyMask)
 {
+    // The items to apply are the package contents filtered with the user selection mask
+    const Contents itemsToApply = packageContents(package) & applyMask;
+
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                               QStringLiteral("/PlasmaShell"),
