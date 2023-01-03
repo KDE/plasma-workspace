@@ -243,6 +243,22 @@ QString KCMRegionAndLang::toGlibcLocale(const QString &lang)
     }
 }
 
+QString KCMRegionAndLang::toUTF8Locale(const QString &locale)
+{
+    if (locale.contains(QLatin1String("UTF-8"))) {
+        return locale;
+    }
+
+    if (locale.contains(QLatin1Char('@'))) {
+        // uz_UZ@cyrillic to uz_UZ.UTF-8@cyrillic
+        auto localeDup = locale;
+        localeDup.replace(QLatin1Char('@'), QLatin1String(".UTF-8@"));
+        return localeDup;
+    }
+
+    return locale + QLatin1String(".UTF-8");
+}
+
 std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 {
     std::unordered_map<QString, QString> localeMap;
@@ -281,7 +297,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             // if we have one to one match, use that. Eg. en_US to en_US
             auto fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), plasmaLocale);
             if (fullMatch != prefixedLocales.end()) {
-                localeMap.insert({plasmaLocale, *fullMatch + ".UTF-8"});
+                localeMap.insert({plasmaLocale, toUTF8Locale(*fullMatch)});
                 continue;
             }
 
@@ -289,7 +305,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             auto mainLocale = plasmaLocale + "_" + plasmaLocale.toUpper();
             fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), mainLocale);
             if (fullMatch != prefixedLocales.end()) {
-                localeMap.insert({plasmaLocale, *fullMatch + ".UTF-8"});
+                localeMap.insert({plasmaLocale, toUTF8Locale(*fullMatch)});
                 continue;
             }
 
@@ -324,7 +340,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
                 }
                 i++;
             }
-            localeMap.insert({plasmaLocale, prefixedLocales[closestMatchIndex] + ".UTF-8"});
+            localeMap.insert({plasmaLocale, toUTF8Locale(prefixedLocales[closestMatchIndex])});
         }
     }
     return localeMap;

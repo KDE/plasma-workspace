@@ -55,6 +55,7 @@ private:
     std::unordered_map<QString, QString> constructGlibcLocaleMap();
     static QString failedFindLocalesMessage();
     static QString localeFileDirPath();
+    static QString toUTF8Locale(const QString &locale);
 
     QHash<QString, QString> m_cachedFlags;
 
