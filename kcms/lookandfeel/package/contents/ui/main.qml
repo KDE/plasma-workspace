@@ -17,8 +17,17 @@ import org.kde.private.kcms.lookandfeel 1.0 as Private
 
 KCM.GridViewKCM {
     id: root
+
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
+    readonly property bool hasAppearance: currentThemeRole(Private.KCMLookandFeel.HasGlobalThemeRole)
+    readonly property bool hasLayout: currentThemeRole(Private.KCMLookandFeel.HasLayoutSettingsRole)
+                                        || currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
+    readonly property bool showLayoutInfo: currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
+
+    function currentThemeRole(role) {
+        return view.model.data(view.model.index(view.currentIndex, 0), role)
+    }
     function showConfirmation() { //Show the Kirigami Sheet
         if (stackSwitcher.depth !== 1) {
             stackSwitcher.pop();
@@ -80,7 +89,7 @@ KCM.GridViewKCM {
     Kirigami.OverlaySheet {
         id: globalThemeConfirmSheet
         title: i18nc("Confirmation question about applying the Global Theme - %1 is the Global Theme's name",
-                     "Apply %1?", view.model.data(view.model.index(view.currentIndex, 0), Qt.Display))
+                     "Apply %1?", currentThemeRole(Qt.Display))
         QtControls.StackView {
             id: stackSwitcher
             initialItem: simpleOptions
@@ -100,7 +109,7 @@ KCM.GridViewKCM {
                 QtControls.Button {
                     text: stackSwitcher.depth === 1 ? i18n("Choose what to apply…") : i18n("Show fewer options…")
                     icon.name: stackSwitcher.depth === 1 ? "settings-configure" : "go-previous"
-                    enabled: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasGlobalThemeRole)
+                    enabled: currentThemeRole(Private.KCMLookandFeel.HasGlobalThemeRole)
                     onClicked: {
                         if (stackSwitcher.depth === 1) {
                             stackSwitcher.push(moreOptions);

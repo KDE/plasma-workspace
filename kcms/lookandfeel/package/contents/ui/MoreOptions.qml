@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
+    SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -12,8 +13,6 @@ import org.kde.kirigami 2.8 as Kirigami
 import org.kde.private.kcms.lookandfeel 1.0 as Private
 
 ColumnLayout {
-    id: subscreen
-
     Kirigami.FormLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
@@ -22,37 +21,16 @@ ColumnLayout {
 
         ColumnLayout {
             Kirigami.FormData.label: i18n("Layout settings:")
-
-            visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasLayoutSettingsRole)
-                        || view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
-
-            QtControls.CheckBox { //FIXME: Once we have decided the fate of these checkboxes
-                //(make them GUI selectable, or absorb them into other values like DesktopLayout)
-                //we can then move this checkbox into the below repeater:
-                // DesktopSwitcher, WindowPlacement, ShellPackage
-                id: resetCheckbox
-                Kirigami.FormData.label: i18n("Layout settings:")
-                text: i18n("Desktop layout")
-                checked: kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
-                onCheckedChanged: { //NOTE: onCheckedChanged is used here to make sure the other checkboxes
-                    //it sets as well do not get inconsistently set - see fixme above
-                    if (checked) {
-                        kcm.layoutToApply |= Private.LookandFeelManager.DesktopLayout
-                        kcm.layoutToApply |= Private.LookandFeelManager.DesktopSwitcher
-                        kcm.layoutToApply |= Private.LookandFeelManager.WindowPlacement
-                        kcm.layoutToApply |= Private.LookandFeelManager.ShellPackage
-                    } else {
-                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopLayout
-                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopSwitcher
-                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.WindowPlacement
-                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.ShellPackage
-                    }
-                }
-                visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
-            }
-
+            visible: root.hasLayout
             Repeater {
                 model: [
+                    { text: i18n("Desktop layout"),
+                      role: Private.KCMLookandFeel.HasDesktopLayoutRole,
+                      flag: Private.LookandFeelManager.DesktopLayout
+                            | Private.LookandFeelManager.DesktopSwitcher
+                            | Private.LookandFeelManager.WindowPlacement
+                            | Private.LookandFeelManager.ShellPackage
+                    },
                     { text: i18n("Titlebar Buttons layout"), role: Private.KCMLookandFeel.HasTitlebarLayoutRole, flag: Private.LookandFeelManager.TitlebarLayout },
                 ]
                 delegate: QtControls.CheckBox {
@@ -66,17 +44,17 @@ ColumnLayout {
         }
         QtControls.Label {
             Layout.fillWidth: true
+            visible: root.showLayoutInfo
             text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             font: Kirigami.Theme.smallFont
-            visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
             color: Kirigami.Theme.neutralTextColor
         }
 
         ColumnLayout {
             Kirigami.FormData.label: i18n("Appearance settings:")
-            visible:  view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasGlobalThemeRole)
+            visible: root.hasAppearance
             Repeater {
                 model: [
                     { text: i18n("Colors"), role: Private.KCMLookandFeel.HasColorsRole, flag: Private.LookandFeelManager.Colors },
