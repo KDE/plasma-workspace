@@ -26,10 +26,13 @@ void TestRunnerModel::testQuery()
     std::unique_ptr<RunnerModel> model = std::make_unique<RunnerModel>();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(model.get()));
     QSignalSpy countChangedSpy(model.get(), &RunnerModel::countChanged);
+    QSignalSpy queryFinishedSpy(model.get(), &RunnerModel::queryFinished);
 
     // Searching for a really basic string should at least show some results.
     model->setQuery(QStringLiteral("a"));
-    QTRY_VERIFY(model->count() > 0);
+
+    queryFinishedSpy.wait();
+    QVERIFY(model->count() > 0);
     QCOMPARE(countChangedSpy.count(), 1);
     QCOMPARE(model->count(), model->rowCount());
 
@@ -44,9 +47,7 @@ void TestRunnerModel::testQuery()
     auto previousCount = model->count();
     model->setQuery(QStringLiteral("something_that_really_shouldn't_return_any_results"));
 
-    // Changing a query runs an internal timer that delays query execution. As
-    // there's nothing we can wait for here, just wait a short moment.
-    QTest::qWait(500);
+    queryFinishedSpy.wait();
 
     QCOMPARE(model->count(), previousCount);
     QCOMPARE(countChangedSpy.count(), 1);
