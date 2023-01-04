@@ -314,10 +314,9 @@ msgstr[1] "%1 nepřečtená upozornění"
 msgstr[2] "%1 nepřečtených upozornění"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Nerušit do %1"
+msgstr ""
 
 #: package/contents/ui/main.qml:86
 #, kde-format
@@ -447,7 +446,3 @@ msgstr "Napište odpověď…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Odeslat"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "Do %1"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-14 17:46\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -250,18 +250,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Бразілія)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Лакаль была наладжаная, але гэты KCM зараз не падтрымлівае аўтаматычнае "
-"стварэнне лакалі ў сістэмах без glibc. Каб усталяваць шрыфты і стварыць "
-"лакалі, зазірніце ў дапаможнік да вашага дыстрыбутыва"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -584,3 +572,13 @@ msgstr "Нумар тэлефона"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Пераняць мову"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Лакаль была наладжаная, але гэты KCM зараз не падтрымлівае аўтаматычнае "
+#~ "стварэнне лакалі ў сістэмах без glibc. Каб усталяваць шрыфты і стварыць "
+#~ "лакалі, зазірніце ў дапаможнік да вашага дыстрыбутыва"

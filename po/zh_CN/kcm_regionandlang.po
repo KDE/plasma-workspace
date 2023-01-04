@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-24 11:42\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
+"PO-Revision-Date: 2023-01-02 07:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -246,17 +246,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (巴西)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"区域配置已经完成，但此 KCM 模块不支持在非 glibc 类型的系统中自动生成区域配置"
-"文件，请按照本机发行版的使用手册来安装字体和生成区域配置文件。"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -572,3 +561,12 @@ msgstr "电话号码"
 #, kde-format
 msgid "Inherit Language"
 msgstr "继承语言设置"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "区域配置已经完成，但此 KCM 模块不支持在非 glibc 类型的系统中自动生成区域配"
+#~ "置文件，请按照本机发行版的使用手册来安装字体和生成区域配置文件。"

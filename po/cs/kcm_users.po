@@ -192,10 +192,9 @@ msgid "Re-enroll finger"
 msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:286
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Vymazat otisky"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:295
 #, kde-format
@@ -428,6 +427,3 @@ msgstr "Váš účet"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Jiné účty"
-
-#~ msgid "Continue"
-#~ msgstr "Pokračovat"

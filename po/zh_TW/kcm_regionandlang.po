@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-21 05:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -249,17 +249,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1（巴西）"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"已設定語系，但此 KCM 尚不支援在非 glibc 系統自動產生語系。請參考您發行版的使"
-"用手冊，安裝字型及產生語系。"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -575,6 +564,15 @@ msgstr "電話號碼"
 #, kde-format
 msgid "Inherit Language"
 msgstr "使用語言預設值"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "已設定語系，但此 KCM 尚不支援在非 glibc 系統自動產生語系。請參考您發行版的"
+#~ "使用手冊，安裝字型及產生語系。"
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

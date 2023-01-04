@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-08-18 22:15+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -245,19 +245,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr ""
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"ロケールは設定されましたが、現在この KCM (KDE 設定モジュール) は非 glibc シス"
-"テムでのロケールの自動生成をサポートしていません。フォントのインストールおよ"
-"びロケールの生成については、お使いのディストリビューションのマニュアルを参照"
-"してください。"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -580,3 +567,14 @@ msgstr ""
 #, kde-format
 msgid "Inherit Language"
 msgstr "言語を引き継ぐ"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "ロケールは設定されましたが、現在この KCM (KDE 設定モジュール) は非 glibc "
+#~ "システムでのロケールの自動生成をサポートしていません。フォントのインストー"
+#~ "ルおよびロケールの生成については、お使いのディストリビューションのマニュア"
+#~ "ルを参照してください。"

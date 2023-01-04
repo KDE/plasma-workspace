@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-07-13 12:02+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -246,18 +246,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr ""
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"로캘을 설정했으나 이 KCM에서는 glibc를 사용하지 않는 시스템에서 자동 로캘 생"
-"성을 지원하지 않으므로, 배포판 설명서에서 글꼴 설치와 로캘 생성에 대한 부분"
-"을 참조하십시오"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -577,3 +565,13 @@ msgstr ""
 #, kde-format
 msgid "Inherit Language"
 msgstr "언어에서 상속"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "로캘을 설정했으나 이 KCM에서는 glibc를 사용하지 않는 시스템에서 자동 로캘 "
+#~ "생성을 지원하지 않으므로, 배포판 설명서에서 글꼴 설치와 로캘 생성에 대한 "
+#~ "부분을 참조하십시오"

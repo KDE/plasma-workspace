@@ -1,20 +1,18 @@
-# translation of kcmfonts.po to esperanto
-# translation of kcmfonts.po to
-# Esperantaj mesaĝoj por "kdisplay"
+# translation of kcm_fonts.pot to esperanto
 # Copyright (C) 1998, 2003, 2005, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Heiko Evermann <heiko@evermann.de>, 2003.
 # Matthias Peick <matthias@peick.de>, 2005.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
-#
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2007-11-07 02:16+0100\n"
-"Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
+"PO-Revision-Date: 2023-03-01 15:30+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -25,71 +23,57 @@ msgstr ""
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI Wayland"
-msgstr "Devigi tiparan DPI:"
+msgstr "Devigi tiparan DPI Wayland"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Devigi tiparan DPI:"
+msgstr "Devigi tiparan DPI sur X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "Normala"
+msgstr "Ĝenerala tiparo"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Egallarĝa"
+msgstr "Egallarĝa tiparo"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "Malgranda"
+msgstr "Malgranda tiparo"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Ilobreto"
+msgstr "Ilobreta tiparo"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Menutiparo"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "Fenestra titolo"
+msgstr "Fenestra titoltiparo"
 
 #: kxftconfig.cpp:458
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "Sistema agordo"
+msgstr "Vendista defaŭlto"
 
 #: kxftconfig.cpp:460
 #, kde-format
@@ -118,12 +102,10 @@ msgid "Vertical BGR"
 msgstr "Vertikala BVR"
 
 #: kxftconfig.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "Sistema agordo"
+msgstr "Vendista defaŭlto"
 
 #: kxftconfig.cpp:498
 #, kde-format
@@ -155,22 +137,18 @@ msgid "This module lets you configure the system fonts."
 msgstr ""
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Alĝustigi ĉiu&jn tiparojn..."
+msgstr "Alĝustigi Globalan Skalon…"
 
 #: package/contents/ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#| "started applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p>Kelkaj ŝanĝoj kiel glatigo kaj DPI afektas nur poste lanĉotajn programojn."
-"</p>"
+"Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn.</"
+"p>"
 
 #: package/contents/ui/main.qml:51
 #, kde-format
@@ -194,73 +172,54 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "Alĝustigi ĉiu&jn tiparojn..."
+msgstr "&Alĝustigi Ĉiujn Tiparojn…"
 
 #: package/contents/ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Normala"
+msgstr "Normala:"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "Normala"
+msgstr "Elekti normalan tiparon"
 
 #: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "Egallarĝa"
+msgstr "Egallarĝa:"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Egallarĝa"
+msgstr "Elekti egallarĝan tiparon"
 
 #: package/contents/ui/main.qml:143
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "Malgranda"
+msgstr "Malgranda:"
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "Malgranda"
+msgstr "Elekti malgrandan tiparon"
 
 #: package/contents/ui/main.qml:155
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "Ilobreto"
+msgstr "Ilobreto:"
 
 #: package/contents/ui/main.qml:156
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Ilobreto"
+msgstr "Elekti ilobretan tiparon"
 
 #: package/contents/ui/main.qml:167
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "Menuo"
+msgstr "Menuo:"
 
 #: package/contents/ui/main.qml:168
 #, kde-format
@@ -268,29 +227,22 @@ msgid "Select menu font"
 msgstr ""
 
 #: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "Fenestra titolo"
+msgstr "Fenestra titolo:"
 
 #: package/contents/ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "Fenestra titolo"
+msgstr "Elekti fenestrotitolan tiparon"
 
 #: package/contents/ui/main.qml:194
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "&Glatigi tiparojn:"
+msgstr "Glatigo:"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
 msgstr "Ebligita"
 
@@ -316,17 +268,15 @@ msgid "%1 pt"
 msgstr ""
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " al "
+msgstr "al "
 
 #: package/contents/ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "&Use sub-pixel rendering:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "&Uzi subpunktan bildigon:"
+msgstr "Subpunkta bildigo:"
 
 #: package/contents/ui/main.qml:324
 #, kde-kuit-format
@@ -343,11 +293,10 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:329
-#, fuzzy, kde-format
-#| msgid "Hinting style: "
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Indika stilo: "
+msgstr "Aludado:"
 
 #: package/contents/ui/main.qml:370
 #, kde-kuit-format
@@ -360,8 +309,7 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
 msgstr "Devigi tiparan DPI:"
 
@@ -381,164 +329,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid ""
-#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
-#~| "when the real DPI of the hardware is not detected properly and it is "
-#~| "also often misused when poor quality fonts are used that do not look "
-#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
-#~| "option is generally discouraged. For selecting proper DPI value a better "
-#~| "option is explicitly configuring it for the whole X server if possible "
-#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
-#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
-#~| "render properly with real DPI value better fonts should be used or "
-#~| "configuration of font hinting should be checked.</p>"
-#~ msgctxt "@info:tooltip Force fonts DPI"
-#~ msgid ""
-#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
-#~ "when the real DPI of the hardware is not detected properly and it is also "
-#~ "often misused when poor quality fonts are used that do not look well with "
-#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
-#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
-#~ "Window System</emphasis>, for selecting the proper DPI value a better "
-#~ "option is explicitly configuring it for the whole X server if possible (e."
-#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
-#~ "real DPI value better fonts should be used or configuration of font "
-#~ "hinting should be checked.</para>"
-#~ msgstr ""
-#~ "<p>Tiu opcio devigas difinitan DPI-valoron por la tiparoj. Ĝi eble estas "
-#~ "utila kiam la reala DPI de la aparato ne detektiĝas taŭge kaj ĝi estas "
-#~ "misuzata kiam oni uzas malaltkvalitajn tiparojn kiuj ne bone aperas per "
-#~ "DPI-valoroj malsamaj ol 96 aŭ 120 DPI.</p><p>Oni ne kutime rekomendas la "
-#~ "uzon de tiu opcio. Por elekti taŭgan DPI-valoron, pli bona kielo estas "
-#~ "klare agordi tiun ĉi por la plena X-servilo, se eblas (ekz. DisplaySize "
-#~ "en xorg.conf aŭ aldonante <i>-dpi value</i> al ServerLocalArgs= en "
-#~ "$KDEDIR/share/config/kdm/kdmrc). Kiam tiparoj ne montriĝas taŭge per "
-#~ "realaj DPI-valoroj, pli bonaj tiparoj uzindas aŭ agordo aŭ tipara glatigo "
-#~ "kontrolindas.</p>"
-
-#~ msgid "Font Settings Changed"
-#~ msgstr "Agordo pri glatigo ŝanĝiĝis"
-
-#~ msgid ""
-#~ "<p>Some changes such as DPI will only affect newly started applications.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>Kelkaj ŝanĝoj kiel DPI afektas nur poste lanĉotajn programojn.</p>"
-
-#, fuzzy
-#~| msgctxt "Use anti-aliasing"
-#~| msgid "System Settings"
-#~ msgid "Vendor default"
-#~ msgstr "Sistema agordo"
-
-#, fuzzy
-#~| msgctxt "Use anti-aliasing"
-#~| msgid "Disabled"
-#~ msgid "Disabled"
-#~ msgstr "Malebligita"
-
-#, fuzzy
-#~| msgid "Configure..."
-#~ msgid "Configure the system fonts"
-#~ msgstr "Agordi..."
-
-#~ msgid "Configure Anti-Alias Settings"
-#~ msgstr "Agordu la glatigon"
-
-#~ msgid "E&xclude range:"
-#~ msgstr "E&kskludi regionon:"
-
-#, fuzzy
-#~| msgid " pt"
-#~ msgctxt "abbreviation for unit of points"
-#~ msgid " pt"
-#~ msgstr " pt"
-
-#~ msgid ""
-#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
-#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
-#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
-#~ "work correctly you need to know how the sub-pixels of your display are "
-#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
-#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
-#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
-#~ "not work with CRT monitors.</p>"
-#~ msgstr ""
-#~ "<p>Se vi havas TFT aŭ LCD ekranon vi povas plibonigi la kvalitecon de la "
-#~ "montrataj tiparoj elektante ĉi tiun opcion.<br /> Subpunkta bildigo ankaŭ "
-#~ "konatas kiel ClearType(tm).<br /> Por funkciigi la subpunktan bildigon, "
-#~ "vi devas koni kiel la rastrumeroj de via ekrano aranĝiĝas.</p><p>Sur TFT "
-#~ "aŭ LCD ekranoj unu rastrumero fakte konsistas el tri subrastrumeroj: "
-#~ "ruĝa, verda kaj blua. La plimulto da ekranoj havas tiuorde aranĝon, "
-#~ "kelkaj havas BVR.<br /> Ĉi tiu opcio ne funkcias ĉe CRT ekranoj.</p>"
-
-#~ msgid ""
-#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
-#~ msgstr ""
-#~ "Indiko estas uzata por plibonigi la kvalitecon de tiparo ĉe malgrandeco."
-
-#~ msgid "Used for normal text (e.g. button labels, list items)."
-#~ msgstr "Uzata por normala teksto (ekz. butonsurskriboj, listeroj)."
-
-#~ msgid "A non-proportional font (i.e. typewriter font)."
-#~ msgstr "Egallarĝa tiparo (kiel ĉe skribmaŝino)"
-
-#~ msgid "Smallest font that is still readable well."
-#~ msgstr "Plej malgranda tiparo kiu ankoraŭ estas bone legebla."
-
-#~ msgid "Used to display text beside toolbar icons."
-#~ msgstr "Uzata por la tekstoj apud ilobretaj piktogramoj"
-
-#~ msgid "Used by menu bars and popup menus."
-#~ msgstr "Uzata de menubretoj kaj ŝprucmenuoj."
-
-#~ msgid "Used by the window titlebar."
-#~ msgstr "Uzata de la fenestrotitolo"
-
-#~ msgctxt "Font role"
-#~ msgid "%1: "
-#~ msgstr "%1: "
-
-#~ msgid "Click to change all fonts"
-#~ msgstr "Klaku por ŝanĝi ĉiujn tiparojn"
-
-#~ msgctxt "Use anti-aliasing"
-#~ msgid "System Settings"
-#~ msgstr "Sistema agordo"
-
-#, fuzzy
-#~| msgid ""
-#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
-#~ msgid "Select this option to smooth the edges of curves in fonts."
-#~ msgstr ""
-#~ "Se elektita, KDE glatigos la kurbojn ĉe literoj kaj kelkaj grafikoj."
-
-#, fuzzy
-#~| msgid "Taskbar"
-#~ msgctxt "font usage"
-#~ msgid "Taskbar"
-#~ msgstr "Taskobreto"
-
-#, fuzzy
-#~| msgid "Desktop"
-#~ msgctxt "font usage"
-#~ msgid "Desktop"
-#~ msgstr "Labortablo"
-
-#~ msgid "Used by the taskbar."
-#~ msgstr "Uzata de la taskostrio."
-
-#~ msgid "Used for desktop icons."
-#~ msgstr "Uzata de labortablaj piktogramoj."
-
-#~ msgctxt "Force fonts DPI"
-#~ msgid "Disabled"
-#~ msgstr "Malebligita"
-
-#~ msgid "96 DPI"
-#~ msgstr "96 DPI"
-
-#~ msgid "120 DPI"
-#~ msgstr "120 DPI"

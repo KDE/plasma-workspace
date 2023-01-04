@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-10-17 11:50+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -250,19 +250,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Бразилия)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Локаль настроена, но в текущей версии этого модуля управления не "
-"поддерживается автоматическая генерация локалей в системах, не использующих "
-"glibc. Обратитесь к руководству из дистрибутива, чтобы получить сведения об "
-"установке шрифтов и генерации локалей."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -583,3 +570,14 @@ msgstr "Номер телефона"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Наследовать по языку"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Локаль настроена, но в текущей версии этого модуля управления не "
+#~ "поддерживается автоматическая генерация локалей в системах, не "
+#~ "использующих glibc. Обратитесь к руководству из дистрибутива, чтобы "
+#~ "получить сведения об установке шрифтов и генерации локалей."

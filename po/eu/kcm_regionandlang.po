@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-31 23:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -256,19 +256,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brasil)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Tokiko ezarpenak konfiguratu dira, baina KCM honek une honetan ez du "
-"onartzen tokiko ezarpenen sorrera automatikoa «glibc» ez diren sistemetan, "
-"mesedez, mesedez, kontsultatu banatzailearen eskuliburua letra-tipoak "
-"instalatzeko eta tokiko ezarpenak sortzeko"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -592,3 +579,14 @@ msgstr "Telefono zenbakia"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Heredatutako hizkuntza"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Tokiko ezarpenak konfiguratu dira, baina KCM honek une honetan ez du "
+#~ "onartzen tokiko ezarpenen sorrera automatikoa «glibc» ez diren "
+#~ "sistemetan, mesedez, mesedez, kontsultatu banatzailearen eskuliburua "
+#~ "letra-tipoak instalatzeko eta tokiko ezarpenak sortzeko"

@@ -1,17 +1,18 @@
-# translation of plasma_applet_battery.po to esperanto
+# translation of plasma_applet_org.kde.plasma.battery.pot to esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007, 2008.
 # Cindy McKee <cfmckee@gmail.com>, 2007, 2008, 2009.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2009-12-16 09:39+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 16:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -50,15 +51,12 @@ msgid "Estimating…"
 msgstr ""
 
 #: package/contents/ui/BatteryItem.qml:204
-#, fuzzy, kde-format
-#| msgid "Battery:"
+#, kde-format
 msgid "Battery Health:"
-msgstr "Baterio:"
+msgstr "Bateria Sano:"
 
 #: package/contents/ui/BatteryItem.qml:210
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is battery percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
@@ -69,9 +67,7 @@ msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
 #: package/contents/ui/BrightnessItem.qml:64
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is battery percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
@@ -84,29 +80,24 @@ msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
 #: package/contents/ui/main.qml:145
-#, fuzzy, kde-format
-#| msgid "%1% (fully charged)"
+#, kde-format
 msgid "Fully Charged"
-msgstr "%1% (plene ŝargita)"
+msgstr "Plene Ŝargita"
 
 #: package/contents/ui/logic.js:28
-#, fuzzy, kde-format
-#| msgctxt "Shown when a time estimate is not available"
-#| msgid "%1% (discharging)"
+#, kde-format
 msgid "Discharging"
-msgstr "%1% (malŝargita)"
+msgstr "Malŝarganta"
 
 #: package/contents/ui/logic.js:30
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Charging"
-msgstr "%1% (ŝargas)"
+msgstr "Ŝarganta"
 
 #: package/contents/ui/logic.js:32
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Not Charging"
-msgstr "%1% (ŝargas)"
+msgstr "Ne Ŝarganta"
 
 #: package/contents/ui/logic.js:35
 #, kde-format
@@ -115,53 +106,44 @@ msgid "Not present"
 msgstr "Ne ĉeestas"
 
 #: package/contents/ui/main.qml:118 package/contents/ui/main.qml:361
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Battery and Brightness"
-msgstr "Ekranbrileco"
+msgstr "Baterio kaj Brileco"
 
 #: package/contents/ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Brightness"
-msgstr "Ekranbrileco"
+msgstr "Brileco"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Battery:"
+#, kde-format
 msgid "Battery"
 msgstr "Baterio:"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "tooltip on the config button in the popup"
-#| msgid "Configure Power Management..."
+#, kde-format
 msgid "Power Management"
-msgstr "Agordi Energiadministradon..."
+msgstr "Energiadministrado"
 
 #: package/contents/ui/main.qml:152
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "%1% (ŝargas)"
+msgstr "Baterio ĉe %1%, ne Ŝarganta"
 
 #: package/contents/ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "%1% (ŝargas)"
+msgstr "Baterio ĉe %1%, enŝtopita sed plue malŝarganta"
 
 #: package/contents/ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "%1% (ŝargas)"
+msgstr "Baterio ĉe %1%, Ŝarganta"
 
 #: package/contents/ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Battery:"
+#, kde-format
 msgid "Battery at %1%"
-msgstr "Baterio:"
+msgstr "Baterio ĉe %1%"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
@@ -174,23 +156,21 @@ msgid "No Batteries Available"
 msgstr ""
 
 #: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "%1% (fully charged)"
+#, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
-msgstr "%1% (plene ŝargita)"
+msgstr "%1 ĝis plenŝargita"
 
 #: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
-msgstr ""
+msgstr "%1 restanta"
 
 #: package/contents/ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "%1% (charging)"
+#, kde-format
 msgid "Not charging"
-msgstr "%1% (ŝargas)"
+msgstr "Ne ŝarganta"
 
 #: package/contents/ui/main.qml:186
 #, kde-format
@@ -222,15 +202,14 @@ msgid "System is in Power Save mode"
 msgstr ""
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Ekranbrileco"
+msgstr "Rulumu por alĝustigi ekranbrilecon"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr ""
+msgstr "La bateriapleto enŝaltis tutsisteman malebligon"
 
 #: package/contents/ui/main.qml:364
 #, kde-format
@@ -238,10 +217,9 @@ msgid "Failed to activate %1 mode"
 msgstr ""
 
 #: package/contents/ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Show charge &information"
+#, kde-format
 msgid "&Show Energy Information…"
-msgstr "Montri ŝarginformon"
+msgstr "&Montri Energiinformon…"
 
 #: package/contents/ui/main.qml:378
 #, kde-format
@@ -249,22 +227,19 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 
 #: package/contents/ui/main.qml:384
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "&Configure Energy Saving…"
-msgstr "Agordi..."
+msgstr "&Agordi Energiŝparadon…"
 
 #: package/contents/ui/PopupDialog.qml:117
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Display Brightness"
 msgstr "Ekranbrileco"
 
 #: package/contents/ui/PopupDialog.qml:146
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Keyboard Brightness"
-msgstr "Ekranbrileco"
+msgstr "Klavarbrileco"
 
 #: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
@@ -290,43 +265,42 @@ msgstr[1] ""
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr ""
+msgstr "%1 aktuale estas blokanta dormon kaj ekranŝlosadon (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr ""
+msgstr "%1 aktuale estas blokanta dormon kaj ekranŝlosadon (nekonata kialo)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
-msgstr ""
+msgstr "%1: nekonata kialo"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
-msgstr ""
+msgstr "Energiŝparo"
 
 #: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format
 msgid "Balanced"
-msgstr ""
+msgstr "Balancita"
 
 #: package/contents/ui/PowerProfileItem.qml:42
 #, kde-format
 msgid "Performance"
-msgstr ""
+msgstr "Rendimento"
 
 #: package/contents/ui/PowerProfileItem.qml:59
-#, fuzzy, kde-format
-#| msgid "Power Profile"
+#, kde-format
 msgid "Power Profile"
 msgstr "Energioprofilo"
 
@@ -341,13 +315,12 @@ msgstr ""
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
-msgstr ""
+msgstr "Rendimenta reĝimo ne haveblas ĉar la komputilo estas tro varma."
 
 #: package/contents/ui/PowerProfileItem.qml:195
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Performance mode is unavailable."
-msgstr "Energiadministrado"
+msgstr "Rendimenta reĝimo ne haveblas."
 
 #: package/contents/ui/PowerProfileItem.qml:208
 #, kde-format
@@ -359,13 +332,12 @@ msgstr ""
 #: package/contents/ui/PowerProfileItem.qml:210
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
-msgstr ""
+msgstr "Rendimento povas esti reduktita ĉar la komputilo estas tro varma."
 
 #: package/contents/ui/PowerProfileItem.qml:212
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Performance may be reduced."
-msgstr "Energiadministrado"
+msgstr "Rendimento povas esti reduktita."
 
 #: package/contents/ui/PowerProfileItem.qml:223
 #, kde-format
@@ -381,173 +353,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Power Management"
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "Energiadministrado"
-
-#~ msgid "General"
-#~ msgstr "Ĝenerala"
-
-#, fuzzy
-#~| msgid "Configure..."
-#~ msgid "Configure Power Saving..."
-#~ msgstr "Agordi..."
-
-#~ msgctxt "Used for measurement"
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#, fuzzy
-#~| msgid "%1% (charging)"
-#~ msgid "%1% Charging"
-#~ msgstr "%1% (ŝargas)"
-
-#, fuzzy
-#~| msgid "Plugged in "
-#~ msgid "%1% Plugged in"
-#~ msgstr "Enŝtopita"
-
-#, fuzzy
-#~| msgctxt "Placeholder is battery percentage"
-#~| msgid "%1%"
-#~ msgctxt "Placeholder is battery's capacity degradation"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgctxt "Placeholder is battery capacity"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgid "AC Adapter"
-#~ msgstr "AK-adaptilo:"
-
-#, fuzzy
-#~| msgid "Plugged in "
-#~ msgid "Plugged In"
-#~ msgstr "Enŝtopita"
-
-#, fuzzy
-#~| msgid "Not plugged in"
-#~ msgid "Not Plugged In"
-#~ msgstr "Ne enŝtopita"
-
-#, fuzzy
-#~| msgid "%1% (charged)"
-#~ msgid "%1% (charged)"
-#~ msgstr "%1% (ŝargita)"
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgctxt "tooltip"
-#~ msgid "AC Adapter:"
-#~ msgstr "AK-adaptilo:"
-
-#, fuzzy
-#~| msgid "Plugged in "
-#~ msgctxt "tooltip"
-#~ msgid "<b>Plugged in</b>"
-#~ msgstr "Enŝtopita"
-
-#, fuzzy
-#~| msgid "Not plugged in"
-#~ msgctxt "tooltip"
-#~ msgid "<b>Not plugged in</b>"
-#~ msgstr "Ne enŝtopita"
-
-#~ msgid "Configure Battery Monitor"
-#~ msgstr "Agordi la baterian kontrolilon"
-
-#, fuzzy
-#~| msgid "Sleep"
-#~ msgctxt "Suspend the computer to RAM; translation should be short"
-#~ msgid "Sleep"
-#~ msgstr "Dormi"
-
-#, fuzzy
-#~| msgid "Hibernate"
-#~ msgctxt "Suspend the computer to disk; translation should be short"
-#~ msgid "Hibernate"
-#~ msgstr "Pasivumigi"
-
-#, fuzzy
-#~| msgid "%1% (charged)"
-#~ msgid "<b>%1% (charged)</b>"
-#~ msgstr "%1% (ŝargita)"
-
-#, fuzzy
-#~| msgctxt "Shown when a time estimate is not available"
-#~| msgid "%1% (discharging)"
-#~ msgid "<b>%1% (discharging)</b>"
-#~ msgstr "%1% (malŝargita)"
-
-#, fuzzy
-#~| msgid "%1% (charging)"
-#~ msgid "<b>%1% (charging)</b>"
-#~ msgstr "%1% (ŝargas)"
-
-#, fuzzy
-#~| msgctxt "Battery is not plugged in"
-#~| msgid "Not present"
-#~ msgctxt "Battery is not plugged in"
-#~ msgid "<b>Not present</b>"
-#~ msgstr "Ne ĉeestas"
-
-#~ msgid "Show the state for &each battery present"
-#~ msgstr "Montri la staton de ĉi&u ĉeestanta baterio"
-
-#, fuzzy
-#~| msgid "<b>Battery:</b> "
-#~ msgid "<b>Battery:</b>"
-#~ msgstr "<b>Baterio:</b>"
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgctxt "tooltip"
-#~ msgid "<b>AC Adapter:</b>"
-#~ msgstr "AK-adaptilo:"
-
-#, fuzzy
-#~| msgid "Not plugged in"
-#~ msgctxt "tooltip"
-#~ msgid "Not plugged in"
-#~ msgstr "Ne enŝtopita"
-
-#, fuzzy
-#~| msgid "Show the state for &each battery present"
-#~ msgid "Show remaining time for the battery"
-#~ msgstr "Montri la staton de ĉi&u ĉeestanta baterio"
-
-#, fuzzy
-#~| msgctxt "Placeholder is the battery ID"
-#~| msgid "<b>Battery %1:</b> "
-#~ msgctxt "tooltip: placeholder is the battery ID"
-#~ msgid "<b>Battery %1:</b>"
-#~ msgstr "<b>Baterio %1:</b> "
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgid "AC Adapter: "
-#~ msgstr "AK-adaptilo:"
-
-#~ msgid "<b>Battery:</b> "
-#~ msgstr "<b>Baterio:</b>"
-
-#, fuzzy
-#~| msgctxt "Shown when a time estimate is not available"
-#~| msgid "%1% (discharging)"
-#~ msgctxt "state of battery"
-#~ msgid "%1% (discharging)"
-#~ msgstr "%1% (malŝargita)"
-
-#~ msgid "%2% (discharging)"
-#~ msgstr "%2% (malŝargas)"
-
-#~ msgid "%2% (charging)"
-#~ msgstr "%2% (ŝargas)"
-
-#~ msgid "Actions"
-#~ msgstr "Agoj"

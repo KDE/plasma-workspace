@@ -1,18 +1,18 @@
 # Translation of kcm_cursortheme.po to Catalan
-# Copyright (C) 2015-2022 This_file_is_part_of_KDE
+# Copyright (C) 2015-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-04-15 16:44+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"POT-Creation-Date: 2023-01-03 00:49+0000\n"
+"PO-Revision-Date: 2023-01-03 06:16+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -34,7 +34,7 @@ msgstr "Nom del tema de cursor actual"
 msgid "Current cursor size"
 msgstr "Mida actual del cursor"
 
-#: kcmcursortheme.cpp:302
+#: kcmcursortheme.cpp:308
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -42,27 +42,27 @@ msgstr ""
 "Cal tornar a engegar la sessió del Plasma perquè aquests canvis tinguin "
 "efecte."
 
-#: kcmcursortheme.cpp:376
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "No s'ha pogut crear el fitxer temporal."
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:393
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "No s'ha pogut baixar l'arxiu del tema d'icones: %1"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "El fitxer no és un arxiu vàlid de tema d'icones."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Ha fallat en crear la carpeta «Icones»."
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -71,15 +71,22 @@ msgstr ""
 "A la vostra carpeta de temes d'icones ja existeix un tema anomenat %1. "
 "Desitgeu substituir-lo per aquest?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Sobreescriure el tema?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "El tema s'ha instal·lat correctament."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Temps d'espera en segons"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -90,6 +97,74 @@ msgstr "Elimina el tema"
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Restaura el tema de cursor"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "Reacció en iniciar"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "Configura les animacions reproduïdes mentre es llança una aplicació."
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr "Reacció del cursor:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr "Sense"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "Estàtic"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "Parpellejant"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "Botant"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Reacció del gestor de tasques:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "Activa les animacions"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "Atura les animacions després de:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:122
+#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 segon"
+msgstr[1] "%1 segons"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -103,20 +178,26 @@ msgstr "Mida:"
 
 #: package/contents/ui/main.qml:134
 #, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "&Configura les reaccions de llançament…"
+
+#: package/contents/ui/main.qml:145
+#, kde-format
 msgid "&Install from File…"
 msgstr "&Instal·la des d'un fitxer…"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "&Obtén cursors nous…"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Open Theme"
 msgstr "Obre un tema"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de temes de cursor (*.tar.gz *.tar.bz2)"
@@ -210,72 +291,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mides disponibles: %1)"
-
-#~ msgid "Name"
-#~ msgstr "Nom"
-
-#~ msgid "Description"
-#~ msgstr "Descripció"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Cursors"
-#~ msgstr "Cursors"
-
-#~ msgid "(c) 2003-2007 Fredrik Höglund"
-#~ msgstr "(c) 2003-2007 Fredrik Höglund"
-
-#~ msgid "Fredrik Höglund"
-#~ msgstr "Fredrik Höglund"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid ""
-#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
-#~ "switch to another theme first.</qt>"
-#~ msgstr ""
-#~ "<qt>No podeu suprimir el tema que esteu usant actualment.<br />Primer heu "
-#~ "de canviar a un altre tema.</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
-#~ "will delete all the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>Esteu segur que voleu eliminar el tema de cursor <i>%1</i>?<br />Això "
-#~ "esborrarà tots els fitxers instal·lats per aquest tema.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Confirmació"
-
-#~ msgctxt "@item:inlistbox size"
-#~ msgid "Resolution dependent"
-#~ msgstr "Depenent de la resolució"
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Ha canviat l'arranjament del cursor"
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Arrossegueu o introduïu l'URL del tema"
-
-#~ msgid ""
-#~ "Unable to download the cursor theme archive; please check that the "
-#~ "address %1 is correct."
-#~ msgstr ""
-#~ "No s'ha pogut descarregar l'arxiu del tema de cursor; si us plau, "
-#~ "comproveu que l'adreça %1 sigui correcta."
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Obtén esquemes de color nous des d'Internet"
-
-#~ msgid ""
-#~ "Select the cursor theme you want to use (hover preview to test cursor):"
-#~ msgstr ""
-#~ "Seleccioneu el tema de cursor que voleu usar (manteniu per sobre per a "
-#~ "provar el cursor):"

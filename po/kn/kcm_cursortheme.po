@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-01-03 00:49+0000\n"
 "PO-Revision-Date: 2008-01-11 11:48+0530\n"
 "Last-Translator: Umesh Rudrapatna <umeshrs@gmail.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:302
+#: kcmcursortheme.cpp:308
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
@@ -40,29 +40,29 @@ msgid ""
 msgstr ""
 "ಈ ಬದಲಾವಣೆಗಳು ಪರಿಣಾಮ ಬೀರಲು ನೀವು ಕೆಡಿಇಯನ್ನು ಪುನರಾರಂಭಿಸಬೇಕಾಗುತ್ತದೆ (ರಿಸ್ಟಾರ್ಟ್)."
 
-#: kcmcursortheme.cpp:376
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:393
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಾಗಾರ %1 ಲಭ್ಯವಿಲ್ಲ."
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:424
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "ಕಡತ %1 ಸರಿಯಾದ ಸ್ಥಳಸೂಚಕ (ಕರ್ಸರ್) ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಾಗಾರದಂತೆ ತೋರದು."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -71,14 +71,21 @@ msgstr ""
 "%1 ಹೆಸರಿನ ಪರಿಸರವಿನ್ಯಾಸವು (ಥೀಮ್) ಈಗಾಗಲೇ ನಿಮ್ಮ ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಕೋಶದಲ್ಲಿ "
 "ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ. ನೀವು ಅದನ್ನು ಈ ಪರಿಸರವಿನ್ಯಾಸದಿಂದ (ಥೀಮ್) ಪ್ರತಿಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಾ?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತಿದ್ದಿಬರೆಯಬೇಕೆ?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
 msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
@@ -92,6 +99,74 @@ msgstr ""
 msgid "Restore Cursor Theme"
 msgstr "ಸ್ಥಳಸೂ&ಚಕ (ಕರ್ಸರ್) ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್)"
 
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:122
+#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
 #: package/contents/ui/main.qml:20
 #, kde-format
 msgid "This module lets you choose the mouse cursor theme."
@@ -104,22 +179,28 @@ msgstr ""
 
 #: package/contents/ui/main.qml:134
 #, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr ""
+
+#: package/contents/ui/main.qml:145
+#, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "&Get New Cursors…"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತಿದ್ದಿಬರೆಯಬೇಕೆ?"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "Open Theme"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತಿದ್ದಿಬರೆಯಬೇಕೆ?"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

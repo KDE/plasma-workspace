@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2021-08-08 17:45+0530\n"
+"POT-Creation-Date: 2023-01-03 00:49+0000\n"
+"PO-Revision-Date: 2023-01-03 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -28,33 +28,33 @@ msgstr "தற்போதைய சுட்டிக்குறி திட�
 msgid "Current cursor size"
 msgstr "தற்போதைய சுட்டிக்குறி அளவு"
 
-#: kcmcursortheme.cpp:302
+#: kcmcursortheme.cpp:308
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "இந்த மாற்றங்கள் செயல்பட பிளாஸ்மாவை நீங்கள் மீள்துவக்க வேண்டும்."
 
-#: kcmcursortheme.cpp:376
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:393
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "இக்கோப்பு ஒரு முறையான திட்டமுறையை கொண்ட பெட்டகம் போல் தெரியவில்லை."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' அடைவை உருவாக்க முடியவில்லை."
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -62,15 +62,22 @@ msgid ""
 msgstr ""
 "%1 என்ற பெயருள்ள தோற்றத்திட்டம் ஏற்கனவே உள்ளது. அதற்கு பதிலாக இதை நிறுவ வேண்டுமா?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "திட்டமுறையை மேலெழுதலாமா?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "காலாவதியாகும் நேரம், நொடிகளில்"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -81,6 +88,74 @@ msgstr "திட்டமுறையை நீக்கு"
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "சுட்டிக்குறி திட்டமுறையை மீள்"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "தொடக்கப் பின்னூட்டம்"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "ஏதாவதொரு செயலி துவக்கப்படும்போது காட்டப்படும் அசைவூட்டங்களை அமையுங்கள்."
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr "சுட்டிக்குறி பின்னூட்டம்:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "நகராத‍து"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "மின்னுவது"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "துள்ளுவது"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "பணி மேலாளரிலுள்ள பின்னூட்டம்:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "அசைவூட்டத்தை இயக்கு"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "இவ்வளவு நேரங்கழித்து அசைவூட்டங்களை நிறுத்து:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:122
+#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 நொடி"
+msgstr[1] "%1 நொடிகள்"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -94,20 +169,26 @@ msgstr "அளவு:"
 
 #: package/contents/ui/main.qml:134
 #, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "&தொடக்க பின்னூட்டத்தை அமை…"
+
+#: package/contents/ui/main.qml:145
+#, kde-format
 msgid "&Install from File…"
 msgstr "கோப்பிலிருந்து &நிறுவு…"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "புதிய சுட்டிக்குறிகளை &பெறு…"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Open Theme"
 msgstr "திட்டமுறையை திற"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "சுட்டிக்குறி திட்டமுறை கோப்புகள் (*.tar.gz *.tar.bz2)"
@@ -115,7 +196,7 @@ msgstr "சுட்டிக்குறி திட்டமுறை கோ�
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "கோரிய '%1' அளவு கிடைக்கவில்லை; பதிலாக %2 பயன்படுத்தப்படும்."
 
 #: plasma-apply-cursortheme.cpp:63
 #, kde-format
@@ -124,6 +205,8 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"தவறுதலாக, இல்லாத ஒன்றையொ ஏற்கனவே செயலில் உள்ளதையோ தேர்ந்தெடுக்காமல், தற்போதைய பிளாஸ்மா "
+"அமர்வின் சுட்டிக்குறி தோற்றத்திட்டத்தை நீங்கள் மாற்ற இந்த கருவி உதவும்."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -131,17 +214,21 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"தற்போதைய பிளாஸ்மா அமர்வில் நீங்கள் பயன்படுத்த விரும்பும் தோற்றத்திட்டத்தின் பெயர் (ஒரு பாதையை "
+"வழங்கினால், அதன் கடைசி பாகம் மட்டுமே பயன்படுத்தப்படும்)"
 
 #: plasma-apply-cursortheme.cpp:68
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"கணினியில் கிட்டுகின்ற அனைத்து தோற்றத்திட்டங்களை (மற்றும் இப்போது எது செயலில் உள்ளதென) "
+"காட்டும்"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "தோற்றத்திட்டத்தின் இயல்பிருப்பு அளவுக்கு பதிலாக ஓர் குறிப்பிட்ட அளவையே பயன்படுத்து"
 
 #: plasma-apply-cursortheme.cpp:90
 #, kde-format
@@ -149,12 +236,14 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"கோரப்பட்ட \"%1\" என்ற தோற்றத்திட்டம், தற்போதைய பிளாஸ்மா அமர்வில் ஏற்கனவே செயலில் உள்ளது."
 
 #: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr ""
+"%1 எனும் தோற்றத்திட்டம் வெற்றிகரமாக தற்போதைய பிளாஸ்மா அமர்வுக்கானதாக அமைக்கப்பட்டுள்ளது"
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
@@ -171,16 +260,18 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"\"%1\" என்ற தோற்றத்திட்டத்தை கண்டுபிடிக்க முடியவில்லை. தோற்றத்திட்டம் பின்வருபவற்றில் ஒன்றாக "
+"இருக்க வேண்டும்: %2"
 
 #: plasma-apply-cursortheme.cpp:121
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
-msgstr ""
+msgstr "உங்கள் கணினியில் கீழ்காணும் சுட்டிக்குறி தோற்றத்திட்டங்கள் உள்ளன:"
 
 #: plasma-apply-cursortheme.cpp:126
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(தற்போதைய அமர்வுக்கான தோற்றத்திட்டம்)"
 
 #: xcursor/xcursortheme.cpp:60
 #, kde-format

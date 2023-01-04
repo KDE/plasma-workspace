@@ -1,14 +1,16 @@
+# translation of plasma_wallpaper_org.kde.image.pot to esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2010-02-07 19:45+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 05:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -30,22 +32,22 @@ msgstr "axel@esperanto-jeunes.org"
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
 msgid "Positioning:"
-msgstr ""
+msgstr "Lokigo:"
 
 #: imagepackage/contents/ui/config.qml:97
 #, kde-format
 msgid "Scaled and Cropped"
-msgstr ""
+msgstr "Skalite kaj Stucite"
 
 #: imagepackage/contents/ui/config.qml:101
 #, kde-format
 msgid "Scaled"
-msgstr "Etendite"
+msgstr "Skalite"
 
 #: imagepackage/contents/ui/config.qml:105
 #, kde-format
 msgid "Scaled, Keep Proportions"
-msgstr ""
+msgstr "Skalite"
 
 #: imagepackage/contents/ui/config.qml:109
 #, kde-format
@@ -60,68 +62,64 @@ msgstr "Kahele"
 #: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Background:"
-msgstr ""
+msgstr "Fono:"
 
 #: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "Malklara"
 
 #: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "Solida koloro"
 
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr ""
+msgstr "Elekti Fonan Koloron"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
-msgstr ""
+msgstr "Aldoni Bildon…"
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Get New Wallpapers…"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Ricevi Novajn Ekranfonbildojn…"
 
 #: imagepackage/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Malfermi Ekranfonan Bildon"
 
 #: imagepackage/contents/ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Sekva Ekranfona Bildo"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Malfermi Entenantan Dosierujon"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr ""
+msgstr "Restarigi ekranfonbildon"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Remove Wallpaper"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Forigi Ekranfonbildon"
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "Tiu ilo permesas meti bildon kiel ekranfono de la Plasma-seanco."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -129,6 +127,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Bilddosiero aŭ instailta ekranfonbilda kpackage kiun vi deziras meti kiel "
+"ekranfonbildo de via Plasma-seanco"
 
 #: plasma-apply-wallpaperimage.cpp:45
 #, kde-format
@@ -141,18 +141,19 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Eraro okazis dum provo meti la Plasma-ekranfonbildon:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
+"Sukcese metis la ekranfonbildon por ĉiuj labortabloj de la KPackage-bazita %1"
 
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Sukcese metis la ekranfonbildon por ĉiuj labortabloj al la bildo %1"
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
@@ -160,140 +161,111 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"La dosiero metenda kiel ekranfonbildo ne ekzistas aŭ ni ne povas identigi "
+"ĝin  kiel ekranfonbildo: %1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format
 msgid "Recommended wallpaper file"
-msgstr ""
+msgstr "Rekomendita ekranfonbilda dosiero"
 
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "Dosierujo kun ekranfonbildo el kiu montri lumbildojn"
 
 #: plugin/imagebackend.cpp:353
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Open Image"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Malfermi Bildon"
 
 #: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
-msgstr ""
+msgstr "Bilddosieroj"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "Sinsekvo:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "Hazarde"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:49
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "A ĝis Z"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "Z ĝis A"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:57
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "Dato modifita (plej nova unue)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:61
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "Dato modifita (plej malnova unue)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "Grupigi laŭ dosierujoj"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
 #, kde-format
 msgid "Change every:"
-msgstr ""
+msgstr "Ŝanĝi ĉiujn:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 horon"
+msgstr[1] "%1 horojn"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minuton"
+msgstr[1] "%1 minutojn"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sekundon"
+msgstr[1] "%1 sekundojn"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Folders"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Dosierujoj"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Remove Folder"
-msgstr "Elekti ekranfonan bildan dosieron"
+msgstr "Forigi Dosierujon"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:225
 #, kde-format
 msgid "Open Folder"
-msgstr ""
+msgstr "Malfermi Dosierujon"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "Ne estas agordita iu ekranfonbildejo"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "Select Wallpaper Image File"
+#, kde-format
 msgid "Add Folder…"
-msgstr "Elekti ekranfonan bildan dosieron"
-
-#, fuzzy
-#~| msgid "Select Wallpaper Image File"
-#~ msgid "Wallpapers"
-#~ msgstr "Elekti ekranfonan bildan dosieron"
-
-#~ msgid "Open..."
-#~ msgstr "Malfermi..."
-
-#~ msgid "Center Tiled"
-#~ msgstr "Kahele centre"
-
-#~ msgid "Select Wallpaper Image File"
-#~ msgstr "Elekti ekranfonan bildan dosieron"
-
-#~ msgid "&Color:"
-#~ msgstr "&Koloro:"
-
-#~ msgctxt "Wallpaper info, author name"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Email:"
-#~ msgstr "Retpoŝto:"
-
-#~ msgid "License:"
-#~ msgstr "Permesilo:"
+msgstr "Aldoni Dosierujon…"

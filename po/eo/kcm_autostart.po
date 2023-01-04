@@ -1,14 +1,16 @@
+# translation of kcm_autostart.pot to esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-25 00:49+0000\n"
-"PO-Revision-Date: 2009-10-31 20:40+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-02 18:33+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -20,173 +22,105 @@ msgstr ""
 #: autostartmodel.cpp:322
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "\"%1\" ne estas absoluta url."
 
 #: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr ""
+msgstr "\"%1\" ne ekzistas."
 
 #: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr ""
+msgstr "\"%1\" ne estas dosiero."
 
 #: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "\"%1\" ne estas legebla."
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "Igi Lanĉebla"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "La dosiero '%1' devas esti lanĉebla por rulo dum elsaluto."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "La dosiero '%1' devas esti lanĉebla por rulo dum ensaluto."
 
 #: package/contents/ui/main.qml:93
-#, fuzzy, kde-format
-#| msgid "&Properties"
+#, kde-format
 msgid "Properties"
-msgstr "E&coj"
+msgstr "Trajtoj"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove"
-msgstr "Fo&rigi"
+msgstr "Forigi"
 
 #: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Aplikaĵoj"
 
 #: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Ensalutaj Skriptoj"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr ""
+msgstr "Antaŭ-ensalutaj Skriptoj"
 
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "Elsalutaj Skriptoj"
 
 #: package/contents/ui/main.qml:128
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "Neniuj uzantodifinitaj aŭtostartaĵoj"
 
 #: package/contents/ui/main.qml:129
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
-msgstr ""
+msgstr "Alklaku la butonon <interface>Aldoni…</interface> malsupre por aldoni"
 
 #: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Choose Login Script"
-msgstr ""
+msgstr "Elekti Ensalutan Skripton"
 
 #: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Elekti Elsalutan Skripton"
 
 #: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "Aldoni Aplikaĵon…"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
-msgstr ""
+msgstr "Aldoni Ensalutan Skripton…"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Axel Rousseau"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "axel@esperanto-jeunes.org"
-
-#, fuzzy
-#~| msgid "(c) 2006-2007-2008 Autostart Manager team"
-#~ msgid "Copyright © 2006–2020 Autostart Manager team"
-#~ msgstr "(c) 2006-2007-2008 Autostart Manager team"
-
-#~ msgid "Stephen Leaf"
-#~ msgstr "Stephen Leaf"
-
-#~ msgid "Montel Laurent"
-#~ msgstr "Montel Laurent"
-
-#~ msgid "Maintainer"
-#~ msgstr "Administranto"
-
-#, fuzzy
-#~| msgid "Advanced"
-#~ msgid "Add..."
-#~ msgstr "Pliaj"
-
-#, fuzzy
-#~| msgid "Shell script:"
-#~ msgid "Shell script path:"
-#~ msgstr "Ŝela skripto:"
-
-#~ msgid "Create as symlink"
-#~ msgstr "Krei kiel simbola ligilo"
-
-#, fuzzy
-#~| msgid "Autostart only in KDE"
-#~ msgid "Autostart only in Plasma"
-#~ msgstr "Aŭtolanĉi nur en KDE"
-
-#~ msgid "Name"
-#~ msgstr "Nomo"
-
-#~ msgid "Command"
-#~ msgstr "Komando"
-
-#~ msgid "Status"
-#~ msgstr "Stato"
-
-#~ msgctxt "The program will be run"
-#~ msgid "Enabled"
-#~ msgstr "Ŝaltita"
-
-#~ msgctxt "The program won't be run"
-#~ msgid "Disabled"
-#~ msgstr "Malŝaltita"
-
-#~ msgid "Script File"
-#~ msgstr "Skriptdosiero"
-
-#~ msgid "Startup"
-#~ msgstr "Lanĉo"
-
-#~ msgid "Shutdown"
-#~ msgstr "Sistemfermi"
+msgstr "Aldoni Elsalutan Skripton…"

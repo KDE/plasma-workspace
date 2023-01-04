@@ -1,26 +1,25 @@
 # Translation for kcm_cursortheme.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, Free Software Foundation.
-# Copyright (C) 2019-2022, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002,2003, 2005, 2006, 2007, 2008, 2010.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2022-08-11 20:03+0200\n"
+"POT-Creation-Date: 2023-01-03 00:49+0000\n"
+"PO-Revision-Date: 2023-01-03 08:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
@@ -35,34 +34,34 @@ msgstr "Uneko kurtsore-gaiaren izena"
 msgid "Current cursor size"
 msgstr "Kurtsorearen uneko neurria"
 
-#: kcmcursortheme.cpp:302
+#: kcmcursortheme.cpp:308
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Plasma saioa berrabiarazi behar duzu aldaketa hauek indarrean jartzeko."
 
-#: kcmcursortheme.cpp:376
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ezin da aldi baterako fitxategi bat sortu."
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:393
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ezin da jaitsi ikono-gai artxiboa: %1"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fitxategia ez da ikono-gai artxibo erabilgarria."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Huts egin du 'icons' karpeta sortzean."
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -71,15 +70,22 @@ msgstr ""
 "%1 izeneko gaia lehendik ere badago zure ikono-gaien karpetan. Ordeztu nahi "
 "duzu?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Gaia gainidatzi?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Gaia ondo instalatu da."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Denbora-muga segundotan"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -90,6 +96,74 @@ msgstr "Kendu gaia"
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Lehengoratu kurtsore-gaia"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "Abiarazte lekukotza"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "Konfiguratu, aplikazio bat abiarazi bitartean jotzen den animazioa."
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr "Kurtsorearen lekukotza:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr "Bat ere ez"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "Estatikoa"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "Keinuka"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "Punpaka"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Ataza kudeatzailearen lekukotza:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "Gaitu animazioa"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "Igarotakoan gelditu animazioak:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:122
+#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "segundo %1"
+msgstr[1] "%1 segundo"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -103,20 +177,26 @@ msgstr "Neurria:"
 
 #: package/contents/ui/main.qml:134
 #, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "&Konfiguratu abiarazte lekukotza..."
+
+#: package/contents/ui/main.qml:145
+#, kde-format
 msgid "&Install from File…"
 msgstr "&Instalatu fitxategitik..."
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "&Lortu kurtsore berriak..."
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Open Theme"
 msgstr "Ireki gaia"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kurtsore-gai fitxategiak (*.tar.gz *.tar.bz2)"

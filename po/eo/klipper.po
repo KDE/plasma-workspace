@@ -1,15 +1,16 @@
 # translation of klipper.po to Esperanto
 # Copyright (C) 2007 Free Software Foundation, Inc.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2007-12-16 15:07-0600\n"
-"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
-"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"PO-Revision-Date: 2023-01-03 22:03+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>Language-"
+"Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,10 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "E&viti malplenan poŝon"
+msgstr "Elekto kaj Poŝo:"
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -40,15 +40,12 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Poŝohistorio:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -56,16 +53,14 @@ msgstr[0] " ero"
 msgstr[1] " eroj"
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
+#, kde-format
 msgid "Always save in history"
-msgstr "&Refari agojn sur ero elektita en la historio"
+msgstr "Ĉiam konservi en la historio"
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Text selection:"
-msgstr "&Ignori elekton"
+msgstr "Tekstelekto:"
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
@@ -73,22 +68,19 @@ msgid "Only when explicitly copied"
 msgstr ""
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "&Forviŝi poŝohistorion"
+msgstr "Ĉu tekstelektoj estas konservataj en la poŝohistorio."
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "&Ignori elekton"
+msgstr "Neteksta elekto:"
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
+#, kde-format
 msgid "Never save in history"
-msgstr "&Refari agojn sur ero elektita en la historio"
+msgstr "Neniam konservi en la historio"
 
 #: configdialog.cpp:185
 #, kde-format
@@ -98,10 +90,9 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "&Tempolimo por agomontroj:"
+msgstr "Montri ŝprucmenuon por agoj:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -120,31 +111,28 @@ msgid "Exclude Windows..."
 msgstr ""
 
 #: configdialog.cpp:283
-#, fuzzy, kde-format
-#| msgid " sec"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] " sek"
-msgstr[1] " sek"
+msgstr[0] " sekundo"
+msgstr[1] " sekundoj"
 
 #: configdialog.cpp:284
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Agoj"
+msgstr "Opcioj:"
 
 #: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Ekskluzivi Fenestrojn"
 
 #: configdialog.cpp:350
 #, kde-kuit-format
@@ -162,8 +150,7 @@ msgid "Match pattern and commands"
 msgstr ""
 
 #: configdialog.cpp:359
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Priskribo"
@@ -174,16 +161,14 @@ msgid "Add Action..."
 msgstr "Aldoni agon"
 
 #: configdialog.cpp:369
-#, fuzzy, kde-format
-#| msgid "&Add Action"
+#, kde-format
 msgid "Edit Action..."
-msgstr "&Aldoni agon"
+msgstr "Redakti Agon..."
 
 #: configdialog.cpp:374
-#, fuzzy, kde-format
-#| msgid "&Delete Action"
+#, kde-format
 msgid "Delete Action"
-msgstr "&Forigi agon"
+msgstr "Forigi Agon"
 
 #: configdialog.cpp:381
 #, kde-kuit-format
@@ -202,10 +187,9 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:566
-#, fuzzy, kde-format
-#| msgid "&Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "&Forigi agon"
+msgstr "Konfirmi Forigan Agon"
 
 #: configdialog.cpp:595
 #, kde-format
@@ -214,36 +198,29 @@ msgid "General"
 msgstr "Ĝenerala"
 
 #: configdialog.cpp:595
-#, fuzzy, kde-format
-#| msgid "General Config"
+#, kde-format
 msgid "General Configuration"
-msgstr "Ĝenerala agordo"
+msgstr "Ĝenerala Agordo"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Agoj"
+msgstr "Agmenuo"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Agoj"
+msgstr "Agmenuo"
 
 #: configdialog.cpp:597
-#, fuzzy, kde-format
-#| msgid "Actions Config"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Agordo de agoj"
 
 #: configdialog.cpp:597
-#, fuzzy, kde-format
-#| msgid "Actions Config"
+#, kde-format
 msgid "Actions Configuration"
 msgstr "Agordo de agoj"
 
@@ -254,10 +231,9 @@ msgid "Shortcuts"
 msgstr "Fulmoklavoj"
 
 #: configdialog.cpp:600
-#, fuzzy, kde-format
-#| msgid "Shortcuts Config"
+#, kde-format
 msgid "Shortcuts Configuration"
-msgstr "Agordo de fulmoklavoj"
+msgstr "Agordo de Fulmoklavoj"
 
 #: configdialog.cpp:680
 #, kde-kuit-format
@@ -288,22 +264,19 @@ msgid "Ignore"
 msgstr "Ignori"
 
 #: editactiondialog.cpp:36
-#, fuzzy, kde-format
-#| msgid "<empty clipboard>"
+#, kde-format
 msgid "Replace Clipboard"
-msgstr "<malplena poŝo>"
+msgstr "Anstataŭigi Poŝon"
 
 #: editactiondialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "<empty clipboard>"
+#, kde-format
 msgid "Add to Clipboard"
-msgstr "<malplena poŝo>"
+msgstr "Aldoni al Poŝo"
 
 #: editactiondialog.cpp:122
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Command"
-msgstr "Aldoni komandon"
+msgstr "Komando"
 
 #: editactiondialog.cpp:124
 #, kde-format
@@ -376,22 +349,19 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Aldoni komandon"
+msgstr "Aldoni Komandon..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Aldoni komandon"
+msgstr "Redakti Komandon..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Forigi komandon"
+msgstr "Forigi Komandon"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
@@ -405,11 +375,9 @@ msgid "Confirm Delete Command"
 msgstr ""
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Command Properties"
-msgstr "Agoj"
+msgstr "Trajtoj de Komando"
 
 #: editcommanddialog.cpp:59
 #, kde-format
@@ -417,10 +385,9 @@ msgid "Enter the command and arguments"
 msgstr ""
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Command:"
-msgstr "Aldoni komandon"
+msgstr "Komando:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -443,16 +410,14 @@ msgid "Output from command:"
 msgstr ""
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "<empty clipboard>"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "<malplena poŝo>"
+msgstr "Anstataŭigi aktualan poŝon"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "<empty clipboard>"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "<malplena poŝo>"
+msgstr "Aldoni al poŝo"
 
 #: editcommanddialog.cpp:101
 #, kde-format
@@ -475,47 +440,40 @@ msgid "%1x%2 %3bpp"
 msgstr ""
 
 #: klipper.cpp:154
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "&Tempolimo por agomontroj:"
+msgstr "Aŭtomata Ŝprucmenuo por Agoj"
 
 #: klipper.cpp:177
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Forviŝi poŝohistorion"
 
 #: klipper.cpp:184
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Agordi Klipper..."
+msgstr "&Agordi Klipper…"
 
 #: klipper.cpp:190
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Ĉesi"
 
 #: klipper.cpp:195
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Mane lanĉi agon laŭ nuna poŝenhavo"
+msgstr "Mane Lanĉi Agon je Aktuala Poŝenhavo"
 
 #: klipper.cpp:203
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Modifi enhavon"
+msgstr "Redakti &Enhavon…"
 
 #: klipper.cpp:211
 #, kde-format
@@ -524,32 +482,28 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Sekva Historiero"
 
 #: klipper.cpp:225
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Antaŭa Historiero"
 
 #: klipper.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Popup menu at mouse-cursor position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Ŝ&prucmenuo ĉe la muspozicio"
+msgstr "Montri Erojn ĉe Muspozicio"
 
 #: klipper.cpp:243
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Ilo por la poŝo"
+msgstr "%1 - Ilo por la poŝo"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -590,44 +544,40 @@ msgid "Mobile Barcode"
 msgstr ""
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "&Forviŝi poŝohistorion"
+msgstr "Ĉu vi vere volas viŝi kaj forigi la kompletan poŝohistorion?"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "&Forviŝi poŝohistorion"
+msgstr "&Forviŝi Poŝohistorion"
 
 #: klipper.cpp:1076 klipper.cpp:1085
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard history"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Poŝa historio"
 
 #: klipper.cpp:1102
 #, kde-format
 msgid "up"
-msgstr ""
+msgstr "supra"
 
 #: klipper.cpp:1109
 #, kde-format
 msgid "current"
-msgstr ""
+msgstr "aktuala"
 
 #: klipper.cpp:1116
 #, kde-format
 msgid "down"
-msgstr ""
+msgstr "malsupra"
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Klipper"
+#, kde-format
 msgid "Klipper version"
-msgstr "Klipper"
+msgstr "Klipper versio"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
@@ -645,10 +595,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "E&viti malplenan poŝon"
+msgstr "Eviti ke la poŝo estu forviŝata"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -660,10 +609,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Pre&vent empty clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "E&viti malplenan poŝon"
+msgstr "Konservi elekton kaj poŝon sama"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -676,10 +624,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
-msgstr "&Ignori elekton"
+msgstr "Ignori la elekton"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -692,10 +639,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Text selection only"
-msgstr "&Ignori elekton"
+msgstr "Nur tekstelekto"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -707,10 +653,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore"
+#, kde-format
 msgid "Always ignore images"
-msgstr "Ignori"
+msgstr "Ĉiam ignori bildojn"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -727,10 +672,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "&Ignori elekton"
+msgstr "Senpere je elekto"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -747,24 +691,21 @@ msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "&Tempolimo por agomontroj:"
+msgstr "Aŭtomata agomontra tempo:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Tim&eout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "&Tempolimo por agomontroj:"
+msgstr "Montri la aŭtomatan ŝprucmenuon por agoj dum tiu tempo."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Grando de la historio:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
@@ -780,10 +721,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Remove whitespace when executing actions"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Forpreni la spacetojn dum plenumo de agoj"
+msgstr "Stuci spacetojn de elekto"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -797,26 +737,25 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Refari agojn sur ero elektita en la historio"
+msgstr "Por ero elektita el la historio"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "&Forviŝi poŝohistorion"
+msgstr ""
+"Montri la ŝprucmenuon de aplikeblaj agoj se ero de la poŝohistorio estas "
+"elektata."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable/Disable Clipboard Actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "(Mal)ŝalti poŝagojn"
+msgstr "Inkluzivi MIME agojn"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -827,34 +766,30 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "&Konservi la poŝenhavon ĉe eliro"
+msgstr "%1 - Poŝaj Eroj"
 
 #: klipperpopup.cpp:109
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Serĉi…"
 
 #: klipperpopup.cpp:167
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Regula esprimo:"
+msgstr "Nevalida regula esprimo, %1"
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgid "Clipboard is empty"
-msgstr "Grando de la &poŝohistorio:"
+msgstr "Poŝo estas malplena"
 
 #: klipperpopup.cpp:174
-#, fuzzy, kde-format
-#| msgid "<no matches>"
+#, kde-format
 msgid "No matches"
-msgstr "<neniuj kongruaĵoj>"
+msgstr "Neniuj kongruaĵoj"
 
 #: main.cpp:27 tray.cpp:22
 #, kde-format
@@ -862,10 +797,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Ilo por la KDEa eltonda kaj enmeta historio"
+msgstr "Ilo por la Plasma-a eltonda kaj enmeta historio"
 
 #: main.cpp:31
 #, kde-format
@@ -924,10 +858,9 @@ msgid "Esben Mose Hansen"
 msgstr "Esben Mose Hansen"
 
 #: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Prizorganto"
+msgstr "Antaŭa Prizorganto"
 
 #: main.cpp:44
 #, kde-format
@@ -943,13 +876,15 @@ msgstr "Prizorganto"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Wolfram Diestel,Steffen Pietsch,Cindy McKee"
+msgstr "Wolfram Diestel,Steffen Pietsch,Cindy McKee,Oliver Kellogg"
 
 #: main.cpp:46
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de,cfmckee@gmail.com"
+msgstr ""
+"wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de,cfmckee@gmail.com,"
+"okellogg@users.sourceforge.net"
 
 #: popupproxy.cpp:145
 #, kde-format
@@ -957,10 +892,9 @@ msgid "&More"
 msgstr "&Pliaj"
 
 #: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
+#, kde-format
 msgid "Clipboard Contents"
-msgstr "&Konservi la poŝenhavon ĉe eliro"
+msgstr "Poŝenhavo"
 
 #: urlgrabber.cpp:199
 #, kde-format
@@ -971,252 +905,3 @@ msgstr "Malebligi ĉi tiun ŝprucmesaĝon"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rezigni"
-
-#, fuzzy
-#~| msgid "C&lear Clipboard History"
-#~ msgid "Delete clipboard history?"
-#~ msgstr "&Forviŝi poŝohistorion"
-
-#, fuzzy
-#~| msgctxt "Actions Config"
-#~| msgid "Actions"
-#~ msgid "Action list:"
-#~ msgstr "Agoj"
-
-#~ msgid "Regular Expression"
-#~ msgstr "Regula esprimo"
-
-#, fuzzy
-#~ msgid ""
-#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~ "will be replaced with the clipboard contents.<br>For more information "
-#~ "about regular expressions, you could have a look at the <a href=\"https://"
-#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
-#~ "topic</a>."
-#~ msgstr ""
-#~ "Se vi volas legi pri regulaj esprimoj, bonvolu rigardi la <a href="
-#~ "\"http://en.wikipedia.org/wiki/Regular_expression\">anglan Vikipedian "
-#~ "artikolon pri tiu temo</a>."
-
-#, fuzzy
-#~| msgid "<new command>"
-#~ msgid "new command"
-#~ msgstr "<nova komando>"
-
-#, fuzzy
-#~| msgid "Description"
-#~ msgid "Command Description"
-#~ msgstr "Priskribo"
-
-#~ msgid "Remove whitespace when executing actions"
-#~ msgstr "Forpreni la spacetojn dum plenumo de agoj"
-
-#~ msgid "Advanced..."
-#~ msgstr "Altnivela..."
-
-#~ msgid "Advanced Settings"
-#~ msgstr "Altnivela agordo"
-
-#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
-#~ msgstr "Malebligi &agojn por fenestroj de la tipo WM_CLASS"
-
-#~ msgid ""
-#~ "<qt>This lets you specify windows in which Klipper should not invoke "
-#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
-#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
-#~ "click on the window you want to examine. The first string it outputs "
-#~ "after the equal sign is the one you need to enter here.</qt>"
-#~ msgstr ""
-#~ "<qt>Jen vi povas indiki fenestrojn, en kiuj Klipper ne envoku \"agojn\"."
-#~ "<br /><br />Por eltrovi la klason de fenestro tajpu <center><b>xprop | "
-#~ "grep WM_CLASS</b></center><br />en terminalo kaj poste alklaku la "
-#~ "ekzamenotan fenestron.<br />La unua signoĉeno post la egalsigno estas "
-#~ "tiu, kiun vi donu tie ĉi.</qt>"
-
-#, fuzzy
-#~| msgid "Enable/Disable Clipboard Actions"
-#~ msgid "Enable Clipboard Actions"
-#~ msgstr "(Mal)ŝalti poŝagojn"
-
-#, fuzzy
-#~| msgid "&Replay actions on an item selected from history"
-#~ msgid "Replay action in history"
-#~ msgstr "&Refari agojn sur ero elektita en la historio"
-
-#, fuzzy
-#~| msgid "Save clipboard contents on e&xit"
-#~ msgid "Save clipboard contents on exit"
-#~ msgstr "&Konservi la poŝenhavon ĉe eliro"
-
-#, fuzzy
-#~| msgid "Sy&nchronize contents of the clipboard and the selection"
-#~ msgid "Synchronize contents of the clipboard and the selection"
-#~ msgstr "&Sinkronigi la enhavon de la poŝo kun la elekto"
-
-#, fuzzy
-#~| msgid "Save clipboard contents on e&xit"
-#~ msgid "Keep clipboard contents"
-#~ msgstr "&Konservi la poŝenhavon ĉe eliro"
-
-#~ msgid ""
-#~ "Selecting this option has the effect, that the clipboard can never be "
-#~ "emptied. E.g. when an application exits, the clipboard would usually be "
-#~ "emptied."
-#~ msgstr ""
-#~ "Elekto de tiu opcio, malhelpas ke la poŝo estos malplenigata. Ekz. "
-#~ "ordinare la poŝo malpleniĝas se aplikaĵo finiĝas."
-
-#, fuzzy
-#~| msgid "&Ignore selection"
-#~ msgid "Ignore Selection"
-#~ msgstr "&Ignori elekton"
-
-#, fuzzy
-#~| msgid "Separate clipboard and selection"
-#~ msgid "Synchronize clipboard and selection"
-#~ msgstr "Apartigi la poŝon kaj la elekton"
-
-#, fuzzy
-#~| msgid "&Ignore selection"
-#~ msgid "Selection text only"
-#~ msgstr "&Ignori elekton"
-
-#, fuzzy
-#~| msgid "Tim&eout for action popups:"
-#~ msgid "Timeout for action popups (seconds)"
-#~ msgstr "&Tempolimo por agomontroj:"
-
-#~ msgid "A value of 0 disables the timeout"
-#~ msgstr "Valoro 0 malebligas la tempolimon"
-
-#, fuzzy
-#~| msgid "C&lipboard history size:"
-#~ msgid "Clipboard history size"
-#~ msgstr "Grando de la &poŝohistorio:"
-
-#~ msgid ""
-#~ "Sometimes, the selected text has some whitespace at the end, which, if "
-#~ "loaded as URL in a browser would cause an error. Enabling this option "
-#~ "removes any whitespace at the beginning or end of the selected string "
-#~ "(the original clipboard contents will not be modified)."
-#~ msgstr ""
-#~ "Kelkfoje, la elektita teksto enhavas spaceton ĉe la fino; se la teksto "
-#~ "estas retadreso por uzo en retumilo, tio kaŭzus eraron. Se vi ebligas ĉi "
-#~ "tiun opcion, spacetoj ĉe kaj la komenco kaj la fino de la tekstoĉeno "
-#~ "estos forigitaj. La originala teksto ene de la poŝo ne ŝanĝiĝos."
-
-#, fuzzy
-#~| msgid " - Actions For: "
-#~ msgid "%1 - Actions For: %2"
-#~ msgstr " - Agoj por: "
-
-#~ msgid "&Edit Contents..."
-#~ msgstr "&Modifi enhavon..."
-
-#~ msgid "<empty clipboard>"
-#~ msgstr "<malplena poŝo>"
-
-#, fuzzy
-#~| msgid ""
-#~| "You can enable URL actions later by right-clicking on the Klipper icon "
-#~| "and selecting 'Enable Actions'"
-#~ msgid ""
-#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
-#~ "selecting 'Enable Clipboard Actions'"
-#~ msgstr ""
-#~ "Vi povas ebligi retadresajn agojn poste per maldekstra klako sur la "
-#~ "Klipper-piktogramo kaj elekto de 'Ebligi agojn'"
-
-#, fuzzy
-#~| msgid "Enable/Disable Clipboard Actions"
-#~ msgid "Enable Clipboard &Actions"
-#~ msgstr "(Mal)ŝalti poŝagojn"
-
-#~ msgid "Show Klipper Popup-Menu"
-#~ msgstr "Montri Klipper ŝprucmenuon"
-
-#, fuzzy
-#~| msgid "&Popup menu at mouse-cursor position"
-#~ msgid "Popup menu at mouse-cursor position"
-#~ msgstr "Ŝ&prucmenuo ĉe la muspozicio"
-
-#~ msgid "Replace"
-#~ msgstr "Anstataŭigi"
-
-#~ msgid "Add"
-#~ msgstr "Aldoni"
-
-#~ msgid "Clipboard/Selection Behavior"
-#~ msgstr "Poŝa/elekta konduto"
-
-#~ msgid "Separate clipboard and selection"
-#~ msgstr "Apartigi la poŝon kaj la elekton"
-
-#~ msgid ""
-#~ "This option prevents the selection being recorded in the clipboard "
-#~ "history. Only explicit clipboard changes are recorded."
-#~ msgstr ""
-#~ "Ĉi tiu opcio ne permesas la elekton esti enmetita en la poŝa historio. "
-#~ "Nur difinitaj ŝanĝoj al la poŝo estos enmetitaj."
-
-#~ msgid ""
-#~ "<qt>There are two different clipboard buffers available:<br /><br /"
-#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
-#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
-#~ "b> is available immediately after selecting some text. The only way to "
-#~ "access the selection is to press the middle mouse button.<br /><br />You "
-#~ "can configure the relationship between Clipboard and Selection.</qt>"
-#~ msgstr ""
-#~ "<qt>Ekzistas fakte du poŝenhavoj:<br /><br />La <b>poŝo</b>, kiun vi "
-#~ "plenigas per elekto de io kaj premo de Stir-C aŭ alklako al \"Kopii\" en "
-#~ "ilobreto aŭ menubreto.<br /><br />Kaj la <b>elekto</b>, kiu estas uzebla "
-#~ "tuj post elektado de teksto. La maniero por enmeti tiun elekton <br />en "
-#~ "alia loko estas premi la mezan musbutonon.<br /><br />Vi povas agordi la "
-#~ "rilaton inter poŝo kaj elekto.</qt>"
-
-#~ msgid "Klipper - clipboard tool"
-#~ msgstr "Klipper - Ilo por la poŝo"
-
-#, fuzzy
-#~| msgid "Action &list (right click to add/remove commands):"
-#~ msgid "Action list (right click to add/remove commands):"
-#~ msgstr "Ago&listo (dekstre klaku por aldoni/forigi komandojn):"
-
-#~ msgid "Double-click here to set the command to be executed"
-#~ msgstr "Duoble klaku tie ĉi por difini la plenumeblan komandon"
-
-#, fuzzy
-#~| msgid "Double-click here to set the regexp"
-#~ msgid "Double-click here to set the regular expression"
-#~ msgstr "Duoble klaku tie ĉi por difini regulan esprimon"
-
-#~ msgid "<new action>"
-#~ msgstr "<nova ago>"
-
-#~ msgid "Selecting this option synchronizes these two buffers."
-#~ msgstr ""
-#~ "Se vi elektas tiun ĉi opcion la du poŝenhavoj estos en stato de akordo."
-
-#~ msgid ""
-#~ "Using this option will only set the selection when highlighting something "
-#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
-#~ msgstr ""
-#~ "Se vi uzas ĉi tiun opcion, kiam vi elektas ion per emfazi tekston, vi "
-#~ "vere nur elektas. Por esti enmetita en la poŝon, vi devas alklaki ekz. "
-#~ "\"Kopii\" en la menubreto."
-
-#~ msgid "&Use graphical editor for editing regular expressions"
-#~ msgstr "&Uzi grafikan redaktilon por modifi regulajn esprimojn"
-
-#~ msgid ""
-#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~ "will be replaced with the clipboard contents."
-#~ msgstr ""
-#~ "Alklaku kolumnon de emfazita ero por ŝanĝi ĝin. \"%s\" en komando estos "
-#~ "anstataŭigita per la enhavo de la poŝo."
-
-#~ msgid "Enable &Actions"
-#~ msgstr "Ebligi &agojn"
-
-#~ msgid "&Actions Enabled"
-#~ msgstr "Ebligis &agojn"

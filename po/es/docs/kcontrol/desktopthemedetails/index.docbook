@@ -53,9 +53,9 @@
 </authorgroup>
 
 <date
->2019-03-08</date>
+>2021-04-09</date>
 <releaseinfo
->Plasma 5.16</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -65,6 +65,8 @@
 <keyword
 >escritorio</keyword>
 <keyword
+>estilo</keyword>
+<keyword
 >tema</keyword>
 <keyword
 >plasma</keyword>
@@ -72,19 +74,19 @@
 </articleinfo>
 
 <para
->&plasma; contiene diversos temas. El tema de &plasma; define cómo se muestran los distintos componentes de &plasma; (por ejemplo, los plasmoides, los paneles y los elementos gráficos). </para>
+>&plasma; contiene diversos estilos. El estilo de &plasma; define cómo se muestran los distintos componentes de &plasma; (por ejemplo, los plasmoides, los paneles y los elementos gráficos). </para>
 
 <para>
   <screenshot>
     <screeninfo
->Captura de pantalla del gestor de temas de &plasma;</screeninfo>
+>Captura de pantalla del gestor de estilos de &plasma;</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="main.png" format="PNG"/>
       </imageobject>
       <textobject>
         <phrase
->Personalizar un tema de &plasma;</phrase>
+>Personalizar un estilo de &plasma;</phrase>
       </textobject>
     </mediaobject>
   </screenshot>
@@ -95,39 +97,48 @@
 <itemizedlist>
   <listitem
 ><para
->instalar y escoger temas de &plasma;</para
+>instalar y escoger estilos de &plasma;</para
 ></listitem>
   <listitem
 ><para
->editar temas de &plasma;</para
+>editar estilos de &plasma;</para
 ></listitem>
   <listitem
 ><para
->eliminar temas de &plasma;</para
+>eliminar estilos de &plasma;</para
 ></listitem>
 </itemizedlist>
 
 <para
->Si quiere eliminar un tema, use el icono <inlinemediaobject
+>Se puede filtrar la lista de estilos usando el campo <guilabel
+>Buscar...</guilabel
+> que hay encima de la cuadrícula. Además, puede usar la lista desplegable que hay junto a este campo para mostrar solo los <guimenuitem
+>Temas claros</guimenuitem
+>, los <guimenuitem
+>Temas oscuros</guimenuitem
+> o los temas <guimenuitem
+>Compatibles con el esquema de colores</guimenuitem
+>. </para>
+
+<para
+>Si quiere eliminar un estilo, use el icono <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
 ></inlinemediaobject
-> superpuesto en la parte inferior derecha del icono del tema. Para deshacer esta acción, pulse el icono <inlinemediaobject
+> superpuesto en la parte inferior derecha del icono del estilo. Para deshacer esta acción, pulse el icono <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
 ></inlinemediaobject
->. Si pulsa <guibutton
+>. Si pulsa el botón <guibutton
 >Aplicar</guibutton
-> o <guibutton
->Aceptar</guibutton
-> se borrarán definitivamente los temas seleccionados para su eliminación, por lo que no podrá deshacer este tipo de borrado. </para>
+>, se borrarán los temas seleccionados para su eliminación, por lo que no podrá deshacer este tipo de borrado. </para>
 
 <para
->Si el paquete «plasma-sdk» está instalado en su sistema, aparece un botón al situar el puntero del ratón sobre la vista previa de cualquier tema que le permite iniciar el <application
+>Si el paquete «plasma-sdk» está instalado en su sistema, aparece un botón al situar el puntero del ratón sobre la vista previa de cualquier estilo que le permite iniciar el <application
 >Explorador de temas de Plasma</application
 >. </para>
 <para
->Para información más técnica visite <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails"
+>Para información más técnica visite <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
 >esta página</ulink
 >. </para>
 
@@ -139,9 +150,9 @@
 ></term>
     <listitem>
     <para
->Debe estar conectado a Internet para poder usarlo. Al pulsar este botón se mostrará un diálogo en el que puede escoger un nuevo tema de Plasma. Si pulsa <guibutton
+>Debe estar conectado a Internet para poder usarlo. Al pulsar este botón se mostrará un diálogo en el que puede escoger un nuevo estilo de Plasma. Si pulsa <guibutton
 >Instalar</guibutton
-> en el diálogo se instalará el tema de &plasma; escogido, que estará disponible en cuanto pulse el botón <guibutton
+> en el diálogo se instalará el estilo de &plasma; escogido, que estará disponible en cuanto pulse el botón <guibutton
 >Cerrar</guibutton
 > en el instalador. </para>
     <para>
@@ -168,12 +179,12 @@
 ></term>
     <listitem>
       <para
->Si ha descargado nuevos temas desde Internet, puede usar esto para explorar la ubicación de dichos temas recién descargados. Si pulsa este botón se le mostrará el diálogo de archivos para apuntar al «tarball» del tema de &plasma; que tiene en el disco.</para>
+>Si ha descargado nuevos estilos desde Internet, puede usar esto para explorar la ubicación de dichos estilos recién descargados. Si pulsa este botón se le mostrará el diálogo de archivos para apuntar al «tarball» del estilo de &plasma; que tiene en el disco.</para>
 
       <para
 >Si pulsa <guibutton
 >Abrir</guibutton
-> en este diálogo se instalará el tema seleccionado y estará disponible en la lista de temas. </para>
+> en este diálogo se instalará el estilo seleccionado y estará disponible en la lista de estilos. </para>
     </listitem>
   </varlistentry>
 </variablelist>

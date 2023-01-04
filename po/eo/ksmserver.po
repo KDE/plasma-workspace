@@ -2,6 +2,7 @@
 # Copyright (C) 2000, 2007, 2008 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 2000.
 # Cindy McKee <cfmckee@gmail.com>, 2007, 2008.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:49+0000\n"
-"PO-Revision-Date: 2008-01-02 08:02-0600\n"
-"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
+"PO-Revision-Date: 2023-01-03 11:05+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -28,47 +29,47 @@ msgstr "'%1' nuligis la elsaluton"
 #: main.cpp:118
 #, kde-format
 msgid "$HOME not set!"
-msgstr ""
+msgstr "$HOME nedifinita!"
 
 #: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr ""
+msgstr "$HOME dosierujo (%1) ne ekzistas."
 
 #: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
-msgstr ""
+msgstr "Neniu skribaliro al $HOME dosierujo (%1)."
 
 #: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr ""
+msgstr "Neniu leg-aliro al $HOME dosierujo (%1)."
 
 #: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr ""
+msgstr "$HOME dosierujo (%1) ne plu havas diskospacon."
 
 #: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
+msgstr "Skribo al $HOME dosierujo (%2) malsukcesis kun la eraro '%1'"
 
 #: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
-msgstr ""
+msgstr "Neniu skribaliro al '%1'."
 
 #: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
-msgstr ""
+msgstr "Neniu leg-aliro al '%1'."
 
 #: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr ""
+msgstr "Dumtempdosierujo (%1) ne plu havas diskospacon."
 
 #: main.cpp:163 main.cpp:176
 #, kde-format
@@ -76,6 +77,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
+"Skribo al la dumtempdosierujo (%2) malsukcesis kun\n"
+"    la eraro '%1'"
 
 #: main.cpp:191
 #, kde-format
@@ -83,6 +86,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"La sekva instalproblemo estis detektita\n"
+"dum provo startigi Plasma:"
 
 #: main.cpp:194
 #, kde-format
@@ -91,22 +96,22 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"Plasma estas nekapabla starti.\n"
 
 #: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr ""
+msgstr "Plasma-Laborspaca instalproblemo!"
 
 #: main.cpp:237
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"La fidinda KDE-seancadministrilo kiu parolas la norman X11R6-"
+"La fidinda Plasma-seancadministrilo kiu parolas la norman X11R6-\n"
 "seancadministran protokolon XSMP."
 
 #: main.cpp:241
@@ -122,7 +127,7 @@ msgstr "Permesi ankaŭ forajn konektojn"
 #: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr ""
+msgstr "Startigas la seancon en ŝlosita reĝimo"
 
 #: main.cpp:251
 #, kde-format
@@ -130,16 +135,16 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Startas sen ekranŝlosa subteno. Nur bezonata se alia komponanto provizas la "
+"ekranŝloson."
 
 #: server.cpp:884
-#, fuzzy, kde-format
-#| msgid "The KDE Session Manager"
+#, kde-format
 msgid "Session Management"
-msgstr "La KDE-seanco-administrilo"
+msgstr "Seanc-Administrado"
 
 #: server.cpp:887
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgid "Log Out"
 msgstr "Elsaluto"
 
@@ -157,111 +162,3 @@ msgstr "Ĉesi sen konfirmo"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Reŝargi sen konfirmo"
-
-#~ msgid ""
-#~ "Starts <wm> in case no other window manager is \n"
-#~ "participating in the session. Default is 'kwin'"
-#~ msgstr ""
-#~ "Lanĉas <wm> se neniu alia fenestroadministrilo partoprenas\n"
-#~ "en la seanco. La defaŭlta estas 'kwin'"
-
-#, fuzzy
-#~| msgid "Logout"
-#~ msgid "Logout"
-#~ msgstr "Elsaluto"
-
-#, fuzzy
-#~| msgid "Turn Off Computer"
-#~ msgid "Sleeping in 1 second"
-#~ msgid_plural "Sleeping in %1 seconds"
-#~ msgstr[0] "Malŝalti la komputilon"
-#~ msgstr[1] "Malŝalti la komputilon"
-
-#, fuzzy
-#~| msgid "Turn Off Computer"
-#~ msgid "Logging out in 1 second."
-#~ msgid_plural "Logging out in %1 seconds."
-#~ msgstr[0] "Malŝalti la komputilon"
-#~ msgstr[1] "Malŝalti la komputilon"
-
-#, fuzzy
-#~| msgid "Turn Off Computer"
-#~ msgid "Turning off computer in 1 second."
-#~ msgid_plural "Turning off computer in %1 seconds."
-#~ msgstr[0] "Malŝalti la komputilon"
-#~ msgstr[1] "Malŝalti la komputilon"
-
-#, fuzzy
-#~| msgid "Turn Off Computer"
-#~ msgid "Restarting computer in 1 second."
-#~ msgid_plural "Restarting computer in %1 seconds."
-#~ msgstr[0] "Malŝalti la komputilon"
-#~ msgstr[1] "Malŝalti la komputilon"
-
-#, fuzzy
-#~| msgid "Turn Off Computer"
-#~ msgid "Turn Off Computer"
-#~ msgstr "Malŝalti la komputilon"
-
-#, fuzzy
-#~| msgid "Restart Computer"
-#~ msgid "Restart Computer"
-#~ msgstr "Relanĉi la komputilon"
-
-#, fuzzy
-#~| msgid "Cancel"
-#~ msgid "Cancel"
-#~ msgstr "Rezigni"
-
-#, fuzzy
-#~| msgid "Standby"
-#~ msgid "&Standby"
-#~ msgstr "Suspendi"
-
-#, fuzzy
-#~| msgid "Suspend to RAM"
-#~ msgid "Suspend to &RAM"
-#~ msgstr "Suspendi al RAM"
-
-#, fuzzy
-#~| msgid "Suspend to Disk"
-#~ msgid "Suspend to &Disk"
-#~ msgstr "Suspendi al disko"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Wolfram Diestel,Steffen Pietsch"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de"
-
-#~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "(C) 2000, The KDE Developers"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Maintainer"
-#~ msgstr "Prizorganto"
-
-#~ msgctxt "current option in boot loader"
-#~ msgid " (current)"
-#~ msgstr " (nuna)"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2.%3</numid>"
-#~ msgstr "KDE <numid>%1.%2.%3</numid>"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2</numid>"
-#~ msgstr "KDE <numid>%1.%2</numid>"
-
-#~ msgid "End Session for %1"
-#~ msgstr "Fini seancon por %1"
-
-#~ msgid "End Session for %1 (%2)"
-#~ msgstr "Fini seancon por %1 (%2)"

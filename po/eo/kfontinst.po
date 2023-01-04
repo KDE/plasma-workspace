@@ -1,13 +1,14 @@
 # translation of kfontinst.po to Esperanto
 # Matthias Peick <matthias@peick.de>, 2004.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2009-11-10 09:40+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 20:30+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,18 +20,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Matthias Peick, Cindy McKee"
+msgstr "Matthias Peick, Cindy McKee, Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "matthias@peick.de, cfmckee@gmail.com"
+msgstr "matthias@peick.de, cfmckee@gmail.com, okellogg@users.sourceforge.net"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you wish to install the font(s) for personal use (only usable by you), "
-#| "or system-wide (usable by all users)?"
+#, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
@@ -74,10 +72,9 @@ msgid "Print"
 msgstr "Presi"
 
 #: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
-#, fuzzy, kde-format
-#| msgid "Canceling..."
+#, kde-format
 msgid "Canceling…"
-msgstr "Rezigni"
+msgstr "Rezignanta…"
 
 #: apps/Printer.cpp:325
 #, kde-format
@@ -114,16 +111,14 @@ msgid "Remove file containing list of fonts to print"
 msgstr "Forpreni la dosieron kiu enhavas liston de presotaj tiparoj"
 
 #: apps/Viewer.cpp:48
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "Ĉu malfermi ĉiujn %1 tiparojn en tipara rigardilo?"
+msgstr "Malfermi ekzistantan tipardosieron"
 
 #: apps/Viewer.cpp:49
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "Presi tiparajn ekzemplerojn"
+msgstr "Presi tiparan antaŭrigardon"
 
 #: apps/Viewer.cpp:66
 #, kde-format
@@ -156,10 +151,9 @@ msgid "Duplicate Fonts"
 msgstr "Duplikataj tiparoj"
 
 #: kcmfontinst/DuplicatesDialog.cpp:77
-#, fuzzy, kde-format
-#| msgid "Scanning for duplicate fonts. Please wait..."
+#, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Serĉas duplikatajn tiparoj. Bonvolu atendi..."
+msgstr "Serĉanta duplikatajn tiparojn. Bonvolu atendi…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
@@ -172,8 +166,7 @@ msgid "Delete Marked Files"
 msgstr "Forigi elektitajn dosierojn"
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "%1 duplicate fonts found."
+#, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "Trovis %1 duplikatajn tiparojn."
@@ -239,11 +232,10 @@ msgid "Mark for Deletion"
 msgstr "Elekti por forigo..."
 
 #: kcmfontinst/DuplicatesDialog.cpp:502
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Ĉu malfermi ĉiujn %1 tiparojn en tipara rigardilo?"
+msgstr[0] "Ĉu malfermi tiparon en tipara rigardilo?"
 msgstr[1] "Ĉu malfermi ĉiujn %1 tiparojn en tipara rigardilo?"
 
 #: kcmfontinst/FontFilter.cpp:103
@@ -267,16 +259,14 @@ msgid "FontConfig Match"
 msgstr "Fontconfig kongruaĵo"
 
 #: kcmfontinst/FontFilter.cpp:111
-#, fuzzy, kde-format
-#| msgid "Preview Type"
+#, kde-format
 msgid "File Type"
-msgstr "Antaŭrigarda tipo"
+msgstr "Dosiertipo"
 
 #: kcmfontinst/FontFilter.cpp:113
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgid "File Name"
-msgstr "Dosiero"
+msgstr "Dosiernomo"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
@@ -323,12 +313,7 @@ msgstr ""
 "tiparaj stiloj."
 
 #: kcmfontinst/FontList.cpp:677
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>This list shows your installed fonts. The fonts are grouped by family, "
-#| "and the number in square brackets represents the number of styles that "
-#| "the family is  avaiable in. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-#| "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+#, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
 "and the number in square brackets represents the number of styles in which "
@@ -336,15 +321,15 @@ msgid ""
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
 "<p>Ĉi tiu listo montras viajn instalitajn tiparojn. La tiparoj estas "
-"arigitaj laŭ familio, kaj la nombro en rektaj krampoj estas la kvanton de "
-"stiloj kiujn tiu familio enhavas. Ekz.</p><ul><li>Tajmzo [4]<ul><li>Normala</"
-"li><li>Grasa</li><li>Grasa-kursiva</li><li>Kursiva</li></ul></li></ul>"
+"arigitaj laŭ familio, kaj la nombro en rektaj krampoj estas la kvanto de "
+"stiloj kiuj enhavas tiun familion. Ekz.</p><ul><li>Tajmzo "
+"[4]<ul><li>Normala</li><li>Grasa</li><li>Grasa-kursiva</li><li>Kursiva</li></"
+"ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
-#, fuzzy, kde-format
-#| msgid "...plus %1 more"
+#, kde-format
 msgid "…plus %1 more"
-msgstr "...kaj %1 plu"
+msgstr "…kaj %1 plu"
 
 #: kcmfontinst/FontList.cpp:1007
 #, kde-format
@@ -369,10 +354,9 @@ msgid "Disable"
 msgstr "Malebligi"
 
 #: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
-#, fuzzy, kde-format
-#| msgid "Print"
+#, kde-format
 msgid "Print…"
-msgstr "Presi"
+msgstr "Presi…"
 
 #: kcmfontinst/FontList.cpp:1317
 #, kde-format
@@ -481,22 +465,19 @@ msgstr ""
 "en \"Propraj\".</li>"
 
 #: kcmfontinst/GroupList.cpp:699
-#, fuzzy, kde-format
-#| msgid "<qt>A group named <b>'%1'</b> already exists!</qt>"
+#, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Grupo de la nomo <b>'%1'</b> jam ekzistas!</qt>"
+msgstr "<qt>Grupo de la nomo <b>'%1'</b> jam ekzistas.</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
-#, fuzzy, kde-format
-#| msgid "Rename..."
+#, kde-format
 msgid "Rename…"
-msgstr "Renomi..."
+msgstr "Renomi…"
 
 #: kcmfontinst/GroupList.cpp:801
-#, fuzzy, kde-format
-#| msgid "Print..."
+#, kde-format
 msgid "Export…"
-msgstr "Presi..."
+msgstr "Eksporti…"
 
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
@@ -534,16 +515,13 @@ msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Rezigni?</h3><p>Ĉu vi certas ke vi volas rezigni?</p>"
 
 #: kcmfontinst/JobRunner.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Please note that any open applications will need to be restarted in "
-#| "order for any changes to be noticed.</p>"
+#, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
-"<p>Notu, ke ĉiu malferma aplikaĵo necesas relanĉon por apliko de la ŝanĝoj.</"
-"p>"
+"<h3>Finita</h3><p>Notu ke ĉiu malferma aplikaĵo bezonas relanĉon por apliko "
+"de la ŝanĝoj.</p>"
 
 #: kcmfontinst/JobRunner.cpp:211
 #, kde-format
@@ -586,10 +564,9 @@ msgid "Disabling"
 msgstr "Malebligas"
 
 #: kcmfontinst/JobRunner.cpp:379
-#, fuzzy, kde-format
-#| msgid "Updating font configuration. Please wait..."
+#, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Ĝisdatigas la tiparan agordon. Bonvolu atendi..."
+msgstr "Ĝisdatiganta la tiparan agordon. Bonvolu atendi…"
 
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
@@ -617,29 +594,20 @@ msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
 #: kcmfontinst/JobRunner.cpp:700
-#, fuzzy, kde-format
-#| msgid ""
-#| "You cannot install bitmap fonts, as these have been disabled on your "
-#| "system."
+#, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"Vi ne povas instali rastrumajn tiparojn, ĉar ili estas malebligitaj en via "
-"sistemo."
+"<i>%1</i> estas rastruma tiparo kaj ili estas malebligitaj en via sistemo."
 
 #: kcmfontinst/JobRunner.cpp:702
-#, fuzzy, kde-format
-#| msgid ""
-#| "File %1 contains the font:\n"
-#| "%2\n"
-#| "A font with this name is already installed.\n"
+#, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"Dosiero %1 enhavas la tiparon:\n"
-"%2\n"
-"Tiparo kiu havas tiun nomon jam estas instalita.\n"
+"<i>%1</i> enhavas la tiparon <b>%2</b> kiu jam estas instalita en via "
+"sistemo."
 
 #: kcmfontinst/JobRunner.cpp:704
 #, kde-format
@@ -647,10 +615,9 @@ msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> ne estas tiparo."
 
 #: kcmfontinst/JobRunner.cpp:706
-#, fuzzy, kde-format
-#| msgid "Looking for files associated with %1"
+#, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "Serĉas dosierojn kiuj rilatas al %1"
+msgstr "Ne eblis forigi ĉiujn dosierojn kiuj rilatas al <i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:708
 #, kde-format
@@ -673,16 +640,14 @@ msgid "Permission denied.<br><i>%1</i>"
 msgstr ""
 
 #: kcmfontinst/JobRunner.cpp:718
-#, fuzzy, kde-format
-#| msgid "Authorization Failed"
+#, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
-msgstr "Rajtigo malsukcesis"
+msgstr "Nesubtenata ago.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:720
-#, fuzzy, kde-format
-#| msgid "Authorization Failed"
+#, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
-msgstr "Rajtigo malsukcesis"
+msgstr "Aŭtentigo malsukcesis.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:722
 #, kde-format
@@ -690,10 +655,9 @@ msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:169
-#, fuzzy, kde-format
-#| msgid "KDE Font Installer"
+#, kde-format
 msgid "Font Management"
-msgstr "KDEa tiparinstalilo"
+msgstr "Tiparmastrumado"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
@@ -711,28 +675,24 @@ msgid "Developer and maintainer"
 msgstr "Programisto kaj zorganto"
 
 #: kcmfontinst/KCmFontInst.cpp:202
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Create New Group…"
-msgstr "Krei novan grupon"
+msgstr "Krei Novan Grupon…"
 
 #: kcmfontinst/KCmFontInst.cpp:204
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgid "Remove Group…"
-msgstr "Forpreni grupon"
+msgstr "Forpreni grupon…"
 
 #: kcmfontinst/KCmFontInst.cpp:206
-#, fuzzy, kde-format
-#| msgid "Enable Fonts"
+#, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Ebligi tiparojn"
+msgstr "Ebligi tiparojn en Grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:208
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
+#, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Malebligi tiparojn"
+msgstr "Malebligi tiparojn en Grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
@@ -740,22 +700,19 @@ msgid "This displays a preview of the selected font."
 msgstr "Ĉi tiu antaŭrigardas la elektitan tiparon."
 
 #: kcmfontinst/KCmFontInst.cpp:249
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Find Duplicates…"
-msgstr "Serĉi duplikatajn tiparojn..."
+msgstr "Trovi Duplikaĵojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:249
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Serĉi duplikatajn tiparojn..."
+msgstr "Serĉi duplikatajn tiparojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:251
-#, fuzzy, kde-format
-#| msgid "Install..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Instali..."
+msgstr "Instali el Dosiero…"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
@@ -763,10 +720,9 @@ msgid "Install fonts from a local file"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:252
-#, fuzzy, kde-format
-#| msgid "Delete Fonts"
+#, kde-format
 msgid "Get New Fonts…"
-msgstr "Forigi tiparojn"
+msgstr "Ricevi Novajn Tiparojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
@@ -774,16 +730,14 @@ msgid "Download new fonts"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:255
-#, fuzzy, kde-format
-#| msgid "Delete all selected fonts"
+#, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Forigi ĉiujn elektitajn tiparojn"
+msgstr "Forigi Elektitajn Tiparojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:313
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
+#, kde-format
 msgid "Change Preview Text…"
-msgstr "Ŝanĝi antaŭrigardan tekston..."
+msgstr "Ŝanĝi Antaŭrigardan Tekston…"
 
 #: kcmfontinst/KCmFontInst.cpp:375
 #, kde-format
@@ -878,10 +832,9 @@ msgid "Delete Fonts"
 msgstr "Forigi tiparojn"
 
 #: kcmfontinst/KCmFontInst.cpp:639
-#, fuzzy, kde-format
-#| msgid "Deleting font(s)..."
+#, kde-format
 msgid "Deleting font(s)…"
-msgstr "Forigas tiparo(j)n..."
+msgstr "Foriganta tiparo(j)n…"
 
 #: kcmfontinst/KCmFontInst.cpp:654
 #, kde-format
@@ -894,12 +847,13 @@ msgid "Nothing to Move"
 msgstr "Ne ekzistas io por movi"
 
 #: kcmfontinst/KCmFontInst.cpp:664
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
-msgstr "<p>Ĉu vi vere volas movi</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<p>Ĉu vi vere volas movi</p><p>'<b>%1</b>'</p><p>de <i>%2</i> al <i>%3</i>?</"
+"p>"
 
 #: kcmfontinst/KCmFontInst.cpp:669
 #, kde-format
@@ -912,14 +866,13 @@ msgid "Move"
 msgstr "Movi"
 
 #: kcmfontinst/KCmFontInst.cpp:675
-#, fuzzy, kde-format
-#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+#, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] "<p>Ĉu vi vere volas movi</p><p>'<b>%1</b>'?</p>"
-msgstr[1] "<p>Ĉu vi vere volas movi</p><p>'<b>%1</b>'?</p>"
+msgstr[0] "<p>Ĉu vi vere volas movi tiparon de <i>%2</i> al <i>%3</i>?</p>"
+msgstr[1] "<p>Ĉu vi vere volas movi %1 tiparojn de <i>%2</i> al <i>%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -927,10 +880,9 @@ msgid "Move Fonts"
 msgstr "Movi tiparojn"
 
 #: kcmfontinst/KCmFontInst.cpp:686
-#, fuzzy, kde-format
-#| msgid "Moving font(s)..."
+#, kde-format
 msgid "Moving font(s)…"
-msgstr "Movas tiparo(j)n..."
+msgstr "Movanta tiparo(j)n…"
 
 #: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
@@ -953,10 +905,9 @@ msgid "Create New Group"
 msgstr "Krei novan grupon"
 
 #: kcmfontinst/KCmFontInst.cpp:749
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Name of new group:"
-msgstr "Krei novan grupon"
+msgstr "Nomo de nova grupo:"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
@@ -971,13 +922,12 @@ msgstr "Antaŭrigarda tipo"
 #: kcmfontinst/KCmFontInst.cpp:777
 #, kde-format
 msgid "Please enter new text:"
-msgstr "Entipu novan ĉenon:"
+msgstr "Entajpu novan ĉenon:"
 
 #: kcmfontinst/KCmFontInst.cpp:829
-#, fuzzy, kde-format
-#| msgid "Scanning font list..."
+#, kde-format
 msgid "Scanning font list…"
-msgstr "Legas liston de tiparoj..."
+msgstr "Leganta liston de tiparoj…"
 
 #: kcmfontinst/KCmFontInst.cpp:888
 #, kde-format
@@ -992,53 +942,43 @@ msgstr[0] "1 tiparo"
 msgstr[1] "%1 tiparoj"
 
 #: kcmfontinst/KCmFontInst.cpp:902
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><td>Ebligaj Tiparoj:</td><td>%1</td></tr><tr><td>Malebligaj "
-"tiparoj:</td><td>%2</td></tr><tr><td>Parte ebligaj tiparoj:</td><td>%3</td></"
-"tr><tr><td>Tuta tiparoj:</td><td>%4</td></tr></table>"
+"<table><tr><tdalign=\"right\">Ebligitaj:</td><td>%1</td></tr><tr><td align="
+"\"right\">Malebligitaj:</td><td>%2</td></tr><tr><td align=\"right\">Parte "
+"ebligitaj:</td><td>%3</td></tr><tr><td align=\"right\">Totalo:</td><td>%4</"
+"td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:912
-#, fuzzy, kde-format
-#| msgid ""
-#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
-#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
-#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+#, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td>Ebligaj Tiparoj:</td><td>%1</td></tr><tr><td>Malebligaj "
-"tiparoj:</td><td>%2</td></tr><tr><td>Parte ebligaj tiparoj:</td><td>%3</td></"
-"tr><tr><td>Tuta tiparoj:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Ebligitaj:</td><td>%1</td></tr><tr><td align="
+"\"right\">Malebligitaj:</td><td>%2</td></tr><tr><td align=\"right\">Totalo:</"
+"td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:989
-#, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
+#, kde-format
 msgid "Looking for any associated files…"
-msgstr "Serĉas rilatajn dosierojn..."
+msgstr "Serĉanta rilatajn dosierojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:993
-#, fuzzy, kde-format
-#| msgid "Scanning Files..."
+#, kde-format
 msgid "Scanning Files…"
-msgstr "Legas dosierojn..."
+msgstr "Leganta Dosierojn…"
 
 #: kcmfontinst/KCmFontInst.cpp:994
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
+#, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Serĉas aliajn dosierojn kiuj estas instalendaj..."
+msgstr "Serĉanta aliajn dosierojn kiuj estas instalendaj…"
 
 #: kcmfontinst/KCmFontInst.cpp:1009
 #, kde-format
@@ -1046,10 +986,9 @@ msgid "Looking for files associated with %1"
 msgstr "Serĉas dosierojn kiuj rilatas al %1"
 
 #: kcmfontinst/KCmFontInst.cpp:1037
-#, fuzzy, kde-format
-#| msgid "Installing font(s)..."
+#, kde-format
 msgid "Installing font(s)…"
-msgstr "Instalas tiparo(j)n..."
+msgstr "Instalanta tiparo(j)n…"
 
 #: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
@@ -1163,16 +1102,14 @@ msgid "Disable Fonts"
 msgstr "Malebligi tiparojn"
 
 #: kcmfontinst/KCmFontInst.cpp:1164
-#, fuzzy, kde-format
-#| msgid "Enabling font(s)..."
+#, kde-format
 msgid "Enabling font(s)…"
-msgstr "Ebligas tiparo(j)n..."
+msgstr "Ebliganta tiparo(j)n…"
 
 #: kcmfontinst/KCmFontInst.cpp:1166
-#, fuzzy, kde-format
-#| msgid "Disabling font(s)..."
+#, kde-format
 msgid "Disabling font(s)…"
-msgstr "Malebligas tiparo(j)n..."
+msgstr "Malebliganta tiparo(j)n…"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1234,10 +1171,9 @@ msgid "Cannot copy fonts"
 msgstr "Ne eblas kopii tiparojn"
 
 #: kio/KioFonts.cpp:444
-#, fuzzy, kde-format
-#| msgid "Cannot Print"
+#, kde-format
 msgid "Cannot move fonts"
-msgstr "Ne povas presi"
+msgstr "Ne povas movi tiparojn"
 
 #: kio/KioFonts.cpp:455
 #, kde-format
@@ -1245,12 +1181,9 @@ msgid "Only fonts may be deleted."
 msgstr "Nur tiparo povas esti forigita"
 
 #: kio/KioFonts.cpp:458
-#, fuzzy, kde-format
-#| msgid ""
-#| "Sorry, you cannot rename, move, copy, or delete either \"%1\" or \"%2\"."
+#, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr ""
-"Bedaŭrinde, vi ne povas renomi, movi, kopii, aŭ forigi aŭ \"%1\" aŭ \"%2\"."
+msgstr "Povas nur forigi tiparojn aŭ de \"%1\" aŭ \"%2\"."
 
 #: kio/KioFonts.cpp:485
 #, kde-format
@@ -1268,8 +1201,7 @@ msgid "Fonts"
 msgstr "Tiparoj"
 
 #: kio/KioFonts.cpp:708
-#, fuzzy, kde-format
-#| msgid "Failed to start font printer."
+#, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Malsukcesis lanĉi la tiparan presilon."
 
@@ -1279,27 +1211,16 @@ msgid "Backend died"
 msgstr ""
 
 #: kio/KioFonts.cpp:714
-#, fuzzy, kde-format
-#| msgid ""
-#| "You cannot install bitmap fonts, as these have been disabled on your "
-#| "system."
+#, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
-msgstr ""
-"Vi ne povas instali rastrumajn tiparojn, ĉar ili estas malebligitaj en via "
-"sistemo."
+msgstr "%1 estas rastruma tiparo kaj ili estas malebligitaj en via sistemo."
 
 #: kio/KioFonts.cpp:717
-#, fuzzy, kde-format
-#| msgid ""
-#| "File %1 contains the font:\n"
-#| "%2\n"
-#| "A font with this name is already installed.\n"
+#, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
-"Dosiero %1 enhavas la tiparon:\n"
-"%2\n"
-"Tiparo kiu havas tiun nomon jam estas instalita.\n"
+"%1 enhavas la tiparon <b>%2</b> kiu jam estas instalita en via sistemo."
 
 #: kio/KioFonts.cpp:720
 #, kde-format
@@ -1307,10 +1228,9 @@ msgid "%1 is not a font."
 msgstr "%1 ne estas tiparon."
 
 #: kio/KioFonts.cpp:723
-#, fuzzy, kde-format
-#| msgid "Looking for files associated with %1"
+#, kde-format
 msgid "Could not remove all files associated with %1"
-msgstr "Serĉas dosierojn kiuj rilatas al %1"
+msgstr "Ne eblis forigi ĉiujn dosierojn kiuj rilatas al %1"
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:107
 #, kde-format
@@ -1680,16 +1600,14 @@ msgid "Show Face:"
 msgstr "Montri tiparan fasonon:"
 
 #: viewpart/FontViewPart.cpp:88
-#, fuzzy, kde-format
-#| msgid "Installing"
+#, kde-format
 msgid "Install…"
-msgstr "Instalas"
+msgstr "Instali…"
 
 #: viewpart/FontViewPart.cpp:109
-#, fuzzy, kde-format
-#| msgid "Change Text..."
+#, kde-format
 msgid "Change Text…"
-msgstr "Ŝanĝi tekston..."
+msgstr "Ŝanĝi Tekston…"
 
 #: viewpart/FontViewPart.cpp:335
 #, kde-format
@@ -1704,7 +1622,7 @@ msgstr "Antaŭrigarda ĉeno"
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Entipu novan ĉenon:"
+msgstr "Entajpu novan ĉenon:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
@@ -2404,85 +2322,3 @@ msgstr "Phagspa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "Print..."
-#~ msgstr "Presi..."
-
-#, fuzzy
-#~| msgid "Create New Group"
-#~ msgid "Create New Group..."
-#~ msgstr "Krei novan grupon"
-
-#, fuzzy
-#~| msgid "Remove Group"
-#~ msgid "Remove Group..."
-#~ msgstr "Forpreni grupon"
-
-#~ msgid "Install..."
-#~ msgstr "Instali..."
-
-#, fuzzy
-#~| msgid "Font Viewer"
-#~ msgid "FontViewPart"
-#~ msgstr "Tiparorigardilo"
-
-#~ msgid "<p>No information</p>"
-#~ msgstr "<p>Ne estas informoj</p>"
-
-#~ msgid "Create a new group"
-#~ msgstr "Krei novan grupon"
-
-#~ msgid "Enable all disabled fonts in the current group"
-#~ msgstr "Ebligi ĉiujn malebligitajn tiparojn en la nuna grupo"
-
-#~ msgid "Disable all enabled fonts in the current group"
-#~ msgstr "Malebligi ĉiujn ebligitajn tiparojn en la nuna grupo"
-
-#~ msgid "Please enter the name of the new group:"
-#~ msgstr "Bonvolu entajpi la nomon de la nova grupo:"
-
-#~ msgid "Type here to filter on %1"
-#~ msgstr "Entajpu ĉi tie por filtri laŭ %1"
-
-#~ msgid "Tools"
-#~ msgstr "Iloj"
-
-#~ msgid "Add..."
-#~ msgstr "Aldoni..."
-
-#~ msgid "Install fonts"
-#~ msgstr "Instali tiparojn"
-
-#, fuzzy
-#~| msgid "Do you really want to move this font?"
-#~| msgid_plural "Do you really want to move these %1 fonts?"
-#~ msgid "Do you really want to move this font?"
-#~ msgid_plural ""
-#~ "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?"
-#~ msgstr[0] "Ĉu vi vere volas movi ĉi tiun tiparon?"
-#~ msgstr[1] "Ĉu vi vere volas movi ĉi tiujn %1 tiparojn?"
-
-#, fuzzy
-#~| msgid "Print..."
-#~ msgid "Starting..."
-#~ msgstr "Presi..."
-
-#, fuzzy
-#~| msgid "Canceling..."
-#~ msgid "Cancelling..."
-#~ msgstr "Rezigni"
-
-#~ msgid "Failed to locate font printer."
-#~ msgstr "Malsukcesis trovi tiparan presilon."
-
-#~ msgid "Move Here"
-#~ msgstr "Movi ĉi tie"
-
-#~ msgid "Cancel"
-#~ msgstr "Rezigni"
-
-#~ msgid " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
-#~ msgstr " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
-
-#~ msgid "Preview"
-#~ msgstr "Antaŭrigardo"

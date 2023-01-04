@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2023-01-03 00:49+0000\n"
 "PO-Revision-Date: 2010-12-17 20:54+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -31,36 +31,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:302
+#: kcmcursortheme.cpp:308
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ต้องทำการเริ่มการทำงาน KDE ใหม่ เพื่อให้การเปลี่ยนชุดตกแต่งของเคอร์เซอร์มีผล"
 
-#: kcmcursortheme.cpp:376
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:393
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "หาแฟ้มจัดเก็บชุดตกแต่ง %1 ไม่เจอ"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:424
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "แฟ้ม %1 ไม่ใช่แฟ้มจัดเก็บของชุดตกแต่งเคอร์เซอร์"
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,14 +69,21 @@ msgstr ""
 "มีชุดตกแต่งชื่อ %1 อยู่แล้วในโฟลเดอร์ของชุดตกแต่งไอคอนของคุณ "
 "คุณต้องการจะแทนที่ชุดเดิมด้วยชุดตกแต่งนี้หรือไม่ ?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "เขียนชุดตกแต่งทับของเดิมหรือไม่ ?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
 msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
@@ -90,6 +97,73 @@ msgstr "ลบชุดตกแต่งออก"
 msgid "Restore Cursor Theme"
 msgstr "ชุดตกแต่งเคอร์เซอร์"
 
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:122
+#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+
 #: package/contents/ui/main.qml:20
 #, kde-format
 msgid "This module lets you choose the mouse cursor theme."
@@ -101,24 +175,30 @@ msgid "Size:"
 msgstr ""
 
 #: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr ""
+
+#: package/contents/ui/main.qml:145
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Install from File…"
 msgstr "ติดตั้งชุดตกแต่งใหม่..."
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Get New Cursors…"
 msgstr "ติดตั้งชุดตกแต่งใหม่..."
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "ลบชุดตกแต่งออก"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

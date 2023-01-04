@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2022.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-19 08:04+0200\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
+"PO-Revision-Date: 2023-01-02 20:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -235,6 +235,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Ni bilo mogoče najti razpoložljivih lokalizacij sistema z ukazom orodja "
+"<command>localectl</command>. Prosimo, da o tem vložite poročilo na "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:72
 #, kde-format
@@ -249,18 +252,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brazilsko)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Locale je konfiguriran, vendar ta KCM trenutno ne podpira samodejno "
-"generacija locale v sistemih, ki niso glibc, poglejte v priročnik za svojo "
-"distribucijoza namestitev pisav in ustvarjanje locale"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -583,6 +574,16 @@ msgstr "Telefonska številka"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Podeduj jezik"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Locale je konfiguriran, vendar ta KCM trenutno ne podpira samodejno "
+#~ "generacija locale v sistemih, ki niso glibc, poglejte v priročnik za "
+#~ "svojo distribucijoza namestitev pisav in ustvarjanje locale"
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

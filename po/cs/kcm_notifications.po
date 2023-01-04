@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
 "PO-Revision-Date: 2021-08-05 11:13+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -88,11 +88,10 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Upozornění nejsou aktuálně Plasmou poskytována."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Režim Nerušit:"
+msgstr ""
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -101,20 +100,16 @@ msgid "Enable:"
 msgstr ""
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Zapnout při zrcadlení obrazovek"
+msgstr ""
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Povolit při sdílení obrazovky"
+msgstr ""
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -159,26 +154,22 @@ msgid "Show popup"
 msgstr "Zobrazit vyskakovací okno"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Vyskakovací okno:"
+msgstr ""
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Aplikace:"
+msgstr "Umístění:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Zobrazit poblíž ikony upozornění"
+msgstr ""
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -233,11 +224,10 @@ msgid "Notification badges:"
 msgstr "Počet upozornění:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Nastavení aplikace"
+msgstr ""
 
 #: package/contents/ui/main.qml:308
 #, kde-format
@@ -280,7 +270,3 @@ msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit."
 #, kde-format
 msgid "Other Applications"
 msgstr "Ostatní aplikace"
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "Klávesová zkratka:"

@@ -22,7 +22,3 @@ msgstr ""
 msgctxt "error; %1 is the desktop file name of the service"
 msgid "Failed to resolve service action for %1."
 msgstr "Selhalo vyřešení činnosti služby pro %1."
-
-#~ msgctxt "A default name for an action without proper label"
-#~ msgid "Unknown"
-#~ msgstr "Neznámá"

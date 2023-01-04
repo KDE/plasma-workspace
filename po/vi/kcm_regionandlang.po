@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-08-22 17:16+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -248,18 +248,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brazil)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Thiết lập vùng đã được cấu hình, nhưng KCM này hiện không hỗ trợ việc tạo tự "
-"động thiết lập vùng ở các hệ thống phi glibc, vui lòng xem sổ tay bản phân "
-"phối của bạn để cài đặt phông chữ và tạo các thiết lập vùng"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -580,3 +568,13 @@ msgstr "Số điện thoại"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Kế thừa từ ngôn ngữ"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Thiết lập vùng đã được cấu hình, nhưng KCM này hiện không hỗ trợ việc tạo "
+#~ "tự động thiết lập vùng ở các hệ thống phi glibc, vui lòng xem sổ tay bản "
+#~ "phân phối của bạn để cài đặt phông chữ và tạo các thiết lập vùng"

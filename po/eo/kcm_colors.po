@@ -1,20 +1,19 @@
-# translation of kcmcolors.po to Esperanto
-# Esperantaj mesaĝoj por "kdisplay"
+# translation of kcm_colors.pot to Esperanto
 # Copyright (C) 1998, 2004, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Matthias Peick <matthias@peick.de>, 2004.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
-#
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2009-12-17 09:25+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 22:12+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -39,16 +38,14 @@ msgid "Unable to create a temporary file."
 msgstr ""
 
 #: colors.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Enter a name for the color scheme:"
+#, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "&Doni nomon por tiu koloraro:"
+msgstr "Ne eblas elŝuti la koloraron: %1"
 
 #: colors.cpp:264
-#, fuzzy, kde-format
-#| msgid "Import a color scheme from a file"
+#, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Importi koloraron el dosiero"
+msgstr "Tiu dosiero ne estas kolorardosiero."
 
 #: colors.cpp:283
 #, kde-format
@@ -67,17 +64,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "Konservi koloraron"
+msgstr "Nomo de koloraro"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "Neaktiva koloro"
+msgstr "Emfaza koloro"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -94,16 +89,14 @@ msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "KColorSchemeEditor"
-msgstr "Konservi koloraron"
+msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "Konservi la aktualan koloraron"
+msgstr "Utilaĵo por redakti kaj krei kolorarojn"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -162,9 +155,7 @@ msgstr "Fenestra Teksto sur Fenestra fono"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
 msgstr "Fenestra teksto"
@@ -208,9 +199,7 @@ msgstr "Elekti Ligitan Tekston kompare al Normala Fono"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection3)
 #. i18n: ectx: property (text), widget (QLabel, labelView3)
 #: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
 msgstr "ligilo"
@@ -226,9 +215,7 @@ msgstr "Elekti Vizititan Tekston kompare al Normala Fono"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection4)
 #. i18n: ectx: property (text), widget (QLabel, labelView4)
 #: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
 msgstr "vizitita"
@@ -322,9 +309,7 @@ msgstr "Vidi Normalan Tekston kompare al Normala Fono"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
 #: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
 msgstr "Normala teksto"
@@ -484,9 +469,7 @@ msgstr "Fenestro"
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgctxt "color-sets"
 msgid "Button"
 msgstr "Butono"
@@ -633,10 +616,9 @@ msgstr "Aktiva titolobreta teksto"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
-#, fuzzy, kde-format
-#| msgid "Active Titlebar Text"
+#, kde-format
 msgid "Active Titlebar Secondary"
-msgstr "Aktiva titolobreta teksto"
+msgstr "Aktiva Titolbreto Duaranga"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
@@ -652,10 +634,9 @@ msgstr "Neaktiva titolobreta teksto"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
-#, fuzzy, kde-format
-#| msgid "Inactive Titlebar Text"
+#, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr "Neaktiva titolobreta teksto"
+msgstr "Neaktiva Titolobreto Duaranga"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -668,8 +649,7 @@ msgid "Colors"
 msgstr "Koloroj"
 
 #: editor/scmeditordialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled"
 msgstr "Malŝaltita"
 
@@ -681,7 +661,7 @@ msgstr ""
 #: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
-msgstr ""
+msgstr "Nekonservitaj ŝanĝoj"
 
 #: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
@@ -713,8 +693,7 @@ msgid "Error"
 msgstr "Eraro"
 
 #: editor/scmeditordialog.cpp:191
-#, fuzzy, kde-format
-#| msgid "Inactive"
+#, kde-format
 msgid "Inactive"
 msgstr "Neaktiva"
 
@@ -738,32 +717,28 @@ msgstr "Malŝaltita kolora efekta tipo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "no disabled color effect"
 msgid "None"
 msgstr "Nenio"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:46
-#, fuzzy, kde-format
-#| msgid "Desaturate"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Desaturate"
 msgstr "Malsaturigi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:51
-#, fuzzy, kde-format
-#| msgid "Fade"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Fade"
 msgstr "Dissolvi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:56
-#, fuzzy, kde-format
-#| msgid "Tint"
+#, kde-format
 msgctxt "disabled color effect"
 msgid "Tint"
 msgstr "Nuanco"
@@ -776,32 +751,28 @@ msgstr "Malŝaltita intenseca efekta tipo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "no disabled intensity effect"
 msgid "None"
 msgstr "Nenio"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:73
-#, fuzzy, kde-format
-#| msgid "Shade"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Shade"
 msgstr "Ombrigi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
-#, fuzzy, kde-format
-#| msgid "Darken"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Darken"
 msgstr "Malheligi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:83
-#, fuzzy, kde-format
-#| msgid "Lighten"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Lighten"
 msgstr "Heligi"
@@ -838,24 +809,21 @@ msgstr "Malŝaltita konstrastotipo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "no disabled contrast"
 msgid "None"
 msgstr "Nenio"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:190
-#, fuzzy, kde-format
-#| msgid "Fade"
+#, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
 msgstr "Dissolvi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
-#, fuzzy, kde-format
-#| msgid "Tint"
+#, kde-format
 msgctxt "disabled contrast"
 msgid "Tint"
 msgstr "Nuanco"
@@ -868,10 +836,9 @@ msgstr "Malŝaltita konstrastokvanto"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
+#, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "Apliki neaktivajn fenestrajn kolor-&efektojn"
+msgstr "Apliki &efektojn al neaktivaj fenestroj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
@@ -887,8 +854,7 @@ msgstr "Ombrigi ordigitan kolumnon &en listoj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
 msgstr "Neaktiva koloro"
 
@@ -1185,22 +1151,19 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Import Scheme..."
+#, kde-format
 msgid "All Schemes"
-msgstr "Importi koloraron..."
+msgstr "Ĉiuj Etosoj"
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "&Scheme"
+#, kde-format
 msgid "Light Schemes"
-msgstr "Ko&loraron"
+msgstr "Helaj Etosoj"
 
 #: package/contents/ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
+#, kde-format
 msgid "Dark Schemes"
-msgstr "Konservi Etoson..."
+msgstr "Malhelaj Etosoj"
 
 #: package/contents/ui/main.qml:143
 #, kde-format
@@ -1208,17 +1171,15 @@ msgid "Use accent color:"
 msgstr ""
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "From current color scheme"
-msgstr "Konservi la aktualan koloraron"
+msgstr "De aktuala koloraro"
 
 #: package/contents/ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
-msgstr "Konservi la aktualan koloraron"
+msgstr "De aktuala ekranfono"
 
 #: package/contents/ui/main.qml:254
 #, kde-format
@@ -1231,99 +1192,81 @@ msgid "Choose custom accent color"
 msgstr ""
 
 #: package/contents/ui/main.qml:349
-#, fuzzy, kde-format
-#| msgid "Window Text"
+#, kde-format
 msgid "Window Title"
-msgstr "Fenestra teksto"
+msgstr "Fenestra Titolo"
 
 #: package/contents/ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgid "Window text"
 msgstr "Fenestra teksto"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgid "Button"
 msgstr "Butono"
 
 #: package/contents/ui/main.qml:415
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ligilo"
 
 #: package/contents/ui/main.qml:417
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "vizitita"
 
 #: package/contents/ui/main.qml:424
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgid "Normal text"
 msgstr "Normala teksto"
 
 #: package/contents/ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Visited Text"
+#, kde-format
 msgid "Highlighted text"
 msgstr "Vizitita teksto"
 
 #: package/contents/ui/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled text"
-msgstr "Malŝaltita"
+msgstr "Malŝaltita teksto"
 
 #: package/contents/ui/main.qml:457
-#, fuzzy, kde-format
-#| msgid "Import Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Importi koloraron..."
+msgstr "Redakti Koloraron…"
 
 #: package/contents/ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Remove Color Scheme"
-msgstr "Konservi koloraron"
+msgstr "Forigi Koloraron"
 
 #: package/contents/ui/main.qml:470
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgid "Restore Color Scheme"
-msgstr "Importi koloraron"
+msgstr "Restarigi Koloraron"
 
 #: package/contents/ui/main.qml:514
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instali el Dosiero…"
 
 #: package/contents/ui/main.qml:519
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
+#, kde-format
 msgid "Get New Color Schemes…"
-msgstr "Elŝuti &Novan etoson..."
+msgstr "Elŝuti Novajn Kolorarojn…"
 
 #: package/contents/ui/main.qml:537
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Open Color Scheme"
-msgstr "Konservi koloraron"
+msgstr "Malfermi Koloraron"
 
 #: package/contents/ui/main.qml:539
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "Kolorardosieroj (*.colors)"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
@@ -1365,7 +1308,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:101
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "Sukcesis apliki la koloraron %1 al via aktuala Plasma-seanco"
 
 #: plasma-apply-colorscheme.cpp:103
 #, kde-format
@@ -1391,224 +1334,19 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:137
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "Sukcesis apliki la emfazkoloron %1"
 
 #: plasma-apply-colorscheme.cpp:139
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "Neaktiva koloro"
+msgstr "Nevalida emfazkoloro "
 
 #: plasma-apply-colorscheme.cpp:144
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "Vi havas la sekvajn kolorarojn en via sistemo:"
 
 #: plasma-apply-colorscheme.cpp:149
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "Konservi la aktualan koloraron"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply a&ccent color to active window titlebars"
-#~ msgstr "Apliki neaktivajn fenestrajn kolor-&efektojn"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply acce&nt color to inactive window titlebars"
-#~ msgstr "Apliki neaktivajn fenestrajn kolor-&efektojn"
-
-#, fuzzy
-#~| msgid "Get new color schemes from the Internet"
-#~ msgid "Share the selected scheme on the Internet"
-#~ msgstr "Importi koloraron el interreto"
-
-#, fuzzy
-#~| msgid "Import Scheme..."
-#~ msgid "Upload Scheme"
-#~ msgstr "Importi koloraron..."
-
-#, fuzzy
-#~| msgid "Get &New Schemes..."
-#~ msgid "Download New Color Schemes"
-#~ msgstr "Elŝuti &Novan etoson..."
-
-#~ msgid "Remove the selected scheme"
-#~ msgstr "Forigi la elektitan tekston"
-
-#, fuzzy
-#~| msgid "Remove Scheme"
-#~ msgid "Remove"
-#~ msgstr "Forigi Koloraron"
-
-#, fuzzy
-#~| msgid "Get new color schemes from the Internet"
-#~ msgid "Import a color scheme from a file"
-#~ msgstr "Importi koloraron el interreto"
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Importi koloraron el interreto"
-
-#, fuzzy
-#~| msgid "Get &New Schemes..."
-#~ msgid "Get &New Color Schemes..."
-#~ msgstr "Elŝuti &Novan etoson..."
-
-#, fuzzy
-#~| msgid "Apply colors to &non-KDE4 applications"
-#~ msgid "Apply colors to &non-Qt applications"
-#~ msgstr "Apliki la kolorojn al &ne-KDE4 aplikaĵoj"
-
-#~ msgid "(c) 2007 Matthew Woehlke"
-#~ msgstr "(c) 2007 Matthew Woehlke"
-
-#~ msgctxt "Default color scheme"
-#~ msgid "Default"
-#~ msgstr "Default"
-
-#~ msgctxt "Current color scheme"
-#~ msgid "Current"
-#~ msgstr "Current"
-
-#~ msgid "You do not have permission to delete that scheme"
-#~ msgstr "Vi ne rajtas forigi tiun koloraron"
-
-#~ msgid "Notice"
-#~ msgstr "Rimarku"
-
-#~ msgid "In&active selection changes color"
-#~ msgstr "&Neaktiva elekto ŝanĝas koloron"
-
-#~ msgid "Selecting another scheme will discard any changes you have made"
-#~ msgstr "Se vi faris ŝanĝojn ili perdiĝus kiam vi elektas alian koloraron"
-
-#~ msgid "Are you sure?"
-#~ msgstr "Ĉu vi certas?"
-
-#~ msgid ""
-#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
-#~ "\n"
-#~ "KDE will attempt to import this scheme, however many color roles have "
-#~ "been added since KDE3. Some manual work will likely be required.\n"
-#~ "\n"
-#~ "This scheme will not be saved automatically."
-#~ msgstr ""
-#~ "La elektita etoso ŝajnas esti KDE3-estoso.\n"
-#~ "\n"
-#~ "KDE importos tiun etoson, tamen pro novaj koloroj aldonitaj ekde KDE3, "
-#~ "iom da manlaboro eble estos bezonata.\n"
-#~ "\n"
-#~ "Tiu etoso ne estos aŭtomatike sendita."
-
-#, fuzzy
-#~| msgid "Inactive"
-#~ msgctxt "@title:tab color transformations on inactive elements"
-#~ msgid "Inactive"
-#~ msgstr "Neaktiva"
-
-#~ msgid "Inactive intensity effect type"
-#~ msgstr "Neaktiva intenseca efekta tipo"
-
-#, fuzzy
-#~| msgid "None"
-#~ msgctxt "no inactive intensity effect"
-#~ msgid "None"
-#~ msgstr "Nenio"
-
-#, fuzzy
-#~| msgid "Shade"
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Ombrigi"
-
-#, fuzzy
-#~| msgid "Darken"
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Malheligi"
-
-#, fuzzy
-#~| msgid "Lighten"
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Heligi"
-
-#~ msgid "Inactive intensity effect amount"
-#~ msgstr "Malaktivigi kvanton de intenseca efekto"
-
-#~ msgid "Inactive color effect type"
-#~ msgstr "Neaktiva kolora efekta tipo"
-
-#, fuzzy
-#~| msgid "None"
-#~ msgctxt "no inactive color effect"
-#~ msgid "None"
-#~ msgstr "Nenio"
-
-#, fuzzy
-#~| msgid "Desaturate"
-#~ msgctxt "inactive color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Malsaturigi"
-
-#, fuzzy
-#~| msgid "Fade"
-#~ msgctxt "inactive color effect"
-#~ msgid "Fade"
-#~ msgstr "Dissolvi"
-
-#, fuzzy
-#~| msgid "Tint"
-#~ msgctxt "inactive color effect"
-#~ msgid "Tint"
-#~ msgstr "Nuanco"
-
-#~ msgid "Inactive color amount"
-#~ msgstr "Neaktiva kolorokvanto"
-
-#~ msgid "Inactive contrast effect type"
-#~ msgstr "Neaktiva kontrasta efekta tipo"
-
-#, fuzzy
-#~| msgid "None"
-#~ msgctxt "no inactive contrast effect"
-#~ msgid "None"
-#~ msgstr "Nenio"
-
-#, fuzzy
-#~| msgid "Fade"
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Fade"
-#~ msgstr "Dissolvi"
-
-#, fuzzy
-#~| msgid "Tint"
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Tint"
-#~ msgstr "Nuanco"
-
-#~ msgid "Inactive contrast effect amount"
-#~ msgstr "Neaktiva kontrasta efekta kvanto"
-
-#~ msgid "Preview"
-#~ msgstr "Antaŭrigardo"
-
-#~ msgid "Import Scheme..."
-#~ msgstr "Importi koloraron..."
-
-#~ msgid "Contrast used for 3D objects"
-#~ msgstr "Kontrasto por 3D objektoj"
-
-#~ msgid "&Save..."
-#~ msgstr "&Konservi..."
-
-#~ msgid "Rem&ove"
-#~ msgstr "F&origi"
-
-#~ msgid "I&mport..."
-#~ msgstr "I&mporti..."
-
-#~ msgid "&Effects"
-#~ msgstr "&Efektoj"
+msgstr " * %1 (aktuala koloraro)"

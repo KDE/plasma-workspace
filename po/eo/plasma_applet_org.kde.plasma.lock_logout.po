@@ -1,14 +1,16 @@
+# translation of plasma_applet_org.kde.plasma.lock_logout.pot to esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2009-10-25 12:37+0200\n"
-"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"PO-Revision-Date: 2023-01-02 18:17+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -23,27 +25,26 @@ msgid "General"
 msgstr "Ĝenerala"
 
 #: contents/ui/ConfigGeneral.qml:36
-#, fuzzy, kde-format
-#| msgid "Show lock button"
+#, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr "Montri ŝlosbutonon"
+msgstr "Montri agojn:"
 
 #: contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Logout"
-msgstr ""
+msgstr "Elsaluti"
 
 #: contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Malŝalti"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Restartigi"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
@@ -53,7 +54,7 @@ msgstr "Ŝlosi"
 #: contents/ui/ConfigGeneral.qml:58
 #, kde-format
 msgid "Switch User"
-msgstr ""
+msgstr "Ŝalti Uzanton"
 
 #: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
 #, kde-format
@@ -64,7 +65,7 @@ msgstr "Pasivumigi"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Dormeti"
 
 #: contents/ui/data.js:6
 #, kde-format
@@ -74,43 +75,42 @@ msgstr "Ŝlosi la ekranon"
 #: contents/ui/data.js:12
 #, kde-format
 msgid "Switch user"
-msgstr ""
+msgstr "Ŝalti uzanton"
 
 #: contents/ui/data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr ""
+msgstr "Starti paralelan seancon kiel alia uzanto"
 
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr ""
+msgstr "Malŝalti…"
 
 #: contents/ui/data.js:19
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Elsaluti, malŝalti aŭ restartigi la komputilon"
+msgstr "Malŝalti la komputilon"
 
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr ""
+msgstr "Restartigi…"
 
 #: contents/ui/data.js:26
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Restartigi la komputilon"
 
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr ""
+msgstr "Elsaluti…"
 
 #: contents/ui/data.js:33
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Fini la seancon"
 
 #: contents/ui/data.js:40
 #, kde-format
@@ -121,37 +121,3 @@ msgstr "Dormi (halteti al RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Pasivumigi (halteti al disko)"
-
-#~ msgid "Do you want to suspend to disk (hibernate)?"
-#~ msgstr "Ĉu vi volas halteti al disko (pasivumigi)?"
-
-#~ msgid "Do you want to suspend to RAM (sleep)?"
-#~ msgstr "Ĉu vi volas halteti al RAM (dormi)?"
-
-#, fuzzy
-#~| msgid "Leave..."
-#~ msgid "Leave"
-#~ msgstr "Lasi..."
-
-#~ msgid "Leave..."
-#~ msgstr "Lasi..."
-
-#~ msgid "Suspend"
-#~ msgstr "Halteti"
-
-#~ msgid "Configure Lock/Logout"
-#~ msgstr "Agordi en/elsalutadon"
-
-#, fuzzy
-#~| msgid "Show sleep button"
-#~ msgid "Show \"switch user\" button"
-#~ msgstr "Montri dormbutonon"
-
-#~ msgid "Show logout button"
-#~ msgstr "Montri elsalutbutonon"
-
-#~ msgid "Show hibernate button"
-#~ msgstr "Montri pasivumigbutonon"
-
-#~ msgid "Show sleep button"
-#~ msgstr "Montri dormbutonon"

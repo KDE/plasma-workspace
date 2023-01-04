@@ -1,14 +1,16 @@
+# translation of plasma_runner_shell.pot to Esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-27 00:45+0000\n"
-"PO-Revision-Date: 2009-10-25 13:10+0200\n"
-"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"PO-Revision-Date: 2023-01-02 18:09+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -24,45 +26,11 @@ msgstr ""
 "Trovas komandojn kiuj kongruas kun :q:, uzante la ordinaran ŝelsintakson"
 
 #: shellrunner.cpp:36
-#, fuzzy, kde-format
-#| msgid "Run in &terminal window"
+#, kde-format
 msgid "Run in Terminal Window"
-msgstr "Lanĉi en &konsolo"
+msgstr "Lanĉi en Terminala Fenestro"
 
 #: shellrunner.cpp:54
 #, kde-format
 msgid "Run %1"
 msgstr "Lanĉi %1"
-
-#~ msgid "Enter the user you want to run the application as here."
-#~ msgstr ""
-#~ "Entajpu tien ĉi la uzantonomon, kiel kiu vi volas lanĉi la aplikaĵon."
-
-#~ msgid "User&name:"
-#~ msgstr "Uzant&nomo:"
-
-#~ msgid "Enter the password here for the user you specified above."
-#~ msgstr "Entajpu tien ĉi la pasvorton por la uzanto."
-
-#~ msgid "Pass&word:"
-#~ msgstr "Pas&vorto:"
-
-#~ msgid ""
-#~ "Check this option if the application you want to run is a text mode "
-#~ "application. The application will then be run in a terminal emulator "
-#~ "window."
-#~ msgstr "Elektu tiun ĉi opcion se la lanĉota aplikaĵo estas teksta aplikaĵo."
-
-#~ msgid "Run in &terminal window"
-#~ msgstr "Lanĉi en &konsolo"
-
-#~ msgid ""
-#~ "Check this option if you want to run the application with a different "
-#~ "user id. Every process has a user id associated with it. This id code "
-#~ "determines file access and other permissions. The password of the user is "
-#~ "required to do this."
-#~ msgstr ""
-#~ "Elektu tiun ĉi opcion se vi volas lanĉi la aplikaĵon kun alia uzant-ID-on."
-
-#~ msgid "Run as a different &user"
-#~ msgstr "Lanĉi kiel alia &uzanto"

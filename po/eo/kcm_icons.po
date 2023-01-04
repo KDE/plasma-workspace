@@ -1,20 +1,19 @@
-# translation of kcmicons.po to esperanto
-# translation of kcmicons.po to
-# Esperantaj mesaĝoj por "kdisplay"
+# translation of kcm_icons.pot to esperanto
 # Copyright (C) 1998, 2003, 2005, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Heiko Evermann <heiko@evermann.de>, 2003.
 # Matthias Peick <matthias@peick.de>, 2005.
 # Axel Rousseau <axel584@axel584.org>, 2007.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2009-10-21 09:51+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 05:02+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -29,10 +28,9 @@ msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Dua koloro:"
+msgstr "Duarangaj Ilobretoj"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -48,56 +46,53 @@ msgstr "Dialogoj"
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Nomo de la aktuala piktogrametoso"
 
 #. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
 #: iconssettingsbase.kcfg:15
 #, kde-format
 msgid "Desktop icons size"
-msgstr ""
+msgstr "Labortabla piktogramgrandeco"
 
 #. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
 #: iconssettingsbase.kcfg:21
 #, kde-format
 msgid "Toolbar icons size"
-msgstr ""
+msgstr "Ilobreta piktogramgrandeco"
 
 #. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
 #: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Main toolbar icons size"
-msgstr "Ĉefa ilobreto"
+msgstr "Ĉef-ilobreta piktogramgrandeco"
 
 #. i18n: ectx: label, entry (smallSize), group (SmallIcons)
 #: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
+#, kde-format
 msgid "Small icons size"
-msgstr "Malgrandaj piktogramoj"
+msgstr "Malgranda piktogramgrandeco"
 
 #. i18n: ectx: label, entry (panelSize), group (PanelIcons)
 #: iconssettingsbase.kcfg:39
 #, kde-format
 msgid "Panel icons size"
-msgstr ""
+msgstr "Panela piktogramgrandeco"
 
 #. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
 #: iconssettingsbase.kcfg:45
 #, kde-format
 msgid "Dialog icons size"
-msgstr ""
+msgstr "Dialoga piktogramgrandeco"
 
 #: main.cpp:182
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Ne eblas krei provizoran dosieron."
 
 #: main.cpp:193
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Ne eblas trovi la piktogrametosan arkivon por %1."
+msgstr "Ne eblas elŝuti la piktogrametosan arkivon: %1"
 
 #: main.cpp:207
 #, kde-format
@@ -119,16 +114,14 @@ msgid "Theme installed successfully."
 msgstr ""
 
 #: main.cpp:260
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Instalante piktogrametosojn"
+msgstr "Instalante piktogrametosojn…"
 
 #: main.cpp:270
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalante piktogrametosojn"
+msgstr "Instalante %1 etoson…"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -146,8 +139,7 @@ msgid "Adjust Global Scale…"
 msgstr ""
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Grandeco:"
@@ -158,249 +150,42 @@ msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 
 #: package/contents/ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Remove Icon Theme"
-msgstr "Forigi etoson"
+msgstr "Forigi Piktogrametoson"
 
 #: package/contents/ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Icon Theme"
-msgstr "Forigi etoson"
+msgstr "Restarigi Piktogrametoson"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "Agordi Piktogrametoson"
 
 #: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Install Theme File..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Instali novan etoson..."
+msgstr "Instali el dosiero…"
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New Icons…"
-msgstr "Elŝuti novan etoson..."
+msgstr "Elŝuti Novajn Piktogramojn…"
 
 #: package/contents/ui/main.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "Agordi Piktogramgrandecojn"
 
 #: package/contents/ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Forigi etoson"
+msgstr "Malfermi Etoson"
 
 #: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
-
-#~ msgid "Toolbar"
-#~ msgstr "Ilobreto"
-
-#~ msgid "Panel"
-#~ msgstr "Panelo"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Heiko Evermann"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "heiko@evermann.de"
-
-#~ msgid "Icons"
-#~ msgstr "Piktogramoj"
-
-#~ msgid "Icons Control Panel Module"
-#~ msgstr "Panelmodulo por piktogramstiro"
-
-#~ msgid "(c) 2000-2003 Geert Jansen"
-#~ msgstr "(c) 2000-2003 Geert Jansen"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Geert Jansen"
-
-#~ msgid "Antonio Larrosa Jimenez"
-#~ msgstr "Antonio Larrosa Jimenez"
-
-#~ msgid "Torsten Rahn"
-#~ msgstr "Torsten Rahn"
-
-#~ msgid "Desktop"
-#~ msgstr "Labortablo"
-
-#~ msgid "Use of Icon"
-#~ msgstr "Piktogramuzo"
-
-#~ msgctxt "@label The icon rendered by default"
-#~ msgid "Default"
-#~ msgstr "Defaŭlta"
-
-#~ msgctxt "@label The icon rendered as active"
-#~ msgid "Active"
-#~ msgstr "Aktiva"
-
-#~ msgctxt "@label The icon rendered as disabled"
-#~ msgid "Disabled"
-#~ msgstr "Neaktiva"
-
-#~ msgid "Set Effect..."
-#~ msgstr "Agordi efekton..."
-
-#~ msgid "All Icons"
-#~ msgstr "Ĉiuj piktogramoj"
-
-#~ msgid "Setup Default Icon Effect"
-#~ msgstr "Agordi la efekton por la defaŭltaj piktogramoj"
-
-#~ msgid "Setup Active Icon Effect"
-#~ msgstr "Agordi la efekton por la aktivaj piktogramoj"
-
-#~ msgid "Setup Disabled Icon Effect"
-#~ msgstr "Agordi la efekton por la neaktivaj piktogramoj"
-
-#~ msgid "&Effect:"
-#~ msgstr "&Efekto:"
-
-#~ msgid "No Effect"
-#~ msgstr "Sen efekto"
-
-#~ msgid "To Gray"
-#~ msgstr "Grizigi"
-
-#~ msgid "Colorize"
-#~ msgstr "Kolorigi"
-
-#~ msgid "Gamma"
-#~ msgstr "Gamo"
-
-#~ msgid "Desaturate"
-#~ msgstr "Malsaturigi"
-
-#~ msgid "To Monochrome"
-#~ msgstr "Dukolorigi"
-
-#~ msgid "&Semi-transparent"
-#~ msgstr "&Diafana"
-
-#~ msgid "Preview"
-#~ msgstr "Antaŭrigardo"
-
-#~ msgid "Effect Parameters"
-#~ msgstr "Efektaj parametroj"
-
-#~ msgid "&Amount:"
-#~ msgstr "&Kvanto:"
-
-#~ msgid "Co&lor:"
-#~ msgstr "Ko&loro:"
-
-#~ msgid "Name"
-#~ msgstr "Nomo"
-
-#~ msgid "Description"
-#~ msgstr "Priskribo"
-
-#~ msgid "Install a theme archive file you already have locally"
-#~ msgstr "Instali etos-arkivan dosieron kion vi jam havas en via komputilo"
-
-#~ msgid ""
-#~ "If you already have a theme archive locally, this button will unpack it "
-#~ "and make it available for KDE applications"
-#~ msgstr ""
-#~ "Se vi jam havas en via komputilo la etos-arkivon, tiu butono malpakos ĝin "
-#~ "kaj disponebligos ĝin por viaj KDE aplikaĵoj"
-
-#~ msgid "Get new themes from the Internet"
-#~ msgstr "Elŝuti novajn etosojn el Interreto"
-
-#~ msgid ""
-#~ "You need to be connected to the Internet to use this action. A dialog "
-#~ "will display a list of themes from the http://www.kde.org website. "
-#~ "Clicking the Install button associated with a theme will install this "
-#~ "theme locally."
-#~ msgstr ""
-#~ "Vi bezonas interret-konekton por uzi tiun agon. Dialog-mesaĝo montros "
-#~ "liston de etoso el la retejo http://www.kde.org. Klikante sur la Instal-"
-#~ "butono ligita al iu etoso instalos tiun etoson en via komputilo."
-
-#~ msgid "Remove the selected theme from your disk"
-#~ msgstr "Forigu la elektitan etoson de via disko."
-
-#~ msgid "This will remove the selected theme from your disk."
-#~ msgstr "Tio forigos la eletkitan etoson de via disko."
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Enmetu aŭ donu URL de etoso"
-
-#~ msgid ""
-#~ "Unable to download the icon theme archive;\n"
-#~ "please check that address %1 is correct."
-#~ msgstr ""
-#~ "Ne eblas ricevi la piktogrametosan arkivon.\n"
-#~ "Bonvole kontrolu la ĝustecon de la adreso \"%1\"."
-
-#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
-#~ msgstr "<qt>Instalas <strong>%1</strong> etoson</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
-#~ "<br /><br />This will delete the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>Ĉu vi estas certa, ke vi volas forigi la <strong>%1</strong> "
-#~ "piktogrametoson?<br /><br />Tio forigos la instalitajn dosierojn de tiu "
-#~ "etoso.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Konfirmo"
-
-#~ msgid "&Theme"
-#~ msgstr "&Etoso"
-
-#~ msgid "Ad&vanced"
-#~ msgstr "&Plie"
-
-#~ msgid ""
-#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
-#~ "<p>To choose an icon theme, click on its name and apply your choice by "
-#~ "pressing the \"Apply\" button below. If you do not want to apply your "
-#~ "choice you can press the \"Reset\" button to discard your changes.</"
-#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
-#~ "your new icon theme by writing its location in the box or browsing to the "
-#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
-#~ "\"Remove Theme\" button will only be activated if you select a theme that "
-#~ "you installed using this module. You are not able to remove globally "
-#~ "installed themes here.</p><p>You can also specify effects that should be "
-#~ "applied to the icons.</p>"
-#~ msgstr ""
-#~ "<h1>Piktogramoj</h1> La modulo eblas al vi elekti piktogramojn por via "
-#~ "labortablo. <p>Por elekti piktogrametoson, alklaku ĝian nomon kaj apliku "
-#~ "ĝin per la malsupra butono. Se vi ne volas apliki vian elekton, vi povas "
-#~ "premi la butonon \"Rezigni\" por forĵeti la ŝanĝojn.</p> <p>Premante la "
-#~ "\"Instali novajn etosojn\" vi povas instali vian novan piktogrametoson "
-#~ "per skribo ĝian lokon en la enigo aŭ uzu la serĉilon. Premu la butonon "
-#~ "\"Konfirmi\" por finigi la instalon.</p> <p>\"Forigi etoson\" nur estas "
-#~ "uzebla, se vi elektas etoson instalita de vi. Vi ne povas forigi "
-#~ "sistemajn etosojn ĉi tie.</p> <p>Vi ankaŭ povas difini efektojn, kiuj "
-#~ "estas aplikataj al la piktogramoj.</p>"
-
-#~ msgid "Animate icons"
-#~ msgstr "Animacii la piktogramojn"
-
-#~ msgid "Select the icon theme you want to use:"
-#~ msgstr "Elektu la piktogrametoson kiun vi volas uzi:"
-
-#~ msgid "Double-sized pixels"
-#~ msgstr "Duoble grandaj rastrumeroj"
-
-#~ msgid "Desktop/File Manager"
-#~ msgstr "Labortabla/dosieradministrilo"
+msgstr "Etosaj Dosieroj (*.tar.gz *.tar.bz2)"

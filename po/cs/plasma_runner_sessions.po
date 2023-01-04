@@ -18,13 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 19.12.2\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "odhlásit"
+msgstr ""
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -32,14 +31,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Odhlásí se a ukončí aktuální sezení pracovní plochy"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "vypnutí"
+msgstr ""
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -47,14 +44,12 @@ msgid "Turns off the computer"
 msgstr "Vypnout počítač"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "restart"
+msgstr ""
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -62,12 +57,11 @@ msgid "Reboots the computer"
 msgstr "Restartovat počítač"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Uzamknout obrazovku"
+msgstr ""
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -75,13 +69,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Uzamkne aktuální sezení a spustí spořič obrazovky"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "nové sezení"
+msgstr ""
 
 #: sessionrunner.cpp:66
 #, kde-format
@@ -89,13 +82,12 @@ msgid "Saves the current session for session restoration"
 msgstr ""
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "přepnout uživatele"
+msgstr ""
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -103,12 +95,10 @@ msgid "Starts a new session as a different user"
 msgstr "Spustí nové sezení jako jiný uživatel"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "sezení"
+msgstr ""
 
 #: sessionrunner.cpp:84
 #, kde-format
@@ -116,12 +106,10 @@ msgid "Lists all sessions"
 msgstr "Vypíše všechna sezení"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "switch"
+msgstr ""
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -139,20 +127,16 @@ msgid "Log Out"
 msgstr ""
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "vypnutí"
+msgstr ""
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "restart"
+msgstr ""
 
 #: sessionrunner.cpp:141
 #, kde-format
@@ -161,10 +145,9 @@ msgid "Lock"
 msgstr ""
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "nové sezení"
+msgstr "Uložit sezení"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -182,64 +165,6 @@ msgid ""
 msgstr ""
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "nové sezení"
-
-#~ msgctxt "log out command"
-#~ msgid "logout"
-#~ msgstr "odhlášení"
-
-#~ msgctxt "lock screen command"
-#~ msgid "lock"
-#~ msgstr "uzamčení"
-
-#~ msgctxt "restart computer command"
-#~ msgid "reboot"
-#~ msgstr "reboot"
-
-#~ msgctxt "switch user command"
-#~ msgid "switch :q:"
-#~ msgstr "switch :q:"
-
-#~ msgid "new session"
-#~ msgstr "nové sezení"
-
-#~ msgctxt "log out command"
-#~ msgid "Logout"
-#~ msgstr "Odhlásit se"
-
-#~ msgid "Restart the computer"
-#~ msgstr "Restartovat počítač"
-
-#~ msgctxt "shut down computer command"
-#~ msgid "shutdown"
-#~ msgstr "vypnutí"
-
-#~ msgid "Shut down the computer"
-#~ msgstr "Vypnout počítač"
-
-#, fuzzy
-#~| msgid "new session"
-#~ msgid "Save the session"
-#~ msgstr "nové sezení"
-
-#~ msgid "Warning - New Session"
-#~ msgstr "Varování - Nové sezení"
-
-#~ msgid ""
-#~ "<p>You have chosen to open another desktop session.<br />The current "
-#~ "session will be hidden and a new login screen will be displayed.<br />An "
-#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
-#~ "session, F%2 to the second session and so on. You can switch between "
-#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
-#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
-#~ "switching between sessions.</p>"
-#~ msgstr ""
-#~ "<p>Zvolili jste otevření dalšího sezení.<br />Aktuální sezení bude skryto "
-#~ "a bude zobrazena nová přihlašovací obrazovka.<br />Každému sezení je "
-#~ "přiřazena F-klávesa, F%1 obvykle prvnímu sezení, F%2 druhému atd. Mezi "
-#~ "sezeními se lze přepínat stisknutím klávesové kombinace Ctrl + Alt + F-"
-#~ "klávesa. Mimo to  panel Plasma a plocha obsahují odpovídající činnosti "
-#~ "pro přepínaní mezi sezeními.</p>"
+msgstr ""

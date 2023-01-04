@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Bloqueo de la pantalla</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>bloqueador de pantalla</keyword>
+<keyword
+>bloqueador de pantalla</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Con este módulo puede determinar cuánto tiempo debe pasar antes de que se active el bloqueador de pantalla, configurar el período de gracia para desbloquear la pantalla sin contraseña y elegir la apariencia del bloqueador de pantalla.</para>
+
+<para
+>En la parte superior hay una casilla para que el bloqueador de pantalla pueda <guilabel
+>Bloquear la pantalla automáticamente</guilabel
+>, además de un cuadro giratorio que determina el período de inactividad antes de que se inicie el bloqueador de pantalla. En este cuadro puede introducir cualquier número positivo de minutos.</para>
+
+<para
+>Puede usar la casilla <guilabel
+>Después de volver del modo de suspensión</guilabel
+> para activar y desactivar el bloqueo de la pantalla del escritorio después de la suspensión del sistema.</para>
+
+<para
+>Debajo hay un cuadro giratorio con la etiqueta <guilabel
+>Permitir desbloquear sin la contraseña</guilabel
+>. Si pulsa una tecla o hace clic con un botón del ratón para terminar el bloqueo de pantalla antes de la hora del cuadro numérico y regresar a su trabajo, no debe introducir la contraseña. La contraseña que debe usar es la misma que utiliza para iniciar sesión en su máquina.</para>
+
+<para
+>Si bloquea la pantalla manualmente, la protección con contraseña se activará inmediatamente.</para>
+
+<para
+>Puede definir un acceso rápido de teclado para bloquear la pantalla usando el campo <guilabel
+>Acceso rápido de teclado</guilabel
+>.</para>
+
+<para
+>El acceso rápido predeterminado <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> proporciona un modo rápido para bloquear la pantalla de forma manual.</para>
+
+<para
+>Si desea cambiar el fondo que se muestra en el estado de bloqueado, pulse el botón <guibutton
+>Configurar</guibutton
+> que hay junto a la etiqueta <guilabel
+>Aspecto</guilabel
+>. Aquí podrá cambiar el <guilabel
+>Tipo de fondo de pantalla</guilabel
+>.</para>
+
+<para
+>Puede seleccionar un <guilabel
+>Color plano</guilabel
+> como tipo de fondo de pantalla.</para>
+
+<para
+>De forma alternativa, puede seleccionar una única imagen o una presentación con las imágenes de una carpeta, o cargar nuevos fondos de pantalla de Internet.</para>
+
+</article>

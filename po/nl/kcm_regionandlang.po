@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-27 10:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -251,18 +251,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brazilië)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Locale (taalcode) is geconfigureerd, maar deze KCM ondersteunt nu geen "
-"automatische generatie op niet-glibc systemen, kijk in de handleiding van uw "
-"distributie om lettertypen te installeren en locales (taalcodes) te genereren"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -587,6 +575,17 @@ msgstr "Telefoonnummer"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Taal erven"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Locale (taalcode) is geconfigureerd, maar deze KCM ondersteunt nu geen "
+#~ "automatische generatie op niet-glibc systemen, kijk in de handleiding van "
+#~ "uw distributie om lettertypen te installeren en locales (taalcodes) te "
+#~ "genereren"
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

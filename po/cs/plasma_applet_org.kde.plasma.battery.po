@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011, 2012.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
@@ -180,14 +180,12 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatický spánek a zamčení obrazovky jsou vypnuty"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Jedna aplikace vyžádala aktivaci %2:"
-msgstr[1] "%1 aplikace vyžádaly aktivaci %2:"
-msgstr[2] "%1 aplikace vyžádalo aktivaci %2:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -195,14 +193,12 @@ msgid "System is in Performance mode"
 msgstr ""
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Jedna aplikace vyžádala aktivaci %2:"
-msgstr[1] "%1 aplikace vyžádaly aktivaci %2:"
-msgstr[2] "%1 aplikace vyžádalo aktivaci %2:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: package/contents/ui/main.qml:203
 #, kde-format
@@ -230,10 +226,9 @@ msgid "&Show Energy Information…"
 msgstr "Zobrazit infor&mace o energii"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Zobrazovat ikonu procent baterie"
+msgstr ""
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -370,8 +365,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-#, fuzzy
-#~| msgid "Performance mode is unavailable."
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "Režim výkon je nedostupný"

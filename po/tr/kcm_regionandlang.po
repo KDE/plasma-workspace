@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-31 00:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -251,18 +251,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brezilya)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Yerel ayarlar yapılandırıldı; ancak bu KCM şu anda glibc olmayan sistemlerde "
-"otomatik yerel ayar oluşturmasını desteklemiyor. Yerel ayarları oluşturmak "
-"ve yazıtiplerini kurmak için dağıtımınızın belgelendirmesine başvurun."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -585,6 +573,17 @@ msgstr "Telefon numarası"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Dili Devral"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Yerel ayarlar yapılandırıldı; ancak bu KCM şu anda glibc olmayan "
+#~ "sistemlerde otomatik yerel ayar oluşturmasını desteklemiyor. Yerel "
+#~ "ayarları oluşturmak ve yazıtiplerini kurmak için dağıtımınızın "
+#~ "belgelendirmesine başvurun."
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

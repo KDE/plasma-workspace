@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-27 17:50+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -249,20 +249,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brésil)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"L'internationalisation a été configurée mais cette version de « kcm » ne "
-"prend pas en charge sa génération automatique pour des systèmes sans la "
-"bibliothèque « glibc ». Veuillez consulter le manuel de votre distribution "
-"pour l'installation de polices et la génération de fichiers "
-"d'internationalisation."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -594,6 +580,18 @@ msgstr "Numéro de téléphone"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Langue héritée"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "L'internationalisation a été configurée mais cette version de « kcm » ne "
+#~ "prend pas en charge sa génération automatique pour des systèmes sans la "
+#~ "bibliothèque « glibc ». Veuillez consulter le manuel de votre "
+#~ "distribution pour l'installation de polices et la génération de fichiers "
+#~ "d'internationalisation."
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

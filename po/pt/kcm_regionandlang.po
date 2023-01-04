@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-28 18:40+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -253,19 +253,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brasil)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"A região foi configurada, mas este KCM não suporta de momento a geração de "
-"informação regional nos sistemas não-glibc; verifique por favor o manual da "
-"sua distribuição para saber como instalar os tipos de letra e gerar a "
-"informação regional"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -589,3 +576,14 @@ msgstr "Telefone"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Herdar a Língua"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "A região foi configurada, mas este KCM não suporta de momento a geração "
+#~ "de informação regional nos sistemas não-glibc; verifique por favor o "
+#~ "manual da sua distribuição para saber como instalar os tipos de letra e "
+#~ "gerar a informação regional"

@@ -61,9 +61,9 @@
 </authorgroup>
 
 <date
->2018-12-10</date>
+>2021-04-09</date>
 <releaseinfo
->Plasma 5.14</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -170,6 +170,11 @@
 >.</para>
 
 <para
+>Marque <guilabel
+>Mostrar solo tipos de letra de ancho fijo</guilabel
+> para ocultar en la lista todos los tipos de letra que no sean de ancho fijo.</para>
+
+<para
 >Se mostrará un ejemplo del tipo de letra seleccionado en el espacio situado entre el nombre del grupo de tipos de letra y el botón <guibutton
 >Elegir...</guibutton
 >.</para>
@@ -189,6 +194,11 @@
 > o el <guilabel
 >Tamaño</guilabel
 >, de forma independiente. Puede elegir una, dos o las tres opciones, y se aplicarán a todos los grupos de tipos de letra.</para>
+
+<para
+>Marque <guilabel
+>Mostrar solo tipos de letra de ancho fijo</guilabel
+> para ocultar en la lista todos los tipos de letra que no sean de ancho fijo.</para>
 
 <para>
 <screenshot>
@@ -214,32 +224,27 @@
 >Suavizar texto</title>
 
 <para
->La configuración predeterminada del suavizado la utiliza su distribución para todo el sistema y se etiqueta como <guilabel
->Predeterminada del vendedor</guilabel
->. Puede desactivar todo el suavizado eligiendo <guilabel
->Desactivado</guilabel
-> en la lista desplegable.</para>
-
-<para
->Para usar una configuración de suavizado distinta, solo tiene que escoger <guilabel
+>Para usar el ajuste de suavizado, solo tiene marcar el elemento <guilabel
 >Activado</guilabel
-> en el cuadro situado a la derecha de <guilabel
->Usar suavizado</guilabel
-> y activar las preferencias personalizadas.</para>
+> y seleccionar las preferencias personalizadas.</para>
 
 <para
 >Marcando la casilla <guilabel
->Excluir rango</guilabel
-> podrá especificar que rango de tipos de letra <emphasis
+>Excluir intervalo de suavizado</guilabel
+> podrá indicar el intervalo de tipos de letra que <emphasis
 >no</emphasis
-> se suavizarán. Este rango se especificará con dos listas desplegables que hay debajo.</para>
+> se suavizarán. Este intervalo se especifica con las dos listas desplegables que hay debajo.</para>
 
 <para
->También podrá elegir el método a usar para crear un aspecto suavizado de sus tipos de letra y cómo debería aplicarse cambiando la <ulink url="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n_de_subpixel"
+>También puede escoger el método que se usará para crear el aspecto suavizado de los tipos de letra y la fuerza con la que debería aplicarse cambiando la <ulink url="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n_de_subpixel"
 >renderización de subpíxel</ulink
 > y el <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
 >hinting del tipo de letra</ulink
->. Si no está familiarizado con los métodos individuales, debería dejar esta opción vacía.</para>
+>. También se puede <guilabel
+>Forzar los PPP del tipo de letra</guilabel
+> de la <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>renderización de la pantalla</ulink
+>. Si no está familiarizado con los métodos individuales, debería dejar estas opciones como están.</para>
 
 <note
 ><para

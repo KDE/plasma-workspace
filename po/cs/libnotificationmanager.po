@@ -18,13 +18,10 @@ msgstr ""
 "X-Generator: Lokalize 20.04.1\n"
 
 #: abstractnotificationsmodel.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 soubor do %2"
+msgstr ""
 
 #: job_p.cpp:185
 #, kde-format
@@ -102,13 +99,10 @@ msgid "to %1"
 msgstr "do %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 soubor do %2"
+msgstr ""
 
 #: jobsmodel_p.cpp:477
 #, kde-format

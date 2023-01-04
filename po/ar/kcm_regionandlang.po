@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-27 18:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -252,18 +252,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (البرازيل)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"ضُبطت الإعدادات المحلية  لكن هذه الوحدة لا تدعم حاليًا إنشاء الإعدادات المحلية "
-"تلقائيًا على أنظمة non-glibc ، يرجى الرجوع إلى دليل التوزيعة الخاص بك لتثبيت "
-"الخطوط وإنشاء الإعدادات المحلية."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -583,3 +571,13 @@ msgstr "رقم الهاتف"
 #, kde-format
 msgid "Inherit Language"
 msgstr "توارث اللغة"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "ضُبطت الإعدادات المحلية  لكن هذه الوحدة لا تدعم حاليًا إنشاء الإعدادات "
+#~ "المحلية تلقائيًا على أنظمة non-glibc ، يرجى الرجوع إلى دليل التوزيعة الخاص "
+#~ "بك لتثبيت الخطوط وإنشاء الإعدادات المحلية."

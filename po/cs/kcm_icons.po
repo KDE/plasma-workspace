@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2014, 2016, 2017, 2018, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vpelcak@suse.cz>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021.
 #
 msgid ""
 msgstr ""
@@ -25,10 +25,9 @@ msgid "Main Toolbar"
 msgstr "Hlavní panel nástrojů"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "Hlavní panel nástrojů"
+msgstr ""
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -173,11 +172,10 @@ msgid "Get New Icons…"
 msgstr "Získat nové ikony…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr "Nastavit velikosti ikon"
+msgstr ""
 
 #: package/contents/ui/main.qml:285
 #, kde-format
@@ -188,9 +186,3 @@ msgstr "Otevřít motiv"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Toolbar"
-#~ msgstr "Panel nástrojů"
-
-#~ msgid "Panel"
-#~ msgstr "Panel"

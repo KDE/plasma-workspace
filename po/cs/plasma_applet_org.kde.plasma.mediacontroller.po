@@ -104,15 +104,13 @@ msgid "Choose player automatically"
 msgstr "Automaticky vybrat přehrávač"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastaveno, %2)"
+msgstr ""
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -124,37 +122,19 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastaveno, %2)"
+msgstr ""
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastaveno, %2)"
-
-#~ msgid "General"
-#~ msgstr "Obecné"
-
-#~ msgid "Volume step:"
-#~ msgstr "Krok hlasitosti:"
-
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "od %1 (%2)"
-
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "Pozastavena (%1)"
+msgstr ""

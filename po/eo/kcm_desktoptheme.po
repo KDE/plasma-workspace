@@ -1,14 +1,16 @@
+# translation of kcm_desktoptheme.pot to Esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2009-11-08 19:41+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-03 11:05+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,35 +21,34 @@ msgstr ""
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "Elŝuti novan etoson..."
+msgstr "Nomo de la aktuala Plasma-Stilo"
 
 #: kcm.cpp:110
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Nekapabla krei dumtempan dosieron."
 
 #: kcm.cpp:121
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr ""
+msgstr "Nekapabla elŝuti the etoson: %1"
 
 #: kcm.cpp:146
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Etoso instaliĝis sukcese."
 
 #: kcm.cpp:149 kcm.cpp:155
 #, kde-format
 msgid "Theme installation failed."
-msgstr ""
+msgstr "Instalado de etoso malsukcesis."
 
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "Forigado de etoso malsukcesis: %1"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -55,72 +56,64 @@ msgid "This module lets you choose the Plasma style."
 msgstr ""
 
 #: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Theme Item"
+#, kde-format
 msgid "All Themes"
-msgstr "Etosa Ero"
+msgstr "Ĉiuj Etosoj"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Theme Item"
+#, kde-format
 msgid "Light Themes"
-msgstr "Etosa Ero"
+msgstr "Helaj Etosoj"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr ""
+msgstr "Malhelaj Etosoj"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "Kongrua al kolorskemo"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
+#, kde-format
 msgid "Follows color scheme"
-msgstr "Kolorara Etoso"
+msgstr "Sekvas koloran etoson"
 
 #: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Theme Item"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "Etosa Ero"
+msgstr "Redakti Etoson…"
 
 #: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
-msgstr "Forigi la etoson"
+msgstr "Forigi Etoson"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Theme"
-msgstr "Forigi la etoson"
+msgstr "Restarigi Etoson"
 
 #: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instali el Dosiero…"
 
 #: package/contents/ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New Plasma Styles…"
-msgstr "Elŝuti novan etoson..."
+msgstr "Elŝuti Novajn Plasma-Etosojn…"
 
 #: package/contents/ui/main.qml:193
-#, fuzzy, kde-format
-#| msgid "Theme Item"
+#, kde-format
 msgid "Open Theme"
-msgstr "Etosa Ero"
+msgstr "Malfermi Etoson"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Etosaj Dosieroj (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -153,7 +146,7 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "La etoso de la aktuala Plasma-seanco estis metata al %1"
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
@@ -165,221 +158,4 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Axel Rousseau"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "axel@esperanto-jeunes.org"
-
-#, fuzzy
-#~| msgid "Get New Themes..."
-#~ msgid "Plasma Style"
-#~ msgstr "Elŝuti novan etoson..."
-
-#, fuzzy
-#~| msgid "Get New Themes..."
-#~ msgid "Plasma Styles"
-#~ msgstr "Elŝuti novan etoson..."
-
-#, fuzzy
-#~| msgid "Remove Desktop Theme"
-#~ msgid "Download New Plasma Styles"
-#~ msgstr "Forigi labortablan etoson"
-
-#, fuzzy
-#~| msgid "Remove Desktop Theme"
-#~ msgid "Configure Desktop Theme"
-#~ msgstr "Forigi labortablan etoson"
-
-#, fuzzy
-#~| msgid "Export Desktop Theme"
-#~ msgid "KDE Desktop Theme Module"
-#~ msgstr "Eksporti labortablan Etoson"
-
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
-#~ msgstr "(C) 2002 ĉe Karol Szwed, Daniel Molkentin"
-
-#~ msgid "Details"
-#~ msgstr "Detaloj"
-
-#~ msgctxt "plasma name"
-#~ msgid "Panel Background"
-#~ msgstr "Panela Fono"
-
-#~ msgctxt "plasma name"
-#~ msgid "Kickoff"
-#~ msgstr "Kickoff"
-
-#~ msgctxt "plasma name"
-#~ msgid "Task Items"
-#~ msgstr "Taskeroj"
-
-#~ msgctxt "plasma name"
-#~ msgid "Widget Background"
-#~ msgstr "Fenestraĵa Fono"
-
-#~ msgctxt "plasma name"
-#~ msgid "Translucent Background"
-#~ msgstr "Diafana Fono"
-
-#~ msgctxt "plasma name"
-#~ msgid "Dialog Background"
-#~ msgstr "Dialoga Fono"
-
-#~ msgctxt "plasma name"
-#~ msgid "Analog Clock"
-#~ msgstr "Analoga horloĝo"
-
-#~ msgctxt "plasma name"
-#~ msgid "Notes"
-#~ msgstr "Notoj"
-
-#~ msgctxt "plasma name"
-#~ msgid "Tooltip"
-#~ msgstr "Ŝpruchelpilo"
-
-#~ msgctxt "plasma name"
-#~ msgid "Pager"
-#~ msgstr "Paĝilo"
-
-#~ msgctxt "plasma name"
-#~ msgid "Run Command Dialog"
-#~ msgstr "Lanĉi Komandan Dialogon"
-
-#~ msgctxt "plasma name"
-#~ msgid "Shutdown Dialog"
-#~ msgstr "Fermi dialogon"
-
-#~ msgid "(Customized)"
-#~ msgstr "(Akomodigita)"
-
-#~ msgid "User customized theme"
-#~ msgstr "Akomidigita etoso de la uzanto"
-
-#~ msgid ""
-#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
-#~ msgstr "Etosero ŝanĝiĝis. Ĉu vi tamen deziras forigi la \"%1\" etoso ?"
-
-#~ msgid "Removal of the default desktop theme is not allowed."
-#~ msgstr "Forigi la aprioran labortablan etoson estas malpermesata."
-
-#~ msgid "Are you sure you wish remove the \"%1\" theme?"
-#~ msgstr "Ĉu vi certas ke vi volas forpreni la etoson \"%1\" ?"
-
-#~ msgid ""
-#~ "Please apply theme item changes (with a new theme name) before attempting "
-#~ "to export theme."
-#~ msgstr ""
-#~ "Bonvolu apliki etosan ŝanĝon (kun nova etosa nomo) antaŭ provi eksporti "
-#~ "ĝin."
-
-#~ msgid "Export Desktop Theme"
-#~ msgstr "Eksporti labortablan Etoson"
-
-#~ msgid "Export theme to file"
-#~ msgstr "Eksporti etoson al dosiero"
-
-#~ msgid "Theme Item"
-#~ msgstr "Etosa Ero"
-
-#~ msgid "Source"
-#~ msgstr "Fonto"
-
-#, fuzzy
-#~| msgid "%1 %2"
-#~ msgctxt ""
-#~ "%1 is the name of the theme, %2 is the type of the element (background, "
-#~ "icon, note, etc)"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgid "File..."
-#~ msgstr "Dosiero..."
-
-#~ msgid "Select File to Use for %1"
-#~ msgstr "Elekti dosieron por uzi por %1"
-
-#~ msgid " Author: %1"
-#~ msgstr "Aŭtoro: %1"
-
-#~ msgid "Version: %1"
-#~ msgstr "Versio: %1"
-
-#~ msgid "Desktop Theme Details"
-#~ msgstr "Labortablaj Etosaj detaloj"
-
-#~ msgid "More"
-#~ msgstr "Pli"
-
-#, fuzzy
-#~| msgid "Remove Desktop Theme"
-#~ msgid "Remove the selected theme"
-#~ msgstr "Forigi labortablan etoson"
-
-#~ msgid "Export Theme to File..."
-#~ msgstr "Eksporti Etoson al Dosiero..."
-
-#~ msgid "New theme name:"
-#~ msgstr "Nova etosa nomo:"
-
-#, fuzzy
-#~| msgid "New theme name:"
-#~ msgid "Custom theme name"
-#~ msgstr "Nova etosa nomo:"
-
-#~ msgid "Author:"
-#~ msgstr "Aŭtoro:"
-
-#, fuzzy
-#~| msgid "Theme Author"
-#~ msgid "Custom theme author "
-#~ msgstr "Aŭtoro de la Etoso"
-
-#~ msgid "Version:"
-#~ msgstr "Versio:"
-
-#, fuzzy
-#~| msgid "New theme name:"
-#~ msgid "Custom theme version number"
-#~ msgstr "Nova etosa nomo:"
-
-#~ msgid "Description:"
-#~ msgstr "Priskribo:"
-
-#, fuzzy
-#~| msgid "The theme description goes here..."
-#~ msgid "Custom theme description"
-#~ msgstr "Ĉi tie troviĝas la etosa priskribo..."
-
-#~ msgid "Select theme from above to customize"
-#~ msgstr "Elektu etoson suben por akomodi"
-
-#~ msgid "Theme Author"
-#~ msgstr "Aŭtoro de la Etoso"
-
-#~ msgid "Theme Name"
-#~ msgstr "Etosonomo"
-
-#~ msgid "Theme Version"
-#~ msgstr "Etosversio"
-
-#~ msgid "The theme description goes here..."
-#~ msgstr "Ĉi tie troviĝas la etosa priskribo..."
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Szwed"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#, fuzzy
-#~| msgid "Remove Desktop Theme"
-#~ msgid "KCMDesktopTheme"
-#~ msgstr "Forigi labortablan etoson"
+msgstr "Vi havas la sekvajn Plasma-etosojn en via sistemo:"

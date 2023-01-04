@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007.
 # Cindy McKee <cfmckee@gmail.com>, 2007, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2009-10-23 19:24+0300\n"
-"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
+"PO-Revision-Date: 2023-01-03 14:34+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +21,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/DeviceItem.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
+#, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%1 libera"
+msgstr "%1 libera de %2"
 
 #: package/contents/ui/DeviceItem.qml:189
 #, kde-format
@@ -33,7 +32,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr ""
+msgstr "Aliranta…"
 
 #: package/contents/ui/DeviceItem.qml:192
 #, kde-format
@@ -41,207 +40,91 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr ""
+msgstr "Foriganta…"
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "Ankoraŭ ne malŝtopu! Dosieroj estas en transiĝo..."
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "Malfermi en Dosiermastrumilo"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "Munti kaj Malfermi"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "Elĵeti"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "Sekure demeti"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "Munti"
 
 #: package/contents/ui/FullRepresentation.qml:41
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Remove All"
-msgstr ""
+msgstr "Demeti Ĉiujn"
 
 #: package/contents/ui/FullRepresentation.qml:42
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Klaku por demeti tiun ĉi aparaton."
 
 #: package/contents/ui/FullRepresentation.qml:186
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "No removable devices attached"
-msgstr "Nur nedemeteblajn aparatojn"
+msgstr "Ne estas demeteblaj aparatoj alligataj"
 
 #: package/contents/ui/FullRepresentation.qml:186
-#, fuzzy, kde-format
-#| msgid "No devices plugged in."
+#, kde-format
 msgid "No disks available"
-msgstr "Ne kunmetitaj aparatoj."
+msgstr "Neniuj diskoj je dispono"
 
 #: package/contents/ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Most Recent Device"
-msgstr "Lasta kunmetita aparato: %1"
+msgstr "Lasta Alligata Aparato"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
 msgid "No Devices Available"
-msgstr ""
+msgstr "Neniuj Aparatoj je Dispono"
 
 #: package/contents/ui/main.qml:245
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
+#, kde-format
 msgid "Removable Devices"
-msgstr "Nur demeteblajn aparatojn"
+msgstr "Demeteblaj Aparatoj"
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "Non Removable Devices"
-msgstr "Nur nedemeteblajn aparatojn"
+msgstr "Nedemeteblaj Aparatoj"
 
 #: package/contents/ui/main.qml:257
-#, fuzzy, kde-format
-#| msgid "All devices"
+#, kde-format
 msgid "All Devices"
-msgstr "Ĉiujn aparatojn"
+msgstr "Ĉiuj aparatoj"
 
 #: package/contents/ui/main.qml:265
-#, fuzzy, kde-format
-#| msgid "No devices plugged in"
+#, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr "Ne kunmetitaj aparatoj."
+msgstr "Montri ŝprucfenestron kiam nova aparato estas enŝtopata."
 
 #: package/contents/ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "Nur nedemeteblajn aparatojn"
-
-#~ msgid "General"
-#~ msgstr "Ĝenerala"
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "It is currently safe to remove this device."
-#~ msgstr "Klaku por demeti tiun ĉi aparaton."
-
-#~ msgid "1 action for this device"
-#~ msgid_plural "%1 actions for this device"
-#~ msgstr[0] "1 ago por ĉi tiu aparato"
-#~ msgstr[1] "%1 agoj por ĉi tiu aparato"
-
-#~ msgid "Click to access this device from other applications."
-#~ msgstr "Klaku por atingi tiun ĉi aparaton el aliaj programoj."
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to eject this disc."
-#~ msgstr "Klaku por demeti tiun ĉi aparaton."
-
-#~ msgid "Click to safely remove this device."
-#~ msgstr "Klaku por demeti tiun ĉi aparaton."
-
-#, fuzzy
-#~| msgid "Click to safely remove this device from the computer."
-#~ msgid "Click to mount this device."
-#~ msgstr "Klaku por demeti tiun ĉi aparaton."
-
-#, fuzzy
-#~| msgid "All devices"
-#~ msgid "Available Devices"
-#~ msgstr "Ĉiujn aparatojn"
-
-#, fuzzy
-#~| msgid "Display:"
-#~ msgid "Display"
-#~ msgstr "Montri:"
-
-#~ msgid "Show hidden devices"
-#~ msgstr "Montri kaŝitaj aparatoj"
-
-#~ msgctxt "Hide a device"
-#~ msgid "Hide %1"
-#~ msgstr "Kaŝi %1"
-
-#, fuzzy
-#~| msgid "Device is plugged in and can be accessed by applications."
-#~ msgid ""
-#~ "Device is plugged in and the volume can be accessed by applications. It "
-#~ "is not safe to remove this device."
-#~ msgstr "Aparto estas enigata kaj estas atingebla por programoj."
-
-#, fuzzy
-#~| msgid "Device is plugged in, but not mounted for access yet."
-#~ msgid ""
-#~ "Device is plugged in and the volume is not mounted for access yet. The "
-#~ "device can be safely removed."
-#~ msgstr "Aparato estas kunmetata, sed ne ankoraŭ muntita."
-
-#, fuzzy
-#~| msgid ""
-#~| "Could not unmount the device.\n"
-#~| "One or more files on this device are open within an application."
-#~ msgid ""
-#~ "Could not unmount device %1.\n"
-#~ "One or more files on this device are open within an application."
-#~ msgstr ""
-#~ "Ne eblis demeti la aparaton.\n"
-#~ "Unu aŭ pli dosieroj sur la aparto estas malfermata en iu programo."
-
-#~ msgid ""
-#~ "Cannot eject the disc.\n"
-#~ "One or more files on this disc are open within an application."
-#~ msgstr ""
-#~ "Ne eblas elĵeti la diskon.\n"
-#~ "Unu aŭ pli dosieroj sur la aparto estas malfermata en iu programo."
-
-#, fuzzy
-#~| msgid "Last plugged in device: %1"
-#~ msgid "Could not mount device %1."
-#~ msgstr "Lasta kunmetita aparato: %1"
-
-#~ msgid "Cannot mount the disc."
-#~ msgstr "Ne eblas munti la diskon."
-
-#~ msgid "Devices recently plugged in:"
-#~ msgstr "Lasttempaj kunmetitaj aparatoj:"
-
-#, fuzzy
-#~| msgid "Time to stay on top (s) :"
-#~ msgid "&Time to stay on top:"
-#~ msgstr "Daŭro por resti en supra pozicio (s) :"
-
-#, fuzzy
-#~| msgid "Number of items displayed (0 for no limit) :"
-#~ msgid "&Number of items displayed:"
-#~ msgstr "Nombro de montrataj eroj (0 estas senlima) :"
-
-#, fuzzy
-#~| msgid "Display time of items (0 for no limit) :"
-#~ msgid "&Display time of items:"
-#~ msgstr "Daŭro por montri erojn (0 estas senlima) :"
-
-#~ msgid "Configure New Device Notifier"
-#~ msgstr "Agordi la avizilon de novaj disponaĵoj"
+msgstr "Agordi Demeteblajn Aparatojn…"

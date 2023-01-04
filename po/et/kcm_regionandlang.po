@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-11-17 23:25+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -248,18 +248,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brasiilia)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Lokaat on seadistatud, aga see juhtimismoodul ei toeta lokaadi automaatset "
-"genereerimist süsteemides, mis ei kasuta glibc'd. Uuri oma distro "
-"käsiraamatust, kuidas fonte paigaldada ja lokaate genereerida."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -571,3 +559,13 @@ msgstr "Telefoninumber"
 #, kde-format
 msgid "Inherit Language"
 msgstr ""
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Lokaat on seadistatud, aga see juhtimismoodul ei toeta lokaadi "
+#~ "automaatset genereerimist süsteemides, mis ei kasuta glibc'd. Uuri oma "
+#~ "distro käsiraamatust, kuidas fonte paigaldada ja lokaate genereerida."

@@ -3,15 +3,15 @@
 # Copyright (C) 1998, 2007 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
-#
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-02 00:47+0000\n"
-"PO-Revision-Date: 2007-12-18 10:07-0600\n"
-"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
+"PO-Revision-Date: 2023-03-01 15:30+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: gtkpage.cpp:59
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 ne estas valida GTK-etosa arkivo."
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
@@ -33,124 +33,111 @@ msgstr "Eraro okazis dum ŝargo de la agorda dialogo por ĉi tiu stilo."
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "Malsukcesis apliki elektitan stilon '%1'."
 
 #: package/contents/ui/EffectSettingsPopup.qml:32
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons:"
 msgstr "M&ontri piktogramojn sur butonoj"
 
 #: package/contents/ui/EffectSettingsPopup.qml:33
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "Radiobutono"
+msgstr "Sur butonoj"
 
 #: package/contents/ui/EffectSettingsPopup.qml:44
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "En menuoj"
 
 #: package/contents/ui/EffectSettingsPopup.qml:56
 #, kde-format
 msgid "Main toolbar label:"
-msgstr ""
+msgstr "Ĉef-ilobreta etikedo:"
 
 #: package/contents/ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Neniu"
 
 #: package/contents/ui/EffectSettingsPopup.qml:59
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "Nur teksto"
 
 #: package/contents/ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "Teksto apud piktogramoj"
+msgstr "Apud piktogramoj"
 
 #: package/contents/ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "Teksto sub piktogramoj"
+msgstr "Sub piktogramoj"
 
 #: package/contents/ui/EffectSettingsPopup.qml:76
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr ""
+msgstr "Etikedo de duaranga ilobreto:"
 
 #: package/contents/ui/GtkStylePage.qml:18
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "Aplikaĵa nivelo"
+msgstr "GNOME/GTK Aplikaĵa Stilo"
 
 #: package/contents/ui/GtkStylePage.qml:44
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "GTK-etoso:"
 
 #: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Antaŭrigardo"
+msgstr "Antaŭrigardi…"
 
 #: package/contents/ui/GtkStylePage.qml:88
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instali el Dosiero…"
 
 #: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Aplikaĵa nivelo"
+msgstr "Ricevi Novajn GNOME/GTK Aplikaĵstilojn…"
 
 #: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "Elekti GTK-Etosan Arkivon"
 
 #: package/contents/ui/GtkStylePage.qml:111
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "GTK-Etosa Arkivo (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
+#, kde-format
 msgid ""
 "This module allows you to modify the visual appearance of applications' user "
 "interface elements."
 msgstr ""
-"<h1>Stilagordo</h1>Tiu modulo permesas ŝanĝi la aperon de la grafikaj "
-"elementoj, fenestraĵostiloj kaj efektoj."
+"Tiu modulo permesas ŝanĝi la aperon de la grafikaj elementoj kiel "
+"fenestraĵostilo kaj efektoj."
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "&Agordi..."
+msgstr "Agordi Stilon…"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "Agordi Piktogramojn kaj Ilbretojn"
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "&Agordi..."
+msgstr "Agordi GNOME/GTK Aplikaĵstilon…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -165,15 +152,13 @@ msgstr "Langeto 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
-msgstr "Butono"
+msgstr "Prembutono"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
 msgstr "Redaktebla falmenuo"
 
@@ -198,404 +183,30 @@ msgstr "Langeto 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Application Level"
+#, kde-format
 msgid "Application style"
-msgstr "Aplikaĵa nivelo"
+msgstr "Aplikaĵa stilo"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "M&ontri piktogramojn sur butonoj"
+msgstr "Montri piktogramojn sur butonoj"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "M&ontri piktogramojn sur butonoj"
+msgstr "Montri piktogramojn en menuoj"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
 #, kde-format
 msgid "Main toolbar label"
-msgstr ""
+msgstr "Ĉef-ilobreta etikedo"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Wolfram Diestel,Steffen Pietsch,Cindy McKee"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de,cfmckee@gmail.com"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "Application Style"
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
-#~ msgstr "(C) 2002 ĉe Karol Szwed, Daniel Molkentin"
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Szwed"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "Download New GNOME/GTK2 Application Styles..."
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "GNOME/GTK2 Application Styles"
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "Download New GNOME/GTK3 Application Styles..."
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "GNOME/GTK3 Application Styles"
-#~ msgstr "Aplikaĵa nivelo"
-
-#~ msgid "Unable to Load Dialog"
-#~ msgstr "Ne povis ŝargi dialogon"
-
-#~ msgid "No description available."
-#~ msgstr "Neniu priskribo troviĝis."
-
-#~ msgid ""
-#~ "This area shows a preview of the currently selected style without having "
-#~ "to apply it to the whole desktop."
-#~ msgstr ""
-#~ "Tiu areo montras antaŭrigardon de la elektita stilo. Tiel vi povas "
-#~ "prijuĝi ĝin sen apliki ĝin al la tuta labortablo."
-
-#~ msgid ""
-#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
-#~ "buttons are drawn) which may or may not be combined with a theme "
-#~ "(additional information like a marble texture or a gradient)."
-#~ msgstr ""
-#~ "Tie ĉi vi povas elekti iun el listo de antaŭdifinitaj fenestraĵostiloj."
-#~ "Stiloj difinas ekz. kiel butonoj aspektas ktp. Stiloj povas esti "
-#~ "kombinitaj kun etosoj, kiuj donas aldonajn aspekterojn, kiel marmoran "
-#~ "teksturon aŭ kolortransirojn k.s."
-
-#, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside some important buttons."
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "some important buttons."
-#~ msgstr ""
-#~ "Se elektita, KDE-aplikaĵoj montras malgrandajn piktogramojn apud kelkaj "
-#~ "gravaj butonoj."
-
-#, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside some important buttons."
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "most menu items."
-#~ msgstr ""
-#~ "Se elektita, KDE-aplikaĵoj montras malgrandajn piktogramojn apud kelkaj "
-#~ "gravaj butonoj."
-
-#, fuzzy
-#~| msgid ""
-#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
-#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
-#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
-#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
-#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
-#~| "below the icon."
-#~ msgid ""
-#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
-#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
-#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
-#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
-#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
-#~ msgstr ""
-#~ "<p><b>Nur piktogramoj:</b> Montras nur piktogramojn sur ilobretaj "
-#~ "butonoj. Plej bona elekto por malgrandaj ekranoj.</p><p><b>Nur teksto: </"
-#~ "b>Montras nur tekston sur la ilobretaj butonoj.</p><p><b>Teksto apud "
-#~ "piktogramoj: </b> Montras piktogramojn kaj tekston sur butonoj de "
-#~ "ilobretoj. La teksto aperas laŭlonge de la piktogramo.</p><b>Teksto sub "
-#~ "piktogramoj: </b>Montras piktogramojn kaj tekston sur butonoj de "
-#~ "ilobretoj. La teksto aperas sube de la piktogramo."
-
-#, fuzzy
-#~| msgid "&Toolbar"
-#~ msgid "Toolbars"
-#~ msgstr "I&lobreto"
-
-#, fuzzy
-#~| msgid "Widget Style"
-#~ msgid "Widget Style"
-#~ msgstr "Stilo de fenestraĵoj"
-
-#, fuzzy
-#~| msgid "Widget Style"
-#~ msgid "Widget style:"
-#~ msgstr "Stilo de fenestraĵoj"
-
-#~ msgid "Description: %1"
-#~ msgstr "Priskribo: %1"
-
-#~ msgid "Group Box"
-#~ msgstr "Grupazono"
-
-#~ msgid "KDE Style Module"
-#~ msgstr "Agordmodulo por stilo"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "In application"
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "Global Menu widget"
-#~ msgstr "Aplikaĵa nivelo"
-
-#, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside some important buttons."
-#~ msgid ""
-#~ "If you enable this option, KDE Applications will run internal animations."
-#~ msgstr ""
-#~ "Se elektita, KDE-aplikaĵoj montras malgrandajn piktogramojn apud kelkaj "
-#~ "gravaj butonoj."
-
-#~ msgid "kcmstyle"
-#~ msgstr "kcmstyle"
-
-#~ msgid "Get New Themes..."
-#~ msgstr "Elŝuti novan etoson..."
-
-#~ msgid "Icons Only"
-#~ msgstr "Nur piktogramoj"
-
-#, fuzzy
-#~| msgid "Text pos&ition:"
-#~ msgctxt "@label:listbox"
-#~ msgid "Text pos&ition of toolbar elements:"
-#~ msgstr "Po&zicio de teksto:"
-
-#~ msgctxt "@title:tab"
-#~ msgid "&Style"
-#~ msgstr "&Stilo"
-
-#~ msgid ""
-#~ "This page allows you to enable various widget style effects. For best "
-#~ "performance, it is advisable to disable all effects."
-#~ msgstr ""
-#~ "Tiu paĝo oferas diversajn stilajn efektojn por fenestraĵoj. Por pleja "
-#~ "rapideco prefere malŝaltu ĉiujn efektojn."
-
-#~ msgctxt "@option:check"
-#~ msgid "High&light buttons under mouse"
-#~ msgstr "&Emfazi butonojn sub muso"
-
-#~ msgctxt "@option:check"
-#~ msgid "E&nable tooltips"
-#~ msgstr "E&bligi ŝpruchelpilojn"
-
-#~ msgid ""
-#~ "If this option is selected, toolbar buttons will change their color when "
-#~ "the mouse cursor is moved over them."
-#~ msgstr ""
-#~ "Se elektita, butonoj de ilobretoj ŝanĝas sian koloron kiam la musmontrilo "
-#~ "moviĝas super ilin."
-
-#~ msgid ""
-#~ "If you check this option, the KDE application will offer tooltips when "
-#~ "the cursor remains over items in the toolbar."
-#~ msgstr ""
-#~ "Se elektita, la KDE-aplikaĵo montras ŝpruchelpilojn kiam la kursoro "
-#~ "restas super ero en la ilobreto."
-
-#~ msgid "&Effects"
-#~ msgstr "E&fektoj"
-
-#~ msgid "Show tear-off handles in &popup menus"
-#~ msgstr "Montri deŝirilojn en ŝ&prucmenuoj"
-
-#~ msgid "&Enable GUI effects"
-#~ msgstr "&Ebligi grafikajn efektojn"
-
-#~ msgid "Disable"
-#~ msgstr "Malebligi"
-
-#~ msgid "Animate"
-#~ msgstr "Animacii"
-
-#~ msgid "Combobo&x effect:"
-#~ msgstr "&Redaktebla falmenua efekto:"
-
-#~ msgid "Fade"
-#~ msgstr "Dissolvi"
-
-#~ msgid "&Tool tip effect:"
-#~ msgstr "Ŝ&pruchelpila efekto:"
-
-#~ msgid "Make Translucent"
-#~ msgstr "Diafanigi"
-
-#~ msgid "&Menu effect:"
-#~ msgstr "&Menuefekto:"
-
-#~ msgid "Me&nu tear-off handles:"
-#~ msgstr "Deŝiriloj por &menuoj:"
-
-#~ msgid "Menu &drop shadow"
-#~ msgstr "Menua ĵe&tita ombro"
-
-#~ msgid "Software Tint"
-#~ msgstr "Programa nuanco"
-
-#~ msgid "Software Blend"
-#~ msgstr "Programa kolortransiro"
-
-#~ msgid "XRender Blend"
-#~ msgstr "XRender-kolortransiro"
-
-#~ msgid "0%"
-#~ msgstr "0%"
-
-#~ msgid "50%"
-#~ msgstr "50%"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Menu trans&lucency type:"
-#~ msgstr "Tipo de menua &diafaneco:"
-
-#~ msgid "Menu &opacity:"
-#~ msgstr "Menua &opakeco:"
-
-#~ msgid "Transparent tool&bars when moving"
-#~ msgstr "Ilobretoj estas &travideblaj dum ŝovado"
-
-#~ msgid ""
-#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
-#~ "have chosen could not be applied because the selected style does not "
-#~ "support them; they have therefore been disabled.<br /><br /></qt>"
-#~ msgstr ""
-#~ "<qt>Elektita stilo: <b>%1</b><br /><br />Unu aŭ pli da efektoj kiujn vi "
-#~ "elektis ne povis esti aplikita ĉar la elektita stilo ne subtenas ilin, "
-#~ "tial ili estas malebligitaj.<br /><br /></qt>"
-
-#~ msgid "Menu translucency is not available.<br />"
-#~ msgstr "Menua diafaneco ne estas havebla.<br />"
-
-#~ msgid "Menu drop-shadows are not available."
-#~ msgstr "Ĵetitaj ombroj por menuoj ne estas haveblaj."
-
-#~ msgid ""
-#~ "If you check this box, you can select several effects for different "
-#~ "widgets like combo boxes, menus or tooltips."
-#~ msgstr ""
-#~ "Se vi elektas tion, vi povas elekti kelkajn efektojn aparte por diversaj "
-#~ "fenestraĵoj kiel redaktolistoj, menuoj aŭ ŝpruchelpiloj."
-
-#~ msgid ""
-#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
-#~ "<b>Animate: </b>Do some animation."
-#~ msgstr ""
-#~ "<p><b>Malebligi: </b>Ne uzi efekton en redakteblaj falmenuoj.</p>\n"
-#~ "<b>Animacii: </b>Ruluma efekto."
-
-#~ msgid ""
-#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
-#~ "<p><b>Animate: </b>Do some animation.</p>\n"
-#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
-#~ msgstr ""
-#~ "<p><b>Malebligi: </b>Ne uzi efekton en ŝpruchelpiloj.</p>\n"
-#~ "<p><b>Animacii: </b>Moviĝanta efekto.</p>\n"
-#~ "<b>Maldissolvi: </b>Maldissolvi ŝpruchelpilojn per alfa-transiro."
-
-#~ msgid ""
-#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
-#~ "<p><b>Animate: </b>Do some animation.</p>\n"
-#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
-#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
-#~ "styles only)"
-#~ msgstr ""
-#~ "<p><b>Malebligi: </b>Ne uzi menuefektojn.</p>\n"
-#~ "<p><b>Animacii: </b>Ruluma efekto.</p>\n"
-#~ "<p><b>Maldissolvi: </b>Maldissolvi menuojn per alfa-transiro.</p>\n"
-#~ "<b>Diafanigi: </b>Oni travidas iomete la fonon. (Funkcias nur kun KDE-"
-#~ "stiloj)"
-
-#~ msgid ""
-#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
-#~ "shadows will not be displayed. At present, only KDE styles can have this "
-#~ "effect enabled."
-#~ msgstr ""
-#~ "Se ebligita, ĉiuj ŝprucmenuoj ĵetos ombrojn, alie ĵetitaj ombroj ne "
-#~ "montriĝos. Nuntempe, nur KDE-stiloj povas havi ĉi tiun efekton."
-
-#~ msgid ""
-#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
-#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
-#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
-#~ "blending (if available). This method may be slower than the Software "
-#~ "routines on non-accelerated displays, but may however improve performance "
-#~ "on remote displays.</p>\n"
-#~ msgstr ""
-#~ "<p><b>Programa nuanco:</b>Alfa-transiro uzante simplan koloron.</p>\n"
-#~ "<p><b>Programa kolortransiro:</b> Alfa-transiro uzante bildon.</p>\n"
-#~ "<p><b>XRender-kolortransiro:</b>Uzas la XFree-RENDER krompramon por "
-#~ "bildkolortransiro (se haveblas). Tiu metodo estas pli malrapida ol "
-#~ "programaj metodoj kun ne rapidigitaj vidigiloj, sed povas helpi la "
-#~ "montrorapidecon je foraj vidigiloj.</p>\n"
-
-#~ msgid "By adjusting this slider you can control the menu effect opacity."
-#~ msgstr "Per tiu ŝovilo vi povas adapti la opakecon de la menuoj."
-
-#~ msgid ""
-#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
-#~ "applications."
-#~ msgstr ""
-#~ "<b>Notu:</b> ĉiuj fenestraĵoj en ĉi tiu falmenuo ne aplikiĝas al la puraj "
-#~ "Qt-aplikaĵoj."
-
-#~ msgid ""
-#~ "If you check this box, the toolbars will be transparent when moving them "
-#~ "around."
-#~ msgstr "Se elektita, la ilobretoj estos travideblaj dum vi movas ilin."
-
-#~ msgid ""
-#~ "If you enable this option some pop-up menus will show so called tear-off "
-#~ "handles. If you click them, you get the menu inside a widget. This can be "
-#~ "very helpful when performing the same action multiple times."
-#~ msgstr ""
-#~ "Se elektita, kelkaj ŝprucmenuoj havos tiel nomatajn deŝirilojn. Se vi "
-#~ "alklakas ilin, vi povas deŝiri kopion de la menuo. Tio povas faciligi la "
-#~ "laboron kiam vi faras la saman agon plurfoje."
-
-#~ msgid "%"
-#~ msgstr "%"
+msgstr "Etikedo de duaranga ilobreto"

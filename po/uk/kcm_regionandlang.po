@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-01-04 00:51+0000\n"
 "PO-Revision-Date: 2022-12-27 08:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -252,19 +252,6 @@ msgctxt ""
 "português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Бразилія)"
-
-#: localegeneratorbase.cpp:16
-#, kde-format
-msgctxt "@info:warning"
-msgid ""
-"Locale has been configured, but this KCM currently doesn't support auto "
-"locale generation on non-glibc systems, please refer to your distribution's "
-"manual to install fonts and generate locales"
-msgstr ""
-"Налаштовано локаль, але у поточній версії цього модуля керування не "
-"передбачено автоматичного створення локалі для систем, у яких не використано "
-"glibc. Будь ласка, зверніться до документації з вашого дистрибутива, щоб "
-"дізнатися про те, як встановити шрифти і створити локалі."
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -589,6 +576,18 @@ msgstr "Номер телефону"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Успадкувати за мовою"
+
+#~ msgctxt "@info:warning"
+#~ msgid ""
+#~ "Locale has been configured, but this KCM currently doesn't support auto "
+#~ "locale generation on non-glibc systems, please refer to your "
+#~ "distribution's manual to install fonts and generate locales"
+#~ msgstr ""
+#~ "Налаштовано локаль, але у поточній версії цього модуля керування не "
+#~ "передбачено автоматичного створення локалі для систем, у яких не "
+#~ "використано glibc. Будь ласка, зверніться до документації з вашого "
+#~ "дистрибутива, щоб дізнатися про те, як встановити шрифти і створити "
+#~ "локалі."
 
 #~ msgctxt "Button for change the locale used"
 #~ msgid "Change it…"

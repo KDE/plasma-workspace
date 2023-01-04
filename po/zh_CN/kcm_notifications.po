@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-24 11:42\n"
+"PO-Revision-Date: 2023-01-02 07:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -87,11 +87,10 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "通知目前不是由 Plasma 提供。"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "勿扰模式："
+msgstr ""
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -100,20 +99,16 @@ msgid "Enable:"
 msgstr ""
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "投屏时开启"
+msgstr ""
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "共享屏幕时启用"
+msgstr ""
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -158,26 +153,22 @@ msgid "Show popup"
 msgstr "显示弹出窗口"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "弹出："
+msgstr ""
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "应用程序："
+msgstr ""
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "靠近通知图标显示"
+msgstr ""
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -230,11 +221,10 @@ msgid "Notification badges:"
 msgstr "通知计数："
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "应用程序设置"
+msgstr ""
 
 #: package/contents/ui/main.qml:308
 #, kde-format
@@ -277,7 +267,3 @@ msgstr "从列表中选择应用程序来配置其通知设置和行为。"
 #, kde-format
 msgid "Other Applications"
 msgstr "其他应用"
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "勿扰模式开关快捷键："
