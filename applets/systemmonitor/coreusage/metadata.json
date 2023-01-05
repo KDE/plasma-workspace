@@ -51,6 +51,7 @@
         "Description[bg]": "Уиджет за системен монитор, който показва използването на отделни ядра на процесора",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
+        "Description[cs]": "Widget monitoru systému, zobrazující využití jednotlivých jader CPU",
         "Description[da]": "Systemovervågning-widget som viser brug af hver CPU-kerne",
         "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung einzelner CPU-Kerne anzeigt",
         "Description[en_GB]": "System monitor Widget that shows usage of individual CPU cores",

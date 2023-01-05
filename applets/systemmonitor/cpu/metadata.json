@@ -51,6 +51,7 @@
         "Description[bg]": "Уиджет за системен монитор, което показва общото използване на процесора",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
+        "Description[cs]": "Widget monitoru systému, zobrazující celkové využití CPU",
         "Description[da]": "Systemovervågning-widget som viser den samlede CPU-brug",
         "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung des gesamten Prozessors anzeigt",
         "Description[en_GB]": "System monitor Widget that shows the total CPU usage",

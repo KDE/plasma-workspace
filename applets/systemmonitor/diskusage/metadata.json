@@ -52,6 +52,7 @@
         "Description[bg]": "Уиджет за системен монитор, който показва използването на основния дял",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
+        "Description[cs]": "Widget monitoru systému, zobrazující celkové využití kořenového oddílu",
         "Description[da]": "Systemovervågning-widget som viser brug af rod-partitionen",
         "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung des Basisordners anzeigt",
         "Description[en_GB]": "System monitor Widget that shows the usage of the root partition",
