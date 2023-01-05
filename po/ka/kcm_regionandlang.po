@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-04 00:51+0000\n"
-"PO-Revision-Date: 2022-12-27 07:27+0100\n"
+"PO-Revision-Date: 2023-01-04 09:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -267,7 +267,7 @@ msgstr "check-language-support -ის შეცდომა. გამოტა
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "ყველა ნაკლული პაკეტის ამოხსნა შეუძლებელია! %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
@@ -412,6 +412,9 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
+"ამერიკული ინგლისურის ენების სიაში თავში დადება ზოგიერთ აპლიკაციაზე "
+"არასასურველ გავლენას იწვევს. თუ გნებავთ, თქვენმა სისტემამ ამერიკული "
+"ინგლისური გამოიყენოს, სხვა ენები წაშალეთ."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -495,6 +498,9 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"ენის და მათი მხარდაჭერის ფაილები დაგენერირდა, მაგრამ ენის შესაბამისი "
+"ფონტების ავტომატური დაყენება შეუძლებელია. თუ თქვენს ენას სპეციალური ფონტები "
+"სჭირდება სწორად გამოსაჩენად, უნდა იპოვოთ, რომლებია და ხელით დააყენოთ."
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -503,6 +509,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"საჭირო ენები და მათი მხარდაჭერის ფაილები წარმატებით იქნა დაყენებული. ახლა "
+"კომპიუტერის გამორთვა უსაფრთხოა."
 
 #: package/contents/ui/main.qml:138
 #, kde-format

@@ -1,35 +1,35 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2018, 2019, 2020, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-06-29 12:08+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-04 10:01+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Ťukni na svoji polohu na mapě."
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Klikni na svoji polohu na mapě."
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
@@ -46,53 +46,57 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Upraveno z <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Světová mapa poloh</link> od "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
-msgstr ""
+msgstr "Zeměpisná šířka:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
-msgstr ""
+msgstr "Zeměpisná délka:"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
+msgstr "Filtr modré barvy způsobí, že barvy na monitoru jsou teplejší."
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Switching times:"
-msgstr ""
+msgstr "Časy přepínání:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Vždy vypnuto"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr ""
+msgstr "Východ a západ slunce v současné poloze"
 
 #: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr ""
+msgstr "Východ a západ slunce v ručně vybraném místě"
 
 #: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Custom times"
-msgstr ""
+msgstr "Vlastní časy"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Always on night color"
-msgstr ""
+msgstr "Vždy noční barva"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -102,11 +106,14 @@ msgid ""
 "or by sending network information to <link url='https://location.services."
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
+"Poloha zařízení bude pravidelně zjišťována pomocí GPS (pokud je dostupné), "
+"nebo zasíláním síťových informací na <link url='https://location.services."
+"mozilla.com'>Služba polohy Mozilla</link>."
 
 #: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Day color temperature:"
-msgstr ""
+msgstr "Teplota denní barvy:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -124,7 +131,7 @@ msgstr "Teplá"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Studená (bez filtru)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -135,7 +142,7 @@ msgstr "Studená"
 #: package/contents/ui/main.qml:234
 #, kde-format
 msgid "Night color temperature:"
-msgstr ""
+msgstr "Teplota noční barvy:"
 
 #: package/contents/ui/main.qml:298
 #, kde-format
@@ -145,7 +152,7 @@ msgstr "Zeměpisná šířka: %1° Zeměpisná délka: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Spustit noční barvu v:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -155,7 +162,7 @@ msgstr "Vstupní formát: HH:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Spustit denní barvu v:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -184,18 +191,18 @@ msgstr "Chyba: Délka přechodu se překrývá."
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr ""
+msgstr "Hledám umístění..."
 
 #: package/contents/ui/TimingsView.qml:32
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr ""
+msgstr "Teplota barvy se začne měnit na noční v %1 a plně změněna je v %2"
 
 #: package/contents/ui/TimingsView.qml:39
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr ""
+msgstr "Teplota barvy se začne měnit na denní v %1 a plně změněna je v %2"

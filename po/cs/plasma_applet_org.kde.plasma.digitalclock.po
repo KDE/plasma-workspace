@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2016, 2017, 2018, 2019.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2021-11-02 11:18+0100\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-04 14:32+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -51,7 +51,7 @@ msgstr "Přidat…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Přidat novou událost"
 
 #: package/contents/ui/CalendarView.qml:397
 #, kde-format
@@ -204,13 +204,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr ""
+msgstr "Zobrazení textu:"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automaticky"
 
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format
@@ -218,30 +218,32 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"Text bude používat systémové písmo a roztáhne se tak, aby využil veškeré "
+"dostupné místo."
 
 #: package/contents/ui/configAppearance.qml:237
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr ""
+msgstr "Ručně"
 
 #: package/contents/ui/configAppearance.qml:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Zvolte styl..."
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: package/contents/ui/configAppearance.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Zvolte písmo..."
 
 #: package/contents/ui/configCalendar.qml:44
 #, kde-format
@@ -288,7 +290,7 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr ""
+msgstr "Přepnout systémové časové pásmo…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -298,7 +300,7 @@ msgstr "Odstranit toto časové pásmo"
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Systemwide Time Zone"
-msgstr ""
+msgstr "Systémové časové pásmo"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -320,7 +322,7 @@ msgstr "Přidat časová pásma…"
 #: package/contents/ui/configTimeZones.qml:165
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr ""
+msgstr "Přepnout zobrazené časové pásmo rolováním přes applet hodin"
 
 #: package/contents/ui/configTimeZones.qml:172
 #, kde-format
@@ -328,6 +330,8 @@ msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
+"Použití této funkce nezmění časové pásmo napříč systémem. Pokud cestujete, "
+"přepněte raději na místní časové pásmo."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -372,13 +376,13 @@ msgstr "Nastavit formát času…"
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr ""
+msgstr "Dnes je %1"
 
 #: package/contents/ui/Tooltip.qml:108
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

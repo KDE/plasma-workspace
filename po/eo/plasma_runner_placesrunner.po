@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# Translation of plasma_runner_placesrunner.pot to esperanto.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 #
 msgid ""
 msgstr ""

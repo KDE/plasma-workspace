@@ -2,14 +2,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Cindy McKee <cfmckee@gmail.com>, 2008, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-01 00:49+0000\n"
-"PO-Revision-Date: 2009-10-23 20:03+0300\n"
-"Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
+"PO-Revision-Date: 2023-01-04 05:18+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +46,4 @@ msgstr "Iri al %1"
 #: locationrunner.cpp:96
 #, kde-format
 msgid "Send email to %1"
-msgstr ""
-
-#~ msgid "Locations"
-#~ msgstr "Lokoj"
+msgstr "Sendi e-poŝton al %1"

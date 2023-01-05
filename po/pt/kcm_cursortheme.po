@@ -154,8 +154,8 @@ msgstr ""
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segundo"
+msgstr[1] "%1 segundos"
 
 #: package/contents/ui/main.qml:20
 #, kde-format

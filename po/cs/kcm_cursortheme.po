@@ -3,14 +3,14 @@
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2014, 2015, 2016, 2018, 2019.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-06-29 12:03+0200\n"
+"PO-Revision-Date: 2023-01-04 22:24+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -98,7 +98,7 @@ msgstr "Obnovit motiv kurzoru"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Odezva při spouštění aplikací"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:23
 #, kde-format
@@ -112,29 +112,30 @@ msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr ""
 
+# žádné parametry funkce v inspektoru funkcí
 #: package/contents/ui/LaunchFeedbackDialog.qml:45
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Žádná"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:54
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Statické"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:63
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Blikání"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:72
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Poskakování"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:87
 #, kde-format
@@ -146,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Povolit animace"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:108
 #, kde-format

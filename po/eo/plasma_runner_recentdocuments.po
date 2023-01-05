@@ -1,6 +1,8 @@
+# translation of plasma_runner_recentdocuments.pot to Esperanto
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
@@ -8,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-05 00:46+0000\n"
 "PO-Revision-Date: 2009-10-16 23:03+0300\n"
-"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +22,9 @@ msgstr ""
 #: recentdocuments.cpp:36
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
-msgstr "Serĉas freŝe uzitajn dokumentojn, kies nomoj kongruas kun :q:."
+msgstr "Serĉas freŝe uzitajn dokumentojn kies nomoj kongruas kun :q:."
 
 #: recentdocuments.cpp:38
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
-
-#~ msgid "Recent Document"
-#~ msgstr "Freŝe uzita dokumento"
+msgstr "Malfermi Entenantan Dosierujon"

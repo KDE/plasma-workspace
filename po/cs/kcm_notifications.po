@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-05 11:13+0200\n"
+"PO-Revision-Date: 2023-01-04 22:24+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -91,13 +91,13 @@ msgstr "Upozornění nejsou aktuálně Plasmou poskytována."
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr ""
+msgstr "Režim Nerušit"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Povolit:"
 
 #: package/contents/ui/main.qml:70
 #, kde-format
@@ -169,7 +169,7 @@ msgstr "Umístění:"
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr ""
+msgstr "Poblíž ikony upozornění"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -227,7 +227,7 @@ msgstr "Počet upozornění:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr ""
+msgstr "Nastavení specifická pro aplikaci"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-03-20 09:52+0100\n"
+"PO-Revision-Date: 2023-01-04 20:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -80,7 +80,7 @@ msgstr "Pomyślnie wgrano zestaw."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Czas oczekiwania w sekundach"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -96,70 +96,70 @@ msgstr "Przywróć zestaw wskaźników"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Wrażenia przy uruchamianiu"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:23
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Ustaw animacje odtwarzane w trakcie uruchamiania aplikacji."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Odzew wskaźnika:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:45
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Żaden"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:54
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Statyczny"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:63
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Migoczący"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:72
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Skaczący"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:87
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Odzew zarządzania zadaniami:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Włącz animacje"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:108
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Zatrzymaj animacje po:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:122
 #: package/contents/ui/LaunchFeedbackDialog.qml:134
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 sekundzie"
+msgstr[1] "%1 sekundach"
+msgstr[2] "%1 sekundach"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -175,7 +175,7 @@ msgstr "Rozmiar:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "Ustawienia odzewu przy uru&chamianiu…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format
