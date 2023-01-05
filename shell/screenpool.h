@@ -67,7 +67,6 @@ private:
 
     bool m_orderChangedPendingSignal = false;
 
-    QTimer m_invariantTimer;
     OutputOrderWatcher *m_outputOrderWatcher;
     friend QDebug operator<<(QDebug d, const ScreenPool *pool);
 };

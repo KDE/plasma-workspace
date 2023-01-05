@@ -183,9 +183,7 @@ void ShellTest::cleanup()
     });
     setScreenOrder({""}, true);
 
-    coronaRemovedSpy.wait();
-
-    QCOMPARE(coronaRemovedSpy.size(), oldCoronaNumScreens);
+    QTRY_COMPARE(coronaRemovedSpy.size(), oldCoronaNumScreens);
 
     // Cleanup all the containments that were created
     for (auto *c : m_corona->containments()) {
@@ -508,9 +506,8 @@ void ShellTest::testReorderScreens()
 
     QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
     setScreenOrder(orderAfter, true);
-    coronaScreenOrderSpy.wait();
 
-    QCOMPARE(coronaScreenOrderSpy.count(), 1);
+    QTRY_COMPARE(coronaScreenOrderSpy.count(), 1);
     QList<QScreen *> qScreenOrderFormSignal = coronaScreenOrderSpy.takeFirst().at(0).value<QList<QScreen *>>();
 
     QCOMPARE(qScreenOrderFormSignal.size(), orderAfter.size());

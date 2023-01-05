@@ -35,10 +35,6 @@ ScreenPool::ScreenPool(QObject *parent)
     m_outputOrderWatcher = OutputOrderWatcher::instance(this);
     connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, &ScreenPool::handleOutputOrderChanged);
 
-    m_invariantTimer.setSingleShot(true);
-    m_invariantTimer.setInterval(300ms);
-    connect(&m_invariantTimer, &QTimer::timeout, this, &ScreenPool::screenInvariants);
-
     reconsiderOutputOrder();
 }
 
@@ -246,14 +242,11 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         m_availableScreens.removeAll(screen);
     }
 
-    // CHECK_SCREEN_INVARIANTS
-    // Async as the status is known to be incoherent until m_outputOrderWatcher emits outputOrderChanged again
-    m_invariantTimer.start();
+    // We can't call CHECK_SCREEN_INVARIANTS here, but on handleOutputOrderChanged which is about to arrive
 }
 
 void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 {
-    m_invariantTimer.stop();
     QHash<QString, QScreen *> connMap;
     for (auto s : qApp->screens()) {
         connMap[s->name()] = s;
@@ -295,9 +288,8 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 
     m_orderChangedPendingSignal = false;
 
-    // CHECK_SCREEN_INVARIANTS
-    // Async as the status can be incoherent before a fake screen goes away
-    m_invariantTimer.start();
+    CHECK_SCREEN_INVARIANTS
+    // FIXME Async as the status can be incoherent before a fake screen goes away?
 }
 
 void ScreenPool::reconsiderOutputOrder()
@@ -319,29 +311,31 @@ void ScreenPool::screenInvariants()
     // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
+    qWarning() << "Checking screens: available:" << m_availableScreens << "redundant:" << m_redundantScreens << "fake:" << m_fakeScreens
+               << "all:" << allScreens;
     Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count() + m_fakeScreens.count()) == allScreens.count());
     Q_ASSERT(allScreens.count() == m_sizeSortedScreens.count());
 
     // At most one fake output
     Q_ASSERT(m_fakeScreens.count() <= 1);
-    if (m_fakeScreens.count() == 1) {
-        // If we have a fake output we can't have anything else
-        Q_ASSERT(m_availableScreens.count() == 0);
-        Q_ASSERT(m_redundantScreens.count() == 0);
-    } else {
-        for (QScreen *screen : allScreens) {
-            if (m_availableScreens.contains(screen)) {
-                // If available can't be redundant
-                Q_ASSERT(!m_redundantScreens.contains(screen));
-            } else if (m_redundantScreens.contains(screen)) {
-                // If redundant can't be available
-                Q_ASSERT(!m_availableScreens.contains(screen));
-            } else {
-                // We can't have a screen unaccounted for
-                Q_ASSERT(false);
-            }
+    for (QScreen *screen : allScreens) {
+        if (m_availableScreens.contains(screen)) {
+            // If available can't be redundant
+            Q_ASSERT(!m_redundantScreens.contains(screen));
+        } else if (m_redundantScreens.contains(screen)) {
+            // If redundant can't be available
+            Q_ASSERT(!m_availableScreens.contains(screen));
+        } else if (m_fakeScreens.contains(screen)) {
+            // A fake screen can't be anywhere else
+            // This branch is quite rare, happens only during the transition from a fake screen to a real one, for a brief moment both screens can be there
+            Q_ASSERT(!m_availableScreens.contains(screen));
+            Q_ASSERT(!m_redundantScreens.contains(screen));
+        } else {
+            // We can't have a screen unaccounted for
+            Q_ASSERT(false);
         }
     }
+
     for (QScreen *screen : m_redundantScreens.keys()) {
         Q_ASSERT(outputRedundantTo(screen) != nullptr);
     }
