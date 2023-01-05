@@ -56,6 +56,7 @@
         "Description[bg]": "Уиджет за системен монитор, който показва скоростта на изтегляне и качване на данни",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
         "Description[ca]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
+        "Description[cs]": "Widget monitoru systému, zobrazující přenosovou rychlost stahování a odesílání",
         "Description[da]": "Systemovervågning-widget som viser download- og uploadhastighed",
         "Description[de]": "Systemmonitor-Miniprogramm, das die Download- und Upload-Datenrate anzeigt",
         "Description[en_GB]": "System monitor Widget that shows the download and upload data rate",

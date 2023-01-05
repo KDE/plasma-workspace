@@ -55,6 +55,7 @@
         "Description[bg]": "Уиджет за системен монитор, което показва използването на физическа памет",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús de la memòria física",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la memòria física",
+        "Description[cs]": "Widget monitoru systému, zobrazující celkové využití paměti",
         "Description[da]": "Systemovervågning-widget som viser brug af den fysiske hukommelse",
         "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung des Arbeitsspeichers anzeigt",
         "Description[en_GB]": "System monitor Widget that shows physical memory usage",
