@@ -23,6 +23,9 @@ ColumnLayout {
         ColumnLayout {
             Kirigami.FormData.label: i18n("Layout settings:")
 
+            visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasLayoutSettingsRole)
+                        || view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
+
             QtControls.CheckBox { //FIXME: Once we have decided the fate of these checkboxes
                 //(make them GUI selectable, or absorb them into other values like DesktopLayout)
                 //we can then move this checkbox into the below repeater:
@@ -73,6 +76,7 @@ ColumnLayout {
 
         ColumnLayout {
             Kirigami.FormData.label: i18n("Appearance settings:")
+            visible:  view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasGlobalThemeRole)
             Repeater {
                 model: [
                     { text: i18n("Colors"), role: Private.KCMLookandFeel.HasColorsRole, flag: Private.LookandFeelManager.Colors },
