@@ -2,156 +2,109 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 <article id="desktopthemedetails" lang="&language;">
 <articleinfo>
-<title
->Plasma-Stil</title>
+<title>Plasma Style</title>
 <authorgroup>
-<author
-><firstname
->Andrew</firstname
-> <surname
->Lake</surname
-></author>
-<author
-><firstname
->Carl</firstname
-> <surname
->Schwan</surname
-> </author>
-<othercredit role="translator"
-><firstname
->Johannes</firstname
-><surname
->Obermayr</surname
-><affiliation
-><address
-><email
->johannesobermayr@gmx.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author>
+<firstname>Andrew</firstname>
+<surname>Lake</surname></author>
+<author>
+  <firstname>Carl</firstname>
+  <surname>Schwan</surname>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date
->2021-04-09</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2021-04-09</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Arbeitsfläche</keyword>
-<keyword
->Stil</keyword>
-<keyword
->Design</keyword>
-<keyword
->Plasma</keyword>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>desktop</keyword>
+<keyword>style</keyword>
+<keyword>theme</keyword>
+<keyword>plasma</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->&plasma; enthält mehrere Stile. Der &plasma;-Stile legt fest, wie die einzelnen Komponenten von &plasma; wie &eg; Plasmoids, Kontrollleisten und Bedienungselement angezeigt werden. </para>
+<para>
+  &plasma; comes with multiple styles. The &plasma; style defines how the different
+  components of &plasma; are displayed (&eg; Plasmoids, panels, widgets).
+</para>
 
 <para>
   <screenshot>
-    <screeninfo
->Bildschirmfoto der Verwaltung von &plasma;-Stilen</screeninfo>
+    <screeninfo>Here's a screenshot of the &plasma; style manager</screeninfo>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="main.png" format="PNG"/>
+        <imagedata fileref="main.png" format="PNG" />
       </imageobject>
       <textobject>
-        <phrase
->&plasma;-Stile anpassen</phrase>
+        <phrase>Customizing &plasma; style</phrase>
       </textobject>
     </mediaobject>
   </screenshot>
 </para>
 
-<para
->In diesem Modul können Sie:</para>
+<para>In this module you can:</para>
 <itemizedlist>
-  <listitem
-><para
->&plasma;-Stile auswählen und installieren</para
-></listitem>
-  <listitem
-><para
->&plasma;-Stile bearbeiten</para
-></listitem>
-  <listitem
-><para
->&plasma;-Stile entfernen</para
-></listitem>
+  <listitem><para>install and choose &plasma; styles</para></listitem>
+  <listitem><para>edit &plasma; styles</para></listitem>
+  <listitem><para>remove &plasma; styles</para></listitem>
 </itemizedlist>
 
-<para
->Sie können die Stilliste mit dem Feld <guilabel
->Suchen</guilabel
-> über den angezeigten Stilen filtern. Außerdem können Sie mit dem Kombinationsfeld neben dem Suchfeld nur <guimenuitem
->Helle Designs</guimenuitem
->, <guimenuitem
->Dunkle Designs</guimenuitem
-> oder Designs <guimenuitem
->Kompatibel zum Farbschema</guimenuitem
-> anzeigen. </para>
+<para>
+  It is possible to filter the style list using the <guilabel>Search...</guilabel>
+  field above the grid. Moreover, you can use the combo box next to this field to
+  show only the <guimenuitem>Light Themes</guimenuitem>, the <guimenuitem>Dark
+  Themes</guimenuitem> or the <guimenuitem>Color scheme compatible</guimenuitem> themes.
+</para>
 
-<para
->Möchten Sie einen Stile entfernen, klicken Sie auf das Symbol <inlinemediaobject
-><imageobject
-><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
-></inlinemediaobject
-> rechts auf dem Stilsymbol. Um diese Aktion rückgängig zu machen, benutzen Sie das Symbol <inlinemediaobject
-><imageobject
-><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
-></inlinemediaobject
->. Klicken Sie auf <guibutton
->Anwenden</guibutton
->, dann werden die ausgewählten Stile tatsächlich gelöscht. So können Sie das Löschen einzelner Stile oder aller Stile zurücknehmen. </para>
+<para>
+  If you want to remove a style, use the <inlinemediaobject><imageobject><imagedata
+  fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> overlay
+  icon at the bottom right of the style icon. To undo this action click on the
+  <inlinemediaobject><imageobject><imagedata fileref="edit-undo.png"
+  format="PNG"/></imageobject></inlinemediaobject> icon.
+  If you hit the <guibutton>Apply</guibutton> button the styles
+  selected for removal are actually deleted, so you cannot undo individual or all
+  deletions.
+</para>
 
-<para
->Ist das Paket „plasma-sdk“ auf Ihrem System installiert, dann erscheint ein Knopf bei Überfahren eines Sile mit dem Mauszeiger. Damit können Sie das Programm <application
->Plasma-Designexplorer</application
-> starten. </para>
-<para
->Weitere technische Informationen finden Sie auf <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
->dieser Seite</ulink
->. </para>
+<para>
+  If the plasma-sdk package is installed on your system, a button appears hovering
+  a style preview and lets you start the <application>Plasma Theme Explorer</application>.
+</para>
+<para>
+  For more technical information visit <ulink
+  url="https://develop.kde.org/docs/plasma/theme/theme-details/">this
+  page</ulink>.
+</para>
 
 <variablelist>
   <varlistentry>
-    <term
-><guilabel
->Neue Plasma-Stile holen ...</guilabel
-></term>
+    <term><guilabel>Get New Plasma Styles...</guilabel></term>
     <listitem>
-    <para
->Sie müssen mit dem Internet verbunden sein, um diese Funktion benutzen zu können. Klicken Sie auf diesen Knopf, um einen Dialog zur Auswahl eines neuen Plasma-Stils zu öffnen. Um einen &plasma;.-Stil zu installieren, klicken Sie auf den Knopf <guibutton
->Installieren</guibutton
->. Nachdem Sie den Installationsdialog mit <guibutton
->Schließen</guibutton
-> beendet haben, können Sie den neuen Stil sofort benutzen. </para>
+    <para>
+      You need to be connected to the Internet to use it. Clicking on this button will
+      display a dialog where you can choose a new plasma style. Clicking on
+      <guibutton>Install</guibutton> in the dialog will install the chosen &plasma; style
+      and after you <guibutton>Close</guibutton> the installer your new style is
+      immediately available.
+    </para>
     <para>
     <screenshot>
-    <screeninfo
->Neue Plasma-Stile holen ...</screeninfo>
+    <screeninfo>Get New Plasma Styles...</screeninfo>
       <mediaobject>
         <imageobject>
           <imagedata fileref="get-new-theme.png" format="PNG"/>
         </imageobject>
         <textobject>
-          <phrase
->Neue Plasma-Stile holen ...</phrase>
+          <phrase>Get New Plasma Styles...</phrase>
         </textobject>
       </mediaobject>
     </screenshot>
@@ -159,18 +112,16 @@
     </listitem>
   </varlistentry>
   <varlistentry>
-    <term
-><guilabel
->Aus Datei installieren ...</guilabel
-></term>
+    <term><guilabel>Install from File...</guilabel></term>
     <listitem>
-      <para
->Wenn Sie bereits neue Stile aus dem Internet heruntergeladen haben, können Sie mit diesem Knopf bereits heruntergeladene Stile öffnen. Dazu wird der Dateidialog angezeigt, in dem Sie die Adresse des &plasma;-Stilarchivs auf Ihrem System eingeben müssen.</para>
+      <para>
+      If you downloaded new styles from the internet, you can use this to browse to the
+        location of those newly downloaded styles. Clicking on this button will bring you the
+        file dialog to point to the &plasma; style tarball you have on your disk.</para>
 
-      <para
->Klicken Sie in diesem Dialog auf <guibutton
->Öffnen</guibutton
->, damit wird der ausgewählte Stil installiert und kann dann in der Liste der Stile ausgewählt werden. </para>
+      <para>Clicking <guibutton>Open</guibutton> in this dialog will install the style you
+        pointed to and make it available in the style list.
+      </para>
     </listitem>
   </varlistentry>
 </variablelist>

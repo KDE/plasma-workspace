@@ -2,98 +2,52 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % German "INCLUDE"
-> <!-- change language only here -->
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
 ]>
 
 <article id="screenlocker" lang="&language;">
 <articleinfo>
-<title
->Bildschirmsperre</title>
+<title>Screen Locking</title>
 <authorgroup>
-<author
->&Mike.McBride; &Mike.McBride.mail;</author>
-<othercredit role="translator"
-><firstname
->Frank</firstname
-><surname
->Schütte</surname
-><affiliation
-><address
-><email
->F.Schuette@t-online.de</email
-></address
-></affiliation
-><contrib
->Deutsche Übersetzung</contrib
-></othercredit
-> 
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 <!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
-<date
->2020-07-02</date>
-<releaseinfo
->Plasma 5.20</releaseinfo>
+<date>2020-07-02</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Systemeinstellungen</keyword>
-<keyword
->Bildschirmsperre</keyword>
-<keyword
->Bildschirmsperre</keyword>
+<keyword>KDE</keyword>
+<keyword>systemsettings</keyword>
+<keyword>screenlocker</keyword>
+<keyword>screen locker</keyword>
 </keywordset>
 </articleinfo>
-<para
->In diesem Modul können Sie festlegen, nach welchem Zeitraum der Inaktivität der Bildschirm gesperrt wird, die Zeitspanne für das Entsperren ohne Passwort sowie das Erscheinungsbild des Hintergrunds der Bildschirmsperre einstellen.</para>
+<para>Using this module, you can determine
+how much time must pass before the screen locker is activated, configure the grace period for unlocking the screen without password, and choose the appearance of your screen locker.</para>
 
-<para
->Oben im Dialog gibt es das Ankreuzfeld <guilabel
->Bildschirm automatisch sperren</guilabel
-> und ein Drehfeld, in dem Sie das Zeitintervall der Inaktivität vor dem Starten des Bildschirmsperre festlegen können. In diesem Feld können Sie das betreffende Intervall in Minuten einstellen.</para>
+<para>At the top is a check box to have the screen locker <guilabel>Lock screen automatically</guilabel>, 
+and a spin box which determines the period of inactivity before the screen locker should be started. 
+You can enter any positive number of minutes in this box.</para>
 
-<para
->Mit dem Ankreuzfeld <guilabel
->Nach Standby</guilabel
-> legen Sie fest, ob die Bildschirmsperre nach Aufwachen aus dem Standby-Betrieb ein- oder ausgeschaltet ist.</para>
+<para>The <guilabel>After waking from sleep</guilabel> check box can be used to switch locking the desktop screen after the system suspension on and off.</para>
 
-<para
->Darunter befindet sich das Drehfeld <guilabel
->Entsperren ohne Passwort erlauben für</guilabel
->. Drücken Sie eine Taste oder klicken Sie mit der Maus, um die Bildschirmsperre vor der hier eingestellten Zeit zu beenden und zu Ihrer Arbeit zurückzukehren, müssen Sie kein Passwort eingeben. Hier wird das Passwort wie für Ihre Anmeldung am Rechner verwendet.</para>
+<para>Below that is a spinbox labeled <guilabel>Allow unlocking without password for</guilabel>. When you press a key or click a mouse button to end the screen locker before the time in the spinbox and return to your
+work, you must not enter a password. The password used is the same
+password you used to login to your machine.</para>
 
-<para
->Das manuelle Sperren des Bildschirms bewirkt, dass der Passwortschutz sofort wirksam wird.</para>
+<para>Locking the screen manually causes the password protection to engage immediately.</para>
 
-<para
->Zum Sperren des Bildschirms können Sie einen <guilabel
->Tastatur-Kurzbefehl</guilabel
-> festlegen.</para>
+<para>You can define a shortcut to lock the screen using the <guilabel>Keyboard shortcut</guilabel> field.</para>
 
-<para
->Mit dem Standard-Kurzbefehl <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->L</keycap
-></keycombo
-> können Sie den Bildschirm manuell sofort sperren.</para>
+<para>The default shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>L</keycap></keycombo> provides a quick 
+way to lock the screen manually.</para>
 
-<para
->Möchten Sie den Hintergrund im gesperrten Status ändern, drücken Sie auf <guibutton
->Einrichten ...</guibutton
-> neben  <guilabel
->Erscheinungsbild</guilabel
->. Dann können Sie den <guilabel
->Hintergrundbild-Typ</guilabel
-> ändern.</para>
+<para>If you would like to change the background in locked status press the <guibutton>Configure</guibutton> button besides the <guilabel>Appearance</guilabel> label. Then you can change the <guilabel>Wallpaper type</guilabel>.</para>
 
-<para
->Hier können Sie für das Hintergrundbild <guilabel
->Einfarbig</guilabel
-> wählen.</para>
+<para>You can select a <guilabel>Plain Color</guilabel> as wallpaper type.</para>
 
-<para
->Alternativ können Sie ein einzelnes Bild oder eine Diaschau mit Bildern in einem Ordner wählen oder neue Hintergrundbilder aus dem Internet herunterladen.</para>
+<para>Alternatively use a single image or a slideshow with images from a folder
+or load new wallpapers from the Internet.</para>
 
 </article>
