@@ -20,10 +20,9 @@ KCM.GridViewKCM {
 
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
-    readonly property bool hasAppearance: currentThemeRole(Private.KCMLookandFeel.HasGlobalThemeRole)
-    readonly property bool hasLayout: currentThemeRole(Private.KCMLookandFeel.HasLayoutSettingsRole)
-                                        || currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
-    readonly property bool showLayoutInfo: currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
+    readonly property bool hasAppearance: kcm.themeContents & Private.LookandFeelManager.AppearanceSettings
+    readonly property bool hasLayout: kcm.themeContents & Private.LookandFeelManager.LayoutSettings
+    readonly property bool showLayoutInfo: kcm.themeContents & Private.LookandFeelManager.DesktopLayout
 
     function currentThemeRole(role) {
         return view.model.data(view.model.index(view.currentIndex, 0), role)
@@ -147,7 +146,7 @@ KCM.GridViewKCM {
                 QtControls.Button {
                     text: stackSwitcher.depth === 1 ? i18n("Choose what to apply…") : i18n("Show fewer options…")
                     icon.name: stackSwitcher.depth === 1 ? "settings-configure" : "go-previous"
-                    enabled: currentThemeRole(Private.KCMLookandFeel.HasGlobalThemeRole)
+                    enabled: hasAppearance
                     onClicked: {
                         if (stackSwitcher.depth === 1) {
                             stackSwitcher.push(moreOptions);

@@ -58,6 +58,7 @@
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_lnf(new LookAndFeelManager(this))
+    , m_themeContents(LookAndFeelManager::Empty)
     , m_selectedContents(LookAndFeelManager::AppearanceSettings)
 {
     constexpr char uri[] = "org.kde.private.kcms.lookandfeel";
@@ -74,28 +75,24 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     roles[DescriptionRole] = "description";
     roles[ScreenshotRole] = "screenshot";
     roles[FullScreenPreviewRole] = "fullScreenPreview";
-    roles[HasSplashRole] = "hasSplash";
-    roles[HasLockScreenRole] = "hasLockScreen";
-    roles[HasRunCommandRole] = "hasRunCommand";
-    roles[HasLogoutRole] = "hasLogout";
-    roles[HasGlobalThemeRole] = "hasGlobalTheme"; // For the Global Theme global checkbox
-    roles[HasLayoutSettingsRole] = "hasLayoutSettings"; // For the Desktop Layout checkbox in More Options
-    roles[HasDesktopLayoutRole] = "hasDesktopLayout";
-    roles[HasTitlebarLayoutRole] = "hasTitlebarLayout";
-    roles[HasColorsRole] = "hasColors";
-    roles[HasWidgetStyleRole] = "hasWidgetStyle";
-    roles[HasIconsRole] = "hasIcons";
-    roles[HasPlasmaThemeRole] = "hasPlasmaTheme";
-    roles[HasCursorsRole] = "hasCursors";
-    roles[HasWindowSwitcherRole] = "hasWindowSwitcher";
-    roles[HasDesktopSwitcherRole] = "hasDesktopSwitcher";
-    roles[HasWindowDecorationRole] = "hasWindowDecoration";
-    roles[HasFontsRole] = "hasFonts";
+    roles[ContentsRole] = "contents";
     roles[PackagePathRole] = "packagePath";
     roles[UninstallableRole] = "uninstallable";
 
     m_model->setItemRoleNames(roles);
     loadModel();
+
+    connect(lookAndFeelSettings(), &LookAndFeelSettings::lookAndFeelPackageChanged, this, [this]() {
+        // When the selected LNF package changes, update the available theme contents
+        const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
+        const LookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<LookAndFeelManager::Contents>();
+        if (m_themeContents != packageContents) {
+            m_themeContents = packageContents;
+            Q_EMIT themeContentsChanged();
+        }
+        // And also reset the user selection to the new available contents
+        resetSelectedContents();
+    });
 
     connect(m_lnf, &LookAndFeelManager::refreshServices, this, [](const QStringList &toStop, const QList<KService::Ptr> &toStart) {
         for (const auto &serviceName : toStop) {
@@ -386,82 +383,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
     row->setData(pkg.metadata().description(), DescriptionRole);
     row->setData(pkg.filePath("preview"), ScreenshotRole);
     row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
-
-    // What the package provides
-    row->setData(!pkg.filePath("defaults").isEmpty(), HasGlobalThemeRole);
-    row->setData(!pkg.filePath("layoutdefaults").isEmpty(), HasLayoutSettingsRole);
-    row->setData(!pkg.filePath("layouts").isEmpty(), HasDesktopLayoutRole);
-    row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
-    row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
-    row->setData(!pkg.filePath("runcommandmainscript").isEmpty(), HasRunCommandRole);
-    row->setData(!pkg.filePath("logoutmainscript").isEmpty(), HasLogoutRole);
-
-    if (!pkg.filePath("defaults").isEmpty()) {
-        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
-        KConfigGroup cg(conf, "kdeglobals");
-        cg = KConfigGroup(&cg, "General");
-        bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
-        if (!hasColors) {
-            hasColors = !pkg.filePath("colors").isEmpty();
-        }
-        row->setData(hasColors, HasColorsRole);
-
-        cg = KConfigGroup(conf, "kdeglobals");
-        cg = KConfigGroup(&cg, "KDE");
-        row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
-
-        cg = KConfigGroup(conf, "kdeglobals");
-        cg = KConfigGroup(&cg, "Icons");
-        row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
-
-        cg = KConfigGroup(conf, "plasmarc");
-        cg = KConfigGroup(&cg, "Theme");
-        row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
-
-        cg = KConfigGroup(conf, "kcminputrc");
-        cg = KConfigGroup(&cg, "Mouse");
-        row->setData(!cg.readEntry("cursorTheme", QString()).isEmpty(), HasCursorsRole);
-
-        cg = KConfigGroup(conf, "kwinrc");
-        cg = KConfigGroup(&cg, "WindowSwitcher");
-        row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasWindowSwitcherRole);
-
-        cg = KConfigGroup(conf, "kwinrc");
-        cg = KConfigGroup(&cg, "DesktopSwitcher");
-        row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasDesktopSwitcherRole);
-
-        cg = KConfigGroup(conf, "kwinrc");
-        cg = KConfigGroup(&cg, "org.kde.kdecoration2");
-        row->setData(!cg.readEntry("library", QString()).isEmpty() || !cg.readEntry("NoPlugin", QString()).isEmpty(), HasWindowDecorationRole);
-
-        cg = KConfigGroup(conf, "kdeglobals");
-        KConfigGroup cg2(&cg, "WM"); // for checking activeFont
-        cg = KConfigGroup(&cg, "General");
-        row->setData((!cg.readEntry("font", QString()).isEmpty() || !cg.readEntry("fixed", QString()).isEmpty()
-                      || !cg.readEntry("smallestReadableFont", QString()).isEmpty() || !cg.readEntry("toolBarFont", QString()).isEmpty()
-                      || !cg.readEntry("menuFont", QString()).isEmpty() || !cg2.readEntry("activeFont", QString()).isEmpty()),
-                     HasFontsRole);
-    } else {
-        // This fallback is needed since the sheet 'breaks' without it
-        row->setData(false, HasColorsRole);
-        row->setData(false, HasWidgetStyleRole);
-        row->setData(false, HasIconsRole);
-        row->setData(false, HasPlasmaThemeRole);
-        row->setData(false, HasCursorsRole);
-        row->setData(false, HasWindowSwitcherRole);
-        row->setData(false, HasDesktopSwitcherRole);
-        row->setData(false, HasWindowDecorationRole);
-        row->setData(false, HasFontsRole);
-    }
-    if (!pkg.filePath("layoutdefaults").isEmpty()) {
-        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("layoutdefaults"));
-        KConfigGroup cg(conf, "kwinrc");
-        cg = KConfigGroup(&cg, "org.kde.kdecoration2");
-        row->setData((!cg.readEntry("ButtonsOnLeft", QString()).isEmpty() || !cg.readEntry("ButtonsOnRight", QString()).isEmpty()), HasTitlebarLayoutRole);
-    } else {
-        // This fallback is needed since the sheet 'breaks' without it
-        row->setData(false, HasTitlebarLayoutRole);
-    }
+    row->setData(QVariant::fromValue(m_lnf->packageContents(pkg)), ContentsRole);
 
     row->setData(pkg.path(), PackagePathRole);
     const QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
@@ -504,6 +426,11 @@ void KCMLookandFeel::defaults()
     Q_EMIT showConfirmation();
 }
 
+LookAndFeelManager::Contents KCMLookandFeel::themeContents() const
+{
+    return m_themeContents;
+}
+
 LookAndFeelManager::Contents KCMLookandFeel::selectedContents() const
 {
     return m_selectedContents;
@@ -521,11 +448,13 @@ void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
 
 void KCMLookandFeel::resetSelectedContents()
 {
-    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    const bool hasGlobalTheme = m_model->index(index, 0).data(HasGlobalThemeRole).toBool();
-
-    // Disable Layout by default if there are other settings
-    setSelectedContents(hasGlobalTheme ? LookAndFeelManager::AppearanceSettings : LookAndFeelManager::LayoutSettings);
+    // Reset the user selection to those contents provided by the theme.
+    LookAndFeelManager::Contents resetContents = m_themeContents;
+    // But do not select layout contents by default if there appaerance settings
+    if (m_themeContents & LookAndFeelManager::AppearanceSettings) {
+        resetContents &= ~LookAndFeelManager::LayoutSettings;
+    }
+    setSelectedContents(resetContents);
 }
 
 QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)

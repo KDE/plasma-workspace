@@ -34,6 +34,7 @@ class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
 
+    Q_PROPERTY(LookAndFeelManager::Contents themeContents READ themeContents NOTIFY themeContentsChanged)
     Q_PROPERTY(LookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
                    selectedContentsChanged)
 
@@ -43,23 +44,7 @@ public:
         ScreenshotRole,
         FullScreenPreviewRole,
         DescriptionRole,
-        HasSplashRole,
-        HasLockScreenRole,
-        HasRunCommandRole,
-        HasLogoutRole,
-        HasGlobalThemeRole,
-        HasLayoutSettingsRole,
-        HasDesktopLayoutRole,
-        HasTitlebarLayoutRole,
-        HasColorsRole,
-        HasWidgetStyleRole,
-        HasIconsRole,
-        HasPlasmaThemeRole,
-        HasCursorsRole,
-        HasWindowSwitcherRole,
-        HasDesktopSwitcherRole,
-        HasWindowDecorationRole,
-        HasFontsRole,
+        ContentsRole,
         PackagePathRole, //< Package root path
         UninstallableRole, //< Package is installed in local directory
     };
@@ -96,6 +81,8 @@ public:
 
     bool isSaveNeeded() const override;
 
+    LookAndFeelManager::Contents themeContents() const;
+
     LookAndFeelManager::Contents selectedContents() const;
     void setSelectedContents(LookAndFeelManager::Contents items);
     void resetSelectedContents();
@@ -107,6 +94,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void showConfirmation();
+    void themeContentsChanged();
     void selectedContentsChanged();
 
 private:
@@ -119,6 +107,7 @@ private:
 
     LookAndFeelManager *const m_lnf;
 
+    LookAndFeelManager::Contents m_themeContents;
     LookAndFeelManager::Contents m_selectedContents;
 
     QStandardItemModel *m_model;
