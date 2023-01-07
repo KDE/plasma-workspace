@@ -2,97 +2,164 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
 <article id="kcmstyle" lang="&language;">
 <articleinfo>
 
-<title>Application Style</title>
+<title
+>Anwendungs-Stil</title>
 <authorgroup>
-<author>&Mike.McBride; &Mike.McBride.mail;</author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+><affiliation
+><address
+><email
+>F.Schuette@t-online.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
 </authorgroup>
 
-<date>2021-04-09</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>System Settings</keyword>
-<keyword>style</keyword>
-<keyword>application</keyword>
-<keyword>widgets</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Stil</keyword>
+<keyword
+>Anwendung</keyword>
+<keyword
+>Miniprogramme</keyword>
 </keywordset>
 </articleinfo>
 
-<para>This module is used to configure how the individual widgets are
-drawn by &plasma;.</para>
+<para
+>In diesem Abschnitt können Sie festlegen, wie Kontrollelemente (Widgets) von &plasma; dargestellt werden.</para>
 
-<note><para>A <emphasis>Widget</emphasis> is a commonly-used
-programmer's term for referring to User Interface elements such as
-buttons, menus, and scroll bars.  You can think of them as the
-fundamental pieces that are assembled to make your
-application.</para></note>
+<note
+><para
+><emphasis
+>Kontrollelement (Widget)</emphasis
+> ist eine übliche Sammelbezeichnung für Elemente der Benutzeroberfläche wie Knöpfe, Menüs oder Bildlaufleisten. Es sind die grundlegenden Bausteine, aus denen Anwendungen zusammengesetzt sind.</para
+></note>
 
-<para>You can configure how the widgets are drawn with this module,
-but to change the color of the widgets, you should refer to the
-section entitled <ulink
-url="help:/kcontrol/colors/index.html">Colors</ulink>.</para>
+<para
+>Sie können in diesem Abschnitt das Aussehen der Kontrollelemente festlegen, aber nicht die Farben. Diese können Sie im Abschnitt <ulink url="help:/kcontrol/colors/index.html"
+>Farben</ulink
+> einstellen.</para>
 
-<para>The top grid, labeled <guilabel>Application Style</guilabel> 
-contains a list of the previews of the pre-defined styles.
-Each style has a name, and a brief description is shown when you
-hover its item with the mouse pointer.</para>
+<para
+>Unter der Beschriftung <guilabel
+>Anwendungs-Stil</guilabel
+> wird eine Auswahl vordefinierter Stile angezeigt. Jeder Stil hat einen Namen und eine kurze Beschreibung erscheint, wenn der Mauszeiger sich über dem Eintrag befindet.</para>
 
-<para>If you want to configure a &plasma; theme, use the <guilabel>Configure Style...</guilabel> overlay
-icon at the bottom right of the widget style icon in the grid.</para>
+<para
+>Möchten Sie einen &plasma;-Stil ändern, benutzen Sie das Überlagerungssymbol <guilabel
+>Stil einrichten</guilabel
+> unten rechts auf dem Symbol.</para>
 
-<para>If implemented, it is possible to change almost every aspect of the style: center tabbar tabs, draw toolbar item separators, draw focus indicator in lists, draw slider tick marks, enable extended resize handlers, define keyboard accelerators visibility, windows' drag mode, use frames for the better accessibility, use buttons on the scrollbars, use transparency in the menus.</para>
+<para
+>Wenn implementiert, ist es möglich, fast jeden Aspekt eines Stils zu ändern: Reiter auf Karteikarten zentrieren, Symbol-Trenner in Werkzeugleisten anzeigen, Fokus von Bedienelementen in Listen sichtbar machen, Skalenstriche auf Schiebereglern anzeigen, Erweitere Griffe zur Größenänderung aktivieren, Sichtbarkeit von Kurzbefehlen einstellen, Verschiebungsmodus von Fenstern ändern, die Verwendung von Rahmen für die bessere Zugänglichkeit, Verwendung von Schaltflächen auf den Bildlaufleisten und die Verwendung von Transparenz in den Menüs.</para>
 
-<para>The general configuration can be made by pressing the <guibutton>Configure Icons and Toolbars</guibutton> button below the grid. This button opens a pane to select further settings.</para>
+<para
+>Die allgemeinen Einstellungen können Sie mit dem Knopf <guibutton
+>Symbole und Werkzeugleisten einrichten</guibutton
+> unter den Stilen   einen Dialog öffnen, um die Einstellungen auszuwählen.</para>
 <variablelist>
 
-<varlistentry> 
-<term><guilabel>Show icons: On buttons</guilabel></term>
+<varlistentry
+> 
+<term
+><guilabel
+>Symbole auf Knöpfen anzeigen</guilabel
+></term>
 <listitem>
-<para>If this option is selected, action buttons (like <guibutton>OK</guibutton> and 
-<guibutton>Apply</guibutton>) will have a small icon located within them to act
-as a visual reference.  If this option is not selected, then only text
-will appear on the button.</para>
-</listitem> 
-</varlistentry> 
+<para
+>Falls diese Einstellung gewählt wurde, wird auf Standardknöpfen wie <guibutton
+>OK</guibutton
+> und <guibutton
+>Anwenden</guibutton
+> ein kleines Symbol dargestellt. Ist die Einstellung nicht aktiviert, wird nur der Text des Knopfes angezeigt.</para>
+</listitem
+> 
+</varlistentry
+> 
 
-<varlistentry> 
-<term><guilabel>Show icons: In menus</guilabel></term>
+<varlistentry
+> 
+<term
+><guilabel
+>Symbole in Menüs anzeigen</guilabel
+></term>
 <listitem>
-<para>If this option is selected, &kde; applications will show small icons alongside 
-most menu items.  If this option is not selected, then only text
-will appear in the menus. Changes to the visibility of menu icons will only affect newly started 
-applications.</para>
-</listitem> 
-</varlistentry> 
+<para
+>Ist diese Einstellung ausgewählt, werden in &kde;-Programmen kleine Symbole neben den meisten Menüeinträgen angezeigt, ansonsten nur der Text der Menüeinträge. Wird die Anzeige von Menüsymbolen geändert, wirkt sich das nur auf neu gestartete Programme aus.</para>
+</listitem
+> 
+</varlistentry
+> 
 
-<varlistentry> 
-<term><guilabel>Main toolbar label</guilabel>, <guilabel>Secondary toolbar label</guilabel></term>
+<varlistentry
+> 
+<term
+><guilabel
+>Text auf Haupt-Werkzeugleiste</guilabel
+>, <guilabel
+>Text auf anderen Werkzeugleisten</guilabel
+></term>
 <listitem>
-<para>These drop down boxes let you determine where on the button in both toolbars the 
-text name of the button will appear as the default.  
-If <guilabel>None</guilabel> is selected, then there is no text on the toolbar buttons.  
-If  <guilabel>Text only</guilabel> is selected, then the button's icon is replaced with a text name of 
-the button. If <guilabel>Beside icons</guilabel> is selected, then the name of the button 
-will be placed to the <emphasis>right</emphasis> of the icon. 
-If <guilabel>Below icon</guilabel> is selected, the default will be to have the text 
-of the button <emphasis>below</emphasis> the icon.</para>
+<para
+>Mit diesen Auswahlfeldern können Sie festlegen, wo der Text auf einem Knopf standardmäßig angezeigt wird. Falls <guilabel
+>Keiner</guilabel
+> gewählt ist, wird auf den Knöpfen der Werkzeugleisten kein Text angezeigt. Bei der Auswahl <guilabel
+>Nur Text</guilabel
+> wird das Symbol des Knopfes durch eine Textbezeichnung ersetzt. Ist <guilabel
+>Neben Symbolen</guilabel
+> ausgewählt, wird der Text <emphasis
+>rechts</emphasis
+> neben dem Symbol angezeigt. Die Auswahl <guilabel
+>Unter Symbolen</guilabel
+> bewirkt, dass der Text des Knopfes standardmäßig <emphasis
+>unter</emphasis
+> dem Symbol angezeigt wird.</para>
 
-<tip><para>These options only specify the <emphasis>default</emphasis> location.  
-Each application can override the settings used in this panel.</para></tip>
-</listitem> 
-</varlistentry> 
+<tip
+><para
+>Diese Einstellungen legen nur die <emphasis
+>Standard</emphasis
+>position fest. Jede Anwendung kann die Einstellung in diesem Abschnitt überschreiben.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
 
 </variablelist>
 
-<para>The <guibutton>Configure GNOME/GTK Application Style...</guibutton> button can be used to open the configuration tab where you can choose <guilabel>GTK theme</guilabel>, install GTK theme from file or <guibutton>Get New GNOME/GTK Application Styles</guibutton> from the Internet.
-</para>
+<para
+>Mit <guibutton
+>GNOME/GTK Anwendungs-Stil einrichten</guibutton
+> können Sie einen Dialog öffnen, um ein <guilabel
+>GTK-Design</guilabel
+> auszuwählen, ein GTK-Design-Design aus einer Datei zu installieren oder aus dem Internet <guibutton
+>Neue Anwendungs-Stile für GNOME-GTK holen</guibutton
+>. </para>
 
 </article>

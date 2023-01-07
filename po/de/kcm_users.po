@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2022-03-06 15:36+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 21.12.2\n"
 
 #: package/contents/ui/ChangePassword.qml:27
-#: package/contents/ui/UserDetailsPage.qml:166
+#: package/contents/ui/UserDetailsPage.qml:156
 #, kde-format
 msgid "Change Password"
 msgstr "Passwort ändern"
@@ -97,31 +97,31 @@ msgid "Create User"
 msgstr "Benutzer erstellen"
 
 #: package/contents/ui/CreateUser.qml:30
-#: package/contents/ui/UserDetailsPage.qml:134
+#: package/contents/ui/UserDetailsPage.qml:124
 #, kde-format
 msgid "Name:"
 msgstr "Name:"
 
 #: package/contents/ui/CreateUser.qml:34
-#: package/contents/ui/UserDetailsPage.qml:141
+#: package/contents/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Username:"
 msgstr "Benutzername:"
 
 #: package/contents/ui/CreateUser.qml:44
-#: package/contents/ui/UserDetailsPage.qml:149
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
 #: package/contents/ui/CreateUser.qml:45
-#: package/contents/ui/UserDetailsPage.qml:150
+#: package/contents/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Administrator"
 msgstr "Systemverwalter"
 
 #: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:153
+#: package/contents/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Account type:"
 msgstr "Art des Kontos:"
@@ -215,42 +215,177 @@ msgstr "Benutzer verwalten"
 msgid "Add New User"
 msgstr "Neuen Benutzer hinzufügen"
 
-#: package/contents/ui/UserDetailsPage.qml:89
-#, kde-format
+#: package/contents/ui/PicturesSheet.qml:19
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Avatar ändern"
+
+#: package/contents/ui/PicturesSheet.qml:22
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Es ist nichts"
+
+#: package/contents/ui/PicturesSheet.qml:23
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: package/contents/ui/PicturesSheet.qml:24
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Dragon's Fruit"
+
+#: package/contents/ui/PicturesSheet.qml:25
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sweet Potato"
+
+#: package/contents/ui/PicturesSheet.qml:26
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: package/contents/ui/PicturesSheet.qml:27
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Sparkle Sunbeam"
+
+#: package/contents/ui/PicturesSheet.qml:28
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lemon-Lime"
+
+#: package/contents/ui/PicturesSheet.qml:29
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Charm"
+
+#: package/contents/ui/PicturesSheet.qml:30
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mellow Meadow"
+
+#: package/contents/ui/PicturesSheet.qml:31
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Tepid Teal"
+
+#: package/contents/ui/PicturesSheet.qml:32
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Blue"
+
+#: package/contents/ui/PicturesSheet.qml:33
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purple"
+
+#: package/contents/ui/PicturesSheet.qml:34
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajo Purple"
+
+#: package/contents/ui/PicturesSheet.qml:35
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Burnt Charcoal"
+
+#: package/contents/ui/PicturesSheet.qml:36
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: package/contents/ui/PicturesSheet.qml:37
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: package/contents/ui/PicturesSheet.qml:38
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: package/contents/ui/PicturesSheet.qml:72
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Ein Bild auswählen"
 
-#: package/contents/ui/UserDetailsPage.qml:120
+#: package/contents/ui/PicturesSheet.qml:104
+#, fuzzy, kde-format
+#| msgid "Choose File…"
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Datei wählen ..."
+
+#: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format
 msgid "Change avatar"
 msgstr "Avatar ändern"
 
-#: package/contents/ui/UserDetailsPage.qml:162
+#: package/contents/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Email address:"
 msgstr "E-Mail-Adresse:"
 
-#: package/contents/ui/UserDetailsPage.qml:186
+#: package/contents/ui/UserDetailsPage.qml:176
 #, kde-format
 msgid "Delete files"
 msgstr "Dateien löschen"
 
-#: package/contents/ui/UserDetailsPage.qml:193
+#: package/contents/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Keep files"
 msgstr "Dateien behalten"
 
-#: package/contents/ui/UserDetailsPage.qml:200
+#: package/contents/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Delete User…"
 msgstr "Benutzer löschen ..."
 
-#: package/contents/ui/UserDetailsPage.qml:211
+#: package/contents/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Fingerabdruck-Authentifizierung konfigurieren ..."
 
-#: package/contents/ui/UserDetailsPage.qml:225
+#: package/contents/ui/UserDetailsPage.qml:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -263,101 +398,6 @@ msgstr ""
 "Bildschirm zu entsperren und Anwendungen und Befehlszeilenprogrammen, die "
 "sie anfordern, Administratorrechte zu erteilen.<nl/><nl/>Die Anmeldung am "
 "System mit Ihrem Fingerabdruck wird noch nicht unterstützt."
-
-#: package/contents/ui/UserDetailsPage.qml:235
-#, kde-format
-msgid "Change Avatar"
-msgstr "Avatar ändern"
-
-#: package/contents/ui/UserDetailsPage.qml:238
-#, kde-format
-msgid "It's Nothing"
-msgstr "Es ist nichts"
-
-#: package/contents/ui/UserDetailsPage.qml:239
-#, kde-format
-msgid "Feisty Flamingo"
-msgstr "Feisty Flamingo"
-
-#: package/contents/ui/UserDetailsPage.qml:240
-#, kde-format
-msgid "Dragon's Fruit"
-msgstr "Dragon's Fruit"
-
-#: package/contents/ui/UserDetailsPage.qml:241
-#, kde-format
-msgid "Sweet Potato"
-msgstr "Sweet Potato"
-
-#: package/contents/ui/UserDetailsPage.qml:242
-#, kde-format
-msgid "Ambient Amber"
-msgstr "Ambient Amber"
-
-#: package/contents/ui/UserDetailsPage.qml:243
-#, kde-format
-msgid "Sparkle Sunbeam"
-msgstr "Sparkle Sunbeam"
-
-#: package/contents/ui/UserDetailsPage.qml:244
-#, kde-format
-msgid "Lemon-Lime"
-msgstr "Lemon-Lime"
-
-#: package/contents/ui/UserDetailsPage.qml:245
-#, kde-format
-msgid "Verdant Charm"
-msgstr "Verdant Charm"
-
-#: package/contents/ui/UserDetailsPage.qml:246
-#, kde-format
-msgid "Mellow Meadow"
-msgstr "Mellow Meadow"
-
-#: package/contents/ui/UserDetailsPage.qml:247
-#, kde-format
-msgid "Tepid Teal"
-msgstr "Tepid Teal"
-
-#: package/contents/ui/UserDetailsPage.qml:248
-#, kde-format
-msgid "Plasma Blue"
-msgstr "Plasma Blue"
-
-#: package/contents/ui/UserDetailsPage.qml:249
-#, kde-format
-msgid "Pon Purple"
-msgstr "Pon Purple"
-
-#: package/contents/ui/UserDetailsPage.qml:250
-#, kde-format
-msgid "Bajo Purple"
-msgstr "Bajo Purple"
-
-#: package/contents/ui/UserDetailsPage.qml:251
-#, kde-format
-msgid "Burnt Charcoal"
-msgstr "Burnt Charcoal"
-
-#: package/contents/ui/UserDetailsPage.qml:252
-#, kde-format
-msgid "Paper Perfection"
-msgstr "Paper Perfection"
-
-#: package/contents/ui/UserDetailsPage.qml:253
-#, kde-format
-msgid "Cafétera Brown"
-msgstr "Cafétera Brown"
-
-#: package/contents/ui/UserDetailsPage.qml:254
-#, kde-format
-msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
-
-#: package/contents/ui/UserDetailsPage.qml:305
-#, kde-format
-msgid "Choose File…"
-msgstr "Datei wählen ..."
 
 #: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
 #, kde-format

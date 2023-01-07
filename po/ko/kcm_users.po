@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-06 00:47+0000\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2022-05-05 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/ChangePassword.qml:27
-#: package/contents/ui/UserDetailsPage.qml:166
+#: package/contents/ui/UserDetailsPage.qml:156
 #, kde-format
 msgid "Change Password"
 msgstr "암호 변경"
@@ -94,31 +94,31 @@ msgid "Create User"
 msgstr "사용자 만들기"
 
 #: package/contents/ui/CreateUser.qml:30
-#: package/contents/ui/UserDetailsPage.qml:134
+#: package/contents/ui/UserDetailsPage.qml:124
 #, kde-format
 msgid "Name:"
 msgstr "이름:"
 
 #: package/contents/ui/CreateUser.qml:34
-#: package/contents/ui/UserDetailsPage.qml:141
+#: package/contents/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Username:"
 msgstr "사용자 이름:"
 
 #: package/contents/ui/CreateUser.qml:44
-#: package/contents/ui/UserDetailsPage.qml:149
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Standard"
 msgstr "표준"
 
 #: package/contents/ui/CreateUser.qml:45
-#: package/contents/ui/UserDetailsPage.qml:150
+#: package/contents/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Administrator"
 msgstr "관리자"
 
 #: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:153
+#: package/contents/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Account type:"
 msgstr "계정 종류:"
@@ -214,42 +214,177 @@ msgstr "사용자 관리"
 msgid "Add New User"
 msgstr "새 사용자 추가"
 
-#: package/contents/ui/UserDetailsPage.qml:89
-#, kde-format
+#: package/contents/ui/PicturesSheet.qml:19
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "아바타 변경"
+
+#: package/contents/ui/PicturesSheet.qml:22
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "아무것도 아님"
+
+#: package/contents/ui/PicturesSheet.qml:23
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "화려한 플라밍고"
+
+#: package/contents/ui/PicturesSheet.qml:24
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "용과"
+
+#: package/contents/ui/PicturesSheet.qml:25
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "고구마"
+
+#: package/contents/ui/PicturesSheet.qml:26
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "호박"
+
+#: package/contents/ui/PicturesSheet.qml:27
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "반짝이는 햇빛"
+
+#: package/contents/ui/PicturesSheet.qml:28
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "레몬 라임"
+
+#: package/contents/ui/PicturesSheet.qml:29
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "풀밭"
+
+#: package/contents/ui/PicturesSheet.qml:30
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "평화로운 목초지"
+
+#: package/contents/ui/PicturesSheet.qml:31
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "암록색"
+
+#: package/contents/ui/PicturesSheet.qml:32
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma 파란색"
+
+#: package/contents/ui/PicturesSheet.qml:33
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "연한 보라색"
+
+#: package/contents/ui/PicturesSheet.qml:34
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "진한 보라색"
+
+#: package/contents/ui/PicturesSheet.qml:35
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "목탄"
+
+#: package/contents/ui/PicturesSheet.qml:36
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "종이 느낌"
+
+#: package/contents/ui/PicturesSheet.qml:37
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "커피 갈색"
+
+#: package/contents/ui/PicturesSheet.qml:38
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "단단한 나무"
+
+#: package/contents/ui/PicturesSheet.qml:72
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
 msgid "Choose a picture"
 msgstr "사진 선택"
 
-#: package/contents/ui/UserDetailsPage.qml:120
+#: package/contents/ui/PicturesSheet.qml:104
+#, fuzzy, kde-format
+#| msgid "Choose File…"
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "파일 선택…"
+
+#: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format
 msgid "Change avatar"
 msgstr "아바타 변경"
 
-#: package/contents/ui/UserDetailsPage.qml:162
+#: package/contents/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Email address:"
 msgstr "이메일 주소:"
 
-#: package/contents/ui/UserDetailsPage.qml:186
+#: package/contents/ui/UserDetailsPage.qml:176
 #, kde-format
 msgid "Delete files"
 msgstr "파일 삭제"
 
-#: package/contents/ui/UserDetailsPage.qml:193
+#: package/contents/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Keep files"
 msgstr "파일 유지"
 
-#: package/contents/ui/UserDetailsPage.qml:200
+#: package/contents/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Delete User…"
 msgstr "사용자 삭제…"
 
-#: package/contents/ui/UserDetailsPage.qml:211
+#: package/contents/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "지문 인증 설정..."
 
-#: package/contents/ui/UserDetailsPage.qml:225
+#: package/contents/ui/UserDetailsPage.qml:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -261,101 +396,6 @@ msgstr ""
 "화면 잠금을 해제하거나 명령행 프로그램에서 관리자 권한이 필요할 때 암호 대신 "
 "지문을 사용할 수 있습니다.<nl/><nl/>시스템에 지문으로 로그인은 아직 지원하지 "
 "않습니다."
-
-#: package/contents/ui/UserDetailsPage.qml:235
-#, kde-format
-msgid "Change Avatar"
-msgstr "아바타 변경"
-
-#: package/contents/ui/UserDetailsPage.qml:238
-#, kde-format
-msgid "It's Nothing"
-msgstr "아무것도 아님"
-
-#: package/contents/ui/UserDetailsPage.qml:239
-#, kde-format
-msgid "Feisty Flamingo"
-msgstr "화려한 플라밍고"
-
-#: package/contents/ui/UserDetailsPage.qml:240
-#, kde-format
-msgid "Dragon's Fruit"
-msgstr "용과"
-
-#: package/contents/ui/UserDetailsPage.qml:241
-#, kde-format
-msgid "Sweet Potato"
-msgstr "고구마"
-
-#: package/contents/ui/UserDetailsPage.qml:242
-#, kde-format
-msgid "Ambient Amber"
-msgstr "호박"
-
-#: package/contents/ui/UserDetailsPage.qml:243
-#, kde-format
-msgid "Sparkle Sunbeam"
-msgstr "반짝이는 햇빛"
-
-#: package/contents/ui/UserDetailsPage.qml:244
-#, kde-format
-msgid "Lemon-Lime"
-msgstr "레몬 라임"
-
-#: package/contents/ui/UserDetailsPage.qml:245
-#, kde-format
-msgid "Verdant Charm"
-msgstr "풀밭"
-
-#: package/contents/ui/UserDetailsPage.qml:246
-#, kde-format
-msgid "Mellow Meadow"
-msgstr "평화로운 목초지"
-
-#: package/contents/ui/UserDetailsPage.qml:247
-#, kde-format
-msgid "Tepid Teal"
-msgstr "암록색"
-
-#: package/contents/ui/UserDetailsPage.qml:248
-#, kde-format
-msgid "Plasma Blue"
-msgstr "Plasma 파란색"
-
-#: package/contents/ui/UserDetailsPage.qml:249
-#, kde-format
-msgid "Pon Purple"
-msgstr "연한 보라색"
-
-#: package/contents/ui/UserDetailsPage.qml:250
-#, kde-format
-msgid "Bajo Purple"
-msgstr "진한 보라색"
-
-#: package/contents/ui/UserDetailsPage.qml:251
-#, kde-format
-msgid "Burnt Charcoal"
-msgstr "목탄"
-
-#: package/contents/ui/UserDetailsPage.qml:252
-#, kde-format
-msgid "Paper Perfection"
-msgstr "종이 느낌"
-
-#: package/contents/ui/UserDetailsPage.qml:253
-#, kde-format
-msgid "Cafétera Brown"
-msgstr "커피 갈색"
-
-#: package/contents/ui/UserDetailsPage.qml:254
-#, kde-format
-msgid "Rich Hardwood"
-msgstr "단단한 나무"
-
-#: package/contents/ui/UserDetailsPage.qml:305
-#, kde-format
-msgid "Choose File…"
-msgstr "파일 선택…"
 
 #: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
 #, kde-format

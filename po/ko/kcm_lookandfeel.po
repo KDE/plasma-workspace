@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2022-05-05 23:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -96,22 +96,22 @@ msgstr "Plasma 바탕 화면 레이아웃 초기화"
 msgid "Global look and feel"
 msgstr "전역 모습과 느낌"
 
-#: package/contents/ui/main.qml:20
+#: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you choose the global look and feel."
 msgstr "이 모듈에서 전역 모습과 느낌 테마를 선택할 수 있습니다."
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "바탕 화면 레이아웃 포함"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Preview Theme"
 msgstr "테마 미리 보기"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -119,48 +119,47 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 테마를 적용하시겠습니까?"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "적용할 항목 선택…"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Show fewer options…"
 msgstr "옵션 덜 보기…"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgid "Apply"
 msgstr "적용"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "새 전역 테마 가져오기…"
 
-#: package/contents/ui/MoreOptions.qml:24
-#: package/contents/ui/MoreOptions.qml:31
+#: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
 msgstr "레이아웃 설정:"
 
-#: package/contents/ui/MoreOptions.qml:32
+#: package/contents/ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
 msgstr "바탕 화면 레이아웃"
 
-#: package/contents/ui/MoreOptions.qml:53
+#: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr ""
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
 #, fuzzy, kde-format
 #| msgid ""
@@ -172,72 +171,72 @@ msgid ""
 msgstr ""
 "바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 위젯 설정을 대체합니다"
 
-#: package/contents/ui/MoreOptions.qml:75
+#: package/contents/ui/MoreOptions.qml:56
 #, kde-format
 msgid "Appearance settings:"
 msgstr "모양 설정:"
 
-#: package/contents/ui/MoreOptions.qml:78
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Colors"
 msgstr "색상"
 
-#: package/contents/ui/MoreOptions.qml:79
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Application Style"
 msgstr "프로그램 스타일"
 
-#: package/contents/ui/MoreOptions.qml:80
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decorations"
 msgstr "창 장식"
 
-#: package/contents/ui/MoreOptions.qml:81
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "아이콘"
 
-#: package/contents/ui/MoreOptions.qml:82
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma 스타일"
 
-#: package/contents/ui/MoreOptions.qml:83
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "커서"
 
-#: package/contents/ui/MoreOptions.qml:84
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "글꼴"
 
-#: package/contents/ui/MoreOptions.qml:85
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "작업 전환기"
 
-#: package/contents/ui/MoreOptions.qml:86
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "시작 화면"
 
-#: package/contents/ui/MoreOptions.qml:87
+#: package/contents/ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "잠금 화면"
 
-#: package/contents/ui/SimpleOptions.qml:19
+#: package/contents/ui/SimpleOptions.qml:20
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "전역 테마의 다음 부분을 적용합니다:"
 
-#: package/contents/ui/SimpleOptions.qml:32
+#: package/contents/ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "모양 설정"
 
-#: package/contents/ui/SimpleOptions.qml:42
+#: package/contents/ui/SimpleOptions.qml:41
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
@@ -249,7 +248,7 @@ msgstr "• 모양 설정"
 msgid "Desktop and window layout"
 msgstr "바탕 화면 레이아웃"
 
-#: package/contents/ui/SimpleOptions.qml:58
+#: package/contents/ui/SimpleOptions.qml:56
 #, fuzzy, kde-format
 #| msgctxt "List item"
 #| msgid "• Desktop layout"
@@ -257,7 +256,7 @@ msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• 바탕 화면 레이아웃"
 
-#: package/contents/ui/SimpleOptions.qml:75
+#: package/contents/ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

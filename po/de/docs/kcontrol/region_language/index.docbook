@@ -2,93 +2,90 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
 <!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
-<article id="region_language" lang="&language;">
+<article id="translations" lang="&language;">
 <articleinfo>
-<title>Region And Language</title>
+<title
+>Sprache</title>
 <authorgroup>
-<author>&Mike.McBride; &Mike.McBride.mail;</author>
-<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
-<author>&Han.Young; &Han.Young.mail;</author>
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Matthias</firstname
+><surname
+>Kiefer</surname
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
  </authorgroup>
 
-          <date>2022-06-23</date>
-          <releaseinfo>Plasma 5.26</releaseinfo>
+	  <date
+>2021-04-09</date>
+	  <releaseinfo
+>Plasma 5.20</releaseinfo>
 
 	  <keywordset>
-		<keyword>KDE</keyword>
-		<keyword>Systemsettings</keyword>
-		<keyword>locale</keyword>
-		<keyword>country</keyword>
-		<keyword>language</keyword>
-		<keyword>number</keyword>
-                <keyword>translation</keyword>
-		<keyword>currency</keyword>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemeinstellungen</keyword>
+		<keyword
+>locale</keyword>
+		<keyword
+>country</keyword>
+		<keyword
+>language</keyword>
+		<keyword
+>Übersetzung</keyword>
+		<keyword
+>Sprache</keyword>
 	  </keywordset>
 </articleinfo>
 
-<para>
-On this page you can set your preferred languages and formats for the &plasma; Workspace and
-Applications to be displayed in.
-</para>
+<para
+>Auf dieser Seite können Sie die Sprachen auswählen, die in der &plasma;-Arbeitsumgebung sowie Anwendungen bevorzugt verwendet werden sollen. </para>
 
-<para>
-In most cases, you can simply select the language, and all
-options will be set in an appropriate manner.
-The &plasma; Workspace and &kde; Applications are written in American English and are
-translated into many different languages by teams of volunteers. These
-translations need to be installed first before you can choose to use them.
-</para>
-<note><para>Ensure that you have installed the &plasma; language packages or translations for the
-languages you want to use.</para>
-<para>As &plasma; is build upon the &Qt; libraries, you need the &Qt; translations for the selected
-languages as well to have a fully localized &GUI;.</para></note>
+<para
+>Die &plasma;-Arbeitsumgebung und &kde;-Anwendungen werden in Amerikanischem Englisch entwickelt und von Freiwilligen in verschiedenste Sprachen übersetzt. Diese Übersetzungen müssen zuerst installiert werden, bevor Sie sie auswählen können. </para>
+<note
+><para
+>Bitte überprüfen Sie, ob die &plasma;-Sprachpakete oder -Übersetzungen für die von Ihnen verwendeten Sprachen installiert sind.</para>
+<para
+>Da &plasma; die &Qt;-Bibliotheken verwendet, müssen Sie für eine vollständig übersetzte &GUI; außerdem auch die &Qt;-Übersetzungen der ausgewählten Sprachen installieren.</para
+></note>
 
+<para
+>Die Liste zeigt die übersetzten Namen der Sprachen an, die in der &plasma;-Arbeitsumgebung sowie den Anwendungen verwendet werden. Die &plasma;-Arbeitsumgebung sowie die Anwendungen sind nicht unbedingt vollständig in jede Sprache übersetzt. Sollte eine Übersetzung in Ihre Sprache fehlen, sucht &plasma; anhand der Liste nach einer passenden Übersetzung. Falls für keine der dort aufgeführten Sprachen eine Übersetzung vorhanden ist, wird der ursprüngliche Text in amerikanischem Englisch verwendet. </para>
 
-<para>
-On each selection bar you can see examples how the settings look
-like and which measurement units are used. In addition to numbers, you can see 
-how currency values, dates, and times in long and short format are displayed.
-When you change any of the settings, the preview shows the effects of the
-changes before you apply them.
-</para>
-
-<para>
-Clicking on the <guilabel>Add more...</guilabel> button on the language
-sub page will show you the list of available
-languages and will initially show your currently selected language. If the
-selection shows <quote>No Language Configured</quote> then you have not set a country
-and are defaulting to the language set by the system, normally C.
-If the language you want to use is
-not shown in this list then you will need to install it using the usual method
-for your system.
-</para>
-
-<para>You can remove a language from the main list by selecting it and then clicking
-on the <inlinemediaobject><imageobject><imagedata fileref="list-remove.png" format="PNG"/>
-</imageobject></inlinemediaobject> icon. You can change the order of preference in the
-list by selecting a language and clicking on the <inlinemediaobject><imageobject>
-<imagedata fileref="go-top.png" format="PNG"/>
-</imageobject></inlinemediaobject> icon.
-</para>
-
-<para>
-In case you need different individual format settings,
-you can select the locale for <guilabel>Numbers</guilabel>, <guilabel>Time</guilabel>,
-<guilabel>Currency</guilabel> and <guilabel>Measurement Units</guilabel>.
-</para>
+<para
+>Sie können eine Sprache zur Liste hinzufügen, indem Sie auf <guibutton
+>Sprachen hinzufügen</guibutton
+> klicken. Es werden die übersetzten Namen der Sprachen angezeigt, für die Übersetzungen der &systemsettings; auf Ihrem System installiert und verfügbar sind. Falls die gewünschte Sprache nicht auf der Liste steht, müssen Sie sie installieren. Verwenden Sie dazu die auf Ihrem System übliche Methode. Wählen Sie eine oder mehrere Sprache aus und drücken Sie <guibutton
+>Hinzufügen</guibutton
+>. </para>
+<para
+>Zum Entfernen einer Sprache aus der Liste wählen Sie sie aus und klicken Sie auf das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>.Sie können die Reihenfolge der Sprachen ändern, indem Sie eine Sprache in der Liste auswählen und auf das Symbol <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> klicken. </para>
 
 <note>
-<para>
-Previously, Language and Formats are independent settings. Since &plasma; 5.26, they were
-merged into this KCM called Region And Language. Changing a language does
-<emphasis>automatically change</emphasis> the settings for numbers,
-currency &etc; to the corresponding country or region. However, this change
-does not break the old configuration. The configuration file still located
-at <emphasis>~/.config/plasma-localerc</emphasis> .
-</para>
+<para
+>Die Einstellungen für Sprachen und Formate sind unabhängig. Mit der Auswahl einer neuen Sprache werden die Einstellungen für Zahlenformate, Währung &etc; <emphasis
+>nicht</emphasis
+> automatisch an das Land oder die Region, in der die Sprache verwendet wird, angepasst. </para>
 </note>
+
 </article>

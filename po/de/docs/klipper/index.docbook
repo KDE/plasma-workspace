@@ -4,204 +4,271 @@
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+  <!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
 ]>
 
 <book id="klipper" lang="&language;">
 <bookinfo>
-<title>The &klipper; Handbook </title>
+<title
+>Das Handbuch zu &klipper; </title>
 
 <authorgroup>
-<author>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
 
-<othercredit role="developer">
-&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;
-<!-- <contrib>Developer</contrib> -->
-</othercredit>
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<othercredit role="translator"
+>   <firstname
+>Gregor</firstname
+><surname
+>Zumstein</surname
+>  <affiliation
+><address
+><email
+>zumstein@ssd.ethz.ch</email
+></address
+></affiliation
+>   <contrib
+>Deutsche Übersetzung</contrib
+> </othercredit
+> <othercredit role="translator"
+>   <firstname
+>Stefan</firstname
+><surname
+>Doll</surname
+>  <affiliation
+><address
+><email
+>stefan@laugenweck.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
 
 </authorgroup>
 
 <copyright>
-<year>2000-2003</year>
-<holder>&Philip.Rodrigues;</holder>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
 </copyright>
 
-<legalnotice>&FDLNotice;</legalnotice>
+<legalnotice
+>&FDLNotice;</legalnotice>
 
-<date>2022-05-05</date>
-<releaseinfo>Plasma 5.25</releaseinfo>
+<date
+>2021-04-17</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
 
 <abstract>
-<para>&klipper; is the &plasma; clipboard cut &amp; paste utility.</para>
+<para
+>&klipper; ist das Dienstprogramm zum Kopieren &amp; Einfügen in die &plasma;-Zwischenablage.</para>
 </abstract>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>Klipper</keyword>
-<keyword>kdebase</keyword>
-<keyword>clipboard</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>Zwischenablage</keyword>
 </keywordset>
 </bookinfo>
 <!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
-<title>Introduction</title>
-<para>&klipper; is the &plasma; clipboard utility. It stores clipboard
-history, and allows you to link clipboard contents to application
-actions. Please report any problems or feature requests to <ulink
-url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
+<title
+>Einleitung</title>
+<para
+>&klipper; ist das  &kde;-Dienstprogramm für die Zwischenablage. Es speichert Kopien in der Zwischenablage und erlaubt es, Inhalte der Zwischenablage mittels Aktionen mit Anwendungen zu verbinden. Bitte melden Sie Probleme und Wünsche nach Erweiterungen an das <ulink url="http://bugs.kde.org"
+>KDE-Fehlerverfolgungssystem</ulink
+>.</para>
 
 </chapter>
 
 <chapter id="using-klipper">
-<title>Using &klipper;</title>
+<title
+>Wie benutze ich &klipper;?</title>
 
 <sect1 id="basic-usage">
-<title>Basic Usage</title>
-<para>You can use &klipper; in the systemtray either as &plasma; widget or classic application.
-Both share the same functionality but have a different &GUI; and show the last item of the history 
-when hovering the &klipper; icon in the systemtray:
-</para>
+<title
+>Grundlagen</title>
+<para
+>Sie können &klipper; in der Kontrollleiste entweder als &plasma;-Miniprogramm oder als normales Programm verwenden. Beide Programme bieten die gleichen Funktionen in unterschiedlichen graphischen Bedienungsoberflächen. Der letzte Eintrag im Verlauf wird bei beiden Programmen angezeigt, wenn Sie den Mauszeiger über das &klipper;-Symbol in der Kontrollleiste führen: </para>
 
 <screenshot>
-<screeninfo>The &klipper; icon.</screeninfo>
+<screeninfo
+>Das &klipper;-Symbol</screeninfo>
 <mediaobject>
 <imageobject>
-<imagedata fileref="screenshot.png" format="PNG" />
+<imagedata fileref="screenshot.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>The &klipper; icon</phrase>
+<phrase
+>Das &klipper;-Symbol</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para>The &klipper; widget is hidden if the clipboard is empty.</para>
+<para
+>Das &klipper;-Miniprogramm wird ausgeblendet, wenn die Zwischenablage leer ist.</para>
 
-<para>To display the clipboard history, click on the &klipper; icon in
-the systemtray.</para>
+<para
+>Um den Verlauf der Zwischenablage anzuzeigen, klicken Sie auf das &klipper;-Symbol im Systemabschnitt der Kontrollleiste.</para>
 
 <sect2 id="klipper-widget">
-<title>&klipper; Widget</title>
+<title
+>&klipper;-Miniprogramm</title>
 <screenshot>
-<screeninfo>The &klipper; Widget.</screeninfo>
+<screeninfo
+>Das &klipper;-Miniprogramm</screeninfo>
 <mediaobject>
 <imageobject>
-<imagedata fileref="klipper-widget.png" format="PNG" />
+<imagedata fileref="klipper-widget.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>The &klipper; Widget</phrase>
+<phrase
+>Das &klipper;-Miniprogramm</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para>Hover an entry with the mouse pointer and four icons appear which enable you to 
-invoke an action, show the barcode, edit the content or remove the entry from the history.
-Use &spectacle; to capture the barcodes and save them.
-</para>
+<para
+>Führen Sie den Mauszeiger über einen Eintrag, werden vier Symbole angezeigt. Mit Klicken auf diese Symbole können Sie eine Aktion aufrufen,den Barcode des Eintrags anzeigen, den Inhalt bearbeiten oder den Eintrag aus dem Verlauf entfernen. Mit &spectacle; können Sie Barcodes aufnehmen oder speichern. </para>
 
-<para>You can search through the clipboard history by opening it
-(click on &klipper;) and typing your query. The results are updated as
-you type. To clear the clipboard history click on the icon at the right of
-the search field.
-</para>
+<para
+>Sie können den Verlauf des Zwischenspeichers durchsuchen, indem Sie diesen Anzeigen (durch einen Mausklick auf &klipper;) und Ihren Suchbegriff eingeben. Die Ergebnisse werden noch während der Eingabe angezeigt. Um den den Zwischenspeicher-Verlauf zu leeren, klicken Sie auf das Symbol rechts neben dem Suchfeld. </para>
 
-<para>The <guilabel>Configure Clipboard...</guilabel> action in the context menu opens the 
-<link linkend="preferences">settings dialog</link>.
-</para>
+<para
+>Mit der Aktion <guilabel
+>Zwischenablage einrichten</guilabel
+> im Kontextmenü öffnen Sie den <link linkend="preferences"
+>Einrichtungsdialog</link
+>. </para>
 
 </sect2>
 </sect1>
 
 <sect1 id="actions">
-<title>Actions</title>
+<title
+>Aktionen</title>
 
-<para>&klipper; can perform actions on the contents of the clipboard,
-based on whether they match a particular regular expression. For
-example, any clipboard contents starting with <quote>http://</quote> can
-be passed to Firefox or &konqueror; as &URL;s to open. In addition, if the 
-contents matches a path, similar actions can be performed according to the file's
-type. &eg;, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be 
-viewed in &okular;.</para>
+<para
+>&klipper; kann Aktionen auf Grundlage regulärer Ausdrücke mit dem Inhalt der Zwischenablage durchführen. Zum Beispiel können alle Einträge der Zwischenablage, die mit <quote
+>http://</quote
+> beginnen, an Firefox oder &konqueror; weitergeleitet werden, um die betreffende Webseite anzuzeigen. Enthält die Zwischenablage einen Pfad zu einer Datei, können zusätzlich weitere Aktionen für den Dateityp ausgeführt werden. Wird zum Beispiel der Pfad zu einer <acronym
+>PDF</acronym
+>-Datei in die Zwischenablage kopiert, kann die Datei in &okular; geöffnet werden.</para>
 
-<para>To use this feature, just select a &URL; or path. <!-- starting with slash ?-->
-If there is a matching regular expression in &klipper;'s
-list, a menu will appear showing you the programs for your selection. 
-Use the mouse or cursor keys to select a program, and &klipper; will run 
-this program, opening the address pointed to by the
-selection.</para>
+<para
+>Um diese Möglichkeit zu nutzen, muss eine &URL; oder ein Dateiname markiert werden werden. Wenn dann ein von &klipper; gespeicherter regulärer Ausdruck zutrifft, erscheint ein Menü, das die zur Verfügung stehenden Möglichkeiten anzeigt. Benutzen Sie die Maus oder die Cursor-Tasten um ein Programm auszuwählen. Dann startet &klipper; das Programm mit der ausgewählten Adresse.</para>
 
-<para>If you do not want to perform any actions on the clipboard
-contents, select <guimenuitem>Disable This Popup</guimenuitem> on the pop-up menu
-to return to what you were doing before. If you leave the menu, it will
-disappear, leaving you to continue your work. You can change the time
-that the menu remains for in the settings 
-dialog, with the option <guilabel>Show action popup menu</guilabel>
-under the <guilabel>General</guilabel> page. You can separately disable the 
-file path part using the option <guilabel>Include MIME actions</guilabel> under
-the <guilabel>Action Menu</guilabel> page.</para>
+<para
+>Sollen keine Aktionen auf den Inhalt der Zwischenablage durchgeführt werden, muss der Eintrag <guimenuitem
+>Abbrechen</guimenuitem
+> im Kontextmenü gewählt werden. Wenn Sie keine der Optionen wählen, wird das Menü nach einer voreingestellten Zeit ausgeblendet und Sie können weiterarbeiten. Im Einrichtungsdialog können Sie unter dem Punkt <guilabel
+>Zeitlimit für Aktionen-Menüs</guilabel
+> auf der Seite <guilabel
+>Allgemein</guilabel
+> einstellen, wie lange das Menü angezeigt werden soll. Diese Aktionen für Pfade in der Auswahl können Sie mit <guilabel
+>Mime-basierte Aktionen aktivieren</guilabel
+> auf der Seite <guilabel
+>Aktionen</guilabel
+> ein- und ausschalten.</para>
 
-<para>Actions can be disabled completely by pressing
-the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
+<para
+>Aktionen können vollständig mit dem Kurzbefehl <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+> abgeschaltet werden.</para>
 
-<para>Clipboard contents which match a regular expression can also be
-edited before performing an action on them. Select <guimenuitem>Edit 
-contents...</guimenuitem> at the right of the clipboard entry, and you can
-change the clipboard contents in the dialog which appears, before
-clicking the <guibutton>OK</guibutton> button to run the appropriate
-action.</para>
+<para
+>Einträge der Zwischenablage, auf die ein regulärer Ausdruck zutrifft, können vor der Weiterleitung an eine Anwendung noch bearbeitet werden. Die Einträge der Zwischenablage können verändert werden, wenn Sie rechts neben dem Eintag auf <guimenuitem
+>Inhalt bearbeiten...</guimenuitem
+> klicken. Mit <guibutton
+>OK</guibutton
+> wird dann die gewünschte Aktion durchgeführt.</para>
 
-<para>Pressing <keycombo
-action="simul">&Ctrl;&Alt;<keycap>R</keycap></keycombo> shows the pop-up
-menu to repeat the last action which &klipper; performed.</para>
+<para
+>Auf die Tastenkombination <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> hin öffnet &klipper; ein Kontextmenü, mit dem die letzte Aktion wiederholt werden kann.</para>
 
 </sect1>
 
 <sect1 id="clipboard-modes">
-<title>Clipboard/Selection Behavior</title>
+<title
+>Verhalten von Zwischenablage und Auswahl</title>
 
 <sect2 id="clipboard-modes-general">
-<title>General</title>
-<para>
-&klipper; can be used to set the behavior of the clipboard and selection in
-&plasma;. 
-</para>
+<title
+>Allgemein</title>
+<para
+>Sie können &klipper; dazu verwenden das Verhalten der Zwischenablage und von Markierungsvorgängen in &plasma; festzulegen. </para>
 
-<note><para>The &X-Window; uses two separate clipboard buffers: the
-<quote>selection</quote> and the <quote>clipboard</quote>. Text is
-placed in the selection buffer by simply selecting it, and can be
-pasted with the middle mouse button. To place text in
-the clipboard buffer, select it and press
-<keycombo>&Ctrl;<keycap>X</keycap> </keycombo> or
-<keycombo>&Ctrl;<keycap>C</keycap> </keycombo>. Text from the
-clipboard buffer is pasted using <keycombo>&Ctrl;<keycap>V</keycap>
-</keycombo> or by selecting <guimenuitem>Paste</guimenuitem> 
-in a context menu.</para>
+<note
+><para
+>&X-Window; verwendet zwei getrennte Puffer für die Zwischenablage: die <quote
+>Selektion</quote
+> und die <quote
+>Zwischenablage</quote
+>. Durch einfaches Markieren wird Text im Auswahlpuffer abgelegt und kann über die mittlere Maustaste eingefügt werden. Text gelangt erst dann in die Zwischenablage, wenn Sie ihn markieren und die Tasten <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> oder <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+> drücken. Sie fügen einen Text aus der Zwischenablage ein, indem Sie  <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> drücken oder i<guimenuitem
+>Einfügen</guimenuitem
+> in einem Kontextmenü auswählen.</para>
 </note>
 
 </sect2>
 
 <sect2 id="changing-clipboard-modes">
-<title>Changing Clipboard/Selection Behavior</title>
-<para>
-In order to change clipboard/selection behavior, select
-<guimenuitem>Configure Clipboard...</guimenuitem> from the &klipper; context menu,
-and in the dialog box that appears, select the
-<guilabel>General</guilabel> page. Unchecking <guilabel>Selection and Clipboard</guilabel> makes the clipboard and selection function as completely
-separate buffers as described above. With this option set, the option
-<guilabel>Ignore</guilabel> will prevent &klipper; from
-including the contents of the selection in its clipboard history and from
-performing actions on the contents of the selection. Selecting
-<guilabel>Selection and Clipboard</guilabel>
-causes the clipboard and selection buffers to always be the same, meaning that
-text in the selection can be pasted with either the
-<mousebutton>middle</mousebutton> mouse button or the key combination <keycombo>&Ctrl;<keycap>V</keycap>
-</keycombo>, and similarly for text in the clipboard buffer.
-</para>
+<title
+>Verhalten der Zwischenablage und von Markierungen ändern</title>
+<para
+>Um das Verhalten der Zwischenablage und der Auswahl zu ändern, wählen Sie <guimenuitem
+>Zwischenablage einrichten ...</guimenuitem
+> im Kontextmenü und dann in dem aufgerufenen Dialog die Seite <guilabel
+>Allgemein</guilabel
+>. Durch Markieren von <guilabel
+>Inhalt von Zwischenablage und aktueller Auswahl getrennt vorhalten</guilabel
+> erreichen Sie, dass beide Puffer unabhängig voneinander sind, so wie es bereits beschreiben wurde. Ist gleichzeitig die Option <guilabel
+>Auswahl ignorieren</guilabel
+> markiert, wird markierter Text nicht in den Verlauf der Zwischenablage kopiert und es werden keine Aktionen mit dem betreffenden Text ausgeführt. Durch Markieren von <guilabel
+>Inhalt von Zwischenablage und aktueller Auswahl angleichen</guilabel
+> erreichen Sie, dass beide Puffer den gleichen Inhalt haben. Das bedeutet, ausgewählter Text kann entweder über die <mousebutton
+>mittlere</mousebutton
+> Maustaste oder die Tastenkombination <keycombo
+>&Ctrl;<keycap
+>V</keycap
+></keycombo
+> eingefügt werden. Dasselbe gilt für den Text in der Zwischenablage. </para>
 
  <!-- The
-<guilabel>Synchronize contents of the clipboard and the
-selection</guilabel> check box determines the clipboard mode. If the box is
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
 selected, the clipboard functions in the &UNIX; mode; if not, the
 &Windows;/&Mac; mode is used. -->
 
@@ -213,171 +280,266 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 </chapter>
 
 <chapter id="preferences">
-<title>Configuring &klipper;</title>
+<title
+>&klipper; einrichten</title>
 
 <sect1 id="general-page">
-<title>General Options</title>
+<title
+>Allgemeine Einstellungen</title>
 
 <variablelist>
 
-<varlistentry><term><guilabel>Selection and Clipboard</guilabel></term>
-<listitem><para>When text or an area of the screen is highlighted with the mouse or 
-keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using 
-the middle mouse button.</para><para>If the selection is explicitly copied 
-using a <guimenuitem>Copy</guimenuitem> or <guimenuitem>Cut</guimenuitem> action, it 
-is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a 
-<guimenuitem>Paste</guimenuitem> action.</para><para>When turned on this option 
-keeps the selection and the clipboard the same, so that any selection is 
-immediately available to paste by any means. If it is turned off, the 
-selection may still be saved in the clipboard history (subject to the 
-options below), but it can only be pasted using the middle mouse button.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Clipboard history</guilabel></term>
-<listitem><para>Toggles clipboard history.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Number of entries</guilabel></term>
-<listitem><para>Sets the number of items that are stored
-in the clipboard history.</para></listitem>
+<varlistentry>
+<term
+><guilabel
+>Inhalt der Zwischenablage beim Verlassen speichern</guilabel
+></term
+> <listitem
+><para
+>Ist diese Option eingeschaltet, wird beim Beenden von &klipper; der Verlauf der Zwischenablage gespeichert und kann beim nächsten Start wieder verwendet werden.</para>
+</listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Text selection</guilabel></term>
-<listitem><para>When an area of the screen is selected with mouse or keyboard, this is 
-called the <quote>selection</quote>. This option determines whether text selections are
-saved in the clipboard history. It is possible to choose between <guilabel>Always save
-in history</guilabel> and <guilabel>Only when explicitly copied</guilabel>. The
-<guilabel>Always save in history</guilabel> option is not available if
-selection/clipboard synchronisation is turned off &dash; in this
-case the selection is never automatically saved in the clipboard history.
-See <xref linkend="clipboard-modes"/>.
-</para>
-</listitem>
-</varlistentry> 
+<term
+><guilabel
+>Leere Zwischenablage vermeiden</guilabel
+></term>
+<listitem
+><para
+>Wird diese Option gewählt, ist die Zwischenablage nie leer. &klipper; fügt stattdessen den letzten Eintrag aus der Zwischenablage in den Verlauf ein.</para
+></listitem>
+</varlistentry>
 
 <varlistentry>
-<term><guilabel>Non-text selection</guilabel></term>
-<listitem><para>This option determines whether non-text selections (such as images) are
-saved in the clipboard history. It is possible to choose between <guilabel>Always save
-in history</guilabel>, <guilabel>Only when explicitly copied</guilabel>, and
-<guilabel>Never save in history</guilabel>. The <guilabel>Always save in
-history</guilabel> option is not available if selection/clipboard synchronisation
-is turned off &dash; in this case the selection is never automatically saved in the
-clipboard history. See <xref linkend="clipboard-modes"/>.
-</para>
+<term
+><guilabel
+>Bilder ignorieren</guilabel
+></term>
+<listitem
+><para
+>Wenn ein Bereich mit Hilfe der Maus oder der Tastatur markiert wird, bezeichnet man dies als <quote
+>Auswahl</quote
+>. Wenn Sie diese Einstellung aktivieren, wird nur Text im Verlauf der Zwischenablage gespeichert, keine Bilder oder sonstige ausgewählte Objekte. </para>
 </listitem>
-</varlistentry> 
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Auswahl ignorieren</guilabel
+></term>
+<listitem
+><para
+>Ist diese Einstellung aktiv, wird markierter Text nicht in den Verlauf der Zwischenablage kopiert und es werden keine Aktionen mit dem betreffenden Text ausgeführt. Siehe auch <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Nur Textauswahl</guilabel
+></term>
+<listitem
+><para
+>Wenn ein Bereich mit Hilfe der Maus oder der Tastatur markiert wird, bezeichnet man dies als <quote
+>Auswahl</quote
+>. Wenn Sie diese Einstellung aktivieren, wird nur Text im Verlauf der Zwischenablage gespeichert, keine Bilder oder sonstige ausgewählte Objekte. Siehe auch <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Inhalt von Zwischenablage und aktueller Auswahl angleichen</guilabel
+></term>
+<listitem
+><para
+>Legt den Modus der Zwischenablage fest. Wenn ein Bereich mit Hilfe der Maus oder der Tastatur markiert wird, bezeichnet man dies als <quote
+>Auswahl</quote
+>. Wenn Sie diese Einstellung aktivieren, werden die Auswahl und die Zwischenablage abgeglichen; auf diese Weise ist der Inhalt der Auswahl automatisch auch über die Zwischenablage verfügbar, egal welche Methode Sie zum Einfügen verwenden. Auch der unter Linux übliche mittlere Mausklick kann weiterhin zum Einfügen verwendet werden. Wenn Sie diese Einstellung nicht aktivieren, wird die Auswahl zwar im Verlauf der Zwischenablage gespeichert, jedoch können Sie den ausgewählten Text ausschließlich mit der mittleren Maustaste einfügen. Beachten Sie dazu auch die Option <guilabel
+>Auswahl ignorieren</guilabel
+>. Siehe auch <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Zeitlimit für Aktionen-Menüs</guilabel
+></term>
+<listitem
+><para
+>Hier können Sie festlegen, wie lange das Aktionen-Menü geöffnet bleibt, wenn Sie nichts machen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Größe des Verlaufsspeichers</guilabel
+></term>
+<listitem
+><para
+>Diese Option legt die Anzahl der Einträge fest, die im Verlauf der Zwischenablage gehalten werden.</para
+></listitem>
+</varlistentry>
 
 </variablelist>
 
 </sect1>
 
-<sect1 id="action-menu-page">
-<title>Action Menu</title>
+<sect1 id="actions-page">
+<title
+>Aktionen</title>
 
 <variablelist>
-
 <varlistentry>
-<term><guilabel>Show action popup menu</guilabel></term>
-<listitem><para>Set the time that a popup menu will remain for if you do
-nothing with it.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Replay actions on an item selected from
-history</guilabel></term>
-<listitem><para>If this is switched on, selecting an item from the history
-causes &klipper; to display the actions pop-up on that item, if 
-appropriate.</para>
+<term
+><guilabel
+>Aktion erneut an einem aus dem Verlauf gewählten Element ausführen</guilabel
+></term>
+<listitem
+><para
+>Ist die Option markiert, führt das Auswählen eines Eintrags im Verlauf dazu, dass &klipper; das Aktionen-Menü für diesen Eintrag öffnet, sofern dies möglich ist.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guibutton>Exclude Windows</guibutton></term>
-<listitem><para>Brings up the <guilabel>Disable Actions for windows of type
-WM_CLASS</guilabel> dialog.</para>
-<para>Some programs, such as &konqueror;,
-use the clipboard internally. If you get unwanted &klipper; pop-ups all the time
-when using a certain application, do the following:</para>
+<varlistentry>
+<term
+><guilabel
+>Leerräume bei der Befehlsausführung entfernen</guilabel
+></term>
+<listitem
+><para
+>Ist die Option markiert, werden alle Leerräume (Leerzeichen, Tabulatoren &etc;) am Anfang und am Ende von Inhalten der Zwischenablage entfernt, bevor Sie an eine Anwendung übergeben werden. Das ist &eg; nützlich, wenn Sie eine &URL; aufrufen, die Leerzeichen enthält und die im Browser einen Fehler hervorrufen würde.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>MIME-basierte Aktionen aktivieren</guilabel
+></term>
+<listitem
+><para
+>Ist diese Einstellung aktiviert, erscheint zusätzlich zu den definierten Aktion eine Liste von Aktionen für den erkannten MIME-Typ im Kontextmenü.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Aktionen/Ausdrücke bearbeiten</term>
+<listitem
+><para
+>Auf der Seite <guilabel
+>Aktionen</guilabel
+> können reguläre Ausdrücke und Aktionen durch Doppelklicken auf einen Eintrag oder durch Auswählen und Drücken des Knopfes <guibutton
+>Aktionen bearbeiten</guibutton
+> bearbeitet werden. Damit wird ein Dialog geöffnet, in dem der reguläre Ausdruck geändert werden kann.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Hinzufügen von Aktionen/Ausdrücken</term>
+<listitem
+><para
+>Ein Druck auf den Knopf <guibutton
+>Aktion hinzufügen</guibutton
+> erzeugt einen neuen regulären Ausdruck, auf den &klipper; reagieren kann. &klipper; benutzt die Klasse <classname
+>QRegularExpression </classname
+> aus &Qt;, die regulären Ausdrücke nach PCRE (Perl Compatible Regular Expressions) verwendet.</para>
+<para
+>Sie können hier eine Beschreibung des regulären Ausdrucks hinzuzufügen (&eg; <quote
+>HTTP URL</quote
+>). Dazu müssen Sie mit der <mousebutton
+>linken</mousebutton
+> Maustaste in die Spalte <guilabel
+>Beschreibung</guilabel
+> klicken.</para
+>   
+
+<note
+><para
+>Weitere Informationen zu regulären Ausdrücke mit <classname
+>QRegularExpression</classname
+> finden Sie in der <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>Qt-Documentation</ulink
+>.</para
+></note>
+
+<para
+>Danach kann der Eintrag wie oben beschrieben bearbeitet werden. Um einen Befehl zu einer Aktion hinzuzufügen, wählen Sie <guimenuitem
+>Befehl hinzufügen</guimenuitem
+> aus dem Kontextmenü und geben dann den Befehl im neu erstellten Eintrag ein. Durch Doppelklicken auf einen Befehl können Sie ihn bearbeiten.</para>
+
+<para
+>Der Platzhalter <token
+>%s</token
+> auf der Befehlszeile wird durch den Inhalt der Zwischenablage ersetzt. Ist zum Beispiel der Befehl mit <userinput
+><command
+>kwrite <token
+>%s</token
+></command
+></userinput
+> angegeben und der Inhalt der Zwischenablage ist <filename
+>/home/phil/textfile</filename
+>, wird der Befehl <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfile</filename
+></userinput
+> ausgeführt. Soll die Zzeichenfolge <token
+>%s</token
+> in der Befehlszeile verwendet werden, kann eine Escape-Sequenz verwendet werden: <userinput
+>\%s</userinput
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Erweitert</guibutton
+></term>
+<listitem
+><para
+>Öffnet den Dialog, der es Ihnen ermöglicht, Aktionen für bestimmte Fenstertypen (WM_CLASS) zu unterdrücken.</para>
+<para
+>Einige Programme wie &eg; &konqueror;, benutzen die Zwischenablage intern. Wenn sich &klipper; ungewollt öffnet, während Sie mit einer bestimmten Anwendung arbeiten, gehen Sie wie folgt vor:</para>
 
 <orderedlist>
-<listitem><para>Open the application.</para></listitem>
-<listitem><para>From a terminal, run <userinput><command>xprop</command>
-| <command>grep</command> <parameter>WM_CLASS</parameter></userinput>
-and then click on the window of the application you are
-running.</para></listitem> 
-<listitem><para>The first string after the equals sign is the one to
-enter.</para></listitem>
+<listitem
+><para
+>Öffnen Sie die Anwendung.</para
+></listitem>
+<listitem
+><para
+>Aus einem Befehlsfenster heraus rufen Sie <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> auf und klicken auf das Fenster der Anwendung.</para
+></listitem
+> 
+<listitem
+><para
+>Geben Sie die erste Zeichenfolge nach dem Gleichheitszeichen im &klipper;-Dialog ein.</para
+></listitem>
 </orderedlist>
 
-<para>Once the WM_CLASS is added, no more actions will be generated for
-windows of that application.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Remove white space when executing actions</guilabel></term>
-<listitem><para>If selected, any white space (spaces, tabs, &etc;) at the
-beginning and end of the clipboard contents will be removed before passing the
-clipboard contents to an application. This is useful, for example, if the
-clipboard contains a &URL; with spaces which, if opened by a web browser, would
-cause an error.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Include MIME actions</guilabel></term>
-<listitem><para>If selected, include applications that can accept its 
-&MIME; type of a file name or URL selected in the popup menu.</para>
-</listitem>
-</varlistentry>
-</variablelist>
-</sect1>
-
-<sect1 id="actions-configuration-page">
-<title>Actions Configuration</title>
-
-<variablelist>
-<varlistentry>
-<term>Editing Expressions/Actions</term>
-<listitem><para>On the <guilabel>Actions</guilabel> page, double-click
-the regular expression or action that you want to edit or select it and 
-press the <guibutton>Edit Action</guibutton> button. A dialog will appear in which the 
-expression text can be edited as you wish.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term>Adding Expressions/Actions</term>
-<listitem><para>Click the <guibutton>Add Action...</guibutton> button
-to add a regular expression for &klipper; to match. &klipper; uses
-&Qt;'s <classname>QRegularExpression</classname>, which uses PCRE (Perl
-Compatible Regular Expressions).</para>
-<para>You can add a description of the regular expression type (&eg;
-<quote>HTTP URL</quote>) by <mousebutton>left</mousebutton> clicking in the
-<guilabel>Description</guilabel> column.</para>   
-
-<note><para>You can find detailed information about the use of
-<classname>QRegularExpression</classname> regular expressions in <ulink
-url="https://doc.qt.io/qt-5/qregularexpression.html#details">the Qt upstream
-documentation</ulink>.</para></note>
-
-<para>Edit the regular expression as described above. To add a command
-to execute, click <guimenuitem>Add Command</guimenuitem> and edit the command 
-in an in-place text editing box. Double-clicking on a command allows you to edit it.</para>
-
-<para>Note that <token>%s</token> in the command line is replaced with
-the clipboard contents, &eg; if your command definition is
-<userinput><command>kwrite</command> <token>%s</token></userinput> and
-your clipboard contents are <filename>/home/phil/textfile</filename>,
-the command <userinput><command>kwrite</command>
-<filename>/home/phil/textfile</filename></userinput> will be run. To
-include <token>%s</token> in the command line, escape it with a
-backslash, as so: <userinput>\%s</userinput>.</para>
-
-<para>Entries <userinput><token>%0</token></userinput> through
-<userinput><token>%9</token></userinput> will be replaced by the corresponding captured
-texts from the match pattern.
-</para>
+<para
+>Wenn Sie die entsprechende Angabe zu WM_CLASS eingetragen haben, werden für Fenster dieser Anwendung keine Aktionen mehr ausgeführt.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -385,67 +547,88 @@ texts from the match pattern.
 </sect1>
 
 <sect1 id="shortcuts-page">
-<title>Shortcuts Options</title>
+<title
+>Tastenkürzel</title>
 
-<para>The shortcuts page allows you to change the keyboard shortcuts
-which are used to access &klipper; functions. You can change the
-shortcut to one of three things:</para>
+<para
+>Die Seite <guilabel
+>Tastenkürzel</guilabel
+> erlaubt die Änderung der Tastenkürzel für die verschiedenen Funktionen von &klipper;. Folgende drei Möglichkeiten stehen dabei zur Verfügung:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>None</guilabel></term>
-<listitem><para>The selected action cannot be accessed directly from the
-keyboard</para></listitem>
+<term
+><guilabel
+>Keine</guilabel
+></term>
+<listitem
+><para
+>Die ausgewählte Aktion kann nicht direkt über die Tastatur ausgeführt werden</para
+></listitem>
 </varlistentry>
 <varlistentry>
-<term><guilabel>Default</guilabel></term>
-<listitem><para>The selected action uses &klipper;'s default key. These are the
-shortcuts referred to in this manual.</para></listitem>
+<term
+><guilabel
+>Standard</guilabel
+></term>
+<listitem
+><para
+>Die markierte Aktion verwendet die von &klipper; definierte Standardtaste. Verweise in diesem Handbuch beziehen sich immer auf diese Standardtasten.</para
+></listitem>
 </varlistentry>
 <varlistentry>
-<term><guilabel>Custom</guilabel></term>
-<listitem><para>The selected action is assigned to the keys you choose.</para>
-<para>To choose a custom key for the action you have selected, click on 
-<guilabel>Custom</guilabel> and then <guilabel>None</guilabel>.
-Now type the desired key combination on your keyboard, as in any &kde; application. 
-</para> </listitem>
+<term
+><guilabel
+>Benutzerdefiniert</guilabel
+></term>
+<listitem
+><para
+>Die markierte Aktion wird dem von Ihnen gewählten Tastenkürzel zugewiesen.</para>
+<para
+>Um eine benutzerdefinierte Taste für eine Aktion zu verwenden, müssen Sie auf <guilabel
+>Benutzerdefiniert</guilabel
+> und dann auf <guilabel
+>Keiner</guilabel
+> klicken. Danach drücken Sie die gewünschte Taste, so wie Sie es in allen &kde;-Anwendungen machen. </para
+> </listitem>
 </varlistentry>
 </variablelist>
 
-<para>If you define a shortcut for <guilabel>Open Klipper at Mouse Position</guilabel> 
-pressing this shortcut will open the &klipper; popup menu at the position of
-the mouse cursor, instead of their default position (in the &plasma; Panel).
-Useful if you use the mouse more than the keyboard.</para>
+<para
+>Wenn Sie einen Kurzbefehle für die Aktion <guilabel
+>Klipper an Mausposition öffnen</guilabel
+> festlegen und dann diesen Kurzbefehl benutzen, wird das Kontextmenü von &klipper; dort geöffnet, wo sich die Mauszeiger  befindet und nicht an der normalen Position in der Kontrollleiste von &plasma; Das ist vor allem dann praktisch, wenn Sie mehr mit der Maus arbeiten als mit der Tastatur.</para>
 
 </sect1>
 </chapter>
 
 <chapter id="credits">
-<title>Credits and License</title>
+<title
+>Danksagungen und Lizenz</title>
 
-<para>
-&klipper;
-</para>
-<para>
-Program copyright 1998 &Andrew.Stanley-Jones; <email>asj@cban.com</email>
-</para>
-<para>
-Program copyright 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
-<para>
-Currently maintained by Esben Mose Hansen. See <ulink
-url="http://mosehansen.dk/about">http://mosehansen.dk/about</ulink>
-for contact details.
-</para>
+<para
+>&klipper; </para>
+<para
+>Programm Copyright 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>Copyright 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Derzeit betreut von Esben Mose Hansen. Weitere Kontaktinformationen finden Sie auf <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+>. </para>
 
-<para>
-Documentation copyright 2000-2003, 2005 &Philip.Rodrigues;
-&Philip.Rodrigues.mail;</para>
+<para
+>Copyright der Dokumentation 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
 
-<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-&underFDL;
-&underGPL;
-
-</chapter>
+<para
+>Übersetzung Gregor Zumstein <email
+>zumstein@ssd.ethz.ch</email
+>, Stefan Doll <email
+>stefan@laugenweck.de</email
+></para
+> &underFDL; &underGPL; </chapter>
 
 
 &documentation.index; 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2022-04-28 08:58+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -100,23 +100,23 @@ msgstr "Obnoviť rozloženie plochy Plasma"
 msgid "Global look and feel"
 msgstr "Globálny vzhľad a dojem"
 
-#: package/contents/ui/main.qml:20
+#: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you choose the global look and feel."
 msgstr ""
 "Tento modul vám umožní nastaviť globálny vzhľad a dojem pracovnej plochy."
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Obsahuje rozloženie pracovnej plochy"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Preview Theme"
 msgstr "Náhľad témy"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -124,48 +124,47 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Použiť %1?"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Vyberte si, čo chcete použiť..."
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Zobraziť menej možností..."
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgid "Apply"
 msgstr "Použiť"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Získať nové globálne témy..."
 
-#: package/contents/ui/MoreOptions.qml:24
-#: package/contents/ui/MoreOptions.qml:31
+#: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
 msgstr "Nastavenia rozloženia:"
 
-#: package/contents/ui/MoreOptions.qml:32
+#: package/contents/ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
 msgstr "Rozloženie pracovnej plochy"
 
-#: package/contents/ui/MoreOptions.qml:53
+#: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr ""
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
 #, fuzzy, kde-format
 #| msgid ""
@@ -178,72 +177,72 @@ msgstr ""
 "Použitie rozloženia pracovnej plochy nahradí vašu aktuálnu konfiguráciu "
 "pracovných plôch, panelov a miniaplikácií"
 
-#: package/contents/ui/MoreOptions.qml:75
+#: package/contents/ui/MoreOptions.qml:56
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Ďalšie nastavenia vzhľadu..."
 
-#: package/contents/ui/MoreOptions.qml:78
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Colors"
 msgstr "Farby"
 
-#: package/contents/ui/MoreOptions.qml:79
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Application Style"
 msgstr "Štýl aplikácií"
 
-#: package/contents/ui/MoreOptions.qml:80
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decorations"
 msgstr "Dekorácie okien"
 
-#: package/contents/ui/MoreOptions.qml:81
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Ikony"
 
-#: package/contents/ui/MoreOptions.qml:82
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma štýl"
 
-#: package/contents/ui/MoreOptions.qml:83
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Kurzory"
 
-#: package/contents/ui/MoreOptions.qml:84
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Písma"
 
-#: package/contents/ui/MoreOptions.qml:85
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Prepínač úloh"
 
-#: package/contents/ui/MoreOptions.qml:86
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Úvodná obrazovka"
 
-#: package/contents/ui/MoreOptions.qml:87
+#: package/contents/ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Zamknúť obrazovku"
 
-#: package/contents/ui/SimpleOptions.qml:19
+#: package/contents/ui/SimpleOptions.qml:20
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "V rámci tejto globálnej témy sa použijú tieto prvky:"
 
-#: package/contents/ui/SimpleOptions.qml:32
+#: package/contents/ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Ďalšie nastavenia vzhľadu..."
 
-#: package/contents/ui/SimpleOptions.qml:42
+#: package/contents/ui/SimpleOptions.qml:41
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
@@ -255,7 +254,7 @@ msgstr "• Ďalšie nastavenia vzhľadu..."
 msgid "Desktop and window layout"
 msgstr "Rozloženie pracovnej plochy"
 
-#: package/contents/ui/SimpleOptions.qml:58
+#: package/contents/ui/SimpleOptions.qml:56
 #, fuzzy, kde-format
 #| msgctxt "List item"
 #| msgid "• Desktop layout"
@@ -263,7 +262,7 @@ msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Rozloženie pracovnej plochy"
 
-#: package/contents/ui/SimpleOptions.qml:75
+#: package/contents/ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

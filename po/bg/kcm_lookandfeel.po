@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2023-01-07 00:51+0000\n"
 "PO-Revision-Date: 2022-08-09 23:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -99,22 +99,22 @@ msgstr "Възстановяване на стандартни настройк�
 msgid "Global look and feel"
 msgstr "Глобален външен вид"
 
-#: package/contents/ui/main.qml:20
+#: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you choose the global look and feel."
 msgstr "Този модул ви позволява да изберете глобалния външен вид и усещане."
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Съдържа оформления на работния плот"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:76
 #, kde-format
 msgid "Preview Theme"
 msgstr "Предварителен преглед на тема"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -122,48 +122,47 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Прилагане %1?"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Изберете какво да приложите…"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показване на по-малко опции…"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgid "Apply"
 msgstr "Прилагане"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Изтегляне на нови глобални теми…"
 
-#: package/contents/ui/MoreOptions.qml:24
-#: package/contents/ui/MoreOptions.qml:31
+#: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
 msgstr "Настройки на оформление:"
 
-#: package/contents/ui/MoreOptions.qml:32
+#: package/contents/ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
 msgstr "Оформление на работния плот"
 
-#: package/contents/ui/MoreOptions.qml:53
+#: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Оформление на бутоните на заглавната лента"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
 #, kde-format
 msgid ""
@@ -173,72 +172,72 @@ msgstr ""
 "Прилагането на оформление на работен плот замества текущата конфигурация на "
 "работните плотове, панелите и уиджетите."
 
-#: package/contents/ui/MoreOptions.qml:75
+#: package/contents/ui/MoreOptions.qml:56
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Настройки на външен вид:"
 
-#: package/contents/ui/MoreOptions.qml:78
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Colors"
 msgstr "Цветове"
 
-#: package/contents/ui/MoreOptions.qml:79
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Application Style"
 msgstr "Стил на приложения"
 
-#: package/contents/ui/MoreOptions.qml:80
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decorations"
 msgstr "Декорации на прозорци"
 
-#: package/contents/ui/MoreOptions.qml:81
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Icons"
 msgstr "Икони"
 
-#: package/contents/ui/MoreOptions.qml:82
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Plasma Style"
 msgstr "Стил на Plasma"
 
-#: package/contents/ui/MoreOptions.qml:83
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Cursors"
 msgstr "Курсори"
 
-#: package/contents/ui/MoreOptions.qml:84
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифтове"
 
-#: package/contents/ui/MoreOptions.qml:85
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Task Switcher"
 msgstr "Превключване на задачи"
 
-#: package/contents/ui/MoreOptions.qml:86
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Splash Screen"
 msgstr "Начален екран"
 
-#: package/contents/ui/MoreOptions.qml:87
+#: package/contents/ui/MoreOptions.qml:69
 #, kde-format
 msgid "Lock Screen"
 msgstr "Заключване на екрана"
 
-#: package/contents/ui/SimpleOptions.qml:19
+#: package/contents/ui/SimpleOptions.qml:20
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "Следните настройки ще се приложат от тази глобална тема:"
 
-#: package/contents/ui/SimpleOptions.qml:32
+#: package/contents/ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
 msgstr "Настройки на външен вид"
 
-#: package/contents/ui/SimpleOptions.qml:42
+#: package/contents/ui/SimpleOptions.qml:41
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
@@ -249,13 +248,13 @@ msgstr "• Настройки на външен вид"
 msgid "Desktop and window layout"
 msgstr "Оформление на работния плот и прозорците"
 
-#: package/contents/ui/SimpleOptions.qml:58
+#: package/contents/ui/SimpleOptions.qml:56
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Оформление на работния плот и прозорците"
 
-#: package/contents/ui/SimpleOptions.qml:75
+#: package/contents/ui/SimpleOptions.qml:74
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
