@@ -65,7 +65,7 @@ private:
 class FingerprintModel : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString scanType READ scanType CONSTANT)
+    Q_PROPERTY(FprintDevice::ScanType scanType READ scanType CONSTANT)
     Q_PROPERTY(QString currentError READ currentError WRITE setCurrentError NOTIFY currentErrorChanged) // error for ui to display
     Q_PROPERTY(QString enrollFeedback READ enrollFeedback WRITE setEnrollFeedback NOTIFY enrollFeedbackChanged)
     Q_PROPERTY(QVariantList enrolledFingerprints READ enrolledFingerprints NOTIFY enrolledFingerprintsChanged)
@@ -112,7 +112,7 @@ public:
     QVariantList availableFingersToEnroll();
     QVariantList unavailableFingersToEnroll();
 
-    QString scanType();
+    FprintDevice::ScanType scanType();
     QString currentError();
     void setCurrentError(QString error);
     QString enrollFeedback();

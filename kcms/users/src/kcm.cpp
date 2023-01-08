@@ -49,6 +49,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantLis
     , m_fingerprintModel(new FingerprintModel(this))
 {
     qmlRegisterUncreatableType<User>("org.kde.plasma.kcm.users", 1, 0, "User", QString());
+    qmlRegisterUncreatableType<FprintDevice>("FingerprintModel", 1, 0, "FprintDevice", QString());
     qmlRegisterType<Finger>("FingerprintModel", 1, 0, "Finger");
     qmlRegisterType<MaskMouseArea>("org.kde.plasma.kcm.users", 1, 0, "MaskMouseArea");
     setButtons(Apply);

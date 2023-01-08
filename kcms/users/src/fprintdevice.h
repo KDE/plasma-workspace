@@ -28,6 +28,12 @@ class FprintDevice : public QObject
     Q_OBJECT
 
 public:
+    enum ScanType {
+        Press,
+        Swipe,
+    };
+    Q_ENUM(ScanType);
+
     explicit FprintDevice(QDBusObjectPath path, QObject *parent = nullptr);
 
     QDBusPendingReply<QStringList> listEnrolledFingers(const QString &username);
@@ -41,7 +47,7 @@ public:
     QDBusError stopEnrolling();
 
     int numOfEnrollStages();
-    QString scanType();
+    ScanType scanType();
     bool fingerPresent();
     bool fingerNeeded();
 

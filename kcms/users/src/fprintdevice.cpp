@@ -101,14 +101,27 @@ int FprintDevice::numOfEnrollStages()
     return reply.value().variant().toInt();
 }
 
-QString FprintDevice::scanType()
+FprintDevice::ScanType FprintDevice::scanType()
 {
     QDBusReply<QDBusVariant> reply = m_freedesktopInterface->call("Get", "net.reactivated.Fprint.Device", "scan-type");
     if (!reply.isValid()) {
         qDebug() << "error fetching scan-type:" << reply.error();
-        return "";
+        return FprintDevice::Press;
     }
-    return reply.value().variant().toString();
+
+    const QString type = reply.value().variant().toString();
+
+    if (type == QLatin1String("press")) {
+        return FprintDevice::Press;
+    }
+
+    if (type == QLatin1String("swipe")) {
+        return FprintDevice::Swipe;
+    }
+
+    qWarning() << "Unknown fprint scan-type:" << type;
+
+    return FprintDevice::Press;
 }
 
 bool FprintDevice::fingerPresent()

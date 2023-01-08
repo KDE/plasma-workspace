@@ -119,7 +119,54 @@ Kirigami.OverlaySheet {
             }
 
             QQC2.Label {
-                text: i18nc("%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger", "Please repeatedly %1 your %2 on the fingerprint sensor.", fingerprintModel.scanType, fingerprintRoot.currentFinger.toLowerCase())
+                text: {
+                    if (fingerprintModel.scanType == FprintDevice.Press) {
+                        if (fingerprintRoot.currentFinger == "right-index-finger") {
+                            return i18n("Please repeatedly press your right index finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-middle-finger") {
+                            return i18n("Please repeatedly press your right middle finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-ring-finger") {
+                            return i18n("Please repeatedly press your right ring finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-little-finger") {
+                            return i18n("Please repeatedly press your right little finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-thumb") {
+                            return i18n("Please repeatedly press your right thumb on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-index-finger") {
+                            return i18n("Please repeatedly press your left index finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-middle-finger") {
+                            return i18n("Please repeatedly press your left middle finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-ring-finger") {
+                            return i18n("Please repeatedly press your left ring finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-little-finger") {
+                            return i18n("Please repeatedly press your left little finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-thumb") {
+                            return i18n("Please repeatedly press your left thumb on the fingerprint sensor.")
+                        }
+                    } else if (fingerprintModel.scanType == FprintDevice.Swipe) {
+                        if (fingerprintRoot.currentFinger == "right-index-finger") {
+                            return i18n("Please repeatedly swipe your right index finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-middle-finger") {
+                            return i18n("Please repeatedly swipe your right middle finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-ring-finger") {
+                            return i18n("Please repeatedly swipe your right ring finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-little-finger") {
+                            return i18n("Please repeatedly swipe your right little finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "right-thumb") {
+                            return i18n("Please repeatedly swipe your right thumb on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-index-finger") {
+                            return i18n("Please repeatedly swipe your left index finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-middle-finger") {
+                            return i18n("Please repeatedly swipe your left middle finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-ring-finger") {
+                            return i18n("Please repeatedly swipe your left ring finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-little-finger") {
+                            return i18n("Please repeatedly swipe your left little finger on the fingerprint sensor.")
+                        } else if (fingerprintRoot.currentFinger == "left-thumb") {
+                            return i18n("Please repeatedly swipe your left thumb on the fingerprint sensor.")
+                        }
+                    }
+                }
+
                 Layout.alignment: Qt.AlignHCenter
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
@@ -201,7 +248,7 @@ Kirigami.OverlaySheet {
                             img.activate()
                         }
                         function activate() {
-                            fingerprintRoot.currentFinger = modelData.friendlyName;
+                            fingerprintRoot.currentFinger = modelData.internalName;
                             fingerprintModel.startEnrolling(modelData.internalName);
                         }
                         MaskMouseArea {
@@ -273,7 +320,7 @@ Kirigami.OverlaySheet {
                         Kirigami.Action {
                             iconName: "edit-entry"
                             onTriggered: {
-                                fingerprintRoot.currentFinger = finger.friendlyName;
+                                fingerprintRoot.currentFinger = finger.internalName;
                                 fingerprintModel.startEnrolling(finger.internalName);
                             }
                             tooltip: i18n("Re-enroll finger")

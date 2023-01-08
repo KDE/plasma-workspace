@@ -19,6 +19,7 @@
 */
 
 #include "fingerprintmodel.h"
+#include "fprintdevice.h"
 
 FingerprintModel::FingerprintModel(QObject *parent)
     : QObject(parent)
@@ -53,9 +54,9 @@ FingerprintModel::~FingerprintModel()
     }
 }
 
-QString FingerprintModel::scanType()
+FprintDevice::ScanType FingerprintModel::scanType()
 {
-    return !m_device ? "" : m_device->scanType();
+    return !m_device ? FprintDevice::Press : m_device->scanType();
 }
 
 QString FingerprintModel::currentError()
