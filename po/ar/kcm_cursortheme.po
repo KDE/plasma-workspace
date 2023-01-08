@@ -8,23 +8,23 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022, 2023.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-03-28 18:57+0400\n"
+"PO-Revision-Date: 2023-01-07 17:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -86,7 +86,7 @@ msgstr "ثبتت السمة بنجاح."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "المهلة بالثواني"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -102,73 +102,73 @@ msgstr "استعد سِمة المؤشر"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "التنبيه المرئي للبدء التطبيقات"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:23
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "اضبط الحركات التي يجب تشغيلها عند بدء تطبيق."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "تنبيه المؤشر:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:45
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "لا شيء"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:54
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "ساكن"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:63
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "وميض"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:72
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "مرتد"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:87
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "تنبيه مدير المهام:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "مكّن التحريك"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:108
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "أوقف التحريك بعد:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:122
 #: package/contents/ui/LaunchFeedbackDialog.qml:134
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "ثانية"
+msgstr[1] "ثانية واحدة"
+msgstr[2] "ثانيتين"
+msgstr[3] "%1 ثواني"
+msgstr[4] "%1 ثانية"
+msgstr[5] "%1 ثانية"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "الحجم:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "ا&ضبط التنبيه المرئي للبدء التطبيقات…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format

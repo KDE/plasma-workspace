@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-06-28 09:54+0200\n"
+"PO-Revision-Date: 2023-01-07 18:08+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
@@ -79,7 +79,7 @@ msgstr "Темата е инсталирана успешно."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Време за изчакване в секунди"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -95,69 +95,71 @@ msgstr "Възстановяване на темата на курсора"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Обратна връзка"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:23
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
+"Конфигуриране на анимациите, които се възпроизвеждат по време на "
+"стартирането на дадено приложение."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Курсор обратна връзка"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:45
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Без"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:54
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Статична икона"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:63
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Мигаща икона"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:72
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Подскачаща икона"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:87
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Диспечер на задачи обратна връзка:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Активиране на анимация"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:108
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Спиране на анимациите след:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:122
 #: package/contents/ui/LaunchFeedbackDialog.qml:134
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунди"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -173,7 +175,7 @@ msgstr "Размер:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&Конфигуриране на обратна връзка…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format

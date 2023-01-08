@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-12-11 20:30+0300\n"
+"PO-Revision-Date: 2023-01-07 23:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -177,7 +177,7 @@ msgstr "Parmak İzi Kaydetme"
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgstr "Parmak izi sensöründe %2 uzvunuzu %1 yapın."
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
@@ -215,141 +215,121 @@ msgid "Add New User"
 msgstr "Yeni Kullanıcı Ekle"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr "Resmi Değiştir"
+msgstr "Avatarı Değiştir"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
-msgstr "Mühim değil"
+msgstr "Bir Şey Değil"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Alıngan Flamingo"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Ejder Meyvesi"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Tatlı Patates"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr "Ambiyans Kehribarı"
+msgstr "Ortam Kehribarı"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Işıltılı Güneş Işını"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Limon Dilimi"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr "Yemyeşil Çekicilik"
+msgstr "Yemyeşil Cazibe"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Yumuşak Çayır"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Ilık Deniz Mavisi"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plazma Mavisi"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon Moru"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo Moru"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Yanmış Kömür"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr "Paper Perfection"
+msgstr "Kağıt Mükemmelliği"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr "Cafétera Kahverengi"
+msgstr "Cafétera Kahverengisi"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Zengin Sertağaç"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr "Bir resim seçin"
+msgstr "Bir resim seç"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Dosya Seç…"
@@ -357,7 +337,7 @@ msgstr "Dosya Seç…"
 #: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format
 msgid "Change avatar"
-msgstr "Resmi değiştir"
+msgstr "Avatarı değiştir"
 
 #: package/contents/ui/UserDetailsPage.qml:152
 #, kde-format
@@ -372,17 +352,17 @@ msgstr "Dosyaları sil"
 #: package/contents/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Keep files"
-msgstr "Dosyaları koru"
+msgstr "Dosyaları tut"
 
 #: package/contents/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Delete User…"
-msgstr "Kullanıcıyı sil…"
+msgstr "Kullanıcıyı Sil…"
 
 #: package/contents/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Parmak İzi Yetkilendirmesi Yapılandır…"
+msgstr "Parmak İzi Yetkilendirmesini Yapılandır…"
 
 #: package/contents/ui/UserDetailsPage.qml:215
 #, kde-kuit-format
@@ -411,7 +391,7 @@ msgstr "Parmağınızı taramayı yeniden deneyin."
 #: src/fingerprintmodel.cpp:332
 #, kde-format
 msgid "Swipe too short. Try again."
-msgstr "Çok kısa kaydırdınız. Tekrar deneyin."
+msgstr "Çok kısa kaydırdınız. Yeniden deneyin."
 
 #: src/fingerprintmodel.cpp:334
 #, kde-format
