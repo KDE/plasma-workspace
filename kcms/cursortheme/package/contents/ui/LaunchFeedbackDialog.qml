@@ -16,10 +16,12 @@ Kirigami.OverlaySheet {
     title: i18nc("@title", "Launch Feedback")
 
     contentItem: ColumnLayout {
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+        Layout.maximumWidth: Kirigami.Units.gridUnit * 30
         spacing: Kirigami.Units.largeSpacing
 
         QQC2.Label {
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 20
+            Layout.fillWidth: true
             text: i18nc("@info:usagetip", "Configure the animations played while an application is launching.")
             wrapMode: Text.Wrap
         }
