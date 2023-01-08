@@ -26,6 +26,25 @@ class ImageProxyModel;
 class SlideModel;
 class SlideFilterModel;
 
+/**
+ * @brief An image wallpaper backend that handles slideshow progress and data from
+ * wallpaper models.
+ *
+ * It's used in the configuration dialog and the wallpaper front-end.
+ *
+ * When used in the configuration dialog, it summons the wallpaper models to list
+ * all available images in either:
+ * - the default wallpaper location (image wallpaper plugin)
+ * - the specified folders (slideshow wallpaper plugin)
+ *
+ * When used in the front-end, it will only be activated when the current wallpaper
+ * plugin is the sildeshow plugin.
+ * It provides wallpaper paths for \MediaProxy and will update the current wallpaper
+ * path periodically following the slideshow settings, and \MediaProxy will convert
+ * the wallpaper path to an url that \QQuickImage can understand.
+ *
+ * @warning The API is unstable. Do not use the backend in your wallpaper plugin.
+ */
 class ImageBackend : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
