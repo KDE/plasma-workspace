@@ -16,6 +16,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
+import org.kde.plasma.private.notifications 2.0 as Notifications
+
 ColumnLayout {
     id: notificationItem
 
@@ -117,6 +119,10 @@ ColumnLayout {
             topInset: 0
             anchors.fill: parent
             visible: !notificationItem.inHistory
+
+            // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
+            // which breaks the popup default action mouse handler, cf. QTBUG-89785
+            Component.onCompleted: Notifications.InputDisabler.makeTransparentForInput(this)
         }
 
         NotificationHeader {

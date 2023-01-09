@@ -7,6 +7,9 @@
 #include "notificationapplet.h"
 
 #include <QGuiApplication>
+#include <QJSEngine>
+#include <QJSValue>
+#include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
 
@@ -23,6 +26,22 @@
 #include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
+class InputDisabler
+{
+    Q_GADGET
+
+public:
+    Q_INVOKABLE void makeTransparentForInput(QQuickItem *item)
+    {
+        if (item) {
+            item->setAcceptedMouseButtons(Qt::NoButton);
+            item->setAcceptHoverEvents(false);
+            item->setAcceptTouchEvents(false);
+            item->unsetCursor();
+        }
+    }
+};
+
 NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
 {
@@ -38,6 +57,9 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
         qmlRegisterType<JobAggregator>(uri, 2, 0, "JobAggregator");
         qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
+        qmlRegisterSingletonType(uri, 2, 0, "InputDisabler", [](QQmlEngine *, QJSEngine *jsEngine) -> QJSValue {
+            return jsEngine->toScriptValue(InputDisabler());
+        });
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;
     }
