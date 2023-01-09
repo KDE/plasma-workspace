@@ -1,9 +1,9 @@
 # Translation of kcm_cursortheme.po to Catalan (Valencian)
-# Copyright (C) 2015-2022 This_file_is_part_of_KDE
+# Copyright (C) 2015-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2022.
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-04-15 16:44+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2023-01-03 06:16+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -85,7 +85,7 @@ msgstr "El tema s'ha instal·lat correctament."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Temps d'espera en segons"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -101,69 +101,69 @@ msgstr "Restaura el tema del cursor"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Reacció en iniciar"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:23
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Configura les animacions reproduïdes mentre s'inicia una aplicació."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:44
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Reacció del cursor:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:45
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Sense"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:54
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Estàtic"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:63
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Parpellejant"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:72
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Botant"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:87
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Reacció del gestor de tasques:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Activa les animacions"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:108
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Para les animacions després de:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:122
 #: package/contents/ui/LaunchFeedbackDialog.qml:134
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segon"
+msgstr[1] "%1 segons"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Mida:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&Configura les reaccions de llançament…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format

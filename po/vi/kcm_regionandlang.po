@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2022.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-04 00:51+0000\n"
-"PO-Revision-Date: 2022-08-22 17:16+0200\n"
+"PO-Revision-Date: 2023-01-08 09:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -234,6 +234,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Không tìm được các thiết lập vùng hiện có của hệ thống bằng công cụ "
+"<command>localectl</command>. Vui lòng báo lỗi vấn đề này ở <link>https://"
+"bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:72
 #, kde-format

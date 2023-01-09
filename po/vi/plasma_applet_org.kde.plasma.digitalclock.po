@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021, 2022.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-08-02 11:19+0200\n"
+"PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -268,6 +268,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Mẹo: nếu bạn hay di chuyển, hãy thêm một mục cho múi giờ ở nhà vào danh sách "
+"này. Nó sẽ chỉ hiện ra khi bạn thay đổi múi giờ toàn hệ thống thành một múi "
+"giờ khác."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -281,13 +284,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Ẩn trong khi đây là thành phố của múi giờ địa phương"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Chuyển múi giờ địa phương…"
+msgstr "Chuyển múi giờ toàn hệ thống…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -295,10 +297,9 @@ msgid "Remove this time zone"
 msgstr "Bỏ múi giờ này"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Múi giờ địa phương của hệ thống"
+msgstr "Múi giờ toàn hệ thống"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -326,18 +327,13 @@ msgstr ""
 "Chuyển múi giờ hiển thị bằng cách cuộn chuột ở trên tiểu ứng dụng đồng hồ"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Lưu ý rằng việc dùng một múi giờ khác cho đồng hồ sẽ không thay đổi múi giờ "
-"địa phương trên toàn hệ thống. Khi bạn đi đến nơi khác, hãy thay đổi múi giờ "
-"địa phương."
+"Việc dùng tính năng này sẽ không thay đổi múi giờ toàn hệ thống. Khi bạn đi "
+"đến nơi khác, hãy thay đổi múi giờ toàn hệ thống."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -388,7 +384,7 @@ msgstr "Hôm nay là %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2022.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-10-31 12:10+0100\n"
+"PO-Revision-Date: 2023-01-08 09:44+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
@@ -102,11 +102,7 @@ msgid "Choose player automatically"
 msgstr "Tự động chọn trình phát"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (player name)"
-#| msgid ""
-#| "by %1 (%2)\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
@@ -114,13 +110,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "bởi %1 (%2)\n"
-"Bấm giữa để tạm dừng"
+"Bấm giữa để tạm dừng\n"
+"Cuộn để chỉnh âm lượng"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "Middle-click to pause"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "%1\n"
@@ -128,14 +122,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "%1\n"
-"Bấm giữa để tạm dừng"
+"Bấm giữa để tạm dừng\n"
+"Cuộn để chỉnh âm lượng"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid ""
-#| "by %1 (paused, %2)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
@@ -143,16 +134,11 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "bởi %1 (tạm dừng, %2)\n"
-"Bấm giữa để phát"
+"Bấm giữa để phát\n"
+"Cuộn để chỉnh âm lượng"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Paused (player name)\n"
-#| "Middle-click to play"
-#| msgid ""
-#| "Paused (%1)\n"
-#| "Middle-click to play"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
@@ -160,7 +146,8 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 "Tạm dừng (%1)\n"
-"Bấm giữa để phát"
+"Bấm giữa để phát\n"
+"Cuộn để chỉnh âm lượng"
 
 #~ msgid "General"
 #~ msgstr "Chung"
