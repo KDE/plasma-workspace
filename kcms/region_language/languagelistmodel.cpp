@@ -19,7 +19,19 @@ LanguageListModel::LanguageListModel(QObject *parent)
 {
     connect(this, &LanguageListModel::isPreviewExampleChanged, this, &LanguageListModel::exampleChanged);
     connect(m_selectedLanguageModel, &SelectedLanguageModel::exampleChanged, this, &LanguageListModel::exampleChanged);
-    m_availableLanguages = KLocalizedString::availableDomainTranslations("plasmashell").values();
+    /* explicitly set pt to pt_PT as a workaround for GNU Gettext and CLDR treat the default dialect of 'pt' differently
+     *
+     * see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2478
+     * and https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
+     * for more info on the matter
+     */
+    auto availableLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
+    if (availableLanguages.contains(QStringLiteral("pt"))) {
+        availableLanguages.remove(QStringLiteral("pt"));
+        availableLanguages.insert(QStringLiteral("pt_PT"));
+    }
+
+    m_availableLanguages = availableLanguages.values();
     m_availableLanguages.sort();
     m_availableLanguages.push_front(QStringLiteral("C"));
 }
