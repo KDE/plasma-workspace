@@ -249,6 +249,7 @@ void KSMServer::saveCurrentSession()
 
     const auto pendingClients = clients;
     for (KSMClient *c : pendingClients) {
+        c->resetState();
         SmsSaveYourself(c->connection(), saveType, false, SmInteractStyleNone, false);
     }
     if (clients.isEmpty())
