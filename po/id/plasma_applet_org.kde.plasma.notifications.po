@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2022-05-30 11:02+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -395,35 +395,35 @@ msgstr "Minimalkan"
 msgid "Close"
 msgstr "Tutup"
 
-#: package/contents/ui/NotificationItem.qml:183
+#: package/contents/ui/NotificationItem.qml:189
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [Dijeda]"
 
-#: package/contents/ui/NotificationItem.qml:188
+#: package/contents/ui/NotificationItem.qml:194
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Gagal)"
 
-#: package/contents/ui/NotificationItem.qml:190
+#: package/contents/ui/NotificationItem.qml:196
 #, kde-format
 msgid "Job Failed"
 msgstr "Tugas Gagal"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:200
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Selesai)"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:202
 #, kde-format
 msgid "Job Finished"
 msgstr "Pekerjaan Selesai"
 
-#: package/contents/ui/NotificationItem.qml:338
+#: package/contents/ui/NotificationItem.qml:344
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

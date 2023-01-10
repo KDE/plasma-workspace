@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-03 00:49+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2010-12-17 20:54+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -103,62 +103,62 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr ""
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:122
-#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#: package/contents/ui/LaunchFeedbackDialog.qml:124
+#: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

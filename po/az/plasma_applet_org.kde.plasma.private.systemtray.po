@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:48+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2022-07-25 17:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,71 +27,71 @@ msgstr "Əsas"
 msgid "Entries"
 msgstr "Girişlər"
 
-#: package/contents/ui/ConfigEntries.qml:31
-#, kde-format
-msgid "Always show all entries"
-msgstr "Bütün girişləri həmişə göstərmək"
-
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "Tətbiq vəziyyəti"
 
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "Kommunikasiya"
 
-#: package/contents/ui/ConfigEntries.qml:41
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "Sistem xidmətləri"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "Avadanlığın İdarə edilməsi"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Müxtəlif"
 
-#: package/contents/ui/ConfigEntries.qml:81
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Giriş"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:94
 #, kde-format
 msgid "Visibility"
 msgstr "Görünən"
 
-#: package/contents/ui/ConfigEntries.qml:92
+#: package/contents/ui/ConfigEntries.qml:100
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klaviatura Qısayolları"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Lazım olduğunda göstərilir"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Always shown"
 msgstr "Həmişə göstərmək"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
 msgstr "Həmişə gizlətmək"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
 msgstr "Söndürülüb"
+
+#: package/contents/ui/ConfigEntries.qml:314
+#, kde-format
+msgid "Always show all entries"
+msgstr "Bütün girişləri həmişə göstərmək"
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format

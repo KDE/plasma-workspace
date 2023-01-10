@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-03 00:49+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2023-01-03 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -95,62 +95,62 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "தொடக்கப் பின்னூட்டம்"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "ஏதாவதொரு செயலி துவக்கப்படும்போது காட்டப்படும் அசைவூட்டங்களை அமையுங்கள்."
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "சுட்டிக்குறி பின்னூட்டம்:"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "நகராத‍து"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "மின்னுவது"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "துள்ளுவது"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:87
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "பணி மேலாளரிலுள்ள பின்னூட்டம்:"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "அசைவூட்டத்தை இயக்கு"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "இவ்வளவு நேரங்கழித்து அசைவூட்டங்களை நிறுத்து:"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:122
-#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#: package/contents/ui/LaunchFeedbackDialog.qml:124
+#: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

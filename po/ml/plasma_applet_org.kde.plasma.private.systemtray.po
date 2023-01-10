@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:48+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -29,71 +29,71 @@ msgstr "സാധാരണം"
 msgid "Entries"
 msgstr "ഇനങ്ങൾ"
 
-#: package/contents/ui/ConfigEntries.qml:31
-#, kde-format
-msgid "Always show all entries"
-msgstr "എപ്പോഴും എല്ലാ ഇനങ്ങളും കാണിക്കുക"
-
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "അപ്ലിക്കേഷൻ അവസ്ഥ"
 
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "ആശയവിനിമയം"
 
-#: package/contents/ui/ConfigEntries.qml:41
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "സംവിധാനത്തിലെ സേവനങ്ങൾ"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "ഹാർഡ്‌വെയർ നിയന്ത്രണം"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "പലവക"
 
-#: package/contents/ui/ConfigEntries.qml:81
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "ഇനം"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:94
 #, kde-format
 msgid "Visibility"
 msgstr "കാണാവുന്ന"
 
-#: package/contents/ui/ConfigEntries.qml:92
+#: package/contents/ui/ConfigEntries.qml:100
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "കീബോർഡ് കുറുക്കുവഴി"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
 msgstr "പ്രസക്തമാകുമ്പോൾ കാണിക്കുന്നു"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Always shown"
 msgstr "എപ്പോഴും കാണിക്കുക"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
 msgstr "എപ്പോഴും മറയ്ക്കുക"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
 msgstr "അപ്രാപ്തമാക്കി"
+
+#: package/contents/ui/ConfigEntries.qml:314
+#, kde-format
+msgid "Always show all entries"
+msgstr "എപ്പോഴും എല്ലാ ഇനങ്ങളും കാണിക്കുക"
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:48+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2022-08-02 11:05+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -27,71 +27,71 @@ msgstr "Chung"
 msgid "Entries"
 msgstr "Các mục"
 
-#: package/contents/ui/ConfigEntries.qml:31
-#, kde-format
-msgid "Always show all entries"
-msgstr "Luôn hiện tất cả các mục"
-
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "Trạng thái ứng dụng"
 
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "Giao tiếp"
 
-#: package/contents/ui/ConfigEntries.qml:41
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "Dịch vụ hệ thống"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "Điều khiển phần cứng"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Hỗn hợp"
 
-#: package/contents/ui/ConfigEntries.qml:81
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Mục"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:94
 #, kde-format
 msgid "Visibility"
 msgstr "Khả kiến"
 
-#: package/contents/ui/ConfigEntries.qml:92
+#: package/contents/ui/ConfigEntries.qml:100
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Phím tắt"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Hiện lúc thích hợp"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Always shown"
 msgstr "Luôn hiện"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
 msgstr "Luôn ẩn"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
 msgstr "Tắt"
+
+#: package/contents/ui/ConfigEntries.qml:314
+#, kde-format
+msgid "Always show all entries"
+msgstr "Luôn hiện tất cả các mục"
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format

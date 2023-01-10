@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:48+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2022-04-28 08:49+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -27,71 +27,71 @@ msgstr "Všeobecné"
 msgid "Entries"
 msgstr "Položky"
 
-#: package/contents/ui/ConfigEntries.qml:31
-#, kde-format
-msgid "Always show all entries"
-msgstr "Vždy zobraziť všetky položky"
-
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "Stav aplikácie"
 
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "Komunikácia"
 
-#: package/contents/ui/ConfigEntries.qml:41
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "Ovládanie hardvéru"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-#: package/contents/ui/ConfigEntries.qml:81
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Položka"
 
-#: package/contents/ui/ConfigEntries.qml:86
+#: package/contents/ui/ConfigEntries.qml:94
 #, kde-format
 msgid "Visibility"
 msgstr "Viditeľnosť"
 
-#: package/contents/ui/ConfigEntries.qml:92
+#: package/contents/ui/ConfigEntries.qml:100
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klávesová skratka"
 
-#: package/contents/ui/ConfigEntries.qml:238
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Zobraziť, keď je to relevantné"
 
-#: package/contents/ui/ConfigEntries.qml:239
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Always shown"
 msgstr "Vždy zobraziť"
 
-#: package/contents/ui/ConfigEntries.qml:240
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
 msgstr "Vždy skryť"
 
-#: package/contents/ui/ConfigEntries.qml:241
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
 msgstr "Zakázané"
+
+#: package/contents/ui/ConfigEntries.qml:314
+#, kde-format
+msgid "Always show all entries"
+msgstr "Vždy zobraziť všetky položky"
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format

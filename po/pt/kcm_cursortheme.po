@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-03 00:49+0000\n"
-"PO-Revision-Date: 2022-03-26 21:18+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"PO-Revision-Date: 2023-01-09 18:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -77,7 +77,7 @@ msgstr "O tema foi instalado com sucesso."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Tempo-limite em segundos"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -93,64 +93,64 @@ msgstr "Repor o Tema de Cursores"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Reacção ao Lançamento"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:23
+#: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Configurar as animações reproduzidas enquanto lança uma aplicação."
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:44
+#: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Reacção do cursor:"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:45
+#: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Nenhuma"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:54
+#: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Estática"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:63
+#: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Intermitente"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:72
+#: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:87
-#, kde-format
-msgctxt "@label"
-msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Saltitante"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Reacção do gestor de tarefas:"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:91
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Activar a animação"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:108
+#: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Parar as animações ao fim de:"
 
-#: package/contents/ui/LaunchFeedbackDialog.qml:122
-#: package/contents/ui/LaunchFeedbackDialog.qml:134
+#: package/contents/ui/LaunchFeedbackDialog.qml:124
+#: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -171,7 +171,7 @@ msgstr "Tamanho:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&Configurar a Reacção do Lançamento…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format
