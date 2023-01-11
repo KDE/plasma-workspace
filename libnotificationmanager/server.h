@@ -132,8 +132,19 @@ public:
      * @param id The notification ID
      * @param actionName The name of the action, e.g. "Action 1", or "default"
      * @param xdgActivationToken The token the application needs to send to raise itself.
+     * @param window the window that invokes the action
      */
-    void invokeAction(uint id, const QString &actionName, const QString &xdgActivationToken, Notifications::InvokeBehavior behavior);
+    void invokeAction(uint id, const QString &actionName, const QString &xdgActivationToken, Notifications::InvokeBehavior behavior, QWindow *window);
+
+    /**
+     * Convenience call to maintain ABI
+     *
+     * @deprecated
+     */
+    void invokeAction(uint id, const QString &actionName, const QString &xdgActivationToken, Notifications::InvokeBehavior behavior)
+    {
+        invokeAction(id, actionName, xdgActivationToken, behavior, nullptr);
+    }
 
     /**
      * Sends a notification reply text

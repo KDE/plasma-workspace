@@ -40,6 +40,7 @@ public:
     QTimer pendingRemovalTimer;
 
     QDateTime lastRead;
+    QWindow *window = nullptr;
 };
 
 }

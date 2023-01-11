@@ -41,7 +41,7 @@ void NotificationAction::start()
 
     if (operationName() == QLatin1String("invokeAction")) {
         qCDebug(NOTIFICATIONS) << "invoking action on " << id;
-        Server::self().invokeAction(id, parameters()[QStringLiteral("actionId")].toString(), {}, Notifications::None);
+        Server::self().invokeAction(id, parameters()[QStringLiteral("actionId")].toString(), {}, Notifications::None, nullptr);
     } else if (operationName() == QLatin1String("userClosed")) {
         // userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));

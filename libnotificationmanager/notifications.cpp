@@ -97,6 +97,7 @@ void Notifications::Private::initSourceModels()
     if (showNotifications && !notificationsModel) {
         notificationsModel = NotificationsModel::createNotificationsModel();
         notificationsAndJobsModel->addSourceModel(notificationsModel.data());
+        connect(notificationsModel.data(), &NotificationsModel::windowChanged, q, &Notifications::windowChanged);
         connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
             updateCount();
             Q_EMIT q->lastReadChanged();
@@ -445,6 +446,20 @@ void Notifications::setExpandUnread(bool expand)
         d->groupCollapsingModel->setExpandUnread(expand);
     }
     Q_EMIT expandUnreadChanged();
+}
+
+QWindow *Notifications::window() const
+{
+    return d->notificationsModel ? d->notificationsModel->window() : nullptr;
+}
+
+void Notifications::setWindow(QWindow *window)
+{
+    if (d->notificationsModel) {
+        d->notificationsModel->setWindow(window);
+    } else {
+        qCWarning(NOTIFICATIONMANAGER) << "Setting window before initialising the model" << this << window;
+    }
 }
 
 bool Notifications::showExpired() const

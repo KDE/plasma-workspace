@@ -7,9 +7,9 @@
 #pragma once
 
 #include <QQmlParserStatus>
-#include <QSortFilterProxyModel>
-
 #include <QScopedPointer>
+#include <QSortFilterProxyModel>
+#include <QWindow>
 
 #include "notificationmanager_export.h"
 
@@ -203,6 +203,12 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(int jobsPercentage READ jobsPercentage NOTIFY jobsPercentageChanged)
 
+    /**
+     * The window that will render the notifications
+     *
+     * This is used to tell the xdg_activation_v1 protocol who is requesting the activation.
+     */
+    Q_PROPERTY(QWindow *window READ window WRITE setWindow NOTIFY windowChanged)
 public:
     explicit Notifications(QObject *parent = nullptr);
     ~Notifications() override;
@@ -397,6 +403,9 @@ public:
     bool expandUnread() const;
     void setExpandUnread(bool expand);
 
+    QWindow *window() const;
+    void setWindow(QWindow *window);
+
     int count() const;
 
     int activeNotificationsCount() const;
@@ -547,6 +556,7 @@ Q_SIGNALS:
     void unreadNotificationsCountChanged();
     void activeJobsCountChanged();
     void jobsPercentageChanged();
+    void windowChanged(QWindow *window);
 
 protected:
     void classBegin() override;

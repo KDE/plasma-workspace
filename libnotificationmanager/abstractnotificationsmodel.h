@@ -10,6 +10,7 @@
 #include <QDateTime>
 #include <QScopedPointer>
 #include <QSharedPointer>
+#include <QWindow>
 
 #include "notification.h"
 #include "notifications.h"
@@ -20,12 +21,16 @@ namespace NotificationManager
 class Q_DECL_EXPORT AbstractNotificationsModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(QWindow *window READ window WRITE setWindow NOTIFY windowChanged)
 
 public:
     ~AbstractNotificationsModel() override;
 
     QDateTime lastRead() const;
     void setLastRead(const QDateTime &lastRead);
+
+    QWindow *window() const;
+    void setWindow(QWindow *window);
 
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
@@ -49,6 +54,7 @@ public:
 
 Q_SIGNALS:
     void lastReadChanged();
+    void windowChanged(QWindow *window);
 
 protected:
     AbstractNotificationsModel();

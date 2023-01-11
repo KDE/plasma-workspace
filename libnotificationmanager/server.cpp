@@ -62,10 +62,13 @@ void Server::closeNotification(uint notificationId, CloseReason reason)
     Q_EMIT d->NotificationClosed(notificationId, static_cast<uint>(reason)); // tell on DBus
 }
 
-void Server::invokeAction(uint notificationId, const QString &actionName, const QString &xdgActivationAppId, Notifications::InvokeBehavior behavior)
+void Server::invokeAction(uint notificationId,
+                          const QString &actionName,
+                          const QString &xdgActivationAppId,
+                          Notifications::InvokeBehavior behavior,
+                          QWindow *window)
 {
     if (KWindowSystem::isPlatformWayland()) {
-        QWindow *window = nullptr;
         const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
         auto conn = QSharedPointer<QMetaObject::Connection>::create();
         *conn = connect(KWindowSystem::self(),

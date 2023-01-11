@@ -260,6 +260,28 @@ void AbstractNotificationsModel::setLastRead(const QDateTime &lastRead)
     }
 }
 
+QWindow *AbstractNotificationsModel::window() const
+{
+    return d->window;
+}
+
+void AbstractNotificationsModel::setWindow(QWindow *window)
+{
+    if (d->window == window) {
+        return;
+    }
+    if (d->window) {
+        disconnect(d->window, &QObject::destroyed, this, nullptr);
+    }
+    d->window = window;
+    if (d->window) {
+        connect(d->window, &QObject::destroyed, this, [this] {
+            setWindow(nullptr);
+        });
+    }
+    Q_EMIT windowChanged(window);
+}
+
 QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid)) {

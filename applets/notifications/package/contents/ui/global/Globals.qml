@@ -404,6 +404,7 @@ QtObject {
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         sortOrder: Qt.AscendingOrder
         groupMode: NotificationManager.Notifications.GroupDisabled
+        window: visualParent.Window.window
         urgencies: {
             var urgencies = 0;
 
