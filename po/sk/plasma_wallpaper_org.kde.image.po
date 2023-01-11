@@ -1,13 +1,13 @@
 # translation of plasma_applet_org.kde.image.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2021-08-11 19:54+0200\n"
+"PO-Revision-Date: 2023-01-10 11:45+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -101,7 +101,7 @@ msgstr "Nasledujúci obrázok tapety"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Otvoriť obsahujúci priečinok"
+msgstr "Otvoriť priečinok s obsahom"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format

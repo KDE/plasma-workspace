@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011, 2012.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-06-29 12:14+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-01-06 11:15+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -50,7 +50,7 @@ msgstr "Zbývající čas:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Odhaduji..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -183,32 +183,32 @@ msgstr "Automatický spánek a zamčení obrazovky jsou vypnuty"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Aplikace vyžádala aktivaci režimu Performance"
+msgstr[1] "%1 aplikace vyžádaly aktivaci režimu Performance"
+msgstr[2] "%1 aplikací vyžádalo aktivaci režimu Performance"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Systém je v režimu Performance"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Aplikace vyžádala aktivaci úsporného režimu"
+msgstr[1] "%1 aplikace vyžádaly aktivaci úsporného režimu"
+msgstr[2] "%1 aplikací vyžádalo aktivaci úsporného režimu"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Systém je v úsporném režimu"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Rolujte pro upravení jasu obrazovky"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Zobrazit infor&mace o energii"
 #: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr ""
+msgstr "Zobrazovat ikonu procent baterie pokud není plně nabitá"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2023-01-04 22:24+0100\n"
+"PO-Revision-Date: 2023-01-06 11:16+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -103,25 +103,25 @@ msgstr "Povolit:"
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr ""
+msgstr "Při zrcadlení obrazovek"
 
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr ""
+msgstr "Při sdílení obrazovky"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Klávesová zkratka:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Podmínky viditelnosti"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "Zobrazit vyskakovací okno"
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr ""
+msgstr "Vyskakovací okna"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "Skrýt po:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Další zpětná vazba"
 
 #: package/contents/ui/main.qml:251
 #, kde-format

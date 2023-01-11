@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-04 00:51+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2022-12-29 10:28+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -239,13 +239,13 @@ msgstr ""
 "<command>localectl</command>. Zalecamy zgłoszenie tego jako błędu na "
 "<link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:72
+#: languagelistmodel.cpp:84
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:78
+#: languagelistmodel.cpp:90
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "

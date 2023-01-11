@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Vit Pelcak <vit@pelcak.org>, 2019, 2020.
+# Vit Pelcak <vit@pelcak.org>, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2020-06-04 11:15+0200\n"
+"PO-Revision-Date: 2023-01-06 11:21+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: abstractnotificationsmodel.cpp:293
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%1 z %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -64,18 +64,18 @@ msgstr[2] "%1 souborů"
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%2 z %1 položky"
+msgstr[1] "%2 z %1 položek"
+msgstr[2] "%2 z %1 položek"
 
 #: job_p.cpp:206 job_p.cpp:226
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 položka"
+msgstr[1] "%1 položky"
+msgstr[2] "%1 položek"
 
 #: job_p.cpp:213
 #, kde-format
@@ -88,9 +88,9 @@ msgstr "%1 do %2"
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 soubor do %2"
+msgstr[1] "%1 položky do %2"
+msgstr[2] "%1 položek do %2"
 
 #: job_p.cpp:236
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "do %1"
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%1 z %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format

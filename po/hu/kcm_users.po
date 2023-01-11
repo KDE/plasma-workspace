@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2022-02-24 09:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -170,35 +170,144 @@ msgstr "Kész"
 msgid "Enrolling Fingerprint"
 msgstr "Ujjlenyomat regisztrálása"
 
-#: package/contents/ui/FingerprintDialog.qml:122
+#: package/contents/ui/FingerprintDialog.qml:125
 #, kde-format
-msgctxt ""
-"%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:132
+#: package/contents/ui/FingerprintDialog.qml:127
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:129
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:133
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:135
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:139
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:141
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:143
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:149
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:151
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:153
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:155
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:157
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:159
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:161
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:163
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:165
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Ujj regisztrálva"
 
-#: package/contents/ui/FingerprintDialog.qml:162
+#: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Válassza ki a regisztrálandó ujjat"
 
-#: package/contents/ui/FingerprintDialog.qml:279
+#: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Ujj újraregisztrálása"
 
-#: package/contents/ui/FingerprintDialog.qml:286
+#: package/contents/ui/FingerprintDialog.qml:333
 #, fuzzy, kde-format
 #| msgid "Clear Fingerprints"
 msgid "Delete fingerprint"
 msgstr "Ujjlenyomatok törlése"
 
-#: package/contents/ui/FingerprintDialog.qml:295
+#: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nincsenek hozzáadva ujjlenyomatok"
@@ -397,37 +506,37 @@ msgstr ""
 "alkalmazásoknak vagy parancssori programoknak.<nl/><nl/>A rendszerbe történő "
 "bejelentkezéshez egyelőre nem használhat ujjlenyomatot."
 
-#: src/fingerprintmodel.cpp:150 src/fingerprintmodel.cpp:257
+#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Nem található ujjlenyomat-olvasó eszköz."
 
-#: src/fingerprintmodel.cpp:330
+#: src/fingerprintmodel.cpp:331
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Próbálja meg újra az ujj beolvasását."
 
-#: src/fingerprintmodel.cpp:332
+#: src/fingerprintmodel.cpp:333
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "A húzás túl rövid volt. Próbálja újra"
 
-#: src/fingerprintmodel.cpp:334
+#: src/fingerprintmodel.cpp:335
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Az ujja nincs az olvasó közepén. Próbálja újra."
 
-#: src/fingerprintmodel.cpp:336
+#: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Vegye el az ujját az olvasóról, és próbálja meg újra."
 
-#: src/fingerprintmodel.cpp:344
+#: src/fingerprintmodel.cpp:345
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Az ujjlenyomat regisztrációja sikertelen."
 
-#: src/fingerprintmodel.cpp:347
+#: src/fingerprintmodel.cpp:348
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -436,12 +545,12 @@ msgstr ""
 "Nincs több hely ehhez az eszközhöz, töröljön más ujjlenyomatokat a "
 "folytatáshoz."
 
-#: src/fingerprintmodel.cpp:350
+#: src/fingerprintmodel.cpp:351
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Az eszközt leválasztották."
 
-#: src/fingerprintmodel.cpp:355
+#: src/fingerprintmodel.cpp:356
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Ismeretlen hiba történt."
