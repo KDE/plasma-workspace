@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-08 09:27+0100\n"
+"PO-Revision-Date: 2023-01-11 22:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -175,180 +175,160 @@ msgid "Enrolling Fingerprint"
 msgstr "Hatz-marka erroldatzea"
 
 #: package/contents/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure eskuineko hatz erakuslea, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:127
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure eskuineko hatz luzea, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure eskuineko hatz nagia, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure eskuineko hatz txikia, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure eskuineko erpurua, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure ezkerreko hatz erakuslea, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure ezkerreko hatz luzea, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure ezkerreko hatz nagia, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure ezkerreko hatz txikia, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, sakatu zure ezkerreko erpurua, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure eskuineko hatz erakuslea, behin eta berriz,  hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:149
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure eskuineko hatz luzea, behin eta berriz, hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:151
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure eskuineko hatz nagia, behin eta berriz,  hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure eskuineko hatz txikia, behin eta berriz, hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure eskuineko erpurua, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure ezkerreko hatz erakuslea, behin eta berriz,  hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:159
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure ezkerreko hatz luzea, behin eta berriz, hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:161
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure ezkerreko hatz nagia, behin eta berriz,  hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure ezkerreko hatz txikia, behin eta berriz, hatz-"
+"marka sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:165
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Mesedez %1 behin eta berriz zure %2 hatz-marka sentsorean."
+msgstr ""
+"Mesedez, arin kolpatu zure ezkerreko erpurua, behin eta berriz, hatz-marka "
+"sentsorean."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format

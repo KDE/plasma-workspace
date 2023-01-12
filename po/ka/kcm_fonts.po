@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-12-15 07:13+0100\n"
+"PO-Revision-Date: 2023-01-11 07:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -153,6 +153,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"ძალიან დიდმა ფონტებმა შეიძლება უცნაური გარეგნობის მქონე შედეგები გამოიღოს. "
+"ძალიან დიდი ფონტის ზომების გამოყენებას ეკრანის გლობალური მასშტაბირება სჯობს."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -160,6 +162,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"ფონტის არამთელმა ზომამ შეიძლება ზოგიერთ აპლიკაციაში ტექსტის განლაგების "
+"პრობლემები გამოიწვიოს. რეკომენდებულია მხოლოდ მთელი ზომების გამოყენება."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -255,6 +259,10 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"პიქსელები ეკრანზე ჩვეულებრივ ბადეზეა განლაგებული. ამიტომ ფონტების "
+"მოხაზულობა, რომელიცა ამ ბადეში არ ჯდება, კუთხოვანი გამოჩნდება, თუ არ იყენებთ "
+"<emphasis>მოგლუვების</emphasis> ტექნოლოგიას, რომელიც ამ პრობლემის "
+"აღმოსაფხვრელადაა გამოგონილი."
 
 #: package/contents/ui/main.qml:217
 #, kde-format
