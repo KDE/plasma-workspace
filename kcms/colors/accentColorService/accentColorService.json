@@ -26,7 +26,7 @@
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит",
         "Description[vi]": "Áp dụng màu chủ đạo trích xuất từ phông nền khi có yêu cầu",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
-        "Description[zh_CN]": "按照请求应用从壁纸中提取的强调色",
+        "Description[zh_CN]": "按照请求应用从壁纸中提取的重点色",
         "Name": "Accent Color",
         "Name[ar]": "لون التمييز",
         "Name[bg]": "Цвят за акцентиране",
@@ -55,7 +55,7 @@
         "Name[uk]": "Колір акценту",
         "Name[vi]": "Màu chủ đạo",
         "Name[x-test]": "xxAccent Colorxx",
-        "Name[zh_CN]": "强调色"
+        "Name[zh_CN]": "重点色"
     },
     "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true
