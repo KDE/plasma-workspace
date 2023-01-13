@@ -85,7 +85,7 @@ void SystemTrayModelTest::testPlasmoidModel()
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::HiddenStatus));
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
     idx = model->index(1, 0);
-    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), "Media Player (Automatic load)");
+    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), "Media Player");
     QVERIFY(model->data(idx, Qt::DecorationRole).isValid());
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).toString(), "Plasmoid");
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemId)).toString(), MEDIACONROLLER_ID);

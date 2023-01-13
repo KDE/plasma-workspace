@@ -116,12 +116,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
     if (role <= Qt::UserRole) {
         switch (role) {
         case Qt::DisplayRole: {
-            const QString dbusactivation = pluginMetaData.value(QStringLiteral("X-Plasma-DBusActivationService"));
-            if (dbusactivation.isEmpty()) {
-                return pluginMetaData.name();
-            } else {
-                return i18nc("Suffix added to the applet name if the applet is autoloaded via DBus activation", "%1 (Automatic load)", pluginMetaData.name());
-            }
+            return pluginMetaData.name();
         }
         case Qt::DecorationRole: {
             QIcon icon = QIcon::fromTheme(pluginMetaData.iconName());
