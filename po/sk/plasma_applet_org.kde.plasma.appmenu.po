@@ -1,19 +1,19 @@
 # translation of plasma_applet_org.kde.plasma.appmenu.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2017.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:47+0000\n"
-"PO-Revision-Date: 2021-09-15 18:44+0200\n"
+"PO-Revision-Date: 2023-01-11 21:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:13
@@ -35,7 +35,7 @@ msgstr "Zobraziť plnú ponuku aplikácie"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "Otvoriť ponuku"
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format

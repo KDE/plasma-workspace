@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -45,7 +45,7 @@ msgstr "剩余时间："
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "正在估算…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "自动睡眠和锁屏已禁用"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 款应用程序请求激活性能模式"
+msgstr[0] "%1 个应用程序已请求激活性能模式"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "系统处于性能模式"
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 款应用程序请求激活省电模式"
+msgstr[0] "%1 个应用程序已请求激活省电模式"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
@@ -199,7 +199,7 @@ msgstr "系统处于省电模式"
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "滚动滑轮以调整屏幕亮度"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -219,7 +219,7 @@ msgstr "显示电量信息(&S)…"
 #: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "未完全充满时在图标上显示电量百分比"
+msgstr "电池未充满时在图标上显示电量百分比"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

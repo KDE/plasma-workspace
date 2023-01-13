@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -120,7 +120,7 @@ msgstr "直到手动禁用"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "将于 %1 自动结束"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -299,17 +299,17 @@ msgstr[0] "%1 条未读通知"
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr ""
+msgstr "直到 %1 保持勿扰；中键单击以立即退出勿扰模式"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "勿扰模式已激活；中键单击以退出"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "中键单击以进入勿扰模式"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -268,6 +268,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"提示：如果您经常旅行，请将您的主拾取添加到此列表中。它将仅在您把系统全局拾取"
+"设为其他时区时显示。"
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -281,12 +283,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "位于本地时区的城市时隐藏"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr ""
+msgstr "切换系统全局时区…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,7 +298,7 @@ msgstr "移除此时区"
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Systemwide Time Zone"
-msgstr ""
+msgstr "系统全局时区"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -327,7 +329,7 @@ msgstr "鼠标滚轮在时钟小程序上方滚动 - 切换显示时区"
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
-msgstr ""
+msgstr "使用此功能时不会更改系统全局时区。在您旅行时，才需要切换系统全局时区。"
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -376,7 +378,7 @@ msgstr "今天是 %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1："
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

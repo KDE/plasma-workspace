@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-09-15 18:46+0200\n"
+"PO-Revision-Date: 2023-01-11 21:28+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -88,17 +88,16 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Oznámenia v súčasnosti nie sú poskytované Plasmou."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Režim Nevyrušovať:"
+msgstr "Režim Nevyrušovať"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Povoliť:"
 
 #: package/contents/ui/main.qml:70
 #, fuzzy, kde-format
@@ -120,7 +119,7 @@ msgstr "Povoliť keď sa obrazovka zdieľa"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Klávesová skratka:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
@@ -159,26 +158,22 @@ msgid "Show popup"
 msgstr "Zobrazovať vyskakovacie okno"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Vyskakovacie okno:"
+msgstr "Vyskakovacie okná"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Aplikácie:"
+msgstr "Umiestnenie:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Zobraziť vedľa ikony upozornení"
+msgstr "Vedľa ikony upozornení"
 
 #: package/contents/ui/main.qml:209
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -35,12 +35,12 @@ msgstr "$HOME 目录 (%1) 不存在。"
 #: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
-msgstr "没有 $HOME 目录的写许可 (%1)。"
+msgstr "没有 $HOME 目录的写入权限 (%1)。"
 
 #: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr "没有 $HOME 目录的读许可 (%1)。"
+msgstr "没有 $HOME 目录的读取权限 (%1)。"
 
 #: main.cpp:134
 #, kde-format
@@ -50,19 +50,17 @@ msgstr "$HOME 目录 (%1) 无可用空间。"
 #: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
-"写入 $HOME 目录 (%2) 时\n"
-"   因错误“%1”失败。"
+msgstr "写入 $HOME 目录 (%2) 时失败，错误“%1”。"
 
 #: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
-msgstr "没有“%1”的写许可。"
+msgstr "没有“%1”的写入权限。"
 
 #: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
-msgstr "没有“%1”的读许可。"
+msgstr "没有“%1”的读取权限。"
 
 #: main.cpp:160 main.cpp:173
 #, kde-format
@@ -74,9 +72,7 @@ msgstr "临时目录 (%1) 无可用空间。"
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
-msgstr ""
-"写入临时目录 (%2) 时\n"
-"   因错误“%1”失败。"
+msgstr "写入临时目录 (%2) 失败，错误“%1”。"
 
 #: main.cpp:191
 #, kde-format
@@ -84,7 +80,7 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
-"在启动Plasma时检测到\n"
+"尝试启动 Plasma 时检测到\n"
 "下列安装问题："
 
 #: main.cpp:194
@@ -101,7 +97,7 @@ msgstr ""
 #: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr "Plasma 工作空间安装问题"
+msgstr "Plasma 工作空间存在安装问题！"
 
 #: main.cpp:237
 #, kde-format
@@ -132,7 +128,7 @@ msgstr "在锁定模式下启动会话"
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
-msgstr "无锁屏支持下启动。仅在其他组件提供了锁屏时需要。"
+msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"
 
 #: server.cpp:884
 #, kde-format
@@ -147,14 +143,14 @@ msgstr "注销"
 #: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "注销前不确认"
+msgstr "注销而无需确认"
 
 #: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
-msgstr "关机前不确认"
+msgstr "关机而无需确认"
 
 #: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "重启前不确认"
+msgstr "重启而无需确认"

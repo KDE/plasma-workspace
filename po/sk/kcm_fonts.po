@@ -9,20 +9,20 @@
 # Michal Sulek <misurel@gmail.com>, 2009, 2010.
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-05-16 18:10+0200\n"
+"PO-Revision-Date: 2023-01-11 21:21+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
@@ -141,10 +141,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "Tento modul vám umožnuje nastaviť systémové písma."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Pr&ispôsobiť všetky písma..."
+msgstr "Upraviť globálnu mierku..."
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -164,7 +163,7 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"Veľmi veľké písma môžu viesť k neobvyklým výsledkom. Zvážte úpravuglobálnej "
+"Veľmi veľké písma môžu viesť k neobvyklým výsledkom. Zvážte úpravu globálnej "
 "mierky obrazovky namiesto použitia veľmi veľkého písma."
 
 #: package/contents/ui/main.qml:72

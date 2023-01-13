@@ -1,20 +1,20 @@
 # translation of kcm_nightcolor.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2017.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022, 2023.
 # Dušan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-04-28 08:55+0200\n"
+"PO-Revision-Date: 2023-01-11 21:20+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
@@ -22,20 +22,20 @@ msgstr ""
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Ťuknutím vyberte svoju polohu na mape."
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Kliknutím vyberte svoju polohu na mape."
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Priblížiť"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -46,65 +46,57 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Upravené z <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Mapa polohy sveta</link> od "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
-#, fuzzy, kde-format
-#| msgid "Latitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Zemepisná šírka:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
-#, fuzzy, kde-format
-#| msgid "Longitude:"
+#, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Zemepisná dĺžka:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Funkcia Nočná farba spôsobí, že farby na obrazovke budú teplejšie, čím sa "
-"zníži námaha vašich očí v čase, kedy si zvolíte."
+msgstr "Vďaka filtru modrého svetla sú farby na obrazovke teplejšie."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Čas aktivácie:"
+msgstr "Čas prepnutí:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Vždy vypnuté"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Od východu po západ slnka na aktuálnom mieste"
+msgstr "Východ a západ slnka na aktuálnom mieste"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Od východu po západ slnka na ručne nastavenom mieste"
+msgstr "Východ a západ slnka na ručne nastavenom mieste"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Vlastný čas"
+msgstr "Vlastné časy"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Vždy zapnutá"
+msgstr "Vždy používať nočnú farbu"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -120,10 +112,9 @@ msgstr ""
 "link>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Teplota nočnej farby: "
+msgstr "Teplota dennej farby:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -141,7 +132,7 @@ msgstr "Teplá"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Studená (žiadný filter)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format
@@ -150,8 +141,7 @@ msgid "Cool"
 msgstr "Studená"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "Teplota nočnej farby: "
 
@@ -163,7 +153,7 @@ msgstr "Zemepisná šírka: %1°   Zemepisná dĺžka: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Spustiť nočnú farbu o:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -173,7 +163,7 @@ msgstr "Vstupný formát: HH:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Spustiť dennú farbu o:"
 
 #: package/contents/ui/main.qml:353
 #, kde-format
@@ -199,27 +189,24 @@ msgid "Error: Transition time overlaps."
 msgstr "Chyba: Čas prechodu sa prekrýva."
 
 #: package/contents/ui/main.qml:413
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr "Umiestnenie"
+msgstr "Hľadám..."
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Nočná farba sa začne meniť pri %1 a úplne sa zmení pri %2"
+msgstr "Teplota farby sa začne meniť na nočnú o %1 a úplne sa zmení o %2"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Nočná farba sa začne meniť pri %1 a úplne sa zmení pri %2"
+msgstr "Teplota farby sa začne meniť na dennú o %1 a úplne sa zmení o %2"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

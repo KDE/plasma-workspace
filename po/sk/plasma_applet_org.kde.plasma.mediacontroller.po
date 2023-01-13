@@ -1,26 +1,26 @@
 # translation of plasma_applet_org.kde.plasma.mediacontroller.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2016, 2017.
 # Mthw <jari_45@hotmail.com>, 2018.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2020-11-27 13:48+0100\n"
+"PO-Revision-Date: 2023-01-11 21:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.11.80\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Žiadny názov"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82

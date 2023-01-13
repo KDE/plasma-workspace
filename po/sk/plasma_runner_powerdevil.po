@@ -2,20 +2,20 @@
 # Peter Mihalik <udavac@inmail.sk>, 2009.
 # Michal Sulek <misurel@gmail.com>, 2009, 2010.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-27 00:45+0000\n"
-"PO-Revision-Date: 2021-02-24 11:08+0100\n"
+"PO-Revision-Date: 2023-01-11 21:30+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: PowerDevilRunner.cpp:32
@@ -73,27 +73,22 @@ msgid "Suspends the system to disk"
 msgstr "Uspí systém na disk"
 
 #: PowerDevilRunner.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword, it should end with a space"
-#| msgid "screen brightness "
+#, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
-msgstr "jas obrazovky "
+msgstr "jas obrazovky <percent value>"
 
 #: PowerDevilRunner.cpp:67
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "Lists screen brightness options or sets it to the brightness defined by :"
-#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
-#| "brightness"
+#, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
-"Zobrazí možnosti jasu obrazovky alebo nastaví jas definovaný :q:; napr. jas "
-"obrazovky 50 stmavie obrazovku na 50% maximálneho jasu"
+"Uvádza zoznam možností jasu obrazovky alebo ho nastavuje na jas definovaný "
+"hľadaným výrazom; napr. jas obrazovky 50 stlmí obrazovku na maximálny jas 50 "
+"%."
 
 #: PowerDevilRunner.cpp:95
 #, kde-format

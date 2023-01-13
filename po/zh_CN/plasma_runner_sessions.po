@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2023-01-02 07:12\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -24,7 +24,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr ""
+msgstr "logout;log out;注销"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -37,7 +37,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr ""
+msgstr "shutdown;shut down;关机"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -50,7 +50,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr ""
+msgstr "restart;reboot;重启;重新启动"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "重新启动计算机"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr ""
+msgstr "lock;lock screen;锁定;锁屏"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -75,7 +75,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr ""
+msgstr "save;save session;保存;保存会话"
 
 #: sessionrunner.cpp:66
 #, kde-format
@@ -88,7 +88,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr ""
+msgstr "switch user;new session;切换用户;新建会话"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -123,30 +123,30 @@ msgstr "切换到用户 :q: 的活动会话，若未提供 :q:，则列出全部
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "注销"
 
 #: sessionrunner.cpp:121
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr ""
+msgstr "关机"
 
 #: sessionrunner.cpp:131
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr ""
+msgstr "重启"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "锁定"
 
 #: sessionrunner.cpp:151
 #, kde-format
 msgid "Save Session"
-msgstr ""
+msgstr "保存会话"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -162,8 +162,12 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>你将要进入新的桌面会话。</p><p>系统将显示登录屏幕，并隐藏当前会话。</p><p>"
+"若要在桌面会话间切换，你可以使用：</p><ul><li>Ctrl+Alt+F{会话序号}</"
+"li><li>Plasma 搜索 (输入“%1”)</li><li>Plasma 挂件 (例如应用程序启动器)</li></"
+"ul>"
 
 #: sessionrunner.cpp:287
 #, kde-format
 msgid "New Desktop Session"
-msgstr ""
+msgstr "新建桌面会话"

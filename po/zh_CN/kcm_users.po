@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-02 07:12\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -169,180 +169,120 @@ msgid "Enrolling Fingerprint"
 msgstr "正在录入指纹"
 
 #: package/contents/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:127
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:149
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:151
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:159
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:161
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:165
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "请在指纹传感器上重复%1您的%2。"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -380,141 +320,121 @@ msgid "Add New User"
 msgstr "添加新用户"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "更换头像"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "啥都不是"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "火烈鸟"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "火龙果"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "番薯"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "琥珀"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "阳光"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "柠檬绿"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "青葱"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "草地"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "孔雀绿"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma 蓝"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "暖紫"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "冷紫"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "焦炭"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "白纸"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "咖啡"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "木材"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "选择图片"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "选择文件…"

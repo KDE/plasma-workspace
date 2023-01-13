@@ -1,20 +1,20 @@
 # translation of plasma_applet_org.kde.plasma.systemtray.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2013, 2014, 2015, 2017.
 # Mthw <jari_45@hotmail.com>, 2018.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2022-04-28 08:49+0200\n"
+"PO-Revision-Date: 2023-01-11 21:30+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:13
@@ -115,10 +115,9 @@ msgid "Scale with Panel width"
 msgstr "Prispôsobiť šírke panelu"
 
 #: package/contents/ui/ConfigGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "Automatically enabled when in tablet mode"
+#, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "Automaticky spustené v režime tabletu"
+msgstr "Automaticky spustené v dotykovom režime"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -145,18 +144,16 @@ msgid "Large"
 msgstr "Veľké"
 
 #: package/contents/ui/ConfigGeneral.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a combobox when tablet mode is on"
-#| msgid "Automatically set to Large when in tablet mode"
+#, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "Automaticky nastavené na Veľké v režime tabletu"
+msgstr "Automaticky nastaviť na Veľké v dotykovom režime"
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Návrat"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format

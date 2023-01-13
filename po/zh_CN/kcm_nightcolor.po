@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2023-01-02 07:12\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -86,7 +86,7 @@ msgstr "从当前地理位置的日落到日出"
 #: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "从手工选定地理位置的日落到日出"
+msgstr "手动选定的地理位置的日落到日出"
 
 #: package/contents/ui/main.qml:103
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "暖色"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "冷色（无过滤器）"
+msgstr "冷色 (无滤镜)"
 
 #: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
 #, kde-format

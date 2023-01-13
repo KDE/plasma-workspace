@@ -87,8 +87,8 @@ msgid ""
 "global theme package and then attempt to apply it"
 msgstr ""
 "Aplica un paquet de tema global. Açò pot ser el nom d'un paquet, o un camí "
-"complet a un paquet instal·lat. En este punt, esta eina comprovarà que és un "
-"paquet de tema global i intentarà aplicar-lo"
+"complet cap a un paquet instal·lat. En este punt, esta eina comprovarà que "
+"és un paquet de tema global i intentarà aplicar-lo"
 
 #: lnftool.cpp:51
 #, kde-format

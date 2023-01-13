@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-19 00:48+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -527,13 +527,13 @@ msgstr "上一条历史记录"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr ""
+msgstr "在鼠标位置显示项目"
 
 #: klipper.cpp:243
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr ""
+msgstr "%1 - 剪贴板工具"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -806,7 +806,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr ""
+msgstr "%1 - 剪贴板项目"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -836,7 +836,7 @@ msgstr "Klipper"
 #: main.cpp:29
 #, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr ""
+msgstr "Plasma 剪切和粘贴历史工具"
 
 #: main.cpp:31
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:52+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
 "symbols such as +, -, /, *, ! and ^."
-msgstr "计算 :q: 的值，:q: 由数字和诸如 +、-、/、*、! 和 ^ 的数学符号组成。"
+msgstr "计算 :q: 的值，:q: 由数字和诸如 +、-、/、*、! 和 ^ 等数学符号组成。"
 
 #: calculatorrunner.cpp:39
 #, kde-format

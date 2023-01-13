@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2019-05-15 07:46+0200\n"
+"PO-Revision-Date: 2023-01-11 21:32+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: abstractnotificationsmodel.cpp:293
 #, fuzzy, kde-format
@@ -79,9 +79,9 @@ msgstr[2] "%2 súborov z %1"
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 položka"
+msgstr[1] "%1 položky"
+msgstr[2] "%1 položiek"
 
 #: job_p.cpp:213
 #, kde-format

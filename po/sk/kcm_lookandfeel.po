@@ -1,21 +1,21 @@
 # translation of kcm_lookandfeel.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-04-28 08:58+0200\n"
+"PO-Revision-Date: 2023-01-11 21:20+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -162,20 +162,17 @@ msgstr "Rozloženie pracovnej plochy"
 #: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Rozloženie tlačidiel záhlavia"
 
 #: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
 "Použitie rozloženia pracovnej plochy nahradí vašu aktuálnu konfiguráciu "
-"pracovných plôch, panelov a miniaplikácií"
+"pracovných plôch, panelov, dokov a miniaplikácií"
 
 #: package/contents/ui/MoreOptions.qml:56
 #, kde-format
@@ -249,18 +246,15 @@ msgid "• Appearance settings"
 msgstr "• Ďalšie nastavenia vzhľadu..."
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "Rozloženie pracovnej plochy"
+msgstr "Rozloženie pracovnej plochy a okien"
 
 #: package/contents/ui/SimpleOptions.qml:56
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• Rozloženie pracovnej plochy"
+msgstr "• Rozloženie pracovnej plochy a okien"
 
 #: package/contents/ui/SimpleOptions.qml:74
 #, kde-format

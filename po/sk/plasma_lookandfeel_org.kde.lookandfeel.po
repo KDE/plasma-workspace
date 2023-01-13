@@ -1,21 +1,21 @@
 # translation of plasma_lookandfeel_org.kde.lookandfeel.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016, 2017, 2019.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-18 00:56+0000\n"
-"PO-Revision-Date: 2022-01-04 20:37+0100\n"
+"PO-Revision-Date: 2023-01-11 21:30+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
@@ -129,30 +129,28 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Hodiny"
+msgstr "Hodiny:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Ponechať viditeľné, keď zmizne výzva na odomknutie"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Ovládanie médií"
+msgstr "Ovládanie médií:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Zobraziť pod výzvou na odomknutie"
 
 #: contents/lockscreen/LockScreenUi.qml:37
 #, kde-format
@@ -204,7 +202,7 @@ msgstr "Odomknúť"
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Žiadny názov"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
