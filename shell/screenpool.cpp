@@ -252,8 +252,7 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
         connMap[s->name()] = s;
     }
 
-    auto oldAvailableScreens = m_availableScreens;
-    m_availableScreens.clear();
+    QList<QScreen *> newAvailableScreens;
     m_redundantScreens.clear();
 
     for (const auto &c : newOrder) {
@@ -273,16 +272,21 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 
         auto *toScreen = outputRedundantTo(s);
         if (!toScreen) {
-            m_availableScreens.append(s);
+            newAvailableScreens.append(s);
         } else {
             m_redundantScreens.insert(s, toScreen);
-            if (oldAvailableScreens.contains(s)) {
-                Q_EMIT screenRemoved(s);
-            }
         }
     }
 
-    if (m_orderChangedPendingSignal || oldAvailableScreens != m_availableScreens) {
+    // always emit removals before updating the sorted list
+    for (auto screen : std::as_const(m_availableScreens)) {
+        if (!newAvailableScreens.contains(screen)) {
+            Q_EMIT screenRemoved(screen);
+        }
+    }
+
+    if (m_orderChangedPendingSignal || newAvailableScreens != m_availableScreens) {
+        m_availableScreens = newAvailableScreens;
         Q_EMIT screenOrderChanged(m_availableScreens);
     }
 
