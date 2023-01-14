@@ -13,6 +13,7 @@
 
 #include "debug.h"
 
+#include <KStartupInfo>
 #include <KWindowSystem>
 #include <QDebug>
 
@@ -87,6 +88,11 @@ void Server::invokeAction(uint notificationId,
                         });
         KWindowSystem::requestXdgActivationToken(window, launchedSerial, xdgActivationAppId);
     } else {
+        KStartupInfoId startupId;
+        startupId.initId();
+
+        Q_EMIT d->ActivationToken(notificationId, QString::fromUtf8(startupId.id()));
+
         Q_EMIT d->ActionInvoked(notificationId, actionName);
         if (behavior & Notifications::Close) {
             Q_EMIT d->CloseNotification(notificationId);
