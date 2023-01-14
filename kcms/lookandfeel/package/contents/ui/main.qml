@@ -9,7 +9,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.3 as KCM
@@ -55,6 +55,37 @@ KCM.GridViewKCM {
         settingName: "lookAndFeelPackage"
     }
 
+    Component {
+        id: confirmDeletionDialog
+
+        Kirigami.PromptDialog {
+            id: dialog
+            required property int index
+
+            parent: root
+            title: i18nc("@title:window", "Delete Permanently")
+            subtitle: i18nc("@label", "Do you really want to permanently delete this theme?")
+            standardButtons: Kirigami.Dialog.NoButton
+            customFooterActions: [
+                Kirigami.Action {
+                    text: i18nc("@action:button", "Delete Permanently")
+                    icon.name: "delete"
+                    onTriggered: dialog.accept();
+                },
+                Kirigami.Action {
+                    text: i18nc("@action:button", "Cancel")
+                    icon.name: "dialog-cancel"
+                    onTriggered: dialog.reject();
+                }
+            ]
+
+            onAccepted: kcm.removeRow(index, true);
+            onClosed: destroy();
+
+            Component.onCompleted: open();
+        }
+    }
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -78,6 +109,14 @@ KCM.GridViewKCM {
                     previewWindow.url = model.fullScreenPreview
                     previewWindow.showFullScreen()
                 }
+            },
+            Kirigami.Action {
+                iconName: "edit-delete"
+                tooltip: i18nc("@action:button", "Remove Theme")
+                enabled: model.uninstallable && !delegate.GridView.isCurrentItem
+                onTriggered: confirmDeletionDialog.incubateObject(root, {
+                    "index": model.index,
+                });
             }
         ]
         onClicked: {

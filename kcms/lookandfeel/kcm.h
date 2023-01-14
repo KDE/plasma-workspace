@@ -59,6 +59,8 @@ public:
         HasDesktopSwitcherRole,
         HasWindowDecorationRole,
         HasFontsRole,
+        PackagePathRole, //< Package root path
+        UninstallableRole, //< Package is installed in local directory
     };
     Q_ENUM(Roles)
 
@@ -67,6 +69,16 @@ public:
 
     LookAndFeelSettings *lookAndFeelSettings() const;
     QStandardItemModel *lookAndFeelModel() const;
+
+    /**
+     * Removes the given row from the LookandFeel items.
+     * It calls \QStandardItemModel::removeRow and removes local files
+     *
+     * @param row the given row from LookandFeel items
+     * @param removeDependencies whether the dependencies should also be removed
+     * @return Returns true if the row is removed; otherwise returns false.
+     */
+    Q_INVOKABLE bool removeRow(int row, bool removeDependencies = false);
 
     Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
     Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *wrapper);

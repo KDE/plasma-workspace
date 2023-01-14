@@ -91,6 +91,8 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     roles[HasDesktopSwitcherRole] = "hasDesktopSwitcher";
     roles[HasWindowDecorationRole] = "hasWindowDecoration";
     roles[HasFontsRole] = "hasFonts";
+    roles[PackagePathRole] = "packagePath";
+    roles[UninstallableRole] = "uninstallable";
 
     m_model->setItemRoleNames(roles);
     loadModel();
@@ -164,6 +166,150 @@ void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
 QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
 {
     return m_model;
+}
+
+bool KCMLookandFeel::removeRow(int row, bool removeDependencies)
+{
+    if (row < 0 || row >= m_model->rowCount() || !m_model->index(row, 0).data(UninstallableRole).toBool()) {
+        // Invalid request
+        return false;
+    }
+
+    QDir packageRootDir(m_model->index(row, 0).data(PackagePathRole).toString());
+    if (!packageRootDir.isReadable()) {
+        // Permission denied
+        return false;
+    }
+
+    // Remove the theme from the item model
+    const bool ret = m_model->removeRow(row);
+    Q_ASSERT_X(ret, "removeRow", QStringLiteral("Failed to remove item at row %1").arg(row).toLatin1().constData()); // Shouldn't happen
+
+    if (!removeDependencies) {
+        // Removes the directory, including all its contents.
+        return packageRootDir.removeRecursively();
+    }
+
+    // Find all dependencies
+    KPackage::Package lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    lookAndFeelPackage.setPath(packageRootDir.absolutePath());
+
+    auto config = KSharedConfig::openConfig(lookAndFeelPackage.filePath("defaults"), KConfig::NoGlobals);
+    KConfigGroup globalGroup(config, "kdeglobals");
+    if (globalGroup.exists()) {
+        // Widget style
+        KConfigGroup kdeGroup(&globalGroup, "KDE");
+        if (kdeGroup.exists() && kdeGroup.hasKey("widgetStyle")) {
+            const QString widgetStyle = kdeGroup.readEntry("widgetStyle", "");
+            if (!widgetStyle.isEmpty()) {
+                const QDir widgetStyleDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("kstyle")
+                                          + QDir::separator() + QStringLiteral("themes"));
+                if (widgetStyleDir.exists()) {
+                    // Read config to get style name
+                    const QStringList styleFileList = widgetStyleDir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+                    for (const QString &path : styleFileList) {
+                        if (!path.endsWith(QLatin1String(".themerc"))) {
+                            continue;
+                        }
+
+                        auto widgetStyleConfig = KSharedConfig::openConfig(widgetStyleDir.absoluteFilePath(path), KConfig::SimpleConfig);
+                        KConfigGroup widgetStyleKDEGroup(widgetStyleConfig, "KDE");
+                        if (widgetStyleKDEGroup.exists() && widgetStyleKDEGroup.hasKey("WidgetStyle")) {
+                            if (widgetStyleKDEGroup.readEntry("WidgetStyle", "") == widgetStyle) {
+                                QFile(widgetStyleDir.absoluteFilePath(path)).remove();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Color scheme
+        KConfigGroup generalGroup(&globalGroup, "General");
+        if (generalGroup.exists() && generalGroup.hasKey("ColorScheme")) {
+            const QString colorScheme = generalGroup.readEntry("ColorScheme", "");
+            if (!colorScheme.isEmpty()) {
+                const QDir colorSchemeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator()
+                                          + QStringLiteral("color-schemes"));
+                if (colorSchemeDir.exists()) {
+                    QFile colorSchemeFile(colorSchemeDir.absoluteFilePath(QStringLiteral("%1.colors").arg(colorScheme)));
+                    colorSchemeFile.remove();
+                }
+            }
+        }
+    }
+
+    // Desktop Theme and Icon (Icons are in the theme folder)
+    KConfigGroup plasmaGroup = KConfigGroup(config, "plasmarc");
+    if (plasmaGroup.exists()) {
+        KConfigGroup themeGroup = KConfigGroup(&plasmaGroup, "Theme");
+        if (themeGroup.exists() && themeGroup.hasKey("name")) {
+            const QString themeName = themeGroup.readEntry("name", "");
+            if (!themeName.isEmpty()) {
+                QDir themeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("plasma")
+                              + QDir::separator() + QStringLiteral("desktoptheme") + QDir::separator() + themeName);
+                if (themeDir.exists()) {
+                    themeDir.removeRecursively();
+                }
+            }
+        }
+    }
+
+    // Wallpaper
+    KConfigGroup wallpaperGroup = KConfigGroup(config, "Wallpaper");
+    if (wallpaperGroup.exists() && wallpaperGroup.hasKey("Image")) {
+        const QString image = wallpaperGroup.readEntry("Image", "");
+        if (!image.isEmpty()) {
+            const QDir wallpaperDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("wallpapers"));
+            if (wallpaperDir.exists()) {
+                QFileInfo wallpaperFile(wallpaperDir.absoluteFilePath(image));
+                if (wallpaperFile.isFile()) {
+                    // Single file, use QFile to remove
+                    QFile(wallpaperFile.absoluteFilePath()).remove();
+                } else if (wallpaperFile.isDir()) {
+                    // A package, use QDir to remove the folder
+                    QDir(wallpaperFile.absoluteFilePath()).removeRecursively();
+                }
+            }
+        }
+    }
+
+    KConfigGroup kwinGroup = KConfigGroup(config, "kwinrc");
+    if (kwinGroup.exists()) {
+        // Window Switcher
+        KConfigGroup windowSwitcherGroup = KConfigGroup(&kwinGroup, "WindowSwitcher");
+        if (windowSwitcherGroup.exists() && windowSwitcherGroup.hasKey("LayoutName")) {
+            const QString layoutName = windowSwitcherGroup.readEntry("LayoutName", "");
+            if (!layoutName.isEmpty()) {
+                const auto windowSwitcherPackages =
+                    KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/WindowSwitcher"), QString(), [&layoutName](const KPluginMetaData &meta) {
+                        return meta.pluginId() == layoutName;
+                    });
+                for (const auto &meta : windowSwitcherPackages) {
+                    QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+                }
+            }
+        }
+
+        // Desktop Switcher
+        KConfigGroup desktopSwitcherGroup = KConfigGroup(&kwinGroup, "DesktopSwitcher");
+        if (desktopSwitcherGroup.exists() && desktopSwitcherGroup.hasKey("LayoutName")) {
+            const QString layoutName = desktopSwitcherGroup.readEntry("LayoutName", "");
+            if (!layoutName.isEmpty()) {
+                const auto desktopSwitcherPackages = KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/DesktopSwitcher"),
+                                                                                                   QString(),
+                                                                                                   [&layoutName](const KPluginMetaData &meta) {
+                                                                                                       return meta.pluginId() == layoutName;
+                                                                                                   });
+                for (const auto &meta : desktopSwitcherPackages) {
+                    QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+                }
+            }
+        }
+    }
+
+    return packageRootDir.removeRecursively();
 }
 
 int KCMLookandFeel::pluginIndex(const QString &pluginName) const
@@ -319,6 +465,10 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
         // This fallback is needed since the sheet 'breaks' without it
         row->setData(false, HasTitlebarLayoutRole);
     }
+
+    row->setData(pkg.path(), PackagePathRole);
+    const QString writableLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    row->setData(pkg.path().startsWith(writableLocation), UninstallableRole);
 
     m_model->appendRow(row);
 }
