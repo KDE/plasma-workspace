@@ -152,8 +152,14 @@ void HistoryModel::insert(QSharedPointer<HistoryItem> item)
 
 void HistoryModel::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
 {
-    if (m_maxSize == 0 || items.empty()) {
+    if (m_maxSize == 0) {
         // special case - cannot insert any items
+        return;
+    }
+
+    if (items.empty()) {
+        // special case - nothing to insert, so just clear.
+        clear();
         return;
     }
 
