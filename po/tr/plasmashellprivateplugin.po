@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-13 00:58+0000\n"
-"PO-Revision-Date: 2022-05-21 12:35+0300\n"
+"PO-Revision-Date: 2023-01-13 19:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,87 +56,85 @@ msgstr "Diğer"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 etkinlik"
+msgstr[1] "%1 etkinlik"
 
 #: calendar/qml/DayDelegate.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Etkinlikler"
+msgstr "Etkinlik yok"
 
 #: calendar/qml/MonthViewHeader.qml:64
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:109
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Gün"
 
 #: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Ay"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Yıl"
 
 #: calendar/qml/MonthViewHeader.qml:157
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Önceki Ay"
 
 #: calendar/qml/MonthViewHeader.qml:159
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Önceki Yıl"
 
 #: calendar/qml/MonthViewHeader.qml:161
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Önceki On Yıl"
 
 #: calendar/qml/MonthViewHeader.qml:178
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
 
 #: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Takvimi bugüne sıfırla"
 
 #: calendar/qml/MonthViewHeader.qml:190
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Sonraki Ay"
 
 #: calendar/qml/MonthViewHeader.qml:192
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Sonraki Yıl"
 
 #: calendar/qml/MonthViewHeader.qml:194
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Sonraki On Yıl"
 
 #: calendar/qml/MonthViewHeader.qml:250
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Açık Tut"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Yapılandır…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

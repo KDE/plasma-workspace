@@ -1,16 +1,16 @@
 # Translation of plasmashellprivateplugin.po to Catalan
-# Copyright (C) 2007-2022 This_file_is_part_of_KDE
+# Copyright (C) 2007-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2018, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-13 00:58+0000\n"
-"PO-Revision-Date: 2022-05-20 09:33+0200\n"
+"PO-Revision-Date: 2023-01-13 13:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -59,87 +59,85 @@ msgstr "Altres"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 esdeveniment"
+msgstr[1] "%1 esdeveniments"
 
 #: calendar/qml/DayDelegate.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Esdeveniments"
+msgstr "Cap esdeveniment"
 
 #: calendar/qml/MonthViewHeader.qml:64
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:109
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dies"
 
 #: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Mesos"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Anys"
 
 #: calendar/qml/MonthViewHeader.qml:157
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Mes anterior"
 
 #: calendar/qml/MonthViewHeader.qml:159
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Any anterior"
 
 #: calendar/qml/MonthViewHeader.qml:161
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Dècada anterior"
 
 #: calendar/qml/MonthViewHeader.qml:178
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Avui"
 
 #: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Restaura el calendari a avui"
 
 #: calendar/qml/MonthViewHeader.qml:190
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Mes següent"
 
 #: calendar/qml/MonthViewHeader.qml:192
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Any següent"
 
 #: calendar/qml/MonthViewHeader.qml:194
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Dècada següent"
 
 #: calendar/qml/MonthViewHeader.qml:250
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Mantén obert"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Configura…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

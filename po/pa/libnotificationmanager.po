@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-01-14 00:58+0000\n"
 "PO-Revision-Date: 2020-10-10 22:46-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#: abstractnotificationsmodel.cpp:293
+#: abstractnotificationsmodel.cpp:315
 #, fuzzy, kde-format
 #| msgctxt "Copying n files to location"
 #| msgid "%1 file to %2"
