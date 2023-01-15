@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2018, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-13 00:58+0000\n"
-"PO-Revision-Date: 2022-11-13 15:29+0100\n"
+"PO-Revision-Date: 2023-01-13 10:49+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2020 t/m 2022"
+msgstr "Freek de Kruijf - 2020 t/m 2023"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -55,87 +55,85 @@ msgstr "Overig"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 gebeurtenis"
+msgstr[1] "%1 gebeurtenissen"
 
 #: calendar/qml/DayDelegate.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Gebeurtenissen"
+msgstr "Geen gebeurtenissen"
 
 #: calendar/qml/MonthViewHeader.qml:64
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:109
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dagen"
 
 #: calendar/qml/MonthViewHeader.qml:114
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Maanden"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Jaren"
 
 #: calendar/qml/MonthViewHeader.qml:157
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Vorige maand"
 
 #: calendar/qml/MonthViewHeader.qml:159
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Vorig jaar"
 
 #: calendar/qml/MonthViewHeader.qml:161
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Vorige decade"
 
 #: calendar/qml/MonthViewHeader.qml:178
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 #: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Zet de agenda terug op vandaag"
 
 #: calendar/qml/MonthViewHeader.qml:190
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Volgende maand"
 
 #: calendar/qml/MonthViewHeader.qml:192
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Volgend jaar"
 
 #: calendar/qml/MonthViewHeader.qml:194
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Volgende decade"
 
 #: calendar/qml/MonthViewHeader.qml:250
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Open houden"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Configureren…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
