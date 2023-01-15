@@ -57,6 +57,7 @@ Item {
 
         RowLayout {
             spacing: 0
+            Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
 
             PlasmaExtras.Heading {
                 id: heading
