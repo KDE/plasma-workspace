@@ -35,6 +35,7 @@ ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
 add_library(systemtraymodel_static STATIC ${systemtray_SRCS})
 target_link_libraries(systemtraymodel_static
     Qt::Gui
+    Qt${QT_VERSION_MAJOR}::GuiPrivate
     Qt::Quick
     Qt::DBus
     KF5::XmlGui
