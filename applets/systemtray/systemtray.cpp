@@ -5,6 +5,7 @@
 */
 
 #include "systemtray.h"
+#include "config-X11.h"
 #include "debug.h"
 
 #include "plasmoidregistry.h"
@@ -26,6 +27,11 @@
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
+
+#if HAVE_X11 // BUG 456168: To calculate the native global position on X11
+#include <KWindowSystem>
+#include <qpa/qplatformscreen.h>
+#endif
 
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
@@ -230,8 +236,23 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 
     QPointF pos = visualParent->mapToScene(QPointF(x, y));
 
-    if (visualParent->window() && visualParent->window()->screen()) {
-        pos = visualParent->window()->mapToGlobal(pos.toPoint());
+    const QQuickWindow *const window = visualParent->window();
+    if (window && window->screen()) {
+        pos = window->mapToGlobal(pos.toPoint());
+#if HAVE_X11
+        if (KWindowSystem::isPlatformX11()) {
+            const auto devicePixelRatio = window->screen()->devicePixelRatio();
+            if (QGuiApplication::screens().size() == 1) {
+                return pos * devicePixelRatio;
+            }
+
+            const QRect geometry = window->screen()->geometry();
+            const QRect nativeGeometry = window->screen()->handle()->geometry();
+            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * devicePixelRatio;
+
+            return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
+        }
+#endif
     } else {
         return QPoint();
     }
