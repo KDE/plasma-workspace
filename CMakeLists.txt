@@ -398,6 +398,8 @@ if(KF5Holidays_FOUND)
     add_subdirectory(plasmacalendarintegration)
 endif()
 
+add_subdirectory(appiumtests)
+
 ki18n_install(po)
 
 install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})

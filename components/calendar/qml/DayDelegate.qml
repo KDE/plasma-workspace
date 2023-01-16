@@ -20,6 +20,17 @@ import org.kde.plasma.workspace.calendar 2.0
 PlasmaComponents3.AbstractButton {
     id: dayStyle
 
+    objectName: {
+        switch (dateMatchingPrecision) {
+        case Calendar.MatchYear:
+            return "calendarCell-" + yearNumber;
+        case Calendar.MatchYearAndMonth:
+            return "calendarCell-" + yearNumber + "-" + monthNumber;
+        case Calendar.MatchYearMonthAndDay:
+        default:
+            return "calendarCell-" + yearNumber + "-" + monthNumber + "-" + dayNumber;
+        }
+    }
     hoverEnabled: true
     property var dayModel: null
 

@@ -61,6 +61,8 @@ Item {
 
             PlasmaExtras.Heading {
                 id: heading
+                // Needed for Appium testing
+                objectName: "monthHeader"
 
                 text: root.swipeView.currentIndex > 0 || monthViewRoot.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", monthViewRoot.selectedMonth, monthViewRoot.selectedYear.toString()) : monthViewRoot.selectedMonth
                 level: root.isDigitalClock ? 1 : 2
@@ -107,16 +109,19 @@ Item {
                                                                                root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
 
                 PlasmaComponents3.TabButton {
+                    Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
                     onClicked: monthViewRoot.showMonthView();
                     display: PlasmaComponents3.AbstractButton.TextOnly
                 }
                 PlasmaComponents3.TabButton {
+                    Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
                     onClicked: monthViewRoot.showYearView();
                     display: PlasmaComponents3.AbstractButton.TextOnly
                 }
                 PlasmaComponents3.TabButton {
+                    Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
                     onClicked: monthViewRoot.showDecadeView();
                     display: PlasmaComponents3.AbstractButton.TextOnly

@@ -36,6 +36,11 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(i18n("Plasma Windowed"));
     parser.addOption(
         QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
+    QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
+                                         i18n("Force loading the given shell plugin"),
+                                         QStringLiteral("plugin"),
+                                         QStringLiteral("org.kde.plasma.desktop"));
+    parser.addOption(shellPluginOption);
     parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
     parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
     parser.addVersionOption();
@@ -46,7 +51,7 @@ int main(int argc, char **argv)
         parser.showHelp(1);
     }
 
-    PlasmaWindowedCorona *corona = new PlasmaWindowedCorona();
+    PlasmaWindowedCorona *corona = new PlasmaWindowedCorona(parser.value(shellPluginOption));
 
     const QStringList arguments = parser.positionalArguments();
     QVariantList args;

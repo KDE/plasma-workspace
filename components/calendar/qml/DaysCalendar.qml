@@ -123,6 +123,7 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
+                Accessible.onPressAction: daysCalendar.activated(index, model, delegate)
                 Keys.onPressed: {
                     if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
                         event.accepted = false;

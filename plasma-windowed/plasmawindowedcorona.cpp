@@ -18,11 +18,11 @@
 #include <KPackage/PackageLoader>
 #include <Plasma/PluginLoader>
 
-PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
+PlasmaWindowedCorona::PlasmaWindowedCorona(const QString &shell, QObject *parent)
     : Plasma::Corona(parent)
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
-    package.setPath(QStringLiteral("org.kde.plasma.desktop"));
+    package.setPath(shell);
     setKPackage(package);
     // QMetaObject::invokeMethod(this, "load", Qt::QueuedConnection);
     load();
