@@ -42,9 +42,9 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             return;
         }
     }
-    PlasmaWindowedView *v = new PlasmaWindowedView();
-    v->setHasStatusNotifier(m_hasStatusNotifier);
-    v->show();
+    m_view = new PlasmaWindowedView();
+    m_view->setHasStatusNotifier(m_hasStatusNotifier);
+    m_view->show();
 
     KConfigGroup appletsGroup(KSharedConfig::openConfig(), "Applets");
     QString plugin;
@@ -56,7 +56,8 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
             if (!a) {
                 qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
-                v->deleteLater();
+                m_view->deleteLater();
+                m_view = nullptr;
                 return;
             }
             a->restore(cg);
@@ -67,7 +68,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             KConfigGroup cg2 = a->config();
             cont->addApplet(a);
 
-            v->setApplet(a);
+            m_view->setApplet(a);
             return;
         }
     }
@@ -75,7 +76,8 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
     if (!a) {
         qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
-        v->deleteLater();
+        m_view->deleteLater();
+        m_view = nullptr;
         return;
     }
 
@@ -85,7 +87,12 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     KConfigGroup cg2 = a->config();
     cont->addApplet(a);
 
-    v->setApplet(a);
+    m_view->setApplet(a);
+}
+
+PlasmaWindowedView *PlasmaWindowedCorona::view() const
+{
+    return m_view;
 }
 
 void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)

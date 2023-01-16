@@ -20,9 +20,11 @@
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
 
+#include <Plasma/Applet>
+#include <Plasma/Containment>
+
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent)
-    , m_applet(nullptr)
     , m_statusNotifier(nullptr)
     , m_withStatusNotifier(false)
 {
@@ -45,6 +47,11 @@ void PlasmaWindowedView::setHasStatusNotifier(bool stay)
 {
     Q_ASSERT(!m_statusNotifier);
     m_withStatusNotifier = stay;
+}
+
+Plasma::Applet *PlasmaWindowedView::applet() const
+{
+    return m_applet;
 }
 
 void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
@@ -144,6 +151,11 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         connect(applet, &Plasma::Applet::statusChanged, this, syncStatus);
         syncStatus();
     }
+}
+
+QQuickItem *PlasmaWindowedView::appletInterface() const
+{
+    return m_appletInterface;
 }
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)

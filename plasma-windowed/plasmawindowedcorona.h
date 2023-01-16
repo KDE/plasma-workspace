@@ -9,7 +9,11 @@
 
 #include <Plasma/Corona>
 
-class PlasmaWindowedCorona : public Plasma::Corona
+#include "plasmawindowed_plugin_export.h"
+
+class PlasmaWindowedView;
+
+class PLASMAWINDOWED_EXPORT PlasmaWindowedCorona : public Plasma::Corona
 {
     Q_OBJECT
 
@@ -20,11 +24,17 @@ public:
     void setHasStatusNotifier(bool stay);
     void loadApplet(const QString &applet, const QVariantList &arguments);
 
+    /**
+     * @return the current window for displaying a widget
+     */
+    PlasmaWindowedView *view() const;
+
 public Q_SLOTS:
     void load();
     void activateRequested(const QStringList &arguments, const QString &workingDirectory);
 
 private:
+    PlasmaWindowedView *m_view = nullptr;
     Plasma::Containment *m_containment = nullptr;
     bool m_hasStatusNotifier = false;
 };

@@ -6,6 +6,7 @@
 */
 
 #include <QApplication>
+#include <QQuickWindow>
 #include <QSurfaceFormat>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
@@ -14,7 +15,6 @@
 #include <KLocalizedString>
 
 #include "plasmawindowedcorona.h"
-#include "plasmawindowedview.h"
 
 static const char version[] = "1.0";
 

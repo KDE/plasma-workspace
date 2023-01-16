@@ -7,14 +7,15 @@
 
 #pragma once
 
-#include "plasmawindowedcorona.h"
 #include <PlasmaQuick/ConfigView>
 #include <QPointer>
 #include <QQuickView>
 
+#include "plasmawindowed_plugin_export.h"
+
 class KStatusNotifierItem;
 
-class PlasmaWindowedView : public QQuickView
+class PLASMAWINDOWED_EXPORT PlasmaWindowedView : public QQuickView
 {
     Q_OBJECT
 
@@ -22,8 +23,14 @@ public:
     explicit PlasmaWindowedView(QWindow *parent = nullptr);
     ~PlasmaWindowedView() override;
 
+    Plasma::Applet *applet() const;
     void setApplet(Plasma::Applet *applet);
     void setHasStatusNotifier(bool stay);
+
+    /**
+     * @return root item of the current applet
+     */
+    QQuickItem *appletInterface() const;
 
 protected:
     void resizeEvent(QResizeEvent *ev) override;
@@ -44,7 +51,7 @@ private:
     void updateSniTitle();
     void updateSniStatus();
 
-    Plasma::Applet *m_applet;
+    Plasma::Applet *m_applet = nullptr;
     QPointer<QObject> m_layout;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QQuickItem> m_rootObject;
