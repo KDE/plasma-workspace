@@ -98,6 +98,7 @@ PlasmaComponents.ItemDelegate {
         }
 
         Loader {
+            objectName: "itemDelegateLoader"
             width: parent.width
             source: ["Text", "Image", "Url"][TypeRole] + "ItemDelegate.qml"
         }

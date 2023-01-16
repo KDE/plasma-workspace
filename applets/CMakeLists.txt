@@ -23,3 +23,7 @@ if(NOT WIN32)
     add_subdirectory(notifications)
     add_subdirectory(systemtray)
 endif()
+
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()

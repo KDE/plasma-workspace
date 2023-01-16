@@ -11,7 +11,7 @@
 #include <QPointer>
 #include <QQuickView>
 
-#include "plasmawindowed_plugin_export.h"
+#include "plasmawindowed_export.h"
 
 class KStatusNotifierItem;
 

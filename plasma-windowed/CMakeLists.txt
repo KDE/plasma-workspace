@@ -32,7 +32,7 @@ target_include_directories(plasmawindowed_plugin
     INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}>"
 )
 ecm_generate_export_header(plasmawindowed_plugin
-    EXPORT_FILE_NAME plasmawindowed_plugin_export.h
+    EXPORT_FILE_NAME plasmawindowed_export.h
     BASE_NAME PlasmaWindowed
     GROUP_BASE_NAME PW
     VERSION ${PROJECT_VERSION}
@@ -56,3 +56,32 @@ install(TARGETS plasmawindowed ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 #even if hidden, the desktop file is needed anyways for kdbusservice::unique
 configure_file(org.kde.plasmawindowed.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmawindowed.desktop @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmawindowed.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+
+install(TARGETS plasmawindowed_plugin EXPORT plasmawindowedTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES
+        plasmawindowedcorona.h
+        plasmawindowedview.h
+        ${CMAKE_CURRENT_BINARY_DIR}/plasmawindowed_export.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/plasma/plasmawindowed
+    COMPONENT Devel
+)
+
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/PlasmaWindowedConfigVersion.cmake
+    VERSION "${PROJECT_VERSION}"
+    COMPATIBILITY ExactVersion
+)
+
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_CMAKEPACKAGEDIR}/PlasmaWindowed)
+
+configure_package_config_file(PlasmaWindowedConfig.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/PlasmaWindowedConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/PlasmaWindowedConfig.cmake
+              ${CMAKE_CURRENT_BINARY_DIR}/PlasmaWindowedConfigVersion.cmake
+        DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+install(EXPORT plasmawindowedTargets
+        NAMESPACE PW::
+        DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+        FILE PlasmaWindowedLibraryTargets.cmake )

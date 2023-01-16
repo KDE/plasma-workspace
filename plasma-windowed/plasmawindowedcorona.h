@@ -9,7 +9,7 @@
 
 #include <Plasma/Corona>
 
-#include "plasmawindowed_plugin_export.h"
+#include "plasmawindowed_export.h"
 
 class PlasmaWindowedView;
 
