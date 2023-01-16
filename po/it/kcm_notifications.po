@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Paolo Zamponi <zapaolo@email.it>, 2019, 2020, 2021, 2022.
+# Paolo Zamponi <zapaolo@email.it>, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-28 17:20+0100\n"
+"PO-Revision-Date: 2023-01-03 08:43+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -197,7 +197,7 @@ msgstr "Nascondi dopo:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Riscontro aggiuntivo"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "Simboli di notifica:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Impostazioni specifiche dell'applicazione"
+msgstr "Impostazioni specifiche delle applicazioni"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "Posizione della finestra a comparsa"
 #: package/contents/ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
-msgstr "Impostazioni dell'applicazione"
+msgstr "Impostazioni delle applicazioni"
 
 #: package/contents/ui/SourcesPage.qml:93
 #, kde-format
@@ -268,8 +268,8 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
-"Seleziona un'applicazione dalla lista per configurare le sue impostazioni "
-"delle notifiche e il suo comportamento."
+"Seleziona un'applicazione dalla lista per configurare le sue impostazioni di "
+"notifica e il suo comportamento."
 
 #: sourcesmodel.cpp:363
 #, kde-format

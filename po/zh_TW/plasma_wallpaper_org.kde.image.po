@@ -6,30 +6,31 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009, 2010.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2020-01-16 00:08+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-01-15 18:50+0800\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
@@ -82,17 +83,15 @@ msgid "Select Background Color"
 msgstr "設定背景顏色"
 
 #: imagepackage/contents/ui/config.qml:207
-#, fuzzy, kde-format
-#| msgid "Add Image..."
+#, kde-format
 msgid "Add Image…"
-msgstr "新增圖像 ..."
+msgstr "新增影像…"
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Get New Wallpapers…"
-msgstr "取得新桌布..."
+msgstr "取得新桌布…"
 
 #: imagepackage/contents/ui/main.qml:66
 #, kde-format
@@ -123,7 +122,7 @@ msgstr "移除桌布"
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "這個工具讓您將影像設定為 Plasma 工作階段的桌布。"
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -131,6 +130,7 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"希望設定為您的 Plasma 工作階段的桌布用的，一個影像檔或是已安裝的桌布 kpackage"
 
 #: plasma-apply-wallpaperimage.cpp:45
 #, kde-format
@@ -139,29 +139,31 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"這個桌布的檔案名稱中有一個獨自存在的單引號 (') —— 請聯繫桌布作者修正它，或是"
+"自己重新命名檔案：%1"
 
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "嘗試設定 Plasma 桌布時出錯：\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
-msgstr ""
+msgstr "成功設定所有桌面的桌布為基於 KPackage 的 %1"
 
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "成功設定所有桌面的桌布為影像 %1"
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
-msgstr ""
+msgstr "傳遞來要設成桌布的檔案不存在，或我們無法將其辨識為桌布：%1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format
@@ -216,7 +218,7 @@ msgstr "修改日期（由舊到新）"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "依資料夾分組"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
 #, kde-format
@@ -262,10 +264,9 @@ msgid "There are no wallpaper locations configured"
 msgstr "尚未設定桌布位置"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "新增資料夾 ..."
+msgstr "新增資料夾…"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "此投影播放中沒有桌布"

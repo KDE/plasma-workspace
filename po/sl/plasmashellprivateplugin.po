@@ -2,23 +2,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-13 00:58+0000\n"
-"PO-Revision-Date: 2022-05-22 07:02+0200\n"
+"POT-Creation-Date: 2023-01-16 00:58+0000\n"
+"PO-Revision-Date: 2023-01-15 10:01+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,89 +58,87 @@ msgstr "Ostalo"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 dogodek"
+msgstr[1] "%1 dogodka"
+msgstr[2] "%1 dogodki"
+msgstr[3] "%1 dogodkov"
 
 #: calendar/qml/DayDelegate.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Dogodki"
+msgstr "Ni dogodkov"
 
-#: calendar/qml/MonthViewHeader.qml:64
+#: calendar/qml/MonthViewHeader.qml:65
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:109
+#: calendar/qml/MonthViewHeader.qml:110
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dni"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:115
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Mesecev"
 
-#: calendar/qml/MonthViewHeader.qml:119
+#: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Let"
 
-#: calendar/qml/MonthViewHeader.qml:157
+#: calendar/qml/MonthViewHeader.qml:158
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Prejšnji mesec"
 
-#: calendar/qml/MonthViewHeader.qml:159
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Prejšnje leto"
 
-#: calendar/qml/MonthViewHeader.qml:161
+#: calendar/qml/MonthViewHeader.qml:162
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
-
-#: calendar/qml/MonthViewHeader.qml:178
-#, kde-format
-msgctxt "Reset calendar to today"
-msgid "Today"
-msgstr ""
+msgstr "Prejšnja dekada"
 
 #: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
-msgid "Reset calendar to today"
-msgstr ""
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr "Danes"
 
-#: calendar/qml/MonthViewHeader.qml:190
+#: calendar/qml/MonthViewHeader.qml:180
+#, kde-format
+msgid "Reset calendar to today"
+msgstr "Ponovno nastavi koledar na danes"
+
+#: calendar/qml/MonthViewHeader.qml:191
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Naslednji mesec"
 
-#: calendar/qml/MonthViewHeader.qml:192
+#: calendar/qml/MonthViewHeader.qml:193
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Naslednje leto"
 
-#: calendar/qml/MonthViewHeader.qml:194
+#: calendar/qml/MonthViewHeader.qml:195
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Naslednja dekada"
 
-#: calendar/qml/MonthViewHeader.qml:250
+#: calendar/qml/MonthViewHeader.qml:251
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Ohranjaj odprto"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Konfiguriraj…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

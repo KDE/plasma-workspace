@@ -1,14 +1,14 @@
 # Translation of plasma_applet_org.kde.plasma.digitalclock to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2021-12-16 12:49+0100\n"
-"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"PO-Revision-Date: 2023-01-15 12:54+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "Legg til …"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Legg til ny hending"
 
 #: package/contents/ui/CalendarView.qml:397
 #, kde-format
@@ -204,13 +204,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr ""
+msgstr "Tekst som skal visast:"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisk"
 
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format
@@ -223,25 +223,25 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr ""
+msgstr "Manuelt"
 
 #: package/contents/ui/configAppearance.qml:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Vel stil …"
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1 pt %2"
 
 #: package/contents/ui/configAppearance.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Vel skrift"
 
 #: package/contents/ui/configCalendar.qml:44
 #, kde-format

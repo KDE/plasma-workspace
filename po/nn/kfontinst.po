@@ -2,7 +2,7 @@
 #
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2004.
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2004, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2010, 2011, 2015, 2016, 2018, 2019, 2020.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2010, 2011, 2015, 2016, 2018, 2019, 2020, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2019.
 msgid ""
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2020-05-10 22:09+0200\n"
+"PO-Revision-Date: 2023-01-15 12:52+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -82,7 +82,7 @@ msgstr "Skriv ut"
 #: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
-msgstr ""
+msgstr "Avbryt …"
 
 #: apps/Printer.cpp:325
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "Symbol/anna"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Filtrer etter %1 …"
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
@@ -336,7 +336,7 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, kde-format
 msgid "…plus %1 more"
-msgstr ""
+msgstr "… i tillegg til %1 fleire"
 
 #: kcmfontinst/FontList.cpp:1007
 #, kde-format
@@ -363,7 +363,7 @@ msgstr "Ta ut av bruk"
 #: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
 #, kde-format
 msgid "Print…"
-msgstr ""
+msgstr "Skriv ut …"
 
 #: kcmfontinst/FontList.cpp:1317
 #, kde-format
@@ -481,12 +481,12 @@ msgstr "<qt>Ei gruppe med namn «<b>%1</b>» finst allereie.</qt>"
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
 msgid "Rename…"
-msgstr ""
+msgstr "Endra namn …"
 
 #: kcmfontinst/GroupList.cpp:801
 #, kde-format
 msgid "Export…"
-msgstr ""
+msgstr "Eksporter …"
 
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
@@ -575,7 +575,7 @@ msgstr "Tek ut av bruk"
 #: kcmfontinst/JobRunner.cpp:379
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr ""
+msgstr "Oppdaterer skriftoppsettet. Vent litt …"
 
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
@@ -686,22 +686,22 @@ msgstr "Utviklar og vedlikehaldar"
 #: kcmfontinst/KCmFontInst.cpp:202
 #, kde-format
 msgid "Create New Group…"
-msgstr ""
+msgstr "Lag ny gruppe …"
 
 #: kcmfontinst/KCmFontInst.cpp:204
 #, kde-format
 msgid "Remove Group…"
-msgstr ""
+msgstr "Fjern gruppe …"
 
 #: kcmfontinst/KCmFontInst.cpp:206
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr ""
+msgstr "Ta skriftene i gruppa i bruk …"
 
 #: kcmfontinst/KCmFontInst.cpp:208
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr ""
+msgstr "Ta skriftene i gruppa ut av bruk …"
 
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
@@ -711,17 +711,17 @@ msgstr "Dette førehandsviser den valde skrifta."
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Find Duplicates…"
-msgstr ""
+msgstr "Finn duplikatar …"
 
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr ""
+msgstr "Sjå etter skriftduplikatar …"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Installer frå fil …"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
@@ -731,7 +731,7 @@ msgstr "Installer skrifter frå lokal fil"
 #: kcmfontinst/KCmFontInst.cpp:252
 #, kde-format
 msgid "Get New Fonts…"
-msgstr ""
+msgstr "Hent nye skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
@@ -741,12 +741,12 @@ msgstr "Last ned nye skrifter"
 #: kcmfontinst/KCmFontInst.cpp:255
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr ""
+msgstr "Slett merke skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:313
 #, kde-format
 msgid "Change Preview Text…"
-msgstr ""
+msgstr "Endra tekst til førehandsvising …"
 
 #: kcmfontinst/KCmFontInst.cpp:375
 #, kde-format
@@ -844,7 +844,7 @@ msgstr "Slett skrifter"
 #: kcmfontinst/KCmFontInst.cpp:639
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr ""
+msgstr "Slettar skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:654
 #, kde-format
@@ -896,7 +896,7 @@ msgstr "Flytt skrifter"
 #: kcmfontinst/KCmFontInst.cpp:686
 #, kde-format
 msgid "Moving font(s)…"
-msgstr ""
+msgstr "Flyttar skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
@@ -941,7 +941,7 @@ msgstr "Skriv ny tekst:"
 #: kcmfontinst/KCmFontInst.cpp:829
 #, kde-format
 msgid "Scanning font list…"
-msgstr ""
+msgstr "Ser gjennom lista over skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:888
 #, kde-format
@@ -982,17 +982,17 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:989
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr ""
+msgstr "Ser etter tilknytte filer …"
 
 #: kcmfontinst/KCmFontInst.cpp:993
 #, kde-format
 msgid "Scanning Files…"
-msgstr ""
+msgstr "Søkjer gjennom filer …"
 
 #: kcmfontinst/KCmFontInst.cpp:994
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr ""
+msgstr "Ser etter fleire filer å installera …"
 
 #: kcmfontinst/KCmFontInst.cpp:1009
 #, kde-format
@@ -1002,7 +1002,7 @@ msgstr "Ser etter filer som er tilknytte %1"
 #: kcmfontinst/KCmFontInst.cpp:1037
 #, kde-format
 msgid "Installing font(s)…"
-msgstr ""
+msgstr "Installerer skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
@@ -1118,12 +1118,12 @@ msgstr "Ta skriftene ut av bruk"
 #: kcmfontinst/KCmFontInst.cpp:1164
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr ""
+msgstr "Tek skriftene i bruk …"
 
 #: kcmfontinst/KCmFontInst.cpp:1166
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr ""
+msgstr "Tek skriftene ut av bruk …"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1617,12 +1617,12 @@ msgstr "Vis type:"
 #: viewpart/FontViewPart.cpp:88
 #, kde-format
 msgid "Install…"
-msgstr ""
+msgstr "Installerer …"
 
 #: viewpart/FontViewPart.cpp:109
 #, kde-format
 msgid "Change Text…"
-msgstr ""
+msgstr "Byt tekst …"
 
 #: viewpart/FontViewPart.cpp:335
 #, kde-format

@@ -1,13 +1,13 @@
 # Translation of kcm_users to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-06-18 23:54+0200\n"
+"PO-Revision-Date: 2023-01-15 12:49+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -151,7 +151,7 @@ msgstr "Set opp fingeravtrykk"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Fjern alle"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -307,7 +307,7 @@ msgstr "Registrer finger på nytt"
 #: package/contents/ui/FingerprintDialog.qml:333
 #, kde-format
 msgid "Delete fingerprint"
-msgstr ""
+msgstr "Slett fingeravtrykk"
 
 #: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
@@ -328,121 +328,122 @@ msgstr "Legg til ny brukar"
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr ""
+msgstr "Byt avatar"
 
 #: package/contents/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
-msgstr ""
+msgstr "Det er ingenting"
 
+# Er visst namn på fargar, ikkje bilde. Denne er rosa (fargekodar på https://invent.kde.org/plasma/plasma-desktop/-/blob/master/kcms/users/package/contents/ui/UserDetailsPage.qml). Og bør ha alliterasjon. Mine forslag vart laga «kjapt og gæli», så finn heller betre alternativ.
 #: package/contents/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr ""
+msgstr "Flaksande flamingo"
 
 #: package/contents/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
-msgstr ""
+msgstr "Drakefrukt"
 
 #: package/contents/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
-msgstr ""
+msgstr "Søtpotet"
 
 #: package/contents/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr ""
+msgstr "Glødande glo"
 
 #: package/contents/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
-msgstr ""
+msgstr "Solstrålar"
 
 #: package/contents/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr ""
+msgstr "Limegrønt"
 
 #: package/contents/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr ""
+msgstr "Frodig og fint"
 
 #: package/contents/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr ""
+msgstr "Vårgrønt"
 
 #: package/contents/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr ""
+msgstr "Tafatt turkis"
 
 #: package/contents/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr ""
+msgstr "Plasma-blått"
 
 #: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr ""
+msgstr "Lat lavendel"
 
 #: package/contents/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr ""
+msgstr "Interessant indigo"
 
 #: package/contents/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr ""
+msgstr "Brent kol"
 
 #: package/contents/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr ""
+msgstr "Perfekt papir"
 
 #: package/contents/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr ""
+msgstr "Kafeteriabrunt"
 
 #: package/contents/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr ""
+msgstr "Tydeleg trevirke"
 
 #: package/contents/ui/PicturesSheet.qml:72
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr ""
+msgstr "Vel bilete"
 
 #: package/contents/ui/PicturesSheet.qml:104
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr ""
+msgstr "Vel fil …"
 
 #: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format

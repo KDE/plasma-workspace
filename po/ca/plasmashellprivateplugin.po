@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-13 00:58+0000\n"
+"POT-Creation-Date: 2023-01-16 00:58+0000\n"
 "PO-Revision-Date: 2023-01-13 13:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -67,69 +67,69 @@ msgstr[1] "%1 esdeveniments"
 msgid "No events"
 msgstr "Cap esdeveniment"
 
-#: calendar/qml/MonthViewHeader.qml:64
+#: calendar/qml/MonthViewHeader.qml:65
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:109
+#: calendar/qml/MonthViewHeader.qml:110
 #, kde-format
 msgid "Days"
 msgstr "Dies"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:115
 #, kde-format
 msgid "Months"
 msgstr "Mesos"
 
-#: calendar/qml/MonthViewHeader.qml:119
+#: calendar/qml/MonthViewHeader.qml:120
 #, kde-format
 msgid "Years"
 msgstr "Anys"
 
-#: calendar/qml/MonthViewHeader.qml:157
+#: calendar/qml/MonthViewHeader.qml:158
 #, kde-format
 msgid "Previous Month"
 msgstr "Mes anterior"
 
-#: calendar/qml/MonthViewHeader.qml:159
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Previous Year"
 msgstr "Any anterior"
 
-#: calendar/qml/MonthViewHeader.qml:161
+#: calendar/qml/MonthViewHeader.qml:162
 #, kde-format
 msgid "Previous Decade"
 msgstr "Dècada anterior"
 
-#: calendar/qml/MonthViewHeader.qml:178
+#: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Avui"
 
-#: calendar/qml/MonthViewHeader.qml:179
+#: calendar/qml/MonthViewHeader.qml:180
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Restaura el calendari a avui"
 
-#: calendar/qml/MonthViewHeader.qml:190
+#: calendar/qml/MonthViewHeader.qml:191
 #, kde-format
 msgid "Next Month"
 msgstr "Mes següent"
 
-#: calendar/qml/MonthViewHeader.qml:192
+#: calendar/qml/MonthViewHeader.qml:193
 #, kde-format
 msgid "Next Year"
 msgstr "Any següent"
 
-#: calendar/qml/MonthViewHeader.qml:194
+#: calendar/qml/MonthViewHeader.qml:195
 #, kde-format
 msgid "Next Decade"
 msgstr "Dècada següent"
 
-#: calendar/qml/MonthViewHeader.qml:250
+#: calendar/qml/MonthViewHeader.qml:251
 #, kde-format
 msgid "Keep Open"
 msgstr "Mantén obert"

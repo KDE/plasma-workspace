@@ -1,7 +1,7 @@
 # Translation of kcm_icons to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 1999, 2000, 2002, 2003, 2004, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2015, 2018, 2020.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2015, 2018, 2020, 2023.
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2007.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018, 2021.
@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2021-12-16 13:03+0100\n"
-"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"PO-Revision-Date: 2023-01-15 12:47+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -31,7 +31,7 @@ msgstr "Hovudverktøylinje"
 #: iconsizecategorymodel.cpp:15
 #, kde-format
 msgid "Secondary Toolbars"
-msgstr ""
+msgstr "Underverktøylinjer"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -137,13 +137,13 @@ msgstr ""
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Juster global skalering …"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "Storleik:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Hent nye ikon …"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "Vel ikonstorleikar"
 
 #: package/contents/ui/main.qml:285
 #, kde-format

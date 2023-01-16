@@ -1,13 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.mediacontroller to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2020, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2020, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-06-18 14:56+0200\n"
+"PO-Revision-Date: 2023-01-15 12:55+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Utan tittel"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82
@@ -112,6 +112,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"av %1 (%2)\n"
+"Midtklikk for å pausa\n"
+"Rull for å endra lydstyrken"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -121,6 +124,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Midtklikk for å pausa\n"
+"Rull for å endra lydstyrken"
 
 #: package/contents/ui/main.qml:303
 #, kde-format
@@ -130,6 +136,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"av %1 (pausa, %2)\n"
+"Midtklikk for å spela\n"
+"Rull for å endra lydstyrken"
 
 #: package/contents/ui/main.qml:303
 #, kde-format
@@ -139,3 +148,6 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"Pausa (%1)\n"
+"Midtklikk for å spela\n"
+"Rull for å endra lydstyrken"

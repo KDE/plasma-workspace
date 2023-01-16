@@ -1,12 +1,12 @@
 # Translation of kcm_notifications to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2019, 2020, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-10-18 20:33+0200\n"
+"PO-Revision-Date: 2023-01-15 12:48+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -93,37 +93,37 @@ msgstr "Varslingar vert ikkje handterte av Plasma."
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr ""
+msgstr "«Ikkje forstyrr»-modus"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Slått på:"
 
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr ""
+msgstr "Ved skjermspegling"
 
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr ""
+msgstr "Ved skjermdeling"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Snøggtast:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Synlegheitsvilkår"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -159,19 +159,19 @@ msgstr "Vis sprettopp"
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr ""
+msgstr "Sprettopp-vindauge"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr ""
+msgstr "Plassering:"
 
 #: package/contents/ui/main.qml:172
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr ""
+msgstr "Nært varslingsikonet"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "Gøym etter:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Meir tilbakemelding"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Varslingsikon:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr ""
+msgstr "Programspesifikke innstillingar"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

@@ -1,6 +1,6 @@
 # Translation of plasma_applet_org.kde.plasma.notifications to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2011, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2011, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2011.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2022-06-18 14:55+0200\n"
+"PO-Revision-Date: 2023-01-15 12:56+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -123,7 +123,7 @@ msgstr "Til manuelt slått av"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Vert automatisk avslutta: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -311,17 +311,17 @@ msgstr[1] "%1 ulesne varslingar"
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr ""
+msgstr "Ikkje forstyrr før %1 – midtklikk for å avslutta no"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "«Ikkje forstyrr»-modus – midtklikk for å avslutta"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Midtlikk for å starta «Ikkje forstyrr»-modus"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -337,7 +337,7 @@ msgstr "&Set opp varslingar og handlingar for hendingar …"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Nett no"
 
 #: package/contents/ui/NotificationHeader.qml:128
 #, kde-format
