@@ -123,7 +123,7 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
-                Accessible.onPressAction: daysCalendar.activated(index, model, delegate)
+                Accessible.onPressAction: mouseArea.clicked(null);
                 Keys.onPressed: {
                     if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
                         event.accepted = false;
@@ -169,6 +169,7 @@ Item {
                 }
 
                 MouseArea {
+                    id: mouseArea
                     anchors.fill: parent
                     property int wheelDelta: 0
 
