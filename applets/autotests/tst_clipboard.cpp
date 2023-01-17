@@ -64,6 +64,7 @@ private Q_SLOTS:
     void testMaximumRecords();
     void testDeleteRecord();
     void testClickRecord();
+    void testSearchRecord();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -560,6 +561,31 @@ void ClipboardTest::testClickRecord()
     QCoreApplication::processEvents();
 
     QCOMPARE(clipboard->text(), QStringLiteral("Hello World%1").arg(datetimeString));
+}
+
+void ClipboardTest::testSearchRecord()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    const QString datetimeString = QString::number(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch());
+    clipboard->setText(QStringLiteral("Hello World%1").arg(datetimeString));
+    addSpy.wait(500);
+    clipboard->setText(QStringLiteral("Goodbye%1").arg(datetimeString));
+    QCOMPARE(listViewItem->property("count").toInt(), 2);
+
+    QCoreApplication::processEvents();
+
+    QQuickItem *searchField = m_currentItemInStackView->findChild<QQuickItem *>("filter");
+    QVERIFY(searchField);
+    QVERIFY(searchField->property("enabled").toBool());
+    evaluate<void>(searchField, "text = 'hello'");
+    QCoreApplication::processEvents();
+
+    // Only one match
+    QCOMPARE(listViewItem->property("count").toInt(), 1);
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const

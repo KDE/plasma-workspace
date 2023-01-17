@@ -95,6 +95,7 @@ Menu {
 
             PlasmaExtras.SearchField {
                 id: filter
+                objectName: "filter"
                 Layout.fillWidth: true
 
                 // This uses expanded to ensure the binding gets reevaluated
