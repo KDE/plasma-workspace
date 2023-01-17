@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -468,81 +468,81 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Czas wëskrzëniwaniô menu dzejaniów:"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Wëczëszczë historëjã tacnika"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Kònfigùracëjô Klippera..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Zakùńczë"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Rãczno wëwòłôj dzejanié na zamkłoscë tacnika"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Editëjë zamkłoscë"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nôslédny element historëji"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "wczasniészi element historëji"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Menu w placu kùrsora mëszë"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

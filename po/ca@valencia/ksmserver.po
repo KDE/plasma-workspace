@@ -145,7 +145,7 @@ msgstr ""
 #: server.cpp:884
 #, kde-format
 msgid "Session Management"
-msgstr "Gestió de les sessions"
+msgstr "Gestioneu les sessions"
 
 #: server.cpp:887
 #, kde-format

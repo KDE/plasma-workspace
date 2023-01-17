@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2022-12-08 09:53+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -495,72 +495,72 @@ msgstr "Ponastavi ikono na privzeto za ukaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Samodejno pojavno okno menuja dejanj"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Počisti zgodovino odložišča"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Nastavi Klipper…"
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "Končaj"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ročno izvedi dejanje na trenutnem odložišču"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Uredi vsebine…"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Prikaži črtno kodo…"
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Naslednji predmet zgodovine"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Predhodni predmet zgodovine"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Odpri predmete na mestu miškinega kazalca"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2003-12-27 14:52+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -472,80 +472,80 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "&Goramser naidlenni gweithredoedd:"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "G&wagio Hanes y Clipfwrdd"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Ffurfweddu Klipper..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr ""
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Achosi Gweithred â Llaw ar y Clipfwrdd Cyfredol"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Golygu'r Cynnwys"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "&Naidlen wrth leoliad cyrchydd y llygoden"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2023-01-12 13:49+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -487,73 +487,73 @@ msgstr "Obnovenie predvolenej ikony pre príkaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatická akcia vyskakovacej ponuky"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Vyčistiť históriu schránky"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Nastaviť Klipper..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "Koniec"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručne spustiť akciu na aktuálnej schránke"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Upraviť obsah..."
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Zobraziť čiarový kód..."
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nasledujúca položka histórie"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Predchádzajúca položka histórie"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Otvoriť Klipper na polohe myši"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

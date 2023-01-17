@@ -95,7 +95,7 @@ msgstr "Deixa sense canviar"
 #: package/contents/ui/CreateUser.qml:16
 #, kde-format
 msgid "Create User"
-msgstr "Creació d'un usuari"
+msgstr "Creeu un usuari"
 
 #: package/contents/ui/CreateUser.qml:30
 #: package/contents/ui/UserDetailsPage.qml:124
@@ -357,7 +357,7 @@ msgstr "No s'ha afegit cap empremta dactilar"
 #: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Manage Users"
-msgstr "Gestió d'usuaris"
+msgstr "Gestioneu els usuaris"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -582,7 +582,7 @@ msgstr "S'ha produït un error desconegut."
 #: src/user.cpp:267
 #, kde-format
 msgid "Could not get permission to save user %1"
-msgstr "No s'ha pogut obtindre el permís per a guardar l'usuari %1"
+msgstr "No s'ha pogut obtindre el permís per que es guardarà l'usuari %1"
 
 #: src/user.cpp:272
 #, kde-format

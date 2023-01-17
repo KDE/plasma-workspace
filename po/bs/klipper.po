@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -478,33 +478,33 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Prekovrijeme iskakanja radnje:"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Očisti istorijat klipborda"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Podesi Klipper..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Quit Klipper"
 #| msgid "&Quit"
@@ -512,49 +512,49 @@ msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Izađi"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručno izvrši radnju nad trenutnim klipbordom"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Uredi sadržaj"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Prikaži prugasti kod..."
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Sljedeća stavka istorijata"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Prethodna stavka istorijata"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Otvori Klipper na poziciji miša"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

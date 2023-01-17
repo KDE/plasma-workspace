@@ -157,7 +157,7 @@ msgstr "Obtín temes globals nous…"
 #: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
-msgstr "Configuració de la disposició:"
+msgstr "Configureu la disposició:"
 
 #: package/contents/ui/MoreOptions.qml:27
 #, kde-format
@@ -182,7 +182,7 @@ msgstr ""
 #: package/contents/ui/MoreOptions.qml:56
 #, kde-format
 msgid "Appearance settings:"
-msgstr "Configuració de l'aparença:"
+msgstr "Configureu l'aparença:"
 
 #: package/contents/ui/MoreOptions.qml:60
 #, kde-format
@@ -242,13 +242,13 @@ msgstr "Este tema global aplicarà el següent:"
 #: package/contents/ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
-msgstr "Configuració de l'aparença"
+msgstr "Configureu l'aparença"
 
 #: package/contents/ui/SimpleOptions.qml:41
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr "• Configuració de l'aparença"
+msgstr "• Configureu l'aparença"
 
 #: package/contents/ui/SimpleOptions.qml:47
 #, kde-format

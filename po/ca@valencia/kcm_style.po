@@ -113,7 +113,7 @@ msgstr "Obtín estils nous de les aplicacions GNOME/GTK…"
 #: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr "Selecció d'arxiu de tema GTK"
+msgstr "Seleccioneu un arxiu de tema GTK"
 
 #: package/contents/ui/GtkStylePage.qml:111
 #, kde-format

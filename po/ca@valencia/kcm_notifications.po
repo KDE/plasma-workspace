@@ -252,7 +252,7 @@ msgstr "Posició del missatge emergent"
 #: package/contents/ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
-msgstr "Configuració de l'aplicació"
+msgstr "Configureu l'aplicació"
 
 #: package/contents/ui/SourcesPage.qml:93
 #, kde-format

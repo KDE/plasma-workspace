@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2009-01-05 12:55+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -471,80 +471,80 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "কর্ম সঞ্চালনের অনুরোধকারী পপ-আপের সময়সীমা: (&e)"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ক্লিপবোর্ডের পূর্ববর্তী তথ্য মুছে ফেলুন (&l)"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper কনফিগার করুন...(&C)"
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "প্রস্থান (&Q)"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "তথ্য সম্পাদনা"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ক্লিপবোর্ডের পূর্ববর্তী তথ্য ধারণের মাপ: (&l)"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ক্লিপবোর্ডের পূর্ববর্তী তথ্য ধারণের মাপ: (&l)"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "মাউসের কার্সারের অবস্থানে মেনু পপ-আপ করে প্রদর্শিত হবে (&P)"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

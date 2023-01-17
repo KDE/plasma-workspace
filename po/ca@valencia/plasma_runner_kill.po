@@ -72,7 +72,7 @@ msgstr "res"
 #: killrunner_config.ui:30
 #, kde-format
 msgid "Kill Applications Config"
-msgstr "Configuració de la finalització d'aplicacions"
+msgstr "Configureu la finalització d'aplicacions"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
 #: killrunner_config.ui:39

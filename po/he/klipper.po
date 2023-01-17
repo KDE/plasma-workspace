@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -472,33 +472,33 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "השהיה לחלון מוקפץ של פעולות:"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&נקה את היסטוריית לוח העריכה"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&הגדרות Klipper..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Quit Klipper"
 #| msgid "&Quit"
@@ -506,49 +506,49 @@ msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&יציאה..."
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "החל פעולה על לוח העריכה הנוכחי באופן ידני"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "עריכת תוכן"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&הצג ברקוד..."
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "פריט ההיסטוריה הבא"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "פריט ההיסטוריה הקודם"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "הקפץ תפריט במיקום של מצביע העכבר"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"

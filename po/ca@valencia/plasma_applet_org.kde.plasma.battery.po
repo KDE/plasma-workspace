@@ -127,7 +127,7 @@ msgstr "Bateria"
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
-msgstr "Gestió d'energia"
+msgstr "Gestió de l'energia"
 
 #: package/contents/ui/main.qml:152
 #, kde-format

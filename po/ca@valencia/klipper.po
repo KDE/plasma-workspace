@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2022-10-17 10:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -248,12 +248,12 @@ msgstr "Menú d'accions"
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "Configuració de les accions"
+msgstr "Configureu les accions"
 
 #: configdialog.cpp:597
 #, kde-format
 msgid "Actions Configuration"
-msgstr "Configuració de les accions"
+msgstr "Configureu les accions"
 
 #: configdialog.cpp:600
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "Dreceres"
 #: configdialog.cpp:600
 #, kde-format
 msgid "Shortcuts Configuration"
-msgstr "Configuració de les dreceres"
+msgstr "Configureu les dreceres"
 
 #: configdialog.cpp:680
 #, kde-kuit-format
@@ -495,72 +495,72 @@ msgstr "Reinicia la icona al valor predeterminat per a l'ordre."
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergent d'acció automàtica"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Neteja &l'historial del porta-retalls"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configura Klipper…"
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "I&x"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualment una acció al porta-retalls actual"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Edita el contingut…"
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra el codi de barres…"
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Element següent de l'historial"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Element anterior de l'historial"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Mostra els elements a la posició del ratolí"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
@@ -989,11 +989,3 @@ msgstr "Desactiva este emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The actions shown in the popup menu can be configured on the "
-#~ "<interface>Actions Configuration</interface> page."
-#~ msgstr ""
-#~ "Les accions mostrades en el menú emergent es poden configurar a la pàgina "
-#~ "<interface>Configuració d'accions</interface>."

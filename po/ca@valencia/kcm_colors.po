@@ -113,7 +113,7 @@ msgstr "Olivier Churlaud"
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Utility creation"
-msgstr "Creació de la utilitat"
+msgstr "Creeu la utilitat"
 
 #: editor/kcolorschemeeditor.cpp:30
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr "Codi del KCM (es torna a utilitzar ací)"
+msgstr "Codi de KCM (es torna a utilitzar ací)"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format

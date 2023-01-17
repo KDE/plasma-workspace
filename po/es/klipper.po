@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2022-10-17 17:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -505,72 +505,72 @@ msgstr "Reiniciar el icono al predeterminado para la orden"
 msgid "Icon:"
 msgstr "Icono:"
 
-#: historyimageitem.cpp:39
+#: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:154
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergente de acciones automático"
 
-#: klipper.cpp:177
+#: klipper.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Borrar historial del portapapeles"
 
-#: klipper.cpp:184
+#: klipper.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar Klipper..."
 
-#: klipper.cpp:190
+#: klipper.cpp:207
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Salir"
 
-#: klipper.cpp:195
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente la acción en el portapapeles actual"
 
-#: klipper.cpp:203
+#: klipper.cpp:220
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Editar el contenido..."
 
-#: klipper.cpp:211
+#: klipper.cpp:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mostrar código de &barras..."
 
-#: klipper.cpp:220
+#: klipper.cpp:237
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Siguiente elemento del historial"
 
-#: klipper.cpp:225
+#: klipper.cpp:242
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
-#: klipper.cpp:232
+#: klipper.cpp:249
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Mostrar elementos en la posición del ratón"
 
-#: klipper.cpp:243
+#: klipper.cpp:260
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"

@@ -186,7 +186,7 @@ msgstr "Obtín icones noves…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr "Configuració de la mida de les icones"
+msgstr "Configureu la mida de les icones"
 
 #: package/contents/ui/main.qml:285
 #, kde-format
