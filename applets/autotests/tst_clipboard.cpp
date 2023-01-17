@@ -67,6 +67,8 @@ private Q_SLOTS:
     void testSearchRecord();
     void testSaveHistory();
 
+    void testEmptyHint();
+
 private:
     QQuickItem *fullRepresentationItem() const;
     QQuickItem *rootItem() const;
@@ -612,6 +614,18 @@ void ClipboardTest::testSaveHistory()
     listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
     QVERIFY(listViewItem);
     QCOMPARE(listViewItem->property("count").toInt(), 2);
+}
+
+void ClipboardTest::testEmptyHint()
+{
+    QQuickItem *listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+    QCOMPARE(listViewItem->property("count").toInt(), 0);
+
+    QQuickItem *emptyHint = m_currentItemInStackView->findChild<QQuickItem *>("emptyHint");
+    QVERIFY(emptyHint);
+    QVERIFY(emptyHint->property("active").toBool());
+    QVERIFY(emptyHint->property("visible").toBool());
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const

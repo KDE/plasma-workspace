@@ -111,6 +111,7 @@ PlasmaComponents3.ScrollView {
 
         Loader {
             id: emptyHint
+            objectName: "emptyHint"
 
             anchors.centerIn: parent
             width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
