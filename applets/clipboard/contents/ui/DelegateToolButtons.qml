@@ -31,6 +31,7 @@ RowLayout {
     }
     PlasmaComponents3.ToolButton {
         id: barcodeToolButton
+        objectName: "barcodeToolButton"
         icon.name: "view-barcode-qr"
         visible: supportsBarcodes
 

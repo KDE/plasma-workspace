@@ -59,6 +59,8 @@ private Q_SLOTS:
     void testEditRecord();
     void testEditCancel();
 
+    void testGenerateBarcode();
+
 private:
     QQuickItem *fullRepresentationItem() const;
     QQuickItem *rootItem() const;
@@ -422,6 +424,60 @@ void ClipboardTest::testEditCancel()
     firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
     QVERIFY(firstRecordItem);
     QCOMPARE(evaluate<QString>(firstRecordItem, "DisplayRole"), firstRecordDisplayRole);
+}
+
+void ClipboardTest::testGenerateBarcode()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    // Must use different strings to create a new record
+    clipboard->setText(QStringLiteral("Hello World%1").arg(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch()));
+    addSpy.wait(500);
+    QCOMPARE(listViewItem->property("count").toInt(), 1);
+
+    QQuickItem *firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    QQuickItem *const toolButtonsLoader = firstRecordItem->findChild<QQuickItem *>("toolButtonsLoader");
+    QVERIFY(toolButtonsLoader);
+    QVERIFY(evaluate<bool>(toolButtonsLoader, "!active")); // Is not current item, so loader is not ready
+
+    // Activate tool buttons
+    evaluate<void>(listViewItem, "currentIndex = 0;");
+    QCoreApplication::processEvents();
+    QQuickItem *const toolButtonsLoaderItem = evaluate<QQuickItem *>(toolButtonsLoader, "item");
+    QVERIFY(toolButtonsLoaderItem);
+
+    // Click the button
+    QQuickItem *const barcodeToolButton = toolButtonsLoaderItem->findChild<QQuickItem *>("barcodeToolButton");
+    QVERIFY(barcodeToolButton);
+    // Click edit button
+    evaluate<void>(barcodeToolButton, "clicked(null);");
+    QCoreApplication::processEvents();
+    QTest::qWait(1000); // Animation
+
+    m_currentItemInStackView = evaluate<QQuickItem *>(fullRepresentationItem(), "stack.currentItem");
+    QVERIFY(m_currentItemInStackView);
+    QVERIFY(evaluate<bool>(m_currentItemInStackView, "this instanceof BarcodePage"));
+    QQuickItem *const barcodeItem = m_currentItemInStackView->findChild<QQuickItem *>("barcodeItem");
+    QVERIFY(barcodeItem);
+
+    // Grab the image
+    QEventLoop loop;
+    QImage grabImage;
+    auto grabResult = barcodeItem->grabToImage();
+    Q_ASSERT(grabResult);
+    loop.connect(grabResult.data(), &QQuickItemGrabResult::ready, this, [&loop, &grabResult, &grabImage] {
+        grabImage = grabResult->image();
+        grabResult.clear();
+        loop.quit();
+    });
+    loop.exec();
+    // If a preview fails to load, the pixel in the center position will be transparent
+    const QColor centerColor = grabImage.pixelColor(grabImage.width() / 2, grabImage.height() / 2);
+    QVERIFY(centerColor == Qt::white || centerColor == Qt::black); // Barcode image
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const

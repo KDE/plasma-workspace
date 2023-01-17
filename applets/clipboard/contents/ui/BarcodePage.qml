@@ -100,6 +100,7 @@ ColumnLayout {
 
         Prison.Barcode {
             id: barcodeItem
+            objectName: "barcodeItem"
             readonly property bool valid: implicitWidth > 0 && implicitHeight > 0 && implicitWidth <= width && implicitHeight <= height
             anchors.fill: parent
             barcodeType: Plasmoid.configuration.barcodeType
