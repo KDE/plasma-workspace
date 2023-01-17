@@ -33,7 +33,7 @@ PlasmaComponents3.Label {
         })
 
         // finally turn line breaks into HTML br tags
-        text = text.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "<br>")
+        text = text.replace(/\r\n|\r|\n/g, "<br>")
 
         return text
     }
