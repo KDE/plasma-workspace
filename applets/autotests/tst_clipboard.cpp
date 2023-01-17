@@ -62,6 +62,7 @@ private Q_SLOTS:
     void testGenerateBarcode();
 
     void testMaximumRecords();
+    void testDeleteRecord();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -498,6 +499,41 @@ void ClipboardTest::testMaximumRecords()
     }
 
     QCOMPARE(listViewItem->property("count").toInt(), 30);
+}
+
+void ClipboardTest::testDeleteRecord()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    clipboard->setText(QStringLiteral("Hello World%1").arg(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch()));
+    addSpy.wait(500);
+    clipboard->setText(QStringLiteral("Goodbye%1").arg(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch()));
+    QCOMPARE(listViewItem->property("count").toInt(), 2);
+
+    // Activate tool buttons
+    QCoreApplication::processEvents();
+    evaluate<void>(listViewItem, "currentIndex = 0;");
+    QCoreApplication::processEvents();
+
+    QQuickItem *firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    QQuickItem *const toolButtonsLoader = firstRecordItem->findChild<QQuickItem *>("toolButtonsLoader");
+    QVERIFY(toolButtonsLoader);
+
+    QQuickItem *const toolButtonsLoaderItem = evaluate<QQuickItem *>(toolButtonsLoader, "item");
+    QVERIFY(toolButtonsLoaderItem);
+
+    // Click the button
+    QQuickItem *const deleteToolButton = toolButtonsLoaderItem->findChild<QQuickItem *>("deleteToolButton");
+    QVERIFY(deleteToolButton);
+    // Click edit button
+    evaluate<void>(deleteToolButton, "clicked(null);");
+    QCoreApplication::processEvents();
+
+    QCOMPARE(listViewItem->property("count").toInt(), 1);
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const

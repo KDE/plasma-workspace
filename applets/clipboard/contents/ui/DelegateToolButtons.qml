@@ -64,6 +64,7 @@ RowLayout {
     }
     PlasmaComponents3.ToolButton {
         id: deleteToolButton
+        objectName: "deleteToolButton"
         icon.name: "edit-delete"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
