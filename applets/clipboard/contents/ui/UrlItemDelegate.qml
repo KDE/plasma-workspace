@@ -73,6 +73,7 @@ Item {
                 }
             }
             PlasmaComponents3.Label {
+                id: label
                 font: PlasmaCore.Theme.smallestFont
                 color: PlasmaCore.Theme.backgroundColor
                 maximumLineCount: 1

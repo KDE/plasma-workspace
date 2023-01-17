@@ -53,6 +53,8 @@ private Q_SLOTS:
 
     void testCopyText();
     void testCopyImage();
+    void testCopyFileUrl_data();
+    void testCopyFileUrl();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -223,6 +225,82 @@ void ClipboardTest::testCopyImage()
     loop.exec();
     // Grabbed, now compare two colors
     QCOMPARE(grabImage.pixelColor(0, 0), testImage.pixelColor(0, 0));
+}
+
+void ClipboardTest::testCopyFileUrl_data()
+{
+    QTest::addColumn<QList<QUrl>>("urls");
+    QTest::addColumn<QStringList>("labels");
+    QTest::newRow("single url") << QList<QUrl>{QUrl::fromLocalFile(QFINDTESTDATA("./CMakeLists.txt"))} << QStringList{QStringLiteral("CMakeLists.txt")};
+    QTest::newRow("multiple urls") << QList<QUrl>{QUrl::fromLocalFile(QFINDTESTDATA("./CMakeLists.txt")),
+                                                  QUrl::fromLocalFile(QFINDTESTDATA("./tst_clipboard.cpp"))}
+                                   << QStringList{QStringLiteral("CMakeLists.txt"), QStringLiteral("tst_clipboard.cpp")};
+}
+
+void ClipboardTest::testCopyFileUrl()
+{
+    QFETCH(QList<QUrl>, urls);
+    QFETCH(QStringList, labels);
+
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    clipboard->setText("test");
+    addSpy.wait(500);
+    auto mimeData = new QMimeData;
+    mimeData->setUrls(urls);
+    clipboard->setMimeData(mimeData);
+    addSpy.wait();
+
+    QQuickItem *const firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    // From klipper/historyurlitem.cpp
+    QString ret;
+    {
+        bool first = true;
+        for (const QUrl &url : urls) {
+            if (!first) {
+                ret.append(QLatin1Char(' '));
+            }
+            first = false;
+            ret.append(url.toString(QUrl::FullyEncoded));
+        }
+    }
+    QCOMPARE(ret, evaluate<QString>(firstRecordItem, "DisplayRole"));
+    QQuickItem *itemLoader = firstRecordItem->findChild<QQuickItem *>("itemDelegateLoader");
+    QVERIFY(itemLoader);
+
+    // Test correct delegate is used
+    QVERIFY(evaluate<bool>(itemLoader, "item instanceof UrlItemDelegate"));
+    QQuickItem *itemDelegate = evaluate<QQuickItem *>(itemLoader, "item");
+    QCOMPARE(urls.size(), evaluate<int>(itemDelegate, "previewList.count"));
+
+    // Sleep 1s to make sure the preview is loaded
+    QTest::qWait(1000);
+    // Test url preview
+    for (int i = 0; i < urls.size(); ++i) {
+        QQuickItem *urlPreviewDelegate =
+            evaluate<QQuickItem *>(itemDelegate, QStringLiteral("previewList.itemAtIndex(%1)").arg(QString::number(i)).toLatin1().constData());
+        QVERIFY(urlPreviewDelegate);
+
+        // Test file preview
+        QEventLoop loop;
+        QImage grabImage;
+        auto grabResult = urlPreviewDelegate->grabToImage();
+        QVERIFY(grabResult);
+        loop.connect(grabResult.data(), &QQuickItemGrabResult::ready, this, [&loop, &grabResult, &grabImage] {
+            grabImage = grabResult->image();
+            grabResult.clear();
+            loop.quit();
+        });
+        loop.exec();
+        // If a preview fails to load, the pixel in the center position will be transparent
+        QVERIFY(grabImage.pixelColor(grabImage.width() / 2, grabImage.height() / 2) != Qt::transparent);
+
+        // Test preview label / decodeURIComponent
+        QCOMPARE(labels.at(i), evaluate<QString>(urlPreviewDelegate, "label.text"));
+    }
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const
