@@ -8,6 +8,11 @@
 
 #include <KPackage/PackageStructure>
 
+/**
+ * By specifying "X-KDE-PlasmaImageWallpaper-AccentColor" in metadata,
+ * a wallpaper package can override the accent color when
+ * "Accent color from wallpaper" is enabled.
+ */
 class WallpaperPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
