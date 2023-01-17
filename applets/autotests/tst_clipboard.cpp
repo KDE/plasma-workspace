@@ -63,6 +63,7 @@ private Q_SLOTS:
 
     void testMaximumRecords();
     void testDeleteRecord();
+    void testClickRecord();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -534,6 +535,31 @@ void ClipboardTest::testDeleteRecord()
     QCoreApplication::processEvents();
 
     QCOMPARE(listViewItem->property("count").toInt(), 1);
+}
+
+void ClipboardTest::testClickRecord()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    const QString datetimeString = QString::number(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch());
+    clipboard->setText(QStringLiteral("Hello World%1").arg(datetimeString));
+    addSpy.wait(500);
+    clipboard->setText(QStringLiteral("Goodbye%1").arg(datetimeString));
+    QCOMPARE(listViewItem->property("count").toInt(), 2);
+
+    QCoreApplication::processEvents();
+    QCOMPARE(clipboard->text(), QStringLiteral("Goodbye%1").arg(datetimeString));
+
+    QQuickItem *secondRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(1)");
+    QVERIFY(secondRecordItem);
+
+    evaluate<void>(secondRecordItem, "clicked()");
+    QCoreApplication::processEvents();
+
+    QCOMPARE(clipboard->text(), QStringLiteral("Hello World%1").arg(datetimeString));
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const
