@@ -46,6 +46,7 @@ RowLayout {
     }
     PlasmaComponents3.ToolButton {
         id: editToolButton
+        objectName: "editToolButton"
         icon.name: "document-edit"
         enabled: !clipboardSource.editing
         visible: TypeRole === 0

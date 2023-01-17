@@ -64,6 +64,7 @@ ColumnLayout {
 
         PlasmaComponents3.TextArea {
             id: textArea
+            objectName: "textArea"
             wrapMode: Text.Wrap
             textFormat: TextEdit.PlainText
 
@@ -83,6 +84,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignRight
         Layout.margins: PlasmaCore.Units.smallSpacing * 2
         PlasmaComponents3.Button {
+            objectName: "saveButton"
             text: i18nc("@action:button", "Save")
             icon.name: "document-save"
             KeyNavigation.up: textArea
@@ -91,6 +93,7 @@ ColumnLayout {
         }
         PlasmaComponents3.Button {
             id: cancelButton
+            objectName: "cancelButton"
             text: i18nc("@action:button", "Cancel")
             icon.name: "dialog-cancel"
             KeyNavigation.up: textArea

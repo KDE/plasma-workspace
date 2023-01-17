@@ -106,6 +106,7 @@ PlasmaComponents.ItemDelegate {
 
     Loader {
         id: toolButtonsLoader
+        objectName: "toolButtonsLoader"
 
         anchors {
             right: label.right

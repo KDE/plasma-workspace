@@ -56,6 +56,9 @@ private Q_SLOTS:
     void testCopyFileUrl_data();
     void testCopyFileUrl();
 
+    void testEditRecord();
+    void testEditCancel();
+
 private:
     QQuickItem *fullRepresentationItem() const;
     QQuickItem *rootItem() const;
@@ -301,6 +304,124 @@ void ClipboardTest::testCopyFileUrl()
         // Test preview label / decodeURIComponent
         QCOMPARE(labels.at(i), evaluate<QString>(urlPreviewDelegate, "label.text"));
     }
+}
+
+void ClipboardTest::testEditRecord()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    // Must use different strings to create a new record
+    clipboard->setText(QStringLiteral("Hello World%1").arg(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch()));
+    addSpy.wait(500);
+    QCOMPARE(listViewItem->property("count").toInt(), 1);
+
+    QQuickItem *firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    const QString firstRecordDisplayRole = evaluate<QString>(firstRecordItem, "DisplayRole");
+    QQuickItem *const toolButtonsLoader = firstRecordItem->findChild<QQuickItem *>("toolButtonsLoader");
+    QVERIFY(toolButtonsLoader);
+    QVERIFY(evaluate<bool>(toolButtonsLoader, "!active")); // Is not current item, so loader is not ready
+
+    // Activate tool buttons
+    evaluate<void>(listViewItem, "currentIndex = 0;");
+    QCoreApplication::processEvents();
+    QQuickItem *const toolButtonsLoaderItem = evaluate<QQuickItem *>(toolButtonsLoader, "item");
+    QVERIFY(toolButtonsLoaderItem);
+
+    // Click the button
+    QQuickItem *const editButton = toolButtonsLoaderItem->findChild<QQuickItem *>("editToolButton");
+    QVERIFY(editButton);
+    // Click edit button
+    evaluate<void>(editButton, "clicked(null);");
+    QCoreApplication::processEvents();
+    QTest::qWait(1000);
+
+    m_currentItemInStackView = evaluate<QQuickItem *>(fullRepresentationItem(), "stack.currentItem");
+    QVERIFY(m_currentItemInStackView);
+    QVERIFY(evaluate<bool>(m_currentItemInStackView, "this instanceof EditPage"));
+    QQuickItem *const textArea = m_currentItemInStackView->findChild<QQuickItem *>("textArea");
+    QCOMPARE(evaluate<QString>(textArea, "text"), firstRecordDisplayRole);
+
+    // Change text
+    evaluate<void>(textArea, "text = 'Goodbye';");
+    QCoreApplication::processEvents();
+
+    // Save
+    QQuickItem *const saveButton = m_currentItemInStackView->findChild<QQuickItem *>("saveButton");
+    QVERIFY(saveButton);
+    evaluate<void>(saveButton, "clicked();");
+    QCoreApplication::processEvents();
+
+    // Back to list
+    m_currentItemInStackView = evaluate<QQuickItem *>(fullRepresentationItem(), "stack.currentItem");
+    QVERIFY(m_currentItemInStackView);
+    QVERIFY(evaluate<bool>(m_currentItemInStackView, "this instanceof PlasmaComponents3.ScrollView"));
+
+    firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    QCOMPARE(evaluate<QString>(firstRecordItem, "DisplayRole"), QStringLiteral("Goodbye"));
+}
+
+void ClipboardTest::testEditCancel()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    // Must use different strings to create a new record
+    clipboard->setText(QStringLiteral("Hello World%1").arg(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch()));
+    addSpy.wait(500);
+    QCOMPARE(listViewItem->property("count").toInt(), 1);
+
+    QQuickItem *firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    const QString firstRecordDisplayRole = evaluate<QString>(firstRecordItem, "DisplayRole");
+    QQuickItem *const toolButtonsLoader = firstRecordItem->findChild<QQuickItem *>("toolButtonsLoader");
+    QVERIFY(toolButtonsLoader);
+    QVERIFY(evaluate<bool>(toolButtonsLoader, "!active")); // Is not current item, so loader is not ready
+
+    // Activate tool buttons
+    evaluate<void>(listViewItem, "currentIndex = 0;");
+    QCoreApplication::processEvents();
+    QQuickItem *const toolButtonsLoaderItem = evaluate<QQuickItem *>(toolButtonsLoader, "item");
+    QVERIFY(toolButtonsLoaderItem);
+
+    // Click the button
+    QQuickItem *const editButton = toolButtonsLoaderItem->findChild<QQuickItem *>("editToolButton");
+    QVERIFY(editButton);
+    // Click edit button
+    evaluate<void>(editButton, "clicked(null);");
+    QCoreApplication::processEvents();
+    QTest::qWait(1000);
+
+    m_currentItemInStackView = evaluate<QQuickItem *>(fullRepresentationItem(), "stack.currentItem");
+    QVERIFY(m_currentItemInStackView);
+    QVERIFY(evaluate<bool>(m_currentItemInStackView, "this instanceof EditPage"));
+    QQuickItem *const textArea = m_currentItemInStackView->findChild<QQuickItem *>("textArea");
+    QCOMPARE(evaluate<QString>(textArea, "text"), firstRecordDisplayRole);
+
+    // Change text
+    evaluate<void>(textArea, "text = 'Goodbye';");
+    QCoreApplication::processEvents();
+
+    // Cancel
+    QQuickItem *const cancelButton = m_currentItemInStackView->findChild<QQuickItem *>("cancelButton");
+    QVERIFY(cancelButton);
+    evaluate<void>(cancelButton, "clicked();");
+    QCoreApplication::processEvents();
+
+    // Back to list
+    m_currentItemInStackView = evaluate<QQuickItem *>(fullRepresentationItem(), "stack.currentItem");
+    QVERIFY(m_currentItemInStackView);
+    QVERIFY(evaluate<bool>(m_currentItemInStackView, "this instanceof PlasmaComponents3.ScrollView"));
+
+    firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    QCOMPARE(evaluate<QString>(firstRecordItem, "DisplayRole"), firstRecordDisplayRole);
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const
