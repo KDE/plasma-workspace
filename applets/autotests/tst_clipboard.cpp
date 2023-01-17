@@ -10,8 +10,10 @@
 #include <QQmlEngine>
 #include <QQmlExpression>
 #include <QQuickItem>
-#include <QQuickView>
+#include <QQuickItemGrabResult>
 #include <QtTest>
+
+#include <KLocalizedString>
 
 #include "plasmawindowedcorona.h"
 #include "plasmawindowedview.h"
@@ -50,6 +52,7 @@ private Q_SLOTS:
     void cleanup();
 
     void testCopyText();
+    void testCopyImage();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -179,6 +182,47 @@ void ClipboardTest::testCopyText()
     // Case 7: Some UTF-8 characters, from https://en.wikipedia.org/wiki/Wikipedia:Language_recognition_chart
     const QString utf8String = QStringLiteral("AàêÆÄÇĂÂĈÇÁꞗāéñيঅअਅઅཀБЪΔת漢あ위ㄅកԱაกⴰ");
     copyTextAndCheckCount(utf8String, utf8String, true);
+}
+
+void ClipboardTest::testCopyImage()
+{
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+
+    QImage testImage(100, 100, QImage::Format_RGB32);
+    testImage.fill(Qt::red);
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    clipboard->setText("test");
+    addSpy.wait(500);
+    clipboard->setImage(testImage);
+    addSpy.wait(5000);
+
+    // A new image is added, now verify the first record
+    QQuickItem *const firstRecordItem = evaluate<QQuickItem *>(listViewItem, "itemAtIndex(0)");
+    QVERIFY(firstRecordItem);
+    QCOMPARE(QStringLiteral("▨ ") + i18nd("klipper", "%1x%2 %3bpp", testImage.width(), testImage.height(), testImage.depth()),
+             evaluate<QString>(firstRecordItem, "DisplayRole"));
+    QQuickItem *itemLoader = firstRecordItem->findChild<QQuickItem *>("itemDelegateLoader");
+    QVERIFY(itemLoader);
+
+    // Test correct delegate is used
+    QVERIFY(evaluate<bool>(itemLoader, "item instanceof ImageItemDelegate"));
+    QQuickItem *itemDelegate = evaluate<QQuickItem *>(itemLoader, "item");
+
+    // Grab one pixel to match color
+    QEventLoop loop;
+    QImage grabImage;
+    auto grabResult = itemDelegate->grabToImage();
+    QVERIFY(grabResult);
+    loop.connect(grabResult.data(), &QQuickItemGrabResult::ready, this, [&loop, &grabResult, &grabImage] {
+        grabImage = grabResult->image();
+        grabResult.clear();
+        loop.quit();
+    });
+    loop.exec();
+    // Grabbed, now compare two colors
+    QCOMPARE(grabImage.pixelColor(0, 0), testImage.pixelColor(0, 0));
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const

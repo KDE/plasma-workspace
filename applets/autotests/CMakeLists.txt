@@ -3,4 +3,4 @@
 
 # applets/clipboard
 ecm_add_test(tst_clipboard.cpp TEST_NAME test_applet_clipboard
-    LINK_LIBRARIES Qt::Qml Qt::Test Qt::Widgets PW::PlasmaWindowed)
+    LINK_LIBRARIES Qt::Qml Qt::Test Qt::Widgets KF5::I18n PW::PlasmaWindowed)
