@@ -61,6 +61,8 @@ private Q_SLOTS:
 
     void testGenerateBarcode();
 
+    void testMaximumRecords();
+
 private:
     QQuickItem *fullRepresentationItem() const;
     QQuickItem *rootItem() const;
@@ -478,6 +480,24 @@ void ClipboardTest::testGenerateBarcode()
     // If a preview fails to load, the pixel in the center position will be transparent
     const QColor centerColor = grabImage.pixelColor(grabImage.width() / 2, grabImage.height() / 2);
     QVERIFY(centerColor == Qt::white || centerColor == Qt::black); // Barcode image
+}
+
+void ClipboardTest::testMaximumRecords()
+{
+    // In initTestCase() the maximum number is set to 30
+    QQuickItem *const listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    // Must use different strings to create new records
+    for (int i = 0; i < 35; ++i) {
+        clipboard->setText(QString::number(i));
+        addSpy.wait(500);
+        qDebug() << "Current count" << listViewItem->property("count").toInt();
+    }
+
+    QCOMPARE(listViewItem->property("count").toInt(), 30);
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const
