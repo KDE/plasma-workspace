@@ -65,6 +65,7 @@ private Q_SLOTS:
     void testDeleteRecord();
     void testClickRecord();
     void testSearchRecord();
+    void testSaveHistory();
 
 private:
     QQuickItem *fullRepresentationItem() const;
@@ -586,6 +587,31 @@ void ClipboardTest::testSearchRecord()
 
     // Only one match
     QCOMPARE(listViewItem->property("count").toInt(), 1);
+}
+
+void ClipboardTest::testSaveHistory()
+{
+    QQuickItem *listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+
+    QSignalSpy addSpy(listViewItem, SIGNAL(countChanged()));
+    QClipboard *const clipboard = QGuiApplication::clipboard();
+    const QString datetimeString = QString::number(QDateTime::currentDateTimeUtc().toMSecsSinceEpoch());
+    clipboard->setText(QStringLiteral("Hello World%1").arg(datetimeString));
+    addSpy.wait(500);
+    clipboard->setText(QStringLiteral("Goodbye%1").arg(datetimeString));
+    QCOMPARE(listViewItem->property("count").toInt(), 2);
+
+    QCoreApplication::processEvents();
+
+    m_corona->view()->close();
+    delete m_corona;
+
+    // Init manually to create a new corona without history being removed
+    init();
+    listViewItem = evaluate<QQuickItem *>(m_currentItemInStackView, "contentItem");
+    QVERIFY(listViewItem);
+    QCOMPARE(listViewItem->property("count").toInt(), 2);
 }
 
 QQuickItem *ClipboardTest::fullRepresentationItem() const
