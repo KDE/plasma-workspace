@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: MIT
+
+forcetranslationdomaincheck:
+  variables:
+    CHECK_FOLDER_PATHS: "./" # Use ',' to separate multiple paths
+  image:
+    name: python:3.11-alpine
+    entrypoint: [""]
+  stage: build
+  tags:
+    - Linux
+  interruptible: true
+  before_script:
+    - wget -O check.py https://invent.kde.org/plasma-workspace/-/raw/master/wallpapers/autotests/TestForceTranslationDomain.py
+    - chmod +x check.py
+  script:
+    - ./check.py ${CHECK_FOLDER_PATHS}
