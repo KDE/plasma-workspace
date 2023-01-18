@@ -50,6 +50,7 @@ void ImageListModelTest::initTestCase()
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
+    renameBizarreFile(m_dataDir);
 
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
@@ -89,6 +90,8 @@ void ImageListModelTest::cleanupTestCase()
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
 
     QDir(standardPath).removeRecursively();
+
+    restoreBizarreFile(m_dataDir);
 }
 
 void ImageListModelTest::testImageListModelData()

@@ -20,6 +20,7 @@ public:
 
 public Q_SLOTS:
     void qmlEngineAvailable(QQmlEngine *engine);
+    void cleanupTestCase();
 
 private:
     QDir m_dataDir;
@@ -34,6 +35,7 @@ TestSetup::TestSetup()
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
+    renameBizarreFile(m_dataDir);
 
     m_wallpaperPath = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
     m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package/"));
@@ -47,6 +49,11 @@ void TestSetup::qmlEngineAvailable(QQmlEngine *engine)
     engine->rootContext()->setContextProperty(QStringLiteral("testPackage"), QUrl::fromLocalFile(m_packagePath));
     engine->rootContext()->setContextProperty(QStringLiteral("testBizzareFileName"), m_bizzarePath);
     engine->rootContext()->setContextProperty(QStringLiteral("testBizzareFileName_modelImage"), QUrl::fromUserInput(m_bizzarePath).toString());
+}
+
+void TestSetup::cleanupTestCase()
+{
+    restoreBizarreFile(m_dataDir);
 }
 
 QUICK_TEST_MAIN_WITH_SETUP(ImageBackend, TestSetup)

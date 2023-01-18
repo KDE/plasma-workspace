@@ -16,6 +16,7 @@ class ImageFinderTest : public QObject
 
 private Q_SLOTS:
     void initTestCase();
+    void cleanupTestCase();
     void testImageFinderCanFindImages();
 
 private:
@@ -26,6 +27,12 @@ void ImageFinderTest::initTestCase()
 {
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     QVERIFY(!m_dataDir.isEmpty());
+    renameBizarreFile(m_dataDir);
+}
+
+void ImageFinderTest::cleanupTestCase()
+{
+    restoreBizarreFile(m_dataDir);
 }
 
 void ImageFinderTest::testImageFinderCanFindImages()
