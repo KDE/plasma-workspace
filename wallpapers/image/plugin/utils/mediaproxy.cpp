@@ -186,8 +186,15 @@ void MediaProxy::useSingleImageDefaults()
         }
 
         package.setPath(m_source.toLocalFile());
+    }
 
-        if (!package.isValid()) {
+    if (!package.isValid()) {
+        // Use Next
+        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/Next"), QStandardPaths::LocateDirectory));
+
+        if (package.isValid()) {
+            m_source = QUrl::fromLocalFile(package.path());
+        } else {
             return;
         }
     }
