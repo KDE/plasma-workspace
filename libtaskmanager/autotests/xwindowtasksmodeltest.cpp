@@ -202,6 +202,8 @@ void XWindowTasksModelTest::test_openCloseWindow()
     // Change the title of the window
     QSignalSpy dataChangedSpy(&model, &XWindowTasksModel::dataChanged);
     const QString newTitle = initialProperties[QStringLiteral("title")].toString() + QStringLiteral("__newtitle__");
+    QCoreApplication::processEvents();
+    dataChangedSpy.clear();
     QVERIFY(engine.rootObjects().at(0)->setProperty("title", newTitle));
     QVERIFY(dataChangedSpy.wait());
     QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
