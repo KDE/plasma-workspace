@@ -67,42 +67,47 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
         }
     }
 
-    if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
-        const KService::Ptr service = KService::serviceByStorageId(url.fileName());
+    if (url.isLocalFile()) {
+        if (KDesktopFile::isDesktopFile(url.toLocalFile())) {
+            const KService::Ptr service = KService::serviceByStorageId(url.fileName());
 
-        // Resolve to non-absolute menuId-based URL if possible.
-        if (service) {
-            const QString &menuId = service->menuId();
+            // Resolve to non-absolute menuId-based URL if possible.
+            if (service) {
+                const QString &menuId = service->menuId();
 
-            if (!menuId.isEmpty()) {
-                data.url = QUrl(QLatin1String("applications:") + menuId);
-            }
-        }
-
-        if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
-            data.name = service->name();
-            data.genericName = service->genericName();
-            data.id = service->storageId();
-
-            if (data.icon.isNull()) {
-                data.icon = QIcon::fromTheme(service->icon());
-            }
-        } else {
-            KDesktopFile f(url.toLocalFile());
-            if (f.tryExec()) {
-                data.name = f.readName();
-                data.genericName = f.readGenericName();
-                data.id = QUrl::fromLocalFile(f.fileName()).fileName();
-
-                if (data.icon.isNull()) {
-                    data.icon = QIcon::fromTheme(f.readIcon());
+                if (!menuId.isEmpty()) {
+                    data.url = QUrl(QLatin1String("applications:") + menuId);
                 }
             }
+
+            if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
+                data.name = service->name();
+                data.genericName = service->genericName();
+                data.id = service->storageId();
+
+                if (data.icon.isNull()) {
+                    data.icon = QIcon::fromTheme(service->icon());
+                }
+            } else {
+                KDesktopFile f(url.toLocalFile());
+                if (f.tryExec()) {
+                    data.name = f.readName();
+                    data.genericName = f.readGenericName();
+                    data.id = QUrl::fromLocalFile(f.fileName()).fileName();
+
+                    if (data.icon.isNull()) {
+                        data.icon = QIcon::fromTheme(f.readIcon());
+                    }
+                }
+            }
+
+            if (data.id.endsWith(".desktop")) {
+                data.id = data.id.left(data.id.length() - 8);
+            }
+        } else {
+            data.id = url.fileName();
         }
 
-        if (data.id.endsWith(".desktop")) {
-            data.id = data.id.left(data.id.length() - 8);
-        }
     } else if (url.scheme() == QLatin1String("preferred")) {
         data.id = defaultApplication(url);
 
