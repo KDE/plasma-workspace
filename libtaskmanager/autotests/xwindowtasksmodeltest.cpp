@@ -6,8 +6,11 @@
 
 #include <QDateTime>
 #include <QQmlApplicationEngine>
+#include <QRasterWindow>
 #include <QtTest>
 
+#include <KActivities/Consumer>
+#include <KIconLoader>
 #include <KWindowSystem>
 
 #include "xwindowtasksmodel.h"
@@ -28,17 +31,26 @@ private Q_SLOTS:
     void test_winIdsFromMimeData();
 
     void test_openCloseWindow();
+    void test_modelData();
 
 private:
+    std::unique_ptr<QRasterWindow> createSingleWindow(const QString &title, QModelIndex &index);
+
     WId m_WId = 12345;
     QByteArray m_singleWId;
     QByteArray m_threeWIds;
     QByteArray m_negativeCountWIds;
     QByteArray m_insufficientWIds;
+
+    XWindowTasksModel m_model;
 };
 
 void XWindowTasksModelTest::initTestCase()
 {
+    if (!KWindowSystem::isPlatformX11()) {
+        QSKIP("Test is not running on X11.");
+    }
+
     char *singleWIdData = new char[sizeof(WId)];
     memcpy(singleWIdData, &m_WId, sizeof(WId));
     m_singleWId = QByteArray(singleWIdData, sizeof(WId));
@@ -165,10 +177,6 @@ void XWindowTasksModelTest::test_winIdsFromMimeData()
 
 void XWindowTasksModelTest::test_openCloseWindow()
 {
-    if (!KWindowSystem::isPlatformX11()) {
-        QSKIP("Test is not running on X11.");
-    }
-
     XWindowTasksModel model;
 
     auto findWindow = [&model](const QString &windowTitle) {
@@ -217,6 +225,113 @@ void XWindowTasksModelTest::test_openCloseWindow()
     QMetaObject::invokeMethod(engine.rootObjects().at(0), "close", Qt::QueuedConnection);
     QVERIFY(rowsRemovedSpy.wait());
     QCOMPARE(modelCount - 1, model.rowCount());
+}
+
+void XWindowTasksModelTest::test_modelData()
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    // See XWindowTasksModel::data for available roles
+    { // BEGIN Icon
+        QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+        qDebug() << "Start testing Qt::DecorationRole";
+        const QIcon oldWindowIcon = index.data(Qt::DecorationRole).value<QIcon>(); // X11 icon
+        QVERIFY(!oldWindowIcon.isNull());
+        window->setIcon(QIcon(QFINDTESTDATA("data/windows/samplewidgetwindow.png")));
+        QVERIFY(dataChangedSpy.wait());
+        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DecorationRole));
+
+        const QIcon newWindowIcon = index.data(Qt::DecorationRole).value<QIcon>();
+        QVERIFY(!newWindowIcon.isNull());
+        QVERIFY(oldWindowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2)
+                != newWindowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2));
+
+        window->setIcon(QIcon());
+        QVERIFY(dataChangedSpy.wait());
+        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DecorationRole));
+    } // END Icon
+
+    const NET::Properties windowInfoFlags =
+        NET::WMState | NET::XAWMState | NET::WMDesktop | NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
+    const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities | NET::WM2WindowClass | NET::WM2AllowedActions
+        | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName | NET::WM2GTKApplicationId;
+    KWindowInfo info(window->winId(), windowInfoFlags, windowInfoFlags2);
+
+    QTRY_COMPARE(index.data(AbstractTasksModel::AppId).toString(), info.windowClassClass());
+    QTRY_COMPARE(index.data(AbstractTasksModel::AppName).toString(), info.windowClassClass());
+    QTRY_COMPARE(index.data(AbstractTasksModel::GenericName).toString(), QString());
+    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrl).toUrl().toLocalFile().endsWith(info.windowClassClass()));
+    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl().toLocalFile().endsWith(info.windowClassClass()));
+    QTRY_COMPARE(index.data(AbstractTasksModel::WinIdList).toList().size(), 1);
+    QTRY_COMPARE(index.data(AbstractTasksModel::MimeType).toString(), QStringLiteral("windowsystem/winid"));
+
+    {
+        QMimeData mimeData;
+        mimeData.setData(index.data(AbstractTasksModel::MimeType).toString(), index.data(AbstractTasksModel::MimeData).toByteArray());
+        bool ok = false;
+        XWindowTasksModel::winIdFromMimeData(&mimeData, &ok);
+        QVERIFY(ok);
+    }
+
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsWindow).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsActive).toBool());
+
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsClosable).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsMovable).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsResizable).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsMaximizable).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsMaximized).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimizable).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepAbove).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsKeepBelow).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreenable).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsShadeable).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsShaded).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsVirtualDesktopsChangeable).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool());
+
+    // Due to window decoration, the size of a window can't be determined accurately
+    const QRect screenGeometry = index.data(AbstractTasksModel::ScreenGeometry).toRect();
+    QVERIFY(screenGeometry.width() > 0 && screenGeometry.height() > 0);
+
+    KActivities::Consumer activityConsumer;
+    qDebug() << "Start testing AbstractTasksModel::Activities. Current activity number:" << activityConsumer.runningActivities().size();
+    if (activityConsumer.runningActivities().size() > 0) {
+        QCOMPARE(index.data(AbstractTasksModel::Activities).toStringList(), info.activities());
+    } else {
+        // In CI the window manager is openbox, so there could be no running activity.
+        QCOMPARE(index.data(AbstractTasksModel::Activities).toStringList().size(), 0);
+    }
+
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsDemandingAttention).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::SkipTaskbar).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::SkipPager).toBool());
+    QTRY_COMPARE(index.data(AbstractTasksModel::AppPid).toInt(), info.pid());
+
+    QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
+}
+
+std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const QString &title, QModelIndex &index)
+{
+    auto window = std::make_unique<QRasterWindow>();
+    window->setTitle(title);
+    window->setBaseSize(QSize(320, 240));
+
+    QSignalSpy rowInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
+    window->show();
+    Q_ASSERT(rowInsertedSpy.wait());
+
+    // Find the window index
+    const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, title);
+    Q_ASSERT(results.size() == 1);
+    index = results.at(0);
+    Q_ASSERT(index.isValid());
+    qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
+
+    return window;
 }
 
 QTEST_MAIN(XWindowTasksModelTest)
