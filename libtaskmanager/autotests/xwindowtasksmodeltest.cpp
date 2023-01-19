@@ -11,12 +11,19 @@
 
 #include <KActivities/Consumer>
 #include <KIconLoader>
+#include <KSycoca>
 #include <KWindowSystem>
 
+#include "samplewidgetwindow.h"
 #include "xwindowtasksmodel.h"
 
 using namespace TaskManager;
 using MimeDataMap = QMap<QString, QByteArray>;
+
+namespace
+{
+constexpr const char *dummyDesktopFileName = "org.kde.plasma.test.dummy.desktop";
+}
 
 class XWindowTasksModelTest : public QObject
 {
@@ -24,6 +31,7 @@ class XWindowTasksModelTest : public QObject
 
 private Q_SLOTS:
     void initTestCase();
+    void cleanupTestCase();
 
     void test_winIdFromMimeData_data();
     void test_winIdFromMimeData();
@@ -32,9 +40,11 @@ private Q_SLOTS:
 
     void test_openCloseWindow();
     void test_modelData();
+    void test_modelDataFromDesktopFile();
 
 private:
     std::unique_ptr<QRasterWindow> createSingleWindow(const QString &title, QModelIndex &index);
+    void createDesktopFile(const char *fileName, const std::vector<std::string> &lines, QString &path);
 
     WId m_WId = 12345;
     QByteArray m_singleWId;
@@ -84,6 +94,21 @@ void XWindowTasksModelTest::initTestCase()
     delete[] insufficientWIdsData;
 
     QGuiApplication::setQuitOnLastWindowClosed(false);
+
+    QStandardPaths::setTestModeEnabled(true);
+
+    const QString applicationDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications");
+    QDir dir;
+    if (!dir.exists(applicationDir)) {
+        dir.mkpath(applicationDir);
+    }
+}
+
+void XWindowTasksModelTest::cleanupTestCase()
+{
+    QFile dummyFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications")
+                    + QDir::separator() + QString::fromLatin1(dummyDesktopFileName));
+    dummyFile.remove();
 }
 
 void XWindowTasksModelTest::test_winIdFromMimeData_data()
@@ -312,6 +337,99 @@ void XWindowTasksModelTest::test_modelData()
     QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
 }
 
+void XWindowTasksModelTest::test_modelDataFromDesktopFile()
+{
+    // Case 1: A normal window
+    std::vector<std::string> lines;
+    lines.emplace_back("Name=DummyWindow");
+    lines.emplace_back("GenericName=DummyGenericName");
+    lines.emplace_back(QStringLiteral("Exec=%1").arg(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath)).toStdString());
+    lines.emplace_back("Terminal=false");
+    lines.emplace_back("Type=Application");
+    lines.emplace_back(QStringLiteral("Icon=%1").arg(QFINDTESTDATA("data/windows/none.png")).toStdString());
+
+    // Test generic name, icon and launcher url
+    QString desktopFilePath;
+    createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
+
+    QSignalSpy rowsInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
+    QProcess sampleWindowProcess;
+    sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
+    sampleWindowProcess.setArguments(QStringList{
+        QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
+        QFINDTESTDATA("data/windows/samplewidgetwindow.png"),
+    });
+    sampleWindowProcess.start();
+    rowsInsertedSpy.wait();
+
+    // Find the window index
+    auto findWindowIndex = [this, &sampleWindowProcess](QModelIndex &index) {
+        const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, sampleWindowProcess.arguments().at(0));
+        QVERIFY(results.size() == 1);
+        index = results.at(0);
+        QVERIFY(index.isValid());
+        qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
+    };
+
+    QModelIndex index;
+    findWindowIndex(index);
+
+    QCOMPARE(index.data(AbstractTasksModel::AppName).toString(), QStringLiteral("DummyWindow"));
+    QCOMPARE(index.data(AbstractTasksModel::GenericName).toString(), QStringLiteral("DummyGenericName"));
+    QCOMPARE(index.data(AbstractTasksModel::LauncherUrl).toUrl(), QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
+    QCOMPARE(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(),
+             QUrl(QStringLiteral("applications:%1").arg(QString::fromLatin1(dummyDesktopFileName))));
+
+    // Test icon should use the icon from the desktop file (Not the png file filled with red color)
+    const QIcon windowIcon = index.data(Qt::DecorationRole).value<QIcon>();
+    QVERIFY(!windowIcon.isNull());
+    QVERIFY(windowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2).red() < 200);
+
+    // SingleMainWindow is not set, which implies it can launch a new instance.
+    QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
+
+    QSignalSpy rowsRemovedSpy(&m_model, &XWindowTasksModel::rowsRemoved);
+    sampleWindowProcess.terminate();
+    QVERIFY(rowsRemovedSpy.wait());
+
+    auto testCanLaunchNewInstance = [&](bool canLaunchNewInstance) {
+        createDesktopFile(dummyDesktopFileName, lines, desktopFilePath);
+        sampleWindowProcess.start();
+        rowsInsertedSpy.wait();
+
+        findWindowIndex(index);
+        QCOMPARE(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool(), canLaunchNewInstance);
+
+        sampleWindowProcess.terminate();
+        QVERIFY(rowsRemovedSpy.wait());
+    };
+
+    // Case 2: Set SingleMainWindow or X-GNOME-SingleWindow or both
+    lines.emplace_back("SingleMainWindow=true");
+    testCanLaunchNewInstance(false);
+
+    lines.pop_back();
+    lines.emplace_back("X-GNOME-SingleWindow=true");
+    testCanLaunchNewInstance(false);
+
+    lines.pop_back();
+    lines.emplace_back("SingleMainWindow=false");
+    lines.emplace_back("X-GNOME-SingleWindow=true");
+    testCanLaunchNewInstance(false);
+
+    lines.pop_back();
+    lines.pop_back();
+    lines.emplace_back("SingleMainWindow=true");
+    lines.emplace_back("X-GNOME-SingleWindow=false");
+    testCanLaunchNewInstance(false);
+
+    lines.pop_back();
+    lines.pop_back();
+    lines.emplace_back("SingleMainWindow=false");
+    lines.emplace_back("X-GNOME-SingleWindow=false");
+    testCanLaunchNewInstance(true);
+}
+
 std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const QString &title, QModelIndex &index)
 {
     auto window = std::make_unique<QRasterWindow>();
@@ -330,6 +448,31 @@ std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const Q
     qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
 
     return window;
+}
+
+void XWindowTasksModelTest::createDesktopFile(const char *fileName, const std::vector<std::string> &lines, QString &path)
+{
+    path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications") + QDir::separator()
+        + QString::fromUtf8(fileName);
+
+    QSignalSpy databaseChangedSpy(KSycoca::self(), &KSycoca::databaseChanged);
+
+    QFile out(path);
+    if (out.exists()) {
+        qDebug() << "Removing the old desktop file in" << path;
+        out.remove();
+    }
+
+    qDebug() << "Creating a desktop file in" << path;
+    QVERIFY(out.open(QIODevice::WriteOnly));
+    out.write("[Desktop Entry]\n");
+    for (const std::string &l : lines) {
+        out.write((l + "\n").c_str());
+    }
+    out.close();
+
+    KSycoca::self()->ensureCacheValid();
+    databaseChangedSpy.wait(2500);
 }
 
 QTEST_MAIN(XWindowTasksModelTest)

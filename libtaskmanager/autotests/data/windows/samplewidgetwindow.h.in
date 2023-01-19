@@ -1,0 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+
+    SPDX-License-Identifier: MIT
+*/
+
+namespace TaskManagerTest
+{
+constexpr const char *samplewidgetwindowExecutablePath = "@samplewidgetwindowExecutablePath@";
+}
