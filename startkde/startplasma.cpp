@@ -103,7 +103,7 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
 
 bool isShellVariable(const QByteArray &name)
 {
-    return name == "_" || name.startsWith("SHLVL");
+    return name == "_" || name == "SHELL" || name.startsWith("SHLVL");
 }
 
 bool isSessionVariable(const QByteArray &name)
@@ -467,8 +467,17 @@ bool syncDBusEnvironment()
 {
     dropSessionVarsFromSystemdEnvironment();
 
+    // Shell variables are filtered out of things we explicitly load, but they
+    // still might have been inherited from the parent process
+    QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
+    for (auto &name : environment.keys()) {
+        if (isShellVariable(name.toLocal8Bit())) {
+            environment.remove(name);
+        }
+    }
+
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-    auto job = new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
+    auto job = new UpdateLaunchEnvJob(environment);
     return job->exec();
 }
 
