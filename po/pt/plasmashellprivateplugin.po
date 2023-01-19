@@ -51,8 +51,8 @@ msgstr "Outros"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 evento"
+msgstr[1] "%1 eventos"
 
 #: calendar/qml/DayDelegate.qml:43
 #, fuzzy, kde-format
@@ -65,73 +65,73 @@ msgstr "Eventos"
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 de %2"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dias"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Meses"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Anos"
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Mês Anterior"
 
 #: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Ano Anterior"
 
 #: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Década Anterior"
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Hoje"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Repor o calendário para hoje"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Mês Seguinte"
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Ano Seguinte"
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Década Seguinte"
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Manter Aberto"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Configurar…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

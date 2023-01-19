@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-20 21:00+0300\n"
+"PO-Revision-Date: 2023-01-18 10:20+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -91,30 +91,25 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Уведомления выводятся сторонним приложением, а не Plasma."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Режим «Не беспокоить»:"
+msgstr "Режим «Не беспокоить»"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Включать:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "При дублировании изображения на внешний экран"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "При трансляции изображения"
@@ -123,13 +118,13 @@ msgstr "При трансляции изображения"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Комбинация клавиш:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Условия видимости"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -162,23 +157,19 @@ msgid "Show popup"
 msgstr "Показывать всплывающие уведомления"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Выпадающие уведомления:"
+msgstr "Выпадающие уведомления"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Приложения:"
+msgstr "Расположение:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Рядом со значком уведомления"
@@ -186,7 +177,7 @@ msgstr "Рядом со значком уведомления"
 #: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
-msgstr "Задать расположение..."
+msgstr "Задать расположение…"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
@@ -207,7 +198,7 @@ msgstr "Скрывать через:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Дополнительная обратная связь"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -237,16 +228,15 @@ msgid "Notification badges:"
 msgstr "Счётчики уведомлений:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Параметры приложения"
+msgstr "Индивидуальные параметры приложений"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
-msgstr "Настроить..."
+msgstr "Настроить…"
 
 #: package/contents/ui/PopupPositionPage.qml:15
 #, kde-format

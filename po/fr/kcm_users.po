@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-08 10:27+0100\n"
+"PO-Revision-Date: 2023-01-17 20:09+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -171,180 +171,160 @@ msgid "Enrolling Fingerprint"
 msgstr "Enregistrement d'une empreinte digitale"
 
 #: package/contents/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre index droit sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:127
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre majeur droit sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre annulaire droit sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre auriculaire droit sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre pouce droit sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre index gauche sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre majeur gauche sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre annulaire gauche sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre auriculaire gauche sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez appuyer de façon répétée votre pouce gauche sur le capteur "
+"d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre index droit sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:149
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre majeur droit sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:151
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre annulaire droit sur "
+"le capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre auriculaire droit sur "
+"le capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre pouce droit sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre index gauche sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:159
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre majeur gauche sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:161
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre annulaire gauche sur "
+"le capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre auriculaire gauche "
+"sur le capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:165
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Veuillez répéter %1 votre %2 sur le capteur d'empreintes digitales."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre pouce gauche sur le "
+"capteur d'empreintes digitales."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
