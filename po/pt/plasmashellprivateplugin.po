@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-03-26 21:54+0000\n"
+"PO-Revision-Date: 2023-01-19 02:31+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -55,11 +55,9 @@ msgstr[0] "%1 evento"
 msgstr[1] "%1 eventos"
 
 #: calendar/qml/DayDelegate.qml:43
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Eventos"
+msgstr "Sem eventos"
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
