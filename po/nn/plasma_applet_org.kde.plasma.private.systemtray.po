@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-19 00:59+0000\n"
 "PO-Revision-Date: 2022-08-03 13:59+0200\n"
 "Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
 "com>\n"
@@ -193,12 +193,3 @@ msgstr "Lukk sprettopp"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Vis gøymde ikon"
-
-# Vert vist etter enkelte programnamn i innstillingsvindauget for systemtrauet.
-#: systemtraymodel.cpp:123
-#, kde-format
-msgctxt ""
-"Suffix added to the applet name if the applet is autoloaded via DBus "
-"activation"
-msgid "%1 (Automatic load)"
-msgstr "%1 (lasta automatisk)"
