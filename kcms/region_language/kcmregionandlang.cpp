@@ -85,7 +85,8 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
 QString KCMRegionAndLang::failedFindLocalesMessage()
 {
     return xi18nc("@info this will be shown as an error message",
-                 "Could not find the system's available locales using the <command>localectl</command> tool. Please file a bug report about this at <link>https://bugs.kde.org</link>");
+                  "Could not find the system's available locales using the <command>localectl</command> tool. Please file a bug report about this at "
+                  "<link>https://bugs.kde.org</link>");
 }
 
 QString KCMRegionAndLang::localeFileDirPath()

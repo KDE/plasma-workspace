@@ -6,10 +6,10 @@
 
 #include "kcm.h"
 
-#include <QIcon>
-#include <QStandardPaths>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QIcon>
+#include <QStandardPaths>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

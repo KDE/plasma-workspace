@@ -56,7 +56,6 @@ private:
 
     void screenInvariants();
 
-
     // List correspondent to qGuiApp->screens(), but sorted first by size then by Id,
     // determines the screen importance while figuring out the reduntant ones
     QList<QScreen *> m_sizeSortedScreens;

@@ -8,10 +8,10 @@
 #include "splashapp.h"
 #include "splashwindow.h"
 
-#include <QLoggingCategory>
 #include <QCommandLineParser>
 #include <QCursor>
 #include <QDBusConnection>
+#include <QLoggingCategory>
 #include <QPixmap>
 #include <qscreen.h>
 
