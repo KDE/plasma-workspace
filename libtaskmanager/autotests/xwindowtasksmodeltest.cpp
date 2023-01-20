@@ -4,15 +4,25 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
+#include <array>
+
 #include <QDateTime>
 #include <QQmlApplicationEngine>
 #include <QRasterWindow>
 #include <QtTest>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QX11Info>
+#else
+#include <private/qtx11extras_p.h>
+#endif
 
 #include <KActivities/Consumer>
 #include <KIconLoader>
 #include <KSycoca>
 #include <KWindowSystem>
+
+#include <xcb/xcb.h>
+#include <xcb/xproto.h>
 
 #include "samplewidgetwindow.h"
 #include "xwindowtasksmodel.h"
@@ -41,6 +51,7 @@ private Q_SLOTS:
     void test_openCloseWindow();
     void test_modelData();
     void test_modelDataFromDesktopFile();
+    void test_windowState();
 
 private:
     std::unique_ptr<QRasterWindow> createSingleWindow(const QString &title, QModelIndex &index);
@@ -428,6 +439,135 @@ void XWindowTasksModelTest::test_modelDataFromDesktopFile()
     lines.emplace_back("SingleMainWindow=false");
     lines.emplace_back("X-GNOME-SingleWindow=false");
     testCanLaunchNewInstance(true);
+}
+
+void XWindowTasksModelTest::test_windowState()
+{
+    QSignalSpy rowsInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
+
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+
+    // NETWinInfo only allows a window manager set window states
+    std::array<std::string, 11> actions{
+        "_NET_WM_ACTION_MOVE",
+        "_NET_WM_ACTION_RESIZE",
+        "_NET_WM_ACTION_MINIMIZE",
+        "_NET_WM_ACTION_SHADE",
+        "_NET_WM_ACTION_STICK",
+        "_NET_WM_ACTION_MAXIMIZE_VERT",
+        "_NET_WM_ACTION_MAXIMIZE_HORZ",
+        "_NET_WM_ACTION_FULLSCREEN",
+        "_NET_WM_ACTION_CHANGE_DESKTOP",
+        "_NET_WM_ACTION_CLOSE",
+        "_NET_WM_ALLOWED_ACTIONS",
+    };
+    xcb_atom_t atoms[11];
+    {
+        xcb_intern_atom_cookie_t cookies[11];
+        for (std::size_t i = 0; i < actions.size(); ++i) {
+            cookies[i] = xcb_intern_atom(QX11Info::connection(), false, actions[i].size(), actions[i].c_str());
+        }
+        // Get the replies
+        for (std::size_t i = 0; i < actions.size(); ++i) {
+            xcb_intern_atom_reply_t *reply = xcb_intern_atom_reply(QX11Info::connection(), cookies[i], nullptr);
+            if (!reply) {
+                continue;
+            }
+            atoms[i] = reply->atom;
+            free(reply);
+        }
+        qDebug() << "XCB atom cached";
+    }
+
+    auto setAllowedActionsAndVerify = [&](AbstractTasksModel::AdditionalRoles role, NET::Actions allowedActions, bool &success) {
+        qDebug() << "Start testing" << role;
+        success = false;
+        dataChangedSpy.clear();
+        QVERIFY(index.data(role).toBool());
+
+        uint32_t data[50];
+        int count = 0;
+        if (allowedActions & NET::ActionMove) {
+            data[count++] = atoms[0];
+        }
+        if (allowedActions & NET::ActionResize) {
+            data[count++] = atoms[1];
+        }
+        if (allowedActions & NET::ActionMinimize) {
+            data[count++] = atoms[2];
+        }
+        if (allowedActions & NET::ActionShade) {
+            data[count++] = atoms[3];
+        }
+        if (allowedActions & NET::ActionStick) {
+            data[count++] = atoms[4];
+        }
+        if (allowedActions & NET::ActionMaxVert) {
+            data[count++] = atoms[5];
+        }
+        if (allowedActions & NET::ActionMaxHoriz) {
+            data[count++] = atoms[6];
+        }
+        if (allowedActions & NET::ActionFullScreen) {
+            data[count++] = atoms[7];
+        }
+        if (allowedActions & NET::ActionChangeDesktop) {
+            data[count++] = atoms[8];
+        }
+        if (allowedActions & NET::ActionClose) {
+            data[count++] = atoms[9];
+        }
+
+        xcb_change_property(QX11Info::connection(), XCB_PROP_MODE_REPLACE, window->winId(), atoms[10], XCB_ATOM_ATOM, 32, count, (const void *)data);
+        xcb_flush(QX11Info::connection());
+        QCoreApplication::processEvents();
+
+        QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [role](const QVariantList &list) {
+            return list.at(2).value<QVector<int>>().contains(role);
+        }));
+        QVERIFY(!index.data(role).toBool());
+        success = true;
+    };
+
+    bool success = false;
+    const auto fullFlags = NET::ActionMove | NET::ActionResize | NET::ActionMinimize | NET::ActionShade | NET::ActionStick | NET::ActionMaxVert
+        | NET::ActionMaxHoriz | NET::ActionFullScreen | NET::ActionChangeDesktop | NET::ActionClose;
+
+    // Make the window not movable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsMovable, fullFlags & (~NET::ActionMove), success);
+    QVERIFY(success);
+
+    // Make the window not resizable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsResizable, fullFlags & (~NET::ActionResize), success);
+    QVERIFY(success);
+
+    // Make the window not maximizable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsMaximizable, fullFlags & (~NET::ActionMax), success);
+    QVERIFY(success);
+
+    // Make the window not minimizable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsMinimizable, fullFlags & (~NET::ActionMinimize), success);
+    QVERIFY(success);
+
+    // Make the window not fullscreenable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsFullScreenable, fullFlags & (~NET::ActionFullScreen), success);
+    QVERIFY(success);
+
+    // Make the window not shadeable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsShadeable, fullFlags & (~NET::ActionShade), success);
+    QVERIFY(success);
+
+    // Make the window not able to change virtual desktop
+    setAllowedActionsAndVerify(AbstractTasksModel::IsVirtualDesktopsChangeable, fullFlags & (~NET::ActionChangeDesktop), success);
+    QVERIFY(success);
+
+    // Make the window not closable
+    setAllowedActionsAndVerify(AbstractTasksModel::IsClosable, fullFlags & (~NET::ActionClose), success);
+    QVERIFY(success);
 }
 
 std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const QString &title, QModelIndex &index)
