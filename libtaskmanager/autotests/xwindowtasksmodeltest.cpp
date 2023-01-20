@@ -53,6 +53,8 @@ private Q_SLOTS:
     void test_modelDataFromDesktopFile();
     void test_windowState();
 
+    void test_request();
+
 private:
     std::unique_ptr<QRasterWindow> createSingleWindow(const QString &title, QModelIndex &index);
     void createDesktopFile(const char *fileName, const std::vector<std::string> &lines, QString &path);
@@ -568,6 +570,87 @@ void XWindowTasksModelTest::test_windowState()
     // Make the window not closable
     setAllowedActionsAndVerify(AbstractTasksModel::IsClosable, fullFlags & (~NET::ActionClose), success);
     QVERIFY(success);
+}
+
+void XWindowTasksModelTest::test_request()
+{
+    QSignalSpy rowsInsertedSpy(&m_model, &XWindowTasksModel::rowsInserted);
+
+    QProcess sampleWindowProcess;
+    sampleWindowProcess.setProgram(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath));
+    sampleWindowProcess.setArguments(QStringList{
+        QStringLiteral("__testwindow__%1").arg(QString::number(QDateTime::currentDateTime().offsetFromUtc())),
+    });
+    sampleWindowProcess.start();
+    rowsInsertedSpy.wait();
+
+    // Find the window index
+    auto findWindowIndex = [this](QModelIndex &index, const QString &title) {
+        const auto results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, title);
+        QVERIFY(results.size() == 1);
+        index = results.at(0);
+        QVERIFY(index.isValid());
+        qDebug() << "Window title:" << index.data(Qt::DisplayRole).toString();
+    };
+
+    QModelIndex index;
+    findWindowIndex(index, sampleWindowProcess.arguments().at(0));
+
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+
+    {
+        m_model.requestActivate(index);
+        QVERIFY(dataChangedSpy.wait());
+        QVERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
+    }
+
+    {
+        m_model.requestNewInstance(index);
+        QVERIFY(rowsInsertedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleMinimized(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleMaximized(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleKeepAbove(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleKeepBelow(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleFullScreen(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    {
+        m_model.requestToggleShaded(index);
+        QVERIFY(dataChangedSpy.wait());
+    }
+
+    QSignalSpy rowsRemovedSpy(&m_model, &XWindowTasksModel::rowsRemoved);
+    {
+        m_model.requestClose(index);
+        QVERIFY(rowsRemovedSpy.wait());
+    }
+
+    {
+        // CLose the new instance
+        findWindowIndex(index, QStringLiteral("__test_window_no_title__"));
+        m_model.requestClose(index);
+        QVERIFY(rowsRemovedSpy.wait());
+    }
 }
 
 std::unique_ptr<QRasterWindow> XWindowTasksModelTest::createSingleWindow(const QString &title, QModelIndex &index)
