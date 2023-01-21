@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-12 13:49+0100\n"
+"PO-Revision-Date: 2023-01-20 20:38+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -547,18 +547,16 @@ msgid "Previous History Item"
 msgstr "Predchádzajúca položka histórie"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Otvoriť Klipper na polohe myši"
+msgstr "Zobraziť položky na polohe myši"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Nástroj pre schránku"
+msgstr "%1 - Nástroj pre schránku"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -840,11 +838,10 @@ msgstr ""
 "prijať jeho MIME typ vo vyskakovacej ponuke."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Obsah schránky"
+msgstr "%1 - Položky schránky"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -872,10 +869,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE nástroj na históriu Kopíruj & Vlož"
+msgstr "KDE nástroj na históriu schránky"
 
 #: main.cpp:31
 #, kde-format

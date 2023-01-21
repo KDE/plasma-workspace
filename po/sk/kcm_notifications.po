@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2023-01-11 21:28+0100\n"
+"PO-Revision-Date: 2023-01-20 20:39+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -100,20 +100,16 @@ msgid "Enable:"
 msgstr "Povoliť:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Povoliť keď sa obrazovka zrkadlí"
+msgstr "Počas zrkadlenia obrazovky"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Povoliť keď sa obrazovka zdieľa"
+msgstr "Počas zdieľania obrazovky"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -125,7 +121,7 @@ msgstr "Klávesová skratka:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Podmienky viditeľnosti"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -198,7 +194,7 @@ msgstr "Skryť po:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Ďalšia odozva"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -228,11 +224,10 @@ msgid "Notification badges:"
 msgstr "Odznaky aplikácií:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Nastavenia aplikácií"
+msgstr "Špecifické nastavenia aplikácií"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

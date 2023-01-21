@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-14 00:58+0000\n"
-"PO-Revision-Date: 2023-01-11 21:32+0100\n"
+"PO-Revision-Date: 2023-01-20 20:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -18,13 +18,10 @@ msgstr ""
 "X-Generator: Lokalize 22.12.1\n"
 
 #: abstractnotificationsmodel.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 súbor do %2"
+msgstr "%1 z %2"
 
 #: job_p.cpp:185
 #, kde-format
@@ -63,16 +60,13 @@ msgstr[1] "%1 súbory"
 msgstr[2] "%1 súborov"
 
 #: job_p.cpp:203
-#, fuzzy, kde-format
-#| msgctxt "Copying n of m files"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 súbor z %1"
-msgstr[1] "%2 súbory z %1"
-msgstr[2] "%2 súborov z %1"
+msgstr[0] "%2 položka z %1"
+msgstr[1] "%2 položky z %1"
+msgstr[2] "%2 položiek z %1"
 
 #: job_p.cpp:206 job_p.cpp:226
 #, kde-format
@@ -90,10 +84,7 @@ msgid "%1 to %2"
 msgstr "%1 do %2"
 
 #: job_p.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
@@ -108,13 +99,10 @@ msgid "to %1"
 msgstr "do %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 súbor do %2"
+msgstr "%1 z %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format

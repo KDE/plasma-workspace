@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2023-01-11 21:19+0100\n"
+"PO-Revision-Date: 2023-01-20 20:40+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -30,10 +30,9 @@ msgid "Main Toolbar"
 msgstr "Hlavný panel nástrojov"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Druhá farba:"
+msgstr "Sekundárne panely nástrojov"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -139,7 +138,7 @@ msgstr ""
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Upraviť globálnu mierku..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

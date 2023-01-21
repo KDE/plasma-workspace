@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2023-01-11 21:31+0100\n"
+"PO-Revision-Date: 2023-01-20 20:47+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "Vybrať prehrávač automaticky"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastavené, %2)"
+msgstr ""
+"od %1 (%2)\n"
+"Kliknutím streného tlačidla pozastavíte\n"
+"Kolieskom myši upravíte hlasitosť"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,28 +121,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Kliknutím streného tlačidla pozastavíte\n"
+"Kolieskom myši upravíte hlasitosť"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastavené, %2)"
+msgstr ""
+"od %1 (pozastavené, %2)\n"
+"Kliknutím streného tlačidla prehráte\n"
+"Kolieskom myši upravíte hlasitosť"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "od %1 (pozastavené, %2)"
+msgstr ""
+"Pozastavené (%1)\n"
+"Kliknutím streného tlačidla prehráte\n"
+"Kolieskom myši upravíte hlasitosť"
 
 #~ msgid "General"
 #~ msgstr "Všeobecné"

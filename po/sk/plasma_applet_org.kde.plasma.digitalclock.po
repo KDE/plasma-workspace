@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2023-01-11 21:31+0100\n"
+"PO-Revision-Date: 2023-01-20 20:48+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -286,10 +286,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Prepnúť miestne časové pásmo…"
+msgstr "Prepnúť systémové časové pásmo…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -297,10 +296,9 @@ msgid "Remove this time zone"
 msgstr "Odstrániť toto časové pásmo"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Miestne časové pásmo systému"
+msgstr "Systémová časová zóna"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -328,18 +326,13 @@ msgstr ""
 "Prepínať zobrazené časové pásmo použitím kolieska myši nad appletom hodín"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Upozorňujeme, že použitie iného časového pásma pre hodiny nemení lokálne "
-"časové pásmo celého systému. Ak cestujete, zmeňte radšej miestne časové "
-"pásmo."
+"Použitím tejto funkcie sa nezmení systémové časové pásmo. Keď cestujete, "
+"prepnite namiesto toho systémové časové pásmo."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
@@ -390,7 +383,7 @@ msgstr "Dnes je %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

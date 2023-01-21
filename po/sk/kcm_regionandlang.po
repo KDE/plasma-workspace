@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-11 21:27+0100\n"
+"PO-Revision-Date: 2023-01-20 20:38+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -50,7 +50,7 @@ msgstr "A4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "c/o"
 
 #: exampleutility.cpp:65
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Dom 1"
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:72
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "Predmestie"
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:77
 #, kde-format

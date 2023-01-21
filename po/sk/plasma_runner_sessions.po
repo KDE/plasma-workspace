@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2023-01-11 21:30+0100\n"
+"PO-Revision-Date: 2023-01-20 20:44+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -20,13 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "odhlásiť"
+msgstr "odhlásiť;odhlásiť sa"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -34,14 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Odhlási a ukončí aktuálne sedenie pracovnej plochy"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "vypnut"
+msgstr "vypnúť;vypnúť"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -49,14 +46,12 @@ msgid "Turns off the computer"
 msgstr "Vypne počítač"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "restart"
+msgstr "reštartovať;reštartovať"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -64,12 +59,11 @@ msgid "Reboots the computer"
 msgstr "Reštartuje počítač"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Zamknúť obrazovku"
+msgstr "zamknúť;zamknúť obrazovku"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -77,13 +71,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Zamkne aktuálne sedenia a spustí šetrič obrazovky"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "nove sedenie"
+msgstr "uložiť;uložiť sedenie"
 
 #: sessionrunner.cpp:66
 #, kde-format
@@ -91,13 +84,12 @@ msgid "Saves the current session for session restoration"
 msgstr ""
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "prepnut uzivatela"
+msgstr "prepnúť používateľa;nové sedenie"
 
 #: sessionrunner.cpp:76
 #, kde-format
