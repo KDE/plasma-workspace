@@ -40,11 +40,10 @@ class RenderContext < OpenStruct
     city = city.tr('_', ' ')
     {
       'DumontDUrville' => 'Dumont d’Urville',
-      'ComodRivadavia' => 'Comodoro Rivadavia'
-      # TODO do we want these? seeing as different transliterations are in use, one is just as bad as the other, surely
-      # 'Uzhgorod' => 'Uzhhorod' # the tz has the legacy transliteration
-      # 'Zaporozhye' => 'Zaporizhzhia'
-      # 'Kiev' => 'Kyiv'
+      'ComodRivadavia' => 'Comodoro Rivadavia',
+      'Kiev' => 'Kyiv', # tzdata has the legacy transliteration
+      'Uzhgorod' => 'Uzhhorod', # tzdata has the legacy transliteration
+      'Zaporozhye' => 'Zaporizhzhia' # tzdata has the legacy transliteration
     }.fetch(city, city)
   end
 
