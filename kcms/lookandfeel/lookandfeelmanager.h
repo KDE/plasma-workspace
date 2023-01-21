@@ -43,7 +43,8 @@ public:
         WindowSwitcher = 1 << 7,
         SplashScreen = 1 << 8,
         LockScreen = 1 << 9,
-        AppearanceSettings = (1 << 10) - 1, // All the contents within Appearance
+        Wallpaper = 1 << 10,
+        AppearanceSettings = (1 << 11) - 1, // All the contents within Appearance
         // Layout
         DesktopLayout = 1 << 16,
         TitlebarLayout = 1 << 17,
@@ -70,6 +71,7 @@ public:
      * @p applyMask filters the package contents that will be applied.
      */
     void save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents applyMask = AllSettings);
+    bool remove(const KPackage::Package &package, Contents contentsMask = Empty);
 
     Contents packageContents(const KPackage::Package &package) const;
 

@@ -16,6 +16,7 @@
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
 #include <KIO/CommandLauncherJob>
+#include <KPackage/PackageLoader>
 #include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -29,9 +30,9 @@
 
 namespace
 {
-// Helper methods to retrieve wheter a certain group contains any of a list of possible entries
+// Helper methods to read or check entries from a nested group within a config
 
-bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QStringList &entries)
+QString configValue(KSharedConfigPtr config, const QString &groupPath, const QString &entry)
 {
     // Navigate through the group hierarchy
     QStringList groups = groupPath.split(QLatin1Char('/'));
@@ -40,14 +41,19 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
         cg = KConfigGroup(&cg, group);
     }
 
-    return std::any_of(entries.cbegin(), entries.cend(), [cg](const QString &entry) {
-        return !cg.readEntry(entry, QString()).isEmpty();
+    return cg.readEntry(entry, QString());
+}
+
+bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QStringList &entries)
+{
+    return std::any_of(entries.cbegin(), entries.cend(), [config, groupPath](const QString &entry) {
+        return !configValue(config, groupPath, entry).isEmpty();
     });
 }
 
 bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QString &entry)
 {
-    return configProvides(config, groupPath, QStringList{entry});
+    return !configValue(config, groupPath, entry).isEmpty();
 }
 
 } // Anonymouse namespace
@@ -92,6 +98,7 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
         contents.setFlag(Icons, configProvides(conf, "kdeglobals/Icons", "Theme"));
 
         contents.setFlag(PlasmaTheme, configProvides(conf, "plasmarc/Theme", "name"));
+        contents.setFlag(Wallpaper, configProvides(conf, "Wallpaper", "Image"));
         contents.setFlag(Cursors, configProvides(conf, "kcminputrc/Mouse", "cursorTheme"));
 
         contents.setFlag(WindowSwitcher, configProvides(conf, "kwinrc/WindowSwitcher", "LayoutName"));
@@ -646,6 +653,107 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
         QDBusConnection::sessionBus().send(message);
     }
+}
+
+bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelManager::Contents contentsMask)
+{
+    QDir packageRootDir(package.path());
+    if (!packageRootDir.isReadable()) {
+        // Permission denied
+        return false;
+    }
+
+    const Contents itemsToRemove = packageContents(package) & contentsMask;
+
+    // Remove package dependencies
+    auto config = KSharedConfig::openConfig(package.filePath("defaults"), KConfig::NoGlobals);
+
+    // WidgetStyle
+    if (itemsToRemove.testFlag(WidgetStyle)) {
+        const QString widgetStyle = configValue(config, "kdeglobals/KDE", "widgetStyle");
+
+        const QDir widgetStyleDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("kstyle")
+                                  + QDir::separator() + QStringLiteral("themes"));
+        if (widgetStyleDir.exists()) {
+            // Read config to get style name
+            const QStringList styleFileList = widgetStyleDir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+            for (const QString &path : styleFileList) {
+                if (!path.endsWith(QLatin1String(".themerc"))) {
+                    continue;
+                }
+
+                auto widgetStyleConfig = KSharedConfig::openConfig(widgetStyleDir.absoluteFilePath(path), KConfig::SimpleConfig);
+                KConfigGroup widgetStyleKDEGroup(widgetStyleConfig, "KDE");
+                if (widgetStyleKDEGroup.exists() && widgetStyleKDEGroup.hasKey("WidgetStyle")) {
+                    if (widgetStyleKDEGroup.readEntry("WidgetStyle", "") == widgetStyle) {
+                        QFile(widgetStyleDir.absoluteFilePath(path)).remove();
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    // Color scheme
+    if (itemsToRemove.testFlag(Colors)) {
+        const QString colorScheme = configValue(config, "kdeglobals/General", "ColorScheme");
+        QFile schemeFile(colorSchemeFile(colorScheme));
+        if (schemeFile.exists()) {
+            schemeFile.remove();
+        }
+    }
+
+    // Desktop Theme and Icon (Icons are in the theme folder). Only remove if both selected
+    // TODO: Remove separately
+    if (itemsToRemove.testFlag(PlasmaTheme) && itemsToRemove.testFlag(Icons)) {
+        const QString themeName = configValue(config, "plasmarc/Theme", "name");
+        QDir themeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("plasma") + QDir::separator()
+                      + QStringLiteral("desktoptheme") + QDir::separator() + themeName);
+        if (themeDir.exists()) {
+            themeDir.removeRecursively();
+        }
+    }
+
+    // Wallpaper
+    if (itemsToRemove.testFlag(Wallpaper)) {
+        const QString image = configValue(config, "Wallpaper", "Image");
+        const QDir wallpaperDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("wallpapers"));
+        if (wallpaperDir.exists()) {
+            QFileInfo wallpaperFile(wallpaperDir.absoluteFilePath(image));
+            if (wallpaperFile.isFile()) {
+                // Single file, use QFile to remove
+                QFile(wallpaperFile.absoluteFilePath()).remove();
+            } else if (wallpaperFile.isDir()) {
+                // A package, use QDir to remove the folder
+                QDir(wallpaperFile.absoluteFilePath()).removeRecursively();
+            }
+        }
+    }
+
+    if (itemsToRemove.testFlag(WindowSwitcher)) {
+        const QString layoutName = configValue(config, "kwinrc/WindowSwitcher", "LayoutName");
+        const auto windowSwitcherPackages =
+            KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/WindowSwitcher"), QString(), [&layoutName](const KPluginMetaData &meta) {
+                return meta.pluginId() == layoutName;
+            });
+        for (const auto &meta : windowSwitcherPackages) {
+            QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+        }
+    }
+
+    if (itemsToRemove.testFlag(DesktopSwitcher)) {
+        const QString layoutName = configValue(config, "kwinrc/DesktopSwitcher", "LayoutName");
+        const auto desktopSwitcherPackages =
+            // A Desktop Switcher package is actually a Window Switcher but applied over a desktop list
+            KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/WindowSwitcher"), QString(), [&layoutName](const KPluginMetaData &meta) {
+                return meta.pluginId() == layoutName;
+            });
+        for (const auto &meta : desktopSwitcherPackages) {
+            QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+        }
+    }
+
+    return packageRootDir.removeRecursively();
 }
 
 void LookAndFeelManager::setCursorTheme(const QString themeName)
