@@ -29,4 +29,7 @@ inline const QString defaultPackageFolderName2 = QStringLiteral("package");
 
 inline const QString alternateImageFileName1 = QStringLiteral("dummy.jpg");
 inline const QString alternatePackageFolderName1 = QStringLiteral("dummy");
+
+inline const QString customAccentColorPackage1 = QStringLiteral("testdata/customaccentcolor/case1/");
+inline const QString customAccentColorPackage2 = QStringLiteral("testdata/customaccentcolor/case2/");
 }
