@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-11 18:49+0300\n"
+"PO-Revision-Date: 2023-01-21 15:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -57,14 +57,13 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
-"Artık oturum açma parolanızı değiştirdiğinize göre, öntanımlı "
-"KWallet'inizdeki parolayı da buna uyacak şekilde değiştirmek "
-"isteyebilirsiniz."
+"Artık oturum açma parolanızı değiştirdiğinize göre, öntanımlı K "
+"Cüzdan'ınızdaki parolayı da buna uyacak şekilde değiştirmek isteyebilirsiniz."
 
 #: package/contents/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
-msgstr "KWallet nedir?"
+msgstr "K Cüzdan nedir?"
 
 #: package/contents/ui/ChangeWalletPassword.qml:41
 #, kde-format
@@ -75,11 +74,11 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
-"KWallet, kablosuz ağlar ve diğer şifreli kaynaklar için parolalarınızı "
+"K Cüzdan, kablosuz ağlar ve diğer şifreli kaynaklar için parolalarınızı "
 "saklayan bir parola yöneticisidir. Giriş parolanızdan farklı olan kendi "
 "parolası ile kilitlenir. İki parola aynıysa giriş sırasında otomatik olarak "
-"kilidin açılması sağlanabilir, böylece KWallet'in parolasını sizin girmenize "
-"gerek kalmaz."
+"kilidin açılması sağlanabilir, böylece K Cüzdan'ın parolasını sizin "
+"girmenize gerek kalmaz."
 
 #: package/contents/ui/ChangeWalletPassword.qml:57
 #, kde-format
