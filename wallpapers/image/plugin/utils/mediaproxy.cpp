@@ -237,13 +237,65 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     Q_EMIT colorSchemeChanged();
 }
 
-bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
+bool MediaProxy::isDarkColorScheme(const QPalette &palette)
 {
     // 192 is from kcm_colors
     if (palette == QPalette()) {
         return qGray(qGuiApp->palette().window().color().rgb()) < 192;
     }
     return qGray(palette.window().color().rgb()) < 192;
+}
+
+QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
+{
+    const QJsonObject metaData = package.metadata().rawData();
+    const auto jsonIt = metaData.constFind(QStringLiteral("X-KDE-PlasmaImageWallpaper-AccentColor"));
+    if (jsonIt == metaData.constEnd()) {
+        return QColor();
+    }
+
+    QString colorString = QStringLiteral("transparent");
+    const auto accentColorValue = jsonIt.value();
+    switch (accentColorValue.type()) {
+    case QJsonValue::String: {
+        colorString = accentColorValue.toString();
+        if (!colorString.isEmpty()) {
+            break;
+        }
+        [[fallthrough]];
+    }
+
+    case QJsonValue::Object: {
+        const QJsonObject accentColorDict = accentColorValue.toObject();
+        if (isDarkColorScheme()) {
+            const auto darkIt = accentColorDict.constFind(QStringLiteral("Dark"));
+            if (darkIt != accentColorDict.constEnd()) {
+                colorString = darkIt.value().toString();
+                if (!colorString.isEmpty()) {
+                    break;
+                }
+            }
+        }
+
+        // Light color as fallback
+        const auto lightIt = accentColorDict.constFind(QStringLiteral("Light"));
+        if (lightIt != accentColorDict.constEnd()) {
+            colorString = lightIt.value().toString();
+        }
+
+        break;
+    }
+
+    case QJsonValue::Array: {
+        break;
+    }
+
+    default:
+        qCWarning(IMAGEWALLPAPER, "Invalid value from \"X-KDE-PlasmaImageWallpaper-AccentColor\"");
+        break;
+    }
+
+    return QColor(colorString);
 }
 
 void MediaProxy::determineBackgroundType(KPackage::Package &package)
@@ -334,9 +386,9 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
 
     case Provider::Type::Package: {
         // Get custom accent color from
-        const QString colorString = package.metadata().value(QStringLiteral("X-KDE-PlasmaImageWallpaper-AccentColor"), QStringLiteral("transparent"));
-        const QColor color(colorString);
-        if (color.isValid() && color != Qt::transparent) {
+
+        const QColor color(getAccentColorFromMetaData(package));
+        if (m_customColor != color && color.isValid() && color != Qt::transparent) {
             m_customColor = color;
             Q_EMIT customColorChanged();
         }
