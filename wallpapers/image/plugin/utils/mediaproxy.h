@@ -121,7 +121,17 @@ private Q_SLOTS:
     void slotSystemPaletteChanged(const QPalette &palette);
 
 private:
-    inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
+    static inline bool isDarkColorScheme(const QPalette &palette = {});
+
+    /**
+     * Reads accent color from wallpaper metadata. The value is stored under key
+     * @c X-KDE-PlasmaImageWallpaper-AccentColor in metadata.json.
+     *
+     * @param package wallpaper package
+     * @return custom accent color from the wallpaper package
+     * @since 5.27
+     */
+    static QColor getAccentColorFromMetaData(const KPackage::Package &package);
 
     void determineBackgroundType(KPackage::Package &package);
     void determineProviderType();
