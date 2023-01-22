@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2022-06-29 14:22+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -56,88 +56,86 @@ msgstr "Jiné"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 událost"
+msgstr[1] "%1 události"
+msgstr[2] "%1 událostí"
 
 #: calendar/qml/DayDelegate.qml:43
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Události"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dnů"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Měsíce"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Roky"
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Předchozí měsíc"
 
 #: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Předchozí rok"
 
 #: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Předchozí desetiletí"
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Resetovat kalendář na dnešek"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Příští měsíc"
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Příští rok"
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Následující desetiletí"
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Ponechat otevřené"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Nastavit…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

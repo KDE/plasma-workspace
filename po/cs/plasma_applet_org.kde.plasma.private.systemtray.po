@@ -192,9 +192,3 @@ msgstr "Zavřít vyskakovací okno"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Zobrazit skryté ikony"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (automatické načtení)"

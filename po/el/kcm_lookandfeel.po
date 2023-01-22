@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-22 00:59+0000\n"
 "PO-Revision-Date: 2017-01-19 19:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
-#: kcm.cpp:590
+#: kcm.cpp:740
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for cursor changes to take effect."
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Πρέπει να επανεκκινήσετε το KDE για να εφαρμοστούν οι αλλαγές του δρομέα."
 
-#: kcm.cpp:591
+#: kcm.cpp:741
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Οι ρυθμίσεις του δρομέα άλλαξαν"
@@ -109,17 +109,47 @@ msgstr ""
 "Το άρθρωμα αυτό σας επιτρέπει να διαμορφώσετε την εμφάνιση και την αίσθηση "
 "όλου του χώρου εργασίας με κάποια έτοιμα πακέτα ρυθμίσεων."
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:66
 #, kde-format
-msgid "Contains Desktop layout"
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr ""
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
 msgstr ""
 
 #: package/contents/ui/main.qml:76
 #, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr ""
+
+#: package/contents/ui/main.qml:107
+#, kde-format
 msgid "Preview Theme"
 msgstr ""
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr ""
+
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -127,27 +157,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr ""
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Choose what to apply…"
 msgstr ""
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
 
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Apply"
 msgstr ""
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:195
 #, fuzzy, kde-format
 #| msgid "Download New Look And Feel Packages"
 msgid "Get New Global Themes…"

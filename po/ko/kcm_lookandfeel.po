@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-22 00:59+0000\n"
 "PO-Revision-Date: 2022-05-05 23:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: kcm.cpp:590
+#: kcm.cpp:740
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "커서 변경 사항을 적용하려면 Plasma 세션을 다시 시작해야 합니다."
 
-#: kcm.cpp:591
+#: kcm.cpp:741
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "커서 설정 변경됨"
@@ -101,17 +101,49 @@ msgstr "전역 모습과 느낌"
 msgid "This module lets you choose the global look and feel."
 msgstr "이 모듈에서 전역 모습과 느낌 테마를 선택할 수 있습니다."
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr ""
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "취소"
+
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "바탕 화면 레이아웃 포함"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Preview Theme"
 msgstr "테마 미리 보기"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Preview Theme"
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr "테마 미리 보기"
+
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -119,27 +151,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 테마를 적용하시겠습니까?"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "적용할 항목 선택…"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Show fewer options…"
 msgstr "옵션 덜 보기…"
 
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Apply"
 msgstr "적용"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "새 전역 테마 가져오기…"

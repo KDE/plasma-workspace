@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-22 00:59+0000\n"
 "PO-Revision-Date: 2022-08-10 11:37+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -36,14 +36,14 @@ msgstr ""
 "maxence.ledore@gmail.com, vpinon@kde.org, sdepiets@gmail.com, xavier."
 "besnard@neuf.fr"
 
-#: kcm.cpp:590
+#: kcm.cpp:740
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "KDE doit être redémarré pour que ces changements soient pris en compte."
 
-#: kcm.cpp:591
+#: kcm.cpp:741
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Paramètres de curseurs modifiés"
@@ -114,17 +114,49 @@ msgstr "Apparence globale"
 msgid "This module lets you choose the global look and feel."
 msgstr "Ce module vous permet de choisir l'apparence globale du bureau."
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr ""
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Annuler"
+
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Contient la disposition du bureau"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Preview Theme"
 msgstr "Afficher un aperçu du thème"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Preview Theme"
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr "Afficher un aperçu du thème"
+
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -132,27 +164,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Appliquer %1 ?"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Sélectionnez quoi appliquer..."
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Afficher moins d'options..."
 
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Apply"
 msgstr "Appliquer"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Télécharger de nouveaux thèmes globaux..."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-22 00:59+0000\n"
 "PO-Revision-Date: 2022-08-11 20:39+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,14 +31,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Xalba@ni.eus"
 
-#: kcm.cpp:590
+#: kcm.cpp:740
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Plasma saioa berrabiarazi behar duzu aldaketa hauek indarrean jartzeko."
 
-#: kcm.cpp:591
+#: kcm.cpp:741
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Kurtsore-ezarpenak aldatuta"
@@ -110,17 +110,49 @@ msgstr "Itxura eta izaera orokorra"
 msgid "This module lets you choose the global look and feel."
 msgstr "Modulu honek Itxura eta izaera orokorra aukeratzen uzten dizu."
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr ""
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Utzi"
+
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Mahaigaineko antolaera du"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Preview Theme"
 msgstr "Aurreikusi gaia"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Preview Theme"
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr "Aurreikusi gaia"
+
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -128,27 +160,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 ezarri?"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Aukeratu zer ezarri..."
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Erakutsi aukera gutxiago..."
 
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Apply"
 msgstr "Ezarri"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Lortu gai orokor berriak..."

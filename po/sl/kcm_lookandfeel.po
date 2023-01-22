@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2023-01-22 00:59+0000\n"
 "PO-Revision-Date: 2022-08-10 08:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -30,13 +30,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
 
-#: kcm.cpp:590
+#: kcm.cpp:740
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Za uveljavitev sprememb seje morate znova zagnati Plasmo."
 
-#: kcm.cpp:591
+#: kcm.cpp:741
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Spremenjene nastavitve kazalke"
@@ -105,17 +105,49 @@ msgstr "Globalni izgled in občutek"
 msgid "This module lets you choose the global look and feel."
 msgstr "Ta modul omogoča nastavitev globalnega Izgleda in občutka."
 
-#: package/contents/ui/main.qml:62
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to permanently delete this theme?"
+msgstr ""
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Permanently"
+msgstr ""
+
+#: package/contents/ui/main.qml:76
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Vsebuje razpored namizja"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Preview Theme"
 msgstr "Predogled teme"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Preview Theme"
+msgctxt "@action:button"
+msgid "Remove Theme"
+msgstr "Predogled teme"
+
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -123,27 +155,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Uveljavim %1?"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Izberite, kar naj velja…"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Prikaži manj možnosti…"
 
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Prejmi nove globalne teme…"
