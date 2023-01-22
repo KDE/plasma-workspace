@@ -281,13 +281,8 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
         const auto lightIt = accentColorDict.constFind(QStringLiteral("Light"));
         if (lightIt != accentColorDict.constEnd()) {
             colorString = lightIt.value().toString();
+            break;
         }
-
-        break;
-    }
-
-    case QJsonValue::Array: {
-        break;
     }
 
     default:

@@ -12,6 +12,9 @@
 #include <QQuickView>
 #include <QtTest>
 
+#include <KPackage/PackageLoader>
+
+#include "../utils/mediaproxy.h"
 #include "commontestdata.h"
 
 namespace
@@ -26,13 +29,15 @@ public:
     explicit MockWallpaperInterface(QObject *parent = nullptr)
         : QObject(parent)
     {
-        connect(this, &MockWallpaperInterface::repaintNeeded, this, [this] {
+        connect(this, &MockWallpaperInterface::repaintNeeded, this, [this](const QColor &color) {
             m_repainted = true;
+            m_accentColor = color;
         });
     }
 
     bool m_repainted = false; // To be set to true by QQC2.StackView.onActivated
     bool m_loading = true; // To be set to false by replaceWhenLoaded
+    QColor m_accentColor = Qt::transparent;
 
 Q_SIGNALS:
     void isLoadingChanged();
@@ -92,6 +97,8 @@ private Q_SLOTS:
     void testLoadWallpaper_data();
     void testLoadWallpaper();
     void testReloadWallpaperOnScreenSizeChanged();
+
+    void testCustomAccentColorFromWallpaperMetaData();
 
 private:
     QPointer<QQuickView> m_view;
@@ -304,6 +311,68 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
     source = evaluate<QUrl>(fourthItem, "source");
     QCOMPARE(source, QUrl::fromLocalFile(singleImagePath));
     QCOMPARE(evaluate<QSizeF>(fourthItem, "sourceSize"), QSizeF(1920, 1080));
+}
+
+void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
+{
+    // Case 1: value is a dict
+    auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+    package.setPath(QFINDTESTDATA(ImageBackendTestData::customAccentColorPackage1));
+    QVERIFY(package.isValid());
+
+    QPalette palette;
+    // Light variant
+    palette.setColor(QPalette::Normal, QPalette::Window, Qt::white);
+    qGuiApp->setPalette(palette);
+    QColor customColor = MediaProxy::getAccentColorFromMetaData(package);
+    QCOMPARE(customColor, Qt::red);
+
+    // Dark variant
+    palette.setColor(QPalette::Normal, QPalette::Window, Qt::black);
+    qGuiApp->setPalette(palette);
+    customColor = MediaProxy::getAccentColorFromMetaData(package);
+    QCOMPARE(customColor, Qt::cyan);
+
+    // Case 2: value is a string
+    package.setPath(QFINDTESTDATA(ImageBackendTestData::customAccentColorPackage2));
+    QVERIFY(package.isValid());
+    customColor = MediaProxy::getAccentColorFromMetaData(package);
+    QCOMPARE(customColor, QColor("green")); // Qt::green is not QColor("green")
+
+    // Real-life test
+    palette.setColor(QPalette::Normal, QPalette::Window, Qt::white);
+    qGuiApp->setPalette(palette);
+    QVariantMap initialProperties;
+    initialProperties.insert(QStringLiteral("fillMode"), 1 /* PreserveAspectFit */);
+    initialProperties.insert(QStringLiteral("configColor"), QStringLiteral("black"));
+    initialProperties.insert(QStringLiteral("blur"), false);
+    initialProperties.insert(QStringLiteral("source"), QFINDTESTDATA(ImageBackendTestData::customAccentColorPackage1));
+    QSize sourceSize(320, 240);
+    initialProperties.insert(QStringLiteral("sourceSize"), sourceSize);
+    initialProperties.insert(QStringLiteral("width"), sourceSize.width());
+    initialProperties.insert(QStringLiteral("height"), sourceSize.height());
+    initialProperties.insert(QStringLiteral("wallpaperInterface"), QVariant::fromValue(m_wallpaperInterface.data()));
+    m_view->setInitialProperties(initialProperties);
+
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::repaintNeeded);
+
+    QByteArray errorMessage;
+    QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
+             errorMessage.constData());
+
+    m_view->show();
+    QVERIFY(repaintSpy.wait());
+    QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::red);
+
+    palette.setColor(QPalette::Normal, QPalette::Window, Qt::black);
+    qGuiApp->setPalette(palette);
+    QVERIFY(repaintSpy.wait());
+    QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::cyan);
+
+    // Switch to a wallpaper package that does not contain accent color information
+    m_view->rootObject()->setProperty("source", m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
+    QVERIFY(repaintSpy.wait());
+    QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::transparent);
 }
 
 QTEST_MAIN(ImageFrontendTest)

@@ -151,4 +151,6 @@ private:
     QColor m_customColor = Qt::transparent;
 
     bool m_isDarkColorScheme;
+
+    friend class ImageFrontendTest;
 };
