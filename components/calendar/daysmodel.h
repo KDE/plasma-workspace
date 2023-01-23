@@ -71,7 +71,7 @@ private Q_SLOTS:
     void onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &data);
     void onEventModified(const CalendarEvents::EventData &data);
     void onEventRemoved(const QString &uid);
-    void onAlternateDateReady(const QHash<QDate, QDate> &data);
+    void onAlternateCalendarDateReady(const QHash<QDate, QCalendar::YearMonthDay> &data);
     void onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> &data);
 
 private:

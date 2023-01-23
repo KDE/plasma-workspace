@@ -24,7 +24,7 @@ public:
     QList<DayData> *data = nullptr;
     QList<QObject *> qmlData;
     QMultiHash<QDate, CalendarEvents::EventData> eventsData;
-    QHash<QDate /* Gregorian */, QDate> alternateDatesData;
+    QHash<QDate /* Gregorian */, QCalendar::YearMonthDay> alternateDatesData;
     QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> subLabelsData;
 
     QDate lastRequestedAgendaDate;
@@ -120,11 +120,11 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
         if (d->alternateDatesData.count(currentDate)) {
             switch (role) {
             case AlternateYearNumber:
-                return d->alternateDatesData.value(currentDate).year();
+                return d->alternateDatesData.value(currentDate).year;
             case AlternateMonthNumber:
-                return d->alternateDatesData.value(currentDate).month();
+                return d->alternateDatesData.value(currentDate).month;
             case AlternateDayNumber:
-                return d->alternateDatesData.value(currentDate).day();
+                return d->alternateDatesData.value(currentDate).day;
             default:
                 break;
             }
@@ -286,7 +286,7 @@ void DaysModel::onEventRemoved(const QString &uid)
     endResetModel();
 }
 
-void DaysModel::onAlternateDateReady(const QHash<QDate, QDate> &data)
+void DaysModel::onAlternateCalendarDateReady(const QHash<QDate, QCalendar::YearMonthDay> &data)
 {
     d->alternateDatesData.reserve(d->alternateDatesData.size() + data.size());
     for (int i = 0; i < d->data->count(); i++) {
@@ -402,7 +402,7 @@ void DaysModel::setPluginsManager(QObject *manager)
     connect(d->pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
     connect(d->pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
     connect(d->pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
-    connect(d->pluginsManager, &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
+    connect(d->pluginsManager, &EventPluginsManager::alternateCalendarDateReady, this, &DaysModel::onAlternateCalendarDateReady);
     connect(d->pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
     connect(d->pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
 

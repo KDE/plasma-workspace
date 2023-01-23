@@ -56,7 +56,7 @@ Q_SIGNALS:
      *
      * @param data a hash from CalendarEventsPlugin
      */
-    void alternateDateReady(const QHash<QDate, QDate> &data);
+    void alternateCalendarDateReady(const QHash<QDate, QCalendar::YearMonthDay> &data);
 
     /**
      * Relays the plugin signal that contains sub-labels
