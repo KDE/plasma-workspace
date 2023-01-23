@@ -283,6 +283,7 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
             colorString = lightIt.value().toString();
             break;
         }
+        [[fallthrough]];
     }
 
     default:
