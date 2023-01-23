@@ -220,8 +220,7 @@ QVariantList jumpListActions(KService::Ptr service)
             continue;
         }
 
-        QString exec = KIO::DesktopExecParser(KService(action.name(), action.exec(), action.icon()), {}).resultingArguments().join(QLatin1Char(' '));
-        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), exec);
+        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), QVariant::fromValue(action));
 
         list << item;
     }
@@ -253,7 +252,8 @@ QVariantList systemSettingsActions()
             continue;
         }
 
-        list << createActionItem(service->name(), service->icon(), QStringLiteral("_kicker_jumpListAction"), service->exec());
+        KServiceAction action(service->name(), service->desktopEntryName(), service->icon(), service->exec(), false, service);
+        list << createActionItem(service->name(), service->icon(), QStringLiteral("_kicker_jumpListAction"), QVariant::fromValue(action));
     }
 
     return list;
@@ -514,3 +514,5 @@ QString resolvedServiceEntryPath(const KService::Ptr &service)
 }
 
 }
+
+Q_DECLARE_METATYPE(KServiceAction)

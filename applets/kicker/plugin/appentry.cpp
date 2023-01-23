@@ -19,7 +19,6 @@
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
-#include <KIO/CommandLauncherJob>
 #include <KJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
@@ -341,9 +340,8 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     } else if (Kicker::handleAppstreamActions(actionId, m_service)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        auto job = new KIO::CommandLauncherJob(argument.toString());
-        job->setDesktopName(m_service->entryPath());
-        job->setIcon(m_service->icon());
+        auto *job = new KIO::ApplicationLauncherJob(argument.value<KServiceAction>());
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         return job->exec();
     } else if (Kicker::handleAdditionalAppActions(actionId, m_service, argument)) {
         return true;
@@ -449,3 +447,5 @@ AbstractModel *AppGroupEntry::childModel() const
 {
     return m_childModel;
 }
+
+Q_DECLARE_METATYPE(KServiceAction)

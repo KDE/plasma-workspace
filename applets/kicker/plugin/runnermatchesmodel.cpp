@@ -13,8 +13,9 @@
 #include <QIcon>
 #include <QUrlQuery>
 
-#include <KIO/CommandLauncherJob>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KRunner/RunnerManager>
 
 #include <Plasma/Plasma>
@@ -210,9 +211,8 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     } else if (Kicker::handleAppstreamActions(actionId, service)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        auto job = new KIO::CommandLauncherJob(argument.toString());
-        job->setDesktopName(service->entryPath());
-        job->setIcon(service->icon());
+        auto job = new KIO::ApplicationLauncherJob(argument.value<KServiceAction>());
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         return job->exec();
     } else if (actionId == QLatin1String("_kicker_recentDocument") || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
@@ -267,3 +267,5 @@ AbstractModel *RunnerMatchesModel::favoritesModel()
 {
     return static_cast<RunnerModel *>(parent())->favoritesModel();
 }
+
+Q_DECLARE_METATYPE(KServiceAction)
