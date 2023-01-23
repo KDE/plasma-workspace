@@ -133,7 +133,6 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     mx.expandMacrosShellQuote(exec);
 
     KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(exec);
-    job->setIcon(m_service.icon());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 
     // To make xdg-activation and startup feedback work we need to pass the desktop file name of what we are launching
