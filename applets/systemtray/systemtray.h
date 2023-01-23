@@ -8,11 +8,16 @@
 
 #include <QAbstractItemModel>
 
+#include <KConfigWatcher>
+
 #include <Plasma/Containment>
+
+#include "config-WaylandProtocols.h"
 
 class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 class QQuickItem;
+
 namespace Plasma
 {
 class Service;
@@ -92,6 +97,12 @@ private Q_SLOTS:
 
 private:
     SystemTrayModel *systemTrayModel();
+
+#if HAVE_WaylandProtocols
+    std::unique_ptr<class FractionalScaleManagerV1> m_fractionalScaleManagerV1;
+    KConfigWatcher::Ptr m_configWatcher;
+#endif
+    bool m_xwaylandClientsScale = true;
 
     QPointer<SystemTraySettings> m_settings;
     QPointer<PlasmoidRegistry> m_plasmoidRegistry;
