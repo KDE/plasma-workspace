@@ -9,13 +9,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2014, 2015, 2016, 2019.
 # Yuri Efremov <yur.arh@gmail.com>, 2011.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-12-30 22:27+0300\n"
+"PO-Revision-Date: 2023-01-22 16:28+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -279,6 +279,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Подсказка: Если вы часто путешествуете, добавьте в этот список несколько "
+"«домашних» часовых поясов. Этот список используется только при изменении "
+"системного часового пояса."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -334,17 +337,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Переключать отображаемый часовой пояс прокручиванием колесом мыши"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 "Обратите внимание, что выбор часового пояса виджета не изменяет часовой "
-"пояс, используемый системой. При перемещении в дугой часовой пояс следует "
+"пояс, используемый системой. При перемещении в другой часовой пояс следует "
 "изменить часовой пояс системы."
 
 #: package/contents/ui/configTimeZones.qml:201

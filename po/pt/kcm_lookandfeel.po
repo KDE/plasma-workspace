@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:59+0000\n"
-"PO-Revision-Date: 2022-08-14 12:11+0100\n"
+"PO-Revision-Date: 2023-01-22 22:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -105,23 +105,22 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Apagar de Forma Permanente"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Deseja realmente apagar este tema de forma permanente?"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Apagar de Forma Permanente"
 
 #: package/contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
@@ -137,11 +136,10 @@ msgid "Preview Theme"
 msgstr "Antevisão do Tema"
 
 #: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Antevisão do Tema"
+msgstr "Remover o Tema"
 
 #: package/contents/ui/main.qml:131
 #, kde-format

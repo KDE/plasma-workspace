@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-11 21:31+0100\n"
+"PO-Revision-Date: 2023-01-22 17:03+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -123,7 +123,7 @@ msgstr "Kým nebude ručne deaktivované"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Automaticky ukončí: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -318,20 +318,19 @@ msgstr[1] "%1 neprečítané upozornenia"
 msgstr[2] "%1 neprečítaných upozornení"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Nevyrušovať do %1"
+msgstr "Režim nevyrušovať do %1; kliknutím stredného tlačidla ho ukončíte"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Režim nerušiť je aktívny; stredným kliknutím ho ukončíte"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Kliknutím stredného tlačidla prejdete do režimu nerušiť"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

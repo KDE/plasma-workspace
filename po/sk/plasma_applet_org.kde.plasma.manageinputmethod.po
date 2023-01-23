@@ -1,19 +1,19 @@
 # translation of plasma_applet_org.kde.plasma.manageinputmethod.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2021.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2021-07-27 16:23+0200\n"
+"PO-Revision-Date: 2023-01-22 17:03+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.07.80\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/ui/manage-inputmethod.qml:64
@@ -33,11 +33,9 @@ msgid "Virtual Keyboard: disabled"
 msgstr "Virtuálna klávesnica: zakázaná"
 
 #: contents/ui/manage-inputmethod.qml:104
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgid "Show Virtual Keyboard"
-msgstr "Nastaviť virtuálne klávesnice..."
+msgstr "Zobraziť virtuálnu klávesnicu"
 
 #: contents/ui/manage-inputmethod.qml:115
 #, kde-format

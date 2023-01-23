@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2023-01-11 21:19+0100\n"
+"PO-Revision-Date: 2023-01-22 17:03+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -30,10 +30,9 @@ msgid "Main Toolbar"
 msgstr "Hlavný panel nástrojov"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Druhá farba:"
+msgstr "Sekundárne panely nástrojov"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -135,11 +134,16 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Tu môžete nakonfigurovať predvolené veľkosti rôznych typov ikon na úrovni "
+"celého systému. Upozorňujeme, že nie všetky aplikácie budú tieto nastavenia "
+"rešpektovať.<nl/><nl/>Ak zistíte, že objekty na obrazovke sú vo všeobecnosti "
+"príliš malé alebo príliš veľké, zvážte namiesto toho nastavenie globálnej "
+"mierky."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Upraviť globálnu mierku..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
