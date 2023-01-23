@@ -168,6 +168,15 @@ endif()
 find_package(Qt${QT_MAJOR_VERSION}WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
+find_package(WaylandProtocols 1.31)
+set_package_properties(WaylandProtocols PROPERTIES
+    TYPE OPTIONAL
+    PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
+    URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
+)
+if (WaylandProtocols_FOUND)
+    set(HAVE_WaylandProtocols true)
+endif()
 
 if(FONTCONFIG_FOUND)
   # kfontinst
@@ -324,6 +333,7 @@ configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-works
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
+configure_file(config-WaylandProtocols.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-WaylandProtocols.h )
 add_subdirectory(login-sessions)
 add_subdirectory(lookandfeel)
 

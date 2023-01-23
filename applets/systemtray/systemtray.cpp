@@ -4,9 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "systemtray.h"
+#include <optional>
+
 #include "config-X11.h"
 #include "debug.h"
+#include "systemtray.h"
 
 #include "plasmoidregistry.h"
 #include "sortedsystemtraymodel.h"
@@ -20,6 +22,7 @@
 #include <QQuickWindow>
 #include <QScreen>
 #include <QTimer>
+#include <qpa/qplatformscreen.h>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
@@ -27,10 +30,69 @@
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
-
-#if HAVE_X11 // BUG 456168: To calculate the native global position on X11
+#include <KSharedConfig>
 #include <KWindowSystem>
-#include <qpa/qplatformscreen.h>
+
+#if HAVE_WaylandProtocols
+#include "qwayland-fractional-scale-v1.h"
+#include <QtWaylandClient/qwaylandclientextension.h>
+#include <qpa/qplatformnativeinterface.h>
+#endif
+
+#if HAVE_WaylandProtocols // TODO Qt6: check window()->devicePixelRatio() is usable
+class FractionalScaleManagerV1 : public QWaylandClientExtensionTemplate<FractionalScaleManagerV1>, public QtWayland::wp_fractional_scale_manager_v1
+{
+public:
+    FractionalScaleManagerV1()
+        : QWaylandClientExtensionTemplate<FractionalScaleManagerV1>(1)
+        , QtWayland::wp_fractional_scale_manager_v1()
+    {
+    }
+
+    ~FractionalScaleManagerV1() override
+    {
+        QtWayland::wp_fractional_scale_manager_v1::destroy();
+    }
+};
+
+class FractionalScaleV1 : public QtWayland::wp_fractional_scale_v1
+{
+public:
+    FractionalScaleV1(struct ::wp_fractional_scale_v1 *object)
+        : QtWayland::wp_fractional_scale_v1(object)
+    {
+    }
+
+    ~FractionalScaleV1() override
+    {
+        QtWayland::wp_fractional_scale_v1::destroy();
+    }
+
+    double devicePixelRatio()
+    {
+        return m_preferredScale.value_or(120) / 120.0;
+    }
+
+    void ensureReady()
+    {
+        if (m_preferredScale.has_value()) {
+            return;
+        }
+
+        QPlatformNativeInterface *const native = qGuiApp->platformNativeInterface();
+        const auto display = static_cast<struct wl_display *>(native->nativeResourceForIntegration("wl_display"));
+        wl_display_roundtrip(display);
+    }
+
+protected:
+    void wp_fractional_scale_v1_preferred_scale(uint32_t scale) override
+    {
+        m_preferredScale = scale;
+    }
+
+private:
+    std::optional<unsigned> m_preferredScale;
+};
 #endif
 
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
@@ -63,6 +125,23 @@ void SystemTray::init()
     connect(this, &Containment::appletAdded, this, [this](Plasma::Applet *applet) {
         disconnect(applet, &Applet::activated, this, &Applet::activated);
     });
+
+#if HAVE_WaylandProtocols
+    if (KWindowSystem::isPlatformWayland()) {
+        m_fractionalScaleManagerV1.reset(new FractionalScaleManagerV1);
+
+        auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
+        KConfigGroup kscreenGroup = config->group("KScreen");
+        m_xwaylandClientsScale = kscreenGroup.readEntry("XwaylandClientsScale", true);
+
+        m_configWatcher = KConfigWatcher::create(config);
+        connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+            if (group.name() == QStringLiteral("KScreen") && names.contains(QByteArrayLiteral("XwaylandClientsScale"))) {
+                m_xwaylandClientsScale = group.readEntry("XwaylandClientsScale", true);
+            }
+        });
+    }
+#endif
 }
 
 void SystemTray::restoreContents(KConfigGroup &group)
@@ -236,7 +315,7 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 
     QPointF pos = visualParent->mapToScene(QPointF(x, y));
 
-    const QQuickWindow *const window = visualParent->window();
+    QQuickWindow *const window = visualParent->window();
     if (window && window->screen()) {
         pos = window->mapToGlobal(pos.toPoint());
 #if HAVE_X11
@@ -253,10 +332,43 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
             return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
         }
 #endif
-    } else {
-        return QPoint();
+
+        if (KWindowSystem::isPlatformWayland()) {
+            if (!m_xwaylandClientsScale) {
+                return pos;
+            }
+
+            qreal devicePixelRatio = 1.0;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+            devicePixelRatio = window->devicePixelRatio();
+#elif HAVE_WaylandProtocols
+            if (m_fractionalScaleManagerV1->isActive()) {
+                QPlatformNativeInterface *const native = qGuiApp->platformNativeInterface();
+                Q_ASSERT(native);
+                const auto surface = reinterpret_cast<struct wl_surface *>(native->nativeResourceForWindow(QByteArrayLiteral("surface"), window));
+                if (surface) {
+                    const auto scale = std::make_unique<FractionalScaleV1>(m_fractionalScaleManagerV1->get_fractional_scale(surface));
+                    if (scale->isInitialized()) {
+                        scale->ensureReady();
+                        devicePixelRatio = scale->devicePixelRatio();
+                    }
+                }
+            }
+#endif
+
+            if (QGuiApplication::screens().size() == 1) {
+                return pos * devicePixelRatio;
+            }
+
+            const QRect geometry = window->screen()->geometry();
+            const QRect nativeGeometry = window->screen()->handle()->geometry();
+            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * devicePixelRatio;
+
+            return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
+        }
     }
-    return pos;
+
+    return QPoint();
 }
 
 bool SystemTray::isSystemTrayApplet(const QString &appletId)
