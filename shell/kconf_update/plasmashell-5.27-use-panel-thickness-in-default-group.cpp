@@ -59,6 +59,8 @@ int main()
 
     if (count == 0) {
         std::cout << "No need to update config." << std::endl;
+    } else {
+        configPtr->sync();
     }
 
     return EXIT_SUCCESS;
