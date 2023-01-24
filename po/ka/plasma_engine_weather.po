@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2023-01-11 07:11+0100\n"
+"PO-Revision-Date: 2023-01-23 07:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -543,7 +543,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "partly cloudy"
-msgstr ""
+msgstr "ნაწილობრივ მოღრუბლული"
 
 #: bbcukmet_i18n.dat:88
 #, kde-format
@@ -573,7 +573,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny"
-msgstr ""
+msgstr "მზიანი"
 
 #: bbcukmet_i18n.dat:93
 #, kde-format
@@ -4406,7 +4406,7 @@ msgstr "ქარიანი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice Crystals"
-msgstr ""
+msgstr "ყინულის კრისტალები"
 
 #: noaa_i18n.dat:266
 #, kde-format

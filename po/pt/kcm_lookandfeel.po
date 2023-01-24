@@ -117,7 +117,7 @@ msgstr "Deseja realmente apagar este tema de forma permanente?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr "Apagar de Forma Permanente"
+msgstr "Apagar Permanentemente"
 
 #: package/contents/ui/main.qml:76
 #, kde-format
