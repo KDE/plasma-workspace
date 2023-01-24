@@ -4,7 +4,5 @@
 Version=5
 
 Id=plasmashell-5.27-use-panel-thickness-in-default-group
-File=plasmashellrc
-Group=Plasma
 Script=plasmashell-5.27-use-panel-thickness-in-default-group
 
