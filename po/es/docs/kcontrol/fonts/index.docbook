@@ -61,9 +61,9 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2018-12-10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword
@@ -163,16 +163,11 @@
 </itemizedlist>
 
 <para
->Cada tipo de letra tiene un botón <guibutton
->Seleccionar...</guibutton
->. Al pulsarlo se muestra un cuadro de diálogo, que puede utilizar para seleccionar un nuevo tipo de letra, un estilo y un tamaño. Después pulse <guibutton
->Aceptar</guibutton
+>Each font has a corresponding <guibutton
+>Choose...</guibutton
+> button. By clicking on this button, a dialog box appears. You can use this dialog box to choose a new font, a font style and size. Then press <guibutton
+>Ok</guibutton
 >.</para>
-
-<para
->Marque <guilabel
->Mostrar solo tipos de letra de ancho fijo</guilabel
-> para ocultar en la lista todos los tipos de letra que no sean de ancho fijo.</para>
 
 <para
 >Se mostrará un ejemplo del tipo de letra seleccionado en el espacio situado entre el nombre del grupo de tipos de letra y el botón <guibutton
@@ -194,11 +189,6 @@
 > o el <guilabel
 >Tamaño</guilabel
 >, de forma independiente. Puede elegir una, dos o las tres opciones, y se aplicarán a todos los grupos de tipos de letra.</para>
-
-<para
->Marque <guilabel
->Mostrar solo tipos de letra de ancho fijo</guilabel
-> para ocultar en la lista todos los tipos de letra que no sean de ancho fijo.</para>
 
 <para>
 <screenshot>
@@ -224,27 +214,32 @@
 >Suavizar texto</title>
 
 <para
->Para usar el ajuste de suavizado, solo tiene marcar el elemento <guilabel
->Activado</guilabel
-> y seleccionar las preferencias personalizadas.</para>
+>Default anti-aliasing settings are those used system wide by your distribution and labelled <guilabel
+>Vendor Default</guilabel
+>. You can disable all anti-aliasing by choosing <guilabel
+>Disabled</guilabel
+> in the drop down box.</para>
 
 <para
->Marcando la casilla <guilabel
->Excluir intervalo de suavizado</guilabel
-> podrá indicar el intervalo de tipos de letra que <emphasis
->no</emphasis
-> se suavizarán. Este intervalo se especifica con las dos listas desplegables que hay debajo.</para>
+>To use different anti-aliasing setting, simply choose <guilabel
+>Enabled</guilabel
+> from the box on the right of <guilabel
+>Use anti-aliasing:</guilabel
+> and enable the custom settings.</para>
 
 <para
->También puede escoger el método que se usará para crear el aspecto suavizado de los tipos de letra y la fuerza con la que debería aplicarse cambiando la <ulink url="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n_de_subpixel"
->renderización de subpíxel</ulink
-> y el <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
->hinting del tipo de letra</ulink
->. También se puede <guilabel
->Forzar los PPP del tipo de letra</guilabel
-> de la <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
->renderización de la pantalla</ulink
->. Si no está familiarizado con los métodos individuales, debería dejar estas opciones como están.</para>
+>Placing a mark in the <guilabel
+>Exclude range:</guilabel
+> checkbox will allow you to specify which range of fonts will <emphasis
+>not</emphasis
+> be anti-aliased. This range is specified with the two combo boxes below.</para>
+
+<para
+>You can also choose the method used to create an anti-alias look to your fonts, and how strongly it should be applied changing the <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+> Sub-pixel rendering</ulink
+> and <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+> font hinting</ulink
+>. If you are not familiar with the individual methods, you should leave this option alone.</para>
 
 <note
 ><para

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-08-09 12:28+0300\n"
+"PO-Revision-Date: 2023-01-22 19:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,7 +73,7 @@ msgstr "Bakımcı"
 #: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr "Mevcut genel tema paketlerini listele"
+msgstr "Kullanılabilir genel tema paketlerini listele"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "paketadı"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr "Plasma Masaüstü düzenini sıfırla"
+msgstr "Plasma Masaüstü yerleşimini sıfırla"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -148,22 +148,22 @@ msgstr "İptal"
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Get New Global Themes…"
-msgstr "Yeni Genel Temalar Al…"
+msgstr "Yeni Global Temalar Al…"
 
 #: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
-msgstr "Düzen ayarları:"
+msgstr "Yerleşim ayarları:"
 
 #: package/contents/ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
-msgstr "Masaüstü düzeni"
+msgstr "Masaüstü yerleşimi"
 
 #: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr "Başlık Çubuğu Düğmeleri Düzeni"
+msgstr "Başlık Çubuğu Düğmeleri yerleşimi"
 
 #: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
@@ -172,7 +172,7 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
-"Bir masaüstü düzeni uygulamak; geçerli masaüstü, panel, rıhtım ve araç "
+"Bir masaüstü yerleşimi uygulamak; geçerli masaüstü, panel, rıhtım ve araç "
 "takımı yapılandırmanızı değiştirir"
 
 #: package/contents/ui/MoreOptions.qml:56
@@ -249,13 +249,13 @@ msgstr "• Görünüş ayarları"
 #: package/contents/ui/SimpleOptions.qml:47
 #, kde-format
 msgid "Desktop and window layout"
-msgstr "Masaüstü ve pencere düzeni"
+msgstr "Masaüstü ve pencere yerleşimi"
 
 #: package/contents/ui/SimpleOptions.qml:56
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• Masaüstü ve pencere düzeni"
+msgstr "• Masaüstü ve pencere yerleşimi"
 
 #: package/contents/ui/SimpleOptions.qml:74
 #, kde-format

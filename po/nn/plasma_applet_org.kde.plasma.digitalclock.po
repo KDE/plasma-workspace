@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2023-01-15 12:54+0100\n"
+"PO-Revision-Date: 2023-01-23 21:54+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -218,6 +218,8 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"Teksten vil bruka systemskrifta og vert automatisk utvida til å fylla all "
+"ledig plass."
 
 #: package/contents/ui/configAppearance.qml:237
 #, kde-format
@@ -270,6 +272,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Tips: Viss ofte er på reisefot, legg til ei oppføring for tidssona til "
+"heimstaden din her. Denne vert då berre vist når du byter tidssona for heile "
+"systemet til ei anna tidssone."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -283,12 +288,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Vert gøymd viss dette er byen til den lokale tidssona"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr ""
+msgstr "Byt tidssone for heile systemet …"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -330,6 +335,8 @@ msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
+"Denne funksjonen endrar ikkje tidssona for heile systemet. Når du reiser, "
+"byt heller den tidssona."
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format

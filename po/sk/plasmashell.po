@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-11 21:29+0100\n"
+"PO-Revision-Date: 2023-01-22 16:53+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -190,7 +190,7 @@ msgstr "Klávesnica na obrazovke deaktivovaná"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Vnútorná obrazovka na %1"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
@@ -201,7 +201,7 @@ msgstr "%1 %2 na %3"
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Odpojená obrazovka na %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format

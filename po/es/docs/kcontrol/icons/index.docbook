@@ -49,9 +49,9 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2018-12-10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.14</releaseinfo>
 
 <keywordset>
 <keyword
@@ -113,17 +113,19 @@
 >Al situar el cursor encima, una vista previa animada muestra una selección aleatoria, así como tipos MIME e iconos de carpetas comunes. </para>
 
 <para
->Si desea eliminar un tema, use el icono superpuesto <inlinemediaobject
+>If you want to remove a theme, use the <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
 ></inlinemediaobject
-> de la parte inferior derecha del tema de iconos. Para deshacer esta acción, pulse el icono <inlinemediaobject
+> overlay icon at the bottom right of the theme icon. To undo this action click on the <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
 ></inlinemediaobject
->. Si pulsa el botón <guibutton
->Aplicar</guibutton
->, se borrarán los temas seleccionados para su eliminación, por lo que no se pueden deshacer los borrados individuales o generales. </para>
+> icon. If you hit <guibutton
+>Apply</guibutton
+> or <guibutton
+>OK</guibutton
+> the themes selected for removal are actually deleted, so you cannot undo individual or all deletions. </para>
 
 <variablelist>
 <varlistentry
@@ -166,14 +168,14 @@
 <para>
 <screenshot>
 <screeninfo
->Obtener nuevos iconos</screeninfo>
+>Get New Icon Themes</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="get-new-theme.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Obtener nuevos iconos</phrase>
+>Get New Icon Themes</phrase>
     </textobject>
   </mediaobject>
 </screenshot>

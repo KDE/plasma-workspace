@@ -10,14 +10,14 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2022, 2023.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2022-09-24 14:22+0300\n"
+"PO-Revision-Date: 2023-01-22 16:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -206,18 +206,18 @@ msgstr "Экранная клавиатура выключена"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Встроенный экран (%1)"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Отключённый экран %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
