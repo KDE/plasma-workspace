@@ -592,6 +592,7 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
             KConfigGroup grp(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP));
             grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, m_dontShowFinishedMsg->isChecked());
         }
+        QDialog::accept();
         break;
     }
     case PAGE_ERROR:
