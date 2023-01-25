@@ -13,6 +13,7 @@
 #include <functional>
 
 struct ScreencastingRequestPrivate {
+    Screencasting *m_screenCasting = nullptr;
     QPointer<ScreencastingStream> m_stream;
     QString m_uuid;
     QString m_outputName;
@@ -38,17 +39,15 @@ void ScreencastingRequest::setUuid(const QString &uuid)
         return;
     }
 
-    if (!d->m_stream.isNull()) {
-        d->m_stream->deleteLater();
-    }
     setNodeid(0);
-
     d->m_uuid = uuid;
     Q_EMIT uuidChanged(uuid);
 
     if (!d->m_uuid.isEmpty()) {
-        auto screencasting = new Screencasting(this);
-        auto stream = screencasting->createWindowStream(d->m_uuid, Screencasting::CursorMode::Hidden);
+        if (!d->m_screenCasting) {
+            d->m_screenCasting = new Screencasting(this);
+        }
+        auto stream = d->m_screenCasting->createWindowStream(d->m_uuid, Screencasting::CursorMode::Hidden);
         if (!stream) {
             return;
         }
@@ -67,8 +66,10 @@ void ScreencastingRequest::setOutputName(const QString &outputName)
     Q_EMIT outputNameChanged(outputName);
 
     if (!d->m_outputName.isEmpty()) {
-        auto screencasting = new Screencasting(this);
-        auto stream = screencasting->createOutputStream(d->m_outputName, Screencasting::CursorMode::Hidden);
+        if (!d->m_screenCasting) {
+            d->m_screenCasting = new Screencasting(this);
+        }
+        auto stream = d->m_screenCasting->createOutputStream(d->m_outputName, Screencasting::CursorMode::Hidden);
         if (!stream) {
             return;
         }
@@ -94,12 +95,14 @@ void ScreencastingRequest::adopt(ScreencastingStream *stream)
 
 void ScreencastingRequest::setNodeid(uint nodeId)
 {
-    if (nodeId == d->m_nodeId) {
-        return;
+    if (nodeId != d->m_nodeId) {
+        d->m_nodeId = nodeId;
+        Q_EMIT nodeIdChanged(nodeId);
     }
 
-    d->m_nodeId = nodeId;
-    Q_EMIT nodeIdChanged(nodeId);
+    if (nodeId == 0 && d->m_stream) {
+        delete d->m_stream;
+    }
 }
 
 QString ScreencastingRequest::uuid() const
