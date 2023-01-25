@@ -3,17 +3,13 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQml 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-
 import org.kde.notificationmanager 1.0 as NotificationManager
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
 ColumnLayout {
@@ -30,23 +26,20 @@ ColumnLayout {
 
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
     readonly property var url: {
-       if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
-               || jobItem.jobError) {
-           return null;
-       }
+        if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped || jobItem.jobError) {
+            return null;
+        }
 
-       // For a single file show actions for it
-       // Otherwise the destination folder all of them were copied into
-       const url = totalFiles === 1 ? jobItem.jobDetails.descriptionUrl
-                                    : jobItem.jobDetails.destUrl;
+        // For a single file show actions for it
+        // Otherwise the destination folder all of them were copied into
+        const url = totalFiles === 1 ? jobItem.jobDetails.descriptionUrl : jobItem.jobDetails.destUrl;
 
-       // Don't offer opening files in Trash
-       if (url && url.toString().startsWith("trash:")) {
-           return null;
-       }
-
-       return url;
-   }
+        // Don't offer opening files in Trash
+        if (url && url.toString().startsWith("trash:")) {
+            return null;
+        }
+        return url;
+    }
 
     property alias iconContainerItem: jobDragIconItem.parent
 
@@ -92,7 +85,7 @@ ColumnLayout {
             opacity: busyIndicator.running ? 0.6 : 1
             source: !fileInfo.error ? fileInfo.iconName : ""
 
-            Behavior on opacity {
+            Behavior on opacity  {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -112,7 +105,6 @@ ColumnLayout {
                 onContextMenuRequested: {
                     // avoid menu button glowing if we didn't actually press it
                     otherFileActionsButton.checked = false;
-
                     otherFileActionsMenu.visualParent = this;
                     otherFileActionsMenu.open(x, y);
                 }
@@ -146,12 +138,10 @@ ColumnLayout {
             from: 0
             to: 100
             // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
-            indeterminate: visible && Window.window && Window.window.visible && percentage < 1
-                           && jobItem.jobState === NotificationManager.Notifications.JobStateRunning
-                           // is this too annoying?
-                           && (jobItem.jobDetails.processedBytes === 0 || jobItem.jobDetails.totalBytes === 0)
-                           && jobItem.jobDetails.processedFiles === 0
-                           //&& jobItem.jobDetails.processedDirectories === 0
+            indeterminate: visible && Window.window && Window.window.visible && percentage < 1 && jobItem.jobState === NotificationManager.Notifications.JobStateRunning &&
+            // is this too annoying?
+            (jobItem.jobDetails.processedBytes === 0 || jobItem.jobDetails.totalBytes === 0) && jobItem.jobDetails.processedFiles === 0
+            //&& jobItem.jobDetails.processedDirectories === 0
         }
 
         PlasmaComponents3.Label {
@@ -170,8 +160,7 @@ ColumnLayout {
             PlasmaComponents3.ToolButton {
                 id: suspendButton
                 icon.name: "media-playback-pause"
-                onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
-                                                                                                    : jobItem.suspendJobClicked()
+                onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked() : jobItem.suspendJobClicked()
 
                 PlasmaComponents3.ToolTip {
                     text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
@@ -195,8 +184,7 @@ ColumnLayout {
                 enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
 
                 PlasmaComponents3.ToolTip {
-                    text: expandButton.checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
-                                  : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
+                    text: expandButton.checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details") : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
                 }
             }
         }
@@ -231,9 +219,9 @@ ColumnLayout {
             Accessible.name: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
             onPressedChanged: {
                 if (pressed) {
-                    checked = Qt.binding(function() {
-                        return otherFileActionsMenu.visible;
-                    });
+                    checked = Qt.binding(function () {
+                            return otherFileActionsMenu.visible;
+                        });
                     otherFileActionsMenu.visualParent = this;
                     // -1 tells it to "align bottom left of visualParent (this)"
                     otherFileActionsMenu.open(-1, -1);

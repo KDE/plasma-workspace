@@ -3,25 +3,18 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
-
 import org.kde.quickcharts 1.0 as Charts
-
 import "global"
 
 MouseArea {
     id: compactRoot
 
-    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
-        || Plasmoid.location === PlasmaCore.Types.RightEdge
-        || Plasmoid.location === PlasmaCore.Types.BottomEdge
-        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.RightEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
     Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
@@ -72,10 +65,18 @@ MouseArea {
 
             visible: false
 
-            range { from: 0; to: 100; automatic: false }
+            range {
+                from: 0
+                to: 100
+                automatic: false
+            }
 
-            valueSources: Charts.SingleValueSource { value: compactRoot.jobsPercentage }
-            colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
+            valueSources: Charts.SingleValueSource {
+                value: compactRoot.jobsPercentage
+            }
+            colorSource: Charts.SingleValueSource {
+                value: PlasmaCore.Theme.highlightColor
+            }
 
             thickness: PlasmaCore.Units.devicePixelRatio * 5
         }
@@ -114,7 +115,8 @@ MouseArea {
     }
 
     states: [
-        State { // active process
+        State {
+            // active process
             when: compactRoot.jobsCount > 0
             PropertyChanges {
                 target: notificationIcon
@@ -134,7 +136,8 @@ MouseArea {
                 visible: true
             }
         },
-        State { // do not disturb
+        State {
+            // do not disturb
             when: compactRoot.inhibited
             PropertyChanges {
                 target: dndIcon
@@ -147,7 +150,8 @@ MouseArea {
                 opacity: 0
             }
         },
-        State { // unread notifications
+        State {
+            // unread notifications
             name: "UNREAD"
             when: compactRoot.unreadCount > 0
             PropertyChanges {
@@ -192,5 +196,4 @@ MouseArea {
             }
         }
     ]
-
 }

@@ -3,14 +3,12 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kcm 1.5 as KCM
-
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 KCM.SimpleKCM {
@@ -25,8 +23,7 @@ KCM.SimpleKCM {
 
     readonly property NotificationManager.ServerInfo currentOwnerInfo: NotificationManager.Server.currentOwner
 
-    readonly property bool notificationsAvailable: currentOwnerInfo.status === NotificationManager.ServerInfo.Running
-        && currentOwnerInfo.vendor === ourServerVendor && currentOwnerInfo.name === ourServerName
+    readonly property bool notificationsAvailable: currentOwnerInfo.status === NotificationManager.ServerInfo.Running && currentOwnerInfo.vendor === ourServerVendor && currentOwnerInfo.name === ourServerName
 
     function openSourcesSettings() {
         // TODO would be nice to re-use the current SourcesPage instead of pushing a new one that lost all state
@@ -39,7 +36,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
-            text: i18n("Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.");
+            text: i18n("Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.")
             visible: currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
         }
 
@@ -49,15 +46,11 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Information
             text: {
                 if (currentOwnerInfo.vendor && currentOwnerInfo.name) {
-                    return i18nc("Vendor and product name",
-                                 "Notifications are currently provided by '%1 %2' instead of Plasma.",
-                                 currentOwnerInfo.vendor, currentOwnerInfo.name);
+                    return i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2' instead of Plasma.", currentOwnerInfo.vendor, currentOwnerInfo.name);
                 }
-
                 return i18n("Notifications are currently not provided by Plasma.");
             }
-            visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running
-                && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
+            visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
         }
 
         Kirigami.Separator {
@@ -91,7 +84,6 @@ KCM.SimpleKCM {
                 extraEnabledConditions: root.notificationsAvailable
             }
         }
-
 
         KQuickControls.KeySequenceItem {
             Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Keyboard shortcut:")
@@ -170,9 +162,9 @@ KCM.SimpleKCM {
             id: positionCloseToWidget
             Kirigami.FormData.label: i18nc("@label", "Location:")
             text: i18nc("Popup position near notification plasmoid", "Near notification icon") // "widget"
-            checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
-                // Force binding re-evaluation when user returns from position selector
-                + kcm.currentIndex * 0
+            checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget +
+            // Force binding re-evaluation when user returns from position selector
+            kcm.currentIndex * 0
             onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
 
             KCM.SettingStateBinding {
@@ -188,8 +180,7 @@ KCM.SimpleKCM {
 
             QtControls.RadioButton {
                 id: positionCustomPosition
-                checked: kcm.notificationSettings.popupPosition !== NotificationManager.Settings.CloseToWidget
-                    + kcm.currentIndex * 0
+                checked: kcm.notificationSettings.popupPosition !== NotificationManager.Settings.CloseToWidget + kcm.currentIndex * 0
                 activeFocusOnTab: false
 
                 MouseArea {
@@ -202,7 +193,6 @@ KCM.SimpleKCM {
                     settingName: "PopupPosition"
                     extraEnabledConditions: root.notificationsAvailable
                 }
-
             }
             QtControls.Button {
                 id: positionCustomButton
@@ -227,10 +217,10 @@ KCM.SimpleKCM {
             stepSize: 1000
             value: kcm.notificationSettings.popupTimeout
             editable: true
-            valueFromText: function(text, locale) {
+            valueFromText: function (text, locale) {
                 return parseInt(text) * 1000;
             }
-            textFromValue: function(value, locale) {
+            textFromValue: function (value, locale) {
                 return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
             }
             onValueModified: kcm.notificationSettings.popupTimeout = value
@@ -271,7 +261,8 @@ KCM.SimpleKCM {
             }
         }
 
-        RowLayout { // just for indentation
+        RowLayout {
+            // just for indentation
             QtControls.CheckBox {
                 Layout.leftMargin: mirrored ? 0 : indicator.width
                 Layout.rightMargin: mirrored ? indicator.width : 0
@@ -319,7 +310,7 @@ KCM.SimpleKCM {
             target: kcm
             function onFirstLoadDone() {
                 if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-                        root.openSourcesSettings();
+                    root.openSourcesSettings();
                 }
             }
         }

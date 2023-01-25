@@ -4,14 +4,12 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
 import org.kde.kirigami 2.3 as Kirigami
 import org.kde.kcm 1.0
-
 
 FocusScope {
     id: root
@@ -41,8 +39,8 @@ FocusScope {
             Kirigami.MnemonicData.enabled: false
             focus: true
             onClicked: {
-                fontDialog.adjustAllFonts = false
-                kcm.adjustFont(root.font, root.category)
+                fontDialog.adjustAllFonts = false;
+                kcm.adjustFont(root.font, root.category);
             }
             QtControls.ToolTip {
                 id: tooltip
@@ -50,4 +48,3 @@ FocusScope {
         }
     }
 }
-

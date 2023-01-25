@@ -4,15 +4,12 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
 
 Menu {
@@ -20,7 +17,7 @@ Menu {
     Keys.onPressed: {
         function forwardToFilter() {
             if (filter.enabled && event.text !== "" && !filter.activeFocus) {
-                clipboardMenu.view.currentIndex = -1
+                clipboardMenu.view.currentIndex = -1;
                 if (event.matches(StandardKey.Paste)) {
                     filter.paste();
                 } else {
@@ -35,13 +32,14 @@ Menu {
             event.accepted = false;
             return;
         }
-        switch(event.key) {
-            case Qt.Key_Enter:
-            case Qt.Key_Return: {
+        switch (event.key) {
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+            {
                 if (clipboardMenu.view.currentIndex >= 0) {
-                    var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
+                    var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole;
                     if (uuid) {
-                        clipboardSource.service(uuid, "select")
+                        clipboardSource.service(uuid, "select");
                         if (Plasmoid.hideOnWindowDeactivate) {
                             Plasmoid.expanded = false;
                         }
@@ -49,14 +47,16 @@ Menu {
                 }
                 break;
             }
-            case Qt.Key_Escape: {
+        case Qt.Key_Escape:
+            {
                 if (filter.text != "") {
                     filter.text = "";
                     event.accepted = true;
                 }
                 break;
             }
-            case Qt.Key_F: {
+        case Qt.Key_F:
+            {
                 if (event.modifiers & Qt.ControlModifier) {
                     filter.forceActiveFocus();
                     filter.selectAll();
@@ -66,19 +66,22 @@ Menu {
                 }
                 break;
             }
-            case Qt.Key_Tab:
-            case Qt.Key_Backtab: {
+        case Qt.Key_Tab:
+        case Qt.Key_Backtab:
+            {
                 // prevent search filter from getting Tab key events
                 break;
             }
-            case Qt.Key_Backspace: {
+        case Qt.Key_Backspace:
+            {
                 // filter.text += event.text wil break if the key is backspace
                 filter.forceActiveFocus();
                 filter.text = filter.text.slice(0, -1);
                 event.accepted = true;
                 break;
             }
-            default: {
+        default:
+            {
                 forwardToFilter();
             }
         }
@@ -109,7 +112,7 @@ Menu {
                 Connections {
                     target: main
                     function onClearSearchField() {
-                        filter.clear()
+                        filter.clear();
                     }
                 }
             }
@@ -122,8 +125,8 @@ Menu {
                 text: Plasmoid.action("clearHistory").text
 
                 onClicked: {
-                    clipboardSource.service("", "clearHistory")
-                    filter.clear()
+                    clipboardSource.service("", "clearHistory");
+                    filter.clear();
                 }
 
                 PlasmaComponents3.ToolTip {
@@ -152,14 +155,14 @@ Menu {
     onRemove: clipboardSource.service(uuid, "remove")
     onEdit: {
         stack.push(Qt.resolvedUrl("EditPage.qml"), {
-            text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
-            uuid: uuid
-        });
+                "text": clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
+                "uuid": uuid
+            });
     }
     onBarcode: {
         stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
-            text: text
-        });
+                "text": text
+            });
     }
     onTriggerAction: clipboardSource.service(uuid, "action")
 
@@ -178,27 +181,29 @@ Menu {
 
     function arrowKeyPressed(event) {
         switch (event.key) {
-        case Qt.Key_Up: {
-            if (clipboardMenu.view.currentIndex === 0) {
-                clipboardMenu.view.currentIndex = -1;
-                filter.forceActiveFocus();
-                filter.selectAll();
-            } else if (filter.activeFocus) {
-                event.accepted = false;
-                return;
-            } else {
-                clipboardMenu.view.decrementCurrentIndex();
-                goToCurrent();
+        case Qt.Key_Up:
+            {
+                if (clipboardMenu.view.currentIndex === 0) {
+                    clipboardMenu.view.currentIndex = -1;
+                    filter.forceActiveFocus();
+                    filter.selectAll();
+                } else if (filter.activeFocus) {
+                    event.accepted = false;
+                    return;
+                } else {
+                    clipboardMenu.view.decrementCurrentIndex();
+                    goToCurrent();
+                }
+                event.accepted = true;
+                break;
             }
-            event.accepted = true;
-            break;
-        }
-        case Qt.Key_Down: {
-            clipboardMenu.view.incrementCurrentIndex();
-            goToCurrent();
-            event.accepted = true;
-            break;
-        }
+        case Qt.Key_Down:
+            {
+                clipboardMenu.view.incrementCurrentIndex();
+                goToCurrent();
+                event.accepted = true;
+                break;
+            }
         default:
             break;
         }

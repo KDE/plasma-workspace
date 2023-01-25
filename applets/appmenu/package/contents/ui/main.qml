@@ -10,7 +10,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 // Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
 import QtQml 2.15
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -46,7 +45,7 @@ Item {
         text: Plasmoid.title
         Accessible.description: Plasmoid.toolTipSubText
 
-        onClicked: Plasmoid.nativeInterface.trigger(this, 0);
+        onClicked: Plasmoid.nativeInterface.trigger(this, 0)
     }
 
     Plasmoid.fullRepresentation: GridLayout {

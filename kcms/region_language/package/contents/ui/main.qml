@@ -6,7 +6,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
-
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kcm 1.2 as KCM
 import org.kde.kitemmodels 1.0
@@ -37,7 +36,7 @@ KCM.ScrollViewKCM {
                     visible: takeEffectNextTimeMsg.visible && !dontShutdownMsg.visible
                     text: i18n("Restart now")
                     onTriggered: {
-                        kcm.reboot()
+                        kcm.reboot();
                     }
                 }
             ]
@@ -49,7 +48,7 @@ KCM.ScrollViewKCM {
 
             type: Kirigami.MessageType.Warning
 
-            text:  i18nc("@info", "Generating locale and language support files; don't turn off the computer yet.")
+            text: i18nc("@info", "Generating locale and language support files; don't turn off the computer yet.")
         }
 
         Kirigami.InlineMessage {
@@ -143,7 +142,6 @@ KCM.ScrollViewKCM {
                         while (kcm.depth > 1) {
                             kcm.takeLast();
                         }
-
                         if (model.page === SettingType.Lang) {
                             languageSelectPage.active = true;
                             kcm.push(languageSelectPage.item);
@@ -190,7 +188,7 @@ KCM.ScrollViewKCM {
                 case SettingType.NameStyle:
                     return i18nc("Name Style", "Name");
                 case SettingType.PhoneNumbers:
-                    return i18nc("Phone Numbers","Phone number");
+                    return i18nc("Phone Numbers", "Phone number");
                 }
                 console.warn("Invalid setting passed: ", setting);
                 return "Invalid"; // guard
@@ -268,7 +266,6 @@ KCM.ScrollViewKCM {
                         } else {
                             kcm.unset(setting);
                         }
-
                         kcm.takeLast();
                     }
                 }

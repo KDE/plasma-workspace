@@ -6,7 +6,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
@@ -30,7 +29,8 @@ MouseArea {
             return Qt.SystemLocaleLongDate; // int
         } else if (Plasmoid.configuration.dateFormat === "isoDate") {
             return Qt.ISODate; // int
-        } else { // "shortDate"
+        } else {
+            // "shortDate"
             return Qt.SystemLocaleShortDate; // int
         }
     }
@@ -56,9 +56,7 @@ MouseArea {
             return false;
         } else {
             // Adaptive
-            return Plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize &&
-                (main.showDate || timezoneLabel.visible);
+            return Plasmoid.formFactor === PlasmaCore.Types.Horizontal && main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize && (main.showDate || timezoneLabel.visible);
         }
     }
 
@@ -69,14 +67,28 @@ MouseArea {
         setupLabels();
     }
 
-    onDisplayTimezoneFormatChanged: { setupLabels(); }
-    onStateChanged: { setupLabels(); }
+    onDisplayTimezoneFormatChanged: {
+        setupLabels();
+    }
+    onStateChanged: {
+        setupLabels();
+    }
 
-    onLastSelectedTimezoneChanged: { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowLocalTimezoneChanged:    { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
+    onLastSelectedTimezoneChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+    }
+    onShowSecondsChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+    }
+    onShowLocalTimezoneChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+    }
+    onShowDateChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+    }
+    onUse24hFormatChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+    }
 
     Connections {
         target: Plasmoid.self
@@ -95,7 +107,6 @@ MouseArea {
             if (Plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) === -1) {
                 Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[0];
             }
-
             setupLabels();
             setTimezoneIndex();
         }
@@ -112,8 +123,8 @@ MouseArea {
     }
 
     function pointToPixel(pointSize) {
-        var pixelsPerInch = Screen.pixelDensity * 25.4
-        return Math.round(pointSize / 72 * pixelsPerInch)
+        var pixelsPerInch = Screen.pixelDensity * 25.4;
+        return Math.round(pointSize / 72 * pixelsPerInch);
     }
 
     states: [
@@ -133,8 +144,7 @@ MouseArea {
                 target: contentItem
 
                 height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                width: Math.max(timeLabel.width + (main.showDate ? timezoneLabel.paintedWidth : 0),
-                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + PlasmaCore.Units.smallSpacing * 2
+                width: Math.max(timeLabel.width + (main.showDate ? timezoneLabel.paintedWidth : 0), timezoneLabel.paintedWidth, dateLabel.paintedWidth) + PlasmaCore.Units.smallSpacing * 2
             }
 
             PropertyChanges {
@@ -194,13 +204,11 @@ MouseArea {
                  * the time label is slightly larger than the date or timezone label
                  * and still fits well into the panel with all the applied margins.
                  */
-                height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
-                                 fontHelper.font.pixelSize)
+                height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71, fontHelper.font.pixelSize)
 
                 font.pixelSize: sizehelper.height
             }
         },
-
         State {
             name: "oneLineDate"
             // the one-line mode has no effect on a vertical panel because it would never fit
@@ -212,7 +220,6 @@ MouseArea {
                 Layout.fillWidth: false
                 Layout.minimumWidth: contentItem.width
                 Layout.maximumWidth: Layout.minimumWidth
-
             }
 
             PropertyChanges {
@@ -276,7 +283,6 @@ MouseArea {
                 font.pixelSize: fontHelper.font.pixelSize
             }
         },
-
         State {
             name: "verticalPanel"
             when: Plasmoid.formFactor === PlasmaCore.Types.Vertical
@@ -355,7 +361,6 @@ MouseArea {
                 font.pixelSize: fontHelper.font.pixelSize
             }
         },
-
         State {
             name: "other"
             when: Plasmoid.formFactor !== PlasmaCore.Types.Vertical && Plasmoid.formFactor !== PlasmaCore.Types.Horizontal
@@ -426,13 +431,13 @@ MouseArea {
                 height: {
                     if (main.showDate) {
                         if (timezoneLabel.visible) {
-                            return 0.4 * main.height
+                            return 0.4 * main.height;
                         }
-                        return 0.56 * main.height
+                        return 0.56 * main.height;
                     } else if (timezoneLabel.visible) {
-                        return 0.59 * main.height
+                        return 0.59 * main.height;
                     }
-                    return main.height
+                    return main.height;
                 }
                 width: main.width
 
@@ -448,8 +453,7 @@ MouseArea {
         if (!Plasmoid.configuration.wheelChangesTimezone) {
             return;
         }
-
-        var delta = wheel.angleDelta.y || wheel.angleDelta.x
+        var delta = wheel.angleDelta.y || wheel.angleDelta.x;
         var newIndex = main.tzIndex;
         wheelDelta += delta;
         // magic number 120 for common "one click"
@@ -462,23 +466,20 @@ MouseArea {
             wheelDelta += 120;
             newIndex++;
         }
-
         if (newIndex >= Plasmoid.configuration.selectedTimeZones.length) {
             newIndex = 0;
         } else if (newIndex < 0) {
             newIndex = Plasmoid.configuration.selectedTimeZones.length - 1;
         }
-
         if (newIndex !== main.tzIndex) {
             Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
             main.tzIndex = newIndex;
-
             dataSource.dataChanged();
             setupLabels();
         }
     }
 
-   /*
+    /*
     * Visible elements
     *
     */
@@ -496,7 +497,7 @@ MouseArea {
             flow: Grid.TopToBottom
             columnSpacing: PlasmaCore.Units.smallSpacing
 
-            Components.Label  {
+            Components.Label {
                 id: timeLabel
 
                 font {
@@ -505,7 +506,7 @@ MouseArea {
                     italic: fontHelper.font.italic
                     pixelSize: 1024
                     pointSize: -1 // Because we're setting the pixel size instead
-                                  // TODO: remove once this label is ported to PC3
+                    // TODO: remove once this label is ported to PC3
                 }
                 minimumPixelSize: 1
 
@@ -522,7 +523,7 @@ MouseArea {
                 font.italic: timeLabel.font.italic
                 font.pixelSize: 1024
                 font.pointSize: -1 // Because we're setting the pixel size instead
-                                   // TODO: remove once this label is ported to PC3
+                // TODO: remove once this label is ported to PC3
                 minimumPixelSize: 1
 
                 visible: text.length > 0
@@ -541,18 +542,18 @@ MouseArea {
             font.italic: timeLabel.font.italic
             font.pixelSize: 1024
             font.pointSize: -1 // Because we're setting the pixel size instead
-                               // TODO: remove once this label is ported to PC3
+            // TODO: remove once this label is ported to PC3
             minimumPixelSize: 1
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
         }
     }
+
     /*
      * end: Visible Elements
      *
      */
-
     Components.Label {
         id: sizehelper
 
@@ -567,7 +568,7 @@ MouseArea {
     // To measure Label.height for maximum-sized font in VerticalFit mode
     Components.Label {
         id: fontHelper
-        
+
         height: 1024
 
         font.family: (Plasmoid.configuration.autoFontAndSize || Plasmoid.configuration.fontFamily.length === 0) ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
@@ -592,16 +593,14 @@ MouseArea {
     // eg. no "gimme time with seconds" or "gimme time without seconds and with timezone".
     // QLocale supports only two formats - Long and Short. Long is unusable in many situations
     // and Short does not provide seconds. So if seconds are enabled, we need to add it here.
-    //
     // What happens here is that it looks for the delimiter between "h" and "m", takes it
     // and appends it after "mm" and then appends "ss" for the seconds.
     function timeFormatCorrection(timeFormatString) {
-        var regexp = /(hh*)(.+)(mm)/i
+        var regexp = /(hh*)(.+)(mm)/i;
         var match = regexp.exec(timeFormatString);
-
         var hours = match[1];
         var delimiter = match[2];
-        var minutes = match[3]
+        var minutes = match[3];
         var seconds = "ss";
         var amPm = "AP";
         var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") === -1;
@@ -609,7 +608,6 @@ MouseArea {
         // because QLocale is incredibly stupid and does not convert 12h/24h clock format
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
         var result = hours.toLowerCase() + delimiter + minutes;
-
         if (main.showSeconds) {
             result += delimiter + seconds;
         }
@@ -618,21 +616,17 @@ MouseArea {
         if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
             result += " " + amPm;
         }
-
         main.timeFormat = result;
         setupLabels();
     }
 
     function setupLabels() {
-        var showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
-                                                        && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
-
+        var showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local" && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
         var timezoneString = "";
-
         if (showTimezone) {
             // format timezone as tz code, city or UTC offset
             if (displayTimezoneFormat === 0) {
-                timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
+                timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"];
             } else if (displayTimezoneFormat === 1) {
                 timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
             } else if (displayTimezoneFormat === 2) {
@@ -640,17 +634,13 @@ MouseArea {
                 var symbol = lastOffset > 0 ? '+' : '';
                 var hours = Math.floor(lastOffset / 3600);
                 var minutes = Math.floor(lastOffset % 3600 / 60);
-
                 timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
             }
-
             timezoneLabel.text = (main.showDate || main.oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
         } else {
             // this clears the label and that makes it hidden
             timezoneLabel.text = timezoneString;
         }
-
-
         if (main.showDate) {
             dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
         } else {
@@ -683,30 +673,26 @@ MouseArea {
         } else {
             sizehelper.text = timePm;
         }
-        fontHelper.text = sizehelper.text
+        fontHelper.text = sizehelper.text;
     }
 
-    function dateTimeChanged()
-    {
+    function dateTimeChanged() {
         var doCorrections = false;
-
         if (main.showDate) {
             // If the date has changed, force size recalculation, because the day name
             // or the month name can now be longer/shorter, so we need to adjust applet size
             const currentDate = Qt.formatDateTime(main.getCurrentTime(), "yyyy-MM-dd");
             if (main.lastDate !== currentDate) {
                 doCorrections = true;
-                main.lastDate = currentDate
+                main.lastDate = currentDate;
             }
         }
-
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
         if (currentTZOffset !== tzOffset) {
             doCorrections = true;
             tzOffset = currentTZOffset;
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
-
         if (doCorrections) {
             timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         }
@@ -726,11 +712,10 @@ MouseArea {
         // Calling sort() directly on Plasmoid.configuration.selectedTimeZones
         // has no effect, so sort a copy and then assign the copy to it
         var sortArray = Plasmoid.configuration.selectedTimeZones;
-        sortArray.sort(function(a, b) {
-            return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
-        });
+        sortArray.sort(function (a, b) {
+                return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
+            });
         Plasmoid.configuration.selectedTimeZones = sortArray;
-
         setTimezoneIndex();
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();

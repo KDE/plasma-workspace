@@ -4,13 +4,11 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.0
 import QtQuick.Window 2.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
-
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 Item {
@@ -155,7 +153,6 @@ Item {
     }
 
     // TODO increase hit area for radio buttons
-
     QtControls.RadioButton {
         anchors {
             top: topPart.bottom

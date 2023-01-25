@@ -19,38 +19,37 @@ Row {
     }
     spacing: 4
     visible: false
-    
+
     Components.ToolButton {
         id: monthright
-        flat: true;
-        text: "<";
-        width: height;
+        flat: true
+        text: "<"
+        width: height
         anchors.left: parent.left
         anchors.rightMargin: 20
         onClicked: {
-            calendarBackend.previousMonth()
+            calendarBackend.previousMonth();
         }
     }
 
-//     Components.ToolButton {
-//         id: month
-//         anchors.left: monthright.right
-//         anchors.right: monthYear.left
-//         anchors.leftMargin: 20
-//         Loader {
-//             id: menuLoader
-//         }
-//         onClicked: {
-//             if (menuLoader.source == "") {
-//                 menuLoader.source = "MonthMenu.qml"
-//             } else {
-//                 //menuLoader.source = ""
-//             }
-//             menuLoader.item.open(0, height);
-//         }
-//         text: calendarBackend.monthName
-//     }
-
+    //     Components.ToolButton {
+    //         id: month
+    //         anchors.left: monthright.right
+    //         anchors.right: monthYear.left
+    //         anchors.leftMargin: 20
+    //         Loader {
+    //             id: menuLoader
+    //         }
+    //         onClicked: {
+    //             if (menuLoader.source == "") {
+    //                 menuLoader.source = "MonthMenu.qml"
+    //             } else {
+    //                 //menuLoader.source = ""
+    //             }
+    //             menuLoader.item.open(0, height);
+    //         }
+    //         text: calendarBackend.monthName
+    //     }
     Components.ToolButton {
         id: monthYear
         text: calendarBackend.year
@@ -77,12 +76,12 @@ Row {
 
     Components.ToolButton {
         id: previous
-        flat: true;
-        text: ">";
-        width: height;
+        flat: true
+        text: ">"
+        width: height
         anchors.right: parent.right
         onClicked: {
-            calendarBackend.nextMonth()
+            calendarBackend.nextMonth();
         }
     }
 }

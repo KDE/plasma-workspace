@@ -6,13 +6,11 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 
 Item {
@@ -22,11 +20,11 @@ Item {
 
     property string devicesType: {
         if (Plasmoid.configuration.allDevices) {
-            return "all"
+            return "all";
         } else if (Plasmoid.configuration.removableDevices) {
-            return "removable"
+            return "removable";
         } else {
-            return "nonRemovable"
+            return "nonRemovable";
         }
     }
     property string popupIcon: "device-notifier"
@@ -47,21 +45,21 @@ Item {
     Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
     Plasmoid.toolTipSubText: {
         if (filterModel.count > 0) {
-            var data = filterModel.get(0)
+            var data = filterModel.get(0);
             if (data && data.Description) {
-                return data.Description
+                return data.Description;
             }
         }
-        return ""
+        return "";
     }
     Plasmoid.icon: {
         if (filterModel.count > 0) {
-            var data = filterModel.get(0)
+            var data = filterModel.get(0);
             if (data && data.Icon) {
-                return data.Icon
+                return data.Icon;
             }
         }
-        return "device-notifier"
+        return "device-notifier";
     }
 
     Plasmoid.status: (filterModel.count > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
@@ -75,7 +73,7 @@ Item {
         onSourceAdded: {
             disconnectSource(source);
             connectSource(source);
-            sdSource.connectedSources = sources
+            sdSource.connectedSources = sources;
         }
         onSourceRemoved: {
             disconnectSource(source);
@@ -84,8 +82,8 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: devicenotifier.popupIcon
-        width: PlasmaCore.Units.iconSizes.medium;
-        height: PlasmaCore.Units.iconSizes.medium;
+        width: PlasmaCore.Units.iconSizes.medium
+        height: PlasmaCore.Units.iconSizes.medium
         active: compactMouse.containsMouse
         MouseArea {
             id: compactMouse
@@ -98,7 +96,8 @@ Item {
             onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
     }
-    Plasmoid.fullRepresentation: FullRepresentation {}
+    Plasmoid.fullRepresentation: FullRepresentation {
+    }
 
     PlasmaCore.DataSource {
         id: sdSource
@@ -147,14 +146,11 @@ Item {
             if (devicesType === "all") {
                 return true;
             }
-
             var device = data[udi];
             if (!device) {
                 return false;
             }
-
-            return (devicesType === "removable" && device.Removable)
-                || (devicesType === "nonRemovable" && !device.Removable);
+            return (devicesType === "removable" && device.Removable) || (devicesType === "nonRemovable" && !device.Removable);
         }
 
         function processLastDevice(expand) {
@@ -177,11 +173,11 @@ Item {
         filterRole: "Removable"
         filterRegExp: {
             if (devicesType === "removable") {
-                return "true"
+                return "true";
             } else if (devicesType === "nonRemovable") {
-                return "false"
+                return "false";
             } else {
-                return ""
+                return "";
             }
         }
         sortRole: "Timestamp"
@@ -204,24 +200,23 @@ Item {
         onSourceRemoved: disconnectSource(source)
         onDataChanged: {
             if (last) {
-                lastUdi = data[last].udi
-                lastDescription = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Description : ""
-                lastMessage = data[last].error
-                lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier"
-
+                lastUdi = data[last].udi;
+                lastDescription = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Description : "";
+                lastMessage = data[last].error;
+                lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier";
                 if (sdSource.isViableDevice(lastUdi)) {
-                    Plasmoid.expanded = true
+                    Plasmoid.expanded = true;
                     Plasmoid.fullRepresentationItem.spontaneousOpen = true;
                 }
             }
         }
 
         function clearMessage() {
-            last = ""
-            lastUdi = ""
-            lastDescription = ""
-            lastMessage = ""
-            lastIcon = ""
+            last = "";
+            lastUdi = "";
+            lastDescription = "";
+            lastMessage = "";
+            lastIcon = "";
         }
     }
 
@@ -234,49 +229,48 @@ Item {
         if (sdSource.connectedSources.count === 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
-
         Plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
         Plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
-            return devicenotifier.mountedRemovables > 0;
-        });
- 
+                return devicenotifier.mountedRemovables > 0;
+            });
         Plasmoid.setActionSeparator("sep0");
-
         Plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
         devicenotifier.showRemovableDevicesAction = Plasmoid.action("showRemovableDevices");
         devicenotifier.showRemovableDevicesAction.checkable = true;
-        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.removableDevices;});
+        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {
+                return Plasmoid.configuration.removableDevices;
+            });
         Plasmoid.setActionGroup("showRemovableDevices", "devicesShown");
-
         Plasmoid.setAction("showNonRemovableDevices", i18n("Non Removable Devices"), "drive-harddisk");
         devicenotifier.showNonRemovableDevicesAction = Plasmoid.action("showNonRemovableDevices");
         devicenotifier.showNonRemovableDevicesAction.checkable = true;
-        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.nonRemovableDevices;});
+        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {
+                return Plasmoid.configuration.nonRemovableDevices;
+            });
         Plasmoid.setActionGroup("showNonRemovableDevices", "devicesShown");
-
         Plasmoid.setAction("showAllDevices", i18n("All Devices"));
         devicenotifier.showAllDevicesAction = Plasmoid.action("showAllDevices");
         devicenotifier.showAllDevicesAction.checkable = true;
-        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.allDevices;});
+        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {
+                return Plasmoid.configuration.allDevices;
+            });
         Plasmoid.setActionGroup("showAllDevices", "devicesShown");
-
         Plasmoid.setActionSeparator("sep");
-
         Plasmoid.setAction("openAutomatically", i18n("Show popup when new device is plugged in"));
         devicenotifier.openAutomaticallyAction = Plasmoid.action("openAutomatically");
         devicenotifier.openAutomaticallyAction.checkable = true;
-        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {return Plasmoid.configuration.popupOnNewDevice;});
-
+        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {
+                return Plasmoid.configuration.popupOnNewDevice;
+            });
         Plasmoid.setActionSeparator("sep2");
-
         if (devicenotifier.openAutomounterKcmAuthorized) {
             Plasmoid.removeAction("configure");
-            Plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure")
+            Plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure");
         }
     }
 
     function action_configure() {
-        KCMShell.openSystemSettings("kcm_device_automounter")
+        KCMShell.openSystemSettings("kcm_device_automounter");
     }
 
     function action_showRemovableDevices() {
@@ -318,19 +312,17 @@ Item {
         if (!sdSource.data[udi]) {
             return false;
         }
-
         var types = sdSource.data[udi]["Device Types"];
         if (types.indexOf("Storage Access") >= 0) {
             return sdSource.data[udi]["Accessible"];
         }
-
-        return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0)
+        return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0);
     }
 
     Timer {
         id: popupIconTimer
         interval: 3000
-        onTriggered: devicenotifier.popupIcon  = "device-notifier";
+        onTriggered: devicenotifier.popupIcon = "device-notifier"
     }
 
     Timer {
@@ -341,11 +333,11 @@ Item {
             // show the popup on new device attachment if the user has added
             // the text "popupOnNewDevice=false" to their
             // plasma-org.kde.plasma.desktop-appletsrc file.
-            if (Plasmoid.configuration.popupOnNewDevice) { // Bug 351592
+            if (Plasmoid.configuration.popupOnNewDevice) {
+                // Bug 351592
                 Plasmoid.expanded = true;
                 Plasmoid.fullRepresentationItem.spontaneousOpen = true;
             }
         }
     }
-
 }

@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
@@ -24,8 +23,8 @@ PlasmaCore.ToolTipArea {
     property alias text: label.text
     property alias labelHeight: label.implicitHeight
     property alias iconContainer: iconContainer
-    property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
-    property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
+    property int status: model.status || PlasmaCore.Types.UnknownStatus
+    property int effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
@@ -49,7 +48,6 @@ PlasmaCore.ToolTipArea {
     mainText:
     subText:
     */
-
     location: {
         if (inHiddenLayout) {
             if (LayoutMirroring.enabled && Plasmoid.location !== PlasmaCore.Types.RightEdge) {
@@ -58,19 +56,16 @@ PlasmaCore.ToolTipArea {
                 return PlasmaCore.Types.RightEdge;
             }
         }
-
         return Plasmoid.location;
     }
 
     PulseAnimation {
         targetItem: iconContainer
-        running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus
-                || abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus)
-            && PlasmaCore.Units.longDuration > 0
+        running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus || abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus) && PlasmaCore.Units.longDuration > 0
     }
 
     function startActivatedAnimation() {
-        activatedAnimation.start()
+        activatedAnimation.start();
     }
 
     SequentialAnimation {
@@ -110,18 +105,18 @@ PlasmaCore.ToolTipArea {
         // onEntered will change the index while the items are scrolling,
         // making it harder to scroll.
         onPositionChanged: if (inHiddenLayout) {
-            root.hiddenLayout.currentIndex = index
+            root.hiddenLayout.currentIndex = index;
         }
         onClicked: abstractItem.clicked(mouse)
         onPressed: {
             if (inHiddenLayout) {
-                root.hiddenLayout.currentIndex = index
+                root.hiddenLayout.currentIndex = index;
             }
-            abstractItem.hideImmediately()
-            abstractItem.pressed(mouse)
+            abstractItem.hideImmediately();
+            abstractItem.pressed(mouse);
         }
         onPressAndHold: if (mouse.button === Qt.LeftButton) {
-            abstractItem.contextMenu(mouse)
+            abstractItem.contextMenu(mouse);
         }
         onWheel: {
             abstractItem.wheel(wheel);
@@ -141,20 +136,20 @@ PlasmaCore.ToolTipArea {
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
             Accessible.role: Accessible.Button
-            Accessible.onPressAction: abstractItem.activated(Qt.point(iconContainer.width/2, iconContainer.height/2));
+            Accessible.onPressAction: abstractItem.activated(Qt.point(iconContainer.width / 2, iconContainer.height / 2))
 
             Keys.onPressed: {
                 switch (event.key) {
-                    case Qt.Key_Space:
-                    case Qt.Key_Enter:
-                    case Qt.Key_Return:
-                    case Qt.Key_Select:
-                        abstractItem.activated(Qt.point(width/2, height/2));
-                        break;
-                    case Qt.Key_Menu:
-                        abstractItem.contextMenu(null);
-                        event.accepted = true;
-                        break;
+                case Qt.Key_Space:
+                case Qt.Key_Enter:
+                case Qt.Key_Return:
+                case Qt.Key_Select:
+                    abstractItem.activated(Qt.point(width / 2, height / 2));
+                    break;
+                case Qt.Key_Menu:
+                    abstractItem.contextMenu(null);
+                    event.accepted = true;
+                    break;
                 }
             }
 
@@ -166,7 +161,7 @@ PlasmaCore.ToolTipArea {
             Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
             implicitWidth: root.vertical && abstractItem.inVisibleLayout ? abstractItem.width : size
             implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
-            Layout.topMargin: abstractItem.inHiddenLayout ? Math.round(PlasmaCore.Units.smallSpacing * 1.5): 0
+            Layout.topMargin: abstractItem.inHiddenLayout ? Math.round(PlasmaCore.Units.smallSpacing * 1.5) : 0
         }
         PlasmaComponents3.Label {
             id: label
@@ -191,7 +186,7 @@ PlasmaCore.ToolTipArea {
             maximumLineCount: 3
 
             opacity: visible ? 1 : 0
-            Behavior on opacity {
+            Behavior on opacity  {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -200,4 +195,3 @@ PlasmaCore.ToolTipArea {
         }
     }
 }
-

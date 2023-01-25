@@ -4,10 +4,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
@@ -22,7 +20,7 @@ PlasmaComponents3.ItemDelegate {
 
     readonly property real percentage: Math.round(100 * value / maximumValue)
 
-    signal moved()
+    signal moved
 
     background.visible: highlighted
     highlighted: activeFocus

@@ -41,7 +41,6 @@ Item {
         function test_triangle_filter() {
             mouseMove(root, 100, 350); // under the list
             compare(item3.containsMouse, false);
-
             mouseMove(root, 100, 290); // enter the last item
             // the first entrance is filtered
             compare(item3.containsMouse, false);
@@ -65,6 +64,5 @@ Item {
             wait(500);
             compare(item2.containsMouse, true);
         }
-
     }
 }

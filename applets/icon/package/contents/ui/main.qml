@@ -5,11 +5,9 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -19,10 +17,8 @@ import org.kde.plasma.plasmoid 2.0
 MouseArea {
     id: root
 
-    readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
-        .includes(Plasmoid.location)
-    readonly property bool constrained: [PlasmaCore.Types.Vertical, PlasmaCore.Types.Horizontal]
-        .includes(Plasmoid.formFactor)
+    readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge].includes(Plasmoid.location)
+    readonly property bool constrained: [PlasmaCore.Types.Vertical, PlasmaCore.Types.Horizontal].includes(Plasmoid.formFactor)
     property bool containsAcceptableDrag: false
 
     height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
@@ -35,7 +31,7 @@ MouseArea {
         case Qt.Key_Enter:
         case Qt.Key_Return:
         case Qt.Key_Select:
-            Plasmoid.nativeInterface.run()
+            Plasmoid.nativeInterface.run();
             break;
         }
     }
@@ -68,7 +64,6 @@ MouseArea {
     function updateActions() {
         Plasmoid.clearActions();
         Plasmoid.removeAction("configure");
-
         if (Plasmoid.nativeInterface.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             Plasmoid.setAction("configure", i18n("Properties"), "document-properties");
         }
@@ -99,7 +94,6 @@ MouseArea {
         onDragEnter: {
             const acceptable = Plasmoid.nativeInterface.isAcceptableDrag(event);
             root.containsAcceptableDrag = acceptable;
-
             if (!acceptable) {
                 event.ignore();
             }
@@ -111,7 +105,6 @@ MouseArea {
             } else {
                 event.ignore();
             }
-
             root.containsAcceptableDrag = false;
         }
     }
@@ -129,7 +122,7 @@ MouseArea {
         active: root.containsMouse || root.containsAcceptableDrag
         usesPlasmaTheme: false
         opacity: Plasmoid.busy ? 0.6 : 1
-        Behavior on opacity {
+        Behavior on opacity  {
             OpacityAnimator {
                 duration: PlasmaCore.Units.shortDuration
                 easing.type: Easing.OutCubic

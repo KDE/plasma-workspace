@@ -3,9 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.8
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.notifications 2.0 as Notifications
 

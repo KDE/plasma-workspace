@@ -3,21 +3,16 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.10
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For ModelContextMenu
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.12 as Kirigami
-
 import org.kde.kcoreaddons 1.0 as KCoreAddons
-
 import org.kde.notificationmanager 1.0 as NotificationManager
-
 import "global"
 
 PlasmaExtras.Representation {
@@ -37,7 +32,7 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
-    Keys.onDownPressed: dndCheck.forceActiveFocus(Qt.TabFocusReason);
+    Keys.onDownPressed: dndCheck.forceActiveFocus(Qt.TabFocusReason)
 
     Connections {
         target: Plasmoid.self
@@ -56,11 +51,11 @@ PlasmaExtras.Representation {
 
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
+            id: header
             anchors {
                 fill: parent
                 leftMargin: PlasmaCore.Units.smallSpacing
             }
-            id: header
             spacing: 0
 
             RowLayout {
@@ -94,7 +89,6 @@ PlasmaExtras.Representation {
                         }
                     }
 
-
                     PlasmaComponents.ModelContextMenu {
                         id: dndMenu
                         property date date
@@ -112,12 +106,17 @@ PlasmaExtras.Representation {
                             var d = dndMenu.date;
                             d.setHours(d.getHours() + 1);
                             d.setSeconds(0);
-                            model.push({date: d, text: i18n("For 1 hour")});
-
+                            model.push({
+                                    "date": d,
+                                    "text": i18n("For 1 hour")
+                                });
                             d = dndMenu.date;
                             d.setHours(d.getHours() + 4);
                             d.setSeconds(0);
-                            model.push({date: d, text: i18n("For 4 hours")});
+                            model.push({
+                                    "date": d,
+                                    "text": i18n("For 4 hours")
+                                });
 
                             // Until this evening
                             if (dndMenu.date.getHours() < dndEveningHour) {
@@ -126,7 +125,10 @@ PlasmaExtras.Representation {
                                 d.setHours(dndEveningHour);
                                 d.setMinutes(0);
                                 d.setSeconds(0);
-                                model.push({date: d, text: i18n("Until this evening")});
+                                model.push({
+                                        "date": d,
+                                        "text": i18n("Until this evening")
+                                    });
                             }
 
                             // Until next morning
@@ -136,7 +138,10 @@ PlasmaExtras.Representation {
                                 d.setHours(dndMorningHour);
                                 d.setMinutes(0);
                                 d.setSeconds(0);
-                                model.push({date: d, text: i18n("Until tomorrow morning")});
+                                model.push({
+                                        "date": d,
+                                        "text": i18n("Until tomorrow morning")
+                                    });
                             }
 
                             // Until Monday
@@ -148,15 +153,20 @@ PlasmaExtras.Representation {
                                 d.setDate(d.getDate() + (7 - d.getDay() + 1));
                                 d.setMinutes(0);
                                 d.setSeconds(0);
-                                model.push({date: d, text: i18n("Until Monday")});
+                                model.push({
+                                        "date": d,
+                                        "text": i18n("Until Monday")
+                                    });
                             }
 
                             // Until "turned off"
                             d = dndMenu.date;
                             // Just set it to one year in the future so we don't need yet another "do not disturb enabled" property
                             d.setFullYear(d.getFullYear() + 1);
-                            model.push({date: d, text: i18n("Until manually disabled")});
-
+                            model.push({
+                                    "date": d,
+                                    "text": i18n("Until manually disabled")
+                                });
                             return model;
                         }
                     }
@@ -190,29 +200,23 @@ PlasmaExtras.Representation {
                     if (!Globals.inhibited) {
                         return "";
                     }
-
                     var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
                     var inhibitedByApp = notificationSettings.notificationsInhibitedByApplication;
-                    var inhibitedByMirroredScreens = notificationSettings.inhibitNotificationsWhenScreensMirrored
-                                                        && notificationSettings.screensMirrored;
-
+                    var inhibitedByMirroredScreens = notificationSettings.inhibitNotificationsWhenScreensMirrored && notificationSettings.screensMirrored;
                     var sections = [];
 
                     // Show until time if valid but not if too far int he future
-                    if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - Date.now() < 100 * 24 * 60 * 60 * 1000 /* 1 year*/) {
+                    if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - Date.now() < 100 * 24 * 60 * 60 * 1000) /* 1 year*/ {
                         const endTime = KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat);
-                        const lowercaseEndTime =  endTime[0] + endTime.slice(1);
+                        const lowercaseEndTime = endTime[0] + endTime.slice(1);
                         sections.push(i18nc("Do not disturb until date", "Automatically ends: %1", lowercaseEndTime));
                     }
-
                     if (inhibitedByApp) {
                         var inhibitionAppNames = notificationSettings.notificationInhibitionApplications;
                         var inhibitionAppReasons = notificationSettings.notificationInhibitionReasons;
-
                         for (var i = 0, length = inhibitionAppNames.length; i < length; ++i) {
                             var name = inhibitionAppNames[i];
                             var reason = inhibitionAppReasons[i];
-
                             if (reason) {
                                 sections.push(i18nc("Do not disturb until app has finished (reason)", "While %1 is active (%2)", name, reason));
                             } else {
@@ -220,14 +224,12 @@ PlasmaExtras.Representation {
                             }
                         }
                     }
-
                     if (inhibitedByMirroredScreens) {
-                        sections.push(i18nc("Do not disturb because external mirrored screens connected", "Screens are mirrored"))
+                        sections.push(i18nc("Do not disturb because external mirrored screens connected", "Screens are mirrored"));
                     }
-
                     return sections.join(" · ");
                 }
-                visible:  text !== ""
+                visible: text !== ""
             }
         }
     }
@@ -302,7 +304,6 @@ PlasmaExtras.Representation {
                 var rowIdx = historyModel.index(row, 0);
                 var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
                 var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(rowIdx));
-
                 historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
 
                 // If the current item went away when the group collapsed, scroll to the group heading
@@ -327,22 +328,43 @@ PlasmaExtras.Representation {
 
             add: Transition {
                 SequentialAnimation {
-                    PropertyAction { property: "opacity"; value: 0 }
-                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
+                    PropertyAction {
+                        property: "opacity"
+                        value: 0
+                    }
+                    PauseAnimation {
+                        duration: PlasmaCore.Units.longDuration
+                    }
                     ParallelAnimation {
-                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.longDuration }
-                        NumberAnimation { property: "height"; from: 0; duration: PlasmaCore.Units.longDuration }
+                        NumberAnimation {
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                            duration: PlasmaCore.Units.longDuration
+                        }
+                        NumberAnimation {
+                            property: "height"
+                            from: 0
+                            duration: PlasmaCore.Units.longDuration
+                        }
                     }
                 }
             }
             addDisplaced: Transition {
-                NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
+                NumberAnimation {
+                    properties: "y"
+                    duration: PlasmaCore.Units.longDuration
+                }
             }
 
             remove: Transition {
                 id: removeTransition
                 ParallelAnimation {
-                    NumberAnimation { property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
+                    NumberAnimation {
+                        property: "opacity"
+                        to: 0
+                        duration: PlasmaCore.Units.longDuration
+                    }
                     NumberAnimation {
                         id: removeXAnimation
                         property: "x"
@@ -353,8 +375,13 @@ PlasmaExtras.Representation {
             }
             removeDisplaced: Transition {
                 SequentialAnimation {
-                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
-                    NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
+                    PauseAnimation {
+                        duration: PlasmaCore.Units.longDuration
+                    }
+                    NumberAnimation {
+                        properties: "y"
+                        duration: PlasmaCore.Units.longDuration
+                    }
                 }
             }
 
@@ -378,7 +405,6 @@ PlasmaExtras.Representation {
                     if (x < 0) {
                         removeXAnimation.to = -delegate.width;
                     }
-
                     historyModel.close(historyModel.index(index, 0));
                 }
 
@@ -395,7 +421,6 @@ PlasmaExtras.Representation {
                             originName: model.originName || ""
 
                             // don't show timestamp for group
-
                             configurable: model.configurable
                             closable: model.closable
                             closeButtonTooltip: i18n("Close Group")
@@ -446,11 +471,9 @@ PlasmaExtras.Representation {
                                     // configure button on every single notifications is bit overwhelming
                                     configurable: !inGroup && model.configurable
 
-                                    dismissable: model.type === NotificationManager.Notifications.JobType
-                                        && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                        && model.dismissed
-                                        // TODO would be nice to be able to undismiss jobs even when they autohide
-                                        && notificationSettings.permanentJobPopups
+                                    dismissable: model.type === NotificationManager.Notifications.JobType && model.jobState !== NotificationManager.Notifications.JobStateStopped && model.dismissed &&
+                                    // TODO would be nice to be able to undismiss jobs even when they autohide
+                                    notificationSettings.permanentJobPopups
                                     dismissed: model.dismissed || false
                                     closable: model.closable
 
@@ -472,9 +495,7 @@ PlasmaExtras.Representation {
                                     // however in the list this is undesirable, so instead show a clickable button
                                     // in case you have a non-expired notification in history (do not disturb mode)
                                     // unless it has the same label as an action
-                                    readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                                            && model.defaultActionLabel
-                                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
+                                    readonly property bool addDefaultAction: (model.hasDefaultAction && model.defaultActionLabel && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
                                     actionNames: {
                                         var actions = (model.actionNames || []);
                                         if (addDefaultAction) {
@@ -504,7 +525,6 @@ PlasmaExtras.Representation {
                                         } else {
                                             historyModel.invokeAction(historyModel.index(index, 0), actionName);
                                         }
-
                                         expire();
                                     }
                                     onOpenUrl: {
@@ -539,11 +559,8 @@ PlasmaExtras.Representation {
 
                             PlasmaComponents3.ToolButton {
                                 icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
-                                text: model.isGroupExpanded ? i18n("Show Fewer")
-                                                            : i18nc("Expand to show n more notifications",
-                                                                    "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
-                                visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
-                                    && delegate.ListView.nextSection !== delegate.ListView.section
+                                text: model.isGroupExpanded ? i18n("Show Fewer") : i18nc("Expand to show n more notifications", "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
+                                visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded) && delegate.ListView.nextSection !== delegate.ListView.section
                                 onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
                             }
 
@@ -554,8 +571,7 @@ PlasmaExtras.Representation {
                                 svg: lineSvg
 
                                 // property is only atached to the delegate itself (the Loader in our case)
-                                visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
-                                                && delegate.ListView.nextSection !== "" // don't show after last item
+                                visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section) && delegate.ListView.nextSection !== "" // don't show after last item
                             }
                         }
                     }
@@ -597,9 +613,7 @@ PlasmaExtras.Representation {
 
                     iconName: "notifications-disabled"
                     text: i18n("Notification service not available")
-                    explanation: currentOwner && currentOwner.vendor && currentOwner.name
-                                ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name)
-                                : ""
+                    explanation: currentOwner && currentOwner.vendor && currentOwner.name ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name) : ""
                 }
             }
         }

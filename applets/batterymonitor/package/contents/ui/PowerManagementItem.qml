@@ -4,10 +4,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -22,7 +20,6 @@ ColumnLayout {
 
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
-    //
     // type: [{
     //  Icon: string,
     //  Name: string,
@@ -85,9 +82,7 @@ ColumnLayout {
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3
-            text: i18np("%1 application is currently blocking sleep and screen locking:",
-                        "%1 applications are currently blocking sleep and screen locking:",
-                        root.inhibitions.length)
+            text: i18np("%1 application is currently blocking sleep and screen locking:", "%1 applications are currently blocking sleep and screen locking:", root.inhibitions.length)
         }
 
         Repeater {
@@ -97,20 +92,13 @@ ColumnLayout {
             model: !root.disabled ? root.inhibitions : null
 
             InhibitionHint {
-                property string icon: modelData.Icon
-                    || (kwindowsystem.isPlatformWayland ? "wayland" : "xorg")
+                property string icon: modelData.Icon || (kwindowsystem.isPlatformWayland ? "wayland" : "xorg")
                 property string name: modelData.Name
                 property string reason: modelData.Reason
 
                 Layout.fillWidth: true
                 iconSource: icon
-                text: (root.inhibitions.length === 1)
-                    ? (reason
-                        ? i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason)
-                        : i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name))
-                    : (reason
-                        ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
-                        : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name))
+                text: (root.inhibitions.length === 1) ? (reason ? i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason) : i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name)) : (reason ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason) : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name))
             }
         }
     }

@@ -4,12 +4,10 @@
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.12
 import QtQuick.Controls 2.5 as QQC2
-
 import org.kde.kcm 1.2
 import org.kde.kirigami 2.13 as Kirigami
 
@@ -25,8 +23,8 @@ SimpleKCM {
     Connections {
         target: user
         function onApplyError(errorText) {
-            errorMessage.visible = true
-            errorMessage.text = errorText
+            errorMessage.visible = true;
+            errorMessage.text = errorText;
         }
     }
 
@@ -35,52 +33,51 @@ SimpleKCM {
         function onPasswordSuccessfullyChanged() {
             // Prompt to change the wallet password of the logged-in user
             if (usersDetailPage.user.loggedIn && usersDetailPage.user.usesDefaultWallet()) {
-                changeWalletPassword.open()
+                changeWalletPassword.open();
             }
         }
     }
-
 
     Connections {
         target: kcm
 
         function onApply() {
-            errorMessage.visible = false
-            usersDetailPage.user.realName = realNametextField.text
-            usersDetailPage.user.email = emailTextField.text
-            usersDetailPage.user.name = userNameField.text
-            usersDetailPage.user.administrator = (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator")
-            user.apply()
-            usersDetailPage.overrideImage = false
-            usersDetailPage.oldImage = ""
+            errorMessage.visible = false;
+            usersDetailPage.user.realName = realNametextField.text;
+            usersDetailPage.user.email = emailTextField.text;
+            usersDetailPage.user.name = userNameField.text;
+            usersDetailPage.user.administrator = (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator");
+            user.apply();
+            usersDetailPage.overrideImage = false;
+            usersDetailPage.oldImage = "";
         }
 
         function onReset() {
-            errorMessage.visible = false
-            realNametextField.text = usersDetailPage.user.realName
-            emailTextField.text = usersDetailPage.user.email
-            userNameField.text = usersDetailPage.user.name
-            usertypeBox.currentIndex = usersDetailPage.user.administrator ? 1 : 0
+            errorMessage.visible = false;
+            realNametextField.text = usersDetailPage.user.realName;
+            emailTextField.text = usersDetailPage.user.email;
+            userNameField.text = usersDetailPage.user.name;
+            usertypeBox.currentIndex = usersDetailPage.user.administrator ? 1 : 0;
             if (usersDetailPage.oldImage != "") {
-                usersDetailPage.overrideImage = false
-                usersDetailPage.user.face = usersDetailPage.oldImage
+                usersDetailPage.overrideImage = false;
+                usersDetailPage.user.face = usersDetailPage.oldImage;
             }
         }
     }
 
     function resolvePending() {
-        let pending = false
-        let user = usersDetailPage.user
-        pending = pending || user.realName != realNametextField.text
-        pending = pending || user.email != emailTextField.text
-        pending = pending || user.name != userNameField.text
-        pending = pending || user.administrator != (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator")
-        pending = pending || usersDetailPage.overrideImage
-        return pending
+        let pending = false;
+        let user = usersDetailPage.user;
+        pending = pending || user.realName != realNametextField.text;
+        pending = pending || user.email != emailTextField.text;
+        pending = pending || user.name != userNameField.text;
+        pending = pending || user.administrator != (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator");
+        pending = pending || usersDetailPage.overrideImage;
+        return pending;
     }
 
     Component.onCompleted: {
-        kcm.needsSave = Qt.binding(resolvePending)
+        kcm.needsSave = Qt.binding(resolvePending);
     }
 
     ColumnLayout {
@@ -106,18 +103,18 @@ SimpleKCM {
                 main: Kirigami.Action {
                     text: i18n("Change avatar")
                     onTriggered: {
-                        const component = Qt.createComponent("PicturesSheet.qml")
+                        const component = Qt.createComponent("PicturesSheet.qml");
                         component.incubateObject(usersDetailPage, {
-                            "parent": usersDetailPage,
-                        })
-                        component.destroy()
+                                "parent": usersDetailPage
+                            });
+                        component.destroy();
                     }
                 }
             }
         }
 
         Kirigami.FormLayout {
-            QQC2.TextField  {
+            QQC2.TextField {
                 id: realNametextField
                 focus: true
                 text: user.realName
@@ -135,10 +132,13 @@ SimpleKCM {
                 id: usertypeBox
 
                 textRole: "label"
-                model: [
-                    { "type": "standard", "label": i18n("Standard") },
-                    { "type": "administrator", "label": i18n("Administrator") },
-                ]
+                model: [{
+                        "type": "standard",
+                        "label": i18n("Standard")
+                    }, {
+                        "type": "administrator",
+                        "label": i18n("Administrator")
+                    },]
 
                 Kirigami.FormData.label: i18n("Account type:")
 
@@ -155,8 +155,8 @@ SimpleKCM {
             QQC2.Button {
                 text: i18n("Change Password")
                 onClicked: {
-                    changePassword.account = user
-                    changePassword.openAndClear()
+                    changePassword.account = user;
+                    changePassword.openAndClear();
                 }
             }
 
@@ -176,14 +176,14 @@ SimpleKCM {
                         text: i18n("Delete files")
                         icon.name: "edit-delete-shred"
                         onClicked: {
-                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, true)
+                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, true);
                         }
                     }
                     QQC2.MenuItem {
                         text: i18n("Keep files")
                         icon.name: "document-multiple"
                         onClicked: {
-                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, false)
+                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, false);
                         }
                     }
                 }
@@ -219,7 +219,15 @@ SimpleKCM {
         }
     }
 
-    ChangePassword { id: changePassword; account: user }
-    ChangeWalletPassword { id: changeWalletPassword }
-    FingerprintDialog { id: fingerprintDialog; account: user }
+    ChangePassword {
+        id: changePassword
+        account: user
+    }
+    ChangeWalletPassword {
+        id: changeWalletPassword
+    }
+    FingerprintDialog {
+        id: fingerprintDialog
+        account: user
+    }
 }

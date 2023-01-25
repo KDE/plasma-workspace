@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
@@ -13,7 +12,6 @@ import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.3 as KCM
-
 import org.kde.private.kcms.icons 1.0 as Private
 
 KCM.GridViewKCM {
@@ -57,8 +55,10 @@ KCM.GridViewKCM {
             clip: thumbFlow.y < 0
 
             opacity: model.pendingDeletion ? 0.3 : 1
-            Behavior on opacity {
-                NumberAnimation { duration: Kirigami.Units.longDuration }
+            Behavior on opacity  {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                }
             }
 
             Timer {
@@ -75,7 +75,6 @@ KCM.GridViewKCM {
                         thumbFlow.loadPreviews(-1 /*no limit*/);
                         thumbFlow.allPreviesLoaded = true;
                     }
-
                     ++thumbFlow.currentPage;
                     if (thumbFlow.currentPage >= thumbFlow.pageCount) {
                         stop();
@@ -108,8 +107,10 @@ KCM.GridViewKCM {
                 width: parent.width
                 y: -currentPage * iconHeight * rows
 
-                Behavior on y {
-                    NumberAnimation { duration: Kirigami.Units.longDuration }
+                Behavior on y  {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                    }
                 }
 
                 Repeater {
@@ -134,10 +135,10 @@ KCM.GridViewKCM {
 
                 Component.onCompleted: {
                     // avoid reloading it when icon sizes or dpr changes on startup
-                    Qt.callLater(function() {
-                        // We show 6 icons initially (3x2 grid), only load those
-                        thumbFlow.loadPreviews(6 /*limit*/);
-                    });
+                    Qt.callLater(function () {
+                            // We show 6 icons initially (3x2 grid), only load those
+                            thumbFlow.loadPreviews(6 /*limit*/);
+                        });
                 }
             }
         }
@@ -267,7 +268,7 @@ KCM.GridViewKCM {
         id: iconSizeSheet
         parent: root.parent
 
-        onSheetOpenChanged: content.opened();
+        onSheetOpenChanged: content.opened()
 
         header: Kirigami.Heading {
             text: i18nc("@title:window", "Configure Icon Sizes")
@@ -284,14 +285,14 @@ KCM.GridViewKCM {
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Theme")
             folder: shortcuts.home
-            nameFilters: [ i18n("Theme Files (*.tar.gz *.tar.bz2)") ]
+            nameFilters: [i18n("Theme Files (*.tar.gz *.tar.bz2)")]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
-                fileDialogLoader.active = false
+                kcm.installThemeFromFile(fileUrls[0]);
+                fileDialogLoader.active = false;
             }
             onRejected: {
-                fileDialogLoader.active = false
+                fileDialogLoader.active = false;
             }
         }
     }

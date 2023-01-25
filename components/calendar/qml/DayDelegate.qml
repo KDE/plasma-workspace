@@ -14,7 +14,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import QtQml 2.15 // For Date
 import QtQml.Models 2.15
 import org.kde.kirigami 2.12 as Kirigami
-
 import org.kde.plasma.workspace.calendar 2.0
 
 PlasmaComponents3.AbstractButton {
@@ -49,29 +48,29 @@ PlasmaComponents3.AbstractButton {
         const today = root.today;
         let result = true;
         if (dateMatchingPrecision >= Calendar.MatchYear) {
-            result = result && today.getFullYear() === thisDate.getFullYear()
+            result = result && today.getFullYear() === thisDate.getFullYear();
         }
         if (dateMatchingPrecision >= Calendar.MatchYearAndMonth) {
-            result = result && today.getMonth() === thisDate.getMonth()
+            result = result && today.getMonth() === thisDate.getMonth();
         }
         if (dateMatchingPrecision >= Calendar.MatchYearMonthAndDay) {
-            result = result && today.getDate() === thisDate.getDate()
+            result = result && today.getDate() === thisDate.getDate();
         }
-        return result
+        return result;
     }
     readonly property bool selected: {
         const current = root.currentDate;
         let result = true;
         if (dateMatchingPrecision >= Calendar.MatchYear) {
-            result = result && current.getFullYear() === thisDate.getFullYear()
+            result = result && current.getFullYear() === thisDate.getFullYear();
         }
         if (dateMatchingPrecision >= Calendar.MatchYearAndMonth) {
-            result = result && current.getMonth() === thisDate.getMonth()
+            result = result && current.getMonth() === thisDate.getMonth();
         }
         if (dateMatchingPrecision >= Calendar.MatchYearMonthAndDay) {
-            result = result && current.getDate() === thisDate.getDate()
+            result = result && current.getDate() === thisDate.getDate();
         }
-        return result
+        return result;
     }
 
     Loader {
@@ -119,8 +118,7 @@ PlasmaComponents3.AbstractButton {
     Loader {
         active: model.eventCount !== undefined && model.eventCount > 0
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: subDayLabel.item ? subDayLabel.item.implicitHeight
-            : PlasmaCore.Units.smallSpacing
+        anchors.bottomMargin: subDayLabel.item ? subDayLabel.item.implicitHeight : PlasmaCore.Units.smallSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         sourceComponent: Row {
             spacing: PlasmaCore.Units.smallSpacing
@@ -157,9 +155,7 @@ PlasmaComponents3.AbstractButton {
                 top: parent.top
                 bottom: subDayLabel.top
             }
-            font.pixelSize: Math.max(
-                PlasmaCore.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
-                daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+            font.pixelSize: Math.max(PlasmaCore.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */, daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */  : 6))
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -171,8 +167,7 @@ PlasmaComponents3.AbstractButton {
 
         Loader {
             id: subDayLabel
-            active: (!!model.subDayLabel && model.subDayLabel.length > 0)
-                 || typeof(model.alternateDayNumber) === "number"
+            active: (!!model.subDayLabel && model.subDayLabel.length > 0) || typeof (model.alternateDayNumber) === "number"
             anchors {
                 left: parent.left
                 right: parent.right
@@ -181,9 +176,7 @@ PlasmaComponents3.AbstractButton {
 
             sourceComponent: PlasmaComponents3.Label {
                 elide: Text.ElideRight
-                font.pixelSize: Math.max(
-                    PlasmaCore.Theme.smallestFont.pixelSize,
-                    daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 6 : 12))
+                font.pixelSize: Math.max(PlasmaCore.Theme.smallestFont.pixelSize, daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 6 : 12))
                 font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -201,7 +194,7 @@ PlasmaComponents3.AbstractButton {
             active: !!model.subLabel
 
             sourceComponent: PlasmaComponents3.ToolTip {
-                visible: Kirigami.Settings.isMobile? dayStyle.pressed : dayStyle.hovered
+                visible: Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered
                 text: model.subLabel
             }
 

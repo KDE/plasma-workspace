@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtTest 1.0
 import "../../org.kde.breeze/contents/lockscreen"
 
-
 LockScreen {
 
     SignalSpy {

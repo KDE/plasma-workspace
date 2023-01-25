@@ -5,12 +5,10 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtGraphicalEffects 1.0
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -19,21 +17,13 @@ import org.kde.kirigami 2.11 as Kirigami
 
 ContainmentLayoutManager.AppletContainer {
     id: appletContainer
-    editModeCondition: Plasmoid.immutable
-        ? ContainmentLayoutManager.ItemContainer.Manual
-        : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
+    editModeCondition: Plasmoid.immutable ? ContainmentLayoutManager.ItemContainer.Manual : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
     Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: (applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
-        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
-            ? Kirigami.Theme.Complementary
-            : Kirigami.Theme.Window
+    Kirigami.Theme.colorSet: (applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground) && !(applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) && !(applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) ? Kirigami.Theme.Complementary : Kirigami.Theme.Window
 
     PlasmaCore.ColorScope.inherit: false
-    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet === Kirigami.Theme.Complementary
-        ? PlasmaCore.Theme.ComplementaryColorGroup
-        : PlasmaCore.Theme.NormalColorGroup
+    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet === Kirigami.Theme.Complementary ? PlasmaCore.Theme.ComplementaryColorGroup : PlasmaCore.Theme.NormalColorGroup
 
     onFocusChanged: {
         if (!focus && !dragActive) {
@@ -44,10 +34,7 @@ ContainmentLayoutManager.AppletContainer {
         if (!applet) {
             return leftPadding + rightPadding;
         }
-
-        if (applet.preferredRepresentation !== applet.fullRepresentation
-            && applet.compactRepresentationItem
-        ) {
+        if (applet.preferredRepresentation !== applet.fullRepresentation && applet.compactRepresentationItem) {
             return applet.compactRepresentationItem.Layout.minimumWidth + leftPadding + rightPadding;
         } else {
             return applet.Layout.minimumWidth + leftPadding + rightPadding;
@@ -57,10 +44,7 @@ ContainmentLayoutManager.AppletContainer {
         if (!applet) {
             return topPadding + bottomPadding;
         }
-
-        if (applet.preferredRepresentation !== applet.fullRepresentation
-            && applet.compactRepresentationItem
-        ) {
+        if (applet.preferredRepresentation !== applet.fullRepresentation && applet.compactRepresentationItem) {
             return applet.compactRepresentationItem.Layout.minimumHeight + topPadding + bottomPadding;
         } else {
             return applet.Layout.minimumHeight + topPadding + bottomPadding;
@@ -109,11 +93,7 @@ ContainmentLayoutManager.AppletContainer {
 
         function bindBlurEnabled() {
             // bind to api and hints automatically, refresh non-observable prefix manually
-            blurEnabled = Qt.binding(() =>
-                   GraphicsInfo.api !== GraphicsInfo.Software
-                && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-                && hasElementPrefix("blurred")
-            );
+            blurEnabled = Qt.binding(() => GraphicsInfo.api !== GraphicsInfo.Software && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) && hasElementPrefix("blurred"));
         }
 
         Component.onCompleted: bindBlurEnabled()
@@ -151,8 +131,7 @@ ContainmentLayoutManager.AppletContainer {
             color: Qt.rgba(0, 0, 0, 0.5)
             opacity: 1
 
-            source: appletContainer.applet && appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground
-                ? appletContainer.applet : null
+            source: appletContainer.applet && appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground ? appletContainer.applet : null
             visible: source !== null
         }
     }
@@ -166,16 +145,7 @@ ContainmentLayoutManager.AppletContainer {
             readonly property rect appletContainerScreenRect: {
                 const scene = appletContainer.Window.window;
                 const position = appletContainer.Kirigami.ScenePosition;
-                return clipRect(
-                    boundsForTransformedRect(
-                        Qt.rect(
-                            position.x,
-                            position.y,
-                            appletContainer.width,
-                            appletContainer.height),
-                        appletContainer.rotation,
-                        appletContainer.scale),
-                    Qt.size(scene.width, scene.height));
+                return clipRect(boundsForTransformedRect(Qt.rect(position.x, position.y, appletContainer.width, appletContainer.height), appletContainer.rotation, appletContainer.scale), Qt.size(scene.width, scene.height));
             }
 
             /** Apply geometry transformations, and return a bounding rectangle for a resulting shape. */
@@ -187,14 +157,8 @@ ContainmentLayoutManager.AppletContainer {
                 }
                 let cosa = Math.abs(Math.cos(angle * (Math.PI / 180))) * scale;
                 let sina = Math.abs(Math.sin(angle * (Math.PI / 180))) * scale;
-                let newSize = Qt.size(
-                    rect.width * cosa + rect.height * sina,
-                    rect.width * sina + rect.height * cosa);
-                return Qt.rect(
-                    rect.left + (rect.width - newSize.width) / 2,
-                    rect.top + (rect.height - newSize.height) / 2,
-                    newSize.width,
-                    newSize.height);
+                let newSize = Qt.size(rect.width * cosa + rect.height * sina, rect.width * sina + rect.height * cosa);
+                return Qt.rect(rect.left + (rect.width - newSize.width) / 2, rect.top + (rect.height - newSize.height) / 2, newSize.width, newSize.height);
             }
 
             /** Clip given rectangle to the bounds of given size, assuming bounds position {0,0}.
@@ -202,16 +166,7 @@ ContainmentLayoutManager.AppletContainer {
              * which Qt should've exposed in QML stdlib.
              */
             function clipRect(rect: rect, bounds: size): rect {
-                return Qt.rect(
-                    Math.max(0, Math.min(bounds.width, rect.x)),
-                    Math.max(0, Math.min(bounds.height, rect.y)),
-                    Math.max(0, rect.width
-                                + Math.min(0, rect.x)
-                                + Math.min(0, bounds.width - (rect.x + rect.width))),
-                    Math.max(0, rect.height
-                                + Math.min(0, rect.y)
-                                + Math.min(0, bounds.height - (rect.y + rect.height))),
-                );
+                return Qt.rect(Math.max(0, Math.min(bounds.width, rect.x)), Math.max(0, Math.min(bounds.height, rect.y)), Math.max(0, rect.width + Math.min(0, rect.x) + Math.min(0, bounds.width - (rect.x + rect.width))), Math.max(0, rect.height + Math.min(0, rect.y) + Math.min(0, bounds.height - (rect.y + rect.height))));
             }
 
             parent: appletContainer.Plasmoid.self
@@ -222,8 +177,8 @@ ContainmentLayoutManager.AppletContainer {
 
             z: -2
             maskSource: Item {
-                // optimized (clipped) blurred-mask
 
+                // optimized (clipped) blurred-mask
                 width: mask.appletContainerScreenRect.width
                 height: mask.appletContainerScreenRect.height
 
@@ -270,6 +225,6 @@ ContainmentLayoutManager.AppletContainer {
         text: i18n("Configure…")
         icon.name: "configure"
         visible: applet.configurationRequired
-        onClicked: applet.action("configure").trigger();
+        onClicked: applet.action("configure").trigger()
     }
 }

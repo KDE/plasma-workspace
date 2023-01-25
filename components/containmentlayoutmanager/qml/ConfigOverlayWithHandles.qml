@@ -3,15 +3,11 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.12
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
-
 import "private"
 
 ContainmentLayoutManager.ConfigOverlay {
@@ -21,7 +17,7 @@ ContainmentLayoutManager.ConfigOverlay {
     LayoutMirroring.childrenInherit: true
 
     opacity: open
-    Behavior on opacity {
+    Behavior on opacity  {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
@@ -38,8 +34,12 @@ ContainmentLayoutManager.ConfigOverlay {
         mouseEnabled: false
         maximumTouchPoints: 2
         touchPoints: [
-            TouchPoint { id: point1 },
-            TouchPoint { id: point2 }
+            TouchPoint {
+                id: point1
+            },
+            TouchPoint {
+                id: point2
+            }
         ]
 
         onPressed: {
@@ -53,11 +53,9 @@ ContainmentLayoutManager.ConfigOverlay {
             let minY;
             let maxX;
             let maxY;
-
             if (point1.pressed && point2.pressed) {
                 minX = Math.min(point1.sceneX, point2.sceneX);
                 minY = Math.min(point1.sceneY, point2.sceneY);
-
                 maxX = Math.max(point1.sceneX, point2.sceneX);
                 maxY = Math.max(point1.sceneY, point2.sceneY);
             } else {
@@ -66,19 +64,16 @@ ContainmentLayoutManager.ConfigOverlay {
                 maxX = -1;
                 maxY = -1;
             }
-
             if (pinching === (point1.pressed && point2.pressed)) {
                 overlay.itemContainer.x += minX - previousMinX;
                 overlay.itemContainer.y += minY - previousMinY;
-
                 if (pinching) {
                     overlay.itemContainer.width += maxX - previousMaxX + previousMinX - minX;
                     overlay.itemContainer.height += maxY - previousMaxY + previousMinY - minY;
                 }
                 overlay.itemContainer.layout.showPlaceHolderForItem(overlay.itemContainer);
             }
-
-            pinching = point1.pressed && point2.pressed
+            pinching = point1.pressed && point2.pressed;
             previousMinX = minX;
             previousMinY = minY;
             previousMaxX = maxX;

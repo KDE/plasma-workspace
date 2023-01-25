@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.10
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.11 as Kirigami
@@ -35,7 +34,7 @@ MouseArea {
     NumberAnimation {
         id: slideAnim
         target: delegate
-        property:"x"
+        property: "x"
         to: 0
         duration: PlasmaCore.Units.longDuration
     }

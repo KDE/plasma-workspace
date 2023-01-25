@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import "../osd"
@@ -43,7 +42,9 @@ PlasmaCore.FrameSvgItem {
     SequentialAnimation {
         id: hideAnimation
         // prevent press and hold from flickering
-        PauseAnimation { duration: PlasmaCore.Units.shortDuration }
+        PauseAnimation {
+            duration: PlasmaCore.Units.shortDuration
+        }
         NumberAnimation {
             target: osd
             property: "opacity"

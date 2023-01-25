@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2 // For StackView
 import QtQuick.Layouts 1.1
@@ -17,11 +16,12 @@ ColumnLayout {
     property alias text: textArea.text
     property string uuid
 
-    property var header: Item {}
+    property var header: Item {
+    }
 
     Keys.onPressed: {
         if (event.key === Qt.Key_Escape) {
-            stack.pop()
+            stack.pop();
             event.accepted = true;
         }
     }
@@ -34,7 +34,9 @@ ColumnLayout {
 
     function done() {
         // The modified item will be pushed to the top, and we would like to highlight the real first item
-        Qt.callLater(() => {stack.initialItem.view.currentIndex = 0;});
+        Qt.callLater(() => {
+                stack.initialItem.view.currentIndex = 0;
+            });
     }
 
     QQC2.StackView.onStatusChanged: {

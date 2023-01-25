@@ -7,11 +7,9 @@
 */
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-
 import org.kde.plasma.workspace.calendar 2.0
 
 Item {
@@ -27,7 +25,7 @@ Item {
         // remove it + the delimiter and space
         var format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
-        return Qt.formatDate(dataSource.data.Local.DateTime, format)
+        return Qt.formatDate(dataSource.data.Local.DateTime, format);
     }
 
     Layout.minimumWidth: PlasmaCore.Units.iconSizes.large
@@ -51,7 +49,7 @@ Item {
 
             PlasmaComponents3.Label {
                 id: monthLabel
-                y: parent.y + parent.height * 0.05;
+                y: parent.y + parent.height * 0.05
                 x: 0
                 width: parent.width
                 height: parent.height * 0.2
@@ -86,14 +84,12 @@ Item {
                 /* color must be black because it's set on top of a white icon */
                 color: "black"
                 text: {
-                    var d = new Date(dataSource.data.Local.DateTime)
-                    var format = Plasmoid.configuration.compactDisplay
-
+                    var d = new Date(dataSource.data.Local.DateTime);
+                    var format = Plasmoid.configuration.compactDisplay;
                     if (format === "w") {
-                        return Plasmoid.nativeInterface.weekNumber(d)
+                        return Plasmoid.nativeInterface.weekNumber(d);
                     }
-
-                    return Qt.formatDate(d, format)
+                    return Qt.formatDate(d, format);
                 }
             }
         }

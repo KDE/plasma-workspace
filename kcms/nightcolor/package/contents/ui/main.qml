@@ -3,16 +3,12 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
-
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcm 1.5 as KCM
-
 import org.kde.colorcorrect 0.1 as CC
-
 import org.kde.private.kcms.nightcolor 1.0
 
 KCM.SimpleKCM {
@@ -34,7 +30,6 @@ KCM.SimpleKCM {
 
     // the Geolocator object is created dynamically so we can have control over when geolocation is attempted
     // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
-
     function startLocator() {
         root.locator = Qt.createQmlObject('import org.kde.colorcorrect 0.1 as CC; CC.Geolocator {}', root, "geoLocatorObj");
     }
@@ -60,7 +55,7 @@ KCM.SimpleKCM {
         }
     }
 
-    header: ColumnLayout{
+    header: ColumnLayout {
         Kirigami.InlineMessage {
             id: errorMessage
             Layout.fillWidth: true
@@ -96,13 +91,8 @@ KCM.SimpleKCM {
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
-                model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
-                    i18n("Sunset and sunrise at current location"),
-                    i18n("Sunset and sunrise at manual location"),
-                    i18n("Custom times"),
-                    i18n("Always on night color")
-                ]
+                model: [i18n("Always off")  // This is not actually a Mode, but represents Night Color being disabled
+                    , i18n("Sunset and sunrise at current location"), i18n("Sunset and sunrise at manual location"), i18n("Custom times"), i18n("Always on night color")]
                 Connections {
                     target: kcm.nightColorSettings
                     function onActiveChanged() {
@@ -156,7 +146,7 @@ KCM.SimpleKCM {
                 text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
                 font: Kirigami.Theme.smallFont
 
-                onLinkActivated: (url) => Qt.openUrlExternally(url)
+                onLinkActivated: url => Qt.openUrlExternally(url)
 
                 HoverHandler {
                     acceptedButtons: Qt.NoButton
@@ -165,7 +155,9 @@ KCM.SimpleKCM {
             }
 
             // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
-            Item { implicitHeight: Kirigami.Units.largeSpacing }
+            Item {
+                implicitHeight: Kirigami.Units.largeSpacing
+            }
 
             Item {
                 Kirigami.FormData.isSection: true
@@ -191,20 +183,20 @@ KCM.SimpleKCM {
                     value: kcm.nightColorSettings.dayTemperature
 
                     onMoved: {
-                        kcm.nightColorSettings.dayTemperature = value
-                        cA.preview(value)
+                        kcm.nightColorSettings.dayTemperature = value;
+                        cA.preview(value);
 
                         // This can fire for scroll events; in this case we need
                         // to use a timer to make the preview message disappear, since
                         // we can't make it disappear in the onPressedChanged handler
                         // since there is no press
                         if (!pressed) {
-                            previewTimer.restart()
+                            previewTimer.restart();
                         }
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            cA.stopPreview()
+                            cA.stopPreview();
                         }
                     }
 
@@ -227,7 +219,8 @@ KCM.SimpleKCM {
                 QQC2.Label {
                     text: tempSliderDay.value == tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
-                Item {}
+                Item {
+                }
             }
 
             GridLayout {
@@ -250,20 +243,20 @@ KCM.SimpleKCM {
                     value: kcm.nightColorSettings.nightTemperature
 
                     onMoved: {
-                        kcm.nightColorSettings.nightTemperature = value
-                        cA.preview(value)
+                        kcm.nightColorSettings.nightTemperature = value;
+                        cA.preview(value);
 
                         // This can fire for scroll events; in this case we need
                         // to use a timer to make the preview disappear, since
                         // we can't make it disappear in the onPressedChanged handler
                         // since there is no press
                         if (!pressed) {
-                            previewTimer.restart()
+                            previewTimer.restart();
                         }
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            cA.stopPreview()
+                            cA.stopPreview();
                         }
                     }
 
@@ -286,16 +279,16 @@ KCM.SimpleKCM {
                 QQC2.Label {
                     text: tempSliderNight.value == tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
-                Item {}
+                Item {
+                }
             }
 
             // Show current location in auto mode
             QQC2.Label {
-                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
-                    && root.doneLocating
+                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active && root.doneLocating
                 enabled: kcm.nightColorSettings.active
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
+                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100) / 100, Math.round(locator.longitude * 100) / 100)
             }
 
             // Show time entry fields in manual timings mode
@@ -358,10 +351,10 @@ KCM.SimpleKCM {
                 onValueModified: {
                     kcm.nightColorSettings.transitionTime = value;
                 }
-                textFromValue: function(value, locale) {
-                    return i18np("%1 minute", "%1 minutes", value)
+                textFromValue: function (value, locale) {
+                    return i18np("%1 minute", "%1 minutes", value);
                 }
-                valueFromText: function(text, locale) {
+                valueFromText: function (text, locale) {
                     return parseInt(text);
                 }
 
@@ -383,17 +376,15 @@ KCM.SimpleKCM {
                     var trTime = transTimeField.value * 60 * 1000;
                     var mor = mornBeginManField.getNormedDate();
                     var eve = evenBeginManField.getNormedDate();
-
                     var diffMorEve = eve > mor ? eve - mor : mor - eve;
                     var diffMin = Math.min(diffMorEve, day - diffMorEve);
-
                     return diffMin <= trTime && kcm.nightColorSettings.active;
                 }
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
             }
         }
-        
+
         // Show location chooser in manual location mode
         LocationsFixedView {
             visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
@@ -403,8 +394,7 @@ KCM.SimpleKCM {
 
         // Show start/end times in automatic and manual location modes
         Item {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic || kcm.nightColorSettings.mode === NightColorMode.Location
-                && kcm.nightColorSettings.active
+            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic || kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.alignment: Qt.AlignHCenter
 
@@ -416,14 +406,11 @@ KCM.SimpleKCM {
 
             TimingsView {
                 id: timings
-                visible: kcm.nightColorSettings.mode === NightColorMode.Location ||
-                    (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
+                visible: kcm.nightColorSettings.mode === NightColorMode.Location || (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
                 anchors.centerIn: parent
                 enabled: kcm.nightColorSettings.active
-                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
-                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
-                    && (locator !== undefined) ? locator.longitude : kcm.nightColorSettings.longitudeFixed
+                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
+                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic && (locator !== undefined) ? locator.longitude : kcm.nightColorSettings.longitudeFixed
             }
         }
     }

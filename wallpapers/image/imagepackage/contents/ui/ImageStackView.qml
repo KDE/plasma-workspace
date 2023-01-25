@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
@@ -36,25 +35,27 @@ QQC2.StackView {
     property Component staticImageComponent
     property Component animatedImageComponent
 
-    onFillModeChanged: Qt.callLater(loadImage);
-    onModelImageChanged: Qt.callLater(loadImage);
-    onConfigColorChanged: Qt.callLater(loadImage);
-    onBlurChanged: Qt.callLater(loadImage);
+    onFillModeChanged: Qt.callLater(loadImage)
+    onModelImageChanged: Qt.callLater(loadImage)
+    onConfigColorChanged: Qt.callLater(loadImage)
+    onBlurChanged: Qt.callLater(loadImage)
 
     function createBackgroundComponent() {
         switch (mediaProxy.backgroundType) {
-        case Wallpaper.BackgroundType.Image: {
-            if (!staticImageComponent) {
-                staticImageComponent = Qt.createComponent("mediacomponent/StaticImageComponent.qml");
+        case Wallpaper.BackgroundType.Image:
+            {
+                if (!staticImageComponent) {
+                    staticImageComponent = Qt.createComponent("mediacomponent/StaticImageComponent.qml");
+                }
+                return staticImageComponent;
             }
-            return staticImageComponent;
-        }
-        case Wallpaper.BackgroundType.AnimatedImage: {
-            if (!animatedImageComponent) {
-                animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
+        case Wallpaper.BackgroundType.AnimatedImage:
+            {
+                if (!animatedImageComponent) {
+                    animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
+                }
+                return animatedImageComponent;
             }
-            return animatedImageComponent;
-        }
         }
     }
 
@@ -68,27 +69,23 @@ QQC2.StackView {
             pendingImage.destroy();
             pendingImage = null;
         }
-
         if (mediaProxy.providerType == Wallpaper.Provider.Unknown) {
             console.error("The backend got an unknown wallpaper provider type. The wallpaper will now fall back to the default. Please check your wallpaper configuration!");
             mediaProxy.useSingleImageDefaults();
             return;
         }
-
         doesSkipAnimation = view.currentItem == undefined || !!skipAnimation;
         const baseImage = createBackgroundComponent();
         pendingImage = baseImage.createObject(view, {
-            // Use mediaProxy instead of view because colorSchemeChanged needs immediately update the wallpaper
-            "source": mediaProxy.modelImage,
-            "fillMode": view.fillMode,
-            "sourceSize": view.sourceSize,
-            "color": view.configColor,
-            "blur": view.blur,
-            "opacity": 0,
-            "width": view.width,
-            "height": view.height,
-        });
-
+                "source": mediaProxy.modelImage,
+                "fillMode": view.fillMode,
+                "sourceSize": view.sourceSize,
+                "color": view.configColor,
+                "blur": view.blur,
+                "opacity": 0,
+                "width": view.width,
+                "height": view.height
+            });
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
     }
@@ -97,19 +94,15 @@ QQC2.StackView {
         if (pendingImage.status === Image.Loading) {
             return;
         }
-
         pendingImage.statusChanged.disconnect(replaceWhenLoaded);
         // BUG 454908: Update accent color
         pendingImage.QQC2.StackView.onActivated.connect(() => wallpaperInterface.repaintNeeded(mediaProxy.customColor));
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
         view.replace(pendingImage, {}, QQC2.StackView.Transition);
-
         wallpaperInterface.loading = false;
-
         if (pendingImage.status !== Image.Ready) {
             mediaProxy.useSingleImageDefaults();
         }
-
         pendingImage = null;
     }
 
@@ -125,7 +118,7 @@ QQC2.StackView {
     }
     // Keep the old image around till the new one is fully faded in
     // If we fade both at the same time you can see the background behind glimpse through
-    replaceExit: Transition{
+    replaceExit: Transition {
         PauseAnimation {
             duration: replaceEnterOpacityAnimator.duration
         }
@@ -136,7 +129,7 @@ QQC2.StackView {
 
         targetSize: view.sourceSize
 
-        onActualSizeChanged: Qt.callLater(loadImage);
-        onColorSchemeChanged: loadImageImmediately();
+        onActualSizeChanged: Qt.callLater(loadImage)
+        onColorSchemeChanged: loadImageImmediately()
     }
 }

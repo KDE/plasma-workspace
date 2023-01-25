@@ -8,15 +8,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
-
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kcm 1.2 as KCM
 import kcmregionandlang 1.0
 
 KCM.ScrollViewKCM {
+    id: languageSelectPage
     property int replaceLangIndex: -1
     implicitHeight: languageListView.height
-    id: languageSelectPage
     title: i18n("Language")
     LanguageListModel {
         id: languageListModel
@@ -74,7 +73,7 @@ KCM.ScrollViewKCM {
                         Layout.fillWidth: true
                         text: model.display
 
-                        color: listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate) ? listItem.activeTextColor : listItem.textColor;
+                        color: listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate) ? listItem.activeTextColor : listItem.textColor
                     }
 
                     QQC2.Button {
@@ -102,8 +101,9 @@ KCM.ScrollViewKCM {
                         visible: languageListView.count > 1
                         iconName: "edit-delete"
                         tooltip: i18nc("@info:tooltip", "Remove")
-                        onTriggered: languageListModel.selectedLanguageModel.remove(index);
-                    }]
+                        onTriggered: languageListModel.selectedLanguageModel.remove(index)
+                    }
+                ]
             }
         }
     }
@@ -121,7 +121,7 @@ KCM.ScrollViewKCM {
     Component {
         id: addLanguageItemComponent
 
-        Kirigami.BasicListItem  {
+        Kirigami.BasicListItem {
             id: languageItem
 
             width: availableLanguagesList.width
@@ -140,7 +140,7 @@ KCM.ScrollViewKCM {
                 }
             }
         }
-    }    
+    }
 
     Kirigami.OverlaySheet {
         id: addLanguagesSheet

@@ -8,7 +8,6 @@
 */
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.workspace.calendar 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -55,7 +54,7 @@ Item {
     property int rows: calendarBackend.weeks
 
     property Item selectedItem
-    property int week;
+    property int week
     property int firstDay: new Date(showDate.getFullYear(), showDate.getMonth(), 1).getDay()
     property alias today: calendarBackend.today
     property bool showWeekNumbers: false
@@ -83,8 +82,8 @@ Item {
         return date.toDateString() === new Date().toDateString();
     }
 
-    function eventDate(yearNumber,monthNumber,dayNumber) {
-        const d = new Date(yearNumber, monthNumber-1, dayNumber);
+    function eventDate(yearNumber, monthNumber, dayNumber) {
+        const d = new Date(yearNumber, monthNumber - 1, dayNumber);
         return Qt.formatDate(d, "dddd dd MMM yyyy");
     }
 
@@ -92,7 +91,6 @@ Item {
         const date = calendarBackend.displayedDate;
         const day = date.getDate();
         const year = date.getFullYear();
-
         for (let i = 0, j = monthModel.count; i < j; ++i) {
             monthModel.setProperty(i, "yearNumber", year);
         }
@@ -104,7 +102,6 @@ Item {
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
         const decade = year - year % 10;
-
         for (let i = 0, j = yearModel.count; i < j; ++i) {
             const label = decade - 1 + i;
             yearModel.setProperty(i, "yearNumber", label);
@@ -196,8 +193,8 @@ Item {
         }
 
         onYearChanged: {
-            updateYearOverview()
-            updateDecadeOverview()
+            updateYearOverview();
+            updateDecadeOverview();
         }
     }
 
@@ -207,13 +204,13 @@ Item {
         Component.onCompleted: {
             for (let i = 0; i < 12; ++i) {
                 append({
-                    label: Qt.locale(Qt.locale().uiLanguages[0]).standaloneMonthName(i, Locale.LongFormat),
-                    monthNumber: i + 1,
-                    yearNumber: 2050,
-                    isCurrent: true
-                })
+                        "label": Qt.locale(Qt.locale().uiLanguages[0]).standaloneMonthName(i, Locale.LongFormat),
+                        "monthNumber": i + 1,
+                        "yearNumber": 2050,
+                        "isCurrent": true
+                    });
             }
-            updateYearOverview()
+            updateYearOverview();
         }
     }
 
@@ -223,17 +220,16 @@ Item {
         Component.onCompleted: {
             for (let i = 0; i < 12; ++i) {
                 append({
-                    label: 2050, // this value will be overwritten, but it set the type of the property to int
-                    yearNumber: 2050,
-                    isCurrent: (i > 0 && i < 11) // first and last year are outside the decade
-                })
+                        "label": 2050,
+                        "yearNumber": 2050,
+                        "isCurrent": (i > 0 && i < 11)
+                    });
             }
-            updateDecadeOverview()
+            updateDecadeOverview();
         }
     }
 
     /* ------------------------------------------------------- UI Starts From Here ----------------------------------------------------- */
-
     MonthViewHeader {
         id: viewHeader
 
@@ -257,33 +253,33 @@ Item {
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
-        Keys.onLeftPressed: Keys.onUpPressed(event);
-        Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+        Keys.onLeftPressed: Keys.onUpPressed(event)
+        Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
 
         onCurrentIndexChanged: if (currentIndex > 1) {
             updateDecadeOverview();
         }
 
-        onFocusChanged: if(focus) {
+        onFocusChanged: if (focus) {
             currentItem.focusFirstCellOfView();
         }
 
         // MonthView
         InfiniteList {
-           id: mainDaysCalendar
+            id: mainDaysCalendar
 
-           function handleUpPress(event) {
-                if(root.showDigitalClockHeader) {
+            function handleUpPress(event) {
+                if (root.showDigitalClockHeader) {
                     root.upPressed(event);
                     return;
                 }
                 swipeView.Keys.onUpPressed(event);
             }
 
-           backend: calendarBackend
-           viewType: InfiniteList.ViewType.DayView
+            backend: calendarBackend
+            viewType: InfiniteList.ViewType.DayView
 
-           delegate: DaysCalendar {
+            delegate: DaysCalendar {
                 columns: calendarBackend.days
                 rows: calendarBackend.weeks
                 width: mainDaysCalendar.width
@@ -302,8 +298,7 @@ Item {
                 onActivated: {
                     const rowNumber = Math.floor(index / columns);
                     week = 1 + calendarBackend.weeksModel[rowNumber];
-                    root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
-
+                    root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber);
                     if (date.subLabel) {
                         root.currentDateAuxilliaryText = date.subLabel;
                     }
@@ -315,11 +310,11 @@ Item {
 
         // YearView
         InfiniteList {
-           id: yearView
+            id: yearView
 
-           backend: calendarBackend
-           viewType: InfiniteList.ViewType.YearView
-           delegate: DaysCalendar {
+            backend: calendarBackend
+            viewType: InfiniteList.ViewType.YearView
+            delegate: DaysCalendar {
                 columns: 3
                 rows: 4
 
@@ -349,8 +344,8 @@ Item {
             viewType: InfiniteList.ViewType.DecadeView
             delegate: DaysCalendar {
                 readonly property int decade: {
-                    const year = calendarBackend.displayedDate.getFullYear()
-                    return year - year % 10
+                    const year = calendarBackend.displayedDate.getFullYear();
+                    return year - year % 10;
                 }
 
                 columns: 3
@@ -377,6 +372,6 @@ Item {
     }
 
     Component.onCompleted: {
-        root.currentDate = calendarBackend.today
+        root.currentDate = calendarBackend.today;
     }
 }

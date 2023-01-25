@@ -3,9 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
-
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
@@ -100,9 +98,10 @@ PlasmaCore.FrameSvgItem {
     function updateHighlightedItem() {
         if (systemTrayState.expanded) {
             if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent && systemTrayState.activeApplet.parent.inVisibleLayout) {
-                changeHighlightedItem(systemTrayState.activeApplet.parent.container, /*forceEdgeHighlight*/false);
-            } else { // 'Show hidden items' popup
-                changeHighlightedItem(parent, /*forceEdgeHighlight*/true);
+                changeHighlightedItem(systemTrayState.activeApplet.parent.container /*forceEdgeHighlight*/, false);
+            } else {
+                // 'Show hidden items' popup
+                changeHighlightedItem(parent /*forceEdgeHighlight*/, true);
             }
         } else {
             highlightedItem = null;
@@ -115,31 +114,29 @@ PlasmaCore.FrameSvgItem {
         if (!highlightedItem || (highlightedItem === nextItem)) {
             animationEnabled = false;
         }
-
         const p = parent.mapFromItem(nextItem, 0, 0);
         if (containerMargins && (parent.oneRowOrColumn || forceEdgeHighlight)) {
-            x = p.x - containerMargins('left', /*returnAllMargins*/true);
-            y = p.y - containerMargins('top', /*returnAllMargins*/true);
-            width = nextItem.width + containerMargins('left', /*returnAllMargins*/true) + containerMargins('right', /*returnAllMargins*/true);
-            height = nextItem.height + containerMargins('bottom', /*returnAllMargins*/true) + containerMargins('top', /*returnAllMargins*/true);
+            x = p.x - containerMargins('left' /*returnAllMargins*/, true);
+            y = p.y - containerMargins('top' /*returnAllMargins*/, true);
+            width = nextItem.width + containerMargins('left' /*returnAllMargins*/, true) + containerMargins('right' /*returnAllMargins*/, true);
+            height = nextItem.height + containerMargins('bottom' /*returnAllMargins*/, true) + containerMargins('top' /*returnAllMargins*/, true);
         } else {
             x = p.x;
             y = p.y;
-            width = nextItem.width
-            height = nextItem.height
+            width = nextItem.width;
+            height = nextItem.height;
         }
-
         highlightedItem = nextItem;
         animationEnabled = true;
     }
 
-    Behavior on opacity {
+    Behavior on opacity  {
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
-    Behavior on x {
+    Behavior on x  {
         id: xAnim
         enabled: animationEnabled
         NumberAnimation {
@@ -147,7 +144,7 @@ PlasmaCore.FrameSvgItem {
             easing.type: Easing.InOutCubic
         }
     }
-    Behavior on y {
+    Behavior on y  {
         id: yAnim
         enabled: animationEnabled
         NumberAnimation {
@@ -155,7 +152,7 @@ PlasmaCore.FrameSvgItem {
             easing.type: Easing.InOutCubic
         }
     }
-    Behavior on width {
+    Behavior on width  {
         id: widthAnim
         enabled: animationEnabled
         NumberAnimation {
@@ -163,7 +160,7 @@ PlasmaCore.FrameSvgItem {
             easing.type: Easing.InOutCubic
         }
     }
-    Behavior on height {
+    Behavior on height  {
         id: heightAnim
         enabled: animationEnabled
         NumberAnimation {

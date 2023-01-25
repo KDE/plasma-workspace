@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.5
 import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -47,12 +46,12 @@ Rectangle {
         Image {
             id: busyIndicator
             //in the middle of the remaining space
-            y: parent.height - (parent.height - logo.y) / 2 - height/2
+            y: parent.height - (parent.height - logo.y) / 2 - height / 2
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
             sourceSize.height: PlasmaCore.Units.gridUnit * 2
             sourceSize.width: PlasmaCore.Units.gridUnit * 2
-            RotationAnimator on rotation {
+            RotationAnimator on rotation  {
                 id: rotationAnimator
                 from: 0
                 to: 360
@@ -66,7 +65,7 @@ Rectangle {
             }
         }
         Row {
-            spacing: PlasmaCore.Units.smallSpacing*2
+            spacing: PlasmaCore.Units.smallSpacing * 2
             anchors {
                 bottom: parent.bottom
                 right: parent.right

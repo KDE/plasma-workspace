@@ -84,10 +84,8 @@ Item {
             property int minutes: 5
 
             readonly property double svgScale: face.width / face.naturalSize.width
-            readonly property double horizontalShadowOffset:
-                Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) % 2
-            readonly property double verticalShadowOffset:
-                Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
+            readonly property double horizontalShadowOffset: Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) % 2
+            readonly property double verticalShadowOffset: Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
             PlasmaCore.Svg {
                 id: clockSvg
@@ -134,7 +132,7 @@ Item {
             Hand {
                 elementId: "HourHand"
                 rotationCenterHintId: "hint-hourhand-rotation-center-offset"
-                rotation: 180 + clock.hours * 30 + (clock.minutes/2)
+                rotation: 180 + clock.hours * 30 + (clock.minutes / 2)
                 svgScale: clock.svgScale
             }
 

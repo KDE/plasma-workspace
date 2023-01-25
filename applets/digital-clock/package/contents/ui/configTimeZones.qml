@@ -3,12 +3,10 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.12
 import QtQuick.Controls 2.8 as QQC2
 import QtQuick.Layouts 1.0
 import QtQuick.Dialogs 1.1
-
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
@@ -21,9 +19,7 @@ ColumnLayout {
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
 
-
     TimeZoneModel {
-
         id: timeZones
         onSelectedTimeZonesChanged: {
             if (selectedTimeZones.length === 0) {
@@ -121,7 +117,7 @@ ColumnLayout {
                     QQC2.Button {
                         visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
                         icon.name: "edit-delete"
-                        onClicked: model.checked = false;
+                        onClicked: model.checked = false
                         QQC2.ToolTip {
                             text: i18n("Remove this time zone")
                         }
@@ -186,7 +182,7 @@ ColumnLayout {
             filter.text = "";
             messageWidget.visible = false;
             if (sheetOpen) {
-                filter.forceActiveFocus()
+                filter.forceActiveFocus();
             }
         }
 
@@ -237,9 +233,9 @@ ColumnLayout {
                 text: !city || city.indexOf("UTC") === 0 ? comment : comment ? i18n("%1, %2 (%3)", city, region, comment) : i18n("%1, %2", city, region)
                 checked: model.checked
                 onToggled: {
-                    model.checked = checkbox.checked
-                    listView.currentIndex = index // highlight
-                    listView.forceActiveFocus() // keyboard navigation
+                    model.checked = checkbox.checked;
+                    listView.currentIndex = index; // highlight
+                    listView.forceActiveFocus(); // keyboard navigation
                 }
                 highlighted: ListView.isCurrentItem
             }

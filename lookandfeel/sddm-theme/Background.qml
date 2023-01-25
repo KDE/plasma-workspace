@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 
 FocusScope {
@@ -24,7 +23,7 @@ FocusScope {
         sourceSize.width: parent.width
         sourceSize.height: parent.height
         fillMode: Image.PreserveAspectCrop
-        smooth: true;
+        smooth: true
     }
 
     states: [

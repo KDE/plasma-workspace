@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
@@ -16,7 +15,7 @@ ColumnLayout {
     signal opened
     onOpened: {
         iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
-        iconSizeSlider.updateSizes()
+        iconSizeSlider.updateSizes();
         // can we do this automatically with "focus: true" somewhere?
         iconTypeList.forceActiveFocus();
     }
@@ -40,7 +39,7 @@ ColumnLayout {
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
         text: i18n("Adjust Global Scale…")
         icon.name: "preferences-desktop-display"
-        onClicked: KCMShell.open("kcm_kscreen");
+        onClicked: KCMShell.open("kcm_kscreen")
     }
 
     Kirigami.Separator {
@@ -57,7 +56,7 @@ ColumnLayout {
             Layout.fillHeight: true
             activeFocusOnTab: false
 
-            Component.onCompleted: iconTypeScroll.background.visible = true;
+            Component.onCompleted: iconTypeScroll.background.visible = true
 
             ListView {
                 id: iconTypeList
@@ -70,11 +69,11 @@ ColumnLayout {
                 currentIndex: 0 // Initialize with the first item
 
                 Keys.onLeftPressed: {
-                    LayoutMirroring.enabled ? iconSizeSlider.increase() : iconSizeSlider.decrease()
+                    LayoutMirroring.enabled ? iconSizeSlider.increase() : iconSizeSlider.decrease();
                     iconSizeSlider.moved();
                 }
                 Keys.onRightPressed: {
-                    LayoutMirroring.enabled ? iconSizeSlider.decrease() : iconSizeSlider.increase()
+                    LayoutMirroring.enabled ? iconSizeSlider.decrease() : iconSizeSlider.increase();
                     iconSizeSlider.moved();
                 }
 
@@ -129,7 +128,7 @@ ColumnLayout {
                     enabled: sizes.length > 0 && !kcm.iconsSettings.isImmutable(iconTypeList.currentItem.configKey)
 
                     onMoved: {
-                        kcm.iconsSettings[iconTypeList.currentItem.configKey] = iconSizeSlider.sizes[iconSizeSlider.value] || 0
+                        kcm.iconsSettings[iconTypeList.currentItem.configKey] = iconSizeSlider.sizes[iconSizeSlider.value] || 0;
                     }
 
                     KCM.SettingStateBinding {
@@ -141,22 +140,21 @@ ColumnLayout {
                     function updateSizes() {
                         // since the icon sizes are queried using invokables, always force an update when opening
                         // in case the user clicked Default or something
-                        value = Qt.binding(function() {
-                            var iconSize = kcm.iconsSettings[iconTypeList.currentItem.configKey]
+                        value = Qt.binding(function () {
+                                var iconSize = kcm.iconsSettings[iconTypeList.currentItem.configKey];
 
-                            // I have no idea what this code does but it works and is just copied from the old KCM
-                            var index = -1;
-                            var delta = 1000;
-                            for (var i = 0, length = sizes.length; i < length; ++i) {
-                                var dw = Math.abs(iconSize - sizes[i]);
-                                if (dw < delta) {
-                                    delta = dw;
-                                    index = i;
+                                // I have no idea what this code does but it works and is just copied from the old KCM
+                                var index = -1;
+                                var delta = 1000;
+                                for (var i = 0, length = sizes.length; i < length; ++i) {
+                                    var dw = Math.abs(iconSize - sizes[i]);
+                                    if (dw < delta) {
+                                        delta = dw;
+                                        index = i;
+                                    }
                                 }
-                            }
-
-                            return index;
-                        });
+                                return index;
+                            });
                     }
                 }
 

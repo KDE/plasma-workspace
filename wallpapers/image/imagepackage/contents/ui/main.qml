@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.5
 import QtQuick.Window 2.2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
@@ -33,7 +32,6 @@ ImageStackView {
     function setUrl(url) {
         if (wallpaper.pluginName === "org.kde.image") {
             const result = imageWallpaper.addUsersWallpaper(url);
-
             if (result.length > 0) {
                 // Can be a file or a folder (KPackage)
                 wallpaper.configuration.Image = result;
@@ -56,12 +54,10 @@ ImageStackView {
     }
 
     //private
-
     Component.onCompleted: {
         // In case plasmashell crashes when the config dialog is opened
         wallpaper.configuration.PreviewImage = "null";
         wallpaper.loading = true; // delays ksplash until the wallpaper has been loaded
-
         if (wallpaper.pluginName === "org.kde.slideshow") {
             wallpaper.setAction("open", i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image"), "document-open");
             wallpaper.setAction("next", i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), "user-desktop");

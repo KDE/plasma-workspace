@@ -3,10 +3,8 @@
  *
  *    SPDX-License-Identifier: GPL-2.0-or-later
  */
-
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -21,13 +19,13 @@ Item {
 
     Plasmoid.onActivated: {
         if (!Keyboards.KWinVirtualKeyboard.available) {
-            root.action_settings()
+            root.action_settings();
         } else if (unsupportedState.when) {
-            Keyboards.KWinVirtualKeyboard.forceActivate()
+            Keyboards.KWinVirtualKeyboard.forceActivate();
         } else if (Keyboards.KWinVirtualKeyboard.visible) {
-            Keyboards.KWinVirtualKeyboard.active = false
+            Keyboards.KWinVirtualKeyboard.active = false;
         } else {
-            Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
+            Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled;
         }
     }
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
@@ -61,8 +59,7 @@ Item {
     }
 
     Component.onCompleted: {
-        Plasmoid.setAction("settings", i18nc("Opens the system settings module", "Configure Virtual Keyboards..."),
-                               "settings-configure")
+        Plasmoid.setAction("settings", i18nc("Opens the system settings module", "Configure Virtual Keyboards..."), "settings-configure");
     }
 
     function action_settings() {
@@ -79,7 +76,10 @@ Item {
                 toolTipSubText: i18n("Virtual Keyboard: unavailable")
                 status: PlasmaCore.Types.HiddenStatus
             }
-            PropertyChanges { target: root; overlays: [ "emblem-unavailable" ] }
+            PropertyChanges {
+                target: root
+                overlays: ["emblem-unavailable"]
+            }
         },
         State {
             name: "disabled"
@@ -90,7 +90,10 @@ Item {
                 toolTipSubText: i18n("Virtual Keyboard: disabled")
                 status: PlasmaCore.Types.ActiveStatus
             }
-            PropertyChanges { target: root; overlays: [] }
+            PropertyChanges {
+                target: root
+                overlays: []
+            }
         },
         State {
             id: unsupportedState
@@ -104,7 +107,10 @@ Item {
                 toolTipSubText: i18n("Show Virtual Keyboard")
                 status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
-            PropertyChanges { target: root; overlays: [] }
+            PropertyChanges {
+                target: root
+                overlays: []
+            }
         },
         State {
             name: "visible"
@@ -117,7 +123,10 @@ Item {
                 // while not explicitly in Touch Mode
                 status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
-            PropertyChanges { target: root; overlays: [] }
+            PropertyChanges {
+                target: root
+                overlays: []
+            }
         },
         State {
             name: "idle"
@@ -129,7 +138,10 @@ Item {
                 // It's only relevant in tablet mode
                 status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
-            PropertyChanges { target: root; overlays: [] }
+            PropertyChanges {
+                target: root
+                overlays: []
+            }
         }
     ]
 }

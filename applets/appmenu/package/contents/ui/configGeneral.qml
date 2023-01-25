@@ -3,10 +3,8 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.0
 import QtQuick.Controls 2.5
-
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -14,7 +12,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
-    
+
     property alias cfg_compactView: compactViewRadioButton.checked
 
     RadioButton {

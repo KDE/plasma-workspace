@@ -48,7 +48,7 @@ KWin.Switcher {
                     target: tabBox
                     function onCurrentIndexChanged() {
                         thumbnailListView.currentIndex = tabBox.currentIndex;
-                        thumbnailListView.positionViewAtIndex(thumbnailListView.currentIndex, ListView.Contain)
+                        thumbnailListView.positionViewAtIndex(thumbnailListView.currentIndex, ListView.Contain);
                     }
                 }
 
@@ -111,7 +111,8 @@ KWin.Switcher {
                     }
                 }
 
-                highlight: PlasmaExtras.Highlight {}
+                highlight: PlasmaExtras.Highlight {
+                }
             }
 
             /*
@@ -129,4 +130,3 @@ KWin.Switcher {
         }
     }
 }
-

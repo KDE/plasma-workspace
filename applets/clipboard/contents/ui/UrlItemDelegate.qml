@@ -4,9 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
@@ -33,7 +31,7 @@ Item {
 
         delegate: Item {
             width: previewList.itemWidth
-            height:  previewList.itemHeight
+            height: previewList.itemHeight
             y: Math.round((parent.height - previewList.itemHeight) / 2)
             clip: true
 
@@ -46,11 +44,11 @@ Item {
                     function result(job) {
                         if (!job.error) {
                             pixmap = job.result.preview;
-                            previewPixmap.width = job.result.previewWidth
-                            previewPixmap.height = job.result.previewHeight
+                            previewPixmap.width = job.result.previewWidth;
+                            previewPixmap.height = job.result.previewHeight;
                         }
                     }
-                    var service = clipboardSource.serviceForSource(UuidRole)
+                    var service = clipboardSource.serviceForSource(UuidRole);
                     var operation = service.operationDescription("preview");
                     operation.url = modelData;
                     // We request a bigger size and then clip out a square in the middle
@@ -102,7 +100,6 @@ Item {
             right: parent.right
             bottom: parent.bottom
             margins: PlasmaCore.Units.smallSpacing
-
         }
         verticalAlignment: Text.AlignBottom
         horizontalAlignment: Text.AlignCenter

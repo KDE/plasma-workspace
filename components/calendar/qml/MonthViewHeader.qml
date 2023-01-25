@@ -2,10 +2,8 @@
     SPDX-FileCopyrightText: 2022 Tanbir Jishan <tantalising007@gmail.com>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -20,9 +18,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 // |                                                   |  |                                                    |
 // |               Rest of the calendar                |  |              Rest of the calendar                  |
 // |...................................................|  |....................................................|
-//
-
-
 Item {
     id: root
 
@@ -47,7 +42,8 @@ Item {
 
     Loader {
         anchors.fill: parent
-        sourceComponent: PlasmaExtras.PlasmoidHeading {}
+        sourceComponent: PlasmaExtras.PlasmoidHeading {
+        }
         active: isDigitalClock
     }
 
@@ -104,26 +100,24 @@ Item {
 
                 KeyNavigation.up: root.isDigitalClock ? root.configureButton : root.previousButton
                 KeyNavigation.right: dateManipulationButtonsForDigitalClock.previousButton
-                KeyNavigation.left:  root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.visible ?
-                                                                               root.monthViewRoot.eventButton :
-                                                                               root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
+                KeyNavigation.left: root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.visible ? root.monthViewRoot.eventButton : root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
 
                 PlasmaComponents3.TabButton {
                     Accessible.onPressAction: clicked()
-                    text: i18nd("plasmashellprivateplugin", "Days");
-                    onClicked: monthViewRoot.showMonthView();
+                    text: i18nd("plasmashellprivateplugin", "Days")
+                    onClicked: monthViewRoot.showMonthView()
                     display: PlasmaComponents3.AbstractButton.TextOnly
                 }
                 PlasmaComponents3.TabButton {
                     Accessible.onPressAction: clicked()
-                    text: i18nd("plasmashellprivateplugin", "Months");
-                    onClicked: monthViewRoot.showYearView();
+                    text: i18nd("plasmashellprivateplugin", "Months")
+                    onClicked: monthViewRoot.showYearView()
                     display: PlasmaComponents3.AbstractButton.TextOnly
                 }
                 PlasmaComponents3.TabButton {
                     Accessible.onPressAction: clicked()
-                    text: i18nd("plasmashellprivateplugin", "Years");
-                    onClicked: monthViewRoot.showDecadeView();
+                    text: i18nd("plasmashellprivateplugin", "Years")
+                    onClicked: monthViewRoot.showDecadeView()
                     display: PlasmaComponents3.AbstractButton.TextOnly
                 }
             }
@@ -142,7 +136,6 @@ Item {
     }
 
     // ------------------------------------------ UI ends ------------------------------------------------- //
-
     Component {
         id: buttonsGroup
 
@@ -158,15 +151,15 @@ Item {
             PlasmaComponents3.ToolButton {
                 id: previousButton
                 text: {
-                    switch(monthViewRoot.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Previous Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Previous Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Previous Decade")
-                        default:
-                            return "";
+                    switch (monthViewRoot.calendarViewDisplayed) {
+                    case MonthView.CalendarView.DayView:
+                        return i18nd("plasmashellprivateplugin", "Previous Month");
+                    case MonthView.CalendarView.MonthView:
+                        return i18nd("plasmashellprivateplugin", "Previous Year");
+                    case MonthView.CalendarView.YearView:
+                        return i18nd("plasmashellprivateplugin", "Previous Decade");
+                    default:
+                        return "";
                     }
                 }
 
@@ -176,7 +169,9 @@ Item {
 
                 onClicked: monthViewRoot.previousView()
 
-                PlasmaComponents3.ToolTip { text: parent.text }
+                PlasmaComponents3.ToolTip {
+                    text: parent.text
+                }
             }
 
             PlasmaComponents3.ToolButton {
@@ -191,15 +186,15 @@ Item {
             PlasmaComponents3.ToolButton {
                 id: nextButton
                 text: {
-                    switch(monthViewRoot.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Next Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Next Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Next Decade")
-                        default:
-                            return "";
+                    switch (monthViewRoot.calendarViewDisplayed) {
+                    case MonthView.CalendarView.DayView:
+                        return i18nd("plasmashellprivateplugin", "Next Month");
+                    case MonthView.CalendarView.MonthView:
+                        return i18nd("plasmashellprivateplugin", "Next Year");
+                    case MonthView.CalendarView.YearView:
+                        return i18nd("plasmashellprivateplugin", "Next Decade");
+                    default:
+                        return "";
                     }
                 }
 
@@ -207,9 +202,11 @@ Item {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 KeyNavigation.tab: root.swipeView
 
-                onClicked: monthViewRoot.nextView();
+                onClicked: monthViewRoot.nextView()
 
-                PlasmaComponents3.ToolTip { text: parent.text }
+                PlasmaComponents3.ToolTip {
+                    text: parent.text
+                }
             }
         }
     }

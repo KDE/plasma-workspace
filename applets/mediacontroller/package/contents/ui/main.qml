@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
@@ -19,33 +18,33 @@ Item {
     property var currentMetadata: mpris2Source.currentData ? mpris2Source.currentData.Metadata : undefined
     property string track: {
         if (!currentMetadata) {
-            return ""
+            return "";
         }
-        var xesamTitle = currentMetadata["xesam:title"]
+        var xesamTitle = currentMetadata["xesam:title"];
         if (xesamTitle) {
-            return xesamTitle
+            return xesamTitle;
         }
         // if no track title is given, print out the file name
-        var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
+        var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : "";
         if (!xesamUrl) {
-            return ""
+            return "";
         }
-        var lastSlashPos = xesamUrl.lastIndexOf('/')
+        var lastSlashPos = xesamUrl.lastIndexOf('/');
         if (lastSlashPos < 0) {
-            return ""
+            return "";
         }
-        var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-        return decodeURIComponent(lastUrlPart)
+        var lastUrlPart = xesamUrl.substring(lastSlashPos + 1);
+        return decodeURIComponent(lastUrlPart);
     }
     property string artist: {
         if (!currentMetadata) {
-            return ""
+            return "";
         }
-        var xesamArtist = currentMetadata["xesam:artist"]
+        var xesamArtist = currentMetadata["xesam:artist"];
         if (!xesamArtist || xesamArtist.length === 0) {
-            xesamArtist = currentMetadata["xesam:albumArtist"] || [""]
+            xesamArtist = currentMetadata["xesam:albumArtist"] || [""];
         }
-        return xesamArtist.join(", ")
+        return xesamArtist.join(", ");
     }
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
 
@@ -65,10 +64,8 @@ Item {
     readonly property bool canQuit: (!root.noPlayer && mpris2Source.currentData.CanQuit) || false
 
     // var instead of bool so we can use "undefined" for "shuffle not supported"
-    readonly property var shuffle: !root.noPlayer && typeof mpris2Source.currentData.Shuffle === "boolean"
-                                   ? mpris2Source.currentData.Shuffle : undefined
-    readonly property var loopStatus: !root.noPlayer && typeof mpris2Source.currentData.LoopStatus === "string"
-                                      ? mpris2Source.currentData.LoopStatus : undefined
+    readonly property var shuffle: !root.noPlayer && typeof mpris2Source.currentData.Shuffle === "boolean" ? mpris2Source.currentData.Shuffle : undefined
+    readonly property var loopStatus: !root.noPlayer && typeof mpris2Source.currentData.LoopStatus === "string" ? mpris2Source.currentData.LoopStatus : undefined
 
     GlobalConfig {
         id: config
@@ -85,55 +82,45 @@ Item {
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
     function populateContextualActions() {
-        Plasmoid.clearActions()
-
-        Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"),  "go-up-symbolic")
-        Plasmoid.action("open").visible = Qt.binding(() => root.canRaise)
-        Plasmoid.action("open").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
-                           Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
-        Plasmoid.action("previous").enabled = Qt.binding(() => root.canGoPrevious)
-        Plasmoid.action("previous").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("previous").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
-        Plasmoid.action("pause").enabled = Qt.binding(() => root.state === "playing" && root.canPause)
-        Plasmoid.action("pause").visible = Qt.binding(() => root.canControl && root.state === "playing" && root.canPause)
-        Plasmoid.action("pause").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
-        Plasmoid.action("play").enabled = Qt.binding(() => root.state !== "playing" && root.canPlay)
-        Plasmoid.action("play").visible = Qt.binding(() => root.canControl && root.state !== "playing")
-        Plasmoid.action("play").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
-                               Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward")
-        Plasmoid.action("next").enabled = Qt.binding(() => root.canGoNext)
-        Plasmoid.action("next").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("next").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
-        Plasmoid.action("stop").enabled = Qt.binding(() => root.state === "playing" || root.state === "paused")
-        Plasmoid.action("stop").visible = Qt.binding(() => root.canControl)
-        Plasmoid.action("stop").priority = Plasmoid.LowPriorityAction
-
+        Plasmoid.clearActions();
+        Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), "go-up-symbolic");
+        Plasmoid.action("open").visible = Qt.binding(() => root.canRaise);
+        Plasmoid.action("open").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"), Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
+        Plasmoid.action("previous").enabled = Qt.binding(() => root.canGoPrevious);
+        Plasmoid.action("previous").visible = Qt.binding(() => root.canControl);
+        Plasmoid.action("previous").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause");
+        Plasmoid.action("pause").enabled = Qt.binding(() => root.state === "playing" && root.canPause);
+        Plasmoid.action("pause").visible = Qt.binding(() => root.canControl && root.state === "playing" && root.canPause);
+        Plasmoid.action("pause").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start");
+        Plasmoid.action("play").enabled = Qt.binding(() => root.state !== "playing" && root.canPlay);
+        Plasmoid.action("play").visible = Qt.binding(() => root.canControl && root.state !== "playing");
+        Plasmoid.action("play").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("next", i18nc("Play next track", "Next Track"), Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward");
+        Plasmoid.action("next").enabled = Qt.binding(() => root.canGoNext);
+        Plasmoid.action("next").visible = Qt.binding(() => root.canControl);
+        Plasmoid.action("next").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop");
+        Plasmoid.action("stop").enabled = Qt.binding(() => root.state === "playing" || root.state === "paused");
+        Plasmoid.action("stop").visible = Qt.binding(() => root.canControl);
+        Plasmoid.action("stop").priority = Plasmoid.LowPriorityAction;
         Plasmoid.setActionSeparator("quitseparator");
-        Plasmoid.action("quitseparator").visible = Qt.binding(() => root.canQuit)
-        Plasmoid.action("quitseparator").priority = Plasmoid.LowPriorityAction
-
-        Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
-        Plasmoid.action("quit").visible = Qt.binding(() => root.canQuit)
-        Plasmoid.action("quit").priority = Plasmoid.LowPriorityAction
+        Plasmoid.action("quitseparator").visible = Qt.binding(() => root.canQuit);
+        Plasmoid.action("quitseparator").priority = Plasmoid.LowPriorityAction;
+        Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit");
+        Plasmoid.action("quit").visible = Qt.binding(() => root.canQuit);
+        Plasmoid.action("quit").priority = Plasmoid.LowPriorityAction;
     }
 
     // HACK Some players like Amarok take quite a while to load the next track
     // this avoids having the plasmoid jump between popup and panel
     onStateChanged: {
         if (state != "") {
-            Plasmoid.status = PlasmaCore.Types.ActiveStatus
+            Plasmoid.status = PlasmaCore.Types.ActiveStatus;
         } else {
-            updatePlasmoidStatusTimer.restart()
+            updatePlasmoidStatusTimer.restart();
         }
     }
 
@@ -142,15 +129,17 @@ Item {
         interval: 3000
         onTriggered: {
             if (state != "") {
-                Plasmoid.status = PlasmaCore.Types.ActiveStatus
+                Plasmoid.status = PlasmaCore.Types.ActiveStatus;
             } else {
-                Plasmoid.status = PlasmaCore.Types.PassiveStatus
+                Plasmoid.status = PlasmaCore.Types.PassiveStatus;
             }
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: ExpandedRepresentation {}
+    Plasmoid.compactRepresentation: CompactRepresentation {
+    }
+    Plasmoid.fullRepresentation: ExpandedRepresentation {
+    }
 
     PlasmaCore.DataSource {
         id: mpris2Source
@@ -164,23 +153,23 @@ Item {
         connectedSources: sources
 
         onSourceAdded: {
-            updateMprisSourcesModel()
+            updateMprisSourcesModel();
         }
 
         onSourceRemoved: {
             // if player is closed, reset to multiplex source
             if (source === current) {
-                current = multiplexSource
+                current = multiplexSource;
             }
-            updateMprisSourcesModel()
+            updateMprisSourcesModel();
         }
     }
 
     Component.onCompleted: {
         plasmoid.removeAction("configure");
-        mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
-        updateMprisSourcesModel()
-        populateContextualActions()
+        mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts();
+        updateMprisSourcesModel();
+        populateContextualActions();
     }
 
     function togglePlaying() {
@@ -232,35 +221,29 @@ Item {
         return service.startOperationCall(operation);
     }
 
-    function updateMprisSourcesModel () {
-
+    function updateMprisSourcesModel() {
         var model = [{
-            'text': i18n("Choose player automatically"),
-            'icon': 'emblem-favorite',
-            'source': mpris2Source.multiplexSource
-        }]
-
+                "text": i18n("Choose player automatically"),
+                "icon": 'emblem-favorite',
+                "source": mpris2Source.multiplexSource
+            }];
         var proxyPIDs = [];  // for things like plasma-browser-integration
-        var sources = mpris2Source.sources
+        var sources = mpris2Source.sources;
         for (var i = 0, length = sources.length; i < length; ++i) {
-            var source = sources[i]
+            var source = sources[i];
             if (source === mpris2Source.multiplexSource) {
-                continue
+                continue;
             }
-
             const playerData = mpris2Source.data[source];
             // source data is removed before its name is removed from the list
             if (!playerData) {
                 continue;
             }
-
             model.push({
-                'text': playerData["Identity"],
-                'icon': playerData["Desktop Icon Name"] || playerData["DesktopEntry"] || "emblem-music-symbolic",
-                'source': source
-            });
-
-
+                    "text": playerData["Identity"],
+                    "icon": playerData["Desktop Icon Name"] || playerData["DesktopEntry"] || "emblem-music-symbolic",
+                    "source": source
+                });
             if ("kde:pid" in playerData["Metadata"]) {
                 var proxyPID = playerData["Metadata"]["kde:pid"];
                 if (!proxyPIDs.includes(proxyPID)) {
@@ -270,13 +253,12 @@ Item {
         }
 
         // prefer proxy controls like plasma-browser-integration over browser built-in controls
-        model = model.filter( item => {
-            if (mpris2Source.data[item["source"]] && "InstancePid" in mpris2Source.data[item["source"]]) {
-                return !(proxyPIDs.includes(mpris2Source.data[item["source"]]["InstancePid"]));
-            }
-            return true;
-        });
-
+        model = model.filter(item => {
+                if (mpris2Source.data[item["source"]] && "InstancePid" in mpris2Source.data[item["source"]]) {
+                    return !(proxyPIDs.includes(mpris2Source.data[item["source"]]["InstancePid"]));
+                }
+                return true;
+            });
         root.mprisSourcesModel = model;
     }
 

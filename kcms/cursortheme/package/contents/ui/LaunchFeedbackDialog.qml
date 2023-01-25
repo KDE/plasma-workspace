@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
@@ -92,7 +91,7 @@ Kirigami.OverlaySheet {
 
                 checked: kcm.launchFeedbackSettings.taskbarButton
                 enabled: !kcm.launchFeedbackSettings.isTaskbarButtonImmutable
-                onToggled: kcm.launchFeedbackSettings.taskbarButton = checked;
+                onToggled: kcm.launchFeedbackSettings.taskbarButton = checked
 
                 KCM.SettingStateBinding {
                     configObject: kcm.launchFeedbackSettings
@@ -117,12 +116,16 @@ Kirigami.OverlaySheet {
 
                 value: kcm.launchFeedbackSettings.cursorTimeout
                 onValueModified: {
-                    kcm.launchFeedbackSettings.cursorTimeout = value
-                    kcm.launchFeedbackSettings.taskbarTimeout = value
+                    kcm.launchFeedbackSettings.cursorTimeout = value;
+                    kcm.launchFeedbackSettings.taskbarTimeout = value;
                 }
 
-                textFromValue: function(value, locale) { return i18np("%1 second", "%1 seconds", value)}
-                valueFromText: function(text, locale) { return parseInt(text) }
+                textFromValue: function (value, locale) {
+                    return i18np("%1 second", "%1 seconds", value);
+                }
+                valueFromText: function (text, locale) {
+                    return parseInt(text);
+                }
 
                 KCM.SettingStateBinding {
                     configObject: kcm.launchFeedbackSettings
@@ -143,5 +146,5 @@ Kirigami.OverlaySheet {
         destroy(Kirigami.Units.humanMoment);
     }
 
-    Component.onCompleted: open();
+    Component.onCompleted: open()
 }

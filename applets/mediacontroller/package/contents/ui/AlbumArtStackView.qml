@@ -5,11 +5,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -20,8 +18,7 @@ Item {
     /**
      * Whether the album art image is available or in loading status
      */
-    readonly property bool hasImage: (root.albumArt && albumArt.empty)
-        || (albumArt.currentItem instanceof Image && (albumArt.currentItem.status === Image.Ready || albumArt.currentItem.status === Image.Loading))
+    readonly property bool hasImage: (root.albumArt && albumArt.empty) || (albumArt.currentItem instanceof Image && (albumArt.currentItem.status === Image.Ready || albumArt.currentItem.status === Image.Loading))
 
     readonly property bool animating: exitTransition.running || popExitTransition.running
 
@@ -35,27 +32,24 @@ Item {
      */
     readonly property alias albumArt: albumArt
 
-    onWidthChanged: geometryChangeTimer.restart();
-    onHeightChanged: geometryChangeTimer.restart();
+    onWidthChanged: geometryChangeTimer.restart()
+    onHeightChanged: geometryChangeTimer.restart()
 
     function loadAlbumArt() {
         if (!root.albumArt) {
             albumArt.clear(StackView.PopTransition);
             return;
         }
-
         const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
         const pendingImage = albumArtComponent.createObject(albumArt, {
-            "source": root.albumArt,
-            "sourceSize": Qt.size(container.width * Screen.devicePixelRatio, container.height * Screen.devicePixelRatio),
-            "opacity": 0,
-        });
-
+                "source": root.albumArt,
+                "sourceSize": Qt.size(container.width * Screen.devicePixelRatio, container.height * Screen.devicePixelRatio),
+                "opacity": 0
+            });
         function replaceWhenLoaded() {
             if (pendingImage.status === Image.Loading) {
                 return;
             }
-
             if (pendingImage.status === Image.Ready) {
                 const newImageRatio = pendingImage.sourceSize.width / pendingImage.sourceSize.height;
                 exitTransitionOpacityAnimator.duration = oldImageRatio === newImageRatio ? 0 : PlasmaCore.Units.longDuration;
@@ -63,11 +57,9 @@ Item {
                 // Load placeholder icon, but keep the invalid image to avoid flashing application icons
                 exitTransitionOpacityAnimator.duration = 0;
             }
-
             albumArt.replace(pendingImage, {}, StackView.ReplaceTransition);
             pendingImage.statusChanged.disconnect(replaceWhenLoaded);
         }
-
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
     }
@@ -76,7 +68,7 @@ Item {
     Timer {
         id: geometryChangeTimer
         interval: 250
-        onTriggered: container.loadAlbumArt();
+        onTriggered: container.loadAlbumArt()
     }
 
     StackView {
@@ -129,7 +121,8 @@ Item {
         Component {
             id: albumArtComponent
 
-            Image { // Album Art
+            Image {
+                // Album Art
                 horizontalAlignment: Image.AlignRight
                 verticalAlignment: Image.AlignVCenter
                 fillMode: Image.PreserveAspectFit
@@ -147,7 +140,8 @@ Item {
         Component {
             id: fallbackIconItem
 
-            PlasmaCore.IconItem { // Fallback
+            PlasmaCore.IconItem {
+                // Fallback
                 id: fallbackIcon
 
                 anchors.margins: PlasmaCore.Units.largeSpacing * 2
@@ -182,7 +176,6 @@ Item {
                 }
             }
         }
-
     }
 
     Loader {
@@ -194,4 +187,3 @@ Item {
         sourceComponent: root.track ? fallbackIconItem : placeholderMessage
     }
 }
-

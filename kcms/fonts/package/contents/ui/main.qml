@@ -5,12 +5,10 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
-
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.6 as KCM
@@ -39,7 +37,7 @@ KCM.SimpleKCM {
             Connections {
                 target: kcm
                 function onAliasingChangeApplied() {
-                    antiAliasingMessage.visible = true
+                    antiAliasingMessage.visible = true;
                 }
             }
         }
@@ -53,15 +51,11 @@ KCM.SimpleKCM {
             Connections {
                 target: kcm
                 function onFontsHaveChanged() {
-                    hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14
-                    || fixedWidthFontWidget.font.pointSize > 14
-                    || smallFontWidget.font.pointSize > 14
-                    || toolbarFontWidget.font.pointSize > 14
-                    || menuFontWidget.font.pointSize > 14
+                    hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14 || fixedWidthFontWidget.font.pointSize > 14 || smallFontWidget.font.pointSize > 14 || toolbarFontWidget.font.pointSize > 14 || menuFontWidget.font.pointSize > 14;
                 }
             }
 
-            actions: [ kscreenAction ]
+            actions: [kscreenAction]
         }
 
         Kirigami.InlineMessage {
@@ -70,19 +64,14 @@ KCM.SimpleKCM {
             showCloseButton: true
             type: Kirigami.MessageType.Warning
             text: i18n("Decimal font sizes can cause text layout problems in some applications. Consider using only integer font sizes.")
+
             // Specifically, it will trigger https://bugreports.qt.io/browse/QTBUG-92006,
             // but we don't mention that in the message because that would be too technical
             // for users.
-
             Connections {
                 target: kcm
                 function onFontsHaveChanged() {
-                    fractionalFontSizeWarning.visible =
-                    !Number.isInteger(generalFontWidget.font.pointSize)
-                    || !Number.isInteger(fixedWidthFontWidget.font.pointSize)
-                    || !Number.isInteger(smallFontWidget.font.pointSize)
-                    || !Number.isInteger(toolbarFontWidget.font.pointSize)
-                    || !Number.isInteger(menuFontWidget.font.pointSize)
+                    fractionalFontSizeWarning.visible = !Number.isInteger(generalFontWidget.font.pointSize) || !Number.isInteger(fixedWidthFontWidget.font.pointSize) || !Number.isInteger(smallFontWidget.font.pointSize) || !Number.isInteger(toolbarFontWidget.font.pointSize) || !Number.isInteger(menuFontWidget.font.pointSize);
                 }
             }
         }
@@ -92,7 +81,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             showCloseButton: true
             text: i18n("The recommended way to scale the user interface is using the global screen scaling feature.")
-            actions: [ kscreenAction ]
+            actions: [kscreenAction]
         }
 
         Kirigami.FormLayout {
@@ -105,13 +94,8 @@ KCM.SimpleKCM {
                 icon.name: "font-select-symbolic"
                 text: i18n("&Adjust All Fonts…")
 
-                onClicked: kcm.adjustAllFonts();
-                enabled: !kcm.fontsSettings.isImmutable("font")
-                        || !kcm.fontsSettings.isImmutable("fixed")
-                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
-                        || !kcm.fontsSettings.isImmutable("toolBarFont")
-                        || !kcm.fontsSettings.isImmutable("menuFont")
-                        || !kcm.fontsSettings.isImmutable("activeFont")
+                onClicked: kcm.adjustAllFonts()
+                enabled: !kcm.fontsSettings.isImmutable("font") || !kcm.fontsSettings.isImmutable("fixed") || !kcm.fontsSettings.isImmutable("smallestReadableFont") || !kcm.fontsSettings.isImmutable("toolBarFont") || !kcm.fontsSettings.isImmutable("menuFont") || !kcm.fontsSettings.isImmutable("activeFont")
             }
 
             FontWidget {
@@ -213,7 +197,7 @@ KCM.SimpleKCM {
             QtControls.CheckBox {
                 id: excludeCheckBox
                 checked: kcm.fontsAASettings.exclude
-                onCheckedChanged: kcm.fontsAASettings.exclude = checked;
+                onCheckedChanged: kcm.fontsAASettings.exclude = checked
                 text: i18n("Exclude range from anti-aliasing")
                 Layout.fillWidth: true
 
@@ -233,8 +217,12 @@ KCM.SimpleKCM {
                     id: excludeFromSpinBox
                     stepSize: 1
                     onValueChanged: kcm.fontsAASettings.excludeFrom = value
-                    textFromValue: function(value, locale) { return i18n("%1 pt", value)}
-                    valueFromText: function(text, locale) { return parseInt(text) }
+                    textFromValue: function (value, locale) {
+                        return i18n("%1 pt", value);
+                    }
+                    valueFromText: function (text, locale) {
+                        return parseInt(text);
+                    }
                     editable: true
                     value: kcm.fontsAASettings.excludeFrom
 
@@ -256,8 +244,12 @@ KCM.SimpleKCM {
                     id: excludeToSpinBox
                     stepSize: 1
                     onValueChanged: kcm.fontsAASettings.excludeTo = value
-                    textFromValue: function(value, locale) { return i18n("%1 pt", value)}
-                    valueFromText: function(text, locale) { return parseInt(text) }
+                    textFromValue: function (value, locale) {
+                        return i18n("%1 pt", value);
+                    }
+                    valueFromText: function (text, locale) {
+                        return parseInt(text);
+                    }
                     editable: true
                     value: kcm.fontsAASettings.excludeTo
 
@@ -284,14 +276,14 @@ KCM.SimpleKCM {
                     id: subPixelCombo
                     Layout.preferredWidth: formLayout.maxImplicitWidth
                     currentIndex: kcm.subPixelCurrentIndex
-                    onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex;
+                    onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex
                     model: kcm.subPixelOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: subPixelDelegate
                         onWidthChanged: {
-                            subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
+                            subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width);
                         }
                         contentItem: ColumnLayout {
                             id: subPixelLayout
@@ -304,9 +296,7 @@ KCM.SimpleKCM {
                                 id: subPixelComboImage
                                 source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
                                 // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                                //
                                 // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                                //
                                 // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
                                 sourceSize.width: 1
                                 sourceSize.height: 1
@@ -331,14 +321,14 @@ KCM.SimpleKCM {
                     id: hintingCombo
                     Layout.preferredWidth: formLayout.maxImplicitWidth
                     currentIndex: kcm.hintingCurrentIndex
-                    onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex;
+                    onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex
                     model: kcm.hintingOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
                     delegate: QtControls.ItemDelegate {
                         id: hintingDelegate
                         onWidthChanged: {
-                            hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
+                            hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width);
                         }
                         contentItem: ColumnLayout {
                             id: hintingLayout
@@ -351,9 +341,7 @@ KCM.SimpleKCM {
                                 id: hintingComboImage
                                 source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
                                 // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                                //
                                 // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                                //
                                 // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
                                 sourceSize.width: 1
                                 sourceSize.height: 1
@@ -379,8 +367,8 @@ KCM.SimpleKCM {
                     checked: kcm.fontsAASettings.dpi !== 0
                     text: i18n("Force font DPI:")
                     onClicked: {
-                        kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0
-                        dpiTwiddledMessage.visible = checked
+                        kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0;
+                        dpiTwiddledMessage.visible = checked;
                     }
 
                     // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
@@ -431,9 +419,9 @@ KCM.SimpleKCM {
                 property bool adjustAllFonts: false
                 onAccepted: {
                     if (adjustAllFonts) {
-                        kcm.adjustAllFonts()
+                        kcm.adjustAllFonts();
                     } else {
-                        kcm.adjustFont(font, currentCategory)
+                        kcm.adjustFont(font, currentCategory);
                     }
                 }
             }

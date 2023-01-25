@@ -4,11 +4,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -52,7 +50,7 @@ PlasmaComponents.ItemDelegate {
 
     ListView.onIsCurrentItemChanged: {
         if (ListView.isCurrentItem) {
-            labelMask.source = label // calculate on demand
+            labelMask.source = label; // calculate on demand
         }
     }
 
@@ -69,10 +67,22 @@ PlasmaComponents.ItemDelegate {
             height: parent.width
 
             gradient: Gradient {
-                GradientStop { position: 0.0; color: "white" }
-                GradientStop { position: gradientThreshold - 0.25; color: "white"}
-                GradientStop { position: gradientThreshold; color: "transparent"}
-                GradientStop { position: 1; color: "transparent"}
+                GradientStop {
+                    position: 0.0
+                    color: "white"
+                }
+                GradientStop {
+                    position: gradientThreshold - 0.25
+                    color: "white"
+                }
+                GradientStop {
+                    position: gradientThreshold
+                    color: "transparent"
+                }
+                GradientStop {
+                    position: 1
+                    color: "transparent"
+                }
             }
         }
     }
@@ -131,8 +141,8 @@ PlasmaComponents.ItemDelegate {
 
         onActiveChanged: {
             if (active) {
-                menuItem.KeyNavigation.tab =  toolButtonsLoader.item.children[0]
-                menuItem.KeyNavigation.right = toolButtonsLoader.item.children[0]
+                menuItem.KeyNavigation.tab = toolButtonsLoader.item.children[0];
+                menuItem.KeyNavigation.right = toolButtonsLoader.item.children[0];
                 // break binding, once it was loaded, never unload
                 active = true;
             }

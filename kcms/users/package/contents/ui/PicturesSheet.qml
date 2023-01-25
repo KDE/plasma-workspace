@@ -4,12 +4,10 @@
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs 1.3
 import QtQuick.Layouts 1.15
-
 import org.kde.kcm 1.3
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -18,27 +16,77 @@ Kirigami.OverlaySheet {
 
     title: i18nc("@title", "Change Avatar")
 
-    readonly property var colorPalette: [
-        {"name": i18nc("@item:intable", "It's Nothing"),     "color": "transparent", "dark": false},
-        {"name": i18nc("@item:intable", "Feisty Flamingo"),  "color": "#E93A9A", "dark": true},
-        {"name": i18nc("@item:intable", "Dragon's Fruit"),   "color": "#E93D58", "dark": true},
-        {"name": i18nc("@item:intable", "Sweet Potato"),     "color": "#E9643A", "dark": true},
-        {"name": i18nc("@item:intable", "Ambient Amber"),    "color": "#EF973C", "dark": false},
-        {"name": i18nc("@item:intable", "Sparkle Sunbeam"),  "color": "#E8CB2D", "dark": false},
-        {"name": i18nc("@item:intable", "Lemon-Lime"),       "color": "#B6E521", "dark": false},
-        {"name": i18nc("@item:intable", "Verdant Charm"),    "color": "#3DD425", "dark": false},
-        {"name": i18nc("@item:intable", "Mellow Meadow"),    "color": "#00D485", "dark": false},
-        {"name": i18nc("@item:intable", "Tepid Teal"),       "color": "#00D3B8", "dark": false},
-        {"name": i18nc("@item:intable", "Plasma Blue"),      "color": "#3DAEE9", "dark": true},
-        {"name": i18nc("@item:intable", "Pon Purple"),       "color": "#B875DC", "dark": true},
-        {"name": i18nc("@item:intable", "Bajo Purple"),      "color": "#926EE4", "dark": true},
-        {"name": i18nc("@item:intable", "Burnt Charcoal"),   "color": "#232629", "dark": true},
-        {"name": i18nc("@item:intable", "Paper Perfection"), "color": "#EEF1F5", "dark": false},
-        {"name": i18nc("@item:intable", "Cafétera Brown"),   "color": "#CB775A", "dark": false},
-        {"name": i18nc("@item:intable", "Rich Hardwood"),    "color": "#6A250E", "dark": true}
-    ]
+    readonly property var colorPalette: [{
+            "name": i18nc("@item:intable", "It's Nothing"),
+            "color": "transparent",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Feisty Flamingo"),
+            "color": "#E93A9A",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Dragon's Fruit"),
+            "color": "#E93D58",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Sweet Potato"),
+            "color": "#E9643A",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Ambient Amber"),
+            "color": "#EF973C",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Sparkle Sunbeam"),
+            "color": "#E8CB2D",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Lemon-Lime"),
+            "color": "#B6E521",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Verdant Charm"),
+            "color": "#3DD425",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Mellow Meadow"),
+            "color": "#00D485",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Tepid Teal"),
+            "color": "#00D3B8",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Plasma Blue"),
+            "color": "#3DAEE9",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Pon Purple"),
+            "color": "#B875DC",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Bajo Purple"),
+            "color": "#926EE4",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Burnt Charcoal"),
+            "color": "#232629",
+            "dark": true
+        }, {
+            "name": i18nc("@item:intable", "Paper Perfection"),
+            "color": "#EEF1F5",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Cafétera Brown"),
+            "color": "#CB775A",
+            "dark": false
+        }, {
+            "name": i18nc("@item:intable", "Rich Hardwood"),
+            "color": "#6A250E",
+            "dark": true
+        }]
 
-    onSheetOpenChanged: if (!sheetOpen){
+    onSheetOpenChanged: if (!sheetOpen) {
         destroy(Kirigami.Units.humanMoment);
     }
 
@@ -50,7 +98,7 @@ Kirigami.OverlaySheet {
         focus: true
         interactive: false
 
-        Keys.onEscapePressed: picturesSheet.close();
+        Keys.onEscapePressed: picturesSheet.close()
 
         ColumnLayout {
             id: cols
@@ -72,10 +120,10 @@ Kirigami.OverlaySheet {
                     title: i18nc("@title", "Choose a picture")
                     folder: shortcuts.pictures
                     onAccepted: {
-                        usersDetailPage.oldImage = usersDetailPage.user.face
-                        usersDetailPage.user.face = fileDialog.fileUrl
-                        usersDetailPage.overrideImage = true
-                        picturesSheet.close()
+                        usersDetailPage.oldImage = usersDetailPage.user.face;
+                        usersDetailPage.user.face = fileDialog.fileUrl;
+                        usersDetailPage.overrideImage = true;
+                        picturesSheet.close();
                     }
                 }
 
@@ -186,10 +234,10 @@ Kirigami.OverlaySheet {
                         }
 
                         onClicked: {
-                            usersDetailPage.oldImage = usersDetailPage.user.face
-                            usersDetailPage.user.face = imgDelegate.source
-                            usersDetailPage.overrideImage = true
-                            picturesSheet.close()
+                            usersDetailPage.oldImage = usersDetailPage.user.face;
+                            usersDetailPage.user.face = imgDelegate.source;
+                            usersDetailPage.overrideImage = true;
+                            picturesSheet.close();
                         }
                     }
                 }
@@ -259,15 +307,15 @@ Kirigami.OverlaySheet {
                         }
 
                         onClicked: {
-                            colourRectangle.grabToImage(function(result) {
-                                const uri = kcm.plonkImageInTempfile(result.image)
-                                if (uri != "") {
-                                    usersDetailPage.oldImage = usersDetailPage.user.face
-                                    usersDetailPage.user.face = uri
-                                    usersDetailPage.overrideImage = true
-                                }
-                                picturesSheet.close()
-                            })
+                            colourRectangle.grabToImage(function (result) {
+                                    const uri = kcm.plonkImageInTempfile(result.image);
+                                    if (uri != "") {
+                                        usersDetailPage.oldImage = usersDetailPage.user.face;
+                                        usersDetailPage.user.face = uri;
+                                        usersDetailPage.overrideImage = true;
+                                    }
+                                    picturesSheet.close();
+                                });
                         }
                     }
                 }
@@ -336,15 +384,15 @@ Kirigami.OverlaySheet {
                         }
 
                         onClicked: {
-                            colourRectangle.grabToImage(function(result) {
-                                const uri = kcm.plonkImageInTempfile(result.image)
-                                if (uri != "") {
-                                    usersDetailPage.oldImage = usersDetailPage.user.face
-                                    usersDetailPage.user.face = uri
-                                    usersDetailPage.overrideImage = true
-                                }
-                                picturesSheet.close()
-                            })
+                            colourRectangle.grabToImage(function (result) {
+                                    const uri = kcm.plonkImageInTempfile(result.image);
+                                    if (uri != "") {
+                                        usersDetailPage.oldImage = usersDetailPage.user.face;
+                                        usersDetailPage.user.face = uri;
+                                        usersDetailPage.overrideImage = true;
+                                    }
+                                    picturesSheet.close();
+                                });
                         }
                     }
                 }
@@ -352,5 +400,5 @@ Kirigami.OverlaySheet {
         }
     }
 
-    Component.onCompleted: open();
+    Component.onCompleted: open()
 }

@@ -3,21 +3,15 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.notificationmanager 1.0 as NotificationManager
-
 import org.kde.kcoreaddons 1.0 as KCoreAddons
-
 import org.kde.quickcharts 1.0 as Charts
-
 import "global"
 
 RowLayout {
@@ -66,7 +60,7 @@ RowLayout {
         target: Globals
         // clock time changed
         function onTimeChanged() {
-            notificationHeading.updateAgoText()
+            notificationHeading.updateAgoText();
         }
     }
 
@@ -109,18 +103,13 @@ RowLayout {
         Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
         function generateAgoText() {
-            if (!time || isNaN(time.getTime())
-                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning
-                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateSuspended) {
+            if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning || notificationHeading.jobState === NotificationManager.Notifications.JobStateSuspended) {
                 return "";
             }
-
             var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
                 // "Just now" is implied by
-                return notificationHeading.inHistory
-                    ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Notification was added less than a minute ago, keep short", "Just now")
-                    : "";
+                return notificationHeading.inHistory ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Notification was added less than a minute ago, keep short", "Just now") : "";
             }
 
             // Received less than an hour ago, show relative minutes
@@ -137,41 +126,34 @@ RowLayout {
         }
 
         function generateRemainingText() {
-            if (notificationHeading.notificationType !== NotificationManager.Notifications.JobType
-                || notificationHeading.jobState !== NotificationManager.Notifications.JobStateRunning) {
+            if (notificationHeading.notificationType !== NotificationManager.Notifications.JobType || notificationHeading.jobState !== NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
-
             var details = notificationHeading.jobDetails;
             if (!details || !details.speed) {
                 return "";
             }
-
             var remaining = details.totalBytes - details.processedBytes;
             if (remaining <= 0) {
                 return "";
             }
-
             var eta = remaining / details.speed;
-            if (eta < 0.5) { // Avoid showing "0 seconds remaining"
+            if (eta < 0.5) {
+                // Avoid showing "0 seconds remaining"
                 return "";
             }
-
-            if (eta < 60) { // 1 minute
-                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "seconds remaining, keep short",
-                              "%1 s remaining", "%1 s remaining", Math.round(eta));
+            if (eta < 60) {
+                // 1 minute
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "seconds remaining, keep short", "%1 s remaining", "%1 s remaining", Math.round(eta));
             }
-            if (eta < 60 * 60) {// 1 hour
-                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "minutes remaining, keep short",
-                              "%1 min remaining", "%1 min remaining",
-                              Math.round(eta / 60));
+            if (eta < 60 * 60) {
+                // 1 hour
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "minutes remaining, keep short", "%1 min remaining", "%1 min remaining", Math.round(eta / 60));
             }
-            if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in showing that
-                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "hours remaining, keep short",
-                              "%1 h remaining", "%1 h remaining",
-                              Math.round(eta / 60 / 60));
+            if (eta < 60 * 60 * 5) {
+                // 5 hours max, if it takes even longer there's no real point in showing that
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "hours remaining, keep short", "%1 h remaining", "%1 h remaining", Math.round(eta / 60 / 60));
             }
-
             return "";
         }
 
@@ -208,9 +190,7 @@ RowLayout {
             visible: false
 
             display: PlasmaComponents3.AbstractButton.IconOnly
-            text: notificationHeading.dismissed
-                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
-                : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
+            text: notificationHeading.dismissed ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore") : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
             Accessible.description: applicationNameLabel.text
 
             onClicked: notificationHeading.dismissClicked()
@@ -242,18 +222,31 @@ RowLayout {
                 anchors.margins: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
 
                 opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
-                Behavior on opacity {
-                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
+                Behavior on opacity  {
+                    NumberAnimation {
+                        duration: PlasmaCore.Units.longDuration
+                    }
                 }
 
-                range { from: 0; to: notificationHeading.timeout; automatic: false }
+                range {
+                    from: 0
+                    to: notificationHeading.timeout
+                    automatic: false
+                }
 
-                valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
-                colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
+                valueSources: Charts.SingleValueSource {
+                    value: notificationHeading.remainingTime
+                }
+                colorSource: Charts.SingleValueSource {
+                    value: PlasmaCore.Theme.highlightColor
+                }
 
                 thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
 
-                transform: Scale { origin.x: chart.width / 2; xScale: -1 }
+                transform: Scale {
+                    origin.x: chart.width / 2
+                    xScale: -1
+                }
             }
         }
     }
@@ -270,6 +263,5 @@ RowLayout {
                 visible: false
             }
         }
-
     ]
 }

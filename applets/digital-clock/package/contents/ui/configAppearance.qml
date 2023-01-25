@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.15
@@ -16,8 +15,6 @@ import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.5 as Kirigami
 
-
-
 ColumnLayout {
     id: appearancePage
 
@@ -26,12 +23,12 @@ ColumnLayout {
     // boldText and fontStyleName are not used in DigitalClock.qml
     // However, they are necessary to remember the exact font style chosen.
     // Otherwise, when the user open the font dialog again, the style will be lost.
-    property alias cfg_fontFamily : fontDialog.fontChosen.family
-    property alias cfg_boldText : fontDialog.fontChosen.bold
-    property alias cfg_italicText : fontDialog.fontChosen.italic
-    property alias cfg_fontWeight : fontDialog.fontChosen.weight
-    property alias cfg_fontStyleName : fontDialog.fontChosen.styleName
-    property alias cfg_fontSize : fontDialog.fontChosen.pointSize
+    property alias cfg_fontFamily: fontDialog.fontChosen.family
+    property alias cfg_boldText: fontDialog.fontChosen.bold
+    property alias cfg_italicText: fontDialog.fontChosen.italic
+    property alias cfg_fontWeight: fontDialog.fontChosen.weight
+    property alias cfg_fontStyleName: fontDialog.fontChosen.styleName
+    property alias cfg_fontSize: fontDialog.fontChosen.pointSize
 
     property string cfg_timeFormat: ""
     property alias cfg_showLocalTimezone: showLocalTimezone.checked
@@ -59,11 +56,7 @@ ColumnLayout {
                 id: dateDisplayFormat
                 enabled: showDate.checked
                 visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
-                model: [
-                    i18n("Adaptive location"),
-                    i18n("Always beside time"),
-                    i18n("Always below time"),
-                ]
+                model: [i18n("Adaptive location"), i18n("Always beside time"), i18n("Always below time"),]
                 onActivated: cfg_dateDisplayFormat = currentIndex
             }
         }
@@ -101,11 +94,7 @@ ColumnLayout {
 
             QtControls.ComboBox {
                 id: displayTimezoneFormat
-                model: [
-                    i18n("Code"),
-                    i18n("City"),
-                    i18n("Offset from UTC time"),
-                ]
+                model: [i18n("Code"), i18n("City"), i18n("Offset from UTC time"),]
                 onActivated: cfg_displayTimezoneFormat = currentIndex
             }
         }
@@ -120,11 +109,7 @@ ColumnLayout {
 
             QtControls.ComboBox {
                 id: use24hFormat
-                model: [
-                    i18n("12-Hour"),
-                    i18n("Use Region Defaults"),
-                    i18n("24-Hour")
-                ]
+                model: [i18n("12-Hour"), i18n("Use Region Defaults"), i18n("24-Hour")]
                 onCurrentIndexChanged: cfg_use24hFormat = currentIndex
             }
 
@@ -147,27 +132,22 @@ ColumnLayout {
             QtControls.ComboBox {
                 id: dateFormat
                 textRole: "label"
-                model: [
-                    {
-                        'label': i18n("Long Date"),
-                        'name': "longDate",
-                        format: Qt.SystemLocaleLongDate
-                    },
-                    {
-                        'label': i18n("Short Date"),
-                        'name': "shortDate",
-                        format: Qt.SystemLocaleShortDate
-                    },
-                    {
-                        'label': i18n("ISO Date"),
-                        'name': "isoDate",
-                        format: Qt.ISODate
-                    },
-                    {
-                        'label': i18nc("custom date format", "Custom"),
-                        'name': "custom"
-                    }
-                ]
+                model: [{
+                        "label": i18n("Long Date"),
+                        "name": "longDate",
+                        "format": Qt.SystemLocaleLongDate
+                    }, {
+                        "label": i18n("Short Date"),
+                        "name": "shortDate",
+                        "format": Qt.SystemLocaleShortDate
+                    }, {
+                        "label": i18n("ISO Date"),
+                        "name": "isoDate",
+                        "format": Qt.ISODate
+                    }, {
+                        "label": i18nc("custom date format", "Custom"),
+                        "name": "custom"
+                    }]
                 onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
 
                 Component.onCompleted: {
@@ -182,8 +162,7 @@ ColumnLayout {
             QtControls.Label {
                 Layout.fillWidth: true
                 textFormat: Text.PlainText
-                text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
-                                                                            : dateFormat.model[dateFormat.currentIndex].format)
+                text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text : dateFormat.model[dateFormat.currentIndex].format)
             }
         }
 
@@ -219,8 +198,8 @@ ColumnLayout {
         }
 
         QtControls.RadioButton {
-            Kirigami.FormData.label: i18nc("@label:group", "Text display:")
             id: autoFontAndSizeRadioButton
+            Kirigami.FormData.label: i18nc("@label:group", "Text display:")
             text: i18nc("@option:radio", "Automatic")
         }
 
@@ -238,7 +217,7 @@ ColumnLayout {
                 checked: !cfg_autoFontAndSize
                 onClicked: {
                     if (cfg_fontFamily === "") {
-                        fontDialog.fontChosen = PlasmaCore.Theme.defaultFont
+                        fontDialog.fontChosen = PlasmaCore.Theme.defaultFont;
                     }
                 }
             }
@@ -248,11 +227,10 @@ ColumnLayout {
                 icon.name: "settings-configure"
                 enabled: manualFontAndSizeRadioButton.checked
                 onClicked: {
-                    fontDialog.font = fontDialog.fontChosen
-                    fontDialog.open()
+                    fontDialog.font = fontDialog.fontChosen;
+                    fontDialog.open();
                 }
             }
-
         }
 
         QtControls.Label {
@@ -274,7 +252,7 @@ ColumnLayout {
         property font fontChosen: Qt.Font()
 
         onAccepted: {
-            fontChosen = font
+            fontChosen = font;
         }
     }
 

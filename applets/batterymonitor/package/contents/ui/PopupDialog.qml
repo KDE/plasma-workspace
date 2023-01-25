@@ -4,10 +4,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
@@ -29,7 +27,6 @@ PlasmaExtras.Representation {
 
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
-    //
     // type: [{
     //  Icon: string,
     //  Name: string,
@@ -123,10 +120,11 @@ PlasmaExtras.Representation {
                 KeyNavigation.down: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.down
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
-                stepSize: batterymonitor.maximumScreenBrightness/100
+                stepSize: batterymonitor.maximumScreenBrightness / 100
 
                 onMoved: batterymonitor.screenBrightness = value
-                onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
+                onActiveFocusChanged: if (activeFocus)
+                    scrollView.positionViewAtItem(this)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
@@ -155,7 +153,8 @@ PlasmaExtras.Representation {
                 KeyNavigation.tab: KeyNavigation.down
 
                 onMoved: batterymonitor.keyboardBrightness = value
-                onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
+                onActiveFocusChanged: if (activeFocus)
+                    scrollView.positionViewAtItem(this)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
@@ -183,7 +182,8 @@ PlasmaExtras.Representation {
                 profileHolds: dialog.profileHolds
                 onActivateProfileRequested: dialog.activateProfileRequested(profile)
 
-                onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
+                onActiveFocusChanged: if (activeFocus)
+                    scrollView.positionViewAtItem(this)
             }
 
             Repeater {
@@ -210,10 +210,10 @@ PlasmaExtras.Representation {
                         }
                     }
 
-                    onActiveFocusChanged: if (activeFocus) scrollView.positionViewAtItem(this)
+                    onActiveFocusChanged: if (activeFocus)
+                        scrollView.positionViewAtItem(this)
                 }
             }
         }
     }
 }
-

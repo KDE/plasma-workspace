@@ -3,15 +3,11 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.2
-
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import "../components"
 
 SessionManagementScreen {
@@ -39,12 +35,11 @@ SessionManagementScreen {
     }
 
     function startLogin() {
-        const password = passwordBox.text
+        const password = passwordBox.text;
 
         // This is partly because it looks nicer, but more importantly it
         // works round a Qt bug that can trigger if the app is closed with a
         // TextField focused.
-        //
         // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         passwordResult(password);
@@ -79,18 +74,18 @@ SessionManagementScreen {
             Keys.onPressed: {
                 if (event.key == Qt.Key_Left && !text) {
                     userList.decrementCurrentIndex();
-                    event.accepted = true
+                    event.accepted = true;
                 }
                 if (event.key == Qt.Key_Right && !text) {
                     userList.incrementCurrentIndex();
-                    event.accepted = true
+                    event.accepted = true;
                 }
             }
 
             Connections {
                 target: root
                 function onClearPassword() {
-                    passwordBox.forceActiveFocus()
+                    passwordBox.forceActiveFocus();
                     passwordBox.text = "";
                 }
             }

@@ -31,7 +31,7 @@ Item {
     }
 
     function initTimezones() {
-        var tz  = Array()
+        var tz = Array();
         if (Plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
             tz.push("Local");
         }
@@ -50,21 +50,16 @@ Item {
         var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
         var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
-
         var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
-
         if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
             formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
         }
-
         return formattedTime;
     }
 
     function nameForZone(zone) {
         // add the timezone string to the clock
-        var timezoneString = Plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
-                                                                          : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
-
+        var timezoneString = Plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"] : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
         return timezoneString;
     }
 
@@ -77,7 +72,8 @@ Item {
         Accessible.description: tooltipLoader.item.Accessible.description
         Accessible.role: Accessible.Button
     }
-    Plasmoid.fullRepresentation: CalendarView { }
+    Plasmoid.fullRepresentation: CalendarView {
+    }
 
     Plasmoid.toolTipItem: Loader {
         id: tooltipLoader
@@ -95,7 +91,9 @@ Item {
     property var allTimezones
     Connections {
         target: Plasmoid.configuration
-        function onSelectedTimeZonesChanged() { root.initTimezones(); }
+        function onSelectedTimeZonesChanged() {
+            root.initTimezones();
+        }
     }
 
     PlasmaCore.DataSource {
@@ -127,7 +125,6 @@ Item {
     Component.onCompleted: {
         Plasmoid.setAction("clipboard", i18n("Copy to Clipboard"), "edit-copy");
         ClipboardMenu.setupMenu(Plasmoid.action("clipboard"));
-
         root.initTimezones();
         if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
             Plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");

@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.14
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -86,11 +85,11 @@ RowLayout {
         // and plasma-pa:VolumeSlider.qml
         color: {
             if (progressBar.value <= 100) {
-                return PlasmaCore.Theme.textColor
+                return PlasmaCore.Theme.textColor;
             } else if (progressBar.value > 100 && progressBar.value <= 125) {
-                return PlasmaCore.Theme.neutralTextColor
+                return PlasmaCore.Theme.neutralTextColor;
             } else {
-                return PlasmaCore.Theme.negativeTextColor
+                return PlasmaCore.Theme.negativeTextColor;
             }
         }
     }

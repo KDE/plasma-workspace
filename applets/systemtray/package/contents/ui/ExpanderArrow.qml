@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
@@ -63,13 +62,13 @@ PlasmaCore.ToolTipArea {
         height: width
 
         rotation: systemTrayState.expanded ? 180 : 0
-        Behavior on rotation {
+        Behavior on rotation  {
             RotationAnimation {
                 duration: tooltip.arrowAnimationDuration
             }
         }
         opacity: systemTrayState.expanded ? 0 : 1
-        Behavior on opacity {
+        Behavior on opacity  {
             NumberAnimation {
                 duration: tooltip.arrowAnimationDuration
             }
@@ -95,13 +94,13 @@ PlasmaCore.ToolTipArea {
         height: arrow.height
 
         rotation: systemTrayState.expanded ? 0 : -180
-        Behavior on rotation {
+        Behavior on rotation  {
             RotationAnimation {
                 duration: tooltip.arrowAnimationDuration
             }
         }
         opacity: systemTrayState.expanded ? 1 : 0
-        Behavior on opacity {
+        Behavior on opacity  {
             NumberAnimation {
                 duration: tooltip.arrowAnimationDuration
             }

@@ -5,13 +5,11 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
-
 import "items"
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -40,7 +38,8 @@ PlasmaComponents3.ScrollView {
         cellHeight: Math.floor(popup.Layout.minimumHeight / minimumColumns)
 
         currentIndex: -1
-        highlight: PlasmaExtras.Highlight {}
+        highlight: PlasmaExtras.Highlight {
+        }
         highlightMoveDuration: 0
 
         pixelAligned: true
@@ -53,18 +52,15 @@ PlasmaComponents3.ScrollView {
         //! lines will always look consistent with no too much padding
         readonly property int minLabelHeight: {
             var minHeight = 0;
-
-            for(let i in contentItem.children){
+            for (let i in contentItem.children) {
                 var gridItem = contentItem.children[i];
                 if (!gridItem || !gridItem.hasOwnProperty("item") || !gridItem.item.hasOwnProperty("labelHeight")) {
                     continue;
                 }
-
                 if (gridItem.item.labelHeight > minHeight) {
                     minHeight = gridItem.item.labelHeight;
                 }
             }
-
             return minHeight;
         }
 
@@ -73,7 +69,8 @@ PlasmaComponents3.ScrollView {
             filterRole: "effectiveStatus"
             filterCallback: (source_row, value) => value === PlasmaCore.Types.PassiveStatus
         }
-        delegate: ItemLoader {}
+        delegate: ItemLoader {
+        }
 
         keyNavigationEnabled: true
         activeFocusOnTab: true
@@ -82,9 +79,9 @@ PlasmaComponents3.ScrollView {
 
         onActiveFocusChanged: {
             if (activeFocus && currentIndex === -1) {
-                currentIndex = 0
+                currentIndex = 0;
             } else if (!activeFocus && currentIndex >= 0) {
-                currentIndex = -1
+                currentIndex = -1;
             }
         }
     }

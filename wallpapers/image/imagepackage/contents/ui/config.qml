@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.5
 import QtQuick.Controls 2.5 as QtControls2
 import QtQuick.Layouts 1.0
@@ -39,7 +38,7 @@ ColumnLayout {
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
 
-    signal configurationChanged()
+    signal configurationChanged
 
     function saveConfig() {
         if (configDialog.currentWallpaper === "org.kde.image") {
@@ -53,10 +52,10 @@ ColumnLayout {
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
             if (typeof Plasmoid !== "undefined") {
-                return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio)
+                return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio);
             }
             // Lock screen configuration case
-            return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
+            return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio);
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
@@ -67,57 +66,50 @@ ColumnLayout {
     }
 
     onCfg_FillModeChanged: {
-        resizeComboBox.setMethod()
+        resizeComboBox.setMethod();
     }
 
     onCfg_SlidePathsChanged: {
-        imageWallpaper.slidePaths = cfg_SlidePaths
+        imageWallpaper.slidePaths = cfg_SlidePaths;
     }
     onCfg_UncheckedSlidesChanged: {
-        imageWallpaper.uncheckedSlides = cfg_UncheckedSlides
+        imageWallpaper.uncheckedSlides = cfg_UncheckedSlides;
     }
 
     onCfg_SlideshowModeChanged: {
-        imageWallpaper.slideshowMode = cfg_SlideshowMode
+        imageWallpaper.slideshowMode = cfg_SlideshowMode;
     }
 
     onCfg_SlideshowFoldersFirstChanged: {
-        imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst
+        imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst;
     }
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
-
     Kirigami.FormLayout {
         twinFormLayouts: parentLayout
         QtControls2.ComboBox {
             id: resizeComboBox
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
-            model: [
-                        {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
-                            'fillMode': Image.PreserveAspectCrop
-                        },
-                        {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled"),
-                            'fillMode': Image.Stretch
-                        },
-                        {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled, Keep Proportions"),
-                            'fillMode': Image.PreserveAspectFit
-                        },
-                        {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Centered"),
-                            'fillMode': Image.Pad
-                        },
-                        {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Tiled"),
-                            'fillMode': Image.Tile
-                        }
-            ]
+            model: [{
+                    "label": i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
+                    "fillMode": Image.PreserveAspectCrop
+                }, {
+                    "label": i18nd("plasma_wallpaper_org.kde.image", "Scaled"),
+                    "fillMode": Image.Stretch
+                }, {
+                    "label": i18nd("plasma_wallpaper_org.kde.image", "Scaled, Keep Proportions"),
+                    "fillMode": Image.PreserveAspectFit
+                }, {
+                    "label": i18nd("plasma_wallpaper_org.kde.image", "Centered"),
+                    "fillMode": Image.Pad
+                }, {
+                    "label": i18nd("plasma_wallpaper_org.kde.image", "Tiled"),
+                    "fillMode": Image.Tile
+                }]
 
             textRole: "label"
             onActivated: cfg_FillMode = model[currentIndex]["fillMode"]
-            Component.onCompleted: setMethod();
+            Component.onCompleted: setMethod()
 
             KCM.SettingHighlighter {
                 highlight: cfg_FillModeDefault != cfg_FillMode
@@ -133,7 +125,9 @@ ColumnLayout {
             }
         }
 
-        QtControls2.ButtonGroup { id: backgroundGroup }
+        QtControls2.ButtonGroup {
+            id: backgroundGroup
+        }
 
         QtControls2.RadioButton {
             id: blurRadioButton
@@ -178,12 +172,12 @@ ColumnLayout {
         }
         onDropped: {
             drop.urls.forEach(function (url) {
-                if (configDialog.currentWallpaper === "org.kde.image") {
-                    imageWallpaper.addUsersWallpaper(url);
-                } else {
-                    imageWallpaper.addSlidePath(url);
-                }
-            });
+                    if (configDialog.currentWallpaper === "org.kde.image") {
+                        imageWallpaper.addUsersWallpaper(url);
+                    } else {
+                        imageWallpaper.addSlidePath(url);
+                    }
+                });
             // Scroll to top to view added images
             if (configDialog.currentWallpaper === "org.kde.image") {
                 thumbnailsLoader.item.view.positionViewAtIndex(0, GridView.Beginning);
@@ -193,8 +187,7 @@ ColumnLayout {
         Loader {
             id: thumbnailsLoader
             anchors.fill: parent
-            source: (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
-                ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "")
+            source: (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" : ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "")
         }
     }
 
@@ -204,8 +197,8 @@ ColumnLayout {
         visible: configDialog.currentWallpaper == "org.kde.image"
         QtControls2.Button {
             icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Image…")
-            onClicked: imageWallpaper.showFileDialog();
+            text: i18nd("plasma_wallpaper_org.kde.image", "Add Image…")
+            onClicked: imageWallpaper.showFileDialog()
         }
         NewStuff.Button {
             Layout.alignment: Qt.AlignRight

@@ -14,12 +14,8 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         id: alwaysClock
-        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                                        "@title: group",
-                                        "Clock:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                     "@option:check",
-                     "Keep visible when unlocking prompt disappears")
+        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@title: group", "Clock:")
+        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@option:check", "Keep visible when unlocking prompt disappears")
 
         KCM.SettingHighlighter {
             highlight: cfg_alwaysShowClockDefault != cfg_alwaysShowClock
@@ -28,12 +24,8 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         id: showMediaControls
-        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                                        "@title: group",
-                                        "Media controls:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                     "@option:check",
-                     "Show under unlocking prompt")
+        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@title: group", "Media controls:")
+        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@option:check", "Show under unlocking prompt")
 
         KCM.SettingHighlighter {
             highlight: cfg_showMediaControlsDefault != cfg_showMediaControls

@@ -3,18 +3,14 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.2
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as QQC2
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kcoreaddons 1.0 as KCoreAddons
-
 import "../components"
 import "timer.js" as AutoTriggerTimer
-
 import org.kde.plasma.private.sessions 2.0
 
 PlasmaCore.ColorScope {
@@ -23,13 +19,13 @@ PlasmaCore.ColorScope {
     height: screenGeometry.height
     width: screenGeometry.width
 
-    signal logoutRequested()
-    signal haltRequested()
+    signal logoutRequested
+    signal haltRequested
     signal suspendRequested(int spdMethod)
-    signal rebootRequested()
+    signal rebootRequested
     signal rebootRequested2(int opt)
-    signal cancelRequested()
-    signal lockScreenRequested()
+    signal cancelRequested
+    signal lockScreenRequested
 
     property alias backgroundColor: backgroundRect.color
 
@@ -45,12 +41,12 @@ PlasmaCore.ColorScope {
     property real remainingTime: root.timeout
     property var currentAction: {
         switch (sdtype) {
-            case ShutdownType.ShutdownTypeReboot:
-                return root.rebootRequested;
-            case ShutdownType.ShutdownTypeHalt:
-                return root.haltRequested;
-            default:
-                return root.logoutRequested;
+        case ShutdownType.ShutdownTypeReboot:
+            return root.rebootRequested;
+        case ShutdownType.ShutdownTypeHalt:
+            return root.haltRequested;
+        default:
+            return root.logoutRequested;
         }
     }
 
@@ -82,14 +78,14 @@ PlasmaCore.ColorScope {
         interval: 1000
         onTriggered: remainingTime--
         Component.onCompleted: {
-            AutoTriggerTimer.addCancelAutoTriggerCallback(function() {
-                countDownTimer.running = false;
-            });
+            AutoTriggerTimer.addCancelAutoTriggerCallback(function () {
+                    countDownTimer.running = false;
+                });
         }
     }
 
     function isLightColor(color) {
-        return Math.max(color.r, color.g, color.b) > 0.5
+        return Math.max(color.r, color.g, color.b) > 0.5;
     }
 
     Rectangle {
@@ -135,10 +131,7 @@ PlasmaCore.ColorScope {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
-            text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
-                         "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
-                         "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
-                         sessionsModel.count)
+            text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.", "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.", sessionsModel.count)
             visible: sessionsModel.count > 1
         }
 
@@ -212,7 +205,7 @@ PlasmaCore.ColorScope {
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: countDownTimer.running ? 1 : 0
-            Behavior on opacity {
+            Behavior on opacity  {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -220,12 +213,12 @@ PlasmaCore.ColorScope {
             }
             text: {
                 switch (sdtype) {
-                    case ShutdownType.ShutdownTypeReboot:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
-                    case ShutdownType.ShutdownTypeHalt:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
-                    default:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
+                case ShutdownType.ShutdownTypeReboot:
+                    return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
+                case ShutdownType.ShutdownTypeHalt:
+                    return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
+                default:
+                    return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
                 }
             }
         }

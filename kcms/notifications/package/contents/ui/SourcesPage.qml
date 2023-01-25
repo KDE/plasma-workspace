@@ -3,15 +3,12 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import QtQml 2.15
-
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcm 1.2 as KCM
-
 import org.kde.private.kcms.notifications 1.0 as Private
 
 Kirigami.Page {
@@ -29,15 +26,14 @@ Kirigami.Page {
 
         // In Component.onCompleted we might not be assigned a window yet
         // which we need to make the events config dialog transient to it
-        Qt.callLater(function() {
-            if (kcm.initialEventId && kcm.initialNotifyRcName) {
-                appConfiguration.configureEvents(kcm.initialEventId);
-            }
-
-            kcm.initialDesktopEntry = "";
-            kcm.initialNotifyRcName = "";
-            kcm.initialEventId = "";
-        });
+        Qt.callLater(function () {
+                if (kcm.initialEventId && kcm.initialNotifyRcName) {
+                    appConfiguration.configureEvents(kcm.initialEventId);
+                }
+                kcm.initialDesktopEntry = "";
+                kcm.initialNotifyRcName = "";
+                kcm.initialEventId = "";
+            });
     }
 
     Binding {
@@ -90,8 +86,10 @@ Kirigami.Page {
                             width: sourcesList.width
                             label: {
                                 switch (Number(section)) {
-                                    case Private.SourcesModel.ApplicationType: return i18n("Applications");
-                                    case Private.SourcesModel.ServiceType: return i18n("System Services");
+                                case Private.SourcesModel.ApplicationType:
+                                    return i18n("Applications");
+                                case Private.SourcesModel.ServiceType:
+                                    return i18n("System Services");
                                 }
                             }
                         }

@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.7
 import QtQuick.Window 2.2 // for Screen
 import QtQuick.Layouts 1.1
@@ -12,7 +11,6 @@ import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.3 as KCM
-
 import org.kde.private.kcm_cursortheme 1.0
 
 KCM.GridViewKCM {
@@ -20,11 +18,12 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the mouse cursor theme.")
 
     view.model: kcm.cursorsModel
-    view.delegate: Delegate {}
-    view.currentIndex: kcm.cursorThemeIndex(kcm.cursorThemeSettings.cursorTheme);
+    view.delegate: Delegate {
+    }
+    view.currentIndex: kcm.cursorThemeIndex(kcm.cursorThemeSettings.cursorTheme)
 
     view.onCurrentIndexChanged: {
-        kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(view.currentIndex)
+        kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(view.currentIndex);
         view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
     }
 
@@ -87,7 +86,7 @@ KCM.GridViewKCM {
                 id: sizeCombo
                 model: kcm.sizesModel
                 textRole: "display"
-                currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
+                currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize)
                 onActivated: {
                     kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                     kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
@@ -136,8 +135,8 @@ KCM.GridViewKCM {
                         onTriggered: {
                             const component = Qt.createComponent("LaunchFeedbackDialog.qml");
                             component.incubateObject(root, {
-                                "parent": root,
-                            });
+                                    "parent": root
+                                });
                             component.destroy();
                         }
                     },
@@ -167,16 +166,15 @@ KCM.GridViewKCM {
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Theme")
             folder: shortcuts.home
-            nameFilters: [ i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)") ]
+            nameFilters: [i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)")]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
-                fileDialogLoader.active = false
+                kcm.installThemeFromFile(fileUrls[0]);
+                fileDialogLoader.active = false;
             }
             onRejected: {
-                fileDialogLoader.active = false
+                fileDialogLoader.active = false;
             }
         }
     }
 }
-

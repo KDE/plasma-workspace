@@ -5,7 +5,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
@@ -24,8 +23,7 @@ Rectangle {
      * This defines the item that will be blurred and used in the background
      */
     property var blurSource
-    readonly property bool blurEnabled: backgroundColor.blur
-        && (backgroundColor.fillMode === Image.PreserveAspectFit || backgroundColor.fillMode === Image.Pad)
+    readonly property bool blurEnabled: backgroundColor.blur && (backgroundColor.fillMode === Image.PreserveAspectFit || backgroundColor.fillMode === Image.Pad)
 
     layer.enabled: StackView.status !== StackView.Active && StackView.status !== StackView.Deactivating
 

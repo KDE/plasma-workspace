@@ -8,7 +8,6 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQml 2.15
-
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -45,7 +44,7 @@ PlasmaExtras.Representation {
 
     property bool debug: false
 
-    Keys.onDownPressed: monthView.Keys.onDownPressed(event);
+    Keys.onDownPressed: monthView.Keys.onDownPressed(event)
 
     Connections {
         target: Plasmoid.self
@@ -164,7 +163,6 @@ PlasmaExtras.Representation {
             topMargin: monthView.viewHeader.height
         }
 
-
         // Agenda view itself
         Item {
             id: agenda
@@ -186,21 +184,11 @@ PlasmaExtras.Representation {
             }
 
             function dateEquals(date1, date2) {
-                const values1 = [
-                    date1.getFullYear(),
-                    date1.getMonth(),
-                    date1.getDate()
-                ];
-
-                const values2 = [
-                    date2.getFullYear(),
-                    date2.getMonth(),
-                    date2.getDate()
-                ];
-
+                const values1 = [date1.getFullYear(), date1.getMonth(), date1.getDate()];
+                const values2 = [date2.getFullYear(), date2.getMonth(), date2.getDate()];
                 return values1.every((value, index) => {
-                    return (value === values2[index]);
-                }, false)
+                        return (value === values2[index]);
+                    }, false);
             }
 
             Connections {
@@ -263,12 +251,12 @@ PlasmaExtras.Representation {
                     currentIndex: -1
 
                     KeyNavigation.down: switchTimeZoneButton.visible ? switchTimeZoneButton : clocksList
-                    Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+                    Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event)
 
                     onCurrentIndexChanged: if (!activeFocus) {
                         currentIndex = -1;
                     }
- 
+
                     onActiveFocusChanged: if (activeFocus) {
                         currentIndex = 0;
                     } else {
@@ -291,21 +279,15 @@ PlasmaExtras.Representation {
                             }
                             // Multi-day event which does not start or end today (so
                             // is all-day from today's point of view)
-                            if (modelData.startDateTime - monthView.currentDate < 0 &&
-                                modelData.endDateTime - monthView.currentDate > 86400000) { // 24hrs in ms
+                            if (modelData.startDateTime - monthView.currentDate < 0 && modelData.endDateTime - monthView.currentDate > 86400000) {
+                                // 24hrs in ms
                                 return false;
                             }
 
                             // Non-explicit all-day event
-                            const startIsMidnight = modelData.startDateTime.getHours() === 0
-                                            && modelData.startDateTime.getMinutes() === 0;
-
-                            const endIsMidnight = modelData.endDateTime.getHours() === 0
-                                            && modelData.endDateTime.getMinutes() === 0;
-
-                            const sameDay = modelData.startDateTime.getDate() === modelData.endDateTime.getDate()
-                                    && modelData.startDateTime.getDay() === modelData.endDateTime.getDay()
-
+                            const startIsMidnight = modelData.startDateTime.getHours() === 0 && modelData.startDateTime.getMinutes() === 0;
+                            const endIsMidnight = modelData.endDateTime.getHours() === 0 && modelData.endDateTime.getMinutes() === 0;
+                            const sameDay = modelData.startDateTime.getDate() === modelData.endDateTime.getDate() && modelData.startDateTime.getDay() === modelData.endDateTime.getDay();
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
 
@@ -344,9 +326,7 @@ PlasmaExtras.Representation {
                                 Layout.column: 1
                                 Layout.minimumWidth: dateLabelMetrics.width
 
-                                text: startsToday || startedYesterdayLessThan12HoursAgo
-                                        ? Qt.formatTime(modelData.startDateTime)
-                                        : agenda.formatDateWithoutYear(modelData.startDateTime)
+                                text: startsToday || startedYesterdayLessThan12HoursAgo ? Qt.formatTime(modelData.startDateTime) : agenda.formatDateWithoutYear(modelData.startDateTime)
                                 horizontalAlignment: Qt.AlignRight
                                 visible: eventItem.hasTime
                             }
@@ -361,9 +341,7 @@ PlasmaExtras.Representation {
                                 Layout.column: 1
                                 Layout.minimumWidth: dateLabelMetrics.width
 
-                                text: endsToday || endsTomorrowInLessThan12Hours
-                                        ? Qt.formatTime(modelData.endDateTime)
-                                        : agenda.formatDateWithoutYear(modelData.endDateTime)
+                                text: endsToday || endsTomorrowInLessThan12Hours ? Qt.formatTime(modelData.endDateTime) : agenda.formatDateWithoutYear(modelData.endDateTime)
                                 horizontalAlignment: Qt.AlignRight
                                 opacity: 0.7
 
@@ -394,8 +372,7 @@ PlasmaExtras.Representation {
                 visible: holidaysList.count == 0
 
                 iconName: "checkmark"
-                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
-                                                               : i18n("No events for this day");
+                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today") : i18n("No events for this day")
             }
         }
 
@@ -479,7 +456,7 @@ PlasmaExtras.Representation {
                     currentIndex = -1;
                 }
 
-                Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+                Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event)
 
                 // Can't use KeyNavigation.tab since the focus won't go to config button, instead it will be redirected to somewhere else because of
                 // some existing code. Since now the header was in this file and this was not a problem. Now the header is also implicitly
@@ -576,7 +553,7 @@ PlasmaExtras.Representation {
         property bool focusChangedForClockListTab: false
         onActiveFocusChanged: if (activeFocus) {
             monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
-            if(!focusChangedForClockListTab) {
+            if (!focusChangedForClockListTab) {
                 monthView.Keys.onDownPressed(null);
             }
         }
@@ -594,9 +571,7 @@ PlasmaExtras.Representation {
 
             eventPluginsManager: eventPluginsManager
             today: root.tzDate
-            firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
-                ? Plasmoid.configuration.firstDayOfWeek
-                : Qt.locale().firstDayOfWeek
+            firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1 ? Plasmoid.configuration.firstDayOfWeek : Qt.locale().firstDayOfWeek
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
 
             showDigitalClockHeader: true
@@ -605,7 +580,7 @@ PlasmaExtras.Representation {
 
             KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
-            Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+            Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
             onUpPressed: Keys.onUpPressed(event)
         }
     }

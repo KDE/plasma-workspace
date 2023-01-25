@@ -4,10 +4,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Window 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -29,13 +27,13 @@ Item {
     property bool constrainText: true
     property alias nameFontSize: usernameDelegate.font.pointSize
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
-    signal clicked()
+    signal clicked
 
     property real faceSize: PlasmaCore.Units.gridUnit * 7
 
     opacity: isCurrent ? 1.0 : 0.5
 
-    Behavior on opacity {
+    Behavior on opacity  {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration
         }
@@ -57,10 +55,10 @@ Item {
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
 
-        Behavior on width {
+        Behavior on width  {
             PropertyAnimation {
                 from: faceSize
-                duration: PlasmaCore.Units.longDuration;
+                duration: PlasmaCore.Units.longDuration
             }
         }
         width: isCurrent ? faceSize : faceSize - PlasmaCore.Units.largeSpacing
@@ -176,5 +174,7 @@ Item {
 
     Accessible.name: name
     Accessible.role: Accessible.Button
-    function accessiblePressAction() { wrapper.clicked() }
+    function accessiblePressAction() {
+        wrapper.clicked();
+    }
 }

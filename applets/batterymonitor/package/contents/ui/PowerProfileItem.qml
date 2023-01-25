@@ -4,10 +4,8 @@
  *
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
@@ -29,21 +27,19 @@ PlasmaComponents3.ItemDelegate {
     // The canBeInhibited property mean that this profile's availability
     // depends on root.inhibited value (and thus on the
     // inhibitionReason string).
-    readonly property var profileData: [
-        {
-            label: i18n("Power Save"),
-            profile: "power-saver",
-            canBeInhibited: false,
+    readonly property var profileData: [{
+            "label": i18n("Power Save"),
+            "profile": "power-saver",
+            "canBeInhibited": false
         }, {
-            label: i18n("Balanced"),
-            profile: "balanced",
-            canBeInhibited: false,
+            "label": i18n("Balanced"),
+            "profile": "balanced",
+            "canBeInhibited": false
         }, {
-            label: i18n("Performance"),
-            profile: "performance",
-            canBeInhibited: true,
-        }
-    ]
+            "label": i18n("Performance"),
+            "profile": "performance",
+            "canBeInhibited": true
+        }]
 
     readonly property int activeProfileIndex: profileData.findIndex(data => data.profile === activeProfile)
     // type: typeof(profileData[])?
@@ -105,7 +101,10 @@ PlasmaComponents3.ItemDelegate {
                 value: root.activeProfileIndex
                 snapMode: PlasmaComponents3.Slider.SnapAlways
                 onMoved: {
-                    const { canBeInhibited, profile } = root.profileData[value];
+                    const {
+                        "canBeInhibited":
+                        "profile":
+                    }{ = root.profileData[value];
                     if (!(canBeInhibited && root.inhibited)) {
                         activateProfileRequested(profile);
                     } else {
@@ -186,13 +185,13 @@ PlasmaComponents3.ItemDelegate {
 
                 visible: root.inhibited
                 iconSource: "dialog-information"
-                text: switch(root.inhibitionReason) {
-                    case "lap-detected":
-                        return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
-                    case "high-operating-temperature":
-                        return i18n("Performance mode is unavailable because the computer is running too hot.")
-                    default:
-                        return i18n("Performance mode is unavailable.")
+                text: switch (root.inhibitionReason) {
+                case "lap-detected":
+                    return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.");
+                case "high-operating-temperature":
+                    return i18n("Performance mode is unavailable because the computer is running too hot.");
+                default:
+                    return i18n("Performance mode is unavailable.");
                 }
             }
 
@@ -203,13 +202,13 @@ PlasmaComponents3.ItemDelegate {
 
                 visible: root.activeProfile === "performance" && root.degradationReason !== ""
                 iconSource: "dialog-information"
-                text: switch(root.degradationReason) {
-                    case "lap-detected":
-                        return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
-                    case "high-operating-temperature":
-                        return i18n("Performance may be reduced because the computer is running too hot.")
-                    default:
-                        return i18n("Performance may be reduced.")
+                text: switch (root.degradationReason) {
+                case "lap-detected":
+                    return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.");
+                case "high-operating-temperature":
+                    return i18n("Performance may be reduced because the computer is running too hot.");
+                default:
+                    return i18n("Performance may be reduced.");
                 }
             }
 
@@ -219,12 +218,7 @@ PlasmaComponents3.ItemDelegate {
                 Layout.fillWidth: true
 
                 visible: root.activeHolds.length > 0 && root.activeProfileData !== undefined
-                text: root.activeProfileData !== undefined
-                    ? i18np("One application has requested activating %2:",
-                            "%1 applications have requested activating %2:",
-                            root.activeHolds.length,
-                            i18n(root.activeProfileData.label))
-                    : ""
+                text: root.activeProfileData !== undefined ? i18np("One application has requested activating %2:", "%1 applications have requested activating %2:", root.activeHolds.length, i18n(root.activeProfileData.label)) : ""
             }
 
             Repeater {
@@ -237,8 +231,7 @@ PlasmaComponents3.ItemDelegate {
 
                     x: PlasmaCore.Units.smallSpacing
                     iconSource: modelData.Icon
-                    text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
-                                "%1: %2", modelData.Name, modelData.Reason)
+                    text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode", "%1: %2", modelData.Name, modelData.Reason)
                 }
             }
 
@@ -246,10 +239,7 @@ PlasmaComponents3.ItemDelegate {
                 Layout.fillWidth: true
                 Layout.preferredHeight: PlasmaCore.Units.smallSpacing
 
-                visible: repeater.visibleChildren > 0
-                    || inhibitionReasonHint.visible
-                    || inhibitionPerformanceHint.visible
-                    || inhibitionHoldersHint.visible
+                visible: repeater.visibleChildren > 0 || inhibitionReasonHint.visible || inhibitionPerformanceHint.visible || inhibitionHoldersHint.visible
             }
         }
     }

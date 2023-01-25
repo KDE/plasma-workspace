@@ -1,8 +1,6 @@
 import "components"
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -26,16 +24,12 @@ SessionManagementScreen {
 
     onShowUsernamePromptChanged: {
         if (!showUsernamePrompt) {
-            lastUserName = ""
+            lastUserName = "";
         }
     }
 
     onUserSelected: {
-        const nextControl = (userNameInput.visible
-            ? userNameInput
-            : (passwordBox.visible
-                ? passwordBox
-                : loginButton));
+        const nextControl = (userNameInput.visible ? userNameInput : (passwordBox.visible ? passwordBox : loginButton));
         // Don't startLogin() here, because the signal is connected to the
         // Escape key as well, for which it wouldn't make sense to trigger
         // login. Using TabFocusReason, so that the loginButton gets the
@@ -48,17 +42,15 @@ SessionManagementScreen {
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
      */
     function startLogin() {
-        const username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
-        const password = passwordBox.text
-
-        footer.enabled = false
-        mainStack.enabled = false
-        userListComponent.userList.opacity = 0.5
+        const username = showUsernamePrompt ? userNameInput.text : userList.selectedUser;
+        const password = passwordBox.text;
+        footer.enabled = false;
+        mainStack.enabled = false;
+        userListComponent.userList.opacity = 0.5;
 
         // This is partly because it looks nicer, but more importantly it
         // works round a Qt bug that can trigger if the app is closed with a
         // TextField focused.
-        //
         // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         loginRequest(username, password);
@@ -76,7 +68,7 @@ SessionManagementScreen {
 
         onAccepted: {
             if (root.loginScreenUiVisible) {
-                passwordBox.forceActiveFocus()
+                passwordBox.forceActiveFocus();
             }
         }
     }
@@ -112,19 +104,19 @@ SessionManagementScreen {
             Keys.onPressed: {
                 if (event.key === Qt.Key_Left && !text) {
                     userList.decrementCurrentIndex();
-                    event.accepted = true
+                    event.accepted = true;
                 }
                 if (event.key === Qt.Key_Right && !text) {
                     userList.incrementCurrentIndex();
-                    event.accepted = true
+                    event.accepted = true;
                 }
             }
 
             Connections {
                 target: sddm
                 function onLoginFailed() {
-                    passwordBox.selectAll()
-                    passwordBox.forceActiveFocus()
+                    passwordBox.selectAll();
+                    passwordBox.forceActiveFocus();
                 }
             }
         }

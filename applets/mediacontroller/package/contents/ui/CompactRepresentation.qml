@@ -3,11 +3,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQml 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.plasmoid 2.0
@@ -52,7 +50,7 @@ MouseArea {
 
     property int layoutForm: CompactRepresentation.LayoutType.IconOnly
 
-    Binding on layoutForm {
+    Binding on layoutForm  {
         when: playerRow.active
         delayed: true
         restoreMode: Binding.RestoreBindingOrValue
@@ -80,9 +78,9 @@ MouseArea {
     property int wheelDelta: 0
 
     onWheel: {
-        const service = mpris2Source.serviceForSource(mpris2Source.current)
-        const operation = service.operationDescription("ChangeVolume")
-        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x
+        const service = mpris2Source.serviceForSource(mpris2Source.current);
+        const operation = service.operationDescription("ChangeVolume");
+        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
         while (wheelDelta >= 120) {
             wheelDelta -= 120;
             operation.delta = volumePercentStep / 100;
@@ -100,16 +98,16 @@ MouseArea {
     onClicked: {
         switch (mouse.button) {
         case Qt.MiddleButton:
-            root.togglePlaying()
-            break
+            root.togglePlaying();
+            break;
         case Qt.BackButton:
-            root.action_previous()
-            break
+            root.action_previous();
+            break;
         case Qt.ForwardButton:
-            root.action_next()
-            break
+            root.action_next();
+            break;
         default:
-            Plasmoid.expanded = !Plasmoid.expanded
+            Plasmoid.expanded = !Plasmoid.expanded;
         }
     }
 
@@ -218,10 +216,7 @@ MouseArea {
 
             ColumnLayout {
                 Layout.alignment: Qt.AlignVCenter
-                visible: (compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel
-                    && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly)
-                    || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel
-                    && compactRepresentation.parent.width >= PlasmaCore.Units.gridUnit * 5)
+                visible: (compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly) || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel && compactRepresentation.parent.width >= PlasmaCore.Units.gridUnit * 5)
 
                 spacing: 0
 
@@ -246,7 +241,7 @@ MouseArea {
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
-                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
+                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */  + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
 
                     elide: Text.ElideRight
                     font.pointSize: PlasmaCore.Theme.smallestFont.pointSize

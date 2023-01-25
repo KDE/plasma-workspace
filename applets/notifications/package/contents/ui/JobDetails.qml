@@ -3,15 +3,11 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.kcoreaddons 1.0 as KCoreAddons
-
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 GridLayout {
@@ -31,8 +27,7 @@ GridLayout {
             Layout.column: 0
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
-                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
+            text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData] ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
             font: PlasmaCore.Theme.smallestFont
             textFormat: Text.PlainText
             visible: text !== ""
@@ -64,9 +59,9 @@ GridLayout {
 
             Component.onCompleted: bindText()
             function bindText() {
-                text = Qt.binding(function() {
-                    return jobDetails["descriptionValue" + modelData] || "";
-                });
+                text = Qt.binding(function () {
+                        return jobDetails["descriptionValue" + modelData] || "";
+                    });
             }
 
             MouseArea {
@@ -75,7 +70,7 @@ GridLayout {
                 onPressed: {
                     // break binding so it doesn't update while the menu is opened
                     descriptionValueLabel.text = descriptionValueLabel.text;
-                    descriptionValueMenu.open(mouse.x, mouse.y)
+                    descriptionValueMenu.open(mouse.x, mouse.y);
                 }
             }
 
@@ -98,28 +93,22 @@ GridLayout {
             text: {
                 var processed = jobDetails["processed" + modelData];
                 var total = jobDetails["total" + modelData];
-
                 if (processed > 0 || total > 1) {
                     if (processed > 0 && total > 0 && processed <= total) {
-                        switch(modelData) {
+                        switch (modelData) {
                         case "Bytes":
-                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "How many bytes have been copied", "%2 of %1",
-                                KCoreAddons.Format.formatByteSize(total),
-                                KCoreAddons.Format.formatByteSize(processed))
+                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "How many bytes have been copied", "%2 of %1", KCoreAddons.Format.formatByteSize(total), KCoreAddons.Format.formatByteSize(processed));
                         case "Files":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
-                                          total, processed);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files", total, processed);
                         case "Directories":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
-                                         total, processed);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders", total, processed);
                         case "Items":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%2 of %1 item", "%2 of %1 items",
-                                         total, processed);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%2 of %1 item", "%2 of %1 items", total, processed);
                         }
                     } else {
-                        switch(modelData) {
+                        switch (modelData) {
                         case "Bytes":
-                            return KCoreAddons.Format.formatByteSize(processed || total)
+                            return KCoreAddons.Format.formatByteSize(processed || total);
                         case "Files":
                             return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processed || total));
                         case "Directories":
@@ -129,7 +118,6 @@ GridLayout {
                         }
                     }
                 }
-
                 return "";
             }
             font: PlasmaCore.Theme.smallestFont
@@ -142,8 +130,7 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 4
         Layout.fillWidth: true
-        text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
-                                           KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
+        text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
         font: PlasmaCore.Theme.smallestFont
         textFormat: Text.PlainText
         visible: text !== ""

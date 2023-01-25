@@ -6,11 +6,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1 as QQC1
-
 import org.kde.plasma.workspace.calendar 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -43,7 +41,7 @@ Item {
     // Take the calendar width, subtract the inner and outer spacings and divide by number of columns (==days in week)
     readonly property int cellWidth: Math.floor((swipeView.width - (daysCalendar.columns + 1) * root.borderWidth) / (daysCalendar.columns + (showWeekNumbers ? 1 : 0)))
     // Take the calendar height, subtract the inner spacings and divide by number of rows (root.weeks + one row for day names)
-    readonly property int cellHeight:  Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * root.borderWidth) / calendarGrid.rows)
+    readonly property int cellHeight: Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * root.borderWidth) / calendarGrid.rows)
 
     PlasmaCore.Svg {
         id: calendarSvg
@@ -123,7 +121,7 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
-                Accessible.onPressAction: mouseArea.clicked(null);
+                Accessible.onPressAction: mouseArea.clicked(null)
                 Keys.onPressed: {
                     if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
                         event.accepted = false;
@@ -163,7 +161,7 @@ Item {
                     target: daysCalendar
                     function onActivateHighlightedItem(delegate) {
                         if (delegate.containsMouse) {
-                            delegate.clicked(null)
+                            delegate.clicked(null);
                         }
                     }
                 }
@@ -174,24 +172,21 @@ Item {
                     property int wheelDelta: 0
 
                     onClicked: {
-                        daysCalendar.activated(index, model, delegate)
+                        daysCalendar.activated(index, model, delegate);
                     }
                     onWheel: {
-                        var delta = wheel.angleDelta.y || wheel.angleDelta.x
-                        wheelDelta += delta
+                        var delta = wheel.angleDelta.y || wheel.angleDelta.x;
+                        wheelDelta += delta;
 
                         // magic number 120 for common "one click"
                         // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-
-
-                        while(wheelDelta >= 120) {
+                        while (wheelDelta >= 120) {
                             wheelDelta -= 120;
-                            daysCalendar.scrollDown()
+                            daysCalendar.scrollDown();
                         }
-
-                        while(wheelDelta <= -120) {
-                            wheelDelta += 120
-                            daysCalendar.scrollUp()
+                        while (wheelDelta <= -120) {
+                            wheelDelta += 120;
+                            daysCalendar.scrollUp();
                         }
                     }
                 }
@@ -199,4 +194,3 @@ Item {
         }
     }
 }
-

@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.15 as QQC2 // For StackView
@@ -34,8 +33,8 @@ Item {
     }
 
     function action_clearHistory() {
-        clipboardSource.service("", "clearHistory")
-        clearSearchField()
+        clipboardSource.service("", "clearHistory");
+        clearSearchField();
     }
 
     onIsClipboardEmptyChanged: {
@@ -46,24 +45,22 @@ Item {
                 Plasmoid.expanded = false;
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         } else {
-            Plasmoid.status = PlasmaCore.Types.ActiveStatus
+            Plasmoid.status = PlasmaCore.Types.ActiveStatus;
         }
     }
-
 
     Component.onCompleted: {
         Plasmoid.removeAction("configure");
         Plasmoid.setAction("configure", i18n("Configure Clipboard…"), "configure", "alt+d, s");
-
         Plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
         Plasmoid.action("clearHistory").visible = Qt.binding(() => {
-            return !main.isClipboardEmpty && !main.editing;
-        });
+                return !main.isClipboardEmpty && !main.editing;
+            });
     }
 
     PlasmaCore.DataSource {
         id: clipboardSource
-        property bool editing: false;
+        property bool editing: false
         engine: "org.kde.plasma.clipboard"
         connectedSources: "clipboard"
         function service(uuid, op) {
@@ -77,9 +74,9 @@ Item {
             const operation = service.operationDescription("edit");
             operation.text = text;
             const job = service.startOperationCall(operation);
-            job.finished.connect(function() {
-                clipboardSource.editing = false;
-            });
+            job.finished.connect(function () {
+                    clipboardSource.editing = false;
+                });
         }
     }
 
@@ -99,7 +96,7 @@ Item {
         readonly property var appletInterface: Plasmoid.self
 
         PlasmaCore.FrameSvgItem {
-            id : listItemSvg
+            id: listItemSvg
             imagePath: "widgets/listitem"
             prefix: "normal"
             visible: false
@@ -110,7 +107,8 @@ Item {
         QQC2.StackView {
             id: stack
             anchors.fill: parent
-            initialItem: ClipboardPage {}
+            initialItem: ClipboardPage {
+            }
         }
     }
 }

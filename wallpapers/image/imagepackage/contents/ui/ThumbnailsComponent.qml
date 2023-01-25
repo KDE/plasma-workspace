@@ -5,10 +5,8 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Window 2.15 // for Screen
-
 import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.plasmoid 2.0
@@ -48,7 +46,7 @@ Item {
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
             if (configDialog.currentWallpaper === "org.kde.image") {
-                view.currentIndex = Qt.binding(() =>  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
+                view.currentIndex = Qt.binding(() => Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
             }
         }
 
@@ -66,8 +64,7 @@ Item {
             } else {
                 screenWidth = Screen.width;
             }
-
-            return screenWidth / 10 + Kirigami.Units.smallSpacing * 2
+            return screenWidth / 10 + Kirigami.Units.smallSpacing * 2;
         }
         view.implicitCellHeight: {
             let screenHeight = 0;
@@ -76,8 +73,7 @@ Item {
             } else {
                 screenHeight = Screen.height;
             }
-
-            return screenHeight / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+            return screenHeight / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3;
         }
 
         view.reuseItems: true

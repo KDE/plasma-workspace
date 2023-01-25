@@ -6,11 +6,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrols 2.0 as KQC
 import org.kde.kirigami 2.10 as Kirigami
@@ -31,16 +29,16 @@ ColumnLayout {
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
-            return i18n("Application Status")
+            return i18n("Application Status");
         case "Communications":
-            return i18n("Communications")
+            return i18n("Communications");
         case "SystemServices":
-            return i18n("System Services")
+            return i18n("System Services");
         case "Hardware":
-            return i18n("Hardware Control")
+            return i18n("Hardware Control");
         case "UnknownCategory":
         default:
-            return i18n("Miscellaneous")
+            return i18n("Miscellaneous");
         }
     }
 
@@ -102,7 +100,8 @@ ColumnLayout {
                         Layout.preferredWidth: itemsList.keySequenceColumnWidth
                         Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
                     }
-                    QQC2.Button { // Configure button column
+                    QQC2.Button {
+                        // Configure button column
                         icon.name: "configure"
                         enabled: false
                         opacity: 0
@@ -156,8 +155,7 @@ ColumnLayout {
                         QQC2.ComboBox {
                             id: visibilityComboBox
 
-                            property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                                                                implicitContentWidth + leftPadding + rightPadding)
+                            property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
                             implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
                             Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
 
@@ -167,98 +165,105 @@ ColumnLayout {
                             model: comboBoxModel()
 
                             currentIndex: {
-                                let value
-
+                                let value;
                                 if (cfg_shownItems.indexOf(itemId) !== -1) {
-                                    value = "shown"
+                                    value = "shown";
                                 } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
-                                    value = "hidden"
+                                    value = "hidden";
                                 } else if (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) {
-                                    value = "disabled"
+                                    value = "disabled";
                                 } else {
-                                    value = "auto"
+                                    value = "auto";
                                 }
-
                                 for (let i = 0; i < model.length; i++) {
                                     if (model[i].value === value) {
-                                        return i
+                                        return i;
                                     }
                                 }
-
-                                return 0
+                                return 0;
                             }
 
                             onActivated: {
-                                const shownIndex = cfg_shownItems.indexOf(itemId)
-                                const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
-                                const extraIndex = cfg_extraItems.indexOf(itemId)
-
+                                const shownIndex = cfg_shownItems.indexOf(itemId);
+                                const hiddenIndex = cfg_hiddenItems.indexOf(itemId);
+                                const extraIndex = cfg_extraItems.indexOf(itemId);
                                 switch (currentValue) {
                                 case "auto":
                                     if (shownIndex > -1) {
-                                        cfg_shownItems.splice(shownIndex, 1)
+                                        cfg_shownItems.splice(shownIndex, 1);
                                     }
                                     if (hiddenIndex > -1) {
-                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                        cfg_hiddenItems.splice(hiddenIndex, 1);
                                     }
                                     if (extraIndex === -1) {
-                                        cfg_extraItems.push(itemId)
+                                        cfg_extraItems.push(itemId);
                                     }
-                                    break
+                                    break;
                                 case "shown":
                                     if (shownIndex === -1) {
-                                        cfg_shownItems.push(itemId)
+                                        cfg_shownItems.push(itemId);
                                     }
                                     if (hiddenIndex > -1) {
-                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                        cfg_hiddenItems.splice(hiddenIndex, 1);
                                     }
                                     if (extraIndex === -1) {
-                                        cfg_extraItems.push(itemId)
+                                        cfg_extraItems.push(itemId);
                                     }
-                                    break
+                                    break;
                                 case "hidden":
                                     if (shownIndex > -1) {
-                                        cfg_shownItems.splice(shownIndex, 1)
+                                        cfg_shownItems.splice(shownIndex, 1);
                                     }
                                     if (hiddenIndex === -1) {
-                                        cfg_hiddenItems.push(itemId)
+                                        cfg_hiddenItems.push(itemId);
                                     }
                                     if (extraIndex === -1) {
-                                        cfg_extraItems.push(itemId)
+                                        cfg_extraItems.push(itemId);
                                     }
-                                    break
+                                    break;
                                 case "disabled":
                                     if (shownIndex > -1) {
-                                        cfg_shownItems.splice(shownIndex, 1)
+                                        cfg_shownItems.splice(shownIndex, 1);
                                     }
                                     if (hiddenIndex > -1) {
-                                        cfg_hiddenItems.splice(hiddenIndex, 1)
+                                        cfg_hiddenItems.splice(hiddenIndex, 1);
                                     }
                                     if (extraIndex > -1) {
-                                        cfg_extraItems.splice(extraIndex, 1)
+                                        cfg_extraItems.splice(extraIndex, 1);
                                     }
-                                    break
+                                    break;
                                 }
-                                iconsPage.configurationChanged()
+                                iconsPage.configurationChanged();
                             }
 
                             function comboBoxModel() {
-                                const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
-                                const shownElement = {"value": "shown", "text": i18n("Always shown")}
-                                const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
-                                const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
-
+                                const autoElement = {
+                                    "value": "auto",
+                                    "text": i18n("Shown when relevant")
+                                };
+                                const shownElement = {
+                                    "value": "shown",
+                                    "text": i18n("Always shown")
+                                };
+                                const hiddenElement = {
+                                    "value": "hidden",
+                                    "text": i18n("Always hidden")
+                                };
+                                const disabledElement = {
+                                    "value": "disabled",
+                                    "text": i18n("Disabled")
+                                };
                                 if (showAllCheckBox.checked) {
                                     if (isPlasmoid) {
-                                        return [autoElement, disabledElement]
+                                        return [autoElement, disabledElement];
                                     } else {
-                                        return [shownElement]
+                                        return [shownElement];
                                     }
                                 } else {
                                     if (isPlasmoid) {
-                                        return [autoElement, shownElement, hiddenElement, disabledElement]
+                                        return [autoElement, shownElement, hiddenElement, disabledElement];
                                     } else {
-                                        return [autoElement, shownElement, hiddenElement]
+                                        return [autoElement, shownElement, hiddenElement];
                                     }
                                 }
                             }
@@ -274,9 +279,8 @@ ColumnLayout {
                             keySequence: model.applet ? model.applet.globalShortcut : ""
                             onCaptureFinished: {
                                 if (model.applet && keySequence !== model.applet.globalShortcut) {
-                                    model.applet.globalShortcut = keySequence
-
-                                    itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                                    model.applet.globalShortcut = keySequence;
+                                    itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
                                 }
                             }
                         }

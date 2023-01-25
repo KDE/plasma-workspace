@@ -3,15 +3,11 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
-
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.plasma.core 2.0 as PlasmaCore
-
 import org.kde.notificationmanager 1.0 as NotificationManager
-
 import ".."
 
 PlasmaCore.Dialog {
@@ -91,7 +87,7 @@ PlasmaCore.Dialog {
     }
 
     location: PlasmaCore.Types.Floating
-    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves 
+    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves
     flags: notificationItem.replying || focusListener.wantsFocus ? 0 : Qt.WindowDoesNotAcceptFocus
 
     visible: false
@@ -202,8 +198,7 @@ PlasmaCore.Dialog {
                     if (notificationItem.dragging || notificationItem.menuOpen) {
                         return false;
                     }
-                    if (notificationItem.replying
-                            && (notificationPopup.active || notificationItem.hasPendingReply)) {
+                    if (notificationItem.replying && (notificationPopup.active || notificationItem.hasPendingReply)) {
                         return false;
                     }
                     return true;

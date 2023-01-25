@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.12
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
@@ -29,34 +28,33 @@ QtObject {
 
     function setActiveApplet(applet, visualIndex) {
         if (visualIndex === undefined) {
-            oldVisualIndex = -1
-            newVisualIndex = -1
+            oldVisualIndex = -1;
+            newVisualIndex = -1;
         } else {
-            oldVisualIndex = (activeApplet && activeApplet.status === PlasmaCore.Types.PassiveStatus) ? 9999 : newVisualIndex
-            newVisualIndex = visualIndex
+            oldVisualIndex = (activeApplet && activeApplet.status === PlasmaCore.Types.PassiveStatus) ? 9999 : newVisualIndex;
+            newVisualIndex = visualIndex;
         }
-
-        const oldApplet = activeApplet
-        activeApplet = applet
+        const oldApplet = activeApplet;
+        activeApplet = applet;
         if (oldApplet && oldApplet !== applet) {
-            oldApplet.expanded = false
+            oldApplet.expanded = false;
         }
-        expanded = true
+        expanded = true;
     }
 
     onExpandedChanged: {
         if (expanded) {
-            Plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus
+            Plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
         } else {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
             if (activeApplet) {
                 // if not expanded we don't have an active applet anymore
-                activeApplet.expanded = false
-                activeApplet = null
+                activeApplet.expanded = false;
+                activeApplet = null;
             }
         }
-        acceptExpandedChange = false
-        Plasmoid.expanded = expanded
+        acceptExpandedChange = false;
+        Plasmoid.expanded = expanded;
     }
 
     //listen on SystemTray AppletInterface signals
@@ -64,13 +62,13 @@ QtObject {
         target: Plasmoid.self
         //emitted when activation is requested, for example by using a global keyboard shortcut
         function onActivated() {
-            acceptExpandedChange = true
+            acceptExpandedChange = true;
         }
         function onExpandedChanged() {
             if (acceptExpandedChange) {
-                expanded = Plasmoid.expanded
+                expanded = Plasmoid.expanded;
             } else {
-                Plasmoid.expanded = expanded
+                Plasmoid.expanded = expanded;
             }
         }
     }
@@ -80,9 +78,8 @@ QtObject {
 
         function onExpandedChanged() {
             if (!activeApplet.expanded) {
-                expanded = false
+                expanded = false;
             }
         }
     }
-
 }

@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
@@ -16,20 +15,20 @@ Flow {
     id: lockout
     Layout.minimumWidth: {
         if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return 0
+            return 0;
         } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons - 1;
         } else {
-            return width > height ? minButtonSize * visibleButtons : minButtonSize
+            return width > height ? minButtonSize * visibleButtons : minButtonSize;
         }
     }
     Layout.minimumHeight: {
         if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            return width >= minButtonSize * visibleButtons ? width / visibleButtons - 1 : width * visibleButtons
+            return width >= minButtonSize * visibleButtons ? width / visibleButtons - 1 : width * visibleButtons;
         } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
-            return 0
+            return 0;
         } else {
-            return width > height ? minButtonSize : minButtonSize * visibleButtons
+            return width > height ? minButtonSize : minButtonSize * visibleButtons;
         }
     }
 
@@ -40,22 +39,20 @@ Flow {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     readonly property int visibleButtons: {
-        var count = 0
+        var count = 0;
         for (var i = 0, j = items.count; i < j; ++i) {
             if (items.itemAt(i).visible) {
-                ++count
+                ++count;
             }
         }
-        return count
+        return count;
     }
 
     flow: {
-        if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
-            (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
-            (width > height)) {
-            return Flow.LeftToRight // horizontal
+        if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) || (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) || (width > height)) {
+            return Flow.LeftToRight; // horizontal
         } else {
-            return Flow.TopToBottom // vertical
+            return Flow.TopToBottom; // vertical
         }
     }
 
@@ -65,8 +62,8 @@ Flow {
 
     Repeater {
         id: items
-        property int itemWidth: parent.flow==Flow.LeftToRight ? Math.floor(parent.width/visibleButtons) : parent.width
-        property int itemHeight: parent.flow==Flow.TopToBottom ? Math.floor(parent.height/visibleButtons) : parent.height
+        property int itemWidth: parent.flow == Flow.LeftToRight ? Math.floor(parent.width / visibleButtons) : parent.width
+        property int itemHeight: parent.flow == Flow.TopToBottom ? Math.floor(parent.height / visibleButtons) : parent.height
         property int iconSize: Math.min(itemWidth, itemHeight)
 
         model: Data.data
@@ -98,7 +95,7 @@ Flow {
                         case Qt.Key_Enter:
                         case Qt.Key_Return:
                         case Qt.Key_Select:
-                            clickHandler(modelData.operation, this)
+                            clickHandler(modelData.operation, this);
                             break;
                         }
                     }
@@ -112,7 +109,7 @@ Flow {
                         subText: modelData.tooltip_subText
                     }
                 }
-            } 
+            }
         }
     }
 
@@ -121,7 +118,6 @@ Flow {
     }
 
     function performOperation(operation) {
-        session[operation]()
+        session[operation]();
     }
 }
-

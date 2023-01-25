@@ -3,16 +3,13 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.1
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as Controls
 import QtQuick.Templates 2.2 as T2
 import QtGraphicalEffects 1.0
-
 import org.kde.kirigami 2.2 as Kirigami
-
 import org.kde.kcm 1.1 as KCM
 import org.kde.private.kcm_cursortheme 1.0
 
@@ -69,6 +66,6 @@ KCM.GridDelegate {
         kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(index);
     }
     onDoubleClicked: {
-            kcm.save();
+        kcm.save();
     }
 }

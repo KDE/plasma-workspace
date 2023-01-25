@@ -3,12 +3,10 @@
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
-
 import QtQuick 2.6
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
-
 import org.kde.kirigami 2.8 as Kirigami
 
 Kirigami.OverlaySheet {
@@ -30,7 +28,7 @@ Kirigami.OverlaySheet {
         Kirigami.LinkButton {
             text: i18n("What is KWallet?")
             onClicked: {
-                whatIsKWalletExplanation.visible = !whatIsKWalletExplanation.visible
+                whatIsKWalletExplanation.visible = !whatIsKWalletExplanation.visible;
             }
         }
 
@@ -57,8 +55,8 @@ Kirigami.OverlaySheet {
                 text: i18n("Change Wallet Password")
                 icon.name: "lock"
                 onClicked: {
-                    user.changeWalletPassword()
-                    walletPasswordRoot.close()
+                    user.changeWalletPassword();
+                    walletPasswordRoot.close();
                 }
             }
             QQC2.Button {
@@ -66,7 +64,7 @@ Kirigami.OverlaySheet {
                 text: i18n("Leave Unchanged")
                 icon.name: "dialog-cancel"
                 onClicked: {
-                    walletPasswordRoot.close()
+                    walletPasswordRoot.close();
                 }
             }
         }

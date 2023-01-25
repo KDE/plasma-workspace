@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -25,13 +24,13 @@ AbstractItem {
         source: {
             if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
                 if (model.AttentionIcon) {
-                    return model.AttentionIcon
+                    return model.AttentionIcon;
                 }
                 if (model.AttentionIconName) {
-                    return model.AttentionIconName
+                    return model.AttentionIconName;
                 }
             }
-            return model.Icon || model.IconName
+            return model.Icon || model.IconName;
         }
         active: taskIcon.containsMouse
     }
@@ -43,24 +42,24 @@ AbstractItem {
         operation.y = pos.y; //mouseY
         const job = service.startOperationCall(operation);
         job.finished.connect(() => {
-            if (!job.result) {
-                // On error try to invoke the context menu.
-                // Workaround primarily for apps using libappindicator.
-                openContextMenu(pos);
-            }
-        })
+                if (!job.result) {
+                    // On error try to invoke the context menu.
+                    // Workaround primarily for apps using libappindicator.
+                    openContextMenu(pos);
+                }
+            });
         taskIcon.startActivatedAnimation();
     }
 
     onContextMenu: {
-        openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
+        openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y));
     }
 
     onClicked: {
         var pos = Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
         switch (mouse.button) {
         case Qt.LeftButton:
-            taskIcon.activated(pos)
+            taskIcon.activated(pos);
             break;
         case Qt.RightButton:
             openContextMenu(pos);
@@ -71,21 +70,20 @@ AbstractItem {
             operation.x = pos.x;
             operation.y = pos.y;
             service.startOperationCall(operation);
-            taskIcon.startActivatedAnimation()
+            taskIcon.startActivatedAnimation();
             break;
         }
     }
 
-    function openContextMenu(pos = Qt.point(width/2, height/2)) {
+    function openContextMenu(pos = Qt.point(width / 2, height / 2)) {
         const service = model.Service;
         const operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;
         operation.y = pos.y;
-
         const job = service.startOperationCall(operation);
         job.finished.connect(() => {
-            Plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
-        });
+                Plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
+            });
     }
 
     onWheel: {

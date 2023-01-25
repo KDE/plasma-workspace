@@ -7,11 +7,9 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -35,7 +33,7 @@ PlasmaExtras.Representation {
         PlasmaComponents3.ToolButton {
             id: unmountAll
             anchors.right: parent.right
-            visible: devicenotifier.mountedRemovables > 1;
+            visible: devicenotifier.mountedRemovables > 1
 
             icon.name: "media-eject"
             text: i18n("Remove All")
@@ -59,20 +57,18 @@ PlasmaExtras.Representation {
         property int polls: 0
         //poll only on plasmoid expanded
         interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && Plasmoid.expanded ? 3000 : 0
-        onIntervalChanged: polls = 0;
+        onIntervalChanged: polls = 0
         onDataChanged: {
             //only do when polling
             if (interval == 0 || polls++ < 1) {
                 return;
             }
-
             if (userActivitySource.data["UserActivity"]["IdleTime"] < interval) {
                 Plasmoid.expanded = false;
                 spontaneousOpen = false;
             }
         }
     }
-
 
     // this item is reparented to a delegate that is showing a message to draw focus to it
     PlasmaExtras.Highlight {
@@ -86,26 +82,30 @@ PlasmaExtras.Representation {
             to: 0
             duration: PlasmaCore.Units.veryLongDuration * 8
             easing.type: Easing.InOutQuad
-            Component.onCompleted: devicenotifier.isMessageHighlightAnimatorRunning = Qt.binding(() => running);
+            Component.onCompleted: devicenotifier.isMessageHighlightAnimatorRunning = Qt.binding(() => running)
         }
 
         Connections {
             target: statusSource
             function onLastChanged() {
                 if (!statusSource.last) {
-                    messageHighlightAnimator.stop()
-                    messageHighlight.visible = false
+                    messageHighlightAnimator.stop();
+                    messageHighlight.visible = false;
                 }
             }
         }
 
         function highlight(item) {
-            parent = item
-            width = Qt.binding(function() { return item.width })
-            height = Qt.binding(function() { return item.height })
-            opacity = 1 // Animator is threaded so the old opacity might be visible for a frame or two
-            visible = true
-            messageHighlightAnimator.start()
+            parent = item;
+            width = Qt.binding(function () {
+                    return item.width;
+                });
+            height = Qt.binding(function () {
+                    return item.height;
+                });
+            opacity = 1; // Animator is threaded so the old opacity might be visible for a frame or two
+            visible = true;
+            messageHighlightAnimator.start();
         }
     }
 
@@ -138,7 +138,8 @@ PlasmaExtras.Representation {
             delegate: DeviceItem {
                 udi: DataEngineSource
             }
-            highlight: PlasmaExtras.Highlight { }
+            highlight: PlasmaExtras.Highlight {
+            }
             highlightMoveDuration: 0
             highlightResizeDuration: 0
 

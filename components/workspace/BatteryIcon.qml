@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -18,8 +17,9 @@ Item {
         id: svg
         imagePath: "icons/battery"
         colorGroup: PlasmaCore.ColorScope.colorGroup
-        onRepaintNeeded: { // needed to detect the hint item go away when theme changes
-            batterySvg.visible = Qt.binding(() => !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery))
+        onRepaintNeeded: {
+            // needed to detect the hint item go away when theme changes
+            batterySvg.visible = Qt.binding(() => !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery));
         }
     }
 
@@ -103,23 +103,23 @@ Item {
     }
 
     function elementForType(t) {
-        switch(t) {
-            case "Mouse":
-                return "input-mouse-battery";
-            case "Keyboard":
-                return "input-keyboard-battery";
-            case "Pda":
-                return "phone-battery";
-            case "Phone":
-                return "phone-battery";
-            case "Ups":
-                return "battery-ups";
-            case "GamingInput":
-                return "input-gaming-battery";
-            case "Bluetooth":
-                return "preferences-system-bluetooth-battery";
-            default:
-                return "";
+        switch (t) {
+        case "Mouse":
+            return "input-mouse-battery";
+        case "Keyboard":
+            return "input-keyboard-battery";
+        case "Pda":
+            return "phone-battery";
+        case "Phone":
+            return "phone-battery";
+        case "Ups":
+            return "battery-ups";
+        case "GamingInput":
+            return "input-gaming-battery";
+        case "Bluetooth":
+            return "preferences-system-bluetooth-battery";
+        default:
+            return "";
         }
     }
 }

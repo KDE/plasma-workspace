@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQml 2.15
 
@@ -14,7 +13,9 @@ QtObject {
 
     readonly property Animation __animation: RejectPasswordPathAnimation {
         id: animation
-        target: Item { id: fakeTarget }
+        target: Item {
+            id: fakeTarget
+        }
     }
 
     property Binding __bindEnabled: Binding {

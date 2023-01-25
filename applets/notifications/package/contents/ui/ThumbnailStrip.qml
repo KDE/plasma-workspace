@@ -3,19 +3,14 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
-
 import "global"
 
 DraggableFileArea {
@@ -47,15 +42,12 @@ DraggableFileArea {
     dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
     dragPixmapSize: previewIcon.height
 
-    implicitHeight: Math.max(thumbnailActionRow.implicitHeight + 2 * thumbnailActionRow.anchors.topMargin,
-                             Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
-                    + topPadding + bottomPadding
+    implicitHeight: Math.max(thumbnailActionRow.implicitHeight + 2 * thumbnailActionRow.anchors.topMargin, Math.round(Math.min(width / 3, width / thumbnailer.ratio))) + topPadding + bottomPadding
 
     onActivated: thumbnailArea.openUrl(thumbnailer.url)
     onContextMenuRequested: {
         // avoid menu button glowing if we didn't actually press it
         menuButton.checked = false;
-
         fileMenu.visualParent = this;
         fileMenu.open(x, y);
     }
@@ -154,10 +146,9 @@ DraggableFileArea {
                 onPressedChanged: {
                     if (pressed) {
                         // fake "pressed" while menu is open
-                        checked = Qt.binding(function() {
-                            return fileMenu.visible;
-                        });
-
+                        checked = Qt.binding(function () {
+                                return fileMenu.visible;
+                            });
                         fileMenu.visualParent = this;
                         // -1 tells it to "align bottom left of visualParent (this)"
                         fileMenu.open(-1, -1);

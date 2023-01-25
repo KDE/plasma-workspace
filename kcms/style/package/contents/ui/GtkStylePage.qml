@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.0 as QtDialogs
@@ -50,9 +49,9 @@ Kirigami.Page {
                         id: gtkThemeCombo
                         model: kcm.gtkPage.gtkThemesModel
                         currentIndex: model.findThemeIndex(kcm.gtkPage.gtkThemesModel.selectedTheme)
-                        onCurrentTextChanged: function() {
-                            model.selectedTheme = currentText
-                            gtkRemoveButton.enabled = model.selectedThemeRemovable()
+                        onCurrentTextChanged: function () {
+                            model.selectedTheme = currentText;
+                            gtkRemoveButton.enabled = model.selectedThemeRemovable();
                         }
                         onActivated: model.setSelectedThemeDirty()
                         textRole: "theme-name"
@@ -70,10 +69,8 @@ Kirigami.Page {
                         onClicked: kcm.gtkPage.showGtkPreview()
                         visible: kcm.gtkPage.gtkPreviewAvailable()
                     }
-
                 }
             }
-
         }
 
         Item {
@@ -108,14 +105,14 @@ Kirigami.Page {
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Select GTK Theme Archive")
             folder: shortcuts.home
-            nameFilters: [ i18n("GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)") ]
+            nameFilters: [i18n("GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)")]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.gtkPage.installGtkThemeFromFile(fileUrls[0])
-                fileDialogLoader.active = false
+                kcm.gtkPage.installGtkThemeFromFile(fileUrls[0]);
+                fileDialogLoader.active = false;
             }
             onRejected: {
-                fileDialogLoader.active = false
+                fileDialogLoader.active = false;
             }
         }
     }

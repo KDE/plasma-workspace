@@ -4,7 +4,6 @@
  *
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
@@ -35,7 +34,7 @@ Item {
     readonly property int spacing: Kirigami.Units.largeSpacing // standard KDE dialog margins
 
     function present() {
-        window.show()
+        window.show();
     }
 
     Kirigami.Separator {
@@ -124,4 +123,3 @@ Item {
         }
     }
 }
-

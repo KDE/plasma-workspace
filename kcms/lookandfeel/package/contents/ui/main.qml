@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
@@ -21,29 +20,28 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
 
     readonly property bool hasAppearance: currentThemeRole(Private.KCMLookandFeel.HasGlobalThemeRole)
-    readonly property bool hasLayout: currentThemeRole(Private.KCMLookandFeel.HasLayoutSettingsRole)
-                                        || currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
+    readonly property bool hasLayout: currentThemeRole(Private.KCMLookandFeel.HasLayoutSettingsRole) || currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
     readonly property bool showLayoutInfo: currentThemeRole(Private.KCMLookandFeel.HasDesktopLayoutRole)
 
     function currentThemeRole(role) {
-        return view.model.data(view.model.index(view.currentIndex, 0), role)
+        return view.model.data(view.model.index(view.currentIndex, 0), role);
     }
     function showConfirmation() { //Show the Kirigami Sheet
         if (stackSwitcher.depth !== 1) {
             stackSwitcher.pop();
         }
-        resetCheckboxes()
-        globalThemeConfirmSheet.open()
-        proceedButton.forceActiveFocus()
+        resetCheckboxes();
+        globalThemeConfirmSheet.open();
+        proceedButton.forceActiveFocus();
     }
     function resetCheckboxes() { //This call is used whenever you switch pages (More/Less Options) or trigger the Kirigami Sheet
-        kcm.appearanceToApply = undefined //triggers RESET
-        kcm.layoutToApply = undefined
+        kcm.appearanceToApply = undefined; //triggers RESET
+        kcm.layoutToApply = undefined;
     }
     Connections {
         target: kcm
         function onShowConfirmation() {
-            root.showConfirmation()
+            root.showConfirmation();
         }
     }
 
@@ -66,8 +64,7 @@ KCM.GridViewKCM {
         thumbnail: Image {
             anchors.fill: parent
             source: model.screenshot || ""
-            sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
-                                delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
+            sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio, delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
         }
         actions: [
             Kirigami.Action {
@@ -75,21 +72,20 @@ KCM.GridViewKCM {
                 iconName: "view-preview"
                 tooltip: i18n("Preview Theme")
                 onTriggered: {
-                    previewWindow.url = model.fullScreenPreview
-                    previewWindow.showFullScreen()
+                    previewWindow.url = model.fullScreenPreview;
+                    previewWindow.showFullScreen();
                 }
             }
         ]
         onClicked: {
-            kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName
-            root.showConfirmation()
+            kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName;
+            root.showConfirmation();
         }
     }
 
     Kirigami.OverlaySheet {
         id: globalThemeConfirmSheet
-        title: i18nc("Confirmation question about applying the Global Theme - %1 is the Global Theme's name",
-                     "Apply %1?", currentThemeRole(Qt.Display))
+        title: i18nc("Confirmation question about applying the Global Theme - %1 is the Global Theme's name", "Apply %1?", currentThemeRole(Qt.Display))
         QtControls.StackView {
             id: stackSwitcher
             initialItem: simpleOptions
@@ -97,11 +93,13 @@ KCM.GridViewKCM {
             implicitWidth: Kirigami.Units.gridUnit * 30
             Component {
                 id: simpleOptions
-                SimpleOptions {}
+                SimpleOptions {
+                }
             }
             Component {
                 id: moreOptions
-                MoreOptions {}
+                MoreOptions {
+                }
             }
         }
         footer: ColumnLayout {
@@ -116,7 +114,7 @@ KCM.GridViewKCM {
                         } else {
                             stackSwitcher.pop();
                         }
-                        resetCheckboxes() //Force a refresh to reset button states
+                        resetCheckboxes(); //Force a refresh to reset button states
                     }
                 }
                 Rectangle {
@@ -127,20 +125,18 @@ KCM.GridViewKCM {
                     text: i18n("Apply")
                     icon.name: "dialog-ok-apply"
                     onClicked: {
-                        kcm.save()
-                        globalThemeConfirmSheet.close()
-                        view.forceActiveFocus() //Prevent further button presses via keyboard
+                        kcm.save();
+                        globalThemeConfirmSheet.close();
+                        view.forceActiveFocus(); //Prevent further button presses via keyboard
                     }
-                    enabled: kcm.appearanceToApply & Private.LookandFeelManager.AppearanceSettings ||
-                        kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings ||
-                        kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
+                    enabled: kcm.appearanceToApply & Private.LookandFeelManager.AppearanceSettings || kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings || kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
                 }
                 QtControls.Button {
                     text: i18n("Cancel")
                     icon.name: "dialog-cancel"
                     onClicked: {
-                        globalThemeConfirmSheet.close()
-                        view.forceActiveFocus()
+                        globalThemeConfirmSheet.close();
+                        view.forceActiveFocus();
                     }
                 }
             }

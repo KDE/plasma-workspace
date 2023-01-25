@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.0
 
 Loader {
@@ -19,11 +18,11 @@ Loader {
 
     source: {
         if (model.itemType === "Plasmoid" && model.hasApplet) {
-            return Qt.resolvedUrl("PlasmoidItem.qml")
+            return Qt.resolvedUrl("PlasmoidItem.qml");
         } else if (model.itemType === "StatusNotifier") {
-            return Qt.resolvedUrl("StatusNotifierItem.qml")
+            return Qt.resolvedUrl("StatusNotifierItem.qml");
         }
-        console.warn("SystemTray ItemLoader: Invalid state, cannot determine source!")
-        return ""
+        console.warn("SystemTray ItemLoader: Invalid state, cannot determine source!");
+        return "";
     }
 }

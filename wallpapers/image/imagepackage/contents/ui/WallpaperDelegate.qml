@@ -4,14 +4,11 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls.Private 1.0
 import QtQuick.Controls 2.3 as QtControls2
 import QtGraphicalEffects 1.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
-
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
@@ -46,7 +43,6 @@ KCM.GridDelegate {
             visible: model.removable && !model.pendingDeletion && configDialog.currentWallpaper == "org.kde.image"
             onTriggered: {
                 model.pendingDeletion = true;
-
                 if (wallpapersGrid.view.currentIndex === index) {
                     const newIndex = (index + 1) % (imageModel.count - 1);
                     wallpapersGrid.view.itemAtIndex(newIndex).clicked();
@@ -116,7 +112,7 @@ KCM.GridDelegate {
             onToggled: model.checked = checked
         }
 
-        Behavior on color {
+        Behavior on color  {
             ColorAnimation {
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
@@ -124,7 +120,7 @@ KCM.GridDelegate {
         }
     }
 
-    Behavior on opacity {
+    Behavior on opacity  {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad

@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.11
@@ -13,7 +12,6 @@ import org.kde.kcm 1.2 as KCM
 import org.kde.plasma.kcm.autostart 1.0
 
 KCM.ScrollViewKCM {
-
     id: root
 
     implicitHeight: Kirigami.Units.gridUnit * 28
@@ -23,13 +21,12 @@ KCM.ScrollViewKCM {
         id: errorMessage
         showCloseButton: true
 
-
         Connections {
             target: kcm.model
             function onError(message) {
-                errorMessage.type = Kirigami.MessageType.Error
-                errorMessage.visible = true
-                errorMessage.text = message
+                errorMessage.type = Kirigami.MessageType.Error;
+                errorMessage.visible = true;
+                errorMessage.text = message;
             }
         }
 
@@ -40,24 +37,23 @@ KCM.ScrollViewKCM {
                 text: i18n("Make Executable")
                 icon.name: "dialog-ok"
                 onTriggered: {
-                    kcm.model.makeFileExecutable(fileName)
-                    errorMessage.visible = false
+                    kcm.model.makeFileExecutable(fileName);
+                    errorMessage.visible = false;
                 }
             }
             function onNonExecutableScript(fileName, kind) {
-                fixItAction.fileName = fileName
-                errorMessage.type = Kirigami.MessageType.Warning
-                errorMessage.visible = true
-                errorMessage.actions = [fixItAction]
-
+                fixItAction.fileName = fileName;
+                errorMessage.type = Kirigami.MessageType.Warning;
+                errorMessage.visible = true;
+                errorMessage.actions = [fixItAction];
                 if (kind === AutostartModel.PlasmaShutdown) {
-                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at logout.", fileName)
-                } else {                                                 '  '
-                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at login.", fileName)
+                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at logout.", fileName);
+                } else {
+                    '  ';
+                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at login.", fileName);
                 }
             }
         }
-
     }
 
     view: ListView {
@@ -107,16 +103,16 @@ KCM.ScrollViewKCM {
         section.delegate: Kirigami.ListSectionHeader {
             text: {
                 if (section == AutostartModel.XdgAutoStart) {
-                    return i18n("Applications")
+                    return i18n("Applications");
                 }
                 if (section == AutostartModel.XdgScripts) {
-                    return i18n("Login Scripts")
+                    return i18n("Login Scripts");
                 }
                 if (section == AutostartModel.PlasmaEnvScripts) {
-                    return i18n("Pre-startup Scripts")
+                    return i18n("Pre-startup Scripts");
                 }
                 if (section == AutostartModel.PlasmaShutdown) {
-                    return i18n("Logout Scripts")
+                    return i18n("Logout Scripts");
                 }
             }
         }
@@ -144,8 +140,8 @@ KCM.ScrollViewKCM {
                 folder: shortcuts.home
                 selectMultiple: false
                 onAccepted: {
-                    kcm.model.addScript(loginFileDialog.fileUrl, AutostartModel.XdgScripts)
-                    loginFileDialogLoader.active = false
+                    kcm.model.addScript(loginFileDialog.fileUrl, AutostartModel.XdgScripts);
+                    loginFileDialogLoader.active = false;
                 }
 
                 onRejected: loginFileDialogLoader.active = false
@@ -165,8 +161,8 @@ KCM.ScrollViewKCM {
                 folder: shortcuts.home
                 selectMultiple: false
                 onAccepted: {
-                    kcm.model.addScript(logoutFileDialog.fileUrl, AutostartModel.PlasmaShutdown)
-                    logoutFileDialogLoader.active = false
+                    kcm.model.addScript(logoutFileDialog.fileUrl, AutostartModel.PlasmaShutdown);
+                    logoutFileDialogLoader.active = false;
                 }
 
                 onRejected: logoutFileDialogLoader.active = false
@@ -183,7 +179,7 @@ KCM.ScrollViewKCM {
 
             checkable: true
             checked: menu.opened
-            onClicked: menu.opened? menu.close() : menu.open()
+            onClicked: menu.opened ? menu.close() : menu.open()
         }
 
         Menu {

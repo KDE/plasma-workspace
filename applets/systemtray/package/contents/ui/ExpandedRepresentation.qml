@@ -4,11 +4,9 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Window 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 // We still need PC2 here for that version of Menu, as PC2 Menu is still very problematic with QActions
 // Not being a proper popup window, makes it a showstopper to be used in Plasma
@@ -38,8 +36,11 @@ Item {
             right: parent.right
         }
         height: trayHeading.height + bottomPadding + container.headingHeight
-        Behavior on height {
-            NumberAnimation { duration: PlasmaCore.Units.shortDuration/2; easing.type: Easing.InOutQuad }
+        Behavior on height  {
+            NumberAnimation {
+                duration: PlasmaCore.Units.shortDuration / 2
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 
@@ -82,10 +83,10 @@ Item {
                 model: {
                     const primaryActions = [];
                     actionsButton.applet.contextualActions.forEach(action => {
-                        if (action.priority == Plasmoid.HighPriorityAction) {
-                            primaryActions.push(action);
-                        }
-                    })
+                            if (action.priority == Plasmoid.HighPriorityAction) {
+                                primaryActions.push(action);
+                            }
+                        });
                     return primaryActions;
                 }
 
@@ -111,15 +112,14 @@ Item {
 
                     KeyNavigation.down: backButton.KeyNavigation.down
                     KeyNavigation.left: (index > 0) ? primaryActionButtons.itemAt(index - 1) : backButton
-                    KeyNavigation.right: (index < primaryActionButtons.count - 1) ? primaryActionButtons.itemAt(index + 1) :
-                                                            actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
+                    KeyNavigation.right: (index < primaryActionButtons.count - 1) ? primaryActionButtons.itemAt(index + 1) : actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
 
                     PlasmaComponents.ToolTip {
                         text: parent.text
                     }
 
-                    onClicked: qAction.trigger();
-                    onToggled: qAction.toggle();
+                    onClicked: qAction.trigger()
+                    onToggled: qAction.toggle()
                 }
             }
 
@@ -183,10 +183,7 @@ Item {
                         let actions = [];
                         for (let i in actionsButton.applet.contextualActions) {
                             const action = actionsButton.applet.contextualActions[i];
-                            if (action.visible
-                                    && action.priority > Plasmoid.LowPriorityAction
-                                    && !primaryActionButtons.model.includes(action)
-                                    && action !== actionsButton.applet.action("configure")) {
+                            if (action.visible && action.priority > Plasmoid.LowPriorityAction && !primaryActionButtons.model.includes(action) && action !== actionsButton.applet.action("configure")) {
                                 actions.push(action);
                             }
                         }
@@ -216,7 +213,7 @@ Item {
                 PlasmaComponents.ToolTip {
                     text: parent.visible ? parent.text : ""
                 }
-                onClicked: actionsButton.applet.action("configure").trigger();
+                onClicked: actionsButton.applet.action("configure").trigger()
             }
 
             PlasmaComponents.ToolButton {

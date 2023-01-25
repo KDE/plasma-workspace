@@ -3,19 +3,14 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
-
 import org.kde.notificationmanager 1.0 as NotificationManager
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
 ColumnLayout {
@@ -77,12 +72,9 @@ ColumnLayout {
     property alias timeout: notificationHeading.timeout
     property alias remainingTime: notificationHeading.remainingTime
 
-    readonly property bool menuOpen: bodyLabel.contextMenu !== null
-                                     || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
-                                     || (jobLoader.item && jobLoader.item.menuOpen)
+    readonly property bool menuOpen: bodyLabel.contextMenu !== null || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen) || (jobLoader.item && jobLoader.item.menuOpen)
 
-    readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging)
-                                        || (jobLoader.item && jobLoader.item.dragging)
+    readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging) || (jobLoader.item && jobLoader.item.dragging)
     property bool replying: false
     readonly property bool hasPendingReply: replyLoader.item && replyLoader.item.text !== ""
     readonly property alias headerHeight: headingElement.height
@@ -307,7 +299,8 @@ ColumnLayout {
         visible: actionRepeater.count > 0 && actionFlow.parent === this
 
         // Notification actions
-        Flow { // it's a Flow so it can wrap if too long
+        Flow {
+            // it's a Flow so it can wrap if too long
             id: actionFlow
             // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
             parent: thumbnailStripLoader.item ? thumbnailStripLoader.item.actionContainer : actionContainer
@@ -316,7 +309,7 @@ ColumnLayout {
             layoutDirection: Qt.RightToLeft
             enabled: !replyLoader.active
             opacity: replyLoader.active ? 0 : 1
-            Behavior on opacity {
+            Behavior on opacity  {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -333,18 +326,16 @@ ColumnLayout {
                     // HACK We want the actions to be right-aligned but Flow also reverses
                     for (var i = actionNames.length - 1; i >= 0; --i) {
                         buttons.push({
-                            actionName: actionNames[i],
-                            label: actionLabels[i]
-                        });
+                                "actionName": actionNames[i],
+                                "label": actionLabels[i]
+                            });
                     }
-
                     if (notificationItem.hasReplyAction) {
                         buttons.unshift({
-                            actionName: "inline-reply",
-                            label: notificationItem.replyActionLabel || i18nc("Reply to message", "Reply")
-                        });
+                                "actionName": "inline-reply",
+                                "label": notificationItem.replyActionLabel || i18nc("Reply to message", "Reply")
+                            });
                     }
-
                     return buttons;
                 }
 
@@ -358,7 +349,6 @@ ColumnLayout {
                             replyLoader.beginReply();
                             return;
                         }
-
                         notificationItem.actionInvoked(modelData.actionName);
                     }
                 }
@@ -375,13 +365,13 @@ ColumnLayout {
             visible: active
             opacity: active ? 1 : 0
             x: active ? 0 : parent.width
-            Behavior on x {
+            Behavior on x  {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
-            Behavior on opacity {
+            Behavior on opacity  {
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -390,7 +380,6 @@ ColumnLayout {
 
             function beginReply() {
                 notificationItem.replying = true;
-
                 notificationItem.forceActiveFocusRequested();
                 replyLoader.item.activate();
             }
@@ -431,7 +420,7 @@ ColumnLayout {
     }
 
     states: [
-         State {
+        State {
             when: notificationItem.inGroup
             PropertyChanges {
                 target: headingElement

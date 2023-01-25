@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.1
 import QtQuick.Controls 2.5 as QQC2
 
@@ -15,10 +14,10 @@ QQC2.TextField {
 
     inputMethodHints: Qt.ImhFormattedNumbersOnly
 
-    text: Math.round(backend * 100)/100;
+    text: Math.round(backend * 100) / 100
 
     onBackendChanged: {
-        text = Math.round(backend * 100)/100;
+        text = Math.round(backend * 100) / 100;
     }
 
     onTextChanged: {

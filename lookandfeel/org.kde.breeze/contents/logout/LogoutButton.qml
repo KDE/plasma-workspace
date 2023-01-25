@@ -3,12 +3,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.2
 import QtQuick.Layouts 1.2
-
 import org.kde.plasma.core 2.0 as PlasmaCore
-
 import "../components"
 import "timer.js" as AutoTriggerTimer
 
@@ -26,8 +23,9 @@ ActionButton {
     circleVisiblity: activeFocus || containsMouse
     circleOpacity: 0.15 // Selected option's circle is instantly visible
     opacity: activeFocus || containsMouse ? 1 : 0.5
-    Behavior on opacity {
-        PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
+    Behavior on opacity  {
+        PropertyAnimation {
+            // OpacityAnimator makes it turn black at random intervals
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
@@ -38,6 +36,6 @@ ActionButton {
     }
 
     onClicked: {
-        action()
+        action();
     }
 }

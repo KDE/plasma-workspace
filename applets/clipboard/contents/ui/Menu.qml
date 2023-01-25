@@ -3,13 +3,11 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQml 2.15
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-
 import org.kde.kirigami 2.12 as Kirigami
 
 PlasmaComponents3.ScrollView {
@@ -36,27 +34,32 @@ PlasmaComponents3.ScrollView {
     Keys.onPressed: {
         if (menuListView.count !== 0) {
             switch (event.key) {
-                case Qt.Key_Home: {
+            case Qt.Key_Home:
+                {
                     menuListView.currentIndex = 0;
                     event.accepted = true;
                     break;
                 }
-                case Qt.Key_End: {
+            case Qt.Key_End:
+                {
                     menuListView.currentIndex = menuListView.count - 1;
                     event.accepted = true;
                     break;
                 }
-                case Qt.Key_PageUp: {
+            case Qt.Key_PageUp:
+                {
                     menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
                     event.accepted = true;
                     break;
                 }
-                case Qt.Key_PageDown: {
+            case Qt.Key_PageDown:
+                {
                     menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
                     event.accepted = true;
                     break;
                 }
-                default: {
+            default:
+                {
                     event.accepted = false;
                     break;
                 }
@@ -67,7 +70,8 @@ PlasmaComponents3.ScrollView {
     contentItem: ListView {
         id: menuListView
 
-        highlight: PlasmaExtras.Highlight { }
+        highlight: PlasmaExtras.Highlight {
+        }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
         currentIndex: -1
@@ -76,8 +80,8 @@ PlasmaComponents3.ScrollView {
             target: plasmoid
             function onExpandedChanged() {
                 if (plasmoid.expanded) {
-                    menuListView.currentIndex = -1
-                    menuListView.positionViewAtBeginning()
+                    menuListView.currentIndex = -1;
+                    menuListView.positionViewAtBeginning();
                 }
             }
         }
@@ -103,8 +107,10 @@ PlasmaComponents3.ScrollView {
             onTriggerAction: menu.triggerAction(uuid)
 
             Binding {
-                target: menuListView; when: hovered
-                property: "currentIndex"; value: index
+                target: menuListView
+                when: hovered
+                property: "currentIndex"
+                value: index
                 restoreMode: Binding.RestoreBinding
             }
         }

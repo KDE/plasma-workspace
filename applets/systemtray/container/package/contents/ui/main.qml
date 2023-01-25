@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -24,13 +23,13 @@ Item {
     //synchronize state between SystemTray and wrapping Applet
     Plasmoid.onExpandedChanged: {
         if (internalSystray) {
-            internalSystray.expanded = Plasmoid.expanded
+            internalSystray.expanded = Plasmoid.expanded;
         }
     }
     Connections {
         target: internalSystray
         function onExpandedChanged() {
-            Plasmoid.expanded = internalSystray.expanded
+            Plasmoid.expanded = internalSystray.expanded;
         }
     }
 
@@ -38,7 +37,6 @@ Item {
 
     Component.onCompleted: {
         root.internalSystray = Plasmoid.nativeInterface.internalSystray;
-
         if (root.internalSystray == null) {
             return;
         }

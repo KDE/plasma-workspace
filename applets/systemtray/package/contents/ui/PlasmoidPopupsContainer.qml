@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
@@ -32,8 +31,8 @@ StackView {
     property int footerHeight: mergeFooters ? activeApplet.fullRepresentationItem.footer.height : 0
 
     onActiveAppletChanged: {
-        mainStack.appletHasHeading = false
-        mainStack.appletHasFooter = false
+        mainStack.appletHasHeading = false;
+        mainStack.appletHasFooter = false;
         if (activeApplet != null) {
             //reset any potential anchor
             activeApplet.fullRepresentationItem.anchors.left = undefined;
@@ -42,34 +41,30 @@ StackView {
             activeApplet.fullRepresentationItem.anchors.bottom = undefined;
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
-
-            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page ||
-                activeApplet.fullRepresentationItem instanceof PlasmaExtras.Representation) {
+            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page || activeApplet.fullRepresentationItem instanceof PlasmaExtras.Representation) {
                 if (activeApplet.fullRepresentationItem.header && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading) {
-                    mainStack.appletHasHeading = true
-                    activeApplet.fullRepresentationItem.header.background.visible = false
+                    mainStack.appletHasHeading = true;
+                    activeApplet.fullRepresentationItem.header.background.visible = false;
                 }
                 if (activeApplet.fullRepresentationItem.footer && activeApplet.fullRepresentationItem.footer instanceof PlasmaExtras.PlasmoidHeading) {
-                    mainStack.appletHasFooter = true
-                    activeApplet.fullRepresentationItem.footer.background.visible = false
+                    mainStack.appletHasFooter = true;
+                    activeApplet.fullRepresentationItem.footer.background.visible = false;
                 }
             }
-
             let unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex;
             if (Qt.application.layoutDirection !== Qt.LeftToRight) {
                 unFlipped = !unFlipped;
             }
-
             const isTransitionEnabled = systemTrayState.expanded;
             (mainStack.empty ? mainStack.push : mainStack.replace)(activeApplet.fullRepresentationItem, {
-                "width": Qt.binding(() => mainStack.width),
-                "height": Qt.binding(() => mainStack.height),
-                "x": 0,
-                "focus": true,
-                "opacity": 1,
-                "KeyNavigation.up": mainStack.KeyNavigation.up,
-                "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
-            }, isTransitionEnabled ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
+                    "width": Qt.binding(() => mainStack.width),
+                    "height": Qt.binding(() => mainStack.height),
+                    "x": 0,
+                    "focus": true,
+                    "opacity": 1,
+                    "KeyNavigation.up": mainStack.KeyNavigation.up,
+                    "KeyNavigation.backtab": mainStack.KeyNavigation.backtab
+                }, isTransitionEnabled ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
         } else {
             mainStack.clear();
         }

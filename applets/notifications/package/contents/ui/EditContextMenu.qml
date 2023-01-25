@@ -3,12 +3,9 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For ContextMenu
-
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 PlasmaComponents.ContextMenu {
@@ -16,7 +13,8 @@ PlasmaComponents.ContextMenu {
 
     signal closed
 
-    property QtObject __clipboard: KQCAddons.Clipboard { }
+    property QtObject __clipboard: KQCAddons.Clipboard {
+    }
 
     // can be a Text or TextEdit
     property Item target
@@ -43,9 +41,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Copy")
         icon: "edit-copy"
-        enabled: typeof target.selectionStart !== "undefined"
-        ? target.selectionStart !== target.selectionEnd
-        : (target.text || "").length > 0
+        enabled: typeof target.selectionStart !== "undefined" ? target.selectionStart !== target.selectionEnd : (target.text || "").length > 0
         onClicked: {
             if (typeof target.copy === "function") {
                 target.copy();

@@ -3,9 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 /*
@@ -41,13 +39,13 @@ ListView {
     /*
      * Signals that a user was explicitly selected
      */
-    signal userSelected()
+    signal userSelected
 
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
 
     //centre align selected item (which implicitly centre aligns the rest
-    preferredHighlightBegin: width/2 - userItemWidth/2
+    preferredHighlightBegin: width / 2 - userItemWidth / 2
     preferredHighlightEnd: preferredHighlightBegin
 
     // Disable flicking if we only have on user (like on the lockscreen)
@@ -61,29 +59,23 @@ ListView {
         vtNumber: model.vtNumber
 
         name: {
-            const displayName = model.realName || model.name
-
+            const displayName = model.realName || model.name;
             if (model.vtNumber === undefined || model.vtNumber < 0) {
-                return displayName
+                return displayName;
             }
-
             if (!model.session) {
-                return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Nobody logged in on that session", "Unused")
+                return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Nobody logged in on that session", "Unused");
             }
-
-
-            let location = undefined
+            let location = undefined;
             if (model.isTty) {
-                location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console number", "TTY %1", model.vtNumber)
+                location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console number", "TTY %1", model.vtNumber);
             } else if (model.displayNumber) {
-                location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console (X display number)", "on TTY %1 (Display %2)", model.vtNumber, model.displayNumber)
+                location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console (X display number)", "on TTY %1 (Display %2)", model.vtNumber, model.displayNumber);
             }
-
             if (location !== undefined) {
-                return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Username (location)", "%1 (%2)", displayName, location)
+                return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Username (location)", "%1 (%2)", displayName, location);
             }
-
-            return displayName
+            return displayName;
         }
 
         userName: model.name

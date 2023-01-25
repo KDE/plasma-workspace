@@ -3,10 +3,8 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.12 as Kirigami
@@ -16,19 +14,20 @@ AbstractButton {
 
     property bool menuIsOpen: false
 
-    signal activated()
+    signal activated
 
     // QMenu opens on press, so we'll replicate that here
     hoverEnabled: true
 
     // This will trigger even if hoverEnabled has just became true and the
     // mouse cursor is already hovering.
-    //
     // In practice, this never works, at least on X11: when menuIsOpen the
     // hover event would not be delivered. Instead we rely on
     // plasmoid.nativeInterface.requestActivateIndex signal to filter
     // QEvent::MouseMove events and tell us when to change the index.
-    onHoveredChanged: if (hovered && menuIsOpen) { activated(); }
+    onHoveredChanged: if (hovered && menuIsOpen) {
+        activated();
+    }
 
     // You don't actually have to "close" the menu via click/pressed handlers.
     // Instead, the menu will be closed automatically, as by any
@@ -65,9 +64,12 @@ AbstractButton {
         id: rest
         imagePath: "widgets/menubaritem"
         prefix: switch (controlRoot.menuState) {
-            case MenuDelegate.State.Down: return "pressed";
-            case MenuDelegate.State.Hover: return "hover";
-            case MenuDelegate.State.Rest: return "normal";
+        case MenuDelegate.State.Down:
+            return "pressed";
+        case MenuDelegate.State.Hover:
+            return "hover";
+        case MenuDelegate.State.Rest:
+            return "normal";
         }
     }
 

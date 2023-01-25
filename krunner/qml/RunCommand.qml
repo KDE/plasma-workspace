@@ -3,11 +3,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
-
 import org.kde.kquickcontrolsaddons 2.0  // For KCMShell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -33,21 +31,21 @@ ColumnLayout {
         function onVisibleChanged() {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
-                listView.currentIndex = -1
+                listView.currentIndex = -1;
                 if (runnerManager.retainPriorSearch) {
                     // If we manually specified a query(D-Bus invocation) we don't want to retain the prior search
                     if (!query) {
-                        queryField.text = runnerManager.priorSearch
-                        queryField.select(root.query.length, 0)
+                        queryField.text = runnerManager.priorSearch;
+                        queryField.select(root.query.length, 0);
                     }
                 }
             } else {
                 if (runnerManager.retainPriorSearch) {
-                    runnerManager.priorSearch = root.query
+                    runnerManager.priorSearch = root.query;
                 }
-                root.runner = ""
-                root.query = ""
-                root.showHistory = false
+                root.runner = "";
+                root.query = "";
+                root.showHistory = false;
             }
         }
     }
@@ -57,9 +55,9 @@ ColumnLayout {
         function onShowHistoryChanged() {
             if (showHistory) {
                 // we store 50 entries in the history but only show 20 in the UI so it doesn't get too huge
-                listView.model = runnerManager.history.slice(0, 20)
+                listView.model = runnerManager.history.slice(0, 20);
             } else {
-                listView.model = []
+                listView.model = [];
             }
         }
     }
@@ -69,8 +67,8 @@ ColumnLayout {
         PlasmaComponents3.ToolButton {
             icon.name: "configure"
             onClicked: {
-                runnerWindow.visible = false
-                runnerWindow.displayConfiguration()
+                runnerWindow.visible = false;
+                runnerWindow.displayConfiguration();
             }
             Accessible.name: i18n("Configure")
             Accessible.description: i18n("Configure KRunner Behavior")
@@ -87,9 +85,7 @@ ColumnLayout {
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
 
             activeFocusOnPress: true
-            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
-                                                         "Search '%1'…", results.runnerName)
-                                                : i18nc("Textfield placeholder text", "Search…")
+            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin", "Search '%1'…", results.runnerName) : i18nc("Textfield placeholder text", "Search…")
 
             PlasmaComponents3.BusyIndicator {
                 anchors {
@@ -106,10 +102,10 @@ ColumnLayout {
                     running: results.querying
                     repeat: true
                     onRunningChanged: if (queryDisplay && !running) {
-                        queryDisplay = false
+                        queryDisplay = false;
                     }
                     onTriggered: if (!queryDisplay) {
-                        queryDisplay = true
+                        queryDisplay = true;
                     }
                     interval: 500
                 }
@@ -122,7 +118,7 @@ ColumnLayout {
                 } else if (results.count > 0) {
                     results.decrementCurrentIndex();
                 }
-                focusCurrentListView()
+                focusCurrentListView();
             }
 
             function move_down() {
@@ -131,7 +127,7 @@ ColumnLayout {
                 } else if (results.count > 0) {
                     results.incrementCurrentIndex();
                 }
-                focusCurrentListView()
+                focusCurrentListView();
             }
 
             function focusCurrentListView() {
@@ -143,33 +139,32 @@ ColumnLayout {
             }
 
             onTextChanged: {
-                root.query = queryField.text
+                root.query = queryField.text;
                 if (allowCompletion && length > 0 && runnerManager.historyEnabled) {
-                    var oldText = text
+                    var oldText = text;
                     var suggestedText = runnerManager.getHistorySuggestion(text);
                     if (suggestedText.length > 0) {
-                        text = text + suggestedText.substr(oldText.length)
-                        select(text.length, oldText.length)
+                        text = text + suggestedText.substr(oldText.length);
+                        select(text.length, oldText.length);
                     }
                 }
             }
             Keys.onPressed: {
-                allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
-
+                allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete);
                 if (event.modifiers & Qt.ControlModifier) {
                     if (event.key === Qt.Key_J) {
-                        move_down()
+                        move_down();
                         event.accepted = true;
                     } else if (event.key === Qt.Key_K) {
-                        move_up()
+                        move_up();
                         event.accepted = true;
                     }
                 }
                 // We only need to handle the Key_End case, the first item is focused by default
                 if (event.key === Qt.Key_End && results.count > 0 && cursorPosition === text.length) {
-                    results.currentIndex = results.count - 1
+                    results.currentIndex = results.count - 1;
                     event.accepted = true;
-                    focusCurrentListView()
+                    focusCurrentListView();
                 }
             }
             Keys.onUpPressed: move_up()
@@ -177,16 +172,16 @@ ColumnLayout {
             function closeOrRun(event) {
                 // Close KRunner if no text was typed and enter was pressed, FEATURE: 211225
                 if (!root.query) {
-                    runnerWindow.visible = false
+                    runnerWindow.visible = false;
                 } else {
-                    results.runCurrentIndex(event)
+                    results.runCurrentIndex(event);
                 }
             }
             Keys.onEnterPressed: closeOrRun(event)
             Keys.onReturnPressed: closeOrRun(event)
 
             Keys.onEscapePressed: {
-                runnerWindow.visible = false
+                runnerWindow.visible = false;
             }
 
             PlasmaCore.SvgItem {
@@ -208,7 +203,7 @@ ColumnLayout {
                 MouseArea {
                     anchors.fill: parent
                     onPressed: {
-                        root.showHistory = !root.showHistory
+                        root.showHistory = !root.showHistory;
                         if (root.showHistory) {
                             listView.forceActiveFocus(); // is the history list
                         } else {
@@ -261,36 +256,36 @@ ColumnLayout {
             Keys.onPressed: {
                 var ctrl = event.modifiers & Qt.ControlModifier;
                 if (ctrl && event.key === Qt.Key_J) {
-                    incrementCurrentIndex()
+                    incrementCurrentIndex();
                 } else if (ctrl && event.key === Qt.Key_K) {
-                    decrementCurrentIndex()
+                    decrementCurrentIndex();
                 } else if (event.key === Qt.Key_Home) {
-                    results.currentIndex = 0
+                    results.currentIndex = 0;
                 } else if (event.key === Qt.Key_End) {
-                    results.currentIndex = results.count - 1
+                    results.currentIndex = results.count - 1;
                 } else if (event.text !== "") {
                     // This prevents unprintable control characters from being inserted
                     if (!/[\x00-\x1F\x7F]/.test(event.text)) {
                         queryField.text += event.text;
                     }
-                    queryField.cursorPosition = queryField.text.length
+                    queryField.cursorPosition = queryField.text.length;
                     queryField.focus = true;
                 }
             }
 
             Keys.onEscapePressed: {
-                runnerWindow.visible = false
+                runnerWindow.visible = false;
             }
 
             onActivated: {
                 if (!runnerWindow.pinned) {
-                    runnerWindow.visible = false
+                    runnerWindow.visible = false;
                 }
             }
 
             onUpdateQueryString: {
-                queryField.text = text
-                queryField.select(cursorPosition, root.query.length)
+                queryField.text = text;
+                queryField.select(cursorPosition, root.query.length);
                 queryField.focus = true;
             }
         }
@@ -309,7 +304,8 @@ ColumnLayout {
         ListView {
             id: listView // needs this id so the delegate can access it
             keyNavigationWraps: true
-            highlight: PlasmaExtras.Highlight {}
+            highlight: PlasmaExtras.Highlight {
+            }
             highlightMoveDuration: 0
             activeFocusOnTab: true
             model: []
@@ -319,69 +315,67 @@ ColumnLayout {
                 width: listView.width
                 typeText: index === 0 ? i18n("Recent Queries") : ""
                 additionalActions: [{
-                    icon: "list-remove",
-                    text: i18n("Remove")
-                }]
+                        "icon": "list-remove",
+                        "text": i18n("Remove")
+                    }]
                 Accessible.description: i18n("Recent Queries")
             }
 
             onActiveFocusChanged: {
-                if (!activeFocus && currentIndex == listView.count-1) {
+                if (!activeFocus && currentIndex == listView.count - 1) {
                     currentIndex = 0;
                 }
             }
             Keys.onReturnPressed: runCurrentIndex(event)
             Keys.onEnterPressed: runCurrentIndex(event)
-            
+
             Keys.onTabPressed: {
-                if (currentIndex == listView.count-1) {
+                if (currentIndex == listView.count - 1) {
                     listView.nextItemInFocusChain(true).forceActiveFocus();
                 } else {
-                    incrementCurrentIndex()
+                    incrementCurrentIndex();
                 }
             }
             Keys.onBacktabPressed: {
                 if (currentIndex == 0) {
                     listView.nextItemInFocusChain(false).forceActiveFocus();
                 } else {
-                    decrementCurrentIndex()
+                    decrementCurrentIndex();
                 }
             }
             Keys.onPressed: {
                 var ctrl = event.modifiers & Qt.ControlModifier;
                 if (ctrl && event.key === Qt.Key_J) {
-                    incrementCurrentIndex()
+                    incrementCurrentIndex();
                 } else if (ctrl && event.key === Qt.Key_K) {
-                    decrementCurrentIndex()
+                    decrementCurrentIndex();
                 } else if (event.key === Qt.Key_Home) {
-                    currentIndex = 0
+                    currentIndex = 0;
                 } else if (event.key === Qt.Key_End) {
-                    currentIndex = count - 1
+                    currentIndex = count - 1;
                 } else if (event.text !== "") {
                     // This prevents unprintable control characters from being inserted
                     if (event.key == Qt.Key_Escape) {
-                        root.showHistory = false
+                        root.showHistory = false;
                     } else if (!/[\x00-\x1F\x7F]/.test(event.text)) {
                         queryField.text += event.text;
                     }
                     queryField.focus = true;
                 }
             }
-  
+
             Keys.onUpPressed: decrementCurrentIndex()
             Keys.onDownPressed: incrementCurrentIndex()
 
             function runCurrentIndex(event) {
-                var entry = runnerManager.history[currentIndex]
+                var entry = runnerManager.history[currentIndex];
                 if (entry) {
                     // If user presses Shift+Return to invoke an action, invoke the first runner action
-                    if (event && event.modifiers === Qt.ShiftModifier
-                            && currentItem.additionalActions && currentItem.additionalActions.length > 0) {
+                    if (event && event.modifiers === Qt.ShiftModifier && currentItem.additionalActions && currentItem.additionalActions.length > 0) {
                         runAction(0);
-                        return
+                        return;
                     }
-
-                    queryField.text = entry
+                    queryField.text = entry;
                     queryField.forceActiveFocus();
                 }
             }
@@ -389,13 +383,12 @@ ColumnLayout {
             function runAction(actionIndex) {
                 if (actionIndex === 0) {
                     // QStringList changes just reset the model, so we'll remember the index and set it again
-                    var currentIndex = listView.currentIndex
-                    runnerManager.removeFromHistory(currentIndex)
-                    model = runnerManager.history
-                    listView.currentIndex = currentIndex
+                    var currentIndex = listView.currentIndex;
+                    runnerManager.removeFromHistory(currentIndex);
+                    model = runnerManager.history;
+                    listView.currentIndex = currentIndex;
                 }
             }
         }
-
     }
 }

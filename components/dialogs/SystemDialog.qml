@@ -3,7 +3,6 @@
  *
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
@@ -61,7 +60,6 @@ Kirigami.AbstractApplicationWindow {
      */
     property bool acceptable: true
 
-
     /**
      * The layout of the action buttons in the footer of the dialog.
      *
@@ -71,7 +69,7 @@ Kirigami.AbstractApplicationWindow {
      *
      * This will only affect mobile dialogs.
      */
-    property int /*Qt.Orientation*/ layout: actions.length > 3 ? Qt.Vertical : Qt.Horizontal
+    property int layout: actions.length > 3 ? Qt.Vertical : Qt.Horizontal
 
     flags: contentDialog.item.flags
     width: contentDialog.implicitWidth
@@ -81,23 +79,23 @@ Kirigami.AbstractApplicationWindow {
     minimumWidth: contentDialog.item.minimumWidth
 
     function present() {
-        contentDialog.item.present()
+        contentDialog.item.present();
     }
-    signal accept()
-    signal reject()
+    signal accept
+    signal reject
     property bool accepted: false
     onAccept: {
-        accepted = true
-        close()
+        accepted = true;
+        close();
     }
     onReject: close()
 
     onVisibleChanged: {
         if (!visible && !accepted) {
-            root.reject()
+            root.reject();
         }
-        width = Qt.binding(() => contentDialog.implicitWidth)
-        height = Qt.binding(() => contentDialog.implicitHeight)
+        width = Qt.binding(() => contentDialog.implicitWidth);
+        height = Qt.binding(() => contentDialog.implicitHeight);
     }
 
     Binding {
@@ -111,16 +109,16 @@ Kirigami.AbstractApplicationWindow {
         id: contentDialog
         anchors.fill: parent
         Component.onCompleted: {
-            var component = LookAndFeel.fileUrl("systemdialogscript")
+            var component = LookAndFeel.fileUrl("systemdialogscript");
             setSource(component, {
-                window: root,
-                mainText: root.mainText,
-                subtitle: root.subtitle,
-                actions: root.actions,
-                iconName: root.iconName,
-                mainItem: root.mainItem,
-                standardButtons: root.standardButtons
-            })
+                    "window": root,
+                    "mainText": root.mainText,
+                    "subtitle": root.subtitle,
+                    "actions": root.actions,
+                    "iconName": root.iconName,
+                    "mainItem": root.mainItem,
+                    "standardButtons": root.standardButtons
+                });
         }
 
         focus: true
@@ -128,7 +126,7 @@ Kirigami.AbstractApplicationWindow {
         function accept() {
             const button = dialogButtonBox.standardButton(DialogButtonBox.Ok);
             if (button && button.enabled) {
-                root.accept()
+                root.accept();
             }
         }
         Keys.onEnterPressed: accept()

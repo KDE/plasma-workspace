@@ -3,22 +3,17 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 pragma Singleton
 import QtQuick 2.8
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.1
 import QtQml 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.11 as Kirigami
-
 import org.kde.notificationmanager 1.0 as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
-
 import ".."
 
 // This singleton object contains stuff shared between all notification plasmoids, namely:
@@ -37,12 +32,10 @@ QtObject {
         if (!pa) {
             return;
         }
-
         var stream = pa.notificationStream;
         if (!stream) {
             return;
         }
-
         if (inhibited) {
             // Only remember that we muted if previously not muted.
             if (!stream.muted) {
@@ -88,26 +81,23 @@ QtObject {
             if (!plasmoid) {
                 return Qt.AlignBottom | Qt.AlignRight; // just in case
             }
-
             var alignment = 0;
             // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
             if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                 alignment |= Qt.AlignLeft;
             } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
                 alignment |= Qt.AlignRight;
-            // No horizontal alignment flag has it place it left or right depending on
-            // which half of the *panel* the notification plasmoid is in
+                // No horizontal alignment flag has it place it left or right depending on
+                // which half of the *panel* the notification plasmoid is in
             }
-
             if (plasmoid.location === PlasmaCore.Types.TopEdge) {
                 alignment |= Qt.AlignTop;
             } else if (plasmoid.location === PlasmaCore.Types.BottomEdge) {
                 alignment |= Qt.AlignBottom;
-            // No vertical alignment flag has it place it top or bottom edge depending on
-            // which half of the *screen* the notification plasmoid is in
+                // No vertical alignment flag has it place it top or bottom edge depending on
+                // which half of the *screen* the notification plasmoid is in
             }
             return alignment;
-
         case NotificationManager.Settings.TopLeft:
             return Qt.AlignTop | Qt.AlignLeft;
         case NotificationManager.Settings.TopCenter:
@@ -129,15 +119,11 @@ QtObject {
         }
 
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-        let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
-                           plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
-                           plasmoid.availableScreenRect.width,
-                           plasmoid.availableScreenRect.height);
+        let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x, plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y, plasmoid.availableScreenRect.width, plasmoid.availableScreenRect.height);
 
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
-        if (visualParent && notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
-            && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+        if (visualParent && notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             const visualParentWindow = visualParent.Window.window;
             if (visualParentWindow) {
                 const left = Math.max(rect.left, visualParentWindow.x);
@@ -145,7 +131,6 @@ QtObject {
                 rect = Qt.rect(left, rect.y, right - left, rect.height);
             }
         }
-
         return rect;
     }
     onScreenRectChanged: repositionTimer.start()
@@ -155,9 +140,7 @@ QtObject {
             return null;
         }
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-        return (plasmoid.nativeInterface && plasmoid.nativeInterface.systemTrayRepresentation)
-            || plasmoid.compactRepresentationItem
-            || plasmoid.fullRepresentationItem;
+        return (plasmoid.nativeInterface && plasmoid.nativeInterface.systemTrayRepresentation) || plasmoid.compactRepresentationItem || plasmoid.fullRepresentationItem;
     }
     onVisualParentChanged: positionPopups()
 
@@ -169,7 +152,7 @@ QtObject {
             // and exclude NotificationPopups so that notifications don't jump down on close when the focusDialog becomes NotificationPopup
             obstructingDialog = focusDialog;
         }
-        positionPopups()
+        positionPopups();
     }
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
@@ -197,20 +180,17 @@ QtObject {
 
     // Sorts plasmoids based on a heuristic to find a suitable plasmoid to follow when placing popups
     function ratePlasmoids() {
-        var plasmoidScore = function(plasmoid) {
+        var plasmoidScore = function (plasmoid) {
             if (!plasmoid) {
                 return 0;
             }
-
             var score = 0;
 
             // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
             // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-            if (plasmoid.location === PlasmaCore.Types.LeftEdge
-                    || plasmoid.location === PlasmaCore.Types.RightEdge) {
+            if (plasmoid.location === PlasmaCore.Types.LeftEdge || plasmoid.location === PlasmaCore.Types.RightEdge) {
                 score += 1;
-            } else if (plasmoid.location === PlasmaCore.Types.TopEdge
-                       || plasmoid.location === PlasmaCore.Types.BottomEdge) {
+            } else if (plasmoid.location === PlasmaCore.Types.TopEdge || plasmoid.location === PlasmaCore.Types.BottomEdge) {
                 score += 2;
             }
 
@@ -223,50 +203,43 @@ QtObject {
             if (plasmoid.nativeInterface && plasmoid.nativeInterface.isPrimaryScreen(plasmoid.screenGeometry)) {
                 ++score;
             }
-
             return score;
-        }
-
+        };
         var newPlasmoids = plasmoids;
         newPlasmoids.sort(function (a, b) {
-            var scoreA = plasmoidScore(a);
-            var scoreB = plasmoidScore(b);
-            // Sort descending by score
-            if (scoreA < scoreB) {
-                return 1;
-            } else if (scoreA > scoreB) {
-                return -1;
-            } else {
-                return 0;
-            }
-        });
+                var scoreA = plasmoidScore(a);
+                var scoreB = plasmoidScore(b);
+                // Sort descending by score
+                if (scoreA < scoreB) {
+                    return 1;
+                } else if (scoreA > scoreB) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
         globals.plasmoids = newPlasmoids;
         globals.plasmoid = newPlasmoids[0];
     }
 
     function checkInhibition() {
-        globals.inhibited = Qt.binding(function() {
-            var inhibited = false;
-
-            if (!NotificationManager.Server.valid) {
-                return false;
-            }
-
-            var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
-            if (!isNaN(inhibitedUntil.getTime())) {
-                inhibited |= (Date.now() < inhibitedUntil.getTime());
-            }
-
-            if (notificationSettings.notificationsInhibitedByApplication) {
-                inhibited |= true;
-            }
-
-            if (notificationSettings.inhibitNotificationsWhenScreensMirrored) {
-                inhibited |= notificationSettings.screensMirrored;
-            }
-
-            return inhibited;
-        });
+        globals.inhibited = Qt.binding(function () {
+                var inhibited = false;
+                if (!NotificationManager.Server.valid) {
+                    return false;
+                }
+                var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
+                if (!isNaN(inhibitedUntil.getTime())) {
+                    inhibited |= (Date.now() < inhibitedUntil.getTime());
+                }
+                if (notificationSettings.notificationsInhibitedByApplication) {
+                    inhibited |= true;
+                }
+                if (notificationSettings.inhibitNotificationsWhenScreensMirrored) {
+                    inhibited |= notificationSettings.screensMirrored;
+                }
+                return inhibited;
+            });
     }
 
     function revokeInhibitions() {
@@ -274,29 +247,22 @@ QtObject {
         notificationSettings.revokeApplicationInhibitions();
         // overrules current mirrored screen setup, updates again when screen configuration changes
         notificationSettings.screensMirrored = false;
-
         notificationSettings.save();
     }
 
-    function rectIntersect(rect1 /*dialog*/, rect2 /*popup*/) {
-        return rect1.x < rect2.x + rect2.width
-                && rect2.x < rect1.x + rect1.width
-                && rect1.y < rect2.y + rect2.height
-                && rect2.y < rect1.y + rect1.height;
+    function rectIntersect(rect1 /*popup*/, rect2) {
+        return rect1.x < rect2.x + rect2.width && rect2.x < rect1.x + rect1.width && rect1.y < rect2.y + rect2.height && rect2.y < rect1.y + rect1.height;
     }
 
     function positionPopups() {
         if (!plasmoid) {
             return;
         }
-
         const screenRect = globals.screenRect;
         if (screenRect.width <= 0 || screenRect.height <= 0) {
             return;
         }
-
         let effectivePopupLocation = popupLocation;
-
         const visualParent = globals.visualParent;
         const visualParentWindow = visualParent.Window.window;
 
@@ -305,7 +271,6 @@ QtObject {
         if (visualParentWindow) {
             if (!(effectivePopupLocation & (Qt.AlignLeft | Qt.AlignHCenter | Qt.AlignRight))) {
                 const iconHCenter = visualParent.mapToItem(null /*mapToScene*/, 0, 0).x + visualParent.width / 2;
-
                 if (iconHCenter < visualParentWindow.width / 2) {
                     effectivePopupLocation |= Qt.AlignLeft;
                 } else {
@@ -319,21 +284,18 @@ QtObject {
         if (!(effectivePopupLocation & (Qt.AlignTop | Qt.AlignBottom))) {
             const screenVCenter = screenRect.y + screenRect.height / 2;
             const iconVCenter = visualParent.mapToGlobal(0, visualParent.height / 2).y;
-
             if (iconVCenter < screenVCenter) {
                 effectivePopupLocation |= Qt.AlignTop;
             } else {
                 effectivePopupLocation |= Qt.AlignBottom;
             }
         }
-
         let y = screenRect.y;
         if (effectivePopupLocation & Qt.AlignBottom) {
             y += screenRect.height - popupEdgeDistance;
         } else {
             y += popupEdgeDistance;
         }
-
         for (var i = 0; i < popupInstantiator.count; ++i) {
             let popup = popupInstantiator.objectAt(i);
             if (!popup) {
@@ -342,24 +304,21 @@ QtObject {
 
             // Popup width is fixed, so don't rely on the actual window size
             var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
-
             const leftMostX = screenRect.x + popupEdgeDistance;
             const rightMostX = screenRect.x + screenRect.width - popupEdgeDistance - popupEffectiveWidth;
 
             // If available screen rect is narrower than the popup, center it in the available rect
             if (screenRect.width < popupEffectiveWidth || effectivePopupLocation & Qt.AlignHCenter) {
-                popup.x = screenRect.x + (screenRect.width - popupEffectiveWidth) / 2
+                popup.x = screenRect.x + (screenRect.width - popupEffectiveWidth) / 2;
             } else if (effectivePopupLocation & Qt.AlignLeft) {
                 popup.x = leftMostX;
             } else if (effectivePopupLocation & Qt.AlignRight) {
                 popup.x = rightMostX;
             }
-
             if (effectivePopupLocation & Qt.AlignTop) {
                 // We want to calculate the new position based on its original target position to avoid positioning it and then
                 // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
-                if (obstructingDialog && obstructingDialog.visible
-                        && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                if (obstructingDialog && obstructingDialog.visible && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = obstructingDialog.y + obstructingDialog.height + popupEdgeDistance;
                 }
                 popup.y = y;
@@ -368,8 +327,7 @@ QtObject {
                 y += popup.height + (popup.height > 0 ? popupSpacing : 0);
             } else {
                 y -= popup.height;
-                if (obstructingDialog && obstructingDialog.visible
-                        && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                if (obstructingDialog && obstructingDialog.visible && rectIntersect(obstructingDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = obstructingDialog.y - popup.height - popupEdgeDistance;
                 }
                 popup.y = y;
@@ -380,14 +338,14 @@ QtObject {
 
             // don't let notifications take more than popupMaximumScreenFill of the screen
             var visible = true;
-            if (i > 0) { // however always show at least one popup
+            if (i > 0) {
+                // however always show at least one popup
                 if (effectivePopupLocation & Qt.AlignTop) {
                     visible = (popup.y + popup.height < screenRect.y + (screenRect.height * popupMaximumScreenFill));
                 } else {
                     visible = (popup.y > screenRect.y + (screenRect.height * (1 - popupMaximumScreenFill)));
                 }
             }
-
             popup.visible = visible;
         }
     }
@@ -420,9 +378,8 @@ QtObject {
 
             // Low only when enabled in settings and not in do not disturb mode
             if (!globals.inhibited && notificationSettings.lowPriorityPopups) {
-                urgencies |=NotificationManager.Notifications.LowUrgency;
+                urgencies |= NotificationManager.Notifications.LowUrgency;
             }
-
             return urgencies;
         }
     }
@@ -456,9 +413,7 @@ QtObject {
             readonly property var notificationId: model.notificationId
 
             popupWidth: globals.popupWidth
-            type: model.urgency === NotificationManager.Notifications.CriticalUrgency
-                  || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
-                  ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
+            type: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop) ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
 
             notificationType: model.type
 
@@ -471,10 +426,9 @@ QtObject {
             configurable: model.configurable
             // For running jobs instead of offering a "close" button that might lead the user to
             // think that will cancel the job, we offer a "dismiss" button that hides it in the history
-            dismissable: model.type === NotificationManager.Notifications.JobType
-                && model.jobState !== NotificationManager.Notifications.JobStateStopped
+            dismissable: model.type === NotificationManager.Notifications.JobType && model.jobState !== NotificationManager.Notifications.JobStateStopped &&
             // TODO would be nice to be able to "pin" jobs when they autohide
-                && notificationSettings.permanentJobPopups
+            notificationSettings.permanentJobPopups
             closable: model.closable
 
             summary: model.summary
@@ -487,10 +441,7 @@ QtObject {
             // to interact with the thumbnail or bring the window to the front where you want to drag it into
             defaultTimeout: notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
             // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
-            dismissTimeout: !notificationSettings.permanentJobPopups
-                            && model.type === NotificationManager.Notifications.JobType
-                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                            ? defaultTimeout : 0
+            dismissTimeout: !notificationSettings.permanentJobPopups && model.type === NotificationManager.Notifications.JobType && model.jobState !== NotificationManager.Notifications.JobStateStopped ? defaultTimeout : 0
 
             urls: model.urls || []
             urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
@@ -518,7 +469,7 @@ QtObject {
                     // but don't actually invalidate the notification
                     model.expired = true;
                 } else {
-                    popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+                    popupNotificationsModel.expire(popupNotificationsModel.index(index, 0));
                 }
             }
             onHoverEntered: model.read = true
@@ -537,41 +488,34 @@ QtObject {
                     if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
                         let highestStacking = -1;
                         let highestIdx = undefined;
-
                         for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
                             const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
-
                             const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
-
                             if (stacking > highestStacking) {
                                 highestStacking = stacking;
                                 highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
                             }
                         }
-
                         if (highestIdx && highestIdx.valid) {
                             tasksModel.requestActivate(highestIdx);
                             if (!model.resident) {
-                                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                                popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                             }
-
                         }
                         return;
                     }
-
                     tasksModel.requestActivate(defaultActionFallbackWindowIdx);
                     if (!model.resident) {
-                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                     }
                     return;
                 }
-
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
+                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior);
             }
             onActionInvoked: {
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
+                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior);
             }
             onReplied: {
                 const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
@@ -583,12 +527,11 @@ QtObject {
                 if (model.resident) {
                     model.expired = true;
                 } else {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                 }
             }
             onFileActionInvoked: {
-                if (!model.resident
-                    || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
+                if (!model.resident || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
                     popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                 } else {
                     model.expired = true;
@@ -619,7 +562,6 @@ QtObject {
                     if (!model.hasDefaultAction) {
                         for (let i = 0; i < tasksModel.rowCount(); ++i) {
                             const idx = tasksModel.index(i, 0);
-
                             const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
                             if (appId === model.desktopEntry + ".desktop") {
                                 // Takes a row number, not a QModelIndex
@@ -640,11 +582,10 @@ QtObject {
             object.visible = true;
         }
         onObjectRemoved: {
-            var notificationId = object.notificationId
+            var notificationId = object.notificationId;
             // Popup might have been destroyed because of a filter change, tell the model to do the timeout work for us again
             // cannot use QModelIndex here as the model row is already gone
             popupNotificationsModel.startTimeout(notificationId);
-
             positionPopups();
         }
     }
@@ -697,9 +638,7 @@ QtObject {
             notificationSettings.notificationsInhibitedUntil = d;
             notificationSettings.save();
         }
-
         checkInhibition();
-
         if (globals.inhibited !== oldInhibited) {
             shortcuts.showDoNotDisturbOsd(globals.inhibited);
         }

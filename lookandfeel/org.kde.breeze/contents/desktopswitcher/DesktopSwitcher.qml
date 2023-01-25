@@ -82,16 +82,10 @@ KWin.Switcher {
                 }
             }
             ListView {
+                id: listView
                 function calculateMaxRowWidth() {
                     var width = 0;
-                    var textElement = Qt.createQmlObject(
-                        'import QtQuick 2.0;'
-                        + 'Text {\n'
-                        + '     text: "' + tabBox.model.longestCaption() + '"\n'
-                        + '     font.bold: true\n'
-                        + '     visible: false\n'
-                        + '}',
-                        listView, "calculateMaxRowWidth");
+                    var textElement = Qt.createQmlObject('import QtQuick 2.0;' + 'Text {\n' + '     text: "' + tabBox.model.longestCaption() + '"\n' + '     font.bold: true\n' + '     visible: false\n' + '}', listView, "calculateMaxRowWidth");
                     width = Math.max(textElement.width, width);
                     textElement.destroy();
                     return width + 32 + hoverItem.margins.right + hoverItem.margins.left;
@@ -101,20 +95,12 @@ KWin.Switcher {
                 * @return Row height
                 **/
                 function calcRowHeight() {
-                    var textElement = Qt.createQmlObject(
-                        'import QtQuick 2.0;'
-                        + 'Text {\n'
-                        + '     text: "Some Text"\n'
-                        + '     font.bold: true\n'
-                        + '     visible: false\n'
-                        + '}',
-                        listView, "calcRowHeight");
+                    var textElement = Qt.createQmlObject('import QtQuick 2.0;' + 'Text {\n' + '     text: "Some Text"\n' + '     font.bold: true\n' + '     visible: false\n' + '}', listView, "calcRowHeight");
                     var height = textElement.height;
                     textElement.destroy();
                     // icon size or two text elements and margins and hoverItem margins
                     return Math.max(32, height + tabBox.textMargin * 2 + hoverItem.margins.top + hoverItem.margins.bottom);
                 }
-                id: listView
                 model: tabBox.model
                 // the maximum text width + icon item width (32 + 4 margin) + margins for hover item
                 property int maxRowWidth: calculateMaxRowWidth()
@@ -138,7 +124,9 @@ KWin.Switcher {
                 boundsBehavior: Flickable.StopAtBounds
                 Connections {
                     target: tabBox
-                    function onCurrentIndexChanged() {listView.currentIndex = tabBox.currentIndex;}
+                    function onCurrentIndexChanged() {
+                        listView.currentIndex = tabBox.currentIndex;
+                    }
                 }
             }
             Component {
@@ -153,8 +141,8 @@ KWin.Switcher {
             Item {
                 id: clientArea
                 VisualDataModel {
-                    property alias desktopIndex: listView.currentIndex
                     id: desktopClientModel
+                    property alias desktopIndex: listView.currentIndex
                     model: tabBox.model
                     delegate: clientIconDelegate
                     onDesktopIndexChanged: {

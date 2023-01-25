@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 
@@ -40,7 +39,7 @@ QQC2.TextField {
         var minutes = backend.slice(2, 4);
         var date = new Date();
         date.setHours(hours, minutes, 0, 0);
-        return date
+        return date;
     }
 
     function updateBackendFromText() {
@@ -56,7 +55,9 @@ QQC2.TextField {
     inputMask: "00:00"
     selectByMouse: false
     inputMethodHints: Qt.ImhTime
-    validator: RegularExpressionValidator { regularExpression: /^[0-2]?[0-9]:[0-5][0-9]$/ }
+    validator: RegularExpressionValidator {
+        regularExpression: /^[0-2]?[0-9]:[0-5][0-9]$/
+    }
 
     onEditingFinished: submit()
 }

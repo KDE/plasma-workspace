@@ -3,15 +3,17 @@
     SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.12
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
 MouseArea {
     property alias keyboardLayout: keyboardLayout
     readonly property bool hasMultipleKeyboardLayouts: keyboardLayout.layoutsList.length > 1
-    readonly property var layoutNames: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout]
-                                                                         : { shortName: "", displayName: "", longName: "" }
+    readonly property var layoutNames: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout] : {
+        "shortName": "",
+        "displayName": "",
+        "longName": ""
+    }
 
     onClicked: keyboardLayout.switchToNextLayout()
 

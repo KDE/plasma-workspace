@@ -3,14 +3,11 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // PC3 Tabbar only has top and bottom tab positions, not left and right
-
 import org.kde.activities 0.1 as Activities
 import org.kde.kquickcontrolsaddons 2.1 // For KCMShell
 
@@ -60,7 +57,7 @@ Item {
                     case Qt.Key_Enter:
                     case Qt.Key_Return:
                     case Qt.Key_Select:
-                        activityModel.setCurrentActivity(model.id, function() {});
+                        activityModel.setCurrentActivity(model.id, function () {});
                         event.accepted = true;
                         break;
                     }
@@ -71,11 +68,11 @@ Item {
                 Accessible.role: Accessible.Button
 
                 onClicked: {
-                    activityModel.setCurrentActivity(model.id, function() {});
+                    activityModel.setCurrentActivity(model.id, function () {});
                 }
 
                 onCheckedChanged: {
-                    if(model.current) {
+                    if (model.current) {
                         tabBar.currentTab = tab;
                         if (tabBar.activeFocus) {
                             forceActiveFocus();
@@ -84,7 +81,7 @@ Item {
                 }
 
                 Component.onCompleted: {
-                    if(model.current) {
+                    if (model.current) {
                         tabBar.currentTab = tab;
                     }
                 }
@@ -94,7 +91,6 @@ Item {
 
     Component.onCompleted: {
         Plasmoid.removeAction("configure");
-
         if (KCMShell.authorize("kcm_activities.desktop").length > 0) {
             Plasmoid.setAction("activitieskcm", i18nc("@action:inmenu", "&Configure Activities…"), "configure");
         }

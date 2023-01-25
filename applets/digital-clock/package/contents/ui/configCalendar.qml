@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.0
 import QtQuick.Controls 2.4 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
@@ -21,8 +20,7 @@ Item {
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property int cfg_firstDayOfWeek
 
-    function saveConfig()
-    {
+    function saveConfig() {
         Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
     }
 
@@ -52,16 +50,16 @@ Item {
             QtControls.ComboBox {
                 id: firstDayOfWeekCombo
                 textRole: "text"
-                model: [-1, 0, 1, 5, 6].map((day) => {
-                    return {
-                        day,
-                        text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day)
-                    };
-                })
+                model: [-1, 0, 1, 5, 6].map(day => {
+                        return {
+                            "day": day,
+                            "text": day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day)
+                        };
+                    })
                 onActivated: cfg_firstDayOfWeek = model[index].day
-                currentIndex: model.findIndex((item) => {
-                    return item.day === cfg_firstDayOfWeek;
-                })
+                currentIndex: model.findIndex(item => {
+                        return item.day === cfg_firstDayOfWeek;
+                    })
             }
         }
 
@@ -91,4 +89,3 @@ Item {
         }
     }
 }
-

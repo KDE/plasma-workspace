@@ -4,14 +4,11 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
-
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
 PlasmaComponents3.ScrollView {
@@ -77,19 +74,16 @@ PlasmaComponents3.ScrollView {
             onPressed: {
                 contextMenu = contextMenuComponent.createObject(bodyText);
                 contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
-
-                contextMenu.closed.connect(function() {
-                    contextMenu.destroy();
-                    contextMenu = null;
-                });
+                contextMenu.closed.connect(function () {
+                        contextMenu.destroy();
+                        contextMenu = null;
+                    });
                 contextMenu.open(mouse.x, mouse.y);
             }
 
             // Pass wheel events to ListView to make scrolling work in FullRepresentation.
             onWheel: {
-                if (bodyTextContainer.listViewParent
-                    && ((wheel.angleDelta.y > 0 && !bodyTextContainer.listViewParent.atYBeginning)
-                        || (wheel.angleDelta.y < 0 && !bodyTextContainer.listViewParent.atYEnd))) {
+                if (bodyTextContainer.listViewParent && ((wheel.angleDelta.y > 0 && !bodyTextContainer.listViewParent.atYBeginning) || (wheel.angleDelta.y < 0 && !bodyTextContainer.listViewParent.atYEnd))) {
                     bodyTextContainer.listViewParent.contentY -= wheel.angleDelta.y;
                     wheel.accepted = true;
                 } else {

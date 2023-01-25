@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
@@ -11,7 +10,6 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Templates 2.3 as T
 import QtQml 2.15
-
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.5 as KCM
@@ -35,7 +33,7 @@ KCM.GridViewKCM {
     Binding {
         target: kcm.filteredModel
         property: "filter"
-        value:  filterCombo.model[filterCombo.currentIndex].filter
+        value: filterCombo.model[filterCombo.currentIndex].filter
         restoreMode: Binding.RestoreBinding
     }
 
@@ -87,7 +85,7 @@ KCM.GridViewKCM {
             Connections {
                 target: kcm
                 function onShowSchemeNotInstalledWarning(schemeName) {
-                    notInstalledWarning.text = i18n("The color scheme '%1' is not installed. Selecting the default theme instead.", schemeName)
+                    notInstalledWarning.text = i18n("The color scheme '%1' is not installed. Selecting the default theme instead.", schemeName);
                     notInstalledWarning.visible = true;
                 }
             }
@@ -104,11 +102,16 @@ KCM.GridViewKCM {
             QtControls.ComboBox {
                 id: filterCombo
                 textRole: "text"
-                model: [
-                    {text: i18n("All Schemes"), filter: Private.KCM.AllSchemes},
-                    {text: i18n("Light Schemes"), filter: Private.KCM.LightSchemes},
-                    {text: i18n("Dark Schemes"), filter: Private.KCM.DarkSchemes}
-                ]
+                model: [{
+                        "text": i18n("All Schemes"),
+                        "filter": Private.KCM.AllSchemes
+                    }, {
+                        "text": i18n("Light Schemes"),
+                        "filter": Private.KCM.LightSchemes
+                    }, {
+                        "text": i18n("Dark Schemes"),
+                        "filter": Private.KCM.DarkSchemes
+                    }]
 
                 // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
                 // and inject a nice little filter icon.
@@ -117,15 +120,13 @@ KCM.GridViewKCM {
                         // not a KQuickStyleItem
                         return;
                     }
-
                     var props = background.properties || {};
-
-                    background.properties = Qt.binding(function() {
-                        var newProps = props;
-                        newProps.currentIcon = "view-filter";
-                        newProps.iconColor = Kirigami.Theme.textColor;
-                        return newProps;
-                    });
+                    background.properties = Qt.binding(function () {
+                            var newProps = props;
+                            newProps.currentIcon = "view-filter";
+                            newProps.iconColor = Kirigami.Theme.textColor;
+                            return newProps;
+                        });
                 }
             }
         }
@@ -147,7 +148,7 @@ KCM.GridViewKCM {
                 onToggled: {
                     if (checked) {
                         kcm.accentColorFromWallpaper = false;
-                        kcm.accentColor = "transparent"
+                        kcm.accentColor = "transparent";
                     }
                 }
             }
@@ -174,7 +175,7 @@ KCM.GridViewKCM {
                     onToggled: {
                         if (checked) {
                             kcm.accentColorFromWallpaper = false;
-                            kcm.accentColor = Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? colorRepeater.model[0] : kcm.lastUsedCustomAccentColor
+                            kcm.accentColor = Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? colorRepeater.model[0] : kcm.lastUsedCustomAccentColor;
                         }
                     }
                 }
@@ -183,58 +184,11 @@ KCM.GridViewKCM {
                     id: colourFlow
                     width: root.width - accentBox.width
                     spacing: accentBox.spacing
-                    component ColorRadioButton : T.RadioButton {
-                        id: control
-                        autoExclusive: false
-
-                        property color color: "transparent"
-
-                        implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
-                        implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
-
-                        background: Rectangle {
-                            readonly property bool showHighlight: parent.hovered && !control.checked && !Qt.colorEqual(control.color, "transparent")
-                            color: control.color
-                            radius:  showHighlight ? Math.round(height / 4) : Math.round(height / 2)
-                            border {
-                                color: showHighlight ? Kirigami.Theme.highlightColor : Qt.rgba(0, 0, 0, 0.15)
-                            }
-                            Behavior on radius {
-                                PropertyAnimation {
-                                    duration: Kirigami.Units.veryShortDuration
-                                    from: Math.round(height / 2)
-                                }
-                            }
-                        }
-                        indicator: Rectangle {
-                            radius: height / 2
-                            visible: control.checked
-                            anchors {
-                                fill: parent
-                                margins: Math.round(Kirigami.Units.smallSpacing * 1.25)
-                            }
-                            border {
-                                color: Qt.rgba(0, 0, 0, 0.15)
-                                width: 1
-                            }
-                        }
-                    }
 
                     Repeater {
                         id: colorRepeater
 
-                        model: [
-                            "#e93a9a",
-                            "#e93d58",
-                            "#e9643a",
-                            "#e8cb2d",
-                            "#3dd425",
-                            "#00d3b8",
-                            "#3daee9",
-                            "#b875dc",
-                            "#926ee4",
-                            "#686b6f",
-                        ]
+                        model: ["#e93a9a", "#e93d58", "#e9643a", "#e8cb2d", "#3dd425", "#00d3b8", "#3daee9", "#b875dc", "#926ee4", "#686b6f",]
 
                         delegate: ColorRadioButton {
                             color: modelData
@@ -242,8 +196,8 @@ KCM.GridViewKCM {
 
                             onToggled: {
                                 kcm.accentColorFromWallpaper = false;
-                                kcm.accentColor = modelData
-                                kcm.lastUsedCustomAccentColor = modelData
+                                kcm.accentColor = modelData;
+                                kcm.lastUsedCustomAccentColor = modelData;
                                 checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
                             }
                         }
@@ -263,31 +217,28 @@ KCM.GridViewKCM {
                         modality: Qt.ApplicationModal
                         color: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
                         onAccepted: {
-                            kcm.accentColor = colorDialog.color
-                            kcm.lastUsedCustomAccentColor = colorDialog.color
-                            kcm.accentColorFromWallpaper = false
+                            kcm.accentColor = colorDialog.color;
+                            kcm.lastUsedCustomAccentColor = colorDialog.color;
+                            kcm.accentColorFromWallpaper = false;
                         }
                     }
 
                     ColorRadioButton {
                         id: customColorIndicator
 
-                        readonly property bool isCustomColor: !kcm.accentColorFromWallpaper
-                            && !Qt.colorEqual(kcm.accentColor, "transparent")
-                            && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
+                        readonly property bool isCustomColor: !kcm.accentColorFromWallpaper && !Qt.colorEqual(kcm.accentColor, "transparent") && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
 
-                       /* The qt binding will keep the binding alive as well as uncheck the button
+                        /* The qt binding will keep the binding alive as well as uncheck the button
                         * we can't just disable the button because then the icon will become grey
                         * and also we have to provide a MouseArea for interaction. Both of these
                         * can be done with the button being disabled but it will become very
                         * complex and will result in lot of extra code */
-
-                        function openColorDialog(){
-                            checked = Qt.binding(() => customColorIndicator.isCustomColor)
-                            colorDialog.open()
+                        function openColorDialog() {
+                            checked = Qt.binding(() => customColorIndicator.isCustomColor);
+                            colorDialog.open();
                         }
 
-                        color:  isCustomColor && accentBox.checked ? kcm.accentColor : "transparent"
+                        color: isCustomColor && accentBox.checked ? kcm.accentColor : "transparent"
                         checked: isCustomColor
 
                         onClicked: openColorDialog()
@@ -303,10 +254,46 @@ KCM.GridViewKCM {
                             onClicked: customColorIndicator.openColorDialog()
 
                             icon.name: "color-picker"
-                            icon.width : Kirigami.Units.iconSizes.small // This provides a nice padding
+                            icon.width: Kirigami.Units.iconSizes.small // This provides a nice padding
                         }
                     }
                 }
+            }
+        }
+    }
+    component ColorRadioButton: T.RadioButton {
+        id: control
+        autoExclusive: false
+
+        property color color: "transparent"
+
+        implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
+        implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
+
+        background: Rectangle {
+            readonly property bool showHighlight: parent.hovered && !control.checked && !Qt.colorEqual(control.color, "transparent")
+            color: control.color
+            radius: showHighlight ? Math.round(height / 4) : Math.round(height / 2)
+            border {
+                color: showHighlight ? Kirigami.Theme.highlightColor : Qt.rgba(0, 0, 0, 0.15)
+            }
+            Behavior on radius  {
+                PropertyAnimation {
+                    duration: Kirigami.Units.veryShortDuration
+                    from: Math.round(height / 2)
+                }
+            }
+        }
+        indicator: Rectangle {
+            radius: height / 2
+            visible: control.checked
+            anchors {
+                fill: parent
+                margins: Math.round(Kirigami.Units.smallSpacing * 1.25)
+            }
+            border {
+                color: Qt.rgba(0, 0, 0, 0.15)
+                width: 1
             }
         }
     }
@@ -321,8 +308,10 @@ KCM.GridViewKCM {
             anchors.fill: parent
 
             opacity: model.pendingDeletion ? 0.3 : 1
-            Behavior on opacity {
-                NumberAnimation { duration: Kirigami.Units.longDuration }
+            Behavior on opacity  {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                }
             }
 
             color: kcm.tinted(model.palette.window, kcm.accentColor, model.tints, model.tintFactor)
@@ -411,10 +400,7 @@ KCM.GridViewKCM {
                     Column {
                         id: listPreviewColumn
 
-                        readonly property string demoText: " <a href='#'>%2</a> <a href='#'><font color='%3'>%4</font></a>"
-                            .arg(i18nc("Hyperlink", "link"))
-                            .arg(model.palette.linkVisited)
-                            .arg(i18nc("Visited hyperlink", "visited"))
+                        readonly property string demoText: " <a href='#'>%2</a> <a href='#'><font color='%3'>%4</font></a>".arg(i18nc("Hyperlink", "link")).arg(model.palette.linkVisited).arg(i18nc("Visited hyperlink", "visited"))
 
                         anchors.fill: parent
                         anchors.margins: 1
@@ -520,9 +506,9 @@ KCM.GridViewKCM {
                     configFile: "colorschemes.knsrc"
                     onEntryEvent: function (entry, event) {
                         if (event == NewStuff.Entry.StatusChangedEvent) {
-                            kcm.knsEntryChanged(entry)
+                            kcm.knsEntryChanged(entry);
                         } else if (event == NewStuff.Entry.AdoptedEvent) {
-                            kcm.loadSelectedColorScheme()
+                            kcm.loadSelectedColorScheme();
                         }
                     }
                 }
@@ -536,15 +522,15 @@ KCM.GridViewKCM {
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Color Scheme")
             folder: shortcuts.home
-            nameFilters: [ i18n("Color Scheme Files (*.colors)") ]
+            nameFilters: [i18n("Color Scheme Files (*.colors)")]
             Component.onCompleted: open()
             onAccepted: {
                 infoLabel.visible = false;
-                kcm.installSchemeFromFile(fileUrls[0])
-                fileDialogLoader.active = false
+                kcm.installSchemeFromFile(fileUrls[0]);
+                fileDialogLoader.active = false;
             }
             onRejected: {
-                fileDialogLoader.active = false
+                fileDialogLoader.active = false;
             }
         }
     }

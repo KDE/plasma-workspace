@@ -1,8 +1,8 @@
 import QtQuick 2.15
 
 Item {
-    signal loginFailed()
-    signal loginSucceeded()
+    signal loginFailed
+    signal loginSucceeded
 
     function powerOff() {
         console.log("SDDM - POWERING OFF");
@@ -21,23 +21,21 @@ Item {
     }
 
     function login(user, password, sessionIndex) {
-        console.log("SDDM - logging in as ", user, password, sessionIndex)
+        console.log("SDDM - logging in as ", user, password, sessionIndex);
 
         //modify as appropriate for testing
-        var success = false
-
+        var success = false;
         if (success) {
             loginSucceeded();
         } else {
             tryLogin.start();
         }
-
     }
 
     Timer {
         id: tryLogin
         interval: 1000
-        onTriggered: loginFailed();
+        onTriggered: loginFailed()
     }
 
     property bool canPowerOff: true
@@ -46,5 +44,4 @@ Item {
     property bool canHibernate: true
     property bool canHybridSleep: true
     property string hostname: "MyHostname"
-
 }

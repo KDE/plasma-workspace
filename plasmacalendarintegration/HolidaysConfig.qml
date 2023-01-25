@@ -4,13 +4,11 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.5
 import QtQuick.Controls 1.4 as QQC1
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 import QtQuick.Dialogs 1.1
-
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kholidays 1.0 as KHolidays
 import org.kde.holidayeventshelperplugin 1.0
@@ -23,8 +21,7 @@ ColumnLayout {
 
     signal configurationChanged
 
-    function saveConfig()
-    {
+    function saveConfig() {
         configHelper.saveConfig();
     }
 

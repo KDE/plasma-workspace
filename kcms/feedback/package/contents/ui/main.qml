@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
@@ -20,7 +19,6 @@ SimpleKCM {
 
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
-
 
     ColumnLayout {
         spacing: 0
@@ -56,7 +54,7 @@ SimpleKCM {
             selectedTextColor: Kirigami.Theme.highlightedTextColor
             selectionColor: Kirigami.Theme.highlightColor
 
-            onLinkActivated: (url) => Qt.openUrlExternally(url)
+            onLinkActivated: url => Qt.openUrlExternally(url)
 
             HoverHandler {
                 acceptedButtons: Qt.NoButton
@@ -79,8 +77,7 @@ SimpleKCM {
                 Layout.fillWidth: true
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 22
 
-                readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
-                                                    UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
+                readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics, UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
                 from: 0
                 to: modeOptions.length - 1
                 stepSize: 1
@@ -97,7 +94,7 @@ SimpleKCM {
                 value: findIndex(modeOptions, kcm.feedbackSettings.feedbackLevel, 0)
 
                 onMoved: {
-                    kcm.feedbackSettings.feedbackLevel = modeOptions[value]
+                    kcm.feedbackSettings.feedbackLevel = modeOptions[value];
                 }
 
                 SettingStateBinding {
@@ -183,4 +180,3 @@ SimpleKCM {
         }
     }
 }
-

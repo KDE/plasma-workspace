@@ -3,10 +3,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQml 2.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PathAnimation {
@@ -40,13 +38,7 @@ PathAnimation {
                 const extreme = root.swing * directionFactor;
                 const here = Qt.point(extreme, 0);
                 const there = Qt.point(-extreme, 0);
-                return [
-                    Qt.point(0, 0),
-                    here, there,
-                    here, there,
-                    here, there,
-                    Qt.point(0, 0),
-                ];
+                return [Qt.point(0, 0), here, there, here, there, here, there, Qt.point(0, 0),];
             }
         }
     }

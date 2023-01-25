@@ -5,14 +5,11 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 
 Item {
@@ -21,7 +18,7 @@ Item {
     width: PlasmaCore.Units.gridUnit * 15
     height: PlasmaCore.Units.gridUnit * 15
 
-    readonly property string currentTime: Qt.formatTime(dataSource.data["Local"]["DateTime"],  Qt.locale().timeFormat(Locale.LongFormat))
+    readonly property string currentTime: Qt.formatTime(dataSource.data["Local"]["DateTime"], Qt.locale().timeFormat(Locale.LongFormat))
     readonly property string currentDate: Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
     property int hours
@@ -31,12 +28,11 @@ Item {
     property bool showTimezone: Plasmoid.configuration.showTimezoneString
     property int tzOffset
 
-    Plasmoid.backgroundHints: "NoBackground";
+    Plasmoid.backgroundHints: "NoBackground"
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
-    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
+    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"], "dddd")
     Plasmoid.toolTipSubText: `${currentTime}\n${currentDate}`
-
 
     function dateTimeChanged() {
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
@@ -125,10 +121,8 @@ Item {
             width: parent.width
 
             readonly property double svgScale: face.width / face.naturalSize.width
-            readonly property double horizontalShadowOffset:
-                Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) % 2
-            readonly property double verticalShadowOffset:
-                Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
+            readonly property double horizontalShadowOffset: Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) % 2
+            readonly property double verticalShadowOffset: Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
             PlasmaCore.SvgItem {
                 id: face
@@ -144,14 +138,13 @@ Item {
                 rotationCenterHintId: "hint-hourhandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                rotation: 180 + hours * 30 + (minutes/2)
+                rotation: 180 + hours * 30 + (minutes / 2)
                 svgScale: clock.svgScale
-
             }
             Hand {
                 elementId: "HourHand"
                 rotationCenterHintId: "hint-hourhand-rotation-center-offset"
-                rotation: 180 + hours * 30 + (minutes/2)
+                rotation: 180 + hours * 30 + (minutes / 2)
                 svgScale: clock.svgScale
             }
 

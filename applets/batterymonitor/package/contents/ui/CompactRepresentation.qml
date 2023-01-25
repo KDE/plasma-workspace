@@ -5,10 +5,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
@@ -16,7 +14,7 @@ import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 MouseArea {
     id: root
 
-    property real itemSize: Math.min(root.height, root.width/view.count)
+    property real itemSize: Math.min(root.height, root.width / view.count)
     readonly property bool isConstrained: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
     property QtObject batteries
@@ -62,7 +60,7 @@ MouseArea {
                 property bool pluggedIn: pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && (root.isConstrained || model["Is Power Supply"])
 
                 height: root.itemSize
-                width: root.width/view.count
+                width: root.width / view.count
 
                 property real iconSize: Math.min(width, height)
 
@@ -76,7 +74,9 @@ MouseArea {
                     width: height
 
                     visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
-                    svg: PlasmaCore.Svg { imagePath: "icons/battery" }
+                    svg: PlasmaCore.Svg {
+                        imagePath: "icons/battery"
+                    }
                     elementId: root.isHeldOnPerformanceMode ? "profile-performance" : "profile-powersave"
                 }
 

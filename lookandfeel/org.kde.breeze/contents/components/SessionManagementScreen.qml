@@ -3,11 +3,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
-
 import QtQuick.Layouts 1.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -62,7 +59,7 @@ FocusScope {
 
     default property alias _children: innerLayout.children
 
-    signal userSelected()
+    signal userSelected
 
     // FIXME: move this component into a layout, rather than abusing
     // anchors and implicitly relying on other components' built-in
@@ -122,7 +119,8 @@ FocusScope {
             Layout.alignment: Qt.AlignHCenter
             implicitHeight: actionItemsLayout.implicitHeight
             implicitWidth: actionItemsLayout.implicitWidth
-            Row { //deliberately not rowlayout as I'm not trying to resize child items
+            Row {
+                //deliberately not rowlayout as I'm not trying to resize child items
                 id: actionItemsLayout
                 anchors.verticalCenter: parent.top
                 spacing: PlasmaCore.Units.largeSpacing / 2

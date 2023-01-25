@@ -30,6 +30,6 @@ ListModel {
         name: "shadeslayer"
         realName: "Sebastian Schweinstager"
         icon: "/home/david/.face.icon"
-        homeDir:""
+        homeDir: ""
     }
 }

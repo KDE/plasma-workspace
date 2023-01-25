@@ -3,7 +3,6 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
@@ -54,16 +53,23 @@ QtControls.Popup {
         QtControls.ComboBox {
             id: mainToolBarStyleCombo
             Kirigami.FormData.label: i18n("Main toolbar label:")
-            model: [
-                {text: i18n("None"), value: Private.KCM.NoText},
-                {text: i18n("Text only"), value: Private.KCM.TextOnly},
-                {text: i18n("Beside icons"), value: Private.KCM.TextBesideIcon},
-                {text: i18n("Below icon"), value: Private.KCM.TextUnderIcon}
-            ]
+            model: [{
+                    "text": i18n("None"),
+                    "value": Private.KCM.NoText
+                }, {
+                    "text": i18n("Text only"),
+                    "value": Private.KCM.TextOnly
+                }, {
+                    "text": i18n("Beside icons"),
+                    "value": Private.KCM.TextBesideIcon
+                }, {
+                    "text": i18n("Below icon"),
+                    "value": Private.KCM.TextUnderIcon
+                }]
             textRole: "text"
             currentIndex: model.findIndex(function (item) {
-                return item.value === kcm.mainToolBarStyle
-            })
+                    return item.value === kcm.mainToolBarStyle;
+                })
             onActivated: kcm.mainToolBarStyle = model[currentIndex].value
 
             KCM.SettingStateBinding {
@@ -77,8 +83,8 @@ QtControls.Popup {
             model: mainToolBarStyleCombo.model
             textRole: "text"
             currentIndex: model.findIndex(function (item) {
-                return item.value === kcm.otherToolBarStyle
-            })
+                    return item.value === kcm.otherToolBarStyle;
+                })
             onActivated: kcm.otherToolBarStyle = model[currentIndex].value
 
             KCM.SettingStateBinding {

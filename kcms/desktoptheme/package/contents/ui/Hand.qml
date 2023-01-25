@@ -5,9 +5,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.SvgItem {
@@ -20,21 +18,17 @@ PlasmaCore.SvgItem {
     property string rotationCenterHintId
     readonly property double horizontalRotationCenter: {
         if (svg.hasElement(rotationCenterHintId)) {
-            var hintedCenterRect = svg.elementRect(rotationCenterHintId),
-                handRect = svg.elementRect(elementId),
-                hintedX = hintedCenterRect.x - handRect.x + hintedCenterRect.width/2;
+            var hintedCenterRect = svg.elementRect(rotationCenterHintId), handRect = svg.elementRect(elementId), hintedX = hintedCenterRect.x - handRect.x + hintedCenterRect.width / 2;
             return Math.round(hintedX * svgScale) + Math.round(hintedX * svgScale) % 2;
         }
-        return width/2;
+        return width / 2;
     }
     readonly property double verticalRotationCenter: {
         if (svg.hasElement(rotationCenterHintId)) {
-            var hintedCenterRect = svg.elementRect(rotationCenterHintId),
-                handRect = svg.elementRect(elementId),
-                hintedY = hintedCenterRect.y - handRect.y + hintedCenterRect.height/2;
+            var hintedCenterRect = svg.elementRect(rotationCenterHintId), handRect = svg.elementRect(elementId), hintedY = hintedCenterRect.y - handRect.y + hintedCenterRect.height / 2;
             return Math.round(hintedY * svgScale) + width % 2;
         }
-        return width/2;
+        return width / 2;
     }
 
     width: Math.round(naturalSize.width * svgScale) + Math.round(naturalSize.width * svgScale) % 2
@@ -54,7 +48,7 @@ PlasmaCore.SvgItem {
             x: handRoot.horizontalRotationCenter
             y: handRoot.verticalRotationCenter
         }
-        Behavior on angle {
+        Behavior on angle  {
             RotationAnimation {
                 id: anim
                 duration: PlasmaCore.Units.longDuration

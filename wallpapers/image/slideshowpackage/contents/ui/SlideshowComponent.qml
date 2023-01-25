@@ -5,11 +5,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
-
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
@@ -40,33 +38,27 @@ ColumnLayout {
             QQC2.ComboBox {
                 id: slideshowModeComboBox
 
-                model: [
-                    {
-                        'label': i18nd("plasma_wallpaper_org.kde.image", "Random"),
-                        'slideshowMode':  PlasmaWallpaper.SortingMode.Random
-                    },
-                    {
-                        'label': i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
-                        'slideshowMode':  PlasmaWallpaper.SortingMode.Alphabetical
-                    },
-                    {
-                        'label': i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
-                        'slideshowMode':  PlasmaWallpaper.SortingMode.AlphabeticalReversed
-                    },
-                    {
-                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
-                        'slideshowMode':  PlasmaWallpaper.SortingMode.ModifiedReversed
-                    },
-                    {
-                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
-                        'slideshowMode':  PlasmaWallpaper.SortingMode.Modified
-                    }
-                ]
+                model: [{
+                        "label": i18nd("plasma_wallpaper_org.kde.image", "Random"),
+                        "slideshowMode": PlasmaWallpaper.SortingMode.Random
+                    }, {
+                        "label": i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
+                        "slideshowMode": PlasmaWallpaper.SortingMode.Alphabetical
+                    }, {
+                        "label": i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
+                        "slideshowMode": PlasmaWallpaper.SortingMode.AlphabeticalReversed
+                    }, {
+                        "label": i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
+                        "slideshowMode": PlasmaWallpaper.SortingMode.ModifiedReversed
+                    }, {
+                        "label": i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
+                        "slideshowMode": PlasmaWallpaper.SortingMode.Modified
+                    }]
                 textRole: "label"
                 onActivated: {
                     cfg_SlideshowMode = model[currentIndex]["slideshowMode"];
                 }
-                Component.onCompleted: setMethod();
+                Component.onCompleted: setMethod()
                 function setMethod() {
                     for (var i = 0; i < model.length; i++) {
                         if (model[i]["slideshowMode"] === wallpaper.configuration.SlideshowMode) {
@@ -104,10 +96,10 @@ ColumnLayout {
                 editable: true
                 onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
-                textFromValue: function(value, locale) {
-                    return i18ndp("plasma_wallpaper_org.kde.image","%1 hour", "%1 hours", value)
+                textFromValue: function (value, locale) {
+                    return i18ndp("plasma_wallpaper_org.kde.image", "%1 hour", "%1 hours", value);
                 }
-                valueFromText: function(text, locale) {
+                valueFromText: function (text, locale) {
                     return parseInt(text);
                 }
 
@@ -124,10 +116,10 @@ ColumnLayout {
                 editable: true
                 onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
-                textFromValue: function(value, locale) {
-                    return i18ndp("plasma_wallpaper_org.kde.image","%1 minute", "%1 minutes", value)
+                textFromValue: function (value, locale) {
+                    return i18ndp("plasma_wallpaper_org.kde.image", "%1 minute", "%1 minutes", value);
                 }
-                valueFromText: function(text, locale) {
+                valueFromText: function (text, locale) {
                     return parseInt(text);
                 }
 
@@ -144,10 +136,10 @@ ColumnLayout {
                 editable: true
                 onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
-                textFromValue: function(value, locale) {
-                    return i18ndp("plasma_wallpaper_org.kde.image","%1 second", "%1 seconds", value)
+                textFromValue: function (value, locale) {
+                    return i18ndp("plasma_wallpaper_org.kde.image", "%1 second", "%1 seconds", value);
                 }
-                valueFromText: function(text, locale) {
+                valueFromText: function (text, locale) {
                     return parseInt(text);
                 }
 
@@ -174,7 +166,7 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.preferredWidth: 0.35 * parent.width
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
-            Component.onCompleted: foldersScroll.background.visible = true;
+            Component.onCompleted: foldersScroll.background.visible = true
 
             // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
@@ -201,12 +193,13 @@ ColumnLayout {
                         // Header: the folder
                         label: {
                             var strippedPath = modelData.replace(/\/+$/, "");
-                            return strippedPath.split('/').pop()
+                            return strippedPath.split('/').pop();
                         }
                         // Subtitle: the path to the folder
                         subtitle: {
                             var strippedPath = modelData.replace(/\/+$/, "");
-                            return strippedPath.replace(/\/[^\/]*$/, '');;
+                            return strippedPath.replace(/\/[^\/]*$/, '');
+                            ;
                         }
 
                         QQC2.ToolTip.text: modelData
@@ -247,7 +240,7 @@ ColumnLayout {
         QQC2.Button {
             Layout.alignment: Qt.AlignRight
             icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Folder…")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Add Folder…")
             onClicked: imageWallpaper.showAddSlidePathsDialog()
         }
 

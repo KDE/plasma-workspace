@@ -3,7 +3,6 @@
  *
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
@@ -15,7 +14,7 @@ import org.kde.plasma.workspace.dialogs 1.0
 
 Kirigami.AbstractApplicationWindow {
     id: root
-    
+
     width: 600
     height: 600
 
@@ -69,7 +68,8 @@ Kirigami.AbstractApplicationWindow {
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
         iconName: "im-user-online"
 
-        Kirigami.PasswordField {}
+        Kirigami.PasswordField {
+        }
 
         standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         actions: [
@@ -90,7 +90,7 @@ Kirigami.AbstractApplicationWindow {
 
         standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         Component.onCompleted: {
-            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Share"
+            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Share";
         }
         actions: [
             Kirigami.Action {
@@ -120,7 +120,7 @@ Kirigami.AbstractApplicationWindow {
                 wrapMode: Text.WordWrap
 
                 onLinkActivated: {
-                    AppChooserData.openDiscover()
+                    AppChooserData.openDiscover();
                 }
             }
 
@@ -180,7 +180,7 @@ Kirigami.AbstractApplicationWindow {
                 text: "Show More"
 
                 onClicked: {
-                    visible = false
+                    visible = false;
                 }
             }
 
@@ -295,66 +295,65 @@ Kirigami.AbstractApplicationWindow {
 
         standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         Component.onCompleted: {
-            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Save"
+            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Save";
         }
     }
-    
+
     ColumnLayout {
         anchors.fill: parent
         Button {
             text: "Simple dialog (Desktop)"
             onClicked: {
-                simple.present()
+                simple.present();
             }
         }
         Button {
             text: "Simple List"
             onClicked: {
-                simpleList.present()
+                simpleList.present();
             }
         }
         Button {
             text: "Polkit dialog (Desktop)"
             onClicked: {
-                desktopPolkit.present()
+                desktopPolkit.present();
             }
         }
         Button {
             text: "App Chooser(-ish)"
             onClicked: {
-                appchooser.present()
+                appchooser.present();
             }
         }
         Button {
             text: "XDG dialog (Desktop)"
             onClicked: {
-                xdgDialog.present()
+                xdgDialog.present();
             }
         }
         Button {
             text: "Polkit dialog (Mobile)"
             onClicked: {
-                mobilePolkit.present()
+                mobilePolkit.present();
             }
         }
         Button {
             text: "SIM PIN dialog (Mobile)"
             onClicked: {
-                sim.present()
+                sim.present();
             }
         }
         Button {
             text: "Device request dialog (Mobile)"
             onClicked: {
-                device.present()
+                device.present();
             }
         }
         Button {
             text: "Wifi Dialog (Mobile)"
             onClicked: {
-                wifi.present()
+                wifi.present();
             }
         }
     }
-} 
-
+}

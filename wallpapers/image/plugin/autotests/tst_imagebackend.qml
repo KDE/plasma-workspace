@@ -3,11 +3,9 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
 import QtQuick 2.5
 import QtQuick.Window 2.15
 import QtTest 1.0
-
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 
 TestCase {
@@ -71,26 +69,26 @@ TestCase {
     }
 
     function test_setSingleImage() {
-        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage
-
+        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage;
         verify(testImage.toString().length > 0);
         imageWallpaper.image = testImage;
         compare(mediaProxy.modelImage, testImage);
-
-        const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
+        const image = createTemporaryObject(mainImage, window, {
+                "source": mediaProxy.modelImage
+            });
         compare(image.status, Image.Ready);
         const grabbed = grabImage(image);
         compare(grabbed.pixel(0, 0), Qt.rgba(0, 0, 0, 255));
     }
 
     function test_setPackageImage() {
-        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage
-
+        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage;
         verify(testPackage.toString().length > 0);
         imageWallpaper.image = testPackage;
         compare(mediaProxy.modelImage.toString().indexOf("image://package/get?dir="), 0);
-
-        const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
+        const image = createTemporaryObject(mainImage, window, {
+                "source": mediaProxy.modelImage
+            });
         compare(image.status, Image.Loading);
         image.wait();
         compare(image.status, Image.Ready);
@@ -102,7 +100,6 @@ TestCase {
         compare(image.status, Image.Loading);
         image.wait();
         compare(image.status, Image.Ready);
-
         const grabbed2 = grabImage(image);
         compare(grabbed2.pixel(0, 0), Qt.rgba(0, 0, 0, 255));
 
@@ -114,7 +111,6 @@ TestCase {
 
     function test_setBizzareFileName() {
         imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage;
-
         verify(testBizzareFileName.length > 0);
         modelImageChangedSignalSpy.clear();
         mediaProxy.source = testBizzareFileName;
@@ -122,26 +118,20 @@ TestCase {
         compare(mediaProxy.providerType, Wallpaper.Provider.Image);
         compare(mediaProxy.modelImage, testBizzareFileName_modelImage);
         console.debug(mediaProxy.modelImage);
-
         mediaProxy.source = Qt.binding(() => imageWallpaper.image);
     }
 
     function test_startSlideShow() {
         verify(testDirs[0].length > 0);
-
         imageWallpaper.slidePaths = testDirs;
         imageWallpaper.slideTimer = 1000; // use nextSlide
         imageWallpaper.slideshowMode = Wallpaper.SortingMode.Alphabetical;
         imageWallpaper.slideshowFoldersFirst = false;
-
         imageWallpaper.renderingMode = Wallpaper.ImageBackend.SlideShow;
         wait(1000); // &SlideModel::done
-
         let image = mediaProxy.modelImage;
-
         imageWallpaper.nextSlide();
         verify(image != mediaProxy.modelImage);
-
         image = mediaProxy.modelImage;
         imageWallpaper.nextSlide();
         verify(image != mediaProxy.modelImage);

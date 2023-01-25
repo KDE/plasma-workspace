@@ -3,16 +3,13 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import QtGraphicalEffects 1.15
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
 import "components"
 import "components/animation"
 
@@ -20,7 +17,6 @@ import "components/animation"
 // SDDM KCM's syncing feature, remove the `config.fontSize` overrides here and
 // the fontSize properties in various components, because the theme's default
 // font size will be correctly propagated to the login screen
-
 PlasmaCore.ColorScope {
     id: root
 
@@ -51,7 +47,10 @@ PlasmaCore.ColorScope {
             model: screenModel
 
             Background {
-                x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+                x: geometry.x
+                y: geometry.y
+                width: geometry.width
+                height: geometry.height
                 sceneBackgroundType: config.type
                 sceneBackgroundColor: config.color
                 sceneBackgroundImage: config.background
@@ -73,8 +72,8 @@ PlasmaCore.ColorScope {
 
         hoverEnabled: true
         drag.filterChildren: true
-        onPressed: uiVisible = true;
-        onPositionChanged: uiVisible = true;
+        onPressed: uiVisible = true
+        onPositionChanged: uiVisible = true
         onUiVisibleChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
@@ -125,8 +124,8 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-            color : "black" // shadows should always be black
-            Behavior on opacity {
+            color: "black" // shadows should always be black
+            Behavior on opacity  {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.veryLongDuration * 2
                     easing.type: Easing.InOutQuad
@@ -139,7 +138,7 @@ PlasmaCore.ColorScope {
             property Item shadow: clockShadow
             visible: y > 0
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (userListComponent.userList.y + mainStack.y)/2 - height/2
+            y: (userListComponent.userList.y + mainStack.y) / 2 - height / 2
             Layout.alignment: Qt.AlignBaseline
         }
 
@@ -178,20 +177,16 @@ PlasmaCore.ColorScope {
                 userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
                 lastUserName: userModel.lastUser
                 showUserList: {
-                    if (!userListModel.hasOwnProperty("count")
-                        || !userListModel.hasOwnProperty("disableAvatarsThreshold")) {
-                        return false
+                    if (!userListModel.hasOwnProperty("count") || !userListModel.hasOwnProperty("disableAvatarsThreshold")) {
+                        return false;
                     }
-
-                    if (userListModel.count === 0 ) {
-                        return false
+                    if (userListModel.count === 0) {
+                        return false;
                     }
-
                     if (userListModel.hasOwnProperty("containsAllUsers") && !userListModel.containsAllUsers) {
-                        return false
+                        return false;
                     }
-
-                    return userListModel.count <= userListModel.disableAvatarsThreshold
+                    return userListModel.count <= userListModel.disableAvatarsThreshold;
                 }
 
                 notificationMessage: {
@@ -235,15 +230,16 @@ PlasmaCore.ColorScope {
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt
-                    }]
+                    }
+                ]
 
                 onLoginRequest: {
-                    root.notificationMessage = ""
-                    sddm.login(username, password, sessionButton.currentIndex)
+                    root.notificationMessage = "";
+                    sddm.login(username, password, sessionButton.currentIndex);
                 }
             }
 
-            Behavior on opacity {
+            Behavior on opacity  {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.longDuration
                 }
@@ -318,7 +314,7 @@ PlasmaCore.ColorScope {
             property bool keyboardActive: item ? item.active : false
             onKeyboardActiveChanged: {
                 if (keyboardActive) {
-                    state = "visible"
+                    state = "visible";
                     // Otherwise the password field loses focus and virtual keyboard
                     // keystrokes get eaten
                     userListComponent.mainPasswordBox.forceActiveFocus();
@@ -358,7 +354,7 @@ PlasmaCore.ColorScope {
                     }
                     PropertyChanges {
                         target: inputPanel
-                        y: root.height - root.height/4
+                        y: root.height - root.height / 4
                         opacity: 0
                     }
                 }
@@ -450,8 +446,8 @@ PlasmaCore.ColorScope {
                 }
 
                 onLoginRequest: {
-                    root.notificationMessage = ""
-                    sddm.login(username, password, sessionButton.currentIndex)
+                    root.notificationMessage = "";
+                    sddm.login(username, password, sessionButton.currentIndex);
                 }
 
                 actionItemsVisible: !inputPanel.keyboardActive
@@ -497,9 +493,9 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-            color : "black" // shadows should always be black
+            color: "black" // shadows should always be black
             opacity: loginScreenRoot.uiVisible ? 0 : 1
-            Behavior on opacity {
+            Behavior on opacity  {
                 //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
@@ -520,7 +516,7 @@ PlasmaCore.ColorScope {
             opacity: loginScreenRoot.uiVisible ? 0 : 1
             fillMode: Image.PreserveAspectFit
             height: Math.round(PlasmaCore.Units.gridUnit * 3.5)
-            Behavior on opacity {
+            Behavior on opacity  {
                 // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
@@ -539,7 +535,7 @@ PlasmaCore.ColorScope {
                 margins: PlasmaCore.Units.smallSpacing
             }
 
-            Behavior on opacity {
+            Behavior on opacity  {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.longDuration
                 }
@@ -587,18 +583,18 @@ PlasmaCore.ColorScope {
     Connections {
         target: sddm
         function onLoginFailed() {
-            notificationMessage = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
-            footer.enabled = true
-            mainStack.enabled = true
-            userListComponent.userList.opacity = 1
-            rejectPasswordAnimation.start()
+            notificationMessage = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed");
+            footer.enabled = true;
+            mainStack.enabled = true;
+            userListComponent.userList.opacity = 1;
+            rejectPasswordAnimation.start();
         }
         function onLoginSucceeded() {
             //note SDDM will kill the greeter at some random point after this
             //there is no certainty any transition will finish, it depends on the time it
             //takes to complete the init
-            mainStack.opacity = 0
-            footer.opacity = 0
+            mainStack.opacity = 0;
+            footer.opacity = 0;
         }
     }
 

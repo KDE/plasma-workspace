@@ -6,18 +6,15 @@
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
-
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQml 2.15
-
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.81 as NewStuff
 import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.desktoptheme 1.0 as Private
-
 
 KCM.GridViewKCM {
     id: root
@@ -36,7 +33,7 @@ KCM.GridViewKCM {
     Binding {
         target: kcm.filteredModel
         property: "filter"
-        value:  filterCombo.model[filterCombo.currentIndex].filter
+        value: filterCombo.model[filterCombo.currentIndex].filter
         restoreMode: Binding.RestoreBinding
     }
 
@@ -55,7 +52,7 @@ KCM.GridViewKCM {
         }
         onDropped: kcm.installThemeFromFile(drop.urls[0])
     }
-     header: RowLayout {
+    header: RowLayout {
         Layout.fillWidth: true
 
         Kirigami.SearchField {
@@ -65,12 +62,19 @@ KCM.GridViewKCM {
         QtControls.ComboBox {
             id: filterCombo
             textRole: "text"
-            model: [
-                {text: i18n("All Themes"), filter: Private.FilterProxyModel.AllThemes},
-                {text: i18n("Light Themes"), filter: Private.FilterProxyModel.LightThemes},
-                {text: i18n("Dark Themes"), filter: Private.FilterProxyModel.DarkThemes},
-                {text: i18n("Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
-            ]
+            model: [{
+                    "text": i18n("All Themes"),
+                    "filter": Private.FilterProxyModel.AllThemes
+                }, {
+                    "text": i18n("Light Themes"),
+                    "filter": Private.FilterProxyModel.LightThemes
+                }, {
+                    "text": i18n("Dark Themes"),
+                    "filter": Private.FilterProxyModel.DarkThemes
+                }, {
+                    "text": i18n("Color scheme compatible"),
+                    "filter": Private.FilterProxyModel.ThemesFollowingColors
+                }]
 
             // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
             // and inject a nice little filter icon.
@@ -79,15 +83,13 @@ KCM.GridViewKCM {
                     // not a KQuickStyleItem
                     return;
                 }
-
                 var props = background.properties || {};
-
-                background.properties = Qt.binding(function() {
-                    var newProps = props;
-                    newProps.currentIcon = "view-filter";
-                    newProps.iconColor = Kirigami.Theme.textColor;
-                    return newProps;
-                });
+                background.properties = Qt.binding(function () {
+                        var newProps = props;
+                        newProps.currentIcon = "view-filter";
+                        newProps.iconColor = Kirigami.Theme.textColor;
+                        return newProps;
+                    });
             }
         }
     }
@@ -96,13 +98,14 @@ KCM.GridViewKCM {
         id: delegate
 
         text: model.display
-        subtitle: model.colorType == Private.ThemesModel.FollowsColorTheme
-            && view.model.filter != Private.FilterProxyModel.ThemesFollowingColors ? i18n("Follows color scheme") : ""
+        subtitle: model.colorType == Private.ThemesModel.FollowsColorTheme && view.model.filter != Private.FilterProxyModel.ThemesFollowingColors ? i18n("Follows color scheme") : ""
         toolTip: model.description || model.display
 
         opacity: model.pendingDeletion ? 0.3 : 1
-        Behavior on opacity {
-            NumberAnimation { duration: Kirigami.Units.longDuration }
+        Behavior on opacity  {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+            }
         }
 
         thumbnailAvailable: true
@@ -125,13 +128,13 @@ KCM.GridViewKCM {
                 tooltip: i18n("Remove Theme")
                 enabled: model.isLocal
                 visible: !model.pendingDeletion
-                onTriggered: model.pendingDeletion = true;
+                onTriggered: model.pendingDeletion = true
             },
             Kirigami.Action {
                 iconName: "edit-undo"
                 tooltip: i18n("Restore Theme")
                 visible: model.pendingDeletion
-                onTriggered: model.pendingDeletion = false;
+                onTriggered: model.pendingDeletion = false
             }
         ]
 
@@ -192,14 +195,14 @@ KCM.GridViewKCM {
         sourceComponent: FileDialog {
             title: i18n("Open Theme")
             folder: shortcuts.home
-            nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
+            nameFilters: [i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)")]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
-                fileDialogLoader.active = false
+                kcm.installThemeFromFile(fileUrls[0]);
+                fileDialogLoader.active = false;
             }
             onRejected: {
-                fileDialogLoader.active = false
+                fileDialogLoader.active = false;
             }
         }
     }

@@ -4,7 +4,6 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.15
@@ -12,7 +11,6 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
 import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
-
 import "items"
 
 MouseArea {
@@ -64,7 +62,6 @@ MouseArea {
                 return null;
             }
             const plasmoidId = event.mimeData.getDataAsByteArray("text/x-plasmoidservicename");
-
             if (!Plasmoid.nativeInterface.isSystemTrayApplet(plasmoidId)) {
                 return null;
             }
@@ -83,7 +80,6 @@ MouseArea {
                 event.ignore();
                 return;
             }
-
             if (Plasmoid.configuration.extraItems.indexOf(plasmoidId) < 0) {
                 const extraItems = Plasmoid.configuration.extraItems;
                 extraItems.push(plasmoidId);
@@ -127,16 +123,16 @@ MouseArea {
 
             cellHeight: {
                 if (root.vertical) {
-                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
+                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength;
                 } else {
-                    return autoSize ? root.height : Math.floor(root.height / rowsOrColumns)
+                    return autoSize ? root.height : Math.floor(root.height / rowsOrColumns);
                 }
             }
             cellWidth: {
                 if (root.vertical) {
-                    return autoSize ? root.width : Math.floor(root.width / rowsOrColumns)
+                    return autoSize ? root.width : Math.floor(root.width / rowsOrColumns);
                 } else {
-                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
+                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength;
                 }
             }
 
@@ -146,9 +142,9 @@ MouseArea {
 
             readonly property int itemSize: {
                 if (autoSize) {
-                    return PlasmaCore.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, PlasmaCore.Units.iconSizes.enormous))
+                    return PlasmaCore.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, PlasmaCore.Units.iconSizes.enormous));
                 } else {
-                    return smallIconSize
+                    return smallIconSize;
                 }
             }
 
@@ -166,12 +162,12 @@ MouseArea {
                 Component.onCompleted: {
                     let item = tasksGrid.itemAtIndex(index - 1);
                     if (item) {
-                        Plasmoid.nativeInterface.stackItemBefore(delegate, item)
+                        Plasmoid.nativeInterface.stackItemBefore(delegate, item);
                     } else {
                         item = tasksGrid.itemAtIndex(index + 1);
                     }
                     if (item) {
-                        Plasmoid.nativeInterface.stackItemAfter(delegate, item)
+                        Plasmoid.nativeInterface.stackItemAfter(delegate, item);
                     }
                 }
             }
@@ -221,7 +217,7 @@ MouseArea {
     Timer {
         id: expandedSync
         interval: 100
-        onTriggered: systemTrayState.expanded = dialog.visible;
+        onTriggered: systemTrayState.expanded = dialog.visible
     }
 
     //Main popup
@@ -253,14 +249,13 @@ MouseArea {
             id: expandedRepresentation
 
             Keys.onEscapePressed: {
-                systemTrayState.expanded = false
+                systemTrayState.expanded = false;
             }
 
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
                 // Only draw for popups of panel applets, not desktop applets
-                visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
-                    .includes(Plasmoid.location)
+                visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge].includes(Plasmoid.location)
                 anchors {
                     top: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : parent.top
                     left: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : parent.left
