@@ -17,7 +17,7 @@
         <choice name="ToolTip" />
         <choice name="Always" />
       </choices>
-      <default>ToolTip</default>
+      <default>1</default>
     </entry>
     <entry name="showDate" type="Bool">
       <label>Whether the date should be shown next to the clock.</label>
@@ -81,7 +81,7 @@
         <choice name="FullText" />
         <choice name="UTCOffset" />
       </choices>
-      <default>Code</default>
+      <default>0</default>
     </entry>
     <entry name="showWeekNumbers" type="Bool">
       <label>Whether the calendar should show week numbers.</label>
@@ -110,7 +110,7 @@
         <choice name="BesideTime" />
         <choice name="BelowTime" />
       </choices>
-      <default>Adaptive</default>
+      <default>0</default>
     </entry>
   </group>
 </kcfg>
