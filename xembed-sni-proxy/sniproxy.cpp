@@ -26,6 +26,7 @@
 
 #include <QBitmap>
 
+#include <KLocalizedString>
 #include <KWindowSystem>
 #include <netwm.h>
 
@@ -462,8 +463,18 @@ QString SNIProxy::Status() const
 
 QString SNIProxy::Title() const
 {
-    KWindowInfo window(m_windowId, NET::WMName);
-    return window.name();
+    KWindowInfo window(m_windowId, NET::WMName | NET::WMPid, NET::WM2WindowClass);
+    const QString name = window.name();
+    if (name.isEmpty()) {
+        const QByteArray className = window.windowClassName();
+        if (className == "explorer.exe") {
+            return i18ndc("xembedsniproxy", "@title", "Wine Application");
+        } else if (className.isEmpty()) {
+            return QString::number(window.pid());
+        }
+        return QString::fromUtf8(className);
+    }
+    return name;
 }
 
 int SNIProxy::WindowId() const
