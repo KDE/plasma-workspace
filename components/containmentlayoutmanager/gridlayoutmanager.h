@@ -36,7 +36,7 @@ public:
     bool itemIsManaged(ItemContainer *item) override;
 
     void resetLayout() override;
-    void resetLayoutFromConfig() override;
+    void resetLayoutFromConfig(const QRectF &newGeom, const QRectF &oldGeom) override;
 
     bool restoreItem(ItemContainer *item) override;
 

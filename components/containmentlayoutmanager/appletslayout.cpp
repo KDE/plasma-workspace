@@ -19,6 +19,7 @@
 #include <Corona>
 #include <PlasmaQuick/AppletQuickItem>
 #include <chrono>
+#include <plasma/containment.h>
 
 using namespace std::chrono_literals;
 
@@ -65,12 +66,15 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         }
 
         const QString &serializedConfig = m_containment->config().readEntry(m_configKey, "");
-        if ((m_layoutChanges & ConfigKeyChange) && !serializedConfig.isEmpty()) {
+        if ((m_layoutChanges & ConfigKeyChange)) {
             if (!m_configKey.isEmpty() && m_containment) {
                 m_layoutManager->parseLayout(serializedConfig);
-
                 if (width() > 0 && height() > 0) {
-                    m_layoutManager->resetLayoutFromConfig();
+                    if (m_geometryBeforeResolutionChange.isEmpty()) {
+                        m_layoutManager->resetLayoutFromConfig(QRectF(), QRectF());
+                    } else {
+                        m_layoutManager->resetLayoutFromConfig(QRectF(x(), y(), width(), height()), m_geometryBeforeResolutionChange);
+                    }
                     m_savedSize = size();
                 }
             }
@@ -78,7 +82,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
             const QRect newGeom(x(), y(), width(), height());
             // The size has been restored from the last one it has been saved: restore that exact same layout
             if (newGeom.size() == m_savedSize) {
-                m_layoutManager->resetLayoutFromConfig();
+                m_layoutManager->resetLayoutFromConfig(QRectF(), QRectF());
 
                 // If the resize is consequence of a screen resolution change, queue a relayout maintaining the distance between screen edges
             } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
@@ -575,7 +579,13 @@ void AppletsLayout::componentComplete()
         connect(m_containment->corona(), &Plasma::Corona::screenGeometryChanged, this, [this](int id) {
             if (m_containment->screen() == id) {
                 m_geometryBeforeResolutionChange = QRectF(x(), y(), width(), height());
+                m_layoutChangeTimer->start();
             }
+        });
+        // If the containment is moved to a different screen, treat it like a resolution change
+        connect(m_containment, &Plasma::Containment::screenChanged, this, [this]() {
+            m_geometryBeforeResolutionChange = QRectF(x(), y(), width(), height());
+            m_layoutChangeTimer->start();
         });
     }
     QQuickItem::componentComplete();
