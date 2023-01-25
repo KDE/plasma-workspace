@@ -123,8 +123,7 @@ msgid "Delete Permanently"
 msgstr ""
 
 #: package/contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Zrušit"
@@ -140,11 +139,10 @@ msgid "Preview Theme"
 msgstr "Náhled motivu"
 
 #: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Náhled motivu"
+msgstr ""
 
 #: package/contents/ui/main.qml:131
 #, kde-format

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-09-15 09:58+0300\n"
+"PO-Revision-Date: 2023-01-24 22:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "necdetyucel@gmail.com, emir_sari@icloud.com"
 #: main.cpp:57 view.cpp:47
 #, kde-format
 msgid "KRunner"
-msgstr "KRunner"
+msgstr "K Çalıştır"
 
 #: main.cpp:57
 #, kde-format
@@ -41,12 +41,12 @@ msgstr "Komut Arayüzünü Çalıştır"
 #: main.cpp:62
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr "Pano içeriğini KRunner için sorgu olarak kullan"
+msgstr "Pano içeriğini K Çalıştır için sorgu olarak kullan"
 
 #: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr "KRunner'ı arka planda başlat, gösterme."
+msgstr "K Çalıştır'ı arka planda başlat, gösterme."
 
 #: main.cpp:64
 #, kde-format
@@ -66,12 +66,12 @@ msgstr "Yapılandır"
 #: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr "KRunner Davranışını Yapılandır"
+msgstr "K Çalıştır Davranışını Yapılandır"
 
 #: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner…"
-msgstr "KRunner'ı Yapılandır…"
+msgstr "K Çalıştır'ı Yapılandır…"
 
 #: qml/RunCommand.qml:91
 #, kde-format

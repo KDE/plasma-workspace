@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:59+0000\n"
-"PO-Revision-Date: 2022-08-09 19:30+0530\n"
+"PO-Revision-Date: 2023-01-24 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -78,6 +78,9 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"பொது தோற்றத்திட்டத் தொகுப்பை செயல்படுத்தும். இது ஓர் தொகுப்பின் பெயராகவோ, நிறுவியுள்ள "
+"தொகுப்புக்கான முழுப் பாதையாகவோ இருக்கலாம். கொடுக்கப்பட்டுள்ளது ஓர் முறையான தோற்றத்திட்டமா "
+"என்பதை உறுதி செய்தபின் இந்நிரல் அதை செயல்படுத்தும்"
 
 #: lnftool.cpp:51
 #, kde-format
@@ -104,23 +107,22 @@ msgstr "பொதுவான தோற்றத்தை நீங்கள் 
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "நிரந்தரமாக அழிப்பது"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "இத்தோற்றத்திட்டத்தை நிரந்தரமாக அழிக்க வேண்டுமா?"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "நிரந்தரமாக அழி"
 
 #: package/contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
@@ -136,11 +138,10 @@ msgid "Preview Theme"
 msgstr "தோற்றத்திட்டத்தின் முன்னோட்டம்"
 
 #: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "தோற்றத்திட்டத்தின் முன்னோட்டம்"
+msgstr "தோற்றத்திட்டத்தை நீக்கு"
 
 #: package/contents/ui/main.qml:131
 #, kde-format
