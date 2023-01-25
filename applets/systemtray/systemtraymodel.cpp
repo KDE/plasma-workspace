@@ -293,8 +293,6 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
     StatusNotifierModel::Item item = m_items[index.row()];
     StatusNotifierItemSource *sniData = m_sniHost->itemForService(item.source);
 
-    const QString itemId = extractItemId(sniData);
-
     if (role <= Qt::UserRole) {
         switch (role) {
         case Qt::DisplayRole:
@@ -305,6 +303,8 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
             return QVariant();
         }
     }
+
+    const QString itemId = extractItemId(sniData);
 
     if (role < static_cast<int>(Role::DataEngineSource)) {
         switch (static_cast<BaseRole>(role)) {
