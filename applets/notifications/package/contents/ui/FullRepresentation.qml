@@ -325,39 +325,6 @@ PlasmaExtras.Representation {
                 prefix: "pressed"
             }
 
-            add: Transition {
-                SequentialAnimation {
-                    PropertyAction { property: "opacity"; value: 0 }
-                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
-                    ParallelAnimation {
-                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.longDuration }
-                        NumberAnimation { property: "height"; from: 0; duration: PlasmaCore.Units.longDuration }
-                    }
-                }
-            }
-            addDisplaced: Transition {
-                NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
-            }
-
-            remove: Transition {
-                id: removeTransition
-                ParallelAnimation {
-                    NumberAnimation { property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
-                    NumberAnimation {
-                        id: removeXAnimation
-                        property: "x"
-                        to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
-                        duration: PlasmaCore.Units.longDuration
-                    }
-                }
-            }
-            removeDisplaced: Transition {
-                SequentialAnimation {
-                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
-                    NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
-                }
-            }
-
             // This is so the delegates can detect the change in "isInGroup" and show a separator
             section {
                 property: "isInGroup"
@@ -369,6 +336,72 @@ PlasmaExtras.Representation {
                 width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
                 contentItem: delegateLoader
 
+                // NOTE: The following animations replace the Transitions in the ListView
+                // because they don't work when the items change size during the animation
+                // (showing/hiding the show more/show less button) in that case they will
+                // animate to a wrong position and stay there
+                // see https://bugs.kde.org/show_bug.cgi?id=427894 and QTBUG-110366
+                property real oldY: -1
+                property int oldListCount: -1
+                onYChanged: {
+                    if (oldY < 0 || oldListCount === list.count) {
+                        oldY = y;
+                        return;
+                    }
+                    traslAnim.from = oldY - y;
+                    traslAnim.running = true;
+                    oldY = y;
+                    oldListCount = list.count;
+                }
+                transform: Translate {
+                    id: transl
+                }
+                NumberAnimation {
+                    id: traslAnim
+                    target: transl
+                    properties: "y";
+                    to: 0
+                    duration:  PlasmaCore.Units.longDuration
+                }
+                opacity: 0;
+                ListView.onAdd: appearAnim.restart();
+                Component.onCompleted: {
+                    Qt.callLater(()=>{
+                        if (!appearAnim.running) {
+                            opacity = 1;
+                        }
+                    });
+                    oldListCount = list.count;
+                }
+
+                SequentialAnimation {
+                    id: appearAnim
+                    PropertyAnimation { target: delegate; property: "opacity"; to: 0 }
+                    PauseAnimation { duration:  PlasmaCore.Units.longDuration}
+                    NumberAnimation {
+                        target: delegate
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        duration:  PlasmaCore.Units.longDuration
+                    }
+                }
+
+                SequentialAnimation {
+                    id: removeAnimation
+                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: true }
+                    ParallelAnimation {
+                        NumberAnimation { target: delegate; property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
+                        NumberAnimation {
+                            target: transl
+                            property: "x"
+                            to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                            duration: PlasmaCore.Units.longDuration
+                        }
+                    }
+                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: false }
+                }
+
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
                 onDismissRequested: {
@@ -378,6 +411,7 @@ PlasmaExtras.Representation {
                     if (x < 0) {
                         removeXAnimation.to = -delegate.width;
                     }
+                    removeAnimation.start();
 
                     historyModel.close(historyModel.index(index, 0));
                 }
@@ -400,7 +434,7 @@ PlasmaExtras.Representation {
                             closable: model.closable
                             closeButtonTooltip: i18n("Close Group")
 
-                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                            onCloseClicked: historyModel.close(historyModel.index(index, 0));
                             onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                         }
                     }
@@ -532,6 +566,7 @@ PlasmaExtras.Representation {
                                     }
 
                                     function close() {
+                                        removeAnimation.start();
                                         historyModel.close(historyModel.index(index, 0));
                                     }
                                 }
@@ -556,6 +591,7 @@ PlasmaExtras.Representation {
                                 // property is only atached to the delegate itself (the Loader in our case)
                                 visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
                                                 && delegate.ListView.nextSection !== "" // don't show after last item
+                                                && !removeAnimation.running
                             }
                         }
                     }
