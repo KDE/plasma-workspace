@@ -93,6 +93,9 @@ inline void maintainItemEdgeAlignment(ItemContainer *item, const QRectF &newRect
 
 void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
 {
+    Q_UNUSED(newGeometry);
+    Q_UNUSED(oldGeometry);
+
     m_grid.clear();
     m_pointsForItem.clear();
     for (auto *item : layout()->childItems()) {
@@ -101,7 +104,6 @@ void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const Q
         // Move the item to maintain the distance with the anchors point
         auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
-            maintainItemEdgeAlignment(itemCont, newGeometry, oldGeometry);
             // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
             positionItem(itemCont);
             assignSpaceImpl(itemCont);
@@ -123,7 +125,7 @@ void GridLayoutManager::resetLayout()
     }
 }
 
-void GridLayoutManager::resetLayoutFromConfig()
+void GridLayoutManager::resetLayoutFromConfig(const QRectF &newGeom, const QRectF &oldGeom)
 {
     m_grid.clear();
     m_pointsForItem.clear();
@@ -140,8 +142,13 @@ void GridLayoutManager::resetLayoutFromConfig()
 
     for (auto *item : qAsConst(missingItems)) {
         // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
+        maintainItemEdgeAlignment(item, newGeom, oldGeom);
         positionItem(item);
         assignSpaceImpl(item);
+    }
+
+    if (!missingItems.isEmpty()) {
+        layout()->save();
     }
 }
 

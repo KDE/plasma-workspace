@@ -69,9 +69,14 @@ public:
     virtual void resetLayout() = 0;
 
     /**
-     * Forget about layout information and relayout all items based on their stored geometry first, and if that fails from their current geometry
+     * Forget about layout information and relayout all items based on their stored geometry first,
+     * and if that fails from their current geometry.
+     * If this function has been called from a resize, oldGeomety and newGeometry
+     * represent the geometries that this layout had before and after the resize, for placing strategies
+     * of items that weren't in the stored config.
+     * If one of those rects are empty, neither should be considered in the layouting strategy.
      */
-    virtual void resetLayoutFromConfig() = 0;
+    virtual void resetLayoutFromConfig(const QRectF &newGeom, const QRectF &oldGeom) = 0;
 
     /**
      * Restores an item geometry from the serialized config
