@@ -268,7 +268,7 @@ PlasmaExtras.Representation {
                     onCurrentIndexChanged: if (!activeFocus) {
                         currentIndex = -1;
                     }
- 
+
                     onActiveFocusChanged: if (activeFocus) {
                         currentIndex = 0;
                     } else {
@@ -512,8 +512,6 @@ PlasmaExtras.Representation {
                     return timezones;
                 }
 
-                property bool showSeconds: Plasmoid.configuration.showSeconds === "always"
-
                 delegate: PlasmaComponents3.ItemDelegate {
                     id: listItem
                     readonly property bool isCurrentTimeZone: modelData === Plasmoid.configuration.lastSelectedTimezone
@@ -523,7 +521,7 @@ PlasmaExtras.Representation {
                     rightPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
                     highlighted: ListView.isCurrentItem
                     Accessible.name: root.nameForZone(modelData)
-                    Accessible.description: root.timeForZone(modelData, showSeconds)
+                    Accessible.description: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
                     hoverEnabled: false
 
                     contentItem: RowLayout {
@@ -537,7 +535,7 @@ PlasmaExtras.Representation {
                         PlasmaComponents3.Label {
                             Layout.fillWidth: true
                             horizontalAlignment: Qt.AlignRight
-                            text: root.timeForZone(modelData, showSeconds)
+                            text: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             elide: Text.ElideRight
                             maximumLineCount: 1

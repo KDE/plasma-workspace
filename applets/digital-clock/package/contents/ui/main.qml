@@ -17,9 +17,6 @@ import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 Item {
     id: root
 
-    readonly property bool showSeconds: Plasmoid.configuration.showSeconds === "always"
-    readonly property bool showSecondsInToolTip: Plasmoid.configuration.showSeconds === "tooltip"
-
     width: PlasmaCore.Units.gridUnit * 10
     height: PlasmaCore.Units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
@@ -110,8 +107,8 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: allTimezones
-        interval: showSeconds || showSecondsInToolTip && Plasmoid.compactRepresentationItem.containsMouse ? 1000 : 60000
-        intervalAlignment: showSeconds || showSecondsInToolTip && Plasmoid.compactRepresentationItem.containsMouse ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
+        interval: intervalAlignment === PlasmaCore.Types.NoAlignment ? 1000 : 60000
+        intervalAlignment: Plasmoid.configuration.showSeconds === 2 || (Plasmoid.configuration.showSeconds === 1 && Plasmoid.compactRepresentationItem.containsMouse) ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
 
     function setDateFormatString() {

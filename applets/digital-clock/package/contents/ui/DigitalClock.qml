@@ -21,7 +21,6 @@ MouseArea {
     property string timeFormat
     property string timeFormatWithSeconds
 
-    property bool showSeconds: Plasmoid.configuration.showSeconds === "always"
     property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
     property bool showDate: Plasmoid.configuration.showDate
     property var dateFormat: {
@@ -81,7 +80,7 @@ MouseArea {
     Connections {
         target: Plasmoid.self
         function onContextualActionsAboutToShow() {
-            ClipboardMenu.secondsIncluded = main.showSeconds;
+            ClipboardMenu.secondsIncluded = (Plasmoid.configuration.showSeconds === 2);
             ClipboardMenu.currentDate = main.getCurrentTime();
         }
     }
@@ -509,7 +508,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(main.getCurrentTime(), showSeconds ? main.timeFormatWithSeconds : main.timeFormat)
+                text: Qt.formatTime(main.getCurrentTime(), Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -567,7 +566,7 @@ MouseArea {
     // To measure Label.height for maximum-sized font in VerticalFit mode
     Components.Label {
         id: fontHelper
-        
+
         height: 1024
 
         font.family: (Plasmoid.configuration.autoFontAndSize || Plasmoid.configuration.fontFamily.length === 0) ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily

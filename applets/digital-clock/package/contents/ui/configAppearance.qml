@@ -36,7 +36,7 @@ ColumnLayout {
     property string cfg_timeFormat: ""
     property alias cfg_showLocalTimezone: showLocalTimezone.checked
     property alias cfg_displayTimezoneFormat: displayTimezoneFormat.currentIndex
-    property string cfg_showSeconds: ""
+    property alias cfg_showSeconds: showSecondsComboBox.currentIndex
 
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
@@ -68,28 +68,15 @@ ColumnLayout {
             }
         }
 
-        ColumnLayout {
+        QtControls.ComboBox {
+            id: showSecondsComboBox
             Kirigami.FormData.label: i18n("Show seconds:")
-            Kirigami.FormData.buddyFor: neverShowSeconds
-
-            QtControls.RadioButton {
-                id: neverShowSeconds
-                checked: cfg_showSeconds === "never"
-                onClicked: cfg_showSeconds = "never"
-                text: i18n("Never")
-            }
-
-            QtControls.RadioButton {
-                checked: cfg_showSeconds === "tooltip"
-                onClicked: cfg_showSeconds = "tooltip"
-                text: i18n("Only in the tooltip")
-            }
-
-            QtControls.RadioButton {
-                checked: cfg_showSeconds === "always"
-                onClicked: cfg_showSeconds = "always"
-                text: i18n("Always")
-            }
+            model: [
+                i18nc("@option:check", "Never"),
+                i18nc("@option:check", "Only in the tooltip"),
+                i18n("Always"),
+            ]
+            onActivated: cfg_showSeconds = currentIndex;
         }
 
         Item {

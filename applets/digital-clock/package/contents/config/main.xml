@@ -10,9 +10,14 @@
       <label>Whether the timezone should be displayed when the clock is showing the local timezone.</label>
       <default>false</default>
     </entry>
-    <entry name="showSeconds" type="string">
+    <entry name="showSeconds" type="Enum">
       <label>How seconds should be shown in the clock.</label>
-      <default>tooltip</default>
+      <choices>
+        <choice name="Never" />
+        <choice name="ToolTip" />
+        <choice name="Always" />
+      </choices>
+      <default>ToolTip</default>
     </entry>
     <entry name="showDate" type="Bool">
       <label>Whether the date should be shown next to the clock.</label>
