@@ -17,6 +17,9 @@ import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 Item {
     id: root
 
+    readonly property bool showSeconds: Plasmoid.configuration.showSeconds === "always"
+    readonly property bool showSecondsInToolTip: Plasmoid.configuration.showSeconds === "tooltip"
+
     width: PlasmaCore.Units.gridUnit * 10
     height: PlasmaCore.Units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
@@ -38,7 +41,7 @@ Item {
         root.allTimezones = tz.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
-    function timeForZone(zone) {
+    function timeForZone(zone, showSecondsForZone) {
         var compactRepresentationItem = Plasmoid.compactRepresentationItem;
         if (!compactRepresentationItem) {
             return "";
@@ -51,7 +54,12 @@ Item {
         // add the dataengine TZ offset to it
         var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
 
-        var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
+        var formattedTime;
+        if (showSecondsForZone) {
+            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormatWithSeconds);
+        } else {
+            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
+        }
 
         if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
             formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
@@ -102,8 +110,8 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: allTimezones
-        interval: Plasmoid.configuration.showSeconds ? 1000 : 60000
-        intervalAlignment: Plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
+        interval: showSeconds || showSecondsInToolTip && Plasmoid.compactRepresentationItem.containsMouse ? 1000 : 60000
+        intervalAlignment: showSeconds || showSecondsInToolTip && Plasmoid.compactRepresentationItem.containsMouse ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
 
     function setDateFormatString() {

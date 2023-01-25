@@ -50,7 +50,7 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
-        interval: showSecondsHand ? 1000 : 30000
+        interval: showSecondsHand || Plasmoid.compactRepresentationItem.containsMouse ? 1000 : 30000
         onDataChanged: {
             var date = new Date(data["Local"]["DateTime"]);
             hours = date.getHours();
@@ -71,6 +71,7 @@ Item {
         property bool wasExpanded
 
         activeFocusOnTab: true
+        hoverEnabled: true
 
         Accessible.name: Plasmoid.title
         Accessible.description: i18nc("@info:tooltip", "Current time is %1; Current date is %2", analogclock.currentTime, analogclock.currentDate)

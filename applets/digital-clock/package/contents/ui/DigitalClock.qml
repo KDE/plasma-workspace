@@ -19,8 +19,9 @@ MouseArea {
     id: main
 
     property string timeFormat
+    property string timeFormatWithSeconds
 
-    property bool showSeconds: Plasmoid.configuration.showSeconds
+    property bool showSeconds: Plasmoid.configuration.showSeconds === "always"
     property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
     property bool showDate: Plasmoid.configuration.showDate
     property var dateFormat: {
@@ -73,7 +74,6 @@ MouseArea {
     onStateChanged: { setupLabels(); }
 
     onLastSelectedTimezoneChanged: { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
-    onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onShowLocalTimezoneChanged:    { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
@@ -509,7 +509,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(main.getCurrentTime(), main.timeFormat)
+                text: Qt.formatTime(main.getCurrentTime(), showSeconds ? main.timeFormatWithSeconds : main.timeFormat)
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -610,16 +610,16 @@ MouseArea {
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
         var result = hours.toLowerCase() + delimiter + minutes;
 
-        if (main.showSeconds) {
-            result += delimiter + seconds;
-        }
+        var result_sec = result + delimiter + seconds;
 
         // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
         if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
             result += " " + amPm;
+            result_sec += " " + amPm;
         }
 
         main.timeFormat = result;
+        main.timeFormatWithSeconds = result_sec;
         setupLabels();
     }
 

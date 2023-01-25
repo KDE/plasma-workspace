@@ -54,6 +54,7 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             elide: Text.ElideRight
+            // keep this consistent with toolTipMainText in analog-clock
             text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
         }
 
@@ -61,7 +62,8 @@ Item {
             id: tooltipSubtext
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
-            text: Qt.formatDate(tzDate, dateFormatString)
+            // keep this consistent with toolTipSubText in analog-clock
+            text: Qt.formatTime(tzDate, Plasmoid.configuration.showSeconds === "never" ? Qt.locale().timeFormat(Locale.ShortFormat) + " t" : Qt.locale().timeFormat(Locale.LongFormat)) + "\n" + Qt.formatDate(tzDate, Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
             opacity: 0.6
             visible: !clocks.visible
         }
@@ -71,7 +73,7 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             Layout.minimumHeight: childrenRect.height
-            visible: timezoneRepeater.count > 1
+            visible: timezoneRepeater.count > 2
             columns: 2
             rowSpacing: 0
 
@@ -105,7 +107,7 @@ Item {
                 PlasmaComponents3.Label {
                     // Layout.fillWidth is buggy here
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
-                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData)) : timeForZone(modelData)
+                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData)) : timeForZone(modelData, Plasmoid.configuration.showSeconds !== "never")
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone
