@@ -65,7 +65,7 @@ IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVari
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>(uri, 1, 0, "KIconLoader", QString());
 
-    setButtons(Apply | Default);
+    setButtons(Apply | Default | Help);
 
     connect(m_model, &IconsModel::pendingDeletionsChanged, this, &IconModule::settingsChanged);
 
