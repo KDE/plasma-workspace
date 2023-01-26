@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2020, 2021, 2022.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-07-08 18:31+0200\n"
+"PO-Revision-Date: 2023-01-25 15:25+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -523,19 +523,16 @@ msgid "Previous History Item"
 msgstr "Precedente elemento de chronologia"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Aperi Klipper al position de mus"
+msgstr "Monstra elementos al position de mus"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Instrumento de area de transferentia (clipboard)"
+msgstr "%1 - Instrumento de  Area de transferentia"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -815,11 +812,10 @@ msgstr ""
 "acceptar sy typo MIME in le menu de popup."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Contentos de Area de Transferentia"
+msgstr "%1 - Elementos de Area de transferentia"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -847,10 +843,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Utilitate de chronologia de talia & colla de KDE"
+msgstr "Utilitate de chronologia de talia & colla de Plasma"
 
 #: main.cpp:31
 #, kde-format

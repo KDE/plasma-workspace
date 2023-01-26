@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2019, 2020, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-12-16 22:41+0100\n"
+"PO-Revision-Date: 2023-01-25 15:37+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -29,7 +29,7 @@ msgstr "Toca per seliger tu location sur le mappa."
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Clicca pro seliger tu location sur le mappa"
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
@@ -79,28 +79,24 @@ msgid "Always off"
 msgstr "Sempre Off"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Poner del sol al levar del sol al location currente"
+msgstr "Poner del sol e levar del sol al location currente"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Poner del sol a levar de sol al location manual"
+msgstr "Poner del sol e levar de sol al location manual"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Tempore personalisate"
+msgstr "Tempores personalisate"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Sempre Active"
+msgstr "Sempre Active sur color de nocte"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -115,10 +111,9 @@ msgstr ""
 "services.mozilla.com'>Mozilla Location Service</link>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Temperatura de Color de Nocte:"
+msgstr "Temperatura de Color de Die:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -145,8 +140,7 @@ msgid "Cool"
 msgstr "Fresc"
 
 #: package/contents/ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Night color temperature:"
 msgstr "Temperatura de Color de Nocte:"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-26 02:32+0000\n"
 "PO-Revision-Date: 2022-10-16 13:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -139,35 +139,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Екраните са огледални"
 
-#: package/contents/ui/FullRepresentation.qml:401
+#: package/contents/ui/FullRepresentation.qml:435
 #, kde-format
 msgid "Close Group"
 msgstr "Затваряне на групата"
 
-#: package/contents/ui/FullRepresentation.qml:542
+#: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
 msgstr "Показване по-малко"
 
-#: package/contents/ui/FullRepresentation.qml:544
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Показване на още %1"
 
-#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Няма непрочетени известия"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Услугата за уведомяване не е налична"
 
-#: package/contents/ui/FullRepresentation.qml:601
+#: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

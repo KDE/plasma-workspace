@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-26 02:32+0000\n"
 "PO-Revision-Date: 2021-06-16 00:31+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -146,35 +146,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Ekranai yra suvienyti"
 
-#: package/contents/ui/FullRepresentation.qml:401
+#: package/contents/ui/FullRepresentation.qml:435
 #, kde-format
 msgid "Close Group"
 msgstr "Užverti grupę"
 
-#: package/contents/ui/FullRepresentation.qml:542
+#: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
 msgstr "Rodyti mažiau"
 
-#: package/contents/ui/FullRepresentation.qml:544
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Rodyti dar %1"
 
-#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Neskaitytų pranešimų nėra"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Pranešimų tarnyba yra neprieinama"
 
-#: package/contents/ui/FullRepresentation.qml:601
+#: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

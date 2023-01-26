@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2014, 2017, 2020, 2021.
+# Giovanni Sora <g.sora@tiscali.it>, 2014, 2017, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2021-12-21 14:44+0100\n"
+"PO-Revision-Date: 2023-01-25 15:23+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -60,59 +60,59 @@ msgstr "Le requesta de executar, solmente usate si -c non es fornite"
 #: qml/RunCommand.qml:75
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Configura"
 
 #: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "Configura le Comportamento de KRunner"
 
 #: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "Configura KRunner..."
 
 #: qml/RunCommand.qml:91
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "Cerca '%1'…"
 
 #: qml/RunCommand.qml:92
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "Cerca…"
 
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "Monstra adjuta de uso"
 
 #: qml/RunCommand.qml:239
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "Pin"
 
 #: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "Attacha cerca"
 
 #: qml/RunCommand.qml:242
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Manteni aperite"
 
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "Requestas recente"
 
 #: qml/RunCommand.qml:323
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Remove"
 
 #~ msgid "krunner"
 #~ msgstr "krunner"
