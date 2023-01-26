@@ -66,7 +66,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     qmlRegisterUncreatableType<KCMLookandFeel>(uri, 1, 0, "KCMLookandFeel", "Can't create KCMLookandFeel");
     qmlRegisterUncreatableType<LookAndFeelManager>(uri, 1, 0, "LookandFeelManager", "Can't create LookandFeelManager");
 
-    setButtons(Default);
+    setButtons(Default | Help);
 
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();

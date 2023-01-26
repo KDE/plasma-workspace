@@ -121,6 +121,7 @@
     "X-KDE-Keywords[vi]": "theme,look,feel,global theme,desktop,appearance,skin, global,presentation,themes,design,UI,chủ đề,nhìn,cảm,chủ đề toàn cục,bàn làm việc,diện mạo,da,toàn cục,thể hiện,thiết kế,giao diện người dùng",
     "X-KDE-Keywords[x-test]": "xxthemexx,xxlookxx,xxfeelxx,xxglobal themexx,xxdesktopxx,xxappearancexx,xxskinxx,xx globalxx,xxpresentationxx,xxthemesxx,xxdesignxx,xxUIxx",
     "X-KDE-Keywords[zh_CN]": "theme,look,feel,global theme,desktop,appearance,skin, global,presentation,themes,design,UI,主题,视觉效果,观感,视效,全局主题,桌面,外观,桌面外观,皮肤,全局,呈现,表现,设计,界面,用户界面",
+    "X-DocPath": "kcontrol/lookandfeel/index.html",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 1
 }
