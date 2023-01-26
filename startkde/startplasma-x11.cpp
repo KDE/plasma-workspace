@@ -50,11 +50,6 @@ int main(int argc, char **argv)
         const auto screenScaleFactors = kscreenGroup.readEntry("ScreenScaleFactors", QByteArray());
         if (!screenScaleFactors.isEmpty()) {
             qputenv("QT_SCREEN_SCALE_FACTORS", screenScaleFactors);
-            qreal scaleFactor = qFloor(kscreenGroup.readEntry("ScaleFactor", 1.0));
-            if (scaleFactor > 1) {
-                qputenv("GDK_SCALE", QByteArray::number(scaleFactor, 'g', 0));
-                qputenv("GDK_DPI_SCALE", QByteArray::number(1.0 / scaleFactor, 'g', 3));
-            }
         }
     }
 
