@@ -30,7 +30,7 @@ extern "C" {
 #include <QMap>
 #include <QTime>
 #include <QTimer>
-#include <kmessagebox.h>
+#include <QWindow>
 #include <kworkspace.h>
 
 #define SESSION_PREVIOUS_LOGOUT "saved at previous logout"

@@ -45,7 +45,6 @@ target_link_libraries(ksmserver
     KF5::KIOCore
     KF5::KIOGui
     KF5::Solid
-    Qt::Quick
     KF5::Declarative
     KF5::DBusAddons
     KF5::Notifications

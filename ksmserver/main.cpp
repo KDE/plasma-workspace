@@ -36,7 +36,6 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QFile>
-#include <QQuickWindow>
 
 static const char version[] = "0.4";
 
@@ -173,9 +172,7 @@ int main(int argc, char *argv[])
     const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");
     qputenv("QT_QPA_PLATFORM", QByteArrayLiteral("xcb"));
 
-    QQuickWindow::setDefaultAlphaBuffer(true);
-    QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
-    QApplication *a = new QApplication(argc, argv);
+    QGuiApplication *a = new QGuiApplication(argc, argv);
 
     // now the QPA platform is set, unset variable again to not launch apps with incorrect environment
     if (origQpaPlatform.isEmpty()) {
@@ -184,9 +181,9 @@ int main(int argc, char *argv[])
         qputenv("QT_QPA_PLATFORM", origQpaPlatform);
     }
 
-    QApplication::setApplicationName(QStringLiteral("ksmserver"));
-    QApplication::setApplicationVersion(QString::fromLatin1(version));
-    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+    QCoreApplication::setApplicationName(QStringLiteral("ksmserver"));
+    QCoreApplication::setApplicationVersion(QString::fromLatin1(version));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
     fcntl(ConnectionNumber(QX11Info::display()), F_SETFD, 1);
 
@@ -271,7 +268,7 @@ int main(int argc, char *argv[])
 
     server->setupShortcuts();
     int ret = a->exec();
-    kde_running.release(); // needs to be done before QApplication destruction
+    kde_running.release(); // needs to be done before QGuiApplication destruction
     delete a;
     return ret;
 }
