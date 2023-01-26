@@ -8,6 +8,8 @@
 #include "previewitem.h"
 #include "kcm_style_debug.h"
 
+#include <cmath>
+
 #include <QHoverEvent>
 #include <QMouseEvent>
 #include <QPainter>
@@ -140,7 +142,7 @@ void PreviewItem::reload()
 
     m_widget->ensurePolished();
 
-    m_widget->resize(qRound(width()), qRound(height()));
+    resizeWidget(size());
 
     m_widget->installEventFilter(this);
 
@@ -157,6 +159,7 @@ void PreviewItem::reload()
 void PreviewItem::paint(QPainter *painter)
 {
     if (m_widget && m_widget->isVisible()) {
+        painter->scale(width() / static_cast<qreal>(m_widget->width()), height() / static_cast<qreal>(m_widget->height()));
         m_widget->render(painter);
     }
 }
@@ -284,14 +287,28 @@ void PreviewItem::dispatchEnterLeave(QWidget *enter, QWidget *leave, const QPoin
     }
 }
 
+void PreviewItem::resizeWidget(const QSizeF &newSize)
+{
+    if (!m_widget) {
+        return;
+    }
+
+    QSizeF size = newSize;
+    if (size.width() < implicitWidth() || size.height() < implicitHeight()) {
+        size.scale(implicitWidth(), implicitHeight(), Qt::KeepAspectRatioByExpanding);
+    }
+
+    m_widget->resize(std::ceil(size.width()), std::ceil(size.height()));
+}
+
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 void PreviewItem::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
 #else
 void PreviewItem::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
 #endif
 {
-    if (m_widget && newGeometry != oldGeometry) {
-        m_widget->resize(qRound(newGeometry.width()), qRound(newGeometry.height()));
+    if (newGeometry != oldGeometry) {
+        resizeWidget(newGeometry.size());
     }
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)

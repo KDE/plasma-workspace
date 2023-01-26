@@ -55,6 +55,7 @@ protected:
 private:
     void sendHoverEvent(QHoverEvent *event);
     void dispatchEnterLeave(QWidget *enter, QWidget *leave, const QPointF &globalPosF);
+    void resizeWidget(const QSizeF &newSize);
 
     QString m_styleName;
 
