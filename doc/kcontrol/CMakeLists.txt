@@ -1,3 +1,4 @@
+ecm_optional_add_subdirectory(lookandfeel)
 ecm_optional_add_subdirectory(desktopthemedetails)
 ecm_optional_add_subdirectory(formats)
 ecm_optional_add_subdirectory(icons)
