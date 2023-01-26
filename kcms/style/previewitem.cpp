@@ -8,6 +8,7 @@
 #include "previewitem.h"
 #include "kcm_style_debug.h"
 
+#include <chrono>
 #include <cmath>
 
 #include <QHoverEvent>
@@ -20,6 +21,8 @@
 
 #include <KColorScheme>
 #include <KSharedConfig>
+
+using namespace std::chrono_literals;
 
 PreviewItem::PreviewItem(QQuickItem *parent)
     : QQuickPaintedItem(parent)
@@ -49,8 +52,16 @@ bool PreviewItem::eventFilter(QObject *watched, QEvent *event)
     if (watched == m_widget.get()) {
         switch (event->type()) {
         case QEvent::Show:
-        case QEvent::UpdateRequest:
             update();
+            break;
+        case QEvent::UpdateRequest:
+            // Some 3rd-party styles (e.g. QSvgStyle) frequently request updates which cause high CPU usage.
+            // Suppress them to work around buggy styles.
+            if (m_containsMouse) {
+                update();
+            } else if (!m_timerId) {
+                m_timerId = startTimer(1s);
+            }
             break;
         default:
             break;
@@ -164,6 +175,11 @@ void PreviewItem::paint(QPainter *painter)
     }
 }
 
+void PreviewItem::hoverEnterEvent(QHoverEvent *)
+{
+    m_containsMouse = true;
+}
+
 void PreviewItem::hoverMoveEvent(QHoverEvent *event)
 {
     sendHoverEvent(event);
@@ -171,10 +187,22 @@ void PreviewItem::hoverMoveEvent(QHoverEvent *event)
 
 void PreviewItem::hoverLeaveEvent(QHoverEvent *event)
 {
+    m_containsMouse = false;
+
     if (m_lastWidgetUnderMouse) {
         dispatchEnterLeave(nullptr, m_lastWidgetUnderMouse, mapToGlobal(event->pos()));
         m_lastWidgetUnderMouse = nullptr;
     }
+}
+
+void PreviewItem::timerEvent(QTimerEvent *event)
+{
+    if (event->timerId() != m_timerId) {
+        return;
+    }
+    killTimer(m_timerId);
+    m_timerId = 0;
+    update();
 }
 
 void PreviewItem::sendHoverEvent(QHoverEvent *event)

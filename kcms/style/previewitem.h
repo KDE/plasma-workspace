@@ -43,8 +43,10 @@ protected:
 
     void paint(QPainter *painter) override;
 
+    void hoverEnterEvent(QHoverEvent *event) override;
     void hoverMoveEvent(QHoverEvent *event) override;
     void hoverLeaveEvent(QHoverEvent *event) override;
+    void timerEvent(QTimerEvent *event) override;
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
@@ -63,6 +65,8 @@ private:
 
     std::unique_ptr<QWidget> m_widget;
     QPointer<QWidget> m_lastWidgetUnderMouse;
+    int m_timerId = 0;
+    bool m_containsMouse = false;
 
     std::unique_ptr<QStyle> m_style;
 };
