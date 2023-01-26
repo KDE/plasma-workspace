@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-26 00:59+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -141,35 +141,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "സ്ക്രീനുകൾ പ്രതിബിംബിച്ചിട്ടുണ്ട്"
 
-#: package/contents/ui/FullRepresentation.qml:401
+#: package/contents/ui/FullRepresentation.qml:435
 #, kde-format
 msgid "Close Group"
 msgstr "ഗ്രൂപ്പ് അടയ്ക്കുക"
 
-#: package/contents/ui/FullRepresentation.qml:542
+#: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
 msgstr "കുറച്ച് കാണിക്കുക"
 
-#: package/contents/ui/FullRepresentation.qml:544
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 കൂടുതൽ കാണിക്കുക"
 
-#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "വായിക്കാത്ത അറിയിപ്പുകൾ ഇല്ല"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "അറിയിപ്പ് സേവനം ലഭ്യമല്ല"
 
-#: package/contents/ui/FullRepresentation.qml:601
+#: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

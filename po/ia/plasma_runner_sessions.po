@@ -1,30 +1,29 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2020, 2021, 2022.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-16 22:38+0100\n"
+"PO-Revision-Date: 2023-01-25 16:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "claude de session"
+msgstr "logout;log out"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -32,14 +31,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Il claude le session, abandonante le currente session de scriptorio"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "arresto (shutdown)"
+msgstr "shutdown;shut down"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -47,14 +44,12 @@ msgid "Turns off the computer"
 msgstr "Extingue le computator"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "re-starta"
+msgstr "restart;reboot"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -62,12 +57,11 @@ msgid "Reboots the computer"
 msgstr "Re-starta le computator"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Bloca le schermo"
+msgstr "lock;lock screen"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -75,27 +69,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Il bloca le sessiones currente e il initia le salvator de schermo"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "nove session"
+msgstr "save;save session"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Salveguarda le session currente per restauration de session"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "commuta usator"
+msgstr "switch user;new session"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -135,17 +127,13 @@ msgid "Log Out"
 msgstr "Claude session"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "Stoppa (shut down)"
+msgstr "Arresto (shut down)"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Re-Initia"
@@ -175,12 +163,16 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>Tu es per insertar un nove session de scriptorio.</p><p>Un schermo de "
+"accesso essera monstrate e le session currente essers celate.</p><p>Tu pote "
+"commutar inter sessiones de scriptorio per usar:</p><ul><li>Ctrl+Alt"
+"+F{numero de session}</li><li>Cerca de Plasma (type '%1')</li><li>Widgets de "
+"Plasma (tal como le lanceator de application)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Nove session"
+msgstr "Nove session de scriptorio"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

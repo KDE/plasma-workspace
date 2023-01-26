@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"POT-Creation-Date: 2023-01-26 00:59+0000\n"
 "PO-Revision-Date: 2009-08-08 17:42+0530\n"
 "Last-Translator: qeqe <danishka@gmail.com>\n"
 "Language-Team: Sinhalese <danishka@gmail.com>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Appearance"
 msgstr "පෙනුම"
 
-#: contents/ui/analogclock.qml:76
+#: contents/ui/analogclock.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

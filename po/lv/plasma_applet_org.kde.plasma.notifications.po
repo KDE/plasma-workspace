@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-26 00:59+0000\n"
 "PO-Revision-Date: 2012-01-07 08:38+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -145,37 +145,37 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:401
+#: package/contents/ui/FullRepresentation.qml:435
 #, kde-format
 msgid "Close Group"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:542
+#: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:544
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:90
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "No unread notifications"
 msgstr "Paziņojumi"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "Notifications and jobs"
 msgid "Notification service not available"
 msgstr "Paziņojumi un darbi"
 
-#: package/contents/ui/FullRepresentation.qml:601
+#: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

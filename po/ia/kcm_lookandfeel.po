@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2016, 2020, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2016, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:59+0000\n"
-"PO-Revision-Date: 2022-12-16 22:41+0100\n"
+"PO-Revision-Date: 2023-01-25 22:57+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -110,23 +110,22 @@ msgstr "Iste modulo te permitte seliger le apparentia global."
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Dele permanentemente"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Tu vermente vole deler permanentemente iste tema?"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Dele permanentemente"
 
 #: package/contents/ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancella"
@@ -142,11 +141,10 @@ msgid "Preview Theme"
 msgstr "Vide de forma preliminr le thema"
 
 #: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Vide de forma preliminr le thema"
+msgstr "Remove thema"
 
 #: package/contents/ui/main.qml:131
 #, kde-format

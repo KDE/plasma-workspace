@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-03-15 11:16+0100\n"
+"PO-Revision-Date: 2023-01-25 16:09+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -149,7 +149,7 @@ msgstr "Configura impressiones digital"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Netta omne"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -303,10 +303,9 @@ msgid "Re-enroll finger"
 msgstr "Re-inrola digito"
 
 #: package/contents/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Netta impressiones digital"
+msgstr "Dele impression digital"
 
 #: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
@@ -324,141 +323,121 @@ msgid "Add New User"
 msgstr "Adde nove usator"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Cambia Avatar"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Il es nihil"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Feisty Flamingo"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Dragon's Fruit"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Sweet Potato"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Ambient Amber"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Sparkle Sunbeam"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Lemon-Lime"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Verdant Charm"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Mellow Meadow"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Tepid Teal"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma Blue"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon Purple"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo Purple"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Burnt Charcoal"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Paper Perfection"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Cafétera Brown"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Selige un pictura"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Selige file..."
