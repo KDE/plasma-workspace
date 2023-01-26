@@ -248,6 +248,7 @@ private Q_SLOTS:
     void activateTaskManagerEntry(int index);
 
 private:
+    void sanitizeScreenLayout(const QString &configFileName);
     void updateStruts();
     void configurationChanged(const QString &path);
     DesktopView *desktopForScreen(QScreen *screen) const;
@@ -260,8 +261,6 @@ private:
 #ifndef NDEBUG
     void screenInvariants() const;
 #endif
-
-    void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
     KSharedConfig::Ptr m_config;
     QString m_configPath;

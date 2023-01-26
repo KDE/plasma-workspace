@@ -654,6 +654,74 @@ QString ShellCorona::shell() const
     return m_shell;
 }
 
+void ShellCorona::sanitizeScreenLayout(const QString &configFileName)
+{
+    KConfigGroup cg(KSharedConfig::openConfig(configFileName), QStringLiteral("Containments"));
+
+    // The containment-> screen mappings we found in the config file
+    QHash<QString, QMap<int, QString>> savedContainmentScreens;
+
+    // Desktop containments with screen = -1 or duplicated wanting to go on the same screen as somebody else
+    QStringList orphanContainments;
+    // Panel containments we found we may want to remap the screen
+    QStringList panelContainments;
+    QSet<Plasma::Types::Location> panelLocations({Plasma::Types::TopEdge, Plasma::Types::BottomEdge, Plasma::Types::LeftEdge, Plasma::Types::RightEdge});
+
+    for (const QString &idStr : cg.groupList()) {
+        if (idStr.toInt() <= 0) {
+            continue;
+        }
+
+        KConfigGroup contCg(&cg, idStr);
+        int lastScreen = contCg.readEntry(QStringLiteral("lastScreen"), -1);
+
+        if (panelLocations.contains(Plasma::Types::Location(contCg.readEntry(QStringLiteral("location"), 0)))) {
+            if (lastScreen >= 0) {
+                panelContainments.append(idStr);
+            }
+            continue;
+        }
+
+        const QString &activity = contCg.readEntry(QStringLiteral("activityId"), QString());
+
+        if (lastScreen >= 0 && !savedContainmentScreens[activity].contains(lastScreen)) {
+            savedContainmentScreens[activity][lastScreen] = idStr;
+        } else {
+            orphanContainments.append(idStr);
+        }
+    }
+
+    QHash<int, int> screenMapping;
+
+    // Ensure desktops screens are progressive
+    for (auto activityIt = savedContainmentScreens.begin(); activityIt != savedContainmentScreens.end(); activityIt++) {
+        const QString &activity = activityIt.key();
+        int progressiveScreen = 0;
+        for (auto originalScreenIt = activityIt.value().begin(); originalScreenIt != activityIt.value().end(); originalScreenIt++) {
+            KConfigGroup contCg(&cg, originalScreenIt.value());
+            screenMapping[originalScreenIt.key()] = progressiveScreen;
+            contCg.writeEntry(QStringLiteral("lastScreen"), progressiveScreen++);
+        }
+
+        for (auto orphanContainmentsIt = orphanContainments.constBegin(); orphanContainmentsIt != orphanContainments.constEnd(); orphanContainmentsIt++) {
+            KConfigGroup contCg(&cg, (*orphanContainmentsIt));
+            const QString &orphanActivity = contCg.readEntry(QStringLiteral("activityId"), QString());
+            if (orphanActivity == activity) {
+                contCg.writeEntry(QStringLiteral("lastScreen"), progressiveScreen++);
+            }
+        }
+    }
+
+    // Remap panels to the screen changes we did for desktops
+    for (auto panelsIt = panelContainments.begin(); panelsIt != panelContainments.end(); panelsIt++) {
+        KConfigGroup contCg(&cg, (*panelsIt));
+        int lastScreen = contCg.readEntry(QStringLiteral("lastScreen"), -1);
+
+        // If we don't know where to put the panel, put it on the first screen
+        contCg.writeEntry(QStringLiteral("lastScreen"), screenMapping.value(lastScreen, 0));
+    }
+}
+
 void ShellCorona::load()
 {
     if (m_shell.isEmpty()) {
@@ -676,6 +744,9 @@ void ShellCorona::load()
     // TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
 
+    // Make sure all containments have screen numbers starting from 0 and are sequential
+    sanitizeScreenLayout(configFileName);
+
     loadLayout(configFileName);
 
     checkActivities();
@@ -690,28 +761,16 @@ void ShellCorona::load()
     } else {
         processUpdateScripts();
         const auto containments = this->containments();
-        for (Plasma::Containment *containment : containments) {
-            if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
-                // Don't give a view to containments that don't want one (negative lastscreen)
-                //(this is pretty mucha special case for the systray)
-                // also, make sure we don't have a view already.
-                // this will be true for first startup as the view has already been created at the new Panel JS call
-                if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment)) {
-                    m_waitingPanels << containment;
-                }
-                // historically CustomContainments are treated as desktops
-            } else if (containment->containmentType() == Plasma::Types::DesktopContainment
-                       || containment->containmentType() == Plasma::Types::CustomContainment) {
-                // containment->lastScreen() is the screen order it had the last time plasma ran, screen < 0 means no screen assigned which should normally
-                // never happen. It needs an explicitly broken config file for that to happen. Sanify lastScreen as much as possible
-                int screen = containment->lastScreen();
-                if (screen < 0) {
-                    screen = 0;
-                    qCWarning(PLASMASHELL) << "last screen is < 0 so putting containment on screen " << screen;
-                }
-                insertContainment(containment->activity(), screen, containment);
-            }
-        }
+
+        // Don't give a view to containments that don't want one (negative lastscreen)
+        // (this is pretty mucha special case for the systray)
+        // also, make sure we don't have a view already.
+        // this will be true for first startup as the view has already been created at the new Panel JS call
+        std::copy_if(containments.constBegin(), containments.constEnd(), std::back_inserter(m_waitingPanels), [this](Plasma::Containment *containment) {
+            return (
+                (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)
+                && !m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment));
+        });
     }
 
     // NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
@@ -1346,16 +1405,32 @@ void ShellCorona::checkAllDesktopsUiReady(bool ready)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, int screenNum)
 {
+    Plasma::Containment *lastScreenCont = nullptr;
+    Plasma::Containment *orphanCont = nullptr;
     const auto containments = containmentsForActivity(activity);
     for (Plasma::Containment *cont : containments) {
         // in the case of a corrupt config file
         // with multiple containments with same lastScreen
-        // it can happen two insertContainment happen for
-        // the same screen, leading to the old containment
-        // to be destroyed
-        if (!cont->destroyed() && cont->screen() == screenNum) {
-            return cont;
+        // Always prefer a containment that already has a screen, if any
+        // This piece of code always fails at startup, used only later in plasma runtime
+        if (cont->destroyed()) {
+            continue;
         }
+        if (cont->screen() == screenNum) {
+            // Always prefer a containment that already has a view
+            return cont;
+        } else if (cont->lastScreen() == screenNum) {
+            // Otherwise base off lastScreen
+            lastScreenCont = cont;
+        } else if (cont->lastScreen() < 0) {
+            // Last resort, if we found a desktop for the activity that for whatever reason had screen -1 (very unlikely) recycle it
+            orphanCont = cont;
+        }
+    }
+    if (lastScreenCont) {
+        return lastScreenCont;
+    } else if (orphanCont) {
+        return orphanCont;
     }
 
     QString plugin = m_activityContainmentPlugins.value(activity);
@@ -1366,10 +1441,6 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &ac
 
     Plasma::Containment *containment = containmentForScreen(screenNum, activity, plugin, QVariantList());
     Q_ASSERT(containment);
-
-    if (containment) {
-        insertContainment(activity, screenNum, containment);
-    }
 
     return containment;
 }
@@ -1796,7 +1867,8 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
     (*viewIt)->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
-    insertContainment(oldContainment->activity(), screen, newContainment);
+
+    oldContainment->destroy();
 
     // removing the focus from the item that is going to be destroyed
     // fixes a crash
@@ -2182,31 +2254,6 @@ void ShellCorona::stopCurrentActivity()
     }
 
     m_activityController->stopActivity(m_activityController->currentActivity());
-}
-
-void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
-{
-    Plasma::Containment *cont = nullptr;
-    const auto candidates = containmentsForActivity(activity);
-    for (Plasma::Containment *c : candidates) {
-        // using lastScreen() instead of screen() catches also containments of activities that aren't the current one, so not assigned to a screen right now
-        if (c->lastScreen() == screenNum) {
-            cont = c;
-            if (containment == cont) {
-                return;
-            }
-            break;
-        }
-    }
-
-    Q_ASSERT(containment != cont);
-
-    // if there was a duplicate containment destroy the old one
-    // the new one replaces it
-    // FIXME: this whole function is probably redundant now
-    if (cont) {
-        cont->destroy();
-    }
 }
 
 /**
