@@ -37,7 +37,6 @@
 #include <QCommandLineParser>
 #include <QFile>
 #include <QQuickWindow>
-#include <X11/extensions/Xrender.h>
 
 static const char version[] = "0.4";
 
@@ -68,45 +67,6 @@ bool writeTest(QByteArray path)
     close(fd);
     unlink(path.data());
     return true;
-}
-
-void checkComposite()
-{
-    if (qgetenv("KDE_SKIP_ARGB_VISUALS") == "1")
-        return;
-    // thanks to zack rusin and frederik for pointing me in the right direction
-    // for the following bits of X11 code
-    dpy = XOpenDisplay(nullptr); // open default display
-    if (!dpy) {
-        qCCritical(KSMSERVER) << "Cannot connect to the X server";
-        return;
-    }
-
-    int screen = DefaultScreen(dpy);
-    int eventBase, errorBase;
-
-    if (XRenderQueryExtension(dpy, &eventBase, &errorBase)) {
-        int nvi;
-        XVisualInfo templ;
-        templ.screen = screen;
-        templ.depth = 32;
-        templ.c_class = TrueColor;
-        XVisualInfo *xvi = XGetVisualInfo(dpy, VisualScreenMask | VisualDepthMask | VisualClassMask, &templ, &nvi);
-        for (int i = 0; i < nvi; ++i) {
-            XRenderPictFormat *format = XRenderFindVisualFormat(dpy, xvi[i].visual);
-            if (format->type == PictTypeDirect && format->direct.alphaMask) {
-                visual = xvi[i].visual;
-                colormap = XCreateColormap(dpy, RootWindow(dpy, screen), visual, AllocNone);
-
-                XFree(xvi);
-                return;
-            }
-        }
-
-        XFree(xvi);
-    }
-    XCloseDisplay(dpy);
-    dpy = nullptr;
 }
 
 void sanity_check(int argc, char *argv[])
@@ -208,7 +168,6 @@ int main(int argc, char *argv[])
     sanity_check(argc, argv);
 
     putenv((char *)"SESSION_MANAGER=");
-    checkComposite();
 
     // force xcb QPA plugin as ksmserver is very X11 specific
     const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");

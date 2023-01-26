@@ -55,7 +55,6 @@ target_link_libraries(ksmserver
     X11::X11
     X11::SM
     X11::ICE
-    X11::Xrender
 )
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(ksmserver Qt::X11Extras)
