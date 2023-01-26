@@ -13,6 +13,7 @@
 
 #include "previewwidget.h"
 
+#include "config-X11.h"
 #include "cursortheme.h"
 
 namespace
@@ -36,7 +37,7 @@ const char *const cursor_names[] = {
 };
 
 const int numCursors = 9; // The number of cursors from the above list to be previewed
-const int cursorSpacing = 20; // Spacing between preview cursors
+constexpr int cursorSpacing = 14 * 2; // Spacing between preview cursors
 const qreal widgetMinWidth = 10; // The minimum width of the preview widget
 const qreal widgetMinHeight = 48; // The minimum height of the preview widget
 }
@@ -216,16 +217,23 @@ void PreviewWidget::updateImplicitSize()
 void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty()) {
-        const int spacing = 12;
+        double devicePixelRatio = 1;
+#if HAVE_X11
+        if (KWindowSystem::isPlatformX11()) {
+            devicePixelRatio = window()->devicePixelRatio();
+        }
+#endif
+        const int spacing = cursorSpacing / devicePixelRatio / 2;
         int nextX = spacing;
         int nextY = spacing;
 
         for (auto *c : std::as_const(list)) {
             c->setPosition(nextX, nextY);
-            nextX += c->boundingSize() + spacing;
-            if (nextX + c->boundingSize() > width()) {
+            const int boundingSize = c->boundingSize() / devicePixelRatio;
+            nextX += boundingSize + spacing;
+            if (nextX + boundingSize > width()) {
                 nextX = spacing;
-                nextY += c->boundingSize() + spacing;
+                nextY += boundingSize + spacing;
             }
         }
     }
@@ -256,11 +264,21 @@ void PreviewWidget::paint(QPainter *painter)
     if (needLayout)
         layoutItems();
 
+    // for cursor themes we must ignore the native scaling,
+    // as they will be rendered by X11/KWin, ignoring whatever Qt
+    // scaling
+    double devicePixelRatio = 1;
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        devicePixelRatio = window()->devicePixelRatio();
+    }
+    painter->scale(1 / devicePixelRatio, 1 / devicePixelRatio);
+#endif
     for (const auto *c : std::as_const(list)) {
         if (c->pixmap().isNull())
             continue;
 
-        painter->drawPixmap(c->position(), *c);
+        painter->drawPixmap(c->position() * devicePixelRatio, *c);
     }
 }
 

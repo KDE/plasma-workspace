@@ -25,15 +25,7 @@ KCM.GridDelegate {
     thumbnailAvailable: true
     thumbnail: PreviewWidget {
         id: previewWidget
-        //for cursor themes we must ignore the native scaling,
-        //as they will be rendered by X11/KWin, ignoring whatever Qt
-        //scaling
-        width: parent.width * Screen.devicePixelRatio
-        height: parent.height * Screen.devicePixelRatio
-        x: Screen.devicePixelRatio % 1
-        y: Screen.devicePixelRatio % 1
-        transformOrigin: Item.TopLeft
-        scale: 1 / Screen.devicePixelRatio
+        anchors.fill: parent
         themeModel: kcm.cursorsModel
         currentIndex: index
         currentSize: kcm.cursorThemeSettings.cursorSize
