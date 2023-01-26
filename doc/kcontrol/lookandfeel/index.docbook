@@ -17,13 +17,13 @@
 </authorgroup>
 
 <date>2023-01-26</date>
-<releaseinfo>Plasma 6.0</releaseinfo>
+<releaseinfo>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
 <keyword>System Settings</keyword>
 <keyword>appearance</keyword>
-<keyword>global theme</keyword>
+<keyword>Global Theme</keyword>
 <keyword>style</keyword>
 <keyword>theme</keyword>
 <keyword>look</keyword>
@@ -40,10 +40,10 @@
 <title>Global Themes</title>
 
 <para>
-  Global themes provide a common look and feel for many components at once:
+  Global Themes provide a common look and feel for many components at once:
 </para>
 <itemizedlist>
-  <listitem><para>Desktop Layout: An arrangement of panels and widgets - for example a bottom panel with a task manager and application launcher, or a top panel with application menu and system tray</para></listitem>
+  <listitem><para>Desktop Layout: An arrangement of panels and widgets - for example a bottom panel with a task manager and application launcher, or a top panel with global menu and system tray</para></listitem>
   <listitem><para>Color Scheme: Color palette used throughout &plasma; and applications</para></listitem>
   <listitem><para>Application Style: Appearance of user interface elements such as buttons, menus, and scroll bars</para></listitem>
   <listitem><para>Plasma Style: Appearance of panels and widgets</para></listitem>
@@ -53,12 +53,12 @@
   <listitem><para>Task Switcher: Overlay for switching between open windows, typically invoked with the keyboard shortcut Alt+Tab</para></listitem>
   <listitem><para>Splash Screen: Loading screen shown during &plasma; startup</para></listitem>
   <listitem><para>Login Screen: Screen with a user selector and password prompt shown when the computer is started up</para></listitem>
-  <listitem><para>Login Manager: Screen with a user password prompt shown when the computer is locked</para></listitem>
+  <listitem><para>Lock Screen: Screen with a user password prompt shown when the computer is locked</para></listitem>
   <listitem><para>Wallpaper: A desktop background image</para></listitem>
 </itemizedlist>
 
 <para>
-  By appling a global theme, you can change all of the above together. You can also apply only some components of a global theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a global theme, or apply individual components by using the other System Settings subsections.
+  By appling a Global Theme, you can change all of the above together. You can also apply only some components of a Global Theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a Global Theme, or apply individual components by using the other System Settings subsections.
 </para>
 
 <sect2 id="globaltheme-manage">
@@ -67,8 +67,8 @@
 <para>
   In this module you can:
   <itemizedlist>
-    <listitem><para>apply global themes</para></listitem>
-    <listitem><para>install new global themes, and remove installed global themes</para></listitem>
+    <listitem><para>apply Global Themes</para></listitem>
+    <listitem><para>install new Global Themes, and remove installed Global Themes</para></listitem>
   </itemizedlist>
   <screenshot>
     <screeninfo>Screenshot of the Global Theme manager</screeninfo>
@@ -90,9 +90,9 @@
 </para>
 
 <para>
-  When clicking on a global theme, a dialog will show up asking you which components of the theme you would like to apply. You can select from various appearance settings and the desktop layout.
+  When clicking on a Global Theme, a dialog will show up asking you which components of the theme you would like to apply. You can select from various appearance settings and the desktop layout.
   <screenshot>
-    <screeninfo>Screenshot of the global theme component chooser</screeninfo>
+    <screeninfo>Screenshot of the Global Theme component chooser</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="component-chooser_1.png" format="PNG" />
@@ -100,7 +100,7 @@
     </mediaobject>
   </screenshot>
   <screenshot>
-    <screeninfo>Screenshot of the global theme component chooser</screeninfo>
+    <screeninfo>Screenshot of the Global Theme component chooser</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="component-chooser_2.png" format="PNG" />
@@ -119,7 +119,7 @@
 <title>Install Global Themes</title>
 
 <para>
-  With the button <guilabel>Get New Global Themes...</guilabel>, you can install new global themes by third-party providers. You need to be connected to the internet in order to access these themes. Clicking on <guibutton>Install</guibutton> in one of the themes in the dialog will install the chosen global theme, and after you close the dialog, your new theme is immediately available.
+  With the button <guilabel>Get New Global Themes...</guilabel>, you can install new Global Themes by third-party providers. You need to be connected to the internet in order to access these themes. Clicking on <guibutton>Install</guibutton> in one of the themes in the dialog will install the chosen Global Theme, and after you close the dialog, your new theme is immediately available.
   <screenshot>
   <screeninfo>Get New Global Themes...</screeninfo>
     <mediaobject>
@@ -134,7 +134,7 @@
 </para>
 
 <para>
-  To remove an installed global theme, click on the button with the thrash icon that appears when hovering over a theme thumbnail.
+  To remove an installed Global Theme, click on the button with the thrash icon that appears when hovering over a theme thumbnail. Note that you can only remove Global Themes that you have downloaded yourself.
 </para>
 
 <para>
