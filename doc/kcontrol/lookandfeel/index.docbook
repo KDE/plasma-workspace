@@ -45,7 +45,7 @@
 <itemizedlist>
   <listitem><para>Desktop Layout: An arrangement of panels and widgets - for example a bottom panel with a task manager and application launcher, or a top panel with application menu and system tray</para></listitem>
   <listitem><para>Color Scheme: Color palette used throughout &plasma; and applications</para></listitem>
-  <listitem><para>Application Style: Appearance of user interface elements such as buttons, menus and scroll bars</para></listitem>
+  <listitem><para>Application Style: Appearance of user interface elements such as buttons, menus, and scroll bars</para></listitem>
   <listitem><para>Plasma Style: Appearance of panels and widgets</para></listitem>
   <listitem><para>Window Decoration: Window borders and titlebar buttons</para></listitem>
   <listitem><para>Icons: Icons used throughout &plasma; and applications</para></listitem>
