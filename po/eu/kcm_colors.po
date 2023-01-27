@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 02:42+0000\n"
 "PO-Revision-Date: 2022-08-11 19:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1332,12 +1332,12 @@ msgid ""
 "Plasma session."
 msgstr "Eskatutako «%1» gaia dagoeneko ezarrita dago Plasmaren uneko saiorako."
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "%1 kolore-antolaera ondo ezarri zaio uneko zure Plasma-saioari"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1346,7 +1346,7 @@ msgstr ""
 "Ezin izan du «%1» gaia aurkitu. Gaia ondoko aukeretako bat izan beharko "
 "litzateke: %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1355,7 +1355,7 @@ msgstr ""
 "Kolore-antolaera izen bat hutsik pasatzea lortu duzu, halakorik, ordea, ez "
 "da onartzen."
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1364,22 +1364,22 @@ msgstr ""
 "Zure antolaera gisa ezartzen saiatu zaren fitxategia, %1, ezin du kolore-"
 "antolaera gisa identifikatu."
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "%1 azentu-kolorea behar bezala aplikatu du"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Azentu-kolore baliogabea"
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Zure sisteman ondoko kolore-antolaerak dituzu:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (uneko kolore-antolaera)"
