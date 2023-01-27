@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:59+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2023-01-24 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: kcm.cpp:740
+#: kcm.cpp:481
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "இந்த மாற்றங்கள் செயல்பட, பிளாஸ்மா அமர்வை நீங்கள் மீள்துவக்க வேண்டும்."
 
-#: kcm.cpp:741
+#: kcm.cpp:482
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "சுட்டிக்குறி அமைப்புகள் மாற்றப்பட்டன"
@@ -103,47 +103,47 @@ msgstr "பொதுவான தோற்றம் "
 msgid "This module lets you choose the global look and feel."
 msgstr "பொதுவான தோற்றத்தை நீங்கள் தேர்ந்தெடுக்க இந்த கூறு உதவும்."
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "நிரந்தரமாக அழிப்பது"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "இத்தோற்றத்திட்டத்தை நிரந்தரமாக அழிக்க வேண்டுமா?"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "நிரந்தரமாக அழி"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "பணிமேடைத் தளவமைப்பைக் கொண்டுள்ளது"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Preview Theme"
 msgstr "தோற்றத்திட்டத்தின் முன்னோட்டம்"
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "தோற்றத்திட்டத்தை நீக்கு"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -151,27 +151,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 என்பதை செயல்படுத்தலாமா?"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "செயல்படுத்தவேண்டியவை…"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Show fewer options…"
 msgstr "குறைவான விருப்பங்களையே காட்டு…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "புதிய பொது தோற்றத்திட்டங்களை பெறு…"
@@ -186,13 +186,13 @@ msgstr "தளவமைப்பு அமைப்புகள்:"
 msgid "Desktop layout"
 msgstr "பணிமேடையின் தளவமைப்பு"
 
-#: package/contents/ui/MoreOptions.qml:34
+#: package/contents/ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "தலைப்புப்பட்டை பட்டன்களின் தளவமைப்பு"
 
-#: package/contents/ui/MoreOptions.qml:48
-#: package/contents/ui/SimpleOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -201,89 +201,89 @@ msgstr ""
 "பணிமேடைத் தளவமைப்பை செயல்படுத்துவது, தற்போதுள்ள பணிமேடைகள், பலகைகள், மற்றும் "
 "பிளாஸ்மாய்டுகள் ஆகியவற்றின் அமைப்பை மாற்றும்"
 
-#: package/contents/ui/MoreOptions.qml:56
+#: package/contents/ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "தோற்ற அமைப்புகள்:"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "நிறங்கள்"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "செயலி தோற்றம்"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decorations"
 msgstr "சாளர விளிம்புகள்"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "சின்னங்கள்"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "சுட்டிக்குறிகள்"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "எழுத்துருக்கள்"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "பணி மாற்றி"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "துவக்கத் திரை"
 
-#: package/contents/ui/MoreOptions.qml:69
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "பூட்டு திரை"
 
-#: package/contents/ui/SimpleOptions.qml:20
+#: package/contents/ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "இப்பொதுத் தோற்றத்திட்டம், பின்வருபவற்றை மாற்றும்:"
 
-#: package/contents/ui/SimpleOptions.qml:33
+#: package/contents/ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "தோற்ற அமைப்புகள்"
 
-#: package/contents/ui/SimpleOptions.qml:41
+#: package/contents/ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• தோற்ற அமைப்புகள்"
 
-#: package/contents/ui/SimpleOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "பணிமேடை மற்றும் சாளர தளவமைப்பு"
 
-#: package/contents/ui/SimpleOptions.qml:56
+#: package/contents/ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• பணிமேடை மற்றும் சாளர தளவமைப்பு"
 
-#: package/contents/ui/SimpleOptions.qml:74
+#: package/contents/ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

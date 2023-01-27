@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:59+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2023-01-22 12:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,14 +30,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: kcm.cpp:740
+#: kcm.cpp:481
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Вам потрібно перезапустити сеанс Плазми, щоб внесені зміни набули чинності."
 
-#: kcm.cpp:741
+#: kcm.cpp:482
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Параметри курсора змінено"
@@ -110,47 +110,47 @@ msgstr ""
 "За допомогою цього модуля ви можете вибрати загальний вигляд і поведінку "
 "робочого простору."
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "Остаточне вилучення"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "Ви хочете остаточно вилучити цю тему?"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "Вилучити остаточно"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Містить компонування стільниці"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Preview Theme"
 msgstr "Попередній перегляд теми"
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Вилучити тему"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -158,27 +158,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Застосувати %1?"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Виберіть, що застосовувати…"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показати скорочений список…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Apply"
 msgstr "Застосувати"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Отримати нові загальні теми…"
@@ -193,13 +193,13 @@ msgstr "Параметри компонування:"
 msgid "Desktop layout"
 msgstr "Компонування стільниці"
 
-#: package/contents/ui/MoreOptions.qml:34
+#: package/contents/ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Компонування кнопок смужки заголовка"
 
-#: package/contents/ui/MoreOptions.qml:48
-#: package/contents/ui/SimpleOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -208,89 +208,89 @@ msgstr ""
 "Застосування компонування стільниці призведе до заміни ваших поточних "
 "налаштувань стільниць, панелей, бічних панелей та віджетів"
 
-#: package/contents/ui/MoreOptions.qml:56
+#: package/contents/ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Параметри вигляду:"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Кольори"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Стиль вікон програм"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decorations"
 msgstr "Обрамлення вікон"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Піктограми"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Стиль Плазми"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Вказівники"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифти"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Перемикання задач"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Вікно вітання"
 
-#: package/contents/ui/MoreOptions.qml:69
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Вікно блокування"
 
-#: package/contents/ui/SimpleOptions.qml:20
+#: package/contents/ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "Ось це буде застосовано за цією загальною темою:"
 
-#: package/contents/ui/SimpleOptions.qml:33
+#: package/contents/ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "Параметри вигляду"
 
-#: package/contents/ui/SimpleOptions.qml:41
+#: package/contents/ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Параметри вигляду"
 
-#: package/contents/ui/SimpleOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Компонування стільниці та вікон"
 
-#: package/contents/ui/SimpleOptions.qml:56
+#: package/contents/ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Компонування стільниці та вікон"
 
-#: package/contents/ui/SimpleOptions.qml:74
+#: package/contents/ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

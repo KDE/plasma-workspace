@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1303,48 +1303,48 @@ msgid ""
 "Plasma session."
 msgstr "请求的主题“%1”已经是当前的 Plasma 会话的主题。"
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "成功应用配色方案 %1 到当前的 Plasma 会话"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "您填写了一个空的配色方案名称，程序不支持空名称。"
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "您尝试设置的文件 %1 无法被识别为配色方案。"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "成功应用重点色 %1"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "无效的重点色 "
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "您的系统中有以下配色方案："
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (当前配色方案)"

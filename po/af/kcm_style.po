@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2005-06-30 11:29+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -132,18 +132,18 @@ msgstr ""
 "<h1>Styl</h1>Hierdie module laat jou toe om te verander die visuele voorkoms "
 "van gebruiker koppelvlak elemente, soos die gui-element Styl en effekte."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "Stel op..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"

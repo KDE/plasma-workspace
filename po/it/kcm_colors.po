@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2022-07-02 11:05+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1328,14 +1328,14 @@ msgstr ""
 "Il tema richiesto «%1» è già impostato come tema per l'attuale sessione di "
 "Plasma."
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "Lo schema dei colori %1 è stato applicato correttamente alla tua sessione "
 "attuale di Plasma"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1344,7 +1344,7 @@ msgstr ""
 "Impossibile trovare il tema «%1». Il tema dovrebbe essere una delle seguenti "
 "opzioni: %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1353,7 +1353,7 @@ msgstr ""
 "Sei riuscito a passare un nome di schema di colori vuoto, che non è un "
 "comportamento supportato."
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1362,22 +1362,22 @@ msgstr ""
 "Il file che hai tentato di impostare come schema,%1, non può essere "
 "identificato come schema di colori."
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Il colore secondario %1 è stato applicato correttamente"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Colore secondario non valido"
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Hai i seguenti schemi di colori sul tuo sistema:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (schema di colori attuale)"

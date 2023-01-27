@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2010-11-12 09:11+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -138,18 +138,18 @@ msgstr ""
 "<h1>រចនាប័ទ្ម</h1>ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​កែប្រែ​រូបរាង​ដែល​មើល​ឃើញ​នៃ​ធាតុ​ចំណុច​ប្រទាក់​អ្នកប្រើ​ដូច​ជា "
 "រចនាប័ទ្ម​វត្ថុ​មើល​ឃើញ និង​បែប​ផែន ។"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"

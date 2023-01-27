@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2009-05-22 12:39+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -125,18 +125,18 @@ msgid ""
 "interface elements."
 msgstr ""
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Configure %1"
 msgid "Configure Style…"
 msgstr "Konfiguro %1"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Configure %1"
 msgid "Configure GNOME/GTK Application Style…"

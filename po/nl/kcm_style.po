@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-08-15 09:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -122,17 +122,17 @@ msgstr ""
 "In deze module kunt u het uiterlijk van de verschillende elementen van de "
 "gebruikersinterface van toepassingen wijzigen."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Configure Style…"
 msgstr "Stijl configureren…"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Pictogrammen en werkbalken configureren"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Stijl van GNOME/GTK-toepassingen configureren…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-06-08 22:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -124,17 +124,17 @@ msgstr ""
 "<h1>ਸਟਾਈਲ</h1>ਇਹ ਮੋਡੀਊਲ ਤਹਾਨੂੰ ਯੂਜ਼ਰ ਇੰਟਰਫੇਸ ਇਕਾਈਆਂ, ਜਿਵੇਂ ਕਿ ਵਿਦਜੈੱਟ ਸਟਾਈਲ ਅਤੇ ਪਰਭਾਵ ਆਦਿ "
 "ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Configure Style…"
 msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"

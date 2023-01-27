@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2022-10-19 15:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1343,13 +1343,13 @@ msgstr ""
 "O tema solicitado \"%1\" já está definido como o tema da sessão atual do "
 "Plasma."
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "O esquema de cores %1 foi aplicado à sua sessão atual do Plasma com sucesso."
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1358,7 +1358,7 @@ msgstr ""
 "Não foi possível encontrar o tema \"%1\". O tema pode ser somente uma das "
 "seguintes opções: %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1367,7 +1367,7 @@ msgstr ""
 "Você tentou passar um nome de esquema de cores vazio, o que não é um "
 "comportamento suportado."
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1376,22 +1376,22 @@ msgstr ""
 "O arquivo que você tentou definir como seu esquema de cores, %1, não foi "
 "identificado como esquema de cores."
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Cor de destaque aplicada com sucesso %1"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Cor de destaque inválida"
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Você tem os seguintes esquemas de cores no seu sistema:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (esquema de cores atual)"

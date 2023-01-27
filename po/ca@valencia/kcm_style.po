@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-08-15 10:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -129,17 +129,17 @@ msgstr ""
 "Este mòdul permet modificar l'aparença visual dels elements de la interfície "
 "d'usuari de les aplicacions."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Configure Style…"
 msgstr "Configura l'estil…"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configura les icones i les barres d'eines"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configura l'estil de l'aplicació GNOME/GTK…"

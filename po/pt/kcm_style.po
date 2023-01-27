@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-08-24 02:00+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -119,17 +119,17 @@ msgstr ""
 "Este módulo permite ao utilizador modificar a aparência visual dos elementos "
 "da interface do utilizador."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Configure Style…"
 msgstr "Configurar o Estilo…"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configurar os Ícones e Barras de Ferramentas"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configurar o Estilo de Aplicações do GNOME/GTK…"

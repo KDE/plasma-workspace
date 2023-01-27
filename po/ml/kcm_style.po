@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -123,17 +123,17 @@ msgstr ""
 "അപ്ലിക്കേഷനുകളുടെ ഉപയോക്തൃ വിനിമയതല ഘടകങ്ങളുടെ ദൃശ്യരൂപം പരിഷ്ക്കരിക്കാൻ ഈ മൊഡ്യൂൾ നിങ്ങളെ "
 "അനുവദിക്കുന്നു."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Configure Style…"
 msgstr "രൂപഭംഗി ക്രമീകരിക്കുക…"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "ചിഹ്നങ്ങളും ഉപകരണപ്പട്ടകളും ക്രമീകരിക്കുക"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി ക്രമീകരിക്കുക…"

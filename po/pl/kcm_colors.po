@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1639295 $
+# Version: $Revision: 1643254 $
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2022-07-30 19:24+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -1329,12 +1329,12 @@ msgstr ""
 "Żądany zestaw \"%1\" jest już ustawiony jako zestaw dla bieżącej sesji "
 "Plazmy."
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Pomyślnie zastosowano zestaw kolorów %1 w bieżącej sesji Plazmy"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1343,7 +1343,7 @@ msgstr ""
 "Nie można znaleźć wyglądu \"%1\". Wygląd powinien być jednym z następujących "
 "ustawień: %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1352,7 +1352,7 @@ msgstr ""
 "Udało ci się wprowadzić pustą nazwę zestawu kolorów, co nie jest oczekiwanym "
 "zachowaniem."
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1361,22 +1361,22 @@ msgstr ""
 "Plik, który usiłujesz ustawić jako swój zestaw, %1, nie jest zestawem "
 "kolorów."
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Pomyślnie nałożono barwę akcentu %1"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Nieprawidłowa barwa akcentu "
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Masz następujące zestawy kolorów na swoim systemie:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (bieżącego zestaw kolorów)"

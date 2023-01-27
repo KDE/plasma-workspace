@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:59+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2022-12-26 04:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -31,13 +31,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com, mail@kisaragi-hiu.com"
 
-#: kcm.cpp:740
+#: kcm.cpp:481
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "您必須重新啟動 Plasma 工作階段，這些變更才能生效。"
 
-#: kcm.cpp:741
+#: kcm.cpp:482
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "游標設定已變更"
@@ -105,49 +105,49 @@ msgstr "全域視覺與使用體驗"
 msgid "This module lets you choose the global look and feel."
 msgstr "這個模組讓你可以選擇全域的「外觀與感覺」。"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr ""
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr ""
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr ""
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "含有桌面佈局"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Preview Theme"
 msgstr "預覽主題"
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:113
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "預覽主題"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -155,27 +155,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "套用 %1？"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "選擇要套用的…"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Show fewer options…"
 msgstr "顯示較少選項…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Apply"
 msgstr "套用"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "取得新全域主題…"
@@ -190,102 +190,102 @@ msgstr "佈局設定："
 msgid "Desktop layout"
 msgstr "桌面佈局"
 
-#: package/contents/ui/MoreOptions.qml:34
+#: package/contents/ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "標題列按鈕配置"
 
-#: package/contents/ui/MoreOptions.qml:48
-#: package/contents/ui/SimpleOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr "套用桌面佈局將會取代您目前的桌面、面板、dock 和元件的設定"
 
-#: package/contents/ui/MoreOptions.qml:56
+#: package/contents/ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "外觀設定："
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "顏色"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "應用程式風格"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decorations"
 msgstr "視窗裝飾"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "圖示"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma 風格"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "游標"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "字型"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "工作切換器"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "啟動畫面"
 
-#: package/contents/ui/MoreOptions.qml:69
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "鎖定畫面"
 
-#: package/contents/ui/SimpleOptions.qml:20
+#: package/contents/ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "此全域主題將會套用以下項目："
 
-#: package/contents/ui/SimpleOptions.qml:33
+#: package/contents/ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "外觀設定"
 
-#: package/contents/ui/SimpleOptions.qml:41
+#: package/contents/ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• 外觀設定"
 
-#: package/contents/ui/SimpleOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "桌面與視窗佈局"
 
-#: package/contents/ui/SimpleOptions.qml:56
+#: package/contents/ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• 桌面與視窗佈局"
 
-#: package/contents/ui/SimpleOptions.qml:74
+#: package/contents/ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2010-12-17 16:41+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -138,18 +138,18 @@ msgstr ""
 "<h1>รูปแบบ</h1>มอดูลนี้ ให้คุณได้ปรับแต่งรูปแบบต่าง ๆ ของส่วนติดต่อผู้ใช้ "
 "เช่นคอนโทรลและลูกเล่นต่าง ๆ"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "ปรับแต่ง..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"

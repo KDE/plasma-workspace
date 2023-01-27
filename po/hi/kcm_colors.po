@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2022-02-17 22:54+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -1316,26 +1316,26 @@ msgid ""
 msgstr ""
 "अनुरोधित प्रसंग \"%1\" पहले से ही वर्तमान प्लाज़्मा सत्र के लिए प्रसंग के रूप में नियत है।"
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "आपके वर्तमान प्लाज़्मा सत्र में रंग योजना %1 को सफलतापूर्वक लागू किया गया है"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "प्रसंग \"%1\" नहीं मिल सका। प्रसंग निम्न विकल्पों में से एक होनी चाहिए : %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "आप एक खाली रंग योजना नाम देने में कामयाब रहे हैं, जो समर्थित व्यवहार नहीं है।"
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1344,22 +1344,22 @@ msgstr ""
 "आपने जिस फ़ाइल को अपनी योजना %1 के रूप में नियत करने का प्रयास किया, उसे रंग योजना के "
 "रूप में पहचाना नहीं जा सका।"
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "प्रभावी रंग %1 को सफलतापूर्वक लागू किया गया"
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
 msgstr "अवैध प्रभावी रंग"
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "आपके सिस्टम पर निम्नलिखित रंग योजनाएं हैं:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1(मौज़ूदा रंग योजना)"

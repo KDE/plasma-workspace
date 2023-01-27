@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -1317,26 +1317,26 @@ msgid ""
 msgstr ""
 "അഭ്യർത്ഥിച്ച തീം \"%1\" നിലവിലെ പ്ലാസ്മ സെഷന്റെ തീം ആയി ഇതിനകം സജ്ജീകരിച്ചിരിക്കുന്നു."
 
-#: plasma-apply-colorscheme.cpp:101
+#: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനിൽ നിറക്കൂട്ടു് %1 വിജയകരമായി പ്രയോഗിച്ചു"
 
-#: plasma-apply-colorscheme.cpp:103
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "\"%1\" തീം കണ്ടെത്താനായില്ല. തീം ഇനിപ്പറയുന്ന ഓപ്ഷനുകളിൽ ഒന്നായിരിക്കണം: %2"
 
-#: plasma-apply-colorscheme.cpp:110
+#: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "പിന്തുണ നൽകാത്ത രീതിയിൽ ഒരു ശൂന്യമായ നിറക്കൂട്ടു് നാമം നിങ്ങൾ കൈമാറി."
 
-#: plasma-apply-colorscheme.cpp:114
+#: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1345,23 +1345,23 @@ msgstr ""
 "നിങ്ങളുടെ സ്കീമായി സജ്ജീകരിക്കാൻ ശ്രമിച്ച ഫയൽ, %1, ഒരു വർണ്ണ സ്കീമായി തിരിച്ചറിയാൻ "
 "കഴിഞ്ഞില്ല."
 
-#: plasma-apply-colorscheme.cpp:137
+#: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:139
+#: plasma-apply-colorscheme.cpp:149
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgid "Invalid accent color "
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
 
-#: plasma-apply-colorscheme.cpp:144
+#: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന വർണ്ണ സ്കീമുകൾ ഉണ്ട്:"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"

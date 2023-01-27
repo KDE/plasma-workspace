@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:59+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2023-01-22 15:09+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: kcm.cpp:740
+#: kcm.cpp:481
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -35,7 +35,7 @@ msgstr ""
 "Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op te "
 "starten."
 
-#: kcm.cpp:741
+#: kcm.cpp:482
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Aanwijzerinstellingen aangepast"
@@ -107,47 +107,47 @@ msgstr "Globaal uiterlijk en gedrag"
 msgid "This module lets you choose the global look and feel."
 msgstr "Deze module laat u het globale uiterlijk en gedrag kiezen."
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "Definitief verwijderen"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "Wilt u dit thema echt permanent verwijderen?"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "Definitief verwijderen"
 
-#: package/contents/ui/main.qml:76
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Bevat de indeling van het bureaublad"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgid "Preview Theme"
 msgstr "Voorbeeldthema"
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Thema verwijderen"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -155,27 +155,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 toepassen?"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Kies wat toe te passen…"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Minder opties tonen…"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Apply"
 msgstr "Toepassen"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Nieuwe globale thema's ophalen…"
@@ -190,13 +190,13 @@ msgstr "Instellingen voor indeling:"
 msgid "Desktop layout"
 msgstr "Indeling van bureaublad"
 
-#: package/contents/ui/MoreOptions.qml:34
+#: package/contents/ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Indeling titelbalkknoppen"
 
-#: package/contents/ui/MoreOptions.qml:48
-#: package/contents/ui/SimpleOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -205,89 +205,89 @@ msgstr ""
 "Een indeling van een bureaublad toepassen vervangt uw huidige configuratie "
 "van bureaubladen, panelen, vastzetters en widgets"
 
-#: package/contents/ui/MoreOptions.qml:56
+#: package/contents/ui/MoreOptions.qml:55
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Instellingen voor uiterlijk:"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Colors"
 msgstr "Kleuren"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Application Style"
 msgstr "Stijl van toepassing"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Window Decorations"
 msgstr "Vensterdecoraties"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Pictogrammen"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma-stijl"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Cursors"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Lettertypen"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Taakschakelaar"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Opstartscherm"
 
-#: package/contents/ui/MoreOptions.qml:69
+#: package/contents/ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Scherm vergrendelen"
 
-#: package/contents/ui/SimpleOptions.qml:20
+#: package/contents/ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "Het volgende zal toegepast worden door dit globale thema:"
 
-#: package/contents/ui/SimpleOptions.qml:33
+#: package/contents/ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "Instellingen voor uiterlijk"
 
-#: package/contents/ui/SimpleOptions.qml:41
+#: package/contents/ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Instellingen voor uiterlijk"
 
-#: package/contents/ui/SimpleOptions.qml:47
+#: package/contents/ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Indeling van bureaublad en venster"
 
-#: package/contents/ui/SimpleOptions.qml:56
+#: package/contents/ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Indeling van bureaublad en venster"
 
-#: package/contents/ui/SimpleOptions.qml:74
+#: package/contents/ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2023-01-22 16:31+0300\n"
+"PO-Revision-Date: 2023-01-26 12:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -331,20 +331,20 @@ msgstr[2] "%1 непрочитанных уведомлений"
 msgstr[3] "одно непрочитанное уведомление"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Не беспокоить до %1"
+msgstr ""
+"Включён режим «не беспокоить» до %1, для отключения щёлкните средней кнопкой"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Включён режим «не беспокоить», для отключения щёлкните средней кнопкой"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Для отключения режима «не беспокоить» щёлкните средней кнопкой"
 
 #: package/contents/ui/main.qml:193
 #, kde-format

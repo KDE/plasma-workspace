@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2023-01-27 01:01+0000\n"
 "PO-Revision-Date: 2008-12-29 16:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -133,18 +133,18 @@ msgstr ""
 "<h1>ಶೈಲಿ</h1>ಈ ಮಾಡ್ಯೂಲ್ ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನ ಘಟಕಗಳ ವಿಜೆಟ್ ಶೈಲಿ ಹಾಗು ಪರಿಣಾಮಗಳಂತಹ "
 "ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸಲು ನೆರವಾಗುತ್ತದೆ."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "ಸಂರಚಿಸು(&f)..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
