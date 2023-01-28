@@ -264,10 +264,6 @@ Item {
             updateDecadeOverview();
         }
 
-        onFocusChanged: if(focus) {
-            currentItem.focusFirstCellOfView();
-        }
-
         // MonthView
         InfiniteList {
            id: mainDaysCalendar
