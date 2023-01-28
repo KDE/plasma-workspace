@@ -485,9 +485,7 @@ PlasmaExtras.Representation {
                 // some existing code. Since now the header was in this file and this was not a problem. Now the header is also implicitly
                 // inside the monthViewWrapper.
                 Keys.onTabPressed: {
-                    monthViewWrapper.focusChangedForClockListTab = true;
                     monthView.viewHeader.configureButton.forceActiveFocus(Qt.BacktabFocusReason);
-                    monthViewWrapper.focusChangedForClockListTab = false;
                 }
 
                 model: {
@@ -573,12 +571,8 @@ PlasmaExtras.Representation {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
 
-        property bool focusChangedForClockListTab: false
         onActiveFocusChanged: if (activeFocus) {
             monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
-            if(!focusChangedForClockListTab) {
-                monthView.Keys.onDownPressed(null);
-            }
         }
 
         PlasmaCalendar.MonthView {
