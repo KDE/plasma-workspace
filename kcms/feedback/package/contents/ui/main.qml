@@ -16,7 +16,7 @@ import org.kde.kcm 1.3
 SimpleKCM {
     id: root
 
-    ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
+    ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply | ConfigModule.Help
 
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35

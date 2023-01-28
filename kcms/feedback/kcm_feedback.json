@@ -99,7 +99,7 @@
         "Name[zh_CN]": "用户反馈",
         "Name[zh_TW]": "使用者意見回應"
     },
-    "X-DocPath": "kcontrol/feedback/index.html",
+    "X-DocPath": "kcontrol/kcmlaunchfeedback/index.html",
     "X-KDE-Keywords": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry",
     "X-KDE-Keywords[ar]": "ردود الفعل,التقرير,الاتصال,جمع البيانات,الإحصاءات,الاستخدام,السجل,التسجيل,القياس عن بعد,مشاركة بيانات",
     "X-KDE-Keywords[az]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,geri rəy bildirişi,hesabat,əlaqə,verilənlərin toplanması,statistika, istifadə,jurnal,jurnalın yazılması,telemetriya",
