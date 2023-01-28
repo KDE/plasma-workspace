@@ -91,7 +91,7 @@ private:
     static constexpr int JITTER_THRESHOLD = 1;
 
     bool filterContains(const QPointF &p) const;
-    void resendHoverEvents(const QHoverEvent &event, QPointF cursorPosition);
+    void resendHoverEvents(QPointF cursorPosition);
 
     QTimer m_resetTimer;
     std::optional<QPointF> m_interceptionPos; // point where we started intercepting
