@@ -6,14 +6,14 @@
 
 #include <config-startplasma.h>
 
+#include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QDir>
 #include <QEventLoop>
+#include <QFileIconProvider>
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTextStream>
-
-#include <QDBusConnectionInterface>
-#include <QDBusServiceWatcher>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -591,6 +591,7 @@ static void migrateUserScriptsAutostart()
     }
     const QDir autostartScriptsMovedLocation(configLocation.filePath(QStringLiteral("old-autostart-scripts")));
     const auto entries = autostartScriptsLocation.entryInfoList(QDir::Files);
+    QFileIconProvider iconProvider;
     for (const auto &info : entries) {
         const auto scriptName = info.fileName();
         const auto scriptPath = info.absoluteFilePath();
@@ -604,8 +605,12 @@ static void migrateUserScriptsAutostart()
             continue;
         }
 
+        QIcon icon = iconProvider.icon(info);
+        QString iconName = icon.name();
         // Migrate autostart script to a standard .desktop autostart file
-        AutostartScriptDesktopFile desktopFile(scriptName, info.isSymLink() ? info.symLinkTarget() : scriptMovedPath);
+        AutostartScriptDesktopFile desktopFile(scriptName,
+                                               info.isSymLink() ? info.symLinkTarget() : scriptMovedPath,
+                                               iconName == QStringLiteral("text-plain") ? QStringLiteral("application-x-executable-script") : iconName);
         qCInfo(PLASMA_STARTUP) << "Migrated legacy autostart script" << scriptPath << "to" << desktopFile.fileName();
 
         if (info.isSymLink() && QFile::remove(scriptPath)) {
