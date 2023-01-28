@@ -12,6 +12,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KFileItem>
+#include <KMountPoint>
 #include <KNotificationJobUiDelegate>
 #include <KProcessList>
 #include <KWindowSystem>
@@ -143,6 +144,34 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     }
 
     return data;
+}
+
+QUrl windowUrlFromAppImage(quint32 pid)
+{
+    QFileInfo exeFile(QStringLiteral("/proc/%1/exe").arg(QString::number(pid)));
+    if (!exeFile.isSymLink()) {
+        return QUrl();
+    }
+
+    const QString targetPath = exeFile.symLinkTarget();
+    // The target path usually starts with something like "/tmp/.mount_osu.apmIbKXP/usr/bin/",
+    if (!targetPath.startsWith(QLatin1String("/tmp/.mount"))) {
+        return QUrl();
+    }
+
+    const KMountPoint::List mountList = KMountPoint::currentMountPoints(KMountPoint::BasicInfoNeeded);
+    KMountPoint::Ptr mountPointPtr = mountList.findByPath(targetPath);
+    if (!mountPointPtr) {
+        return QUrl();
+    }
+
+    QDir mountDir(mountPointPtr->mountPoint());
+    const auto desktopFiles = mountDir.entryInfoList(QStringList{QStringLiteral("*.desktop")}, QDir::Files | QDir::Readable);
+    if (!desktopFiles.empty()) {
+        return QUrl::fromLocalFile(desktopFiles[0].absoluteFilePath());
+    }
+
+    return QUrl();
 }
 
 QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr rulesConfig, const QString &xWindowsWMClassName)
@@ -441,6 +470,14 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
             url = QUrl::fromLocalFile(path);
             url.setQuery(query);
             return url;
+        }
+    }
+
+    // For AppImage, use full path to the desktop file as it's in a temporary folder
+    if (services.isEmpty()) {
+        const QUrl localUrl = windowUrlFromAppImage(pid);
+        if (localUrl.isLocalFile()) {
+            return localUrl;
         }
     }
 
