@@ -233,6 +233,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     string(FIND "${DISTRO_ID_LIKE}" "ubuntu" FINDINDEX)
     if(NOT (FINDINDEX EQUAL -1))
         set(SYSTEM_UBUNTU_BASED ON)
+        find_program(LANGUAGE_SELECTOR_COMMON "check-language-support" DOC "Required for ubuntu-based distros to generate locale")
     endif()
 
     option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt5 required" ${SYSTEM_UBUNTU_BASED})
