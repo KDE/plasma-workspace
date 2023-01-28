@@ -77,6 +77,7 @@ KCM.ScrollViewKCM {
             activeTextColor: Kirigami.Theme.textColor
 
             contentItem: Kirigami.BasicListItem {
+                width: listView.width - baseListItem.overlayWidth
                 icon: model.iconName
                 iconSelected: false // prevent icon flickering now that we've disabled background color changes
                 reserveSpaceForSubtitle: true
