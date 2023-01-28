@@ -99,6 +99,19 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                     if (data.icon.isNull()) {
                         data.icon = QIcon::fromTheme(f.readIcon());
                     }
+
+                    if (data.icon.isNull()) {
+                        // For AppImage, the icon is usually in the same folder with its desktop file
+                        // See https://docs.appimage.org/reference/appdir.html#general-description
+                        QFileInfo desktopFileInfo(url.toLocalFile());
+                        QDir dir = desktopFileInfo.absoluteDir();
+                        const QString iconName = f.readIcon();
+                        const QStringList iconFiles =
+                            dir.entryList({QStringLiteral("%1.png").arg(iconName), QStringLiteral("%1.svg").arg(iconName)}, QDir::Files | QDir::Readable);
+                        if (!iconFiles.empty()) {
+                            data.icon = QIcon(dir.absoluteFilePath(iconFiles[0]));
+                        }
+                    }
                 }
             }
 
