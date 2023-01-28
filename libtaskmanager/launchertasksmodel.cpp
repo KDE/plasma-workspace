@@ -8,6 +8,7 @@
 #include "tasktools.h"
 
 #include <KDesktopFile>
+#include <KMountPoint>
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KSycoca>
@@ -18,13 +19,16 @@
 
 #include <KIO/ApplicationLauncherJob>
 
+#include <QDir>
 #include <QHash>
 #include <QIcon>
+#include <QProcess>
 #include <QSet>
 #include <QTimer>
 #include <QUrlQuery>
 
 #include "launchertasksmodel_p.h"
+#include "libtaskmanager_debug.h"
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -68,6 +72,8 @@ public:
     bool requestRemoveLauncherFromActivities(const QUrl &_url, const QStringList &activities);
 
 private:
+    bool copyDesktopFileAndUpdateInfo(QUrl &url);
+
     LauncherTasksModel *q;
 };
 
@@ -191,6 +197,13 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
     }
 
     // This is a new one
+    // Check if the desktop file is from a temporary directory (e.g. AppImage)
+    if (url.isLocalFile()) {
+        if (!copyDesktopFileAndUpdateInfo(url)) {
+            return false;
+        }
+    }
+
     const auto count = launchersOrder.count();
     q->beginInsertRows(QModelIndex(), count, count);
     setActivitiesForLauncher(url, activities);
@@ -273,6 +286,152 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
     }
 
     return false;
+}
+
+bool LauncherTasksModel::Private::copyDesktopFileAndUpdateInfo(QUrl &url)
+{
+    QFile desktopFile(url.toLocalFile());
+    const QString appDirPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("applications");
+    const QDir appDir(appDirPath);
+    QFile newDesktopFile(appDir.absoluteFilePath(QFileInfo(desktopFile).fileName()));
+    // Do not check the new desktop already exists to always update the desktop file
+    bool ok = false;
+    if (!appDir.exists()) {
+        ok = appDir.mkpath(appDirPath);
+        if (!ok) {
+            qCCritical(TASKMANAGER_DEBUG) << "Failed to create \"applications\" folder!";
+            return false;
+        }
+    }
+
+    // Not from AppImage, copy directly
+    if (!desktopFile.fileName().startsWith(QLatin1String("/tmp/.mount"))) {
+        ok = desktopFile.copy(newDesktopFile.fileName());
+        if (!ok) {
+            qCWarning(TASKMANAGER_DEBUG) << "Failed to copy the original desktop file to the local data directory.";
+            return false;
+        }
+
+        url = QUrl::fromLocalFile(newDesktopFile.fileName());
+        return true;
+    }
+
+    // Open the desktop file to modify the "Exec" value
+    // Is ensured to be readable in windowUrlFromAppImage
+    ok = desktopFile.open(QIODevice::ReadOnly | QIODevice::Text);
+    if (!ok) {
+        qCWarning(TASKMANAGER_DEBUG) << "Failed to read the original desktop file" << desktopFile.fileName();
+        return false;
+    }
+    // Now read the original desktop file
+    KMountPoint::Ptr mountPointPtr;
+    auto getMountPointPtr = [&mountPointPtr, &url] {
+        if (!mountPointPtr) {
+            const KMountPoint::List mountList = KMountPoint::currentMountPoints(KMountPoint::BasicInfoNeeded);
+            mountPointPtr = mountList.findByPath(url.toLocalFile());
+            if (!mountPointPtr) {
+                return false;
+            }
+        }
+        return true;
+    };
+    QByteArrayList contents;
+    contents.reserve(20); // Estimated line count
+    QByteArray currentLine = desktopFile.readLine();
+    while (!currentLine.isEmpty()) {
+        if (currentLine.startsWith("Exec=")) {
+            // Use mount points to find the real path of the AppImage
+            ok = getMountPointPtr();
+            if (!ok) {
+                return false;
+            }
+            const QString mountedFrom = mountPointPtr->mountedFrom();
+            if (mountedFrom.isEmpty()) {
+                return false;
+            }
+            // mountedFrom only contains the base name. Use `pidof` to get pid
+            QProcess pidofProcess;
+            pidofProcess.setReadChannel(QProcess::StandardOutput);
+            pidofProcess.setProgram(QStringLiteral("pidof"));
+            pidofProcess.setArguments(QStringList{mountedFrom});
+            pidofProcess.start();
+            ok = pidofProcess.waitForFinished(300);
+            if (!ok) {
+                qCWarning(TASKMANAGER_DEBUG) << "Failed to start pidof!";
+                return false;
+            }
+
+            const QByteArrayList pidList = pidofProcess.readAllStandardOutput().split('\n');
+            if (pidList.size() != 2 /* Empty line */) {
+                qCWarning(TASKMANAGER_DEBUG) << "Two or more processes have the same base name.";
+                return false;
+            }
+
+            const QFileInfo appImageFileInfo(QStringLiteral("/proc/%1/exe").arg(QString::fromLatin1(pidList[0])));
+
+            if (!appImageFileInfo.isSymLink()) {
+                qCWarning(TASKMANAGER_DEBUG) << "Failed to locate the symlinked target of PID" << pidList[0];
+                return false;
+            }
+            contents.append(QStringLiteral("Exec=\"%1\"\n").arg(appImageFileInfo.symLinkTarget()).toUtf8());
+
+        } else if (currentLine.startsWith("Icon=")) {
+            QString iconName = QString::fromUtf8(currentLine.mid(5)).trimmed();
+            if (!iconName.isEmpty()) {
+                if (QFileInfo::exists(iconName)) {
+                    contents.append(currentLine);
+                } else if (!iconName.endsWith(QLatin1String(".png")) || !iconName.endsWith(QLatin1String(".svg"))) {
+                    // If Icon only contains a name, try to find the image file which is usually in the mount root.
+                    ok = getMountPointPtr();
+                    if (!ok) {
+                        return false;
+                    }
+
+                    const QDir mountPointDir(mountPointPtr->mountPoint());
+                    // AppImage usually uses a png/svg file to store its icon.
+                    // See https://docs.appimage.org/reference/appdir.html#general-description
+                    const QStringList iconFiles =
+                        mountPointDir.entryList({QStringLiteral("%1.png").arg(iconName), QStringLiteral("%1.svg").arg(iconName)}, QDir::Files | QDir::Readable);
+                    if (iconFiles.empty()) {
+                        contents.append(currentLine);
+                    } else {
+                        const QString iconDirPath =
+                            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("icons");
+                        const QDir iconDir(iconDirPath);
+                        if (!iconDir.exists()) {
+                            iconDir.mkpath(iconDirPath);
+                        }
+
+                        const QString newIconPath = iconDir.absoluteFilePath(iconFiles[0]);
+                        if (!QFileInfo::exists(newIconPath)) {
+                            QFile(mountPointDir.absoluteFilePath(iconFiles[0])).copy(newIconPath);
+                        }
+                        // Don't add "" to the path
+                        contents.append(QStringLiteral("Icon=%1\n").arg(newIconPath).toUtf8());
+                    }
+                }
+            }
+
+        } else {
+            contents.append(currentLine);
+        }
+        currentLine = desktopFile.readLine();
+    }
+
+    ok = newDesktopFile.open(QIODevice::WriteOnly);
+    if (!ok) {
+        qCWarning(TASKMANAGER_DEBUG) << "Failed to open the new desktop file" << newDesktopFile.fileName();
+        return false;
+    }
+
+    for (const QByteArray &line : std::as_const(contents)) {
+        newDesktopFile.write(line);
+    }
+
+    newDesktopFile.close();
+    url = QUrl::fromLocalFile(newDesktopFile.fileName());
+
+    return true;
 }
 
 LauncherTasksModel::LauncherTasksModel(QObject *parent)
