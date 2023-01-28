@@ -5,20 +5,21 @@
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2022-12-16 21:05+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-26 19:05+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -103,22 +104,21 @@ msgid "Always below time"
 msgstr "Toujours en dessous de l'heure"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Afficher les secondes"
+msgstr "Afficher les secondes :"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Jamais"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Uniquement dans l'infobulle"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97

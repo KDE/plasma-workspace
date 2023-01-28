@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2023-01-23 07:19+0100\n"
+"PO-Revision-Date: 2023-01-27 07:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -230,7 +230,7 @@ msgstr "ბურუსი"
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr ""
+msgstr "ნისლიანი"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
 #, kde-format
@@ -266,13 +266,13 @@ msgstr "ჭყაპი"
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet shower"
-msgstr ""
+msgstr "თოვლჭყაპი"
 
 #: bbcukmet_i18n.dat:42
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet showers"
-msgstr ""
+msgstr "თოვლჭყაპი"
 
 #: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
 #, kde-format
@@ -531,7 +531,7 @@ msgstr "ბურუსი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "misty"
-msgstr ""
+msgstr "ნისლიანი"
 
 #: bbcukmet_i18n.dat:86
 #, kde-format
@@ -561,13 +561,13 @@ msgstr "ჭყაპი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "sleet shower"
-msgstr ""
+msgstr "თოვლჭყაპი"
 
 #: bbcukmet_i18n.dat:91
 #, kde-format
 msgctxt "weather forecast"
 msgid "sleet showers"
-msgstr ""
+msgstr "თოვლჭყაპი"
 
 #: bbcukmet_i18n.dat:92
 #, kde-format

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2016-09-16 14:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -603,23 +603,23 @@ msgstr ""
 "Το σύστημα υποστήριξης τερματίστηκε, αλλά επανεκκινήθηκε. Παρακαλούμε "
 "δοκιμάστε ξανά."
 
-#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
+#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Σφάλμα</h3>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Αποτυχία λήψης του <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "Το σύστημα υποστήριξης τερματίστηκε. Παρακαλούμε δοκιμάστε ξανά.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -627,7 +627,7 @@ msgstr ""
 "Το <i>%1</i> είναι γραμματοσειρά bitmap, οι οποίες έχουν απενεργοποιηθεί στο "
 "σύστημά σας."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -636,48 +636,48 @@ msgstr ""
 "Το <i>%1</i> περιέχει τη γραμματοσειρά <b>%2</b>, η οποία είναι ήδη "
 "εγκατεστημένη στο σύστημά σας."
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "Το <i>%1</i> δεν είναι γραμματοσειρά."
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:707
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 "Δεν ήταν δυνατή η αφαίρεση όλων των αρχείων που σχετίζονται με το <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Αδυναμία εκκίνησης του δαίμονα συστήματος.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "Το <i>%1</i> υπάρχει ήδη."
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "Το <i>%1</i> δεν υπάρχει."
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Η άδεια απορρίφθηκε.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Μη υποστηριζόμενη ενέργεια.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:721
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Η ταυτοποίηση απέτυχε.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:722
+#: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Απρόβλεπτο σφάλμα κατά την επεξεργασία: <i>%1</i>"

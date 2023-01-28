@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2020-11-04 15:27+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -23,52 +23,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "A kijelentkezést megszakította: „%1”"
 
-#: main.cpp:118
+#: main.cpp:77
 #, kde-format
 msgid "$HOME not set!"
 msgstr "A $HOME nincs beállítva!"
 
-#: main.cpp:122 main.cpp:128
+#: main.cpp:81 main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "A $HOME mappa (%1) nem létezik."
 
-#: main.cpp:124
+#: main.cpp:83
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "Nincs írási jog a $HOME mappára (%1)."
 
-#: main.cpp:130
+#: main.cpp:89
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Nincs olvasási jog a $HOME mappára (%1)."
 
-#: main.cpp:134
+#: main.cpp:93
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "A $HOME mappában (%1) elfogyott a hely."
 
-#: main.cpp:137
+#: main.cpp:96
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "A $HOME mappába (%2) írás a(z) „%1” hibával meghiúsult"
 
-#: main.cpp:150 main.cpp:185
+#: main.cpp:109 main.cpp:144
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nincs írási jog ehhez: „%1”."
 
-#: main.cpp:152 main.cpp:187
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nincs olvasási jog ehhez: „%1”."
 
-#: main.cpp:160 main.cpp:173
+#: main.cpp:119 main.cpp:132
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Az átmeneti mappában (%1) elfogyott a hely."
 
-#: main.cpp:163 main.cpp:176
+#: main.cpp:122 main.cpp:135
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -77,7 +77,7 @@ msgstr ""
 "Az átmeneti mappába (%2) írás a(z)\n"
 "   „%1” hibával meghiúsult"
 
-#: main.cpp:191
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -86,7 +86,7 @@ msgstr ""
 "A következő telepítési problémák lettek észlelve\n"
 "a Plasma indítása során:"
 
-#: main.cpp:194
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -97,12 +97,12 @@ msgstr ""
 "\n"
 "A Plasma nem tud elindulni.\n"
 
-#: main.cpp:201
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma Workspace telepítési probléma!"
 
-#: main.cpp:237
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -111,22 +111,22 @@ msgstr ""
 "Nagy megbízhatóságú Plasma munkamenetkezelő, mely közvetlenül tudja\n"
 "kezelni az X11R6 munkamenetkezelő protokollt (XSMP)."
 
-#: main.cpp:241
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Az utolsó elmentett állapot visszatöltése (ha lehetséges)"
 
-#: main.cpp:244
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Távoli kapcsolatok engedélyezése"
 
-#: main.cpp:247
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Munkamenet indítás zárolt módban"
 
-#: main.cpp:251
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

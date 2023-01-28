@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2008-07-08 16:38+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
 "Language-Team: Bengali INDIA <discuss@ankur.org.in>\n"
@@ -569,22 +569,22 @@ msgstr ""
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
+#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, fuzzy, kde-format
 #| msgid ""
 #| "You cannot install bitmap fonts, as these have been disabled on your "
@@ -594,7 +594,7 @@ msgid ""
 msgstr ""
 "সিস্টেমের মধ্যে বিট-ম্যাপ ফন্ট নিষ্ক্রিয় হওয়ার ফলে, বিট-ম্যাপ ফন্ট ইনস্টল করা সম্ভব নয়।"
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, fuzzy, kde-format
 #| msgid ""
 #| "File %1 contains the font:\n"
@@ -608,51 +608,51 @@ msgstr ""
 "%2\n"
 "এই নামের একটি ফন্ট বর্তমানে ইনস্টল করা আছে।\n"
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:707
 #, fuzzy, kde-format
 #| msgid "Looking for files associated with %1"
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "%1-র সাথে যুক্ত অতিরিক্ত ফাইল অনুসন্ধান করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, fuzzy, kde-format
 #| msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgid "<i>%1</i> already exists."
 msgstr "<qt><b>'%1'</b> নামক একটি দল বর্তমানে উপস্থিত রয়েছে।</qt>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, fuzzy, kde-format
 #| msgid "Authorization Failed"
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "অনুমোদন ব্যর্থ"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:721
 #, fuzzy, kde-format
 #| msgid "Authorization Failed"
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "অনুমোদন ব্যর্থ"
 
-#: kcmfontinst/JobRunner.cpp:722
+#: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""

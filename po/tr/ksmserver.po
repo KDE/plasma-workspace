@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2022-02-27 14:01+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -25,52 +25,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Çıkış '%1' tarafından iptal edildi"
 
-#: main.cpp:118
+#: main.cpp:77
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME ayarlanmamış!"
 
-#: main.cpp:122 main.cpp:128
+#: main.cpp:81 main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME dizini (%1) mevcut değil."
 
-#: main.cpp:124
+#: main.cpp:83
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "$HOME dizinine (%1) yazma izni yok."
 
-#: main.cpp:130
+#: main.cpp:89
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME dizinini (%1) okuma izni yok."
 
-#: main.cpp:134
+#: main.cpp:93
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME dizini (%1) dolu."
 
-#: main.cpp:137
+#: main.cpp:96
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME dizinine (%2) yazarken '%1' hatası oluştu"
 
-#: main.cpp:150 main.cpp:185
+#: main.cpp:109 main.cpp:144
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' üzerine yazma izni yok."
 
-#: main.cpp:152 main.cpp:187
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' için okuma izni yok."
 
-#: main.cpp:160 main.cpp:173
+#: main.cpp:119 main.cpp:132
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Geçici dosya dizini (%1) dolu."
 
-#: main.cpp:163 main.cpp:176
+#: main.cpp:122 main.cpp:135
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -79,7 +79,7 @@ msgstr ""
 "Geçici dosya dizinine (%2) yazma\n"
 "    '%1' hatası ile başarısız oldu"
 
-#: main.cpp:191
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -88,7 +88,7 @@ msgstr ""
 "Plasma başlatılırken aşağıdaki kurulum\n"
 "sorunu algılandı:"
 
-#: main.cpp:194
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -99,12 +99,12 @@ msgstr ""
 "\n"
 "Plasma başlatılamıyor.\n"
 
-#: main.cpp:201
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma Çalışma Alanı kurulum problemi!"
 
-#: main.cpp:237
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -113,22 +113,22 @@ msgstr ""
 "Standart X11R6 oturum yönetim protokolünü (XSMP) kullanan \n"
 "güvenilir Plasma oturum yöneticisi."
 
-#: main.cpp:241
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Mümkünse kaydedilen oturumu yeniden yükler"
 
-#: main.cpp:244
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Uzaktan bağlantılara izin ver"
 
-#: main.cpp:247
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Oturumu kilitli kipte başlatır"
 
-#: main.cpp:251
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

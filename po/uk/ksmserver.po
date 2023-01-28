@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2020-04-25 09:04+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -29,54 +29,54 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Вихід скасовано «%1»"
 
-#: main.cpp:118
+#: main.cpp:77
 #, kde-format
 msgid "$HOME not set!"
 msgstr "Змінну $HOME не встановлено!"
 
-#: main.cpp:122 main.cpp:128
+#: main.cpp:81 main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Каталогу $HOME (%1) не існує."
 
-#: main.cpp:124
+#: main.cpp:83
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "Немає доступу на запис до каталогу $HOME (%1)."
 
-#: main.cpp:130
+#: main.cpp:89
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Немає доступу на читання до каталогу $HOME (%1)."
 
-#: main.cpp:134
+#: main.cpp:93
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "У каталозі $HOME (%1) недостатньо місця на диску."
 
-#: main.cpp:137
+#: main.cpp:96
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 "Спроба запису до каталогу $HOME (%2) зазнала невдачі. Повідомлення про "
 "помилку: «%1»"
 
-#: main.cpp:150 main.cpp:185
+#: main.cpp:109 main.cpp:144
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Немає доступу на запис до «%1»."
 
-#: main.cpp:152 main.cpp:187
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Немає доступу на читання до «%1»."
 
-#: main.cpp:160 main.cpp:173
+#: main.cpp:119 main.cpp:132
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "У каталозі для тимчасових даних (%1) недостатньо місця на диску."
 
-#: main.cpp:163 main.cpp:176
+#: main.cpp:122 main.cpp:135
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -85,7 +85,7 @@ msgstr ""
 "Спроба запису до каталогу тимчасових даних (%2) зазнала невдачі.\n"
 "   Повідомлення про помилку: «%1»"
 
-#: main.cpp:191
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -94,7 +94,7 @@ msgstr ""
 "Під час спроби запустити Плазму виявлено таку проблему\n"
 "зі встановленими компонентами:"
 
-#: main.cpp:194
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -105,12 +105,12 @@ msgstr ""
 "\n"
 "Не вдалося запустити Плазму.\n"
 
-#: main.cpp:201
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Проблема зі встановленням робочого простору Плазми!"
 
-#: main.cpp:237
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -119,22 +119,22 @@ msgstr ""
 "Надійний менеджер сеансів Плазми, який вміє спілкуватися стандартним \n"
 "протоколом X11R6 для менеджерів сеансів (XSMP)."
 
-#: main.cpp:241
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Якщо можливо відновлює попередній сеанс"
 
-#: main.cpp:244
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Дозволити також з'єднання по мережі"
 
-#: main.cpp:247
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Розпочинає сеанс у режимі блокування"
 
-#: main.cpp:251
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

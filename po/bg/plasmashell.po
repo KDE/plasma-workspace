@@ -291,6 +291,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid "Unknown %1"
-#~ msgstr "Неизвестно %1"

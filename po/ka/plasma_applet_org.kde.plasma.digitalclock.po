@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2022-12-15 07:27+0100\n"
+"PO-Revision-Date: 2023-01-27 07:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -98,22 +98,21 @@ msgid "Always below time"
 msgstr "დროისთვის მიდევნება"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "წამების ჩვენება"
+msgstr "წამების ჩვენება:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "არასდროს"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "მხოლოდ მინიშნებაში"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97

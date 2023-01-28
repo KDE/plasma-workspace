@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2021-10-13 08:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -588,24 +588,24 @@ msgstr ""
 "Сервер неочікувано завершив роботу, його було перезапущено. Будь ласка, "
 "повторіть спробу."
 
-#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
+#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Помилка</h3>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Спроба отримання <i>%1</i> зазнала невдачі"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "Системний сервер неочікувано завершив роботу. Будь ласка, повторіть спробу."
 "<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -613,7 +613,7 @@ msgstr ""
 "Файл <i>%1</i> містить растровий шрифт, підтримку таких шрифтів у вашій "
 "системі вимкнено."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -622,47 +622,47 @@ msgstr ""
 "У файлі <i>%1</i> міститься шрифт <b>%2</b>. Шрифт з цією назвою вже "
 "встановлено."
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> не є шрифтом."
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:707
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Не вдалося вилучити всі файли, пов’язані з <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> вже існує."
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> не існує."
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Відмовлено у доступі.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Дія не підтримується.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:721
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Спроба розпізнавання завершилася невдало.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:722
+#: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Під час обробки сталася несподівана помилка: <i>%1</i>"

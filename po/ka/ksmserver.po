@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2022-12-27 07:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,52 +23,52 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "გასვლა გაუქმდა %1-ის მიერ"
 
-#: main.cpp:118
+#: main.cpp:77
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME დაყენებული არაა!"
 
-#: main.cpp:122 main.cpp:128
+#: main.cpp:81 main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME საქაღალდე (%1) არ არსებობს."
 
-#: main.cpp:124
+#: main.cpp:83
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "$HOME საქაღალდეში (%1) ჩაწერის უფლების გარეშე."
 
-#: main.cpp:130
+#: main.cpp:89
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME საქაღალდიდან (%1) წაკითხვის უფლების გარეშე."
 
-#: main.cpp:134
+#: main.cpp:93
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
-#: main.cpp:137
+#: main.cpp:96
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME საქაღალდეში (%2) ჩაწერა %1 შეცდომით დასრულდა"
 
-#: main.cpp:150 main.cpp:185
+#: main.cpp:109 main.cpp:144
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "ჩაწერის წვდომის გარეშე: '%1'."
 
-#: main.cpp:152 main.cpp:187
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "წაკითხვის წვდომის გარეშე: '%1'."
 
-#: main.cpp:160 main.cpp:173
+#: main.cpp:119 main.cpp:132
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "დროებით საქაღალდეში (%1) თავისუფალი ადგილი აღარაა."
 
-#: main.cpp:163 main.cpp:176
+#: main.cpp:122 main.cpp:135
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -77,7 +77,7 @@ msgstr ""
 "დროებით საქაღალდეში (%2) ჩაწერა შემდეგი\n"
 "   შეცდომით დასრულდა: %1"
 
-#: main.cpp:191
+#: main.cpp:150
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -86,7 +86,7 @@ msgstr ""
 "Plasma-ის გაშვებისას ნაპოვნია\n"
 "დაყენების შემდეგი პრობლემა:"
 
-#: main.cpp:194
+#: main.cpp:153
 #, kde-format
 msgid ""
 "\n"
@@ -97,12 +97,12 @@ msgstr ""
 "\n"
 "Plasma-ის გაშვების შეცდომა.\n"
 
-#: main.cpp:201
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma -ის დაყენების პრობლემა გაქვთ!"
 
-#: main.cpp:237
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -111,22 +111,22 @@ msgstr ""
 "საიმედო Plasma-ის სესიების მმართველი, რომელიც სტანდარტულ X11R6-ის\n"
 "სესიის მართვის პროტოკოლით (XSMP) ლაპარაკობს."
 
-#: main.cpp:241
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "შენახული მომხმარებლის სესიის აღდგენა, თუ ის ხელმისაწვდომია"
 
-#: main.cpp:244
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "დაშორებული მიერთებების დაშვება"
 
-#: main.cpp:247
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "სესიის დაბლოკილ რეჟიმში გაშვება"
 
-#: main.cpp:251
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
