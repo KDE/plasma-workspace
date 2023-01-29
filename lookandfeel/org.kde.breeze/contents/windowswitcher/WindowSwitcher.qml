@@ -9,9 +9,9 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kwin 2.0 as KWin
+import org.kde.kwin 3.0 as KWin
 
-KWin.Switcher {
+KWin.TabBoxSwitcher {
     id: tabBox
 
     readonly property real screenFactor: screenGeometry.width / screenGeometry.height
@@ -80,7 +80,7 @@ KWin.Switcher {
                             Layout.fillWidth: true
                             implicitHeight: Math.round(delegateColumn.width / tabBox.screenFactor)
 
-                            KWin.ThumbnailItem {
+                            KWin.WindowThumbnailItem {
                                 anchors.fill: parent
                                 wId: windowId
                             }
