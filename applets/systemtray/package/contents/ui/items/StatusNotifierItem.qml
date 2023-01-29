@@ -49,7 +49,6 @@ AbstractItem {
                 openContextMenu(pos);
             }
         })
-        taskIcon.startActivatedAnimation();
     }
 
     onContextMenu: {
@@ -71,7 +70,6 @@ AbstractItem {
             operation.x = pos.x;
             operation.y = pos.y;
             service.startOperationCall(operation);
-            taskIcon.startActivatedAnimation()
             break;
         }
     }
