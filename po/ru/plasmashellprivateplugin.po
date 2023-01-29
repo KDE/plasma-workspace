@@ -10,13 +10,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-06-18 10:08+0300\n"
+"PO-Revision-Date: 2023-01-28 22:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -68,93 +68,87 @@ msgstr "Другое"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 мероприятие"
+msgstr[1] "%1 мероприятия"
+msgstr[2] "%1 мероприятий"
+msgstr[3] "%1 мероприятие"
 
 #: calendar/qml/DayDelegate.qml:43
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Мероприятия"
+msgstr "Нет ни одного мероприятия"
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Дни"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Месяцы"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Годы"
 
 #: calendar/qml/MonthViewHeader.qml:163
-#, fuzzy, kde-format
-#| msgid "Previous Activity"
+#, kde-format
 msgid "Previous Month"
-msgstr "Предыдущая комната"
+msgstr "Предыдущий месяц"
 
 #: calendar/qml/MonthViewHeader.qml:165
-#, fuzzy, kde-format
-#| msgid "Previous Activity"
+#, kde-format
 msgid "Previous Year"
-msgstr "Предыдущая комната"
+msgstr "Предыдущий год"
 
 #: calendar/qml/MonthViewHeader.qml:167
-#, fuzzy, kde-format
-#| msgid "Previous Activity"
+#, kde-format
 msgid "Previous Decade"
-msgstr "Предыдущая комната"
+msgstr "Предыдущее десятилетие"
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Сегодня"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Перейти к сегодняшнему дню"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Следующий месяц"
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Следующий год"
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Следующее десятилетие"
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Держать открытым"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
-#, fuzzy, kde-format
-#| msgid "Configure Plasma..."
+#, kde-format
 msgid "Configure…"
-msgstr "Настроить Plasma..."
+msgstr "Настроить…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

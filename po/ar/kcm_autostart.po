@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 01:00+0000\n"
 "PO-Revision-Date: 2022-08-08 22:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:330
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ليس عنواناً مطلقًا."
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:333
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" ليس موجودًا."
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:336
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ليس ملفًّا."
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:339
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" لا يمكن قراءته."
@@ -57,73 +57,73 @@ msgstr "يجب أن يكون الملف '%1' تنفيذي حتى يشغل عند
 msgid "The file '%1' must be executable to run at login."
 msgstr "يجب أن يكون الملف '%1' تنفيذي حتى يشغل عند الولوج"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "الخصائص"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "أزِل"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "التطبيقات"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "سكربتات الولوج"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "سكربت ما قبل البدء"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "سكربتات الخروج"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "انقر على زر <interface>أضف...</interface> في الأسفل لتضيف بعضها"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "اختر سكربت الولوج"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "اختر سكربت الخروج"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "أضف…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "أضف تطبيق..."
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "أضف سكربت الولوج…"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "أضف سكربت الخروج…"

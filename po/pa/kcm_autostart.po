@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 01:00+0000\n"
 "PO-Revision-Date: 2021-06-08 22:25-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Generator: Lokalize 20.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:330
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ਅਸਲ url ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:333
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1 ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:336
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ਫਾਈਲ ਨਹੀਂ ਹੈ।"
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:339
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" ਪੜ੍ਹਨਯੋਗ ਨਹੀਂ।"
@@ -55,73 +55,73 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "ਲਾਗਇਨ ਸਕ੍ਰਿਪਟਾਂ"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "ਪ੍ਰੀ-ਸਟਾਰਟਅੱਪ ਸਕ੍ਰਿਪਟਾਂ"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟਾਂ"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "ਲਾਗਇਨ ਸਕ੍ਰਿਪਟ ਚੁਣੋ"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਚੁਣੋ"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "…ਐਪਲੀਕੇਸ਼ਨ ਜੋੜੋ"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "…ਲਾਗਇਨ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "…ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"

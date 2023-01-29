@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 01:00+0000\n"
 "PO-Revision-Date: 2023-01-06 14:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:330
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" není absolutní URL."
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:333
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" neexistuje.."
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:336
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" není souborem."
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:339
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" nelze číst."
@@ -53,73 +53,73 @@ msgstr "Soubor '%1' musí být pro spuštění při odhlášení spustitelný."
 msgid "The file '%1' must be executable to run at login."
 msgstr "Soubor '%1' musí být pro spuštění při přihlášení spustitelný."
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "Odstranit"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "Aplikace"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "Skripty při přihlášení"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripty před spuštěním"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Skripty při odhlášení"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Žádné položky při spuštění zvolené uživatelem"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "Klikněte na tlačítko <interface>Přidat...</interface> pro přidání"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Vyberte skript při přihlášení"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Vyberte skript při odhlášení"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "Přidat…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Přidat aplikaci…"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Přidat skript při přihlášení…"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Přidat skript při odhlášení…"

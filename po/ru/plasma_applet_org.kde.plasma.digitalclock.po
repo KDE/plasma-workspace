@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2023-01-22 16:28+0300\n"
+"PO-Revision-Date: 2023-01-28 22:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -109,22 +109,21 @@ msgid "Always below time"
 msgstr "Всегда ниже времени"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Показывать секунды"
+msgstr "Показывать секунды:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Не показывать"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Во всплывающей подсказке"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97
@@ -309,7 +308,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Скрыто"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
@@ -432,7 +431,7 @@ msgstr "%1 (Юлианская дата)"
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
-msgstr "Местный"
+msgstr " — местный"
 
 #: plugin/timezonemodel.cpp:143
 #, kde-format

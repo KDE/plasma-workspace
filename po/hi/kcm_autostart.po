@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 01:00+0000\n"
 "PO-Revision-Date: 2021-07-23 08:32+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -19,22 +19,22 @@ msgstr ""
 "X-Generator: Lokalize 21.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:330
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" एक पूर्ण यूआरएल नहीं है।"
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:333
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1 अस्तित्व में नहीं है ।"
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:336
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1 फ़ाइल नहीं है ।"
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:339
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1 पढ़ने लायक नहीं है ।"
@@ -54,73 +54,73 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "गुण"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "हटाएँ"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "लॉगइन स्क्रिप्टें"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "पूर्व प्रारंभ स्क्रिप्टें"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "लॉगआउट स्क्रिप्टें"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "कोई उपयोक्ता-उल्लेखित स्वचालित-प्रारंभ वस्तु नहीं"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "कुछ जोड़ने के लिए नीचे <interface>जोड़ें…</interface> बटन पर क्लिक करें"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "लॉगइन स्क्रिप्ट चुनें"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "लॉगआउट स्क्रिप्ट चुनें"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "जोड़ें…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "अनुप्रयोग जोड़ें…"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "लॉगइन स्क्रिप्ट जोडें..."
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "लॉगआउट स्क्रिप्ट जोडें..."
