@@ -26,6 +26,7 @@ PlasmaCore.ToolTipArea {
     property alias iconContainer: iconContainer
     property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
+    property bool effectivePressed: false
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
@@ -69,32 +70,8 @@ PlasmaCore.ToolTipArea {
             && PlasmaCore.Units.longDuration > 0
     }
 
-    function startActivatedAnimation() {
-        activatedAnimation.start()
-    }
-
-    SequentialAnimation {
-        id: activatedAnimation
-        loops: 1
-
-        ScaleAnimator {
-            target: iconContainer
-            from: 1
-            to: 0.5
-            duration: PlasmaCore.Units.shortDuration
-            easing.type: Easing.InQuad
-        }
-
-        ScaleAnimator {
-            target: iconContainer
-            from: 0.5
-            to: 1
-            duration: PlasmaCore.Units.shortDuration
-            easing.type: Easing.OutQuad
-        }
-    }
-
     MouseArea {
+        id: mouseArea
         propagateComposedEvents: true
         // This needs to be above applets when it's in the grid hidden area
         // so that it can receive hover events while the mouse is over an applet,
@@ -137,11 +114,20 @@ PlasmaCore.ToolTipArea {
 
         FocusScope {
             id: iconContainer
+            scale: (abstractItem.effectivePressed || mouseArea.containsPress) ? 0.8 : 1
+
             activeFocusOnTab: true
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
             Accessible.role: Accessible.Button
             Accessible.onPressAction: abstractItem.activated(Qt.point(iconContainer.width/2, iconContainer.height/2));
+
+            Behavior on scale {
+                ScaleAnimator {
+                    duration: PlasmaCore.Units.longDuration
+                    easing.type: (effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
+                }
+            }
 
             Keys.onPressed: {
                 switch (event.key) {

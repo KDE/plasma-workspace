@@ -63,6 +63,7 @@ AbstractItem {
         }
     }
     onContextMenu: if (applet) {
+        effectivePressed = false;
         Plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
                                                   plasmoidContainer.inHiddenLayout ? applet.height : 0);
     }
@@ -120,17 +121,27 @@ AbstractItem {
     }
 
     Connections {
+        enabled: !!applet
+        target: findMouseArea(applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem)
+
+        function onContainsPressChanged() {
+            plasmoidContainer.effectivePressed = target.containsPress;
+        }
+    }
+
+    Connections {
         target: plasmoidContainer.applet
 
         //activation using global keyboard shortcut
         function onActivated() {
-            plasmoidContainer.startActivatedAnimation()
+            plasmoidContainer.effectivePressed = true;
+            Qt.callLater(() => {plasmoidContainer.effectivePressed = false});
         }
 
         function onExpandedChanged(expanded) {
             if (expanded) {
                 systemTrayState.setActiveApplet(plasmoidContainer.applet, model.row)
-                plasmoidContainer.startActivatedAnimation()
+                effectivePressed = false;
             }
         }
 
