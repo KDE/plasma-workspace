@@ -11,17 +11,19 @@
 <title>Colors</title>
 <authorgroup>
 <author>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<author><firstname>Natalie</firstname><surname>Clarius</surname><email>natalie_clarius@yahoo.de</email></author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2021-04-08</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date>2023-01-29</date>
+<releaseinfo>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
 <keyword>KControl</keyword>
 <keyword>color</keyword>
 <keyword>kcm</keyword>
+<keyword>accent</keyword>
 </keywordset>
 </articleinfo>
 
@@ -65,6 +67,25 @@
 </sect2>
 
 <sect2>
+  <title>Accent Color</title>
+
+  <para>The accent color is the color in which focused or selected elements are highlighted, and is also used for some other interface elements such as sliders or folder icons. It is also possible to tint all colors with the accent color (see more on color scheme options below). With <guilabel>Use accent color</guilabel>, you have three options for choosing an accent color:
+ </para>
+    <itemizedlist>
+      <listitem><para><guilabel>From current color scheme</guilabel>:
+        This will leave the color of highlighted elements up to the color scheme, and not set a global accent color for all schemes. You can learn more about editing color schemes in the section below.
+      </para></listitem>
+      <listitem><para><guilabel>From current wallpaper</guilabel>:
+        This will automatically extract a matching color from your desktop background image.
+      </para></listitem>
+      <listitem><para><guilabel>Curstom</guilabel>:
+        Here you can choose from a set of predefined colors or pick a custom color.
+      </para></listitem>
+    </itemizedlist>
+
+</sect2>
+
+<sect2>
   <title>Edit or Create Schemes</title>
   <para>To edit or create new schemes select a scheme from the list and press the
   <guibutton>Edit Scheme</guibutton> button to open a dialog with three tabs 
@@ -101,6 +122,12 @@
       &mdash; If checked, multi-column lists will use a slightly different
       color to paint the column whose information is being used to sort the
       items in the list.
+    </para></listitem>
+    <listitem><para><guilabel>Tint all colors with accent color</guilabel>
+      &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in my moving the <guilabel>Tint strength</guilabel> slider.
+    </para></listitem>
+    <listitem><para><guilabel>Make window titlebars accent-colored</guilabel>
+      &mdash; If checked, the color of the titlebar and header of windows will be tinted with the accent color. Active windows will be strongly highlighted in the accent color; inactive windows will get the accent color blended in more faintly.
     </para></listitem>
     <listitem><para><guilabel>Contrast</guilabel>
       &mdash; This slider controls the contrast of shaded elements, such as
