@@ -149,6 +149,10 @@ PlasmaComponents3.AbstractButton {
         // ColumnLayout makes scrolling too slow, so use anchors to position labels
         anchors.fill: parent
 
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
+        PlasmaComponents3.ToolTip.text: model.subLabel
+        PlasmaComponents3.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
+
         PlasmaExtras.Heading {
             id: label
             anchors {
@@ -196,19 +200,9 @@ PlasmaComponents3.AbstractButton {
             }
         }
 
-        Loader {
-            id: tooltipLoader
-            active: !!model.subLabel
-
-            sourceComponent: PlasmaComponents3.ToolTip {
-                visible: Kirigami.Settings.isMobile? dayStyle.pressed : dayStyle.hovered
-                text: model.subLabel
-            }
-
-            onLoaded: {
-                if (dayStyle.today) {
-                    root.todayAuxilliaryText = model.subLabel;
-                }
+        Component.onCompleted: {
+            if (dayStyle.today) {
+                root.todayAuxilliaryText = Qt.binding(() => model.subLabel);
             }
         }
     }
