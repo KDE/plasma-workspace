@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 02:56+0000\n"
 "PO-Revision-Date: 2022-07-14 00:31+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -54,42 +54,42 @@ msgstr ""
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "Entfernen"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "Programme"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "Anmeldungs-Skript"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripte vor der Anmeldung"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Abmeldungs-Skript"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Kein benutzerdefinierten Autostart-Einträge vorhanden"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -97,32 +97,32 @@ msgstr ""
 "Klicken Sie unten auf den Knopf <interface>Hinzufügen ...</interface> um "
 "folgende Einträge hinzuzufügen:"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Anmeldungs-Skript auswählen"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Abmeldungs-Skript auswählen"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "Hinzufügen ..."
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Anwendung hinzufügen ..."
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Anmeldungs-Skript hinzufügen ..."
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Abmeldungs-Skript hinzufügen ..."

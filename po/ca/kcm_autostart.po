@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 02:56+0000\n"
 "PO-Revision-Date: 2022-07-02 10:55+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -57,73 +57,73 @@ msgstr "El fitxer «%1» ha de ser executable per executar-se en sortir."
 msgid "The file '%1' must be executable to run at login."
 msgstr "El fitxer «%1» ha de ser executable per executar-se en entrar."
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "Propietats"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts d'inici de sessió"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts previs a l'inici"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts de sortida de sessió"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "Feu clic al botó <interface>Afegeix…</interface> de sota per afegir-ne"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Selecció de script d'inici de sessió"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Selecció de script de sortida"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "Afegeix…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "Afegeix una aplicació…"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Afegeix un script d'inici…"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Afegeix un script de sortida…"

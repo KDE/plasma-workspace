@@ -1,4 +1,4 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2015, 2016, 2018, 2020, 2021, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2018, 2019, 2021.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
 msgid ""
@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:49+0000\n"
-"PO-Revision-Date: 2022-07-23 23:40+0200\n"
+"PO-Revision-Date: 2023-01-14 23:44+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Hinzufügen ..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Neuen Termin hinzufügen"
 
 #: package/contents/ui/CalendarView.qml:397
 #, kde-format
@@ -83,7 +83,7 @@ msgstr "Datum anzeigen"
 #: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Adaptive location"
-msgstr "Angepasster Standort"
+msgstr "Automatische Position"
 
 #: package/contents/ui/configAppearance.qml:64
 #, kde-format
@@ -197,17 +197,16 @@ msgstr ""
 "\">Dokumentation zum Zeitformat</a>"
 
 #: package/contents/ui/configAppearance.qml:222
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Anzeigeformat der Zeit:"
+msgstr "Textanzeige:"
 
 #: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisch"
 
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format
@@ -217,32 +216,28 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:237
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is a country name associated with a particular time zone in a zone "
-#| "selection dialog"
-#| msgid "Vanuatu"
+#, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr "Vanuatu"
+msgstr "Manuell"
 
 #: package/contents/ui/configAppearance.qml:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Darstellung auswählen ..."
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: package/contents/ui/configAppearance.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Eine Schriftart auswählen"
 
 #: package/contents/ui/configCalendar.qml:44
 #, kde-format
@@ -287,10 +282,9 @@ msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Zu lokaler Zeitzone wechseln ..."
+msgstr "Zu Zeitzone des Systems wechseln ..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -298,10 +292,9 @@ msgid "Remove this time zone"
 msgstr "Diese Zeitzone entfernen"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Lokale Zeitzone des Systems"
+msgstr "Zeitzone des Systems"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -381,18 +374,16 @@ msgid "Set Time Format…"
 msgstr "Zeitformat einstellen ..."
 
 #: package/contents/ui/Tooltip.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Reset calendar to today"
-#| msgid "Today"
+#, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "Heute"
+msgstr "Das heutige Datum ist: %1"
 
 #: package/contents/ui/Tooltip.qml:108
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

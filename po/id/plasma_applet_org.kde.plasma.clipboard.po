@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Wantoyo <wantoyek@gmail.com>, 2016, 2017, 2018, 2019, 2022.
-# Linerly <linerly@protonmail.com>, 2022.
+# Linerly <linerly@protonmail.com>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-11-16 22:38+0700\n"
+"PO-Revision-Date: 2023-01-15 13:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: contents/ui/BarcodePage.qml:36
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "Ubah tipe kode QR"
 #: contents/ui/BarcodePage.qml:114
 #, kde-format
 msgid "Creating QR code failed"
-msgstr "Membuat kode QR, gagal"
+msgstr "Gagal membuat kode QR"
 
 #: contents/ui/BarcodePage.qml:123
 #, kde-format
@@ -107,7 +107,7 @@ msgstr "Edit daftar isi"
 #: contents/ui/DelegateToolButtons.qml:68
 #, kde-format
 msgid "Remove from history"
-msgstr "Hapus dari histori"
+msgstr "Hapus dari riwayat"
 
 #: contents/ui/EditPage.qml:86
 #, kde-format

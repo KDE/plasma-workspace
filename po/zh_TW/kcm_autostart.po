@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-25 00:49+0000\n"
+"POT-Creation-Date: 2023-01-29 02:56+0000\n"
 "PO-Revision-Date: 2022-12-21 04:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -57,73 +57,73 @@ msgstr "檔案「%1」必須是可執行檔才可以在登出時執行。"
 msgid "The file '%1' must be executable to run at login."
 msgstr "檔案「%1」必須是可執行檔才可以在登入時執行。"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Properties"
 msgstr "屬性"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Remove"
 msgstr "移除"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
 msgstr "登入文稿"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "啟動前文稿"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
 msgstr "登出文稿"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "沒有使用者指定的自動啟動項目"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "點擊下方的<interface>新增…</interface>按鈕以新增一些"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
 msgstr "選擇登入文稿"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "選擇登出文稿"
 
-#: package/contents/ui/main.qml:182
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
 msgstr "新增…"
 
-#: package/contents/ui/main.qml:197
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
 msgstr "新增應用程式…"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
 msgstr "新增登入文稿…"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "新增登出文稿…"

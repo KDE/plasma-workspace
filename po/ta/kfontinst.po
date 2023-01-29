@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-01-29 02:56+0000\n"
 "PO-Revision-Date: 2022-02-27 16:28+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -577,22 +577,22 @@ msgstr "பின்நிலையை துவக்க முடியவி�
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "பின்நிலை முறிவடைந்த‍து, ஆனால் மீள்துவக்கப்பட்டள்ளது. மீண்டும் முயற்சிக்கவும்."
 
-#: kcmfontinst/JobRunner.cpp:624 kcmfontinst/JobRunner.cpp:630
+#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>சிக்கல்</h3>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> என்பதன் பதிவிறக்கம் தோல்வியடைந்தது"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "பின்நிலை முறிவடைந்த‍து. மீண்டும் முயற்சிக்கவும்.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -600,54 +600,54 @@ msgstr ""
 "<i>%1</i> பிட்மேப் எழுத்துரு ஆகும், ஆனால் பிட்மேப் எழுத்துருக்கள் உங்கள் கணினியில் "
 "முடக்கப்பட்டுள்ளன."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr "உங்கள் கணினியில் ஏற்கனவே நிறுவப்பட்டுள்ள <b>%2</b> என்பதை <i>%1</i> கொண்டுள்ளது."
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> என்பது எழுத்துரு அல்ல."
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:707
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> என்பதுடன் தொடர்புடைய சில கோப்புகளை நீக்க முடியவில்லை."
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "பின்னணி சேவையை துவக்க முடியவில்லை.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:711 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> ஏற்கனவே உள்ளது."
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> என்பது இல்லை."
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "அனுமதி மறுக்கப்பட்டது.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "ஆதரிக்கப்படாத செயல்.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:721
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "உறுதிப்பாடு தோல்வியடைந்தது.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:722
+#: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "வேலை செய்யும்போது எதிர்பாராத சிக்கல்: <i>%1</i>"
