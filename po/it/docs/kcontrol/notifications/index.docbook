@@ -119,7 +119,7 @@
     <varlistentry>
     <term
 ><guiicon
->Cambia con:</guiicon
+>Abilita o disabilita con:</guiicon
 ></term>
     <listitem
 ><para
@@ -292,12 +292,12 @@
 
 <sect2 id="application-settings">
 <title
->Impostazioni dell'applicazione</title>
+>Impostazioni delle applicazioni</title>
 
 <para
 >Facendo clic sul pulsante <guilabel
 >Configura...</guilabel
-> alla fine dell'elenco si apre la pagina delle impostazioni dell'applicazione, che ti permette di configurare il comportamento delle notifiche in base all'applicazione o al servizio.</para>
+> alla fine dell'elenco si apre la pagina delle impostazioni delle applicazioni, che ti permette di configurare il comportamento delle notifiche in base all'applicazione o al servizio.</para>
 
 <para
 >Usa la barra laterale a sinistra per scegliere una voce dalla categoria <guilabel
