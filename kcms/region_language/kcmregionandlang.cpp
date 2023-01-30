@@ -76,6 +76,9 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
                 Q_EMIT enabledChanged();
             });
             m_localectl->start();
+        } else {
+            // probably not even glibc system, KCMRegionAndLang::toGlibcLocale will return the language code itself
+            m_enabled = true;
         }
     } else {
         m_enabled = true;

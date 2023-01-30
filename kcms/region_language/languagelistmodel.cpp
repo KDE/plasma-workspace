@@ -367,10 +367,7 @@ void SelectedLanguageModel::saveLanguages()
                 m_unsupportedLanguage.clear();
                 Q_EMIT unsupportedLanguageChanged();
             }
-            // don't set LANG in non glibc systems, because in non glibc systems KCMRegionAndLang::toGlibcLocale return the language itself
-            if (KCMRegionAndLang::isGlibc()) {
-                m_settings->setLang(lang);
-            }
+            m_settings->setLang(lang);
         }
         QString languages;
         for (auto i = m_selectedLanguages.cbegin(); i != m_selectedLanguages.cend(); i++) {
