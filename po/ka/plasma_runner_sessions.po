@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-18 13:10+0100\n"
+"PO-Revision-Date: 2022-09-02 07:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,10 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: sessionrunner.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "log out"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
@@ -32,7 +33,9 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "გასვლა, სამუშაო მაგიდის მიმდინარე სესიის დასრულება"
 
 #: sessionrunner.cpp:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
@@ -45,7 +48,9 @@ msgid "Turns off the computer"
 msgstr "კომპიუტერის გამორთვა"
 
 #: sessionrunner.cpp:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
@@ -58,7 +63,8 @@ msgid "Reboots the computer"
 msgstr "კომპიუტერის რესტარტი"
 
 #: sessionrunner.cpp:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
@@ -70,20 +76,22 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "მიმდინარე სესიების ჩაკეტვა"
 
 #: sessionrunner.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "new session"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "სესიის შენახვა"
+msgstr "ახალი სესია"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr "მიმდინარე სესიის აღდგენისთვის შენახვა"
+msgstr ""
 
 #: sessionrunner.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "switch user"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
@@ -96,7 +104,9 @@ msgid "Starts a new session as a different user"
 msgstr "სხვა მომხმარებლით ახალი სესიის გაშვება"
 
 #: sessionrunner.cpp:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "User sessions"
+#| msgid "sessions"
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "სესიები"
@@ -107,7 +117,9 @@ msgid "Lists all sessions"
 msgstr "სესიების სია"
 
 #: sessionrunner.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "გადართვა"
@@ -125,30 +137,35 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr "გასვლა"
+msgstr ""
 
 #: sessionrunner.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "shut down computer command"
+#| msgid "shut down"
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "გამორთვა"
 
 #: sessionrunner.cpp:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "გადატვირთვა"
+msgstr "რესტარტი"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr "დაბლოკვა"
+msgstr ""
 
 #: sessionrunner.cpp:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "new session"
 msgid "Save Session"
-msgstr "სესიის შენახვა"
+msgstr "ახალი სესია"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -164,16 +181,12 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
-"<p>ცოტაც და სამუშაო მაგიდის ახალ სესიას დაინახავთ.</p><p>შესვლის ეკრანი "
-"გამოჩნდება და მიმდინარე სესია დაიმალება.</p><p>შეგიძლიათ გადაერთოთ სამუშაო "
-"მაგიდის სესიებს შორის:</p><ul><li>Ctrl+Alt+F(სესიის ნომრით)<li><li>Plasma-ის "
-"ძებნა (აკრიფეთ '%1')</li><li>Plasma-ის ვიჯეტები (მაგალითად, აპლიკაციის "
-"გამშვები)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "new session"
 msgid "New Desktop Session"
-msgstr "სამუშაო მაგიდის ახალი სესია"
+msgstr "ახალი სესია"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"
@@ -187,16 +200,9 @@ msgstr "სამუშაო მაგიდის ახალი სესი
 #~ msgid "reboot"
 #~ msgstr "გადატვირთვა"
 
-#~ msgctxt "save session command"
-#~ msgid "save"
-#~ msgstr "შენახვა"
-
 #~ msgctxt "switch user command"
 #~ msgid "switch :q:"
 #~ msgstr "გადართვა :q:"
-
-#~ msgid "new session"
-#~ msgstr "ახალი სესია"
 
 #~ msgctxt "log out command"
 #~ msgid "Logout"
@@ -211,12 +217,6 @@ msgstr "სამუშაო მაგიდის ახალი სესი
 
 #~ msgid "Shut down the computer"
 #~ msgstr "კომპიუტერის გამორთვა"
-
-#~ msgid "Save the session"
-#~ msgstr "ამ სესიის შენახვა"
-
-#~ msgid "Save the current session for session restoration"
-#~ msgstr "მიმდინარე სესიის აღდგენისთვის შენახვა"
 
 #~ msgid "Warning - New Session"
 #~ msgstr "გაფრთხილება - ახალი სესია"

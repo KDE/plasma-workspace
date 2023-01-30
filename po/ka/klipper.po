@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-15 07:18+0100\n"
+"PO-Revision-Date: 2023-01-29 08:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -497,13 +497,14 @@ msgstr "ისტორიის წინა ჩანაწერი"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "თაგუნას მდგომარეობაზე მყოფი ჩანაწერების ჩვენება"
+msgstr ""
 
 #: klipper.cpp:260
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "%1 - ბუფერის მმართველი"
+msgstr "Klipper - ბუფერის მართვის პროგრამა"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -764,10 +765,11 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "%1 - ბუფერის ჩანაწერები"
+msgstr "ბუფერის შემცველობა"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -795,9 +797,10 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KDE cut & paste history utility"
 msgid "Plasma cut & paste history utility"
-msgstr "Plasnma-ის ამოჭრის და ჩასმის ისტორიის პროგრამა"
+msgstr "KDE-ის ამოჭრა/ჩასმის ისტორიის პროგრამა"
 
 #: main.cpp:31
 #, kde-format
@@ -806,6 +809,9 @@ msgid ""
 "1998-2002, Carsten Pfeiffer\n"
 "2001, Patrick Dubroy"
 msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
 
 #: main.cpp:34
 #, kde-format

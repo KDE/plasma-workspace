@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-12-15 07:15+0100\n"
+"PO-Revision-Date: 2022-09-02 07:17+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,17 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
 msgid "Main Toolbar"
-msgstr "ხელსაწყოების მთავარი ზოლი"
+msgstr "ხელსაწყოთა მთავარი ზოლი"
 
 #: iconsizecategorymodel.cpp:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
 msgid "Secondary Toolbars"
-msgstr "ხელსაწყოების დამხმარე ზოლები"
+msgstr "ხელსაწყოთა მთავარი ზოლი"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -126,21 +127,17 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
-"აქ სხვადასხვა ხატულის ტიპების და ზომების სისტემის დონეზე მორგება შეგიძლიათ. "
-"დაიმახსოვრეთ, რომ ამ პარამეტრებს ყველა პროგრამა არ აქცევს ყურადღებას.<nl/"
-"><nl/>თუ აღმოაჩინეთ, რომ ობიექტები ეკრანზე მეტისმეტად დიდი ან პატარაა, "
-"გთხოვთ გლობალური მასშტაბირება შეცვალოთ."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr "გლობალურის მასშტაბის გასწორება…"
+msgstr ""
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr "ზომა:"
+msgstr ""
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -173,7 +170,8 @@ msgid "Get New Icons…"
 msgstr "ახალი ხატულების მიღება…"
 
 #: package/contents/ui/main.qml:273
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "ხატულების ზომის მორგება"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2023-01-11 07:11+0100\n"
+"PO-Revision-Date: 2022-12-03 08:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -248,7 +248,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "partly cloudy"
-msgstr "ნაწილობრივ მოღრუბლული"
+msgstr ""
 
 #: bbcukmet_i18n.dat:39
 #, kde-format
@@ -278,7 +278,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny"
-msgstr "მზიანი"
+msgstr ""
 
 #: bbcukmet_i18n.dat:44
 #, kde-format
@@ -315,13 +315,13 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "tropical storm"
-msgstr "ტროპიკული ქარიშხალი"
+msgstr ""
 
 #: bbcukmet_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "white cloud"
-msgstr "თეთრი ღრუბელი"
+msgstr ""
 
 #: bbcukmet_i18n.dat:51
 #, kde-format
@@ -609,13 +609,13 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "tropical storm"
-msgstr "ტროპიკული ქარიშხალი"
+msgstr ""
 
 #: bbcukmet_i18n.dat:99
 #, kde-format
 msgctxt "weather forecast"
 msgid "white cloud"
-msgstr "თეთრი ღრუბელი"
+msgstr ""
 
 #: bbcukmet_i18n.dat:100
 #, kde-format
@@ -855,19 +855,19 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Crystals"
-msgstr "ყინულის კრისტალები"
+msgstr ""
 
 #: envcan_i18n.dat:36 noaa_i18n.dat:102
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets"
-msgstr "ყინულის მარცვლები"
+msgstr ""
 
 #: envcan_i18n.dat:37
 #, kde-format
 msgctxt "weather condition"
 msgid "Increasing Cloud"
-msgstr "ზრდადი ღრუბელი"
+msgstr ""
 
 #: envcan_i18n.dat:38 noaa_i18n.dat:106
 #, kde-format
@@ -927,13 +927,13 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Clear"
-msgstr "ძირითადად ნათელი"
+msgstr ""
 
 #: envcan_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Sunny"
-msgstr "ძირითადად მზიანი"
+msgstr ""
 
 #: envcan_i18n.dat:49
 #, kde-format
@@ -1095,7 +1095,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Shallow Fog"
-msgstr "მსუბუქი ნისლი"
+msgstr ""
 
 #: envcan_i18n.dat:76 noaa_i18n.dat:208
 #, kde-format
@@ -1113,13 +1113,13 @@ msgstr "თოვლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Crystals"
-msgstr "თოვლის კრისტალები"
+msgstr ""
 
 #: envcan_i18n.dat:79 noaa_i18n.dat:216
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Grains"
-msgstr "თოვლის მარცვლები"
+msgstr ""
 
 #: envcan_i18n.dat:80
 #, kde-format
@@ -1179,7 +1179,7 @@ msgstr "ტორნადო"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few clouds"
-msgstr "რამდენიმე ღრუბელი"
+msgstr ""
 
 #: envcan_i18n.dat:90
 #, kde-format
@@ -1425,7 +1425,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain"
-msgstr "წვიმის შანსი"
+msgstr ""
 
 #: envcan_i18n.dat:131
 #, kde-format
@@ -1623,7 +1623,7 @@ msgstr "სუფთა ცა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing"
-msgstr "მოიწმინდება"
+msgstr ""
 
 #: envcan_i18n.dat:164 noaa_i18n.dat:342
 #, kde-format
@@ -1635,19 +1635,19 @@ msgstr "მოღრუბლული"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
-msgstr "ნაწილობრივ მოღრუბლული"
+msgstr ""
 
 #: envcan_i18n.dat:166
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr "ძირითადად მოღრუბლული"
+msgstr ""
 
 #: envcan_i18n.dat:167
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cloudy periods"
-msgstr "ღრუბლიანი პერიოდები"
+msgstr ""
 
 #: envcan_i18n.dat:168
 #, kde-format
@@ -2962,13 +2962,13 @@ msgstr "მიუწვდომელია"
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
-msgstr "%1, %2, %3"
+msgstr ""
 
 #: ions/wetter.com/ion_wettercom.cpp:363
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
-msgstr "%1 (%2), %3, %4"
+msgstr ""
 
 #: ions/wetter.com/ion_wettercom.cpp:684
 #, kde-format

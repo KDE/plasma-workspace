@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-03 06:39+0100\n"
+"PO-Revision-Date: 2022-12-03 08:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -78,7 +78,7 @@ msgstr "თემა წარმატებით დადგა."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr "ვადა წამებში"
+msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -94,69 +94,69 @@ msgstr "კურსორის თემის აღდგენა"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr "უკუკავშირის გაშვება"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr "აპლიკაციის გაშვებისას დაკრული ანიმაციის მორგება."
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr "კურსორის უკუკავშირი:"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr "არაფერი"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr "სტატიკური"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr "ციმციმი"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr "ხტუნვა"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr "ამოცანების მმართველის უკუკავშირი:"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr "ანიმაციის ჩართვა"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr "ანიმაციის შეჩერება დროის შემდეგ:"
+msgstr ""
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:124
 #: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "%1 წამი"
-msgstr[1] "%1 წამი"
+msgstr[0] ""
+msgstr[1] ""
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "ზომა:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr "&აპლიკაციის გაშვების უკუკავშირის მორგება…"
+msgstr ""
 
 #: package/contents/ui/main.qml:145
 #, kde-format

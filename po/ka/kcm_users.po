@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-11 06:26+0100\n"
+"PO-Revision-Date: 2022-12-03 08:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -147,7 +147,7 @@ msgstr "ანაბეჭდების მორგება"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr "ყველას გასუფთავება"
+msgstr ""
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -170,124 +170,180 @@ msgid "Enrolling Fingerprint"
 msgstr "ანაბეჭდის ჩაწერა"
 
 #: package/contents/ui/FingerprintDialog.qml:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:127
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
+msgstr "გთხოვთ, კიდევ %1 თქვენი %2 თითი სენსორზე."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -305,9 +361,10 @@ msgid "Re-enroll finger"
 msgstr "თითის თავიდან ჩაწერა"
 
 #: package/contents/ui/FingerprintDialog.qml:333
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
 msgid "Delete fingerprint"
-msgstr "ანაბეჭდის წაშლა"
+msgstr "ანაბეჭდების გასუფთავება"
 
 #: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
@@ -325,121 +382,141 @@ msgid "Add New User"
 msgstr "ახალი მომხმარებლის დამატება"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "ავატარის შეცვლა"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "არაფერია"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr "ენერგიული ფლამინგო"
+msgstr "Feisty Flamingo"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "დრაკონის ხილი"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "ტკბილი კარტოფილი"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "გამჭვირვალე ქარვა"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "შუშხუნა სხივი"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr "ლიმონი-ლაიმი"
+msgstr "ლიმონივით მჟავე"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr "სიმწვანეშეპარული შარმი"
+msgstr "Verdant Charm"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr "ხშირი ჭალა"
+msgstr "Mellow Meadow"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr "თბილი იხვინჯა"
+msgstr "Tepid Teal"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr "ლურჯი პლაზმა"
+msgstr "Plasma Blue"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr "იისფერი პომპონი"
+msgstr "Pon Purple"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr "იისფერი ბახო"
+msgstr "Bajo Purple"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr "დამწვარი ნახშირი"
+msgstr "Burnt Charcoal"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr "ფურცლის სრულყოფილება"
+msgstr "Paper Perfection"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr "შავი ყავა"
+msgstr "Cafétera Brown"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr "პარკეტი"
+msgstr "Rich Hardwood"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "აირჩიეთ სურათი"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Choose File…"
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "აირჩიეთ ფაილი…"

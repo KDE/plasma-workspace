@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-12-08 09:02+0100\n"
+"PO-Revision-Date: 2022-09-02 06:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr "სათაურის გარეშე"
+msgstr ""
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82
@@ -110,9 +110,6 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
-"ავტორი: %1 (%2)\n"
-"შესაჩერებლად გამოიყენეთ შუა-წკაპი\n"
-"ხმის შესაცვლელად ბორბალი გამოიყენეთ"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -122,9 +119,6 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
-"%1\n"
-"შესაჩერებლად გამოიყენეთ შუა-წკაპი\n"
-"ხმის მოსარგებად ბორბალი გამოიყენეთ"
 
 #: package/contents/ui/main.qml:303
 #, kde-format
@@ -134,9 +128,6 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
-"ავტორი %1 (შეჩერებული, %2)\n"
-"დასაკრავად გამოიყენეთ შუა-წკაპი\n"
-"ხმის შესაცვლელად ბორბალი გამოიყენეთ"
 
 #: package/contents/ui/main.qml:303
 #, kde-format
@@ -146,9 +137,6 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
-"შეჩერებული (%1)\n"
-"დასაკრავად გამოიყენეთ შუა-წკაპი\n"
-"ხმის შესაცვლელად ბორბალი გამოიყენეთ"
 
 #~ msgid "General"
 #~ msgstr "ზოგადი"
@@ -159,6 +147,10 @@ msgstr ""
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"
 #~ msgstr "%1 (%2)-სგან"
+
+#~ msgctxt "by Artist (paused, player name)"
+#~ msgid "by %1 (paused, %2)"
+#~ msgstr "%1-სგან (შეჩერებული, %2)"
 
 #~ msgctxt "Paused (player name)"
 #~ msgid "Paused (%1)"
