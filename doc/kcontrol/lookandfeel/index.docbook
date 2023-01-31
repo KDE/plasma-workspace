@@ -49,7 +49,7 @@
   <listitem><para>Plasma Style: Appearance of panels and widgets</para></listitem>
   <listitem><para>Window Decoration: Window borders and titlebar buttons</para></listitem>
   <listitem><para>Icons: Icons used throughout &plasma; and applications</para></listitem>
-  <listitem><para>Cusors: Mouse pointers</para></listitem>
+  <listitem><para>Cursors: Mouse pointers</para></listitem>
   <listitem><para>Task Switcher: Overlay for switching between open windows, typically invoked with the keyboard shortcut Alt+Tab</para></listitem>
   <listitem><para>Splash Screen: Loading screen shown during &plasma; startup</para></listitem>
   <listitem><para>Login Screen: Screen with a user selector and password prompt shown when the computer is started up</para></listitem>
@@ -58,7 +58,7 @@
 </itemizedlist>
 
 <para>
-  By appling a Global Theme, you can change all of the above together. You can also apply only some components of a Global Theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a Global Theme, or apply individual components by using the other System Settings subsections.
+  By applying a Global Theme, you can change all of the above together. You can also apply only some components of a Global Theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a Global Theme, or apply individual components by using the other System Settings subsections.
 </para>
 
 <sect2 id="globaltheme-manage">

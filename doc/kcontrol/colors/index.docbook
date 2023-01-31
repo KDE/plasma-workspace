@@ -78,7 +78,7 @@
       <listitem><para><guilabel>From current wallpaper</guilabel>:
         This will automatically extract a matching color from your desktop background image.
       </para></listitem>
-      <listitem><para><guilabel>Curstom</guilabel>:
+      <listitem><para><guilabel>Custom</guilabel>:
         Here you can choose from a set of predefined colors or pick a custom color.
       </para></listitem>
     </itemizedlist>

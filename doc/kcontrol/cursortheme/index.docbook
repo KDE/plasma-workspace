@@ -107,7 +107,7 @@ This module allows you to
 
 <para>Sometimes it is reassuring to know that your computer didn't just
 ignore your command, and something is happening behind the scenes. In
-this dialog <guilabel>Configure Launch Fedback...</guilabel>, 
+this dialog <guilabel>Configure Launch Feedback...</guilabel>, 
 you can configure visible feedback to help you know if you
 really hit that icon or not.</para>
 
