@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-28 01:00+0000\n"
-"PO-Revision-Date: 2023-01-28 10:27+0100\n"
+"PO-Revision-Date: 2023-01-30 12:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,6 +34,8 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
+"გნებავთ ფონტ(ებ)-ი პირადად თქვენთვის დააყენოთ, თუ მთელი "
+"სისტემისთვის(დაინახავს ყველა მომხმარებელი)?"
 
 #: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
 #, kde-format
@@ -96,6 +98,8 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
+"დასაბეჭდი ფონტი. მითითებული ფორმატში \"ოჯახი,სტილი\", სადაც სტილი 24-ბიტიანი "
+"რიცხვია, რომელიც შედგება: <weight><width><slant>"
 
 #: apps/Printer.cpp:344
 #, kde-format
@@ -1125,6 +1129,8 @@ msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
+"ფონტების პაკეტის პირდაპირ ვერ დააყენებთ.\n"
+"გაშალეთ %1 და კომპონენტები სათითაოდ დააყენეთ."
 
 #: kio/KioFonts.cpp:439
 #, kde-format
