@@ -106,6 +106,8 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    setTitle("Desktop view for " + screen->name());
+
     if (m_screenToFollow) {
         disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
