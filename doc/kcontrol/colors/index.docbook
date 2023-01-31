@@ -124,7 +124,7 @@
       items in the list.
     </para></listitem>
     <listitem><para><guilabel>Tint all colors with accent color</guilabel>
-      &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in my moving the <guilabel>Tint strength</guilabel> slider.
+      &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in by moving the <guilabel>Tint strength</guilabel> slider.
     </para></listitem>
     <listitem><para><guilabel>Make window titlebars accent-colored</guilabel>
       &mdash; If checked, the color of the titlebar and header of windows will be tinted with the accent color. Active windows will be strongly highlighted in the accent color; inactive windows will get the accent color blended in more faintly.
