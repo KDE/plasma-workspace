@@ -1275,6 +1275,7 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
 
 void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
 {
+    qWarning() << "ShellCorona::handleScreenOrderChanged" << screens;
     m_screenReorderInProgress = true;
     // First: reassign existing views if applicable, otherwise remove them
     auto allDesktops = m_desktopViewForScreen.values();
@@ -1282,6 +1283,7 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
     for (auto *v : allDesktops) {
         const int screenNumber = v->containment()->lastScreen();
         if (screenNumber >= 0 && screenNumber < screens.count()) {
+            qWarning() << "ShellCorona::handleScreenOrderChanged setting screen" << screens[screenNumber] << screens[screenNumber]->geometry() << "to" << v;
             v->setScreenToFollow(screens[screenNumber]);
             v->setVisible(true);
             m_desktopViewForScreen[screenNumber] = v;
@@ -2121,6 +2123,7 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
 
             if (containmentView) {
                 if (newScreen) {
+                    qWarning() << "ShellCorona::setScreenForContainment setting new screen" << newScreen << newScreen->geometry() << "to" << containmentView;
                     containmentView->setScreenToFollow(newScreen);
                     m_desktopViewForScreen[newScreenId] = containmentView;
                 } else {
@@ -2132,6 +2135,7 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
 
             if (contSwapView) {
                 if (oldScreen) {
+                    qWarning() << "ShellCorona::setScreenForContainment setting old screen" << oldScreen << oldScreen->geometry() << "to" << contSwapView;
                     contSwapView->setScreenToFollow(oldScreen);
                     m_desktopViewForScreen[oldScreenId] = contSwapView;
                 } else {

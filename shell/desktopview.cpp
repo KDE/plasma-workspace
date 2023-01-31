@@ -101,6 +101,7 @@ void DesktopView::showEvent(QShowEvent *e)
 void DesktopView::setScreenToFollow(QScreen *screen)
 {
     Q_ASSERT(screen);
+    qWarning() << "DesktopView::setScreenToFollow" << screen->name() << screen->geometry();
     if (screen == m_screenToFollow) {
         return;
     }

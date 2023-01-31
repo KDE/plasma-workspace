@@ -131,6 +131,7 @@ void OutputOrderWatcher::refresh()
 
     if (m_outputOrder != pendingOutputOrder) {
         m_outputOrder = pendingOutputOrder;
+        qWarning() << "OutputOrderWatcher::refresh emitting" << m_outputOrder;
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
     return;
@@ -305,6 +306,7 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
         if (hasAllScreens()) {
             if (m_pendingOutputOrder != m_outputOrder) {
                 m_outputOrder = m_pendingOutputOrder;
+                qWarning() << "WaylandOutputOrderWatcher::lambda emitting" << m_outputOrder;
                 Q_EMIT outputOrderChanged(m_outputOrder);
             }
         }
@@ -344,6 +346,7 @@ void WaylandOutputOrderWatcher::refresh()
 
     if (m_outputOrder != m_pendingOutputOrder) {
         m_outputOrder = m_pendingOutputOrder;
+        qWarning() << "WaylandOutputOrderWatcher::refresh emitting" << m_outputOrder;
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
 }
