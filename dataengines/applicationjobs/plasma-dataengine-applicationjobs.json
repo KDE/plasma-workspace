@@ -30,6 +30,7 @@
         "Description[is]": "Uppfærslutilkynningar um forritaverk (með kuiserver)",
         "Description[it]": "Aggiornamenti sui processi delle applicazioni (con kuiserver)",
         "Description[ja]": "アプリケーションジョブ更新 (kuiserver 経由)",
+        "Description[ka]": "აპლიკაციის დავალების განახლებები (kuiserver-ით)",
         "Description[ko]": "프로그램 작업 업데이트 (kuiserver를 통하여)",
         "Description[lt]": "Programų darbų atnaujinimai (per kuiserver)",
         "Description[nl]": "Applicatiejob bijwerken (via kuiserver)",

@@ -86,7 +86,7 @@
         "Description[sl]": "Izvede lupinske ukaze",
         "Description[sv]": "Kör skalkommandon",
         "Description[ta]": "முனைய கட்டளைகளை இயக்கும்",
-        "Description[tr]": "Kabuk komutlarını çalıştırır",
+        "Description[tr]": "Kabuk komutlarını yürütür",
         "Description[uk]": "Виконує команди оболонки",
         "Description[vi]": "Thực hiện các lệnh vỏ",
         "Description[x-test]": "xxExecutes shell commandsxx",

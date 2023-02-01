@@ -29,6 +29,7 @@
         "Description[is]": "Stýrir og gefur upplýsingar um margmiðlunarspilara með MPRIS2",
         "Description[it]": "Fornisce le informazioni dai lettori multimediali e li controlla con MPRIS2",
         "Description[ja]": "MPRIS2 を通して、メディアプレーヤーからの情報を提供し、メディアプレーヤーを制御します",
+        "Description[ka]": "გაძლევთ მედია დამკვრელების ინფორმაციასა და კონტროლს MPRIS2-ით",
         "Description[ko]": "MPRIS2를 통하여 미디어 재생기를 제어하고 정보 가져오기",
         "Description[lt]": "Suteikia informaciją iš MPRIS2 ir per jį valdo medijos leistuves",
         "Description[nl]": "Levert informatie uit en besturing aan mediaspelers via MPRIS2",
