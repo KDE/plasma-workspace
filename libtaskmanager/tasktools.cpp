@@ -96,7 +96,25 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                     data.id = QUrl::fromLocalFile(f.fileName()).fileName();
 
                     if (data.icon.isNull()) {
-                        data.icon = QIcon::fromTheme(f.readIcon());
+                        const QString iconValue = f.readIcon();
+                        if (QIcon::hasThemeIcon(iconValue)) {
+                            data.icon = QIcon::fromTheme(iconValue);
+                        } else if (!iconValue.startsWith(QDir::separator())) {
+                            const QString iconValueWithoutSuffix = iconValue.left(iconValue.lastIndexOf(QLatin1Char('.')));
+                            // Find an icon in the same folder
+                            const QDir sameDir = QFileInfo(url.toLocalFile()).absoluteDir();
+                            const auto iconList = sameDir.entryInfoList(
+                                {
+                                    QStringLiteral("*.png").arg(iconValueWithoutSuffix),
+                                    QStringLiteral("*.svg").arg(iconValueWithoutSuffix),
+                                },
+                                QDir::Files);
+                            if (!iconList.empty()) {
+                                data.icon = QIcon(iconList[0].absoluteFilePath());
+                            }
+                        } else {
+                            data.icon = QIcon(iconValue);
+                        }
                     }
                 }
             }
