@@ -150,7 +150,7 @@ PlasmaComponents3.AbstractButton {
         anchors.fill: parent
 
         PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-        PlasmaComponents3.ToolTip.text: model.subLabel
+        PlasmaComponents3.ToolTip.text: model.subLabel || ""
         PlasmaComponents3.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
 
         PlasmaExtras.Heading {
