@@ -50,5 +50,4 @@ Q_SIGNALS:
 private:
     QDBusServiceWatcher *m_serviceWatcher = nullptr;
     QStringList m_registeredServices;
-    QSet<QString> m_statusNotifierHostServices;
 };
