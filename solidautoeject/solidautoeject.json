@@ -38,7 +38,7 @@
         "Description[sl]": "Samodejno odklopi pogon, ko pritisnjen gumb za izmet",
         "Description[sv]": "Frisläpper automatiskt enheter vid tryck på deras utmatningsknapp",
         "Description[ta]": "வட்டுகளின் வெளியேற்ற பட்டன் அழுத்தப்படும்போது அவற்றை வெளியேற்றும் நிரல்",
-        "Description[tr]": "Çıkarma düğmesine basıldığında sürücüleri otomatik olarak ayırır",
+        "Description[tr]": "Çıkar düğmesine basıldığında sürücüleri otomatik olarak ayırır",
         "Description[uk]": "Автоматичне вилучення файли пристроїв, після натискання на них кнопки виштовхування",
         "Description[vi]": "Tự động xuất các ổ ra khi nút rút của chúng được ấn",
         "Description[x-test]": "xxAutomatically releases drives when their eject button is pushedxx",
