@@ -153,9 +153,11 @@ QColor KCMColors::lastUsedCustomAccentColor() const
 }
 void KCMColors::setLastUsedCustomAccentColor(const QColor &accentColor)
 {
+    // Don't allow transparent since it will conflict with its usage for indicating default accent color
     if (accentColor == QColor(Qt::transparent)) {
         return;
     }
+
     colorsSettings()->setLastUsedCustomAccentColor(accentColor);
     Q_EMIT lastUsedCustomAccentColorChanged();
     Q_EMIT settingsChanged();
