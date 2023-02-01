@@ -1,0 +1,380 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Preferencias de las notificaciones del sistema</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Eloy</firstname
+><surname
+>Cuadra</surname
+><affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>notificación del sistema</keyword>
+<keyword
+>notificación</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Preferencias de las notificaciones del sistema</title>
+
+<para
+>&plasma;, como todas las aplicaciones, necesita informar al usuario cuando ocurre un problema, se completa una tarea o cuando ocurre algo. &plasma; usa un conjunto de «Notificaciones del sistema» para mantener informado al usuario de lo que está ocurriendo.</para>
+
+<para
+>En este módulo puede determinar lo que hace &plasma; para comunicar cada evento.</para>
+
+<sect2 id="notification-settings">
+<title
+>Preferencias de las notificaciones</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Modo no molestar</title>
+
+    <para
+>Este modo desactiva todas las notificaciones visuales y la mayoría de las sonoras para permitirle concentrarse en la tarea actual. Las preferencias de esta sección le permiten configurar bajo qué circunstancias activa &plasma; automáticamente el modo «no molestar».</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Activar cuando las pantallas están duplicadas</guiicon
+></term>
+    <listitem
+><para
+>Activar el modo «no molestar» automáticamente cuando esté duplicando sus pantallas. Por ejemplo, durante una presentación.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Activar cuando se comparte la pantalla</guiicon
+></term>
+    <listitem
+><para
+>Activar automáticamente el modo «no molestar» cuando esté compartiendo sus pantallas. Por ejemplo, durante una conferencia en línea.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar notificaciones críticas</guiicon
+></term>
+    <listitem
+><para
+>Controla si se deben mostrar o no las notificaciones críticas (como la de batería casi agotada), incluso cuando esté en el modo «no molestar».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Conmutar con:</guiicon
+></term>
+    <listitem
+><para
+>Un acceso rápido global que puede pulsar para activar y desactivar el modo «no molestar» en cualquier momento.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filtros</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Notificaciones críticas: <guiicon
+>Mantener siempre encima</guiicon
+></term>
+    <listitem
+><para
+>Mantener las notificaciones críticas, como la de batería casi agotada, siempre encima del resto de ventanas. Esto asegura que seguirán siendo visibles cuando esté viendo un vídeo a pantalla completa o mostrando una presentación.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificaciones normales: <guiicon
+>Mantener siempre encima</guiicon
+></term>
+    <listitem
+><para
+>Mantener las notificaciones normales, como los mensajes, siempre encima del resto de ventanas. Esto asegura que seguirán siendo visibles cuando esté viendo un vídeo a pantalla completa o mostrando una presentación.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificaciones de baja prioridad: <guiicon
+>Mostrar ventana emergente</guiicon
+> y <guiicon
+>Mostrar en el historial</guiicon
+>.</term>
+    <listitem
+><para
+>Controla si las notificaciones de baja prioridad, como un cambio de pista en el reproductor multimedia, se deben mostrar como ventana emergente o en el historial, respectivamente.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Comportamiento</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Ventana emergente: <guiicon
+>Mostrar cerca del icono de notificación</guiicon
+></term>
+    <listitem
+><para
+>Mostrar ventanas emergentes de notificaciones cerca de donde se ubica el icono de notificaciones en el panel.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Escoger posición personalizada...</guiicon
+></term>
+    <listitem
+><para
+>Le permite escoger una esquina fija de la pantalla para mostrar las ventanas emergentes de las notificaciones.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Ocultar tras:</guiicon
+></term>
+    <listitem
+><para
+>Número de segundos que deben transcurrir para que desaparezca automáticamente una ventana emergente de notificación. Puede escoger cualquier número entre 1 y 120 segundos.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Avance de la aplicación y placas</title>
+
+    <sect4 id="application-progress">
+        <title
+>Avance de la aplicación</title>
+
+        <para
+>Las opciones de esta sección controlan cómo se muestra el avance de un proceso de una aplicación, como copiar o descargar un archivo.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar en el gestor de tareas</guiicon
+></term>
+        <listitem
+><para
+>Colorear la ventana en el panel según el estado de avance.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar en notificaciones</guiicon
+></term>
+        <listitem
+><para
+>Mostrar una ventana emergente de notificación durante el proceso.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mantener la ventana emergente abierta durante el avance</guiicon
+></term>
+        <listitem
+><para
+>Controla si la ventana emergente debe permanecer visible durante todo el tiempo que necesite el proceso o si se debe ocultar automáticamente. Siempre se mostrará de nuevo cuando la tarea finalice o falle.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Placas de notificaciones</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar en el gestor de tareas</guiicon
+></term>
+        <listitem
+><para
+>Permitir que las aplicaciones muestren placas, como el número de mensajes sin leer, en el panel.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Preferencias de las aplicaciones</title>
+
+<para
+>Si pulsa el botón <guilabel
+>Configurar...</guilabel
+> que hay al final de la lista se abrirá la página de preferencias de la aplicación, que le permitirá configurar el comportamiento de la notificación por aplicación y por servicio.</para>
+
+<para
+>Use la barra lateral de la izquierda para escoger una entrada de las categorías <guilabel
+>Aplicaciones</guilabel
+> o <guilabel
+>Servicios del sistema</guilabel
+>.</para>
+
+<para
+>Las ventanas emergentes de advertencia generales y los sonidos de inicio y apagado se localizan en el servicio <guilabel
+>Espacio de trabajo Plasma</guilabel
+>.</para>
+
+<para
+>Las aplicaciones que no proporcionan una identificación adecuada, como los guiones del intérprete de órdenes, se pueden configurar usando la entrada <guilabel
+>Otras aplicaciones</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar ventanas emergentes</guiicon
+></term>
+    <listitem
+><para
+>Controla si esta aplicación debe mostrar notificaciones emergentes.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar en modo «No molestar»</guiicon
+></term>
+    <listitem
+><para
+>Controla si esta aplicación puede mostrar notificaciones emergentes incluso en el modo «no molestar».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar en el historial</guiicon
+></term>
+    <listitem
+><para
+>Controla si las notificaciones de esta aplicación se guardarán en el historial de notificaciones.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar placas de notificaciones</guiicon
+></term>
+    <listitem
+><para
+>Si esta aplicación puede mostrar placas, como el número de mensajes sin leer, en el panel.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Configurar eventos...</guiicon
+></term>
+    <listitem
+><para
+>Para las aplicaciones de &kde; también puede configurar cada notificación de forma  individual.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

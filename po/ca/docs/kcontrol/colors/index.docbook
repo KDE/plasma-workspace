@@ -14,13 +14,21 @@
 <authorgroup>
 <author
 >&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &traductor.Antoni.Bella; 
 </authorgroup>
 
 <date
->8 d'abril de 2021</date>
+>29 de gener de 2023</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -31,6 +39,8 @@
 >color</keyword>
 <keyword
 >kcm</keyword>
+<keyword
+>accent</keyword>
 </keywordset>
 </articleinfo>
 
@@ -76,6 +86,37 @@
 
 <sect2>
   <title
+>Color d'accent</title>
+
+  <para
+>El color d'accent és el color en el qual es ressalten els elements enfocats o seleccionats, i també s'utilitza per a altres elements d'interfície com ara controls lliscants o icones de carpeta. També és possible tenyir tots els colors amb el color d'accent (vegeu més a les opcions de l'esquema de color a continuació). Amb <guilabel
+>Usa el color d'accent</guilabel
+>, teniu tres opcions per triar un color d'accent: </para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>A partir de l'esquema de color actual</guilabel
+>: Això deixarà el color dels elements ressaltats a l'esquema de color, i no establirà un color d'accent global per a tots els esquemes. Podeu obtenir més informació sobre l'edició dels esquemes de color a la secció següent. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>A partir del fons de pantalla actual</guilabel
+>: Això extraurà automàticament un color coincident de la imatge de fons de l'escriptori. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Custom</guilabel
+>: Here you can choose from a set of predefined colors or pick a custom color. </para
+></listitem>
+    </itemizedlist>
+
+</sect2>
+
+<sect2>
+  <title
 >Editar o crear esquemes</title>
   <para
 >Per a editar o crear esquemes nous, seleccioneu-ne un de la llista i premeu el botó <guibutton
@@ -117,6 +158,20 @@
 ><guilabel
 >Ombreja la columna ordenada a les llistes</guilabel
 >: Si està marcada, les llistes multicolumna utilitzaran un color lleugerament diferent per a pintar la columna i la informació s'utilitzarà per a ordenar els elements a la llista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Tint all colors with accent color</guilabel
+> &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in by moving the <guilabel
+>Tint strength</guilabel
+> slider. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Fes que les barres de títol tinguin color d'accent</guilabel
+>: Si està marcada, el color de la barra de títol i la capçalera de les finestres s'acolorirà amb el color d'accent. Les finestres actives es ressaltaran intensament amb el color d'accent; les finestres inactives es barrejaran amb el color d'accent de manera més feble. </para
 ></listitem>
     <listitem
 ><para

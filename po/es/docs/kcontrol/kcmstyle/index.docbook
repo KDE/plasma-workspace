@@ -10,7 +10,7 @@
 <articleinfo>
 
 <title
->Estilo de los elementos gráficos</title>
+>Estilo de las aplicaciones</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
@@ -74,9 +74,9 @@
 </authorgroup>
 
 <date
->2018-03-18</date>
+>2021-04-09</date>
 <releaseinfo
->Plasma 5.12</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -86,18 +86,14 @@
 <keyword
 >estilo</keyword>
 <keyword
+>aplicación</keyword>
+<keyword
 >elementos gráficos</keyword>
 </keywordset>
 </articleinfo>
 
-<variablelist>
-<varlistentry>
-<term
->Introducción</term>
-<listitem>
-
 <para
->Este módulo se usa para configurar el modo en el que Plasma muestra los widgets individuales.</para>
+>Este módulo se usa para configurar el modo en el que &plasma; muestra los widgets individuales.</para>
 
 <note
 ><para
@@ -112,51 +108,29 @@
 >.</para>
 
 <para
->Este panel se divide en dos pestañas: <guilabel
->Aplicaciones</guilabel
-> y <guilabel
->Ajuste fino</guilabel
->.</para>
-
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
->La pestaña <guilabel
->Aplicaciones</guilabel
-></term>
-<listitem>
-<para
->La lista desplegable superior, <guilabel
->Estilo del widget</guilabel
->, contiene una lista de estilos predefinidos. Cada estilo posee un nombre y una breve descripción.</para>
+>La cuadrícula superior, etiquetada como <guilabel
+>Estilo de las aplicaciones</guilabel
+>, contiene una lista de las vistas previas de los estilos predefinidos. Cada estilo tiene un nombre y muestra una breve descripción al pasar el puntero del ratón sobre su elemento.</para>
 
 <para
->Para cambiar los estilos, seleccione un estilo en la lista desplegable para mostrar una vista previa del estilo en el cuadro que existe debajo de la lista.</para>
+>Si desea configurar un tema de &plasma;, use el icono superpuesto <guilabel
+>Configurar estilo...</guilabel
+> que hay en la parte inferior derecha del icono de estilo del elemento gráfico en la cuadrícula.</para>
 
 <para
->Si un estilo es configurable, se activará el botón <guibutton
->Configurar...</guibutton
-> a la derecha de la lista desplegable y podrá usarlo para abrir un diálogo donde seleccionar más preferencias.</para>
+>Si se implementa, es posible cambiar casi todos los aspectos del estilo: centrar las pestañas de las barras de pestañas, dibujar separadores de elementos de las barras de herramientas, dibujar indicadores de foco en las listas, dibujar marcas en los deslizadores, activar controladores de cambio de tamaño extendidos, definir la visibilidad de los aceleradores de teclado, modo de arrastre de las ventanas, uso de marcos para una mejor accesibilidad, uso de botones en las barras de desplazamiento y uso de transparencia en los menús.</para>
 
-</listitem>
-</varlistentry>
-
-<varlistentry
-> 
-<term
->La pestaña <guilabel
->Ajuste fino</guilabel
-></term>
-<listitem>
+<para
+>La configuración general se puede realizar pulsando el botón <guibutton
+>Configurar iconos y barras de herramientas</guibutton
+> que hay debajo de la cuadrícula. Este botón abre un panel para seleccionar más preferencias.</para>
 <variablelist>
 
 <varlistentry
 > 
 <term
 ><guilabel
->Mostrar iconos en botones</guilabel
+>Mostrar iconos: En botones</guilabel
 ></term>
 <listitem>
 <para
@@ -174,7 +148,7 @@
 > 
 <term
 ><guilabel
->Mostrar iconos en menús</guilabel
+>Mostrar iconos: En menús</guilabel
 ></term>
 <listitem>
 <para
@@ -188,31 +162,31 @@
 > 
 <term
 ><guilabel
->Posición del texto en la barra de herramientas principal</guilabel
+>Etiqueta de la barra de herramientas principal</guilabel
 >, <guilabel
->Posición del texto en la barra de herramientas secundaria</guilabel
+>Etiqueta de la barra de herramientas secundaria</guilabel
 ></term>
 <listitem>
 <para
 >Estas listas desplegables le permiten indicar la posición predefinida del texto del nombre del botón en ambas barras de herramientas. Si selecciona <guilabel
->Sin texto</guilabel
+>Ninguno</guilabel
 >, no habrá texto en los botones de la barra de herramientas. Si selecciona <guilabel
 >Solo texto</guilabel
 >, el icono de los botones será reemplazado por el texto del nombre del botón. Si selecciona <guilabel
->Texto junto a iconos</guilabel
+>Junto a los iconos</guilabel
 >, el nombre del botón se ubicará a la <emphasis
 >derecha</emphasis
 > del icono. Si selecciona <guilabel
->Texto bajo los iconos</guilabel
+>Debajo de los iconos</guilabel
 >, por defecto el texto del botón estará <emphasis
 >debajo</emphasis
 > del icono.</para>
 
 <tip
 ><para
->Esta opción especifica la posición <emphasis
+>Esta opciones solo especifican la posición <emphasis
 >predefinida</emphasis
->. Cada aplicación puede sobreescribir la opción de configuración elegida en este panel.</para
+>. Cada aplicación puede sobrescribir las preferencias que se usan en este panel.</para
 ></tip>
 </listitem
 > 
@@ -221,16 +195,13 @@
 
 </variablelist>
 
-</listitem>
-</varlistentry>
-
-</variablelist>
-
 <para
->El menú global se activa ahora automáticamente cuando coloca una miniaplicación de menú global en un panel o cuando añade el botón de menú a la decoración de la ventana en la pestaña <guilabel
->Botones</guilabel
-> del módulo <guilabel
->Decoraciones de la ventana</guilabel
->. </para>
+>Puede usar el botón <guibutton
+>Configurar el estilo de las aplicaciones GNOME/GTK...</guibutton
+> para abrir la pestaña de configuración donde puede escoger el <guilabel
+>Tema de GTK</guilabel
+>, instalar temas de GTK desde archivos u <guibutton
+>Obtener nuevos estilos de aplicaciones de GNOME/GTK</guibutton
+> desde Internet. </para>
 
 </article>

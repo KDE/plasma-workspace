@@ -15,13 +15,23 @@
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &Niels.Reedijk;&Sander.Koning; 
 </authorgroup>
 
 <date
->2021-04-07</date>
+>2023-01-29</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <abstract>
 <para
@@ -37,35 +47,175 @@
 >muis</keyword>
 <keyword
 >cursor</keyword>
+<keyword
+>aanwijzer</keyword>
+<keyword
+>stuiteren</keyword>
+<keyword
+>knipperen</keyword>
+<keyword
+>animatie</keyword>
+<keyword
+>opstarten</keyword>
+<keyword
+>terugkoppeling</keyword>
+<keyword
+>thema</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Deze module stelt u in staat uit verschillende geïnstalleerde cursorthema's te kiezen uit een voorbeeld van getoonde cursors. </para>
+<sect1 id="cursorthemes">
+<title
+>Cursorthema</title>
 
 <para
->De opties in deze module zijn op sommige systemen wellicht niet beschikbaar. Uw systeem moet wellicht bijgewerkt worden om cursorthema's te ondersteunen. </para>
+>Deze module biedt u <itemizedlist>
+<listitem
+><para
+>een cursorthema te selecteren</para
+></listitem>
+<listitem
+><para
+>een cursoranimatie te configureren voor starten van toepassingen</para
+></listitem>
+</itemizedlist>
+</para>
 
 <para
->Als u aanvullende cursorthema's tot uw beschikking hebt, kunt u deze verwijderen met de prullenbakknop die verschijnt als u zweeft boven het thema-item in de lijst. Merk op dat u de standaard stijlen niet kunt verwijderen. </para>
+>De opties in deze module zijn op sommige systemen wellicht niet beschikbaar.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Cursorthemabeheerder</title>
+
+<screenshot>
+<screeninfo
+>Schermafdruk van de cursorthemabeheerder</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Om een cursorthema te gebruiken, selecteer er eenvoudig een en klik op de knop <guilabel
+>Toepassen</guilabel
+>.</para>
+
+<para
+>U kunt cursorthema's verwijderen met de prullenbakknop die verschijnt wanneer u zweeft boven het thema-item in de lijst. Merk op dat u de voor-geïnstalleerde thema's niet kunt verwijderen.</para>
+
+<para
+>Gebruik de knop <guilabel
+>Nieuwe cursors ophalen</guilabel
+> om de dialoog <guilabel
+>Nieuwe cursors downloaden</guilabel
+> te starten en download extra thema's van het internet.</para>
+
+<screenshot>
+<screeninfo
+>Schermafdruk van de Haal nieuwe cursorthema's op</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>U kunt ook cursorthema's installeren uit een bestand dat u hebt gedownload of op een andere manier hebt verkregen met de knop <guilabel
+>Installeren uit bestand...</guilabel
+>.</para>
+
+<para
+>If you are interested in creating your own cursor theme, you can find information <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>here</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Cursorgrootte</title>
 
 <para
 >Sommige thema's bieden u het kiezen van de grootte van de cursor. Gebruik het veld <guilabel
 >Grootte</guilabel
-> om de toepasselijke grootte te selecteren. Beschikbare groottes worden getoond wanneer u met de muisaanwijzer boven het thema-item in het lijstvak zweeft. </para>
+> om de toepasselijke grootte te selecteren.</para>
+
+<screenshot>
+<screeninfo
+>Schermafdruk van de cursorgrootte</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Opstartnotificatie</title>
 
 <para
->Als u extra cursorthema's beschikbaar hebt kunt u ze installeren met de knop <guibutton
->Uit bestand installeren...</guibutton
-> onder het lijstvak. Zie <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->deze instructies</ulink
-> over de details over hoe het aangepaste cursorthema aan te maken. </para>
+>Sometimes it is reassuring to know that your computer didn't just ignore your command, and something is happening behind the scenes. In this dialog <guilabel
+>Configure Launch Feedback...</guilabel
+>, you can configure visible feedback to help you know if you really hit that icon or not.</para>
+
+<screenshot>
+<screeninfo
+>Schermafdruk van de opstartnotificatie</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>De traditionele manier om aan te geven dat uw computer bezig is, is om de muiscursor aan te passen. U kunt dit activeren door het vakje <guilabel
+>Cursor</guilabel
+> in te schakelen.</para>
 
 <para
->Gebruik de knop <guibutton
->Nieuwe cursors ophalen</guibutton
-> om de dialoog <guilabel
->Nieuwe cursors downloaden</guilabel
-> te starten en download extra thema's van het internet.</para>
+>Als deze instelling is geactiveerd zal voor een korte tijd een pictogram aan de muiscursor worden geplakt wanneer een nieuwe toepassing wordt gestart. U kunt aangeven hoe lang dit pictogram wordt getoond met het draaischakelaar <guilabel
+>Animatie stoppen na:</guilabel
+>. De standaardtijd is 5 seconden.</para>
+
+<para
+>Er zijn diverse variaties mogelijk voor een cursor voor bezig, waaronder een <guilabel
+>Geen notificatie</guilabel
+>, een <guilabel
+>Knipperend</guilabel
+>, een <guilabel
+>Stuiterend</guilabel
+> of een <guilabel
+>Statisch</guilabel
+> cursorpictogram zonder animatie.</para>
+
+<para
+>De traditionele opstartnotificatie van plasma heeft een andere vorm aangenomen. Deze kan hier ook aan en uit worden ingesteld. Normaal als u een toepassing start, krijgt deze onmiddellijk een knop op de taakbalk met het pictogram vervangen door een zandloper om u te laten weten dat er iets gaande is. U kunt dit in- en uitschakelen met het keuzevakje <guilabel
+>Animatie inschakelen</guilabel
+></para>
+
+<para
+>Niet alle toepassingen die u start zullen uiteindelijk een venster openen of een knop op de taakbalk tonen. Sommige van hen worden bijvoorbeeld in het &plasma;-systeemvak geplaatst, of het kan zijn dat u het naar een ander virtueel bureaublad heeft gestuurd en in de sectie <guilabel
+>Gedrag</guilabel
+> van de <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>Instellingen taakbeheerder</guilabel
+></ulink
+> de optie <guilabel
+>Van het huidige bureaublad</guilabel
+> is ingeschakeld voor de schakelaar <guilabel
+>Alleen taken tonen</guilabel
+>. Het instellen van een maximale tijd verzekert u ervan dat u in deze gevallen toch een opstartmelding krijgt, maar ook dat het weg gaat zodra het opstarten van de taak is voltooid.</para>
+
+</sect2>
+
+</sect1>
 
 </article>

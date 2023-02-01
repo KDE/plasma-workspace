@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>Región e idioma</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Eloy</firstname
+> <surname
+>Cuadra</surname
+> <affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+ </authorgroup>
+
+          <date
+>2022-06-23</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Preferencias del sistema</keyword>
+		<keyword
+>local</keyword>
+		<keyword
+>país</keyword>
+		<keyword
+>idioma</keyword>
+		<keyword
+>número</keyword>
+                <keyword
+>traducción</keyword>
+		<keyword
+>moneda</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>En esta página puede definir sus idiomas y formatos preferidos para el espacio de trabajo &plasma; y las aplicaciones que mostrará. </para>
+
+<para
+>En la mayoría de los casos, solo tiene que seleccionar el idioma y todas las opciones se configurarán de manera adecuada. El espacio de trabajo &plasma; y las aplicaciones de &kde; están escritos en inglés americano y se traducen a muchos idiomas diferentes por equipos de voluntarios. Estas traducciones se deben instalar antes de que pueda decidir usarlas. </para>
+<note
+><para
+>Asegúrese de tener instalados los paquetes de idiomas de &plasma; o las traducciones de los idiomas que quiera usar.</para>
+<para
+>Como &plasma; se construye sobre las bibliotecas &Qt;, también necesita las traducciones de &Qt; para los idiomas seleccionados si quiere tener una interfaz de usuario completamente localizada.</para
+></note>
+
+
+<para
+>En cada barra de selección puede ver ejemplos de cómo se ven los ajustes y las unidades de medida que se utilizan. Además de los números, puede ver cómo se muestran los valores de moneda, las fechas y las horas en formato largo y corto. Si cambia alguna de las preferencias, la vista previa muestra los efectos de los cambios antes de aplicarlos. </para>
+
+<para
+>Si pulsa el botón <guilabel
+>Añadir más...</guilabel
+> en la página del idioma se mostrará la lista de idiomas disponibles y se mostrará inicialmente el idioma actual seleccionado. Si la selección muestra «Ningún idioma configurado», no habrá definido ningún país y los valores predeterminados del idioma serán los del sistema, normalmente C. Si el idioma que quiere usar no aparece en la lista, tendrá que instalarlo usando el método habitual de su sistema. </para>
+
+<para
+>Puede eliminar un idioma de la lista principal seleccionándolo y pulsando el icono <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Puede cambiar el orden de preferencia de la lista seleccionando un idioma y pulsando el icono <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<para
+>En el caso de que necesite distintas preferencias de formato individuales, puede seleccionar la configuración local para <guilabel
+>Números</guilabel
+>, <guilabel
+>Hora</guilabel
+>, <guilabel
+>Moneda</guilabel
+> y <guilabel
+>Unidades de medida</guilabel
+>. </para>
+
+<note>
+<para
+>Anteriormente, el idioma y los formatos eran preferencias independientes. Desde &plasma; 5.26 se han fusionado en este módulo denominado «Región e idioma». Al cambiar un idioma se <emphasis
+>cambian automáticamente</emphasis
+> las preferencias de números, moneda, etc., a las del país o región correspondiente. No obstante, este cambio sigue siendo compatible con la configuración antigua. El archivo de configuración sigue estando en <emphasis
+>~/.config/plasma-localerc</emphasis
+>. </para>
+</note>
+</article>
