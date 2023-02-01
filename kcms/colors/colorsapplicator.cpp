@@ -123,16 +123,17 @@ static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry
 
 void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag, std::optional<QColor> accentColor)
 {
-    const auto getAccent = [configOutput, &accentColor]() {
-        return accentColor.value_or(configOutput->group("General").readEntry("AccentColor", QColor()));
-    };
+    const auto accent = accentColor.value_or(configOutput->group("General").readEntry("AccentColor", QColor()));
 
-    const auto hasAccent = [configOutput, &getAccent]() {
-        if (getAccent() == QColor(Qt::transparent)) {
+    const auto hasAccent = [configOutput, &accent, accentColor]() {
+        if (accent == QColor(Qt::transparent)) {
             return false;
         }
-        return configOutput->group("General").hasKey("AccentColor");
-    };
+
+        return configOutput->group("General").hasKey("AccentColor")
+            || accentColor.has_value(); // It's obvious that when accentColor.hasValue, it has (non-default/non-transparent) accent. reading configOutput for
+                                        // any config is unreliable in this file.
+    }();
 
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
     // rewritten when a new color scheme is loaded.
@@ -184,12 +185,11 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         KConfigGroup targetGroup(configOutput, item);
 
         for (const auto &entry : colorSetKeyList) {
-            if (hasAccent()) {
+            if (hasAccent) {
                 if (accentList.contains(entry)) {
-                    targetGroup.writeEntry(entry, getAccent());
+                    targetGroup.writeEntry(entry, accent);
                 } else if (tintAccent) {
                     auto base = sourceGroup.readEntry<QColor>(entry, QColor());
-                    auto accent = getAccent();
                     targetGroup.writeEntry(entry, tintColor(base, accent, tintFactor));
                 } else {
                     copyEntry(sourceGroup, targetGroup, entry);
@@ -199,8 +199,8 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
-        if (item == QStringLiteral("Colors:Selection") && hasAccent()) {
-            QColor accentbg = accentBackground(getAccent(), config->group("Colors:View").readEntry<QColor>("BackgroundNormal", QColor()));
+        if (item == QStringLiteral("Colors:Selection") && hasAccent) {
+            QColor accentbg = accentBackground(accent, config->group("Colors:View").readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
             }
@@ -209,8 +209,8 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
-        if (item == QStringLiteral("Colors:Button") && hasAccent()) {
-            QColor accentbg = accentBackground(getAccent(), config->group("Colors:Button").readEntry<QColor>("BackgroundNormal", QColor()));
+        if (item == QStringLiteral("Colors:Button") && hasAccent) {
+            QColor accentbg = accentBackground(accent, config->group("Colors:Button").readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
             }
@@ -223,7 +223,6 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             for (const auto &entry : colorSetKeyList) {
                 if (tintAccent) {
                     auto base = sourceGroup.readEntry<QColor>(entry, QColor());
-                    auto accent = getAccent();
                     targetGroup.writeEntry(entry, tintColor(base, accent, tintFactor));
                 } else {
                     copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
@@ -232,10 +231,10 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         // Header accent colouring
-        if (item == QStringLiteral("Colors:Header") && hasAccent()) {
+        if (item == QStringLiteral("Colors:Header") && hasAccent) {
             const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
-            const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
-            const auto inactiveWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
+            const auto accentedWindowBackground = accentBackground(accent, windowBackground);
+            const auto inactiveWindowBackground = tintColor(windowBackground, accent, tintFactor);
 
             if (applyAccentToTitlebar) {
                 targetGroup = KConfigGroup(configOutput, item);
@@ -273,11 +272,11 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         ++i;
     }
 
-    if (hasAccent() && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
+    if (hasAccent && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
         const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
 
         if (tintAccent) {
-            const auto tintedWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
+            const auto tintedWindowBackground = tintColor(windowBackground, accent, tintFactor);
             if (!applyAccentToTitlebar) {
                 groupWMOut.writeEntry("activeBackground", tintedWindowBackground, writeConfigFlag);
                 groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true), writeConfigFlag);
@@ -287,7 +286,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         if (applyAccentToTitlebar) {
-            const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
+            const auto accentedWindowBackground = accentBackground(accent, windowBackground);
             groupWMOut.writeEntry("activeBackground", accentedWindowBackground, writeConfigFlag);
             groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true), writeConfigFlag);
         }
