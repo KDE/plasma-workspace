@@ -91,28 +91,15 @@ void StatusNotifierWatcher::serviceUnregistered(const QString &name)
             ++it;
         }
     }
-
-    if (m_statusNotifierHostServices.contains(name)) {
-        m_statusNotifierHostServices.remove(name);
-        Q_EMIT StatusNotifierHostUnregistered();
-    }
 }
 
 void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 {
-    if (service.contains(QLatin1String("org.kde.StatusNotifierHost-")) && QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value()
-        && !m_statusNotifierHostServices.contains(service)) {
-        qDebug() << "Registering" << service << "as system tray";
-
-        m_statusNotifierHostServices.insert(service);
-        m_serviceWatcher->addWatchedService(service);
-        Q_EMIT StatusNotifierHostRegistered();
-    }
 }
 
 bool StatusNotifierWatcher::IsStatusNotifierHostRegistered() const
 {
-    return !m_statusNotifierHostServices.isEmpty();
+    return true;
 }
 
 int StatusNotifierWatcher::ProtocolVersion() const
