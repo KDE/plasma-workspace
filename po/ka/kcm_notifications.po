@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2022-12-03 08:55+0100\n"
+"PO-Revision-Date: 2023-01-31 06:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -90,45 +90,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "შეტყობინებები ამჟამად Plasma-ის მიერ არაა მოწოდებული."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "არ შემაწუხო:"
+msgstr "რეჟიმი არ შემაწუხო"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "ჩართვა:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "ჩართეთ, როცა ეკრანები სარკისებურია"
+msgstr "როცა ეკრანები სარკისებურია"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "ჩართეთ, როცა ეკრანს აზიარებთ"
+msgstr "ეკრანის გაზიარებისას"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "კლავიატურის მალსახმობი:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "ხილვადობის პირობები"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -158,29 +153,25 @@ msgstr "დაბალი პრიორიტეტის გაფრთხ�
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Show popup"
-msgstr "მხტუნავის ჩვენება"
+msgstr "მხტუნარას ჩვენება"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "მხტუნავი:"
+msgstr "მხტუნარები"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "აპლიკაციები:"
+msgstr "მდებარეობა:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "გაფრთხილების ხატულასთან ჩვენება"
+msgstr "გაფრთხილების ხატულასთან"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -204,7 +195,7 @@ msgstr "დროის შემდეგ დამალვა:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "დამატებითი უკუკავშირი"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -234,11 +225,10 @@ msgid "Notification badges:"
 msgstr "გაფრთხილების მხტუნარები:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "აპლიკაციის მორგება"
+msgstr "აპლიკაციაზე-დამოკიდებული პარამეტრები"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
@@ -248,7 +238,7 @@ msgstr "მორგება…"
 #: package/contents/ui/PopupPositionPage.qml:15
 #, kde-format
 msgid "Popup Position"
-msgstr "მხტუნავის პოზიცია"
+msgstr "მხტუნარას მდებარეობა"
 
 #: package/contents/ui/SourcesPage.qml:19
 #, kde-format

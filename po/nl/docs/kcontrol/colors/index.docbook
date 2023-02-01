@@ -14,13 +14,21 @@
 <authorgroup>
 <author
 >&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &Niels.Reedijk;&Freek.de.Kruijf; 
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2023-01-29</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -31,6 +39,8 @@
 >kleur</keyword>
 <keyword
 >kcm</keyword>
+<keyword
+>accent</keyword>
 </keywordset>
 </articleinfo>
 
@@ -76,6 +86,37 @@
 
 <sect2>
   <title
+>Accentueringskleur</title>
+
+  <para
+>De accentkleur is de kleur waarin elementen met focus of geselecteerde worden geaccentueerd en wordt ook gebruikt voor sommige andere interface-elementen zoals schuifregelaars of map-pictogrammen. Het is ook mogelijk alle kleuren een tint te geven met de accentkleur (zie meer over de optie kleurschema hieronder). Met <guilabel
+>Accentkleur gebruiken</guilabel
+> hebt u drie opties voor het kiezen  van een accentkleur: </para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Uit het huidige kleurenschema</guilabel
+>: dit zal de kleur van geaccentueerd elementen overlaten aan het kleurenschema en niet een globale accentkleur instellen voor alle schema's. U kunt meer te weten komen over bewerken van kleurenschema's in de onderstaande sectie. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Uit de huidige achtergrondafbeelding</guilabel
+>: dit zal automatisch een overeenkomende kleur uit uw bureaubladachtergrondafbeelding halen. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Aangepast</guilabel
+>: hier kunt u kiezen uit een set van voorgedefinieerde kleuren kiezen of een eigen kleur kiezen. </para
+></listitem>
+    </itemizedlist>
+
+</sect2>
+
+<sect2>
+  <title
 >Bewerken of aanmaken van schema's</title>
   <para
 >Om nieuwe schema's te bewerken of aan te maken selecteert u een schema uit de lijst en drukt u op de knop <guibutton
@@ -117,6 +158,20 @@
 ><guilabel
 >Gesorteerde kolom in lijsten van schaduw voorzien</guilabel
 > &mdash; Indien geactiveerd, gebruiken lijsten met meerdere kolommen een enigszins andere kleur om de kolom te laten zien waarvan de informatie wordt gebruikt om de items in de lijst te sorteren. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Geef alle kleuren een tint met de accentkleuor</guilabel
+> &mdash; indien geactiveerd, zullen alle kleuren enige accentkleur ingemengd krijgen. U kunt besturen hoeveel de accentkleur ingemengd krijgt in door de schuifregelaar <guilabel
+>Tintsterkte</guilabel
+> te verplaatsen. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Titelbalken van vensters laten kleuren met de accentkleur</guilabel
+> &mdash; indien geactiveerd zal de kleur van de titelbalk en kop van vensters getint worden met de accentkleur. Actieve vensters zullen sterk geaccentueerd worden met de accentkleur; inactieve vensters zullen de accentkleur vager ingemengd krijgen. </para
 ></listitem>
     <listitem
 ><para

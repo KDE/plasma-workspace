@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-29 08:05+0100\n"
+"PO-Revision-Date: 2023-01-31 06:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -427,7 +427,7 @@ msgstr ""
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "ბრძანების ნაგულისხმებ ხატულაზე დაბრუნება"
 
 #: editcommanddialog.cpp:121
 #, kde-format
@@ -443,7 +443,7 @@ msgstr "%1x%2 %3bpp"
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr ""
+msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
 #: klipper.cpp:194
 #, kde-format
@@ -497,14 +497,13 @@ msgstr "ისტორიის წინა ჩანაწერი"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr ""
+msgstr "თაგუნას მდგომარეობაზე მყოფი ჩანაწერების ჩვენება"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - ბუფერის მართვის პროგრამა"
+msgstr "%1 - ბუფერის მმართველი"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -584,7 +583,7 @@ msgstr "Klipper-ის ვერსია"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "ისტორიის შენახვა სამუშაო მაგიდის სესიებს შორის"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -598,7 +597,7 @@ msgstr ""
 #: klipper.kcfg:18
 #, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr ""
+msgstr "ბუფერის გასუფთავების აკრძალვა"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -724,7 +723,7 @@ msgstr ""
 #: klipper.kcfg:84
 #, kde-format
 msgid "Trim whitespace from selection"
-msgstr ""
+msgstr "მონიშნულიდან ცარიელი ადგილების წაკვეთა"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -765,11 +764,10 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "ბუფერის შემცველობა"
+msgstr "%1 - ბუფერის ჩანაწერები"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -797,10 +795,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE-ის ამოჭრა/ჩასმის ისტორიის პროგრამა"
+msgstr "Plasnma-ის ამოჭრის და ჩასმის ისტორიის პროგრამა"
 
 #: main.cpp:31
 #, kde-format

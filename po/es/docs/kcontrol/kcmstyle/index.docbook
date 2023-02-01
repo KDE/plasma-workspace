@@ -10,7 +10,7 @@
 <articleinfo>
 
 <title
->Estilo de los elementos gráficos</title>
+>Widget Style</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
@@ -93,11 +93,11 @@
 <variablelist>
 <varlistentry>
 <term
->Introducción</term>
+>Introduction</term>
 <listitem>
 
 <para
->Este módulo se usa para configurar el modo en el que Plasma muestra los widgets individuales.</para>
+>This module is used to configure how the individual widgets are drawn by Plasma.</para>
 
 <note
 ><para
@@ -112,10 +112,10 @@
 >.</para>
 
 <para
->Este panel se divide en dos pestañas: <guilabel
->Aplicaciones</guilabel
-> y <guilabel
->Ajuste fino</guilabel
+>This panel is divided into two tabs: <guilabel
+>Applications</guilabel
+> and <guilabel
+>Fine Tuning</guilabel
 >.</para>
 
 </listitem>
@@ -123,22 +123,22 @@
 
 <varlistentry>
 <term
->La pestaña <guilabel
->Aplicaciones</guilabel
-></term>
+><guilabel
+>Applications</guilabel
+> tab</term>
 <listitem>
 <para
->La lista desplegable superior, <guilabel
->Estilo del widget</guilabel
->, contiene una lista de estilos predefinidos. Cada estilo posee un nombre y una breve descripción.</para>
+>The top drop down box, labeled <guilabel
+>Widget Style</guilabel
+> contains a list of the pre-defined styles. Each style has a name, and a brief description.</para>
 
 <para
->Para cambiar los estilos, seleccione un estilo en la lista desplegable para mostrar una vista previa del estilo en el cuadro que existe debajo de la lista.</para>
+>To change styles, select a style in the drop down box, and a preview of the style will be displayed in the preview box below the style list.</para>
 
 <para
->Si un estilo es configurable, se activará el botón <guibutton
->Configurar...</guibutton
-> a la derecha de la lista desplegable y podrá usarlo para abrir un diálogo donde seleccionar más preferencias.</para>
+>If a style is configurable, the <guibutton
+>Configure...</guibutton
+> button at the right side of the drop down box is enabled and can be used to open a dialog to select further settings.</para>
 
 </listitem>
 </varlistentry>
@@ -146,9 +146,9 @@
 <varlistentry
 > 
 <term
->La pestaña <guilabel
->Ajuste fino</guilabel
-></term>
+><guilabel
+>Fine Tuning</guilabel
+> tab</term>
 <listitem>
 <variablelist>
 
@@ -156,15 +156,15 @@
 > 
 <term
 ><guilabel
->Mostrar iconos en botones</guilabel
+>Show icons in buttons</guilabel
 ></term>
 <listitem>
 <para
->Si se selecciona esta opción, los botones de acción (como <guibutton
->Aceptar</guibutton
-> y <guibutton
->Aplicar</guibutton
->) tendrán un pequeño icono ubicado dentro de ellos para actuar como una referencia visual. Si esta opción no se selecciona solo aparecerá el texto en el botón.</para>
+>If this option is selected, action buttons (like <guibutton
+>OK</guibutton
+> and <guibutton
+>Apply</guibutton
+>) will have a small icon located within them to act as a visual reference. If this option is not selected, then only text will appear in the button.</para>
 </listitem
 > 
 </varlistentry
@@ -174,7 +174,7 @@
 > 
 <term
 ><guilabel
->Mostrar iconos en menús</guilabel
+>Show icons in menus</guilabel
 ></term>
 <listitem>
 <para
@@ -188,31 +188,31 @@
 > 
 <term
 ><guilabel
->Posición del texto en la barra de herramientas principal</guilabel
+>Main toolbar text location</guilabel
 >, <guilabel
->Posición del texto en la barra de herramientas secundaria</guilabel
+>Secondary toolbar text location</guilabel
 ></term>
 <listitem>
 <para
->Estas listas desplegables le permiten indicar la posición predefinida del texto del nombre del botón en ambas barras de herramientas. Si selecciona <guilabel
->Sin texto</guilabel
->, no habrá texto en los botones de la barra de herramientas. Si selecciona <guilabel
->Solo texto</guilabel
->, el icono de los botones será reemplazado por el texto del nombre del botón. Si selecciona <guilabel
->Texto junto a iconos</guilabel
->, el nombre del botón se ubicará a la <emphasis
->derecha</emphasis
-> del icono. Si selecciona <guilabel
->Texto bajo los iconos</guilabel
->, por defecto el texto del botón estará <emphasis
->debajo</emphasis
-> del icono.</para>
+>These drop down boxes lets you determine where on the button in both toolbars the text name of the button will appear as the default. If <guilabel
+>No Text</guilabel
+> is selected, then there is no text on the toolbar buttons. If <guilabel
+>Text Only</guilabel
+> is selected, then the button's icon is replaced with a text name of the button. If <guilabel
+>Text Beside Icons</guilabel
+> is selected, then the name of the button will be placed to the <emphasis
+>right</emphasis
+> of the icon. If <guilabel
+>Text Below Icons</guilabel
+> is selected, the default will be to have the text of the button <emphasis
+>below</emphasis
+> the icon.</para>
 
 <tip
 ><para
->Esta opción especifica la posición <emphasis
->predefinida</emphasis
->. Cada aplicación puede sobreescribir la opción de configuración elegida en este panel.</para
+>This option only specifies the <emphasis
+>default</emphasis
+> location. Each application can override the setting used in this panel.</para
 ></tip>
 </listitem
 > 
@@ -227,10 +227,10 @@
 </variablelist>
 
 <para
->El menú global se activa ahora automáticamente cuando coloca una miniaplicación de menú global en un panel o cuando añade el botón de menú a la decoración de la ventana en la pestaña <guilabel
->Botones</guilabel
-> del módulo <guilabel
->Decoraciones de la ventana</guilabel
->. </para>
+>The global menu is now automatically enabled when you place a global menu applet in a panel or add the menu button to the window decoration in <guilabel
+>Buttons</guilabel
+> tab of the <guilabel
+>Window Decorations</guilabel
+> module. </para>
 
 </article>

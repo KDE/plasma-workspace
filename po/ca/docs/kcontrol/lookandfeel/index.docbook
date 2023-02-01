@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Tema global</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+&traductor.JosepMa.Ferrer; 
+</authorgroup>
+
+<date
+>26 de gener de 2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>aparença</keyword>
+<keyword
+>Tema global</keyword>
+<keyword
+>estil</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>aspecte</keyword>
+<keyword
+>comportament</keyword>
+<keyword
+>global</keyword>
+<keyword
+>escriptori</keyword>
+<keyword
+>pell</keyword>
+<keyword
+>disseny</keyword>
+<keyword
+>IU</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Temes globals</title>
+
+<para
+>Els Temes globals proporcionen un aspecte i comportament comú per a molts components alhora: </para>
+<itemizedlist>
+  <listitem
+><para
+>Disposició de l'escriptori: una disposició de plafons i ginys. Per exemple, un plafó inferior amb un gestor de tasques i un llançador d'aplicacions, o un plafó superior amb el menú global i la safata del sistema</para
+></listitem>
+  <listitem
+><para
+>Esquema de color: paleta de colors utilitzada en tot el &plasma; i les aplicacions</para
+></listitem>
+  <listitem
+><para
+>Estil d'aplicació: aparença d'elements de la interfície d'usuari com botons, menús i barres de desplaçament</para
+></listitem>
+  <listitem
+><para
+>Estil del Plasma: aparença dels plafons i ginys</para
+></listitem>
+  <listitem
+><para
+>Decoració de les finestres: vores de les finestres i botons de la barra de títol</para
+></listitem>
+  <listitem
+><para
+>Icones: icones emprades a tot el &plasma; i les aplicacions</para
+></listitem>
+  <listitem
+><para
+>Cusors: punters del ratolí</para
+></listitem>
+  <listitem
+><para
+>Commutador de tasques: una superposició per a canviar entre finestres obertes, normalment s'invoca amb la drecera de teclat Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Pantalla de presentació: pantalla de càrrega mostrada durant l'inici del &plasma;</para
+></listitem>
+  <listitem
+><para
+>Pantalla d'inici de sessió: pantalla amb un selector d'usuari i un indicador de contrasenya que es mostra quan s'inicia l'ordinador</para
+></listitem>
+  <listitem
+><para
+>Pantalla de bloqueig: pantalla amb un indicador de contrasenya d'usuari que es mostra quan l'ordinador està bloquejat</para
+></listitem>
+  <listitem
+><para
+>Fons de pantalla: una imatge de fons de pantalla</para
+></listitem>
+</itemizedlist>
+
+<para
+>Aplicant un tema global, podreu canviar tot l'anterior junt. També podeu aplicar només alguns components d'un tema global, com ara un esquema de color o una decoració de finestres. Podeu triar quins components canviar quan s'apliqui un tema global, o aplicar components individuals utilitzant les altres subseccions de l'Arranjament del sistema. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Gestió dels temes globals</title>
+
+<para
+>En aquest mòdul podeu: <itemizedlist>
+    <listitem
+><para
+>aplicar temes globals</para
+></listitem>
+    <listitem
+><para
+>instal·lar temes globals nous i eliminar temes globals instal·lats</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Captura de pantalla del gestor de temes globals</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Aplicació de temes globals</title>
+
+<para
+>Podeu veure una vista prèvia de cada tema fent clic a la icona de la imatge que apareix quan es passa el cursor per sobre d'una miniatura del tema. </para>
+
+<para
+>En fer clic sobre un tema global es mostrarà un diàleg que us demanarà quins components del tema voleu aplicar. Podeu seleccionar diverses opcions d'aparença i de disposició de l'escriptori. <screenshot>
+    <screeninfo
+>Captura de pantalla del selector de components de tema global</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Captura de pantalla del selector de components de tema global</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Després de fer la selecció, feu clic al botó <guibutton
+>Aplica</guibutton
+> per confirmar la vostra elecció. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Instal·lació de temes globals</title>
+
+<para
+>Amb el botó <guilabel
+>Obtén temes globals nous...</guilabel
+> podeu instal·lar temes globals nous per part de proveïdors de tercers. Cal estar connectat a Internet per accedir a aquests temes. En fer clic a <guibutton
+>Instal·la</guibutton
+> en un dels temes del diàleg s'instal·larà el tema global escollit, i després de tancar el diàleg, el tema nou estarà disponible immediatament. <screenshot>
+  <screeninfo
+>Obtén temes globals nous...</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Obtén temes globals nous...</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Per a eliminar un tema global instal·lat, feu clic al botó amb la icona de la paperera que apareix en passar per sobre d'una miniatura del tema. Tingueu en compte que només podeu eliminar els temes globals que us heu descarregat. </para>
+
+<para
+>Si esteu interessat a crear el vostre propi tema, podeu aprendre més sobre els diversos components <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>aquí</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

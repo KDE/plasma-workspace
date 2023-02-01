@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-09-12 07:49+0200\n"
+"PO-Revision-Date: 2023-01-31 07:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -136,6 +136,8 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"ამ ფონის სურათის ფაილის სახელში ერთი უცხო ბრჭყალია (\") მიმართეთ ფონური "
+"სურათის ავტორს, გაასწოროს ეს, ან სახელი თვითონ გადაარქვით: %1"
 
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
@@ -159,6 +161,8 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"ფაილი, რომელიც ფონურ სურათად დასაყენებლად გადაეცით, ან არ არსებობს, ან ვერ "
+"აღვიქვამ, როგორც ფონურ სურათს: %1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format

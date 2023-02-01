@@ -15,13 +15,23 @@
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 &traductor.Antoni.Bella; 
 </authorgroup>
 
 <date
->7 d'abril de 2021</date>
+>29 de gener de 2023</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <abstract>
 <para
@@ -37,35 +47,175 @@
 >ratolí</keyword>
 <keyword
 >cursor</keyword>
+<keyword
+>apuntador</keyword>
+<keyword
+>botant</keyword>
+<keyword
+>parpellejant</keyword>
+<keyword
+>animació</keyword>
+<keyword
+>llança</keyword>
+<keyword
+>reacció en iniciar</keyword>
+<keyword
+>tema</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Aquest mòdul permet seleccionar entre una sèrie de temes de cursor instal·lats des d'una vista prèvia del cursor. </para>
+<sect1 id="cursorthemes">
+<title
+>Tema de cursor</title>
 
 <para
->Les característiques proporcionades per aquesta pestanya no estan disponibles sobre alguns sistemes. Al vostre sistema potser li caldrà una actualització per a permetre els temes de cursor. </para>
+>Aquest mòdul permet <itemizedlist>
+<listitem
+><para
+>seleccionar un tema de cursor</para
+></listitem>
+<listitem
+><para
+>configurar una animació de cursor per a les aplicacions llançades</para
+></listitem>
+</itemizedlist>
+</para>
 
 <para
->Si teniu temes de cursor addicionals, els podeu eliminar utilitzant el botó de la paperera que apareix quan es passa el punter del ratolí per sobre de l'element de tema en el quadre de llista. Cal tenir present que no es poden eliminar els temes predeterminats. </para>
+>Les característiques proporcionades per aquest mòdul no estan en alguns sistemes.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Gestió del tema de cursor</title>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla del gestor del tema de cursor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Per utilitzar un tema de cursor, simplement seleccioneu-lo i feu clic al botó <guilabel
+>Aplica</guilabel
+>.</para>
+
+<para
+>Podeu eliminar temes de cursor utilitzant el botó de la paperera que apareix quan es passa el punter del ratolí per sobre de l'element de tema en la llista. Cal tenir present que no es poden eliminar els temes preinstal·lats.</para>
+
+<para
+>Utilitzeu el botó <guilabel
+>Obtén cursors nous...</guilabel
+> per a llançar el diàleg <guilabel
+>Baixa cursors nous</guilabel
+> i baixar temes addicionals des d'Internet.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de l'opció Obtén temes de cursor nous</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>També podeu instal·lar fitxers de temes de cursor que heu baixat o obtingut d'una altra manera utilitzant el botó <guilabel
+>Instal·la des d'un fitxer...</guilabel
+>.</para>
+
+<para
+>Si esteu interessat a crear el vostre propi tema de cursor, trobareu informació <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>aquí</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Mida del cursor</title>
 
 <para
 >Alguns temes permeten triar la mida del cursor. Utilitzeu el camp <guilabel
 >Mida</guilabel
-> per a seleccionar la mida apropiada. Les mides disponibles es mostren quan es passa el punter del ratolí per sobre de l'element de tema en el quadre de llista. </para>
+> per a seleccionar la mida apropiada.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de la mida del cursor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Reacció en iniciar</title>
 
 <para
->Si teniu disponibles temes de cursor addicionals, els podeu instal·lar utilitzant el botó <guibutton
->Instal·la des d'un fitxer...</guibutton
-> que hi ha a sota del quadre de llista. Per als detalls sobre com crear un tema de cursor personalitzat, vegeu <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->aquestes instruccions</ulink
->. </para>
+>Algunes vegades haureu d'assegurar-vos per a saber amb certesa que el vostre ordinador no ha ignorat l'ordre introduïda i que està succeint quelcom. En aquest diàleg <guilabel
+>Configura les reaccions de llançament…</guilabel
+> podreu configurar la reacció visible per a ajudar-vos a saber si realment heu accionat o no la icona.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de reacció en iniciar</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>El mode tradicional d'indicar que el vostre ordinador està ocupat és modificant el cursor i ho podeu fer escollint un <guilabel
+>Cursor</guilabel
+>.</para>
 
 <para
->Utilitzeu el botó <guibutton
->Obtén cursors nous...</guibutton
-> per a llançar el diàleg <guilabel
->Baixa cursors nous</guilabel
-> i baixar temes addicionals des d'Internet.</para>
+>Amb aquesta opció activada, el vostre cursor tindrà una icona adjunta durant un petit interval quan s'iniciï una aplicació. També podreu configurar quant de temps es mostrarà aquesta icona al costat del cursor amb el botó de selecció de valors <guilabel
+>Atura l'animació després de:</guilabel
+>. El valor predeterminat és de 5 segons.</para>
+
+<para
+>Hi ha diverses variacions disponibles del cursor ocupat, incloent-hi una icona de cursor <guilabel
+>Sense reacció</guilabel
+>, <guilabel
+>Parpellejant</guilabel
+>, <guilabel
+>Botant</guilabel
+> o <guilabel
+>Estàtic</guilabel
+> sense animació.</para>
+
+<para
+>La notificació d'inici tradicional del &plasma; prendrà una altra forma, el qual podreu activar i desactivar des d'aquí. Normalment quan engegueu una aplicació, obteniu una entrada immediata a la barra de tasques, amb la icona substituïda per una rodeta dentada en rotació per a indicar-vos que quelcom està succeint. Podeu activar/desactivar aquest comportament amb la casella de selecció <guilabel
+>Habilita l'animació</guilabel
+>.</para>
+
+<para
+>No totes les aplicacions que engegueu mostraran una finestra o una entrada a la barra de tasques. Algunes, per exemple, s'acoblen a la safata del sistema del &plasma;. Alternativament, podria ser que s'enviïn a un altre escriptori virtual, si a la secció <guilabel
+>Comportament</guilabel
+> de la <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Configuració de la barra de tasques</guilabel
+></ulink
+> està seleccionada l'opció <guilabel
+>Des de l'escriptori actual</guilabel
+> per al commutador <guilabel
+>Mostra només les tasques</guilabel
+>. Establint un temps d'expiració es garanteix que, fins i tot en aquests casos, encara podreu rebre informació de llançament, però també desapareixerà una vegada hagi finalitzat la tasca.</para>
+
+</sect2>
+
+</sect1>
 
 </article>

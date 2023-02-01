@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Globaal thema</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2023-01-26</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>uiterlijk</keyword>
+<keyword
+>Globaal thema</keyword>
+<keyword
+>stijl</keyword>
+<keyword
+>thema</keyword>
+<keyword
+>uiterlijk</keyword>
+<keyword
+>gedrag</keyword>
+<keyword
+>globaal</keyword>
+<keyword
+>bureaublad</keyword>
+<keyword
+>skin</keyword>
+<keyword
+>ontwerp</keyword>
+<keyword
+>UI</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Globale thema's</title>
+
+<para
+>Globale thema's leveren in een keer een gemeenschappelijk uiterlijk en gedrag voor vele componenten: </para>
+<itemizedlist>
+  <listitem
+><para
+>Bureaubladindeling: een inrichting van panelen en widgets - bijvoorbeeld een panel onderaan met een takenbeheerder en programmastarter of een paneel bovenaan met een globaalmenu en systeemvak</para
+></listitem>
+  <listitem
+><para
+>Kleurenschema: kleurpalet gebruikt in geheel &plasma; en toepassingen</para
+></listitem>
+  <listitem
+><para
+>Stijl van toepassing: uiterlijk van gebruikersinterface-elementen zoals knoppen, menu's en schuifbalken</para
+></listitem>
+  <listitem
+><para
+>Plasmastijl: uiterlijk van panelen en widgets</para
+></listitem>
+  <listitem
+><para
+>Vensterdecoratie: randen van vensters en knoppen in titelbalken</para
+></listitem>
+  <listitem
+><para
+>Pictogrammen: pictogrammen gebruikt in geheel &plasma; en toepassingen</para
+></listitem>
+  <listitem
+><para
+>Cusors: muisaanwijzers</para
+></listitem>
+  <listitem
+><para
+>Taakschakelaar: overlay voor schakelen tussen open vensters, typisch getoond met de keyboard shortcut Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Opstartscherm: getoond scherm dat geladen wordt bij opstarten van &plasma;</para
+></listitem>
+  <listitem
+><para
+>Aanmeldscherm: scherm met een keuze voor gebruiker en vraag om wachtwoord tonen wanneer de computer is opgestart</para
+></listitem>
+  <listitem
+><para
+>Scherm vergrendelen: scherm met een vraag voor een gebruikerswachtwoord tonen wanneer de computer is vergrendeld</para
+></listitem>
+  <listitem
+><para
+>Achtergrondafbeelding: een bureaubladachtergrondafbeelding</para
+></listitem>
+</itemizedlist>
+
+<para
+>Door een globaal thema toe te passen kunt u al het bovenstaande samen wijzigen. U kunt ook alleen sommige componenten van een globaal thema toepassen, zoals een kleurenschema of een vensterdecoratie. U kunt kiezen welke componenten te wijzigen ofwel wanneer een globaal thema toe te passen of individuele componenten door de andere subsecties van systeeminstellingen te gebruiken. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Globale thema's beheren</title>
+
+<para
+>In deze module kunt u: <itemizedlist>
+    <listitem
+><para
+>globale thema's toepassen</para
+></listitem>
+    <listitem
+><para
+>nieuwe globale thema's installeren en geïnstalleerde globale thema's verwijderen</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Schermafdruk van de beheerder van globale thema's</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Globale thema's toepassen</title>
+
+<para
+>U kunt een voorbeeld van elk thema zien door te klikken op het afbeeldingspictogram dat verschijnt bij zweven boven een miniatuur van het thema. </para>
+
+<para
+>Bij klikken op een globaal thema zal een dialoog verschijnen die u vraagt welke componenten van het thema u wilt toepassen. U kunt uit verschillende instellingen voor uiterlijk en de indeling van het bureaublad kiezen. <screenshot>
+    <screeninfo
+>Schermafdruk van de componentenkiezer van het globale thema</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Schermafdruk van de componentenkiezer van het globale thema</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Na het maken van uw selectie, klik op de knop <guibutton
+>Toepassen</guibutton
+> om uw keuze te bevestigen. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Globale thema's installeren</title>
+
+<para
+>Met de knop <guilabel
+>Nieuwe globale thema's ophalen...</guilabel
+> kunt u nieuwe globale thema's van derden installeren. U moet met het internet verbonden zijn om toegang te hebben tot deze thema's. Klikken op <guibutton
+>Installeren</guibutton
+> in een van de thema's in de dialoog zal het gekozen globale thema installeren en nadat u de dialoog sluit, zal uw nieuwe theme onmiddellijk beschikbaar zijn. <screenshot>
+  <screeninfo
+>Nieuwe globale thema's ophalen...</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Nieuwe globale thema's ophalen...</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Om een geïnstalleerd globaal thema te verwijderen, klik op de knop met het prullenbakpictogram dat verschijnt bij zweven boven een miniatuur van het thema. Merk op dat u alleen globale thema's kunt verwijderen die uzelf hebt gedownload. </para>
+
+<para
+>Als u geïnteresseerd bent in het maken van uw eigen thema, dan kunt u <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>hier</ulink
+> meer te weten komen over de verschillende componenten. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

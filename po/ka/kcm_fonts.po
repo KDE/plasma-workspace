@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2023-01-05 07:11+0100\n"
+"PO-Revision-Date: 2023-01-31 06:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -134,10 +134,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "ეს მოდული საშუალებას გაძლევთ მოირგოთ სისტემური ფონტები."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&ყველა ფონტის გასწორება…"
+msgstr "გლობალურის მასშტაბის გასწორება…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -154,6 +153,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"ძალიან დიდმა ფონტებმა შეიძლება უცნაური გარეგნობის მქონე შედეგები გამოიღოს. "
+"ძალიან დიდი ფონტის ზომების გამოყენებას ეკრანის გლობალური მასშტაბირება სჯობს."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -161,6 +162,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"ფონტის არამთელმა ზომამ შეიძლება ზოგიერთ აპლიკაციაში ტექსტის განლაგების "
+"პრობლემები გამოიწვიოს. რეკომენდებულია მხოლოდ მთელი ზომების გამოყენება."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -256,6 +259,10 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"პიქსელები ეკრანზე ჩვეულებრივ ბადეზეა განლაგებული. ამიტომ ფონტების "
+"მოხაზულობა, რომელიცა ამ ბადეში არ ჯდება, კუთხოვანი გამოჩნდება, თუ არ იყენებთ "
+"<emphasis>მოგლუვების</emphasis> ტექნოლოგიას, რომელიც ამ პრობლემის "
+"აღმოსაფხვრელადაა გამოგონილი."
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -307,6 +314,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"ჰინტინგი წარმოადგენს ტექნოლოგიას, როცა მინიშნებები, როგორ უნდა გავაუმჯობესოთ "
+"მისი რენდერის, განსაკუთრებით კი მცირე ზომების გამოყენებისას, ფონტშია "
+"ჩაშენებული. უფრო ძლიერი ჰინტინგი ძირითადად წამახულ წიბოებს გამოხატავს, "
+"მაგრამ პატარა ასოები მათ უფრო დიდ ვარიანტებს ნაკლებად წააგვანან."
 
 #: package/contents/ui/main.qml:380
 #, kde-format

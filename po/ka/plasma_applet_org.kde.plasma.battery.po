@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-09-12 07:52+0200\n"
+"PO-Revision-Date: 2023-01-31 06:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "დარჩენილი დრო:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "დაახლოებით…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -177,37 +177,33 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "ავტომატური დაძინება და ეკრანის ჩაკეტვა გამორთულია"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
-msgstr[1] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
+msgstr[0] "აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
+msgstr[1] "%1 აპლიკაცია წარმადობის რეჟიმის ჩართვას მოითხოვს"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "სისტემა წარმადობის რეჟიმშია"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
-msgstr[1] "%1 აპლიკაცია ითხოვს %2-ის აქტივაციას:"
+msgstr[0] "აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
+msgstr[1] "%1 აპლიკაცია ელემენტის შენახვის რეჟიმს მოითხოვს"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "სისტემა ენერგიის დაზოგვის რეჟიმშია"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "ეკრანის სიკაშკაშის მოსარგები ჩოჩია"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -225,10 +221,10 @@ msgid "&Show Energy Information…"
 msgstr "&კვების ინფორმაციის ჩვენება…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "ხატულაზე ელემენტის პროცენტულობის ჩვენება"
+msgstr ""
+"ხატულაზე ელემენტის პროცენტულობის ჩვენება, როცა ელემენტი ბოლომდე არაა დატენილი"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

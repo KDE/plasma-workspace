@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-01-18 22:29+0300\n"
+"PO-Revision-Date: 2023-02-01 00:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -42,9 +42,9 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"Yazıtiplerini kişisel kullanımınız (yalnızca siz kullanabilirsiniz) için mi "
-"sistem geneli için (tüm kullanıcılar tarafından kullanılabilir) mi yüklemek "
-"istersiniz?"
+"Yazıtiplerini kişisel kullanım için mi (yalnızca sizin için kullanılabilir) "
+"yoksa sistem genelinde mi (tüm kullanıcılar tarafından kullanılabilir) "
+"kurmak istiyorsunuz?"
 
 #: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
 #, kde-format
@@ -54,12 +54,12 @@ msgstr "Kurulacak Yer"
 #: apps/Installer.cpp:110
 #, kde-format
 msgid "Font Installer"
-msgstr "Yazıtipi Kurucusu"
+msgstr "Yazıtipi Kurucu"
 
 #: apps/Installer.cpp:112
 #, kde-format
 msgid "Simple font installer"
-msgstr "Basit yazıtipi kurucusu"
+msgstr "Basit yazıtipi kurucu"
 
 #: apps/Installer.cpp:114 apps/Printer.cpp:329
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Yazıtiplerinin listesini içeren yazdırılacak dosyayı kaldır"
 #: apps/Viewer.cpp:48
 #, kde-format
 msgid "Open an existing font file"
-msgstr "Mevcut bir yazıtipi dosyasını açın"
+msgstr "Var olan bir yazıtipi dosyasını aç"
 
 #: apps/Viewer.cpp:49
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "Yazıtipi önizlemesini yazdır"
 #: apps/Viewer.cpp:66
 #, kde-format
 msgid "Select Font to View"
-msgstr "Görüntülenecek Yazıtipini Seçin"
+msgstr "Görüntülenecek Yazıtipini Seç"
 
 #: apps/Viewer.cpp:109
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "Aile"
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Style"
-msgstr "Biçim"
+msgstr "Biçem"
 
 #: kcmfontinst/FontFilter.cpp:107
 #, kde-format
@@ -451,9 +451,9 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>Tüm Yazıtipleri</i> sisteminizde yüklü olan tüm yazıtiplerini içerir."
-"</li><li><i>Sınıflandırılmamış</i> yazıtipleri ise \"Özel\" bir gruba henüz "
-"yerleştirilmemiş olan yazıtiplerini içerir.</li>"
+"<li><i>Tüm Yazıtipleri</i>, sisteminizde kurulu olan tüm yazıtiplerini "
+"içerir.</li><li><i>Sınıflandırılmamış</i>, henüz bir \"Özel\" grubu içine "
+"yerleştirilmemiş tüm yazıtiplerini içerir.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -468,9 +468,9 @@ msgstr ""
 "<li><i>Tüm Yazıtipleri</i> sisteminizde kurulu olan tüm yazıtiplerini içerir "
 "- hem \"Sistem\" hem de \"Kişisel\" yazıtipleri.</li><li><i>Sistem</i> "
 "sistem geneli için kurulmuş yazıtiplerini içerir (tüm kullanıcılar "
-"tarafından kullanılabilirler).</li><li><i>Kişisel</i> kişisel yazı "
-"tiplerinizi içerir.</li><li><i>Sınıflandırılmamış</i> ise henüz bir \"Özel\" "
-"gruba yerleştirilmemiş yazıtiplerini içerir.</li>"
+"tarafından kullanılabilirler).</li><li><i>Kişisel</i> kişisel "
+"yazıtiplerinizi içerir.</li><li><i>Sınıflandırılmamış</i> ise henüz bir "
+"\"Özel\" gruba yerleştirilmemiş yazıtiplerini içerir.</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
@@ -615,8 +615,8 @@ msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"<i>%1</i> dosyası yazıtipleri içeriyor <b>%2</b> ki bu yazıtipi sisteminizde "
-"zaten kurulu."
+"<i>%1</i>, sisteminizde halihazırda kurulu olan <b>%2</b> yazıtipini "
+"içeriyor."
 
 #: kcmfontinst/JobRunner.cpp:705
 #, kde-format
@@ -721,12 +721,12 @@ msgstr "Aynısı Olan Yazıtiplerini Bul…"
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install from File…"
-msgstr "Dosyadan Yükle…"
+msgstr "Dosyadan Kur"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr "Yerel bir dosyadan yazıtiplerini yükle"
+msgstr "Yerel bir dosyadan yazıtipleri kur"
 
 #: kcmfontinst/KCmFontInst.cpp:252
 #, kde-format
@@ -756,11 +756,11 @@ msgid ""
 "type fonts:/ into Konqueror's location bar and this will display your "
 "installed fonts. To install a font, simply copy one into the folder.</p>"
 msgstr ""
-"<h1>Yazıtipi Kurucu</h1><p> Bu modül TrueType, Type1 ve Resim yazıtiplerini "
-"kurmanızı sağlar.</p><p>Ayrıca Konqueror adres çubuğuna fonts:/ yazarak "
-"erişebileceğiniz ve kurulu yazıtiplerinizi listeleyen konumdan da "
-"yazıtiplerini kurabilirsiniz. Bir yazıtipini yüklemek için yazıtipini bu "
-"konumdaki dizinin içerisine kopyalayın.</p>"
+"<h1>Yazıtipi Kurucu</h1><p> Bu modül, TrueType, Type1 ve Bitmap "
+"yazıtiplerini kurmanızı sağlar.</p><p>Yazıtiplerini Konqueror'u kullanarak "
+"da kurabilirsiniz: Konqueror'un konum çubuğuna fonts:/ yazın ve bu, kurulu "
+"yazıtiplerinizi görüntüler. Bir yazıtipi kurmak için bir tanesini klasöre "
+"kopyalamanız yeterlidir.</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:382
 #, kde-format
@@ -772,13 +772,13 @@ msgid ""
 "folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
 "wide fonts (available to all).</p>"
 msgstr ""
-"<h1>Yazıtipi Kurucu</h1><p> Bu modül TrueType, Type1 ve Resim yazıtiplerini "
-"kurmanızı sağlar.</p><p>Ayrıca Konqueror adres çubuğuna fonts:/ yazarak "
-"erişebileceğiniz ve kurulu yazıtiplerinizi listeleyen konumdan da "
-"yazıtiplerini kurabilirsiniz. Bir yazıtipini uygun dizine yüklemek için - "
-"yalnızca kendiniz kullanmak için  \"%1\" dizinine, sistem genelinde "
-"kullanılabilir olarak yüklemek için  \"%2\" dizinine yazıtipini kopyalayın.</"
-"p>"
+"<h1>Yazıtipi Kurucu</h1><p> Bu modül, TrueType, Type1 ve Bitmap "
+"yazıtiplerini kurmanızı sağlar.</p><p>Yazıtiplerini Konqueror'u kullanarak "
+"da kurabilirsiniz: Konqueror'un konum çubuğuna fonts:/ yazın ve bu, kurulu "
+"yazıtiplerinizi görüntüler. Bir yazıtipini kurmak için onu uygun klasöre "
+"kopyalamanız yeterlidir - yalnızca sizin kullanabileceğiniz yazıtipleri için "
+"\"%1\" veya sistem genelindeki yazıtipleri için \"%2\" (herkes tarafından "
+"kullanılabilir).</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:437
 #, kde-format
@@ -992,7 +992,7 @@ msgstr "Dosyalar Taranıyor…"
 #: kcmfontinst/KCmFontInst.cpp:994
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Yüklemek için ek dosyalar aranıyor…"
+msgstr "Kurmak için ek dosyalar aranıyor…"
 
 #: kcmfontinst/KCmFontInst.cpp:1009
 #, kde-format
@@ -1173,7 +1173,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:208
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Yalnızca \"%1\" ve \"%2\" dışındaki yazıtiplerini kurabilirsiniz."
+msgstr "Yazıtipleri yalnızca \"%1\" ve \"%2\" konumlarına kurulabilir."
 
 #: kio/KioFonts.cpp:211
 #, kde-format
@@ -1181,8 +1181,8 @@ msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
-"Yazıtipi paketlerini olduğu gibi yükleyemezsiniz.\n"
-"Lütfen %1 arşivinin sıkıştırmasını açın ve bileşenleri tek tek yükleyin."
+"Yazıtipi paketlerini doğrudan kuramazsınız.\n"
+"Lütfen %1 arşivinin sıkıştırmasını açın ve bileşenleri tek tek kurun."
 
 #: kio/KioFonts.cpp:439
 #, kde-format
@@ -1239,7 +1239,7 @@ msgstr "%1 bir bitmap yazıtipi ve bu yazıtipleri sisteminizde devre dışı."
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
-"%1 yazıtipleri içeriyor <b>%2</b> ki bu yazıtipi sisteminizde zaten kurulu."
+"%1, sisteminizde halihazırda kurulu olan <b>%2</b> yazıtipini içeriyor."
 
 #: kio/KioFonts.cpp:720
 #, kde-format
@@ -1621,7 +1621,7 @@ msgstr "Yüzü Göster:"
 #: viewpart/FontViewPart.cpp:88
 #, kde-format
 msgid "Install…"
-msgstr "Yükle…"
+msgstr "Kur…"
 
 #: viewpart/FontViewPart.cpp:109
 #, kde-format
