@@ -53,15 +53,13 @@ QDBusObjectPath JobPrivate::objectPath() const
     return m_objectPath;
 }
 
-QSharedPointer<KFilePlacesModel> JobPrivate::createPlacesModel()
+std::shared_ptr<KFilePlacesModel> JobPrivate::createPlacesModel()
 {
-    static QWeakPointer<KFilePlacesModel> s_instance;
+    static std::shared_ptr<KFilePlacesModel> s_instance;
     if (!s_instance) {
-        QSharedPointer<KFilePlacesModel> ptr(new KFilePlacesModel());
-        s_instance = ptr.toWeakRef();
-        return ptr;
+        s_instance = std::make_shared<KFilePlacesModel>();
     }
-    return s_instance.toStrongRef();
+    return s_instance;
 }
 
 QUrl JobPrivate::localFileOrUrl(const QString &urlString)
