@@ -55,13 +55,11 @@ QDBusObjectPath JobPrivate::objectPath() const
 
 std::shared_ptr<KFilePlacesModel> JobPrivate::createPlacesModel()
 {
-    static std::weak_ptr<KFilePlacesModel> s_instance;
-    if (s_instance.expired()) {
-        std::shared_ptr<KFilePlacesModel> ptr(new KFilePlacesModel());
-        s_instance = ptr;
-        return ptr;
+    static std::shared_ptr<KFilePlacesModel> s_instance;
+    if (!s_instance) {
+        s_instance = std::make_shared<KFilePlacesModel>();
     }
-    return s_instance.lock();
+    return s_instance;
 }
 
 QUrl JobPrivate::localFileOrUrl(const QString &urlString)
