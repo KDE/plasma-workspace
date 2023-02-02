@@ -243,7 +243,7 @@ QString KCMRegionAndLang::toGlibcLocale(const QString &lang)
     if (map.count(lang)) {
         return map[lang];
     } else {
-        return lang;
+        return toUTF8Locale(QLocale(lang).name());
     }
 }
 
