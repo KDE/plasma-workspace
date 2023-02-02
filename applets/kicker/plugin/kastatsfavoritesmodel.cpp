@@ -599,7 +599,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &realIds)
     if (!d)
         return;
 
-    const QStringList ids = qEnvironmentVariableIntValue("KDECI_BUILD") ? QStringList{
+    const QStringList ids = qEnvironmentVariable("KDECI_BUILD").toUpper() == QStringLiteral("TRUE") ? QStringList{
             QStringLiteral("org.kde.plasma.emojier.desktop"),
             QStringLiteral("linguist5.desktop"),
             QStringLiteral("org.qt.linguist6.desktop"),
