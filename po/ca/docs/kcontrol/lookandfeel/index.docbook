@@ -88,7 +88,7 @@
 ></listitem>
   <listitem
 ><para
->Cursors: Mouse pointers</para
+>Cursors: punters del ratolí</para
 ></listitem>
   <listitem
 ><para
@@ -113,7 +113,7 @@
 </itemizedlist>
 
 <para
->By applying a Global Theme, you can change all of the above together. You can also apply only some components of a Global Theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a Global Theme, or apply individual components by using the other System Settings subsections. </para>
+>Aplicant un tema global, podreu canviar tot l'anterior junt. També podeu aplicar només alguns components d'un tema global, com ara un esquema de color o una decoració de finestres. Podeu triar quins components canviar quan s'apliqui un tema global, o aplicar components individuals utilitzant les altres subseccions de l'Arranjament del sistema. </para>
 
 <sect2 id="globaltheme-manage">
 <title
@@ -203,7 +203,7 @@
 </para>
 
 <para
->To remove an installed Global Theme, click on the button with the trash icon that appears when hovering over a theme thumbnail. Note that you can only remove Global Themes that you have downloaded yourself. </para>
+>Per a eliminar un tema global instal·lat, feu clic al botó amb la icona de la paperera que apareix en passar per sobre d'una miniatura del tema. Tingueu en compte que només podeu eliminar els temes globals que us heu descarregat. </para>
 
 <para
 >Si esteu interessat a crear el vostre propi tema, podeu aprendre més sobre els diversos components <ulink url="https://develop.kde.org/docs/extend/plasma/"

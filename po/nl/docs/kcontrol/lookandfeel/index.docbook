@@ -88,7 +88,7 @@
 ></listitem>
   <listitem
 ><para
->Cursors: Mouse pointers</para
+>Cursors: muisaanwijzers</para
 ></listitem>
   <listitem
 ><para
@@ -113,7 +113,7 @@
 </itemizedlist>
 
 <para
->By applying a Global Theme, you can change all of the above together. You can also apply only some components of a Global Theme, such as a color scheme or a window decoration. You can choose which components to change either when applying a Global Theme, or apply individual components by using the other System Settings subsections. </para>
+>Door een globaal thema toe te passen kunt u al het bovenstaande samen wijzigen. U kunt ook alleen sommige componenten van een globaal thema toepassen, zoals een kleurenschema of een vensterdecoratie. U kunt kiezen welke componenten te wijzigen ofwel wanneer een globaal thema toe te passen of individuele componenten door de andere subsecties van systeeminstellingen te gebruiken. </para>
 
 <sect2 id="globaltheme-manage">
 <title
@@ -203,7 +203,7 @@
 </para>
 
 <para
->To remove an installed Global Theme, click on the button with the trash icon that appears when hovering over a theme thumbnail. Note that you can only remove Global Themes that you have downloaded yourself. </para>
+>Om een geïnstalleerd globaal thema te verwijderen, klik op de knop met het prullenbakpictogram dat verschijnt bij zweven boven een miniatuur van het thema. Merk op dat u alleen globale thema's kunt verwijderen die uzelf hebt gedownload. </para>
 
 <para
 >Als u geïnteresseerd bent in het maken van uw eigen thema, dan kunt u <ulink url="https://develop.kde.org/docs/extend/plasma/"

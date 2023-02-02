@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -31,32 +31,32 @@ msgstr ""
 "peter.ani@gmail.com,harivishnu@gmail.com,pravi.a@gmail.com,subins2000@gmail."
 "com"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ഒരു താൽക്കാലിക ഫയൽ നിർമ്മിക്കാനായില്ല."
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "നിറക്കൂട്ടു് ഡൗണ്‍ലോഡാൻ കഴിഞില്ല: %1"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "ഈ ഫയൽ ഒരു നിറക്കൂട്ടു് ഫയലല്ല."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' ഡാറ്റ അറ സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു."
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "നിറക്കൂട്ടു് 'color-scheme' ഡാറ്റ ഫോൾഡറിലേക്ക് പകർത്തുന്നതിൽ പരാജയപ്പെട്ടു."
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "നിറക്കൂട്ടു് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
@@ -1145,6 +1145,31 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "ശ്രദ്ധാകേന്ദ്രം"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1156,120 +1181,94 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "നിറക്കൂട്ടു് '%1' ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. പകരം തനത് തീം തിരഞ്ഞെടുക്കുന്നു."
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "എല്ലാ സ്കീമുകളും"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "ലൈറ്റ് സ്കീമുകൾ"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "ഇരുണ്ട സ്കീമുകൾ"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr ""
-
-#: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-msgid "From current color scheme"
-msgstr "നിലവിലുള്ള നിറക്കൂട്ടു് സൂക്ഷിക്കുക"
-
-#: package/contents/ui/main.qml:157
-#, fuzzy, kde-format
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "നിലവിലുള്ള നിറക്കൂട്ടു് സൂക്ഷിക്കുക"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr ""
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "വിൻഡോ ശീർഷകം"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "ജാലകത്തിനുള്ള പദാവലി"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "ബട്ടണ്‍"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "കണ്ണി"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "സന്ദര്‍ശിച്ചതു്"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "സാധാരണ പദാവലി"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "സന്ദര്‍ശിച്ച പദാവലി"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "അപ്രാപ്തമാക്കിയ പദാവലി"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "നിറക്കൂട്ടു് ചിട്ടപെടുത്തുക…"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "നിറക്കൂട്ടു് നീക്കം ചെയ്യുക"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "പുതിയ നിറക്കൂട്ടുകള്‍ ലഭ്യമാക്കുക…"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "നിറക്കൂട്ടു് തുറക്കുക"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "നിറക്കൂട്ടു് ഫയലുകൾ (*.colors)"
@@ -1365,6 +1364,15 @@ msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇന�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"
+
+#, fuzzy
+#~ msgid "From current color scheme"
+#~ msgstr "നിലവിലുള്ള നിറക്കൂട്ടു് സൂക്ഷിക്കുക"
+
+#, fuzzy
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "നിലവിലുള്ള നിറക്കൂട്ടു് സൂക്ഷിക്കുക"
 
 #, fuzzy
 #~| msgid "Apply &effects to inactive windows"

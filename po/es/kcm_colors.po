@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2022-07-03 13:26+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -40,34 +40,34 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net,jaime@kde.org"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "No se ha podido crear un archivo temporal."
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "No se ha podido descargar el esquema de color: %1"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Este archivo no es un archivo de esquema de color."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "No se ha podido crear la carpeta de datos «color-scheme»."
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 "No se ha podido copiar el esquema de color en la carpeta de datos «color-"
 "scheme»."
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "El esquema de color se ha instalado correctamente."
@@ -1159,6 +1159,31 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "foco"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Restaurar esquema de color"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Choose custom accent color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Escoger color de acentuación personalizado"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "Escoger color de acentuación personalizado"
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1172,120 +1197,94 @@ msgstr ""
 "El esquema de color «%1» no está instalado. Se selecciona el tema por "
 "omisión en su lugar."
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "Todos los esquemas"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "Esquemas claros"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Esquemas oscuros"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr "Usar color de acentuación:"
-
-#: package/contents/ui/main.qml:144
-#, kde-format
-msgid "From current color scheme"
-msgstr "Del esquema de color actual"
-
-#: package/contents/ui/main.qml:157
-#, kde-format
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "Del fondo de pantalla actual"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr "Personalizado:"
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Escoger color de acentuación personalizado"
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "Título de la ventana"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "Texto de ventana"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "Botón"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "enlace"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visitado"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "Texto normal"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto resaltado"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto desactivado"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Editar esquema de color..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Eliminar esquema de color"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restaurar esquema de color"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde archivo..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Obtener nuevos esquemas de color..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Abrir esquema de color"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Archivos de esquema de color (*.colors)"
@@ -1392,6 +1391,19 @@ msgstr "Su sistema tiene los siguientes esquemas de color:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de color actual)"
+
+#~ msgid "Use accent color:"
+#~ msgstr "Usar color de acentuación:"
+
+#~ msgid "From current color scheme"
+#~ msgstr "Del esquema de color actual"
+
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "Del fondo de pantalla actual"
+
+#~ msgid "Custom:"
+#~ msgstr "Personalizado:"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr ""

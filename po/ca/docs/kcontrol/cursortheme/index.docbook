@@ -129,8 +129,8 @@
 >.</para>
 
 <para
->If you are interested in creating your own cursor theme, you can find information <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->here</ulink
+>Si esteu interessat a crear el vostre propi tema de cursor, trobareu informació <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>aquí</ulink
 >.</para>
 
 </sect2>
@@ -161,9 +161,9 @@
 >Reacció en iniciar</title>
 
 <para
->Sometimes it is reassuring to know that your computer didn't just ignore your command, and something is happening behind the scenes. In this dialog <guilabel
->Configure Launch Feedback...</guilabel
->, you can configure visible feedback to help you know if you really hit that icon or not.</para>
+>Algunes vegades haureu d'assegurar-vos per a saber amb certesa que el vostre ordinador no ha ignorat l'ordre introduïda i que està succeint quelcom. En aquest diàleg <guilabel
+>Configura les reaccions de llançament...</guilabel
+> podreu configurar la reacció visible per a ajudar-vos a saber si realment heu accionat o no la icona.</para>
 
 <screenshot>
 <screeninfo

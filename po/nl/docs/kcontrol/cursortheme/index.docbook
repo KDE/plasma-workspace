@@ -129,9 +129,9 @@
 >.</para>
 
 <para
->If you are interested in creating your own cursor theme, you can find information <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->here</ulink
->.</para>
+>Als u geïnteresseerd bent in het maken van uw eigen cursorthema, dan kunt u <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>hier</ulink
+> informatie vinden.</para>
 
 </sect2>
 
@@ -161,9 +161,9 @@
 >Opstartnotificatie</title>
 
 <para
->Sometimes it is reassuring to know that your computer didn't just ignore your command, and something is happening behind the scenes. In this dialog <guilabel
->Configure Launch Feedback...</guilabel
->, you can configure visible feedback to help you know if you really hit that icon or not.</para>
+>Soms is het handig om te weten dat de computer uw commando niet heeft genegeerd en dat er iets achter de schermen gebeurt. In deze dialoog <guilabel
+>Opstartnotificatie configureren...</guilabel
+>,  kunt u de visuele terugkoppeling instellen zodat u kunt zien dat u het pictogram ook echt hebt aangeklikt.</para>
 
 <screenshot>
 <screeninfo

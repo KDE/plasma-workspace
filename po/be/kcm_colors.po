@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2022-11-30 21:09\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -33,32 +33,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ihar.hrachyshka@gmail.com, serzh.by@gmail.com, nashtlumach@gmail.com"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не ўдалося стварыць часовы файл."
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Не ўдалося спампаваць колеравую схему: %1"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Гэты файл - не файл колеравай схемы."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Не ўдалося стварыць каталог \"color-scheme\"."
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Не ўдалося скапіяваць схему колераў у каталог \"color-scheme\"."
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Колеравая схема паспяхова ўсталяваная."
@@ -1148,6 +1148,31 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "у фокусе"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Аднавіць колеравую схему"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Choose custom accent color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Абраць адвольны дамінанты колер"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "Абраць адвольны дамінанты колер"
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1160,120 +1185,94 @@ msgid ""
 msgstr ""
 "Колеравая схема \"%1\" не ўсталяваная. Замест яе абраная прадвызначаная тэма."
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "Усе схемы"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "Светлыя схемы"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Цёмныя схемы"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr "Выкарыстоўваць дамінанты колер:"
-
-#: package/contents/ui/main.qml:144
-#, kde-format
-msgid "From current color scheme"
-msgstr "З бягучай колеравай схемы"
-
-#: package/contents/ui/main.qml:157
-#, kde-format
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "З бягучых шпалер"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr "Адвольны:"
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Абраць адвольны дамінанты колер"
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "Загаловак акна"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "Тэкст акна"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "Кнопка"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "cпасылка"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "наведанае"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "Звычайны тэкст"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "Падсветлены тэкст"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "Дэактываваны тэкст"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Рэдагаваць колеравую схему…"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Выдаліць колеравую схему"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Аднавіць колеравую схему"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "Усталяваць з файла…"
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Атрымаць новыя колеравыя схемы…"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Адкрыць колеравую схему"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы колеравых схемаў (*.colors)"
@@ -1373,6 +1372,19 @@ msgstr "У вашай сістэме ёсць наступныя колерав�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (бягучая колеравая схема)"
+
+#~ msgid "Use accent color:"
+#~ msgstr "Выкарыстоўваць дамінанты колер:"
+
+#~ msgid "From current color scheme"
+#~ msgstr "З бягучай колеравай схемы"
+
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "З бягучых шпалер"
+
+#~ msgid "Custom:"
+#~ msgstr "Адвольны:"
 
 #, fuzzy
 #~| msgid "Inactive"

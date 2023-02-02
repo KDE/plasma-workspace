@@ -108,8 +108,8 @@
       <listitem
 ><para
 ><guilabel
->Custom</guilabel
->: Here you can choose from a set of predefined colors or pick a custom color. </para
+>Personalitzat</guilabel
+>: Aquí podeu triar entre un conjunt de colors predefinits o triar un color personalitzat. </para
 ></listitem>
     </itemizedlist>
 
@@ -162,10 +162,10 @@
     <listitem
 ><para
 ><guilabel
->Tint all colors with accent color</guilabel
-> &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in by moving the <guilabel
->Tint strength</guilabel
-> slider. </para
+>Tenyeix tots els colors amb el color d'accent</guilabel
+>: Si està marcada, tots els colors obtindran part del color d'accent barrejat. Podeu controlar la intensitat amb què s'ha de barrejar el color d'accent movent el control lliscant <guilabel
+>Intensitat del tint</guilabel
+>. </para
 ></listitem>
     <listitem
 ><para

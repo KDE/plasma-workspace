@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2022-12-26 04:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -38,32 +38,32 @@ msgstr ""
 "shyue@sonoma.com.tw, pesder.liao@msa.hinet.net, s8321414@gmail.com, "
 "pan93412@gmail.com, mail@kisaragi-hiu.com"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "無法建立暫存檔。"
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "無法下載配色：%1"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "此檔案不是配色檔。"
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' 資料夾建立失敗。"
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "複製配色到 'color-scheme' 資料夾失敗。"
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "配色順利安裝成功。"
@@ -1141,6 +1141,31 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "焦點"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "復原配色"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Choose custom accent color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "選擇自訂強調色"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "選擇自訂強調色"
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1152,120 +1177,94 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "未安裝配色「%1」。改選擇預設主題。"
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "所有配色方案"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "亮色配色"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "暗色配色"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr "使用強調色："
-
-#: package/contents/ui/main.qml:144
-#, kde-format
-msgid "From current color scheme"
-msgstr "來自目前配色方案"
-
-#: package/contents/ui/main.qml:157
-#, kde-format
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "來自目前桌布"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr "自訂："
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "選擇自訂強調色"
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "視窗標題"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "視窗文字"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "按鈕"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "連結"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "已造訪"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "一般文字"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "突顯文字"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "停用文字"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "編輯配色方案…"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "移除配色"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "復原配色"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "從檔案安裝…"
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "取得新配色方案…"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "開啟配色"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "配色檔案 (*.colors)"
@@ -1359,6 +1358,19 @@ msgstr "您的系統中有下列的配色方案："
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (目前配色方案)"
+
+#~ msgid "Use accent color:"
+#~ msgstr "使用強調色："
+
+#~ msgid "From current color scheme"
+#~ msgstr "來自目前配色方案"
+
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "來自目前桌布"
+
+#~ msgid "Custom:"
+#~ msgstr "自訂："
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "套用強調色至作用中標題列(&A)"

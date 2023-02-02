@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2020-07-22 20:00+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "erik@binghamton.edu,mschlander@opensuse.org"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan ikke oprette en midlertidig fil."
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Kan ikke download farvetemaet: %1"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Denne fil er ikke en farvetema-fil."
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Kunne ikke oprette datamappen \"color-scheme\"."
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Kunne ikke kopiere farvetemaet til datamappen \"color-scheme\"."
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Farvetemaet blev installeret."
@@ -1142,6 +1142,31 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "fokus"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Gendan farvetema"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Inaktiv farve"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1154,125 +1179,97 @@ msgid ""
 msgstr ""
 "Farvetemaet \"%1\" er ikke installeret. Standardtemaet vælges i stedet."
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "Alle temaer"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "Lyse temaer"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Mørke temaer"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr ""
-
-#: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Configure the current color scheme"
-msgid "From current color scheme"
-msgstr "Indstil det nuværende farvetema"
-
-#: package/contents/ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Configure the current color scheme"
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "Indstil det nuværende farvetema"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr ""
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "Vinduestitel"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "Vinduestekst"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "Knap"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "link"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "besøgt"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "Normal tekst"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "Fremhævet tekst"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "Deaktiveret tekst"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Edit Color Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Redigér farvetema..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Fjern farvetema"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Gendan farvetema"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Installér fra fil..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Get New Color Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "Hent nye farvetemaer..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Åbn farvetema"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Farvetema-filer (*.colors)"
@@ -1361,6 +1358,17 @@ msgstr ""
 #| msgid "Configure the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Indstil det nuværende farvetema"
+
+#, fuzzy
+#~| msgid "Configure the current color scheme"
+#~ msgid "From current color scheme"
+#~ msgstr "Indstil det nuværende farvetema"
+
+#, fuzzy
+#~| msgid "Configure the current color scheme"
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "Indstil det nuværende farvetema"
 
 #, fuzzy
 #~| msgid "Apply &effects to inactive windows"

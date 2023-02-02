@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Загальна тема</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>26 січня 2023 року</date>
+<releaseinfo
+>Плазма 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>Поява</keyword>
+<keyword
+>Загальна тема</keyword>
+<keyword
+>стиль</keyword>
+<keyword
+>тема</keyword>
+<keyword
+>вигляд</keyword>
+<keyword
+>поведінка</keyword>
+<keyword
+>загальний</keyword>
+<keyword
+>стільниця</keyword>
+<keyword
+>оболонка</keyword>
+<keyword
+>дизайн</keyword>
+<keyword
+>інтерфейс</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Загальні теми</title>
+
+<para
+>Загальні теми надають спільного вигляду та поведінки для багатьох компонентів середовища одночасно: </para>
+<itemizedlist>
+  <listitem
+><para
+>Компонування стільниці: розташування панелей і віджетів. Наприклад, нижньої панелі із керуванням завданнями та кнопкою запуску програм або верхньої панелі із загальним меню та системним лотком.</para
+></listitem>
+  <listitem
+><para
+>Схема кольорів: палітра кольорів, яку буде використано для Плазми і програм</para
+></listitem>
+  <listitem
+><para
+>Стиль програм: вигляд елементів інтерфейсу користувача, зокрема кнопок, меню та смужок гортання</para
+></listitem>
+  <listitem
+><para
+>Стиль Плазми: вигляд панелей і віджетів</para
+></listitem>
+  <listitem
+><para
+>Обрамлення вікон: рамки вікон та кнопки смужки заголовка</para
+></listitem>
+  <listitem
+><para
+>Піктограми: піктограми, які буде використано у Плазмі і програмах</para
+></listitem>
+  <listitem
+><para
+>Вказівники: вказівники миші</para
+></listitem>
+  <listitem
+><para
+>Засіб перемикання завдань: накладка для перемикання між відкритими вікнами, типово, її викликають за допомогою комбінації клавіш Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Вікно вітання: екран завантаження, який буде показано під час запуску Плазми</para
+></listitem>
+  <listitem
+><para
+>Вікно входу: екран із вибором користувача та запитом пароля, який буде показано під час запуску системи</para
+></listitem>
+  <listitem
+><para
+>Екран блокування: екран із запитом пароля, який буде показано, коли систему заблоковано</para
+></listitem>
+  <listitem
+><para
+>Тло стільниці: фонове зображення стільниці</para
+></listitem>
+</itemizedlist>
+
+<para
+>Застосувавши загальну тему, ви можете змінити вигляд усіх цих компонентів одразу. Крім того, ви можете використати лише частину компонентів загальної теми, зокрема схему кольорів або обрамлення вікон. Ви можете вибрати, які компоненти буде змінено, або під час застосування загальної теми, або під час налаштовування окремих компонентів за допомогою інших розділів «Системних параметрів». </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Керування загальними темами</title>
+
+<para
+>За допомогою цього модуля ви можете: <itemizedlist>
+    <listitem
+><para
+>застосовувати загальні теми</para
+></listitem>
+    <listitem
+><para
+>встановлювати нові загальні теми і вилучати встановлені загальні теми</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Знімок засобу керування загальними темами</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Застосовування загальних тем</title>
+
+<para
+>Ви можете попередньо переглянути кожну з тем, натиснувши піктограму із зображенням теми, яка з'являться у відповідь на наведення на пункт теми вказівника миші. </para>
+
+<para
+>У відповідь на натискання пункту загальної теми з'явиться діалогове вікно із запитом щодо того, які компоненти теми ви хочете застосувати. Ви можете вибрати якийсь серед різних варіантів параметрів та якесь компонування стільниці. <screenshot>
+    <screeninfo
+>Знімок вікна вибору компонентів загальної теми</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Знімок вікна вибору компонентів загальної теми</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Після того, як вибір буде зроблено, натисніть кнопку <guibutton
+>Застосувати</guibutton
+>, щоб підтвердити його. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Встановлення загальних тем</title>
+
+<para
+>За допомогою кнопки <guilabel
+>Отримати нові загальні теми...</guilabel
+> ви можете встановлювати нові загальні теми від сторонніх надавачів даних. Для доступу до цих тем потрібне інтернет-з'єднання. Натискання кнопки <guibutton
+>Встановити</guibutton
+> для якоїсь із тем у вікні призведе до встановлення вибраної теми. Після закриття діалогового вікна ви зможете одразу вибрати цю загальну тему. <screenshot>
+  <screeninfo
+>Отримати нові загальні теми…</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Отримати нові загальні теми…</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Щоб вилучити встановлено загальну тему, натисніть кнопку з піктограмою смітника, яку буде показано при наведенні вказівника миші на мініатюру теми у списку. Зауважте, що ви можете вилучити лише загальні теми, які ви встановили власноруч. </para>
+
+<para
+>Якщо ви хочете створити власну тему, ознайомитися із документацією щодо різноманітних компонентів можна <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>тут</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

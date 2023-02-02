@@ -108,8 +108,8 @@
       <listitem
 ><para
 ><guilabel
->Custom</guilabel
->: Here you can choose from a set of predefined colors or pick a custom color. </para
+>Aangepast</guilabel
+>: hier kunt u kiezen uit een set van voorgedefinieerde kleuren kiezen of een eigen kleur kiezen. </para
 ></listitem>
     </itemizedlist>
 
@@ -162,10 +162,10 @@
     <listitem
 ><para
 ><guilabel
->Tint all colors with accent color</guilabel
-> &mdash; If checked, all colors will get some of the accent color blended in. You can control how strongly the accent color should blend in by moving the <guilabel
->Tint strength</guilabel
-> slider. </para
+>Geef alle kleuren een tint met de accentkleuor</guilabel
+> &mdash; indien geactiveerd, zullen alle kleuren enige accentkleur ingemengd krijgen. U kunt besturen hoeveel de accentkleur ingemengd krijgt in door de schuifregelaar <guilabel
+>Tintsterkte</guilabel
+> te verplaatsen. </para
 ></listitem>
     <listitem
 ><para

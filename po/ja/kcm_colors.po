@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-02 01:00+0000\n"
 "PO-Revision-Date: 2019-06-08 13:58-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -38,34 +38,34 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tsuno@ngy.1st.ne.jp"
 
-#: colors.cpp:233
+#: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: colors.cpp:246
+#: colors.cpp:248
 #, fuzzy, kde-format
 #| msgid "&Enter a name for the color scheme:"
 msgid "Unable to download the color scheme: %1"
 msgstr "色スキームの名前を入力(&E):"
 
-#: colors.cpp:264
+#: colors.cpp:266
 #, fuzzy, kde-format
 #| msgid "Import a color scheme from a file"
 msgid "This file is not a color scheme file."
 msgstr "ファイルから色スキームをインポートします"
 
-#: colors.cpp:283
+#: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:290
+#: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:307
+#: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr ""
@@ -1138,6 +1138,32 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "フォーカス"
 
+#: package/contents/ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "色スキームをインポート"
+
+#: package/contents/ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: package/contents/ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "共通色"
+
+#: package/contents/ui/AccentColorUI.qml:152
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
@@ -1149,129 +1175,101 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: package/contents/ui/main.qml:108
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "すべてのスキーム"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "明るいスキーム"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "暗いスキーム"
 
-#: package/contents/ui/main.qml:143
-#, kde-format
-msgid "Use accent color:"
-msgstr ""
-
-#: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "From current color scheme"
-msgstr "色スキームをインポート"
-
-#: package/contents/ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgctxt "@option:radio wallpaper accent color option"
-msgid "From current wallpaper"
-msgstr "色スキームをインポート"
-
-#: package/contents/ui/main.qml:254
-#, kde-format
-msgid "Custom:"
-msgstr ""
-
-#: package/contents/ui/main.qml:261
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "ウィンドウのテキスト"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "ウィンドウのテキスト"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "ボタン"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "リンク"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "訪問済み"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "通常のテキスト"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "強調されたテキスト"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "無効なテキスト"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Edit Color Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "カラースキームを編集..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "色スキームを保存"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "色スキームをインポート"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:342
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "ファイルからインストール..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Get New Color Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "新しいカラースキームを取得..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:365
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "色スキームを保存"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
@@ -1358,3 +1356,14 @@ msgstr ""
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Import Color Scheme"
+#~ msgid "From current color scheme"
+#~ msgstr "色スキームをインポート"
+
+#, fuzzy
+#~| msgid "Import Color Scheme"
+#~ msgctxt "@option:radio wallpaper accent color option"
+#~ msgid "From current wallpaper"
+#~ msgstr "色スキームをインポート"
