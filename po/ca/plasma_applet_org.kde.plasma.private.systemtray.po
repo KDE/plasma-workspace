@@ -194,9 +194,3 @@ msgstr "Tanca la finestra emergent"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostra les icones ocultes"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (càrrega automàtica)"

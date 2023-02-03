@@ -281,6 +281,3 @@ msgstr "No s'ha configurat cap ubicació de fons de pantalla"
 #, kde-format
 msgid "Add Folder…"
 msgstr "Afegeix una carpeta…"
-
-#~ msgid "There are no wallpapers in this slideshow"
-#~ msgstr "No hi ha cap fons de pantalla en aquest passi de diapositives"

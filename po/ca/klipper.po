@@ -990,11 +990,3 @@ msgstr "Desactiva aquest emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The actions shown in the popup menu can be configured on the "
-#~ "<interface>Actions Configuration</interface> page."
-#~ msgstr ""
-#~ "Les accions mostrades en el menú emergent es poden configurar a la pàgina "
-#~ "<interface>Configuració d'accions</interface>."

@@ -166,36 +166,3 @@ msgstr "Atura sense confirmació"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Torna a engegar sense confirmació"
-
-#~ msgid ""
-#~ "Starts <wm> in case no other window manager is \n"
-#~ "participating in the session. Default is 'kwin'"
-#~ msgstr ""
-#~ "Engega el <wm> en cas que no hi hagi cap altre gestor de \n"
-#~ "finestres participant en la sessió. El predeterminat és «kwin»"
-
-#~ msgid "wm"
-#~ msgstr "wm"
-
-#~ msgid "Shut Down"
-#~ msgstr "Atura"
-
-#~ msgid "Reboot"
-#~ msgstr "Reinicia"
-
-#~ msgid "Logout"
-#~ msgstr "Surt"
-
-#~ msgid "Sleeping in 1 second"
-#~ msgid_plural "Sleeping in %1 seconds"
-#~ msgstr[0] "S'adormirà en 1 segon"
-#~ msgstr[1] "S'adormirà en %1 segons"
-
-#~ msgid "Lock"
-#~ msgstr "Bloca"
-
-#~ msgid "ksmserver"
-#~ msgstr "ksmserver"
-
-#~ msgid "Turn off"
-#~ msgstr "Apaga"

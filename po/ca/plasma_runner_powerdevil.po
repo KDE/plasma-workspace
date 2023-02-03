@@ -142,35 +142,3 @@ msgstr "lluminositat de la pantalla "
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "
 msgstr "enfosquiment de la pantalla "
-
-#~ msgctxt "Note this is a KRunner keyword"
-#~ msgid "screen brightness"
-#~ msgstr "lluminositat de la pantalla"
-
-#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
-#~ msgid "screen brightness %1"
-#~ msgstr "lluminositat de la pantalla del %1"
-
-#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
-#~ msgid "dim screen %1"
-#~ msgstr "enfosquiment de la pantalla del %1"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspèn"
-
-#~ msgctxt "Note this is a KRunner keyword"
-#~ msgid "power profile"
-#~ msgstr "perfil de potència"
-
-#~ msgid "Lists all power profiles and allows them to be activated"
-#~ msgstr "Llista tots els perfils de potència i els permet activar"
-
-#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
-#~ msgid "power profile %1"
-#~ msgstr "perfil de potència %1"
-
-#~ msgid "Set Profile to '%1'"
-#~ msgstr "Defineix el perfil a «%1»"
-
-#~ msgid "Turn off screen"
-#~ msgstr "Apaga la pantalla"

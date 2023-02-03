@@ -131,9 +131,3 @@ msgstr "Mostra un missatge emergent quan s'endolli un dispositiu nou"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configura els dispositius extraïbles…"
-
-#~ msgid "Show:"
-#~ msgstr "Mostra:"
-
-#~ msgid "General"
-#~ msgstr "General"

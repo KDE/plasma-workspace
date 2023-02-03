@@ -30,6 +30,3 @@ msgstr "Cerca documents usats recentment amb noms que coincideixin amb :q:."
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obre la carpeta contenidora"
-
-#~ msgid "Recent Document"
-#~ msgstr "Document recent"

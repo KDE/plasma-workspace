@@ -1,13 +1,13 @@
 # Copyright (C).
 #
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 02:53+0000\n"
-"PO-Revision-Date: 2022-06-30 19:57+0530\n"
+"PO-Revision-Date: 2023-02-02 19:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -433,13 +433,13 @@ msgstr "உறுதி உரை"
 #: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, fuzzy, kde-format
 msgid "Focus Decoration"
-msgstr "கவன அலங்காரம்"
+msgstr "குவியப்பட்டிருக்கும் விளிம்பு"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, fuzzy, kde-format
 msgid "Hover Decoration"
-msgstr "மேல்நகரும் அலங்காரம்"
+msgstr "சுட்டியின் அடியிலுள்ள விளிம்பு"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: editor/scmeditorcolors.ui:23
@@ -781,19 +781,17 @@ msgstr "சாயல்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
-#, fuzzy, kde-format
-#| msgid "Darken"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Darken"
-msgstr "இருண்டு"
+msgstr "கருமையாக்கு"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:83
-#, fuzzy, kde-format
-#| msgid "Lighten"
+#, kde-format
 msgctxt "disabled intensity effect"
 msgid "Lighten"
-msgstr "இலேசான"
+msgstr "வெள்ளையாக்கு"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: editor/scmeditoreffects.ui:107
@@ -865,32 +863,31 @@ msgstr "முடக்கப்பட்ட சாளர நிற &தாக�
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "&செயலிலில்லாத தேர்வுகளுக்கு வேறு நிறங்களை பயன்படுத்து"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
-#, fuzzy, kde-format
+#, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "சாயல் வகைப்படுத்தப்பட்ட வரிசை பட்டிலில் &உள்ளது"
+msgstr "&பட்டியல்களை வரிசைப்படுத்த பயன்படும் நெடுவரிசையை முன்னிலைப்படுத்து"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
-#, fuzzy, kde-format
-#| msgid "Use accent color:"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "சிறப்பு நிறத்தை பயன்படுத்து:"
+msgstr "அனைத்து நிறங்களிலும் சிறப்பு நிறத்தை கல"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "சா&ளர தலைப்புப்பட்டைகளுக்கு சிறப்பு நிறத்தையிடு"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "நிறக்கலப்பின் அளவு:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -900,10 +897,9 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
-#, fuzzy, kde-format
-#| msgid "Shade"
+#, kde-format
 msgid "Shading"
-msgstr "சாயல்"
+msgstr "நிழலிடுவது"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: editor/scmeditoroptions.ui:97
@@ -1058,10 +1054,9 @@ msgstr "உறுதி உரை"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
 #: editor/setpreview.ui:170
-#, fuzzy, kde-format
-#| msgid "Normal Background"
+#, kde-format
 msgid "Hover on Normal Background"
-msgstr "சாதாரண பின்னணி"
+msgstr "சுட்டிக்கு அடியிலிருப்பது, சாதாரண பின்னணியின் மீது"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1150,10 +1145,9 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
-#, fuzzy, kde-format
-#| msgid "Normal Background"
+#, kde-format
 msgid "Focus on Normal Background"
-msgstr "சாதாரண பின்னணி"
+msgstr "குவியப்பட்டிருப்பது, சாதாரண பின்னணியின் மீது"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)

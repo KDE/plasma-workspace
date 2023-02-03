@@ -35,9 +35,3 @@ msgstr "Nom"
 #, kde-format
 msgid "Description"
 msgstr "Descripció"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"
-
-#~ msgid "Search Holiday Regions"
-#~ msgstr "Cerca regions de festius"

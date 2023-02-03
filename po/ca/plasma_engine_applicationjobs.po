@@ -31,6 +31,3 @@ msgstr "No s'ha pogut trobar el «JobView» per a %1"
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/seg"
-
-#~ msgid "Job canceled by user."
-#~ msgstr "Tasca cancel·lada per l'usuari."

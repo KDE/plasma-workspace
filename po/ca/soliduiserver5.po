@@ -27,16 +27,3 @@ msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr ""
 "«%1» necessita una contrasenya per a accedir-hi. Si us plau, introduïu la "
 "contrasenya."
-
-#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
-#~ msgstr "S'ha detectat un dispositiu nou.<br><b>Què voleu fer?</b>"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Do nothing"
-#~ msgstr "No facis res"
-
-#~ msgctxt "A default name for an action without proper label"
-#~ msgid "Unknown"
-#~ msgstr "Desconegut"

@@ -2350,18 +2350,3 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "Print..."
-#~ msgstr "Imprimeix..."
-
-#~ msgid "Create New Group..."
-#~ msgstr "Crea un grup nou..."
-
-#~ msgid "Remove Group..."
-#~ msgstr "Elimina grup..."
-
-#~ msgid "Install..."
-#~ msgstr "Instal·la..."
-
-#~ msgid "<p>No information</p>"
-#~ msgstr "<p>Sense informació</p>"

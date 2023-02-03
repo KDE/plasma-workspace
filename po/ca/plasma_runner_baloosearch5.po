@@ -70,9 +70,3 @@ msgstr "Arxiu"
 #, kde-format
 msgid "Text"
 msgstr "Text"
-
-#~ msgid "Search through files, emails and contacts"
-#~ msgstr "Cerca en els fitxers, els correus electrònics i els contactes"
-
-#~ msgid "Email"
-#~ msgstr "Correu electrònic"

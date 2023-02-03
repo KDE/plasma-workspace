@@ -67,37 +67,3 @@ msgstr "S'enviarà la informació següent:"
 #, kde-format
 msgid "View sent data:"
 msgstr "Visualitza les dades enviades:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "User Feedback"
-#~ msgstr "Comentaris de l'usuari"
-
-#~ msgid "Configure user feedback settings"
-#~ msgstr "Configura les opcions dels comentaris de l'usuari"
-
-#~ msgctxt "@info"
-#~ msgid "You can read about our policy in the following link:"
-#~ msgstr "Podeu llegir la nostra política a l'enllaç següent:"
-
-#~ msgid "Allow KDE software to collect anonymous usage information"
-#~ msgstr ""
-#~ "Permet que el programari del KDE recol·lecti informació anònima d'ús"
-
-#~ msgid "Send basic system information"
-#~ msgstr "Envia informació bàsica del sistema"
-
-#~ msgid "Send basic usage information"
-#~ msgstr "Envia informació bàsica de l'usuari"
-
-#~ msgid "Send detailed system information"
-#~ msgstr "Envia informació detallada del sistema"
-
-#~ msgid "Send detailed usage information"
-#~ msgstr "Envia informació detallada d'ús"
