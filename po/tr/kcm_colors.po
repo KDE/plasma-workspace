@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2023-02-01 00:26+0300\n"
+"PO-Revision-Date: 2023-02-02 19:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -176,7 +176,7 @@ msgstr "Pencere metni"
 #: editor/preview.ui:39
 #, kde-format
 msgid "Button text on Button Background"
-msgstr "Düğme Arka Planındaki düğme yazısı"
+msgstr "Düğme Arka Planındaki Düğme yazısı"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -236,7 +236,7 @@ msgstr "ziyaret edilmiş"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Aktif Metin"
+msgstr "Seçili Normal Arka Plan üzerine Seçili Etkin Metin"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -252,7 +252,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Aktif Olmayan Metin"
+msgstr "Seçili Normal Arka Plan üzerine Seçili Etkin Olmayan Metin"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -857,7 +857,7 @@ msgstr "Etkin olmayan pencerelere renk &efektlerini uygula"
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr "Aktif olmay&an seçimler için farklı renkler kullan"
+msgstr "Etkin olmay&an seçimler için farklı renkler kullan"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
@@ -1086,8 +1086,8 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Aktif Arka Plan üzerinde Aktif Metni\n"
-"(Not: Aktif Arka Planı Aktif Metninden türemiştir ve ayrıca yapılandırılamaz)"
+"Etkin Arka Plan üzerinde Etkin Metin\n"
+"(Not: Etkin Arka Planı Etkin Metninden türemiştir ve ayrıca yapılandırılamaz)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
@@ -1153,24 +1153,22 @@ msgid "focus"
 msgstr "odaklanmış"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Renk Şemasını Sıfırla"
+msgstr "Renk Şemasından Vurgu Rengi"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Duvar Kağıdından Vurgu Rengi"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Özel vurgu rengi seç"
+msgstr "Özel Vurgu Rengi"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format
