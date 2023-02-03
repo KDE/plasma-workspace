@@ -6,6 +6,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <optional>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -38,6 +39,7 @@ int main()
 
         KConfigGroup panelConfigGroup(&views, name);
         const QStringList groupList = panelConfigGroup.groupList();
+        std::optional<unsigned> thickness;
         for (const QString &name : groupList) {
             if (!name.startsWith(QLatin1String("Horizontal")) && !name.startsWith(QLatin1String("Vertical"))) {
                 continue;
@@ -48,12 +50,23 @@ int main()
                 continue;
             }
 
+            const unsigned valueInGroup = panelFormConfigGroup.readEntry("thickness", unsigned(0));
+            if (!thickness.has_value() || thickness.value() > valueInGroup) {
+                thickness = valueInGroup; // Use the minimum thickness value
+            }
+
             panelFormConfigGroup.deleteEntry("thickness");
             ++count;
             // Should have at least one default group so no need to delete the whole panel group
             if (panelFormConfigGroup.keyList().empty()) {
                 panelConfigGroup.deleteGroup(name);
             }
+        }
+
+        // Update the thickness in [Defaults] group
+        if (thickness.has_value()) {
+            KConfigGroup defaultConfigGroup(&panelConfigGroup, "Defaults");
+            defaultConfigGroup.writeEntry("thickness", thickness.value());
         }
     }
 
