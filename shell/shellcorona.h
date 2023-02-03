@@ -14,6 +14,7 @@
 
 #include <QDBusContext>
 #include <QDBusVariant>
+#include <QPointer>
 #include <QSet>
 #include <QTimer>
 

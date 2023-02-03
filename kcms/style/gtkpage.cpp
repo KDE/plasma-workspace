@@ -10,7 +10,6 @@
 #include <QUrl>
 
 #include <KLocalizedString>
-#include <KNS3/DownloadDialog>
 #include <KTar>
 
 #include "gtkpage.h"

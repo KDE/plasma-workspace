@@ -10,6 +10,8 @@
 
 #include "playercontrol.h"
 
+#include <QPointer>
+
 class QDBusPendingCallWatcher;
 class QDBusPendingCall;
 class QDBusVariant;

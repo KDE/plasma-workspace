@@ -17,7 +17,6 @@
 
 #include "logoutpromptadaptor.h"
 
-#include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 #include <LayerShellQt/Shell>
 

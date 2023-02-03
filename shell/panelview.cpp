@@ -29,7 +29,6 @@
 #include <kwindowsystem.h>
 
 #include <Plasma/Containment>
-#include <Plasma/Package>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>

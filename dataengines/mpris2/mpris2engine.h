@@ -8,6 +8,7 @@
 
 #include <Plasma/DataEngine>
 
+#include <QPointer>
 #include <QWeakPointer>
 
 class QDBusPendingCallWatcher;

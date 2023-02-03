@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QPointer>
 
 #include <KConfigWatcher>
 

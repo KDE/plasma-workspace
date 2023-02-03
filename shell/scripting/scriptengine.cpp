@@ -19,7 +19,6 @@
 #include <KLocalizedContext>
 #include <QDebug>
 #include <klocalizedstring.h>
-#include <kmimetypetrader.h>
 #include <kshell.h>
 
 #include <KPackage/Package>

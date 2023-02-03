@@ -22,6 +22,7 @@
 #include <Plasma/Service>
 
 #include <QImage>
+#include <QPointer>
 
 #include "debug.h"
 

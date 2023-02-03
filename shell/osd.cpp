@@ -14,7 +14,6 @@
 #include <QWindow>
 
 #include <KDeclarative/QmlObjectSharedEngine>
-#include <Plasma/Package>
 #include <klocalizedstring.h>
 
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)

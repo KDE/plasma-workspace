@@ -11,7 +11,6 @@
 #include <QStandardItemModel>
 
 #include <KDesktopFile>
-#include <KPackage/Package>
 
 #include <faces/SensorFaceController.h>
 

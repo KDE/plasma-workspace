@@ -81,6 +81,7 @@ target_link_libraries(kickerplugin
                       KF5::Runner
                       KF5::Service
                       KF5::WindowSystem
+                      KF5::XmlGui
                       PW::KWorkspace)
 
 if (${HAVE_APPSTREAMQT})

@@ -47,6 +47,7 @@ target_link_libraries(kcm_style
     KF5::QuickAddons
     KF5::Archive
     KF5::NewStuff
+    KF5::XmlGui
     krdb
 )
 

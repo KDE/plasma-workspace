@@ -5,7 +5,6 @@
 
 #include "autostartscriptdesktopfile.h"
 #include <KConfigGroup>
-#include <QFileIconProvider>
 #include <QStandardPaths>
 
 static const auto autostartScriptKey = QStringLiteral("X-KDE-AutostartScript");

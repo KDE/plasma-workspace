@@ -18,7 +18,6 @@
 #include <QStandardPaths>
 
 #include <KConfigLoader>
-#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>

@@ -8,7 +8,6 @@
 #include "pumpjob.h"
 
 #include <QDebug>
-#include <kplugininfo.h>
 #include <kservice.h>
 
 #include <qcommandlineparser.h>

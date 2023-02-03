@@ -25,7 +25,6 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
-#include <Plasma/Package>
 #include <Plasma/PluginLoader>
 #include <PlasmaQuick/Dialog>
 #include <kactioncollection.h>
@@ -38,7 +37,6 @@
 #include <KX11Extras>
 #include <kactivities/consumer.h>
 #include <kactivities/controller.h>
-#include <kdeclarative/kdeclarative.h>
 #include <kdeclarative/qmlobjectsharedengine.h>
 #include <kdirwatch.h>
 #include <ksycoca.h>

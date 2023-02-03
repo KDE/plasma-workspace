@@ -8,6 +8,7 @@
 #include <Plasma/Service>
 
 #include "playercontrol.h"
+#include <QPointer>
 #include <QWeakPointer>
 
 class Multiplexer;
