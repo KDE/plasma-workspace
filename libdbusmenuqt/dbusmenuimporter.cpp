@@ -530,9 +530,9 @@ QMenu *DBusMenuImporter::createMenu(QWidget *parent)
     return new QMenu(parent);
 }
 
-QIcon DBusMenuImporter::iconForName(const QString & /*name*/)
+QIcon DBusMenuImporter::iconForName(const QString &name)
 {
-    return QIcon();
+    return QIcon::fromTheme(name);
 }
 
 #include "moc_dbusmenuimporter.cpp"
