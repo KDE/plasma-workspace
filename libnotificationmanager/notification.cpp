@@ -290,6 +290,18 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
         }
     }
 
+    // Try snap instance name.
+    if (!service) {
+        const auto services = KApplicationTrader::query([&desktopEntry](const KService::Ptr &app) -> bool {
+            const QString snapInstanceName = app->property(QStringLiteral("X-SnapInstanceName"), QMetaType::QString).toString();
+            return desktopEntry.compare(snapInstanceName, Qt::CaseInsensitive) == 0;
+        });
+
+        if (!services.isEmpty()) {
+            service = services.first();
+        }
+    }
+
     return service;
 }
 
