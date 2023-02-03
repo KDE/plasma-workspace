@@ -127,6 +127,13 @@ AbstractItem {
         function onContainsPressChanged() {
             plasmoidContainer.effectivePressed = target.containsPress;
         }
+
+        // TODO For touch/stylus only, since the feature is not desired for mouse users
+        function onPressAndHold(mouse) {
+            if (mouse.button === Qt.LeftButton) {
+                plasmoidContainer.contextMenu(mouse)
+            }
+        }
     }
 
     Connections {
