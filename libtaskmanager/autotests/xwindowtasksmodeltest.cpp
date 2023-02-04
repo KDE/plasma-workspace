@@ -50,6 +50,7 @@ private Q_SLOTS:
 
     void test_openCloseWindow();
     void test_modelData();
+    void test_stackingOrder();
     void test_modelDataFromDesktopFile();
     void test_windowState();
 
@@ -348,6 +349,24 @@ void XWindowTasksModelTest::test_modelData()
     QTRY_COMPARE(index.data(AbstractTasksModel::AppPid).toInt(), info.pid());
 
     QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
+}
+
+void XWindowTasksModelTest::test_stackingOrder()
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto firstWindow = createSingleWindow(title, index);
+    const int stackingOrder1 = index.data(AbstractTasksModel::StackingOrder).toInt();
+
+    // Create another window to make stacking order change
+    QModelIndex index2;
+    auto secondWindow = createSingleWindow(QStringLiteral("second test window"), index2);
+    const int stackingOrder2 = index2.data(AbstractTasksModel::StackingOrder).toInt();
+    QVERIFY(stackingOrder2 > stackingOrder1);
+
+    firstWindow->close();
+    QCoreApplication::processEvents();
+    QTRY_VERIFY(index2.data(AbstractTasksModel::StackingOrder).toInt() < stackingOrder2);
 }
 
 void XWindowTasksModelTest::test_modelDataFromDesktopFile()
