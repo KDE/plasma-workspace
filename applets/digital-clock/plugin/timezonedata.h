@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QLocale>
 #include <QString>
 
 class TimeZoneData
@@ -13,6 +14,11 @@ class TimeZoneData
 public:
     QString id;
     QString region;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+    QLocale::Territory territory;
+#else
+    QLocale::Country territory;
+#endif
     QString city;
     QString comment;
     bool checked = false;

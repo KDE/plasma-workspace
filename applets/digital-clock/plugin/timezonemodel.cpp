@@ -8,9 +8,12 @@
 #include "timezonemodel.h"
 #include "timezonesi18n.h"
 
-#include <KLocalizedString>
+#include <QIcon>
+#include <QStandardPaths>
 #include <QStringMatcher>
 #include <QTimeZone>
+
+#include <KLocalizedString>
 
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -82,6 +85,25 @@ QVariant TimeZoneModel::data(const QModelIndex &index, int role) const
         TimeZoneData currentData = m_data.at(index.row());
 
         switch (role) {
+        case Qt::DecorationRole: {
+            if (currentData.territory == QLocale::AnyCountry) {
+                return QIcon::fromTheme(QStringLiteral("globe"));
+            }
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+            const QString path =
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                       QStringLiteral("kf5/locale/countries/%1/flag.png").arg(QLocale::territoryToCode(currentData.territory).toLower()));
+#else
+            const QString name = QLocale(QLocale::AnyLanguage, currentData.territory).name().toLower();
+            const QString path =
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                       QStringLiteral("kf5/locale/countries/%1/flag.png").arg(name.midRef(name.indexOf(QLatin1Char('_')) + 1)));
+#endif
+            if (path.isEmpty()) {
+                return QVariant();
+            }
+            return QIcon(path);
+        }
         case TimeZoneIdRole:
             return currentData.id;
         case RegionRole:
@@ -139,6 +161,12 @@ void TimeZoneModel::update()
     local.isLocalTimeZone = true;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+    local.territory = QLocale::system().territory();
+#else
+    local.territory = QLocale::system().country();
+#endif
+
     local.city = m_timezonesI18n->i18nCity(data.last());
     local.comment = i18n("System's local time zone");
     local.checked = false;
@@ -178,6 +206,11 @@ void TimeZoneModel::update()
         newData.region = timeZone.country() == QLocale::AnyCountry
             ? QString()
             : m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+        newData.territory = timeZone.territory();
+#else
+        newData.territory = timeZone.country();
+#endif
         newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
         newData.comment = comment;
         newData.checked = false;
@@ -225,6 +258,7 @@ QString TimeZoneModel::localTimeZoneCity()
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
 {
     return QHash<int, QByteArray>({
+        {Qt::DecorationRole, "decoration"},
         {TimeZoneIdRole, "timeZoneId"},
         {RegionRole, "region"},
         {CityRole, "city"},

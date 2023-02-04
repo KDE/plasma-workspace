@@ -87,11 +87,21 @@ ColumnLayout {
                 // TODO: create Kirigami.MutuallyExclusiveListItem to be the
                 // RadioButton equivalent of Kirigami.CheckableListItem,
                 // and then port to use that in Plasma 5.22
-                leading: QQC2.RadioButton {
-                    id: radioButton
-                    visible: configuredTimezoneList.count > 1
-                    checked: timeZoneListItem.isCurrent
-                    onToggled: clickAction.trigger()
+                leading: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.RadioButton {
+                        id: radioButton
+                        visible: configuredTimezoneList.count > 1
+                        checked: timeZoneListItem.isCurrent
+                        onToggled: clickAction.trigger()
+                    }
+
+                    Kirigami.Icon {
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        source: model.decoration
+                    }
                 }
 
                 label: model.city
