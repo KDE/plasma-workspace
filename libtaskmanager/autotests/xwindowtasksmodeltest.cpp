@@ -52,6 +52,7 @@ private Q_SLOTS:
     void test_modelData();
     void test_isMinimized();
     void test_fullscreen();
+    void test_geometry();
     void test_stackingOrder();
     void test_lastActivated();
     void test_modelDataFromDesktopFile();
@@ -427,6 +428,26 @@ void XWindowTasksModelTest::test_fullscreen()
         return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
     }));
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
+}
+
+void XWindowTasksModelTest::test_geometry()
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    const QSize oldSize = index.data(AbstractTasksModel::Geometry).toRect().size();
+    QCoreApplication::processEvents();
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+    window->resize(QSize(240, 320));
+    QVERIFY(dataChangedSpy.wait());
+
+    // There can be more than one dataChanged signal being emitted due to caching
+    // When using openbox the test is flaky
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::Geometry);
+    }));
+    QTRY_VERIFY(index.data(AbstractTasksModel::Geometry).toRect().size() != oldSize);
 }
 
 void XWindowTasksModelTest::test_stackingOrder()
