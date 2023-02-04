@@ -28,6 +28,8 @@
 #include <KActivities/Stats/ResultWatcher>
 #include <KActivities/Stats/Terms>
 
+#include "config-KDECI_BUILD.h"
+
 namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
@@ -594,16 +596,22 @@ bool KAStatsFavoritesModel::isFavorite(const QString &id) const
     return d && d->m_itemEntries.contains(id);
 }
 
-void KAStatsFavoritesModel::portOldFavorites(const QStringList &realIds)
+#if KDECI_BUILD
+void KAStatsFavoritesModel::portOldFavorites(const QStringList &)
+#else
+void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
+#endif
 {
     if (!d)
         return;
 
-    const QStringList ids = qEnvironmentVariable("KDECI_BUILD").toUpper() == QStringLiteral("TRUE") ? QStringList{
-            QStringLiteral("org.kde.plasma.emojier.desktop"),
-            QStringLiteral("linguist5.desktop"),
-            QStringLiteral("org.qt.linguist6.desktop"),
-        } : realIds;
+#if KDECI_BUILD
+    const QStringList ids{
+        QStringLiteral("org.kde.plasma.emojier.desktop"),
+        QStringLiteral("linguist5.desktop"),
+        QStringLiteral("org.qt.linguist6.desktop"),
+    };
+#endif
 
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 

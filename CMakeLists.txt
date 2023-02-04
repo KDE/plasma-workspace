@@ -320,6 +320,11 @@ set_package_properties(KIOFuse PROPERTIES DESCRIPTION "Provide KIO support to le
 # Clipboard applet
 ecm_find_qmlmodule(org.kde.prison 1.0)
 
+# Is building in KDE CI
+if(DEFINED ENV{KDECI_BUILD})
+    set(KDECI_BUILD true)
+endif()
+
 include(ConfigureChecks.cmake)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
@@ -335,6 +340,7 @@ configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
 configure_file(config-WaylandProtocols.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-WaylandProtocols.h )
+configure_file(config-KDECI_BUILD.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KDECI_BUILD.h )
 add_subdirectory(login-sessions)
 add_subdirectory(lookandfeel)
 
