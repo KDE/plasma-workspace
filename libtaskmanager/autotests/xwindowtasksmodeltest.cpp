@@ -50,6 +50,7 @@ private Q_SLOTS:
 
     void test_openCloseWindow();
     void test_modelData();
+    void test_isMinimized();
     void test_stackingOrder();
     void test_lastActivated();
     void test_modelDataFromDesktopFile();
@@ -352,6 +353,54 @@ void XWindowTasksModelTest::test_modelData()
     QTRY_COMPARE(index.data(AbstractTasksModel::AppPid).toInt(), info.pid());
 
     QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
+}
+
+void XWindowTasksModelTest::test_isMinimized()
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsHidden).toBool());
+
+    // Minimize the window
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+    window->showMinimized();
+    dataChangedSpy.wait();
+    // There can be more than one dataChanged signal being emitted due to caching
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+    }));
+    // The model doesn't notify data change stored under IsHidden role
+    QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsHidden);
+    }));
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsActive);
+    }));
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsHidden).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsActive).toBool());
+
+    // Restore the window
+    dataChangedSpy.clear();
+    window->showNormal();
+    window->raise();
+    window->requestActivate();
+    dataChangedSpy.wait();
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+    }));
+    QVERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsHidden);
+    }));
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsActive);
+    }));
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsHidden).toBool());
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsActive).toBool());
 }
 
 void XWindowTasksModelTest::test_stackingOrder()
