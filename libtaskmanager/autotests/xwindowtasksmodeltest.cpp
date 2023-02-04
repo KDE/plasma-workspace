@@ -51,6 +51,7 @@ private Q_SLOTS:
     void test_openCloseWindow();
     void test_modelData();
     void test_isMinimized();
+    void test_fullscreen();
     void test_stackingOrder();
     void test_lastActivated();
     void test_modelDataFromDesktopFile();
@@ -399,6 +400,33 @@ void XWindowTasksModelTest::test_isMinimized()
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsHidden).toBool());
     QTRY_VERIFY(index.data(AbstractTasksModel::IsActive).toBool());
+}
+
+void XWindowTasksModelTest::test_fullscreen()
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    QVERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
+
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+    window->showFullScreen();
+    dataChangedSpy.wait();
+
+    // There can be more than one dataChanged signal being emitted due to caching
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
+    }));
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsFullScreen).toBool());
+    dataChangedSpy.clear();
+    window->showNormal();
+    QVERIFY(dataChangedSpy.wait());
+    // There can be more than one dataChanged signal being emitted due to caching
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsFullScreen);
+    }));
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
 }
 
 void XWindowTasksModelTest::test_stackingOrder()
