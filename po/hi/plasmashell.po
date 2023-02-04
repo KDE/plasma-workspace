@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2021-09-07 10:32+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -106,73 +106,73 @@ msgstr ""
 "नहीं कर सका।\n"
 "कृपया जांचें कि आपके ग्राफिक ड्राइवर सही तरीके से स्थापित हैं।"
 
-#: osd.cpp:54
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "ध्वनी बंद है"
 
-#: osd.cpp:72
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "माइक्रोफोन बंद है"
 
-#: osd.cpp:88
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 मूक है"
 
-#: osd.cpp:110
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "स्पर्श-पैड चालू है"
 
-#: osd.cpp:112
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "स्पर्श-पैड बंद है"
 
-#: osd.cpp:119
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "वाइफाइ चालू है"
 
-#: osd.cpp:121
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "वाइफाइ बंद है"
 
-#: osd.cpp:128
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "ब्लूटूथ चालू है"
 
-#: osd.cpp:130
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "ब्लूटूथ बंद है"
 
-#: osd.cpp:137
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "मोबाइल इन्टरनेट चालू है"
 
-#: osd.cpp:139
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "मोबाइल इन्टरनेट बंद है"
 
-#: osd.cpp:147
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -180,7 +180,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "स्क्रीन पर कुंजीपटल सक्रिय"
 
-#: osd.cpp:150
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -204,57 +204,57 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:176 shellcorona.cpp:178
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "डेस्कटॉप दिखाएँ"
 
-#: shellcorona.cpp:178
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "डेस्कटॉप चिपाएँ"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "गतिविधि परिवर्तक दिखाएं"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "वर्तमान गतिविधि बंद करें"
 
-#: shellcorona.cpp:210
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "पिछली गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "अगले गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "कार्य प्रबंधक प्रविष्टि %1 सक्रिय करें"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr ""
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1914
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनल जोडें"
 
-#: shellcorona.cpp:1950
+#: shellcorona.cpp:1948
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 00:59+0000\n"
-"PO-Revision-Date: 2023-01-05 11:35+0100\n"
+"PO-Revision-Date: 2023-01-30 14:38+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -100,22 +100,21 @@ msgid "Always below time"
 msgstr "Vždy pod časem"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Zobrazit sekundy"
+msgstr "Zobrazit sekundy:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Nikdy"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Pouze v nástrojovém tipu"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97

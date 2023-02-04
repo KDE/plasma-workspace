@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2023-01-04 15:37+0100\n"
+"PO-Revision-Date: 2023-01-28 07:42+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -108,19 +108,19 @@ msgstr "Tento modul vám umožní nastavit celkový vzhled."
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Navždy smazat"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Opravdu si přejete navždy smazat tento motiv?"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Navždy smazat"
 
 #: package/contents/ui/main.qml:74
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "Náhled motivu"
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr ""
+msgstr "Odstranit motiv"
 
 #: package/contents/ui/main.qml:129
 #, kde-format

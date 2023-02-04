@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2010-01-22 15:10+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -27,7 +27,7 @@ msgstr "L' éndjin d' dinêyes di notifiaedje n' est nén defini."
 msgid "Invalid destination: %1"
 msgstr "Destinåcion nén valåbe: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Programe nén cnoxhou"

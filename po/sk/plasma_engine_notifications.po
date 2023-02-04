@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2009-07-08 20:02+0200\n"
 "Last-Translator: Michal Sulek <misurel@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,7 +26,7 @@ msgstr "Nie je nastavený dátový nástroj upozornenia."
 msgid "Invalid destination: %1"
 msgstr "Neplatný cieľ: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Neznáma aplikácia"

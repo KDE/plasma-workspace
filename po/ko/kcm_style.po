@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: gtkpage.cpp:59
+#: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 파일은 올바른 GTK 테마 압축 파일이 아닙니다."

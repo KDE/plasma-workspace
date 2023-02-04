@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,7 +27,7 @@ msgstr "ئۇقتۇرۇش سانلىق-مەلۇمات ماتورى بەلگىلە
 msgid "Invalid destination: %1"
 msgstr "ئىناۋەتسىز نىشان: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "نامەلۇم پروگرامما"

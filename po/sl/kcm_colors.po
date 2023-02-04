@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1643708 2023-02-02 01:49:24Z scripty $
+# $Id: kcm_colors.po 1643844 2023-02-04 01:50:30Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -12,14 +12,14 @@
 # Jure Repinc <jlp@holodeck1.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2007.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2015, 2016, 2018.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
 # Martin Srebotnjak <miles@filmsi.net>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-07-01 10:59+0200\n"
+"PO-Revision-Date: 2023-02-03 08:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1157,24 +1157,22 @@ msgid "focus"
 msgstr "žarišče"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Obnovi barvno shemo"
+msgstr "Poudarjena barve iz barvne sheme"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Poudarjena barve iz tapete"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Uporabi poudarjeno barvo po meri"
+msgstr "Poudarjena barvo po meri"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format

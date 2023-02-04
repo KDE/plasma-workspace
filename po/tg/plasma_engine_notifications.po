@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2019-09-26 13:43+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Огоҳӣ дар dataEngine танзим нашудааст."
 msgid "Invalid destination: %1"
 msgstr "Ҷои таъйиноти беэътимод: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Барномаи номаълум"

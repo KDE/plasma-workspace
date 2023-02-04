@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-06 14:57+0100\n"
+"PO-Revision-Date: 2023-01-28 07:44+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -324,73 +324,73 @@ msgstr "Přidat nového uživatele"
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr ""
+msgstr "Změnit avatara"
 
 #: package/contents/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
-msgstr ""
+msgstr "Nic to není"
 
 #: package/contents/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr ""
+msgstr "Čiperný plameňák"
 
 #: package/contents/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
-msgstr ""
+msgstr "Pitahaya"
 
 #: package/contents/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
-msgstr ""
+msgstr "Batát"
 
 #: package/contents/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr ""
+msgstr "Jantarová"
 
 #: package/contents/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
-msgstr ""
+msgstr "Sluneční paprsek"
 
 #: package/contents/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr ""
+msgstr "Limetkově zelená"
 
 #: package/contents/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr ""
+msgstr "Okouzlující zelená"
 
 #: package/contents/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr ""
+msgstr "Luční zelená"
 
 #: package/contents/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr ""
+msgstr "Modrozelená"
 
 #: package/contents/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr ""
+msgstr "Plazmově modrá"
 
 #: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
@@ -408,37 +408,37 @@ msgstr ""
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr ""
+msgstr "Uhelně šedá"
 
 #: package/contents/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr ""
+msgstr "Papírově bílá"
 
 #: package/contents/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr ""
+msgstr "Kávově hnědá"
 
 #: package/contents/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr ""
+msgstr "Dřevitě hnědá"
 
 #: package/contents/ui/PicturesSheet.qml:72
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr ""
+msgstr "Vyberte obrázek"
 
 #: package/contents/ui/PicturesSheet.qml:104
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr ""
+msgstr "Vyberte soubor…"
 
 #: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format

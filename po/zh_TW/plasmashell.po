@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2022-07-10 17:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -104,73 +104,73 @@ msgstr ""
 "Plasma 無法開啟，因為它無法正確地使用 OpenGL 2 或備用軟體渲染。\n"
 "請檢查您的顯卡驅動程式，並做好設定。"
 
-#: osd.cpp:54
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "音效靜音"
 
-#: osd.cpp:72
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "麥克風靜音"
 
-#: osd.cpp:88
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 已靜音"
 
-#: osd.cpp:110
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "觸控板開啟"
 
-#: osd.cpp:112
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "觸控板關閉"
 
-#: osd.cpp:119
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi 開啟"
 
-#: osd.cpp:121
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi 關閉"
 
-#: osd.cpp:128
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "藍牙開啟"
 
-#: osd.cpp:130
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "藍牙關閉"
 
-#: osd.cpp:137
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "行動網路開啟"
 
-#: osd.cpp:139
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "行動網路關閉"
 
-#: osd.cpp:147
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -178,7 +178,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "螢幕上的虛擬鍵盤開啟"
 
-#: osd.cpp:150
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -202,57 +202,57 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:176 shellcorona.cpp:178
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "顯示桌面"
 
-#: shellcorona.cpp:178
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "隱藏桌面"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "顯示活動切換器"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "停止目前的活動"
 
-#: shellcorona.cpp:210
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切至上個活動"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切至下個活動"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "啟用工作管理員項目 %1"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "管理桌面與面板…"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板間移動鍵盤焦點"
 
-#: shellcorona.cpp:1914
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "新增面板"
 
-#: shellcorona.cpp:1950
+#: shellcorona.cpp:1948
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

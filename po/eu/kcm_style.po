@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2021-08-15 16:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Generator: Lokalize 21.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gtkpage.cpp:59
+#: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 ez da GTK gai artxibo balioduna."

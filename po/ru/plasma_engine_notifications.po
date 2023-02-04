@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2010-01-24 08:53+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -31,7 +31,7 @@ msgstr "Не задан поставщик данных для уведомле�
 msgid "Invalid destination: %1"
 msgstr "Недопустимый получатель: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Неизвестное приложение"

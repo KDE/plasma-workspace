@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-15 07:18+0100\n"
+"PO-Revision-Date: 2023-02-03 16:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -427,12 +427,12 @@ msgstr ""
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "ბრძანების ნაგულისხმებ ხატულაზე დაბრუნება"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr "_ხატულა:"
+msgstr "ხატულა:"
 
 #: historyimageitem.cpp:36
 #, kde-format
@@ -443,7 +443,7 @@ msgstr "%1x%2 %3bpp"
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr ""
+msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
 #: klipper.cpp:194
 #, kde-format
@@ -583,7 +583,7 @@ msgstr "Klipper-ის ვერსია"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "ისტორიის შენახვა სამუშაო მაგიდის სესიებს შორის"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -597,7 +597,7 @@ msgstr ""
 #: klipper.kcfg:18
 #, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr ""
+msgstr "ბუფერის გასუფთავების აკრძალვა"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -723,7 +723,7 @@ msgstr ""
 #: klipper.kcfg:84
 #, kde-format
 msgid "Trim whitespace from selection"
-msgstr ""
+msgstr "მონიშნულიდან ცარიელი ადგილების წაკვეთა"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -806,6 +806,9 @@ msgid ""
 "1998-2002, Carsten Pfeiffer\n"
 "2001, Patrick Dubroy"
 msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
 
 #: main.cpp:34
 #, kde-format

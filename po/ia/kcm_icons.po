@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 "Ci tu pote configurar le dimensiones predefinite de varietypos de icone sl "
 "nivello de toto le systema. Nota que non tote apps respectara iste "
-"preferentias.<nt/><nl/> Si tu trova que objectos sur schermo es generalmente "
+"preferentias.<nl/><nl/> Si tu trova que objectos sur schermo es generalmente "
 "troppo parve o troppo grande, in loco considera adjustar le scala global."
 
 #: package/contents/ui/IconSizePopup.qml:41

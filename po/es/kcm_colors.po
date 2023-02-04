@@ -10,7 +10,7 @@
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
 # Jaime Robles <jaime@robles.nu>, 2005.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-07-03 13:26+0200\n"
+"PO-Revision-Date: 2023-02-03 12:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -1160,24 +1160,22 @@ msgid "focus"
 msgstr "foco"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Restaurar esquema de color"
+msgstr "Color de acentuación del esquema de color"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Color de acentuación del fondo de escritorio"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Escoger color de acentuación personalizado"
+msgstr "Color de acentuación personalizado"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format

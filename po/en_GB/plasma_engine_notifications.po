@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2009-05-06 23:56+0100\n"
 "Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr "The notification dataEngine is not set."
 msgid "Invalid destination: %1"
 msgstr "Invalid destination: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Unknown Application"

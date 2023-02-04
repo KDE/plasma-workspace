@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2023-02-02 09:06+0100\n"
+"PO-Revision-Date: 2023-02-03 16:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -46,7 +46,7 @@ msgstr "ფაილი ფერების სქემის ფაილი
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "საქაღალდე \"color-scheme\"_ის შექმნის შეცდომა."
+msgstr "საქაღალდე \"color-scheme\"-ის შექმნის შეცდომა."
 
 #: colors.cpp:292
 #, kde-format

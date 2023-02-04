@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2022-12-18 12:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -108,73 +108,73 @@ msgstr ""
 "Verifique por favor se os seus controladores gráficos estão devidamente "
 "configurados."
 
-#: osd.cpp:54
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Áudio Silenciado"
 
-#: osd.cpp:72
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Microfone Silenciado"
 
-#: osd.cpp:88
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 Silenciado"
 
-#: osd.cpp:110
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Rato por Toque Ligado"
 
-#: osd.cpp:112
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Rato por Toque Desligado"
 
-#: osd.cpp:119
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wi-fi Ligado"
 
-#: osd.cpp:121
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wi-fi Desligado"
 
-#: osd.cpp:128
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth Ligado"
 
-#: osd.cpp:130
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth Desligado"
 
-#: osd.cpp:137
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Internet Móvel Ligada"
 
-#: osd.cpp:139
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Internet Móvel Desligada"
 
-#: osd.cpp:147
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -182,7 +182,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Teclado no Ecrã Activo"
 
-#: osd.cpp:150
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -206,57 +206,57 @@ msgstr "%1 %2 no %3"
 msgid "Disconnected Screen %1"
 msgstr "Ecrã %1 Desligado"
 
-#: shellcorona.cpp:176 shellcorona.cpp:178
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostrar o Ecrã"
 
-#: shellcorona.cpp:178
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Esconder o Ecrã"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostrar o Selector de Actividades"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Parar a Actividade Actual"
 
-#: shellcorona.cpp:210
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Mudar para a Actividade Anterior"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Mudar para a Actividade Seguinte"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activar o Item %1 do Gestor de Tarefas"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gerir os Ecrãs e Painéis..."
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre painéis"
 
-#: shellcorona.cpp:1914
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar um Painel"
 
-#: shellcorona.cpp:1950
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

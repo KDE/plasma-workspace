@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2023-01-04 15:31+0100\n"
+"PO-Revision-Date: 2023-02-02 14:59+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -72,7 +72,7 @@ msgstr "Název barevného schématu"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr ""
+msgstr "Barva nádechu"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -86,7 +86,7 @@ msgstr ""
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Zda by měla být použita barva nádechu z tapety"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -1146,24 +1146,22 @@ msgid "focus"
 msgstr "zaměření"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Obnovit barevné schéma"
+msgstr "Barva nádechu z barevného schématu"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Barva nádechu z tapety"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Vyberte vlastní barvu nádechu"
+msgstr "Vlastní barva nádechu"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format
@@ -1369,16 +1367,3 @@ msgstr "Ve vašem systému jsou dostupná následující barevná schémata:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuální barevné schéma)"
-
-#~ msgid "Use accent color:"
-#~ msgstr "Použít barvu nádechu:"
-
-#~ msgid "From current color scheme"
-#~ msgstr "Ze současného barevného schématu"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "Ze současné tapety"
-
-#~ msgid "Custom:"
-#~ msgstr "Vlastní:"

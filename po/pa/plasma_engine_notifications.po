@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2009-12-16 08:59+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -27,7 +27,7 @@ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਡਾਟਾਇੰਜਣ ਸੈੱਟ 
 msgid "Invalid destination: %1"
 msgstr "ਗਲਤ ਟਿਕਾਣਾ: %1"
 
-#: notificationsengine.cpp:88
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "ਅਣਜਾਣ ਐਪਲੀਕੇਸ਼ਨ"

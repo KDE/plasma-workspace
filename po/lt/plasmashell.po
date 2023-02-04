@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2022-12-28 02:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -110,73 +110,73 @@ msgstr ""
 "ar programinės įrangos surogatą.\n"
 "Patikrinkite ar jūsų grafikos tvarkyklės yra nustatytos teisingai."
 
-#: osd.cpp:54
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Garsas nutildytas"
 
-#: osd.cpp:72
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofonas nutildytas"
 
-#: osd.cpp:88
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 nutildyta"
 
-#: osd.cpp:110
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Jutiklinis kilimėlis įjungtas"
 
-#: osd.cpp:112
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Jutiklinis kilimėlis išjungtas"
 
-#: osd.cpp:119
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Belaidis internetas įjungtas"
 
-#: osd.cpp:121
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Belaidis internetas išjungtas"
 
-#: osd.cpp:128
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth įjungtas"
 
-#: osd.cpp:130
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth išjungtas"
 
-#: osd.cpp:137
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilusis internetas įjungtas"
 
-#: osd.cpp:139
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilusis internetas išjungtas"
 
-#: osd.cpp:147
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -184,7 +184,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekraninė klaviatūra įjungta"
 
-#: osd.cpp:150
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -208,57 +208,57 @@ msgstr "%1 %2 ties %3"
 msgid "Disconnected Screen %1"
 msgstr "Atjungtas ekranas %1"
 
-#: shellcorona.cpp:176 shellcorona.cpp:178
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Rodyti darbalaukį"
 
-#: shellcorona.cpp:178
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Slėpti darbalaukį"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Rodyti veiklų perjungiklį"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stabdyti dabartinę veiklą"
 
-#: shellcorona.cpp:210
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Perjungti į ankstesnę veiklą"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Perjungti į kitą veiklą"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Tvarkyti darbalaukius ir skydelius..."
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:1914
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:1950
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

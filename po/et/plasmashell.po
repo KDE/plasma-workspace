@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -106,73 +106,73 @@ msgstr ""
 "kasutada OpenGL 2.\n"
 "Palun kontrolli, kas graafikadraiverid on ikka korralikult häälestatud."
 
-#: osd.cpp:54
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Heli summutatud"
 
-#: osd.cpp:72
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon summutatud"
 
-#: osd.cpp:88
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 summutatud"
 
-#: osd.cpp:110
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Puutepadi sees"
 
-#: osd.cpp:112
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Puutepadi väljas"
 
-#: osd.cpp:119
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wi-Fi sees"
 
-#: osd.cpp:121
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wi-Fi väljas"
 
-#: osd.cpp:128
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth sees"
 
-#: osd.cpp:130
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth väljas"
 
-#: osd.cpp:137
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobiilinternet sees"
 
-#: osd.cpp:139
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobiilinternet väljas"
 
-#: osd.cpp:147
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -180,7 +180,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekraaniklaviatuur sees"
 
-#: osd.cpp:150
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -204,57 +204,57 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:176 shellcorona.cpp:178
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Näita töölauda"
 
-#: shellcorona.cpp:178
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Peida töölaud"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Näita tegevuste lülitajat"
 
-#: shellcorona.cpp:203
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Peata aktiivne tegevus"
 
-#: shellcorona.cpp:210
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Lülitu eelmisele tegevusele"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Lülitu järgmiseele tegevusele"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktiveeri ülesannete halduri kirje %1"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr ""
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1914
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisa paneel"
 
-#: shellcorona.cpp:1950
+#: shellcorona.cpp:1948
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
