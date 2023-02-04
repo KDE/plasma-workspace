@@ -51,6 +51,7 @@ private Q_SLOTS:
     void test_openCloseWindow();
     void test_modelData();
     void test_stackingOrder();
+    void test_lastActivated();
     void test_modelDataFromDesktopFile();
     void test_windowState();
 
@@ -369,6 +370,36 @@ void XWindowTasksModelTest::test_stackingOrder()
     firstWindow->close();
     QCoreApplication::processEvents();
     QTRY_VERIFY(index2.data(AbstractTasksModel::StackingOrder).toInt() < stackingOrder2);
+}
+
+void XWindowTasksModelTest::test_lastActivated()
+// Re-activate the window to update the last activated time
+{
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
+
+    QSignalSpy dataChangedSpy(&m_model, &XWindowTasksModel::dataChanged);
+    window->showMinimized();
+    dataChangedSpy.wait();
+    QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::IsMinimized);
+    }));
+    QTRY_VERIFY(index.data(AbstractTasksModel::IsMinimized).toBool());
+
+    window->showNormal();
+    window->raise();
+    window->requestActivate();
+    const QTime lastActivatedTime = QTime::currentTime();
+    dataChangedSpy.wait();
+    // There can be more than one dataChanged signal being emitted due to caching
+    QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
+    // The model doesn't notify data change stored under LastActivated role
+    QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+        return list.at(2).value<QVector<int>>().contains(AbstractTasksModel::LastActivated);
+    }));
+    qDebug() << lastActivatedTime.msecsSinceStartOfDay() << index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay();
+    QVERIFY(std::abs(lastActivatedTime.msecsSinceStartOfDay() - index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay()) < 1000);
 }
 
 void XWindowTasksModelTest::test_modelDataFromDesktopFile()
