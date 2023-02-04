@@ -461,6 +461,7 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
     QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
     if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
+        const QByteArray appDir = QByteArrayLiteral("APPDIR");
 
         const auto lines = environFile.readAll().split('\0');
         for (const QByteArray &line : lines) {
@@ -476,6 +477,14 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
                 KService::Ptr service = KService::serviceByDesktopPath(QString::fromUtf8(value));
                 if (service) {
                     return {service};
+                }
+                break;
+            } else if (key == appDir) {
+                // For AppImage
+                const QByteArray value = line.mid(equalsIdx + 1);
+                const auto desktopFileList = QDir(QString::fromUtf8(value)).entryInfoList(QStringList{QStringLiteral("*.desktop")}, QDir::Files);
+                if (!desktopFileList.empty()) {
+                    return {QExplicitlySharedDataPointer<KService>(new KService(desktopFileList[0].absoluteFilePath()))};
                 }
                 break;
             }
