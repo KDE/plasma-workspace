@@ -84,7 +84,7 @@ bool KSMServer::closeSession()
 
     const QDBusMessage callerContext = message();
 
-    auto conn = QSharedPointer<QMetaObject::Connection>::create(QMetaObject::Connection());
+    auto conn = std::make_shared<QMetaObject::Connection>(QMetaObject::Connection());
     *conn = connect(this, &KSMServer::logoutFinished, this, [callerContext, conn](bool sessionClosed) {
         auto reply = callerContext.createReply(sessionClosed);
         QDBusConnection::sessionBus().send(reply);

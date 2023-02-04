@@ -20,7 +20,7 @@ struct NotificationInhibiton {
     QString value;
 };
 
-typedef QSharedPointer<NotificationInhibiton> NotificationInhibitonPtr;
+using NotificationInhibitonPtr = std::shared_ptr<NotificationInhibiton>;
 
 /**
  *  Engine which provides data sources for notifications.

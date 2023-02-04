@@ -11,10 +11,10 @@
 #include <QDBusVariant>
 #include <QDateTime>
 #include <QObject>
-#include <QSharedPointer>
 #include <QString>
 #include <QTimer>
 #include <QUrl>
+#include <memory>
 
 #include <chrono>
 
@@ -104,7 +104,7 @@ private:
         return updateField(it->value<T>(), target, changeSignal);
     }
 
-    static QSharedPointer<KFilePlacesModel> createPlacesModel();
+    static std::shared_ptr<KFilePlacesModel> createPlacesModel();
 
     static QUrl localFileOrUrl(const QString &stringUrl);
     static QString linkify(const QUrl &url, const QString &caption);
@@ -169,7 +169,7 @@ private:
     bool m_expired = false;
     bool m_dismissed = false;
 
-    mutable QSharedPointer<KFilePlacesModel> m_placesModel;
+    mutable std::shared_ptr<KFilePlacesModel> m_placesModel;
 };
 
 } // namespace NotificationManager

@@ -9,6 +9,7 @@
 #include <QByteArray>
 #include <QHash>
 #include <QObject>
+#include <memory>
 
 class HistoryItem;
 class HistoryModel;
@@ -27,7 +28,7 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert(QSharedPointer<HistoryItem> item);
+    void insert(std::shared_ptr<HistoryItem> item);
 
     /**
      * Inserts items into clipboard without any checks
@@ -35,32 +36,32 @@ public:
      * Don't use this unless you're reasonable the list
      * should be reset.
      */
-    void clearAndBatchInsert(const QVector<QSharedPointer<HistoryItem>> &items);
+    void clearAndBatchInsert(const QVector<std::shared_ptr<HistoryItem>> &items);
 
     /**
      * Remove (first) history item equal to item from history
      */
-    void remove(const QSharedPointer<const HistoryItem> &item);
+    void remove(std::shared_ptr<const HistoryItem> item);
 
     /**
      * Traversal: Get first item
      */
-    QSharedPointer<const HistoryItem> first() const;
+    std::shared_ptr<const HistoryItem> first() const;
 
     /**
      * Get item identified by uuid
      */
-    QSharedPointer<const HistoryItem> find(const QByteArray &uuid) const;
+    std::shared_ptr<const HistoryItem> find(const QByteArray &uuid) const;
 
     /**
      * @return next item in cycle, or null if at end
      */
-    QSharedPointer<const HistoryItem> nextInCycle() const;
+    std::shared_ptr<const HistoryItem> nextInCycle() const;
 
     /**
      * @return previous item in cycle, or null if at top
      */
-    QSharedPointer<const HistoryItem> prevInCycle() const;
+    std::shared_ptr<const HistoryItem> prevInCycle() const;
 
     /**
      * True if no history items

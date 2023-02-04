@@ -14,7 +14,7 @@ namespace NotificationManager
 class Q_DECL_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
 public:
-    using Ptr = QSharedPointer<NotificationsModel>;
+    using Ptr = std::shared_ptr<NotificationsModel>;
     static Ptr createNotificationsModel();
     void expire(uint notificationId) override;
     void close(uint notificationId) override;

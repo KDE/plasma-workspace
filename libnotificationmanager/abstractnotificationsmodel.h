@@ -8,9 +8,9 @@
 
 #include <QAbstractListModel>
 #include <QDateTime>
-#include <QScopedPointer>
-#include <QSharedPointer>
 #include <QWindow>
+
+#include <memory>
 
 #include "notification.h"
 #include "notifications.h"
@@ -70,7 +70,7 @@ private:
     friend class NotificationTest;
 
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 
     Q_DISABLE_COPY(AbstractNotificationsModel)
 };

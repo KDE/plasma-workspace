@@ -6,8 +6,8 @@
 #pragma once
 
 #include <QHash>
-#include <QSharedPointer>
 #include <QStringList>
+#include <memory>
 
 #include <KSharedConfig>
 
@@ -35,8 +35,8 @@ public:
      * Checks a given string whether it matches any of the user-defined criteria.
      * If it does, the configured action will be executed.
      */
-    void checkNewData(QSharedPointer<const HistoryItem> item);
-    void invokeAction(QSharedPointer<const HistoryItem> item);
+    void checkNewData(std::shared_ptr<const HistoryItem> item);
+    void invokeAction(std::shared_ptr<const HistoryItem> item);
 
     ActionList actionList() const
     {
@@ -78,13 +78,13 @@ private:
     const ActionList &matchingActions(const QString &, bool automatically_invoked);
     void execute(const ClipAction *action, int commandIdx) const;
     bool isAvoidedWindow() const;
-    void actionMenu(QSharedPointer<const HistoryItem> item, bool automatically_invoked);
+    void actionMenu(std::shared_ptr<const HistoryItem> item, bool automatically_invoked);
     void matchingMimeActions(const QString &clipData);
 
     ActionList m_myActions;
     ActionList m_myMatches;
     QStringList m_myAvoidWindows;
-    QSharedPointer<const HistoryItem> m_myClipItem;
+    std::shared_ptr<const HistoryItem> m_myClipItem;
     ClipAction *m_myCurrentAction;
 
     // holds mappings of menu action IDs to action commands (action+cmd index in it)

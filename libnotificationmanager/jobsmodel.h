@@ -7,8 +7,7 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QScopedPointer>
-#include <QSharedPointer>
+#include <memory>
 
 #include "notificationmanager_export.h"
 #include "notifications.h"
@@ -27,7 +26,7 @@ class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
 public:
     ~JobsModel() override;
 
-    using Ptr = QSharedPointer<JobsModel>;
+    using Ptr = std::shared_ptr<JobsModel>;
     static Ptr createJobsModel();
 
     /**

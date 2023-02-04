@@ -23,15 +23,15 @@ Server::Server(QObject *parent)
     : QObject(parent)
     , d(new ServerPrivate(this))
 {
-    connect(d.data(), &ServerPrivate::validChanged, this, &Server::validChanged);
-    connect(d.data(), &ServerPrivate::inhibitedChanged, this, [this] {
+    connect(d.get(), &ServerPrivate::validChanged, this, &Server::validChanged);
+    connect(d.get(), &ServerPrivate::inhibitedChanged, this, [this] {
         Q_EMIT inhibitedChanged(inhibited());
     });
-    connect(d.data(), &ServerPrivate::externalInhibitedChanged, this, [this] {
+    connect(d.get(), &ServerPrivate::externalInhibitedChanged, this, [this] {
         Q_EMIT inhibitedByApplicationChanged(inhibitedByApplication());
     });
-    connect(d.data(), &ServerPrivate::externalInhibitionsChanged, this, &Server::inhibitionApplicationsChanged);
-    connect(d.data(), &ServerPrivate::serviceOwnershipLost, this, &Server::serviceOwnershipLost);
+    connect(d.get(), &ServerPrivate::externalInhibitionsChanged, this, &Server::inhibitionApplicationsChanged);
+    connect(d.get(), &ServerPrivate::serviceOwnershipLost, this, &Server::serviceOwnershipLost);
 }
 
 Server::~Server() = default;
@@ -71,7 +71,7 @@ void Server::invokeAction(uint notificationId,
 {
     if (KWindowSystem::isPlatformWayland()) {
         const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
-        auto conn = QSharedPointer<QMetaObject::Connection>::create();
+        auto conn = std::shared_ptr<QMetaObject::Connection>();
         *conn = connect(KWindowSystem::self(),
                         &KWindowSystem::xdgActivationTokenArrived,
                         this,

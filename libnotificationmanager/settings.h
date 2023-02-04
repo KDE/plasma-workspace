@@ -11,8 +11,8 @@
 #include <KSharedConfig>
 
 #include <QDateTime>
-#include <QScopedPointer>
 #include <QString>
+#include <memory>
 
 #include "notificationmanager_export.h"
 
@@ -334,7 +334,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 } // namespace NotificationManager

@@ -63,7 +63,7 @@ void KuiserverEngine::init()
     // TODO see if this causes any issues when/if other processes are using applicationjobs engine, e.g. Latte Dock
     m_jobsModel->init();
 
-    connect(m_jobsModel.data(), &Notifications::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
+    connect(m_jobsModel.get(), &Notifications::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
             const QModelIndex idx = m_jobsModel->index(first, 0, parent);
             Job *job = idx.data(Notifications::JobDetailsRole).value<Job *>();
@@ -71,7 +71,7 @@ void KuiserverEngine::init()
         }
     });
 
-    connect(m_jobsModel.data(), &Notifications::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int first, int last) {
+    connect(m_jobsModel.get(), &Notifications::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
             const QModelIndex idx = m_jobsModel->index(first, 0, parent);
             Job *job = idx.data(Notifications::JobDetailsRole).value<Job *>();

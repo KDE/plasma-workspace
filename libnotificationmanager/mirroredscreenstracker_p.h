@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QObject>
-#include <QSharedPointer>
+#include <memory>
 
 #include <KScreen/Config>
 
@@ -25,7 +25,7 @@ class MirroredScreensTracker : public QObject
 public:
     ~MirroredScreensTracker();
 
-    using Ptr = QSharedPointer<MirroredScreensTracker>;
+    using Ptr = std::shared_ptr<MirroredScreensTracker>;
     static Ptr createTracker();
 
     bool screensMirrored() const;

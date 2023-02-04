@@ -7,6 +7,7 @@
 
 #include <QAbstractListModel>
 #include <QRecursiveMutex>
+#include <memory>
 
 class HistoryItem;
 
@@ -45,8 +46,8 @@ public:
     QModelIndex indexOf(const QByteArray &uuid) const;
     QModelIndex indexOf(const HistoryItem *item) const;
 
-    void insert(QSharedPointer<HistoryItem> item);
-    void clearAndBatchInsert(const QVector<QSharedPointer<HistoryItem>> &items);
+    void insert(std::shared_ptr<HistoryItem> item);
+    void clearAndBatchInsert(const QVector<std::shared_ptr<HistoryItem>> &items);
 
     QRecursiveMutex *mutex()
     {
@@ -55,7 +56,7 @@ public:
 
 private:
     void moveToTop(int row);
-    QList<QSharedPointer<HistoryItem>> m_items;
+    QList<std::shared_ptr<HistoryItem>> m_items;
     int m_maxSize;
     bool m_displayImages;
     QRecursiveMutex m_mutex;

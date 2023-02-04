@@ -763,7 +763,7 @@ void TaskGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         d->rebuildMap();
 
         using namespace std::placeholders;
-        auto dd = d.data();
+        auto dd = d.get();
         connect(sourceModel,
                 &QSortFilterProxyModel::rowsAboutToBeInserted,
                 this,

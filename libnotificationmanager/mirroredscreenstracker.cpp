@@ -35,13 +35,13 @@ MirroredScreensTracker::~MirroredScreensTracker() = default;
 
 MirroredScreensTracker::Ptr MirroredScreensTracker::createTracker()
 {
-    static QWeakPointer<MirroredScreensTracker> s_instance;
-    if (!s_instance) {
-        QSharedPointer<MirroredScreensTracker> ptr(new MirroredScreensTracker());
-        s_instance = ptr.toWeakRef();
+    static std::weak_ptr<MirroredScreensTracker> s_instance;
+    if (s_instance.expired()) {
+        std::shared_ptr<MirroredScreensTracker> ptr(new MirroredScreensTracker());
+        s_instance = ptr;
         return ptr;
     }
-    return s_instance.toStrongRef();
+    return s_instance.lock();
 }
 
 bool MirroredScreensTracker::screensMirrored() const

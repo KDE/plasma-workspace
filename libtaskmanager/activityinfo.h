@@ -8,6 +8,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 #include "taskmanager_export.h"
 
 namespace TaskManager
@@ -78,7 +80,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

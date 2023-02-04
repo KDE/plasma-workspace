@@ -19,13 +19,13 @@ using namespace NotificationManager;
 
 NotificationsModel::Ptr NotificationsModel::createNotificationsModel()
 {
-    static QWeakPointer<NotificationsModel> s_instance;
-    if (!s_instance) {
-        QSharedPointer<NotificationsModel> ptr(new NotificationsModel());
-        s_instance = ptr.toWeakRef();
+    static std::weak_ptr<NotificationsModel> s_instance;
+    if (s_instance.expired()) {
+        std::shared_ptr<NotificationsModel> ptr(new NotificationsModel());
+        s_instance = ptr;
         return ptr;
     }
-    return s_instance.toStrongRef();
+    return s_instance.lock();
 }
 
 NotificationsModel::NotificationsModel()

@@ -33,24 +33,24 @@ void HistoryModelTest::testSetMaxSize()
     QCOMPARE(history->maxSize(), 0);
 
     // insert an item - should still be empty
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foo"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
     QCOMPARE(history->rowCount(), 0);
 
     // now it should insert again
     history->setMaxSize(1);
     QCOMPARE(history->maxSize(), 1);
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foo"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
     QCOMPARE(history->rowCount(), 1);
 
     // insert another item, foo should get removed
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("bar"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("bar")));
     QCOMPARE(history->rowCount(), 1);
     QCOMPARE(history->data(history->index(0, 0)).toString(), QLatin1String("bar"));
 
     // I don't trust the model, add more items
     history->setMaxSize(10);
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foo"))));
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foobar"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foobar")));
     QCOMPARE(history->rowCount(), 3);
     QCOMPARE(history->data(history->index(0, 0)).toString(), QLatin1String("foobar"));
     QCOMPARE(history->data(history->index(1, 0)).toString(), QLatin1String("foo"));
@@ -77,13 +77,13 @@ void HistoryModelTest::testInsertRemove()
     const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
 
     // let's insert a few items
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(fooText)));
+    history->insert(std::make_shared<HistoryStringItem>(fooText));
     QModelIndex index = history->index(0, 0);
     QCOMPARE(index.data().toString(), fooText);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(HistoryModel::UuidRole).toByteArray());
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(HistoryModel::UuidRole).toByteArray());
 
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(barText)));
+    history->insert(std::make_shared<HistoryStringItem>(barText));
     QCOMPARE(index.data().toString(), barText);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
@@ -91,7 +91,7 @@ void HistoryModelTest::testInsertRemove()
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
 
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(fooBarText)));
+    history->insert(std::make_shared<HistoryStringItem>(fooBarText));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooBarText);
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
@@ -104,7 +104,7 @@ void HistoryModelTest::testInsertRemove()
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
 
     // insert one again - it should be moved to top
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(barText)));
+    history->insert(std::make_shared<HistoryStringItem>(barText));
     QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
@@ -174,9 +174,9 @@ void HistoryModelTest::testClear()
     QCOMPARE(history->rowCount(), 0);
 
     // insert some items
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foo"))));
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("bar"))));
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foobar"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("bar")));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foobar")));
     history->moveToTop(QCryptographicHash::hash(QByteArrayLiteral("bar"), QCryptographicHash::Sha1));
     QCOMPARE(history->rowCount(), 3);
 
@@ -195,7 +195,7 @@ void HistoryModelTest::testIndexOf()
     QVERIFY(!history->indexOf(QByteArray()).isValid());
 
     // insert some items
-    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(QStringLiteral("foo"))));
+    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
     QVERIFY(!history->indexOf(QByteArrayLiteral("whatever")).isValid());
     QVERIFY(!history->indexOf(QByteArray()).isValid());
     const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
@@ -228,7 +228,7 @@ void HistoryModelTest::testType()
 
     QFETCH(HistoryItem *, item);
     QFETCH(HistoryItemType, expectedType);
-    history->insert(QSharedPointer<HistoryItem>(item));
+    history->insert(std::shared_ptr<HistoryItem>(item));
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
 }
 

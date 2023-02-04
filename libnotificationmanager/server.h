@@ -225,7 +225,7 @@ private:
     Q_DISABLE_COPY(Server)
     // FIXME we also need to disable move and other stuff?
 
-    QScopedPointer<ServerPrivate> d;
+    std::unique_ptr<ServerPrivate> d;
 };
 
 } // namespace NotificationManager

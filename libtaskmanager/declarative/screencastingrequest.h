@@ -58,5 +58,5 @@ private:
     void adopt(ScreencastingStream *stream);
     void setNodeid(uint nodeId);
 
-    QScopedPointer<ScreencastingRequestPrivate> d;
+    std::unique_ptr<ScreencastingRequestPrivate> d;
 };

@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <memory>
+
 #include "abstractwindowtasksmodel.h"
 
 #include "taskmanager_export.h"
@@ -218,7 +220,7 @@ public:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

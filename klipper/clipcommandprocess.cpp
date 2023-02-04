@@ -46,7 +46,7 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction &action,
         connect(this, &QIODevice::readyRead, this, &ClipCommandProcess::slotStdOutputAvailable);
     }
     if (command.output != ClipCommand::REPLACE) {
-        m_historyItem.clear();
+        m_historyItem.reset();
     }
 }
 

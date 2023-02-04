@@ -57,13 +57,13 @@ JobsModel::~JobsModel() = default;
 
 JobsModel::Ptr JobsModel::createJobsModel()
 {
-    static QWeakPointer<JobsModel> s_instance;
-    if (!s_instance) {
-        QSharedPointer<JobsModel> ptr(new JobsModel());
-        s_instance = ptr.toWeakRef();
+    static std::weak_ptr<JobsModel> s_instance;
+    if (s_instance.expired()) {
+        std::shared_ptr<JobsModel> ptr(new JobsModel());
+        s_instance = ptr;
         return ptr;
     }
-    return s_instance.toStrongRef();
+    return s_instance.lock();
 }
 
 bool JobsModel::init()

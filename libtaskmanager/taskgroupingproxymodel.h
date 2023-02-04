@@ -8,6 +8,8 @@
 
 #include <QAbstractProxyModel>
 
+#include <memory>
+
 #include "abstracttasksmodeliface.h"
 #include "tasksmodel.h"
 
@@ -378,7 +380,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 
     Q_PRIVATE_SLOT(d, void sourceRowsAboutToBeInserted(const QModelIndex &parent, int first, int last))
     Q_PRIVATE_SLOT(d, void sourceRowsInserted(const QModelIndex &parent, int start, int end))

@@ -480,7 +480,7 @@ bool Klipper::loadHistory()
     delete[] version;
 
     QVector<HistoryItemPtr> items;
-    for (HistoryItemPtr item = HistoryItem::create(history_stream); !item.isNull(); item = HistoryItem::create(history_stream)) {
+    for (HistoryItemPtr item = HistoryItem::create(history_stream); item; item = HistoryItem::create(history_stream)) {
         items.append(item);
     }
 
@@ -525,7 +525,7 @@ void Klipper::saveHistory(bool empty)
         HistoryItemConstPtr item = history()->first();
         if (item) {
             do {
-                history_stream << item.data();
+                history_stream << item.get();
                 item = HistoryItemConstPtr(history()->find(item->next_uuid()));
             } while (item != history()->first());
         }
@@ -620,7 +620,7 @@ void Klipper::slotPopupMenu()
 
 void Klipper::slotRepeatAction()
 {
-    auto top = qSharedPointerCast<const HistoryStringItem>(history()->first());
+    auto top = std::static_pointer_cast<const HistoryStringItem>(history()->first());
     if (top) {
         m_myURLGrabber->invokeAction(top);
     }
@@ -834,7 +834,7 @@ void Klipper::checkClipData(bool selectionMode)
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if (m_bURLGrabber && item && data->hasText()) {
-        m_myURLGrabber->checkNewData(qSharedPointerConstCast<const HistoryItem>(item));
+        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
         // text all the time (e.g. because XFixes is not available and the application
@@ -939,7 +939,7 @@ void Klipper::updateTimestamp()
 #endif
 }
 
-void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
+void Klipper::editData(std::shared_ptr<const HistoryItem> item)
 {
     QPointer<QDialog> dlg(new QDialog());
     dlg->setWindowTitle(i18n("Edit Contents"));
@@ -1005,7 +1005,7 @@ private:
     std::unique_ptr<Prison::AbstractBarcode> m_barcode;
 };
 
-void Klipper::showBarcode(const QSharedPointer<const HistoryItem> &item)
+void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
 {
     using namespace Prison;
     QPointer<QDialog> dlg(new QDialog());

@@ -7,7 +7,7 @@
 #pragma once
 
 #include <KProcess>
-#include <QSharedPointer>
+#include <memory>
 
 class ClipAction;
 class History;
@@ -22,13 +22,13 @@ public:
                        const ClipCommand &command,
                        const QString &clip,
                        History *history = nullptr,
-                       QSharedPointer<const HistoryItem> original_item = QSharedPointer<const HistoryItem>());
+                       std::shared_ptr<const HistoryItem> original_item = nullptr);
 public Q_SLOTS:
     void slotStdOutputAvailable();
     void slotFinished(int exitCode, QProcess::ExitStatus newState);
 
 private:
     History *m_history;
-    QSharedPointer<const HistoryItem> m_historyItem;
+    std::shared_ptr<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
 };

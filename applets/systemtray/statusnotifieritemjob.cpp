@@ -7,7 +7,7 @@
 
 #include "statusnotifieritemjob.h"
 #include <KWindowSystem>
-#include <QSharedPointer>
+#include <memory>
 
 StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(source->objectName(), operation, parameters, parent)
@@ -31,7 +31,7 @@ void StatusNotifierItemJob::start()
 
     QWindow *window = nullptr;
     const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
-    auto conn = QSharedPointer<QMetaObject::Connection>::create();
+    auto conn = std::make_shared<QMetaObject::Connection>();
     *conn = connect(KWindowSystem::self(), &KWindowSystem::xdgActivationTokenArrived, this, [this, launchedSerial, conn](quint32 serial, const QString &token) {
         if (serial == launchedSerial) {
             disconnect(*conn);

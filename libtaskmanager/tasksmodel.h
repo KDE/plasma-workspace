@@ -9,6 +9,8 @@
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
 
+#include <memory>
+
 #include "abstracttasksmodeliface.h"
 
 #include "taskmanager_export.h"
@@ -929,7 +931,7 @@ private:
     class Private;
     class TasksModelLessThan;
     friend class TasksModelLessThan;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

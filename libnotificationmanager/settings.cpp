@@ -162,7 +162,7 @@ Settings::Settings(QObject *parent)
 
     if (d->dndSettings.whenScreensMirrored()) {
         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
-        connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
+        connect(d->mirroredScreensTracker.get(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
     }
 }
 
@@ -286,7 +286,7 @@ void Settings::setLive(bool live)
 
     if (live) {
         d->watcher = KConfigWatcher::create(d->config);
-        d->watcherConnection = connect(d->watcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        d->watcherConnection = connect(d->watcher.get(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
             Q_UNUSED(names);
 
             if (group.name() == QLatin1String("DoNotDisturb")) {
@@ -297,7 +297,7 @@ void Settings::setLive(bool live)
                     if (!d->mirroredScreensTracker) {
                         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
                         emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
-                        connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
+                        connect(d->mirroredScreensTracker.get(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
                     }
                 } else if (d->mirroredScreensTracker) {
                     emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();

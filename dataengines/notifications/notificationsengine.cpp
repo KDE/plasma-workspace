@@ -218,14 +218,14 @@ void NotificationsEngine::configureNotification(const QString &appName, const QS
     }
 }
 
-QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(const QString &hint, const QString &value)
+NotificationInhibitonPtr NotificationsEngine::createInhibition(const QString &hint, const QString &value)
 {
     auto ni = new NotificationInhibiton;
     ni->hint = hint;
     ni->value = value;
 
     QPointer<NotificationsEngine> guard(this);
-    QSharedPointer<NotificationInhibiton> rc(ni, [this, guard](NotificationInhibiton *ni) {
+    NotificationInhibitonPtr rc(ni, [this, guard](NotificationInhibiton *ni) {
         if (guard) {
             m_inhibitions.removeOne(ni);
         }

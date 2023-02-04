@@ -13,8 +13,8 @@ class QMimeData;
 class QDataStream;
 
 class HistoryItem;
-typedef QSharedPointer<HistoryItem> HistoryItemPtr;
-typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
+typedef std::shared_ptr<HistoryItem> HistoryItemPtr;
+typedef std::shared_ptr<const HistoryItem> HistoryItemConstPtr;
 
 enum class HistoryItemType {
     Text,

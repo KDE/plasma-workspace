@@ -132,7 +132,7 @@ int PopupProxy::insertFromSpill(int index)
     }
     do {
         if (m_filter.match(item->text()).hasMatch()) {
-            tryInsertItem(item.data(), remainingHeight, index++);
+            tryInsertItem(item.get(), remainingHeight, index++);
             count++;
         }
         item = history->find(item->next_uuid());

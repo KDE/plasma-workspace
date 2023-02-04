@@ -55,7 +55,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    QSharedPointer<HistoryItem> item = m_items.at(index.row());
+    std::shared_ptr<HistoryItem> item = m_items.at(index.row());
 
     switch (role) {
     case Qt::DisplayRole:
@@ -63,7 +63,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case Qt::DecorationRole:
         return item->image();
     case HistoryItemConstPtrRole:
-        return QVariant::fromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
+        return QVariant::fromValue<HistoryItemConstPtr>(std::const_pointer_cast<const HistoryItem>(item));
     case UuidRole:
         return item->uuid();
     case TypeRole:
@@ -120,12 +120,12 @@ QModelIndex HistoryModel::indexOf(const HistoryItem *item) const
     return indexOf(item->uuid());
 }
 
-void HistoryModel::insert(QSharedPointer<HistoryItem> item)
+void HistoryModel::insert(std::shared_ptr<HistoryItem> item)
 {
-    if (item.isNull()) {
+    if (!item) {
         return;
     }
-    const QModelIndex existingItem = indexOf(item.data());
+    const QModelIndex existingItem = indexOf(item.get());
     if (existingItem.isValid()) {
         // move to top
         moveToTop(existingItem.row());
@@ -173,7 +173,7 @@ void HistoryModel::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
     m_items.reserve(numOfItemsToBeInserted);
 
     for (int i = 0; i < numOfItemsToBeInserted; i++) {
-        if (items[i].isNull()) {
+        if (!items[i]) {
             continue;
         }
 

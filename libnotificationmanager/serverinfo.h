@@ -9,8 +9,8 @@
 #include "notificationmanager_export.h"
 
 #include <QObject>
-#include <QScopedPointer>
 #include <QString>
+#include <memory>
 
 namespace NotificationManager
 {
@@ -61,7 +61,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 } // namespace NotificationManager

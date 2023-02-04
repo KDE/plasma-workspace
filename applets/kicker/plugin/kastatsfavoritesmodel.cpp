@@ -75,7 +75,7 @@ public:
             if (id.isEmpty())
                 return;
 
-            QSharedPointer<AbstractEntry> entry = nullptr;
+            std::shared_ptr<AbstractEntry> entry = nullptr;
 
             if (parent->m_itemEntries.contains(id)) {
                 entry = parent->m_itemEntries[id];
@@ -86,7 +86,7 @@ public:
             }
 
             if (!entry || !entry->isValid()) {
-                qCWarning(KICKER_DEBUG) << "Entry is not valid" << id << entry;
+                qCWarning(KICKER_DEBUG) << "Entry is not valid" << id << entry.get();
                 m_id = id;
                 return;
             }
@@ -102,7 +102,7 @@ public:
             }
 
             // If this is an application, use the applications:-format url
-            auto appEntry = dynamic_cast<AppEntry *>(entry.data());
+            auto appEntry = dynamic_cast<AppEntry *>(entry.get());
             if (appEntry && !appEntry->menuId().isEmpty()) {
                 m_id = QLatin1String("applications:") + appEntry->menuId();
                 return;
@@ -146,9 +146,9 @@ public:
         return NormalizedId(this, id);
     }
 
-    QSharedPointer<AbstractEntry> entryForResource(const QString &resource, const QString &mimeType = QString()) const
+    std::shared_ptr<AbstractEntry> entryForResource(const QString &resource, const QString &mimeType = QString()) const
     {
-        using SP = QSharedPointer<AbstractEntry>;
+        using SP = std::shared_ptr<AbstractEntry>;
 
         const auto agent = agentForUrl(resource);
 
@@ -384,7 +384,7 @@ public:
         m_items.removeAt(index);
 
         // Removing the entry from the cache
-        QMutableHashIterator<QString, QSharedPointer<AbstractEntry>> i(m_itemEntries);
+        QMutableHashIterator<QString, std::shared_ptr<AbstractEntry>> i(m_itemEntries);
         while (i.hasNext()) {
             i.next();
             if (i.value() == entry) {
@@ -508,7 +508,7 @@ public:
     QString m_clientId;
 
     QVector<NormalizedId> m_items;
-    QHash<QString, QSharedPointer<AbstractEntry>> m_itemEntries;
+    QHash<QString, std::shared_ptr<AbstractEntry>> m_itemEntries;
     QStringList m_ignoredItems;
 };
 

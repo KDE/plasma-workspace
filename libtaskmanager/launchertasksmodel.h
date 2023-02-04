@@ -8,6 +8,8 @@
 
 #include "abstracttasksmodel.h"
 
+#include <memory>
+
 #include "taskmanager_export.h"
 
 #include <QUrl>
@@ -167,7 +169,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

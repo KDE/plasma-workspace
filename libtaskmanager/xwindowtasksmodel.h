@@ -13,6 +13,8 @@
 #include <QMimeData>
 #include <qwindowdefs.h>
 
+#include <memory>
+
 #include <netwm.h>
 
 namespace TaskManager
@@ -223,7 +225,7 @@ public:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

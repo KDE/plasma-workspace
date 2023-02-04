@@ -90,7 +90,7 @@ void NotificationTest::compressNotificationRemoval()
 
     auto model = NotificationsModel::createNotificationsModel();
 
-    QSignalSpy rowsRemovedSpy(model.data(), &QAbstractItemModel::rowsRemoved);
+    QSignalSpy rowsRemovedSpy(model.get(), &QAbstractItemModel::rowsRemoved);
     QVERIFY(rowsRemovedSpy.isValid());
 
     for (uint i = 1; i <= notificationCount; ++i) {

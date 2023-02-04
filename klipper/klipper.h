@@ -100,8 +100,8 @@ public:
         return m_popup;
     }
 
-    void editData(const QSharedPointer<const HistoryItem> &item);
-    void showBarcode(const QSharedPointer<const HistoryItem> &item);
+    void editData(std::shared_ptr<const HistoryItem> item);
+    void showBarcode(std::shared_ptr<const HistoryItem> item);
 
 public Q_SLOTS:
     void saveSession();
@@ -146,7 +146,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    QSharedPointer<HistoryItem> applyClipChanges(const QMimeData *data);
+    std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
 
     void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
@@ -158,7 +158,7 @@ protected:
 
 Q_SIGNALS:
     void passivePopup(const QString &caption, const QString &text);
-    void editFinished(QSharedPointer<const HistoryItem> item, int result);
+    void editFinished(std::shared_ptr<const HistoryItem> item, int result);
 
 public Q_SLOTS:
     void slotPopupMenu();

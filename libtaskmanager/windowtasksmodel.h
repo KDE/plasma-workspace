@@ -8,6 +8,8 @@
 
 #include <QIdentityProxyModel>
 
+#include <memory>
+
 #include "abstracttasksproxymodeliface.h"
 
 #include "taskmanager_export.h"
@@ -42,7 +44,7 @@ protected:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 }

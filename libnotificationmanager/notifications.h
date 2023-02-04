@@ -7,9 +7,10 @@
 #pragma once
 
 #include <QQmlParserStatus>
-#include <QScopedPointer>
 #include <QSortFilterProxyModel>
 #include <QWindow>
+
+#include <memory>
 
 #include "notificationmanager_export.h"
 
@@ -564,7 +565,7 @@ protected:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 } // namespace NotificationManager

@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <memory>
+
 #include "abstracttasksmodel.h"
 
 namespace TaskManager
@@ -23,7 +25,7 @@ public:
 
 private:
     class Private;
-    QScopedPointer<Private> d;
+    std::unique_ptr<Private> d;
 };
 
 } // namespace TaskManager

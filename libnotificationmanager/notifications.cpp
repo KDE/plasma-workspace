@@ -9,7 +9,7 @@
 #include <QConcatenateTablesProxyModel>
 #include <QDebug>
 #include <QMetaEnum>
-#include <QSharedPointer>
+#include <memory>
 
 #include <KDescendantsProxyModel>
 
@@ -65,7 +65,7 @@ public:
     // NOTE when you add or re-arrange models make sure to update mapFromModel()!
     NotificationsModel::Ptr notificationsModel;
     JobsModel::Ptr jobsModel;
-    QSharedPointer<Settings> settings() const;
+    std::shared_ptr<Settings> settings() const;
 
     QConcatenateTablesProxyModel *notificationsAndJobsModel = nullptr;
 
@@ -96,24 +96,23 @@ void Notifications::Private::initSourceModels()
 
     if (showNotifications && !notificationsModel) {
         notificationsModel = NotificationsModel::createNotificationsModel();
-        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
-        connect(notificationsModel.data(), &NotificationsModel::windowChanged, q, &Notifications::windowChanged);
-        connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
+        notificationsAndJobsModel->addSourceModel(notificationsModel.get());
+        connect(notificationsModel.get(), &NotificationsModel::lastReadChanged, q, [this] {
             updateCount();
             Q_EMIT q->lastReadChanged();
         });
     } else if (!showNotifications && notificationsModel) {
-        notificationsAndJobsModel->removeSourceModel(notificationsModel.data());
-        disconnect(notificationsModel.data(), nullptr, q, nullptr); // disconnect all
+        notificationsAndJobsModel->removeSourceModel(notificationsModel.get());
+        disconnect(notificationsModel.get(), nullptr, q, nullptr); // disconnect all
         notificationsModel = nullptr;
     }
 
     if (showJobs && !jobsModel) {
         jobsModel = JobsModel::createJobsModel();
-        notificationsAndJobsModel->addSourceModel(jobsModel.data());
+        notificationsAndJobsModel->addSourceModel(jobsModel.get());
         jobsModel->init();
     } else if (!showJobs && jobsModel) {
-        notificationsAndJobsModel->removeSourceModel(jobsModel.data());
+        notificationsAndJobsModel->removeSourceModel(jobsModel.get());
         jobsModel = nullptr;
     }
 }
@@ -346,7 +345,7 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
                     break;
                 }
             } else if (auto *concatenateModel = qobject_cast<QConcatenateTablesProxyModel *>(model)) {
-                if (idxModel == notificationsModel.data() || idxModel == jobsModel.data()) {
+                if (idxModel == notificationsModel.get() || idxModel == jobsModel.get()) {
                     resolvedIdx = concatenateModel->mapFromSource(resolvedIdx);
                     found = true;
                     break;
@@ -361,15 +360,15 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
     return resolvedIdx;
 }
 
-QSharedPointer<Settings> Notifications::Private::settings() const
+std::shared_ptr<Settings> Notifications::Private::settings() const
 {
-    static QWeakPointer<Settings> s_instance;
-    if (!s_instance) {
-        QSharedPointer<Settings> ptr(new Settings());
-        s_instance = ptr.toWeakRef();
+    static std::weak_ptr<Settings> s_instance;
+    if (!s_instance.expired()) {
+        std::shared_ptr<Settings> ptr(new Settings());
+        s_instance = ptr;
         return ptr;
     }
-    return s_instance.toStrongRef();
+    return s_instance.lock();
 }
 
 Notifications::Notifications(QObject *parent)
@@ -664,7 +663,7 @@ void Notifications::expire(const QModelIndex &idx)
         d->notificationsModel->expire(Private::notificationId(idx));
         break;
     case Notifications::JobType:
-        d->jobsModel->expire(Utils::mapToModel(idx, d->jobsModel.data()));
+        d->jobsModel->expire(Utils::mapToModel(idx, d->jobsModel.get()));
         break;
     default:
         Q_UNREACHABLE();
@@ -699,7 +698,7 @@ void Notifications::close(const QModelIndex &idx)
         d->notificationsModel->close(Private::notificationId(idx));
         break;
     case Notifications::JobType:
-        d->jobsModel->close(Utils::mapToModel(idx, d->jobsModel.data()));
+        d->jobsModel->close(Utils::mapToModel(idx, d->jobsModel.get()));
         break;
     default:
         Q_UNREACHABLE();
@@ -767,21 +766,21 @@ void Notifications::stopTimeout(const QModelIndex &idx)
 void Notifications::suspendJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->suspend(Utils::mapToModel(idx, d->jobsModel.data()));
+        d->jobsModel->suspend(Utils::mapToModel(idx, d->jobsModel.get()));
     }
 }
 
 void Notifications::resumeJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->resume(Utils::mapToModel(idx, d->jobsModel.data()));
+        d->jobsModel->resume(Utils::mapToModel(idx, d->jobsModel.get()));
     }
 }
 
 void Notifications::killJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->kill(Utils::mapToModel(idx, d->jobsModel.data()));
+        d->jobsModel->kill(Utils::mapToModel(idx, d->jobsModel.get()));
     }
 }
 
