@@ -190,9 +190,6 @@ ColumnLayout {
             }
         }
 
-        // Need to manually set the parent when using this in a Plasma config dialog
-        parent: timeZonesPage.parent
-
         header: ColumnLayout {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 25
 
