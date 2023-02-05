@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:49+0000\n"
+"POT-Creation-Date: 2023-02-05 02:43+0000\n"
 "PO-Revision-Date: 2016-08-04 13:04+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -339,12 +339,12 @@ msgid ""
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:209
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. 'Local' was enabled "
@@ -356,12 +356,12 @@ msgstr ""
 "Πρέπει να ενεργοποιηθεί τουλάχιστον μια ζώνη ώρας. Η 'Τοπική' έχει "
 "ενεργοποιηθεί αυτόματα."
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2"
 msgstr ""

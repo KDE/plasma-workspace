@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:49+0000\n"
+"POT-Creation-Date: 2023-02-05 02:43+0000\n"
 "PO-Revision-Date: 2022-12-14 10:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -339,12 +339,12 @@ msgstr ""
 "El uso de esta función no cambia la zona horaria del sistema. Cuando viaje, "
 "cambie la zona horaria del sistema en lugar de esto."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Añadir más zonas horarias"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -353,12 +353,12 @@ msgstr ""
 "Necesita activar al menos una zona horaria. Su zona horaria local se ha "
 "activado automáticamente."
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

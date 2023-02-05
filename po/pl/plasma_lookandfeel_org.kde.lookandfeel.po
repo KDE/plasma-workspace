@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-18 00:56+0000\n"
-"PO-Revision-Date: 2022-10-09 10:14+0200\n"
+"PO-Revision-Date: 2023-02-04 09:08+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -92,7 +92,7 @@ msgstr "Nie udało się zalogować"
 #: ../sddm-theme/SessionButton.qml:18
 #, kde-format
 msgid "Desktop Session: %1"
-msgstr "Sesja pulpitu: %1"
+msgstr "Posiedzenia pulpitu: %1"
 
 #: contents/components/Battery.qml:53
 #, kde-format
@@ -175,12 +175,12 @@ msgstr "Przełącz użytkownika"
 #: contents/lockscreen/LockScreenUi.qml:520
 #, kde-format
 msgid "Switch to This Session"
-msgstr "Przełącz na tę sesję"
+msgstr "Przełącz na to posiedzenie"
 
 #: contents/lockscreen/LockScreenUi.qml:528
 #, kde-format
 msgid "Start New Session"
-msgstr "Rozpocznij nową sesję"
+msgstr "Rozpocznij nowe posiedzenie"
 
 #: contents/lockscreen/LockScreenUi.qml:541
 #, kde-format

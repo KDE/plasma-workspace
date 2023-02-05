@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:49+0000\n"
+"POT-Creation-Date: 2023-02-05 02:43+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -337,12 +337,12 @@ msgstr ""
 "ध्यान दें कि घड़ी के लिए किसी भिन्न समय क्षेत्र का उपयोग करने से तंत्रव्यापी स्थानीय समय "
 "क्षेत्र नहीं बदलता है। जब आप यात्रा करते हैं, तो इसके बजाय स्थानीय समय क्षेत्र बदलें।"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr "और अधिक समय क्षेत्रों को जोड़ें"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -351,12 +351,12 @@ msgstr ""
 "कम से कम एक समय क्षेत्र को सक्षम करने की आवश्यकता है। आपका स्थानीय समय क्षेत्र स्वचालित "
 "रूप से सक्षम हो गया था।"
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

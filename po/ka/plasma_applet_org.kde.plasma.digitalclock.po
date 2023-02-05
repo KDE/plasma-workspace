@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:49+0000\n"
+"POT-Creation-Date: 2023-02-05 02:43+0000\n"
 "PO-Revision-Date: 2023-01-31 06:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -338,12 +338,12 @@ msgstr ""
 "დაიმახსოვრეთ, რომ ამ ფუნქციის გამოყენება არ ცვლის სისტემის ლოკალურ დროის "
 "სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr "დროის მეტი სარტყლის დამატება"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -352,12 +352,12 @@ msgstr ""
 "საჭიროა, ჩართული იყოს დროის ერთი სარტყელი მაინც. თქვენი ლოკალური დროის "
 "სარტყელი ავტომატურად ჩართულია."
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
