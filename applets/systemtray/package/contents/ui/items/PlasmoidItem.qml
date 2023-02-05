@@ -48,20 +48,7 @@ AbstractItem {
             plasmoidContainer.activated(null)
         }
     }
-    onPressed: {
-        // Only Plasmoids can show context menu on the mouse pressed event.
-        // SNI has few problems, for example legacy applications that still use XEmbed require mouse to be released.
-        if (mouse.button === Qt.RightButton) {
-            plasmoidContainer.contextMenu(mouse);
-        } else {
-            const appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
-            const mouseArea = findMouseArea(appletItem)
-            if (mouseArea) {
-                // HACK QML only sees the "mouseArea.pressed" property, not the signal.
-                Plasmoid.nativeInterface.emitPressed(mouseArea, mouse);
-            }
-        }
-    }
+
     onContextMenu: if (applet) {
         effectivePressed = false;
         Plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,

@@ -90,12 +90,16 @@ PlasmaCore.ToolTipArea {
             root.hiddenLayout.currentIndex = index
         }
         onClicked: abstractItem.clicked(mouse)
-        onPressed: {
+        onPressed: (mouse) => {
             if (inHiddenLayout) {
                 root.hiddenLayout.currentIndex = index
             }
             abstractItem.hideImmediately()
-            abstractItem.pressed(mouse)
+            if (mouse.button === Qt.RightButton) {
+                abstractItem.contextMenu(mouse);
+            } else {
+                abstractItem.pressed(mouse);
+            }
         }
         onPressAndHold: if (mouse.button === Qt.LeftButton) {
             abstractItem.contextMenu(mouse)
