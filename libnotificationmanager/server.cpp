@@ -71,7 +71,7 @@ void Server::invokeAction(uint notificationId,
 {
     if (KWindowSystem::isPlatformWayland()) {
         const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
-        auto conn = std::shared_ptr<QMetaObject::Connection>();
+        auto conn = std::make_shared<QMetaObject::Connection>();
         *conn = connect(KWindowSystem::self(),
                         &KWindowSystem::xdgActivationTokenArrived,
                         this,
