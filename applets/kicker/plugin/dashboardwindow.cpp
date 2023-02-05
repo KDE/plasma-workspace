@@ -124,12 +124,12 @@ bool DashboardWindow::event(QEvent *event)
     if (event->type() == QEvent::Expose) {
         // FIXME TODO: We can remove this once we depend on Qt 5.6.1+.
         // See: https://bugreports.qt.io/browse/QTBUG-26978
-        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
     } else if (event->type() == QEvent::PlatformSurface) {
         const QPlatformSurfaceEvent *pSEvent = static_cast<QPlatformSurfaceEvent *>(event);
 
         if (pSEvent->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
-            KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+            KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
         }
     } else if (event->type() == QEvent::Show) {
         updateTheme();
