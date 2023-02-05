@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-12-12 20:03+0200\n"
+"PO-Revision-Date: 2023-02-04 19:44+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -177,116 +177,148 @@ msgstr "Įrašomas piršto atspaudas"
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus dešiniuoju smiliumi ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus dešiniuoju didžiuoju pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:129
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus dešiniuoju bevardžiu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:131
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus dešiniuoju mažyliu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:133
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus dešiniuoju nykščiu ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:135
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus kairiuoju smiliumi ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:137
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus kairiuoju didžiuoju pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:139
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus kairiuoju bevardžiu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:141
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus kairiuoju mažyliu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
+"Paspauskite kelis kartus kairiuoju nykščiu ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:147
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus dešiniuoju smiliumi ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:149
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus dešiniuoju didžiuoju pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:151
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus dešiniuoju bevardžiu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:153
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus dešiniuoju mažyliu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:155
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus dešiniuoju nykščiu ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:157
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus kairiuoju smiliumi ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:159
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus kairiuoju didžiuoju pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:161
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus kairiuoju bevardžiu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:163
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus kairiuoju mažyliu pirštu ant piršto atspaudo "
+"jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:165
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
+"Perbraukite kelis kartus kairiuoju nykščiu ant piršto atspaudo jutiklio."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -324,141 +356,121 @@ msgid "Add New User"
 msgstr "Pridėti naują naudotoją"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Keisti avatarą"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Nieko tokio"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Atkaklus flamingas"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Drakono vaisius"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Saldi bulvė"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Supantis gintaras"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Tviskantis Saulės spindulys"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Citrininė citrina"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Žaliuojantis žavesys"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Sodri pieva"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Drungna mėlyna"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma mėlyna"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon purpurinė"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo purpurinė"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Sudegusios anglys"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Popierinis tobulumas"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Kavos aparato ruda"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Prabangus kietmedis"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Pasirinkti paveikslą"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Pasirinkti failą…"

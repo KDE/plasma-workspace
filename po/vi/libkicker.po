@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2023-02-05 01:00+0000\n"
 "PO-Revision-Date: 2021-05-26 21:06+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -118,7 +118,7 @@ msgid "Show Contact Information…"
 msgstr "Hiện thông tin liên hệ…"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
+#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
 #: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"

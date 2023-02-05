@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-11-18 20:23+0200\n"
+"PO-Revision-Date: 2023-02-04 19:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,23 +112,22 @@ msgstr "Šis modulis leidžia jums pasirinkti visuotinę išvaizdą ir turinį."
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Ištrinti visam laikui"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Ar tikrai norite ištrinti visam laikui šį apipavidalinimą?"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Ištrinti visam laikui"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Atsisakyti"
@@ -144,11 +143,10 @@ msgid "Preview Theme"
 msgstr "Peržiūrėti apipavidalinimą"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Peržiūrėti apipavidalinimą"
+msgstr "Šalinti apipavidalinimą"
 
 #: package/contents/ui/main.qml:129
 #, kde-format

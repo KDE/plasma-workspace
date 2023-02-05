@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-26 00:59+0000\n"
+"POT-Creation-Date: 2023-02-05 01:00+0000\n"
 "PO-Revision-Date: 2023-01-31 19:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -348,12 +348,12 @@ msgstr ""
 "இந்த அம்சம், கணினியின் கால மண்டலத்தை மாற்றாது. பயணிக்கும்போது, இதற்கு பதிலாக கணினி "
 "முழுவதற்குமான நேரமண்டலத்தையே மாற்றி அமையுங்கள்."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr "கூடுதல் நேரமண்டலங்களை சேர்த்தல்"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -362,12 +362,12 @@ msgstr ""
 "ஒரு நேரமண்டலமாவது இயக்கப்பட்டிருக்க வேண்டும். உங்கள் வட்டார நேரமண்டலம் தானாக "
 "இயக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:237
+#: package/contents/ui/configTimeZones.qml:234
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

@@ -2,14 +2,14 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2011.
+# Sveinn í Felli <sv1@fellsnet.is>, 2008, 2009, 2011.
 # Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-10-18 01:25+0000\n"
+"PO-Revision-Date: 2022-10-18 01:27+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -248,7 +248,7 @@ msgstr "Ný seta"
 #~ "gangi verður falin og nýr innskráningargluggi mun birtast.<br />Einum F-"
 #~ "lykli er úthlutað á hverja setu; F%1 er venjulega fyrir fyrstu setuna, F"
 #~ "%2 fyrir þá næstu, o.s.frv. Þú getur skipt á milli seta með því að ýta "
-#~ "samtímis á Ctrl, Alt og viðeigandi F-lykil. Að auki eru aðgerðir á KDE "
+#~ "samtímis á Ctrl, Alt og viðeigandi F-lykil. Að auki eru aðgerðir á Plasma "
 #~ "skjáborðsstikunni og í skjáborðsvalmyndum til að skipta á milli seta.</p>"
 
 #~ msgid "&Start New Session"
