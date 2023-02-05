@@ -519,8 +519,6 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         return;
     }
 
-    auto cookie = xcb_query_pointer(c, m_windowId);
-    UniqueCPointer<xcb_query_pointer_reply_t> pointer(xcb_query_pointer_reply(c, cookie, nullptr));
     /*qCDebug(SNIPROXY) << "samescreen" << pointer->same_screen << endl
     << "root x*y" << pointer->root_x << pointer->root_y << endl
     << "win x*y" << pointer->win_x << pointer->win_y;*/
@@ -530,17 +528,13 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     const QPoint clickPoint = calculateClickPoint();
     if (mouseButton >= XCB_BUTTON_INDEX_4) {
         // scroll event, take pointer position
+        auto cookie = xcb_query_pointer(c, m_windowId);
+        UniqueCPointer<xcb_query_pointer_reply_t> pointer(xcb_query_pointer_reply(c, cookie, nullptr));
         configVals[0] = pointer->root_x;
         configVals[1] = pointer->root_y;
     } else {
-        if (pointer->root_x > x + clientGeom->width)
-            configVals[0] = pointer->root_x - clientGeom->width + 1;
-        else
-            configVals[0] = static_cast<uint32_t>(x - clickPoint.x());
-        if (pointer->root_y > y + clientGeom->height)
-            configVals[1] = pointer->root_y - clientGeom->height + 1;
-        else
-            configVals[1] = static_cast<uint32_t>(y - clickPoint.y());
+        configVals[0] = static_cast<uint32_t>(x - clickPoint.x());
+        configVals[1] = static_cast<uint32_t>(y - clickPoint.y());
     }
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y, configVals);
 
