@@ -1,19 +1,20 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2013, 2020, 2022.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2022-04-15 04:39+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-01 23:24+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -113,18 +114,15 @@ msgid "Scale with Panel width"
 msgstr "An Breite der Leiste anpassen"
 
 #: package/contents/ui/ConfigGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "Automatically enabled when in tablet mode"
+#, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "Im Tablett-Modus automatisch aktiviert"
+msgstr "Im Touch-Modus automatisch aktiviert"
 
 #: package/contents/ui/ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "Symbolgröße der Leiste:"
+msgstr "Abstand zwischen Symbolen:"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
@@ -145,18 +143,16 @@ msgid "Large"
 msgstr "Groß"
 
 #: package/contents/ui/ConfigGeneral.qml:82
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a combobox when tablet mode is on"
-#| msgid "Automatically set to Large when in tablet mode"
+#, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "Im Tablet-Modus automatisch auf „Groß“ einstellen"
+msgstr "Im Touch-Modus automatisch auf „Groß“ einstellen"
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Zurück"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format
@@ -176,12 +172,12 @@ msgstr "Offen halten"
 #: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format
 msgid "Expand System Tray"
-msgstr ""
+msgstr "Kontrollleiste aufklappen"
 
 #: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "Alle Elemente der Kontrollleiste in einem Aufklappfenster anzeigen"
 
 #: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format

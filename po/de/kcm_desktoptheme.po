@@ -2,19 +2,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2013, 2014, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2016, 2018.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2021-06-11 17:18+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-01 21:55+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -119,6 +121,9 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"Dieses Werkzeug ermöglicht es, das Design für die aktuelle Plasma-Sitzung "
+"festzulegen, ohne versehentlich ein nicht verfügbares oder bereits "
+"ausgewähltes zu verwenden."
 
 #: plasma-apply-desktoptheme.cpp:35
 #, kde-format
@@ -126,12 +131,17 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Der Name des Designs, das Sie für die aktuelle Plasma-Sitzung festlegen "
+"möchten (bei Angabe des vollständigen Pfades wird nur der letzte Teil "
+"verwendet)"
 
 #: plasma-apply-desktoptheme.cpp:36
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"Alle auf dem System verfügbaren Designs anzeigen (und welches das aktuelle "
+"ist)"
 
 #: plasma-apply-desktoptheme.cpp:49
 #, kde-format
@@ -139,11 +149,13 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Das gewählte Design „%1“ wird bereits für die aktuelle Plasma-Sitzung "
+"verwendet."
 
 #: plasma-apply-desktoptheme.cpp:65
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "Als Design für die aktuelle Plasma-Sitzung wurde „%1“ festgelegt"
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
@@ -151,6 +163,8 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Das Design „%1“ wurde nicht gefunden. Es sollte eines der folgenden Designs "
+"gewählt werden: %2"
 
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
