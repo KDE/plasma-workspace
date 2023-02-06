@@ -15,6 +15,16 @@
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Rocío</firstname
@@ -61,9 +71,9 @@
 </authorgroup>
 
 <date
->2021-04-07</date>
+>2023-01-29</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <abstract>
 <para
@@ -79,35 +89,175 @@
 >ratón</keyword>
 <keyword
 >cursor</keyword>
+<keyword
+>puntero</keyword>
+<keyword
+>rebote</keyword>
+<keyword
+>parpadeo</keyword>
+<keyword
+>animación</keyword>
+<keyword
+>lanzar</keyword>
+<keyword
+>información visual</keyword>
+<keyword
+>tema</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Este módulo le permite seleccionar el tema del cursor de entre los que tenga instalados desde una pantalla de vista previa del cursor. </para>
+<sect1 id="cursorthemes">
+<title
+>Tema del cursor</title>
 
 <para
->Es posible que las características proporcionadas por este módulo no estén disponibles en algunos sistemas. También es posible que tenga que actualizar su sistema para poder usar temas de cursores. </para>
+>Este módulo le permite <itemizedlist>
+<listitem
+><para
+>seleccionar un tema de cursores</para
+></listitem>
+<listitem
+><para
+>configurar la animación de un cursor al lanzar aplicaciones</para
+></listitem>
+</itemizedlist>
+</para>
 
 <para
->Si dispone de temas de cursor adicionales, puede eliminarlos usando el botón de la papelera que aparece al pasar el puntero del ratón sobre los elementos de la lista. Tenga en cuenta que no puede eliminar los temas predeterminados. </para>
+>Es posible que las funcionalidades proporcionadas por este módulo no estén disponibles en algunos sistemas.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Gestión de temas de cursores</title>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla del gestor de temas de cursores</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Para usar un tema de cursores, selecciónelo y pulse el botón <guilabel
+>Aplicar</guilabel
+>.</para>
+
+<para
+>Puede eliminar temas de cursores usando el botón de la papelera que aparece al pasar el puntero del ratón sobre un elemento de la lista. Tenga en cuenta que no puede eliminar los temas preinstalados.</para>
+
+<para
+>Use el botón <guilabel
+>Obtener nuevos cursores...</guilabel
+> para lanzar el diálogo <guilabel
+>Obtener nuevos cursores</guilabel
+> y descargar temas adicionales de internet.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de Obtener nuevos temas de cursores</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>También puede instalar temas de cursores que haya descargado u obtenido de otra forma usando el botón <guilabel
+>Instalar de archivo...</guilabel
+>.</para>
+
+<para
+>Si está interesado en crear su propio tema de cursores, puede encontrar más información <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>aquí</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Tamaño del cursor</title>
 
 <para
 >Algunos temas permiten elegir el tamaño del cursor. Use el campo <guilabel
 >Tamaño</guilabel
-> para seleccionar el tamaño apropiado. Los tamaños disponibles se muestran al pasar el cursor por el elemento del tema en la lista. </para>
+> para seleccionar el tamaño apropiado.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla del tamaño del cursor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Notificación de lanzamiento</title>
 
 <para
->Si dispone de temas de cursores adicionales, puede instalarlos usando el botón <guibutton
->Instalar de archivo...</guibutton
-> que hay debajo de la lista. Consulte <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->estas instrucciones</ulink
-> sobre los detalles para crear el tema de cursores personalizado. </para>
+>A veces es reconfortante saber que su computadora no ha ignorado su orden, sino que algo está sucediendo entre bastidores. En el diálogo <guilabel
+>Configurar notificación de lanzamiento...</guilabel
+>, puede configurar una notificación visible que le ayude a saber si realmente ha pulsado un icono o no.</para>
+
+<screenshot>
+<screeninfo
+>Captura de pantalla de la notificación de lanzamiento</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>El modo tradicional de indicar que su computadora está ocupada consiste en modificar el cursor, y puede activarlo escogiendo un <guilabel
+>Cursor</guilabel
+>.</para>
 
 <para
->Use el botón <guibutton
->Obtener nuevos cursores...</guibutton
-> para lanzar el diálogo <guilabel
->Obtener nuevos cursores</guilabel
-> y descargar temas adicionales de Internet.</para>
+>Con esta opción activada, su cursor tendrá un icono adjunto durante un intervalo corto de tiempo, cuando se inicie una aplicación. Puede configurar cuanto tiempo se mostrará este icono junto al cursor con la casilla de edición numérica <guilabel
+>Detener animación tras:</guilabel
+>. El valor predeterminado es de 5 segundos.</para>
+
+<para
+>Existen algunas variaciones disponibles del cursor de ocupado, que incluyen <guilabel
+>Ninguna notificación</guilabel
+>, un <guilabel
+>Parpadeo</guilabel
+>, un <guilabel
+>Rebote</guilabel
+> o un cursor <guilabel
+>Estático</guilabel
+> sin animar.</para>
+
+<para
+>La notificación de lanzamiento tradicional de &plasma; ha tenido otra forma, que todavía se puede activar y desactivar aquí. Normalmente, cuando se inicia una aplicación, se muestra al instante en la barra de tareas, con su icono cambiado por el de un reloj de arena giratorio para indicar que está ocurriendo algo. Se puede activar y desactivar este comportamiento en la casilla <guilabel
+>Activar animación</guilabel
+>.</para>
+
+<para
+>No todas las aplicaciones que se inicien acabarán mostrando una ventana o una entrada en la barra de tareas. Algunas, por ejemplo, están ancladas a la bandeja del sistema de &plasma;. De forma alternativa, es posible que las haya enviado a otro escritorio virtual, y que en la sección <guilabel
+>Comportamiento</guilabel
+> de las <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Preferencias del gestor de tareas</guilabel
+></ulink
+>, la opción <guilabel
+>Del escritorio actual</guilabel
+> esté marcada para el selector <guilabel
+>Mostrar solo tareas</guilabel
+>. Establecer un tiempo de espera garantiza que, incluso en estos casos, aún pueda recibir notificaciones de lanzamiento, pero también que desaparecerán cuando termine el trabajo.</para>
+
+</sect2>
+
+</sect1>
 
 </article>

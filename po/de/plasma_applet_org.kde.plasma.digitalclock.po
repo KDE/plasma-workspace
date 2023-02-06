@@ -1,13 +1,14 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2018, 2019, 2021.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-05 01:00+0000\n"
-"PO-Revision-Date: 2023-01-14 23:44+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-02-01 22:28+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -96,22 +97,21 @@ msgid "Always below time"
 msgstr "Immer unterhalb der Uhrzeit"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Sekunden anzeigen"
+msgstr "Sekunden anzeigen:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Niemals"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Nur in Kurzinfo"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97
@@ -228,6 +228,8 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"Der Text entspricht der Systemschriftart und wird an den verfügbaren Platz "
+"angepasst."
 
 #: package/contents/ui/configAppearance.qml:243
 #, kde-format
@@ -280,6 +282,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Tipp: Fügen Sie dieser Liste einen zusätzlichen Eintrag für Ihre Heimat-"
+"Zeitzone hinzu. Dieser wird nur angezeigt, wenn Sie die Zeitzone des Systems "
+"auf eine andere ändern."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -293,12 +298,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Versteckt, da der lokalen Zeitzone entsprechend"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Zu Zeitzone des Systems wechseln ..."
+msgstr "Zeitzone des Systems wechseln ..."
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -335,18 +340,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Die angezeigte Zeitzone durch Scrollen über der Uhr umschalten"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Beachten Sie, dass die Verwendung einer anderen Zeitzone für die Uhr die "
-"systemweite lokale Zeitzone nicht ändert. Wenn Sie reisen, wechseln Sie "
-"stattdessen die lokale Zeitzone."
+"Die Verwendung dieser Funktion ändert nicht die Zeitzone des Systems. Wenn "
+"Sie reisen, wechseln Sie stattdessen die Zeitzone des Systems."
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format

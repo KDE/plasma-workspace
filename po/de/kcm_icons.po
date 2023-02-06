@@ -5,19 +5,21 @@
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2009.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2016.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2021-05-26 07:09+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-01 21:56+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -25,10 +27,9 @@ msgid "Main Toolbar"
 msgstr "Haupt-Werkzeugleiste"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Zweite Farbe:"
+msgstr "Andere Werkzeugleisten"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -130,15 +131,19 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Hier können Sie die Standardgrößen verschiedener Symbolarten systemweit "
+"festlegen. Beachten Sie, dass nicht alle Anwendungen diese Einstellungen "
+"respektieren.<nl/> <nl/> Wenn Ihnen Objekte auf dem Bildschirm generell zu "
+"groß oder zu klein erscheinen, sollten Sie stattdessen erwägen, die globale "
+"Skalierung anzupassen."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Globale Skalierung anpassen ..."
 
 #: package/contents/ui/IconSizePopup.qml:117
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Größe:"
@@ -175,8 +180,7 @@ msgid "Get New Icons…"
 msgstr "Neue Symbole holen ..."
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Symbolgröße einstellen"

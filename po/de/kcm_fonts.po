@@ -3,19 +3,21 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2014, 2017, 2018, 2019, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012, 2018, 2020.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2021-05-26 07:07+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-01 21:56+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -27,7 +29,7 @@ msgstr "DPI für Schriften erzwingen (Wayland)"
 #: fontsaasettingsbase.kcfg:13
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr "DPI für Schriften erzwingen in X11"
+msgstr "DPI für Schriften erzwingen (X11)"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -133,10 +135,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "Mit diesem Modul können Sie die Schriftarten des Systems einrichten."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&Alle Schriftarten anpassen ..."
+msgstr "Globale Skalierung anpassen ..."
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -153,6 +154,9 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Sehr große Schriften können zu seltsam aussehenden Ergebnissen führen. Statt "
+"der Verwendung sehr großer Schriftgrößen sollten Sie die Verwendung der "
+"„Globalen Skalierung“ in Erwägung ziehen."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -160,6 +164,9 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"Schriftgrößen mit Nachkommastellen können in manchen Anwendungen zu "
+"Darstellungsproblemen führen. Bevorzugen Sie daher die Verwendung "
+"ganzzahliger Schriftgrößen."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -167,6 +174,8 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"Der bevorzugte Weg, die Benutzeroberfläche zu skalieren, ist die Verwendung "
+"der Funktion „Globale Skalierung“."
 
 #: package/contents/ui/main.qml:106
 #, kde-format
@@ -253,6 +262,11 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Pixel werden auf Bildschirmen generell in Gittern angeordnet. Daher wirkt "
+"der Umriss von Schriften, die nicht mit dem Gitter übereinstimmen, klötzern "
+"und falsch, wenn keine Technik zur <emphasis>Kantenglättung</emphasis> "
+"angewendet wird, um diesen Effekt zu reduzieren. Sie sollten diese "
+"Einstellung generell aktivieren, sofern keine Probleme damit auftreten."
 
 #: package/contents/ui/main.qml:217
 #, kde-format

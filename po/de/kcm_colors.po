@@ -5,20 +5,21 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009, 2010.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016, 2020, 2022.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-02-17 00:05+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-02 21:33+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -86,7 +87,7 @@ msgstr ""
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Ob die Akzentfarbe aus dem Hintergrundbild angewendet werden soll"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -859,22 +860,21 @@ msgstr "Sortierte Spalte in Listen einfärben"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
-#, fuzzy, kde-format
-#| msgid "Invalid accent color "
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Ungültige Akzentfarbe "
+msgstr "Alle Farben mit der Akzentfarbe tönen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Titelleisten von Fenstern mit A&kzentfarbe tönen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Ausprägung der Tönung:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69

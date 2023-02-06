@@ -1,25 +1,27 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-#
 # Burkhard Lück <lueck@hube-lueck.de>, 2019, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-05-26 07:07+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-02 21:33+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Nicht stören umschalten"
+msgstr "„Nicht stören“ umschalten"
 
 #: kcm.cpp:192
 #, kde-format
@@ -69,17 +71,16 @@ msgstr ""
 "einrichten."
 
 #: package/contents/ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not find a 'Notifications' widget which is required for displaying "
-#| "notifications."
+#, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"Es wurde kein Miniprogramm für Benachrichtigungen gefunden, das für die "
-"Anzeiger erforderlich ist."
+"Es wurde kein Miniprogramm für Benachrichtigungen gefunden, was aber für die "
+"Anzeige von Benachrichtigungen erforderlich ist. Stellen Sie sicher, dass "
+"eines entweder in der Kontrollleiste oder als eigenständiges Miniprogramm "
+"aktiviert ist."
 
 #: package/contents/ui/main.qml:53
 #, kde-format
@@ -95,45 +96,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Benachrichtigungen werden derzeit nicht von Plasma bereitgestellt."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "„Nicht stören“-Modus:"
+msgstr "„Nicht stören“-Modus"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Aktivieren:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Einschalten, wenn Bildschirmausgabe vereinheitlicht ist"
+msgstr "Wenn Bildschirme gespiegelt werden"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Einschalten bei Bildschirmübertragung"
+msgstr "Bei Bildschirmübertragung"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Tastatur-Kurzbefehl:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Sichtbarkeitsbedingungen"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -166,26 +162,22 @@ msgid "Show popup"
 msgstr "Aufklappfenster anzeigen"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Aufklappfenster:"
+msgstr "Aufklappfenster"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Anwendungen:"
+msgstr "Position:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Neben dem Benachrichtigungssymbol anzeigen"
+msgstr "Neben dem Benachrichtigungssymbol"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -209,7 +201,7 @@ msgstr "Ausblenden nach:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Zusätzliche Rückmeldung"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -231,19 +223,18 @@ msgstr "In Benachrichtigungen anzeigen"
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
-msgstr "Aufklappfenster beim Fortschritt geöffnet lassen"
+msgstr "Aufklappfenster bei Fortschritt geöffnet lassen"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Notification badges:"
-msgstr "Benachrichtigungs-Symbole:"
+msgstr "Benachrichtigungssymbole:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Programm-Einstellungen"
+msgstr "Anwendungsspezifische Einstellungen"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

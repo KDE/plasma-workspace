@@ -4,20 +4,21 @@
 # Markus Slopianka <markus.s@kdemail.net>, 2010.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2012, 2022.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 01:00+0000\n"
-"PO-Revision-Date: 2022-07-14 00:31+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-01-30 14:24+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: autostartmodel.cpp:330
 #, kde-format
@@ -42,17 +43,21 @@ msgstr "„%1“ ist nicht lesbar."
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "Ausführbar machen"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
+"Die Datei „%1“ muss ausführbar sein, um beim Abmelden gestartet werden zu "
+"können."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
+"Die Datei „%1“ muss ausführbar sein, um beim Anmelden gestartet werden zu "
+"können."
 
 #: package/contents/ui/main.qml:94
 #, kde-format

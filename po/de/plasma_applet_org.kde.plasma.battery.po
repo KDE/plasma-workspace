@@ -3,20 +3,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2013, 2016, 2020, 2022.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010, 2011.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-03-13 09:56+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-02 21:45+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -47,7 +48,7 @@ msgstr "Verbleibende Zeit:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Schätzung läuft ..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -177,38 +178,34 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatischer Ruhezustand und Bildschirmsperre sind deaktiviert"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Eine Anwendung hat die Aktivierung von %2 angefragt:"
-msgstr[1] "%1 Anwendungen haben die Aktivierung von %2 angefragt:"
+msgstr[0] "Eine Anwendung hat die Aktivierung des Leistungsmodus‘ angefragt"
+msgstr[1] "%1 Anwendungen haben die Aktivierung des Leistungsmodus‘ angefragt"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "System ist im Leistungsmodus"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Eine Anwendung hat die Aktivierung von %2 angefragt:"
-msgstr[1] "%1 Anwendungen haben die Aktivierung von %2 angefragt:"
+msgstr[0] "Eine Anwendung hat die Aktivierung des Energiesparmodus‘ angefragt"
+msgstr[1] ""
+"%1 Anwendungen haben die Aktivierung des Energiesparmodus‘ angefragt"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "System ist im Energiesparmodus"
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Bildschirm-Helligkeit:"
+msgstr "Bildschirmhelligkeit mit dem Mausrad anpassen"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -226,10 +223,9 @@ msgid "&Show Energy Information…"
 msgstr "Energie-&Informationen anzeigen ..."
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Prozentualen Ladestand auf Symbol anzeigen"
+msgstr "Prozentualen Ladestand auf Symbol anzeigen, wenn nicht voll geladen"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

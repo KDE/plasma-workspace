@@ -1,21 +1,23 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Frederik Schwarzer <schwarzer@kde.org>, 2020.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
+# Jannick Kuhr <opensource@kuhr.org>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-28 00:47+0000\n"
-"PO-Revision-Date: 2021-04-20 05:00+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-01-30 21:59+0100\n"
+"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
@@ -31,15 +33,7 @@ msgid "Plasma:"
 msgstr "Plasma:"
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about our "
-#| "privacy policy in the following link:"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -50,13 +44,13 @@ msgid ""
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
 "Sie können KDE helfen, Plasma zu verbessern, indem Sie Informationen darüber "
-"mitteilen, wie Sie es benutzen. so dass wir uns auf die Dinge konzentrieren "
+"mitteilen, wie Sie es benutzen, sodass wir uns auf die Dinge konzentrieren "
 "können, die für Sie wichtig sind.<nl/><nl/>Das Einreichen dieser "
 "Informationen ist optional und völlig anonym. Wir sammeln niemals Ihre "
 "persönliche Daten, von Ihnen verwendete Dateien, von Ihnen besuchte "
 "Webseiten oder Informationen, die Sie identifizieren könnten. <nl/><nl/>Sie "
-"können unsere Richtlinien zur Privatsphäre unter der folgenden Verknüpfung "
-"nachlesen:"
+"können unsere Richtlinien zur Privatsphäre <link url='https://kde.org/"
+"privacypolicy-apps.php'>hier</link> nachlesen."
 
 #: package/contents/ui/main.qml:112
 #, kde-format
@@ -71,7 +65,7 @@ msgstr "Die folgenden Informationen werden gesendet:"
 #: package/contents/ui/main.qml:178
 #, kde-format
 msgid "View sent data:"
-msgstr ""
+msgstr "Gesendete Daten anzeigen:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
