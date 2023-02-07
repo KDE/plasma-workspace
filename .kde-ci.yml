@@ -66,3 +66,4 @@ Dependencies:
   'require':
     'frameworks/networkmanager-qt': '@latest'
     'libraries/polkit-qt-1': '@latest'
+    'sdk/selenium-webdriver-at-spi': '@latest'
