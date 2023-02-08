@@ -8,7 +8,6 @@
 #include "kcm_componentchooser.h"
 
 #include <kaboutdata.h>
-#include <plasma_version.h>
 
 #include <QApplication>
 #include <QDBusConnection>
@@ -30,6 +29,7 @@
 #include "components/componentchooserterminal.h"
 #include "components/componentchoosertexteditor.h"
 #include "components/componentchooservideoplayer.h"
+#include "config-workspace.h"
 
 extern KSERVICE_EXPORT int ksycoca_ms_between_checks;
 
@@ -65,7 +65,7 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData 
     connect(pdfViewers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(archiveManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_componentchooser"), i18n("Component Chooser"), PLASMA_VERSION_STRING);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_componentchooser"), i18n("Component Chooser"), WORKSPACE_VERSION_STRING);
     about->setLicense(KAboutLicense::GPL);
     about->addAuthor(QStringLiteral("Tobias Fella"));
     about->addAuthor(QStringLiteral("Méven Car"));
