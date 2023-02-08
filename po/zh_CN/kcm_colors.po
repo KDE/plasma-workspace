@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 02:53+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,18 +14,18 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_colors.pot\n"
-"X-Crowdin-File-ID: 9580\n"
+"X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_colors.pot\n"
+"X-Crowdin-File-ID: 10564\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
+msgstr "KDE 中国"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
+msgstr "kde-china@kde.org"
 
 #: colors.cpp:235
 #, kde-format
@@ -40,22 +40,22 @@ msgstr "无法下载配色方案：%1"
 #: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "此文件并非配色方案文件。"
+msgstr "此文件不是配色方案文件。"
 
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "无法创建 color-scheme 数据文件夹。"
+msgstr "未能创建 color-scheme 数据文件夹。"
 
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr "无法将配色方案复制到 color-scheme 数据文件夹。"
+msgstr "未能将配色方案复制到 color-scheme 数据文件夹中。"
 
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr "配色方案已成功安装。"
+msgstr "已成功安装配色方案。"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
@@ -86,12 +86,12 @@ msgstr "是否应用从壁纸中提取的重点色"
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr "KColor 配色方案编辑器"
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "配色方案创建与编辑工具程序"
+msgstr "编辑和创建配色方案的工具"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -121,14 +121,14 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr "要编辑或者用作基础的配色方案。"
+msgstr "要编辑或者作为基础的方案。"
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
-msgstr "显示“应用”按钮。与“另存为”不同，该按钮将不经询问直接保存更改"
+msgstr "显示“应用”按钮，保存更改时不询问 (与“另存为”按钮不同)"
 
 #: editor/kcolorschemeeditor.cpp:41
 #, kde-format
@@ -139,7 +139,7 @@ msgstr "使对话框成为句柄指定的另一个应用程序窗口的瞬态"
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr "找不到配色方案，将回退到当前方案。\n"
+msgstr "方案未找到，返回当前方案。\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -167,13 +167,13 @@ msgstr "按钮背景上的按钮文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Push Button"
-msgstr "按钮"
+msgstr "按下的按钮"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "选区正常背景中的正常文字"
+msgstr "普通选区背景上的选中的普通文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -187,7 +187,7 @@ msgstr "选中文字"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "选区正常背景中的链接文字"
+msgstr "普通选区背景上的选中的链接文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -203,7 +203,7 @@ msgstr "链接"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "选区正常背景中的已访问文字"
+msgstr "普通选区背景上的选中的访问过的文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -213,13 +213,13 @@ msgstr "选区正常背景中的已访问文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
-msgstr "已访问"
+msgstr "访问过的"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "选区正常背景中的活动文字"
+msgstr "普通选区背景上选中的激活状态文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -235,7 +235,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "选区正常背景中的非活动文字"
+msgstr "普通选区背景上选中的未激活状态文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -251,7 +251,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "选区正常背景中的负面文字"
+msgstr "普通选区背景上选中的负面文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -267,7 +267,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "选区正常背景中的中性文字"
+msgstr "普通选区背景上选中的中性文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -283,7 +283,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "选区正常背景中的正面文字"
+msgstr "查看选择正常背景时的正面文字效果"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -299,7 +299,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "视图正常背景中的正常文字"
+msgstr "普通视图背景上的普通视图文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -307,49 +307,49 @@ msgstr "视图正常背景中的正常文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
-msgstr "正常文字"
+msgstr "普通文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "视图正常背景中的链接文字"
+msgstr "普通视图背景上的视图链接文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "视图正常背景中的已访问文字"
+msgstr "普通视图背景上普通访问过的文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "视图正常背景中的活动文字"
+msgstr "普通视图背景上的激活状态文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "视图正常背景中的非活动文字"
+msgstr "普通视图背景上的未激活状态文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "视图正常背景中的负面文字"
+msgstr "普通视图背景上的负面视图文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "视图正常背景中的中性文字"
+msgstr "普通视图背景上的中性视图文字"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "视图正常背景中的正面文字"
+msgstr "普通视图背景上的正面视图文字"
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "交替背景"
 #: editor/scmeditorcolors.cpp:101
 #, kde-format
 msgid "Normal Text"
-msgstr "正常文字"
+msgstr "普通文字"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
@@ -429,13 +429,13 @@ msgstr "悬停装饰"
 #: editor/scmeditorcolors.ui:23
 #, kde-format
 msgid "Color set:"
-msgstr "配色集合："
+msgstr "颜色设定："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:36
 #, kde-format
 msgid "Colorset to view/modify"
-msgstr "要查看/修改的配色集合"
+msgstr "要查看/修改的配色集"
 
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -443,7 +443,7 @@ msgstr "要查看/修改的配色集合"
 #, kde-format
 msgctxt "color-sets"
 msgid "Common Colors"
-msgstr "共通颜色"
+msgstr "普通颜色"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -483,7 +483,7 @@ msgstr "选区"
 #, kde-format
 msgctxt "color-sets"
 msgid "Tooltip"
-msgstr "悬停提示"
+msgstr "工具提示"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -491,7 +491,7 @@ msgstr "悬停提示"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr "互补色"
+msgstr "补色"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -583,19 +583,19 @@ msgstr "选区文字"
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "选区非活动文字"
+msgstr "选区的非活动文字"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
 #, kde-format
 msgid "Tooltip Background"
-msgstr "悬停提示背景"
+msgstr "工具提示背景"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:353
 #, kde-format
 msgid "Tooltip Text"
-msgstr "悬停提示文字"
+msgstr "工具提示文字"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:358
@@ -646,17 +646,17 @@ msgstr "颜色"
 #: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
-msgstr "已禁用对象"
+msgstr "禁用"
 
 #: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr "您有尚未保存的更改。您确定要退出吗？"
+msgstr "您有未保存的更改。您真的想退出吗？"
 
 #: editor/scmeditordialog.cpp:95
 #, kde-format
 msgid "Unsaved changes"
-msgstr "尚未保存的更改"
+msgstr "未保存的更改"
 
 #: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
@@ -680,7 +680,7 @@ msgstr ""
 #: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
-msgstr "您不具备覆盖该配色方案的权限"
+msgstr "您没有权限覆盖这个方案"
 
 #: editor/scmeditordialog.cpp:176
 #, kde-format
@@ -690,7 +690,7 @@ msgstr "错误"
 #: editor/scmeditordialog.cpp:191
 #, kde-format
 msgid "Inactive"
-msgstr "非活动"
+msgstr "非活动区域"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: editor/scmeditoreffects.ui:17
@@ -702,13 +702,13 @@ msgstr "颜色："
 #: editor/scmeditoreffects.ui:27
 #, kde-format
 msgid "Intensity:"
-msgstr "亮度："
+msgstr "强度："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:37
 #, kde-format
 msgid "Disabled color effect type"
-msgstr "已禁用对象的颜色特效类型"
+msgstr "禁用区域的颜色效果类型"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
@@ -742,7 +742,7 @@ msgstr "染色"
 #: editor/scmeditoreffects.ui:64
 #, kde-format
 msgid "Disabled intensity effect type"
-msgstr "已禁用对象的亮度特效类型"
+msgstr "禁用区域的强度效果类型"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
@@ -756,7 +756,7 @@ msgstr "无"
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Shade"
-msgstr "明暗"
+msgstr "阴影"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
@@ -782,25 +782,25 @@ msgstr "对比度："
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr "已禁用对象的颜色特效水平"
+msgstr "禁用区域的颜色效果份量"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
 #, kde-format
 msgid "Disabled intensity effect amount"
-msgstr "已禁用对象的亮度特效水平"
+msgstr "禁用区域的强度效果份量"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
 #, kde-format
 msgid "Disabled color"
-msgstr "已禁用对象颜色"
+msgstr "禁用区域的颜色"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
 #, kde-format
 msgid "Disabled contrast type"
-msgstr "已禁用对象的对比度特效类型"
+msgstr "禁用区域的对比度类型"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -827,25 +827,25 @@ msgstr "染色"
 #: editor/scmeditoreffects.ui:222
 #, kde-format
 msgid "Disabled contrast amount"
-msgstr "已禁用对象的对比度特效水平"
+msgstr "禁用区域的对比度份量"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "应用特效至到活动窗口(&E)"
+msgstr "对非活动窗口应用效果(&E)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr "非活动选区使用不同颜色(&A)"
+msgstr "为非活动的选区使用不同颜色(&A)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "绘制立体特效到列表中的已排序列(&I)"
+msgstr "为排序过的列表添加阴影(&I)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
@@ -869,13 +869,13 @@ msgstr "染色强度："
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "线框阴影和立体光照特效水平"
+msgstr "框架阴影以及 3D 光亮特效"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Shading"
-msgstr "立体光照特效"
+msgstr "阴影"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: editor/scmeditoroptions.ui:97
@@ -893,7 +893,7 @@ msgstr "最小"
 #: editor/scmeditoroptions.ui:124
 #, kde-format
 msgid "Contrast"
-msgstr "对比度"
+msgstr "对比"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
@@ -942,7 +942,7 @@ msgstr "正常背景上的已访问文字"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "visited"
-msgstr "已访问"
+msgstr "已访问链接"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
 #: editor/setpreview.ui:90
@@ -958,7 +958,7 @@ msgstr "正常背景上的活动文字"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "active"
-msgstr "活动"
+msgstr "活动的"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
 #: editor/setpreview.ui:109
@@ -972,7 +972,7 @@ msgstr "正常背景上的非活动文字"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "inactive"
-msgstr "非活动"
+msgstr "非活动的"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
 #: editor/setpreview.ui:125
@@ -1026,7 +1026,7 @@ msgstr "正面"
 #: editor/setpreview.ui:170
 #, kde-format
 msgid "Hover on Normal Background"
-msgstr "正常背景上的悬停文字"
+msgstr "悬停于正常背景上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1045,7 +1045,7 @@ msgid ""
 "configured at this time)"
 msgstr ""
 "链接背景上的链接文字\n"
-"(注意：链接背景色按照链接文字色自动生成，目前不支持单独设置)"
+"(注意：链接背景色由链接文字色衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1055,8 +1055,8 @@ msgid ""
 "(Note: Visited Background is derived from Visited Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"已访问背景上的已访问文字\n"
-"(注意：已访问背景色按照已访问文字色自动生成，目前不支持单独设置)"
+"访问过的背景上的访问过的文字\n"
+"(注意：访问过的背景色由访问过的文字色衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1066,14 +1066,14 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"活动背景上的活动文字\n"
-"(注意：活动背景色按照活动文字色自动生成，目前不支持单独设置)"
+"激活的背景上激活的文字\n"
+"(注意：激活的背景颜色由激活的文字色衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
 #, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "交替背景上的非活动文字"
+msgstr "备选背景上的未激活文字"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1081,7 +1081,7 @@ msgstr "交替背景上的非活动文字"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "alternate"
-msgstr "交替"
+msgstr "备选"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
 #: editor/setpreview.ui:283
@@ -1092,7 +1092,7 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "负面背景上的负面文字\n"
-"(注意：负面背景色按照负面文字色自动生成，目前不支持单独设置)"
+"(注意：负面背景颜色由负面文字色衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1103,7 +1103,7 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "中性背景上的中性文字\n"
-"(注意：中性背景色按照中性文字色自动生成，目前不支持单独设置)"
+"(注意：中性背景颜色由中性文字色衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1114,7 +1114,7 @@ msgid ""
 "separately configured at this time)"
 msgstr ""
 "正面背景上的正面文字\n"
-"(注意：正面背景色按照正面文字色自动生成，目前不支持单独设置)"
+"(注意：正面背景颜色由正面文字衍生，无法单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
@@ -1128,7 +1128,7 @@ msgstr "正常背景上的焦点"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "focus"
-msgstr "焦点"
+msgstr "聚焦"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1212,7 +1212,7 @@ msgstr "已访问"
 #: package/contents/ui/main.qml:424
 #, kde-format
 msgid "Normal text"
-msgstr "正常文字"
+msgstr "普通文本"
 
 #: package/contents/ui/main.qml:432
 #, kde-format
@@ -1222,7 +1222,7 @@ msgstr "高亮文本"
 #: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Disabled text"
-msgstr "已禁用文字"
+msgstr "禁用文本"
 
 #: package/contents/ui/main.qml:457
 #, kde-format

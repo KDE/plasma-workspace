@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_fonts.pot\n"
-"X-Crowdin-File-ID: 6901\n"
+"X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_fonts.pot\n"
+"X-Crowdin-File-ID: 7136\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -69,7 +69,7 @@ msgstr "窗口标题字体"
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "发行版默认值"
+msgstr "供应商默认值"
 
 #: kxftconfig.cpp:460
 #, kde-format
@@ -101,19 +101,19 @@ msgstr "垂直 BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "发行版默认值"
+msgstr "供应商默认值"
 
 #: kxftconfig.cpp:498
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
-msgstr "中等"
+msgstr "适中"
 
 #: kxftconfig.cpp:500
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
-msgstr "关闭"
+msgstr "无"
 
 #: kxftconfig.cpp:502
 #, kde-format
@@ -130,7 +130,7 @@ msgstr "完全"
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you configure the system fonts."
-msgstr "您可以在此模块中配置系统字体。"
+msgstr "此模块可以让您配置系统字体。"
 
 #: package/contents/ui/main.qml:26
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "调整全局缩放…"
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
-msgstr "某些更改只影响之后启动的程序，例如抗锯齿或 DPI 等选项。"
+msgstr "某些更改，比如抗锯齿或 DPI，只影响新启动的程序。"
 
 #: package/contents/ui/main.qml:51
 #, kde-format
@@ -167,7 +167,7 @@ msgstr ""
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
-msgstr "要对用户界面进行缩放，推荐使用全局屏幕缩放功能。"
+msgstr "推荐的缩放用户界面的方法是使用全局屏幕缩放功能。"
 
 #: package/contents/ui/main.qml:106
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "选择常规字体"
 #: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Fixed width:"
-msgstr "等宽："
+msgstr "固定宽度："
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -197,7 +197,7 @@ msgstr "选择等宽字体"
 #: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Small:"
-msgstr "小号字："
+msgstr "小字体："
 
 #: package/contents/ui/main.qml:144
 #, kde-format
@@ -237,7 +237,7 @@ msgstr "选择窗口标题字体"
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Anti-Aliasing:"
-msgstr "抗锯齿处理："
+msgstr "抗锯齿："
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -261,7 +261,7 @@ msgstr ""
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr "不进行抗锯齿的大小范围"
+msgstr "抗锯齿要排除的范围"
 
 #: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
 #, kde-format
@@ -302,7 +302,7 @@ msgstr ""
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "字体微调方式："
+msgstr "微调："
 
 #: package/contents/ui/main.qml:370
 #, kde-kuit-format
@@ -320,7 +320,7 @@ msgstr ""
 #: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
-msgstr "强制字体 DPI："
+msgstr "固定字体 DPI："
 
 #: package/contents/ui/main.qml:422
 #, kde-kuit-format

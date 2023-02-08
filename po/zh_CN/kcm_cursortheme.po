@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_cursortheme.pot\n"
-"X-Crowdin-File-ID: 6900\n"
+"X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_cursortheme.pot\n"
+"X-Crowdin-File-ID: 7131\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -43,24 +43,24 @@ msgstr "无法创建临时文件。"
 #: kcmcursortheme.cpp:393
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "无法下载图标主题压缩包：%1"
+msgstr "无法下载图标主题存档：%1"
 
 #: kcmcursortheme.cpp:424
 #, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr "文件不是一个有效的图标主题压缩包。"
+msgstr "文件不是一个有效的图标主题归档。"
 
 #: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr "无法创建“icons”文件夹。"
+msgstr "未能创建 \"icons\" 文件夹。"
 
 #: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
-msgstr "您的图标主题文件夹中已存在名为 %1 的主题。您想要用此主题替换它吗？"
+msgstr "已经在您的图标主题文件夹中存在名为 %1 的主题。您是否想要将其覆盖？"
 
 #: kcmcursortheme.cpp:444
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "超时秒数"
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
 msgid "Remove Theme"
-msgstr "移除主题"
+msgstr "删除主题"
 
 #: package/contents/ui/Delegate.qml:61
 #, kde-format

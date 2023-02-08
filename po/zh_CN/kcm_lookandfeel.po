@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,29 +14,29 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_lookandfeel.pot\n"
-"X-Crowdin-File-ID: 4154\n"
+"X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_lookandfeel.pot\n"
+"X-Crowdin-File-ID: 2352\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国"
+msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org"
+msgstr "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
 
 #: kcm.cpp:590
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
-msgstr "您必须重新启动 Plasma 会话才能使这些更改生效。"
+msgstr "要让这些更改生效，您必须重新启动 Plasma 会话。"
 
 #: kcm.cpp:591
 #, kde-format
 msgid "Cursor Settings Changed"
-msgstr "鼠标指针设置已更改"
+msgstr "光标设置已更改"
 
 #: lnftool.cpp:33
 #, kde-format
@@ -48,12 +48,12 @@ msgstr "全局主题工具"
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
-msgstr "应用全局主题包以更改界面外观的命令行工具。"
+msgstr "应用全局主题包以改变观感的命令行工具。"
 
 #: lnftool.cpp:37
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr "Copyright 2017, Marco Martin"
+msgstr "版权 2017，Marco Martin"
 
 #: lnftool.cpp:38
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "Marco Martin"
 #: lnftool.cpp:38
 #, kde-format
 msgid "Maintainer"
-msgstr "维护人员"
+msgstr "维护者"
 
 #: lnftool.cpp:46
 #, kde-format
@@ -83,7 +83,7 @@ msgstr ""
 #: lnftool.cpp:51
 #, kde-format
 msgid "packagename"
-msgstr "主题包名称"
+msgstr "包名"
 
 #: lnftool.cpp:52
 #, kde-format
@@ -94,12 +94,12 @@ msgstr "重置 Plasma 桌面布局"
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr "全局界面外观"
+msgstr "全局外观"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you choose the global look and feel."
-msgstr "您可以使用此模块选择全局界面外观。"
+msgstr "此模块让您选择全局观感。"
 
 #: package/contents/ui/main.qml:62
 #, kde-format

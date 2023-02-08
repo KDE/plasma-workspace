@@ -11,13 +11,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009, 2012, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-12-26 04:02+0900\n"
+"PO-Revision-Date: 2023-02-07 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: iconsizecategorymodel.cpp:14
@@ -136,6 +136,9 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"這裡您可以從系統層面上設定各種圖示的預設大小。請注意不是所有應用程式都會使用"
+"這些設定。<nl/><nl/>如果您感覺螢幕上各種東西全部都太小或太大，請考慮改為調整"
+"全域縮放。"
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format

@@ -4,13 +4,13 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2022-06-29 11:36+0900\n"
+"PO-Revision-Date: 2023-02-07 23:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -80,7 +80,7 @@ msgstr "主題安裝成功。"
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "逾時（秒）"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -96,68 +96,68 @@ msgstr "還原游標主題"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "啟動回饋"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "設定應用程式啟動中的時候播放的動畫。"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "游標回饋："
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "無"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "靜態"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "閃爍"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "彈跳"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "工作管理員回饋："
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "啟用動畫"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "幾秒後停止動畫："
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:124
 #: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "%1 秒"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -173,7 +173,7 @@ msgstr "大小："
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "設定啟動回饋(&C)…"
 
 #: package/contents/ui/main.qml:145
 #, kde-format

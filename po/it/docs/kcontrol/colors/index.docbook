@@ -14,6 +14,14 @@
 <authorgroup>
 <author
 >&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Vincenzo</firstname
@@ -60,9 +68,9 @@
 </authorgroup>
 
 <date
->8/4/2021</date>
+>29/1/2023</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
@@ -73,6 +81,8 @@
 >colore</keyword>
 <keyword
 >kcm</keyword>
+<keyword
+>secondario</keyword>
 </keywordset>
 </articleinfo>
 
@@ -118,6 +128,37 @@
 
 <sect2>
   <title
+>Colore secondario</title>
+
+  <para
+>Il colore secondario è il colore in cui vengono evidenziati gli elementi focalizzati o selezionati e viene utilizzato anche per alcuni altri elementi dell'interfaccia come i cursori o le icone delle cartelle. È anche possibile rendere tutti i colori con il colore secondario (vedi altro sulle opzioni dello schema di colori di seguito). Con <guilabel
+>Usa il colore secondario</guilabel
+>, hai tre opzioni per scegliere un colore secondario: </para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Dallo schema di colori attuale</guilabel
+>: questa opzione lascerà il colore degli elementi evidenziati allo schema di colori, e non imposterà un colore secondario globale per tutte le combinazioni. Puoi scoprire di più sulla modifica degli schemi di colore nella sezione sottostante. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Dallo sfondo attuale</guilabel
+>: questa opzione estrarrà automaticamente un colore corrispondente dall'immagine di sfondo del desktop. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Personalizzato</guilabel
+>: qui puoi scegliere tra un insieme di colori predefinito o un colore personalizzato. </para
+></listitem>
+    </itemizedlist>
+
+</sect2>
+
+<sect2>
+  <title
 >Modificare o creare schemi</title>
   <para
 >Per modificare o creare nuovi schemi selezionare uno schema dall'elenco e premere il pulsante <guibutton
@@ -159,6 +200,20 @@
 ><guilabel
 >Ombreggia la colonna ordinata nelle liste</guilabel
 > &mdash; Se selezionato, le liste suddivise in varie colonne adotteranno un colore lievemente differente per la colonna le cui informazioni sono utilizzate per ordinare gli elementi nella lista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Rendi tutti i colori con un colore secondario</guilabel
+> &mdash; Se selezionata, tutti i colori otterranno una parte del colore secondario sfumato. Puoi controllare l'intensità con cui il colore secondario dovrebbe miscelarsi spostando il cursore <guilabel
+>Intensità della tinta</guilabel
+>. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Rendi le barre del titolo delle finestre con il colore secondario</guilabel
+> &mdash; Se selezionata, il colore della barra del titolo e dell'intestazione delle finestre sarà colorato con il colore secondario. Le finestre attive saranno evidenziate intensamente nel colore secondario; le finestre inattive otterranno il colore secondario sfumato in modo più debole. </para
 ></listitem>
     <listitem
 ><para

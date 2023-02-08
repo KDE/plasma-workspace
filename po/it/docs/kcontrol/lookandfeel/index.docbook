@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Tema globale</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>26/1/2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>aspetto</keyword>
+<keyword
+>Tema globale</keyword>
+<keyword
+>stile</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>aspetto</keyword>
+<keyword
+>aspetto</keyword>
+<keyword
+>globale</keyword>
+<keyword
+>desktop</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>disegno</keyword>
+<keyword
+>UI</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Temi globali</title>
+
+<para
+>I temi globali forniscono un aspetto comune per molti componenti contemporaneamente: </para>
+<itemizedlist>
+  <listitem
+><para
+>Disposizione desktop: una disposizione di pannelli e oggetti, ad esempio un pannello inferiore con un gestore dei processi un esecutore di applicazioni o un pannello superiore con menu globale e barra delle applicazioni</para
+></listitem>
+  <listitem
+><para
+>Schema di colori: tavolozza dei colori utilizzata in &plasma; e nelle applicazioni</para
+></listitem>
+  <listitem
+><para
+>Stile delle applicazioni: aspetto degli elementi dell'interfaccia utente come pulsanti, menu e barre di scorrimento</para
+></listitem>
+  <listitem
+><para
+>Stile di Plasma: aspetto dei pannelli e degli oggetti</para
+></listitem>
+  <listitem
+><para
+>Decorazione delle finestre: bordi delle finestre e pulsanti della barra del titolo</para
+></listitem>
+  <listitem
+><para
+>Icone: icone utilizzate in &plasma; e nelle applicazioni</para
+></listitem>
+  <listitem
+><para
+>Puntatori: i puntatori del mouse</para
+></listitem>
+  <listitem
+><para
+>Selettore delle attività: sovrapposizione per passare da una finestra aperta all'altra, in genere richiamato con la scorciatoia da tastiera Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Schermata iniziale: schermata di caricamento mostrata durante l'avvio di &plasma;</para
+></listitem>
+  <listitem
+><para
+>Schermata di accesso: schermata con un selettore utente e richiesta della password visualizzata all'avvio del computer</para
+></listitem>
+  <listitem
+><para
+>Schermata di blocco: schermata con una richiesta della password dell'utente mostrata quando il computer è bloccato</para
+></listitem>
+  <listitem
+><para
+>Sfondo: un'immagine di sfondo del desktop</para
+></listitem>
+</itemizedlist>
+
+<para
+>Applicando un tema globale, è possibile cambiare tutto quanto indicato in precedenza contemporaneamente. È possibile anche applicare solo alcuni componenti di un tema globale, come uno schema di colori o una decorazione delle finestre. È possibile scegliere quali componenti modificare quando si applica un tema globale o applicare singoli componenti utilizzando le altre sottosezioni delle Impostazioni di sistema. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Gestire i temi globali</title>
+
+<para
+>In questo modulo è possibile: <itemizedlist>
+    <listitem
+><para
+>applicare i temi globali</para
+></listitem>
+    <listitem
+><para
+>installare nuovi temi globali e rimuovere i temi globali installati</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Schermata del gestore dei temi globali</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Applicare i temi globali</title>
+
+<para
+>È possibile vedere un'anteprima di ciascun tema facendo clic sull'icona dell'immagine che appare quando si passa con il puntatore del mouse sopra la miniatura di un tema. </para>
+
+<para
+>Facendo clic su un tema globale, viene visualizzata una finestra che chiede quali componenti del tema si desidera applicare. È possibile scegliere tra varie impostazioni dell'aspetto e la disposizione del desktop. <screenshot>
+    <screeninfo
+>Schermata del selettore dei componenti del tema globale</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Schermata del selettore dei componenti del tema globale</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Dopo aver effettuato la selezione, fare clic sul pulsante <guibutton
+>Applica</guibutton
+> per confermare la propria scelta. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Installare i temi globali</title>
+
+<para
+>Con il pulsante <guilabel
+>Ottieni nuovi temi globali...</guilabel
+>, è possibile installare nuovi temi globali da fornitori di terze parti. È necessario essere connessi a Internet per accedere a questi temi. Il clic su <guibutton
+>Installa</guibutton
+> in uno dei temi nella finestra installerà il tema globale scelto e, dopo aver chiuso la finestra, il nuovo tema sarà immediatamente disponibile. <screenshot>
+  <screeninfo
+>Scarica nuovi temi globali...</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Scarica nuovi temi globali...</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Per rimuovere un tema globale installato, fare clic sul pulsante con l'icona del cestino che appare quando si passa con il puntatore del mouse sopra la miniatura di un tema. Notare che è possibile rimuovere solo i temi globali esplicitamente scaricati. </para>
+
+<para
+>Se si è interessati a creare il proprio tema, è possibile saperne di più sui vari componenti <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>qui</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

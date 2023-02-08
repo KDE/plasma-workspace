@@ -1,10 +1,10 @@
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-12-26 04:01+0900\n"
+"PO-Revision-Date: 2023-02-07 23:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -164,180 +164,120 @@ msgid "Enrolling Fingerprint"
 msgstr "正在登錄指紋"
 
 #: package/contents/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的右手食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:127
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的右手中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的右手無名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的右手小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的右手大拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的左手食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的左手中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的左手無名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的左手小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複按壓您的左手大拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的右手食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:149
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的右手中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:151
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的右手無名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的右手小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的右手大拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的左手食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:159
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的左手中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:161
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的左手無名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的左手小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:165
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "請在指紋感應器上重複%1您的%2。"
+msgstr "請在指紋感應器上重複滑動您的左手大拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -375,8 +315,7 @@ msgid "Add New User"
 msgstr "新增使用者"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "變更大頭貼"
@@ -484,15 +423,13 @@ msgid "Rich Hardwood"
 msgstr ""
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "選取圖片"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "選取檔案…"

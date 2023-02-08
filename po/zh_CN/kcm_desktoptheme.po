@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,14 +14,14 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_desktoptheme.pot\n"
-"X-Crowdin-File-ID: 4201\n"
+"X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_desktoptheme.pot\n"
+"X-Crowdin-File-ID: 2480\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "当前 Plasma 视觉风格名称"
+msgstr "当前 Plasma 样式名称"
 
 #: kcm.cpp:110
 #, kde-format
@@ -46,12 +46,12 @@ msgstr "主题安装失败。"
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr "移除主题失败：%1"
+msgstr "删除主题失败：%1"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
 msgid "This module lets you choose the Plasma style."
-msgstr "您可以在此模块中选择 Plasma 视觉风格。"
+msgstr "此模块允许您选择 Plasma 样式。"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -61,17 +61,17 @@ msgstr "所有主题"
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
-msgstr "浅色主题"
+msgstr "亮色主题"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr "深色主题"
+msgstr "暗色主题"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
-msgstr "兼容配色方案"
+msgstr "配色方案兼容"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "编辑主题…"
 #: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
-msgstr "删除主题"
+msgstr "移除主题"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -106,12 +106,12 @@ msgstr "获取新 Plasma 视觉风格…"
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
-msgstr "打开主题"
+msgstr "打开 Plasma 主题包"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Plasma 主题包文件 (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
