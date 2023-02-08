@@ -5,19 +5,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009.
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2020-02-01 19:54+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-02-07 20:16+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: sessionrunner.cpp:23
@@ -89,7 +90,7 @@ msgstr "新工作階段"
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "為工作階段回復功能儲存目前工作階段"
 
 #: sessionrunner.cpp:73
 #, fuzzy, kde-format
@@ -162,14 +163,12 @@ msgid "Lock"
 msgstr ""
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "新工作階段"
+msgstr "儲存工作階段"
 
 #: sessionrunner.cpp:194
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
 msgstr "切換使用者"
 
@@ -184,10 +183,9 @@ msgid ""
 msgstr ""
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "新工作階段"
+msgstr "新的桌面工作階段"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

@@ -6,13 +6,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-18 00:56+0000\n"
-"PO-Revision-Date: 2022-07-10 17:50+0900\n"
+"PO-Revision-Date: 2023-02-07 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "登入失敗"
 #: ../sddm-theme/SessionButton.qml:18
 #, kde-format
 msgid "Desktop Session: %1"
-msgstr "桌面作業階段：%1"
+msgstr "桌面工作階段：%1"
 
 #: contents/components/Battery.qml:53
 #, kde-format
@@ -133,30 +133,28 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "時鐘"
+msgstr "時鐘："
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "解除鎖定畫面消失後維持可見"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "媒體控制器"
+msgstr "媒體控制："
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "在解除鎖定畫面中顯示"
 
 #: contents/lockscreen/LockScreenUi.qml:37
 #, kde-format
@@ -208,7 +206,7 @@ msgstr "解除鎖定"
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "無標題"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format

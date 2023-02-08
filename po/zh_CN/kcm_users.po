@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-12 10:31\n"
+"PO-Revision-Date: 2023-02-07 11:02\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -172,117 +172,117 @@ msgstr "正在录入指纹"
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的右食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的右中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:129
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的右无名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:131
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的右小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:133
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的右拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:135
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的左食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:137
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的左中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:139
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的左无名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:141
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的左小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复按压您的左拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:147
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的右食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:149
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的右中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:151
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的右无名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:153
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的右小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:155
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的右拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:157
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的左食指。"
 
 #: package/contents/ui/FingerprintDialog.qml:159
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的左中指。"
 
 #: package/contents/ui/FingerprintDialog.qml:161
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的左无名指。"
 
 #: package/contents/ui/FingerprintDialog.qml:163
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的左小指。"
 
 #: package/contents/ui/FingerprintDialog.qml:165
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "请在指纹传感器上重复划过您的左拇指。"
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format

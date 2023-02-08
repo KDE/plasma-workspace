@@ -15,6 +15,16 @@
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Samuele</firstname
@@ -33,7 +43,7 @@
 </authorgroup>
 
 <date
->2021-04-07</date>
+>2023-01-29</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -51,35 +61,175 @@
 >mouse</keyword>
 <keyword
 >puntatore</keyword>
+<keyword
+>puntatore</keyword>
+<keyword
+>rimbalzante</keyword>
+<keyword
+>lampeggiante</keyword>
+<keyword
+>animazione</keyword>
+<keyword
+>avvio</keyword>
+<keyword
+>notifica</keyword>
+<keyword
+>tema</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Questa scheda permette di scegliere tra vari temi di puntatori installati da un'anteprima del puntatore. </para>
+<sect1 id="cursorthemes">
+<title
+>Tema dei puntatori</title>
 
 <para
->La funzionalità offerta da questo modulo potrebbe non essere disponibile su alcuni sistemi. Potrebbe essere necessario un aggiornamento del tuo sistema per supportare i temi dei puntatori. </para>
+>Questo modulo ti permette di <itemizedlist>
+<listitem
+><para
+>selezionare un tema di cursori</para
+></listitem>
+<listitem
+><para
+>configurare un'animazione del cursore per le applicazioni avviate</para
+></listitem>
+</itemizedlist>
+</para>
 
 <para
->Se hai dei temi di puntatori aggiuntivi, puoi rimuoverli utilizzando il pulsante del cestino che appare quando passi il puntatore del mouse sull'elemento del tema nell'elenco. Nota che non puoi rimuovere i temi predefiniti. </para>
+>Le funzionalità offerte da questo modulo potrebbero non essere disponibili su alcuni sistemi.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Gestione del tema dei puntatori</title>
+
+<screenshot>
+<screeninfo
+>Schermata del gestore dei temi dei puntatori</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Per usare un tema di puntatori, basta selezionarlo e fare clic sul pulsante <guilabel
+>Applica</guilabel
+>.</para>
+
+<para
+>Puoi rimuovere dei temi di puntatori aggiuntivi utilizzando il pulsante del cestino che appare quando passi il puntatore del mouse sull'elemento del tema nell'elenco. Nota che non puoi rimuovere i temi pre-installati.</para>
+
+<para
+>Usa il pulsante <guilabel
+>Scarica nuovi puntatori...</guilabel
+> per avviare la finestra delle <guilabel
+>Scarica nuovi/e Puntatori</guilabel
+> e scaricare altri temi da Internet.</para>
+
+<screenshot>
+<screeninfo
+>Schermata della scheda Scarica nuove/i Puntatori</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Puoi anche installare file di temi di puntatori che hai scaricato, o comunque ottenuto, tramite il pulsante <guilabel
+>Installa da file...</guilabel
+>.</para>
+
+<para
+>Se ti interessa creare un tema di puntatori, puoi trovare delle informazioni <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>qui</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Dimensione del puntatore</title>
 
 <para
 >Alcuni temi permettono di scegliere la dimensione del puntatore. Usa il campo <guilabel
 >Dimensione</guilabel
-> per selezionare la dimensione appropriata. Le dimensioni disponibili sono mostrate quando passi il puntatore del mouse sull'elemento del tema nell'elenco. </para>
+> per selezionare la dimensione appropriata.</para>
+
+<screenshot>
+<screeninfo
+>Schermata della dimensione del cursore</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Notifica di avvio</title>
 
 <para
->Se hai dei temi di puntatori aggiuntivi puoi installarli usando il pulsante <guibutton
->Installa da file...</guibutton
-> sotto l'elenco. Vedi le <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
->istruzioni del tema</ulink
-> per i dettagli su come creare un tema di puntatori personalizzato. </para>
+>Talvolta è rassicurante sapere che il computer non ha ignorato i comandi ricevuti, e che sta succedendo qualcosa dietro le quinte. In questa finestra <guilabel
+>Configura la notifica di avvio...</guilabel
+>, puoi configurare una notifica visibile per aiutarti a capire se hai davvero premuto quell'icona o meno.</para>
+
+<screenshot>
+<screeninfo
+>Schermata della notifica di avvio</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>Il modo classico di indicare che il computer è al lavoro è modificare il puntatore, e puoi abilitare questa funzione scegliendo un <guilabel
+>Puntatore</guilabel
+>.</para>
 
 <para
->Usa il pulsante <guibutton
->Scarica nuovi puntatori</guibutton
-> per avviare la finestra delle <guilabel
->Scarica nuovi/e Puntatori</guilabel
-> e scaricare altri temi da Internet.</para>
+>Abilitando questa opzione, al puntatore sarà associata un'icona per un breve periodo di tempo quando l'applicazione viene avviata. Puoi configurare la durata della visualizzazione dell'icona vicino al puntatore con la casella numerica <guilabel
+>Ferma le animazioni dopo:</guilabel
+>. Il valore predefinito è 5 secondi.</para>
+
+<para
+>Ci sono diverse variazioni disponibili per indicare un puntatore al lavoro, incluse le icone di puntatore <guilabel
+>Nessuna notifica</guilabel
+>, <guilabel
+>Lampeggiante</guilabel
+>, <guilabel
+>Rimbalzante</guilabel
+>, o <guilabel
+>Statico</guilabel
+> senza animazione.</para>
+
+<para
+>La classica notifica di avvio di &plasma; ha una modalità diversa, che puoi abilitare o disabilitare qui. Normalmente, quando avvii un'applicazione, questa ottiene immediatamente una voce nella barra dei processi, in cui l'icona è sostituita da una clessidra rotante per fare sapere che sta succedendo qualcosa. Puoi attivare o disabilitare questo comportamento tramite la casella <guilabel
+>Abilita l'animazione</guilabel
+>.</para>
+
+<para
+>Non tutte le applicazioni che avvii mostreranno alla fine una finestra o una voce nella barra dei processi. Alcune di esse, ad esempio, saranno agganciate al vassoio di sistema di &plasma;. Oppure potresti averle mandate in un desktop virtuale diverso, e, nella sezione <guilabel
+>Comportamento</guilabel
+> delle <ulink url="help:/plasma-desktop/panel.html"
+> <guilabel
+>impostazioni del Gestore dei processi</guilabel
+></ulink
+>, è selezionata l'opzione <guilabel
+>del desktop corrente</guilabel
+> per il selettore <guilabel
+>Mostra solo i processi</guilabel
+>. Impostare un tempo massimo garantisce che, anche in questi casi, sia possibile ottenere una notifica di avvio, ma anche che questa sparisca quando l'operazione è completata.</para>
+
+</sect2>
+
+</sect1>
 
 </article>
