@@ -28,7 +28,7 @@ KCM.ScrollViewKCM {
         spacing: Kirigami.Units.largeSpacing
 
         Kirigami.InlineMessage {
-            text: i18n("Putting American English above other languages will cause undesired behavior in some applications. If you would like your system to use American English, remove all other languages.")
+            text: i18n("Putting any other languages below English will cause undesired behavior in some applications. If you would like to use your system in English, remove all other languages.")
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             visible: languageListModel.selectedLanguageModel.shouldWarnMultipleLang
