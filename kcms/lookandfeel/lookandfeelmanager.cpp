@@ -20,6 +20,7 @@
 #include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QGuiApplication>
 #include <QStyle>
 #include <QStyleFactory>
 
@@ -229,11 +230,13 @@ void LookAndFeelManager::setWidgetStyle(const QString &style)
         return;
     }
 
-    // Some global themes use styles that may not be installed.
-    // Test if style can be installed before updating the config.
-    std::unique_ptr<QStyle> testStyle(QStyleFactory::create(style));
-    if (!testStyle) {
-        return;
+    if (qobject_cast<QGuiApplication *>(QCoreApplication::instance())) {
+        // Some global themes use styles that may not be installed.
+        // Test if style can be installed before updating the config.
+        std::unique_ptr<QStyle> testStyle(QStyleFactory::create(style));
+        if (!testStyle) {
+            return;
+        }
     }
 
     writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("KDE"), QStringLiteral("widgetStyle"), style, KConfig::Notify);
