@@ -669,7 +669,7 @@ void PanelView::restore()
     }
 
     setFloating((bool)config().parent().readEntry<int>("floating", configDefaults().parent().readEntry<int>("floating", false)));
-    setThickness(readConfigValueWithFallBack("thickness", m_thickness));
+    setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
     setMinimumSize(QSize(-1, -1));
