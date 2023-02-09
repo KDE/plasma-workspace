@@ -5,13 +5,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2010, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2021, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2022-07-02 13:46+0300\n"
+"PO-Revision-Date: 2023-02-08 21:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "\"%1\" gerçek bir URL değil."
+msgstr "\"%1\" mutlak bir URL değil."
 
 #: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr "\"%1\" mevcut değil."
+msgstr "\"%1\" yok."
 
 #: autostartmodel.cpp:328
 #, kde-format
@@ -44,21 +44,21 @@ msgstr "\"%1\" okunabilir değil."
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Make Executable"
-msgstr "Çalıştırılabilir Yap"
+msgstr "Yürütülebilir Yap"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
-"\"%1\" dosyası, çıkış sırasında çalıştırılabilmek için çalıştırılabilir "
-"türden olmalıdır."
+"\"%1\" dosyası, oturum kapanışında çalıştırılabilmesi için yürütülebilir "
+"olmalıdır."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
-"\"%1\" dosyası, giriş sırasında çalıştırılabilmek için çalıştırılabilir "
-"türden olmalıdır."
+"\"%1\" dosyası, oturum açılışında çalıştırılabilmesi için yürütülebilir "
+"olmalıdır."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "Uygulamalar"
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
-msgstr "Giriş Betikleri"
+msgstr "Oturum Açma Betikleri"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Başlangıç Öncesi Betikleri"
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
-msgstr "Çıkış Betikleri"
+msgstr "Oturum Kapatma Betikleri"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -106,12 +106,12 @@ msgstr ""
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "Choose Login Script"
-msgstr "Giriş Betiği Seç"
+msgstr "Oturum Açma Betiği Seç"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
-msgstr "Çıkış Betiği Seç"
+msgstr "Oturum Kapatma Betiği Seç"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
@@ -126,9 +126,9 @@ msgstr "Uygulama Ekle…"
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
-msgstr "Giriş Betiği Ekle…"
+msgstr "Oturum Açma Betiği Ekle…"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
-msgstr "Çıkış Betiği Ekle…"
+msgstr "Oturum Kapatma Betiği Ekle…"

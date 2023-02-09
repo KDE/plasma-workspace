@@ -6,20 +6,21 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2021-09-01 02:24+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-09 01:20+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -123,7 +124,7 @@ msgstr "直到手動停用"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "自動結束：%1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -235,12 +236,10 @@ msgid "%1/s"
 msgstr "%1 / 秒"
 
 #: package/contents/ui/JobItem.qml:163
-#, fuzzy, kde-format
-#| msgctxt "Row description, e.g. Source"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1："
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:177
 #, kde-format
@@ -287,15 +286,13 @@ msgstr[0] "%1 個執行中的工作"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "%1 running job"
-#| msgid_plural "%1 running jobs"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 個執行中的工作"
+msgstr[0] "%1 個執行中的工作 (%2%)"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
@@ -304,20 +301,19 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 則未讀通知"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "請勿打擾，直到 %1"
+msgstr "請勿打擾，直到 %1；按中鍵來馬上結束"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "請勿打擾模式已啟用；按中鍵來結束"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "按中鍵來進入請勿打擾模式"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -333,7 +329,7 @@ msgstr "設定事件通知與動作(&C)..."
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "剛剛"
 
 #: package/contents/ui/NotificationHeader.qml:128
 #, kde-format

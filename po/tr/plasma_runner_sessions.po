@@ -3,13 +3,13 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-12-17 18:00+0300\n"
+"PO-Revision-Date: 2023-02-08 19:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: sessionrunner.cpp:23
 #, kde-format
@@ -25,12 +25,12 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "çıkış;çıkış yap"
+msgstr "çıkış;çıkış yap;oturumu kapat;oturum kapat;"
 
 #: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
-msgstr "Çıkış yapar, geçerli masaüstü oturumundan çıkış"
+msgstr "Geçerli masaüstü oturumundan çıkarak oturumu kapatır"
 
 #: sessionrunner.cpp:33
 #, kde-format
@@ -126,7 +126,7 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr "Çıkış Yap"
+msgstr "Oturumu Kapat"
 
 #: sessionrunner.cpp:121
 #, kde-format
@@ -165,10 +165,10 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
-"<p>Yeni bir masaüstü oturumuna girmek üzeresiniz.</p><p>Bir giriş ekranı "
-"görüntülenecektir ve geçerli oturum gizlenecektir.</p><p>Masaüstü oturumları "
-"arasında şunları kullanarak geçiş yapabilirsiniz:</p><ul><li>Ctrl+Alt"
-"+F{oturum numarası}</li><li>Plasma arama (%1 yazın)</li><li>Plasma araç "
+"<p>Yeni bir masaüstü oturumuna girmek üzeresiniz.</p><p>Bir oturum açma "
+"ekranı görüntülenir ve geçerli oturum gizlenecektir.</p><p>Masaüstü "
+"oturumları arasında şunları kullanarak geçiş yapabilirsiniz:</p><ul><li>Ctrl"
+"+Alt+F {oturum numarası}</li><li>Plasma arama (%1 yazın)</li><li>Plasma araç "
 "takımları (örneğin uygulama başlatıcı)</li></ul>"
 
 #: sessionrunner.cpp:287

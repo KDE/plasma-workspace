@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-31 06:55+0100\n"
+"PO-Revision-Date: 2023-02-08 11:40+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -432,7 +432,7 @@ msgstr "ბრძანების ნაგულისხმებ ხატ�
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr "_ხატულა:"
+msgstr "ხატულა:"
 
 #: historyimageitem.cpp:36
 #, kde-format
