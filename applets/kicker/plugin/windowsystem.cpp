@@ -37,7 +37,6 @@ void WindowSystem::forceActive(QQuickItem *item)
     }
 
     KX11Extras::forceActiveWindow(item->window()->winId());
-    KWindowSystem::raiseWindow(item->window()->winId());
 }
 
 bool WindowSystem::isActive(QQuickItem *item)
