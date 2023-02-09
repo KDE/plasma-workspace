@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-02-09 01:04+0000\n"
 "PO-Revision-Date: 2022-04-30 12:26+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -24,49 +24,63 @@ msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
 #: baloosearchrunner.cpp:87
-#, kde-format
-msgid "Audio"
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgid "Audios"
 msgstr "Audio"
 
 #: baloosearchrunner.cpp:88
-#, kde-format
-msgid "Image"
+#, fuzzy, kde-format
+#| msgid "Image"
+msgid "Images"
 msgstr "Imagine"
 
 #: baloosearchrunner.cpp:89
-#, kde-format
-msgid "Video"
+#, fuzzy, kde-format
+#| msgid "Video"
+msgid "Videos"
 msgstr "Video"
 
 #: baloosearchrunner.cpp:90
-#, kde-format
-msgid "Spreadsheet"
+#, fuzzy, kde-format
+#| msgid "Spreadsheet"
+msgid "Spreadsheets"
 msgstr "Foaie de calcul"
 
 #: baloosearchrunner.cpp:91
-#, kde-format
-msgid "Presentation"
+#, fuzzy, kde-format
+#| msgid "Presentation"
+msgid "Presentations"
 msgstr "Prezentare"
 
 #: baloosearchrunner.cpp:92
-#, kde-format
-msgid "Folder"
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
 msgstr "Dosar"
 
 #: baloosearchrunner.cpp:93
-#, kde-format
-msgid "Document"
+#, fuzzy, kde-format
+#| msgid "Document"
+msgid "Documents"
 msgstr "Document"
 
 #: baloosearchrunner.cpp:94
-#, kde-format
-msgid "Archive"
+#, fuzzy, kde-format
+#| msgid "Archive"
+msgid "Archives"
 msgstr "Arhivă"
 
 #: baloosearchrunner.cpp:95
-#, kde-format
-msgid "Text"
+#, fuzzy, kde-format
+#| msgid "Text"
+msgid "Texts"
 msgstr "Text"
+
+#: baloosearchrunner.cpp:96
+#, kde-format
+msgid "Files"
+msgstr ""
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Caută printre fișiere, scrisori și contacte"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_baloosearchrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-02-09 01:04+0000\n"
 "PO-Revision-Date: 2014-02-22 22:22-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -21,45 +21,50 @@ msgstr ""
 
 #: baloosearchrunner.cpp:87
 #, kde-format
-msgid "Audio"
+msgid "Audios"
 msgstr ""
 
 #: baloosearchrunner.cpp:88
 #, kde-format
-msgid "Image"
+msgid "Images"
 msgstr ""
 
 #: baloosearchrunner.cpp:89
 #, kde-format
-msgid "Video"
+msgid "Videos"
 msgstr ""
 
 #: baloosearchrunner.cpp:90
 #, kde-format
-msgid "Spreadsheet"
+msgid "Spreadsheets"
 msgstr ""
 
 #: baloosearchrunner.cpp:91
 #, kde-format
-msgid "Presentation"
+msgid "Presentations"
 msgstr ""
 
 #: baloosearchrunner.cpp:92
 #, kde-format
-msgid "Folder"
+msgid "Folders"
 msgstr ""
 
 #: baloosearchrunner.cpp:93
 #, kde-format
-msgid "Document"
+msgid "Documents"
 msgstr ""
 
 #: baloosearchrunner.cpp:94
 #, kde-format
-msgid "Archive"
+msgid "Archives"
 msgstr ""
 
 #: baloosearchrunner.cpp:95
 #, kde-format
-msgid "Text"
+msgid "Texts"
+msgstr ""
+
+#: baloosearchrunner.cpp:96
+#, kde-format
+msgid "Files"
 msgstr ""

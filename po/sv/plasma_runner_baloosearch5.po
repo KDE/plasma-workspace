@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-02-09 01:04+0000\n"
 "PO-Revision-Date: 2022-04-24 11:27+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -23,49 +23,63 @@ msgid "Open Containing Folder"
 msgstr "Öppna katalog med innehåll"
 
 #: baloosearchrunner.cpp:87
-#, kde-format
-msgid "Audio"
+#, fuzzy, kde-format
+#| msgid "Audio"
+msgid "Audios"
 msgstr "Ljud"
 
 #: baloosearchrunner.cpp:88
-#, kde-format
-msgid "Image"
+#, fuzzy, kde-format
+#| msgid "Image"
+msgid "Images"
 msgstr "Bild"
 
 #: baloosearchrunner.cpp:89
-#, kde-format
-msgid "Video"
+#, fuzzy, kde-format
+#| msgid "Video"
+msgid "Videos"
 msgstr "Video"
 
 #: baloosearchrunner.cpp:90
-#, kde-format
-msgid "Spreadsheet"
+#, fuzzy, kde-format
+#| msgid "Spreadsheet"
+msgid "Spreadsheets"
 msgstr "Kalkylark"
 
 #: baloosearchrunner.cpp:91
-#, kde-format
-msgid "Presentation"
+#, fuzzy, kde-format
+#| msgid "Presentation"
+msgid "Presentations"
 msgstr "Presentation"
 
 #: baloosearchrunner.cpp:92
-#, kde-format
-msgid "Folder"
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
 msgstr "Katalog"
 
 #: baloosearchrunner.cpp:93
-#, kde-format
-msgid "Document"
+#, fuzzy, kde-format
+#| msgid "Document"
+msgid "Documents"
 msgstr "Dokument"
 
 #: baloosearchrunner.cpp:94
-#, kde-format
-msgid "Archive"
+#, fuzzy, kde-format
+#| msgid "Archive"
+msgid "Archives"
 msgstr "Arkiv"
 
 #: baloosearchrunner.cpp:95
-#, kde-format
-msgid "Text"
+#, fuzzy, kde-format
+#| msgid "Text"
+msgid "Texts"
 msgstr "Text"
+
+#: baloosearchrunner.cpp:96
+#, kde-format
+msgid "Files"
+msgstr ""
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Sök igenom filer, e-post och kontakter"

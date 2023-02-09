@@ -5,13 +5,14 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2022-02-27 14:06+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2023-02-08 21:26+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-POOTLE-MTIME: 1413102242.000000\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -36,7 +37,7 @@ msgstr "Eylemleri göster:"
 #: contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Logout"
-msgstr "Çıkış yap"
+msgstr "Oturumu Kapat"
 
 #: contents/ui/ConfigGeneral.qml:43
 #, kde-format
@@ -61,7 +62,7 @@ msgstr "Kullanıcı Değiştir"
 #: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
-msgstr "Hazırda beklet"
+msgstr "Hazırda Beklet"
 
 #: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
 #, kde-format
@@ -77,7 +78,7 @@ msgstr "Ekranı kilitle"
 #: contents/ui/data.js:12
 #, kde-format
 msgid "Switch user"
-msgstr "Kullanıcı değiştir"
+msgstr "Kullanıcıyı değiştir"
 
 #: contents/ui/data.js:13
 #, kde-format
@@ -97,7 +98,7 @@ msgstr "Bilgisayarı kapat"
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr "Yeniden başlat…"
+msgstr "Yeniden Başlat…"
 
 #: contents/ui/data.js:26
 #, kde-format
@@ -107,12 +108,12 @@ msgstr "Bilgisayarı yeniden başlat"
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr "Çıkış yap…"
+msgstr "Oturumu Kapat…"
 
 #: contents/ui/data.js:33
 #, kde-format
 msgid "End the session"
-msgstr "Oturumu bitir"
+msgstr "Oturumu sonlandır"
 
 #: contents/ui/data.js:40
 #, kde-format

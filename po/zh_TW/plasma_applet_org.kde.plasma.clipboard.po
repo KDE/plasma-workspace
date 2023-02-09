@@ -4,20 +4,21 @@
 # Franklin, 2014, 2015.
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2015.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2019-01-04 23:25+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-02-09 01:15+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 18.12.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: contents/ui/BarcodePage.qml:36
 #, kde-format
@@ -51,27 +52,24 @@ msgid "Code 93"
 msgstr "Code 93"
 
 #: contents/ui/BarcodePage.qml:62
-#, fuzzy, kde-format
-#| msgid "Code 39"
+#, kde-format
 msgid "Code 128"
-msgstr "Code 39"
+msgstr "Code 128"
 
 #: contents/ui/BarcodePage.qml:85
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
+#, kde-format
 msgid "Change the QR code type"
-msgstr "變更條碼型態"
+msgstr "變更 QR 碼型態"
 
 #: contents/ui/BarcodePage.qml:114
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
+#, kde-format
 msgid "Creating QR code failed"
-msgstr "建立條碼失敗"
+msgstr "建立 QR 碼失敗"
 
 #: contents/ui/BarcodePage.qml:123
 #, kde-format
 msgid "The QR code is too large to be displayed"
-msgstr ""
+msgstr "QR 碼太大了而無法顯示"
 
 #: contents/ui/clipboard.qml:27
 #, kde-format
@@ -84,14 +82,12 @@ msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
 
 #: contents/ui/clipboard.qml:56
-#, fuzzy, kde-format
-#| msgid "Configure Clipboard..."
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "設定剪貼簿..."
+msgstr "設定剪貼簿…"
 
 #: contents/ui/clipboard.qml:58
-#, fuzzy, kde-format
-#| msgid "Clear history"
+#, kde-format
 msgid "Clear History"
 msgstr "清除歷史"
 
@@ -101,10 +97,9 @@ msgid "Invoke action"
 msgstr "請求活動"
 
 #: contents/ui/DelegateToolButtons.qml:38
-#, fuzzy, kde-format
-#| msgid "Show barcode"
+#, kde-format
 msgid "Show QR code"
-msgstr "顯示條碼"
+msgstr "顯示 QR 碼"
 
 #: contents/ui/DelegateToolButtons.qml:54
 #, kde-format
@@ -120,18 +115,18 @@ msgstr "從歷史紀錄中移除"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: contents/ui/Menu.qml:126
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "無相符項目"
 
 #: contents/ui/UrlItemDelegate.qml:99
 #, kde-format
