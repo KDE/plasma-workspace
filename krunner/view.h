@@ -56,7 +56,7 @@ public:
 
     bool helpEnabled()
     {
-        const static auto metaData = KPluginMetaData(QStringLiteral("kf5/krunner/helprunner"));
+        const static auto metaData = KPluginMetaData(QStringLiteral("kf6/krunner/helprunner"));
         const KConfigGroup grp = KSharedConfig::openConfig()->group("Plugins");
         return metaData.isEnabled(grp);
     }

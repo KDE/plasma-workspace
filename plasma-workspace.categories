@@ -1,4 +1,4 @@
-org.kde.kf5.ksmserver ksmserver (ksmserver) IDENTIFIER [KSMSERVER]
+org.kde.kf6.ksmserver ksmserver (ksmserver) IDENTIFIER [KSMSERVER]
 org.kde.plasma.runner.services Plasma Runner Services DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_SERVICES]
 org.kde.plasma.runner.appstream Plasma Runner Appstream DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_APPSTREAM]
 org.kde.plasma.runner.bookmarks Plasma Runner Bookmarks DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_BOOKMARKS]

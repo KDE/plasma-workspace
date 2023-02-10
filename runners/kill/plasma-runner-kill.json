@@ -167,5 +167,5 @@
         "Name[zh_CN]": "终止程序",
         "Name[zh_TW]": "終端機應用程式"
     },
-    "X-KDE-ConfigModule": "kf5/krunner/kcms/kcm_krunner_kill"
+    "X-KDE-ConfigModule": "kf6/krunner/kcms/kcm_krunner_kill"
 }
