@@ -200,17 +200,17 @@ void RunnerModel::startQuery()
     m_runnerManager->launchQuery(m_query);
 }
 
-void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
+void RunnerModel::matchesChanged(const QList<KRunner::QueryMatch> &matches)
 {
     // Group matches by runner.
     // We do not use a QMultiHash here because it keeps values in LIFO order, while we want FIFO.
-    QHash<QString, QList<Plasma::QueryMatch>> matchesForRunner;
+    QHash<QString, QList<KRunner::QueryMatch>> matchesForRunner;
 
-    for (const Plasma::QueryMatch &match : matches) {
+    for (const KRunner::QueryMatch &match : matches) {
         auto it = matchesForRunner.find(match.runner()->id());
 
         if (it == matchesForRunner.end()) {
-            it = matchesForRunner.insert(match.runner()->id(), QList<Plasma::QueryMatch>());
+            it = matchesForRunner.insert(match.runner()->id(), QList<KRunner::QueryMatch>());
         }
 
         it.value().append(match);
@@ -239,7 +239,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             matchesModel = m_models.at(0);
         }
 
-        QList<Plasma::QueryMatch> matches;
+        QList<KRunner::QueryMatch> matches;
         // To preserve the old behavior when allowing all runners we use static sorting
         const static QStringList runnerIds = {
             QStringLiteral("desktopsessions"),
@@ -283,7 +283,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
     // Assign matches to existing models. If there is no match for a model, delete it.
     for (int row = m_models.count() - 1; row >= 0; --row) {
         RunnerMatchesModel *matchesModel = m_models.at(row);
-        QList<Plasma::QueryMatch> matches = matchesForRunner.take(matchesModel->runnerId());
+        QList<KRunner::QueryMatch> matches = matchesForRunner.take(matchesModel->runnerId());
 
         if (m_deleteWhenEmpty && matches.isEmpty()) {
             beginRemoveRows(QModelIndex(), row, row);
@@ -306,7 +306,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         QList<RunnerMatchesModel *> toAppend;
 
         for (; it != end; ++it) {
-            QList<Plasma::QueryMatch> matches = it.value();
+            QList<KRunner::QueryMatch> matches = it.value();
             Q_ASSERT(!matches.isEmpty());
             RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(), matches.first().runner()->name(), m_runnerManager, this);
             matchesModel->setMatches(matches);
@@ -343,14 +343,12 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 void RunnerModel::createManager()
 {
     if (!m_runnerManager) {
-        m_runnerManager = new Plasma::RunnerManager(QStringLiteral("krunnerrc"), this);
-        if (m_runners.isEmpty()) {
-            m_runnerManager->enableKNotifyPluginWatcher();
-        } else {
+        m_runnerManager = new KRunner::RunnerManager(QStringLiteral("krunnerrc"), this);
+        if (!m_runners.isEmpty()) {
             m_runnerManager->setAllowedRunners(m_runners);
         }
-        connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged, this, &RunnerModel::matchesChanged);
-        connect(m_runnerManager, &Plasma::RunnerManager::queryFinished, this, &RunnerModel::queryFinished);
+        connect(m_runnerManager, &KRunner::RunnerManager::matchesChanged, this, &RunnerModel::matchesChanged);
+        connect(m_runnerManager, &KRunner::RunnerManager::queryFinished, this, &RunnerModel::queryFinished);
     }
 }
 

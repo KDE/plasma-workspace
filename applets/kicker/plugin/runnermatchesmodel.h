@@ -11,7 +11,7 @@
 
 #include <KRunner/QueryMatch>
 
-namespace Plasma
+namespace KRunner
 {
 class RunnerManager;
 }
@@ -23,7 +23,7 @@ class RunnerMatchesModel : public AbstractModel
     Q_PROPERTY(QString name READ name CONSTANT)
 
 public:
-    explicit RunnerMatchesModel(const QString &runnerId, const QString &name, Plasma::RunnerManager *manager, QObject *parent = nullptr);
+    explicit RunnerMatchesModel(const QString &runnerId, const QString &name, KRunner::RunnerManager *manager, QObject *parent = nullptr);
 
     QString description() const override;
 
@@ -42,7 +42,7 @@ public:
         return m_name;
     }
 
-    void setMatches(const QList<Plasma::QueryMatch> &matches);
+    void setMatches(const QList<KRunner::QueryMatch> &matches);
 
     AbstractModel *favoritesModel() override;
 
@@ -51,6 +51,6 @@ public:
 private:
     QString m_runnerId;
     QString m_name;
-    Plasma::RunnerManager *m_runnerManager;
-    QList<Plasma::QueryMatch> m_matches;
+    KRunner::RunnerManager *m_runnerManager;
+    QList<KRunner::QueryMatch> m_matches;
 };

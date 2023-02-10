@@ -20,13 +20,13 @@
 
 #include <Plasma/Plasma>
 
-RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name, Plasma::RunnerManager *manager, QObject *parent)
+RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name, KRunner::RunnerManager *manager, QObject *parent)
     : AbstractModel(parent)
     , m_runnerId(runnerId)
     , m_name(name)
     , m_runnerManager(manager)
 {
-    connect(m_runnerManager, &Plasma::RunnerManager::setSearchTerm, this, &RunnerMatchesModel::requestUpdateQueryString);
+    connect(m_runnerManager, &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
 }
 
 QString RunnerMatchesModel::description() const
@@ -40,7 +40,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    Plasma::QueryMatch match = m_matches.at(index.row());
+    KRunner::QueryMatch match = m_matches.at(index.row());
 
     if (role == Qt::DisplayRole) {
         return match.text();
@@ -170,7 +170,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return false;
     }
 
-    Plasma::QueryMatch match = m_matches.at(row);
+    KRunner::QueryMatch match = m_matches.at(row);
 
     if (!match.isEnabled()) {
         return false;
@@ -223,7 +223,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     return false;
 }
 
-void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
+void RunnerMatchesModel::setMatches(const QList<KRunner::QueryMatch> &matches)
 {
     int oldCount = m_matches.count();
     int newCount = matches.count();

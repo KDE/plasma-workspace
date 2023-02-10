@@ -100,5 +100,5 @@ private:
     bool m_requestedVisible = false;
     bool m_pinned = false;
     QStringList m_history;
-    Plasma::RunnerManager *m_manager = nullptr;
+    KRunner::RunnerManager *m_manager = nullptr;
 };

@@ -12,7 +12,7 @@
 #include "favicon.h"
 #include <QTest>
 
-using namespace Plasma;
+using namespace KRunner;
 
 void TestChromeBookmarks::initTestCase()
 {

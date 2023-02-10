@@ -14,7 +14,7 @@
 
 #include <KRunner/QueryMatch>
 
-namespace Plasma
+namespace KRunner
 {
 class RunnerManager;
 }
@@ -77,7 +77,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void startQuery();
-    void matchesChanged(const QList<Plasma::QueryMatch> &matches);
+    void matchesChanged(const QList<KRunner::QueryMatch> &matches);
 
 private:
     void createManager();
@@ -85,7 +85,7 @@ private:
 
     AbstractModel *m_favoritesModel = nullptr;
     QObject *m_appletInterface = nullptr;
-    Plasma::RunnerManager *m_runnerManager = nullptr;
+    KRunner::RunnerManager *m_runnerManager = nullptr;
     QStringList m_runners;
     QList<RunnerMatchesModel *> m_models;
     QString m_query;

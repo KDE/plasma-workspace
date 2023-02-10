@@ -12,7 +12,7 @@
 #include <QAction>
 #include <QObject>
 
-using namespace Plasma;
+using namespace KRunner;
 
 class HelpRunner : public AbstractRunner
 {
