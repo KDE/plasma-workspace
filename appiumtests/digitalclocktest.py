@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # SPDX-License-Identifier: MIT
-# SPDX-FileCopyrightText: 2016 Microsoft Corporation. All rights reserved.
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
 import unittest
 from appium import webdriver
