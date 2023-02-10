@@ -93,6 +93,11 @@ QString LanguageListModel::languageCodeToName(const QString &languageCode)
     return languageName;
 }
 
+bool LanguageListModel::isSupportedLanguage(const QString &language) const
+{
+    return m_availableLanguages.contains(language);
+}
+
 int LanguageListModel::currentIndex() const
 {
     return m_index;
@@ -188,6 +193,12 @@ void LanguageListModel::setIsPreviewExample(bool preview)
     m_isPreviewExample = preview;
 }
 
+SelectedLanguageModel::SelectedLanguageModel(LanguageListModel *parent)
+    : QAbstractListModel(parent)
+    , m_parent(parent)
+{
+}
+
 void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *settings, KCMRegionAndLang *kcm)
 {
     m_settings = settings;
@@ -221,7 +232,7 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
     endResetModel();
 
     // check for invalid lang
-    if (const QString lang = m_kcm->toGlibcLocale(m_selectedLanguages.front()); lang.isEmpty()) {
+    if (!m_selectedLanguages.empty() && !m_parent->isSupportedLanguage(m_selectedLanguages.front())) {
         m_unsupportedLanguage = m_selectedLanguages.front();
         Q_EMIT unsupportedLanguageChanged();
     } else if (!m_unsupportedLanguage.isEmpty()) {
@@ -358,8 +369,7 @@ void SelectedLanguageModel::saveLanguages()
         m_settings->config()->group(QStringLiteral("Formats")).deleteEntry("lang");
         m_settings->config()->group(QStringLiteral("Translations")).deleteEntry("language");
     } else {
-        QString lang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
-        if (lang.isEmpty()) {
+        if (!m_parent->isSupportedLanguage(m_selectedLanguages.front())) {
             m_unsupportedLanguage = m_selectedLanguages.front();
             Q_EMIT unsupportedLanguageChanged();
         } else {
@@ -367,9 +377,10 @@ void SelectedLanguageModel::saveLanguages()
                 m_unsupportedLanguage.clear();
                 Q_EMIT unsupportedLanguageChanged();
             }
-            // don't set LANG in non glibc systems, because in non glibc systems KCMRegionAndLang::toGlibcLocale return the language itself
-            if (KCMRegionAndLang::isGlibc()) {
-                m_settings->setLang(lang);
+
+            auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
+            if (glibcLang.has_value()) {
+                m_settings->setLang(glibcLang.value());
             }
         }
         QString languages;

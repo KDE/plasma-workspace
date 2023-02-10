@@ -127,9 +127,9 @@ void KCMRegionAndLang::save()
     if (!settings()->language().isEmpty()) {
         QStringList languages = settings()->language().split(QLatin1Char(':'));
         for (const QString &lang : languages) {
-            QString glibcLocale = toGlibcLocale(lang);
-            if (!glibcLocale.isEmpty()) {
-                locales.append(glibcLocale);
+            auto glibcLocale = toGlibcLocale(lang);
+            if (glibcLocale.has_value()) {
+                locales.append(glibcLocale.value());
             }
         }
     }
@@ -226,21 +226,14 @@ bool KCMRegionAndLang::enabled() const
     return m_enabled;
 }
 
-QString KCMRegionAndLang::toGlibcLocale(const QString &lang)
+std::optional<QString> KCMRegionAndLang::toGlibcLocale(const QString &lang)
 {
-    static bool inited = false;
-    static std::unordered_map<QString, QString> map;
-
-    if (!inited) {
-        map = constructGlibcLocaleMap();
-        inited = true;
-    }
+    static std::unordered_map<QString, QString> map = constructGlibcLocaleMap();
 
     if (map.count(lang)) {
         return map[lang];
-    } else {
-        return lang;
     }
+    return std::nullopt;
 }
 
 QString KCMRegionAndLang::toUTF8Locale(const QString &locale)

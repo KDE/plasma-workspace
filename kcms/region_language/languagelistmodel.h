@@ -58,6 +58,7 @@ Q_SIGNALS:
 protected:
     friend class SelectedLanguageModel;
     static QString languageCodeToName(const QString &languageCode);
+    bool isSupportedLanguage(const QString &language) const;
 
 private:
     QString exampleHelper(const std::function<QString(const QLocale &)> &func) const;
@@ -75,7 +76,7 @@ class SelectedLanguageModel : public QAbstractListModel
     Q_PROPERTY(bool hasImplicitLang READ hasImplicitLang NOTIFY hasImplicitLangChanged)
     Q_PROPERTY(QString unsupportedLanguage READ unsupportedLanguage NOTIFY unsupportedLanguageChanged)
 public:
-    using QAbstractListModel::QAbstractListModel;
+    explicit SelectedLanguageModel(LanguageListModel *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -104,4 +105,5 @@ private:
     bool m_hasImplicitLang = false;
     QString m_unsupportedLanguage;
     KCMRegionAndLang *m_kcm = nullptr;
+    LanguageListModel *m_parent = nullptr;
 };
