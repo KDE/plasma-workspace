@@ -76,9 +76,11 @@ void Greeter::adoptScreen(QScreen *screen)
         w->deleteLater();
     });
     connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
+
     connect(w, &KSMShutdownDlg::accepted, this, []() {
         QApplication::exit(1);
     });
+
     w->setGeometry(screen->geometry());
     w->init(m_package);
 }

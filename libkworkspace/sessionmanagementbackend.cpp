@@ -32,7 +32,10 @@ SessionBackend *SessionBackend::self()
     if (s_backend) {
         return s_backend;
     }
-    if (LogindSessionBackend::exists()) {
+
+    if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
+        s_backend = new TestSessionBackend();
+    } else if (LogindSessionBackend::exists()) {
         s_backend = new LogindSessionBackend();
     } else if (ConsoleKitSessionBackend::exists()) {
         s_backend = new ConsoleKitSessionBackend();
@@ -61,6 +64,36 @@ bool SessionBackend::canSwitchUser() const
 DummySessionBackend::DummySessionBackend()
 {
     qCritical() << "Could not load a session backend. Session management operations such as shutdown will not be operational. This is a setup issue.";
+}
+
+TestSessionBackend::TestSessionBackend()
+{
+    qWarning() << "This backend is intended for gui autotesting only, it will not be operational";
+}
+
+void TestSessionBackend::shutdown()
+{
+    qWarning() << "shutdown";
+}
+
+void TestSessionBackend::reboot()
+{
+    qWarning() << "reboot";
+}
+
+void TestSessionBackend::suspend()
+{
+    qWarning() << "suspend";
+}
+
+void TestSessionBackend::hybridSuspend()
+{
+    qWarning() << "hybridSuspend";
+}
+
+void TestSessionBackend::hibernate()
+{
+    qWarning() << "hibernate";
 }
 
 /*********************************************************************************/
