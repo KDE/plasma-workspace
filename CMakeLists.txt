@@ -46,7 +46,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor
                     OPTIONAL_COMPONENTS DocTools)
 
-find_package(KDED CONFIG REQUIRED)
+find_package(KF6KDED CONFIG REQUIRED)
 find_package(KPipeWire CONFIG)
 
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
