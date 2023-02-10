@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-14 00:58+0000\n"
+"POT-Creation-Date: 2023-02-10 02:54+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -28,7 +28,7 @@ msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
 msgstr "%1 ഫയൽ %2 ലേക്ക്"
 
-#: job_p.cpp:185
+#: job_p.cpp:183
 #, kde-format
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
@@ -36,7 +36,7 @@ msgid_plural "%2 of %1 files to %3"
 msgstr[0] "%1 ൽ %2 ഫയൽ %3 ലേക്ക്"
 msgstr[1] "%1 ൽ %2 ഫയലുകൾ %3 ലേക്ക്"
 
-#: job_p.cpp:188 job_p.cpp:218 job_p.cpp:234
+#: job_p.cpp:186 job_p.cpp:216 job_p.cpp:232
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
@@ -44,7 +44,7 @@ msgid_plural "%1 files to %2"
 msgstr[0] "%1 ഫയൽ %2 ലേക്ക്"
 msgstr[1] "%1 ഫയലുകൾ %2 ലേക്ക്"
 
-#: job_p.cpp:195
+#: job_p.cpp:193
 #, kde-format
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
@@ -52,7 +52,7 @@ msgid_plural "%2 of %1 files"
 msgstr[0] "%1 ൽ %2 ഫയൽ"
 msgstr[1] "%1 ൽ %2 ഫയലുകൾ"
 
-#: job_p.cpp:198 job_p.cpp:228 job_p.cpp:238
+#: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236
 #, kde-format
 msgctxt "Copying n files"
 msgid "%1 file"
@@ -60,7 +60,7 @@ msgid_plural "%1 files"
 msgstr[0] "%1 ഫയൽ"
 msgstr[1] "%1 ഫയലുകൾ"
 
-#: job_p.cpp:203
+#: job_p.cpp:201
 #, fuzzy, kde-format
 #| msgctxt "Copying n of m files"
 #| msgid "%2 of %1 file"
@@ -71,7 +71,7 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%1 ൽ %2 ഫയൽ"
 msgstr[1] "%1 ൽ %2 ഫയലുകൾ"
 
-#: job_p.cpp:206 job_p.cpp:226
+#: job_p.cpp:204 job_p.cpp:224
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
@@ -79,13 +79,13 @@ msgid_plural "%1 items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: job_p.cpp:213
+#: job_p.cpp:211
 #, kde-format
 msgctxt "Copying file to location"
 msgid "%1 to %2"
 msgstr "%1 ൽ നിന്ന് %2 ലേക്ക്"
 
-#: job_p.cpp:216
+#: job_p.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "Copying n files to location"
 #| msgid "%1 file to %2"
@@ -96,7 +96,7 @@ msgid_plural "%1 items to %2"
 msgstr[0] "%1 ഫയൽ %2 ലേക്ക്"
 msgstr[1] "%1 ഫയലുകൾ %2 ലേക്ക്"
 
-#: job_p.cpp:236
+#: job_p.cpp:234
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
