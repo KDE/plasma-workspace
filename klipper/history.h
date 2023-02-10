@@ -41,7 +41,7 @@ public:
     /**
      * Remove (first) history item equal to item from history
      */
-    void remove(std::shared_ptr<const HistoryItem> item);
+    void remove(const std::shared_ptr<const HistoryItem> &item);
 
     /**
      * Traversal: Get first item

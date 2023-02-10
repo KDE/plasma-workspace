@@ -100,7 +100,7 @@ void History::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
     m_model->clearAndBatchInsert(items);
 }
 
-void History::remove(HistoryItemConstPtr newItem)
+void History::remove(const HistoryItemConstPtr &newItem)
 {
     if (!newItem)
         return;
