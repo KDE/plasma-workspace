@@ -143,7 +143,6 @@ bool DashboardWindow::event(QEvent *event)
         }
     } else if (event->type() == QEvent::FocusOut) {
         if (isVisible()) {
-            KWindowSystem::raiseWindow(winId());
             KX11Extras::forceActiveWindow(winId());
         }
     }
