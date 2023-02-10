@@ -13,14 +13,14 @@ set(hotplug_engine_SRCS
 
 kcoreaddons_add_plugin(plasma_engine_hotplug SOURCES ${hotplug_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_hotplug
-    KF5::CoreAddons
-    KF5::Plasma
-    KF5::Solid
-    KF5::Service
-    KF5::KIOCore
-    KF5::KIOWidgets      # KDesktopFileActions
-    KF5::Notifications
-    KF5::I18n
+    KF6::CoreAddons
+    KF6::Plasma
+    KF6::Solid
+    KF6::Service
+    KF6::KIOCore
+    KF6::KIOWidgets      # KDesktopFileActions
+    KF6::Notifications
+    KF6::I18n
 )
 
 install(FILES hotplug.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

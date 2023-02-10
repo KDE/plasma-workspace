@@ -36,9 +36,9 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 target_link_libraries(gmenudbusmenuproxy
     Qt::Core
     Qt::DBus
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::WindowSystem
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::WindowSystem
     XCB::XCB
 )
 if (QT_MAJOR_VERSION EQUAL "5")

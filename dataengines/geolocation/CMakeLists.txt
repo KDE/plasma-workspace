@@ -7,9 +7,9 @@ target_link_libraries(plasma-geolocation-interface
     PUBLIC
         Qt::Core
         Qt::Network
-        KF5::Plasma
+        KF6::Plasma
     PRIVATE
-        KF5::KIOCore
+        KF6::KIOCore
 )
 set_target_properties(plasma-geolocation-interface PROPERTIES
    VERSION ${PROJECT_VERSION}
@@ -26,17 +26,17 @@ target_compile_definitions(plasma_engine_geolocation PRIVATE -DQT_NO_KEYWORDS)
 generate_export_header(plasma_engine_geolocation EXPORT_FILE_NAME "geolocation_export.h" BASE_NAME "GEOLOCATION")
 target_link_libraries(plasma_engine_geolocation
     plasma-geolocation-interface
-    KF5::Plasma
-    KF5::CoreAddons
-    KF5::KIOCore
-    KF5::NetworkManagerQt
-    KF5::Service
-    KF5::Solid)
+    KF6::Plasma
+    KF6::CoreAddons
+    KF6::KIOCore
+    KF6::NetworkManagerQt
+    KF6::Service
+    KF6::Solid)
 
 kcoreaddons_add_plugin(plasma-geolocation-ip SOURCES location_ip.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
 ecm_qt_declare_logging_category(plasma-geolocation-ip HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
-target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::NetworkManagerQt)
+target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF6::NetworkManagerQt)
 
 pkg_check_modules(LIBGPS libgps IMPORTED_TARGET)
 

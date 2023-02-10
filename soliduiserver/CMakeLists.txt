@@ -3,13 +3,13 @@ add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver5\")
 
 kcoreaddons_add_plugin(soliduiserver SOURCES soliduiserver.cpp soliduiserver.h INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 target_link_libraries(soliduiserver
-    KF5::Solid
-    KF5::DBusAddons
-    KF5::Wallet
-    KF5::KIOCore
-    KF5::WindowSystem
-    KF5::I18n
-    KF5::WidgetsAddons
+    KF6::Solid
+    KF6::DBusAddons
+    KF6::Wallet
+    KF6::KIOCore
+    KF6::WindowSystem
+    KF6::I18n
+    KF6::WidgetsAddons
 )
 
 

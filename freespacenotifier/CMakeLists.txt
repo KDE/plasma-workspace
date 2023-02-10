@@ -11,13 +11,13 @@ kconfig_add_kcfg_files(kded_freespacenotifier_SRCS settings.kcfgc)
 kcoreaddons_add_plugin(freespacenotifier SOURCES ${kded_freespacenotifier_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 target_link_libraries(freespacenotifier
-    KF5::ConfigWidgets
-    KF5::DBusAddons
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::Notifications
-    KF5::Service
+    KF6::ConfigWidgets
+    KF6::DBusAddons
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::Notifications
+    KF6::Service
 )
 
 ########### install files ###############

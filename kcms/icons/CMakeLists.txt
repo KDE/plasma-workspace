@@ -19,12 +19,12 @@ kcmutils_generate_desktop_file (kcm_icons    )
 target_link_libraries(kcm_icons
     Qt::Widgets
     Qt::Svg
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::IconThemes
-    KF5::Archive
-    KF5::KIOWidgets
-    KF5::QuickAddons
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::IconThemes
+    KF6::Archive
+    KF6::KIOWidgets
+    KF6::QuickAddons
 )
 
 file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/config.h CONTENT "#define CMAKE_INSTALL_FULL_LIBEXECDIR \"${CMAKE_INSTALL_FULL_LIBEXECDIR}\"")
@@ -34,7 +34,7 @@ set(changeicons_SRCS changeicons.cpp iconssettings.cpp)
 kconfig_add_kcfg_files(changeicons_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
 
 add_executable(plasma-changeicons ${changeicons_SRCS})
-target_link_libraries(plasma-changeicons PRIVATE Qt::Core KF5::KIOWidgets KF5::KCMUtils KF5::IconThemes KF5::I18n)
+target_link_libraries(plasma-changeicons PRIVATE Qt::Core KF6::KIOWidgets KF6::KCMUtils KF6::IconThemes KF6::I18n)
 
 ecm_qt_declare_logging_category(plasma-changeicons
     HEADER plasma_changeicons_debug.h

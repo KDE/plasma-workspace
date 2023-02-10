@@ -38,12 +38,12 @@ target_link_libraries(systemtraymodel_static
     Qt${QT_VERSION_MAJOR}::GuiPrivate
     Qt::Quick
     Qt::DBus
-    KF5::XmlGui
-    KF5::I18n
-    KF5::ItemModels
-    KF5::Plasma
-    KF5::IconThemes
-    KF5::WindowSystem
+    KF6::XmlGui
+    KF6::I18n
+    KF6::ItemModels
+    KF6::Plasma
+    KF6::IconThemes
+    KF6::WindowSystem
     dbusmenuqt)
 
 set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)

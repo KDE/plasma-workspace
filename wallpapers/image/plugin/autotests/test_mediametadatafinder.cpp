@@ -9,7 +9,7 @@
 
 #include "../finder/mediametadatafinder.h"
 #include "commontestdata.h"
-#include "config-KF5KExiv2.h"
+#include "config-KF6KExiv2.h"
 
 class MediaMetadataFinderTest : public QObject
 {
@@ -44,7 +44,7 @@ void MediaMetadataFinderTest::testMediaMetadataFinderCanFindMetadata()
     QCOMPARE(args.at(0).toString(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
 
     const auto metadata = args.at(1).value<MediaMetadata>();
-#if HAVE_KF5KExiv2
+#if HAVE_KF6KExiv2
     QTRY_COMPARE(metadata.title, QStringLiteral("DocumentName"));
     QTRY_COMPARE(metadata.author, QStringLiteral("KDE Community"));
 #endif

@@ -83,31 +83,31 @@ target_link_libraries(plasmashell
  Qt::Quick
  Qt::DBus
  Qt::WaylandClient
- KF5::KIOCore
- KF5::WindowSystem
- KF5::ConfigCore # Activate KRunner on the desktop
- KF5::Crash
- KF5::Plasma
- KF5::PlasmaQuick
- KF5::Solid
- KF5::Declarative
- KF5::I18n
- KF5::Activities
- KF5::GlobalAccel
- KF5::CoreAddons
- KF5::DBusAddons
- KF5::QuickAddons
- KF5::XmlGui
- KF5::Package
- KF5::WaylandClient
- KF5::Notifications
- KF5::GuiAddons
- KF5::Service
+ KF6::KIOCore
+ KF6::WindowSystem
+ KF6::ConfigCore # Activate KRunner on the desktop
+ KF6::Crash
+ KF6::Plasma
+ KF6::PlasmaQuick
+ KF6::Solid
+ KF6::Declarative
+ KF6::I18n
+ KF6::Activities
+ KF6::GlobalAccel
+ KF6::CoreAddons
+ KF6::DBusAddons
+ KF6::QuickAddons
+ KF6::XmlGui
+ KF6::Package
+ KF6::WaylandClient
+ KF6::Notifications
+ KF6::GuiAddons
+ KF6::Service
  PW::KWorkspace
  Wayland::Client
 )
 if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(plasmashell KF5::ConfigQml)
+    target_link_libraries(plasmashell KF6::ConfigQml)
 endif()
 if (TARGET KUserFeedbackCore)
     target_link_libraries(plasmashell KUserFeedbackCore)

@@ -18,8 +18,8 @@ kcoreaddons_add_plugin(plasma_engine_time SOURCES ${time_engine_SRCS} INSTALL_NA
 
 target_link_libraries(plasma_engine_time
     Qt::DBus
-    KF5::Solid
-    KF5::Plasma
-    KF5::I18n
-    KF5::Service
+    KF6::Solid
+    KF6::Plasma
+    KF6::I18n
+    KF6::Service
 )

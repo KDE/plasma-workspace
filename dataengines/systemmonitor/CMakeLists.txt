@@ -8,8 +8,8 @@ kcoreaddons_add_plugin(plasma_engine_systemmonitor SOURCES ${systemmonitor_engin
 
 target_link_libraries(plasma_engine_systemmonitor
     Qt::Network
-    KF5::I18n
-    KF5::Plasma
-    KF5::Service
+    KF6::I18n
+    KF6::Plasma
+    KF6::Service
     KSysGuard::SysGuard
 )

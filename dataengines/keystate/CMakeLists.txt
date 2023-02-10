@@ -10,11 +10,11 @@ set(keystate_engine_SRCS
 kcoreaddons_add_plugin(plasma_engine_keystate SOURCES ${keystate_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_keystate
-    KF5::GuiAddons
-    KF5::Plasma
-    KF5::Service
-    KF5::KIOCore
-    KF5::I18n
+    KF6::GuiAddons
+    KF6::Plasma
+    KF6::Service
+    KF6::KIOCore
+    KF6::I18n
 )
 
 install(FILES modifierkeystate.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

@@ -2,7 +2,7 @@ kcoreaddons_add_plugin(plasma_containmentactions_switchactivity SOURCES switch.c
 
 target_link_libraries(plasma_containmentactions_switchactivity
                       Qt::Widgets
-                      KF5::Plasma
-                      KF5::KIOCore
-                      KF5::Activities
+                      KF6::Plasma
+                      KF6::KIOCore
+                      KF6::Activities
                       PW::KWorkspace)

@@ -11,20 +11,20 @@ target_compile_definitions(kcm_krunner_kill PRIVATE -DKRUNNER_PLUGIN_NAME="krunn
 target_link_libraries(kcm_krunner_kill
     Qt::Core
     Qt::Gui
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::I18n
-    KF5::Completion
-    KF5::ConfigWidgets
-    KF5::Runner
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::I18n
+    KF6::Completion
+    KF6::ConfigWidgets
+    KF6::Runner
     )
 
 kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(krunner_kill
-                      KF5::I18n
-                      KF5::Completion
-                      KF5::ConfigWidgets
-                      KF5::AuthCore
-                      KF5::Runner
+                      KF6::I18n
+                      KF6::Completion
+                      KF6::ConfigWidgets
+                      KF6::AuthCore
+                      KF6::Runner
                       KSysGuard::ProcessCore
                       )

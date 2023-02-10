@@ -11,7 +11,7 @@
 #include "../finder/mediametadatafinder.h"
 #include "../model/imagelistmodel.h"
 #include "commontestdata.h"
-#include "config-KF5KExiv2.h"
+#include "config-KF6KExiv2.h"
 
 class ImageListModelTest : public QObject
 {
@@ -103,7 +103,7 @@ void ImageListModelTest::testImageListModelData()
     // Should return the complete base name for wallpaper.jpg.jpg
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
     m_dataSpy->wait();
-#if HAVE_KF5KExiv2
+#if HAVE_KF6KExiv2
     m_dataSpy->wait();
     m_dataSpy->wait();
     QCOMPARE(m_dataSpy->size(), 3);
@@ -123,7 +123,7 @@ void ImageListModelTest::testImageListModelData()
         QVERIFY(!idx.data(ImageRoles::ScreenshotRole).value<QPixmap>().isNull());
     }
 
-#if HAVE_KF5KExiv2
+#if HAVE_KF6KExiv2
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("KDE Community"));
 #else
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QString());
@@ -254,7 +254,7 @@ void ImageListModelTest::testImageListModelRemoveLocalBackground()
     QPersistentModelIndex idx = m_model->index(0, 0);
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
     m_dataSpy->wait();
-#if HAVE_KF5KExiv2
+#if HAVE_KF6KExiv2
     m_dataSpy->wait();
     m_dataSpy->wait();
 #endif

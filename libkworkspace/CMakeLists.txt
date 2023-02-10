@@ -47,12 +47,12 @@ generate_export_header(kworkspace)
 target_link_libraries(kworkspace
     PUBLIC
         Qt::Core
-        KF5::CoreAddons
+        KF6::CoreAddons
     PRIVATE
         Qt::DBus
-        KF5::I18n
-        KF5::WindowSystem
-        KF5::ConfigCore
+        KF6::I18n
+        KF6::WindowSystem
+        KF6::ConfigCore
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace5>" )

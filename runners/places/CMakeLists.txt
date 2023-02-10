@@ -7,9 +7,9 @@ set(krunner_placesrunner_SRCS
 
 kcoreaddons_add_plugin(krunner_placesrunner SOURCES ${krunner_placesrunner_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(krunner_placesrunner
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::I18n
-    KF5::Runner
-    KF5::Notifications
+    KF6::KIOCore
+    KF6::KIOFileWidgets
+    KF6::I18n
+    KF6::Runner
+    KF6::Notifications
 )

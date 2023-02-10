@@ -10,12 +10,12 @@ set(device_notifications_engine_SRCS
 add_library(plasma_engine_devicenotifications MODULE ${device_notifications_engine_SRCS})
 
 target_link_libraries(plasma_engine_devicenotifications 
-    KF5::Service
-    KF5::Plasma
-    KF5::Solid
-    KF5::I18n
+    KF6::Service
+    KF6::Plasma
+    KF6::Solid
+    KF6::I18n
     KSysGuard::ProcessCore
-    KF5::Notifications
+    KF6::Notifications
 ) # todo: add kworkspace once ported
 
 install(TARGETS plasma_engine_devicenotifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

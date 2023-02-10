@@ -12,8 +12,8 @@ endif ()
 kcoreaddons_add_plugin(plasma_engine_mouse SOURCES ${mouse_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_mouse
     Qt::Widgets
-    KF5::Plasma
-    KF5::WindowSystem
+    KF6::Plasma
+    KF6::WindowSystem
 )
 
 if (HAVE_X11)

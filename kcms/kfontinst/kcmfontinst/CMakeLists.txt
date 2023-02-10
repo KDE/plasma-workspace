@@ -7,13 +7,13 @@ kcoreaddons_add_plugin(kcm_fontinst SOURCES ${kcm_fontinst_PART_SRCS} INSTALL_NA
 kcmutils_generate_desktop_file(kcm_fontinst)
 
 target_link_libraries(kcm_fontinst
-    KF5::Archive
-    KF5::KCMUtils
-    KF5::IconThemes
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::XmlGui
-    KF5::NewStuffWidgets
+    KF6::Archive
+    KF6::KCMUtils
+    KF6::IconThemes
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::XmlGui
+    KF6::NewStuffWidgets
     kfontinstui
     kfontinst
     X11::X11

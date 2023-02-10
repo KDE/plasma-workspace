@@ -34,21 +34,21 @@ target_link_libraries(libklipper_common_static
     Qt::Concurrent
     Qt::Widgets
     Qt::DBus
-    KF5::ConfigGui
-    KF5::CoreAddons
-    KF5::DBusAddons
-    KF5::GuiAddons
-    KF5::GlobalAccel
-    KF5::KIOWidgets
-    KF5::Notifications
-    KF5::Service
-    KF5::Prison
-    KF5::TextWidgets
-    KF5::WindowSystem
-    KF5::WidgetsAddons
-    KF5::XmlGui
-    KF5::WaylandClient
-    KF5::IconThemes
+    KF6::ConfigGui
+    KF6::CoreAddons
+    KF6::DBusAddons
+    KF6::GuiAddons
+    KF6::GlobalAccel
+    KF6::KIOWidgets
+    KF6::Notifications
+    KF6::Service
+    KF6::Prison
+    KF6::TextWidgets
+    KF6::WindowSystem
+    KF6::WidgetsAddons
+    KF6::XmlGui
+    KF6::WaylandClient
+    KF6::IconThemes
     ${ZLIB_LIBRARY})
 
 if (HAVE_X11)
@@ -75,7 +75,7 @@ set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipbo
 kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
 target_link_libraries(plasma_engine_clipboard
     libklipper_common_static
-    KF5::Plasma
+    KF6::Plasma
 )
 
 install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

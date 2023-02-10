@@ -35,10 +35,10 @@ ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
 kcoreaddons_add_plugin(plasma_engine_statusnotifieritem SOURCES ${statusnotifieritem_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_statusnotifieritem
     Qt::DBus
-    KF5::Service
-    KF5::Plasma
-    KF5::IconThemes
-    KF5::WindowSystem
+    KF6::Service
+    KF6::Plasma
+    KF6::IconThemes
+    KF6::WindowSystem
     dbusmenuqt
 )
 

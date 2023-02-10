@@ -11,4 +11,4 @@ ecm_qt_declare_logging_category(krunner_appstream_SRCS
     DEFAULT_SEVERITY Warning)
 
 kcoreaddons_add_plugin(krunner_appstream SOURCES ${krunner_appstream_SRCS} INSTALL_NAMESPACE "kf5/krunner")
-target_link_libraries(krunner_appstream PUBLIC Qt::Gui KF5::Runner KF5::I18n KF5::Service AppStreamQt)
+target_link_libraries(krunner_appstream PUBLIC Qt::Gui KF6::Runner KF6::I18n KF6::Service AppStreamQt)

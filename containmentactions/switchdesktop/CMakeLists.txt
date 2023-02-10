@@ -2,7 +2,7 @@ kcoreaddons_add_plugin(plasma_containmentactions_switchdesktop SOURCES desktop.c
 
 target_link_libraries(plasma_containmentactions_switchdesktop
                         Qt::Widgets
-                        KF5::Plasma
+                        KF6::Plasma
                         PW::LibTaskManager
                        )
 

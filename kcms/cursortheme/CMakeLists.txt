@@ -35,15 +35,15 @@ kcmutils_generate_desktop_file (kcm_cursortheme)
 target_link_libraries(kcm_cursortheme
     Qt::DBus
     Qt::Quick
-    KF5::Archive
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::GuiAddons
-    KF5::WindowSystem
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::NewStuffCore
-    KF5::QuickAddons
+    KF6::Archive
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::GuiAddons
+    KF6::WindowSystem
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::NewStuffCore
+    KF6::QuickAddons
     PW::KWorkspace
     krdb
 )
@@ -76,10 +76,10 @@ add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
 
 target_link_libraries(plasma-apply-cursortheme
     Qt::DBus
-    KF5::GuiAddons
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::WindowSystem
+    KF6::GuiAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::WindowSystem
     PW::KWorkspace
 )
 

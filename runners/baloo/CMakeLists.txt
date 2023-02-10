@@ -9,11 +9,11 @@ qt_add_dbus_adaptor(baloosearchrunner_SRCS "org.kde.krunner1.xml" baloosearchrun
 add_executable(baloorunner ${baloosearchrunner_SRCS})
 
 target_link_libraries(baloorunner
-  KF5::Runner
-  KF5::KIOWidgets
-  KF5::I18n
-  KF5::Baloo
-  KF5::Notifications
+  KF6::Runner
+  KF6::KIOWidgets
+  KF6::I18n
+  KF6::Baloo
+  KF6::Notifications
   Qt::DBus
 )
 

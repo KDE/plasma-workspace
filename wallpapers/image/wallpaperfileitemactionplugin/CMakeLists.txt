@@ -5,6 +5,6 @@ kcoreaddons_add_plugin(wallpaperfileitemaction
     INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kfileitemaction")
 
 target_link_libraries(wallpaperfileitemaction
-    KF5::KIOWidgets
-    KF5::I18n
+    KF6::KIOWidgets
+    KF6::I18n
 )

@@ -10,9 +10,9 @@ target_link_libraries(appmenuplugin
                       Qt::Core
                       Qt::Widgets
                       Qt::Quick
-                      KF5::Plasma
-                      KF5::WindowSystem
-                      KF5::I18n
+                      KF6::Plasma
+                      KF6::WindowSystem
+                      KF6::I18n
                       PW::LibTaskManager
                       dbusmenuqt)
 

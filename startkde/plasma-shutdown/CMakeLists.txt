@@ -15,7 +15,7 @@ add_executable(plasma-shutdown ${plasma_shutdown_SRCS})
 target_link_libraries(plasma-shutdown
     Qt::Core
     Qt::DBus
-    KF5::ConfigCore
+    KF6::ConfigCore
     PW::KWorkspace
 )
 

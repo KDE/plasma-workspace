@@ -41,13 +41,13 @@ kcmutils_generate_desktop_file(kcm_style)
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
 target_link_libraries(kcm_style
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::KIOCore
-    KF5::QuickAddons
-    KF5::Archive
-    KF5::NewStuff
-    KF5::XmlGui
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::KIOCore
+    KF6::QuickAddons
+    KF6::Archive
+    KF6::NewStuff
+    KF6::XmlGui
     krdb
 )
 

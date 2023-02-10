@@ -77,17 +77,17 @@ target_link_libraries(notificationmanager
         Qt::Core
         Qt::Gui
         Qt::Quick
-        KF5::ConfigCore
+        KF6::ConfigCore
     PRIVATE
         Qt::DBus
-        KF5::ConfigGui
-        KF5::I18n
-        KF5::WindowSystem
-        KF5::ItemModels # KDescendantsProxyModel
-        KF5::KIOFileWidgets
-        KF5::Plasma
-        KF5::Screen
-        KF5::Service
+        KF6::ConfigGui
+        KF6::I18n
+        KF6::WindowSystem
+        KF6::ItemModels # KDescendantsProxyModel
+        KF6::KIOFileWidgets
+        KF6::Plasma
+        KF6::Screen
+        KF6::Service
 )
 
 set_target_properties(notificationmanager PROPERTIES

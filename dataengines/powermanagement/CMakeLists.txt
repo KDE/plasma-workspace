@@ -15,12 +15,12 @@ qt_add_dbus_interface(powermanagement_engine_SRCS ${krunner_xml} krunner_interfa
 kcoreaddons_add_plugin(plasma_engine_powermanagement SOURCES ${powermanagement_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_powermanagement
-    KF5::Solid
-    KF5::Plasma
-    KF5::IdleTime
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::Service
+    KF6::Solid
+    KF6::Plasma
+    KF6::IdleTime
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::Service
     Qt::DBus
     PW::KWorkspace
 )

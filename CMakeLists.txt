@@ -5,7 +5,7 @@ set(PROJECT_VERSION "5.27.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.102.0")
+set(KF6_MIN_VERSION "5.102.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
@@ -14,7 +14,7 @@ option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(KDEInstallDirs)
@@ -39,7 +39,7 @@ include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
@@ -49,20 +49,20 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 find_package(KDED CONFIG REQUIRED)
 find_package(KPipeWire CONFIG)
 
-find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
-set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
+find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
+set_package_properties(KF6NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
                        TYPE OPTIONAL
                        PURPOSE "Needed by geolocation data engine."
                       )
 
-find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
-set_package_properties(KF5Kirigami2 PROPERTIES
+find_package(KF6Kirigami2 ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6Kirigami2 PROPERTIES
     DESCRIPTION "A QtQuick based components set"
     TYPE RUNTIME
 )
 
-find_package(KF5QuickCharts ${KF5_MIN_VERSION} CONFIG)
-set_package_properties(KF5QuickCharts PROPERTIES
+find_package(KF6QuickCharts ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6QuickCharts PROPERTIES
     DESCRIPTION "Used for rendering charts"
     TYPE RUNTIME
 )
@@ -70,8 +70,8 @@ set_package_properties(KF5QuickCharts PROPERTIES
 find_package(KUserFeedback)
 find_package(KSysGuard CONFIG REQUIRED)
 
-find_package(KF5Baloo)
-set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
+find_package(KF6Baloo)
+set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED
                        PURPOSE "Needed for the File Search runner."
                       )
@@ -80,12 +80,12 @@ pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
-find_package(KF5Screen CONFIG REQUIRED)
+find_package(KF6Screen CONFIG REQUIRED)
 find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(LayerShellQt CONFIG REQUIRED)
-find_package(KF5Holidays)
-set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
+find_package(KF6Holidays)
+set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
                        TYPE OPTIONAL
                        PURPOSE "Needed to for holidays plugin for Plasma Calendar."
                       )
@@ -142,7 +142,7 @@ if(WITH_X11)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 
     if (QT_MAJOR_VERSION EQUAL "5")
-        find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+        find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
     endif()
 
 else()
@@ -161,7 +161,7 @@ endif()
 
 if(QT_MAJOR_VERSION EQUAL "5")
   find_package(QtWaylandScanner REQUIRED)
-  find_package(Qt5XkbCommonSupport)
+  find_package(Qt6XkbCommonSupport)
 else()
   find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
@@ -236,7 +236,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         find_program(LANGUAGE_SELECTOR_COMMON "check-language-support" DOC "Required for ubuntu-based distros to generate locale")
     endif()
 
-    option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt5 required" ${SYSTEM_UBUNTU_BASED})
+    option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt6 required" ${SYSTEM_UBUNTU_BASED})
     if(UBUNTU_PACKAGEKIT)
         set(OS_UBUNTU TRUE)
     endif()
@@ -296,14 +296,14 @@ if(${ICU_FOUND})
     set(HAVE_ICU TRUE)
 endif()
 
-find_package(KF5KExiv2)
-set_package_properties(KF5KExiv2
+find_package(KF6KExiv2)
+set_package_properties(KF6KExiv2
         PROPERTIES URL "https://www.exiv2.org" DESCRIPTION "Image metadata support"
         TYPE OPTIONAL
         PURPOSE "Provides metadata for image wallpaper plugin"
         )
-if(${KF5KExiv2_FOUND})
-    set(HAVE_KF5KExiv2 TRUE)
+if(${KF6KExiv2_FOUND})
+    set(HAVE_KF6KExiv2 TRUE)
 endif()
 
 find_package(KIOExtras)
@@ -358,7 +358,7 @@ ecm_query_qt(QtBinariesDir QT_INSTALL_BINS)
 
 option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
-if(KF5DocTools_FOUND)
+if(KF6DocTools_FOUND)
   add_subdirectory(doc)
   kdoctools_install(po)
 endif()
@@ -412,7 +412,7 @@ ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
 
 add_subdirectory(soliduiserver)
 
-if(KF5Holidays_FOUND)
+if(KF6Holidays_FOUND)
     add_subdirectory(plasmacalendarintegration)
 endif()
 

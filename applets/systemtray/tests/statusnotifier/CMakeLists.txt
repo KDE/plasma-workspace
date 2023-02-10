@@ -11,12 +11,12 @@ add_executable(statusnotifiertest ${statusnotifiertest_SRCS})
 target_link_libraries(statusnotifiertest
     Qt::Widgets
     Qt::Core
-    KF5::CoreAddons
-    KF5::KIOCore
-    KF5::Service
-    KF5::Notifications
-    KF5::I18n
-    KF5::ConfigCore
+    KF6::CoreAddons
+    KF6::KIOCore
+    KF6::Service
+    KF6::Notifications
+    KF6::I18n
+    KF6::ConfigCore
     Qt::DBus
 )
 

@@ -26,12 +26,12 @@ ki18n_wrap_ui(scheme_editor_SRCS
 add_executable(kcolorschemeeditor ${scheme_editor_SRCS})
 
 target_link_libraries(kcolorschemeeditor
-    KF5::ConfigWidgets
-    KF5::GuiAddons
-    KF5::I18n
-    KF5::CoreAddons
-    KF5::NewStuff
-    KF5::WindowSystem
+    KF6::ConfigWidgets
+    KF6::GuiAddons
+    KF6::I18n
+    KF6::CoreAddons
+    KF6::NewStuff
+    KF6::WindowSystem
 )
 
 install(TARGETS kcolorschemeeditor DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

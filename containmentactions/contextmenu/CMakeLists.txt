@@ -16,11 +16,11 @@ kcoreaddons_add_plugin(plasma_containmentactions_contextmenu SOURCES ${contextme
 
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::DBus
-                      KF5::Activities
-                      KF5::I18n
-                      KF5::GlobalAccel
-                      KF5::Plasma
-                      KF5::XmlGui
-                      KF5::KIOCore
-                      KF5::KIOGui
+                      KF6::Activities
+                      KF6::I18n
+                      KF6::GlobalAccel
+                      KF6::Plasma
+                      KF6::XmlGui
+                      KF6::KIOCore
+                      KF6::KIOGui
                       PW::KWorkspace)

@@ -6,5 +6,5 @@ include(ECMAddTests)
 ecm_add_tests(regionandlangexampletest.cpp
     LINK_LIBRARIES kcm_regionandlang_example_static
     Qt::Test
-    KF5::I18n
+    KF6::I18n
 )

@@ -4,9 +4,9 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_calculatorrunner\")
 
 set(EXTERNAL_LIBS
-    KF5::KIOCore
-    KF5::Runner
-    KF5::I18n
+    KF6::KIOCore
+    KF6::Runner
+    KF6::I18n
     Qt::Network
     Qt::Widgets
 )

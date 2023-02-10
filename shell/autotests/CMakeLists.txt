@@ -40,19 +40,19 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt::Test
                             Qt::Gui
                             Qt::WaylandClient
-                            KF5::Activities
-                            KF5::ConfigCore
-                            KF5::Declarative
-                            KF5::Service
-                            KF5::WaylandClient
-                            KF5::WindowSystem
-                            KF5::Package
-                            KF5::Plasma
-                            KF5::PlasmaQuick
-                            KF5::QuickAddons
-                            KF5::XmlGui
-                            KF5::I18n
-                            KF5::GlobalAccel
+                            KF6::Activities
+                            KF6::ConfigCore
+                            KF6::Declarative
+                            KF6::Service
+                            KF6::WaylandClient
+                            KF6::WindowSystem
+                            KF6::Package
+                            KF6::Plasma
+                            KF6::PlasmaQuick
+                            KF6::QuickAddons
+                            KF6::XmlGui
+                            KF6::I18n
+                            KF6::GlobalAccel
                             Qt::Quick
                             Qt::DBus
                             Wayland::Client
@@ -60,7 +60,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             SharedClientTest
                                      )
                if (QT_MAJOR_VERSION STREQUAL "6")
-                    target_link_libraries(${_testname} KF5::ConfigQml)
+                    target_link_libraries(${_testname} KF6::ConfigQml)
                endif()
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)

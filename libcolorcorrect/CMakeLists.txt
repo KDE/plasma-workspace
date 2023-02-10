@@ -16,12 +16,12 @@ target_include_directories(colorcorrect PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURREN
 
 target_link_libraries(colorcorrect
                     PUBLIC
-                      KF5::Plasma
+                      KF6::Plasma
 
                       Qt::Core
                       Qt::Quick
                     PRIVATE
-                      KF5::I18n
+                      KF6::I18n
 
                       Qt::DBus)
 

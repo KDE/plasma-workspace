@@ -11,8 +11,8 @@ kcoreaddons_add_plugin(ktimezoned SOURCES ${kded_ktimezoned_SRCS}  INSTALL_NAMES
 target_link_libraries(ktimezoned
    Qt::Core
    Qt::DBus
-   KF5::Service    # plugin factory
-   KF5::CoreAddons # KDirWatch
-   KF5::DBusAddons # kdedmodule
-   KF5::ConfigCore # KConfig[Group]
+   KF6::Service    # plugin factory
+   KF6::CoreAddons # KDirWatch
+   KF6::DBusAddons # kdedmodule
+   KF6::ConfigCore # KConfig[Group]
 )

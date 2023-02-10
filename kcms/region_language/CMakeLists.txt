@@ -11,8 +11,8 @@ set(kcm_regionandlang_example_SRCS
 add_library(kcm_regionandlang_example_static STATIC ${kcm_regionandlang_example_SRCS})
 set_property(TARGET kcm_regionandlang_example_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(kcm_regionandlang_example_static
-    KF5::I18n
-    KF5::CoreAddons
+    KF6::I18n
+    KF6::CoreAddons
 )
 set(kcm_regionandlang_PART_SRCS
     settingtype.h
@@ -71,10 +71,10 @@ target_link_libraries(kcm_regionandlang
     kcm_regionandlang_example_static
     Qt::Core
     Qt::DBus
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::QuickAddons
-    KF5::ItemModels)
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::QuickAddons
+    KF6::ItemModels)
 if (QT_MAJOR_VERSION EQUAL "6")
     target_link_libraries(kcm_regionandlang Qt::Core5Compat) # for QTextCodec
 endif()

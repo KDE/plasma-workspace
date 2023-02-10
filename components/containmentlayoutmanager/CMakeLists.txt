@@ -18,7 +18,7 @@ target_link_libraries(containmentlayoutmanagerplugin
             Qt::Core
         PRIVATE
             Qt::Qml Qt::Quick
-            KF5::Plasma KF5::PlasmaQuick
+            KF6::Plasma KF6::PlasmaQuick
     )
 
 ecm_qt_declare_logging_category(containmentlayoutmanagerplugin

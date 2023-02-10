@@ -8,7 +8,7 @@ set(kfontviewpart_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstdbusiface_SRC
 
 add_library(kfontviewpart MODULE ${kfontviewpart_PART_SRCS})
 
-target_link_libraries(kfontviewpart KF5::Archive KF5::Parts KF5::XmlGui kfontinstui kfontinst )
+target_link_libraries(kfontviewpart KF6::Archive KF6::Parts KF6::XmlGui kfontinstui kfontinst )
 
 install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/parts )
 

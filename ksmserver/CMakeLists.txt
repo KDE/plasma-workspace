@@ -39,17 +39,17 @@ configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
 target_link_libraries(ksmserver
     PW::KScreenLocker
     PW::KWorkspace
-    KF5::XmlGui
-    KF5::GlobalAccel
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::Solid
-    KF5::Declarative
-    KF5::DBusAddons
-    KF5::Notifications
-    KF5::Package
-    KF5::WindowSystem
+    KF6::XmlGui
+    KF6::GlobalAccel
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::Solid
+    KF6::Declarative
+    KF6::DBusAddons
+    KF6::Notifications
+    KF6::Package
+    KF6::WindowSystem
     Qt::Concurrent
     X11::X11
     X11::SM

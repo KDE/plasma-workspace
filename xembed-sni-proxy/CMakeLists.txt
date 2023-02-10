@@ -54,7 +54,7 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 target_link_libraries(xembedsniproxy
     Qt::Core
     Qt::DBus
-    KF5::WindowSystem
+    KF6::WindowSystem
     ${XCB_LIBS}
     X11::Xtst
 )

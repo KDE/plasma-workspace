@@ -10,8 +10,8 @@
 #include <QFile>
 #include <QImageReader>
 
-#include "config-KF5KExiv2.h"
-#if HAVE_KF5KExiv2
+#include "config-KF6KExiv2.h"
+#if HAVE_KF6KExiv2
 #include <KExiv2/KExiv2>
 #endif
 
@@ -28,7 +28,7 @@ void MediaMetadataFinder::run()
     const QImageReader reader(m_path);
     metadata.resolution = reader.size();
 
-#if HAVE_KF5KExiv2
+#if HAVE_KF6KExiv2
     KExiv2Iface::KExiv2 exivImage(m_path);
 
     // Extract title from XPTitle

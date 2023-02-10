@@ -2,8 +2,8 @@ kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp INSTALL
 target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets
-    KF5::Plasma
-    KF5::KIOCore
+    KF6::Plasma
+    KF6::KIOCore
 )
 
 ecm_qt_declare_logging_category(plasma_containmentactions_paste

@@ -9,11 +9,11 @@ set(kuiserver_engine_SRCS
 add_library(plasma_engine_applicationjobs MODULE ${kuiserver_engine_SRCS})
 target_link_libraries(plasma_engine_applicationjobs
   Qt::DBus
-  KF5::CoreAddons
-  KF5::I18n
-  KF5::KIOCore
-  KF5::Plasma
-  KF5::Service
+  KF6::CoreAddons
+  KF6::I18n
+  KF6::KIOCore
+  KF6::Plasma
+  KF6::Service
   PW::LibNotificationManager
 )
 

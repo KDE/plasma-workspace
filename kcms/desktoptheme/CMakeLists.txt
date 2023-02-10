@@ -23,14 +23,14 @@ kconfig_add_kcfg_files(kcm_desktoptheme_SRCS desktopthemesettings.kcfgc GENERATE
 kcoreaddons_add_plugin(kcm_desktoptheme SOURCES ${kcm_desktoptheme_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_desktoptheme
-  KF5::CoreAddons
-  KF5::KCMUtils
-  KF5::KIOCore
-  KF5::KIOWidgets
-  KF5::I18n
-  KF5::Plasma
-  KF5::Declarative
-  KF5::QuickAddons
+  KF6::CoreAddons
+  KF6::KCMUtils
+  KF6::KIOCore
+  KF6::KIOWidgets
+  KF6::I18n
+  KF6::Plasma
+  KF6::Declarative
+  KF6::QuickAddons
 )
 
 set(plasma-apply-desktoptheme_SRCS
@@ -41,10 +41,10 @@ set(plasma-apply-desktoptheme_SRCS
 add_executable(plasma-apply-desktoptheme ${plasma-apply-desktoptheme_SRCS})
 
 target_link_libraries(plasma-apply-desktoptheme
-  KF5::CoreAddons
-  KF5::KCMUtils
-  KF5::I18n
-  KF5::Plasma
+  KF6::CoreAddons
+  KF6::KCMUtils
+  KF6::I18n
+  KF6::Plasma
 )
 
 #this desktop file is installed only for retrocompatibility with sycoca

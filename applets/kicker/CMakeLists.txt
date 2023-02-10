@@ -65,24 +65,24 @@ target_link_libraries(kickerplugin
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
-                      KF5::Activities
-                      KF5::ActivitiesStats
-                      KF5::ConfigCore
-                      KF5::CoreAddons
-                      KF5::I18n
-                      KF5::IconThemes
-                      KF5::ItemModels
-                      KF5::KIOCore
-                      KF5::KIOWidgets
-                      KF5::KIOFileWidgets
-                      KF5::Notifications
-                      KF5::People
-                      KF5::PeopleWidgets
-                      KF5::PlasmaQuick
-                      KF5::Runner
-                      KF5::Service
-                      KF5::WindowSystem
-                      KF5::XmlGui
+                      KF6::Activities
+                      KF6::ActivitiesStats
+                      KF6::ConfigCore
+                      KF6::CoreAddons
+                      KF6::I18n
+                      KF6::IconThemes
+                      KF6::ItemModels
+                      KF6::KIOCore
+                      KF6::KIOWidgets
+                      KF6::KIOFileWidgets
+                      KF6::Notifications
+                      KF6::People
+                      KF6::PeopleWidgets
+                      KF6::PlasmaQuick
+                      KF6::Runner
+                      KF6::Service
+                      KF6::WindowSystem
+                      KF6::XmlGui
                       PW::KWorkspace)
 
 if (${HAVE_APPSTREAMQT})

@@ -1,1 +1,1 @@
-#cmakedefine01 KF5TextEditor_FOUND
+#cmakedefine01 KF6TextEditor_FOUND

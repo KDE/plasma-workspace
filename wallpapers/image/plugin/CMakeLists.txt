@@ -34,22 +34,22 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
     Qt::Quick
     Qt::Qml
-    KF5::Plasma
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::NewStuff
-    KF5::Notifications
-    KF5::Package
+    KF6::Plasma
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::NewStuff
+    KF6::Notifications
+    KF6::Package
     PW::LibTaskManager
     )
 
-if(HAVE_KF5KExiv2)
-    target_link_libraries(plasma_wallpaper_imageplugin_static KF5::KExiv2)
+if(HAVE_KF6KExiv2)
+    target_link_libraries(plasma_wallpaper_imageplugin_static KF6::KExiv2)
 endif()
-configure_file(config-KF5KExiv2.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KF5KExiv2.h)
+configure_file(config-KF6KExiv2.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KF6KExiv2.h)
 
 add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp)
 target_link_libraries(plasma_wallpaper_imageplugin

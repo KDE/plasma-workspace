@@ -12,10 +12,10 @@ set(apps_engine_SRCS
 add_library(plasma_engine_apps MODULE ${apps_engine_SRCS})
 
 target_link_libraries(plasma_engine_apps
-    KF5::Plasma
-    KF5::Service
-    KF5::KIOCore
-    KF5::KIOWidgets
+    KF6::Plasma
+    KF6::Service
+    KF6::KIOCore
+    KF6::KIOWidgets
 )
 
 install(TARGETS plasma_engine_apps DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

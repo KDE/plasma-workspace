@@ -71,11 +71,11 @@ target_link_libraries(kcm_users
     Qt::Quick
     Qt::QuickWidgets
     Qt::Concurrent
-    KF5::CoreAddons
-    KF5::Declarative
-    KF5::I18n
-    KF5::QuickAddons
-    KF5::Wallet
+    KF6::CoreAddons
+    KF6::Declarative
+    KF6::I18n
+    KF6::QuickAddons
+    KF6::Wallet
     Qt::DBus
     crypt
 )

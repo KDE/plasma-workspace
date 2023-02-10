@@ -24,10 +24,10 @@ target_link_libraries(screenpoolmanualtest
             Qt::Gui
             Qt::Widgets
             Qt::WaylandClient
-            KF5::ConfigCore
-            KF5::Service
-            KF5::WindowSystem
-            KF5::WaylandClient
+            KF6::ConfigCore
+            KF6::Service
+            KF6::WindowSystem
+            KF6::WaylandClient
             Wayland::Client
                         )
 if(HAVE_X11)

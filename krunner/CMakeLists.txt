@@ -16,14 +16,14 @@ add_executable(krunner ${krunner_SRCS})
 target_link_libraries(krunner
     Qt::Quick
     Qt::Widgets
-    KF5::KIOGui
-    KF5::Declarative
-    KF5::I18n
-    KF5::PlasmaQuick
-    KF5::DBusAddons
-    KF5::Crash
-    KF5::WaylandClient
-    KF5::Runner
+    KF6::KIOGui
+    KF6::Declarative
+    KF6::I18n
+    KF6::PlasmaQuick
+    KF6::DBusAddons
+    KF6::Crash
+    KF6::WaylandClient
+    KF6::Runner
     PW::KWorkspace
 )
 target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")

@@ -40,13 +40,13 @@ set_property(TARGET lookandfeelmanager PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 target_link_libraries(lookandfeelmanager
     Qt::DBus
-    KF5::ConfigCore
-    KF5::GuiAddons
-    KF5::I18n
-    KF5::KIOGui
-    KF5::KCMUtils
-    KF5::NewStuff
-    KF5::Package
+    KF6::ConfigCore
+    KF6::GuiAddons
+    KF6::I18n
+    KF6::KIOGui
+    KF6::KCMUtils
+    KF6::NewStuff
+    KF6::Package
     PlasmaAutostart
     krdb
 )
@@ -63,10 +63,10 @@ endif()
 add_library(kcm_lookandfeel_objects OBJECT kcm.cpp)
 target_link_libraries(kcm_lookandfeel_objects
     lookandfeelmanager
-    KF5::IconThemes
-    KF5::JobWidgets
-    KF5::KIOGui
-    KF5::QuickAddons
+    KF6::IconThemes
+    KF6::JobWidgets
+    KF6::KIOGui
+    KF6::QuickAddons
     PW::KWorkspace
 )
 

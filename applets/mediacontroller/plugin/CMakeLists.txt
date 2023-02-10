@@ -11,7 +11,7 @@ target_link_libraries(mediacontrollerplugin
     PRIVATE
         Qt::Core
         Qt::Qml
-        KF5::ConfigCore
+        KF6::ConfigCore
 )
 
 install(TARGETS mediacontrollerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/mediacontroller)

@@ -18,13 +18,13 @@ kcoreaddons_add_plugin(plasma_engine_notifications SOURCES ${notifications_engin
 
 target_link_libraries(plasma_engine_notifications
     Qt::DBus
-    KF5::I18n
-    KF5::IconThemes
-    KF5::KIOCore
-    KF5::Notifications
-    KF5::Plasma
-    KF5::Service
-    KF5::NotifyConfig
+    KF6::I18n
+    KF6::IconThemes
+    KF6::KIOCore
+    KF6::Notifications
+    KF6::Plasma
+    KF6::Service
+    KF6::NotifyConfig
     PW::LibNotificationManager
 )
 

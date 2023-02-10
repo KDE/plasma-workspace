@@ -12,11 +12,11 @@ target_link_libraries(ksmserver-logout-greeter
     Qt::Widgets
     Qt::Quick
     Qt::DBus
-    KF5::I18n
-    KF5::Package
-    KF5::QuickAddons
-    KF5::WindowSystem
-    KF5::ConfigCore
+    KF6::I18n
+    KF6::Package
+    KF6::QuickAddons
+    KF6::WindowSystem
+    KF6::ConfigCore
     X11::X11
     LayerShellQt::Interface
 )

@@ -15,9 +15,9 @@ kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NA
 kcmutils_generate_desktop_file (kcm_feedback)
 
 target_link_libraries(kcm_feedback
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::QuickAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::QuickAddons
     KUserFeedbackCore
 )
 

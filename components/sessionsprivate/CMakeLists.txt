@@ -14,10 +14,10 @@ target_link_libraries(sessionsprivateplugin
     Qt::Quick
     Qt::Qml
     Qt::Gui
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::ConfigGui
-    KF5::I18n
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::ConfigGui
+    KF6::I18n
     PW::KWorkspace
 )
 

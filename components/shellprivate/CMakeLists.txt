@@ -18,15 +18,15 @@ target_link_libraries(plasmashellprivateplugin
         Qt::Widgets
         Qt::Quick
         Qt::Qml
-        KF5::Plasma
-        KF5::PlasmaQuick
-        KF5::I18n
-        KF5::NewStuff
-        KF5::KIOFileWidgets
-        KF5::WindowSystem
-        KF5::Activities
-        KF5::TextWidgets
-        KF5::Package
+        KF6::Plasma
+        KF6::PlasmaQuick
+        KF6::I18n
+        KF6::NewStuff
+        KF6::KIOFileWidgets
+        KF6::WindowSystem
+        KF6::Activities
+        KF6::TextWidgets
+        KF6::Package
 )
 
 install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)

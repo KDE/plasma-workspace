@@ -20,9 +20,9 @@ add_library(startplasma OBJECT startplasma.cpp ${startplasma_SRCS})
 target_link_libraries(startplasma PUBLIC
     Qt::Core
     Qt::DBus
-    KF5::ConfigCore
-    KF5::Notifications
-    KF5::Package
+    KF6::ConfigCore
+    KF6::Notifications
+    KF6::Package
     ${PHONON_LIBRARIES}
     PW::KWorkspace
     lookandfeelmanager

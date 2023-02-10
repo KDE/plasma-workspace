@@ -5,4 +5,4 @@ ecm_qt_declare_logging_category(fontthumbnail
     IDENTIFIER KCM_KFONTINST_THUMBNAIL
     CATEGORY_NAME org.kde.kcm_kfontinst.thumbnail)
 
-target_link_libraries(fontthumbnail KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinstui kfontinst )
+target_link_libraries(fontthumbnail KF6::Archive KF6::KIOCore KF6::KIOWidgets kfontinstui kfontinst )

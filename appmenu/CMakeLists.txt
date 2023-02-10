@@ -20,10 +20,10 @@ pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
 target_link_libraries(appmenu
     Qt::DBus
     Qt::WaylandClientPrivate
-    KF5::DBusAddons
-    KF5::KIOCore
-    KF5::WaylandClient
-    KF5::WindowSystem
+    KF6::DBusAddons
+    KF6::KIOCore
+    KF6::WaylandClient
+    KF6::WindowSystem
     Wayland::Client
     PkgConfig::XKBCommon
     dbusmenuqt

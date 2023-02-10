@@ -7,7 +7,7 @@ add_executable(plasma-apply-wallpaperimage ${plasma-apply-wallpaperimage_SRCS})
 target_link_libraries(plasma-apply-wallpaperimage
     Qt::Core
     Qt::DBus
-    KF5::I18n
+    KF6::I18n
 )
 
 add_subdirectory(plugin)

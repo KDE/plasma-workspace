@@ -10,6 +10,6 @@ kcoreaddons_add_plugin(plasma_containmentactions_switchwindow SOURCES ${switchwi
 
 target_link_libraries(plasma_containmentactions_switchwindow
                       Qt::Widgets
-                      KF5::Plasma
-                      KF5::I18n
+                      KF6::Plasma
+                      KF6::I18n
                       PW::LibTaskManager)

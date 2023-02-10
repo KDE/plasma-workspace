@@ -9,10 +9,10 @@ add_executable(ksplashqml ${ksplashqml_SRCS})
 target_link_libraries(ksplashqml
     Qt::Quick
     Qt::DBus
-    KF5::ConfigCore
-    KF5::Package
-    KF5::QuickAddons
-    KF5::WindowSystem
+    KF6::ConfigCore
+    KF6::Package
+    KF6::QuickAddons
+    KF6::WindowSystem
     PW::KWorkspace
     LayerShellQt::Interface
    )

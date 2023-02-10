@@ -47,16 +47,16 @@ kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "
 kcmutils_generate_desktop_file (kcm_colors)
 target_link_libraries(kcm_colors
     Qt::DBus
-    KF5::KCMUtils
-    KF5::CoreAddons
-    KF5::Declarative
-    KF5::GuiAddons
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::NewStuffCore
-    KF5::QuickAddons
-    KF5::WindowSystem
+    KF6::KCMUtils
+    KF6::CoreAddons
+    KF6::Declarative
+    KF6::GuiAddons
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::NewStuffCore
+    KF6::QuickAddons
+    KF6::WindowSystem
     krdb
 )
 
@@ -87,10 +87,10 @@ target_link_libraries(plasma-apply-colorscheme
     Qt::Core
     Qt::DBus
     Qt::Gui
-    KF5::GuiAddons
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::WindowSystem
+    KF6::GuiAddons
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::WindowSystem
     PW::KWorkspace
     X11::X11
 )
@@ -98,12 +98,12 @@ target_link_libraries(plasma-apply-colorscheme
 target_link_libraries(plasma_accentcolor_service
     Qt::Core
     Qt::DBus
-    KF5::GuiAddons
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::WindowSystem
-    KF5::ConfigCore
-    KF5::DBusAddons
+    KF6::GuiAddons
+    KF6::KCMUtils
+    KF6::I18n
+    KF6::WindowSystem
+    KF6::ConfigCore
+    KF6::DBusAddons
     PW::KWorkspace
     X11::X11
 )

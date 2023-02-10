@@ -1,5 +1,5 @@
 ########### next target ###############
-#set(EXTERNAL_LIBS KIOCore Qt::Script KF5::Plasma Qt::Sql)
+#set(EXTERNAL_LIBS KIOCore Qt::Script KF6::Plasma Qt::Sql)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
@@ -28,11 +28,11 @@ ecm_qt_declare_logging_category(krunner_bookmarks_common_SRCS
 add_library(krunner_bookmarks_common STATIC ${krunner_bookmarks_common_SRCS})
 target_link_libraries(krunner_bookmarks_common
     Qt::Sql
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::I18n
-    KF5::Runner
-    KF5::Bookmarks
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::I18n
+    KF6::Runner
+    KF6::Bookmarks
 )
 
 set_property(TARGET krunner_bookmarks_common PROPERTY POSITION_INDEPENDENT_CODE ON)

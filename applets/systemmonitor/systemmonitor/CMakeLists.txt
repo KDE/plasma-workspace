@@ -5,13 +5,13 @@ target_link_libraries(org.kde.plasma.systemmonitor
                       Qt::Qml
                       Qt::Quick
                       Qt::DBus
-                      KF5::Plasma
-                      KF5::I18n
-                      KF5::ConfigCore
-                      KF5::ConfigGui
-                      KF5::Declarative
-                      KF5::KIOGui
-                      KF5::Notifications
+                      KF6::Plasma
+                      KF6::I18n
+                      KF6::ConfigCore
+                      KF6::ConfigGui
+                      KF6::Declarative
+                      KF6::KIOGui
+                      KF6::Notifications
                       KSysGuard::SysGuard
                       KSysGuard::Sensors
                       KSysGuard::SensorFaces

@@ -10,11 +10,11 @@ add_executable(fontinst_helper ${fontinst_helper_SRCS})
 
 set_target_properties(fontinst_bin PROPERTIES OUTPUT_NAME fontinst)
 target_link_libraries(fontinst_bin 
-                      Qt::DBus Qt::Xml KF5::AuthCore KF5::KIOCore kfontinst)
+                      Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
 
 set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
 target_link_libraries(fontinst_helper 
-                      Qt::DBus Qt::Xml KF5::AuthCore KF5::KIOCore kfontinst)
+                      Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
 if (QT_MAJOR_VERSION EQUAL "6")
     target_link_libraries(fontinst_helper Qt::Core5Compat) # for QTextCodec
 endif()

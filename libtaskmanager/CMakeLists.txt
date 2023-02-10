@@ -43,21 +43,21 @@ target_link_libraries(taskmanager
         Qt::Core
         Qt::Gui
         Qt::Quick
-        KF5::ItemModels
+        KF6::ItemModels
     PRIVATE
         Qt::DBus
-        KF5::Activities
-        KF5::ConfigCore
-        KF5::I18n
-        KF5::KIOCore
-        KF5::KIOGui
-        KF5::Notifications
-        KF5::WaylandClient
-        KF5::WindowSystem
+        KF6::Activities
+        KF6::ConfigCore
+        KF6::I18n
+        KF6::KIOCore
+        KF6::KIOGui
+        KF6::Notifications
+        KF6::WaylandClient
+        KF6::WindowSystem
 )
 
 if (HAVE_X11)
-    target_link_libraries(taskmanager PRIVATE KF5::IconThemes)
+    target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(taskmanager PRIVATE Qt::X11Extras)
     else()

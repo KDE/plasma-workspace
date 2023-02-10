@@ -1,4 +1,4 @@
-if(KF5Baloo_FOUND)
+if(KF6Baloo_FOUND)
  add_subdirectory(baloo)
 endif()
 add_subdirectory(bookmarks)

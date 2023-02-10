@@ -34,12 +34,12 @@ qt_add_dbus_interface(mpris2_engine_SRCS org.mpris.MediaPlayer2.xml mprisroot)
 kcoreaddons_add_plugin(plasma_engine_mpris2 SOURCES ${mpris2_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_mpris2
    Qt::DBus
-   KF5::ConfigCore
-   KF5::GlobalAccel
-   KF5::I18n
-   KF5::Service
-   KF5::Plasma
-   KF5::XmlGui
+   KF6::ConfigCore
+   KF6::GlobalAccel
+   KF6::I18n
+   KF6::Service
+   KF6::Plasma
+   KF6::XmlGui
 )
 
 install(FILES mpris2.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

@@ -24,14 +24,14 @@ kcoreaddons_add_plugin(org.kde.plasma.notifications SOURCES ${notificationapplet
 target_link_libraries(org.kde.plasma.notifications
                       Qt::Gui
                       Qt::Quick # for QQmlParserStatus
-                      KF5::ConfigWidgets # for KStandardAction
-                      KF5::I18n
-                      KF5::Plasma
-                      KF5::PlasmaQuick
-                      KF5::GlobalAccel
-                      KF5::KIOGui
-                      KF5::KIOWidgets # for PreviewJob
-                      KF5::Notifications # for KNotificationJobUiDelegate
+                      KF6::ConfigWidgets # for KStandardAction
+                      KF6::I18n
+                      KF6::Plasma
+                      KF6::PlasmaQuick
+                      KF6::GlobalAccel
+                      KF6::KIOGui
+                      KF6::KIOWidgets # for PreviewJob
+                      KF6::Notifications # for KNotificationJobUiDelegate
                       PW::LibNotificationManager
                       )
 

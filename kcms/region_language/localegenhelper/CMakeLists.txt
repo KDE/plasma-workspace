@@ -18,7 +18,7 @@ add_executable(plasma-localegen-helper ${localegen_Helper_SRCS})
 target_link_libraries(plasma-localegen-helper
     Qt::DBus
     PolkitQt${QT_MAJOR_VERSION}-1::Core
-    KF5::I18n
+    KF6::I18n
 )
 ecm_install_configured_files(INPUT org.kde.localegenhelper.service.in DESTINATION ${KDE_INSTALL_DBUSSYSTEMSERVICEDIR} @ONLY)
 install(TARGETS plasma-localegen-helper ${KF_INSTALL_TARGETS_DEFAULT_ARGS})

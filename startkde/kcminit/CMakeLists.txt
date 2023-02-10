@@ -3,10 +3,10 @@ target_link_libraries(kcminit
     Qt::Core
     Qt::Gui
     Qt::DBus
-    KF5::CoreAddons
-    KF5::Service
-    KF5::I18n
-    KF5::ConfigCore
+    KF6::CoreAddons
+    KF6::Service
+    KF6::I18n
+    KF6::ConfigCore
     PW::KWorkspace
 )
 install(TARGETS kcminit ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

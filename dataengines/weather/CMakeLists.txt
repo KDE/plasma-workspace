@@ -22,9 +22,9 @@ kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAM
 target_compile_definitions(plasma_engine_weather PRIVATE -DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
 
 target_link_libraries (plasma_engine_weather
-            KF5::KIOCore
-            KF5::Solid
-            KF5::Plasma
-            KF5::Service
+            KF6::KIOCore
+            KF6::Solid
+            KF6::Plasma
+            KF6::Service
             Qt::Network
             weather_ion)

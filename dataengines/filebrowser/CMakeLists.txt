@@ -5,7 +5,7 @@ set(filebrowser_engine_SRCS
 
 kcoreaddons_add_plugin(plasma_engine_filebrowser SOURCES ${filebrowser_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_filebrowser
-    KF5::Plasma
-    KF5::Service
-    KF5::KIOCore
+    KF6::Plasma
+    KF6::Service
+    KF6::KIOCore
 )

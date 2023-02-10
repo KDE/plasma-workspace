@@ -11,10 +11,10 @@ set(CMAKE_AUTOMOC TRUE)
 kcoreaddons_add_plugin(plasma_engine_places SOURCES ${places_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_places
-    KF5::Plasma
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::Solid
+    KF6::Plasma
+    KF6::KIOCore
+    KF6::KIOFileWidgets
+    KF6::Solid
 )
 
 install(FILES org.kde.places.operations

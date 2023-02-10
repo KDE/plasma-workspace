@@ -12,11 +12,11 @@ qt_add_dbus_interface(
 
 add_library(plasma_engine_activities MODULE ${activity_engine_SRCS})
 target_link_libraries(plasma_engine_activities
-                      KF5::CoreAddons
-                      KF5::Plasma
-                      KF5::Activities
-                      KF5::I18n
-                      KF5::Service
+                      KF6::CoreAddons
+                      KF6::Plasma
+                      KF6::Activities
+                      KF6::I18n
+                      KF6::Service
                       Qt::DBus
                       Qt::Widgets
                       )
