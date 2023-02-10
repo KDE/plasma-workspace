@@ -1716,7 +1716,7 @@ void ShellCorona::checkActivities()
     const auto conts = containments();
     for (Plasma::Containment *cont : conts) {
         if ((cont->containmentType() == Plasma::Types::DesktopContainment || cont->containmentType() == Plasma::Types::CustomContainment)
-            && !existingActivities.contains(cont->activity())) {
+            && !existingActivities.contains(cont->activity()) && m_activityController->currentActivity() != cont->activity()) {
             cont->destroy();
         }
     }
