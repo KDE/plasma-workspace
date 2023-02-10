@@ -18,17 +18,13 @@
 #include <QStandardPaths>
 
 #include <KConfigLoader>
+#include <KConfigPropertyMap>
 #include <KLocalizedString>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 #include <Plasma/ContainmentActions>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <KDeclarative/ConfigPropertyMap>
-#else
-#include <KConfigPropertyMap>
-#endif
 
 class WallpaperConfigModel : public PlasmaQuick::ConfigModel
 {
@@ -179,11 +175,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
         cfg = KConfigGroup(&cfg, wallpaper);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
-#else
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
-#endif
     }
 
     m_currentWallpaper = wallpaper;
