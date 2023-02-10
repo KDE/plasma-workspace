@@ -66,3 +66,6 @@ Dependencies:
     'frameworks/networkmanager-qt': '@latest'
     'libraries/polkit-qt-1': '@latest'
     'sdk/selenium-webdriver-at-spi': '@latest'
+
+Options:
+  require-passing-tests-on: ['@all']
