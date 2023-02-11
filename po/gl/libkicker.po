@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2023-02-11 02:38+0000\n"
 "PO-Revision-Date: 2019-08-19 20:40+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -69,18 +69,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: plugin/appentry.cpp:309
+#: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
 msgstr "Agochar o aplicativo"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:371
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -174,17 +174,17 @@ msgstr ""
 msgid "Forget File"
 msgstr "Esquecer todo"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:472
 #, kde-format
 msgid "Forget All"
 msgstr "Esquecer todo"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Esquecer todos os aplicativos"
 
-#: plugin/recentusagemodel.cpp:479
+#: plugin/recentusagemodel.cpp:477
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Files"

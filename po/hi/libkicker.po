@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2023-02-11 02:38+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -63,18 +63,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "ऐड-ऑन की स्थापना रद्द करें या प्रबंधित करें…"
 
-#: plugin/appentry.cpp:309
+#: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
 msgstr "अनुप्रयोग छुपाएँ"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:371
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -164,17 +164,17 @@ msgstr "युक्त फोल्डर खोलें"
 msgid "Forget File"
 msgstr "फ़ाइल भूलें"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:472
 #, kde-format
 msgid "Forget All"
 msgstr "सभी को भुलें"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
 msgstr "सभी अनुप्रयोगों को भुलें"
 
-#: plugin/recentusagemodel.cpp:479
+#: plugin/recentusagemodel.cpp:477
 #, kde-format
 msgid "Forget All Files"
 msgstr "सभी फाइलों को भुलें"
