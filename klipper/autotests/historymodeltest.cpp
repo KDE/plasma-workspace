@@ -213,7 +213,7 @@ void HistoryModelTest::testType_data()
 
     HistoryItem *item = new HistoryStringItem(QStringLiteral("foo"));
     QTest::newRow("text") << item << HistoryItemType::Text;
-    item = new HistoryImageItem(QImage());
+    item = new HistoryImageItem(QPixmap());
     QTest::newRow("image") << item << HistoryItemType::Image;
     item = new HistoryURLItem(QList<QUrl>(), KUrlMimeData::MetaDataMap(), false);
     QTest::newRow("url") << item << HistoryItemType::Url;
