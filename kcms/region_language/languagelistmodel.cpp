@@ -270,7 +270,7 @@ QVariant SelectedLanguageModel::data(const QModelIndex &index, int role) const
 bool SelectedLanguageModel::shouldWarnMultipleLang() const
 {
     if (m_selectedLanguages.size() >= 2) {
-        if (m_selectedLanguages.front().startsWith(QStringLiteral("en_"))) {
+        if (m_selectedLanguages.front().startsWith(QLatin1String("en_"))) {
             return true;
         }
     }
