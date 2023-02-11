@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-12-13 15:30\n"
+"PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -110,23 +110,22 @@ msgstr "Гэты модуль дазваляе абраць глабальны �
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Выдаліць назаўсёды"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Сапраўды хочаце назаўсёды выдаліць гэтую тэму?"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Выдаліць назаўсёды"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасаваць"
@@ -142,11 +141,10 @@ msgid "Preview Theme"
 msgstr "Папярэдні прагляд тэмы"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Папярэдні прагляд тэмы"
+msgstr "Выдаліць тэму"
 
 #: package/contents/ui/main.qml:129
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 01:00+0000\n"
+"POT-Creation-Date: 2023-02-11 00:59+0000\n"
 "PO-Revision-Date: 2019-11-10 12:37+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -69,18 +69,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Pārvaldīt paplašinājums..."
 
-#: plugin/appentry.cpp:309
+#: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
 msgstr "Slēpt programmu"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:371
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -172,17 +172,17 @@ msgstr ""
 msgid "Forget File"
 msgstr "Aizmirst visu"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:472
 #, kde-format
 msgid "Forget All"
 msgstr "Aizmirst visu"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Aizmirst visas programmas"
 
-#: plugin/recentusagemodel.cpp:479
+#: plugin/recentusagemodel.cpp:477
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Files"

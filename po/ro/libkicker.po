@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 01:00+0000\n"
+"POT-Creation-Date: 2023-02-11 00:59+0000\n"
 "PO-Revision-Date: 2021-07-25 14:01+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Dezinstalează sau gestionează extensii…"
 
-#: plugin/appentry.cpp:309
+#: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
 msgstr "Ascunde aplicația"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:371
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -165,17 +165,17 @@ msgstr "Deschide dosarul conținător"
 msgid "Forget File"
 msgstr "Uită fișierul"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:472
 #, kde-format
 msgid "Forget All"
 msgstr "Uită tot"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Uită toate aplicațiile"
 
-#: plugin/recentusagemodel.cpp:479
+#: plugin/recentusagemodel.cpp:477
 #, kde-format
 msgid "Forget All Files"
 msgstr "Uită toate fișierele"

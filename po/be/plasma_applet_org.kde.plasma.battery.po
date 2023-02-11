@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-12-16 16:46\n"
+"PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -51,7 +51,7 @@ msgstr "Засталося часу:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Разлік…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Сістэма працуе ў энергазберагальным рэ
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Пракруціце, каб наладзіць яркасць экрана"
 
 #: package/contents/ui/main.qml:310
 #, kde-format

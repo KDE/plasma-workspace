@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-05 01:00+0000\n"
+"POT-Creation-Date: 2023-02-11 00:59+0000\n"
 "PO-Revision-Date: 2022-10-22 16:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Fjarlægja eða vinna með viðbætur…"
 
-#: plugin/appentry.cpp:309
+#: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
 msgstr "Fela forrit"
 
-#: plugin/appentry.cpp:369
+#: plugin/appentry.cpp:367
 #, kde-format
 msgctxt "App name (Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:371
+#: plugin/appentry.cpp:369
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -165,17 +165,17 @@ msgstr "Opna möppu sem skráin er í"
 msgid "Forget File"
 msgstr "Gleyma skrá"
 
-#: plugin/recentusagemodel.cpp:474
+#: plugin/recentusagemodel.cpp:472
 #, kde-format
 msgid "Forget All"
 msgstr "Gleyma öllu"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Gleyma öllum forritum"
 
-#: plugin/recentusagemodel.cpp:479
+#: plugin/recentusagemodel.cpp:477
 #, kde-format
 msgid "Forget All Files"
 msgstr "Gleyma öllum skrám"

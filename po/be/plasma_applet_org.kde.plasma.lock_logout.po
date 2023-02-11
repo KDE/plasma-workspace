@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2022-12-19 15:31\n"
+"PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -68,7 +68,7 @@ msgstr "Перавесці ў рэжым сну"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Прыпыніць"
+msgstr "Прыпыніць у RAM"
 
 #: contents/ui/data.js:6
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Завяршыць сеанс"
 #: contents/ui/data.js:40
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "Прыпыніць (кэшаванне у аператыўную памяць)"
+msgstr "Прыпыніць у RAM(кэшаванне у аператыўную памяць)"
 
 #: contents/ui/data.js:47
 #, kde-format

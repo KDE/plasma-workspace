@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-18 00:56+0000\n"
-"PO-Revision-Date: 2022-12-20 17:01\n"
+"PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -52,7 +52,7 @@ msgstr "Caps Lock уключаны"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Прыпыніць"
+msgstr "Прыпыніць у RAM"
 
 #: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
 #: contents/logout/Logout.qml:181
@@ -164,7 +164,7 @@ msgstr "Не ўдалося разблакаваць"
 #: contents/lockscreen/LockScreenUi.qml:312
 #, kde-format
 msgid "Sleep"
-msgstr "Прыпыніць"
+msgstr "Прыпыніць у RAM"
 
 #: contents/lockscreen/LockScreenUi.qml:318 contents/logout/Logout.qml:172
 #, kde-format

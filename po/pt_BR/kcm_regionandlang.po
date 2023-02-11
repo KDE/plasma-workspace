@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-11 00:59+0000\n"
 "PO-Revision-Date: 2022-08-19 15:39-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -404,9 +404,9 @@ msgstr "Idioma"
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
 #, kde-format
 msgid ""
-"Putting American English above other languages will cause undesired behavior "
-"in some applications. If you would like your system to use American English, "
-"remove all other languages."
+"Putting any other languages below English will cause undesired behavior in "
+"some applications. If you would like to use your system in English, remove "
+"all other languages."
 msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
