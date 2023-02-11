@@ -87,7 +87,7 @@ History::~History()
 {
 }
 
-void History::insert(HistoryItemPtr item)
+void History::insert(const HistoryItemPtr &item)
 {
     if (!item)
         return;

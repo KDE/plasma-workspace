@@ -120,7 +120,7 @@ QModelIndex HistoryModel::indexOf(const HistoryItem *item) const
     return indexOf(item->uuid());
 }
 
-void HistoryModel::insert(std::shared_ptr<HistoryItem> item)
+void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
 {
     if (!item) {
         return;

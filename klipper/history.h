@@ -28,7 +28,7 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert(std::shared_ptr<HistoryItem> item);
+    void insert(const std::shared_ptr<HistoryItem> &item);
 
     /**
      * Inserts items into clipboard without any checks

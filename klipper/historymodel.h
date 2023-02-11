@@ -46,7 +46,7 @@ public:
     QModelIndex indexOf(const QByteArray &uuid) const;
     QModelIndex indexOf(const HistoryItem *item) const;
 
-    void insert(std::shared_ptr<HistoryItem> item);
+    void insert(const std::shared_ptr<HistoryItem> &item);
     void clearAndBatchInsert(const QVector<std::shared_ptr<HistoryItem>> &items);
 
     QRecursiveMutex *mutex()
