@@ -125,6 +125,8 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     if (!item) {
         return;
     }
+
+    QMutexLocker lock(&m_mutex);
     const QModelIndex existingItem = indexOf(item.get());
     if (existingItem.isValid()) {
         // move to top
@@ -132,7 +134,6 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
         return;
     }
 
-    QMutexLocker lock(&m_mutex);
     if (m_items.count() == m_maxSize) {
         // remove last item
         if (m_maxSize == 0) {
