@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2023-02-05 11:13+0300\n"
+"PO-Revision-Date: 2023-02-11 10:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -165,7 +165,7 @@ msgstr "Durumlar ve Bildirimler"
 #: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
-msgstr "Daha fazla eylem"
+msgstr "Daha Fazla Eylem"
 
 #: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
