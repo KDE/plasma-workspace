@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:59+0000\n"
-"PO-Revision-Date: 2022-12-27 10:30+0100\n"
+"PO-Revision-Date: 2023-02-11 11:18+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -408,19 +408,15 @@ msgid "Language"
 msgstr "Taal"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Amerikaans-Engels boven andere talen zetten zal ongewenst gedrag veroorzaken "
-"in sommige toepassingen. Als u in uw systeem Amerikaans-Engels wilt "
-"gebruiken, verwijder dan alle andere talen."
+"Andere talen onder Engels zetten zal ongewenst gedrag veroorzaken in sommige "
+"toepassingen. Als u in uw systeem Engels wilt gebruiken, verwijder dan alle "
+"andere talen."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format

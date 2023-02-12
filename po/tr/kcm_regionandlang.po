@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:59+0000\n"
-"PO-Revision-Date: 2023-02-08 21:41+0300\n"
+"PO-Revision-Date: 2023-02-11 10:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,13 +21,13 @@ msgstr ""
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr "Birleşik Krallık Emperyal"
+msgstr "Birleşik Krallık İmparatorluk"
 
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr "Birleşik Devletler Emperyal"
+msgstr "Birleşik Devletler İmparatorluk"
 
 #: exampleutility.cpp:33
 #, kde-format
@@ -408,19 +408,15 @@ msgid "Language"
 msgstr "Dil"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Amerikan İngilizcesini diğer dillerin üstüne koymak, istenmeyen davranışlara "
-"ve sonuçlara neden olabilir. Sisteminizin Amerikan İngilizcesini "
-"kullanmasını istiyorsanız diğer tüm dilleri kaldırın."
+"Diğer dilleri İngilizcenin altına koymak, bazı uygulamalarda istenmeyen "
+"davranışlara neden olacaktır. Sisteminizi İngilizce olarak kullanmak "
+"istiyorsanız, diğer tüm dilleri kaldırın."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
