@@ -59,8 +59,7 @@ void DBusServiceObserver::registerPlugin(const KPluginMetaData &pluginMetaData)
     const QString dbusactivation = pluginMetaData.value(QStringLiteral("X-Plasma-DBusActivationService"));
     if (!dbusactivation.isEmpty()) {
         qCDebug(SYSTEM_TRAY) << "Found DBus-able Applet: " << pluginMetaData.pluginId() << dbusactivation;
-        QRegExp rx(dbusactivation);
-        rx.setPatternSyntax(QRegExp::Wildcard);
+        QRegularExpression rx = QRegularExpression::fromWildcard(dbusactivation);
         m_dbusActivatableTasks[pluginMetaData.pluginId()] = rx;
 
         const QString watchedService = QString(dbusactivation).replace(QLatin1String(".*"), QLatin1String("*"));
@@ -72,7 +71,7 @@ void DBusServiceObserver::registerPlugin(const KPluginMetaData &pluginMetaData)
 void DBusServiceObserver::unregisterPlugin(const QString &pluginId)
 {
     if (m_dbusActivatableTasks.contains(pluginId)) {
-        QRegExp rx = m_dbusActivatableTasks.take(pluginId);
+        auto rx = m_dbusActivatableTasks.take(pluginId);
         const QString watchedService = rx.pattern().replace(QLatin1String(".*"), QLatin1String("*"));
         m_sessionServiceWatcher->removeWatchedService(watchedService);
         m_systemServiceWatcher->removeWatchedService(watchedService);
@@ -156,7 +155,7 @@ void DBusServiceObserver::serviceRegistered(const QString &service)
         }
 
         const auto &rx = it.value();
-        if (rx.exactMatch(service)) {
+        if (rx.match(service).hasMatch()) {
             qCDebug(SYSTEM_TRAY) << "DBus service" << service << "matching" << m_dbusActivatableTasks[plugin] << "appeared. Loading" << plugin;
             Q_EMIT serviceStarted(plugin);
             m_dbusServiceCounts[plugin]++;
@@ -173,7 +172,7 @@ void DBusServiceObserver::serviceUnregistered(const QString &service)
         }
 
         const auto &rx = it.value();
-        if (rx.exactMatch(service)) {
+        if (rx.match(service).hasMatch()) {
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
