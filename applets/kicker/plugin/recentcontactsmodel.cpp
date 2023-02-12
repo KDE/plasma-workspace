@@ -16,8 +16,8 @@
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
 
+#include <KPeople/Actions>
 #include <KPeople/PersonData>
-#include <kpeople/widgets/actions.h> //FIXME TODO: Pretty include in KPeople broken.
 #include <kpeople/widgets/persondetailsdialog.h>
 
 namespace KAStats = KActivities::Stats;

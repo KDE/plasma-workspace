@@ -14,7 +14,6 @@
 #include <KLocalizedString>
 
 #include <KPeople/PersonData>
-#include <KPeople/Widgets/Actions>
 #include <KPeople/Widgets/PersonDetailsDialog>
 
 ContactEntry::ContactEntry(AbstractModel *owner, const QString &id)
