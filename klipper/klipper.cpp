@@ -24,6 +24,7 @@
 #include <QPushButton>
 #include <QSaveFile>
 #include <QtConcurrent>
+#include <qpa/qplatformnativeinterface.h> // wl_display_roundtrip
 
 #include <KAboutData>
 #include <KActionCollection>
@@ -58,6 +59,7 @@
 #else
 #include <QX11Info>
 #endif
+#include "wayland-client-core.h"
 #include <chrono>
 #include <xcb/xcb.h>
 
@@ -85,6 +87,12 @@ struct Ignore {
     }
     ~Ignore()
     {
+        if (KWindowSystem::isPlatformWayland()) {
+            QPlatformNativeInterface *const native = qGuiApp->platformNativeInterface();
+            const auto display = static_cast<struct wl_display *>(native->nativeResourceForIntegration("wl_display"));
+            wl_display_roundtrip(display);
+        }
+
         locklevelref--;
     }
 

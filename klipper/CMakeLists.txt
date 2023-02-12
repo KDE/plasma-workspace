@@ -32,6 +32,7 @@ add_library(libklipper_common_static STATIC ${libklipper_common_SRCS})
 set_property(TARGET libklipper_common_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(libklipper_common_static
     Qt::Concurrent
+    Qt::GuiPrivate
     Qt::Widgets
     Qt::DBus
     KF5::ConfigGui
@@ -49,7 +50,9 @@ target_link_libraries(libklipper_common_static
     KF5::XmlGui
     KF5::WaylandClient
     KF5::IconThemes
-    ${ZLIB_LIBRARY})
+    ${ZLIB_LIBRARY}
+    Wayland::Client
+)
 
 if (HAVE_X11)
     target_link_libraries(libklipper_common_static XCB::XCB)
