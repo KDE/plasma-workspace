@@ -26,7 +26,7 @@ QByteArray compute_uuid(const QImage &data)
 
 HistoryImageItem::HistoryImageItem(const QImage &data)
     : HistoryItem(compute_uuid(data))
-    , m_data(QPixmap::fromImage(data))
+    , m_data(data)
 {
 }
 
@@ -41,20 +41,20 @@ QString HistoryImageItem::text() const
 /* virtual */
 void HistoryImageItem::write(QDataStream &stream) const
 {
-    stream << QStringLiteral("image") << m_data.toImage();
+    stream << QStringLiteral("image") << m_data;
 }
 
 QMimeData *HistoryImageItem::mimeData() const
 {
     QMimeData *data = new QMimeData();
-    data->setImageData(m_data.toImage());
+    data->setImageData(m_data);
     return data;
 }
 
-const QPixmap &HistoryImageItem::image() const
+QPixmap HistoryImageItem::image() const
 {
     if (m_model->displayImages()) {
-        return m_data;
+        return QPixmap::fromImage(m_data);
     }
     static QPixmap imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)));
     return imageIcon;
