@@ -596,8 +596,8 @@ bool KAStatsFavoritesModel::isFavorite(const QString &id) const
     return d && d->m_itemEntries.contains(id);
 }
 
-#if KDECI_BUILD
-void KAStatsFavoritesModel::portOldFavorites(const QStringList &)
+#if BUILD_TESTING
+void KAStatsFavoritesModel::portOldFavorites(const QStringList &_ids)
 #else
 void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
 #endif
@@ -605,12 +605,12 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
     if (!d)
         return;
 
-#if KDECI_BUILD
-    const QStringList ids{
-        QStringLiteral("org.kde.plasma.emojier.desktop"),
-        QStringLiteral("linguist5.desktop"),
-        QStringLiteral("org.qt.linguist6.desktop"),
-    };
+#if BUILD_TESTING
+    const QStringList ids = qEnvironmentVariableIsSet("KDECI_BUILD") ? QStringList{
+        QLatin1String("org.kde.plasma.emojier.desktop"),
+        QLatin1String("linguist5.desktop"),
+        QLatin1String("org.qt.linguist6.desktop"),
+    } : _ids;
 #endif
 
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
