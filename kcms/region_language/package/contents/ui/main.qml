@@ -121,6 +121,7 @@ KCM.ScrollViewKCM {
         delegate: Kirigami.BasicListItem {
             highlighted: false
             hoverEnabled: false
+            down: false
 
             text: model.name
             subtitle: {
