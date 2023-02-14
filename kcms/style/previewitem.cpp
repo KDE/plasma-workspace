@@ -28,6 +28,7 @@ PreviewItem::PreviewItem(QQuickItem *parent)
     : QQuickPaintedItem(parent)
 {
     setAcceptHoverEvents(true);
+    setAcceptTouchEvents(false); // BUG 465650 rely on mouse events synthesized from touch
 
     // HACK QtCurve deadlocks on application teardown when the Q_GLOBAL_STATIC QFactoryLoader
     // in QStyleFactory is destroyed which destroys all loaded styles prompting QtCurve
