@@ -11,6 +11,28 @@ from selenium.webdriver.support.ui import WebDriverWait
 from datetime import date
 from dateutil.relativedelta import relativedelta
 import time
+from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
+
+
+class EventListeners(AbstractEventListener):
+    def __init__(self) -> None:
+        super().__init__()
+        self.i = 0
+
+
+    def before_click(self, element, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
+
+
+    def after_click(self, element, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
+
+
+    def before_find(self, by, value, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
 
 
 class DigitalClockTests(unittest.TestCase):
@@ -19,9 +41,11 @@ class DigitalClockTests(unittest.TestCase):
         desired_caps = {}
         desired_caps["app"] = "plasmawindowed -p org.kde.plasma.nano org.kde.plasma.digitalclock"
         desired_caps["timeouts"] = {'implicit': 10000}
-        self.driver = webdriver.Remote(
+        self.remote = webdriver.Remote(
             command_executor='http://127.0.0.1:4723',
             desired_capabilities=desired_caps)
+        self.driver = EventFiringWebDriver(self.remote, EventListeners())
+
         self.driver.implicitly_wait = 10
         # Open Applet
         self.driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="expandApplet").click()
@@ -31,8 +55,7 @@ class DigitalClockTests(unittest.TestCase):
         self.assertEqual(self.compareMonthLabel(date.today()), True)
 
     def tearDown(self):
-        if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
+        self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
 
     @classmethod
     def tearDownClass(self):

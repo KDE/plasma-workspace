@@ -13,6 +13,29 @@ from dateutil.relativedelta import relativedelta
 import subprocess
 import time
 import sys
+from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
+
+
+class EventListeners(AbstractEventListener):
+    def __init__(self) -> None:
+        super().__init__()
+        self.i = 0
+
+
+    def before_click(self, element, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
+
+
+    def after_click(self, element, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
+
+
+    def before_find(self, by, value, driver):
+        driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.i))
+        self.i += 1
+
 
 class LogoutGreeterTests(unittest.TestCase):
     def setUp(self):
@@ -20,9 +43,10 @@ class LogoutGreeterTests(unittest.TestCase):
         desired_caps = {}
         desired_caps["app"] = str(self.proc.pid)
         desired_caps["timeouts"] = {'implicit': 10000}
-        self.driver = webdriver.Remote(
+        self.remote = webdriver.Remote(
             command_executor='http://127.0.0.1:4723',
             desired_capabilities=desired_caps)
+        self.driver = EventFiringWebDriver(self.remote, EventListeners())
         self.driver.implicitly_wait = 10
 
     def tearDown(self):
@@ -32,8 +56,7 @@ class LogoutGreeterTests(unittest.TestCase):
             self.proc.terminate(timeout=5)
         except TimeoutExpired:
             self.proc.kill()
-        if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
+        self.driver.get_screenshot_as_file("failed_test_shot_{}.png".format(self.id()))
 
     def assertStdErrLine(self, expected):
         out, err = self.proc.communicate()
