@@ -80,7 +80,7 @@ KWin.TabBoxSwitcher {
                             Layout.fillWidth: true
                             implicitHeight: Math.round(delegateColumn.width / tabBox.screenFactor)
 
-                            KWin.WindowThumbnailItem {
+                            KWin.WindowThumbnail {
                                 anchors.fill: parent
                                 wId: windowId
                             }
