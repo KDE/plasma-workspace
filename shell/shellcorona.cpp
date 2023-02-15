@@ -1267,7 +1267,6 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
     // There can't be a containment that has for instance screen 0 and another 2 but nothing on 1
     // It's size() - 1 because at this point screenpool didn't remove it from screenOrder() yet
     Q_EMIT screenRemoved(m_screenPool->screenOrder().size() - 1);
-
 #ifndef NDEBUG
     m_invariantsTimer.start();
 #endif
@@ -1329,6 +1328,7 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(screen);
 
     if (desktopForScreen(screen)) {
+        Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
         return;
     }
     Q_ASSERT(!screen->geometry().isNull());
