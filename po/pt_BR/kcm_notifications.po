@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2023.
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-18 10:30-0300\n"
+"PO-Revision-Date: 2023-02-14 10:18-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -95,45 +95,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "As notificações não são atualmente fornecidas pelo Plasma."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Modo \"Não perturbe\":"
+msgstr "Modo \"Não perturbe\""
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Habilitar:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Ativar quando as telas estiverem com espelhamento"
+msgstr "Quando as telas estiverem espelhadas"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Habilitar durante o compartilhamento de tela"
+msgstr "Durante o compartilhamento de tela"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Atalho de teclado:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Condições de visibilidade"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -173,19 +168,16 @@ msgid "Popups"
 msgstr "Mensagem:"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Aplicativos:"
+msgstr "Localização:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Mostrar próximo do ícone da notificação"
+msgstr "Próximo do ícone da notificação"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -239,11 +231,10 @@ msgid "Notification badges:"
 msgstr "Emblemas das notificações:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Configurações do aplicativo"
+msgstr "Configurações específicas do aplicativo"
 
 #: package/contents/ui/main.qml:308
 #, kde-format
