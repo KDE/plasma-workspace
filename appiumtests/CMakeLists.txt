@@ -28,8 +28,14 @@ add_test(
 set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 
 add_test(
+    NAME mediacontrollertest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "LANG=en_US.UTF-8")
+
+add_test(
     NAME logoutgreetertest
     COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py ${KDE_INSTALL_FULL_LIBEXECDIR}
 )
 set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1")
-
