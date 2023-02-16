@@ -67,6 +67,12 @@ int main(int argc, char **argv)
     setupPlasmaEnvironment();
     runStartupConfig();
     qputenv("PLASMA_USE_QT_SCALING", "1");
+
+    // Required or else XWayland-using Electron apps are scaled too small;
+    // see https://github.com/electron/electron/issues/37312.
+    qputenv("GDK_SCALE", "1");
+    qputenv("GDK_DPI_SCALE", "1");
+
     qputenv("XDG_SESSION_TYPE", "wayland");
 
     auto oldSystemdEnvironment = getSystemdEnvironment();
