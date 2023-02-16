@@ -202,7 +202,7 @@ PlasmaComponents3.AbstractButton {
 
         Component.onCompleted: {
             if (dayStyle.today) {
-                root.todayAuxilliaryText = Qt.binding(() => model.subLabel);
+                root.todayAuxilliaryText = Qt.binding(() => model.subLabel || "");
             }
         }
     }
