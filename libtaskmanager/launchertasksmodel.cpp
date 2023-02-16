@@ -330,7 +330,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
         return false;
     }
 
-    return QVariant();
+    return AbstractTasksModel::data(index, role);
 }
 
 int LauncherTasksModel::rowCount(const QModelIndex &parent) const

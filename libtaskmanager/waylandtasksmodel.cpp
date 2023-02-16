@@ -471,7 +471,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return canLauchNewInstance(d->appData(window));
     }
 
-    return {};
+    return AbstractTasksModel::data(index, role);
 }
 
 int WaylandTasksModel::rowCount(const QModelIndex &parent) const

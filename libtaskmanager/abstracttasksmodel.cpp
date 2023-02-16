@@ -32,6 +32,80 @@ QHash<int, QByteArray> AbstractTasksModel::roleNames() const
     return roles;
 }
 
+QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole:
+        return QString();
+    case Qt::DecorationRole:
+        return QVariant();
+    case AppId:
+        return 0;
+    case AppName:
+    case GenericName:
+        return QString();
+    case LauncherUrl:
+    case LauncherUrlWithoutIcon:
+        return QVariant();
+    case WinIdList:
+        return QVariantList();
+    case MimeType:
+        return QString();
+    case MimeData:
+        return QVariant();
+    case IsWindow:
+    case IsStartup:
+    case IsLauncher:
+    case HasLauncher:
+    case IsGroupParent:
+        return false;
+    case ChildCount:
+        return 0;
+    case IsGroupable:
+    case IsActive:
+    case IsClosable:
+    case IsMovable:
+    case IsResizable:
+    case IsMaximizable:
+    case IsMaximized:
+    case IsMinimizable:
+    case IsMinimized:
+    case IsKeepAbove:
+    case IsKeepBelow:
+    case IsFullScreenable:
+    case IsFullScreen:
+    case IsShadeable:
+    case IsShaded:
+    case IsVirtualDesktopsChangeable:
+        return false;
+    case VirtualDesktops:
+        return QVariantList{0};
+    case IsOnAllVirtualDesktops:
+        return false;
+    case Geometry:
+    case ScreenGeometry:
+        return QVariant();
+    case Activities:
+        return QStringList();
+    case IsDemandingAttention:
+    case SkipTaskbar:
+    case SkipPager:
+        return false;
+    case AppPid:
+        return 0;
+    case StackingOrder:
+    case LastActivated:
+        return QVariant();
+    case ApplicationMenuServiceName:
+    case ApplicationMenuObjectPath:
+        return QString();
+    case IsHidden:
+    case CanLaunchNewInstance:
+        return false;
+    }
+    Q_UNREACHABLE();
+}
+
 QModelIndex AbstractTasksModel::index(int row, int column, const QModelIndex &parent) const
 {
     return hasIndex(row, column, parent) ? createIndex(row, column, nullptr) : QModelIndex();

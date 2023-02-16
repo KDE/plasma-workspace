@@ -93,6 +93,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+    QVariant data(const QModelIndex &index, int role) const override;
     QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
 
     /**

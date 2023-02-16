@@ -199,7 +199,7 @@ QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) cons
         return false;
     }
 
-    return QVariant();
+    return AbstractTasksModel::data(index, role);
 }
 
 int WaylandStartupTasksModel::rowCount(const QModelIndex &parent) const

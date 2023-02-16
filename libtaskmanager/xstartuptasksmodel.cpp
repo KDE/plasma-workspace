@@ -259,7 +259,7 @@ QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
         return false;
     }
 
-    return QVariant();
+    return AbstractTasksModel::data(index, role);
 }
 
 int XStartupTasksModel::rowCount(const QModelIndex &parent) const

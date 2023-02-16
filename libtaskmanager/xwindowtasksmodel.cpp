@@ -702,7 +702,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return canLauchNewInstance(d->appData(window));
     }
 
-    return QVariant();
+    return AbstractTasksModel::data(index, role);
 }
 
 int XWindowTasksModel::rowCount(const QModelIndex &parent) const
