@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-06-30 14:48+0100\n"
+"PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -1144,24 +1144,22 @@ msgid "focus"
 msgstr "foco"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Repor o Esquema de Cores"
+msgstr "Cor Acentuada do Esquema de Cores"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Cor Acentuada do Papel de Parede"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Escolher uma cor acentuada personalizada"
+msgstr "Cor Acentuada Personalizada"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format
@@ -1376,16 +1374,3 @@ msgstr "Tem os seguintes esquemas de cores no seu sistema:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de cores actual)"
-
-#~ msgid "Use accent color:"
-#~ msgstr "Usar uma cor acentuada:"
-
-#~ msgid "From current color scheme"
-#~ msgstr "Do esquema de cores actual"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "Do papel de parede actual"
-
-#~ msgid "Custom:"
-#~ msgstr "Personalizado:"

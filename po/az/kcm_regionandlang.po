@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
+"POT-Creation-Date: 2023-02-16 01:01+0000\n"
 "PO-Revision-Date: 2022-08-24 17:45+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -304,7 +304,7 @@ msgid "Default for System"
 msgstr "Sistemin standart dili"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Default"
 msgstr "Standart"
@@ -516,50 +516,50 @@ msgstr ""
 "Lazımi yerli format və dil dəstəyi faylları quraşdırılıb. İndi "
 "kompyuterinizi təhlükəsiz söndürə bilərsiniz."
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Dəyşdirin…"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Numbers"
 msgstr "Saylar"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Time"
 msgstr "Vaxt"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Currency"
 msgstr "Pul vahidi"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Measurements"
 msgstr "Ölçü vahidləri"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
 msgstr "Vərəq ölçüsü"
 
-#: package/contents/ui/main.qml:189
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Ünvan"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Adı"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

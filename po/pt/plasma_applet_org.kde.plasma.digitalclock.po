@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-05 01:00+0000\n"
-"PO-Revision-Date: 2022-12-14 09:46+0000\n"
+"PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -844,22 +844,21 @@ msgid "Always below time"
 msgstr "Sempre debaixo da hora"
 
 #: package/contents/ui/configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Mostrar os segundos"
+msgstr "Mostrar os segundos:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Apenas na dica"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97

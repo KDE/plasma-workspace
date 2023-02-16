@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
-"PO-Revision-Date: 2022-12-28 18:40+0000\n"
+"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -310,7 +310,7 @@ msgid "Default for System"
 msgstr "Predefinido do Sistema"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Default"
 msgstr "Predefinição"
@@ -410,19 +410,15 @@ msgid "Language"
 msgstr "Língua"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Se colocar o Inglês Americano acima das outras línguas, irá provocar um "
-"comportamento indesejado em algumas aplicações. Se gostar que o seu sistema "
-"use o Inglês Americano, remova todas as outras línguas."
+"Se colocar o Inglês acima das outras línguas, irá provocar um comportamento "
+"indesejado em algumas aplicações. Se gostar que o seu sistema use o Inglês, "
+"remova todas as outras línguas."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -523,50 +519,50 @@ msgstr ""
 "Os ficheiros de suporte para a região e língua necessários foram instalados. "
 "Agora já é seguro desligar o computador."
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Modificar…"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Numbers"
 msgstr "Números"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Time"
 msgstr "Hora"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Currency"
 msgstr "Moeda"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Measurements"
 msgstr "Medidas"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
 msgstr "Tamanho do Papel"
 
-#: package/contents/ui/main.qml:189
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Endereço"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Nome"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
@@ -580,14 +576,3 @@ msgstr "Telefone"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Herdar a Língua"
-
-#~ msgctxt "@info:warning"
-#~ msgid ""
-#~ "Locale has been configured, but this KCM currently doesn't support auto "
-#~ "locale generation on non-glibc systems, please refer to your "
-#~ "distribution's manual to install fonts and generate locales"
-#~ msgstr ""
-#~ "A região foi configurada, mas este KCM não suporta de momento a geração "
-#~ "de informação regional nos sistemas não-glibc; verifique por favor o "
-#~ "manual da sua distribuição para saber como instalar os tipos de letra e "
-#~ "gerar a informação regional"

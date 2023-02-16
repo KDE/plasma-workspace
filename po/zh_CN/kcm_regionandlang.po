@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
-"PO-Revision-Date: 2023-02-07 11:02\n"
+"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"PO-Revision-Date: 2023-02-15 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -304,7 +304,7 @@ msgid "Default for System"
 msgstr "系统默认"
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Default"
 msgstr "默认"
@@ -404,18 +404,14 @@ msgid "Language"
 msgstr "语言"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"如果将美式英语置于其他语言之上，可能会导致某些应用程序发生问题。如果您希望系"
-"统显示美式英语，请移除所有其他语言。"
+"将其他语言移到英语的下方可能会导致某些程序发生问题。如果您想要系统显示英语，"
+"请移除所有其他语言。"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -510,50 +506,50 @@ msgid ""
 "safe to turn off the computer."
 msgstr "已经安装所需的区域配置和语言支持文件。您现在可以安全地关闭计算机。"
 
-#: package/contents/ui/main.qml:138
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "修改…"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Numbers"
 msgstr "数字"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Time"
 msgstr "时间"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Currency"
 msgstr "货币"
 
-#: package/contents/ui/main.qml:185
+#: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Measurements"
 msgstr "度量衡"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
 msgstr "纸张大小"
 
-#: package/contents/ui/main.qml:189
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "地址"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "姓名"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

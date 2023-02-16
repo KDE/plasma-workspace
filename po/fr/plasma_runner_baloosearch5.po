@@ -5,20 +5,21 @@
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2022.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2022-04-22 20:06+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-02-14 21:31+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -29,63 +30,54 @@ msgid "Open Containing Folder"
 msgstr "Ouvrir le dossier contenant"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
-msgstr "Audio"
+msgstr "Audios"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "Image"
+msgstr "Images"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "Vidéo"
+msgstr "Vidéos"
 
 #: baloosearchrunner.cpp:90
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
-msgstr "Feuille de calcul"
+msgstr "Feuilles de calcul"
 
 #: baloosearchrunner.cpp:91
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "Présentation"
+msgstr "Présentations"
 
 #: baloosearchrunner.cpp:92
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Dossier"
+msgstr "Dossiers"
 
 #: baloosearchrunner.cpp:93
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "Document"
+msgstr "Documents"
 
 #: baloosearchrunner.cpp:94
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
-msgstr "Archive"
+msgstr "Archives"
 
 #: baloosearchrunner.cpp:95
-#, fuzzy, kde-format
-#| msgid "Text"
+#, kde-format
 msgid "Texts"
-msgstr "Texte"
+msgstr "Textes"
 
 #: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Fichiers"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Rechercher dans les fichiers, courriels et contacts"
