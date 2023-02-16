@@ -5,21 +5,21 @@
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2016, 2018, 2019, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2016, 2018, 2019, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2022-08-12 13:40+0200\n"
+"PO-Revision-Date: 2023-02-15 07:03+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: bbcukmet_i18n.dat:1
@@ -2724,49 +2724,49 @@ msgstr "Gaur gauean"
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
-msgstr "lr."
+msgstr "lar"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:647
 #: ions/envcan/ion_envcan.cpp:1552
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
-msgstr "ig."
+msgstr "Iga"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:648
 #: ions/envcan/ion_envcan.cpp:1553
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
-msgstr "al."
+msgstr "Asl"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:649
 #: ions/envcan/ion_envcan.cpp:1554
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
-msgstr "ar."
+msgstr "Asr"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:650
 #: ions/envcan/ion_envcan.cpp:1555
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
-msgstr "az."
+msgstr "Asz"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:651
 #: ions/envcan/ion_envcan.cpp:1556
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
-msgstr "og."
+msgstr "Osg"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:652
 #: ions/envcan/ion_envcan.cpp:1557
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
-msgstr "or."
+msgstr "Osr"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1031
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-14 23:29+0100\n"
+"PO-Revision-Date: 2023-02-15 06:47+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -75,17 +75,17 @@ msgstr "%2 %1"
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr "Egun"
+msgstr "Egunak"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr "Hilabete"
+msgstr "Hilabeteak"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr "Urte"
+msgstr "Urteak"
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format

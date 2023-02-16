@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2023-02-07 11:05\n"
+"PO-Revision-Date: 2023-02-15 11:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -20,12 +20,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国"
+msgstr "KDE 中国, EasternLi, fusionfuture, Guo Yunhe, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org"
+msgstr ""
+"kde-china@kde.org, EasternLi@kde.org, fusionfuture@kde.org, i@guoyunhe.me, "
+"tysontan@tysontan.com"
 
 #: main.cpp:57 view.cpp:47
 #, kde-format
@@ -40,22 +42,22 @@ msgstr "运行命令界面"
 #: main.cpp:62
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr "使用剪贴板内容作为 KRunner 查询"
+msgstr "使用剪贴板内容作为 KRunner 查询条件"
 
 #: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr "在后台启动 KRunner，不显示。"
+msgstr "启动 KRunner 到后台，不显示界面。"
 
 #: main.cpp:64
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "替换现有实例"
+msgstr "替换已有实例"
 
 #: main.cpp:69
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr "要运行的查询，只在 -c 未提供时使用"
+msgstr "要运行的查询，只在未提供 -c 参数时使用"
 
 #: qml/RunCommand.qml:75
 #, kde-format
@@ -76,7 +78,7 @@ msgstr "配置 KRunner…"
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr "搜索“%1”..."
+msgstr "搜索“%1”…"
 
 #: qml/RunCommand.qml:92
 #, kde-format
@@ -107,7 +109,7 @@ msgstr "保持打开"
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
 msgid "Recent Queries"
-msgstr "最近命令"
+msgstr "最近查询"
 
 #: qml/RunCommand.qml:323
 #, kde-format
