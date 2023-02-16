@@ -108,7 +108,7 @@ Item {
         engine: "time"
         connectedSources: allTimezones
         interval: intervalAlignment === PlasmaCore.Types.NoAlignment ? 1000 : 60000
-        intervalAlignment: Plasmoid.configuration.showSeconds === 2 || (Plasmoid.configuration.showSeconds === 1 && Plasmoid.compactRepresentationItem.containsMouse) ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
+        intervalAlignment: Plasmoid.configuration.showSeconds === 2 || (Plasmoid.configuration.showSeconds === 1 && Plasmoid.compactRepresentationItem && Plasmoid.compactRepresentationItem.containsMouse) ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
 
     function setDateFormatString() {
