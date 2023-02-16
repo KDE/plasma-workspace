@@ -104,13 +104,29 @@ ColumnLayout {
 
                 Layout.fillWidth: true
                 iconSource: icon
-                text: (root.inhibitions.length === 1)
-                    ? (reason
-                        ? i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason)
-                        : i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name))
-                    : (reason
-                        ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
-                        : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name))
+                text: {
+                    if (root.inhibitions.length === 1) {
+                        if (reason && name) {
+                            return i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason)
+                        } else if (name) {
+                            return i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name)
+                        } else if (reason) {
+                            return i18n("An application is currently blocking sleep and screen locking (%1)", reason)
+                        } else {
+                            return i18n("An application is currently blocking sleep and screen locking (unknown reason)")
+                        }
+                    } else {
+                        if (reason && name) {
+                            return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
+                        } else if (name) {
+                            return i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name)
+                        } else if (reason) {
+                            return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: %1", reason)
+                        } else {
+                            return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: unknown reason")
+                        }
+                    }
+                }
             }
         }
     }
