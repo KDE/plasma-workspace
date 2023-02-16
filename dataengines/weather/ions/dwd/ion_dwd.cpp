@@ -350,7 +350,7 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
 
 void DWDIon::calculatePositions(QStringList lines, QVector<int> &namePositionalInfo, QVector<int> &stationIdPositionalInfo)
 {
-    QStringList stringLengths = lines[3].split(QChar::Space);
+    QStringList stringLengths = lines[1].split(QChar::Space);
     QVector<int> lengths;
     for (const QString &length : qAsConst(stringLengths)) {
         lengths.append(length.count());
@@ -359,7 +359,7 @@ void DWDIon::calculatePositions(QStringList lines, QVector<int> &namePositionalI
     int curpos = 0;
 
     for (int labelLength : lengths) {
-        QString label = lines[2].mid(curpos, labelLength);
+        QString label = lines[0].mid(curpos, labelLength).toLower();
 
         if (label.contains(QStringLiteral("name"))) {
             namePositionalInfo[0] = curpos;
@@ -383,17 +383,12 @@ void DWDIon::parseStationData(QByteArray data)
     calculatePositions(lines, namePositionalInfo, stationIdPositionalInfo);
 
     // This loop parses the station file (https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg)
-    // clu   CofX  id    ICAO name                 nb.    el.     elev  Hmod-H type
-    // ===== ----- ===== ---- -------------------- ------ ------- ----- ------ ----
-    // 99801   504 07335 LFBI POITIERS              46.35    0.18   120    -10 LAND
-    // 99802   504 07354 LFLX CHATEAUROUX           46.52    1.43   155     12 LAND
-    // 99803   470 07379 LFLN SAINT-YAN.            46.25    4.01   242      9 LAND
-    bool start = true;
+    // ID    ICAO NAME                 LAT    LON     ELEV
+    // ----- ---- -------------------- -----  ------- -----
+    // 01001 ENJA JAN MAYEN             70.56   -8.40    10
+    // 01008 ENSB SVALBARD              78.15   15.28    29
+    int lineIndex = 0;
     for (const QString &line : qAsConst(lines)) {
-        if (!start && line.isEmpty()) {
-            break;
-        }
-        start = false;
 
         QString name = line.mid(namePositionalInfo[0], namePositionalInfo[1]).trimmed();
         QString id = line.mid(stationIdPositionalInfo[0], stationIdPositionalInfo[1]).trimmed();
@@ -402,7 +397,12 @@ void DWDIon::parseStationData(QByteArray data)
         // With this we remove all non working but also a lot of working ones.
         if (id.startsWith(QLatin1Char('0')) || id.startsWith(QLatin1Char('1'))) {
             m_place.insert(camelCaseString(name), id);
+        } else if (lineIndex > 10) {
+            // After header is passed and some more lines for safety, abort parse if filter fails, all acceptable stations were found
+            break;
         }
+
+        lineIndex += 1;
     }
     qCDebug(IONENGINE_dwd) << "Number of parsed stations: " << m_place.size();
 }
