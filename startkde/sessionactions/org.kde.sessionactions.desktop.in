@@ -1,0 +1,33 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Session Management
+Comment=Entry for Session Actions
+Exec=/bin/false
+X-KDE-StartupNotify=false
+Actions=Logout;LogoutWithoutConfirmation;Shutdown;ShutdownWithoutConfirmation;Reboot;RebootWithoutConfirmation
+
+[Desktop Action Logout]
+Exec=@QtBinariesDir@/qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout
+Name=Logout
+X-KDE-Shortcuts=Ctrl+Alt+Delete
+
+[Desktop Action LogoutWithoutConfirmation]
+Exec=@QtBinariesDir@/qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout
+Name=Logout Without Confirmation
+
+[Desktop Action Shutdown]
+Exec=@QtBinariesDir@/qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptShutDown
+Name=Shutdown
+
+[Desktop Action ShutdownWithoutConfirmation]
+Exec=@QtBinariesDir@/qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndShutdown
+Name=Shutdown Without Confirmation
+
+[Desktop Action Reboot]
+Exec=@QtBinariesDir@/qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptReboot
+Name=Reboot
+
+[Desktop Action RebootWithoutConfirmation]
+Exec=@QtBinariesDir@/qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot
+Name=Reboot Without Confirmation

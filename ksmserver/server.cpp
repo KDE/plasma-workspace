@@ -16,7 +16,6 @@
 #include "server.h"
 #include "client.h"
 #include "global.h"
-#include "kglobalaccel.h"
 #include "klocalizedstring.h"
 #include "ksmserver_debug.h"
 #include "ksmserverinterfaceadaptor.h"
@@ -874,47 +873,6 @@ bool KSMServer::defaultSession() const
     return sessionGroup.isEmpty();
 }
 
-void KSMServer::setupShortcuts()
-{
-    if (KAuthorized::authorize(QStringLiteral("logout"))) {
-        KActionCollection *actionCollection = new KActionCollection(this);
-        actionCollection->setComponentDisplayName(i18n("Session Management"));
-        QAction *a;
-
-        // "With confirmation" actions
-        a = actionCollection->addAction(QStringLiteral("Log Out"));
-        a->setText(i18n("Log Out"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << (Qt::ALT | Qt::CTRL | Qt::Key_Delete));
-        connect(a, &QAction::triggered, this, &KSMServer::defaultLogout);
-
-        a = actionCollection->addAction(QStringLiteral("Shut Down"));
-        a->setText(i18n("Shut Down"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
-        connect(a, &QAction::triggered, this, &KSMServer::haltWithConfirmation);
-
-        a = actionCollection->addAction(QStringLiteral("Reboot"));
-        a->setText(i18n("Reboot"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
-        connect(a, &QAction::triggered, this, &KSMServer::rebootWithConfirmation);
-
-        // "Without confirmation" actions
-        a = actionCollection->addAction(QStringLiteral("Log Out Without Confirmation"));
-        a->setText(i18n("Log Out Without Confirmation"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
-        connect(a, &QAction::triggered, this, &KSMServer::logoutWithoutConfirmation);
-
-        a = actionCollection->addAction(QStringLiteral("Halt Without Confirmation"));
-        a->setText(i18n("Shut Down Without Confirmation"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
-        connect(a, &QAction::triggered, this, &KSMServer::haltWithoutConfirmation);
-
-        a = actionCollection->addAction(QStringLiteral("Reboot Without Confirmation"));
-        a->setText(i18n("Reboot Without Confirmation"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
-        connect(a, &QAction::triggered, this, &KSMServer::rebootWithoutConfirmation);
-    }
-}
-
 void KSMServer::setRestoreSession(const QString &sessionName)
 {
     if (state != Idle)
@@ -1044,36 +1002,6 @@ void KSMServer::tryRestoreNext()
 void KSMServer::startupDone()
 {
     state = Idle;
-}
-
-void KSMServer::defaultLogout()
-{
-    shutdown(KWorkSpace::ShutdownConfirmYes, KWorkSpace::ShutdownTypeDefault, KWorkSpace::ShutdownModeDefault);
-}
-
-void KSMServer::logoutWithoutConfirmation()
-{
-    shutdown(KWorkSpace::ShutdownConfirmNo, KWorkSpace::ShutdownTypeNone, KWorkSpace::ShutdownModeDefault);
-}
-
-void KSMServer::haltWithConfirmation()
-{
-    shutdown(KWorkSpace::ShutdownConfirmYes, KWorkSpace::ShutdownTypeHalt, KWorkSpace::ShutdownModeDefault);
-}
-
-void KSMServer::haltWithoutConfirmation()
-{
-    shutdown(KWorkSpace::ShutdownConfirmNo, KWorkSpace::ShutdownTypeHalt, KWorkSpace::ShutdownModeDefault);
-}
-
-void KSMServer::rebootWithConfirmation()
-{
-    shutdown(KWorkSpace::ShutdownConfirmYes, KWorkSpace::ShutdownTypeReboot, KWorkSpace::ShutdownModeDefault);
-}
-
-void KSMServer::rebootWithoutConfirmation()
-{
-    shutdown(KWorkSpace::ShutdownConfirmNo, KWorkSpace::ShutdownTypeReboot, KWorkSpace::ShutdownModeDefault);
 }
 
 void KSMServer::openSwitchUserDialog()
