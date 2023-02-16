@@ -70,8 +70,14 @@ int main(int argc, char **argv)
 
     // Required or else XWayland-using Electron apps are scaled too small;
     // see https://github.com/electron/electron/issues/37312.
-    qputenv("GDK_SCALE", "1");
-    qputenv("GDK_DPI_SCALE", "1");
+    // But let the user override these if they're feeling adventurous.
+    if (qEnvironmentVariableIsEmpty("GDK_SCALE")) {
+        qputenv("GDK_SCALE", "1");
+    }
+
+    if (qEnvironmentVariableIsEmpty("GDK_DPI_SCALE")) {
+        qputenv("GDK_DPI_SCALE", "1");
+    }
 
     qputenv("XDG_SESSION_TYPE", "wayland");
 
