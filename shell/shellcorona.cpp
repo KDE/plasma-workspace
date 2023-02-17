@@ -1189,13 +1189,14 @@ QStringList ShellCorona::availableActivities() const
 
 void ShellCorona::removeDesktop(DesktopView *desktopView)
 {
-    const int oldSize = m_desktopViewForScreen.size();
-    const int idx = desktopView->containment()->lastScreen();
+    const int screenId = desktopView->containment()->lastScreen();
 
-    // m_desktopViewForScreen not containing idx can happen during reordering
-    if (m_desktopViewForScreen.contains(idx)) {
-        m_desktopViewForScreen.remove(idx);
-        Q_ASSERT(m_desktopViewForScreen.size() == oldSize - 1);
+    auto result = std::find_if(m_desktopViewForScreen.begin(), m_desktopViewForScreen.end(), [desktopView](DesktopView *v) {
+        return v == desktopView;
+    });
+
+    if (result != m_desktopViewForScreen.end()) {
+        m_desktopViewForScreen.erase(result);
     }
 
     QMutableMapIterator<const Plasma::Containment *, PanelView *> it(m_panelViews);
@@ -1204,7 +1205,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         it.next();
         PanelView *panelView = it.value();
 
-        if (panelView->containment()->lastScreen() == idx) {
+        if (panelView->containment()->lastScreen() == screenId) {
             m_waitingPanels << panelView->containment();
             it.remove();
             panelView->destroy();
@@ -1257,7 +1258,9 @@ DesktopView *ShellCorona::desktopForScreen(QScreen *screen) const
 void ShellCorona::handleScreenRemoved(QScreen *screen)
 {
     if (DesktopView *v = desktopForScreen(screen)) {
-        if (v->containment()->lastScreen() < 0 || v->containment()->lastScreen() >= m_screenPool->screenOrder().count()) {
+        // Checking with m_screenPool->screenOrder().count() - 1 because when ScreenPool emits screenRemoved, the screen has not yet been removed from
+        // ScreenPool::screenORder()
+        if (v->containment()->lastScreen() < 0 || v->containment()->lastScreen() >= m_screenPool->screenOrder().count() - 1) {
             removeDesktop(v);
         }
         // Else do nothing, the view will be recycled
