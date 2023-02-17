@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_runner_baloo package.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2014, 2016.
-# Paolo Zamponi <zapaolo@email.it>, 2018, 2022.
+# Paolo Zamponi <zapaolo@email.it>, 2018, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2022-04-23 18:02+0200\n"
+"PO-Revision-Date: 2023-02-10 08:47+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: baloosearchrunner.cpp:65
 #, kde-format
@@ -24,63 +24,54 @@ msgid "Open Containing Folder"
 msgstr "Apri cartella contenitore"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
 msgstr "Audio"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "Immagine"
+msgstr "Immagini"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
 msgstr "Video"
 
 #: baloosearchrunner.cpp:90
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
-msgstr "Foglio elettronico"
+msgstr "Fogli elettronici"
 
 #: baloosearchrunner.cpp:91
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
-msgstr "Presentazione"
+msgstr "Presentazioni"
 
 #: baloosearchrunner.cpp:92
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Cartella"
+msgstr "Cartelle"
 
 #: baloosearchrunner.cpp:93
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "Documento"
+msgstr "Documenti"
 
 #: baloosearchrunner.cpp:94
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
-msgstr "Archivio"
+msgstr "Archivi"
 
 #: baloosearchrunner.cpp:95
-#, fuzzy, kde-format
-#| msgid "Text"
+#, kde-format
 msgid "Texts"
-msgstr "Testo"
+msgstr "Testi"
 
 #: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "File"
 
 #~ msgid "Search through files, emails and contacts"
 #~ msgstr "Cerca nei file, messaggi di posta e contatti"

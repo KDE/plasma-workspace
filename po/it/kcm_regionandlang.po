@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Paolo Zamponi <zapaolo@email.it>, 2022.
+# Paolo Zamponi <zapaolo@email.it>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2022-12-28 17:24+0100\n"
+"PO-Revision-Date: 2023-02-15 15:05+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -409,19 +409,15 @@ msgid "Language"
 msgstr "Lingua"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Mettere l'inglese americano sopra le altre lingue provoca un comportamento "
-"indesiderato in alcune applicazioni. Se vuoi che il sistema usi l'inglese "
-"americano, rimuovi le altre lingue."
+"Mettere altre lingue sotto l'inglese genera un comportamento indesiderato "
+"con alcune applicazioni. Se vuoi usare il sistema in inglese, rimuovi le "
+"altre lingue."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
