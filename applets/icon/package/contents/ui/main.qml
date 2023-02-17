@@ -46,9 +46,6 @@ MouseArea {
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
     Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
-    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
-
     hoverEnabled: true
     enabled: Plasmoid.nativeInterface.valid
 
