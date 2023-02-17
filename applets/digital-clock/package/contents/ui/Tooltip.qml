@@ -62,8 +62,10 @@ Item {
             id: tooltipSubtext
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
-            // keep this consistent with toolTipSubText in analog-clock
-            text: Qt.formatTime(tzDate, Plasmoid.configuration.showSeconds === 0 ? Qt.locale().timeFormat(Locale.ShortFormat) + " t" : Qt.locale().timeFormat(Locale.LongFormat)) + "\n" + Qt.formatDate(tzDate, Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
+            text: Plasmoid.configuration.showSeconds === 0 ? Qt.formatDate(tzDate, dateFormatString)
+                                                           : Qt.formatTime(tzDate, Qt.locale().timeFormat(Locale.LongFormat))
+                                                             + "\n"
+                                                             + Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString))
             opacity: 0.6
             visible: !clocks.visible
         }
