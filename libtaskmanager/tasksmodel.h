@@ -17,6 +17,8 @@
 
 namespace TaskManager
 {
+class VirtualDesktopInfo;
+
 /**
  * @short A unified tasks model.
  *
@@ -924,6 +926,11 @@ Q_SIGNALS:
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+
+    /**
+     * @return a shared pointer to VirtualDesktopInfo to access virtual desktop information
+     */
+    std::shared_ptr<VirtualDesktopInfo> virtualDesktopInfo() const;
 
 private:
     Q_INVOKABLE void updateLauncherCount();

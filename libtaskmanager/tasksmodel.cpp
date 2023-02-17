@@ -59,9 +59,8 @@ public:
     QList<int> sortedPreFilterRows;
     QVector<int> sortRowInsertQueue;
     bool sortRowInsertQueueStale = false;
+    std::shared_ptr<VirtualDesktopInfo> virtualDesktopInfo;
     QHash<QString, int> activityTaskCounts;
-    static VirtualDesktopInfo *virtualDesktopInfo;
-    static int virtualDesktopInfoUsers;
     static ActivityInfo *activityInfo;
     static int activityInfoUsers;
 
@@ -112,8 +111,6 @@ private:
 int TasksModel::Private::instanceCount = 0;
 WindowTasksModel *TasksModel::Private::windowTasksModel = nullptr;
 StartupTasksModel *TasksModel::Private::startupTasksModel = nullptr;
-VirtualDesktopInfo *TasksModel::Private::virtualDesktopInfo = nullptr;
-int TasksModel::Private::virtualDesktopInfoUsers = 0;
 ActivityInfo *TasksModel::Private::activityInfo = nullptr;
 int TasksModel::Private::activityInfoUsers = 0;
 
@@ -136,8 +133,6 @@ TasksModel::Private::~Private()
         windowTasksModel = nullptr;
         delete startupTasksModel;
         startupTasksModel = nullptr;
-        delete virtualDesktopInfo;
-        virtualDesktopInfo = nullptr;
         delete activityInfo;
         activityInfo = nullptr;
     }
@@ -1207,21 +1202,10 @@ void TasksModel::setSortMode(SortMode mode)
         }
 
         if (mode == SortVirtualDesktop) {
-            if (!d->virtualDesktopInfo) {
-                d->virtualDesktopInfo = new VirtualDesktopInfo();
-            }
-
-            ++d->virtualDesktopInfoUsers;
-
+            d->virtualDesktopInfo = virtualDesktopInfo();
             setSortRole(AbstractTasksModel::VirtualDesktops);
         } else if (d->sortMode == SortVirtualDesktop) {
-            --d->virtualDesktopInfoUsers;
-
-            if (!d->virtualDesktopInfoUsers) {
-                delete d->virtualDesktopInfo;
-                d->virtualDesktopInfo = nullptr;
-            }
-
+            d->virtualDesktopInfo = nullptr;
             setSortRole(Qt::DisplayRole);
         }
 
@@ -2040,4 +2024,14 @@ bool TasksModel::lessThan(const QModelIndex &left, const QModelIndex &right) con
     return d->lessThan(left, right);
 }
 
+std::shared_ptr<VirtualDesktopInfo> TasksModel::virtualDesktopInfo() const
+{
+    static std::weak_ptr<VirtualDesktopInfo> s_virtualDesktopInfo;
+    if (s_virtualDesktopInfo.expired()) {
+        auto ptr = std::make_shared<VirtualDesktopInfo>();
+        s_virtualDesktopInfo = ptr;
+        return ptr;
+    }
+    return s_virtualDesktopInfo.lock();
+}
 }
