@@ -102,6 +102,8 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
     case IsHidden:
     case CanLaunchNewInstance:
         return false;
+    default:
+        return QVariant();
     }
     Q_UNREACHABLE();
 }
