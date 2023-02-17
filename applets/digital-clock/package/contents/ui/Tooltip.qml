@@ -71,7 +71,7 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             Layout.minimumHeight: childrenRect.height
-            visible: timezoneRepeater.count > 1
+            visible: timezoneRepeater.count > 2
             columns: 2
             rowSpacing: 0
 
