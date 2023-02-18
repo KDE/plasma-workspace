@@ -9,10 +9,15 @@ import org.kde.kirigami 2.16 as Kirigami
 
 Timer {
     property bool isTriggered: false
-    interval: Kirigami.Units.humanMoment
+
     function reset() {
-        isTriggered = false
-        restart()
+        isTriggered = false;
+        restart();
     }
-    onTriggered: isTriggered = true
+
+    interval: Kirigami.Units.humanMoment
+
+    onTriggered: {
+        isTriggered = true;
+    }
 }

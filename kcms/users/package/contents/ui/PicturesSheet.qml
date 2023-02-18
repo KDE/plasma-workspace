@@ -38,7 +38,7 @@ Kirigami.OverlaySheet {
         {"name": i18nc("@item:intable", "Rich Hardwood"),    "color": "#6A250E", "dark": true}
     ]
 
-    onSheetOpenChanged: if (!sheetOpen){
+    onSheetOpenChanged: if (!sheetOpen) {
         destroy(Kirigami.Units.humanMoment);
     }
 

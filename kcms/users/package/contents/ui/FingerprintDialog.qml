@@ -347,4 +347,3 @@ Kirigami.OverlaySheet {
         }
     }
 }
-

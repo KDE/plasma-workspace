@@ -38,12 +38,12 @@ KCM.ScrollViewKCM {
 
     function createUser(userName, realName, password, isAdministrator) {
         if (kcm.createUser(userName, realName, password, isAdministrator)) {
-            userList.indexToActivate = userList.count
+            userList.indexToActivate = userList.count;
         }
     }
     function deleteUser(uid, deleteData) {
         if (kcm.deleteUser(uid, deleteData)) {
-            userList.indexToActivate = userList.count-1
+            userList.indexToActivate = userList.count - 1;
         }
     }
 
@@ -56,19 +56,21 @@ KCM.ScrollViewKCM {
 
     Component.onCompleted: {
         kcm.columnWidth = Kirigami.Units.gridUnit * 15
-        kcm.push("UserDetailsPage.qml", {user: kcm.userModel.getLoggedInUser()})
+        kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getLoggedInUser() })
     }
 
     view: ListView {
         id: userList
-        model: kcm.userModel
+
         property int indexToActivate: -1
+
+        model: kcm.userModel
 
         onCountChanged: {
             if (indexToActivate >= 0) {
                 kcm.pop();
                 currentIndex = Math.min(Math.max(0, indexToActivate), count - 1);
-                kcm.push("UserDetailsPage.qml", {user: currentItem.userObject});
+                kcm.push("UserDetailsPage.qml", { user: currentItem.user });
                 indexToActivate = -1;
             }
         }
@@ -80,17 +82,18 @@ KCM.ScrollViewKCM {
         }
 
         delegate: Kirigami.BasicListItem {
+            property var user: model.userObject
+
             text: model.displayPrimaryName
             subtitle: model.displaySecondaryName
             reserveSpaceForSubtitle: true
-            property var userObject: model.userObject
 
-            highlighted: index == userList.currentIndex
+            highlighted: index === userList.currentIndex
 
             onClicked: {
-                userList.currentIndex = index
-                kcm.pop(0)
-                kcm.push("UserDetailsPage.qml", {user: userObject})
+                userList.currentIndex = index;
+                kcm.pop(0);
+                kcm.push("UserDetailsPage.qml", { user });
             }
 
             Kirigami.Theme.colorSet: highlighted ? Kirigami.Theme.Selection : Kirigami.Theme.View
@@ -99,9 +102,9 @@ KCM.ScrollViewKCM {
                 width: height
 
                 color: "transparent"
-                border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, {alpha: 0.4*255})
+                border.color: Kirigami.ColorUtils.adjustColor(Kirigami.Theme.textColor, { alpha: 0.4 * 255 })
                 border.width: 1
-                radius: height/2
+                radius: height / 2
 
                 Kirigami.Avatar {
                     source: model.decoration + '?' + avatarVersion // force reload after saving
@@ -123,9 +126,9 @@ KCM.ScrollViewKCM {
             text: i18n("Add New User")
 
             onClicked: {
-                kcm.pop(0)
-                kcm.push("CreateUser.qml")
-                userList.currentIndex = -1
+                kcm.pop(0);
+                kcm.push("CreateUser.qml");
+                userList.currentIndex = -1;
             }
         }
 

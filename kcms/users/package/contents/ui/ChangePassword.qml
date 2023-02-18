@@ -13,6 +13,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.PromptDialog {
     id: passwordRoot
+
     preferredWidth: Kirigami.Units.gridUnit * 20
 
     function openAndClear() {
@@ -27,15 +28,14 @@ Kirigami.PromptDialog {
     title: i18n("Change Password")
 
     standardButtons: Kirigami.Dialog.NoButton
-    
     customFooterActions: Kirigami.Action {
         id: passAction
         text: i18n("Set Password")
         enabled: !passwordWarning.visible && verifyField.text && passwordField.text
         onTriggered: apply()
-        
+
         function apply() {
-            if (passwordField.text != verifyField.text) {
+            if (passwordField.text !== verifyField.text) {
                 debouncer.isTriggered = true
                 return
             }
@@ -43,7 +43,7 @@ Kirigami.PromptDialog {
             passwordRoot.close()
         }
     }
-    
+
     ColumnLayout {
         id: mainColumn
         spacing: Kirigami.Units.smallSpacing
@@ -88,7 +88,10 @@ Kirigami.PromptDialog {
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             text: i18n("Passwords must match")
-            visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text && debouncer.isTriggered
+            visible: passwordField.text !== ""
+                && verifyField.text !== ""
+                && passwordField.text !== verifyField.text
+                && debouncer.isTriggered
         }
     }
 }

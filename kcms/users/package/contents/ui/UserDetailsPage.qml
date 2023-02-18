@@ -10,8 +10,8 @@ import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.12
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kcm 1.2
 import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kcm 1.2
 
 SimpleKCM {
     id: usersDetailPage
@@ -39,7 +39,6 @@ SimpleKCM {
             }
         }
     }
-
 
     Connections {
         target: kcm
@@ -108,7 +107,7 @@ SimpleKCM {
                     onTriggered: {
                         const component = Qt.createComponent("PicturesSheet.qml")
                         component.incubateObject(usersDetailPage, {
-                            "parent": usersDetailPage,
+                            parent: usersDetailPage,
                         })
                         component.destroy()
                     }

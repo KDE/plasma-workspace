@@ -15,14 +15,18 @@ import org.kde.kirigami 2.20 as Kirigami
 KCM.SimpleKCM {
     title: i18n("Create User")
 
-    width: mainColumn.childrenRect.width + (Kirigami.Units.largeSpacing*10)
-    height: mainColumn.childrenRect.height + (Kirigami.Units.largeSpacing*10)
+    width: mainColumn.childrenRect.width + (Kirigami.Units.largeSpacing * 10)
+    height: mainColumn.childrenRect.height + (Kirigami.Units.largeSpacing * 10)
 
     onVisibleChanged: {
-        userNameField.text = realNameField.text = verifyField.text = passwordField.text = ""
-        usertypeBox.currentIndex = 0
+        realNameField.text = "";
+        userNameField.text = "";
+        passwordField.text = "";
+        verifyField.text = "";
+        usertypeBox.currentIndex = 0;
     }
     Component.onCompleted: realNameField.forceActiveFocus()
+
     Kirigami.FormLayout {
         anchors.centerIn: parent
         QQC2.TextField {
@@ -41,8 +45,8 @@ KCM.SimpleKCM {
 
             textRole: "label"
             model: [
-                { "type": "standard", "label": i18n("Standard") },
-                { "type": "administrator", "label": i18n("Administrator") },
+                { type: "standard", label: i18n("Standard") },
+                { type: "administrator", label: i18n("Administrator") },
             ]
 
             Kirigami.FormData.label: i18n("Account type:")
@@ -63,20 +67,28 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             text: i18n("Passwords must match")
-            visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text && debouncer.isTriggered
+            visible: passwordField.text !== ""
+                && verifyField.text !== ""
+                && passwordField.text !== verifyField.text
+                && debouncer.isTriggered
         }
         Debouncer {
             id: debouncer
         }
         QQC2.Button {
             text: i18n("Create")
-            enabled: !passwordWarning.visible && verifyField.text && passwordField.text && realNameField.text && userNameField.text
+            enabled: !passwordWarning.visible
+                && realNameField.text !== ""
+                && userNameField.text !== ""
+                && passwordField.text !== ""
+                && verifyField.text !== ""
+
             onClicked: {
-                if (passwordField.text != verifyField.text) {
-                    debouncer.isTriggered = true
-                    return
+                if (passwordField.text !== verifyField.text) {
+                    debouncer.isTriggered = true;
+                    return;
                 }
-                kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator"))
+                kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] === "administrator"));
             }
         }
     }
