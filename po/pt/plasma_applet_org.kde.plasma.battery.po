@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-12 18:27+0000\n"
+"PO-Revision-Date: 2023-02-17 12:33+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -272,21 +272,18 @@ msgstr ""
 "O %1 está a impedir a suspensão e o bloqueio do ecrã (razão desconhecida)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 aplicação está a impedir a suspensão e o bloqueio do ecrã:"
+msgstr "Uma aplicação está a impedir a suspensão e o bloqueio do ecrã (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"O %1 está a impedir a suspensão e o bloqueio do ecrã (razão desconhecida)"
+"Uma aplicação está a impedir a suspensão e o bloqueio do ecrã (razão "
+"desconhecida)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -304,15 +301,13 @@ msgstr "%1: razão desconhecida"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplicação desconhecida: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: razão desconhecida"
+msgstr "Aplicação desconhecida: razão desconhecida"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-07 07:14+0200\n"
+"PO-Revision-Date: 2023-02-17 08:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -290,20 +290,18 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "Зараз %1 блокує присипляння і блокування екрана (невідома причина)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 програма зараз блокує присипляння та блокування екрана:"
+msgstr "Якась програма зараз блокує присипляння та блокування екрана (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "Зараз %1 блокує присипляння і блокування екрана (невідома причина)"
+msgstr ""
+"Зараз якась програма блокує присипляння і блокування екрана (невідома "
+"причина)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -321,15 +319,13 @@ msgstr "%1: невідома причина"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Невідома програма: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: невідома причина"
+msgstr "Невідома програма: невідома причина"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

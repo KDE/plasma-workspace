@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2023-01-06 11:16+0100\n"
+"PO-Revision-Date: 2023-02-16 09:05+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -73,7 +73,7 @@ msgid ""
 "a standalone widget."
 msgstr ""
 "Nebylo možné nalézt widget 'Upozornění', který je vyžadován pro zobrazování "
-"upozornění. Ujistěte se, že je povolen buď v systémové liště nebo jako "
+"upozornění. Ujistěte se, že je povolen buď v systémovém panelu nebo jako "
 "samostatný widget."
 
 #: package/contents/ui/main.qml:53

@@ -1,24 +1,24 @@
 # Translation for plasma_applet_org.kde.plasma_battery.po to Euskara/Basque (eu).
-# Copyright (C) 2007-2022 This file is copyright:
+# Copyright (C) 2007-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # marcos <marcos@euskalgnu.org>, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-08 22:15+0100\n"
+"PO-Revision-Date: 2023-02-17 06:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -285,23 +285,20 @@ msgstr ""
 "ezezaguna)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
-"Aplikazio %1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da:"
+"Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
+"honetan (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"%1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da (arrazoia "
-"ezezaguna)"
+"Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
+"honetan (arrazoia ezezaguna)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -319,15 +316,13 @@ msgstr "%1: arrazoi ezezaguna"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplikazio ezezaguna: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: arrazoi ezezaguna"
+msgstr "Aplikazio ezezaguna: arrazoi ezezaguna"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

@@ -13,13 +13,13 @@
 # Yuri Efremov <yur.arh@gmail.com>, 2010.
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Yaroslav Sidlovsky <zawertun@gmail.com>, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-09-23 23:00+0300\n"
+"PO-Revision-Date: 2023-02-17 11:18+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -1160,24 +1160,22 @@ msgid "focus"
 msgstr "фокус"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Восстановить цветовую схему"
+msgstr "Цвет выделения в соответствии с цветовой схемой"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Цвет выделения в соответствии с обоями"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Выбор цвета выделения"
+msgstr "Использовать собственный цвет выделения"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format
