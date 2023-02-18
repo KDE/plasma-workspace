@@ -647,7 +647,7 @@ QString defaultApplication(const QUrl &url)
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
 
-        return confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
+        return confGroup.readPathEntry("TerminalApplication", KService::serviceByStorageId(QStringLiteral("konsole")) ? QStringLiteral("konsole") : QString());
     } else if (application.compare(QLatin1String("filemanager"), Qt::CaseInsensitive) == 0) {
         KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
 
