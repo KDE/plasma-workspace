@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
-import QtGraphicalEffects 1.12
+import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.18 as Kirigami
 import org.kde.plasma.lookandfeel 1.0
 

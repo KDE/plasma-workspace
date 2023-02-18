@@ -4,10 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtGraphicalEffects 1.15
+import Qt5Compat.GraphicalEffects
 
 /**
- * QtGraphicalEffects is gone in Qt6, so put it in a Loader to avoid blank wallpapers.
+ * Qt5Compat.GraphicalEffects is gone in Qt6, so put it in a Loader to avoid blank wallpapers.
  * TODO Qt 6
  */
 FastBlur {

@@ -7,7 +7,7 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -64,7 +64,7 @@ PlasmaComponents.ItemDelegate {
 
         Rectangle {
             anchors.centerIn: parent
-            rotation: LayoutMirroring.enabled ? 90 : -90 // you cannot even rotate gradients without QtGraphicalEffects
+            rotation: LayoutMirroring.enabled ? 90 : -90 // you cannot even rotate gradients without Qt5Compat.GraphicalEffects
             width: parent.height
             height: parent.width
 
