@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-05 02:43+0000\n"
-"PO-Revision-Date: 2023-01-05 11:35+0100\n"
+"PO-Revision-Date: 2023-02-17 14:12+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -272,6 +272,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Tip: Pokud pravidelně cestujete, přidejte sem další položku pro vaše časové "
+"pásmo. Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -285,7 +287,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Skryté pokud je toto místní čas ve vašem městě"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
@@ -313,6 +315,8 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
+"Přidat časová pásma pro jejich zobrazení ve vyskakovací části appletu nebo "
+"jejich použití přímo jako hodiny"
 
 #: package/contents/ui/configTimeZones.qml:155
 #, kde-format

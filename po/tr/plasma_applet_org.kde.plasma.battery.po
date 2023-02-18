@@ -9,13 +9,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-12-07 17:10+0300\n"
+"PO-Revision-Date: 2023-02-17 18:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-POOTLE-MTIME: 1413102233.000000\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -268,19 +268,18 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 uygulama şu anda uyku ve ekran kilitlemesini engelliyor:"
-msgstr[1] "%1 uygulama şu anda uyku ve ekran kilitlemesini engelliyor:"
+msgstr[0] "%1 uygulama şu anda uykuyu ve ekran kilitlemesini engelliyor:"
+msgstr[1] "%1 uygulama şu anda uykuyu ve ekran kilitlemesini engelliyor:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "%1 uygulama şu anda uyku ve ekran kilitlemesini engelliyor (%2)"
+msgstr "%1, şu anda uykuyu ve ekran kilitlemesini engelliyor (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr ""
-"%1 uygulama şu anda uyku ve ekran kilitlemesini engelliyor (bilinmeyen neden)"
+msgstr "%1, şu anda uyku ve ekran kilitlemesini engelliyor (bilinmeyen neden)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
