@@ -17,7 +17,7 @@
 class KWORKSPACE_EXPORT AutostartScriptDesktopFile : public KDesktopFile
 {
 public:
-    explicit AutostartScriptDesktopFile(const QString &name, const QString &execPath, const QString &iconName);
+    explicit AutostartScriptDesktopFile(const QString &name, const QString &execPath);
 
     /**
      * Checks whether this KDesktopFile has X-KDE-AutostartScript=true
