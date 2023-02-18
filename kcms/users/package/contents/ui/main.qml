@@ -49,7 +49,7 @@ KCM.ScrollViewKCM {
 
     Connections {
         target: kcm
-        onApply: {
+        function onApply() {
             avatarVersion += 1
         }
     }
