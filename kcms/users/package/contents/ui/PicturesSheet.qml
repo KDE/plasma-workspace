@@ -7,10 +7,9 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs 1.3 as Dialogs
 import QtQuick.Layouts 1.15
 
-import org.kde.kcm 1.3
 import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.OverlaySheet {
@@ -67,7 +66,7 @@ Kirigami.OverlaySheet {
                 Layout.leftMargin: Kirigami.Units.largeSpacing
                 Layout.rightMargin: Kirigami.Units.largeSpacing
 
-                FileDialog {
+                Dialogs.FileDialog {
                     id: fileDialog
                     title: i18nc("@title", "Choose a picture")
                     folder: shortcuts.pictures

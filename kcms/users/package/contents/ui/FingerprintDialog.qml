@@ -19,7 +19,6 @@
 */
 
 import QtQuick 2.12
-import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.3
 import QtQuick.Shapes 1.12
 import QtQuick.Controls 2.5 as QQC2
