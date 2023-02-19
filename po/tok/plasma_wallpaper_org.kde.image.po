@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-02-19 01:00+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -271,4 +271,39 @@ msgstr ""
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, kde-format
 msgid "Add Folder…"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#, kde-kuit-format
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#, kde-format
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""

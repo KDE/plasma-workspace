@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-02-19 01:00+0000\n"
 "PO-Revision-Date: 2022-05-23 07:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -290,6 +290,48 @@ msgstr "Aucun emplacement de fond d'écran configuré"
 #, kde-format
 msgid "Add Folder…"
 msgstr "Ajouter un dossier..."
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr "Obtenir de nouveaux fonds d'écran..."
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#, fuzzy, kde-kuit-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr ""
+"Une erreur est survenue lors d'une tentative de définition d'un fond d'écran "
+"pour Plasma : \n"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#, fuzzy, kde-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
+msgstr ""
+"Une erreur est survenue lors d'une tentative de définition d'un fond d'écran "
+"pour Plasma : \n"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Aucun fond d'écran dans ce diaporama"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-02-19 01:00+0000\n"
 "PO-Revision-Date: 2022-11-18 00:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -284,6 +284,44 @@ msgstr "Nėra sukonfigūruotų darbalaukio fono vietų"
 #, kde-format
 msgid "Add Folder…"
 msgstr "Pridėti aplanką…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr "Gauti naujų darbalaukio fonų…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#, fuzzy, kde-kuit-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr "Bandant nustatyti Plasma darbalaukio foną, įvyko klaida:\n"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#, fuzzy, kde-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
+msgstr "Bandant nustatyti Plasma darbalaukio foną, įvyko klaida:\n"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Šiame skaidrių rodyme nėra jokių paveikslų"

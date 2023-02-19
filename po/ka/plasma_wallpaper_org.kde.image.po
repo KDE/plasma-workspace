@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-02-19 01:00+0000\n"
 "PO-Revision-Date: 2022-12-03 06:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -269,3 +269,41 @@ msgstr "ფონის სურათების მდებარეობ�
 #, kde-format
 msgid "Add Folder…"
 msgstr "საქაღალდის დამატება…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr "ფონის ახალი სურათების მიღება…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#, fuzzy, kde-kuit-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr "Plasma-ის ფონის სურათის დაყენების შეცდომა\n"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#, fuzzy, kde-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
+msgstr "Plasma-ის ფონის სურათის დაყენების შეცდომა\n"

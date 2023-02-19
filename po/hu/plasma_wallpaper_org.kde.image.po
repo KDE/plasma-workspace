@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-02-19 01:00+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -274,6 +274,44 @@ msgstr "Nincsenek beállítva háttérkép-mappák"
 #, kde-format
 msgid "Add Folder…"
 msgstr "Mappa hozzáadása…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers…"
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr "Háttérképek letöltése…"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
+#, fuzzy, kde-kuit-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
+#, fuzzy, kde-format
+#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
+msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Nincsenek háttérképek ebben a diavetítésben"
