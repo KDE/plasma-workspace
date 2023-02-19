@@ -25,7 +25,7 @@ import QtQuick.Shapes 1.12
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.plasma.kcm.users 1.0
+import org.kde.plasma.kcm.users 1.0 as UsersKCM
 import FingerprintModel 1.0
 
 Kirigami.OverlaySheet {
@@ -252,7 +252,7 @@ Kirigami.OverlaySheet {
                             fingerprintRoot.currentFinger = modelData.internalName;
                             fingerprintModel.startEnrolling(modelData.internalName);
                         }
-                        MaskMouseArea {
+                        UsersKCM.MaskMouseArea {
                             id: maskArea
                             anchors.fill: parent
                             onTapped: {

@@ -48,10 +48,16 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantLis
     , m_model(new UserModel(this))
     , m_fingerprintModel(new FingerprintModel(this))
 {
-    qmlRegisterUncreatableType<User>("org.kde.plasma.kcm.users", 1, 0, "User", QString());
-    qmlRegisterUncreatableType<FprintDevice>("FingerprintModel", 1, 0, "FprintDevice", QString());
-    qmlRegisterType<Finger>("FingerprintModel", 1, 0, "Finger");
-    qmlRegisterType<MaskMouseArea>("org.kde.plasma.kcm.users", 1, 0, "MaskMouseArea");
+    constexpr const char *uri = "org.kde.plasma.kcm.users";
+
+    qmlRegisterUncreatableType<User>(uri, 1, 0, "User", QStringLiteral("Use kcm.userModel to access User objects"));
+    qmlRegisterType<MaskMouseArea>(uri, 1, 0, "MaskMouseArea");
+
+    constexpr const char *uri_fm = "FingerprintModel";
+
+    qmlRegisterUncreatableType<FprintDevice>(uri_fm, 1, 0, "FprintDevice", QStringLiteral("Only for enum access"));
+    qmlRegisterType<Finger>(uri_fm, 1, 0, "Finger");
+
     setButtons(Apply);
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);

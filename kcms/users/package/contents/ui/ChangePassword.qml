@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.kcm.users 1.0 as UsersKCM
 
 Kirigami.PromptDialog {
     id: passwordRoot
@@ -23,7 +24,7 @@ Kirigami.PromptDialog {
         this.open()
     }
 
-    property var account
+    property UsersKCM.User user
 
     title: i18n("Change Password")
 
@@ -39,7 +40,7 @@ Kirigami.PromptDialog {
                 debouncer.isTriggered = true
                 return
             }
-            user.password = passwordField.text
+            passwordRoot.user.password = passwordField.text
             passwordRoot.close()
         }
     }

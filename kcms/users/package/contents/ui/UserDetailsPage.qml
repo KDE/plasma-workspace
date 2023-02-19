@@ -12,13 +12,14 @@ import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.13 as Kirigami
 import org.kde.kcm 1.2
+import org.kde.plasma.kcm.users 1.0 as UsersKCM
 
 SimpleKCM {
     id: usersDetailPage
 
     title: user.displayPrimaryName
 
-    property QtObject user
+    property UsersKCM.User user
     property bool overrideImage: false
     property url oldImage
 
@@ -154,7 +155,7 @@ SimpleKCM {
             QQC2.Button {
                 text: i18n("Change Password")
                 onClicked: {
-                    changePassword.account = user
+                    changePassword.user = user
                     changePassword.openAndClear()
                 }
             }
@@ -218,7 +219,7 @@ SimpleKCM {
         }
     }
 
-    ChangePassword { id: changePassword; account: user }
+    ChangePassword { id: changePassword }
     ChangeWalletPassword { id: changeWalletPassword }
     FingerprintDialog { id: fingerprintDialog; account: user }
 }
