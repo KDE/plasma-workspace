@@ -71,6 +71,5 @@
         "Name[zh_CN]": "重点色",
         "Name[zh_TW]": "強調色"
     },
-    "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true
 }

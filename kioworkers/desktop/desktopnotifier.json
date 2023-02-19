@@ -99,7 +99,6 @@
         "Name[zh_CN]": "目录监视器",
         "Name[zh_TW]": "目錄監控器"
     },
-    "X-KDE-FactoryName": "desktopnotifier",
     "X-KDE-Kded-autoload": false,
     "X-KDE-Kded-load-on-demand": true
 }
