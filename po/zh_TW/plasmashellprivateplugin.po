@@ -4,137 +4,138 @@
 # Franklin, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2018-10-31 00:54+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-02-19 06:54+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: calendar/eventdatadecorator.cpp:51
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "假日"
 
 #: calendar/eventdatadecorator.cpp:53
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr "事件"
 
 #: calendar/eventdatadecorator.cpp:55
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "待辦事項"
 
 #: calendar/eventdatadecorator.cpp:57
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
+msgstr[0] "%1 個事件"
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "沒有事件"
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "日"
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "月"
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "年"
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "上個月"
 
 #: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "前一年"
 
 #: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "前一個十年"
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "重設行事曆到今天"
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "下個月"
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "下一年"
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "下一個十年"
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "保持開啟"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "設定…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -178,7 +179,7 @@ msgstr "選擇 Plasmoid 檔"
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
-msgstr "安裝套件包 %1 失敗。"
+msgstr "安裝軟體包 %1 失敗。"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
@@ -196,14 +197,13 @@ msgid "Running"
 msgstr "執行中"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy, kde-format
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr "無法安裝"
+msgstr "可被解除安裝"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
@@ -216,10 +216,9 @@ msgid "Download New Plasma Widgets"
 msgstr "下載新的 Plasma 元件"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:206
-#, fuzzy, kde-format
-#| msgid "Install Widget From Local File..."
+#, kde-format
 msgid "Install Widget From Local File…"
-msgstr "從本地端檔案安裝元件..."
+msgstr "從本地端檔案安裝元件…"
 
 #~ msgid "&Execute"
 #~ msgstr "執行(&E)"
