@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 01:00+0000\n"
-"PO-Revision-Date: 2022-05-22 07:59+0300\n"
+"PO-Revision-Date: 2023-02-19 09:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -286,42 +286,41 @@ msgid "Add Folder…"
 msgstr "Додати теку…"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Отримати зображення тла стільниці…"
+msgstr "Встановити зображенням тла"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Стільниця"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Вікно блокування"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Обидва"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "Під час спроби встановити зображення тла Плазми сталася помилка:\n"
+msgstr ""
+"Під час спроби встановити зображення тла Плазми сталася помилка:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "Під час спроби встановити зображення тла Плазми сталася помилка:\n"
+msgstr ""
+"Під час спроби відкрити файл налаштувань kscreenlockerrc сталася помилка."
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "У цьому показі слайдів немає зображень тла стільниці"

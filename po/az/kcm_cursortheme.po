@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2022-03-24 15:03+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2023-02-19 15:11+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -81,7 +81,7 @@ msgstr "Mövzu uğurla quraşdırıldı."
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Gecikmə saniyələr ilə"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -97,69 +97,69 @@ msgstr "Kursor Mövzusunu Bərpa Etmək"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Başladılma görünüşü"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Tətbiqin başladılma animasiyasını ayarla."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Kursorun dəyişdirilməsi:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Heç nə"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Sabit"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:65
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Sayrışan"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:74
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Sıçrayan"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Tapşırıq panelinin dəyişdirilməsi:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Animasiya"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Animasiya dayansın:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:124
 #: package/contents/ui/LaunchFeedbackDialog.qml:136
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 saniyə"
+msgstr[1] "%1 saniyə"
 
 #: package/contents/ui/main.qml:20
 #, kde-format
@@ -175,7 +175,7 @@ msgstr "Ölçüsü:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "Tətbiq başladılmasının görünüşünü &tənzimlə..."
 
 #: package/contents/ui/main.qml:145
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 01:00+0000\n"
-"PO-Revision-Date: 2022-05-23 13:21+0200\n"
+"PO-Revision-Date: 2023-02-19 18:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2022"
+msgstr "Freek de Kruijf - 2022-2023"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -280,46 +280,43 @@ msgid "Add Folder…"
 msgstr "Map toevoegen…"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Nieuwe achtergrondafbeeldingen ophalen…"
+msgstr "Als achtergrondafbeelding instellen"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Bureaublad"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Vergrendelscherm"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Beide"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
 "Er deed zich een fout voor tijdens het instellen van de Plasma "
-"achtergrondafbeelding:\n"
+"achtergrondafbeelding:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-"Er deed zich een fout voor tijdens het instellen van de Plasma "
-"achtergrondafbeelding:\n"
+"Er deed zich een fout voor tijdens het openen van het configuratiebestand "
+"kscreenlockerrc."
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Er zijn geen achtergrondafbeeldingen in deze diashow"

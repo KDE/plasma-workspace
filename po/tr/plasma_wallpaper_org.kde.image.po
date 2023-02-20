@@ -5,13 +5,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2021, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 01:00+0000\n"
-"PO-Revision-Date: 2022-12-10 18:43+0300\n"
+"PO-Revision-Date: 2023-02-19 11:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -278,42 +278,40 @@ msgid "Add Folder…"
 msgstr "Klasör Ekle…"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Yeni Duvar Kağıtları Al…"
+msgstr "Duvar Kağıdı Olarak Ayarla"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Masaüstü"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Kilit Ekranı"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Her İkisi"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "Plasma duvar kağıdı ayarlamaya çalışırken bir hata oluştu:\n"
+msgstr "Plasma duvar kağıdını ayarlamaya çalışırken bir hata oluştu:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "Plasma duvar kağıdı ayarlamaya çalışırken bir hata oluştu:\n"
+msgstr ""
+"kscreenlockerrc yapılandırma dosyasını açmaya çalışırken bir hata oluştu."
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Bu slayt gösterisinde duvar kağıdı yok"

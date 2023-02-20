@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-18 01:01+0000\n"
-"PO-Revision-Date: 2022-10-18 13:07+0400\n"
+"PO-Revision-Date: 2023-02-19 14:02+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -191,18 +191,18 @@ msgstr "Ekran Klaviaturası Söndürülüb"
 #: shellcontainmentconfig.cpp:101
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Daxili ekran (%1)"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: shellcontainmentconfig.cpp:129
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Ayrılmış ekran %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format

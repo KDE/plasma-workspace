@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2022-07-01 16:54+0400\n"
+"PO-Revision-Date: 2023-02-19 14:36+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1148,24 +1148,22 @@ msgid "focus"
 msgstr "fokus"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Rəng Sxemini Bərpa etmək"
+msgstr "Seçim rəngini rəng sxemindən almaq"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Seçim rəngini divar kağızından almaq"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Vurğulama rəngini seçin"
+msgstr "Xüsusi seçim rəngi"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format

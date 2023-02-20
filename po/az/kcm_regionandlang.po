@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kheyyam <xxmn77@gmail.com>, 2022.
+# Kheyyam <xxmn77@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2022-08-24 17:45+0400\n"
+"PO-Revision-Date: 2023-02-19 14:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -234,6 +234,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>localectl</command> alətini istifadə edən sistemin əlçatan dil "
+"dəstəyini tapmaq mümkün olmadı. <link>https://bugs.kde.org</link> saytında "
+"bu xəta haqqında məlumat verin."
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -404,19 +407,15 @@ msgid "Language"
 msgstr "Dil"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Amerika ingiliscəsini digər dillərdən üstün tutmaq bəzi tətbiqlərdə "
-"arzuolunmaz hallara səbəb olacaq. Əgər sisteminizi Amerika ingiliscəsində "
-"istifadə etmək istəyirsinizsə başqa dilləri silin."
+"Hər hansı dili ingilis dilindən aşağıda yerləşdirmək arzuolunmaz hallara "
+"səbəb ola bilər. Əgərsistemi ingiliscə istifadə etmək istəyirsinizsə o zaman "
+"bütün başqa dilləri silin."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format

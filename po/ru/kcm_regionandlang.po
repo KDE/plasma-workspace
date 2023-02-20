@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2023-01-28 22:47+0300\n"
+"PO-Revision-Date: 2023-02-19 17:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -409,19 +409,15 @@ msgid "Language"
 msgstr "Язык"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"При помещении американского английского на вершину списка некоторые "
-"приложения могут работать некорректно. Чтобы использовать в системе "
-"американский английский, удалите все остальные языки."
+"При размещении любого языка в списке ниже английского, некоторые приложения "
+"могут работать некорректно. Чтобы использовать в системе английский, удалите "
+"все остальные языки."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format

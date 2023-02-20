@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 01:00+0000\n"
-"PO-Revision-Date: 2023-01-23 21:08+0100\n"
+"PO-Revision-Date: 2023-02-19 20:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -81,6 +81,8 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Siste brukte tilpassa kontrastfarge før brukaren bytte til kontrastfarge frå "
+"bakgrunnsbilete eller standard kontrastfarge"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
@@ -1152,19 +1154,19 @@ msgstr "Fokus"
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr ""
+msgstr "Aksentfarge frå fargetema"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Kontrastfarge frå bakgrunnsbilete"
 
 #: package/contents/ui/AccentColorUI.qml:40
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr ""
+msgstr "Tilpastta konstrastfarge"
 
 #: package/contents/ui/AccentColorUI.qml:152
 #, kde-format

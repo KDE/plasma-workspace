@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-11-11 11:25+0400\n"
+"PO-Revision-Date: 2023-02-19 14:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -46,7 +46,7 @@ msgstr "Qalan vaxt:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Qiymətləndirilir..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -185,7 +185,7 @@ msgstr[1] "%1 tətbiq məhsuldar rejimin aktiv edilməsini tələb edir"
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistem məhsuldar rejimdədir"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -197,12 +197,12 @@ msgstr[1] "%1 tətbiq enerjiyə nəzarət rejiminin aktiv edilməsini tələb ed
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistem enerjiyə qənaət rejimindədir"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Ekran parlaqlığını dəyişmək üçün sürüşdür"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -276,22 +276,19 @@ msgstr ""
 "bilinmir)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 tətbiqi hazırda yuxu rejimini və ekranın kilidlənməsini əngəlləyir:"
+msgstr ""
+"Bir tətbiq hazırda yuxu rejimini və ekranın kilidlənməsini əngəlləyir (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"%1 hazırda yuxu rejimini və ekranın kilidlənməsini əngəlləyir (səbəbi "
-"bilinmir)"
+"Bir tətbiq hazırda yuxu rejimini və ekranın kilidlənməsini əngəlləyir "
+"(səbəbi bilinmir)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -309,15 +306,13 @@ msgstr "%1: naməlum səbəb"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Naməlum tətbiq: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: naməlum səbəb"
+msgstr "Naməlum tətbiq: naməlum səbəb"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

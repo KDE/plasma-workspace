@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2022.
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-11-11 11:43+0400\n"
+"PO-Revision-Date: 2023-02-19 15:54+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,16 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "sesiyadan çıxış"
+msgstr "çıxış;sesiyadan çıxış"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -32,14 +31,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Cari istifadəçinin sesiyasından çıxır"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "söndürmək"
+msgstr "söndürmək;söndür"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -47,14 +44,12 @@ msgid "Turns off the computer"
 msgstr "Kompyuteri söndürmək"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "yenidən başlatmaq"
+msgstr "yenidən başlatmaq;təkrar aç"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -62,12 +57,11 @@ msgid "Reboots the computer"
 msgstr "Kompyuteri yenidən başladır"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Ekranı kilidləmək"
+msgstr "kilid;ekranı kilidləmək"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -75,14 +69,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Cari sesiyanı kilidləyir və ekran qoruyucusunu işə salır"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "sesiyanı saxla"
+msgstr "saxla:sesiyanı saxla"
 
 #: sessionrunner.cpp:66
 #, kde-format
@@ -90,13 +82,12 @@ msgid "Saves the current session for session restoration"
 msgstr "Sesiyanı bərpa etməyək üçün cari sesiyanı saxlayır"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "istifadəçini dəyişmək"
+msgstr "istifadəçini dəyişmək;yeni sesiya"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -104,9 +95,7 @@ msgid "Starts a new session as a different user"
 msgstr "Yeni sesiyanı digər istifadəçi ilə başladır"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sesiyalar"
@@ -117,12 +106,10 @@ msgid "Lists all sessions"
 msgstr "bütün sesiyaların siyahısı"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "dəyişdirmək"
+msgstr "dəyişdir"
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -137,36 +124,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Sİstemdən çıx"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "söndürmək"
+msgstr "Söndür"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "yenidən başlatmaq"
+msgstr "Yenidən başlat"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Kilidlə"
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgctxt "save session command"
-#| msgid "save session"
+#, kde-format
 msgid "Save Session"
-msgstr "sesiyanı saxla"
+msgstr "Sesiyanı saxla"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -174,13 +155,7 @@ msgid "Switch User"
 msgstr "istifadəçini dəyiş"
 
 #: sessionrunner.cpp:278
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#| "will be displayed and the current session will be hidden.</p><p>You can "
-#| "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#| "session}</li><li>Plasma search (type 'switch' or 'sessions')</"
-#| "li><li>Plasma widgets (such as the application launcher)</li></ul>"
+#, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
 "be displayed and the current session will be hidden.</p><p>You can switch "
@@ -191,14 +166,13 @@ msgstr ""
 "<p>Siz yeni iş masası sesiyasına daxil olmaq üzrəsiniz.</p><p>Giriş ekran "
 "göstəriləcək və cari sesiya gizlədiləcəkdir.</p><p>Siz bunlardan istifadə "
 "edərək iş masası sesiyalarını dəyişə bilərsiniz:</p><ul>Ctrl+Alt+F{sesiyanın "
-"nömrəsi}<li></li>Plasma axtarışı (\"switch\" və ya \"sessions\" yazın)<li></"
-"li>Plasma vidjet (tətbiq başladıcısı kimi)<li></li>"
+"nömrəsi}<li></li>Plasma axtarışı (növ \"%1\")<li></li>Plasma vidjet (tətbiq "
+"başladıcısı kimi)<li></li>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Yeni Sesiya"
+msgstr "Yeni iş masası sesiyası"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"
