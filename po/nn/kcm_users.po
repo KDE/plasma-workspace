@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-01-15 12:49+0100\n"
+"PO-Revision-Date: 2023-02-19 20:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -177,117 +177,117 @@ msgstr "Registrerer fingeravtrykk"
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk høgre peikefinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk høgre midtfinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:129
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk høgre ringfinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:131
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk høgre litlefinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:133
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk høgre tommel fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:135
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk venstre peikefinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:137
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk venstre midtfinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:139
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk venstre ringfinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:141
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk venstre litlefinger fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Trykk venstre tommel fleire gongar på fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:147
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip høgre peikefinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:149
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip høgre midtfinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:151
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip høgre ringfinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:153
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip høgre litlefinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:155
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip høgre tommel fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:157
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip venstre peikefinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:159
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip venstre midtfinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:161
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip venstre ringfinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:163
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip venstre litlefinger fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:165
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "Sveip venstre tommel fleire gongar over fingeravtrykk-sensoren."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
