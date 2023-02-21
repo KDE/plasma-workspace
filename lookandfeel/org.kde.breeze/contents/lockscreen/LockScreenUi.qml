@@ -148,11 +148,13 @@ PlasmaCore.ColorScope {
             }
         }
         Keys.onEscapePressed: {
-            uiVisible = !uiVisible;
-            if (inputPanel.keyboardActive) {
-                inputPanel.showHide();
-            }
-            if (!uiVisible) {
+            // If the escape key is pressed, kscreenlocker will turn off the screen.
+            // We do not want to show the password prompt in this case.
+            if (uiVisible) {
+                uiVisible = false;
+                if (inputPanel.keyboardActive) {
+                    inputPanel.showHide();
+                }
                 root.clearPassword();
             }
         }
