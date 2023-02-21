@@ -103,7 +103,20 @@ Item {
                         from: Math.round(height / 2)
                     }
                 }
+                Rectangle {
+                    id: tabHighlight
+                    anchors.fill: parent
+                    radius: Math.round(height / 2)
+                    scale: 1.3
+                    color: "transparent"
+                    visible: control.visualFocus
+                    border {
+                        color: Kirigami.Theme.highlightColor
+                        width: 1
+                    }
+                }
             }
+
             indicator: Rectangle {
                 radius: height / 2
                 visible: control.checked
@@ -192,6 +205,7 @@ Item {
                     anchors.fill: parent
                     onClicked: colorDialog.open()
                 }
+                onFocusChanged: colorPicker.focus = true;
             }
             QQC2.RoundButton {
                 id: colorPicker
