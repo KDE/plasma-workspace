@@ -6,6 +6,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -86,7 +87,7 @@ Item {
             asynchronous: true
             fillMode: Image.PreserveAspectFit
             source: mpris2Source.albumArt
-            sourceSize.height: height
+            sourceSize.height: height * Screen.devicePixelRatio
             visible: status === Image.Loading || status === Image.Ready
         }
 
