@@ -25,5 +25,6 @@ target_link_libraries (plasma_engine_weather
             KF5::KIOCore
             KF5::Solid
             KF5::Plasma
+            KF5::Service
             Qt::Network
             weather_ion)

@@ -102,6 +102,7 @@ target_link_libraries(plasmashell
  KF5::WaylandClient
  KF5::Notifications
  KF5::GuiAddons
+ KF5::Service
  PW::KWorkspace
  Wayland::Client
 )
