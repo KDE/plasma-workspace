@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 01:00+0000\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2013-10-18 20:13+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: autostartmodel.cpp:330
+#: autostartmodel.cpp:322
 #, fuzzy, kde-format
 #| msgid "\"%1\" is not an absolute path."
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" nije apsolutna staza."
 
-#: autostartmodel.cpp:333
+#: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" ne postoji."
 
-#: autostartmodel.cpp:336
+#: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" nije datoteka."
 
-#: autostartmodel.cpp:339
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" nije čitljivo."

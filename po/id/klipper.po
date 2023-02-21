@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the klipper package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
 # Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2022.
+# Linerly <linerly@protonmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2022-09-27 18:12+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2023-02-17 18:08+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -52,16 +53,12 @@ msgstr ""
 "mouse."
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Histori papan klip"
+msgstr "Riwayat papan klip:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "NUmber of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -107,10 +104,9 @@ msgstr ""
 "Apakah seleksi non teks (sepertihalnya citra) disimpan di histori clipboard."
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Waktu sembulan aksi otomatis:"
+msgstr "Tampilkan sembulan menu tindakan:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -143,11 +139,9 @@ msgid "None"
 msgstr "Nihil"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Aksi"
+msgstr "Opsi:"
 
 #: configdialog.cpp:320
 #, kde-format
@@ -170,8 +164,7 @@ msgid "Match pattern and commands"
 msgstr ""
 
 #: configdialog.cpp:359
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskripsi"
@@ -208,10 +201,9 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:566
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Hapus Aksi"
+msgstr "Konfirmasi Tindakan Menghapus"
 
 #: configdialog.cpp:595
 #, kde-format
@@ -225,26 +217,21 @@ msgid "General Configuration"
 msgstr "Konfigurasi Umum"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Aksi"
+msgstr "Menu Tindakan"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Aksi"
+msgstr "Menu Tindakan"
 
 #: configdialog.cpp:597
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "Konfigurasi Aksi"
+msgstr "Konfigurasi Tindakan"
 
 #: configdialog.cpp:597
 #, kde-format
@@ -293,12 +280,12 @@ msgstr "Abaikan"
 #: editactiondialog.cpp:36
 #, kde-format
 msgid "Replace Clipboard"
-msgstr "Ganti Papan-klip"
+msgstr "Ganti Papan Klip"
 
 #: editactiondialog.cpp:38
 #, kde-format
 msgid "Add to Clipboard"
-msgstr "Tambah ke Papan-klip"
+msgstr "Tambah ke Papan Klip"
 
 #: editactiondialog.cpp:122
 #, kde-format
@@ -376,20 +363,17 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Tambah Perintah"
+msgstr "Tambahkan Perintah..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Tambah Perintah"
+msgstr "Sunting Perintah..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
 msgstr "Hapus Perintah"
 
@@ -405,10 +389,9 @@ msgid "Confirm Delete Command"
 msgstr ""
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Properti Aksi"
+msgstr "Properti Perintah"
 
 #: editcommanddialog.cpp:59
 #, kde-format
@@ -416,10 +399,9 @@ msgid "Enter the command and arguments"
 msgstr ""
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Perintah"
+msgstr "Perintah:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -442,16 +424,14 @@ msgid "Output from command:"
 msgstr ""
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Ganti Papan-klip"
+msgstr "Ganti papan klip saat ini"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "Tambah ke Papan-klip"
+msgstr "Tambahkan ke papan klip"
 
 #: editcommanddialog.cpp:101
 #, kde-format
@@ -474,82 +454,70 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:155
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Waktu sembulan aksi otomatis:"
+msgstr "Menu Tindakan Sembulan Otomatis"
 
 #: klipper.cpp:194
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "&Bersihkan Histori Papan-klip"
+msgstr "&Bersihkan Riwayat Papan Klip"
 
 #: klipper.cpp:201
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigurasi Klipper..."
 
 #: klipper.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
-msgstr "&Berhenti"
+msgstr "&Keluar"
 
 #: klipper.cpp:212
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Panggil Aksi Secara Manual di Papan-klip Saat Ini"
+msgstr "Panggil Tindakan Secara Manual di Papan Klip Saat Ini"
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "&Edit Contents…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "&Edit Konten..."
+msgstr "&Sunting Konten..."
 
 #: klipper.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Show Barcode…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "&Tampilkan Barcode..."
+msgstr "&Tampilkan Kode Bilah..."
 
 #: klipper.cpp:237
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "Item Histori Selanjutnya"
+msgstr "Item Riwayat Selanjutnya"
 
 #: klipper.cpp:242
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "Item Histori Sebelumnya"
+msgstr "Item Riwayat Sebelumnya"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Buka Klipper di Posisi Mouse"
+msgstr "Tampilkan Item di Posisi Mouse"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Alat Papan-klip"
+msgstr "%1 - Alat Papan Klip"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -592,16 +560,14 @@ msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Yakin hapus seluruh histori papan klip?"
+msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "&Bersihkan Histori Papan-klip"
+msgstr "Bersihkan Riwayat Papan Klip"
 
 #: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
@@ -631,10 +597,9 @@ msgstr "Versi Klipper"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Save the clipboard history across desktop sessions"
+#, kde-format
 msgid "Save history across desktop sessions"
-msgstr "Simpan histori clipboard di seluruh sesi desktop"
+msgstr "Simpan riwayat di seluruh sesi desktop"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -734,10 +699,9 @@ msgstr "Gunakan penyunting ekspresi reguler grafis"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Abaikan seleksi"
+msgstr "Segera pada pemilihan"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -754,24 +718,21 @@ msgstr "Tak ada aksi untuk WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Automatic action popup time:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "Waktu sembulan aksi otomatis:"
+msgstr "Waktu menu tindakan otomatis:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Display the automatic action popup for this time."
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Tampilkan sembulan aksi otomatis untuk kali ini."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Ukuran histori papan klip:"
+msgstr "Ukuran riwayat:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
@@ -787,72 +748,61 @@ msgstr "Entri dumi untuk mengindikasikan perubahan di widget ranting aksi"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Kupas ruang putih ketika mengeksekusi aksi"
+msgstr "Kupas ruang putih dari pemilihan"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove white space from the start and end of clipboard text before "
-#| "performing an action. For example, this ensures that the URL pasted in a "
-#| "browser is interpreted as expected.<br/><br/>The text saved on the "
-#| "clipboard is not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
 "performing an action. For example, this ensures that a URL pasted in a "
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
-"Singkirkan spasi putih dari awal dan akhir teks clipboard sebelum melakukan "
-"aksi. Misalnya, ini memastikan bahwa URL yang ditempelkan di browser "
-"ditafsirkan seperti yang diharapkan.<br/><br/>Teks yang disimpan di "
-"clipboard tidak terpengaruh."
+"Hapus ruang putih apa pun dari mulai sampai akhir teks yang dipilih, sebelum "
+"melakukan sebuah tindakan. Misalnya, ini memastikan bahwa URL yang "
+"ditempelkan di peramban diinterpretasikan sebagai yang diharapkan. Teks "
+"disimpan di papan klip tidak berpengaruh."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Aksi perulangan pada butir yang terpilih dari histori"
+msgstr "Untuk item yang dipilih dari riwayat"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Apakah seleksi teks akan disimpan di histori clipboard."
+msgstr ""
+"Tampilkan menu sembulan dari tindakan yang dapat diterapkan jika sebuah "
+"entri dipilih dari riwayat papan klip."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Fungsikan aksi berbasis MIME"
+msgstr "Termasuk tindakan MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
-#, fuzzy, kde-format
-#| msgid ""
-#| "If this option is set, and a file name or URL is selected, include "
-#| "applications that can handle its MIME type in the actions popup."
+#, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
-"Jika opsi ini diatur, dan nama file atau URL dipilih, sertakan aplikasi yang "
-"bisa menangani tipe MIME-nya dalam sembulan aksi."
+"Jika nama berkas atau URL dipilih, aplikasi yang dapat menerima jenis MIME "
+"di menu sembulan juga termasuk."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Dartar Isi Papan-klip"
+msgstr "%1 - Item Papan Klip"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -868,7 +818,7 @@ msgstr "Ekspresi reguler:"
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
 msgid "Clipboard is empty"
-msgstr "Papan-klip kosong"
+msgstr "Papan Klip kosong"
 
 #: klipperpopup.cpp:174
 #, kde-format
@@ -977,7 +927,7 @@ msgstr "&Selebihnya"
 #: tray.cpp:25
 #, kde-format
 msgid "Clipboard Contents"
-msgstr "Dartar Isi Papan-klip"
+msgstr "Dartar Isi Papan Klip"
 
 #: urlgrabber.cpp:199
 #, kde-format

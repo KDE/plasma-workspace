@@ -11,13 +11,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2015, 2017, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-12-17 18:32+0300\n"
+"PO-Revision-Date: 2023-02-20 17:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -90,7 +90,7 @@ msgstr "Hiçbiri"
 #: kxftconfig.cpp:462
 #, kde-format
 msgid "RGB"
-msgstr "RGB"
+msgstr "KYM"
 
 #: kxftconfig.cpp:464
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "BGR"
 #: kxftconfig.cpp:466
 #, kde-format
 msgid "Vertical RGB"
-msgstr "Dikey RGB"
+msgstr "Dikey KYM"
 
 #: kxftconfig.cpp:468
 #, kde-format
@@ -313,7 +313,7 @@ msgstr ""
 "yazıtiplerinin kalitesini daha da iyileştirmek için bağımsız olarak "
 "değiştirilebilir.</para><para>Sunum kalitesi, yalnızca seçim, alt "
 "piksellerin biçimiyle eşleşirse iyileştirilir, ekranınız hizalanır. Çoğu "
-"ekranın <emphasis>RGB</emphasis> alt piksellerinin doğrusal sıralaması "
+"ekranın <emphasis>KYM</emphasis> alt piksellerinin doğrusal sıralaması "
 "vardır, bazılarında <emphasis>BGR</emphasis> bulunur ve bazı egzotik "
 "sıralamalar bu özellik tarafından desteklenmez.</para>Bu, CRT monitörler ile "
 "çalışmaz."

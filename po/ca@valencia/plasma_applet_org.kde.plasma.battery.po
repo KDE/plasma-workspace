@@ -1,9 +1,9 @@
 # Translation of plasma_applet_org.kde.plasma.battery.po to Catalan (Valencian)
-# Copyright (C) 2007-2022 This_file_is_part_of_KDE
+# Copyright (C) 2007-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2019, 2020.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-07 13:24+0100\n"
+"PO-Revision-Date: 2023-02-17 12:26+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -289,23 +289,20 @@ msgstr ""
 "desconegut)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
-"%1 aplicació està blocant actualment la suspensió i el bloqueig de pantalla:"
+"Una aplicació està blocant actualment la suspensió i el bloqueig de pantalla "
+"(%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"Actualment %1 està blocant la suspensió i el bloqueig de pantalla (motiu "
-"desconegut)"
+"Una aplicació està blocant actualment la suspensió i el bloqueig de pantalla "
+"(motiu desconegut)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -323,15 +320,13 @@ msgstr "%1: motiu desconegut"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Aplicació desconeguda: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: motiu desconegut"
+msgstr "Aplicació desconeguda: motiu desconegut"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
