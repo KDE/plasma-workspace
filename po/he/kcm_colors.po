@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2017-05-16 06:52-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -1203,37 +1203,37 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "הגדרת ערכת הצבעים הנוכחית"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr ""
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "טקסט חלון"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "טקסט חלון"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "כפתור"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1241,7 +1241,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "קישור"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1249,62 +1249,62 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "שביקרו בו"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "טקסט רגיל"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "קישור שביקרו בו"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "מבוטל"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, fuzzy, kde-format
 #| msgid "Edit Scheme"
 msgid "Edit Color Scheme…"
 msgstr "עריכת ערכה"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "שמירת ערכת צבעים"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "ייבוא של ערכת צבעים"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, fuzzy, kde-format
 #| msgid "&Install from File"
 msgid "Install from File…"
 msgstr "התקן מקובץ"
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, fuzzy, kde-format
 #| msgid "Get &New Scheme"
 msgid "Get New Color Schemes…"
 msgstr "קבל ערכות &חדשות"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "שמירת ערכת צבעים"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

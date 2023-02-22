@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2023-01-25 21:35+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1186,89 +1186,89 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "Ex le tapete de papiro currente"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr "Personalisa:"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Selige color de accento personalisate"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgid "Window Title"
 msgstr "Titulo de fenestra"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Window text"
 msgstr "Texto de fenestra"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Button"
 msgstr "Button"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "Ligamine"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "Visitate"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
 msgstr "Texto Normal"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto evidentiate "
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto disactivate"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edita Schema de Color..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Remove schema de color"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restabili schema de color"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa ex file ..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Obtene Nove Schemas de Color..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Aperi Schema de Color"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Files de Schema de Color (*.colors)"

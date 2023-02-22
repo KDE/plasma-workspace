@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2005-11-23 16:45+0200\n"
 "Last-Translator: Kobus <kabousv@therugby.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -1234,98 +1234,98 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "Stoor Kleur Skema"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr ""
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, fuzzy, kde-format
 msgid "Window Title"
 msgstr "Venster teks"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "Venster teks"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, fuzzy, kde-format
 msgid "Button"
 msgstr "Knoppie Teks"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "skakel"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "Aktiewe titel teks"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Highlighted text"
 msgstr "Aktiewe titel teks"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled text"
 msgstr "Onaktiewe titel Knoppie"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Kleur Skema"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Stoor Kleur Skema"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Kleur Skema"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Get New Color Schemes…"
 msgstr "Stoor Kleur Skema"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Stoor Kleur Skema"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

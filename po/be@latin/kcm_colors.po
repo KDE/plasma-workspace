@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2008-11-04 17:27+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -1230,100 +1230,100 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "Zapišy dziejnuju schiemu koleraŭ"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr ""
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Tekst akna"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, fuzzy, kde-format
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Tekst akna"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, fuzzy, kde-format
 #| msgid "Button"
 msgid "Button"
 msgstr "Knopka"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "łuč"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, fuzzy, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "vykarystany"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, fuzzy, kde-format
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Zvyčajny tekst"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Vykarystany łuč"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, fuzzy, kde-format
 msgid "Disabled text"
 msgstr "Vyklučana"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Zimpartuj schiemu koleraŭ"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Zapišy schiemu koleraŭ"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Zimpartuj schiemu koleraŭ"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "Atrymaj &novych schiemaŭ..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Zapišy schiemu koleraŭ"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

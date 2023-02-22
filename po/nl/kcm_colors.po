@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2022-08-26 09:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1182,89 +1182,89 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "Uit huidige achtergrondafbeelding"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr "Aangepast:"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Aangepaste accentueringskleur kiezen"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgid "Window Title"
 msgstr "Venstertitel"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Window text"
 msgstr "Venstertekst"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Button"
 msgstr "Knop"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "koppeling"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "bezocht"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
 msgstr "Normale tekst"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Highlighted text"
 msgstr "Geaccentueerde tekst"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, kde-format
 msgid "Disabled text"
 msgstr "Uitgeschakelde tekst"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Kleurenschema bewerken…"
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Kleurenschema verwijderen"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Kleurenschema herstellen"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
 msgstr "Uit bestand installeren…"
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Nieuwe kleurenschema's ophalen…"
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Kleurenschema openen"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Kleurenschemabestanden (*.colors)"

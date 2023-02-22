@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2022-09-23 23:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1203,89 +1203,89 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "В соответствии с выбранными обоями"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr "Другой:"
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Выбор цвета выделения"
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgid "Window Title"
 msgstr "Заголовок окна"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Window text"
 msgstr "Текст в окне"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Button"
 msgstr "Кнопка"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ссылка"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посещённая ссылка"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
 msgstr "Обычный текст"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Highlighted text"
 msgstr "Подсвеченный текст"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, kde-format
 msgid "Disabled text"
 msgstr "Недоступный текст"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Изменить цветовую схему..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Удалить цветовую схему"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Восстановить цветовую схему"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
 msgstr "Установить из файла..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Загрузить цветовые схемы..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Открыть цветовую схему"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы цветовых схем (*.colors)"

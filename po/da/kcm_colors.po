@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 02:53+0000\n"
+"POT-Creation-Date: 2023-02-22 02:35+0000\n"
 "PO-Revision-Date: 2020-07-22 20:00+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -1187,92 +1187,92 @@ msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
 msgstr "Indstil det nuværende farvetema"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
 msgstr ""
 
-#: package/contents/ui/main.qml:261
+#: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:349
+#: package/contents/ui/main.qml:361
 #, kde-format
 msgid "Window Title"
 msgstr "Vinduestitel"
 
-#: package/contents/ui/main.qml:371
+#: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Window text"
 msgstr "Vinduestekst"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Button"
 msgstr "Knap"
 
-#: package/contents/ui/main.qml:415
+#: package/contents/ui/main.qml:427
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "link"
 
-#: package/contents/ui/main.qml:417
+#: package/contents/ui/main.qml:429
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "besøgt"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
 msgstr "Normal tekst"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Highlighted text"
 msgstr "Fremhævet tekst"
 
-#: package/contents/ui/main.qml:439
+#: package/contents/ui/main.qml:451
 #, kde-format
 msgid "Disabled text"
 msgstr "Deaktiveret tekst"
 
-#: package/contents/ui/main.qml:457
+#: package/contents/ui/main.qml:469
 #, fuzzy, kde-format
 #| msgid "Edit Color Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Redigér farvetema..."
 
-#: package/contents/ui/main.qml:463
+#: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Fjern farvetema"
 
-#: package/contents/ui/main.qml:470
+#: package/contents/ui/main.qml:482
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Gendan farvetema"
 
-#: package/contents/ui/main.qml:514
+#: package/contents/ui/main.qml:526
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Installér fra fil..."
 
-#: package/contents/ui/main.qml:519
+#: package/contents/ui/main.qml:531
 #, fuzzy, kde-format
 #| msgid "Get New Color Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "Hent nye farvetemaer..."
 
-#: package/contents/ui/main.qml:537
+#: package/contents/ui/main.qml:549
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Åbn farvetema"
 
-#: package/contents/ui/main.qml:539
+#: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Farvetema-filer (*.colors)"
