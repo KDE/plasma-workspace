@@ -41,6 +41,7 @@ public:
 
 public Q_SLOTS:
     void load();
+    void remove(int screenId);
 
 private:
     ShellCorona *m_corona;
