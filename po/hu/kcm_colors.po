@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:00+0000\n"
+"POT-Creation-Date: 2023-02-22 01:00+0000\n"
 "PO-Revision-Date: 2022-02-18 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1163,7 +1163,7 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Egyéni kiemelőszín kiválasztása"
 
-#: package/contents/ui/AccentColorUI.qml:152
+#: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Egyéni kiemelőszín kiválasztása"

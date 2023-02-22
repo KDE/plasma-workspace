@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 01:00+0000\n"
+"POT-Creation-Date: 2023-02-22 01:00+0000\n"
 "PO-Revision-Date: 2023-02-17 11:18+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1177,7 +1177,7 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Использовать собственный цвет выделения"
 
-#: package/contents/ui/AccentColorUI.qml:152
+#: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Выбор цвета выделения"
