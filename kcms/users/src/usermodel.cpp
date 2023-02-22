@@ -61,6 +61,8 @@ UserModel::UserModel(QObject *parent)
         const std::list<QPair<void (User::*const)(), int>> set = {
             {&User::uidChanged, UidRole},
             {&User::nameChanged, NameRole},
+            {&User::displayNamesChanged, DisplayPrimaryNameRole},
+            {&User::displayNamesChanged, DisplaySecondaryNameRole},
             {&User::faceValidChanged, FaceValidRole},
             {&User::realNameChanged, RealNameRole},
             {&User::emailChanged, EmailRole},
@@ -87,6 +89,8 @@ QHash<int, QByteArray> UserModel::roleNames() const
     QHash<int, QByteArray> names = QAbstractItemModel::roleNames();
     names.insert(UidRole, "uid");
     names.insert(NameRole, "name");
+    names.insert(DisplayPrimaryNameRole, "displayPrimaryName");
+    names.insert(DisplaySecondaryNameRole, "displaySecondaryName");
     names.insert(EmailRole, "email");
     names.insert(AdministratorRole, "administrator");
     names.insert(UserRole, "userObject");
@@ -125,6 +129,10 @@ QVariant UserModel::data(const QModelIndex &index, int role) const
         return user->face().toString();
     case RealNameRole:
         return user->realName();
+    case DisplayPrimaryNameRole:
+        return user->displayPrimaryName();
+    case DisplaySecondaryNameRole:
+        return user->displaySecondaryName();
     case EmailRole:
         return user->email();
     case AdministratorRole:

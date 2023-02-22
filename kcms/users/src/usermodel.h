@@ -23,6 +23,8 @@ public:
         FaceRole = Qt::DecorationRole,
         UidRole = Qt::UserRole,
         NameRole,
+        DisplayPrimaryNameRole,
+        DisplaySecondaryNameRole,
         EmailRole,
         FaceValidRole,
         AdministratorRole,

@@ -59,6 +59,12 @@ class User : public QObject
 
     Q_PROPERTY(QString realName READ realName WRITE setRealName NOTIFY realNameChanged)
 
+    // If realName is set, then primary is real name and secondary is username.
+    // Otherwise, primary is username and secondary is empty.
+    // This is useful for KCM delegates and pages to display "at least something" and "something else or nothing" text.
+    Q_PROPERTY(QString displayPrimaryName READ displayPrimaryName NOTIFY displayNamesChanged)
+    Q_PROPERTY(QString displaySecondaryName READ displaySecondaryName NOTIFY displayNamesChanged)
+
     Q_PROPERTY(QString email READ email WRITE setEmail NOTIFY emailChanged)
 
     Q_PROPERTY(QUrl face READ face WRITE setFace NOTIFY faceChanged)
@@ -79,6 +85,8 @@ public:
 
     QString name() const;
     QString realName() const;
+    QString displayPrimaryName() const;
+    QString displaySecondaryName() const;
     QString email() const;
     QUrl face() const;
     bool faceValid() const;
@@ -112,6 +120,7 @@ Q_SIGNALS:
     void uidChanged();
     void nameChanged();
     void realNameChanged();
+    void displayNamesChanged();
     void emailChanged();
     void faceChanged();
     void faceValidChanged();
