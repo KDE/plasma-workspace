@@ -165,6 +165,7 @@ Kirigami.OverlaySheet {
                             return i18n("Please repeatedly swipe your left thumb on the fingerprint sensor.")
                         }
                     }
+                    return ""
                 }
 
                 Layout.alignment: Qt.AlignHCenter
