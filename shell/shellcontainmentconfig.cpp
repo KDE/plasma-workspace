@@ -90,7 +90,10 @@ void ScreenPoolModel::load()
 
     QSet<int> unknownScreenIds;
     for (auto *cont : m_corona->containments()) {
-        unknownScreenIds.insert(cont->lastScreen());
+        connect(cont, &Plasma::Containment::destroyedChanged, this, &ScreenPoolModel::load, Qt::UniqueConnection);
+        if (!cont->destroyed()) {
+            unknownScreenIds.insert(cont->lastScreen());
+        }
     }
     int knownId = 0;
     for (QScreen *screen : m_corona->screenPool()->screenOrder()) {
@@ -137,6 +140,24 @@ void ScreenPoolModel::load()
         i++;
     }
     endResetModel();
+}
+
+void ScreenPoolModel::remove(int screenId)
+{
+    // Don't allow to remove currently used containemnts
+    if (m_corona->screenPool()->screenForId(screenId)) {
+        return;
+    }
+
+    // remove containments of *all* activities
+    auto conts = m_corona->containmentsForScreen(screenId);
+    for (auto *cont : std::as_const(conts)) {
+        // Don't call destroy directly, so we can have the undo action notification
+        auto *destroyAction = cont->actions()->action("remove");
+        if (destroyAction) {
+            destroyAction->trigger();
+        }
+    }
 }
 
 // ---
