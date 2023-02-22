@@ -16,7 +16,7 @@ import org.kde.kirigami 2.13 as Kirigami
 SimpleKCM {
     id: usersDetailPage
 
-    title: user.realName
+    title: user.displayPrimaryName
 
     property QtObject user
     property bool overrideImage: false

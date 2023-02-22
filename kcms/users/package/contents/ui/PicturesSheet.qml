@@ -129,7 +129,7 @@ Kirigami.OverlaySheet {
                         fontSizeMode: Text.Fit
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
-                        text: kcm.initializeString(user.realName || user.name)
+                        text: kcm.initializeString(user.displayPrimaryName)
                     }
 
                     onClicked: stackSwitcher.currentIndex = 1
@@ -254,7 +254,7 @@ Kirigami.OverlaySheet {
                                 anchors.centerIn: parent
                                 color: modelData.dark ? "white" : "black"
                                 font.pixelSize: Kirigami.Units.gridUnit * 4
-                                text: kcm.initializeString(user.realName || user.name)
+                                text: kcm.initializeString(user.displayPrimaryName)
                             }
                         }
 

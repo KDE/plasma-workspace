@@ -47,6 +47,7 @@ void User::setName(const QString &value)
     }
     mName = value;
     Q_EMIT nameChanged();
+    Q_EMIT displayNamesChanged();
 }
 
 QString User::realName() const
@@ -61,6 +62,17 @@ void User::setRealName(const QString &value)
     }
     mRealName = value;
     Q_EMIT realNameChanged();
+    Q_EMIT displayNamesChanged();
+}
+
+QString User::displayPrimaryName() const
+{
+    return !mRealName.isEmpty() ? mRealName : mName;
+}
+
+QString User::displaySecondaryName() const
+{
+    return !mRealName.isEmpty() ? mName : QString();
 }
 
 QString User::email() const
