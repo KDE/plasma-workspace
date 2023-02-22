@@ -68,9 +68,10 @@ UserModel::UserModel(QObject *parent)
         };
 
         for (const auto &item : set) {
-            connect(user, item.first, [this, user, item] {
+            const auto role = item.second;
+            connect(user, item.first, this, [this, user, role] {
                 auto idx = index(m_userList.lastIndexOf(user));
-                Q_EMIT dataChanged(idx, idx, {item.second});
+                Q_EMIT dataChanged(idx, idx, {role});
             });
         }
 
