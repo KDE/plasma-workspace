@@ -14,20 +14,15 @@ import org.kde.plasma.kcm.users 1.0 as UsersKCM
 Kirigami.PromptDialog {
     id: passwordRoot
 
-    preferredWidth: Kirigami.Units.gridUnit * 20
-
-    function openAndClear() {
-        verifyField.text = ""
-        passwordField.text = ""
-        passwordField.forceActiveFocus()
-        this.open()
-    }
-
     property UsersKCM.User user
 
     title: i18n("Change Password")
+    preferredWidth: Kirigami.Units.gridUnit * 20
 
-    standardButtons: Kirigami.Dialog.NoButton
+    closePolicy: QQC2.Popup.CloseOnEscape
+    showCloseButton: false
+    standardButtons: QQC2.Dialog.Cancel
+
     customFooterActions: Kirigami.Action {
         id: passAction
         text: i18n("Set Password")
@@ -44,35 +39,35 @@ Kirigami.PromptDialog {
         }
     }
 
+    onOpened: {
+        passwordField.forceActiveFocus();
+    }
+
     ColumnLayout {
         id: mainColumn
         spacing: Kirigami.Units.smallSpacing
 
-        Kirigami.PasswordField {
-            id: passwordField
+        Kirigami.FormLayout {
+            Kirigami.PasswordField {
+                id: passwordField
 
-            Layout.fillWidth: true
+                Layout.fillWidth: true
+                Kirigami.FormData.label: i18n("New password:")
+                onTextChanged: debouncer.reset()
 
-            placeholderText: i18n("Password")
-            onTextChanged: debouncer.reset()
-
-            onAccepted: {
-                if (!passwordWarning.visible && verifyField.text && passwordField.text) {
+                onAccepted: {
                     passAction.trigger()
                 }
             }
-        }
 
-        Kirigami.PasswordField {
-            id: verifyField
+            Kirigami.PasswordField {
+                id: verifyField
 
-            Layout.fillWidth: true
+                Layout.fillWidth: true
+                Kirigami.FormData.label: i18n("Confirm new password:")
+                onTextChanged: debouncer.reset()
 
-            placeholderText: i18n("Confirm password")
-            onTextChanged: debouncer.reset()
-
-            onAccepted: {
-                if (!passwordWarning.visible && verifyField.text && passwordField.text) {
+                onAccepted: {
                     passAction.trigger()
                 }
             }
