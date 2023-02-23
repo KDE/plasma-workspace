@@ -132,7 +132,7 @@ Item {
         showExpired: true
         showDismissed: true
         showJobs: notificationSettings.jobsInNotifications
-        sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
+        sortMode: NotificationManager.Notifications.SortByDate
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
         groupLimit: 2
         expandUnread: true
