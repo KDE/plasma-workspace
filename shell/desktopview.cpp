@@ -50,10 +50,11 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     if (targetScreen) {
         setScreenToFollow(targetScreen);
+    } else {
+        setTitle(corona->kPackage().metadata().name());
     }
 
     setFlags(Qt::Window | Qt::FramelessWindowHint);
-    setTitle(corona->kPackage().metadata().name());
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
@@ -112,6 +113,9 @@ void DesktopView::setScreenToFollow(QScreen *screen)
     setScreen(screen);
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
 
+    QString rectString;
+    QDebug(&rectString) << screen->geometry();
+    setTitle(QStringLiteral("%1 @ %2").arg(corona()->kPackage().metadata().name()).arg(rectString));
     adaptToScreen();
 }
 
