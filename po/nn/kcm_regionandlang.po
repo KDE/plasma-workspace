@@ -1,12 +1,12 @@
 # Translation of kcm_regionandlang to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2022-08-20 11:20+0200\n"
+"PO-Revision-Date: 2023-02-22 21:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -217,7 +217,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Fann ikkje noko eksempel for dette språkområdet"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -236,6 +236,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Fann ikkje oversikt over tilgjengelege språkområde (lokale) via programmet "
+"<command>localectl</command>. Meld frå om denne feilen på <link>https://bugs."
+"kde.org</link>."
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -255,19 +258,19 @@ msgstr "%1 (Brasil)"
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr ""
+msgstr "Fann ikkje programfila «check-language-support»"
 
 #: localegeneratorubuntu.cpp:52
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr ""
+msgstr "Feil frå «check-language-support». Melding: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "Klarte ikkje finn løysing for alle manglande pakkar. %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
@@ -278,12 +281,12 @@ msgstr "Klarte ikkje installera pakken %1"
 #: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr ""
+msgstr "Ein annan prosess køyrer frå før. Prøv på nytt seinare."
 
 #: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr ""
+msgstr "Har ikkje løyve til å redigera oppsettfila for språkområde"
 
 #: localegenhelper/localegenhelper.cpp:113
 #, kde-format
@@ -413,6 +416,9 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
+"Viss du legg andre språk nedanfor amerikansk engelsk i lista, kan det føra "
+"til at enkelte program ikkje oppfører seg rett. Viss du ønskjer å sjå alle "
+"programma på amerikansk engelsk, fjern dei andre språka."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -486,6 +492,8 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
+"Genererer språkområde-oppsett og tilhøyrande språkstøtte­filer. Ikkje slå av "
+"maskina enno."
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -496,6 +504,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no genererte, men "
+"klarte ikkje automatisk installera språkspesifikke skrifter. Viss språket "
+"krev særskilde skrifter for å visast skikkeleg, må du sjølv finna ut kva "
+"skrifter som trengst og installera dei manuelt."
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -504,6 +516,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du "
+"kan trygt slå av maskina."
 
 #: package/contents/ui/main.qml:139
 #, kde-format
