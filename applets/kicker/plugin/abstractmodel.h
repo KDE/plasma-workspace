@@ -24,7 +24,7 @@ class AbstractModel : public QAbstractListModel
     /**
      * @return all sections in the model
      */
-    Q_PROPERTY(QVariantList sections READ sections NOTIFY sectionsChanged)
+    Q_PROPERTY(QAbstractListModel *sections READ sections NOTIFY sectionsChanged)
 
 public:
     explicit AbstractModel(QObject *parent = nullptr);
@@ -56,7 +56,7 @@ public:
     virtual void setFavoritesModel(AbstractModel *model);
     AbstractModel *rootModel();
 
-    virtual QVariantList sections() const;
+    virtual QAbstractListModel *sections() const;
 
     virtual void entryChanged(AbstractEntry *entry);
 

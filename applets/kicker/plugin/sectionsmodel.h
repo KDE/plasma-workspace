@@ -1,0 +1,34 @@
+#pragma once
+
+#include <QAbstractListModel>
+
+class SectionsModel : public QAbstractListModel
+{
+    Q_OBJECT
+    // Constant because we rely on sectionsChanged in AbstractModel
+    Q_PROPERTY(int count READ rowCount CONSTANT FINAL)
+public:
+    SectionsModel(QObject *parent = nullptr);
+
+    enum {
+        FirstIndexRole = Qt::UserRole + 1,
+    };
+
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+
+    QString lastSection() const;
+    // Not using standard QAbstractItemModel functions for these to keep them from being exposed to QML.
+    void clear();
+    void append(const QString &section, int firstIndex);
+
+private:
+    struct Item {
+        QString section;
+        int firstIndex;
+    };
+
+    QVector<Item> m_data;
+    QHash<int, QByteArray> m_roleNames;
+};

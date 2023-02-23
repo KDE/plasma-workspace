@@ -9,6 +9,7 @@
 
 #include "abstractmodel.h"
 #include "appentry.h"
+#include "sectionsmodel.h"
 
 #include <QQmlParserStatus>
 
@@ -88,7 +89,7 @@ public:
 
     QStringList hiddenEntries() const;
 
-    QVariantList sections() const override;
+    SectionsModel *sections() const override;
 
     void entryChanged(AbstractEntry *entry) override;
 
@@ -134,7 +135,7 @@ private:
 
     bool m_autoPopulate;
 
-    QVariantList m_sectionList;
+    SectionsModel *m_sectionList;
 
     QString m_description;
     QString m_entryPath;

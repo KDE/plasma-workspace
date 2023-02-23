@@ -8,6 +8,7 @@
 #include "appsmodel.h"
 #include "actionlist.h"
 #include "rootmodel.h"
+#include "sectionsmodel.h"
 
 #include <QCollator>
 #include <QDebug>
@@ -31,6 +32,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
     , m_showTopLevelItems(false)
     , m_appletInterface(nullptr)
     , m_autoPopulate(true)
+    , m_sectionList(new SectionsModel(this))
     , m_description(i18n("Applications"))
     , m_entryPath(entryPath)
     , m_staticEntryList(false)
@@ -55,6 +57,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntries
     , m_showTopLevelItems(false)
     , m_appletInterface(nullptr)
     , m_autoPopulate(true)
+    , m_sectionList(new SectionsModel(this))
     , m_description(i18n("Applications"))
     , m_entryPath(QString())
     , m_staticEntryList(true)
@@ -444,7 +447,7 @@ QStringList AppsModel::hiddenEntries() const
     return m_hiddenEntries;
 }
 
-QVariantList AppsModel::sections() const
+SectionsModel *AppsModel::sections() const
 {
     return m_sectionList;
 }
@@ -611,7 +614,7 @@ void AppsModel::refreshInternal()
 
 void AppsModel::refreshSectionList()
 {
-    m_sectionList.clear();
+    m_sectionList->clear();
 
     if (m_entryList.empty()) {
         Q_EMIT sectionsChanged();
@@ -619,21 +622,16 @@ void AppsModel::refreshSectionList()
     }
 
     // Insert one item so no need to check empty in the loop
-    m_sectionList.append(QVariantMap{
-        {QStringLiteral("section"), m_entryList.at(0)->group().toUpper()},
-        {QStringLiteral("firstIndex"), 0},
-    });
+    m_sectionList->append(m_entryList.at(0)->group().toUpper(), 0);
 
     for (int i = 1; i < m_entryList.size(); i++) {
         const QString sectionName = m_entryList.at(i)->group().toUpper();
-        if (m_sectionList.constLast().toMap()[QStringLiteral("section")].toString() == sectionName) {
+
+        if (m_sectionList->lastSection() == sectionName) {
             continue;
         }
 
-        m_sectionList.append(QVariantMap{
-            {QStringLiteral("section"), sectionName},
-            {QStringLiteral("firstIndex"), i},
-        });
+        m_sectionList->append(sectionName, i);
     }
 
     Q_EMIT sectionsChanged();

@@ -138,9 +138,9 @@ AbstractModel *AbstractModel::rootModel()
     return rootModel;
 }
 
-QVariantList AbstractModel::sections() const
+QAbstractListModel *AbstractModel::sections() const
 {
-    return {};
+    return nullptr;
 }
 
 void AbstractModel::entryChanged(AbstractEntry *entry)

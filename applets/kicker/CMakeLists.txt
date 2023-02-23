@@ -40,6 +40,7 @@ set(kickerplugin_SRCS
     plugin/wheelinterceptor.cpp
     plugin/windowsystem.cpp
     plugin/funnelmodel.cpp
+    plugin/sectionsmodel.cpp
     plugin/kickercompattrianglemousefilter.cpp
     ../../components/trianglemousefilter/trianglemousefilter.cpp
 )
