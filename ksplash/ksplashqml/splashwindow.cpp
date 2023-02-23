@@ -36,7 +36,6 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
             layerShellWindow->setScope(QStringLiteral("ksplashqml"));
             layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
             layerShellWindow->setExclusiveZone(-1);
-            layerShellWindow->setDesiredOutput(screen);
         }
     }
 
