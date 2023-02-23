@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-15 12:53+0100\n"
+"PO-Revision-Date: 2023-02-22 21:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -183,30 +183,30 @@ msgstr "Automatisk kvilemodus og skjermlåsing er slått av"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Eitt program har bedt om aktivering av ytingsmodus"
+msgstr[1] "%1 program har bedt om aktivering av ytingsmodus"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Systemet er i ytingsmodus"
 
 #: package/contents/ui/main.qml:199
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Eitt program har bedt om aktivering av straumsparemodus"
+msgstr[1] "%1 program har bedt om aktivering av straumsparemodus"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Systemet er i straumsparemodus"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Rull for å justera lysstyrken til skjermen"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "&Vis energiinformasjon …"
 #: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr ""
+msgstr "Vis batteriprosent på ikonet viss ikkje fullada"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -280,14 +280,14 @@ msgstr "%1 hindrar kvilemodus og skjermlåsing (ukjend grunn)"
 #: package/contents/ui/PowerManagementItem.qml:114
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr ""
+msgstr "Eit program hindrar kvilemodus og skjermlåsing (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr ""
+msgstr "Eit program hindrar kvilemodus og skjermlåsing (ukjend grunn)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -305,13 +305,13 @@ msgstr "%1: ukjend grunn"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Ukjent program: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr ""
+msgstr "Ukjent program: ukjend grunn"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

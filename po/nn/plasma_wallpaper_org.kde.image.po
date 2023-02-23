@@ -1,14 +1,14 @@
 # Translation of plasma_wallpaper_org.kde.image to Norwegian Nynorsk
 #
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010, 2011.
-# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 01:00+0000\n"
-"PO-Revision-Date: 2022-06-18 14:55+0200\n"
+"PO-Revision-Date: 2023-02-22 21:31+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -279,33 +279,33 @@ msgstr "Legg til mappe …"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr ""
+msgstr "Bruk som bakgrunns­bilete"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Skrivebord"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Låseskjerm"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Begge"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr ""
+msgstr "Det oppstod ein feil ved val av bakgrunnsbilete for Plasma:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr ""
+msgstr "Det oppstod ein feil ved opning av oppsettfila «kscreenlockerrc»."

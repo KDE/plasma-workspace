@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -314,27 +314,27 @@ msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў правядзіце левым вялікім пальцам па сканеры адбіткаў пальцаў."
 
-#: package/contents/ui/FingerprintDialog.qml:179
+#: package/contents/ui/FingerprintDialog.qml:180
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Палец зарэгістраваны"
 
-#: package/contents/ui/FingerprintDialog.qml:209
+#: package/contents/ui/FingerprintDialog.qml:210
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Абярыце палец для рэгістравання"
 
-#: package/contents/ui/FingerprintDialog.qml:326
+#: package/contents/ui/FingerprintDialog.qml:327
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Паўторнае рэгістраванне пальца"
 
-#: package/contents/ui/FingerprintDialog.qml:333
+#: package/contents/ui/FingerprintDialog.qml:334
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Выдаліць адбітак пальца"
 
-#: package/contents/ui/FingerprintDialog.qml:342
+#: package/contents/ui/FingerprintDialog.qml:343
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не дададзена адбіткаў пальцаў"

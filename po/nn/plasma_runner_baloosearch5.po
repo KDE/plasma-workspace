@@ -1,12 +1,12 @@
 # Translation of plasma_runner_baloosearch5 to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2022-06-18 14:57+0200\n"
+"PO-Revision-Date: 2023-02-22 21:32+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -27,49 +27,49 @@ msgstr "Opna foreldermappa"
 #: baloosearchrunner.cpp:87
 #, kde-format
 msgid "Audios"
-msgstr ""
+msgstr "Lyd"
 
 #: baloosearchrunner.cpp:88
 #, kde-format
 msgid "Images"
-msgstr ""
+msgstr "Bilete"
 
 #: baloosearchrunner.cpp:89
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "Videoar"
 
 #: baloosearchrunner.cpp:90
 #, kde-format
 msgid "Spreadsheets"
-msgstr ""
+msgstr "Rekneark"
 
 #: baloosearchrunner.cpp:91
 #, kde-format
 msgid "Presentations"
-msgstr ""
+msgstr "Presentasjonar"
 
 #: baloosearchrunner.cpp:92
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Mapper"
 
 #: baloosearchrunner.cpp:93
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Dokument"
 
 #: baloosearchrunner.cpp:94
 #, kde-format
 msgid "Archives"
-msgstr ""
+msgstr "Arkiv"
 
 #: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Texts"
-msgstr ""
+msgstr "Tekstar"
 
 #: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Filer"

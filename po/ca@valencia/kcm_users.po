@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2023-01-11 09:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -329,27 +329,27 @@ msgstr ""
 "Feu lliscar repetidament el vostre polze esquerre sobre el sensor "
 "d'empremtes dactilars."
 
-#: package/contents/ui/FingerprintDialog.qml:179
+#: package/contents/ui/FingerprintDialog.qml:180
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "S'ha registrat el dit"
 
-#: package/contents/ui/FingerprintDialog.qml:209
+#: package/contents/ui/FingerprintDialog.qml:210
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Triu un dit per a registrar"
 
-#: package/contents/ui/FingerprintDialog.qml:326
+#: package/contents/ui/FingerprintDialog.qml:327
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Torna a registrar el dit"
 
-#: package/contents/ui/FingerprintDialog.qml:333
+#: package/contents/ui/FingerprintDialog.qml:334
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Suprimix l'empremta dactilar"
 
-#: package/contents/ui/FingerprintDialog.qml:342
+#: package/contents/ui/FingerprintDialog.qml:343
 #, kde-format
 msgid "No fingerprints added"
 msgstr "No s'ha afegit cap empremta dactilar"

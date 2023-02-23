@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -289,27 +289,27 @@ msgstr "გთხოვთ ბევრჯერ გადაუსვათ თ
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
 
-#: package/contents/ui/FingerprintDialog.qml:179
+#: package/contents/ui/FingerprintDialog.qml:180
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "თითი ჩაწერილია"
 
-#: package/contents/ui/FingerprintDialog.qml:209
+#: package/contents/ui/FingerprintDialog.qml:210
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "აირჩიეთ ჩასაწერი თითი"
 
-#: package/contents/ui/FingerprintDialog.qml:326
+#: package/contents/ui/FingerprintDialog.qml:327
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "თითის თავიდან ჩაწერა"
 
-#: package/contents/ui/FingerprintDialog.qml:333
+#: package/contents/ui/FingerprintDialog.qml:334
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "ანაბეჭდის წაშლა"
 
-#: package/contents/ui/FingerprintDialog.qml:342
+#: package/contents/ui/FingerprintDialog.qml:343
 #, kde-format
 msgid "No fingerprints added"
 msgstr "ანაბეჭდები დამატებული არაა"

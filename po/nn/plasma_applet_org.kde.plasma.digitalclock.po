@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-18 01:01+0000\n"
-"PO-Revision-Date: 2023-01-23 21:54+0100\n"
+"PO-Revision-Date: 2023-02-22 21:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -102,19 +102,19 @@ msgstr "Alltid under klokkeslettet"
 #: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgid "Show seconds:"
-msgstr ""
+msgstr "Vis sekund:"
 
 #: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Aldri"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Berre i hjelpebobla"
 
 #: package/contents/ui/configAppearance.qml:77
 #: package/contents/ui/configAppearance.qml:97
@@ -316,7 +316,7 @@ msgstr "Fjern denne tidssona"
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Systemwide Time Zone"
-msgstr ""
+msgstr "Tidssone for heile systemet"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -393,13 +393,13 @@ msgstr "Vel klokkeslettformat …"
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr ""
+msgstr "I dag er %1"
 
 #: package/contents/ui/Tooltip.qml:112
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

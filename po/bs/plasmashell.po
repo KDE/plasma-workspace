@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2014-12-28 11:43+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -189,18 +189,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:101
+#: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:129
+#: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr ""

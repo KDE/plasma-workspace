@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-15 07:19+0100\n"
+"PO-Revision-Date: 2023-02-22 06:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -275,20 +275,16 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (უცნობი მიზეზით)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "ამჟამად %1 აპლიკაცია ბლოკავს ძილს და ეკრანის დაბლოკვას:"
+msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "ამჟამად %1 ბლოკავს ძილს და ეკრანის დაბლოკვას (უცნობი მიზეზით)"
+msgstr "აპლიკაცია ამჟამად ძილს და ეკრანის ჩაკეტვას ბლოკავს (მიზეზი უცნობია)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -306,15 +302,13 @@ msgstr "%1: უცნობი მიზეზი"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "უცნობი აპლიკაცია: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: უცნობი მიზეზი"
+msgstr "უცნობი აპლიკაცია: უცნობი მიზეზი"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2022-04-19 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -346,28 +346,28 @@ msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
 
-#: package/contents/ui/FingerprintDialog.qml:179
+#: package/contents/ui/FingerprintDialog.qml:180
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Finger inregistrerat"
 
-#: package/contents/ui/FingerprintDialog.qml:209
+#: package/contents/ui/FingerprintDialog.qml:210
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Välj ett finger att registrera"
 
-#: package/contents/ui/FingerprintDialog.qml:326
+#: package/contents/ui/FingerprintDialog.qml:327
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Registrera finger igen"
 
-#: package/contents/ui/FingerprintDialog.qml:333
+#: package/contents/ui/FingerprintDialog.qml:334
 #, fuzzy, kde-format
 #| msgid "Clear Fingerprints"
 msgid "Delete fingerprint"
 msgstr "Rensa fingeravtryck"
 
-#: package/contents/ui/FingerprintDialog.qml:342
+#: package/contents/ui/FingerprintDialog.qml:343
 #, kde-format
 msgid "No fingerprints added"
 msgstr "inga fingeravtryck tillagda"

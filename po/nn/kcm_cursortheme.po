@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-10 00:58+0000\n"
-"PO-Revision-Date: 2023-01-15 12:46+0100\n"
+"PO-Revision-Date: 2023-02-22 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -100,19 +100,19 @@ msgstr "Tilbakestill peikartema"
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr "Signal ved programstart"
+msgstr "Markering ved programstart"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "Set opp animasjonar viste når eit program vert starta."
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:46
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Markering på musepeikar:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:47
 #, kde-format
@@ -142,13 +142,13 @@ msgstr "Sprettande"
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Markering på oppgåvehandsamar:"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr "Slå på animasjonar"
+msgstr "Bruk animasjonar"
 
 #: package/contents/ui/LaunchFeedbackDialog.qml:110
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "Storleik:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr "Set opp tilbakemeldingar …"
+msgstr "Set opp programstart-markering …"
 
 #: package/contents/ui/main.qml:145
 #, kde-format
