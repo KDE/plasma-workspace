@@ -66,8 +66,10 @@ KCM.ScrollViewKCM {
         onCountChanged: {
             if (indexToActivate >= 0) {
                 kcm.pop();
-                currentIndex = Math.min(Math.max(0, indexToActivate), count - 1);
-                kcm.push("UserDetailsPage.qml", { user: currentItem.user });
+                currentIndex = Math.min(indexToActivate, count - 1);
+                const modelIndex = kcm.userModel.index(currentIndex, 0);
+                const user = kcm.userModel.data(modelIndex, UsersKCM.UserModel.UserRole);
+                kcm.push("UserDetailsPage.qml", { user });
                 indexToActivate = -1;
             }
         }

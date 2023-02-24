@@ -18,7 +18,7 @@ class UserModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum ModelRoles {
+    enum Roles {
         RealNameRole = Qt::DisplayRole,
         FaceRole = Qt::DecorationRole,
         UidRole = Qt::UserRole,
@@ -32,6 +32,7 @@ public:
         LoggedInRole,
         SectionHeaderRole,
     };
+    Q_ENUM(Roles)
 
     explicit UserModel(QObject *parent = nullptr);
     ~UserModel() override;

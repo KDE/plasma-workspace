@@ -50,6 +50,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantLis
 {
     constexpr const char *uri = "org.kde.plasma.kcm.users";
 
+    qmlRegisterUncreatableType<UserModel>(uri, 1, 0, "UserModel", QStringLiteral("Registered for enum access only"));
     qmlRegisterUncreatableType<User>(uri, 1, 0, "User", QStringLiteral("Use kcm.userModel to access User objects"));
     qmlRegisterType<MaskMouseArea>(uri, 1, 0, "MaskMouseArea");
 
