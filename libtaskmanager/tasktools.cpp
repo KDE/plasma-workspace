@@ -100,7 +100,8 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                         if (QIcon::hasThemeIcon(iconValue)) {
                             data.icon = QIcon::fromTheme(iconValue);
                         } else if (!iconValue.startsWith(QDir::separator())) {
-                            const QString iconValueWithoutSuffix = iconValue.left(iconValue.lastIndexOf(QLatin1Char('.')));
+                            const int lastIndexOfPeriod = iconValue.lastIndexOf(QLatin1Char('.'));
+                            const QString iconValueWithoutSuffix = lastIndexOfPeriod < 0 ? iconValue : iconValue.left(lastIndexOfPeriod);
                             // Find an icon in the same folder
                             const QDir sameDir = QFileInfo(url.toLocalFile()).absoluteDir();
                             const auto iconList = sameDir.entryInfoList(
