@@ -282,6 +282,12 @@ KCM.SimpleKCM {
             showCloseButton: true
             standardButtons: QQC2.Dialog.Cancel
 
+            onOpened: {
+                const button = standardButton(QQC2.Dialog.Cancel);
+                button.forceActiveFocus(Qt.TabFocusReason);
+                button.KeyNavigation.up = buttonNext;
+            }
+
             onAccepted: {
                 usersDetailPage.showDeleteUserConfirmationDialog(dialog.alsoDeleteFiles);
                 close();
@@ -329,6 +335,7 @@ KCM.SimpleKCM {
                     text: i18n("Keep files")
                     subtitle: i18n("Only user will be deleted from this system, but their home directory is left intact.")
                     QQC2.ButtonGroup.group: deleteFilesButtonGroup
+                    KeyNavigation.down: deleteFilesRadioButton
                 }
                 RadioItem {
                     id: deleteFilesRadioButton
@@ -337,8 +344,10 @@ KCM.SimpleKCM {
                     text: i18n("Delete files")
                     subtitle: i18n("Both user <i>and</i> their home directory will be deleted from this system.")
                     QQC2.ButtonGroup.group: deleteFilesButtonGroup
+                    KeyNavigation.down: buttonNext
                 }
                 QQC2.Button {
+                    id: buttonNext
                     Layout.alignment: Qt.AlignHCenter
                     Layout.topMargin: Kirigami.Units.gridUnit
                     Layout.minimumWidth: Kirigami.Units.gridUnit * 10
@@ -378,6 +387,12 @@ KCM.SimpleKCM {
             closePolicy: QQC2.Popup.CloseOnEscape
             showCloseButton: true
             standardButtons: QQC2.Dialog.Cancel
+
+            onOpened: {
+                const button = standardButton(QQC2.Dialog.Cancel);
+                button.forceActiveFocus(Qt.TabFocusReason);
+                button.KeyNavigation.up = deleteUserButton;
+            }
 
             onAccepted: {
                 const name = userName;
@@ -499,6 +514,11 @@ KCM.SimpleKCM {
             closePolicy: QQC2.Popup.CloseOnEscape
             showCloseButton: true
             standardButtons: QQC2.Dialog.Close
+
+            onOpened: {
+                const button = standardButton(QQC2.Dialog.Close);
+                button.forceActiveFocus(Qt.TabFocusReason);
+            }
 
             onClosed: {
                 destroy();
