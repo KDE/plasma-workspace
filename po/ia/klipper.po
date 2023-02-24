@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-17 01:00+0000\n"
-"PO-Revision-Date: 2023-01-25 15:25+0100\n"
+"PO-Revision-Date: 2023-02-23 15:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -272,6 +272,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Le popup de action non essera monstrate automaticamente per iste fenestras, "
+"anque si es habilitate. Isto es proque, por exemplo, un navigator web pote "
+"evidentiar un URL in le barra de adresse, durante que on typa, assi que le "
+"menu monstrarea per cata battimento de clave.<nl/><nal/>Si le menu de action "
+"appare inexpectatemente quando on usa un particular application, alora adde "
+"lo a iste lista <link>Como trovar le nomine de insertar</link>. "
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -283,6 +289,12 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Le nomine que necvessita esser insertate hic es le nomine de  WM_CLASS del "
+"fenestra a esser excludite. Per trovar le nomine de WM_CLASS per un fenestra "
+"in un altere fenestra de terminal inserta le commando:<nl/><nl/>&nbsp;&nbsp;"
+"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>e clicca sur le fenestra que "
+"tu vole excluder. Le prime nomine que illo monstra post le signo de equal es "
+"lo que tu necessita insertar."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -328,6 +340,11 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Un action ha effecto quando su <interface>patrono de coincidentia (match "
+"pattern)</interface> corresponde con le contentos del area de transferentia. "
+"Quando isto occurre, le <interface>commandos</interface> del action appare "
+"in le menu depopupde Klipper; si un de illos es seligite, le commandop es "
+"executate."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -376,6 +393,12 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Le commando per iste correspondentia essera includite in le popup de action "
+"automatic si illo es habilitate in le pagine <interface>Menu de Action</"
+"interface>. Si iste option es dishabilitate, le commandos per iste "
+"correspondentia non essera includite in le popup automatic ma illos essera "
+"includite si le popup es activate manualmente con le via breve de clave "
+"<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -427,6 +450,10 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"Un <placeholder>&#37;s</placeholder> in le commando essera reimplaciate per "
+"le contentos complete del area de transferentia. <placeholder>&#37;0</"
+"placeholder> per <placeholder>&#37;9</placeholder> essera reimplaciate per "
+"le correspondentetextos capturate ab le patrono de correspondentia."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -658,6 +685,10 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Contento selectionate con le cursor es automaticamente copiate in le area de "
+"transferentia assi que illo pote esser collate o con un action de Collar o "
+"con un click in le medie.<br/><ahref=\"1\">Plus re le selection e area de "
+"transferentia</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -673,6 +704,10 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Contento selectionate con le cursor ma non explicitemente copiate in le area "
+"de transferentia non es automaticamente immagazinate in le chronologia del "
+"area de transferentia, e solmente pote esser collate per usar le click in le "
+"medie."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -687,6 +722,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Solmente imagazina selectiones de texto in le chronologia de area de "
+"transferentia, non inagines o ulle altere tyupo de datos."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -778,6 +815,10 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Removeulle spatio blanc ab le initio e le fin del texto selectionate, ante "
+"executar un action. Pro exemplo isto assecura que un URL collate in un "
+"navigator de web es interpretate como expectate. Le texto salveguardate al "
+"area de transferentia non es affectate."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
