@@ -298,10 +298,8 @@ KCM.SimpleKCM {
                     source: "data-warning-symbolic"
 
                     Layout.alignment: Qt.AlignCenter
-                    Layout.minimumHeight: Kirigami.Units.iconSizes.large
-                    Layout.maximumHeight: Kirigami.Units.iconSizes.large
-                    Layout.minimumWidth: Kirigami.Units.iconSizes.large
-                    Layout.maximumWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.large
                 }
                 Kirigami.Heading {
                     text: dialog.subtitle
@@ -406,10 +404,8 @@ KCM.SimpleKCM {
                     source: "data-warning-symbolic"
 
                     Layout.alignment: Qt.AlignCenter
-                    Layout.minimumHeight: Kirigami.Units.iconSizes.large
-                    Layout.maximumHeight: Kirigami.Units.iconSizes.large
-                    Layout.minimumWidth: Kirigami.Units.iconSizes.large
-                    Layout.maximumWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.large
                 }
                 Kirigami.Heading {
                     text: "Caution"
@@ -427,10 +423,8 @@ KCM.SimpleKCM {
                     Layout.margins: Kirigami.Units.gridUnit
 
                     Kirigami.Avatar {
-                        Layout.minimumHeight: Kirigami.Units.gridUnit * 3
-                        Layout.maximumHeight: Kirigami.Units.gridUnit * 3
-                        Layout.minimumWidth: Kirigami.Units.gridUnit * 3
-                        Layout.maximumWidth: Kirigami.Units.gridUnit * 3
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                        Layout.preferredWidth: Kirigami.Units.gridUnit * 3
                         Layout.column: 0
                         Layout.row: 0
 
@@ -518,10 +512,8 @@ KCM.SimpleKCM {
 
                     Layout.alignment: Qt.AlignCenter
                     Layout.topMargin: Kirigami.Units.gridUnit
-                    Layout.minimumHeight: Kirigami.Units.iconSizes.large
-                    Layout.maximumHeight: Kirigami.Units.iconSizes.large
-                    Layout.minimumWidth: Kirigami.Units.iconSizes.large
-                    Layout.maximumWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.large
                 }
                 Kirigami.Heading {
                     text: dialog.subtitle
