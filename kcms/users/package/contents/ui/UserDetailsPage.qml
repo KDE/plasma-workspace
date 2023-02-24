@@ -279,7 +279,7 @@ KCM.SimpleKCM {
             subtitle: i18n("This operation cannot be undone")
 
             closePolicy: QQC2.Popup.CloseOnEscape
-            showCloseButton: false
+            showCloseButton: true
             standardButtons: QQC2.Dialog.Cancel
 
             onAccepted: {
@@ -378,7 +378,7 @@ KCM.SimpleKCM {
             }
 
             closePolicy: QQC2.Popup.CloseOnEscape
-            showCloseButton: false
+            showCloseButton: true
             standardButtons: QQC2.Dialog.Cancel
 
             onAccepted: {
@@ -503,7 +503,7 @@ KCM.SimpleKCM {
                 : i18n("%1 is indestructible", dialog.userName)
 
             closePolicy: QQC2.Popup.CloseOnEscape
-            showCloseButton: false
+            showCloseButton: true
             standardButtons: QQC2.Dialog.Close
 
             onClosed: {
