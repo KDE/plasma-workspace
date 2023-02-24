@@ -44,6 +44,7 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCountForActivity(const QString &activity) const;
 
     /**
      * The list of launcher URLs serialized to strings along with
