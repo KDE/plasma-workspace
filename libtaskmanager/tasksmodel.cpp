@@ -1651,7 +1651,14 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
     }
 
     if (d->separateLaunchers && !parent.isValid() /* Exclude tasks in a group */) {
-        const int firstTask = (d->launcherTasksModel ? (d->launchInPlace ? d->launcherTasksModel->rowCount() : launcherCount()) : 0);
+        int firstTask = 0;
+        if (d->launcherTasksModel) {
+            if (d->launchInPlace) {
+                firstTask = d->launcherTasksModel->rowCountForActivity(d->activityInfo->currentActivity());
+            } else {
+                firstTask = launcherCount();
+            }
+        }
 
         // Don't allow launchers to be moved past the last launcher.
         if (isLauncherMove && newPos >= firstTask) {

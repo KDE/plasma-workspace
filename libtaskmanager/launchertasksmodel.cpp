@@ -338,6 +338,18 @@ int LauncherTasksModel::rowCount(const QModelIndex &parent) const
     return parent.isValid() ? 0 : d->launchersOrder.count();
 }
 
+int LauncherTasksModel::rowCountForActivity(const QString &activity) const
+{
+    if (activity == NULL_UUID || activity.isEmpty()) {
+        return rowCount();
+    }
+
+    return std::count_if(d->launchersOrder.cbegin(), d->launchersOrder.cend(), [this, &activity](const QUrl &url) {
+        const auto &set = d->activitiesForLauncher[url];
+        return set.contains(NULL_UUID) || set.contains(activity);
+    });
+}
+
 QStringList LauncherTasksModel::launcherList() const
 {
     // Serializing the launchers
