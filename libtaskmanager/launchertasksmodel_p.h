@@ -10,6 +10,8 @@
 #include <QStringList>
 #include <QUrl>
 
+#include "tasktools.h"
+
 namespace TaskManager
 {
 #define NULL_UUID "00000000-0000-0000-0000-000000000000"
@@ -18,6 +20,10 @@ inline static bool isValidLauncherUrl(const QUrl &url)
 {
     if (url.isEmpty() || !url.isValid()) {
         return false;
+    }
+
+    if (url.scheme() == QLatin1String("preferred")) {
+        return !defaultApplication(url).isEmpty();
     }
 
     if (!url.isLocalFile() && url.scheme() != QLatin1String("applications") && url.scheme() != QLatin1String("preferred")) {
