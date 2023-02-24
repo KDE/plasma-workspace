@@ -26,6 +26,13 @@ private Q_SLOTS:
      * @see https://bugs.kde.org/444816
      */
     void test_moveBug444816();
+
+    /**
+     * Pinned apps with a preferred://[something] URI that resolves to nothing should be hidden
+     *
+     * @see https://bugs.kde.org/436667
+     */
+    void test_filterOutInvalidPreferredLaunchers();
 };
 
 void TasksModelTest::initTestCase()
@@ -122,6 +129,24 @@ void TasksModelTest::test_moveBug444816()
     qDebug() << "********* END After *********";
 
     QCOMPARE(firstWindowRow + 1, launcherRow);
+}
+
+void TasksModelTest::test_filterOutInvalidPreferredLaunchers()
+{
+    // Prepare launchers and running tasks
+    TasksModel model;
+
+    model.setLauncherList(QStringList{
+        "preferred://nonexistent",
+    });
+    QCOMPARE(model.launcherList().size(), 0);
+
+    const QUrl launcherUrl = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/GammaRay.desktop"));
+    model.setLauncherList(QStringList{
+        "preferred://nonexistent",
+        launcherUrl.toString(),
+    });
+    QCOMPARE(model.launcherList().size(), 1);
 }
 
 QTEST_MAIN(TasksModelTest)
