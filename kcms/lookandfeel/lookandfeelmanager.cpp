@@ -740,7 +740,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
                 return meta.pluginId() == layoutName;
             });
         for (const auto &meta : windowSwitcherPackages) {
-            QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+            QFileInfo(meta.fileName()).absoluteDir().removeRecursively();
         }
     }
 
@@ -752,7 +752,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
                 return meta.pluginId() == layoutName;
             });
         for (const auto &meta : desktopSwitcherPackages) {
-            QFileInfo(meta.metaDataFileName()).absoluteDir().removeRecursively();
+            QFileInfo(meta.fileName()).absoluteDir().removeRecursively();
         }
     }
 
