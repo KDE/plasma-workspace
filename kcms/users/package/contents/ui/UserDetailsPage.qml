@@ -353,7 +353,7 @@ KCM.SimpleKCM {
                     Layout.minimumWidth: Kirigami.Units.gridUnit * 10
                     Layout.preferredHeight: Math.round(implicitHeight * 1.35)
                     font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.35
-                    text: i18n("Next")
+                    text: i18nc("@action:button", "Next")
                     enabled: dialog.canProceed
                     onClicked: dialog.accept();
                 }
