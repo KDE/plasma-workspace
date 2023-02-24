@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2023-01-15 12:55+0100\n"
+"PO-Revision-Date: 2023-02-23 19:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
@@ -29,7 +29,7 @@ msgstr "Utan tittel"
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
-msgstr "Inkje medium vert spela"
+msgstr "Inkje medium vert spela av"
 
 #: package/contents/ui/ExpandedRepresentation.qml:413
 #: package/contents/ui/ExpandedRepresentation.qml:534

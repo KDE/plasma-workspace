@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
+"POT-Creation-Date: 2023-02-24 01:00+0000\n"
 "PO-Revision-Date: 2022-07-10 17:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -88,19 +88,19 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
 #: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
 #: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: plugin/appsmodel.cpp:151
+#: plugin/appsmodel.cpp:154
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "在此子選單中取消隱藏"
 
-#: plugin/appsmodel.cpp:160
+#: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "在 '%1' 中取消隱藏"

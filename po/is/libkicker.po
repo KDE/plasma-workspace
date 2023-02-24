@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
+"POT-Creation-Date: 2023-02-24 01:00+0000\n"
 "PO-Revision-Date: 2022-10-22 16:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -81,19 +81,19 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
 #: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
 #: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "Forrit"
 
-#: plugin/appsmodel.cpp:151
+#: plugin/appsmodel.cpp:154
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Ekki fela forrit í þessari undirvalmynd"
 
-#: plugin/appsmodel.cpp:160
+#: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Ekki fela forrit í '%1'"

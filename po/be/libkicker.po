@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:59+0000\n"
+"POT-Creation-Date: 2023-02-24 01:00+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -84,19 +84,19 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:61 plugin/computermodel.cpp:98
 #: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:153
 #: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "Праграмы"
 
-#: plugin/appsmodel.cpp:151
+#: plugin/appsmodel.cpp:154
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Паказваць праграмы ў гэтым падменю"
 
-#: plugin/appsmodel.cpp:160
+#: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Паказваць праграмы ў \"%1\""
