@@ -353,6 +353,8 @@ KCM.SimpleKCM {
                     Layout.minimumWidth: Kirigami.Units.gridUnit * 10
                     Layout.preferredHeight: Math.round(implicitHeight * 1.35)
                     font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.35
+                    // TODO: There's no "go-next-rtl" in Breeze??  only -rtl-symbolic version is present smh
+                    icon.name: mirrored ? "go-previous" : "go-next"
                     text: i18nc("@action:button", "Next")
                     enabled: dialog.canProceed
                     onClicked: dialog.accept();
