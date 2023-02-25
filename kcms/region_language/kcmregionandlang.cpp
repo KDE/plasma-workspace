@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
+#include <updatelaunchenvjob.h>
 
 #include "languagelistmodel.h"
 #include "localegenerator.h"
@@ -94,34 +95,49 @@ QString KCMRegionAndLang::localeFileDirPath()
 
 void KCMRegionAndLang::save()
 {
+    auto updateEnvironment = [](const char *name, const QString &value) {
+        if (qEnvironmentVariableIsSet(name)) {
+            UpdateLaunchEnvJob launchEnvJob(QString::fromLatin1(name), value);
+        }
+    };
+
     // assemble full locales in use
     QStringList locales;
     if (!settings()->isDefaultSetting(SettingType::Lang)) {
         locales.append(settings()->lang());
+        updateEnvironment("LANG", settings()->lang());
     }
     if (!settings()->isDefaultSetting(SettingType::Numeric)) {
         locales.append(settings()->numeric());
+        updateEnvironment("LC_NUMERIC", settings()->numeric());
     }
     if (!settings()->isDefaultSetting(SettingType::Time)) {
         locales.append(settings()->time());
+        updateEnvironment("LC_TIME", settings()->time());
     }
     if (!settings()->isDefaultSetting(SettingType::Measurement)) {
         locales.append(settings()->measurement());
+        updateEnvironment("LC_MEASUREMENT", settings()->measurement());
     }
     if (!settings()->isDefaultSetting(SettingType::Currency)) {
         locales.append(settings()->monetary());
+        updateEnvironment("LC_MONETARY", settings()->monetary());
     }
     if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
         locales.append(settings()->paperSize());
+        updateEnvironment("LC_PAGE", settings()->paperSize());
     }
     if (!settings()->isDefaultSetting(SettingType::Address)) {
         locales.append(settings()->address());
+        updateEnvironment("LC_ADDRESS", settings()->address());
     }
     if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
         locales.append(settings()->nameStyle());
+        updateEnvironment("LC_NAME", settings()->nameStyle());
     }
     if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
         locales.append(settings()->phoneNumbers());
+        updateEnvironment("LC_TELEPHONE", settings()->phoneNumbers());
     }
     if (!settings()->language().isEmpty()) {
         QStringList languages = settings()->language().split(QLatin1Char(':'));
@@ -131,6 +147,7 @@ void KCMRegionAndLang::save()
                 locales.append(glibcLocale.value());
             }
         }
+        updateEnvironment("LANGUAGE", settings()->language());
     }
 
     auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),

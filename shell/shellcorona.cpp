@@ -1621,6 +1621,16 @@ void ShellCorona::initConfigWatcher()
             }
         }
     });
+
+    // Language settings
+    m_languageConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig("plasma-localerc", KConfig::NoGlobals));
+    connect(m_languageConfigWatcher.data(), &KConfigWatcher::configChanged, this, [](const KConfigGroup &group, const QByteArrayList &names) {
+        for (const QByteArray &name : names) {
+            if (qEnvironmentVariableIsSet(name.constData())) {
+                qputenv(name, group.readEntry(name.constData()).toUtf8());
+            }
+        }
+    });
 }
 
 QRgb ShellCorona::color() const

@@ -19,11 +19,29 @@
 
 #include <KAboutData>
 #include <KAuthorized>
+#include <KConfigWatcher>
 #include <KDBusService>
 
 #include <kworkspace.h>
 
 #include "view.h"
+
+namespace
+{
+KConfigWatcher::Ptr initConfigWatcher()
+{
+    auto languageConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig("plasma-localerc", KConfig::NoGlobals));
+    QObject::connect(languageConfigWatcher.data(), &KConfigWatcher::configChanged, [](const KConfigGroup &group, const QByteArrayList &names) {
+        for (const QByteArray &name : names) {
+            if (qEnvironmentVariableIsSet(name.constData())) {
+                qputenv(name, group.readEntry(name.constData()).toUtf8());
+            }
+        }
+    });
+
+    return languageConfigWatcher;
+}
+}
 
 int main(int argc, char **argv)
 {
@@ -98,6 +116,7 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
+    const auto watcher = initConfigWatcher();
 
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);

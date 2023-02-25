@@ -272,6 +272,9 @@ private:
     bool m_accentColorFromWallpaperEnabled = false;
     QMetaObject::Connection m_fakeColorRequestConn;
 
+    // Language settings
+    KConfigWatcher::Ptr m_languageConfigWatcher;
+
     ScreenPool *m_screenPool;
     QString m_shell;
     KActivities::Controller *m_activityController;

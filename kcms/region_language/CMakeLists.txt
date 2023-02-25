@@ -72,6 +72,7 @@ target_link_libraries(kcm_regionandlang
     KF6::KCMUtils
     KF6::KCMUtilsQuick
     KF6::ItemModels
+    PW::KWorkspace
     Qt::Core5Compat
 )
 if(UBUNTU_LOCALE)
