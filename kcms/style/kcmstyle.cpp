@@ -40,6 +40,7 @@
 #include "krdb.h"
 
 #include "kded_interface.h"
+#include <updatelaunchenvjob.h>
 
 #include "previewitem.h"
 #include "styledata.h"
@@ -59,6 +60,19 @@ Q_DECL_EXPORT void kcminit()
         flags |= KRdbExportColors;
     }
     runRdb(flags);
+
+    if (!qEnvironmentVariableIsSet("GTK_THEME")) {
+        const QString gtkConfigPath = QStringLiteral("%1/gtk-4.0/settings.ini").arg(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation));
+        if (QFileInfo::exists(gtkConfigPath)) {
+            KSharedConfig::Ptr gtkConfig = KSharedConfig::openConfig(gtkConfigPath, KConfig::NoGlobals);
+            KConfigGroup group = gtkConfig->group(QStringLiteral("Settings"));
+            const QString themeName = group.readEntry("gtk-theme-name");
+
+            if (!themeName.isEmpty()) {
+                UpdateLaunchEnvJob launchEnvJob(QStringLiteral("GTK_THEME"), themeName);
+            }
+        }
+    }
 }
 }
 

@@ -49,6 +49,7 @@ target_link_libraries(kcm_style
     KF6::NewStuffCore
     KF6::XmlGui
     krdb
+    PW::KWorkspace
 )
 
 ecm_qt_declare_logging_category(kcm_style
