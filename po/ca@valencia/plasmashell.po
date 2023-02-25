@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 02:52+0000\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
 "PO-Revision-Date: 2022-12-16 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -194,18 +194,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "S'ha desactivat el teclat a la pantalla"
 
-#: shellcontainmentconfig.cpp:101
+#: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Pantalla interna en %1"
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 en %3"
 
-#: shellcontainmentconfig.cpp:129
+#: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Pantalla desconnectada %1"

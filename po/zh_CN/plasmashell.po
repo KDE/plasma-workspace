@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 02:52+0000\n"
-"PO-Revision-Date: 2023-02-15 11:07\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
+"PO-Revision-Date: 2023-02-24 12:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -185,18 +185,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "屏幕键盘停用"
 
-#: shellcontainmentconfig.cpp:101
+#: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "位于 %1 的内建屏幕"
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2，位于 %3"
 
-#: shellcontainmentconfig.cpp:129
+#: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "已断开连接的屏幕 %1"
