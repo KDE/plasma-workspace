@@ -202,6 +202,8 @@ public Q_SLOTS:
 
     void refreshCurrentShell();
 
+    void refreshEnvironmentVariables();
+
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks
@@ -305,6 +307,8 @@ private:
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
+
+    QHash<QString, QString> systemdEnvironment;
 
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;

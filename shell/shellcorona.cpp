@@ -2551,6 +2551,57 @@ void ShellCorona::refreshCurrentShell()
     QProcess::startDetached("plasmashell", {"--replace"});
 }
 
+void ShellCorona::refreshEnvironmentVariables()
+{
+    QDBusMessage lookupEnvironmentCall = QDBusMessage::createMethodCall( //
+        QStringLiteral("org.freedesktop.systemd1"),
+        QStringLiteral("/org/freedesktop/systemd1"),
+        QStringLiteral("org.freedesktop.DBus.Properties"),
+        QStringLiteral("Get"));
+    lookupEnvironmentCall.setArguments(QVariantList{
+        QStringLiteral("org.freedesktop.systemd1.Manager"),
+        QStringLiteral("Environment"),
+    });
+    auto reply = QDBusConnection::sessionBus().asyncCall(lookupEnvironmentCall);
+    auto watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+
+        QDBusReply<QDBusVariant> reply = *watcher;
+        if (!reply.isValid()) {
+            return;
+        }
+
+        const QStringList pairs = reply.value().variant().toStringList();
+        decltype(systemdEnvironment) newEnvironment;
+
+        for (const QString &p : pairs) {
+            const int indexOfEqual = p.indexOf(QLatin1Char('='));
+            Q_ASSERT(indexOfEqual > 0);
+            auto newIt = newEnvironment.insert(p.left(indexOfEqual), p.mid(indexOfEqual + 1));
+            auto it = systemdEnvironment.find(newIt.key());
+
+            if (it == systemdEnvironment.end()) {
+                // New variable
+                qputenv(newIt.key().toUtf8().constData(), newIt.value().toUtf8());
+            } else {
+                if (it.value() != newIt.value()) {
+                    // Changed
+                    qputenv(newIt.key().toUtf8().constData(), newIt.value().toUtf8());
+                }
+
+                systemdEnvironment.erase(it);
+            }
+        }
+
+        for (auto it = systemdEnvironment.cbegin(); it != systemdEnvironment.cend(); it = std::next(it)) {
+            qunsetenv(it.key().toUtf8());
+        }
+
+        systemdEnvironment = newEnvironment;
+    });
+}
+
 // Desktop corona handler
 
 #include "moc_shellcorona.cpp"

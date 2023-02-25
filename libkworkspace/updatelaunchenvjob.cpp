@@ -120,6 +120,12 @@ void UpdateLaunchEnvJob::start()
 
     auto systemdActivationReply = QDBusConnection::sessionBus().asyncCall(systemdActivationMsg);
     d->monitorReply(systemdActivationReply);
+
+    QDBusMessage plasmashellReply = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                                   QStringLiteral("/PlasmaShell"),
+                                                                   QStringLiteral("org.kde.PlasmaShell"),
+                                                                   QStringLiteral("refreshEnvironmentVariables"));
+    QDBusConnection::sessionBus().asyncCall(plasmashellReply);
 }
 
 bool UpdateLaunchEnvJob::Private::isPosixName(const QString &name)
