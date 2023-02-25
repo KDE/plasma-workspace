@@ -257,6 +257,7 @@ private:
     void checkAllDesktopsUiReady(bool ready);
     void activateLauncherMenu(const QString &screenName);
     void handleColorRequestedFromDBus(const QDBusMessage &msg);
+    void initConfigWatcher();
 
 #ifndef NDEBUG
     void screenInvariants() const;
