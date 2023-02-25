@@ -6,7 +6,7 @@
   <include>QtGlobal</include>
   <include>KLocalizedString</include>
   <include>QLocale</include>
-  <kcfgfile name="plasma-localerc" />
+  <kcfgfile name="plasmalocalerc" />
   <group name="Formats">
     <entry key="LANG" name="lang" type="String">
         <code>

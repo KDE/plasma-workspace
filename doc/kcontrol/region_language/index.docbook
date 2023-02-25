@@ -50,7 +50,7 @@ languages as well to have a fully localized &GUI;.</para></note>
 
 <para>
 On each selection bar you can see examples how the settings look
-like and which measurement units are used. In addition to numbers, you can see 
+like and which measurement units are used. In addition to numbers, you can see
 how currency values, dates, and times in long and short format are displayed.
 When you change any of the settings, the preview shows the effects of the
 changes before you apply them.
@@ -88,7 +88,7 @@ merged into this KCM called Region And Language. Changing a language does
 <emphasis>automatically change</emphasis> the settings for numbers,
 currency &etc; to the corresponding country or region. However, this change
 does not break the old configuration. The configuration file still located
-at <emphasis>~/.config/plasma-localerc</emphasis> .
+at <emphasis>~/.config/plasmalocalerc</emphasis> .
 </para>
 </note>
 </article>

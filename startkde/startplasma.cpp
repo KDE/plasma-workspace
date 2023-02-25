@@ -165,7 +165,7 @@ void runStartupConfig()
 {
     // export LC_* variables set by kcmshell5 formats into environment
     // so it can be picked up by QLocale and friends.
-    KConfig config(QStringLiteral("plasma-localerc"));
+    KConfig config(QStringLiteral("plasmalocalerc"));
     KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
 
     const auto lcValues = {"LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"};

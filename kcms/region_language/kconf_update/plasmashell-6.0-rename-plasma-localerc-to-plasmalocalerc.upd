@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Version=5
+
+Id=plasmashell-6.0-rename-plasma-localerc-to-plasmalocalerc
+Script=plasmashell-6.0-rename-plasma-localerc-to-plasmalocalerc
+
