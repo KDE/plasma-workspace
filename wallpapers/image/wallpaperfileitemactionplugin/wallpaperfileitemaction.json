@@ -12,6 +12,7 @@
                 "Name[eu]": "Julius Zint",
                 "Name[fr]": "Julius Zint",
                 "Name[ia]": "Julius Zint",
+                "Name[it]": "Julius Zint",
                 "Name[ka]": "Julius Zint",
                 "Name[nl]": "Julius Zint",
                 "Name[nn]": "Julius Zint",
@@ -19,7 +20,8 @@
                 "Name[sl]": "Julius Zint",
                 "Name[tr]": "Julius Zint",
                 "Name[uk]": "Julius Zint",
-                "Name[x-test]": "xxJulius Zintxx"
+                "Name[x-test]": "xxJulius Zintxx",
+                "Name[zh_CN]": "Julius Zint"
             }
         ],
         "Category": "Utilities",
@@ -33,6 +35,7 @@
         "Description[eu]": "Ezarri irudia (giltzatzeko pantailako) horma-paper gisa",
         "Description[fr]": "Définir une image comme un fonds d'écran (Écran de verrouillage)",
         "Description[ia]": "Pone imagine comoo tapete de papiro (lockscreen-bloca schermo)",
+        "Description[it]": "Imposta l'immagine come sfondo (schermata di blocco).",
         "Description[ka]": "გამოსახულების ჩაკეტილი ეკრანის ფონად დაყენება",
         "Description[nl]": "Afbeelding instellen als (vergrendelscherm) achtergrondafbeelding",
         "Description[nn]": "Bruk som bakgrunns­bilete (på låseskjerm)",
@@ -41,6 +44,7 @@
         "Description[tr]": "Görseli, kilit ekranı duvar kağıdı olarak ayarla",
         "Description[uk]": "Встановити зображення як фонове (для вікна блокування)",
         "Description[x-test]": "xxSet image as (lockscreen) wallpaperxx",
+        "Description[zh_CN]": "设置图像为 (锁屏) 壁纸",
         "License": "GPL",
         "MimeTypes": [
             "image/avif",
@@ -64,6 +68,7 @@
         "Name[eu]": "Ezarri honela",
         "Name[fr]": "Définir comme",
         "Name[ia]": "Pone como",
+        "Name[it]": "Imposta come",
         "Name[ka]": "დაყენება, როგორც",
         "Name[nl]": "Instellen als",
         "Name[nn]": "Vel som",
@@ -71,6 +76,7 @@
         "Name[sl]": "Nastavi kot",
         "Name[tr]": "Ayarla",
         "Name[uk]": "Встановити як",
-        "Name[x-test]": "xxSet asxx"
+        "Name[x-test]": "xxSet asxx",
+        "Name[zh_CN]": "设为"
     }
 }
