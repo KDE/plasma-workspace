@@ -102,21 +102,7 @@ ShellCorona::ShellCorona(QObject *parent)
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
 
-    // Accent color setting
-    KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
-    KConfigGroup accentColorConfigGroup(globalConfig, "General");
-    m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
-
-    m_accentColorConfigWatcher = KConfigWatcher::create(globalConfig);
-    connect(m_accentColorConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
-            const bool result = group.readEntry("accentColorFromWallpaper", false);
-            if (m_accentColorFromWallpaperEnabled != result) {
-                m_accentColorFromWallpaperEnabled = result;
-                Q_EMIT accentColorFromWallpaperEnabledChanged();
-            }
-        }
-    });
+    initConfigWatcher();
 }
 
 void ShellCorona::init()
@@ -1616,6 +1602,25 @@ void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)
 
     m_accentColorFromWallpaperEnabled = true;
     Q_EMIT accentColorFromWallpaperEnabledChanged();
+}
+
+void ShellCorona::initConfigWatcher()
+{
+    // Accent color setting
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
+    KConfigGroup accentColorConfigGroup(globalConfig, "General");
+    m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
+
+    m_accentColorConfigWatcher = KConfigWatcher::create(globalConfig);
+    connect(m_accentColorConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
+            const bool result = group.readEntry("accentColorFromWallpaper", false);
+            if (m_accentColorFromWallpaperEnabled != result) {
+                m_accentColorFromWallpaperEnabled = result;
+                Q_EMIT accentColorFromWallpaperEnabledChanged();
+            }
+        }
+    });
 }
 
 QRgb ShellCorona::color() const
