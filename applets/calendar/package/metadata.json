@@ -180,9 +180,6 @@
         "Name[x-test]": "xxCalendarxx",
         "Name[zh_CN]": "日历",
         "Name[zh_TW]": "行事曆",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "2.0",
         "Website": "https://kde.org/plasma-desktop"
     },
@@ -191,5 +188,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.date"
     ],
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-StandAloneApp": true,
+    "KPackageStructure": "Plasma/Applet"
 }

@@ -168,13 +168,11 @@
         "Name[x-test]": "xxPanel Spacerxx",
         "Name[zh_CN]": "面板间隙",
         "Name[zh_TW]": "面板間隔器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true,
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

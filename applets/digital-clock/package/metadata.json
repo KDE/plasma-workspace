@@ -186,9 +186,6 @@
         "Name[x-test]": "xxDigital Clockxx",
         "Name[zh_CN]": "数字时钟",
         "Name[zh_TW]": "數位時鐘",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "3.0",
         "Website": "https://kde.org/plasma-desktop"
     },
@@ -198,5 +195,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.time",
         "org.kde.plasma.date"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

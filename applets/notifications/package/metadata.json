@@ -188,9 +188,6 @@
         "Name[x-test]": "xxNotificationsxx",
         "Name[zh_CN]": "通知",
         "Name[zh_TW]": "通知",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "4.0",
         "Website": "https://kde.org/plasma-desktop/"
     },
@@ -201,5 +198,6 @@
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.notifications"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

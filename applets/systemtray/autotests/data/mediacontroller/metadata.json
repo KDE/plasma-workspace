@@ -15,9 +15,6 @@
         "License": "GPL-2.0+",
         "Name": "Media Player",
         "Name[pl]": "Odtwarzacz multimedialny",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -29,5 +26,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ],
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-StandAloneApp": true,
+    "KPackageStructure": "Plasma/Applet"
 }

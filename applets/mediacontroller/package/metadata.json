@@ -160,9 +160,6 @@
         "Name[x-test]": "xxMedia Playerxx",
         "Name[zh_CN]": "媒体播放器",
         "Name[zh_TW]": "媒體播放器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -174,5 +171,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ],
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-StandAloneApp": true,
+    "KPackageStructure": "Plasma/Applet"
 }

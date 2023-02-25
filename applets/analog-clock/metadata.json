@@ -188,9 +188,6 @@
         "Name[x-test]": "xxAnalog Clockxx",
         "Name[zh_CN]": "模拟时钟",
         "Name[zh_TW]": "類比時鐘",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "3.0",
         "Website": "https://userbase.kde.org/Plasma/Clocks"
     },
@@ -200,5 +197,6 @@
         "org.kde.plasma.time",
         "org.kde.plasma.date"
     ],
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-StandAloneApp": true,
+    "KPackageStructure": "Plasma/Applet"
 }

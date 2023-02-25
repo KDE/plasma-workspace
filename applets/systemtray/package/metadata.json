@@ -144,15 +144,12 @@
         "Name[xh]": "Itreyi Yendlela yokusebenza",
         "Name[zh_CN]": "系统托盘",
         "Name[zh_TW]": "系統匣",
-        "ServiceTypes": [
-            "Plasma/Applet",
-            "Plasma/Containment"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true,
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-ContainmentType": "Panel",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

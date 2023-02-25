@@ -155,9 +155,6 @@
         "Name[x-test]": "xxBattery and Brightnessxx",
         "Name[zh_CN]": "电池和亮度",
         "Name[zh_TW]": "電池與亮度",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "3.0",
         "Website": "https://vizzzion.org"
     },
@@ -224,5 +221,6 @@
     "X-Plasma-NotificationAreaCategory": "Hardware",
     "X-Plasma-Provides": [
         "org.kde.plasma.powermanagement"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

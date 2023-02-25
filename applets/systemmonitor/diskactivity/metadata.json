@@ -147,9 +147,6 @@
         "Name[x-test]": "xxHard Disk Activityxx",
         "Name[zh_CN]": "磁盘活动",
         "Name[zh_TW]": "硬碟活動",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -159,5 +156,6 @@
         "org.kde.plasma.systemmonitor"
     ],
     "X-Plasma-RootPath": "org.kde.plasma.systemmonitor",
-    "X-Plasma-StandAloneApp": true
+    "X-Plasma-StandAloneApp": true,
+    "KPackageStructure": "Plasma/Applet"
 }

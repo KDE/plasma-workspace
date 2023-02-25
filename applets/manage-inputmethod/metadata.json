@@ -146,14 +146,12 @@
         "Name[x-test]": "xxInput Methodxx",
         "Name[zh_CN]": "输入法",
         "Name[zh_TW]": "輸入法",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "3.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/manage-inputmethod.qml",
     "X-Plasma-NotificationArea": "true",
-    "X-Plasma-NotificationAreaCategory": "SystemServices"
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
+    "KPackageStructure": "Plasma/Applet"
 }

@@ -184,13 +184,11 @@
         "Name[x-test]": "xxIconxx",
         "Name[zh_CN]": "图标",
         "Name[zh_TW]": "圖示",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "NoDisplay": true,
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }

@@ -147,9 +147,6 @@
         "Name[x-test]": "xxDisk Usagexx",
         "Name[zh_CN]": "磁盘使用情况",
         "Name[zh_TW]": "磁碟用量",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -158,5 +155,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor"
+    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor",
+    "KPackageStructure": "Plasma/Applet"
 }

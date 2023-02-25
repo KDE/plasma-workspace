@@ -15,9 +15,6 @@
         "License": "GPL-2.0+",
         "Name": "Device Notifier",
         "Name[pl]": "Powiadomienia o urządzeniach",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"
     },
@@ -27,5 +24,6 @@
     "X-Plasma-NotificationAreaCategory": "Hardware",
     "X-Plasma-Provides": [
         "org.kde.plasma.removabledevices"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

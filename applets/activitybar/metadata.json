@@ -176,9 +176,6 @@
         "Name[x-test]": "xxActivity Barxx",
         "Name[zh_CN]": "活动栏",
         "Name[zh_TW]": "活動列",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -186,5 +183,6 @@
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.activities"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }

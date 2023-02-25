@@ -146,9 +146,6 @@
         "Name[x-test]": "xxMemory Usagexx",
         "Name[zh_CN]": "内存使用情况",
         "Name[zh_TW]": "記憶體用量",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -157,5 +154,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor"
+    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor",
+    "KPackageStructure": "Plasma/Applet"
 }

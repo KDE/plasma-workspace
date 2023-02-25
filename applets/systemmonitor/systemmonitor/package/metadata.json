@@ -145,9 +145,6 @@
         "Name[x-test]": "xxSystem monitor Sensorxx",
         "Name[zh_CN]": "系统监视传感器",
         "Name[zh_TW]": "系統監視器感測器",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     },
@@ -155,5 +152,6 @@
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Applet"
 }
