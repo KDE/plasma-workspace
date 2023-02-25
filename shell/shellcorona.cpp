@@ -1631,6 +1631,18 @@ void ShellCorona::initConfigWatcher()
             }
         }
     });
+
+    // Cursor theme
+    m_cursorConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals));
+    connect(m_cursorConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        for (const QByteArray &name : names) {
+            if (name == QByteArray("cursorTheme")) {
+                qputenv("XCURSOR_THEME", group.readEntry("cursorTheme").toUtf8());
+            } else if (name == QByteArray("cursorSize")) {
+                qputenv("XCURSOR_SIZE", group.readEntry("cursorSize").toUtf8());
+            }
+        }
+    });
 }
 
 QRgb ShellCorona::color() const

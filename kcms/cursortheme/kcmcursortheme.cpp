@@ -309,6 +309,9 @@ void CursorThemeConfig::save()
     }
     removeThemes();
 
+    UpdateLaunchEnvJob themeEnvJob(QStringLiteral("XCURSOR_THEME"), cursorThemeSettings()->cursorTheme());
+    UpdateLaunchEnvJob sizeEnvJob(QStringLiteral("XCURSOR_SIZE"), QString::number(cursorThemeSettings()->cursorSize()));
+
     notifyKcmChange(GlobalChangeType::CursorChanged);
 }
 

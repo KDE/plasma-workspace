@@ -19,6 +19,7 @@
 
 #include <KAboutData>
 #include <KAuthorized>
+#include <KConfigWatcher>
 #include <KDBusService>
 
 #include <kdeclarative/qmlobject.h>
@@ -26,6 +27,24 @@
 #include <kworkspace.h>
 
 #include "view.h"
+
+std::vector<KConfigWatcher::Ptr> initConfigWatcher()
+{
+    std::vector<KConfigWatcher::Ptr> watchers;
+    auto cursorConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals));
+    QObject::connect(cursorConfigWatcher.data(), &KConfigWatcher::configChanged, [](const KConfigGroup &group, const QByteArrayList &names) {
+        for (const QByteArray &name : names) {
+            if (name == QByteArray("cursorTheme")) {
+                qputenv("XCURSOR_THEME", group.readEntry("cursorTheme").toUtf8());
+            } else if (name == QByteArray("cursorSize")) {
+                qputenv("XCURSOR_SIZE", group.readEntry("cursorSize").toUtf8());
+            }
+        }
+    });
+    watchers.emplace_back(cursorConfigWatcher);
+
+    return watchers;
+}
 
 int main(int argc, char **argv)
 {
@@ -78,6 +97,7 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
+    auto watchers = initConfigWatcher();
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);
