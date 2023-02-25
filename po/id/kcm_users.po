@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-02-25 01:02+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -616,32 +616,32 @@ msgstr "Perangkat terdiskoneksi."
 msgid "An unknown error has occurred."
 msgstr "Sebuah galat tak diketahui telah terjadi."
 
-#: src/user.cpp:267
+#: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Tidak bisa mendapatkan perizinan untuk menyimpan pengguna %1"
 
-#: src/user.cpp:272
+#: src/user.cpp:284
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ada sebuah galat selagi menyimpan perubahan"
 
-#: src/user.cpp:368
+#: src/user.cpp:380
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Gagal mengubah ukuran citra: pembukaan file temp gagal"
 
-#: src/user.cpp:376
+#: src/user.cpp:388
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Gagal mengubah ukuran citra: penulisan file temp gagal"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
 msgstr "Akunmu"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
 msgstr "Akun Lain"

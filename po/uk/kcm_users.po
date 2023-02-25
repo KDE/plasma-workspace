@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-02-25 01:02+0000\n"
 "PO-Revision-Date: 2023-01-11 08:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -579,36 +579,36 @@ msgstr "Пристрій було від'єднано."
 msgid "An unknown error has occurred."
 msgstr "Сталася невідома програмі помилка."
 
-#: src/user.cpp:267
+#: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr ""
 "Не вдалося отримати права доступу для збереження даних запису користувача %1"
 
-#: src/user.cpp:272
+#: src/user.cpp:284
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Під час спроби зберегти зміни сталася помилка"
 
-#: src/user.cpp:368
+#: src/user.cpp:380
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Не вдалося змінити розміри зображення: не вдалося відкрити тимчасовий файл"
 
-#: src/user.cpp:376
+#: src/user.cpp:388
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
 "Не вдалося змінити розміри зображення: не вдалося виконати запис до "
 "тимчасового файла"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
 msgstr "Ваш обліковий запис"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
 msgstr "Інші облікові записи"

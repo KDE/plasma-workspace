@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-02-25 01:02+0000\n"
 "PO-Revision-Date: 2023-02-07 23:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -523,32 +523,32 @@ msgstr "裝置已斷線。"
 msgid "An unknown error has occurred."
 msgstr "發生了未知錯誤。"
 
-#: src/user.cpp:267
+#: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "無法取得權限儲存使用者 %1"
 
-#: src/user.cpp:272
+#: src/user.cpp:284
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "儲存變更時出現錯誤"
 
-#: src/user.cpp:368
+#: src/user.cpp:380
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "圖片尺寸調整失敗：無法開啟暫存檔"
 
-#: src/user.cpp:376
+#: src/user.cpp:388
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "圖片尺寸調整失敗：無法寫入至暫存檔"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
 msgstr "您的帳號"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
 msgstr "其他帳號"

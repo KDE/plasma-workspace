@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-02-24 01:00+0000\n"
 "PO-Revision-Date: 2023-02-23 19:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -202,27 +202,27 @@ msgstr "Byt utforming"
 msgid "Unlock"
 msgstr "Lås opp"
 
-#: contents/lockscreen/MediaControls.qml:109
+#: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No title"
 msgstr "Utan tittel"
 
-#: contents/lockscreen/MediaControls.qml:110
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "No media playing"
 msgstr "Inkje medium vert spela av"
 
-#: contents/lockscreen/MediaControls.qml:139
+#: contents/lockscreen/MediaControls.qml:140
 #, kde-format
 msgid "Previous track"
 msgstr "Førre spor"
 
-#: contents/lockscreen/MediaControls.qml:151
+#: contents/lockscreen/MediaControls.qml:152
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Spel/pause"
 
-#: contents/lockscreen/MediaControls.qml:165
+#: contents/lockscreen/MediaControls.qml:166
 #, kde-format
 msgid "Next track"
 msgstr "Neste spor"

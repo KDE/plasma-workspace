@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-02-25 01:02+0000\n"
 "PO-Revision-Date: 2023-01-11 17:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -554,36 +554,36 @@ msgstr "El dispositivo estaba desconectado."
 msgid "An unknown error has occurred."
 msgstr "Ha ocurrido un error desconocido."
 
-#: src/user.cpp:267
+#: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "No se ha podido obtener permiso para guardar el usuario %1"
 
-#: src/user.cpp:272
+#: src/user.cpp:284
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ha ocurrido un error al guardar los cambios"
 
-#: src/user.cpp:368
+#: src/user.cpp:380
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Ha ocurrido un error al cambiar el tamaño de la imagen: ha fallado la "
 "apertura del archivo temporal"
 
-#: src/user.cpp:376
+#: src/user.cpp:388
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
 "Ha ocurrido un error al cambiar el tamaño de la imagen: ha fallado la "
 "escritura en el archivo temporal"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
 msgstr "Su cuenta"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
 msgstr "Otras cuentas"

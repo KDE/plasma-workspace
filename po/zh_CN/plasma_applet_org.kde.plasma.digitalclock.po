@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-18 01:01+0000\n"
-"PO-Revision-Date: 2023-02-15 11:05\n"
+"PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -281,8 +281,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
-"提示：如果您经常旅行，请将您的主拾取添加到此列表中。它将仅在您把系统全局拾取"
-"设为其他时区时显示。"
+"提示：如果您经常旅行，可以将您的主时区重复添加一次到此列表中。它只会在系统全"
+"局时区被改为其他时区时显示。"
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -296,7 +296,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr "位于本地时区的城市时隐藏"
+msgstr "与本地时区的城市相同时自动隐藏"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
