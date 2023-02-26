@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-25 04:10+0000\n"
 "PO-Revision-Date: 2023-02-19 20:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -535,34 +535,34 @@ msgstr "Eininga vart kopla frå."
 msgid "An unknown error has occurred."
 msgstr "Det oppstod ein ukjend feil."
 
-#: src/user.cpp:267
+#: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Fekk ikkje løyve til å lagra brukaren %1"
 
-#: src/user.cpp:272
+#: src/user.cpp:284
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Det oppstod ein feil ved lagring av endringane"
 
-#: src/user.cpp:368
+#: src/user.cpp:380
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Klarte ikkje endra storleik på bilete: Feil ved opning av mellombels fil."
 
-#: src/user.cpp:376
+#: src/user.cpp:388
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
 "Klarte ikkje endra storleik på bilete: Klarte ikkje lagra til mellombels fil."
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
 msgstr "Kontoen din"
 
-#: src/usermodel.cpp:138
+#: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andre kontoar"
