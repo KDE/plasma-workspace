@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 01:02+0000\n"
+"POT-Creation-Date: 2023-02-26 01:00+0000\n"
 "PO-Revision-Date: 2023-01-11 20:28+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/ChangePassword.qml:27
-#: package/contents/ui/UserDetailsPage.qml:156
+#: package/contents/ui/ChangePassword.qml:28
+#: package/contents/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Change Password"
 msgstr "Промяна на парола"
@@ -39,17 +39,17 @@ msgid "Confirm password"
 msgstr "Потвърждаване на парола"
 
 #: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Паролите трябва да съвпадат"
 
-#: package/contents/ui/ChangeWalletPassword.qml:17
+#: package/contents/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "Да се смени ли паролата на Портфейла?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:26
+#: package/contents/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -59,12 +59,12 @@ msgstr ""
 "Сега, когато сте променили паролата си за влизане, може да искате да "
 "промените паролата на вашия Kwallet, за да съвпада."
 
-#: package/contents/ui/ChangeWalletPassword.qml:31
+#: package/contents/ui/ChangeWalletPassword.qml:30
 #, kde-format
 msgid "What is KWallet?"
 msgstr "Какво е  KWallet?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:41
+#: package/contents/ui/ChangeWalletPassword.qml:40
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -79,98 +79,98 @@ msgstr ""
 "отключена автоматично при влизане, така че не е нужно да въвеждате паролата "
 "на Kwallet."
 
-#: package/contents/ui/ChangeWalletPassword.qml:57
+#: package/contents/ui/ChangeWalletPassword.qml:56
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "Смяна на парола на Портфейла"
 
-#: package/contents/ui/ChangeWalletPassword.qml:66
+#: package/contents/ui/ChangeWalletPassword.qml:65
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "Оставяне непроменено"
 
-#: package/contents/ui/CreateUser.qml:16
+#: package/contents/ui/CreateUser.qml:15
 #, kde-format
 msgid "Create User"
 msgstr "Създаване на потребител"
 
-#: package/contents/ui/CreateUser.qml:30
-#: package/contents/ui/UserDetailsPage.qml:124
+#: package/contents/ui/CreateUser.qml:33
+#: package/contents/ui/UserDetailsPage.qml:123
 #, kde-format
 msgid "Name:"
 msgstr "Име:"
 
-#: package/contents/ui/CreateUser.qml:34
-#: package/contents/ui/UserDetailsPage.qml:131
+#: package/contents/ui/CreateUser.qml:37
+#: package/contents/ui/UserDetailsPage.qml:130
 #, kde-format
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: package/contents/ui/CreateUser.qml:44
-#: package/contents/ui/UserDetailsPage.qml:139
+#: package/contents/ui/CreateUser.qml:47
+#: package/contents/ui/UserDetailsPage.qml:138
 #, kde-format
 msgid "Standard"
 msgstr "Стандартно"
 
-#: package/contents/ui/CreateUser.qml:45
-#: package/contents/ui/UserDetailsPage.qml:140
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Administrator"
 msgstr "Администратор"
 
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:143
+#: package/contents/ui/CreateUser.qml:51
+#: package/contents/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Account type:"
 msgstr "Вид на акаунта:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Password:"
 msgstr "Парола:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:61
 #, kde-format
 msgid "Confirm password:"
 msgstr "Потвърждаване на парола:"
 
-#: package/contents/ui/CreateUser.qml:72
+#: package/contents/ui/CreateUser.qml:78
 #, kde-format
 msgid "Create"
 msgstr "Създаване"
 
-#: package/contents/ui/FingerprintDialog.qml:58
+#: package/contents/ui/FingerprintDialog.qml:57
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Конфигуриране на отпечатъци"
 
-#: package/contents/ui/FingerprintDialog.qml:68
+#: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Изчистване на всичко"
 
-#: package/contents/ui/FingerprintDialog.qml:75
+#: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
 msgid "Add"
 msgstr "Добавяне"
 
-#: package/contents/ui/FingerprintDialog.qml:84
+#: package/contents/ui/FingerprintDialog.qml:83
 #, kde-format
 msgid "Cancel"
 msgstr "Отказване"
 
-#: package/contents/ui/FingerprintDialog.qml:92
+#: package/contents/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid "Done"
 msgstr "Завършен"
 
-#: package/contents/ui/FingerprintDialog.qml:116
+#: package/contents/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Снемане на отпечатък"
 
-#: package/contents/ui/FingerprintDialog.qml:125
+#: package/contents/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -178,7 +178,7 @@ msgstr ""
 "Моля, натиснете многократно десния си показалец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:127
+#: package/contents/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
@@ -186,7 +186,7 @@ msgstr ""
 "Моля, натиснете многократно десния си среден пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:129
+#: package/contents/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
@@ -194,7 +194,7 @@ msgstr ""
 "Моля, натиснете многократно десния си безименен пръст върху сензора за "
 "пръстови отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
@@ -202,14 +202,14 @@ msgstr ""
 "Моля, натиснете многократно десния си малък пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:133
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Моля, натиснете многократно десния си палец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:135
+#: package/contents/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
@@ -217,7 +217,7 @@ msgstr ""
 "Моля, натиснете многократно левия си показалец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
@@ -225,7 +225,7 @@ msgstr ""
 "Моля, натиснете многократно левия си среден пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:139
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
@@ -233,7 +233,7 @@ msgstr ""
 "Моля, натиснете многократно левия си безименен пръст върху сензора за "
 "пръстови отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:141
+#: package/contents/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
@@ -241,14 +241,14 @@ msgstr ""
 "Моля, натиснете многократно левия си малък пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:143
+#: package/contents/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Моля, натиснете многократно левия си палец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -256,7 +256,7 @@ msgstr ""
 "Моля, прокарайте многократно десния си показалец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:149
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -264,7 +264,7 @@ msgstr ""
 "Моля, прокарайте многократно десния си среден пръст върху сензора за "
 "пръстови отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:151
+#: package/contents/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
@@ -272,7 +272,7 @@ msgstr ""
 "Моля, прокарайте многократно десния си безименен пръст върху сензора за "
 "пръстови отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:153
+#: package/contents/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
@@ -280,14 +280,14 @@ msgstr ""
 "Моля, прокарайте многократно десния си малък пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:155
+#: package/contents/ui/FingerprintDialog.qml:154
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Моля, прокарайте многократно десния си палец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:157
+#: package/contents/ui/FingerprintDialog.qml:156
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -295,7 +295,7 @@ msgstr ""
 "Моля, прокарайте многократно левия си показалец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:159
+#: package/contents/ui/FingerprintDialog.qml:158
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
@@ -303,7 +303,7 @@ msgstr ""
 "Моля, прокарайте многократно левия си среден пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:161
+#: package/contents/ui/FingerprintDialog.qml:160
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -311,7 +311,7 @@ msgstr ""
 "Моля, прокарайте многократно левия си безименен пръст върху сензора за "
 "пръстови отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:163
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
@@ -319,199 +319,199 @@ msgstr ""
 "Моля, прокарайте многократно левия си малък пръст върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:165
+#: package/contents/ui/FingerprintDialog.qml:164
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Моля, прокарайте многократно левия си палец върху сензора за пръстови "
 "отпечатъци."
 
-#: package/contents/ui/FingerprintDialog.qml:180
+#: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Пръстът е регистриран"
 
-#: package/contents/ui/FingerprintDialog.qml:210
+#: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Сложете пръст за вземане на отпечатък"
 
-#: package/contents/ui/FingerprintDialog.qml:327
+#: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Сложете отново пръста"
 
-#: package/contents/ui/FingerprintDialog.qml:334
+#: package/contents/ui/FingerprintDialog.qml:333
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Изтриване на отпечатъци"
 
-#: package/contents/ui/FingerprintDialog.qml:343
+#: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не са добавени отпечатъци"
 
-#: package/contents/ui/main.qml:22
+#: package/contents/ui/main.qml:19
 #, kde-format
 msgid "Manage Users"
 msgstr "Управление на потребителите"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Add New User"
 msgstr "Добавяне на нов потребител"
 
-#: package/contents/ui/PicturesSheet.qml:19
+#: package/contents/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Промяна на аватара"
 
-#: package/contents/ui/PicturesSheet.qml:22
+#: package/contents/ui/PicturesSheet.qml:21
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Това не е нищо"
 
-#: package/contents/ui/PicturesSheet.qml:23
+#: package/contents/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Feisty Flamingo"
 
-#: package/contents/ui/PicturesSheet.qml:24
+#: package/contents/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Dragon's Fruit"
 
-#: package/contents/ui/PicturesSheet.qml:25
+#: package/contents/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Sweet Potato"
 
-#: package/contents/ui/PicturesSheet.qml:26
+#: package/contents/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Ambient Amber"
 
-#: package/contents/ui/PicturesSheet.qml:27
+#: package/contents/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Sparkle Sunbeam"
 
-#: package/contents/ui/PicturesSheet.qml:28
+#: package/contents/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Lemon-Lime"
 
-#: package/contents/ui/PicturesSheet.qml:29
+#: package/contents/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Verdant Charm"
 
-#: package/contents/ui/PicturesSheet.qml:30
+#: package/contents/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Mellow Meadow"
 
-#: package/contents/ui/PicturesSheet.qml:31
+#: package/contents/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Tepid Teal"
 
-#: package/contents/ui/PicturesSheet.qml:32
+#: package/contents/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma Blue"
 
-#: package/contents/ui/PicturesSheet.qml:33
+#: package/contents/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon Purple"
 
-#: package/contents/ui/PicturesSheet.qml:34
+#: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo Purple"
 
-#: package/contents/ui/PicturesSheet.qml:35
+#: package/contents/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Burnt Charcoal"
 
-#: package/contents/ui/PicturesSheet.qml:36
+#: package/contents/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Paper Perfection"
 
-#: package/contents/ui/PicturesSheet.qml:37
+#: package/contents/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Cafétera Brown"
 
-#: package/contents/ui/PicturesSheet.qml:38
+#: package/contents/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
-#: package/contents/ui/PicturesSheet.qml:72
+#: package/contents/ui/PicturesSheet.qml:71
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Избиране на снимка"
 
-#: package/contents/ui/PicturesSheet.qml:104
+#: package/contents/ui/PicturesSheet.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Избиране на файл…"
 
-#: package/contents/ui/UserDetailsPage.qml:107
+#: package/contents/ui/UserDetailsPage.qml:106
 #, kde-format
 msgid "Change avatar"
 msgstr "Промяна на аватара"
 
-#: package/contents/ui/UserDetailsPage.qml:152
+#: package/contents/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Email address:"
 msgstr "Адрес за е-поща:"
 
-#: package/contents/ui/UserDetailsPage.qml:176
+#: package/contents/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Delete files"
 msgstr "Изтриване на файлове"
 
-#: package/contents/ui/UserDetailsPage.qml:183
+#: package/contents/ui/UserDetailsPage.qml:182
 #, kde-format
 msgid "Keep files"
 msgstr "Запазване на файлове"
 
-#: package/contents/ui/UserDetailsPage.qml:190
+#: package/contents/ui/UserDetailsPage.qml:189
 #, kde-format
 msgid "Delete User…"
 msgstr "Изтриване на потребител…"
 
-#: package/contents/ui/UserDetailsPage.qml:201
+#: package/contents/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Конфигуриране на идентификация с пръстов отпечатък…"
 
-#: package/contents/ui/UserDetailsPage.qml:215
+#: package/contents/ui/UserDetailsPage.qml:214
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

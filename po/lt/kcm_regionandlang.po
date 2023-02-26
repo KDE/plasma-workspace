@@ -1,217 +1,214 @@
-# German translations for plasma-workspace package.
-# Copyright (C) 2022 This file is copyright:
+# Lithuanian translations for plasma-workspace package.
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022.
-# Alois Spitzbart <spitz234@hotmail.com>, 2022.
-# Jannick Kuhr <opensource@kuhr.org>, 2023.
+# Automatically generated, 2023.
 #
-# Automatically generated, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2023-01-30 22:01+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
-"Language-Team: German <kde-i18n-de@kde.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2023-02-16 01:01+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: exampleutility.cpp:29
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr "Imperial UK"
+msgstr ""
 
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr "Imperial US"
+msgstr ""
 
 #: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
-msgstr "Metrisch"
+msgstr ""
 
 #: exampleutility.cpp:47
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr "Letter"
+msgstr ""
 
 #: exampleutility.cpp:49
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
-msgstr "A4"
+msgstr ""
 
 #: exampleutility.cpp:64
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr "c/o"
+msgstr ""
 
 #: exampleutility.cpp:65
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr "Firmenname"
+msgstr ""
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr "Entwicklungsabteilung"
+msgstr ""
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr "Entwicklungsgebäude"
+msgstr ""
 
 #: exampleutility.cpp:68
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr "Hauptstraße"
+msgstr ""
 
 #: exampleutility.cpp:69
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr "Haus 1"
+msgstr ""
 
 #: exampleutility.cpp:71
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ", "
+msgstr ""
 
 #: exampleutility.cpp:72
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr "Raum 2"
+msgstr ""
 
 #: exampleutility.cpp:73
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr "Stockwerk 3"
+msgstr ""
 
 #: exampleutility.cpp:75
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr "Innenstadt"
+msgstr ""
 
 #: exampleutility.cpp:76
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr "12345"
+msgstr ""
 
 #: exampleutility.cpp:77
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr "Stadt"
+msgstr ""
 
 #: exampleutility.cpp:78
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr "Bundesland"
+msgstr ""
 
 #: exampleutility.cpp:91
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr "Nachname"
+msgstr ""
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr "NACHNAME"
+msgstr ""
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr "Vorname"
+msgstr ""
 
 #: exampleutility.cpp:94
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr "V"
+msgstr ""
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr "Vorname"
+msgstr ""
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr "AndererName"
+msgstr ""
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr "Zusatzname"
+msgstr ""
 
 #: exampleutility.cpp:98
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "Z"
+msgstr ""
 
 #: exampleutility.cpp:99
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
-msgstr "Beruf"
+msgstr ""
 
 #: exampleutility.cpp:100
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr "Doktor"
+msgstr ""
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr "Dr."
+msgstr ""
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr "Dr."
+msgstr ""
 
 #: exampleutility.cpp:103
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr " "
+msgstr ""
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr " "
+msgstr ""
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -219,7 +216,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr "Es wurde kein Beispiel für diese Lokalisierung gefunden"
+msgstr ""
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -227,8 +224,6 @@ msgid ""
 "You can configure the formats used for time, dates, money and other numbers "
 "here."
 msgstr ""
-"Hier können Sie die Formate für Zeiten, Daten, Währung und weitere "
-"Zahlenformate einrichten."
 
 #: kcmregionandlang.cpp:88
 #, kde-kuit-format
@@ -238,15 +233,12 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
-"Die auf dem System verfügbaren Lokalisierungen konnten nicht mit dem "
-"Werkzeug <command>localectl</command> gefunden werden. Bitte erstellen Sie "
-"einen Fehlerbericht unter <link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:84
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: languagelistmodel.cpp:90
 #, kde-format
@@ -254,72 +246,67 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr "%1 (Brasilien)"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
 msgstr ""
-"Die ausführbare Komponente „check-language-support“ kann nicht gefunden "
-"werden"
 
 #: localegeneratorubuntu.cpp:52
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr "„check-language-support“ ist fehlgeschlagen, Ausgabe: %1"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr "Nicht alle fehlenden Pakete konnten aufgelöst werden! %1"
+msgstr ""
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
-msgstr "Fehler beim Installieren von Paket %1"
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:43
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr ""
-"Es wird bereits ein anderer Prozess ausgeführt. Bitte versuchen Sie es später"
 
 #: localegenhelper/localegenhelper.cpp:63
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr ""
-"Nicht autorisiert, um die Datei für die regionalen Einstellungen zu "
-"bearbeiten"
 
 #: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr "Datei „/etc/locale.gen“ kann nicht geöffnet werden"
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr "Die ausführbare Komponente „locale-gen“ kann nicht gefunden werden"
+msgstr ""
 
 #: localegenhelper/localegenhelper.cpp:159
 #, kde-format
 msgid "Unknown"
-msgstr "Unbekannt"
+msgstr ""
 
 #: localelistmodel.cpp:34
 #, kde-format
 msgid "Default for System"
-msgstr "Standard für das System"
+msgstr ""
 
 #: localelistmodel.cpp:34 localelistmodel.cpp:85
 #: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Default"
-msgstr "Standard"
+msgstr ""
 
 #: localelistmodel.cpp:81
 #, kde-format
@@ -327,175 +314,166 @@ msgctxt ""
 "the first is language name, the second is the country name, like 'English "
 "(America)'"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr "Systemvoreinstellung C"
+msgstr ""
 
 #: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr "Standard für %1"
+msgstr ""
 
 #: optionsmodel.cpp:23
 #, kde-format
 msgctxt "@info:title"
 msgid "Language"
-msgstr "Sprache"
+msgstr ""
 
 #: optionsmodel.cpp:24
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
-msgstr "Zahlen"
+msgstr ""
 
 #: optionsmodel.cpp:25
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
-msgstr "Zeit"
+msgstr ""
 
 #: optionsmodel.cpp:26
 #, kde-format
 msgctxt "@info:title"
 msgid "Currency"
-msgstr "Währung"
+msgstr ""
 
 #: optionsmodel.cpp:27
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
-msgstr "Maßeinheiten"
+msgstr ""
 
 #: optionsmodel.cpp:28
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
-msgstr "Papiergröße"
+msgstr ""
 
 #: optionsmodel.cpp:30
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
-msgstr "Adresse"
+msgstr ""
 
 #: optionsmodel.cpp:31
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr "Namensformat"
+msgstr ""
 
 #: optionsmodel.cpp:32
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr "Telefonnummern"
+msgstr ""
 
 #: optionsmodel.cpp:114 optionsmodel.cpp:295
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr "Systemvoreinstellung"
+msgstr ""
 
 #: optionsmodel.cpp:297
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr " (Standardformat für %1)"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
 msgid "Language"
-msgstr "Sprache"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Wenn Sie Englisch (US) über andere Sprachen setzen, führt dies bei einigen "
-"Anwendungen zu unerwünschtem Verhalten. Wenn Sie möchten, dass Ihr System "
-"Englisch (US) verwendet, entfernen Sie alle anderen Sprachen."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr "Die Sprache „%1“ wird nicht unterstützt"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
-"Fügen Sie die Sprachen in der Reihenfolge hinzu, in der Sie sie in Ihren "
-"Anwendungen sehen möchten."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr "Sprache ändern"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr "Sprache ändern"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:98
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr "Nach ganz oben"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
-msgstr "Entfernen"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:117
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
-msgstr "Keine Sprache eingerichtet"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:147
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
-msgstr "Sprachen hinzufügen"
+msgstr ""
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:176
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr "Weitere hinzufügen ..."
+msgstr ""
 
 #: package/contents/ui/main.qml:32
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr "Änderungen werden bei der nächsten Anmeldung aktiviert."
+msgstr ""
 
 #: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Restart now"
-msgstr "Jetzt neu starten"
+msgstr ""
 
 #: package/contents/ui/main.qml:52
 #, kde-format
@@ -504,8 +482,6 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
-"Regionale Einstellungen und Dateien zur Sprachunterstützung werden erstellt. "
-"Den Rechner noch nicht ausschalten."
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -516,11 +492,6 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
-"Regionale Einstellungen und Dateien zur Sprachunterstützung wurden erstellt, "
-"aber die sprachspezifischen Schriftarten konnten nicht automatisch "
-"installiert werden. Wenn für Ihre Sprache spezielle Schriftarten "
-"erforderlich sind, um richtig angezeigt zu werden, müssen Sie diese "
-"herausfinden und selbst installieren."
 
 #: package/contents/ui/main.qml:75
 #, kde-format
@@ -529,57 +500,55 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
-"Die benötigten regionalen Einstellungen und Dateien zur Sprachunterstützung "
-"wurden installiert. Sie können den Rechner jetzt ausschalten."
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
-msgstr "Ändern …"
+msgstr ""
 
 #: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Numbers"
-msgstr "Zahlen"
+msgstr ""
 
 #: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Time"
-msgstr "Zeit"
+msgstr ""
 
 #: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Currency"
-msgstr "Währung"
+msgstr ""
 
 #: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Measurements"
-msgstr "Maßeinheiten"
+msgstr ""
 
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
-msgstr "Papiergröße"
+msgstr ""
 
 #: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
-msgstr "Adresse"
+msgstr ""
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr "Telefonnummer"
+msgstr ""
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
@@ -588,16 +557,4 @@ msgstr "Telefonnummer"
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr "Abgeleitete Sprache"
-
-#~ msgctxt "@info:warning"
-#~ msgid ""
-#~ "Locale has been configured, but this KCM currently doesn't support auto "
-#~ "locale generation on non-glibc systems, please refer to your "
-#~ "distribution's manual to install fonts and generate locales"
-#~ msgstr ""
-#~ "Regionale Einstellungen wurden eingerichtet, aber dieses "
-#~ "Einstellungsmodul unterstützt nicht die automatische Generierung der "
-#~ "Regionaleinstellungen auf Systemen ohne glibc. Bitte lesen Sie das "
-#~ "Handbuch Ihrer Distribution, um Schriftarten zu installieren und "
-#~ "regionalen Einstellungen zu erzeugen"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 01:02+0000\n"
+"POT-Creation-Date: 2023-02-26 01:00+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: package/contents/ui/ChangePassword.qml:27
-#: package/contents/ui/UserDetailsPage.qml:156
+#: package/contents/ui/ChangePassword.qml:28
+#: package/contents/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Change Password"
 msgstr "Đổi mật khẩu"
@@ -39,17 +39,17 @@ msgid "Confirm password"
 msgstr "Xác nhận mật khẩu"
 
 #: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Mật khẩu phải khớp"
 
-#: package/contents/ui/ChangeWalletPassword.qml:17
+#: package/contents/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "Đổi mật khẩu của ví?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:26
+#: package/contents/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -59,12 +59,12 @@ msgstr ""
 "Giờ bạn đã đổi mật khẩu đăng nhập, bạn có thể cũng sẽ muốn đổi mật khẩu ở "
 "KWallet mặc định của mình để khớp với nó."
 
-#: package/contents/ui/ChangeWalletPassword.qml:31
+#: package/contents/ui/ChangeWalletPassword.qml:30
 #, kde-format
 msgid "What is KWallet?"
 msgstr "KWallet là cái gì?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:41
+#: package/contents/ui/ChangeWalletPassword.qml:40
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -79,98 +79,98 @@ msgstr ""
 "thể được tự động mở khoá khi đăng nhập để bạn không cần phải tự mình nhập "
 "mật khẩu KWallet nữa."
 
-#: package/contents/ui/ChangeWalletPassword.qml:57
+#: package/contents/ui/ChangeWalletPassword.qml:56
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "Đổi mật khẩu của ví"
 
-#: package/contents/ui/ChangeWalletPassword.qml:66
+#: package/contents/ui/ChangeWalletPassword.qml:65
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "Giữ nguyên"
 
-#: package/contents/ui/CreateUser.qml:16
+#: package/contents/ui/CreateUser.qml:15
 #, kde-format
 msgid "Create User"
 msgstr "Tạo người dùng"
 
-#: package/contents/ui/CreateUser.qml:30
-#: package/contents/ui/UserDetailsPage.qml:124
+#: package/contents/ui/CreateUser.qml:33
+#: package/contents/ui/UserDetailsPage.qml:123
 #, kde-format
 msgid "Name:"
 msgstr "Tên:"
 
-#: package/contents/ui/CreateUser.qml:34
-#: package/contents/ui/UserDetailsPage.qml:131
+#: package/contents/ui/CreateUser.qml:37
+#: package/contents/ui/UserDetailsPage.qml:130
 #, kde-format
 msgid "Username:"
 msgstr "Tên người dùng:"
 
-#: package/contents/ui/CreateUser.qml:44
-#: package/contents/ui/UserDetailsPage.qml:139
+#: package/contents/ui/CreateUser.qml:47
+#: package/contents/ui/UserDetailsPage.qml:138
 #, kde-format
 msgid "Standard"
 msgstr "Thông thường"
 
-#: package/contents/ui/CreateUser.qml:45
-#: package/contents/ui/UserDetailsPage.qml:140
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Administrator"
 msgstr "Quản trị viên"
 
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:143
+#: package/contents/ui/CreateUser.qml:51
+#: package/contents/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Account type:"
 msgstr "Kiểu danh khoản:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Password:"
 msgstr "Mật khẩu:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:61
 #, kde-format
 msgid "Confirm password:"
 msgstr "Xác nhận mật khẩu:"
 
-#: package/contents/ui/CreateUser.qml:72
+#: package/contents/ui/CreateUser.qml:78
 #, kde-format
 msgid "Create"
 msgstr "Tạo"
 
-#: package/contents/ui/FingerprintDialog.qml:58
+#: package/contents/ui/FingerprintDialog.qml:57
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Cấu hình dấu vân tay"
 
-#: package/contents/ui/FingerprintDialog.qml:68
+#: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr "Xoá hết"
 
-#: package/contents/ui/FingerprintDialog.qml:75
+#: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
-#: package/contents/ui/FingerprintDialog.qml:84
+#: package/contents/ui/FingerprintDialog.qml:83
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: package/contents/ui/FingerprintDialog.qml:92
+#: package/contents/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid "Done"
 msgstr "Xong"
 
-#: package/contents/ui/FingerprintDialog.qml:116
+#: package/contents/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Thêm dấu vân tay"
 
-#: package/contents/ui/FingerprintDialog.qml:125
+#: package/contents/ui/FingerprintDialog.qml:124
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -179,7 +179,7 @@ msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:127
+#: package/contents/ui/FingerprintDialog.qml:126
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -188,7 +188,7 @@ msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:129
+#: package/contents/ui/FingerprintDialog.qml:128
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -197,7 +197,7 @@ msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:130
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -206,7 +206,7 @@ msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:133
+#: package/contents/ui/FingerprintDialog.qml:132
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -214,7 +214,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:135
+#: package/contents/ui/FingerprintDialog.qml:134
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -223,7 +223,7 @@ msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:136
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -232,7 +232,7 @@ msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:139
+#: package/contents/ui/FingerprintDialog.qml:138
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -241,7 +241,7 @@ msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:141
+#: package/contents/ui/FingerprintDialog.qml:140
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -250,7 +250,7 @@ msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:143
+#: package/contents/ui/FingerprintDialog.qml:142
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -258,7 +258,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:146
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -267,7 +267,7 @@ msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:149
+#: package/contents/ui/FingerprintDialog.qml:148
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -276,7 +276,7 @@ msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:151
+#: package/contents/ui/FingerprintDialog.qml:150
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -285,7 +285,7 @@ msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:153
+#: package/contents/ui/FingerprintDialog.qml:152
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -294,7 +294,7 @@ msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:155
+#: package/contents/ui/FingerprintDialog.qml:154
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -302,7 +302,7 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:157
+#: package/contents/ui/FingerprintDialog.qml:156
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -311,7 +311,7 @@ msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:159
+#: package/contents/ui/FingerprintDialog.qml:158
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -320,7 +320,7 @@ msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:161
+#: package/contents/ui/FingerprintDialog.qml:160
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -329,7 +329,7 @@ msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:163
+#: package/contents/ui/FingerprintDialog.qml:162
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -338,7 +338,7 @@ msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:165
+#: package/contents/ui/FingerprintDialog.qml:164
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
@@ -346,192 +346,192 @@ msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
 
-#: package/contents/ui/FingerprintDialog.qml:180
+#: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Dấu vân tay đã được thêm"
 
-#: package/contents/ui/FingerprintDialog.qml:210
+#: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Chọn một ngón tay để thêm dấu vân"
 
-#: package/contents/ui/FingerprintDialog.qml:327
+#: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Thêm lại dấu vân tay"
 
-#: package/contents/ui/FingerprintDialog.qml:334
+#: package/contents/ui/FingerprintDialog.qml:333
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Xoá dấu vân tay"
 
-#: package/contents/ui/FingerprintDialog.qml:343
+#: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Không thêm dấu vân tay nào"
 
-#: package/contents/ui/main.qml:22
+#: package/contents/ui/main.qml:19
 #, kde-format
 msgid "Manage Users"
 msgstr "Quản lí người dùng"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Add New User"
 msgstr "Thêm người dùng mới"
 
-#: package/contents/ui/PicturesSheet.qml:19
+#: package/contents/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Đổi hiện thân ảo"
 
-#: package/contents/ui/PicturesSheet.qml:22
+#: package/contents/ui/PicturesSheet.qml:21
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Không có gì"
 
-#: package/contents/ui/PicturesSheet.qml:23
+#: package/contents/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Hồng hạc"
 
-#: package/contents/ui/PicturesSheet.qml:24
+#: package/contents/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Thanh long"
 
-#: package/contents/ui/PicturesSheet.qml:25
+#: package/contents/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Khoai tây"
 
-#: package/contents/ui/PicturesSheet.qml:26
+#: package/contents/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Hổ phách"
 
-#: package/contents/ui/PicturesSheet.qml:27
+#: package/contents/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Tia nắng"
 
-#: package/contents/ui/PicturesSheet.qml:28
+#: package/contents/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Chanh cốm"
 
-#: package/contents/ui/PicturesSheet.qml:29
+#: package/contents/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Lá cây"
 
-#: package/contents/ui/PicturesSheet.qml:30
+#: package/contents/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Đồng cỏ"
 
-#: package/contents/ui/PicturesSheet.qml:31
+#: package/contents/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Mòng két"
 
-#: package/contents/ui/PicturesSheet.qml:32
+#: package/contents/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Điện tương"
 
-#: package/contents/ui/PicturesSheet.qml:33
+#: package/contents/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Tía tươi"
 
-#: package/contents/ui/PicturesSheet.qml:34
+#: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Tía tối"
 
-#: package/contents/ui/PicturesSheet.qml:35
+#: package/contents/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Than củi"
 
-#: package/contents/ui/PicturesSheet.qml:36
+#: package/contents/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Giấy viết"
 
-#: package/contents/ui/PicturesSheet.qml:37
+#: package/contents/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Nâu nhờ"
 
-#: package/contents/ui/PicturesSheet.qml:38
+#: package/contents/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Nâu đậm"
 
-#: package/contents/ui/PicturesSheet.qml:72
+#: package/contents/ui/PicturesSheet.qml:71
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Chọn một ảnh"
 
-#: package/contents/ui/PicturesSheet.qml:104
+#: package/contents/ui/PicturesSheet.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Chọn tệp…"
 
-#: package/contents/ui/UserDetailsPage.qml:107
+#: package/contents/ui/UserDetailsPage.qml:106
 #, kde-format
 msgid "Change avatar"
 msgstr "Đổi hiện thân ảo"
 
-#: package/contents/ui/UserDetailsPage.qml:152
+#: package/contents/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Email address:"
 msgstr "Địa chỉ thư điện tử:"
 
-#: package/contents/ui/UserDetailsPage.qml:176
+#: package/contents/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Delete files"
 msgstr "Xoá tệp"
 
-#: package/contents/ui/UserDetailsPage.qml:183
+#: package/contents/ui/UserDetailsPage.qml:182
 #, kde-format
 msgid "Keep files"
 msgstr "Giữ tệp"
 
-#: package/contents/ui/UserDetailsPage.qml:190
+#: package/contents/ui/UserDetailsPage.qml:189
 #, kde-format
 msgid "Delete User…"
 msgstr "Xoá người dùng…"
 
-#: package/contents/ui/UserDetailsPage.qml:201
+#: package/contents/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Cấu hình xác thực bằng dấu vân tay..."
 
-#: package/contents/ui/UserDetailsPage.qml:215
+#: package/contents/ui/UserDetailsPage.qml:214
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

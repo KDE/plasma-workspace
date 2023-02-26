@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 01:02+0000\n"
+"POT-Creation-Date: 2023-02-26 01:00+0000\n"
 "PO-Revision-Date: 2021-10-09 08:22-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.04.3\n"
 
-#: package/contents/ui/ChangePassword.qml:27
-#: package/contents/ui/UserDetailsPage.qml:156
+#: package/contents/ui/ChangePassword.qml:28
+#: package/contents/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Change Password"
 msgstr "ਪਾਸਵਰਡ ਬਦਲੋ"
@@ -39,17 +39,17 @@ msgid "Confirm password"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ"
 
 #: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:65
+#: package/contents/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "ਪਾਸਵਰਡ ਮਿਲਦੇ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ"
 
-#: package/contents/ui/ChangeWalletPassword.qml:17
+#: package/contents/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "ਵਾਲਿਟ ਪਾਸਵਰਡ ਬਦਲਣਾ ਹੈ?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:26
+#: package/contents/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -57,12 +57,12 @@ msgid ""
 "the password on your default KWallet to match it."
 msgstr ""
 
-#: package/contents/ui/ChangeWalletPassword.qml:31
+#: package/contents/ui/ChangeWalletPassword.qml:30
 #, kde-format
 msgid "What is KWallet?"
 msgstr "ਕੇਵਾਲਿਟ ਕੀ ਹੈ?"
 
-#: package/contents/ui/ChangeWalletPassword.qml:41
+#: package/contents/ui/ChangeWalletPassword.qml:40
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -72,405 +72,405 @@ msgid ""
 "password yourself."
 msgstr ""
 
-#: package/contents/ui/ChangeWalletPassword.qml:57
+#: package/contents/ui/ChangeWalletPassword.qml:56
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "ਵਾਲਿਟ ਪਾਸਵਰਡ ਬਦਲੋ"
 
-#: package/contents/ui/ChangeWalletPassword.qml:66
+#: package/contents/ui/ChangeWalletPassword.qml:65
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "ਨਾ-ਬਦਲਿਆ ਹੀ ਛੱਡੋ"
 
-#: package/contents/ui/CreateUser.qml:16
+#: package/contents/ui/CreateUser.qml:15
 #, kde-format
 msgid "Create User"
 msgstr "ਵਰਤੋਂਕਾਰ ਬਣਾਓ"
 
-#: package/contents/ui/CreateUser.qml:30
-#: package/contents/ui/UserDetailsPage.qml:124
+#: package/contents/ui/CreateUser.qml:33
+#: package/contents/ui/UserDetailsPage.qml:123
 #, kde-format
 msgid "Name:"
 msgstr "ਨਾਂ:"
 
-#: package/contents/ui/CreateUser.qml:34
-#: package/contents/ui/UserDetailsPage.qml:131
+#: package/contents/ui/CreateUser.qml:37
+#: package/contents/ui/UserDetailsPage.qml:130
 #, kde-format
 msgid "Username:"
 msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
 
-#: package/contents/ui/CreateUser.qml:44
-#: package/contents/ui/UserDetailsPage.qml:139
+#: package/contents/ui/CreateUser.qml:47
+#: package/contents/ui/UserDetailsPage.qml:138
 #, kde-format
 msgid "Standard"
 msgstr "ਸਟੈਂਡਰਡ"
 
-#: package/contents/ui/CreateUser.qml:45
-#: package/contents/ui/UserDetailsPage.qml:140
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Administrator"
 msgstr "ਪਰਸ਼ਾਸ਼ਕ"
 
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:143
+#: package/contents/ui/CreateUser.qml:51
+#: package/contents/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Account type:"
 msgstr "ਖਾਤੇ ਦੀ ਕਿਸਮ:"
 
-#: package/contents/ui/CreateUser.qml:53
+#: package/contents/ui/CreateUser.qml:56
 #, kde-format
 msgid "Password:"
 msgstr "ਪਾਸਵਰਡ:"
 
-#: package/contents/ui/CreateUser.qml:58
+#: package/contents/ui/CreateUser.qml:61
 #, kde-format
 msgid "Confirm password:"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ:"
 
-#: package/contents/ui/CreateUser.qml:72
+#: package/contents/ui/CreateUser.qml:78
 #, kde-format
 msgid "Create"
 msgstr "ਬਣਾਓ"
 
-#: package/contents/ui/FingerprintDialog.qml:58
+#: package/contents/ui/FingerprintDialog.qml:57
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:68
+#: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:75
+#: package/contents/ui/FingerprintDialog.qml:74
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:84
+#: package/contents/ui/FingerprintDialog.qml:83
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:92
+#: package/contents/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid "Done"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:116
+#: package/contents/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:125
+#: package/contents/ui/FingerprintDialog.qml:124
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:127
+#: package/contents/ui/FingerprintDialog.qml:126
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:129
+#: package/contents/ui/FingerprintDialog.qml:128
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:131
+#: package/contents/ui/FingerprintDialog.qml:130
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:133
+#: package/contents/ui/FingerprintDialog.qml:132
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:135
+#: package/contents/ui/FingerprintDialog.qml:134
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:137
+#: package/contents/ui/FingerprintDialog.qml:136
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:139
+#: package/contents/ui/FingerprintDialog.qml:138
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:141
+#: package/contents/ui/FingerprintDialog.qml:140
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:143
+#: package/contents/ui/FingerprintDialog.qml:142
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:147
+#: package/contents/ui/FingerprintDialog.qml:146
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:149
+#: package/contents/ui/FingerprintDialog.qml:148
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:151
+#: package/contents/ui/FingerprintDialog.qml:150
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:153
+#: package/contents/ui/FingerprintDialog.qml:152
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:155
+#: package/contents/ui/FingerprintDialog.qml:154
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:157
+#: package/contents/ui/FingerprintDialog.qml:156
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:159
+#: package/contents/ui/FingerprintDialog.qml:158
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:161
+#: package/contents/ui/FingerprintDialog.qml:160
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:163
+#: package/contents/ui/FingerprintDialog.qml:162
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:165
+#: package/contents/ui/FingerprintDialog.qml:164
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:180
+#: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
 msgid "Finger Enrolled"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:210
+#: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:327
+#: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format
 msgid "Re-enroll finger"
 msgstr ""
 
-#: package/contents/ui/FingerprintDialog.qml:334
+#: package/contents/ui/FingerprintDialog.qml:333
 #, fuzzy, kde-format
 #| msgid "Delete files"
 msgid "Delete fingerprint"
 msgstr "ਫ਼ਾਇਲਾਂ ਹਟਾਓ"
 
-#: package/contents/ui/FingerprintDialog.qml:343
+#: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
 msgid "No fingerprints added"
 msgstr ""
 
-#: package/contents/ui/main.qml:22
+#: package/contents/ui/main.qml:19
 #, kde-format
 msgid "Manage Users"
 msgstr "ਵਰਤੋਂਕਾਰਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Add New User"
 msgstr "ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਜੋੜੋ"
 
-#: package/contents/ui/PicturesSheet.qml:19
+#: package/contents/ui/PicturesSheet.qml:18
 #, fuzzy, kde-format
 #| msgid "Change Avatar"
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "ਅਵਤਾਰ ਬਦਲੋ"
 
-#: package/contents/ui/PicturesSheet.qml:22
+#: package/contents/ui/PicturesSheet.qml:21
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:23
+#: package/contents/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:24
+#: package/contents/ui/PicturesSheet.qml:23
 #, fuzzy, kde-format
 #| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "ਡਰੈਨ ਫ਼ਲ"
 
-#: package/contents/ui/PicturesSheet.qml:25
+#: package/contents/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:26
+#: package/contents/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:27
+#: package/contents/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:28
+#: package/contents/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:29
+#: package/contents/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:30
+#: package/contents/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:31
+#: package/contents/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:32
+#: package/contents/ui/PicturesSheet.qml:31
 #, fuzzy, kde-format
 #| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "ਪਲਾਜ਼ਮਾ ਨੀਲਾ"
 
-#: package/contents/ui/PicturesSheet.qml:33
+#: package/contents/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:34
+#: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:35
+#: package/contents/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:36
+#: package/contents/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:37
+#: package/contents/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:38
+#: package/contents/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:72
+#: package/contents/ui/PicturesSheet.qml:71
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "ਤਸਵੀਰ ਚੁਣੋ"
 
-#: package/contents/ui/PicturesSheet.qml:104
+#: package/contents/ui/PicturesSheet.qml:103
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "…ਫਾਈਲ ਚੁਣੋ"
 
-#: package/contents/ui/UserDetailsPage.qml:107
+#: package/contents/ui/UserDetailsPage.qml:106
 #, kde-format
 msgid "Change avatar"
 msgstr "ਅਵਤਾਰ ਬਦਲੋ"
 
-#: package/contents/ui/UserDetailsPage.qml:152
+#: package/contents/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Email address:"
 msgstr "ਈਮੇਲ ਐਡਰੈਸ:"
 
-#: package/contents/ui/UserDetailsPage.qml:176
+#: package/contents/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Delete files"
 msgstr "ਫ਼ਾਇਲਾਂ ਹਟਾਓ"
 
-#: package/contents/ui/UserDetailsPage.qml:183
+#: package/contents/ui/UserDetailsPage.qml:182
 #, kde-format
 msgid "Keep files"
 msgstr "ਫਾਇਲਾਂ ਰੱਖੋ"
 
-#: package/contents/ui/UserDetailsPage.qml:190
+#: package/contents/ui/UserDetailsPage.qml:189
 #, kde-format
 msgid "Delete User…"
 msgstr "…ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਓ"
 
-#: package/contents/ui/UserDetailsPage.qml:201
+#: package/contents/ui/UserDetailsPage.qml:200
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr ""
 
-#: package/contents/ui/UserDetailsPage.qml:215
+#: package/contents/ui/UserDetailsPage.qml:214
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
