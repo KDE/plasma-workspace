@@ -56,7 +56,7 @@
         "Description[ia]": "Monstra information de adjuta re executores quando on typa \"?\" o \"help\"",
         "Description[id]": "Menampilkan informasi bantuan tentang runners ketika mengetik \"?\" atau \"bantuan\"",
         "Description[it]": "Mostra le informazioni di aiuto sugli esecutori quando digiti «?» o «help»",
-        "Description[ja]": "\"?\" もしくは \"help\" と入力したときヘルプ情報を表示します",
+        "Description[ja]": "\"?\" もしくは \"help\" と入力されたときヘルプ情報を表示します",
         "Description[ko]": "\"?\", \"도움말\"을 입력했을 때 실행기 정보 표시",
         "Description[nl]": "Toont help-informatie over runners bij typen van \"?\" of \"help\"",
         "Description[nn]": "Viser hjelpeinformasjon om køyrarar når du skriv «?» eller «help»",
