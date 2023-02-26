@@ -2,4 +2,4 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 ecm_add_test(calculatorrunnertest.cpp TEST_NAME calculatorrunnertest LINK_LIBRARIES Qt::Test Qt::Gui KF5::Runner KF5::KIOCore PkgConfig::QALCULATE)
-configure_krunner_test(calculatorrunnertest calculator)
+krunner_configure_test(calculatorrunnertest calculator)
