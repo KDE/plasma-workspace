@@ -27,15 +27,15 @@
 K_PLUGIN_CLASS_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
 BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
     , m_browser(nullptr)
     , m_browserFactory(new BrowserFactory(this))
 {
     setObjectName(QStringLiteral("Bookmarks"));
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));
-    addSyntax(Plasma::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks")));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));
+    addSyntax(KRunner::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks")));
 
-    connect(this, &Plasma::AbstractRunner::prepare, this, &BookmarksRunner::prep);
+    connect(this, &KRunner::AbstractRunner::prepare, this, &BookmarksRunner::prep);
     setMinLetterCount(3);
 }
 
@@ -46,14 +46,14 @@ void BookmarksRunner::prep()
     auto browser = m_browserFactory->find(findBrowserName(), this);
     if (m_browser != browser) {
         m_browser = browser;
-        connect(this, &Plasma::AbstractRunner::teardown, dynamic_cast<QObject *>(m_browser), [this]() {
+        connect(this, &KRunner::AbstractRunner::teardown, dynamic_cast<QObject *>(m_browser), [this]() {
             m_browser->teardown();
         });
     }
     m_browser->prepare();
 }
 
-void BookmarksRunner::match(Plasma::RunnerContext &context)
+void BookmarksRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
     bool allBookmarks = term.compare(i18nc("list of all konqueror bookmarks", "bookmarks"), Qt::CaseInsensitive) == 0;
@@ -83,7 +83,7 @@ QString BookmarksRunner::findBrowserName()
     return exec;
 }
 
-void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action)
+void BookmarksRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action)
 {
     Q_UNUSED(context);
     const QString term = action.data().toString();

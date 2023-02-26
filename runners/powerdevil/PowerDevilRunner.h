@@ -17,25 +17,25 @@ struct RunnerKeyword {
     bool supportPartialMatch = true;
 };
 
-class PowerDevilRunner : public Plasma::AbstractRunner
+class PowerDevilRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 public:
     PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~PowerDevilRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
 private Q_SLOTS:
     void updateStatus();
 
 private:
     void updateSyntaxes();
-    void addSuspendMatch(int value, QList<Plasma::QueryMatch> &matches, Plasma::QueryMatch::Type type);
+    void addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::Type type);
     // Returns -1 if there is no match, otherwise the percentage that the user has entered
     int matchesScreenBrightnessKeywords(const QString &query) const;
-    bool matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, Plasma::QueryMatch::Type &type, const QString &query) const;
+    bool matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, KRunner::QueryMatch::Type &type, const QString &query) const;
     void addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description);
 
     SessionManagement *m_session;

@@ -21,7 +21,7 @@ class Processes;
 class Process;
 }
 
-class KillRunner : public Plasma::AbstractRunner
+class KillRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -29,8 +29,8 @@ public:
     KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~KillRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
     void reloadConfiguration() override;
 
 private Q_SLOTS:

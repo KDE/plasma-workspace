@@ -29,11 +29,11 @@ using namespace KActivities::Stats::Terms;
 K_PLUGIN_CLASS_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 
 RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Recent Documents"));
 
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this)};
     setMinLetterCount(3);
@@ -43,7 +43,7 @@ RecentDocuments::~RecentDocuments()
 {
 }
 
-void RecentDocuments::match(Plasma::RunnerContext &context)
+void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     if (!context.isValid()) {
         return;
@@ -63,7 +63,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     const auto result = new ResultModel(query);
 
     float relevance = 0.75;
-    Plasma::QueryMatch::Type type = Plasma::QueryMatch::CompletionMatch;
+    KRunner::QueryMatch::Type type = KRunner::QueryMatch::CompletionMatch;
     for (int i = 0; i < result->rowCount(); ++i) {
         const auto index = result->index(i, 0);
 
@@ -73,17 +73,17 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
                                              QUrl::AssumeLocalFile);
         const auto name = result->data(index, ResultModel::TitleRole).toString();
 
-        Plasma::QueryMatch match(this);
+        KRunner::QueryMatch match(this);
 
         match.setRelevance(relevance);
         match.setType(type);
         if (term.size() >= 5
             && (url.fileName().compare(term, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(term, Qt::CaseInsensitive) == 0)) {
             match.setRelevance(relevance + 0.1);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
         } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
             match.setRelevance(relevance + 0.1);
-            match.setType(Plasma::QueryMatch::PossibleMatch);
+            match.setType(KRunner::QueryMatch::PossibleMatch);
         } else if (!url.fileName().contains(term)) {
             continue;
         }
@@ -105,7 +105,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     }
 }
 
-void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void RecentDocuments::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     Q_UNUSED(context)
 

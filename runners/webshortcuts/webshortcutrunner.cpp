@@ -20,12 +20,12 @@
 #include <QDBusConnection>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
     , m_match(this)
     , m_filterBeforeRun(false)
 {
     setObjectName(QStringLiteral("Web Shortcut"));
-    m_match.setType(Plasma::QueryMatch::ExactMatch);
+    m_match.setType(KRunner::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 
     // Listen for KUriFilter plugin config changes and update state...
@@ -36,7 +36,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WebshortcutRunner::configurePrivateBrowsingActions);
     setMinLetterCount(3);
 
-    connect(qobject_cast<Plasma::RunnerManager *>(parent), &Plasma::RunnerManager::queryFinished, this, [this]() {
+    connect(qobject_cast<KRunner::RunnerManager *>(parent), &KRunner::RunnerManager::queryFinished, this, [this]() {
         if (m_lastUsedContext.isValid() && !m_defaultKey.isEmpty() && m_lastUsedContext.matches().isEmpty()) {
             const QString queryWithDefaultProvider = m_defaultKey + m_delimiter + m_lastUsedContext.query();
             KUriFilterData filterData(queryWithDefaultProvider);
@@ -63,18 +63,18 @@ void WebshortcutRunner::loadSyntaxes()
     }
     m_regex = QRegularExpression(QStringLiteral("^([^ ]+)%1").arg(QRegularExpression::escape(m_delimiter)));
 
-    QList<Plasma::RunnerSyntax> syns;
+    QList<KRunner::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
     const QRegularExpression replaceRegex(QStringLiteral(":q$"));
     const QString placeholder = QStringLiteral(":q:");
     for (const QString &provider : providers) {
-        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
-                               i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
+        KRunner::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
+                                i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
         syns << s;
     }
     if (!providers.isEmpty()) {
         QString defaultKey = filterData.queryForSearchProvider(providers.constFirst()).defaultKey();
-        Plasma::RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
+        KRunner::RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
         syns << s;
     }
 
@@ -117,7 +117,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
     }
 }
 
-void WebshortcutRunner::match(Plasma::RunnerContext &context)
+void WebshortcutRunner::match(KRunner::RunnerContext &context)
 {
     m_lastUsedContext = context;
     const QString term = context.query();
@@ -168,7 +168,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     context.addMatch(m_match);
 }
 
-void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void WebshortcutRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     QUrl location;
     if (m_filterBeforeRun) {

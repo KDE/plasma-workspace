@@ -23,7 +23,7 @@
 K_PLUGIN_CLASS_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
 ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Command"));
     // The results from the services runner are preferred, consequently we set a low priority
@@ -32,7 +32,7 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(KAuthorized::SHELL_ACCESS);
     suspendMatching(!enabled);
 
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
     m_actionList = {new QAction(QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"), this)};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
@@ -41,15 +41,15 @@ ShellRunner::~ShellRunner()
 {
 }
 
-void ShellRunner::match(Plasma::RunnerContext &context)
+void ShellRunner::match(KRunner::RunnerContext &context)
 {
     QStringList envs;
     std::optional<QString> parsingResult = parseShellCommand(context.query(), envs);
     if (parsingResult.has_value()) {
         const QString command = parsingResult.value();
-        Plasma::QueryMatch match(this);
+        KRunner::QueryMatch match(this);
         match.setId(QStringLiteral("exec://") + command);
-        match.setType(Plasma::QueryMatch::ExactMatch);
+        match.setType(KRunner::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", context.query()));
         match.setData(QVariantList({command, envs}));
@@ -59,7 +59,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
     }
 }
 
-void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void ShellRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     if (match.selectedAction()) {
         const QVariantList data = match.data().toList();

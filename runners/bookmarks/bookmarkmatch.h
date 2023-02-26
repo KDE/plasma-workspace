@@ -21,7 +21,7 @@ public:
                   const QString &bookmarkURL,
                   const QString &description = QString());
     void addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch);
-    Plasma::QueryMatch asQueryMatch(Plasma::AbstractRunner *runner);
+    KRunner::QueryMatch asQueryMatch(KRunner::AbstractRunner *runner);
 
     Q_REQUIRED_RESULT QString bookmarkTitle() const
     {

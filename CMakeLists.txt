@@ -333,6 +333,7 @@ ecm_set_disabled_deprecation_versions(
     QT 5.15.2
     KF 5.98.0
     KDECLARATIVE 5.88.0
+    KRUNNER 5.103.0
 )
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)

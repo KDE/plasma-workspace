@@ -18,7 +18,7 @@
  * that KService knows about, this runner can launch
  */
 
-class WindowedWidgetsRunner : public Plasma::AbstractRunner
+class WindowedWidgetsRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -26,11 +26,11 @@ public:
     WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~WindowedWidgetsRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
 protected Q_SLOTS:
-    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
+    QMimeData *mimeDataForMatch(const KRunner::QueryMatch &match) override;
 
 private:
     void loadMetadataList();

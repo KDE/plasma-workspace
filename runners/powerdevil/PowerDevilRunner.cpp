@@ -24,7 +24,7 @@
 K_PLUGIN_CLASS_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
     , m_session(new SessionManagement(this))
 {
     setObjectName(QStringLiteral("PowerDevil"));
@@ -61,7 +61,7 @@ void PowerDevilRunner::updateSyntaxes()
         addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Suspends the system to disk"));
     }
 
-    Plasma::RunnerSyntax brightnessSyntax(
+    KRunner::RunnerSyntax brightnessSyntax(
         i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
         // xgettext:no-c-format
         i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
@@ -81,15 +81,15 @@ void PowerDevilRunner::updateStatus()
 
 enum SleepState { StandbyState = 1, SuspendState = 2, HibernateState = 4, HybridSuspendState = 8 };
 
-void PowerDevilRunner::match(Plasma::RunnerContext &context)
+void PowerDevilRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
-    Plasma::QueryMatch::Type type = Plasma::QueryMatch::ExactMatch;
-    QList<Plasma::QueryMatch> matches;
+    KRunner::QueryMatch::Type type = KRunner::QueryMatch::ExactMatch;
+    QList<KRunner::QueryMatch> matches;
 
     int screenBrightnessResults = matchesScreenBrightnessKeywords(term);
     if (screenBrightnessResults != -1) {
-        Plasma::QueryMatch match(this);
+        KRunner::QueryMatch match(this);
         match.setType(type);
         match.setIconName(QStringLiteral("preferences-system-power-management"));
         match.setText(i18n("Set Brightness to %1%", screenBrightnessResults));
@@ -98,15 +98,15 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
         match.setId(QStringLiteral("BrightnessChange"));
         matches.append(match);
     } else if (matchesRunnerKeywords({m_screenBrightness, m_dimScreen}, type, term)) {
-        Plasma::QueryMatch match1(this);
-        match1.setType(Plasma::QueryMatch::ExactMatch);
+        KRunner::QueryMatch match1(this);
+        match1.setType(KRunner::QueryMatch::ExactMatch);
         match1.setIconName(QStringLiteral("preferences-system-power-management"));
         match1.setText(i18n("Dim screen totally"));
         match1.setRelevance(1);
         match1.setId(QStringLiteral("DimTotal"));
         matches.append(match1);
 
-        Plasma::QueryMatch match2(this);
+        KRunner::QueryMatch match2(this);
         match2.setType(type);
         match2.setIconName(QStringLiteral("preferences-system-power-management"));
         match2.setText(i18n("Dim screen by half"));
@@ -130,9 +130,9 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &matches, Plasma::QueryMatch::Type type)
+void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &matches, KRunner::QueryMatch::Type type)
 {
-    Plasma::QueryMatch match(this);
+    KRunner::QueryMatch match(this);
     match.setType(type);
 
     switch ((SleepState)value) {
@@ -156,7 +156,7 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
     matches.append(match);
 }
 
-void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void PowerDevilRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     Q_UNUSED(context)
 
@@ -190,12 +190,12 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
     }
 }
 
-bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, Plasma::QueryMatch::Type &type, const QString &query) const
+bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, KRunner::QueryMatch::Type &type, const QString &query) const
 {
     return std::any_of(keywords.begin(), keywords.end(), [&query, &type](const RunnerKeyword &keyword) {
         bool exactMatch =
             keyword.triggerWord.compare(query, Qt::CaseInsensitive) == 0 || keyword.translatedTriggerWord.compare(query, Qt::CaseInsensitive) == 0;
-        type = exactMatch ? Plasma::QueryMatch::ExactMatch : Plasma::QueryMatch::CompletionMatch;
+        type = exactMatch ? KRunner::QueryMatch::ExactMatch : KRunner::QueryMatch::CompletionMatch;
         if (!exactMatch && keyword.supportPartialMatch) {
             return keyword.triggerWord.startsWith(query, Qt::CaseInsensitive) || keyword.translatedTriggerWord.startsWith(query, Qt::CaseInsensitive);
         }
@@ -205,7 +205,7 @@ bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keyword
 
 void PowerDevilRunner::addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description)
 {
-    Plasma::RunnerSyntax syntax(keywords.first().translatedTriggerWord, description);
+    KRunner::RunnerSyntax syntax(keywords.first().translatedTriggerWord, description);
     for (int i = 1; i < keywords.size(); ++i) {
         syntax.addExampleQuery(keywords.at(i).translatedTriggerWord);
     }

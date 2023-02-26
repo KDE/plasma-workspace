@@ -15,7 +15,7 @@
  * This class provides matches for running sessions as well as
  * an action to start a new session, etc.
  */
-class SessionRunner : public Plasma::AbstractRunner
+class SessionRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -23,8 +23,8 @@ public:
     SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~SessionRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
     enum {
         LogoutAction = 1,
@@ -35,7 +35,7 @@ public:
     };
 
 private:
-    void matchCommands(QList<Plasma::QueryMatch> &matches, const QString &term);
+    void matchCommands(QList<KRunner::QueryMatch> &matches, const QString &term);
 
     QStringList m_logoutKeywords;
     QStringList m_shutdownKeywords;

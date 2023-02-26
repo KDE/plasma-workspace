@@ -72,12 +72,12 @@ void ServiceRunnerTest::cleanupTestCase()
 void ServiceRunnerTest::testExcutableExactMatch()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
 
     runner.match(context);
     auto matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
     }));
 }
@@ -86,7 +86,7 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("kons"));
 
     runner.match(context);
@@ -121,7 +121,7 @@ void ServiceRunnerTest::testSystemSettings()
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("settings"));
 
     runner.match(context);
@@ -145,7 +145,7 @@ void ServiceRunnerTest::testSystemSettings()
 void ServiceRunnerTest::testSystemSettings2()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("sy"));
 
     runner.match(context);
@@ -169,12 +169,12 @@ void ServiceRunnerTest::testSystemSettings2()
 void ServiceRunnerTest::testCategories()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("System"));
     runner.match(context);
     auto matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
     }));
 
@@ -182,7 +182,7 @@ void ServiceRunnerTest::testCategories()
     context.setQuery(QStringLiteral("System KDE TerminalEmulator"));
     runner.match(context);
     matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.44;
     }));
 
@@ -190,7 +190,7 @@ void ServiceRunnerTest::testCategories()
     context.setQuery(QStringLiteral("System KDE Office"));
     runner.match(context);
     matches = context.matches();
-    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
 }
@@ -198,26 +198,26 @@ void ServiceRunnerTest::testCategories()
 void ServiceRunnerTest::testJumpListActions()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
     runner.match(context);
     auto matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.65;
     }));
 
     context.setQuery(QStringLiteral("new window"));
     runner.match(context);
     matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.5;
     }));
 
     context.setQuery(QStringLiteral("new windows"));
     runner.match(context);
     matches = context.matches();
-    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest");
     }));
 }
@@ -242,7 +242,7 @@ void ServiceRunnerTest::testINotifyUsage()
     bool inotifyCountCool = false;
     auto thread = QThread::create([&] {
         ServiceRunner runner(nullptr, KPluginMetaData(), QVariantList());
-        Plasma::RunnerContext context;
+        KRunner::RunnerContext context;
         context.setQuery(QStringLiteral("settings"));
 
         runner.match(context);
@@ -260,12 +260,12 @@ void ServiceRunnerTest::testINotifyUsage()
 void ServiceRunnerTest::testSpecialArgs()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("kpat"));
     runner.match(context);
     auto matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Should have no -qwindowtitle at the end. Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
     }));
@@ -274,12 +274,12 @@ void ServiceRunnerTest::testSpecialArgs()
 void ServiceRunnerTest::testEnv()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("audacity"));
     runner.match(context);
     auto matches = context.matches();
-    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
     }));

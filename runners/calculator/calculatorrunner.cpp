@@ -25,16 +25,16 @@ K_PLUGIN_CLASS_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
 static QMutex s_initMutex;
 
 CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Calculator"));
 
     QString description = i18n(
         "Calculates the value of :q: when :q: is made up of numbers and "
         "mathematical symbols such as +, -, /, *, ! and ^.");
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), description));
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), description));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral("=:q:"), description));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:="), description));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), this)};
     setMinLetterCount(2);
@@ -56,7 +56,7 @@ void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
     }
 }
 
-void CalculatorRunner::match(Plasma::RunnerContext &context)
+void CalculatorRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
     QString cmd = term;
@@ -69,8 +69,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     }
 
     if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
-        Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::PossibleMatch);
+        KRunner::QueryMatch match(this);
+        match.setType(KRunner::QueryMatch::PossibleMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
         match.setData(QStringLiteral("42"));
@@ -125,8 +125,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     bool isApproximate = false;
     QString result = calculate(cmd, &isApproximate, base, customBase);
     if (!result.isEmpty() && (foundPrefix || result != cmd)) {
-        Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::HelperMatch);
+        KRunner::QueryMatch match(this);
+        match.setType(KRunner::QueryMatch::HelperMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
         if (isApproximate) {
@@ -158,7 +158,7 @@ QString CalculatorRunner::calculate(const QString &term, bool *isApproximate, in
     return result.replace(QLatin1Char('.'), QLocale().decimalPoint(), Qt::CaseInsensitive);
 }
 
-void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void CalculatorRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     if (match.selectedAction()) {
         m_engine->copyToClipboard();
@@ -167,7 +167,7 @@ void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
     }
 }
 
-QMimeData *CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *CalculatorRunner::mimeDataForMatch(const KRunner::QueryMatch &match)
 {
     QMimeData *result = new QMimeData();
     result->setText(match.text());

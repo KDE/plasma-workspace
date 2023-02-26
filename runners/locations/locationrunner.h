@@ -8,7 +8,7 @@
 
 #include <krunner/abstractrunner.h>
 
-class LocationsRunner : public Plasma::AbstractRunner
+class LocationsRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -16,6 +16,6 @@ public:
     LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~LocationsRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 };

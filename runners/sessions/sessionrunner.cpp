@@ -15,7 +15,7 @@
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
 SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : KRunner::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Sessions"));
     setPriority(LowPriority);
@@ -23,7 +23,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLogout()) {
-        Plasma::RunnerSyntax logoutSyntax(m_logoutKeywords.first(), i18n("Logs out, exiting the current desktop session"));
+        KRunner::RunnerSyntax logoutSyntax(m_logoutKeywords.first(), i18n("Logs out, exiting the current desktop session"));
         for (QString keyword : m_logoutKeywords.mid(1)) {
             logoutSyntax.addExampleQuery(keyword);
         }
@@ -33,7 +33,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_shutdownKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to shut down the computer", "shutdown;shut down")
                              .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canShutdown()) {
-        Plasma::RunnerSyntax shutdownSyntax(m_shutdownKeywords.first(), i18n("Turns off the computer"));
+        KRunner::RunnerSyntax shutdownSyntax(m_shutdownKeywords.first(), i18n("Turns off the computer"));
         for (QString keyword : m_shutdownKeywords.mid(1)) {
             shutdownSyntax.addExampleQuery(keyword);
         }
@@ -43,7 +43,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_restartKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to restart the computer", "restart;reboot")
                             .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canReboot()) {
-        Plasma::RunnerSyntax restartSyntax(m_restartKeywords.first(), i18n("Reboots the computer"));
+        KRunner::RunnerSyntax restartSyntax(m_restartKeywords.first(), i18n("Reboots the computer"));
         for (QString keyword : m_restartKeywords.mid(1)) {
             restartSyntax.addExampleQuery(keyword);
         }
@@ -53,7 +53,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_lockKeywords =
         i18nc("KRunner keywords (split by semicolons without whitespace) to lock the screen", "lock;lock screen").split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLock()) {
-        Plasma::RunnerSyntax lockSyntax(m_lockKeywords.first(), i18n("Locks the current sessions and starts the screen saver"));
+        KRunner::RunnerSyntax lockSyntax(m_lockKeywords.first(), i18n("Locks the current sessions and starts the screen saver"));
         for (QString keyword : m_lockKeywords.mid(1)) {
             lockSyntax.addExampleQuery(keyword);
         }
@@ -63,7 +63,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_saveKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to save the desktop session", "save;save session")
                          .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canSaveSession()) {
-        Plasma::RunnerSyntax saveSyntax(m_saveKeywords.first(), i18n("Saves the current session for session restoration"));
+        KRunner::RunnerSyntax saveSyntax(m_saveKeywords.first(), i18n("Saves the current session for session restoration"));
         for (QString keyword : m_saveKeywords.mid(1)) {
             saveSyntax.addExampleQuery(keyword);
         }
@@ -73,7 +73,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     m_usersKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to switch user sessions", "switch user;new session")
                           .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canSwitchUser()) {
-        Plasma::RunnerSyntax usersSyntax(m_usersKeywords.first(), i18n("Starts a new session as a different user"));
+        KRunner::RunnerSyntax usersSyntax(m_usersKeywords.first(), i18n("Starts a new session as a different user"));
         for (QString keyword : m_usersKeywords.mid(1)) {
             usersSyntax.addExampleQuery(keyword);
         }
@@ -81,12 +81,12 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, c
     }
 
     m_sessionsKeyword = i18nc("KRunner keyword to list user sessions", "sessions");
-    Plasma::RunnerSyntax sessionsSyntax(m_sessionsKeyword, i18n("Lists all sessions"));
+    KRunner::RunnerSyntax sessionsSyntax(m_sessionsKeyword, i18n("Lists all sessions"));
     addSyntax(sessionsSyntax);
 
     m_switchKeyword = i18nc("KRunner keyword to switch user sessions", "switch");
-    Plasma::RunnerSyntax switchSyntax(m_switchKeyword + QStringLiteral(" :q:"),
-                                      i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
+    KRunner::RunnerSyntax switchSyntax(m_switchKeyword + QStringLiteral(" :q:"),
+                                       i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
     addSyntax(switchSyntax);
 
     setMinLetterCount(3);
@@ -103,68 +103,68 @@ static inline bool anyKeywordMatches(const QStringList &keywords, const QString 
     });
 }
 
-void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QString &term)
+void SessionRunner::matchCommands(QList<KRunner::QueryMatch> &matches, const QString &term)
 {
     if (anyKeywordMatches(m_logoutKeywords, term)) {
         if (m_session.canLogout()) {
-            Plasma::QueryMatch match(this);
+            KRunner::QueryMatch match(this);
             match.setText(i18nc("log out command", "Log Out"));
             match.setIconName(QStringLiteral("system-log-out"));
             match.setData(LogoutAction);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_shutdownKeywords, term)) {
         if (m_session.canShutdown()) {
-            Plasma::QueryMatch match(this);
+            KRunner::QueryMatch match(this);
             match.setText(i18nc("turn off computer command", "Shut Down"));
             match.setIconName(QStringLiteral("system-shutdown"));
             match.setData(ShutdownAction);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_restartKeywords, term)) {
         if (m_session.canReboot()) {
-            Plasma::QueryMatch match(this);
+            KRunner::QueryMatch match(this);
             match.setText(i18nc("restart computer command", "Restart"));
             match.setIconName(QStringLiteral("system-reboot"));
             match.setData(RestartAction);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_lockKeywords, term)) {
         if (m_session.canLock()) {
-            Plasma::QueryMatch match(this);
+            KRunner::QueryMatch match(this);
             match.setText(i18nc("lock screen command", "Lock"));
             match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     } else if (anyKeywordMatches(m_saveKeywords, term)) {
         if (m_session.canSaveSession()) {
-            Plasma::QueryMatch match(this);
+            KRunner::QueryMatch match(this);
             match.setText(i18n("Save Session"));
             match.setIconName(QStringLiteral("system-save-session"));
             match.setData(SaveAction);
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(KRunner::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     }
 }
 
-void SessionRunner::match(Plasma::RunnerContext &context)
+void SessionRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
     QString user;
     bool matchUser = false;
 
-    QList<Plasma::QueryMatch> matches;
+    QList<KRunner::QueryMatch> matches;
 
     // first compare with "sessions" keyword
     // "SESSIONS" must *NOT* be translated (i18n)
@@ -188,8 +188,8 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     bool switchUser = listAll || anyKeywordMatches(m_usersKeywords, term);
 
     if (switchUser && m_session.canSwitchUser() && dm.isSwitchable() && dm.numReserve() >= 0) {
-        Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::ExactMatch);
+        KRunner::QueryMatch match(this);
+        match.setType(KRunner::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("system-switch-user"));
         match.setText(i18n("Switch User"));
         matches << match;
@@ -206,25 +206,25 @@ void SessionRunner::match(Plasma::RunnerContext &context)
             }
 
             QString name = KDisplayManager::sess2Str(session);
-            Plasma::QueryMatch::Type type = Plasma::QueryMatch::NoMatch;
+            KRunner::QueryMatch::Type type = KRunner::QueryMatch::NoMatch;
             qreal relevance = 0.7;
 
             if (listAll) {
-                type = Plasma::QueryMatch::ExactMatch;
+                type = KRunner::QueryMatch::ExactMatch;
                 relevance = 1;
             } else if (matchUser) {
                 if (name.compare(user, Qt::CaseInsensitive) == 0) {
                     // we need an elif branch here because we don't
                     // want the last conditional to be checked if !listAll
-                    type = Plasma::QueryMatch::ExactMatch;
+                    type = KRunner::QueryMatch::ExactMatch;
                     relevance = 1;
                 } else if (name.contains(user, Qt::CaseInsensitive)) {
-                    type = Plasma::QueryMatch::PossibleMatch;
+                    type = KRunner::QueryMatch::PossibleMatch;
                 }
             }
 
-            if (type != Plasma::QueryMatch::NoMatch) {
-                Plasma::QueryMatch match(this);
+            if (type != KRunner::QueryMatch::NoMatch) {
+                KRunner::QueryMatch match(this);
                 match.setType(type);
                 match.setRelevance(relevance);
                 match.setIconName(QStringLiteral("user-identity"));
@@ -238,7 +238,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void SessionRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
 {
     Q_UNUSED(context);
     if (match.data().type() == QVariant::Int) {

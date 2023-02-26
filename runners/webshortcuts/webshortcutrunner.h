@@ -9,7 +9,7 @@
 #include <KRunner/AbstractRunner>
 #include <KServiceAction>
 
-class WebshortcutRunner : public Plasma::AbstractRunner
+class WebshortcutRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -17,15 +17,15 @@ public:
     WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~WebshortcutRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
 
 private Q_SLOTS:
     void loadSyntaxes();
     void configurePrivateBrowsingActions();
 
 private:
-    Plasma::QueryMatch m_match;
+    KRunner::QueryMatch m_match;
     bool m_filterBeforeRun;
 
     QChar m_delimiter;
@@ -36,6 +36,6 @@ private:
 
     KServiceAction m_privateAction;
 
-    Plasma::RunnerContext m_lastUsedContext;
+    KRunner::RunnerContext m_lastUsedContext;
     QString m_defaultKey;
 };

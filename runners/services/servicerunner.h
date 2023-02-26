@@ -16,7 +16,7 @@
  * that KService knows about, this runner can launch
  */
 
-class ServiceRunner : public Plasma::AbstractRunner
+class ServiceRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 
@@ -24,9 +24,9 @@ public:
     ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~ServiceRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void match(KRunner::RunnerContext &context) override;
+    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
 
 protected:
-    void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
+    void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &action);
 };
