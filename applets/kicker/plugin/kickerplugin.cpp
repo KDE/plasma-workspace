@@ -49,4 +49,6 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
     qmlRegisterType<KickerCompatTriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
+    // Re-export libworkspace for enum access
+    qmlRegisterType<SessionManagement>(uri, 0, 2, "SessionManagement");
 }

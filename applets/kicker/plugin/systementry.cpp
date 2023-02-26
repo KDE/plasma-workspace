@@ -325,10 +325,50 @@ QString SystemEntry::id() const
     return QString();
 }
 
+SystemEntry::Arguments::Arguments()
+    : confirmationMode(SessionManagement::ConfirmationMode::Default)
+{
+}
+
+static SessionManagement::ConfirmationMode parseConfirmationMode(int mode)
+{
+    if (mode == static_cast<int>(SessionManagement::ConfirmationMode::Skip) //
+        || mode == static_cast<int>(SessionManagement::ConfirmationMode::ForcePrompt)) {
+        return static_cast<SessionManagement::ConfirmationMode>(mode);
+    } else {
+        return SessionManagement::ConfirmationMode::Default;
+    }
+}
+
+SystemEntry::Arguments::Arguments(const QVariant &argument)
+    : Arguments()
+{
+    if (argument.canConvert<QMap<QString, QVariant>>()) {
+        const auto map = argument.toMap();
+        for (auto it = map.constBegin(); it != map.constEnd(); it++) {
+            if (it.key() == QStringLiteral("confirmationMode")) {
+                bool ok = false;
+                int mode = it.value().toInt(&ok);
+                if (ok) {
+                    confirmationMode = parseConfirmationMode(mode);
+                }
+            }
+        }
+    }
+}
+
 bool SystemEntry::run(const QString &actionId, const QVariant &argument)
 {
+    const Arguments args{argument};
+
+    return run(actionId, args);
+}
+
+bool SystemEntry::run(const QString &actionId, const Arguments &argument)
+{
     Q_UNUSED(actionId)
-    Q_UNUSED(argument)
+
+    const Arguments args{argument};
 
     if (!m_valid) {
         return false;
@@ -339,7 +379,7 @@ bool SystemEntry::run(const QString &actionId, const QVariant &argument)
         s_sessionManagement->lock();
         break;
     case LogoutSession:
-        s_sessionManagement->requestLogout();
+        s_sessionManagement->requestLogout(args.confirmationMode);
         break;
     case SaveSession:
         s_sessionManagement->saveSession();
@@ -354,10 +394,10 @@ bool SystemEntry::run(const QString &actionId, const QVariant &argument)
         s_sessionManagement->hibernate();
         break;
     case Reboot:
-        s_sessionManagement->requestReboot();
+        s_sessionManagement->requestReboot(args.confirmationMode);
         break;
     case Shutdown:
-        s_sessionManagement->requestShutdown();
+        s_sessionManagement->requestShutdown(args.confirmationMode);
         break;
     default:
         break;

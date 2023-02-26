@@ -7,6 +7,7 @@
 #pragma once
 
 #include "abstractentry.h"
+#include <sessionmanagement.h>
 
 #include <QObject>
 
@@ -51,6 +52,38 @@ public:
     QString id() const override;
 
     bool run(const QString &actionId = QString(), const QVariant &argument = QVariant()) override;
+
+    /**
+     * Deserialized map of arguments for the run() method.
+     */
+    struct Arguments {
+        /**
+         * Construct Arguments object with default values.
+         */
+        explicit Arguments();
+
+        /**
+         * Parse arguments from a variant map.
+         *
+         * The given map shall contain at most one key for now: "confirmationMode".
+         * In future it is possible to add more keys if needed.
+         */
+        explicit Arguments(const QVariant &argument);
+
+        /**
+         * Logout, Reboot and Shutdown actions take confirmation mode argument.
+         * Default mode is SessionManagement::ConfirmationMode::Default.
+         */
+        SessionManagement::ConfirmationMode confirmationMode;
+    };
+
+    /**
+     * Run this entry with given arguments.
+     *
+     * The difference from run(const QString &, const QVariant &) overload is
+     * that arguments map is already parsed.
+     */
+    bool run(const QString &actionId, const Arguments &argument);
 
 Q_SIGNALS:
     void isValidChanged() const;
