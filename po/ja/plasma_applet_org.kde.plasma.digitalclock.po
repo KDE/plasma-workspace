@@ -1,13 +1,13 @@
 # Toda Ryunosuke <toda.ryunosuke@gmail.com>, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-05 02:43+0000\n"
-"PO-Revision-Date: 2022-08-20 23:16-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-02-23 12:00+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -244,7 +244,7 @@ msgstr "フォントを選択"
 #: package/contents/ui/configCalendar.qml:44
 #, kde-format
 msgid "General:"
-msgstr "一般:"
+msgstr "全般:"
 
 #: package/contents/ui/configCalendar.qml:45
 #, kde-format
@@ -268,6 +268,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"ヒント: 頻繁に旅行されるのであれば、このリストにご自宅のタイムゾーンを追加し"
+"てください。システム全体のタイムゾーンがその他のものに変更されたときのみ表示"
+"されます。"
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -281,13 +284,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "ローカルタイムゾーンの都市と同じであるとき隠す"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "ローカルタイムゾーンを切り替え…"
+msgstr "システム全体のタイムゾーンを切り替え…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -295,10 +297,9 @@ msgid "Remove this time zone"
 msgstr "このタイムゾーンを削除"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "システムのローカルタイムゾーン"
+msgstr "システム全体のタイムゾーン"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -325,18 +326,14 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "アプレット上でのスクロール操作により、タイムゾーン表示を切り替える"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 "「デジタル時計」で異なるタイムゾーンを選択しても、システム全体のタイムゾーン"
-"は変わりません。旅行の際は、代わりにローカルタイムゾーンを切り替えてくださ"
-"い。"
+"は変わりません。旅行の際は、代わりにシステム全体のタイムゾーンを切り替えてく"
+"ださい。"
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format
@@ -350,7 +347,7 @@ msgid ""
 "automatically."
 msgstr ""
 "少なくとも一つのタイムゾーンを有効にする必要があります。ローカルタイムゾーン"
-"は自動的に有効にされました。"
+"が自動的に有効にされました。"
 
 #: package/contents/ui/configTimeZones.qml:234
 #, kde-format
@@ -387,7 +384,7 @@ msgstr "今日は %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -398,7 +395,7 @@ msgstr "他のカレンダー"
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
-msgstr "%1 (UNIX Time)"
+msgstr "%1 (UNIX 時間)"
 
 #: plugin/clipboardmenu.cpp:121
 #, kde-format

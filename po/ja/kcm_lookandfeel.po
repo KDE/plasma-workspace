@@ -1,13 +1,13 @@
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-08-20 23:04-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-02-22 17:00+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -161,7 +161,7 @@ msgstr "デスクトップレイアウト"
 #: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "タイトルバーボタンのレイアウト"
 
 #: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
@@ -170,6 +170,8 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
+"デスクトップレイアウトを適用すると、現在のデスクトップ、パネル、ドックやウィ"
+"ジェットの設定が置き換えられます"
 
 #: package/contents/ui/MoreOptions.qml:56
 #, kde-format
@@ -189,7 +191,7 @@ msgstr "アプリケーションスタイル"
 #: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Window Decorations"
-msgstr "ウィンドウの飾り"
+msgstr "ウィンドウの装飾"
 
 #: package/contents/ui/MoreOptions.qml:63
 #, kde-format
@@ -243,17 +245,15 @@ msgid "• Appearance settings"
 msgstr "• 外観設定"
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "Plasma のデスクトップレイアウトをリセット"
+msgstr "デスクトップとウィンドウのレイアウト"
 
 #: package/contents/ui/SimpleOptions.qml:56
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "Plasma のデスクトップレイアウトをリセット"
+msgstr "• デスクトップとウィンドウのレイアウト"
 
 #: package/contents/ui/SimpleOptions.qml:74
 #, kde-format

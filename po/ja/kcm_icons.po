@@ -6,20 +6,21 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2014.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2019-05-30 20:42+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2023-02-23 18:19+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -30,10 +31,9 @@ msgid "Main Toolbar"
 msgstr "メインツールバー"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "メインツールバー"
+msgstr "セカンダリツールバー"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -49,56 +49,53 @@ msgstr "ダイアログ"
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "現在のアイコンテーマの名前"
 
 #. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
 #: iconssettingsbase.kcfg:15
 #, kde-format
 msgid "Desktop icons size"
-msgstr ""
+msgstr "デスクトップアイコンのサイズ"
 
 #. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
 #: iconssettingsbase.kcfg:21
 #, kde-format
 msgid "Toolbar icons size"
-msgstr ""
+msgstr "ツールバーアイコンのサイズ"
 
 #. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
 #: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
+#, kde-format
 msgid "Main toolbar icons size"
-msgstr "メインツールバー"
+msgstr "メインツールバーアイコンのサイズ"
 
 #. i18n: ectx: label, entry (smallSize), group (SmallIcons)
 #: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
+#, kde-format
 msgid "Small icons size"
-msgstr "小さいアイコン"
+msgstr "小さいアイコンのサイズ"
 
 #. i18n: ectx: label, entry (panelSize), group (PanelIcons)
 #: iconssettingsbase.kcfg:39
 #, kde-format
 msgid "Panel icons size"
-msgstr ""
+msgstr "パネルアイコンのサイズ"
 
 #. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
 #: iconssettingsbase.kcfg:45
 #, kde-format
 msgid "Dialog icons size"
-msgstr ""
+msgstr "ダイアログアイコンのサイズ"
 
 #: main.cpp:182
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "一時ファイルを作成できません。"
 
 #: main.cpp:193
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "アイコンテーマアーカイブ %1 が見つかりません。"
+msgstr "アイコンテーマアーカイブをダウンロードできません: %1"
 
 #: main.cpp:207
 #, kde-format
@@ -111,25 +108,23 @@ msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr ""
-"インストール処理中に問題が発生しました。が、アーカイブ内のほとんどのテーマは"
+"インストール中に問題が発生しました。しかし、アーカイブ内のほとんどのテーマは"
 "インストールされました"
 
 #: main.cpp:216
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "テーマのインストールに成功しました。"
 
 #: main.cpp:260
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "アイコンテーマのインストール中..."
+msgstr "アイコンテーマをインストール中..."
 
 #: main.cpp:270
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "アイコンテーマのインストール中..."
+msgstr "テーマ %1 をインストール中..."
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -140,34 +135,36 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"ここでシステム全体における様々なアイコンタイプのデフォルトのサイズを設定でき"
+"ます。すべてのアプリケーションがこれらの設定を尊重するとは限らないことに注意"
+"してください。<nl/><nl/>スクリーン上のオブジェクトが小さすぎるか大きすぎる場"
+"合は、代わりにグローバルスケールを調整してみてください。"
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "グローバルのスケールを調整..."
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "サイズ:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
-msgstr ""
+msgstr "このモジュールでデスクトップのアイコンを選択できます。"
 
 #: package/contents/ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Remove Icon Theme"
-msgstr "テーマを削除"
+msgstr "アイコンテーマを削除"
 
 #: package/contents/ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Icon Theme"
-msgstr "テーマを削除"
+msgstr "アイコンテーマを復元"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
@@ -175,31 +172,27 @@ msgid "Configure Icon Sizes"
 msgstr "アイコンサイズを設定"
 
 #: package/contents/ui/main.qml:246
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "ファイルからインストール..."
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Get New Icons..."
+#, kde-format
 msgid "Get New Icons…"
 msgstr "新しいアイコンを取得..."
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "アイコンサイズを設定"
 
 #: package/contents/ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "テーマを削除"
+msgstr "テーマを開く"
 
 #: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "テーマファイル (*.tar.gz *.tar.bz2)"
