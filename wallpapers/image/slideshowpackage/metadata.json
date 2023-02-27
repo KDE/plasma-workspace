@@ -182,9 +182,6 @@
         "Name[x-test]": "xxSlideshowxx",
         "Name[zh_CN]": "幻灯片",
         "Name[zh_TW]": "投影播放",
-        "ServiceTypes": [
-            "Plasma/Wallpaper"
-        ],
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",
@@ -201,5 +198,6 @@
         "image/bmp",
         "image/webp",
         "image/tiff"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Wallpaper"
 }

@@ -3,10 +3,8 @@
         "Description": "TEST ALL THE THINGS! ;)",
         "Icon": "user-desktop",
         "Id": "org.kde.plasmashelltest",
-        "Name": "TestShell",
-        "ServiceTypes": [
-            "Plasma/Shell"
-        ]
+        "Name": "TestShell"
     },
-    "X-Plasma-MainScript": "layout.js"
+    "X-Plasma-MainScript": "layout.js",
+    "KPackageStructure": "Plasma/Shell"
 }

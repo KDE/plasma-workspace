@@ -135,11 +135,9 @@
         "Name[x-test]": "xxBreeze Darkxx",
         "Name[zh_CN]": "Breeze 微风深色",
         "Name[zh_TW]": "Breeze Dark",
-        "ServiceTypes": [
-            "Plasma/LookAndFeel"
-        ],
         "Version": "2.0",
         "Website": "https://www.kde.org"
     },
-    "X-Plasma-MainScript": "defaults"
+    "X-Plasma-MainScript": "defaults",
+    "KPackageStructure": "Plasma/LookAndFeel"
 }

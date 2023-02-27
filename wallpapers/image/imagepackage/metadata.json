@@ -183,9 +183,6 @@
         "Name[x-test]": "xxImagexx",
         "Name[zh_CN]": "图像",
         "Name[zh_TW]": "影像",
-        "ServiceTypes": [
-            "Plasma/Wallpaper"
-        ],
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",
@@ -202,5 +199,6 @@
         "image/bmp",
         "image/webp",
         "image/tiff"
-    ]
+    ],
+    "KPackageStructure": "Plasma/Wallpaper"
 }
