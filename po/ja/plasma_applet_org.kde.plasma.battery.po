@@ -5,14 +5,14 @@
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-08-26 17:16+0900\n"
+"PO-Revision-Date: 2023-02-23 18:22+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "残り時間:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "計算中..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -183,37 +183,34 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "自動でのスリープと画面ロックは無効化されました"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "1 つのアプリケーションが %2 の有効化を要求しました:"
-msgstr[1] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
+msgstr[0] "1 つのアプリケーションが パフォーマンスモードの有効化を要求しました"
+msgstr[1] ""
+"%1 つのアプリケーションが パフォーマンスモードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "パフォーマンスモードがオンになっています"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "1 つのアプリケーションが %2 の有効化を要求しました:"
-msgstr[1] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
+msgstr[0] "1 つのアプリケーションが省電力モードの有効化を要求しました"
+msgstr[1] "%1 つのアプリケーションが省電力モードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "省電力モードがオンになっています"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "スクロールしてスクリーンの明るさを調整"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -231,10 +228,9 @@ msgid "&Show Energy Information…"
 msgstr "充電情報を表示(&S)…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "アイコンにバッテリのパーセンテージを表示する"
+msgstr "フル充電されていないときアイコンにバッテリのパーセンテージを表示する"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -286,20 +282,17 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "現在 %1 がスリープと画面ロックを妨げています (未知の理由)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "現在 %1 つのアプリケーションがスリープと画面ロックを妨げています:"
+msgstr "現在 1 つのアプリケーションがスリープと画面ロックを妨げています (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "現在 %1 がスリープと画面ロックを妨げています (未知の理由)"
+msgstr ""
+"現在 1 つのアプリケーションがスリープと画面ロックを妨げています (未知の理由)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -317,15 +310,13 @@ msgstr "%1: 未知の理由"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "未知のアプリケーション: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: 未知の理由"
+msgstr "未知のアプリケーション: 未知の理由"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

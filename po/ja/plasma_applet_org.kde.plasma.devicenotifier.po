@@ -1,12 +1,13 @@
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-09-20 18:10+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2023-02-23 18:21+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,22 +16,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: package/contents/ui/DeviceItem.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
+#, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%1 空き"
+msgstr "%2 中 %1 空き"
 
 #: package/contents/ui/DeviceItem.qml:189
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Accessing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
@@ -48,32 +43,32 @@ msgstr "取り外し中…"
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "まだ取り外さないでください。ファイルが転送されています..."
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "ファイルマネージャで開く"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "マウントして開く"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "イジェクト"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "安全に取り外し"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "マウント"
 
 #: package/contents/ui/FullRepresentation.qml:41
 #: package/contents/ui/main.qml:238
@@ -84,7 +79,7 @@ msgstr "すべて取り外し"
 #: package/contents/ui/FullRepresentation.qml:42
 #, kde-format
 msgid "Click to safely remove all devices"
-msgstr "クリックしてすべてのデバイスを安全に取り外し"
+msgstr "クリックしてすべてのデバイスを安全に取り外す"
 
 #: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
@@ -94,7 +89,7 @@ msgstr "リムーバブルデバイスが挿入されていません"
 #: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
-msgstr "デバイスがありません"
+msgstr "ディスクがありません"
 
 #: package/contents/ui/main.qml:47
 #, kde-format

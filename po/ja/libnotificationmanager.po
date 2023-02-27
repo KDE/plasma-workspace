@@ -1,11 +1,12 @@
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2019-07-09 13:21+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2023-02-07 03:30+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -14,16 +15,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: abstractnotificationsmodel.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 個のファイルを %2 へ"
+msgstr "%2 の %1"
 
 #: job_p.cpp:183
 #, kde-format
@@ -58,23 +56,20 @@ msgstr[0] "%1 個のファイル"
 msgstr[1] "%1 個のファイル"
 
 #: job_p.cpp:201
-#, fuzzy, kde-format
-#| msgctxt "Copying n of m files"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%1 個中 %2 個のファイル"
-msgstr[1] "%1 個中 %2 個のファイル"
+msgstr[0] "%1 個中 %2 個のアイテム"
+msgstr[1] "%1 個中 %2 個のアイテム"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 個のアイテム"
+msgstr[1] "%1 個のアイテム"
 
 #: job_p.cpp:211
 #, kde-format
@@ -83,15 +78,12 @@ msgid "%1 to %2"
 msgstr "%1 を %2 へ"
 
 #: job_p.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
 msgstr[0] "%1 個のファイルを %2 へ"
-msgstr[1] "%1 個のファイルを %2 へ"
+msgstr[1] "%1 個のアイテムを %2 へ"
 
 #: job_p.cpp:234
 #, kde-format
@@ -100,13 +92,10 @@ msgid "to %1"
 msgstr "%1 へ"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 個のファイルを %2 へ"
+msgstr "%2 の %1"
 
 #: jobsmodel_p.cpp:477
 #, kde-format

@@ -1,13 +1,13 @@
 # Translation of plasma_containmentactions_contextmenu into Japanese.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2009.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-11 00:47+0000\n"
-"PO-Revision-Date: 2022-08-10 00:05+0900\n"
+"PO-Revision-Date: 2023-02-20 21:23+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: menu.cpp:99
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "KRunner を表示"
 #: menu.cpp:104
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "ターミナルを開く"
 
 #: menu.cpp:108
 #, kde-format

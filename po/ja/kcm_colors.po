@@ -10,20 +10,21 @@
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2015, 2019.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 01:00+0000\n"
-"PO-Revision-Date: 2019-06-08 13:58-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2023-02-23 18:18+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -31,57 +32,55 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Shinichi Tsunoda"
+msgstr "Shinichi Tsunoda, Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tsuno@ngy.1st.ne.jp"
+msgstr "tsuno@ngy.1st.ne.jp, ryuichi_ya220@outlook.jp"
 
 #: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "一時ファイルを作成できません。"
 
 #: colors.cpp:248
-#, fuzzy, kde-format
-#| msgid "&Enter a name for the color scheme:"
+#, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "色スキームの名前を入力(&E):"
+msgstr "カラースキームをダウンロードできません: %1"
 
 #: colors.cpp:266
-#, fuzzy, kde-format
-#| msgid "Import a color scheme from a file"
+#, kde-format
 msgid "This file is not a color scheme file."
-msgstr "ファイルから色スキームをインポートします"
+msgstr "このファイルはカラースキームファイルではありません。"
 
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "'color-scheme' データフォルダの作成に失敗しました。"
 
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
+"カラースキームを 'color-scheme' データフォルダにコピーできませんでした。"
 
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "カラースキームのインストールに成功しました。"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "色スキームを保存"
+msgstr "カラースキームの名前"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr ""
+msgstr "アクセントカラー"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -90,34 +89,34 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"ユーザが壁紙アクセントカラーもしくはデフォルトの色に切り替える前、最後に使用"
+"されたカスタムのアクセントカラー"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "壁紙から抽出されたアクセントカラーを適用するかどうか"
 
 #: editor/kcolorschemeeditor.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "KColorSchemeEditor"
-msgstr "色スキームを保存"
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "現在の色スキームを保存します"
+msgstr "カラースキームを編集・作成するユーティリティ"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "ユーティリティの作成"
 
 #: editor/kcolorschemeeditor.cpp:30
 #, kde-format
@@ -127,7 +126,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM コード (再使用)"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
@@ -137,7 +136,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "編集されるもしくは基礎として使われるスキーム。"
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
@@ -145,6 +144,8 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"(「名前を付けて保存」ボタンと違って) 質問せずに変更を保存する「適用」ボタンを"
+"表示"
 
 #: editor/kcolorschemeeditor.cpp:41
 #, kde-format
@@ -155,7 +156,7 @@ msgstr ""
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "スキームが見つかりませんでした。現在のスキームを使用します。\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -267,7 +268,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr ""
+msgstr "選択の通常の背景に対する選択のネガティブなテキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -283,7 +284,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr ""
+msgstr "選択の通常の背景に対する選択のニュートラルなテキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -299,7 +300,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr ""
+msgstr "通常の背景に対するポジティブな選択テキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -353,19 +354,19 @@ msgstr "ビューの通常の背景に対するビューの非アクティブな
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr ""
+msgstr "ビューの通常の背景に対するビューのネガティブなテキスト"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr ""
+msgstr "ビューの通常の背景に対するビューのニュートラルなテキスト"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr ""
+msgstr "ビューの通常の背景に対するビューのポジティブなテキスト"
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
@@ -415,19 +416,19 @@ msgstr "訪問済みリンクのテキスト"
 #: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
-msgstr ""
+msgstr "ネガティブ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
-msgstr ""
+msgstr "ニュートラル"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
-msgstr ""
+msgstr "ポジティブ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
@@ -507,7 +508,7 @@ msgstr "ツールチップ"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr ""
+msgstr "補足"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -515,7 +516,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "ヘッダ"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -629,7 +630,7 @@ msgstr "アクティブなタイトルバーのテキスト"
 #: editor/scmeditorcolors.ui:368
 #, kde-format
 msgid "Active Titlebar Secondary"
-msgstr ""
+msgstr "アクティブなタイトルバー (セカンダリ)"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
@@ -647,7 +648,7 @@ msgstr "非アクティブなタイトルバーのテキスト"
 #: editor/scmeditorcolors.ui:383
 #, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr ""
+msgstr "非アクティブなタイトルバー (セカンダリ)"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -677,12 +678,12 @@ msgstr "未保存の変更"
 #: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
-msgstr "色スキームを保存"
+msgstr "カラースキームを保存"
 
 #: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "色スキームの名前を入力(&E):"
+msgstr "カラースキームの名前を入力(&E):"
 
 #: editor/scmeditordialog.cpp:139
 #, kde-format
@@ -690,7 +691,7 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"同じ名前の色スキームが既に存在します。\n"
+"同じ名前のカラースキームが既に存在します。\n"
 "上書きしますか？"
 
 #: editor/scmeditordialog.cpp:176
@@ -867,19 +868,19 @@ msgstr "リストでソートされた列にトーンをかける(&I)"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Tint all colors with accent color"
-msgstr ""
+msgstr "すべての色にアクセントカラーの色味をつける"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "ウィンドウのタイトルバーをアクセントカラーで染める(&C)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "色味の強さ:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -992,28 +993,25 @@ msgstr "非アクティブ"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
 #: editor/setpreview.ui:125
-#, fuzzy, kde-format
-#| msgid "Normal Background"
+#, kde-format
 msgid "Negative Text on Normal Background"
-msgstr "通常の背景"
+msgstr "通常の背景上のネガティブなテキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore5)
 #. i18n: ectx: property (text), widget (QLabel, labelBack5)
 #: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, fuzzy, kde-format
-#| msgid "Inactive"
+#, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "negative"
-msgstr "非アクティブ"
+msgstr "ネガティブ"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
 #: editor/setpreview.ui:141
-#, fuzzy, kde-format
-#| msgid "Normal Background"
+#, kde-format
 msgid "Neutral Text on Normal Background"
-msgstr "通常の背景"
+msgstr "通常の背景上のニュートラルなテキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1023,14 +1021,13 @@ msgstr "通常の背景"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "neutral"
-msgstr ""
+msgstr "ニュートラル"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
 #: editor/setpreview.ui:157
-#, fuzzy, kde-format
-#| msgid "Normal Background"
+#, kde-format
 msgid "Positive Text on Normal Background"
-msgstr "通常の背景"
+msgstr "通常の背景上のポジティブなテキスト"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1040,7 +1037,7 @@ msgstr "通常の背景"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "positive"
-msgstr ""
+msgstr "ポジティブ"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
 #: editor/setpreview.ui:170
@@ -1064,6 +1061,9 @@ msgid ""
 "(Note: Link Background is derived from Link Text and cannot be separately "
 "configured at this time)"
 msgstr ""
+"リンクテキストとその背景\n"
+"(注意: リンクの背景はリンクテキストから派生しており、ここでは別々に設定するこ"
+"とはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1073,6 +1073,9 @@ msgid ""
 "(Note: Visited Background is derived from Visited Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"訪問済みのテキストとその背景\n"
+"(注意: 訪問済み背景は訪問済みテキストから派生しており、ここでは別々に設定する"
+"ことはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1082,6 +1085,9 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"アクティブなテキストとその背景\n"
+"(注意: アクティブな背景はアクティブなテキストから派生しており、ここでは別々に"
+"設定することはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
@@ -1105,6 +1111,9 @@ msgid ""
 "(Note: Negative Background is derived from Negative Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"ネガティブなテキストとその背景\n"
+"(注意: ネガティブな背景はネガティブなテキストから派生しており、ここでは別々に"
+"設定することはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1114,6 +1123,9 @@ msgid ""
 "(Note: Neutral Background is derived from Neutral Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"ニュートラルなテキストとその背景\n"
+"(注意: ニュートラルな背景はニュートラルなテキストから派生しており、ここでは"
+"別々に設定することはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1123,6 +1135,9 @@ msgid ""
 "(Note: Positive Background is derived from Positive Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"ポジティブなテキストとその背景\n"
+"(注意: ポジティブな背景はポジティブなテキストから派生しており、ここでは別々に"
+"設定することはできません。)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
@@ -1162,18 +1177,20 @@ msgstr "共通色"
 #: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
 msgid "Choose custom accent color"
-msgstr ""
+msgstr "カスタムのアクセントカラーを選択"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
-msgstr ""
+msgstr "このモジュールでカラースキームを選択できます。"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
+"カラースキーム '%1' はインストールされていません。代わりにデフォルトのテーマ"
+"を選択します。"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
@@ -1191,10 +1208,9 @@ msgid "Dark Schemes"
 msgstr "暗いスキーム"
 
 #: package/contents/ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "Window Text"
+#, kde-format
 msgid "Window Title"
-msgstr "ウィンドウのテキスト"
+msgstr "ウィンドウタイトル"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
@@ -1234,45 +1250,39 @@ msgid "Disabled text"
 msgstr "無効なテキスト"
 
 #: package/contents/ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Edit Color Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
 msgstr "カラースキームを編集..."
 
 #: package/contents/ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Remove Color Scheme"
-msgstr "色スキームを保存"
+msgstr "カラースキームを削除"
 
 #: package/contents/ui/main.qml:298
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgid "Restore Color Scheme"
-msgstr "色スキームをインポート"
+msgstr "カラースキームを復元"
 
 #: package/contents/ui/main.qml:342
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "ファイルからインストール..."
 
 #: package/contents/ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Get New Color Schemes..."
+#, kde-format
 msgid "Get New Color Schemes…"
 msgstr "新しいカラースキームを取得..."
 
 #: package/contents/ui/main.qml:365
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Open Color Scheme"
-msgstr "色スキームを保存"
+msgstr "カラースキームを開く"
 
 #: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "カラースキームファイル (*.colors)"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
@@ -1281,6 +1291,8 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"このツールで、誤って利用不可能なものもしくは既に設定されているものを設定する"
+"ことなく、現在の Plasma セッションのカラースキームを設定できます。"
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1340,30 +1352,19 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "アクセントカラー %1 の適用に成功しました。"
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
-msgstr ""
+msgstr "無効なアクセントカラー"
 
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "以下のカラースキームがシステム上にあります:"
 
 #: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr ""
-
-#, fuzzy
-#~| msgid "Import Color Scheme"
-#~ msgid "From current color scheme"
-#~ msgstr "色スキームをインポート"
-
-#, fuzzy
-#~| msgid "Import Color Scheme"
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "色スキームをインポート"
+msgstr " * %1 (現在のカラースキーム)"
