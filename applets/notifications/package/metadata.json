@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -198,6 +199,5 @@
     "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.notifications"
-    ],
-    "KPackageStructure": "Plasma/Applet"
+    ]
 }

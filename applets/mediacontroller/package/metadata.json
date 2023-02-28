@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -171,6 +172,5 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.multimediacontrols"
     ],
-    "X-Plasma-StandAloneApp": true,
-    "KPackageStructure": "Plasma/Applet"
+    "X-Plasma-StandAloneApp": true
 }

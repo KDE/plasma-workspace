@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -150,6 +151,5 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
     ],
-    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor",
-    "KPackageStructure": "Plasma/Applet"
+    "X-Plasma-RootPath": "org.kde.plasma.systemmonitor"
 }

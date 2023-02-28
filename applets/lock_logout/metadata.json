@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -244,6 +245,5 @@
     "Keywords[zh_CN]": "锁定;注销;待机;睡眠;休眠;切换用户;",
     "Keywords[zh_TW]": "Lock;Logout;Sleep;Hibernate;Switch User;",
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/lockout.qml",
-    "KPackageStructure": "Plasma/Applet"
+    "X-Plasma-MainScript": "ui/lockout.qml"
 }

@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Wallpaper",
     "KPlugin": {
         "Authors": [
             {
@@ -198,6 +199,5 @@
         "image/bmp",
         "image/webp",
         "image/tiff"
-    ],
-    "KPackageStructure": "Plasma/Wallpaper"
+    ]
 }

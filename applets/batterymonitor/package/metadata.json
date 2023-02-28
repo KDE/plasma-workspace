@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -221,6 +222,5 @@
     "X-Plasma-NotificationAreaCategory": "Hardware",
     "X-Plasma-Provides": [
         "org.kde.plasma.powermanagement"
-    ],
-    "KPackageStructure": "Plasma/Applet"
+    ]
 }

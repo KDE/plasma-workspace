@@ -1,4 +1,5 @@
 {
+    "KPackageStructure": "Plasma/LookAndFeel",
     "KPlugin": {
         "Authors": [
             {
@@ -197,6 +198,5 @@
     "Keywords[zh_CN]": "桌面;工作空间;外观;观感;注销;锁定;待机;关机;休眠;",
     "Keywords[zh_TW]": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
     "X-Plasma-APIVersion": "2",
-    "X-Plasma-MainScript": "defaults",
-    "KPackageStructure": "Plasma/LookAndFeel"
+    "X-Plasma-MainScript": "defaults"
 }
