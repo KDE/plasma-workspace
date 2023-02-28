@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٦, 2017.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-12-22 09:26+0400\n"
+"PO-Revision-Date: 2023-02-27 19:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -284,20 +284,16 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "‏%1 يمنع النوم وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "‏%1 يمنع النوم وقفل الشاشة:"
+msgstr "هناك تطبيق يمنع النوم وقفل الشاشة (‏%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "‏%1 يمنع النوم وقفل الشاشة (سبب مجهول)"
+msgstr "‏هناك تطبيق يمنع النوم وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
@@ -315,15 +311,13 @@ msgstr "‏%1: سبب مجهول"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "تطبيق مجهول: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "‏%1: سبب مجهول"
+msgstr "تطبيق مجهول: سبب مجهول"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

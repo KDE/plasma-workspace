@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2022-12-27 18:46+0400\n"
+"PO-Revision-Date: 2023-02-16 12:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -408,19 +408,15 @@ msgid "Language"
 msgstr "اللغة"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"سيؤدي وضع اللغة الإنجليزية الأمريكية فوق اللغات الأخرى إلى حدوث سلوك غير "
-"مرغوب فيه في بعض التطبيقات. إذا كنت تريد أن يستخدم نظامك الإنجليزية "
-"الأمريكية، فقم بإزالة جميع اللغات الأخرى."
+"سيؤدي وضع أي لغة أخرى أسفل اللغة الإنجليزية إلى حدوث سلوك غير مرغوب فيه في "
+"بعض التطبيقات. إذا كنت تريد أن تستخدم الإنجليزية في نظامك، فأزل جميع اللغات "
+"الأخرى."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
