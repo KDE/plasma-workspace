@@ -445,7 +445,7 @@ void CFontViewPart::checkInstallable()
 }
 
 BrowserExtension::BrowserExtension(CFontViewPart *parent)
-    : KParts::BrowserExtension(parent)
+    : KParts::NavigationExtension(parent)
 {
     setURLDropHandlingEnabled(true);
 }

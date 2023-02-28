@@ -12,7 +12,7 @@
 #include <KActionCollection>
 #include <KConfigGroup>
 #include <KDBusService>
-#include <KParts/BrowserExtension>
+#include <KParts/NavigationExtension>
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <KShortcutsDialog>
@@ -50,8 +50,8 @@ CViewer::CViewer()
 
     m_printAct->setEnabled(false);
 
-    if (m_preview->browserExtension()) {
-        connect(m_preview->browserExtension(), &KParts::BrowserExtension::enableAction, this, &CViewer::enableAction);
+    if (m_preview->navigationExtension()) {
+        connect(m_preview->navigationExtension(), &KParts::NavigationExtension::enableAction, this, &CViewer::enableAction);
     }
 
     setCentralWidget(m_preview->widget());

@@ -9,7 +9,7 @@
 #include "FontPreview.h"
 #include "KfiConstants.h"
 #include "Misc.h"
-#include <KParts/BrowserExtension>
+#include <KParts/NavigationExtension>
 #include <KParts/ReadOnlyPart>
 #include <KSharedConfig>
 #include <QFrame>
@@ -75,7 +75,7 @@ private:
     bool m_opening;
 };
 
-class BrowserExtension : public KParts::BrowserExtension
+class BrowserExtension : public KParts::NavigationExtension
 {
     Q_OBJECT
 
