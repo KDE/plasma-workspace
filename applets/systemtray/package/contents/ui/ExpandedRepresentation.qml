@@ -10,9 +10,6 @@ import QtQuick.Layouts 1.12
 import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-// We still need PC2 here for that version of Menu, as PC2 Menu is still very problematic with QActions
-// Not being a proper popup window, makes it a showstopper to be used in Plasma
-import org.kde.plasma.components 2.0 as PC2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
@@ -126,7 +123,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
-                checked: visibleActions > 1 ? configMenu.status !== PC2.DialogStatus.Closed : singleAction && singleAction.checked
+                checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.DialogStatus.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || plasmoid
                 property int visibleActions: menuItemFactory.count
                 property QtObject singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
@@ -170,7 +167,7 @@ Item {
                 PlasmaComponents.ToolTip {
                     text: parent.text
                 }
-                PC2.Menu {
+                PlasmaExtras.Menu {
                     id: configMenu
                     visualParent: actionsButton
                     placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
@@ -192,7 +189,7 @@ Item {
                         }
                         return actions;
                     }
-                    delegate: PC2.MenuItem {
+                    delegate: PlasmaExtras.MenuItem {
                         id: menuItem
                         action: modelData
                     }

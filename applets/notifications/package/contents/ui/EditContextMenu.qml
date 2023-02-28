@@ -7,11 +7,11 @@
 import QtQuick 2.8
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // For ContextMenu
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
-PlasmaComponents.ContextMenu {
+PlasmaExtras.Menu {
     id: contextMenu
 
     signal closed
@@ -24,23 +24,23 @@ PlasmaComponents.ContextMenu {
     property string link
 
     onStatusChanged: {
-        if (status === PlasmaComponents.DialogStatus.Closed) {
+        if (status === PlasmaExtras.DialogStatus.Closed) {
             closed();
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Copy Link Address")
         onClicked: __clipboard.content = contextMenu.link
         visible: contextMenu.link !== ""
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         separator: true
         visible: contextMenu.link !== ""
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Copy")
         icon: "edit-copy"
         enabled: typeof target.selectionStart !== "undefined"
@@ -55,7 +55,7 @@ PlasmaComponents.ContextMenu {
         }
     }
 
-    PlasmaComponents.MenuItem {
+    PlasmaExtras.MenuItem {
         id: selectAllAction
         icon: "edit-select-all"
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Select All")

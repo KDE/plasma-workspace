@@ -6,16 +6,16 @@
 */
 
 import QtQuick 2.2
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-PlasmaComponents.Menu {
+PlasmaExtras.Menu {
     id: testMenu
     property int year
 
     // Needs to be a property since Menu doesn't accept other items than MenuItem
     property Instantiator items: Instantiator {
         model: 12
-        PlasmaComponents.MenuItem {
+        PlasmaExtras.MenuItem {
             text: capitalizeFirstLetter(Qt.locale(Qt.locale().uiLanguages[0]).standaloneMonthName(index))
             onClicked: calendarBackend.displayedDate = new Date(year, index, 1)
         }
