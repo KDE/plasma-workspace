@@ -167,9 +167,9 @@ bool KCMColors::downloadingFile() const
     return m_tempCopyJob;
 }
 
-void KCMColors::knsEntryChanged(KNSCore::EntryWrapper *entry)
+void KCMColors::knsEntryChanged(const KNSCore::Entry &entry)
 {
-    if (!entry) {
+    if (!entry.isValid()) {
         return;
     }
     m_model->load();
@@ -177,8 +177,8 @@ void KCMColors::knsEntryChanged(KNSCore::EntryWrapper *entry)
     // If a new theme was installed, select the first color file in it
     QStringList installedThemes;
     const QString suffix = QStringLiteral(".colors");
-    if (entry->entry().status() == KNS3::Entry::Installed) {
-        for (const QString &path : entry->entry().installedFiles()) {
+    if (entry.status() == KNSCore::Entry::Installed) {
+        for (const QString &path : entry.installedFiles()) {
             const QString fileName = path.section(QLatin1Char('/'), -1, -1);
 
             const int suffixPos = fileName.indexOf(suffix);

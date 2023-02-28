@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <KNSCore/EntryWrapper>
+#include <KNSCore/Entry>
 #include <KQuickAddons/ManagedConfigModule>
 
 #include "cursorthemesettings.h"
@@ -89,7 +89,7 @@ Q_SIGNALS:
     void showErrorMessage(const QString &message);
 
 public Q_SLOTS:
-    void ghnsEntryChanged(KNSCore::EntryWrapper *entry);
+    void ghnsEntryChanged(const KNSCore::Entry &entry);
     void installThemeFromFile(const QUrl &url);
 
 private Q_SLOTS:

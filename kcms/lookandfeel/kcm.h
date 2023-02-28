@@ -13,7 +13,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KNSCore/EntryWrapper>
+#include <KNSCore/Entry>
 #include <KSharedConfig>
 
 #include <QDir>
@@ -67,7 +67,7 @@ public:
     Q_INVOKABLE bool removeRow(int row, bool removeDependencies = false);
 
     Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
-    Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *wrapper);
+    Q_INVOKABLE void knsEntryChanged(const KNSCore::Entry &entry);
     Q_INVOKABLE void reloadConfig()
     {
         ManagedConfigModule::load();

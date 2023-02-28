@@ -8,7 +8,7 @@
 #pragma once
 
 #include <KConfigWatcher>
-#include <KNSCore/EntryWrapper>
+#include <KNSCore/Entry>
 #include <QColor>
 #include <QDBusPendingCallWatcher>
 #include <QPointer>
@@ -62,7 +62,7 @@ public:
     bool downloadingFile() const;
 
     Q_INVOKABLE void loadSelectedColorScheme();
-    Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *entry);
+    Q_INVOKABLE void knsEntryChanged(const KNSCore::Entry &entry);
 
     QColor accentColor() const;
     void setAccentColor(const QColor &accentColor);

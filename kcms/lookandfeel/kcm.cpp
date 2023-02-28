@@ -42,7 +42,6 @@
 
 #include <X11/Xlib.h>
 
-#include <KNSCore/EntryInternal>
 #include <QFileInfo>
 #include <updatelaunchenvjob.h>
 
@@ -129,12 +128,11 @@ KCMLookandFeel::~KCMLookandFeel()
 {
 }
 
-void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
+void KCMLookandFeel::knsEntryChanged(const KNSCore::Entry &entry)
 {
-    if (!wrapper) {
+    if (!entry.isValid()) {
         return;
     }
-    const KNSCore::EntryInternal entry = wrapper->entry();
     auto removeItemFromModel = [&entry, this]() {
         if (entry.uninstalledFiles().isEmpty()) {
             return;
@@ -145,9 +143,9 @@ void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
             m_model->removeRows(index, 1);
         }
     };
-    if (entry.status() == KNS3::Entry::Deleted) {
+    if (entry.status() == KNSCore::Entry::Deleted) {
         removeItemFromModel();
-    } else if (entry.status() == KNS3::Entry::Installed && !entry.installedFiles().isEmpty()) {
+    } else if (entry.status() == KNSCore::Entry::Installed && !entry.installedFiles().isEmpty()) {
         if (!entry.uninstalledFiles().isEmpty()) {
             removeItemFromModel(); // In case we updated it we don't want to have it in twice
         }

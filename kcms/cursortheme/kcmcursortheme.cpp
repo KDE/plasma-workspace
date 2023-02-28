@@ -339,10 +339,10 @@ bool CursorThemeConfig::isSaveNeeded() const
     return !m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true).isEmpty();
 }
 
-void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)
+void CursorThemeConfig::ghnsEntryChanged(const KNSCore::Entry &entry)
 {
-    if (entry->entry().status() == KNS3::Entry::Deleted) {
-        for (const QString &deleted : entry->entry().uninstalledFiles()) {
+    if (entry.status() == KNSCore::Entry::Deleted) {
+        for (const QString &deleted : entry.uninstalledFiles()) {
             auto list = QStringView(deleted).split(QLatin1Char('/'));
             if (list.last() == QLatin1Char('*')) {
                 list.takeLast();
@@ -352,8 +352,8 @@ void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)
                 m_themeModel->removeTheme(idx);
             }
         }
-    } else if (entry->entry().status() == KNS3::Entry::Installed) {
-        const QList<QString> installedFiles = entry->entry().installedFiles();
+    } else if (entry.status() == KNSCore::Entry::Installed) {
+        const QList<QString> installedFiles = entry.installedFiles();
         if (installedFiles.size() != 1) {
             return;
         }
