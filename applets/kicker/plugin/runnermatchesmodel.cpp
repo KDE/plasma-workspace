@@ -190,10 +190,10 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
             if (!action) {
                 return false;
             }
-            match.setSelectedAction(action);
+            return m_runnerManager->run(match, action);
         }
 
-        return m_runnerManager->runMatch(match);
+        return m_runnerManager->run(match);
     }
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
