@@ -183,7 +183,7 @@ if(FONTCONFIG_FOUND)
   find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
 endif()
 
-find_package(AppStreamQt 0.10.6)
+find_package(AppStreamQt 1.0) # 1.0 will be the first release to support Qt6
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for listing available software"
                        URL "https://www.freedesktop.org/wiki/Distributions/AppStream/"
                        TYPE OPTIONAL)
