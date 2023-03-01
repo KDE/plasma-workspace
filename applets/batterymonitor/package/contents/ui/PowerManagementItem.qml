@@ -31,10 +31,6 @@ ColumnLayout {
     property var inhibitions: []
     property bool inhibitsLidAction
 
-    KWindowSystem {
-        id: kwindowsystem
-    }
-
     // UI to manually inhibit sleep and screen locking
     PlasmaComponents3.CheckBox {
         id: pmCheckBox
@@ -98,7 +94,7 @@ ColumnLayout {
 
             InhibitionHint {
                 property string icon: modelData.Icon
-                    || (kwindowsystem.isPlatformWayland ? "wayland" : "xorg")
+                    || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
                 property string name: modelData.Name
                 property string reason: modelData.Reason
 
