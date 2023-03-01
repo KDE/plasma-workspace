@@ -7,7 +7,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs 1.0 as QtDialogs
+import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
@@ -231,9 +231,9 @@ KCM.GridViewKCM {
                 display: QtControls.ToolButton.TextBesideIcon
                 flat: false
                 checkable: true
-                checked: iconSizeSheet.sheetOpen
+                checked: iconSizeSheet.visible
                 onClicked: {
-                    iconSizeSheet.sheetOpen = true;
+                    iconSizeSheet.visible = true;
                 }
             }
 
@@ -267,7 +267,7 @@ KCM.GridViewKCM {
         id: iconSizeSheet
         parent: root.parent
 
-        onSheetOpenChanged: content.opened();
+        onVisibleChanged: content.opened();
 
         header: Kirigami.Heading {
             text: i18nc("@title:window", "Configure Icon Sizes")
@@ -283,11 +283,11 @@ KCM.GridViewKCM {
         active: false
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Theme")
-            folder: shortcuts.home
+            currentFolder: shortcuts.home
             nameFilters: [ i18n("Theme Files (*.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
+                kcm.installThemeFromFile(selectedFile)
                 fileDialogLoader.active = false
             }
             onRejected: {
