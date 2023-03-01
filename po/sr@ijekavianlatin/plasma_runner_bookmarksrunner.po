@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-16 02:25+0200\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2010-04-26 14:43+0200\n"
 "Last-Translator: Dalibor Djuric <daliborddjuric@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,23 +19,23 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: bookmarksrunner.cpp:47
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Nalazi obilježivač veb pregledača koje poklapaju :q:."
 
-#: bookmarksrunner.cpp:48
+#: bookmarksrunner.cpp:36
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "obilježivači"
 
-#: bookmarksrunner.cpp:49
+#: bookmarksrunner.cpp:36
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Nabraja sve obilježivače veb pregledača"
 
-#: bookmarksrunner.cpp:74
+#: bookmarksrunner.cpp:59
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

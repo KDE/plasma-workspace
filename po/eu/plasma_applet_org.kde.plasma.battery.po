@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2023-02-17 06:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -245,13 +245,13 @@ msgstr "Bistaratze distira"
 msgid "Keyboard Brightness"
 msgstr "Teklatuaren distira"
 
-#: package/contents/ui/PowerManagementItem.qml:42
+#: package/contents/ui/PowerManagementItem.qml:38
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Eskuz oztopatu lokartzea eta pantaila giltzatzea"
 
-#: package/contents/ui/PowerManagementItem.qml:75
+#: package/contents/ui/PowerManagementItem.qml:71
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -261,7 +261,7 @@ msgstr ""
 "Zure magalekoa tapa ixtean ez lokartzeko konfiguratuta dago, kanpoko "
 "monitore bat konektatuta dagoenean."
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:84
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -271,27 +271,27 @@ msgstr[1] ""
 "%1 aplikazio une honetan lokartzea eta pantaila giltzatzea oztopatzen ari "
 "dira:"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr ""
 "%1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:108
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr ""
 "%1 une honetan lokartzea eta pantaila giltzatzea oztopatzen ari da (arrazoia "
 "ezezaguna)"
 
-#: package/contents/ui/PowerManagementItem.qml:114
+#: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
 "Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
 "honetan (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -300,25 +300,25 @@ msgstr ""
 "Aplikazio bat lokartzea eta pantaila giltzatzea oztopatzen ari da une "
 "honetan (arrazoia ezezaguna)"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: arrazoi ezezaguna"
 
-#: package/contents/ui/PowerManagementItem.qml:124
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Aplikazio ezezaguna: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:126
+#: package/contents/ui/PowerManagementItem.qml:122
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"

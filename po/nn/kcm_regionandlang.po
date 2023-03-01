@@ -516,8 +516,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
-"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du "
-"kan trygt slå av maskina."
+"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du kan "
+"trygt slå av maskina."
 
 #: package/contents/ui/main.qml:139
 #, kde-format

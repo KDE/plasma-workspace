@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2022-10-13 19:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -22,17 +22,17 @@ msgstr ""
 msgid "Keyboard Layout: %1"
 msgstr "விசைப்பலகை தளவமைப்பு: %1"
 
-#: ../sddm-theme/Login.qml:75
+#: ../sddm-theme/Login.qml:85
 #, kde-format
 msgid "Username"
 msgstr "பயனர் பெயர்"
 
-#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
 #, kde-format
 msgid "Password"
 msgstr "கடவுச்சொல்"
 
-#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
 msgstr "நுழை"

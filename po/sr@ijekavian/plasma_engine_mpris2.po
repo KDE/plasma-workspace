@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_mpris2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2015-02-21 13:02+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,63 +18,75 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: multiplexedservice.cpp:85
+#: multiplexedservice.cpp:68
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Управљање медијумима"
 
-#: multiplexedservice.cpp:87
+#: multiplexedservice.cpp:70
 #, kde-format
 msgid "Play/Pause media playback"
 msgstr "Пусти/паузирај"
 
-#: multiplexedservice.cpp:107
+#: multiplexedservice.cpp:88
 #, kde-format
 msgid "Media playback next"
 msgstr "Пусти наредно"
 
-#: multiplexedservice.cpp:118
+#: multiplexedservice.cpp:97
 #, kde-format
 msgid "Media playback previous"
 msgstr "Пусти претходно"
 
-#: multiplexedservice.cpp:129
+#: multiplexedservice.cpp:106
 #, kde-format
 msgid "Stop media playback"
 msgstr "Заустави пуштање"
 
-#: multiplexedservice.cpp:140
+#: multiplexedservice.cpp:115
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Pause media playback"
+msgstr "Пусти/паузирај"
+
+#: multiplexedservice.cpp:124
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Play media playback"
+msgstr "Пусти/паузирај"
+
+#: multiplexedservice.cpp:133
 #, kde-format
 msgid "Media volume up"
 msgstr ""
 
-#: multiplexedservice.cpp:151
+#: multiplexedservice.cpp:142
 #, kde-format
 msgid "Media volume down"
 msgstr ""
 
-#: playeractionjob.cpp:202
+#: playeractionjob.cpp:169
 #, kde-format
 msgid "The media player '%1' cannot perform the action '%2'."
 msgstr "Медија плејер „%1“ не може да изврши радњу „%2“."
 
-#: playeractionjob.cpp:204
+#: playeractionjob.cpp:171
 #, kde-format
 msgid "Attempting to perform the action '%1' failed with the message '%2'."
 msgstr "Покушај извршавања радње „%1“ пропао уз поруку „%2“."
 
-#: playeractionjob.cpp:207
+#: playeractionjob.cpp:173
 #, kde-format
 msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
 msgstr "Аргумент „%1“ за радњу „%2“ недостаје или је погрешног типа."
 
-#: playeractionjob.cpp:209
+#: playeractionjob.cpp:175
 #, kde-format
 msgid "The operation '%1' is unknown."
 msgstr "Непознат поступак „%1“."
 
-#: playeractionjob.cpp:211
+#: playeractionjob.cpp:177
 #, kde-format
 msgid "Unknown error."
 msgstr "Непозната грешка"

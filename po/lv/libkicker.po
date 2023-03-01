@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2019-11-10 12:37+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -118,7 +118,7 @@ msgstr "Meklē, rēķini vai darbini komandu"
 msgid "Computer"
 msgstr "Dators"
 
-#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
 #, fuzzy, kde-format
 #| msgid "Show Contact Information..."
 msgid "Show Contact Information…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2020-10-08 10:11+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -253,7 +253,7 @@ msgstr "Monitori heledus"
 msgid "Keyboard Brightness"
 msgstr "Klaviatuuri heledus"
 
-#: package/contents/ui/PowerManagementItem.qml:42
+#: package/contents/ui/PowerManagementItem.qml:38
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid "Allow automatic sleep and screen locking"
@@ -261,7 +261,7 @@ msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Automaatse uinumise ja ekraani lukustamise lubamine"
 
-#: package/contents/ui/PowerManagementItem.qml:75
+#: package/contents/ui/PowerManagementItem.qml:71
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid ""
@@ -275,7 +275,7 @@ msgstr ""
 "Sinu sülearvuti on seadistatud mitte uinuma kaane sulgemisel, kui ühendatud "
 "on väline monitor."
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:84
 #, fuzzy, kde-format
 #| msgid "%1 application is preventing sleep and screen locking:"
 #| msgid_plural "%1 applications are preventing sleep and screen locking:"
@@ -284,28 +284,28 @@ msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 rakendus takistab uinumist ja ekraani lukustamist:"
 msgstr[1] "%1 rakendust takistavad uinumist ja ekraani lukustamist:"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:106
 #, fuzzy, kde-format
 #| msgid "%1 application is preventing sleep and screen locking:"
 #| msgid_plural "%1 applications are preventing sleep and screen locking:"
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 rakendus takistab uinumist ja ekraani lukustamist:"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:108
 #, fuzzy, kde-format
 #| msgid "%1 application is preventing sleep and screen locking:"
 #| msgid_plural "%1 applications are preventing sleep and screen locking:"
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 rakendus takistab uinumist ja ekraani lukustamist:"
 
-#: package/contents/ui/PowerManagementItem.qml:114
+#: package/contents/ui/PowerManagementItem.qml:110
 #, fuzzy, kde-format
 #| msgid "%1 application is preventing sleep and screen locking:"
 #| msgid_plural "%1 applications are preventing sleep and screen locking:"
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "%1 rakendus takistab uinumist ja ekraani lukustamist:"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:112
 #, fuzzy, kde-format
 #| msgid "%1 application is preventing sleep and screen locking:"
 #| msgid_plural "%1 applications are preventing sleep and screen locking:"
@@ -314,25 +314,25 @@ msgid ""
 "reason)"
 msgstr "%1 rakendus takistab uinumist ja ekraani lukustamist:"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: tundmatu põhjus"
 
-#: package/contents/ui/PowerManagementItem.qml:124
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr ""
 
-#: package/contents/ui/PowerManagementItem.qml:126
+#: package/contents/ui/PowerManagementItem.qml:122
 #, fuzzy, kde-format
 #| msgctxt "Application name: reason for preventing sleep and screen locking"
 #| msgid "%1: unknown reason"

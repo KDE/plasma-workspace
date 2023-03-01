@@ -1,14 +1,14 @@
 # Translation of krunner_sessions to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2008, 2009, 2011, 2019, 2020, 2022.
+# Shinjo Park <kde@peremen.name>, 2008, 2009, 2011, 2019, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2022-02-20 22:31+0100\n"
+"PO-Revision-Date: 2023-02-28 23:53+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,16 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "로그아웃"
+msgstr "로그아웃;로그 아웃"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -33,14 +32,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "로그아웃, 현재 데스크톱 세션 끝내기"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "끄기"
+msgstr "끄기;종료;시스템 종료"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -48,14 +45,12 @@ msgid "Turns off the computer"
 msgstr "컴퓨터 끄기"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "재시작"
+msgstr "재시작;재시동;다시 시작;다시시작"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -63,12 +58,11 @@ msgid "Reboots the computer"
 msgstr "컴퓨터 다시 시작"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "화면 잠그기"
+msgstr "화면 잠그기;화면 잠금;잠금;잠그기"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -76,27 +70,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "현재 화면을 잠그고 화면 보호기를 시작하기"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "새 세션"
+msgstr "저장;세션 저장"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "다음에 다시 복원할 수 있도록 현재 세션 저장"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "사용자 전환"
+msgstr "사용자 전환;새 세션;새로운 세션"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -104,9 +96,7 @@ msgid "Starts a new session as a different user"
 msgstr "새 사용자로 세션 시작하기"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "세션"
@@ -117,9 +107,7 @@ msgid "Lists all sessions"
 msgstr "모든 세션 표시"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "전환"
@@ -137,35 +125,30 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "로그아웃"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "끄기"
+msgstr "컴퓨터 끄기"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "재시작"
+msgstr "다시 시작"
 
 #: sessionrunner.cpp:141
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "잠금"
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "새 세션"
+msgstr "세션 저장"
 
 #: sessionrunner.cpp:194
 #, kde-format
@@ -181,12 +164,15 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>새 데스크톱 세션을 시작하려고 합니다.</p><p>로그인 화면이 표시되고 현재 세"
+"션이 숨겨집니다.</p><p>다음 방법으로 데스크톱 세션을 전환할 수 있습니다:</"
+"p><ul><li>Ctrl+Alt+F{세션 번호}</li><li>Plasma 검색('%1' 입력)</"
+"li><li>Plasma 위젯(프로그램 실행기 등)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "새 세션"
+msgstr "새 데스크톱 세션"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

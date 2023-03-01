@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_keystate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
 "PO-Revision-Date: 2009-12-29 22:11+0100\n"
 "Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,93 +19,75 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: keystate.cpp:29
-#, kde-format
+#: keystate.cpp:15
 msgid "Shift"
 msgstr "Shift"
 
-#: keystate.cpp:30
-#, kde-format
+#: keystate.cpp:16
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: keystate.cpp:31
-#, kde-format
+#: keystate.cpp:17
 msgid "Alt"
 msgstr "Alt"
 
-#: keystate.cpp:32
-#, kde-format
+#: keystate.cpp:18
 msgid "Meta"
 msgstr "Meta"
 
-#: keystate.cpp:33
-#, kde-format
+#: keystate.cpp:19
 msgid "Super"
 msgstr "Super"
 
-#: keystate.cpp:34
-#, kde-format
+#: keystate.cpp:20
 msgid "Hyper"
 msgstr "Hyper"
 
-#: keystate.cpp:35
-#, kde-format
+#: keystate.cpp:21
 msgid "AltGr"
 msgstr "AltGr"
 
-#: keystate.cpp:36
-#, kde-format
+#: keystate.cpp:22
 msgid "Num Lock"
 msgstr "NumLock"
 
-#: keystate.cpp:37
-#, kde-format
+#: keystate.cpp:23
 msgid "Caps Lock"
 msgstr "CapsLock"
 
-#: keystate.cpp:38
-#, kde-format
+#: keystate.cpp:24
 msgid "Scroll Lock"
 msgstr "ScrollLock"
 
-#: keystate.cpp:40
-#, kde-format
+#: keystate.cpp:26
 msgid "Left Button"
 msgstr "levo dugme"
 
-#: keystate.cpp:41
-#, kde-format
+#: keystate.cpp:27
 msgid "Right Button"
 msgstr "desno dugme"
 
-#: keystate.cpp:42
-#, kde-format
+#: keystate.cpp:28
 msgid "Middle Button"
 msgstr "srednje dugme"
 
-#: keystate.cpp:43
-#, kde-format
+#: keystate.cpp:29
 msgid "First X Button"
 msgstr "prvo X dugme"
 
-#: keystate.cpp:44
-#, kde-format
+#: keystate.cpp:30
 msgid "Second X Button"
 msgstr "drugo X dugme"
 
-#: keystate.cpp:59 keystate.cpp:70 keystate.cpp:98 keystate.cpp:119
-#: keystate.cpp:127
-#, kde-format
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
 msgid "Pressed"
 msgstr "pritisnut"
 
-#: keystate.cpp:60 keystate.cpp:105 keystate.cpp:128
-#, kde-format
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
 msgid "Latched"
 msgstr "zapet"
 
-#: keystate.cpp:61 keystate.cpp:112 keystate.cpp:129
-#, kde-format
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
 msgid "Locked"
 msgstr "zaključan"

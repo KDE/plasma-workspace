@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-31 18:14+0200\n"
+"POT-Creation-Date: 2023-02-18 01:01+0000\n"
 "PO-Revision-Date: 2017-01-14 19:23+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: iconapplet.cpp:107
+#: iconapplet.cpp:92
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Не могу да направим фасциклу виџета иконица „%1“"
 
-#: iconapplet.cpp:153
+#: iconapplet.cpp:138
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Не могу да копирам .десктоп фајл виџета иконица из „%1“ у „%2“"
 
-#: iconapplet.cpp:395
+#: iconapplet.cpp:385
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Отвори обухватајућу фасциклу"
 
-#: iconapplet.cpp:573
+#: iconapplet.cpp:566
 #, kde-format
 msgid "Properties for %1"
 msgstr "Својства за %1"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Properties"
 msgstr "Својства"

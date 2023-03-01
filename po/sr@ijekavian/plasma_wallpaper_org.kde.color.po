@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.color\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2015-01-04 02:10+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/ui/config.qml:33
+#: contents/ui/config.qml:21
 #, kde-format
 msgid "Color:"
 msgstr "Боја:"
 
 # >> @title:window
-#: contents/ui/config.qml:34
+#: contents/ui/config.qml:22
 #, kde-format
 msgid "Select Background Color"
 msgstr "Избор боје позадине"

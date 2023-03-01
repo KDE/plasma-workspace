@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
 "PO-Revision-Date: 2017-09-29 16:44+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,17 +19,33 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Associated-UI-Catalogs: kcmstyle systemsettings.desktop\n"
 
-#: package/contents/config/config.qml:28
+#: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Изглед"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:22
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Користи једно дугме за мени програма"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:28
 #, kde-format
 msgid "Show full application menu"
 msgstr "Прикажи потпуни мени програма"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr ""

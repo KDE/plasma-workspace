@@ -1,14 +1,14 @@
 # Translation of plasma_applet_battery to Korean.
 # Copyright (C) 2007, 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-17 01:00+0000\n"
-"PO-Revision-Date: 2022-02-20 22:29+0100\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2023-02-28 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "남은 시간:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "예상 중…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -177,35 +177,31 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "자동 절전 모드 진입과 화면 잠금이 비활성화됨"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
+msgstr[0] "프로그램 %1개에서 성능 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "시스템이 성능 모드 사용 중"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
+msgstr[0] "프로그램 %1개에서 절전 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "시스템이 절전 모드 사용 중"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "스크롤하여 화면 밝기 조정"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -223,10 +219,9 @@ msgid "&Show Energy Information…"
 msgstr "에너지 정보 표시(&S)…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "아이콘에 배터리 백분율 표시"
+msgstr "완전히 충전되지 않았을 때 아이콘에 배터리 백분율 표시"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -243,13 +238,13 @@ msgstr "화면 밝기"
 msgid "Keyboard Brightness"
 msgstr "키보드 밝기"
 
-#: package/contents/ui/PowerManagementItem.qml:42
+#: package/contents/ui/PowerManagementItem.qml:38
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "절전 모드 진입과 화면 잠금 수동으로 차단"
 
-#: package/contents/ui/PowerManagementItem.qml:75
+#: package/contents/ui/PowerManagementItem.qml:71
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -259,63 +254,57 @@ msgstr ""
 "노트북에 외부 모니터가 연결되었을 때 덮개를 닫아도 절전 모드로 들어가지 않도"
 "록 설정되어 있습니다."
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:84
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "프로그램 %1개에서 절전 모드 진입과 화면 잠금을 차단함:"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1에서 절전 모드 진입과 화면 잠금을 차단함(%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:108
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1에서 절전 모드 진입과 화면 잠금을 차단함(알 수 없는 이유)"
 
-#: package/contents/ui/PowerManagementItem.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#: package/contents/ui/PowerManagementItem.qml:110
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "프로그램 %1개에서 절전 모드 진입과 화면 잠금을 차단함:"
+msgstr "프로그램에서 절전 모드 진입과 화면 잠금을 차단함(%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#: package/contents/ui/PowerManagementItem.qml:112
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1에서 절전 모드 진입과 화면 잠금을 차단함(알 수 없는 이유)"
+msgstr "프로그램에서 절전 모드 진입과 화면 잠금을 차단함(알 수 없는 이유)"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: 알 수 없는 오류"
 
-#: package/contents/ui/PowerManagementItem.qml:124
+#: package/contents/ui/PowerManagementItem.qml:120
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "알 수 없는 프로그램: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:126
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#: package/contents/ui/PowerManagementItem.qml:122
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: 알 수 없는 오류"
+msgstr "알 수 없는 프로그램: 알 수 없는 오류"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

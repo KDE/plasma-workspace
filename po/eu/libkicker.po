@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2021-07-19 19:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -116,7 +116,7 @@ msgstr "Bilatu, kalkulatu, edo komando bat exekutatu"
 msgid "Computer"
 msgstr "Ordenagailua"
 
-#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
 #, kde-format
 msgid "Show Contact Information…"
 msgstr "Erakutsi kontaktuaren informazioa..."

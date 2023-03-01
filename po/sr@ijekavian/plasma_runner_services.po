@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-16 02:25+0200\n"
+"POT-Creation-Date: 2022-12-23 00:48+0000\n"
 "PO-Revision-Date: 2016-05-06 16:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,18 +18,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: servicerunner.cpp:298
-#, fuzzy, kde-format
-#| msgid "System Settings"
-msgid "System Information"
-msgstr "Системске поставке"
-
-#: servicerunner.cpp:300 servicerunner.cpp:417 servicerunner.cpp:424
-#, kde-format
-msgid "System Settings"
-msgstr "Системске поставке"
-
-#: servicerunner.cpp:372
+#: servicerunner.cpp:368
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -37,12 +26,18 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr "%1 — %2"
 
-#: servicerunner.cpp:410
+#: servicerunner.cpp:413
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "Налази програме чија имена или опис поклапају :q:"
 
-#: servicerunner.cpp:417 servicerunner.cpp:422
-#, kde-format
-msgid "Applications"
-msgstr "Програми"
+#, fuzzy
+#~| msgid "System Settings"
+#~ msgid "System Information"
+#~ msgstr "Системске поставке"
+
+#~ msgid "System Settings"
+#~ msgstr "Системске поставке"
+
+#~ msgid "Applications"
+#~ msgstr "Програми"

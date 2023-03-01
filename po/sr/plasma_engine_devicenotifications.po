@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-20 03:44+0100\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2016-01-31 00:15+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,38 +20,49 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: ksolidnotify.cpp:166
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: ksolidnotify.cpp:149
+#, fuzzy, kde-format
+#| msgid "This device can now be safely removed."
+msgid "A device can now be safely removed"
+msgstr "Овај уређај сада можете безбедно уклонити."
+
+#: ksolidnotify.cpp:150
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Овај уређај сада можете безбедно уклонити."
 
-#: ksolidnotify.cpp:173
+#: ksolidnotify.cpp:157
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Нисте овлашћени да монтирате овај уређај."
 
-#: ksolidnotify.cpp:176
+#: ksolidnotify.cpp:160
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Нисте овлашћени да уклоните овај уређај."
 
-#: ksolidnotify.cpp:179
+#: ksolidnotify.cpp:163
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Нисте овлашћени да избаците овај диск."
 
-#: ksolidnotify.cpp:186
+#: ksolidnotify.cpp:170
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Не могу да монтирам овај уређај јер је заузет."
 
-#: ksolidnotify.cpp:216
+#: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Један или више фајлова на овом уређају отворени су у неком програму."
 
-#: ksolidnotify.cpp:218
+#: ksolidnotify.cpp:202
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -64,24 +75,24 @@ msgstr[2] ""
 "Један или више фајлова на овом уређају отворени су у следећим програмима: %2."
 msgstr[3] "Један или више фајлова на овом уређају отворени су у програму „%2“."
 
-#: ksolidnotify.cpp:220
+#: ksolidnotify.cpp:205
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: ksolidnotify.cpp:237
+#: ksolidnotify.cpp:222
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Не могу да монтирам овај уређај."
 
-#: ksolidnotify.cpp:240
+#: ksolidnotify.cpp:225
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Не могу да уклоним овај уређај."
 
-#: ksolidnotify.cpp:243
+#: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Не могу да избацим диск."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2022-02-24 21:53+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "தேடு, கணி, அல்லது கட்டளையை இ
 msgid "Computer"
 msgstr "கணினி"
 
-#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
 #, kde-format
 msgid "Show Contact Information…"
 msgstr "தொடர்புகளின் விவரங்களை காட்டு…"

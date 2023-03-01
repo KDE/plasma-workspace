@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2022-06-17 23:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -114,7 +114,7 @@ msgstr "検索や計算もしくはコマンドを実行"
 msgid "Computer"
 msgstr "コンピュータ"
 
-#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
 #, kde-format
 msgid "Show Contact Information…"
 msgstr "連絡先情報を表示…"

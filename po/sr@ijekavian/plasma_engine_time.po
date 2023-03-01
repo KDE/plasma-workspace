@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_time\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
 "PO-Revision-Date: 2014-09-27 12:14+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,62 +18,50 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: timesource.cpp:58
-#, kde-format
+#: timesource.cpp:46
 msgid "Local"
 msgstr "Локално"
 
-#: timesource.cpp:73
-#, kde-format
+#: timesource.cpp:61
 msgid "Timezone"
 msgstr "Временска зона"
 
-#: timesource.cpp:78 timesource.cpp:81 timesource.cpp:85
-#, kde-format
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
 msgid "Timezone City"
 msgstr "Град временске зоне"
 
-#: timesource.cpp:80 timesource.cpp:83
-#, kde-format
+#: timesource.cpp:68 timesource.cpp:71
 msgid "Timezone Continent"
 msgstr "Континент временске зоне"
 
-#: timesource.cpp:84
-#, kde-format
+#: timesource.cpp:72
 msgid "Timezone Country"
 msgstr "Држава временске зоне"
 
-#: timesource.cpp:109
-#, kde-format
+#: timesource.cpp:97
 msgid "Offset"
 msgstr "Помак"
 
-#: timesource.cpp:112
-#, kde-format
+#: timesource.cpp:100
 msgid "Timezone Abbreviation"
 msgstr "Скраћеница временске зоне"
 
-#: timesource.cpp:143 timesource.cpp:162 timesource.cpp:183
-#, kde-format
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
 msgid "DateTime"
 msgstr "Датум-време"
 
-#: timesource.cpp:158
-#, kde-format
+#: timesource.cpp:146
 msgid "Latitude"
 msgstr "Географска ширина"
 
-#: timesource.cpp:159
-#, kde-format
+#: timesource.cpp:147
 msgid "Longitude"
 msgstr "Географска дужина"
 
-#: timesource.cpp:160
-#, kde-format
+#: timesource.cpp:148
 msgid "Solar"
 msgstr "Соларно"
 
-#: timesource.cpp:161
-#, kde-format
+#: timesource.cpp:149
 msgid "Moon"
 msgstr "Месец"

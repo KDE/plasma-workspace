@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2021-05-27 14:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -120,7 +120,7 @@ msgstr "Chercher, calculer ou exécuter une commande"
 msgid "Computer"
 msgstr "Ordinateur"
 
-#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
 #, kde-format
 msgid "Show Contact Information…"
 msgstr "Afficher les informations de contact…"

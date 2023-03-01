@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-31 18:14+0200\n"
+"POT-Creation-Date: 2022-10-17 00:48+0000\n"
 "PO-Revision-Date: 2014-05-24 13:02+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: freespacenotifier.cpp:104
+#: freespacenotifier.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "Allows the user to configure the warning notification being shown"
 #| msgid "Configure Warning..."
-msgid "Configure Warning..."
+msgid "Configure Warning…"
 msgstr "Подеси упозорење..."
 
-#: freespacenotifier.cpp:108
+#: freespacenotifier.cpp:95
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:111
+#: freespacenotifier.cpp:98
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager..."
@@ -68,7 +68,7 @@ msgstr "Упозори када слободан простор спадне и�
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:46
+#: module.cpp:37
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -82,7 +82,7 @@ msgid ""
 msgstr ""
 "Понестаје вам простора у домаћој фасцикли, има још само %1 %1 MiB (%2%)."
 
-#: module.cpp:54
+#: module.cpp:45
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 "Понестаје вам простора у домаћој фасцикли, има још само %1 %1 MiB (%2%)."
 
-#: module.cpp:74
+#: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

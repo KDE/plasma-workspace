@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_package_plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
 "PO-Revision-Date: 2016-03-20 15:25+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,49 +20,49 @@ msgstr ""
 
 # >? Furniture?
 # >> @item file/directory definition
-#: shellpackage.cpp:39 shellpackage.cpp:40
+#: shellpackage.cpp:26 shellpackage.cpp:27
 #, kde-format
 msgid "Applets furniture"
 msgstr "намештај аплета"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:41
+#: shellpackage.cpp:28
 #, kde-format
 msgid "Explorer UI for adding widgets"
 msgstr "сучеље истраживача за додавање виџета"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:42
+#: shellpackage.cpp:29
 #, kde-format
 msgid "User interface for the views that will show containments"
 msgstr "корисничко сучеље за приказе садржалаца"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:50
+#: shellpackage.cpp:37
 #, kde-format
 msgid "Default layout file"
 msgstr "фајл подразумијеваног распореда"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:51
+#: shellpackage.cpp:38
 #, kde-format
 msgid "Default plugins for containments, containmentActions, etc."
 msgstr "подразумевани прикључци за садржаоце, радње садржалаца, итд."
 
 # >> @item file/directory definition
-#: shellpackage.cpp:56
+#: shellpackage.cpp:43
 #, kde-format
 msgid "Error message shown when an applet fails to load"
 msgstr "порука о грешци када аплет не успе да се учита"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:57
+#: shellpackage.cpp:44
 #, kde-format
 msgid "QML component that shows an applet in a popup"
 msgstr "КуМЛ компонента за приказ аплета у искакачу"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:58
+#: shellpackage.cpp:48
 #, kde-format
 msgid ""
 "Compact representation of an applet when collapsed in a popup, for instance "
@@ -72,31 +72,38 @@ msgstr ""
 "потиснути ову компоненту"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:61
+#: shellpackage.cpp:53
 #, kde-format
 msgid "QML component for the configuration dialog for applets"
 msgstr "КуМЛ компонента дијалога за подешавање аплета"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:62
+#: shellpackage.cpp:56
 #, kde-format
 msgid "QML component for the configuration dialog for containments"
 msgstr "КуМЛ компонента дијалога за подешавање садржалаца"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:63
+#: shellpackage.cpp:57
 #, kde-format
 msgid "Panel configuration UI"
 msgstr "сучеље поставе панела"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:64
+#: shellpackage.cpp:60
 #, kde-format
 msgid "QML component for choosing an alternate applet"
 msgstr "КуМЛ компонента за бирање алтернативног аплета"
 
 # >> @item file/directory definition
-#: shellpackage.cpp:67
+#: shellpackage.cpp:63
+#, fuzzy, kde-format
+#| msgid "QML component for the configuration dialog for containments"
+msgid "QML component for the configuration dialog of containments"
+msgstr "КуМЛ компонента дијалога за подешавање садржалаца"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:66
 #, kde-format
 msgid "Widgets explorer UI"
 msgstr "сучеље истраживача виџета"

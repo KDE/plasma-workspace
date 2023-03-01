@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2020, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-23 01:00+0000\n"
-"PO-Revision-Date: 2022-02-20 22:34+0100\n"
+"PO-Revision-Date: 2023-02-28 23:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -189,18 +189,18 @@ msgstr "가상 키보드 꺼짐"
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "%1의 내장 화면"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%3(으)로 연결된 %1 %2"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "연결 해제된 화면 %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
@@ -253,11 +253,10 @@ msgid "Add Panel"
 msgstr "패널 추가하기"
 
 #: shellcorona.cpp:1951
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr "%1 비어 있음"
+msgstr "비어 있는 %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format

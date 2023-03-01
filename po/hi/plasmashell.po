@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-23 01:00+0000\n"
-"PO-Revision-Date: 2021-09-07 10:32+0530\n"
+"PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
-"Language-Team: kde-hindi\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -191,18 +191,18 @@ msgstr "स्क्रीन पर कुंजीपटल निष्क्
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "%1 पर आंतरिक स्क्रीन"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%3 पर %1 %2"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "वियोजित स्क्रीन %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
@@ -242,12 +242,12 @@ msgstr "कार्य प्रबंधक प्रविष्टि %1 स
 #: shellcorona.cpp:256
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr ""
+msgstr "डेस्कटॉप और पैनल प्रबंधित करें..."
 
 #: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "पैनल के बीच कुंजीपटल फ़ोकस ले जाएँ"
 
 #: shellcorona.cpp:1915
 #, kde-format
@@ -255,8 +255,7 @@ msgid "Add Panel"
 msgstr "पैनल जोडें"
 
 #: shellcorona.cpp:1951
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "खाली %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-18 04:02+0200\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2016-07-23 22:40+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,38 +21,19 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
 #, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Часлав Илић"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
-
-#: kcmcursortheme.cpp:76
-#, fuzzy, kde-format
-#| msgid "Cursor Theme"
-msgid "Cursors"
-msgstr "Тема показивача"
-
-#: kcmcursortheme.cpp:77
-#, kde-format
-msgid "(c) 2003-2007 Fredrik Höglund"
-msgstr "© 2003–2007, Фредрик Хеглунд"
-
-#: kcmcursortheme.cpp:78
-#, kde-format
-msgid "Fredrik Höglund"
-msgstr "Фредрик Хеглунд"
-
-#: kcmcursortheme.cpp:79
-#, kde-format
-msgid "Marco Martin"
+msgid "Name of the current cursor theme"
 msgstr ""
 
-#: kcmcursortheme.cpp:368
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:308
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for these changes to take effect."
@@ -60,29 +41,29 @@ msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Морате поново покренути сесију Плазме да би измјене ступиле у дејство."
 
-#: kcmcursortheme.cpp:451
+#: kcmcursortheme.cpp:382
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:393
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не могу да пронађем архиву теме показивача %1."
 
-#: kcmcursortheme.cpp:494
+#: kcmcursortheme.cpp:424
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "Фајл %1 не изгледа као правилна архива теме показивача."
 
-#: kcmcursortheme.cpp:501
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:509
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -91,91 +72,259 @@ msgstr ""
 "Тема иконица по имену %1 већ постоји у фасцикли тема. Желите ли да је "
 "замијените овом?"
 
-#: kcmcursortheme.cpp:513
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Пребрисати тему?"
 
-#: kcmcursortheme.cpp:539
+#: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: kcmcursortheme.cpp:555
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
-msgid ""
-"<qt>You cannot delete the theme you are currently using.<br />You have to "
-"switch to another theme first.</qt>"
+msgid "Timeout in seconds"
 msgstr ""
-"<qt>Не можете обрисати тему коју тренутно користите. Прво морате пребацити "
-"на неку другу тему.</qt>"
 
-#: kcmcursortheme.cpp:561
-#, kde-format
-msgid ""
-"<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
-"will delete all the files installed by this theme.</qt>"
-msgstr ""
-"<qt>Желите ли заиста да уклоните тему показивача <i>%1</i>? Ово ће обрисати "
-"све фајлове инсталиране овом темом.</qt>"
-
-#: kcmcursortheme.cpp:567
-#, kde-format
-msgid "Confirmation"
-msgstr "Потврда"
-
-#: package/contents/ui/Delegate.qml:64
+#: package/contents/ui/Delegate.qml:54
 #, kde-format
 msgid "Remove Theme"
 msgstr "Уклони тему"
 
-#: package/contents/ui/main.qml:31
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Cursor Theme"
+msgstr "Уклони тему"
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:25
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:46
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:47
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:65
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:74
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:110
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr ""
+
+#: package/contents/ui/LaunchFeedbackDialog.qml:124
+#: package/contents/ui/LaunchFeedbackDialog.qml:136
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "This module lets you choose the mouse cursor theme."
 msgstr ""
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Size:"
 msgstr ""
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr ""
+
+#: package/contents/ui/main.qml:145
 #, fuzzy, kde-format
 #| msgid "Install from File"
-msgid "&Install from File..."
+msgid "&Install from File…"
 msgstr "Инсталирај из фајла"
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Get new Theme"
-msgid "&Get New Cursors..."
+msgid "&Get New Cursors…"
 msgstr "Добави нову тему"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Уклони тему"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: xcursor/thememodel.cpp:83
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
-msgid "Name"
-msgstr "Име"
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
 
-#: xcursor/thememodel.cpp:86
+#: plasma-apply-cursortheme.cpp:63
 #, kde-format
-msgid "Description"
-msgstr "Опис"
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
 
-#: xcursor/xcursortheme.cpp:74
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:69
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:90
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:101
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:103
+#, fuzzy, kde-format
+#| msgid ""
+#| "You have to restart the Plasma session for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Морате поново покренути сесију Плазме да би измјене ступиле у дејство."
+
+#: plasma-apply-cursortheme.cpp:113
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:121
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:126
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(доступне величине: %1)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Часлав Илић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Тема показивача"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "© 2003–2007, Фредрик Хеглунд"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Фредрик Хеглунд"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Не можете обрисати тему коју тренутно користите. Прво морате "
+#~ "пребацити на неку другу тему.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Желите ли заиста да уклоните тему показивача <i>%1</i>? Ово ће "
+#~ "обрисати све фајлове инсталиране овом темом.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Потврда"
+
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "Description"
+#~ msgstr "Опис"

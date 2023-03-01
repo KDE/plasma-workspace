@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2021-10-29 09:07+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,53 +20,53 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Повернути до буфера обміну"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "QR Code"
 msgstr "Код QR"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Data Matrix"
 msgstr "Матриця даних"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Ацтек"
 
-#: contents/ui/BarcodePage.qml:60
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 39"
 msgstr "Код 39"
 
-#: contents/ui/BarcodePage.qml:61
+#: contents/ui/BarcodePage.qml:60
 #, kde-format
 msgid "Code 93"
 msgstr "Код 93"
 
-#: contents/ui/BarcodePage.qml:62
+#: contents/ui/BarcodePage.qml:61
 #, kde-format
 msgid "Code 128"
 msgstr "Код 128"
 
-#: contents/ui/BarcodePage.qml:85
+#: contents/ui/BarcodePage.qml:84
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Змінити тип QR-коду"
 
-#: contents/ui/BarcodePage.qml:114
+#: contents/ui/BarcodePage.qml:113
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
 
-#: contents/ui/BarcodePage.qml:123
+#: contents/ui/BarcodePage.qml:122
 #, kde-format
 msgid "The QR code is too large to be displayed"
 msgstr "QR-код є надто великим для показу"

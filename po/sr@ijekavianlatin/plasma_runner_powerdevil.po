@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-28 03:55+0100\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
 "PO-Revision-Date: 2010-01-27 12:55+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,49 +19,43 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: PowerDevilRunner.cpp:54 PowerDevilRunner.cpp:72 PowerDevilRunner.cpp:193
+#: PowerDevilRunner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "suspenduj"
 
-#: PowerDevilRunner.cpp:55 PowerDevilRunner.cpp:79 PowerDevilRunner.cpp:183
-#, kde-format
-msgctxt "Note this is a KRunner keyword"
-msgid "sleep"
-msgstr "na spavanje"
-
-#: PowerDevilRunner.cpp:56 PowerDevilRunner.cpp:86 PowerDevilRunner.cpp:196
-#, kde-format
-msgctxt "Note this is a KRunner keyword"
-msgid "hibernate"
-msgstr "u hibernaciju"
-
-#: PowerDevilRunner.cpp:57 PowerDevilRunner.cpp:88 PowerDevilRunner.cpp:197
-#, kde-format
-msgctxt "Note this is a KRunner keyword"
-msgid "to disk"
-msgstr "na disk"
-
-#: PowerDevilRunner.cpp:58 PowerDevilRunner.cpp:81 PowerDevilRunner.cpp:194
+#: PowerDevilRunner.cpp:34
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "u RAM"
 
-#: PowerDevilRunner.cpp:59 PowerDevilRunner.cpp:92 PowerDevilRunner.cpp:148
+#: PowerDevilRunner.cpp:36
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
-msgid "screen brightness"
-msgstr "osvjetljaj ekrana"
+msgid "sleep"
+msgstr "na spavanje"
 
-#: PowerDevilRunner.cpp:60 PowerDevilRunner.cpp:96 PowerDevilRunner.cpp:150
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "u hibernaciju"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "na disk"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "priguši ekran"
 
-#: PowerDevilRunner.cpp:73
+#: PowerDevilRunner.cpp:53
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -70,53 +64,56 @@ msgstr ""
 "Nabraja opcije suspendovanja sistema (npr. spavanje, hibernacija) i "
 "omogućava njihovo aktiviranje"
 
-#: PowerDevilRunner.cpp:80
+#: PowerDevilRunner.cpp:57
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Suspenduje sistem u RAM"
 
-#: PowerDevilRunner.cpp:87
+#: PowerDevilRunner.cpp:61
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Suspenduje sistem na disk"
 
-#: PowerDevilRunner.cpp:94
-#, no-c-format, kde-format
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "osvjetljaj ekrana"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
 msgid ""
-"Lists screen brightness options or sets it to the brightness defined by :q:; "
-"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
 msgstr ""
 "Nabraja opcije osvjetljaja ekrana i postavlja osvjetljaj zadat sa :q: (npr. "
 "„osvjetljaj ekrana 50“ prigušuje ekran na 50% najvećeg osvjetljaja)."
 
-#: PowerDevilRunner.cpp:147
-#, kde-format
-msgctxt "Note this is a KRunner keyword; %1 is a parameter"
-msgid "screen brightness %1"
-msgstr "osvjetljaj ekrana %1"
-
-#: PowerDevilRunner.cpp:149
-#, kde-format
-msgctxt "Note this is a KRunner keyword; %1 is a parameter"
-msgid "dim screen %1"
-msgstr "priguši ekran %1"
-
-#: PowerDevilRunner.cpp:160
-#, kde-format
-msgid "Set Brightness to %1"
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
 msgstr "Postavi osvjetljaj na %1"
 
-#: PowerDevilRunner.cpp:170
+#: PowerDevilRunner.cpp:104
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Potpuno priguši ekran"
 
-#: PowerDevilRunner.cpp:178
+#: PowerDevilRunner.cpp:112
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Napola priguši ekran"
 
-#: PowerDevilRunner.cpp:215
+#: PowerDevilRunner.cpp:142
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -124,13 +121,13 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "na spavanje"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:143
 #, fuzzy, kde-format
 #| msgid "Suspends the system to RAM"
 msgid "Suspend to RAM"
 msgstr "Suspenduje sistem u RAM"
 
-#: PowerDevilRunner.cpp:221
+#: PowerDevilRunner.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -138,8 +135,32 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "u hibernaciju"
 
-#: PowerDevilRunner.cpp:222
+#: PowerDevilRunner.cpp:149
 #, fuzzy, kde-format
 #| msgid "Suspends the system to disk"
 msgid "Suspend to disk"
 msgstr "Suspenduje sistem na disk"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "osvjetljaj ekrana"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "priguši ekran"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "osvjetljaj ekrana %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "priguši ekran %1"

@@ -2,7 +2,7 @@
 # Copyright (C) 2001, 2002, 2007 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
 # KIM KyungHeon <tody@teoal.net>, 2002.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 01:00+0000\n"
-"PO-Revision-Date: 2022-07-13 11:39+0200\n"
+"PO-Revision-Date: 2023-02-28 23:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -38,12 +38,12 @@ msgstr "임시 파일을 만들 수 없습니다."
 #: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "색 배열을 다운로드할 수 없음: %1"
+msgstr "색 구성표를 다운로드할 수 없음: %1"
 
 #: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "이 파일은 색 배열 파일이 아닙니다."
+msgstr "이 파일은 색 구성표 파일이 아닙니다."
 
 #: colors.cpp:285
 #, kde-format
@@ -53,18 +53,18 @@ msgstr "'color-scheme' 데이터 폴더를 만들 수 없습니다."
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr "색 배열을 'color-scheme' 데이터 폴더로 복사할 수 없습니다."
+msgstr "색 구성표를 'color-scheme' 데이터 폴더로 복사할 수 없습니다."
 
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr "색 배열을 설치했습니다."
+msgstr "색 구성표를 설치했습니다."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr "색 배열 이름"
+msgstr "색 구성표 이름"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
@@ -96,7 +96,7 @@ msgstr "KColorSchemeEditor"
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "색 배열을 만들고 편집하는 도구"
+msgstr "색 구성표를 만들고 편집하는 도구"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr "편집하거나 기반으로 사용할 색 배열입니다."
+msgstr "편집하거나 기반으로 사용할 색 구성표입니다."
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "대화 상자를 지정한 창 핸들을 사용하는 프로그램에 �
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr "색 배열을 찾을 수 없어서 현재 사용 중인 배열을 사용합니다.\n"
+msgstr "색 구성표를 찾을 수 없어서 현재 사용 중인 구성표를 사용합니다.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -436,7 +436,7 @@ msgstr "호버 장식"
 #: editor/scmeditorcolors.ui:23
 #, kde-format
 msgid "Color set:"
-msgstr "색 배열:"
+msgstr "색 구성표:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:36
@@ -668,12 +668,12 @@ msgstr "저장하지 않은 변경 사항"
 #: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
-msgstr "색 배열 저장하기"
+msgstr "색 구성표 저장하기"
 
 #: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "색 배열의 이름을 입력하십시오(&E):"
+msgstr "색 구성표의 이름을 입력하십시오(&E):"
 
 #: editor/scmeditordialog.cpp:139
 #, kde-format
@@ -681,13 +681,13 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"같은 이름을 가진 색 배열이 존재합니다.\n"
+"같은 이름을 가진 색 구성표가 존재합니다.\n"
 "덮어쓰시겠습니까?"
 
 #: editor/scmeditordialog.cpp:176
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
-msgstr "색 배열을 덮어쓸 권한이 없습니다."
+msgstr "색 구성표를 덮어쓸 권한이 없습니다."
 
 #: editor/scmeditordialog.cpp:176
 #, kde-format
@@ -1138,24 +1138,22 @@ msgid "focus"
 msgstr "초점"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "색 배열 복원"
+msgstr "색 구성표의 강조 색상"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "배경 그림의 강조 색상"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "사용자 정의 강조 색상 선택"
+msgstr "사용자 정의 강조 색상"
 
 #: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
@@ -1165,28 +1163,28 @@ msgstr "사용자 정의 강조 색상 선택"
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
-msgstr "이 모듈에서 색 배열을 선택할 수 있습니다."
+msgstr "이 모듈에서 색 구성표를 선택할 수 있습니다."
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "색 배열 '%1'이(가) 설치되어 있지 않습니다. 기본 테마를 사용합니다."
+msgstr "색 구성표 '%1'이(가) 설치되어 있지 않습니다. 기본 테마를 사용합니다."
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
-msgstr "모든 색 배열"
+msgstr "모든 색 구성표"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
-msgstr "밝은 색 배열"
+msgstr "밝은 색 구성표"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
-msgstr "어두운 색 배열"
+msgstr "어두운 색 구성표"
 
 #: package/contents/ui/main.qml:176
 #, kde-format
@@ -1233,17 +1231,17 @@ msgstr "비활성화된 텍스트"
 #: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "색 배열 편집…"
+msgstr "색 구성표 편집…"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
-msgstr "색 배열 삭제"
+msgstr "색 구성표 삭제"
 
 #: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
-msgstr "색 배열 복원"
+msgstr "색 구성표 복원"
 
 #: package/contents/ui/main.qml:342
 #, kde-format
@@ -1253,17 +1251,17 @@ msgstr "파일에서 설치…"
 #: package/contents/ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
-msgstr "새 색 배열 가져오기…"
+msgstr "새 색 구성표 가져오기…"
 
 #: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
-msgstr "색 배열 열기"
+msgstr "색 구성표 열기"
 
 #: package/contents/ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr "색 배열 파일 (*.colors)"
+msgstr "색 구성표 파일 (*.colors)"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
@@ -1272,8 +1270,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
-"이 도구를 사용하여 사용할 수 없는 색 배열을 실수로 선택하거나 이미 선택된 색 "
-"배열을 다시 선택하지 않고 현재 Plasma 세션의 색 배열을 설정할 수 있습니다."
+"이 도구를 사용하여 사용할 수 없는 색 구성표를 실수로 선택하거나 이미 선택된 "
+"색 구성표를 다시 선택하지 않고 현재 Plasma 세션의 색 구성표를 설정할 수 있습"
+"니다."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1281,14 +1280,14 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"현재 Plasma 세션에 적용할 색 배열(전체 경로를 지정하면 마지막 부분만 사용)"
+"현재 Plasma 세션에 적용할 색 구성표(전체 경로를 지정하면 마지막 부분만 사용)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
-msgstr "시스템에 있는 모든 색 배열 표시(현재 테마 포함)"
+msgstr "시스템에 있는 모든 색 구성표 표시(현재 테마 포함)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1311,7 +1310,7 @@ msgstr "요청한 \"%1\" 테마는 현재 Plasma 세션의 테마로 설정되�
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr "현재 Plasma 세션 색 배열을 %1(으)로 설정함"
+msgstr "현재 Plasma 세션 색 구성표를 %1(으)로 설정함"
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
@@ -1325,14 +1324,14 @@ msgstr "테마 \"%1\"을(를) 찾을 수 없습니다. 다음 중 하나여야 �
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr "빈 색 배열 이름을 전달했습니다. 지원하지 않는 동작입니다."
+msgstr "빈 색 구성표 이름을 전달했습니다. 지원하지 않는 동작입니다."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
-msgstr "색 배열로 지정하려고 했단 파일 %1이(가) 올바른 색 배열이 아닙니다."
+msgstr "색 구성표로 지정하려고 했단 파일 %1이(가) 올바른 색 구성표가 아닙니다."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
@@ -1347,12 +1346,12 @@ msgstr "잘못된 강조 색상"
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr "시스템에 다음 색 배열이 설치되어 있습니다:"
+msgstr "시스템에 다음 색 구성표가 설치되어 있습니다:"
 
 #: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr " * %1(현재 색 배열)"
+msgstr " * %1(현재 색 구성표)"
 
 #~ msgid "Use accent color:"
 #~ msgstr "강조 색상 사용:"

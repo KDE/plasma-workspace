@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2014-08-21 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
-#: kcm.cpp:481
+#: kcm.cpp:479
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for cursor changes to take effect."
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Du muttst KDE nieg starten, anners warrt de Wieserännern nich övernahmen."
 
-#: kcm.cpp:482
+#: kcm.cpp:480
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Wieserinstellen ännert"

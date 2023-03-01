@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-01 03:49+0200\n"
+"POT-Creation-Date: 2022-10-22 00:47+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,111 +22,94 @@ msgstr ""
 "X-Associated-UI-Catalogs: knewstuff5 kwidgetsaddons5_qt\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Топлица Танасковић"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "toptan@sezampro.yu"
-
 # >> @item:inlistbox
-#: iconsizecategorymodel.cpp:26
-#, kde-format
-msgid "Desktop"
-msgstr "површ"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:27
-#, kde-format
-msgid "Toolbar"
-msgstr "трака алатки"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:28
+#: iconsizecategorymodel.cpp:14
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Главна трака"
 
 # >> @item:inlistbox
-#: iconsizecategorymodel.cpp:29
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Secondary Toolbars"
+msgstr "Главна трака"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:16
 #, kde-format
 msgid "Small Icons"
 msgstr "мале иконице"
 
 # >> @item:inlistbox
-#: iconsizecategorymodel.cpp:30
-#, kde-format
-msgid "Panel"
-msgstr "панел"
-
-# >> @item:inlistbox
-#: iconsizecategorymodel.cpp:31
+#: iconsizecategorymodel.cpp:17
 #, kde-format
 msgid "Dialogs"
 msgstr "дијалози"
 
-#: main.cpp:80
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
 #, kde-format
-msgid "Icons"
-msgstr "Иконице"
-
-#: main.cpp:81
-#, kde-format
-msgid "Icons Control Panel Module"
-msgstr ""
-"Модул контролног панела за иконице|/|$[својства дат 'Модулу контролног "
-"панела за иконице']"
-
-#: main.cpp:82
-#, kde-format
-msgid "(c) 2000-2003 Geert Jansen"
-msgstr "© 2000-2003, Герт Јансен"
-
-#: main.cpp:83
-#, kde-format
-msgid "Geert Jansen"
-msgstr "Герт Јансен"
-
-#: main.cpp:84
-#, kde-format
-msgid "Antonio Larrosa Jimenez"
-msgstr "Антонио Лароса Хименез"
-
-#: main.cpp:85
-#, kde-format
-msgid "Torsten Rahn"
-msgstr "Торстен Ран"
-
-#: main.cpp:86
-#, kde-format
-msgid "Jonathan Riddell"
-msgstr "Џонатан Ридел"
-
-#: main.cpp:87
-#, kde-format
-msgid "Kai Uwe Broulik"
+msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:213
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Главна трака"
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "мале иконице"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не могу да направим привремени фајл."
 
-#: main.cpp:225
+#: main.cpp:193
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не могу да пронађем архиву теме иконица %1."
 
-#: main.cpp:239
+#: main.cpp:207
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Овај фајл није исправна архива теме иконица."
 
-#: main.cpp:244
+#: main.cpp:212
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -135,65 +118,136 @@ msgstr ""
 "Дошло је до проблема у току инсталације. Ипак, већи дио тема из архиве је "
 "инсталиран."
 
-#: main.cpp:248
+#: main.cpp:216
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
 # >> @title:window
-#: main.cpp:358
-#, kde-format
-msgid "Installing icon themes..."
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing icon themes…"
 msgstr "Инсталирање теме иконица"
 
 # >> @title:window
-#: main.cpp:368
+#: main.cpp:270
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
-msgid "Installing %1 theme..."
+msgid "Installing %1 theme…"
 msgstr "Инсталирање теме иконица"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/IconSizePopup.qml:34
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Here you can configure the default sizes of various icon types at a system-"
+"wide level. Note that not all apps will respect these settings.<nl/><nl/>If "
+"you find that objects on screen are generally too small or too large, "
+"consider adjusting the global scale instead."
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:41
+#, kde-format
+msgid "Adjust Global Scale…"
+msgstr ""
+
+#: package/contents/ui/IconSizePopup.qml:117
+#, kde-format
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Уклони тему"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:155
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Уклони тему"
 
-#: package/contents/ui/main.qml:232
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:249
+#: package/contents/ui/main.qml:246
 #, fuzzy, kde-format
 #| msgid "Install from File"
-msgid "Install from File..."
+msgid "Install from File…"
 msgstr "Инсталирај из фајла"
 
-#: package/contents/ui/main.qml:256
+#: package/contents/ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
-msgid "Get New Icons..."
+msgid "Get New Icons…"
 msgstr "Добави нове теме..."
 
-#: package/contents/ui/main.qml:277
+#: package/contents/ui/main.qml:273
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Уклони тему"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Топлица Танасковић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toptan@sezampro.yu"
+
+# >> @item:inlistbox
+#~ msgid "Desktop"
+#~ msgstr "површ"
+
+# >> @item:inlistbox
+#~ msgid "Toolbar"
+#~ msgstr "трака алатки"
+
+# >> @item:inlistbox
+#~ msgid "Panel"
+#~ msgstr "панел"
+
+#~ msgid "Icons"
+#~ msgstr "Иконице"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr ""
+#~ "Модул контролног панела за иконице|/|$[својства дат 'Модулу контролног "
+#~ "панела за иконице']"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000-2003, Герт Јансен"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Герт Јансен"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Антонио Лароса Хименез"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Торстен Ран"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Џонатан Ридел"

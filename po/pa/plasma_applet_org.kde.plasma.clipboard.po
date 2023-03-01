@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2022-06-14 20:57-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,53 +17,53 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਵਾਪਸ ਜਾਓ"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "QR Code"
 msgstr "QR ਕੋਡ"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Data Matrix"
 msgstr "ਡਾਟਾ ਮੈਟਰਿਕਸ"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "ਅਜ਼ਟੇਕ"
 
-#: contents/ui/BarcodePage.qml:60
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 39"
 msgstr "ਕੋਡ 39"
 
-#: contents/ui/BarcodePage.qml:61
+#: contents/ui/BarcodePage.qml:60
 #, kde-format
 msgid "Code 93"
 msgstr "ਕੋਡ 93"
 
-#: contents/ui/BarcodePage.qml:62
+#: contents/ui/BarcodePage.qml:61
 #, kde-format
 msgid "Code 128"
 msgstr "ਕੋਡ 128"
 
-#: contents/ui/BarcodePage.qml:85
+#: contents/ui/BarcodePage.qml:84
 #, kde-format
 msgid "Change the QR code type"
 msgstr "QR ਕੋਡ ਕਿਸਮ ਬਦਲੋ"
 
-#: contents/ui/BarcodePage.qml:114
+#: contents/ui/BarcodePage.qml:113
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣ ਲਈ ਅਸਫ਼ਲ"
 
-#: contents/ui/BarcodePage.qml:123
+#: contents/ui/BarcodePage.qml:122
 #, kde-format
 msgid "The QR code is too large to be displayed"
 msgstr "ਦਿਖਾਉਣ ਲਈ QR ਕੋਡ ਬਹੁਤ ਵੱਡਾ ਹੈ"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-09 04:03+0200\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2015-07-12 20:23+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,100 +18,126 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/config/config.qml:26
+#: contents/config/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Opšte"
 
-#: contents/ui/ConfigGeneral.qml:50
+#: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:51
+#: contents/ui/ConfigGeneral.qml:37
 #, kde-format
-msgid "Leave"
-msgstr "Napusti"
+msgid "Logout"
+msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:57 contents/ui/data.js:4
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Zaključaj"
 
-#: contents/ui/ConfigGeneral.qml:62
+#: contents/ui/ConfigGeneral.qml:58
 #, kde-format
 msgid "Switch User"
 msgstr "Prebaci korisnika"
 
-#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:26
-#: contents/ui/lockout.qml:124
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "U hibernaciju"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:20
-#: contents/ui/lockout.qml:140
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: contents/ui/data.js:5
+#: contents/ui/data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "Zaključaj ekran"
 
-#: contents/ui/data.js:10
+#: contents/ui/data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "Prebaci korisnika"
 
-#: contents/ui/data.js:11
+#: contents/ui/data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Započnite paralelnu sesiju kao drugi korisnik"
 
-#: contents/ui/data.js:15
+#: contents/ui/data.js:18
 #, kde-format
-msgid "Leave..."
-msgstr "Napusti..."
+msgid "Shutdown…"
+msgstr ""
 
-#: contents/ui/data.js:16
+#: contents/ui/data.js:19
 #, fuzzy, kde-format
 #| msgid "Logout, turn off or restart the computer"
-msgid "Log out, turn off or restart the computer"
+msgid "Turn off the computer"
 msgstr "Odjavi me, ugasi ili ponovo pokreni računar"
 
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr ""
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr ""
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr ""
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr ""
+
 # well-spelled: сусп
-#: contents/ui/data.js:21
+#: contents/ui/data.js:40
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Na spavanje (susp. u RAM)"
 
 # well-spelled: сусп
-#: contents/ui/data.js:27
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "U hibernaciju (susp. na disk)"
 
-#: contents/ui/lockout.qml:125
-#, kde-format
-msgid "Do you want to suspend to disk (hibernate)?"
-msgstr "Želite li da suspendujete na disk (hibernacija)?"
+#~ msgid "Leave"
+#~ msgstr "Napusti"
 
-#: contents/ui/lockout.qml:128 contents/ui/lockout.qml:144
-#, kde-format
-msgid "Yes"
-msgstr "Da"
+#~ msgid "Leave..."
+#~ msgstr "Napusti..."
 
-#: contents/ui/lockout.qml:129 contents/ui/lockout.qml:145
-#, kde-format
-msgid "No"
-msgstr "Ne"
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Želite li da suspendujete na disk (hibernacija)?"
 
-#: contents/ui/lockout.qml:141
-#, kde-format
-msgid "Do you want to suspend to RAM (sleep)?"
-msgstr "Želite li da suspendujete u RAM (spavanje)?"
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Želite li da suspendujete u RAM (spavanje)?"

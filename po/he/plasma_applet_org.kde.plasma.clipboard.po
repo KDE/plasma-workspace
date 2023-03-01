@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -18,56 +18,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "חזור ללוח העתקה"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "QR Code"
 msgstr "קוד QR"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Data Matrix"
 msgstr "מטריקס נתונים"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:60
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 39"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:61
+#: contents/ui/BarcodePage.qml:60
 #, kde-format
 msgid "Code 93"
 msgstr "'וד 93"
 
-#: contents/ui/BarcodePage.qml:62
+#: contents/ui/BarcodePage.qml:61
 #, fuzzy, kde-format
 #| msgid "Code 39"
 msgid "Code 128"
 msgstr "קוד 39"
 
-#: contents/ui/BarcodePage.qml:85
+#: contents/ui/BarcodePage.qml:84
 #, fuzzy, kde-format
 #| msgid "Change the barcode type"
 msgid "Change the QR code type"
 msgstr "שנה סוג ברקוד"
 
-#: contents/ui/BarcodePage.qml:114
+#: contents/ui/BarcodePage.qml:113
 #, fuzzy, kde-format
 #| msgid "Creating barcode failed"
 msgid "Creating QR code failed"
 msgstr "יצירת הברקוד נכשלה"
 
-#: contents/ui/BarcodePage.qml:123
+#: contents/ui/BarcodePage.qml:122
 #, kde-format
 msgid "The QR code is too large to be displayed"
 msgstr ""

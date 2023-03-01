@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-01-23 03:49+0100\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,103 +21,65 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Часлав Илић"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
-
-#: gtkpage.cpp:117
+#: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr ""
 
-#: kcmstyle.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "Application Style"
-msgstr "&Програми"
-
-#: kcmstyle.cpp:94
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
-msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
-msgstr "© 2002, Карол Свед, Данијел Молкентин"
-
-#: kcmstyle.cpp:96
-#, kde-format
-msgid "Karol Szwed"
-msgstr "Карол Свед"
-
-#: kcmstyle.cpp:97
-#, kde-format
-msgid "Daniel Molkentin"
-msgstr "Данијел Молкентин"
-
-#: kcmstyle.cpp:98
-#, kde-format
-msgid "Kai Uwe Broulik"
-msgstr ""
-
-#: kcmstyle.cpp:181 kcmstyle.cpp:188
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "Грешка при учитавању дијалога за подешавање овог стила."
 
-#: kcmstyle.cpp:283
+#: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr ""
 
-#: package/contents/ui/EffectSettingsPopup.qml:43
+#: package/contents/ui/EffectSettingsPopup.qml:32
 #, fuzzy, kde-format
 #| msgid "Show icons in menus:"
 msgid "Show icons:"
 msgstr "&Иконице у менијима:"
 
-#: package/contents/ui/EffectSettingsPopup.qml:44
+#: package/contents/ui/EffectSettingsPopup.qml:33
 #, fuzzy, kde-format
 #| msgid "Radio button"
 msgid "On buttons"
 msgstr "Радио дугме"
 
-#: package/contents/ui/EffectSettingsPopup.qml:51
+#: package/contents/ui/EffectSettingsPopup.qml:44
 #, kde-format
 msgid "In menus"
 msgstr ""
 
-#: package/contents/ui/EffectSettingsPopup.qml:60
+#: package/contents/ui/EffectSettingsPopup.qml:56
 #, fuzzy, kde-format
 #| msgid "Main &toolbar text location:"
 msgid "Main toolbar label:"
 msgstr "&Локација текста главне траке:"
 
-#: package/contents/ui/EffectSettingsPopup.qml:62
+#: package/contents/ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "None"
 msgstr ""
 
 # @item:inlistbox Text position
-#: package/contents/ui/EffectSettingsPopup.qml:63
+#: package/contents/ui/EffectSettingsPopup.qml:59
 #, fuzzy, kde-format
 #| msgid "Text Only"
 msgid "Text only"
 msgstr "само текст"
 
 # @item:inlistbox Text position
-#: package/contents/ui/EffectSettingsPopup.qml:64
+#: package/contents/ui/EffectSettingsPopup.qml:60
 #, fuzzy, kde-format
 #| msgid "Text Beside Icons"
 msgid "Beside icons"
 msgstr "текст поред иконица"
 
 # @item:inlistbox Text position
-#: package/contents/ui/EffectSettingsPopup.qml:65
+#: package/contents/ui/EffectSettingsPopup.qml:61
 #, fuzzy, kde-format
 #| msgid "Text Below Icons"
 msgid "Below icon"
@@ -129,75 +91,47 @@ msgstr "текст испод иконица"
 msgid "Secondary toolbar label:"
 msgstr "Локација &текста других трака:"
 
-#: package/contents/ui/GtkStylePage.qml:32
+#: package/contents/ui/GtkStylePage.qml:18
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "&Applications"
 msgid "GNOME/GTK Application Style"
 msgstr "&Програми"
 
-#: package/contents/ui/GtkStylePage.qml:58
+#: package/contents/ui/GtkStylePage.qml:44
 #, kde-format
-msgid "GTK2 theme:"
+msgid "GTK theme:"
 msgstr ""
 
-#: package/contents/ui/GtkStylePage.qml:90
-#: package/contents/ui/GtkStylePage.qml:130
+#: package/contents/ui/GtkStylePage.qml:69
 #, fuzzy, kde-format
 #| msgid "Preview"
-msgid "Preview..."
+msgid "Preview…"
 msgstr "Преглед"
 
-#: package/contents/ui/GtkStylePage.qml:98
+#: package/contents/ui/GtkStylePage.qml:88
 #, kde-format
-msgid "GTK3 theme:"
+msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/GtkStylePage.qml:151
-#, kde-format
-msgid "Install from File..."
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:157
-#, kde-format
-msgid "Download New GNOME/GTK Application Styles..."
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:165
-#, kde-format
-msgid "Download New GNOME/GTK2 Application Styles..."
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:173
+#: package/contents/ui/GtkStylePage.qml:93
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "&Applications"
-msgid "GNOME/GTK2 Application Styles"
+msgid "Get New GNOME/GTK Application Styles…"
 msgstr "&Програми"
 
-#: package/contents/ui/GtkStylePage.qml:182
-#, kde-format
-msgid "Download New GNOME/GTK3 Application Styles..."
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:190
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "GNOME/GTK3 Application Styles"
-msgstr "&Програми"
-
-#: package/contents/ui/GtkStylePage.qml:207
+#: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: package/contents/ui/GtkStylePage.qml:209
+#: package/contents/ui/GtkStylePage.qml:111
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: package/contents/ui/main.qml:31
+#: package/contents/ui/main.qml:17
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Style</h1>This module allows you to modify the visual appearance of "
@@ -210,24 +144,26 @@ msgstr ""
 "корисничког сучеља, као што су стил виџета и ефекти.</p>"
 
 # >> @title:window %1 style name
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Configure %1"
-msgid "Configure Style..."
+msgid "Configure Style…"
 msgstr "Подеси %1|/|Подеси $[аку %1]"
 
-#: package/contents/ui/main.qml:124
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:137
-#, kde-format
-msgid "Configure GNOME/GTK Application Style..."
-msgstr ""
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Програми"
 
 # >> @title:window %1 style name
-#: styleconfdialog.cpp:33
+#: styleconfdialog.cpp:21
 #, kde-format
 msgid "Configure %1"
 msgstr "Подеси %1|/|Подеси $[аку %1]"
@@ -270,3 +206,64 @@ msgstr "Радио дугме"
 #, kde-format
 msgid "Tab 2"
 msgstr "Језичак 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "&Програми"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons on buttons"
+msgstr "&Иконице у менијима:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons in menus"
+msgstr "&Иконице у менијима:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main &toolbar text location:"
+msgid "Main toolbar label"
+msgstr "&Локација текста главне траке:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text &location:"
+msgid "Secondary toolbar label"
+msgstr "Локација &текста других трака:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Часлав Илић"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+#~ msgstr "© 2002, Карол Свед, Данијел Молкентин"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Карол Свед"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Данијел Молкентин"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Програми"

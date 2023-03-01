@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-02 03:45+0200\n"
+"POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,84 +18,144 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/ui/ExpandedRepresentation.qml:245 contents/ui/main.qml:85
+#: package/contents/ui/AlbumArtStackView.qml:181
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
 msgstr "Ništa se ne pušta"
 
-#: contents/ui/ExpandedRepresentation.qml:338
-#: contents/ui/ExpandedRepresentation.qml:409
+#: package/contents/ui/ExpandedRepresentation.qml:413
+#: package/contents/ui/ExpandedRepresentation.qml:534
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/main.qml:99
+#: package/contents/ui/ExpandedRepresentation.qml:563
 #, kde-format
-msgctxt "Open player window or bring it to the front if already open"
-msgid "Open"
-msgstr "Otvori"
+msgid "Shuffle"
+msgstr ""
 
-#: contents/ui/main.qml:103
+#: package/contents/ui/ExpandedRepresentation.qml:589
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Prethodna numera"
 
-#: contents/ui/main.qml:111
+#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pauziraj"
 
-#: contents/ui/main.qml:116
+#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Pusti"
 
-#: contents/ui/main.qml:122
+#: package/contents/ui/ExpandedRepresentation.qml:629
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Sledeća numera"
 
-#: contents/ui/main.qml:128
+#: package/contents/ui/ExpandedRepresentation.qml:652
+#, fuzzy, kde-format
+#| msgctxt "Play next track"
+#| msgid "Next Track"
+msgid "Repeat Track"
+msgstr "Sledeća numera"
+
+#: package/contents/ui/ExpandedRepresentation.qml:652
+#, kde-format
+msgid "Repeat"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Otvori"
+
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: contents/ui/main.qml:136
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Napusti"
 
-#: contents/ui/main.qml:283
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Automatski izaberi plejer"
 
-#: contents/ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
-msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "— %1 (pauzirano)"
+#: package/contents/ui/main.qml:292
+#, kde-format
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
+msgstr ""
 
-#: contents/ui/main.qml:325
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
-msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
-msgstr "— %1 (pauzirano)"
+#: package/contents/ui/main.qml:292
+#, kde-format
+msgctxt "@info:tooltip %1 is an app name"
+msgid ""
+"%1\n"
+"Middle-click to pause\n"
+"Scroll to adjust volume"
+msgstr ""
 
-#: contents/ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Paused"
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "Pauzirano"
+#: package/contents/ui/main.qml:303
+#, kde-format
+msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play\n"
+"Scroll to adjust volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:303
+#, kde-format
+msgctxt "@info:tooltip %1 is an app name"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play\n"
+"Scroll to adjust volume"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "Artist of the song"
+#~| msgid "by %1 (paused)"
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "— %1 (pauzirano)"
+
+#, fuzzy
+#~| msgctxt "Artist of the song"
+#~| msgid "by %1 (paused)"
+#~ msgctxt "by Artist (paused, player name)"
+#~ msgid "by %1 (paused, %2)"
+#~ msgstr "— %1 (pauzirano)"
+
+#, fuzzy
+#~| msgid "Paused"
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "Pauzirano"

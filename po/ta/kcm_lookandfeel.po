@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2023-01-24 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: kcm.cpp:481
+#: kcm.cpp:479
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "இந்த மாற்றங்கள் செயல்பட, பிளாஸ்மா அமர்வை நீங்கள் மீள்துவக்க வேண்டும்."
 
-#: kcm.cpp:482
+#: kcm.cpp:480
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "சுட்டிக்குறி அமைப்புகள் மாற்றப்பட்டன"

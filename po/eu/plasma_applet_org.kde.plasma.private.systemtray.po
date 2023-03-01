@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-19 00:59+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2022-08-12 13:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -153,23 +153,23 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Ukimen moduan automatikoki ezarri handira"
 
-#: package/contents/ui/ExpandedRepresentation.qml:64
+#: package/contents/ui/ExpandedRepresentation.qml:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Joan atzera"
 
-#: package/contents/ui/ExpandedRepresentation.qml:76
+#: package/contents/ui/ExpandedRepresentation.qml:73
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Egoera eta jakinarazpenak"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:136
 #, kde-format
 msgid "More actions"
 msgstr "Ekintza gehiago"
 
-#: package/contents/ui/ExpandedRepresentation.qml:230
+#: package/contents/ui/ExpandedRepresentation.qml:227
 #, kde-format
 msgid "Keep Open"
 msgstr "Eduki irekita"

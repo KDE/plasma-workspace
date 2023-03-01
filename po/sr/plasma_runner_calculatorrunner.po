@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-16 02:25+0200\n"
+"POT-Creation-Date: 2022-10-20 00:52+0000\n"
 "PO-Revision-Date: 2017-04-07 20:50+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,30 +20,32 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: calculatorrunner.cpp:54
-#, kde-format
+#: calculatorrunner.cpp:33
+#, fuzzy, kde-format
+#| msgid ""
+#| "Calculates the value of :q: when :q: is made up of numbers and "
+#| "mathematical symbols such as +, -, /, * and ^."
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
-"symbols such as +, -, /, * and ^."
+"symbols such as +, -, /, *, ! and ^."
 msgstr ""
 "Израчунава вредност :q: када је :q: сачињен од бројева и математичких "
 "симбола попут +, -, /, * и ^."
 
-#: calculatorrunner.cpp:60
+#: calculatorrunner.cpp:39
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Копирај у клипборд"
 
 # >> @item:intext
-#: calculatorrunner.cpp:274
+#: calculatorrunner.cpp:133
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"
 msgstr "приближно"
 
-#: qalculate_engine.cpp:74
-#, kde-format
-msgid ""
-"The exchange rates could not be updated. The following error has been "
-"reported: %1"
-msgstr "Курсна листа не може да се ажурира. Пријављена је следећа грешка: %1"
+#~ msgid ""
+#~ "The exchange rates could not be updated. The following error has been "
+#~ "reported: %1"
+#~ msgstr ""
+#~ "Курсна листа не може да се ажурира. Пријављена је следећа грешка: %1"

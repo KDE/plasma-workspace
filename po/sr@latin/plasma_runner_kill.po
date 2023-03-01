@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-runner-kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-14 04:02+0200\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2009-12-29 22:11+0100\n"
 "Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,50 +19,50 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: killrunner.cpp:41
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Pošalji SIGTERM"
 
-#: killrunner.cpp:42
+#: killrunner.cpp:32
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Pošalji SIGKILL"
 
-#: killrunner.cpp:61 killrunner_config.cpp:63 killrunner_config.cpp:88
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
 #, kde-format
 msgid "kill"
 msgstr "ukini"
 
-#: killrunner.cpp:68
+#: killrunner.cpp:57
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "Obustavite programe u pogonu čija imena poklopi upit."
 
-#: killrunner.cpp:132
+#: killrunner.cpp:120
 #, kde-format
 msgid "Terminate %1"
 msgstr "Obustavi %1"
 
-#: killrunner.cpp:133
+#: killrunner.cpp:121
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""
 
 # >> @item:inlistbox Sort by:
-#: killrunner_config.cpp:44
+#: killrunner_config.cpp:32
 #, kde-format
 msgid "CPU usage"
 msgstr "iskorišćenju CPU‑a"
 
 # >> @item:inlistbox Sort by:
-#: killrunner_config.cpp:45
+#: killrunner_config.cpp:33
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "iskorišćenju CPU‑a, obrnuto"
 
 # >> @item:inlistbox Sort by:
-#: killrunner_config.cpp:46
+#: killrunner_config.cpp:34
 #, kde-format
 msgid "nothing"
 msgstr "ničemu"

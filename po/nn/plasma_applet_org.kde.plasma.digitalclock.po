@@ -207,11 +207,11 @@ msgstr "Tilpassa"
 #: package/contents/ui/configAppearance.qml:204
 #, kde-format
 msgid ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-"
-"method\">Time Format Documentation</a>"
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-"
-"method\">Dokumentasjon på tidsformat</a>"
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Dokumentasjon på tidsformat</a>"
 
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-30 03:50+0200\n"
+"POT-Creation-Date: 2023-01-28 01:00+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,81 +20,69 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: logout.cpp:371
+#: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "„%1“ prekinu odjavljivanje"
 
-#: main.cpp:52
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
-msgid ""
-"The reliable Plasma session manager that talks the standard X11R6 \n"
-"session management protocol (XSMP)."
-msgstr ""
-"Pouzdan KDE‑ov menadžer sesija koji komunicira standardnim\n"
-"X‑ovim protokolom za upravljanje sesijama (XSMP)."
-
 # literal-segment: HOME
-#: main.cpp:140
+#: main.cpp:77
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME nije postavljena!"
 
-#: main.cpp:145 main.cpp:152
+#: main.cpp:81 main.cpp:87
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Fascikla $HOME (%1) ne postoji."
 
 # literal-segment: HOME
-#: main.cpp:147
+#: main.cpp:83
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
 msgstr "Nema pristupa za pisanje nad fasciklom $HOME (%1)."
 
 # literal-segment: HOME
-#: main.cpp:154
+#: main.cpp:89
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Nema pristupa za čitanje nad fasciklom $HOME (%1)."
 
 # literal-segment: HOME
-#: main.cpp:159
+#: main.cpp:93
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Nema prostora na disku pod fasciklom $HOME (%1)."
 
 # literal-segment: HOME
-#: main.cpp:161
+#: main.cpp:96
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Upisivanje u fasciklu $HOME (%2) propalo uz grešku „%1“."
 
-#: main.cpp:174 main.cpp:208
+#: main.cpp:109 main.cpp:144
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nema pristupa za pisanje nad „%1“."
 
-#: main.cpp:176 main.cpp:210
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nema pristupa za čitanje nad „%1“."
 
-#: main.cpp:186 main.cpp:198
+#: main.cpp:119 main.cpp:132
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Nema prostora na disku pod privremenom fasciklom (%1)."
 
-#: main.cpp:188 main.cpp:200
+#: main.cpp:122 main.cpp:135
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr "Upisivanje u privremenu fasciklu (%2) propalo uz grešku „%1“."
 
-#: main.cpp:215
+#: main.cpp:150
 #, fuzzy, kde-format
 #| msgid ""
 #| "The following installation problem was detected\n"
@@ -106,7 +94,7 @@ msgstr ""
 "Otkriveni su naredni problemi sa instalacijom\n"
 "pri pokretanju KDE‑a:"
 
-#: main.cpp:218
+#: main.cpp:153
 #, fuzzy, kde-format
 #| msgid ""
 #| "\n"
@@ -121,27 +109,39 @@ msgstr ""
 "\n"
 "KDE ne može da se pokrene.\n"
 
-#: main.cpp:225
+#: main.cpp:160
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problem sa instalacijom plasma radnog prostora"
 
-#: main.cpp:266
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Pouzdan KDE‑ov menadžer sesija koji komunicira standardnim\n"
+"X‑ovim protokolom za upravljanje sesijama (XSMP)."
+
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnavlja sačuvanu korisničku sesiju (ako postoji)."
 
-#: main.cpp:270
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Takođe dozvoli udaljene veze"
 
-#: main.cpp:274
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Pokreće sesiju u zaključanom režimu"
 
-#: main.cpp:278
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -150,28 +150,28 @@ msgstr ""
 "Pokreće se bez podrške za zaključavanje ekrana. Potrebno samo ako neka druga "
 "komponenta opslužuje zaključavanje."
 
-#: server.cpp:951
+#: server.cpp:884
 #, kde-format
 msgid "Session Management"
 msgstr ""
 
-#: server.cpp:954
+#: server.cpp:887
 #, kde-format
 msgid "Log Out"
 msgstr "Odjavi me"
 
-#: server.cpp:959
+#: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Odjavi me bez potvrde"
 
-#: server.cpp:964
+#: server.cpp:897
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Ugasi bez potvrde"
 
 # rewrite-msgid: /Reboot/Reset/
-#: server.cpp:969
+#: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Resetuj bez potvrde"

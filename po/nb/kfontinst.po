@@ -855,8 +855,8 @@ msgstr "Ingenting å flytte"
 #: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to "
-"<i>%3</i>?</p>"
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
 msgstr ""
 "<p>Er du sikker på at du vil flytte </p><p>«<b>%1</b>»</p><p>fra <i>%2</i> "
 "til <i>%3</i>?</p>"
@@ -881,8 +881,8 @@ msgstr[0] ""
 "<p>Er du sikker på at du vil flytte denne skriften fra <i>%2</i> til <i>%3</"
 "i>?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil flytte disse %1 skriftene fra <i>%2</i> til "
-"<i>%3</i>?</p>"
+"<p>Er du sikker på at du vil flytte disse %1 skriftene fra <i>%2</i> til <i>"
+"%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -954,26 +954,26 @@ msgstr[1] "%1 skrifter"
 #: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td "
-"align=\"right\">Partially enabled:</td><td>%3</td></tr><tr><td "
-"align=\"right\">Total:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td "
-"align=\"right\">Delvis aktiverte:</td><td>%3</td></tr><tr><td "
-"align=\"right\">Totalt:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td align="
+"\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td align=\"right\">Delvis "
+"aktiverte:</td><td>%3</td></tr><tr><td align=\"right\">Totalt:</td><td>%4</"
+"td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:912
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:"
-"</td><td>%3</td></tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td "
-"align=\"right\">Totalt:</td><td>%3</td></tr></table>"
+"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td align="
+"\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td align=\"right\">Totalt:</"
+"td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:989
 #, kde-format
@@ -1036,8 +1036,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Er du sikker på at du vil slå på </p><p>«<b>%1</b>», som er i gruppe "
-"«<b>%2</b>»?</p>"
+"<p>Er du sikker på at du vil slå på </p><p>«<b>%1</b>», som er i gruppe «<b>"
+"%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
@@ -1078,14 +1078,14 @@ msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
 msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group "
-"'<b>%2</b>'?</p>"
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
 msgstr[0] ""
 "<p>Er du sikker på at du vil slå på denne skrifta som er i gruppe «<b>%2</"
 "b>Â»?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil slå på disse %1 skriftene som er i gruppe "
-"«<b>%2</b>Â»?</p>"
+"<p>Er du sikker på at du vil slå på disse %1 skriftene som er i gruppe «<b>"
+"%2</b>Â»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
@@ -1093,14 +1093,14 @@ msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
 msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group "
-"'<b>%2</b>'?</p>"
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
 msgstr[0] ""
 "<p>Er du sikker på at du vil slå av denne skrifta som er i gruppe «<b>%2</"
 "b>»?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil slå av disse %1 skriftene som er i gruppe "
-"«<b>%2</b>»?</p>"
+"<p>Er du sikker på at du vil slå av disse %1 skriftene som er i gruppe «<b>"
+"%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format

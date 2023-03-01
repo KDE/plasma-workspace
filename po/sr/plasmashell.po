@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-11 02:17+0200\n"
+"POT-Creation-Date: 2023-02-23 01:00+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,40 +29,40 @@ msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
 # >> @title:window
-#: currentcontainmentactionsmodel.cpp:216
+#: currentcontainmentactionsmodel.cpp:205
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Подешавање прикључка за радње мишем"
 
-#: main.cpp:89
+#: main.cpp:88
 #, kde-format
 msgid "Plasma"
 msgstr "Плазма"
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Плазма шкољка"
 
-#: main.cpp:108
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активирај исправљач КуМЛ јаваскрипта"
 
 # literal-segment: plasma-shell
-#: main.cpp:112
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не покрећи plasma-shell аутоматски по паду"
 
-#: main.cpp:115
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Наметни учитавање датог прикључка шкољке"
 
 # literal-segment: plasmashell
 # literal-segment: shell-plugin
-#: main.cpp:119
+#: main.cpp:111
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -70,12 +70,12 @@ msgid ""
 msgstr ""
 "Учитај plasma-shell као самостални програм (тражи и опцију shell-plugin)"
 
-#: main.cpp:122
+#: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:125
+#: main.cpp:116
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -84,22 +84,22 @@ msgstr ""
 "Активирај пробни режим, са задатим јаваскриптним фајлом распореда за "
 "намештање пробног окружења"
 
-#: main.cpp:125
+#: main.cpp:117
 #, kde-format
 msgid "file"
 msgstr "фајл"
 
-#: main.cpp:130
+#: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:212
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Плазма не може да се покрене"
 
-#: main.cpp:213
+#: main.cpp:222
 #, fuzzy, kde-format
 #| msgid ""
 #| "Plasma is unable to start as it could not correctly use OpenGL 2.\n"
@@ -112,19 +112,19 @@ msgstr ""
 "Плазма не може да се покрене због непотпуне подршке за опенГЛ 2.\n"
 " Проверите да ли је графички драјвер правилно подешен."
 
-#: osd.cpp:59
+#: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Звук утишан"
 
-#: osd.cpp:77
+#: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Микрофон утишан"
 
-#: osd.cpp:93
+#: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
@@ -132,55 +132,55 @@ msgstr ""
 "%1 утишан|/|%1 $[по-роду-броју %1 утишан утишана утишано утишани утишане "
 "утишана]"
 
-#: osd.cpp:113
+#: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Додирник укључен"
 
-#: osd.cpp:115
+#: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Додирник искључен"
 
-#: osd.cpp:122
+#: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Бежична укључена"
 
-#: osd.cpp:124
+#: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Бежична искључена"
 
-#: osd.cpp:131
+#: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Блутут укључен"
 
-#: osd.cpp:133
+#: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Блутут искључен"
 
-#: osd.cpp:140
+#: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Мобилни интернет укључен"
 
-#: osd.cpp:142
+#: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Мобилни интернет искључен"
 
-#: osd.cpp:149
+#: osd.cpp:146
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -188,7 +188,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Тастатура на екрану активирана"
 
-#: osd.cpp:151
+#: osd.cpp:149
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -196,65 +196,78 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Тастатура на екрану деактивирана"
 
-#: panelcountsource.h:36
+#: shellcontainmentconfig.cpp:104
 #, kde-format
-msgid "Panel Count"
+msgid "Internal Screen on %1"
 msgstr ""
 
-#: panelcountsource.h:37
+#: shellcontainmentconfig.cpp:108
 #, kde-format
-msgid "Counts the panels"
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
 msgstr ""
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcontainmentconfig.cpp:132
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr ""
+
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Прикажи површ"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Сакриј површ"
 
-#: shellcorona.cpp:193
+#: shellcorona.cpp:191
 #, kde-format
-msgid "Activities..."
-msgstr "Активности..."
+msgid "Show Activity Switcher"
+msgstr ""
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Заустави текућу активност"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:208
 #, fuzzy, kde-format
 #| msgid "Stop Current Activity"
 msgid "Switch to Previous Activity"
 msgstr "Заустави текућу активност"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:215
 #, fuzzy, kde-format
 #| msgid "Stop Current Activity"
 msgid "Switch to Next Activity"
 msgstr "Заустави текућу активност"
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активирај унос менаџера задатака %1"
 
-#: shellcorona.cpp:1463
+#: shellcorona.cpp:256
 #, kde-format
-msgid "Unable to load script file: %1"
-msgstr "Не могу да учитам скриптни фајл: %1"
+msgid "Manage Desktops And Panels..."
+msgstr ""
 
-#: shellcorona.cpp:1833 shellcorona.cpp:1839
+#: shellcorona.cpp:277
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr ""
+
+#: shellcorona.cpp:1915
 #, kde-format
 msgid "Add Panel"
 msgstr "Додај панел"
 
-#: shellcorona.cpp:1881
-#, kde-format
+#: shellcorona.cpp:1951
+#, fuzzy, kde-format
+#| msgid "Empty %1"
+msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr ""
 "Празан %1|/|$[по-роду-броју %1 Празан Празна Празно Празни Празне Празна] %1"
@@ -280,3 +293,19 @@ msgstr ""
 #, kde-format
 msgid "Never show again"
 msgstr ""
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr ""
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr ""
+
+#~ msgid "Activities..."
+#~ msgstr "Активности..."
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Не могу да учитам скриптни фајл: %1"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2016, 2017, 2018, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2016, 2017, 2018, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-07-13 11:55+0200\n"
+"PO-Revision-Date: 2023-02-28 23:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "제목 없음"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "자동으로 재생기 선택"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "%1 부름(일시 정지됨, %2)"
+msgstr ""
+"by %1(%2)\n"
+"일시 정지: 가운데 단추 클릭\n"
+"음량 조절: 스크롤"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,28 +121,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"일시 정지: 가운데 단추 클릭\n"
+"음량 조절: 스크롤"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "%1 부름(일시 정지됨, %2)"
+msgstr ""
+"by %1(일시 정지됨, %2)\n"
+"재생: 가운데 단추 클릭\n"
+"음량 조절: 스크롤"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "%1 부름(일시 정지됨, %2)"
+msgstr ""
+"일시 정지됨(%1)\n"
+"재생: 가운데 단추 클릭\n"
+"음량 조절: 스크롤"
 
 #~ msgid "General"
 #~ msgstr "일반"

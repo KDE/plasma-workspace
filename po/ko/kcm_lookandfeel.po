@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-05-05 23:51+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"PO-Revision-Date: 2023-02-28 23:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: kcm.cpp:481
+#: kcm.cpp:479
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "커서 변경 사항을 적용하려면 Plasma 세션을 다시 시작해야 합니다."
 
-#: kcm.cpp:482
+#: kcm.cpp:480
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "커서 설정 변경됨"
@@ -105,23 +105,22 @@ msgstr "이 모듈에서 전역 모습과 느낌 테마를 선택할 수 있습�
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "완전히 삭제"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "이 테마를 완전히 삭제하시겠습니까?"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "완전히 삭제"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
@@ -137,11 +136,10 @@ msgid "Preview Theme"
 msgstr "테마 미리 보기"
 
 #: package/contents/ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "테마 미리 보기"
+msgstr "테마 삭제"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -189,19 +187,17 @@ msgstr "바탕 화면 레이아웃"
 #: package/contents/ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "제목 표시줄 단추 레이아웃"
 
 #: package/contents/ui/MoreOptions.qml:47
 #: package/contents/ui/SimpleOptions.qml:59
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
-"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 위젯 설정을 대체합니다"
+"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 독, 위젯 설정을 대체합니"
+"다"
 
 #: package/contents/ui/MoreOptions.qml:55
 #, kde-format
@@ -275,18 +271,15 @@ msgid "• Appearance settings"
 msgstr "• 모양 설정"
 
 #: package/contents/ui/SimpleOptions.qml:45
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "바탕 화면 레이아웃"
+msgstr "바탕 화면과 창 레이아웃"
 
 #: package/contents/ui/SimpleOptions.qml:52
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• 바탕 화면 레이아웃"
+msgstr "• 바탕 화면과 창 레이아웃"
 
 #: package/contents/ui/SimpleOptions.qml:70
 #, kde-format

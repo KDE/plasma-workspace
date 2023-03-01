@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-31 03:34+0100\n"
+"POT-Creation-Date: 2023-01-17 01:00+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,6 +17,126 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr ""
+
+#: calendar/qml/DayDelegate.qml:43
+#, kde-format
+msgid "%1 event"
+msgid_plural "%1 events"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: calendar/qml/DayDelegate.qml:43
+#, kde-format
+msgid "No events"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:67
+#, kde-format
+msgctxt "Format: month year"
+msgid "%1 %2"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:113
+#, kde-format
+msgid "Days"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:119
+#, kde-format
+msgid "Months"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:125
+#, kde-format
+msgid "Years"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:163
+#, kde-format
+msgid "Previous Month"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:165
+#, kde-format
+msgid "Previous Year"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:167
+#, kde-format
+msgid "Previous Decade"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:184
+#, kde-format
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:185
+#, kde-format
+msgid "Reset calendar to today"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:196
+#, kde-format
+msgid "Next Month"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:198
+#, kde-format
+msgid "Next Year"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:200
+#, kde-format
+msgid "Next Decade"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:256
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
+#, kde-format
+msgid "Configure…"
+msgstr ""
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -42,140 +162,112 @@ msgstr "Prekovreme čuvara ekrana"
 msgid "Sets the minutes after which the screen is locked."
 msgstr "Postavlja posle koliko minuta se ekran zaključava."
 
-#: sessionsprivate/sessionsmodel.cpp:253 sessionsprivate/sessionsmodel.cpp:255
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
 msgid "New Session"
 msgstr "Nova sesija"
 
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:72
-#, kde-format
-msgid "&Execute"
-msgstr "&Izvrši"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:73
-#, kde-format
-msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-msgid "Plasma"
-msgstr "Plasma"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:74
-#, kde-format
-msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-msgid "KWin"
-msgstr "KWin"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:75
-#, kde-format
-msgid "Templates"
-msgstr "Šabloni"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:84
-#, kde-format
-msgid "Desktop Shell Scripting Console"
-msgstr "Konzola za skriptovanje školjke površi"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:91
-#, kde-format
-msgid "Editor"
-msgstr "Uređivač"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:102
-#, kde-format
-msgid "Load"
-msgstr "Učitaj"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:108
-#, kde-format
-msgid "Use"
-msgstr "Upotrebi"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:165
-#, kde-format
-msgid "Output"
-msgstr "Izlaz"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:273
-#, kde-format
-msgid "Unable to load script file <b>%1</b>"
-msgstr "Ne mogu da učitam fajl skripte <b>%1</b>."
-
-# >> @title:window
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:323
-#, kde-format
-msgid "Open Script File"
-msgstr "Otvaranje fajla skripte"
-
-# >> @title:window
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:457
-#, kde-format
-msgid "Save Script File"
-msgstr "Upisivanje fajla skripte"
-
-# >> %1 is datetime.
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:549
-#, kde-format
-msgid "Executing script at %1"
-msgstr "Izvršavam skriptu u %1"
-
-#: shellprivate/interactiveconsole/interactiveconsole.cpp:587
-#, no-c-format, kde-format
-msgid "Runtime: %1ms"
-msgstr "Vreme izvršavanja: %1 ms"
-
-#: shellprivate/wallpaperplugin/wallpaperplugin.cpp:45
-#, kde-format
-msgid "Download Wallpaper Plugins"
-msgstr ""
-
-#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:73
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
 msgstr "Filteri"
 
 # >> @title:window
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:60
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Izbor fajla plazmoida"
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:84
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Instaliranje paketa %1 nije uspelo."
 
-#: shellprivate/widgetexplorer/openwidgetassistant.cpp:85
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
 msgstr "Neuspeh instaliranja"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
 #, kde-format
 msgid "All Widgets"
 msgstr "Svi vidžeti"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 #, kde-format
 msgid "Running"
 msgstr "U pogonu"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
-#, kde-format
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#, fuzzy, kde-format
+#| msgid "Uninstallable"
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
 msgid "Uninstallable"
 msgstr "Moguće deinstalirati"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:133
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 #, kde-format
 msgid "Categories:"
 msgstr "Kategorije:"
 
 # >> @title:window
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:216
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:447
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Preuzimanje novih plasma vidžeta"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:226
-#, kde-format
-msgid "Install Widget From Local File..."
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#, fuzzy, kde-format
+#| msgid "Install Widget From Local File..."
+msgid "Install Widget From Local File…"
 msgstr "Instaliraj vidžete iz lokalnog fajla..."
+
+#~ msgid "&Execute"
+#~ msgstr "&Izvrši"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Šabloni"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Konzola za skriptovanje školjke površi"
+
+#~ msgid "Editor"
+#~ msgstr "Uređivač"
+
+#~ msgid "Load"
+#~ msgstr "Učitaj"
+
+#~ msgid "Use"
+#~ msgstr "Upotrebi"
+
+#~ msgid "Output"
+#~ msgstr "Izlaz"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Ne mogu da učitam fajl skripte <b>%1</b>."
+
+# >> @title:window
+#~ msgid "Open Script File"
+#~ msgstr "Otvaranje fajla skripte"
+
+# >> @title:window
+#~ msgid "Save Script File"
+#~ msgstr "Upisivanje fajla skripte"
+
+# >> %1 is datetime.
+#~ msgid "Executing script at %1"
+#~ msgstr "Izvršavam skriptu u %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Vreme izvršavanja: %1 ms"

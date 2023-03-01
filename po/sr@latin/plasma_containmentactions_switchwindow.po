@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2014-06-29 22:54+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -37,19 +37,19 @@ msgid "Display only the current desktop's windows"
 msgstr "Samo prozori na tekućoj površi"
 
 # >> @title:window
-#: switch.cpp:82
+#: switch.cpp:75
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Podešavanje priključka prebacivanja prozora"
 
-#: switch.cpp:162
+#: switch.cpp:155
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Prozori"
 
-#: switch.cpp:186 switch.cpp:207 switch.cpp:209
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

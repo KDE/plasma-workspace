@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-19 03:28+0100\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
 "PO-Revision-Date: 2017-05-21 12:19+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,14 +31,14 @@ msgctxt "weather condition"
 msgid "clear intervals"
 msgstr "vedri intervali"
 
-#: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:233
+#: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:220
 #, kde-format
 msgctxt "weather condition"
 msgid "clear sky"
 msgstr "vedro nebo"
 
-#: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:171
-#: ions/wetter.com/ion_wettercom.cpp:172
+#: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:158
+#: ions/wetter.com/ion_wettercom.cpp:159
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy"
@@ -69,8 +69,8 @@ msgid "cloudy with sleet"
 msgstr "oblačno sa susnježicom"
 
 # ? Може ли боље за /drizzle/?
-#: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:180
-#: ions/wetter.com/ion_wettercom.cpp:181 ions/wetter.com/ion_wettercom.cpp:183
+#: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
+#: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
 #, kde-format
 msgctxt "weather condition"
 msgid "drizzle"
@@ -118,7 +118,7 @@ msgctxt "weather condition"
 msgid "hazy"
 msgstr "izmaglično"
 
-#: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:191
+#: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain"
@@ -144,13 +144,13 @@ msgctxt "weather condition"
 msgid "heavy shower"
 msgstr "jak pljusak"
 
-#: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:204
+#: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:191
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy showers"
 msgstr "jaki pljuskovi"
 
-#: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:200
+#: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:187
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow"
@@ -174,8 +174,8 @@ msgctxt "weather condition"
 msgid "light cloud"
 msgstr "laki oblak"
 
-#: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:188
-#: ions/wetter.com/ion_wettercom.cpp:189
+#: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
+#: ions/wetter.com/ion_wettercom.cpp:176
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain"
@@ -201,14 +201,14 @@ msgctxt "weather condition"
 msgid "light shower"
 msgstr "slab pljusak"
 
-#: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:202
+#: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
 #, kde-format
 msgctxt "weather condition"
 msgid "light showers"
 msgstr "laki pljuskovi"
 
-#: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:197
-#: ions/wetter.com/ion_wettercom.cpp:198
+#: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
+#: ions/wetter.com/ion_wettercom.cpp:185
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow"
@@ -220,7 +220,7 @@ msgctxt "weather condition"
 msgid "light snow shower"
 msgstr "slab snježni pljusak"
 
-#: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:207
+#: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
@@ -280,7 +280,7 @@ msgctxt "weather condition"
 msgid "sleet showers"
 msgstr "pljuskovi susnježice"
 
-#: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:220
+#: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny"
@@ -298,8 +298,8 @@ msgctxt "weather condition"
 msgid "thick cloud"
 msgstr "gusti oblak"
 
-#: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:209
-#: ions/wetter.com/ion_wettercom.cpp:210
+#: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
+#: ions/wetter.com/ion_wettercom.cpp:197
 #, kde-format
 msgctxt "weather condition"
 msgid "thunderstorm"
@@ -2741,111 +2741,124 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "vjetrovito"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:548
+#: ions/bbcukmet/ion_bbcukmet.cpp:563
 #, kde-format
 msgid "UK"
 msgstr "UK"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:549
+#: ions/bbcukmet/ion_bbcukmet.cpp:564
 #, kde-format
 msgid "USA"
 msgstr "SAD"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1004
+#: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:664
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr ""
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1005
+#: ions/bbcukmet/ion_bbcukmet.cpp:1010
 #, fuzzy, kde-format
 #| msgid "Night"
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "noć"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1007 ions/envcan/ion_envcan.cpp:1583
+#: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:646
+#: ions/envcan/ion_envcan.cpp:1551
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
 msgstr "sub"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1008 ions/envcan/ion_envcan.cpp:1584
+#: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:647
+#: ions/envcan/ion_envcan.cpp:1552
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
 msgstr "ned"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/envcan/ion_envcan.cpp:1585
+#: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:648
+#: ions/envcan/ion_envcan.cpp:1553
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
 msgstr "pon"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1010 ions/envcan/ion_envcan.cpp:1586
+#: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:649
+#: ions/envcan/ion_envcan.cpp:1554
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
 msgstr "uto"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1011 ions/envcan/ion_envcan.cpp:1587
+#: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:650
+#: ions/envcan/ion_envcan.cpp:1555
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
 msgstr "sri"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/envcan/ion_envcan.cpp:1588
+#: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:651
+#: ions/envcan/ion_envcan.cpp:1556
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
 msgstr "čet"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/envcan/ion_envcan.cpp:1589
+#: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:652
+#: ions/envcan/ion_envcan.cpp:1557
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
 msgstr "pet"
 
 # ! Додати варијанту ентитета са беспреломним размацима, кад буде доступн
-#: ions/bbcukmet/ion_bbcukmet.cpp:1032
+#: ions/bbcukmet/ion_bbcukmet.cpp:1031
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
 msgstr "Podaci sa BBC‑ovog vremena"
 
-#: ions/envcan/ion_envcan.cpp:928 ions/envcan/ion_envcan.cpp:930
-#: ions/envcan/ion_envcan.cpp:1434 ions/envcan/ion_envcan.cpp:1576
-#: ions/envcan/ion_envcan.cpp:1591 ions/noaa/ion_noaa.cpp:385
-#: ions/noaa/ion_noaa.cpp:573
+#: ions/dwd/ion_dwd.cpp:686
+#, kde-format
+msgctxt "credit line, don't change name!"
+msgid "Source: Deutscher Wetterdienst"
+msgstr ""
+
+#: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
+#: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
+#: ions/envcan/ion_envcan.cpp:1560 ions/noaa/ion_noaa.cpp:365
+#: ions/noaa/ion_noaa.cpp:550
 #, kde-format
 msgid "N/A"
 msgstr "nd."
 
-#: ions/envcan/ion_envcan.cpp:1580
+#: ions/envcan/ion_envcan.cpp:1548
 #, kde-format
 msgid "day"
 msgstr "dan"
 
-#: ions/envcan/ion_envcan.cpp:1581
+#: ions/envcan/ion_envcan.cpp:1549
 #, kde-format
 msgctxt "Short for tonight"
 msgid "nite"
 msgstr "veče"
 
-#: ions/envcan/ion_envcan.cpp:1582
+#: ions/envcan/ion_envcan.cpp:1550
 #, kde-format
 msgctxt "Short for night, appended to the end of the weekday"
 msgid "nt"
 msgstr "veče"
 
-#: ions/envcan/ion_envcan.cpp:1626
+#: ions/envcan/ion_envcan.cpp:1581
 #, kde-format
 msgctxt "precipitation total, very little"
 msgid "Trace"
 msgstr "u tragovima"
 
 # ! Додати варијанту ентитета са беспреломним размацима, кад буде доступна.
-#: ions/envcan/ion_envcan.cpp:1653
+#: ions/envcan/ion_envcan.cpp:1607
 #, fuzzy, kde-format
 #| msgctxt "credit line, keep string short"
 #| msgid "Data from Environment Canada"
@@ -2854,169 +2867,169 @@ msgid "Data from Environment and Climate Change Canada"
 msgstr "Podaci sa Environmenta Canada"
 
 # ! Додати варијанту ентитета са беспреломним размацима, кад буде доступн
-#: ions/noaa/ion_noaa.cpp:663
+#: ions/noaa/ion_noaa.cpp:633
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
 msgstr "Podaci sa Nacionalne vremenske službe NOAA"
 
-#: ions/wetter.com/ion_wettercom.cpp:169 ions/wetter.com/ion_wettercom.cpp:170
+#: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
 msgctxt "weather condition"
 msgid "few clouds"
 msgstr "rijetki oblaci"
 
-#: ions/wetter.com/ion_wettercom.cpp:173 ions/wetter.com/ion_wettercom.cpp:174
+#: ions/wetter.com/ion_wettercom.cpp:160 ions/wetter.com/ion_wettercom.cpp:161
 #, kde-format
 msgctxt "weather condition"
 msgid "overcast"
 msgstr "tmurno"
 
-#: ions/wetter.com/ion_wettercom.cpp:175 ions/wetter.com/ion_wettercom.cpp:176
-#: ions/wetter.com/ion_wettercom.cpp:177
+#: ions/wetter.com/ion_wettercom.cpp:162 ions/wetter.com/ion_wettercom.cpp:163
+#: ions/wetter.com/ion_wettercom.cpp:164
 #, kde-format
 msgctxt "weather condition"
 msgid "haze"
 msgstr "izmaglica"
 
-#: ions/wetter.com/ion_wettercom.cpp:178 ions/wetter.com/ion_wettercom.cpp:179
+#: ions/wetter.com/ion_wettercom.cpp:165 ions/wetter.com/ion_wettercom.cpp:166
 #, kde-format
 msgctxt "weather condition"
 msgid "fog with icing"
 msgstr "magla sa poledicom"
 
-#: ions/wetter.com/ion_wettercom.cpp:182
+#: ions/wetter.com/ion_wettercom.cpp:169
 #, kde-format
 msgctxt "weather condition"
 msgid "light drizzle"
 msgstr "slabo rominjanje"
 
-#: ions/wetter.com/ion_wettercom.cpp:184
+#: ions/wetter.com/ion_wettercom.cpp:171
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy drizzle"
 msgstr "jako rominjanje"
 
-#: ions/wetter.com/ion_wettercom.cpp:185
+#: ions/wetter.com/ion_wettercom.cpp:172
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing drizzle"
 msgstr "ledeno rominjanje"
 
-#: ions/wetter.com/ion_wettercom.cpp:186
+#: ions/wetter.com/ion_wettercom.cpp:173
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy freezing drizzle"
 msgstr "jako ledeno rominjanje"
 
-#: ions/wetter.com/ion_wettercom.cpp:187
+#: ions/wetter.com/ion_wettercom.cpp:174
 #, kde-format
 msgctxt "weather condition"
 msgid "rain"
 msgstr "kiša"
 
-#: ions/wetter.com/ion_wettercom.cpp:190
+#: ions/wetter.com/ion_wettercom.cpp:177
 #, kde-format
 msgctxt "weather condition"
 msgid "moderate rain"
 msgstr "umjerena kiša"
 
-#: ions/wetter.com/ion_wettercom.cpp:192
+#: ions/wetter.com/ion_wettercom.cpp:179
 #, kde-format
 msgctxt "weather condition"
 msgid "light freezing rain"
 msgstr "slaba ledena kiša"
 
-#: ions/wetter.com/ion_wettercom.cpp:193
+#: ions/wetter.com/ion_wettercom.cpp:180
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing rain"
 msgstr "ledena kiša"
 
-#: ions/wetter.com/ion_wettercom.cpp:194
+#: ions/wetter.com/ion_wettercom.cpp:181
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain snow"
 msgstr "slaba kiša, snijeg"
 
-#: ions/wetter.com/ion_wettercom.cpp:195
+#: ions/wetter.com/ion_wettercom.cpp:182
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain snow"
 msgstr "jaka kiša, snijeg"
 
-#: ions/wetter.com/ion_wettercom.cpp:196
+#: ions/wetter.com/ion_wettercom.cpp:183
 #, kde-format
 msgctxt "weather condition"
 msgid "snow"
 msgstr "snijeg"
 
-#: ions/wetter.com/ion_wettercom.cpp:199
+#: ions/wetter.com/ion_wettercom.cpp:186
 #, kde-format
 msgctxt "weather condition"
 msgid "moderate snow"
 msgstr "umjeren snijeg"
 
-#: ions/wetter.com/ion_wettercom.cpp:201 ions/wetter.com/ion_wettercom.cpp:203
+#: ions/wetter.com/ion_wettercom.cpp:188 ions/wetter.com/ion_wettercom.cpp:190
 #, kde-format
 msgctxt "weather condition"
 msgid "showers"
 msgstr "pljuskovi"
 
-#: ions/wetter.com/ion_wettercom.cpp:205
+#: ions/wetter.com/ion_wettercom.cpp:192
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow rain showers"
 msgstr "slab snijeg, kišni pljuskovi"
 
-#: ions/wetter.com/ion_wettercom.cpp:206
+#: ions/wetter.com/ion_wettercom.cpp:193
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow rain showers"
 msgstr "jak snijeg, kišni pljuskovi"
 
-#: ions/wetter.com/ion_wettercom.cpp:208
+#: ions/wetter.com/ion_wettercom.cpp:195
 #, kde-format
 msgctxt "weather condition"
 msgid "snow showers"
 msgstr "sniježni pljuskovi"
 
-#: ions/wetter.com/ion_wettercom.cpp:211
+#: ions/wetter.com/ion_wettercom.cpp:198
 #, kde-format
 msgctxt "weather condition"
 msgid "light thunderstorm"
 msgstr "slaba grmljavina"
 
-#: ions/wetter.com/ion_wettercom.cpp:212
+#: ions/wetter.com/ion_wettercom.cpp:199
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy thunderstorm"
 msgstr "jaka grmljavina"
 
-#: ions/wetter.com/ion_wettercom.cpp:213
+#: ions/wetter.com/ion_wettercom.cpp:200
 #, kde-format
 msgctxt "weather condition"
 msgid "n/a"
 msgstr "nd."
 
-#: ions/wetter.com/ion_wettercom.cpp:377
+#: ions/wetter.com/ion_wettercom.cpp:361
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
 msgstr "%1, %2, %3"
 
-#: ions/wetter.com/ion_wettercom.cpp:381
+#: ions/wetter.com/ion_wettercom.cpp:363
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
 msgstr "%1 (%2), %3, %4"
 
-#: ions/wetter.com/ion_wettercom.cpp:722
+#: ions/wetter.com/ion_wettercom.cpp:684
 #, kde-format
 msgid "Day"
 msgstr "dan"
 
-#: ions/wetter.com/ion_wettercom.cpp:734
+#: ions/wetter.com/ion_wettercom.cpp:694
 #, kde-format
 msgid "Night"
 msgstr "noć"

@@ -801,8 +801,8 @@ msgstr "Ii mihkkiige maid sirdit"
 #: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to "
-"<i>%3</i>?</p>"
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:669
@@ -894,18 +894,18 @@ msgstr[1] "%1 fontta"
 #: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td "
-"align=\"right\">Partially enabled:</td><td>%3</td></tr><tr><td "
-"align=\"right\">Total:</td><td>%4</td></tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:912
 #, kde-format
 msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td "
-"align=\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:"
-"</td><td>%3</td></tr></table>"
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:989
@@ -1007,8 +1007,8 @@ msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
 msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group "
-"'<b>%2</b>'?</p>"
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1018,8 +1018,8 @@ msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
 msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group "
-"'<b>%2</b>'?</p>"
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
 msgstr[0] ""
 msgstr[1] ""
 

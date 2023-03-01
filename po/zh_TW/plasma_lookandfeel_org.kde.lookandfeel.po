@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 01:00+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2023-02-07 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -27,17 +27,17 @@ msgstr ""
 msgid "Keyboard Layout: %1"
 msgstr "鍵盤佈局：%1"
 
-#: ../sddm-theme/Login.qml:75
+#: ../sddm-theme/Login.qml:85
 #, kde-format
 msgid "Username"
 msgstr "使用者名稱"
 
-#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
 #, kde-format
 msgid "Password"
 msgstr "密碼"
 
-#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
 msgstr "登入"

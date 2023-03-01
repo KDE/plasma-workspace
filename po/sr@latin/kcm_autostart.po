@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-12 04:00+0200\n"
+"POT-Creation-Date: 2023-02-21 01:01+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,183 +18,206 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Časlav Ilić"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
-
-#: addscriptdialog.cpp:40
-#, kde-format
-msgid "Shell script path:"
-msgstr "Putanja skripte školjke:"
-
-#: addscriptdialog.cpp:44
-#, kde-format
-msgid "Create as symlink"
-msgstr "Napravi kao simvezu"
-
-#: addscriptdialog.cpp:79
-#, kde-format
-msgid "\"%1\" is not an absolute path."
+#: autostartmodel.cpp:322
+#, fuzzy, kde-format
+#| msgid "\"%1\" is not an absolute path."
+msgid "\"%1\" is not an absolute url."
 msgstr "‘%1’ nije apsolutna putanja."
 
-#: addscriptdialog.cpp:82
+#: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "‘%1’ ne postoji."
 
-#: addscriptdialog.cpp:85
+#: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "‘%1’ nije fajl."
 
 # >> %1 file path
-#: addscriptdialog.cpp:88
+#: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "‘%1’ nije čitljiv."
 
-# >> @option:check
-#: advanceddialog.cpp:32
+#: package/contents/ui/main.qml:40
 #, kde-format
-msgid "Autostart only in Plasma"
-msgstr "Pokreni samo u Plasmi"
-
-# >> @title:column
-#: autostart.cpp:56
-#, kde-format
-msgid "Name"
-msgstr "ime"
-
-# >> @title:column
-#: autostart.cpp:57
-#, kde-format
-msgid "Command"
-msgstr "naredba"
-
-# >> @title:column
-#: autostart.cpp:58
-#, kde-format
-msgid "Status"
-msgstr "stanje"
-
-#: autostart.cpp:59
-#, kde-format
-msgctxt ""
-"@title:column The name of the column that decides if the program is run on "
-"session startup, on session shutdown, etc"
-msgid "Run On"
-msgstr "izvrši"
-
-#: autostart.cpp:79
-#, kde-format
-msgid "Session Autostart Manager"
-msgstr "menadžer samopokretanja u sesiji"
-
-#: autostart.cpp:81
-#, kde-format
-msgid "Session Autostart Manager Control Panel Module"
+msgid "Make Executable"
 msgstr ""
-"Kontrolni modul menadžera samopokretanja u sesiji|/|$[svojstva dat "
-"'Kontrolnom modulu menadžera samopokretanja u sesiji']"
 
-#: autostart.cpp:83
+#: package/contents/ui/main.qml:54
 #, kde-format
-msgid "Copyright © 2006–2010 Autostart Manager team"
-msgstr "© 2006–2010, tim menadžera samopokretanja"
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
 
-#: autostart.cpp:84
+#: package/contents/ui/main.qml:56
 #, kde-format
-msgid "Stephen Leaf"
-msgstr "Stiven Lif"
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
 
-#: autostart.cpp:85
-#, kde-format
-msgid "Montel Laurent"
-msgstr "Loren Montel"
+#: package/contents/ui/main.qml:94
+#, fuzzy, kde-format
+#| msgid "&Properties..."
+msgid "Properties"
+msgstr "&Svojstva..."
 
-#: autostart.cpp:85
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "&Ukloni"
+
+#: package/contents/ui/main.qml:111
 #, kde-format
-msgid "Maintainer"
-msgstr "održavalac"
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:114
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr ""
+
+# >> @item:intable Run application on...
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "Logout"
+msgid "Logout Scripts"
+msgstr "na odjavljivanju"
+
+#: package/contents/ui/main.qml:129
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:130
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Choose Login Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:165
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:183
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:198
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "Dodaj skriptu..."
+
+#: package/contents/ui/main.qml:210
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "Dodaj skriptu..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Časlav Ilić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#~ msgid "Shell script path:"
+#~ msgstr "Putanja skripte školjke:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Napravi kao simvezu"
+
+# >> @option:check
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Pokreni samo u Plasmi"
+
+# >> @title:column
+#~ msgid "Name"
+#~ msgstr "ime"
+
+# >> @title:column
+#~ msgid "Command"
+#~ msgstr "naredba"
+
+# >> @title:column
+#~ msgid "Status"
+#~ msgstr "stanje"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "izvrši"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "menadžer samopokretanja u sesiji"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr ""
+#~ "Kontrolni modul menadžera samopokretanja u sesiji|/|$[svojstva dat "
+#~ "'Kontrolnom modulu menadžera samopokretanja u sesiji']"
+
+#~ msgid "Copyright © 2006–2010 Autostart Manager team"
+#~ msgstr "© 2006–2010, tim menadžera samopokretanja"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stiven Lif"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Loren Montel"
+
+#~ msgid "Maintainer"
+#~ msgstr "održavalac"
 
 # >> @item:intable +
-#: autostart.cpp:104 autostart.cpp:120 autostartitem.cpp:62
-#, kde-format
-msgctxt "The program will be run"
-msgid "Enabled"
-msgstr "uključen"
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "uključen"
 
 # >> @item:intable +
-#: autostart.cpp:106 autostart.cpp:120
-#, kde-format
-msgctxt "The program won't be run"
-msgid "Disabled"
-msgstr "isključen"
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "isključen"
 
 # >? Does "Desktop file" make sense? The button is "Add Program".
 # rewrite-msgid: /Desktop File/Program/
 # >> @item:intable
-#: autostart.cpp:137
-#, kde-format
-msgid "Desktop File"
-msgstr "programi"
+#~ msgid "Desktop File"
+#~ msgstr "programi"
 
 # >> @item:intable
-#: autostart.cpp:145
-#, kde-format
-msgid "Script File"
-msgstr "skripte"
+#~ msgid "Script File"
+#~ msgstr "skripte"
 
-#. i18n: ectx: property (text), widget (QPushButton, btnProperties)
-#: autostartconfig.ui:17
-#, kde-format
-msgid "&Properties..."
-msgstr "&Svojstva..."
+#~ msgid "Advanced..."
+#~ msgstr "Napredno..."
 
-#. i18n: ectx: property (text), widget (QPushButton, btnAddScript)
-#: autostartconfig.ui:24
-#, kde-format
-msgid "Add Script..."
-msgstr "Dodaj skriptu..."
-
-#. i18n: ectx: property (text), widget (QPushButton, btnRemove)
-#: autostartconfig.ui:46
-#, kde-format
-msgid "&Remove"
-msgstr "&Ukloni"
-
-#. i18n: ectx: property (text), widget (QPushButton, btnAdvanced)
-#: autostartconfig.ui:53
-#, kde-format
-msgid "Advanced..."
-msgstr "Napredno..."
-
-#. i18n: ectx: property (text), widget (QPushButton, btnAddProgram)
-#: autostartconfig.ui:60
-#, kde-format
-msgid "Add Program..."
-msgstr "Dodaj program..."
+#~ msgid "Add Program..."
+#~ msgstr "Dodaj program..."
 
 # >> @item:intable Run application on...
-#: autostartmodel.cpp:67
-#, kde-format
-msgid "Startup"
-msgstr "po pokretanju"
+#~ msgid "Startup"
+#~ msgstr "po pokretanju"
 
 # >> @item:intable Run application on...
-#: autostartmodel.cpp:68
-#, kde-format
-msgid "Logout"
-msgstr "na odjavljivanju"
-
-# >> @item:intable Run application on...
-#: autostartmodel.cpp:69
-#, kde-format
-msgid "Before session startup"
-msgstr "pre pokretanja sesije"
+#~ msgid "Before session startup"
+#~ msgstr "pre pokretanja sesije"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-11 02:17+0200\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2017-01-14 19:23+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,145 +18,185 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/config/config.qml:26
+#: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Опште"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:18
 #, kde-format
 msgid "Entries"
 msgstr "Ставке"
 
-#: package/contents/ui/ConfigEntries.qml:41
-#, kde-format
-msgid "Always show all entries"
-msgstr "Увек прикажи све ставке"
-
 # >> @item category
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "стање програма"
 
 # >> @item category
-#: package/contents/ui/ConfigEntries.qml:49
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "комуникација"
 
 # >> @item category
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "системски сервиси"
 
 # >> @item category
-#: package/contents/ui/ConfigEntries.qml:53
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "управљање хардвером"
 
 # >> @item category
-#: package/contents/ui/ConfigEntries.qml:56
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "разно"
 
-#: package/contents/ui/ConfigEntries.qml:88
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Ставка"
 
-#: package/contents/ui/ConfigEntries.qml:93
+#: package/contents/ui/ConfigEntries.qml:94
 #, kde-format
 msgid "Visibility"
 msgstr "Видљивост"
 
-#: package/contents/ui/ConfigEntries.qml:99
+#: package/contents/ui/ConfigEntries.qml:100
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Пречица са тастатуре"
 
-#: package/contents/ui/ConfigEntries.qml:229
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Shown when relevant"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:230
+#: package/contents/ui/ConfigEntries.qml:247
 #, fuzzy, kde-format
 #| msgid "Always show all entries"
 msgid "Always shown"
 msgstr "Увек прикажи све ставке"
 
-#: package/contents/ui/ConfigEntries.qml:231
+#: package/contents/ui/ConfigEntries.qml:248
 #, kde-format
 msgid "Always hidden"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:232
+#: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigEntries.qml:314
 #, kde-format
-msgid "Maximum icon size:"
+msgid "Always show all entries"
+msgstr "Увек прикажи све ставке"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:35
-#, kde-format
-msgid "Very Small"
-msgstr ""
-
-#: package/contents/ui/ConfigGeneral.qml:35
+#: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:35
+#: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
-msgid "Medium"
+msgid "Scale with Panel height"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:35
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:35
+#: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
-msgid "Huge"
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:35
+#: package/contents/ui/ExpandedRepresentation.qml:61
 #, kde-format
-msgid "Enormous"
+msgctxt "@action:button"
+msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:86
+#: package/contents/ui/ExpandedRepresentation.qml:73
 #, fuzzy, kde-format
 #| msgid "Status & Notifications"
 msgid "Status and Notifications"
 msgstr "Стање и обавештења"
 
-#: package/contents/ui/ExpandedRepresentation.qml:96
+#: package/contents/ui/ExpandedRepresentation.qml:136
+#, kde-format
+msgid "More actions"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:227
 #, kde-format
 msgid "Keep Open"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:33
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Expand System Tray"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:24
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Close popup"
 msgstr "Затвори искакач"
 
-#: package/contents/ui/ExpanderArrow.qml:33
+#: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Прикажи скривене иконице"
 
-#: systemtraymodel.cpp:158 systemtraymodel.cpp:196
-#, kde-format
-msgid " (Automatic load)"
-msgstr " (аутоматско учитавање)"
+#~ msgid " (Automatic load)"
+#~ msgstr " (аутоматско учитавање)"

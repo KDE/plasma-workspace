@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2015-02-15 12:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,53 +20,53 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: contents/ui/BarcodePage.qml:36
+#: contents/ui/BarcodePage.qml:35
 #, kde-format
 msgid "Return to Clipboard"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "QR Code"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Data Matrix"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:60
+#: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgid "Code 39"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:61
+#: contents/ui/BarcodePage.qml:60
 #, kde-format
 msgid "Code 93"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:62
+#: contents/ui/BarcodePage.qml:61
 #, kde-format
 msgid "Code 128"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:85
+#: contents/ui/BarcodePage.qml:84
 #, kde-format
 msgid "Change the QR code type"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:114
+#: contents/ui/BarcodePage.qml:113
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
 
-#: contents/ui/BarcodePage.qml:123
+#: contents/ui/BarcodePage.qml:122
 #, kde-format
 msgid "The QR code is too large to be displayed"
 msgstr ""

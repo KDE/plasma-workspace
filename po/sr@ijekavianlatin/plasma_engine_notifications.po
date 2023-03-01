@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2016-01-28 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: notificationaction.cpp:37
+#: notificationaction.cpp:24
 #, kde-format
 msgid "The notification dataEngine is not set."
 msgstr "Datomotor obavještavanja nije postavljen."
 
-#: notificationaction.cpp:47
+#: notificationaction.cpp:34
 #, kde-format
 msgid "Invalid destination: %1"
 msgstr "Loše odredište: %1"
 
-#: notificationsengine.cpp:101
+#: notificationsengine.cpp:89
 #, kde-format
 msgid "Unknown Application"
 msgstr "Nepoznat program"

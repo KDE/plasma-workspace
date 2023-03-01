@@ -4,20 +4,20 @@
 #
 # G Karunakar <karunakar@indlinux.org>, 2008.
 # Rajesh Ranjan <rranjan@redhat.com>, 2008.
-# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 01:00+0000\n"
-"PO-Revision-Date: 2021-08-21 16:25+0530\n"
+"PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
-"Language-Team: kde-hindi\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
@@ -276,42 +276,39 @@ msgid "Add Folder…"
 msgstr "फ़ोल्डर जोड़ें…"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "नए वॉलपेपर प्राप्त करें…"
+msgstr "वॉलपेपर के रूप में नियत करें"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "डेस्कटॉप"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "लॉकस्क्रीन"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "दोनो"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:98
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "प्लाज्मा वॉलपेपर नियत करने का प्रयास करते समय एक त्रुटि हुई:\n"
+msgstr "प्लाज्मा वॉलपेपर नियत करने का प्रयास करते समय एक त्रुटि हुई: <nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:111
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "प्लाज्मा वॉलपेपर नियत करने का प्रयास करते समय एक त्रुटि हुई:\n"
+msgstr "kscreenlockerrc कॉन्फ़िग फ़ाइल खोलने का प्रयास करते समय एक त्रुटि उत्पन्न हुई।"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "इस स्लाइड शो में कोई वॉलपेपर नहीं हैं"

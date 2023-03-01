@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-01 03:42+0100\n"
+"POT-Creation-Date: 2022-12-17 11:11+0000\n"
 "PO-Revision-Date: 2011-06-29 00:52+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,71 +19,113 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: sessionrunner.cpp:42 sessionrunner.cpp:82
-#, kde-format
-msgctxt "log out command"
-msgid "logout"
-msgstr "odjavi"
+#: sessionrunner.cpp:23
+#, fuzzy, kde-format
+#| msgid "log out"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to log out of the "
+"session"
+msgid "logout;log out"
+msgstr "odjava"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Odjavljuje korisnika, napuštajući tekuću sesiju površi"
 
-#: sessionrunner.cpp:44 sessionrunner.cpp:100
+#: sessionrunner.cpp:33
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
-msgctxt "shut down computer command"
-msgid "shut down"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to shut down the "
+"computer"
+msgid "shutdown;shut down"
 msgstr "ugasi"
 
-#: sessionrunner.cpp:45
+#: sessionrunner.cpp:36
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Gasi računar"
 
-#: sessionrunner.cpp:49 sessionrunner.cpp:109
-#, kde-format
-msgctxt "lock screen command"
-msgid "lock"
-msgstr "zaključaj"
-
-#: sessionrunner.cpp:50
-#, kde-format
-msgid "Locks the current sessions and starts the screen saver"
-msgstr "Zaključava tekuće sesije i pokreće čuvar ekrana"
-
-#: sessionrunner.cpp:53 sessionrunner.cpp:91
-#, kde-format
-msgctxt "restart computer command"
-msgid "restart"
+#: sessionrunner.cpp:43
+#, fuzzy, kde-format
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to restart the "
+"computer"
+msgid "restart;reboot"
 msgstr "pokreni ponovo"
 
-#: sessionrunner.cpp:53
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Ponovo podiže računar"
 
-#: sessionrunner.cpp:54 sessionrunner.cpp:92
-#, kde-format
-msgctxt "restart computer command"
-msgid "reboot"
-msgstr "podigni ponovo"
+#: sessionrunner.cpp:54
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to lock the screen"
+msgid "lock;lock screen"
+msgstr "Zaključaj ekran"
 
-#: sessionrunner.cpp:57
+#: sessionrunner.cpp:56
 #, kde-format
-msgctxt "switch user command"
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Zaključava tekuće sesije i pokreće čuvar ekrana"
+
+#: sessionrunner.cpp:63
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to save the "
+"desktop session"
+msgid "save;save session"
+msgstr "nova sesija"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgid "Saves the current session for session restoration"
+msgstr ""
+
+#: sessionrunner.cpp:73
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgctxt ""
+"KRunner keywords (split by semicolons without whitespace) to switch user "
+"sessions"
+msgid "switch user;new session"
+msgstr "prebaci korisnika"
+
+#: sessionrunner.cpp:76
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "Pokreće novu sesiju sa drugim korisnikom"
+
+#: sessionrunner.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "User sessions"
+#| msgid "sessions"
+msgctxt "KRunner keyword to list user sessions"
+msgid "sessions"
+msgstr "sesije"
+
+#: sessionrunner.cpp:84
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Nabraja sve sesije"
+
+#: sessionrunner.cpp:87
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
+msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "prebaci"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "switch user command"
-msgid "switch :q:"
-msgstr "prebaci :q:"
-
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:89
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -92,100 +134,122 @@ msgstr ""
 "Prebacuje na aktivnu sesiju za korisnika :q:, ili nabraja sve aktivne sesije "
 "ako :q: nije zadato"
 
-#: sessionrunner.cpp:62 sessionrunner.cpp:154
-#, kde-format
-msgid "switch user"
-msgstr "prebaci korisnika"
-
-#: sessionrunner.cpp:63
-#, kde-format
-msgid "Starts a new session as a different user"
-msgstr "Pokreće novu sesiju sa drugim korisnikom"
-
-#: sessionrunner.cpp:64 sessionrunner.cpp:155
-#, kde-format
-msgid "new session"
-msgstr "nova sesija"
-
-#: sessionrunner.cpp:68
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Nabraja sve sesije"
-
-#: sessionrunner.cpp:83
-#, kde-format
-msgid "log out"
-msgstr "odjava"
-
-#: sessionrunner.cpp:85
+#: sessionrunner.cpp:111
 #, kde-format
 msgctxt "log out command"
-msgid "Logout"
-msgstr "Odjavi me"
+msgid "Log Out"
+msgstr ""
 
-#: sessionrunner.cpp:94
-#, kde-format
-msgid "Restart the computer"
-msgstr "Ponovo pokreni računar"
-
-#: sessionrunner.cpp:101
+#: sessionrunner.cpp:121
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
-msgctxt "shut down computer command"
-msgid "shutdown"
+msgctxt "turn off computer command"
+msgid "Shut Down"
 msgstr "ugasi"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:131
 #, fuzzy, kde-format
-#| msgid "Shutdown the computer"
-msgid "Shut down the computer"
-msgstr "Ugasi računar"
+#| msgctxt "restart computer command"
+#| msgid "restart"
+msgctxt "restart computer command"
+msgid "Restart"
+msgstr "pokreni ponovo"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:141
 #, kde-format
-msgid "Lock the screen"
-msgstr "Zaključaj ekran"
+msgctxt "lock screen command"
+msgid "Lock"
+msgstr ""
 
-#: sessionrunner.cpp:138
-#, kde-format
-msgctxt "User sessions"
-msgid "sessions"
-msgstr "sesije"
-
-#: sessionrunner.cpp:164
-#, kde-format
-msgid "New Session"
+#: sessionrunner.cpp:151
+#, fuzzy, kde-format
+#| msgid "New Session"
+msgid "Save Session"
 msgstr "Nova sesija"
 
-# >> @title:window
-#: sessionrunner.cpp:240
-#, kde-format
-msgid "Warning - New Session"
-msgstr "Upozorenje — nova sesija"
-
-#: sessionrunner.cpp:241
+#: sessionrunner.cpp:194
 #, fuzzy, kde-format
-#| msgid ""
-#| "<p>You have chosen to open another desktop session.<br />The current "
-#| "session will be hidden and a new login screen will be displayed.<br />An "
-#| "F-key is assigned to each session; F%1 is usually assigned to the first "
-#| "session, F%2 to the second session and so on. You can switch between "
-#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
-#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
-#| "switching between sessions.</p>"
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "prebaci korisnika"
+
+#: sessionrunner.cpp:278
+#, kde-format
 msgid ""
-"<p>You have chosen to open another desktop session.<br />The current session "
-"will be hidden and a new login screen will be displayed.<br />An F-key is "
-"assigned to each session; F%1 is usually assigned to the first session, F%2 "
-"to the second session and so on. You can switch between sessions by pressing "
-"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
-"Plasma Panel and Desktop menus have actions for switching between sessions.</"
-"p>"
+"<p>You are about to enter a new desktop session.</p><p>A login screen will "
+"be displayed and the current session will be hidden.</p><p>You can switch "
+"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
+"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
+"application launcher)</li></ul>"
 msgstr ""
-"<p>Izabrali ste započinjanje druge sesije površi.</p><p>Trenutna sesija će "
-"biti sakrivena, a novi prijavni ekran prikazan.</p><p>Svakoj sesiji "
-"dodeljuje se F-taster; F%1 je obično dodijeljen prvoj sesiji, F%2 drugoj, i "
-"tako dalje. Kroz sesije se možete kretati istovremenim pritiskom na Ctrl, "
-"Alt i odgovarajući F-taster. Pored toga, KDE‑ov panel i meniji površi sadrže "
-"radnje za prebacivanje između sesija.</p>"
+
+#: sessionrunner.cpp:287
+#, fuzzy, kde-format
+#| msgid "New Session"
+msgid "New Desktop Session"
+msgstr "Nova sesija"
+
+#~ msgctxt "log out command"
+#~ msgid "logout"
+#~ msgstr "odjavi"
+
+#~ msgctxt "lock screen command"
+#~ msgid "lock"
+#~ msgstr "zaključaj"
+
+#~ msgctxt "restart computer command"
+#~ msgid "reboot"
+#~ msgstr "podigni ponovo"
+
+#~ msgctxt "switch user command"
+#~ msgid "switch :q:"
+#~ msgstr "prebaci :q:"
+
+#~ msgctxt "log out command"
+#~ msgid "Logout"
+#~ msgstr "Odjavi me"
+
+#~ msgid "Restart the computer"
+#~ msgstr "Ponovo pokreni računar"
+
+#, fuzzy
+#~| msgctxt "shutdown computer command"
+#~| msgid "shutdown"
+#~ msgctxt "shut down computer command"
+#~ msgid "shutdown"
+#~ msgstr "ugasi"
+
+#, fuzzy
+#~| msgid "Shutdown the computer"
+#~ msgid "Shut down the computer"
+#~ msgstr "Ugasi računar"
+
+# >> @title:window
+#~ msgid "Warning - New Session"
+#~ msgstr "Upozorenje — nova sesija"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>You have chosen to open another desktop session.<br />The current "
+#~| "session will be hidden and a new login screen will be displayed.<br />An "
+#~| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~| "session, F%2 to the second session and so on. You can switch between "
+#~| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#~| "switching between sessions.</p>"
+#~ msgid ""
+#~ "<p>You have chosen to open another desktop session.<br />The current "
+#~ "session will be hidden and a new login screen will be displayed.<br />An "
+#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
+#~ "session, F%2 to the second session and so on. You can switch between "
+#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
+#~ "switching between sessions.</p>"
+#~ msgstr ""
+#~ "<p>Izabrali ste započinjanje druge sesije površi.</p><p>Trenutna sesija "
+#~ "će biti sakrivena, a novi prijavni ekran prikazan.</p><p>Svakoj sesiji "
+#~ "dodeljuje se F-taster; F%1 je obično dodijeljen prvoj sesiji, F%2 drugoj, "
+#~ "i tako dalje. Kroz sesije se možete kretati istovremenim pritiskom na "
+#~ "Ctrl, Alt i odgovarajući F-taster. Pored toga, KDE‑ov panel i meniji "
+#~ "površi sadrže radnje za prebacivanje između sesija.</p>"

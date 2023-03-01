@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"POT-Creation-Date: 2023-01-26 00:59+0000\n"
 "PO-Revision-Date: 2013-10-05 17:02+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,24 +18,30 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/config/config.qml:25
+#: contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Izgled"
 
+#: contents/ui/analogclock.qml:77
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
 # >> @option:check
-#: contents/ui/configGeneral.qml:35
+#: contents/ui/configGeneral.qml:23
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Sekundara"
 
-#: contents/ui/configGeneral.qml:36
+#: contents/ui/configGeneral.qml:24
 #, kde-format
 msgid "General:"
 msgstr ""
 
 # >> @option:check
-#: contents/ui/configGeneral.qml:40
+#: contents/ui/configGeneral.qml:28
 #, kde-format
 msgid "Show time zone"
 msgstr "Vremenska zona"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-19 00:59+0000\n"
+"POT-Creation-Date: 2023-03-01 23:30+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -150,23 +150,23 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "შეხების რეჟიმში ავტომატურად დიდი ზომების დაყენება"
 
-#: package/contents/ui/ExpandedRepresentation.qml:64
+#: package/contents/ui/ExpandedRepresentation.qml:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "უკან გადასვლა"
 
-#: package/contents/ui/ExpandedRepresentation.qml:76
+#: package/contents/ui/ExpandedRepresentation.qml:73
 #, kde-format
 msgid "Status and Notifications"
 msgstr "სტატუსი და შეტყობინებები"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:136
 #, kde-format
 msgid "More actions"
 msgstr "მეტი ქმედება"
 
-#: package/contents/ui/ExpandedRepresentation.qml:230
+#: package/contents/ui/ExpandedRepresentation.qml:227
 #, kde-format
 msgid "Keep Open"
 msgstr "ღიად დატოვება"

@@ -206,8 +206,8 @@ msgstr ""
 #: package/contents/ui/configAppearance.qml:204
 #, kde-format
 msgid ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-"
-"method\">Time Format Documentation</a>"
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Time Format Documentation</a>"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:228
