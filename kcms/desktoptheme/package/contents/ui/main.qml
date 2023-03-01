@@ -9,7 +9,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 1.0
+import QtQuick.Dialogs
 import QtQuick.Controls 2.3 as QtControls
 import QtQml 2.15
 
@@ -191,7 +191,7 @@ KCM.GridViewKCM {
         active: false
         sourceComponent: FileDialog {
             title: i18n("Open Theme")
-            folder: shortcuts.home
+            currentFolder: shortcuts.home
             nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
