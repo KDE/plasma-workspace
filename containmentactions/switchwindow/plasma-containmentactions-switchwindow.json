@@ -91,7 +91,6 @@
         "Description[zh_TW]": "列出視窗並切換",
         "EnabledByDefault": true,
         "Icon": "preferences-system-windows",
-        "Id": "switchwindow",
         "License": "GPL",
         "Name": "Switch Window",
         "Name[ar]": "بدّل النافذة",

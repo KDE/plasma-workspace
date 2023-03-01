@@ -92,7 +92,6 @@
         "Description[zh_TW]": "切換到其他活動",
         "EnabledByDefault": true,
         "Icon": "dashboard-show",
-        "Id": "switchactivity",
         "License": "GPL",
         "Name": "Switch Activity",
         "Name[ar]": "بدّل النشاط",

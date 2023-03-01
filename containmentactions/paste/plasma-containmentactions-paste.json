@@ -92,7 +92,6 @@
         "Description[zh_TW]": "會使用剪貼簿內容建立一個新元件",
         "EnabledByDefault": true,
         "Icon": "edit-paste",
-        "Id": "org.kde.paste",
         "License": "GPL",
         "Name": "Paste",
         "Name[ar]": "ألصق",

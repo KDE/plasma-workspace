@@ -92,7 +92,6 @@
         "Description[zh_TW]": "簡單的應用程式啟動器",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-launch-feedback",
-        "Id": "org.kde.applauncher",
         "License": "GPL",
         "Name": "Application Launcher",
         "Name[af]": "Programlanseerder",

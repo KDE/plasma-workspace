@@ -92,7 +92,6 @@
         "Description[zh_TW]": "切換到其他虛擬桌面",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
-        "Id": "org.kde.switchdesktop",
         "License": "GPL",
         "Name": "Switch Desktop",
         "Name[ar]": "بدّل سطح المكتب",

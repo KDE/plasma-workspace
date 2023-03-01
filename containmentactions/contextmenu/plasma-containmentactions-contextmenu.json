@@ -92,7 +92,6 @@
         "Description[zh_TW]": "通常由滑鼠右鍵叫出的選單",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
-        "Id": "org.kde.contextmenu",
         "License": "GPL",
         "Name": "Standard Menu",
         "Name[ar]": "قائمة قياسية",

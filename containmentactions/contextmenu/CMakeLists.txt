@@ -14,6 +14,10 @@ qt_add_dbus_interface(contextmenu_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver
 
 kcoreaddons_add_plugin(plasma_containmentactions_contextmenu SOURCES ${contextmenu_SRCS} INSTALL_NAMESPACE "plasma/containmentactions")
 
+set_target_properties(plasma_containmentactions_contextmenu PROPERTIES
+    OUTPUT_NAME org.kde.contextmenu
+)
+
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::DBus
                       KF6::Activities
