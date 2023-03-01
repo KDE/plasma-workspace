@@ -46,7 +46,7 @@ ConfigModel {
             visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginPath) > -1
         }
 
-        onObjectAdded: configModel.appendCategory(object)
-        onObjectRemoved: configModel.removeCategory(object)
+        onObjectAdded: (index, object) => configModel.appendCategory(object)
+        onObjectRemoved: (index, object) => configModel.removeCategory(object)
     }
 }

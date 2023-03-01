@@ -19,7 +19,7 @@ PlasmaExtras.Menu {
             text: capitalizeFirstLetter(Qt.locale(Qt.locale().uiLanguages[0]).standaloneMonthName(index))
             onClicked: calendarBackend.displayedDate = new Date(year, index, 1)
         }
-        onObjectAdded: testMenu.addMenuItem(object)
+        onObjectAdded: (index, object) => testMenu.addMenuItem(object)
     }
 
     // Because some locales don't have it in standaloneMonthNames,

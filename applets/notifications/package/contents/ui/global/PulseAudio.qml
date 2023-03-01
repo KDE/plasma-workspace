@@ -30,7 +30,7 @@ QtObject {
             }
         }
 
-        onObjectAdded: {
+        onObjectAdded: (index, object) => {
             if (object.name === notificationStreamId) {
                 notificationStream = object;
             }

@@ -193,7 +193,7 @@ Item {
                         id: menuItem
                         action: modelData
                     }
-                    onObjectAdded: {
+                    onObjectAdded: (index, object) => {
                         configMenu.addMenuItem(object);
                     }
                 }

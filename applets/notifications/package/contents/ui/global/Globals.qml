@@ -635,11 +635,11 @@ QtObject {
                 popupNotificationsModel.stopTimeout(popupNotificationsModel.index(index, 0));
             }
         }
-        onObjectAdded: {
+        onObjectAdded: (index, object) => {
             positionPopups();
             object.visible = true;
         }
-        onObjectRemoved: {
+        onObjectRemoved: (index, object) => {
             var notificationId = object.notificationId
             // Popup might have been destroyed because of a filter change, tell the model to do the timeout work for us again
             // cannot use QModelIndex here as the model row is already gone
