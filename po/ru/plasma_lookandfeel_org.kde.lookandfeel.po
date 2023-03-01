@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2023-03-01 00:52+0000\n"
 "PO-Revision-Date: 2022-10-17 12:00+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -26,17 +26,17 @@ msgstr ""
 msgid "Keyboard Layout: %1"
 msgstr "Раскладка клавиатуры: %1"
 
-#: ../sddm-theme/Login.qml:75
+#: ../sddm-theme/Login.qml:85
 #, kde-format
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
 #, kde-format
 msgid "Password"
 msgstr "Пароль"
 
-#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
 msgstr "Войти"
