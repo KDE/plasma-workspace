@@ -17,6 +17,7 @@
         "Description[eu]": "Unitateak automatikoki askatzen ditu haien egozteko botoia sakatzen denean",
         "Description[fi]": "Irrottaa asemat automaattisesti niiden poistopainiketta painettaessa",
         "Description[fr]": "Libère automatiquement les disques lors d'un appui sur leur bouton d'éjection",
+        "Description[hi]": "निष्कासिन बटन को दबाया जाता है तो स्वचालित रूप से ड्राइव रिलीज करता है",
         "Description[hu]": "Automatikusan kiadja a meghajtókat a kiadógomb megnyomásakor",
         "Description[ia]": "Il lassa fora automaticamente le drives quando lor button de expeller es pressate.",
         "Description[id]": "Secara otomatis melepaskan driver ketika tombol eject ditekan",
