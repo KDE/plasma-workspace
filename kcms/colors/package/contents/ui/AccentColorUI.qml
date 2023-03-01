@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 1.0 as QtDialogs
+import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Templates 2.3 as T
 
@@ -165,10 +165,10 @@ Item {
             title: i18n("Choose custom accent color")
             // User must either choose a colour or cancel the operation before doing something else
             modality: Qt.ApplicationModal
-            color: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
+            selectedColor: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
             onAccepted: {
-                kcm.accentColor = colorDialog.color;
-                kcm.lastUsedCustomAccentColor = colorDialog.color;
+                kcm.accentColor = colorDialog.selectedColor;
+                kcm.lastUsedCustomAccentColor = colorDialog.selectedColor;
                 kcm.accentColorFromWallpaper = false;
             }
         }

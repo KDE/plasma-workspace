@@ -7,7 +7,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs 1.0 as QtDialogs
+import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Templates 2.3 as T
 import QtQml 2.15
@@ -363,7 +363,7 @@ KCM.GridViewKCM {
         active: false
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Color Scheme")
-            folder: shortcuts.home
+            currentFolder: shortcuts.home
             nameFilters: [ i18n("Color Scheme Files (*.colors)") ]
             Component.onCompleted: open()
             onAccepted: {
