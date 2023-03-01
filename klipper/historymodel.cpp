@@ -126,7 +126,13 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
         return;
     }
 
+    if (m_maxSize == 0) {
+        // special case - cannot insert any items
+        return;
+    }
+
     QMutexLocker lock(&m_mutex);
+
     const QModelIndex existingItem = indexOf(item.get());
     if (existingItem.isValid()) {
         // move to top
@@ -134,21 +140,16 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
         return;
     }
 
-    if (m_items.count() == m_maxSize) {
-        // remove last item
-        if (m_maxSize == 0) {
-            // special case - cannot insert any items
-            return;
-        }
-        beginRemoveRows(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
-        m_items.removeLast();
-        endRemoveRows();
-    }
-
     beginInsertRows(QModelIndex(), 0, 0);
     item->setModel(this);
     m_items.prepend(item);
     endInsertRows();
+
+    if (m_items.count() > m_maxSize) {
+        beginRemoveColumns(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
+        m_items.removeLast();
+        endRemoveRows();
+    }
 }
 
 void HistoryModel::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
