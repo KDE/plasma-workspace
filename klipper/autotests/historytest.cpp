@@ -54,7 +54,6 @@ void HistoryTest::testSetMaxSize()
     history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("bar"))));
     QCOMPARE(history->first()->text(), QLatin1String("bar"));
     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
-    QEXPECT_FAIL("", "Item is first inserted, then removed, changed signal gets emitted, although not changed", Continue);
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
