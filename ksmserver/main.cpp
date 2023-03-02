@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
 {
     sanity_check(argc, argv);
 
-    putenv((char *)"SESSION_MANAGER=");
+    qunsetenv("SESSION_MANAGER");
 
     // force xcb QPA plugin as ksmserver is very X11 specific
     const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");
