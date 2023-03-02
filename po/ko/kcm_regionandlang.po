@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Shinjo Park <kde@peremen.name>, 2022.
+# Shinjo Park <kde@peremen.name>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2022-07-13 12:02+0200\n"
+"PO-Revision-Date: 2023-02-28 23:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -39,13 +39,13 @@ msgstr "미터법"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr ""
+msgstr "레터"
 
 #: exampleutility.cpp:49
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
-msgstr ""
+msgstr "A4"
 
 #: exampleutility.cpp:64
 #, kde-format
@@ -201,13 +201,13 @@ msgstr ""
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -215,7 +215,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "이 로캘의 예제를 찾을 수 없음"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -232,6 +232,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>localectl</command> 명령을 사용하여 시스템에서 사용 가능한 로캘을 찾"
+"을 수 없습니다. <link>https://bugs.kde.org</link> 사이트에 버그를 보고해 주십"
+"시오."
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -245,7 +248,7 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1(브라질)"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -363,27 +366,25 @@ msgstr "측량"
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
-msgstr ""
+msgstr "용지 크기"
 
 #: optionsmodel.cpp:30
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
-msgstr ""
+msgstr "주소"
 
 #: optionsmodel.cpp:31
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "이름 형식"
 
 #: optionsmodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@info:title"
-#| msgid "Numbers"
+#, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr "숫자"
+msgstr "전화번호"
 
 #: optionsmodel.cpp:114 optionsmodel.cpp:295
 #, kde-format
@@ -537,25 +538,25 @@ msgstr "측량"
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
-msgstr ""
+msgstr "용지 크기"
 
 #: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
-msgstr ""
+msgstr "주소"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr ""
+msgstr "전화번호"
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27

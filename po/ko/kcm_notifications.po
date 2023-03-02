@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Shinjo Park <kde@peremen.name>, 2019, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2021-08-09 22:52+0200\n"
+"PO-Revision-Date: 2023-02-28 23:33+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -87,45 +87,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "현재 Plasma에서 알림을 표시하지 않고 있습니다."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "방해 금지 모드:"
+msgstr "방해 금지 모드"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "활성화:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "화면을 미러링할 때 활성화"
+msgstr "화면을 미러링할 때"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "화면 공유 중일 때 활성화"
+msgstr "화면 공유 중일 때"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "키보드 단축키:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "표시 조건"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -158,26 +153,22 @@ msgid "Show popup"
 msgstr "팝업 창 보기"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "팝업:"
+msgstr "팝업"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "프로그램:"
+msgstr "위치:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "알림 아이콘 근처에 표시"
+msgstr "알림 아이콘 근처"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -200,7 +191,7 @@ msgstr "다음 시간 이후 숨기기:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "추가 피드백"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -230,11 +221,10 @@ msgid "Notification badges:"
 msgstr "알림 배지:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "프로그램 설정"
+msgstr "프로그램별 설정"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

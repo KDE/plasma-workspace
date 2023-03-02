@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2022-07-13 11:55+0200\n"
+"PO-Revision-Date: 2023-02-28 23:50+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -154,7 +154,7 @@ msgstr "터치 모드에서 자동으로 크게 설정"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "뒤로 가기"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format

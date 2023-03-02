@@ -1,6 +1,6 @@
 # Translation of kcmfonts.po to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
-# Shinjo Park <kde@peremen.name>, 2007, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 # Yu-Chan, Park, 2001.
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-15 00:48+0000\n"
-"PO-Revision-Date: 2022-05-05 23:49+0200\n"
+"PO-Revision-Date: 2023-02-28 23:31+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -134,10 +134,9 @@ msgid "This module lets you configure the system fonts."
 msgstr "이 모듈에서 시스템 글꼴을 설정할 수 있습니다."
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts…"
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "모든 글꼴 설정(&A)…"
+msgstr "전역 크기 조정…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -148,10 +147,7 @@ msgstr ""
 "앤티에일리어싱 및 DPI 같은 일부 설정은 새로 시작한 프로그램에만 적용됩니다."
 
 #: package/contents/ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."

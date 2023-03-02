@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2022-04-16 02:18+0200\n"
+"PO-Revision-Date: 2023-03-01 00:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -120,7 +120,7 @@ msgstr "수동으로 비활성화할 때까지"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "자동으로 종료됨: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -297,20 +297,19 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "읽지 않은 알림 %1개"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "%1까지 방해하지 않음"
+msgstr "%1까지 방해 금지 모드 설정됨. 지금 종료하려면 가운데 단추로 클릭"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "방해 금지 모드 설정됨. 종료하려면 가운데 단추로 클릭"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "가운데 단추로 클릭하여 방해 금지 모드를 활성화"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -323,9 +322,7 @@ msgid "&Configure Event Notifications and Actions…"
 msgstr "이벤트 알림 및 동작 설정(&C)…"
 
 #: package/contents/ui/NotificationHeader.qml:122
-#, fuzzy, kde-format
-#| msgctxt "notification was just added, keep short"
-#| msgid "Just now"
+#, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "지금"

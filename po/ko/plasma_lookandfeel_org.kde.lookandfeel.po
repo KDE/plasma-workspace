@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
-"PO-Revision-Date: 2022-04-16 02:18+0200\n"
+"POT-Creation-Date: 2023-03-01 00:52+0000\n"
+"PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,24 +16,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
 msgid "Keyboard Layout: %1"
 msgstr "키보드 레이아웃: %1"
 
-#: ../sddm-theme/Login.qml:75
+#: ../sddm-theme/Login.qml:85
 #, kde-format
 msgid "Username"
 msgstr "사용자 이름"
 
-#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
 #, kde-format
 msgid "Password"
 msgstr "암호"
 
-#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
 #, kde-format
 msgid "Log In"
 msgstr "로그인"
@@ -129,30 +129,28 @@ msgid "%1 (%2)"
 msgstr "%1(%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "시계"
+msgstr "시계:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "잠금 해제 프롬프트가 사라질 때에도 계속 표시"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "미디어 제어"
+msgstr "미디어 제어:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "잠금 해제 프롬프트 아래쪽에 표시"
 
 #: contents/lockscreen/LockScreenUi.qml:37
 #, kde-format
@@ -204,7 +202,7 @@ msgstr "잠금 해제"
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "제목 없음"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format

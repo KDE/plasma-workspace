@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2022-05-05 23:51+0200\n"
+"PO-Revision-Date: 2022-10-04 17:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -157,19 +157,17 @@ msgstr "바탕 화면 레이아웃"
 #: package/contents/ui/MoreOptions.qml:34
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "제목 표시줄 단추 레이아웃"
 
 #: package/contents/ui/MoreOptions.qml:48
 #: package/contents/ui/SimpleOptions.qml:63
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
-"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 위젯 설정을 대체합니다"
+"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 독, 위젯 설정을 대체합니"
+"다"
 
 #: package/contents/ui/MoreOptions.qml:56
 #, kde-format
@@ -243,18 +241,15 @@ msgid "• Appearance settings"
 msgstr "• 모양 설정"
 
 #: package/contents/ui/SimpleOptions.qml:47
-#, fuzzy, kde-format
-#| msgid "Desktop layout"
+#, kde-format
 msgid "Desktop and window layout"
-msgstr "바탕 화면 레이아웃"
+msgstr "바탕 화면과 창 레이아웃"
 
 #: package/contents/ui/SimpleOptions.qml:56
-#, fuzzy, kde-format
-#| msgctxt "List item"
-#| msgid "• Desktop layout"
+#, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr "• 바탕 화면 레이아웃"
+msgstr "• 바탕 화면과 창 레이아웃"
 
 #: package/contents/ui/SimpleOptions.qml:74
 #, kde-format

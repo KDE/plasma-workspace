@@ -1,14 +1,14 @@
 # Translation of plasma_applet_battery to Korean.
 # Copyright (C) 2007, 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-02-20 22:29+0100\n"
+"PO-Revision-Date: 2023-02-28 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "남은 시간:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "예상 중…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -177,35 +177,31 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "자동 절전 모드 진입과 화면 잠금이 비활성화됨"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
+msgstr[0] "프로그램 %1개에서 성능 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "시스템이 성능 모드 사용 중"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
+msgstr[0] "프로그램 %1개에서 절전 모드를 활성화하기를 요청함"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "시스템이 절전 모드 사용 중"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "스크롤하여 화면 밝기 조정"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -223,10 +219,9 @@ msgid "&Show Energy Information…"
 msgstr "에너지 정보 표시(&S)…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "아이콘에 배터리 백분율 표시"
+msgstr "완전히 충전되지 않았을 때 아이콘에 배터리 백분율 표시"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
