@@ -4,11 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import QtCore
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.11
 import org.kde.kirigami 2.13 as Kirigami
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 import org.kde.kcm 1.2 as KCM
 import org.kde.plasma.kcm.autostart 1.0
 
@@ -142,10 +143,9 @@ KCM.ScrollViewKCM {
             sourceComponent: FileDialog {
                 id: loginFileDialog
                 title: i18n("Choose Login Script")
-                folder: shortcuts.home
-                selectMultiple: false
+                currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
                 onAccepted: {
-                    kcm.model.addScript(loginFileDialog.fileUrl, AutostartModel.XdgScripts)
+                    kcm.model.addScript(loginFileDialog.selectedFile, AutostartModel.XdgScripts)
                     loginFileDialogLoader.active = false
                 }
 
@@ -163,10 +163,9 @@ KCM.ScrollViewKCM {
             sourceComponent: FileDialog {
                 id: logoutFileDialog
                 title: i18n("Choose Logout Script")
-                folder: shortcuts.home
-                selectMultiple: false
+                currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
                 onAccepted: {
-                    kcm.model.addScript(logoutFileDialog.fileUrl, AutostartModel.PlasmaShutdown)
+                    kcm.model.addScript(logoutFileDialog.selectedFile, AutostartModel.PlasmaShutdown)
                     logoutFileDialogLoader.active = false
                 }
 
