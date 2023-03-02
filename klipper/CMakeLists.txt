@@ -60,13 +60,6 @@ if (HAVE_X11)
     endif()
 endif()
 
-add_executable(klipper main.cpp tray.cpp)
-target_link_libraries(klipper
-    libklipper_common_static
-)
-
-install(TARGETS klipper         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
