@@ -146,7 +146,7 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     endInsertRows();
 
     if (m_items.count() > m_maxSize) {
-        beginRemoveColumns(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
+        beginRemoveRows(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
         m_items.removeLast();
         endRemoveRows();
     }
