@@ -58,6 +58,7 @@ int main(int argc, char **argv)
 
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
+    app.setQuitLockEnabled(false);
 
     QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")}, i18n("Use the clipboard contents as query for KRunner"));
     QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")}, i18n("Start KRunner in the background, don't show it."));
