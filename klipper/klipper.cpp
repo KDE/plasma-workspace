@@ -390,7 +390,6 @@ void Klipper::loadSettings()
     // this will cause it to loadSettings too
     setURLGrabberEnabled(m_bURLGrabber);
     history()->setMaxSize(KlipperSettings::maxClipItems());
-    history()->model()->setDisplayImages(!m_bIgnoreImages);
 
     // Convert 4.3 settings
     if (KlipperSettings::synchronize() != 3) {

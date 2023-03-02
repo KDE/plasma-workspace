@@ -35,9 +35,6 @@ public:
     int maxSize() const;
     void setMaxSize(int size);
 
-    bool displayImages() const;
-    void setDisplayImages(bool show);
-
     void clear();
     void moveToTop(const QByteArray &uuid);
     void moveTopToBack();
@@ -65,14 +62,4 @@ private:
 inline int HistoryModel::maxSize() const
 {
     return m_maxSize;
-}
-
-inline bool HistoryModel::displayImages() const
-{
-    return m_displayImages;
-}
-
-inline void HistoryModel::setDisplayImages(bool show)
-{
-    m_displayImages = show;
 }
