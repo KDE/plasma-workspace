@@ -45,8 +45,12 @@ void HelpRunner::match(RunnerContext &context)
     for (AbstractRunner *runner : std::as_const(matchingRunners)) {
         const QList<RunnerSyntax> syntaxes = runner->syntaxes();
         if (showExtendedHelp) {
+            float i = 1;
             for (const RunnerSyntax &syntax : syntaxes) {
                 QueryMatch match(this);
+                // Set relevance to preserve the original order of the syntaxes
+                match.setRelevance(1 / i);
+                i++;
                 QString matchText;
                 QString text = QLatin1String("<b>");
                 const auto exampleQueries = syntax.exampleQueries();
