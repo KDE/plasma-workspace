@@ -172,6 +172,7 @@ int main(int argc, char *argv[])
     const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");
     qputenv("QT_QPA_PLATFORM", QByteArrayLiteral("xcb"));
 
+    QCoreApplication::setQuitLockEnabled(false);
     QGuiApplication *a = new QGuiApplication(argc, argv);
 
     // now the QPA platform is set, unset variable again to not launch apps with incorrect environment
