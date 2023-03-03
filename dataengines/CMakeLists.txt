@@ -26,5 +26,4 @@ add_subdirectory(statusnotifieritem)
 
 if(NOT WIN32)
   add_subdirectory(mouse)
-  add_subdirectory(systemmonitor)
 endif()
