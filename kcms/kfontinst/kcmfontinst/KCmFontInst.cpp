@@ -369,28 +369,6 @@ CKCmFontInst::~CKCmFontInst()
     partialIcon(false);
 }
 
-QString CKCmFontInst::quickHelp() const
-{
-    return Misc::root() ? i18n(
-               "<h1>Font Installer</h1><p> This module allows you to"
-               " install TrueType, Type1, and Bitmap"
-               " fonts.</p><p>You may also install fonts using Konqueror:"
-               " type fonts:/ into Konqueror's location bar"
-               " and this will display your installed fonts. To install a"
-               " font, simply copy one into the folder.</p>")
-                        : i18n(
-                            "<h1>Font Installer</h1><p> This module allows you to"
-                            " install TrueType, Type1, and Bitmap"
-                            " fonts.</p><p>You may also install fonts using Konqueror:"
-                            " type fonts:/ into Konqueror's location bar"
-                            " and this will display your installed fonts. To install a"
-                            " font, simply copy it into the appropriate folder - "
-                            " \"%1\" for fonts available to just yourself, or "
-                            " \"%2\" for system-wide fonts (available to all).</p>",
-                            KFI_KIO_FONTS_USER.toString(),
-                            KFI_KIO_FONTS_SYS.toString());
-}
-
 void CKCmFontInst::previewMenu(const QPoint &pos)
 {
     if (m_previewList->isHidden()) {
