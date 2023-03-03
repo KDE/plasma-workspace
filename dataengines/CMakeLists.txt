@@ -22,7 +22,3 @@ add_subdirectory(soliddevice)
 add_subdirectory(time)
 add_subdirectory(weather)
 add_subdirectory(statusnotifieritem)
-
-if(NOT WIN32)
-  add_subdirectory(mouse)
-endif()
