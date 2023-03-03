@@ -32,7 +32,7 @@ if(GLIBC_LOCALE_GEN)
         ${kcm_regionandlang_PART_SRCS}
         localegeneratorglibc.cpp)
 endif()
-if(UBUNTU_PACKAGEKIT)
+if(UBUNTU_LOCALE)
     set(kcm_regionandlang_PART_SRCS
         ${kcm_regionandlang_PART_SRCS}
         localegeneratorubuntu.cpp)
@@ -78,7 +78,7 @@ target_link_libraries(kcm_regionandlang
 if (QT_MAJOR_VERSION EQUAL "6")
     target_link_libraries(kcm_regionandlang Qt::Core5Compat) # for QTextCodec
 endif()
-if(UBUNTU_PACKAGEKIT)
+if(UBUNTU_LOCALE)
     target_link_libraries(kcm_regionandlang PK::packagekitqt${QT_MAJOR_VERSION})
 endif()
 ########### install files ###############

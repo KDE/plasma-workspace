@@ -236,24 +236,32 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         find_program(LANGUAGE_SELECTOR_COMMON "check-language-support" DOC "Required for ubuntu-based distros to generate locale")
     endif()
 
+    set(UBUNTU_LOCALE FALSE)
     option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt6 required" ${SYSTEM_UBUNTU_BASED})
     if(UBUNTU_PACKAGEKIT)
-        set(OS_UBUNTU TRUE)
+        find_package(PackageKitQt${QT_MAJOR_VERSION})
+        set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
+                PROPERTIES DESCRIPTION "Software Manager integration"
+                TYPE OPTIONAL
+                PURPOSE "Used to install additional language packages on demand"
+                )
+        set(UBUNTU_LOCALE ${PackageKitQt${QT_MAJOR_VERSION}_FOUND})
     endif()
 
     set(GLIBC_LOCALE_GEN_DEFAULT ON)
-    if(UBUNTU_PACKAGEKIT)
+    if(UBUNTU_LOCALE)
         set(GLIBC_LOCALE_GEN_DEFAULT OFF)
     endif()
 
     option(GLIBC_LOCALE_GEN "Auto generate Glibc locale with locale-gen and /etc/locale.gen" ${GLIBC_LOCALE_GEN_DEFAULT})
-    if(GLIBC_LOCALE_GEN AND UBUNTU_PACKAGEKIT)
+    if(GLIBC_LOCALE_GEN AND UBUNTU_LOCALE)
         message(FATAL_ERROR "UBUNTU_PACKAGEKIT and GLIBC_LOCALE_GEN both enabled, only UBUNTU_PACKEGKIT will be used")
     endif()
     if(GLIBC_LOCALE_GEN)
         set(GLIBC_LOCALE TRUE)
     endif()
-    if(UBUNTU_PACKAGEKIT OR GLIBC_LOCALE_GEN)
+    set(REGION_LANG_GENERATE_LOCALE FALSE)
+    if(UBUNTU_LOCALE OR GLIBC_LOCALE_GEN)
         set(REGION_LANG_GENERATE_LOCALE TRUE)
     endif()
 
@@ -273,16 +281,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
                 PURPOSE "Communicate with localegen helper in region & lang kcm"
                 TYPE REQUIRED
         )
-    endif()
-
-    if(UBUNTU_PACKAGEKIT)
-        find_package(PackageKitQt${QT_MAJOR_VERSION})
-        set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
-                PROPERTIES DESCRIPTION "Software Manager integration"
-                TYPE OPTIONAL
-                PURPOSE "Used to install additional language packages on demand"
-                )
-
     endif()
 endif()
 
