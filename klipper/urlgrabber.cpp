@@ -165,6 +165,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         m_myPopupKillTimer->stop();
 
         m_myMenu = new QMenu;
+        m_myMenu->setWindowFlags(m_myMenu->windowFlags() | Qt::FramelessWindowHint);
 
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
