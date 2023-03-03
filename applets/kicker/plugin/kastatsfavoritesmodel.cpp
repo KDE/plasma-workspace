@@ -19,6 +19,7 @@
 #include <KLocalizedString>
 #include <KProtocolInfo>
 #include <KSharedConfig>
+#include <KStringHandler>
 #include <KSycoca>
 
 #include <KActivities/Consumer>
@@ -408,6 +409,7 @@ public:
         // clang-format off
         return entry == nullptr ? QVariant()
              : role == Qt::DisplayRole ? entry->name()
+             : role == Kicker::DisplayWrappedRole ? KStringHandler::preProcessWrap(entry->name())
              : role == Qt::DecorationRole ? entry->icon()
              : role == Kicker::DescriptionRole ? entry->description()
              : role == Kicker::FavoriteIdRole ? entry->id()

@@ -32,6 +32,7 @@ QHash<int, QByteArray> AbstractModel::staticRoleNames()
     roles.insert(Kicker::UrlRole, "url");
     roles.insert(Kicker::DisabledRole, "disabled");
     roles.insert(Kicker::IsMultilineTextRole, "isMultilineText");
+    roles.insert(Kicker::DisplayWrappedRole, "displayWrapped");
 
     return roles;
 }

@@ -11,6 +11,7 @@
 #include "systementry.h"
 
 #include <KLocalizedString>
+#include <KStringHandler>
 
 SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent)
     : AbstractModel(parent)
@@ -55,6 +56,8 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
     // TODO: Use a Switch for Enums.
     if (role == Qt::DisplayRole) {
         return entry->name();
+    } else if (role == Kicker::DisplayWrappedRole) {
+        return KStringHandler::preProcessWrap(entry->name());
     } else if (role == Qt::DecorationRole) {
         if (!entry->icon().name().isEmpty())
             return entry->icon().name();
