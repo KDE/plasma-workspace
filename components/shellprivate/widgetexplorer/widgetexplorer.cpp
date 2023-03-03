@@ -15,7 +15,7 @@
 
 #include <KAuthorized>
 #include <KLocalizedString>
-#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
+#include <KNSWidgets/QtQuickDialogWrapper>
 #include <KX11Extras>
 
 #include <Plasma/Applet>
@@ -96,12 +96,12 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     bool showSpecialFilters = true;
     DefaultItemFilterProxyModel filterItemModel;
-    static QPointer<KNS3::QtQuickDialogWrapper> newStuffDialog;
+    static QPointer<KNSWidgets::QtQuickDialogWrapper> newStuffDialog;
 
     std::unique_ptr<KActivities::Consumer> activitiesConsumer;
 };
 
-QPointer<KNS3::QtQuickDialogWrapper> WidgetExplorerPrivate::newStuffDialog;
+QPointer<KNSWidgets::QtQuickDialogWrapper> WidgetExplorerPrivate::newStuffDialog;
 
 void WidgetExplorerPrivate::initFilters()
 {
@@ -448,8 +448,8 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 void WidgetExplorer::downloadWidgets()
 {
     if (WidgetExplorerPrivate::newStuffDialog.isNull()) {
-        WidgetExplorerPrivate::newStuffDialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("plasmoids.knsrc"));
-        connect(WidgetExplorerPrivate::newStuffDialog, &KNS3::QtQuickDialogWrapper::closed, WidgetExplorerPrivate::newStuffDialog, &QObject::deleteLater);
+        WidgetExplorerPrivate::newStuffDialog = new KNSWidgets::QtQuickDialogWrapper(QStringLiteral("plasmoids.knsrc"));
+        connect(WidgetExplorerPrivate::newStuffDialog, &KNSWidgets::QtQuickDialogWrapper::closed, WidgetExplorerPrivate::newStuffDialog, &QObject::deleteLater);
 
         WidgetExplorerPrivate::newStuffDialog->open();
     }

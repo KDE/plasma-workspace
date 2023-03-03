@@ -40,7 +40,6 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF6::I18n
     KF6::KIOCore
     KF6::KIOGui
-    KF6::NewStuff
     KF6::Notifications
     KF6::Package
     PW::LibTaskManager

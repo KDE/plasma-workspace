@@ -45,7 +45,7 @@ target_link_libraries(lookandfeelmanager
     KF6::I18n
     KF6::KIOGui
     KF6::KCMUtils
-    KF6::NewStuff
+    KF6::NewStuffCore
     KF6::Package
     PlasmaAutostart
     krdb

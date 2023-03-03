@@ -30,7 +30,7 @@ target_link_libraries(kcolorschemeeditor
     KF6::GuiAddons
     KF6::I18n
     KF6::CoreAddons
-    KF6::NewStuff
+    KF6::NewStuffCore
     KF6::WindowSystem
 )
 

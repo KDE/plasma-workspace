@@ -46,7 +46,7 @@ target_link_libraries(kcm_style
     KF6::KIOCore
     KF6::QuickAddons
     KF6::Archive
-    KF6::NewStuff
+    KF6::NewStuffCore
     KF6::XmlGui
     krdb
 )
