@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2002-10-26 12:49SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -845,7 +845,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -856,7 +856,7 @@ msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 msgid "No matches"
 msgstr ""
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -951,12 +951,6 @@ msgstr "lwandle@translate.org.za"
 msgid "&More"
 msgstr ""
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Contents"
-msgstr "Gcina imixholo yebhodi eqhotyoshwayo ku&phumo"
-
 #: urlgrabber.cpp:199
 #, fuzzy, kde-format
 msgid "Disable This Popup"
@@ -966,6 +960,11 @@ msgstr "Kubhaza lengxolo eqhekezayo"
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Contents"
+#~ msgstr "Gcina imixholo yebhodi eqhotyoshwayo ku&phumo"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-28 23:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -832,7 +832,7 @@ msgstr "검색…"
 msgid "Invalid regular expression, %1"
 msgstr "잘못된 정규 표현식, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"
@@ -842,7 +842,7 @@ msgstr "클립보드가 비었습니다"
 msgid "No matches"
 msgstr "검색 결과 없음"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -940,11 +940,6 @@ msgstr "kde@peremen.name"
 msgid "&More"
 msgstr "더 보기(&M)"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "클립보드 내용"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -954,6 +949,9 @@ msgstr "이 팝업 사용 안 함"
 #, kde-format
 msgid "&Cancel"
 msgstr "취소(&C)"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "클립보드 내용"
 
 #~ msgctxt "@info"
 #~ msgid ""

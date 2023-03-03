@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -839,7 +839,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "Regùlarny wësłów:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tacnik je pùsti"
@@ -850,7 +850,7 @@ msgstr "Tacnik je pùsti"
 msgid "No matches"
 msgstr "<felënk dopasowań>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -954,12 +954,6 @@ msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
 msgid "&More"
 msgstr "&Wicy"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Keep clipboard contents"
-msgid "Clipboard Contents"
-msgstr "Zatrzëmôj zamkłoscë tacnika"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -969,6 +963,11 @@ msgstr "Wëłączë to òkno"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anulëjë"
+
+#, fuzzy
+#~| msgid "Keep clipboard contents"
+#~ msgid "Clipboard Contents"
+#~ msgstr "Zatrzëmôj zamkłoscë tacnika"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Rëmnąc historëjã tacnika?"

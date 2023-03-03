@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -845,7 +845,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "Slonn ionadaíochta:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tá an ghearrthaisce folamh"
@@ -856,7 +856,7 @@ msgstr "Tá an ghearrthaisce folamh"
 msgid "No matches"
 msgstr "<níl aon rud comhoiriúnach>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -956,11 +956,6 @@ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 msgid "&More"
 msgstr "&Tuilleadh"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Inneachar na Gearrthaisce"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -970,6 +965,9 @@ msgstr "Díchumasaigh an phreabfhuinneog seo"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cealaigh"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Inneachar na Gearrthaisce"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Scrios stair na gearrthaisce?"

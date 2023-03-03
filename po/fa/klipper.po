@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2007-09-02 15:24+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -846,7 +846,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "عبارت منظم"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -858,7 +858,7 @@ msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 msgid "No matches"
 msgstr ">بدون تطبیق<"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -962,12 +962,6 @@ msgstr "kazemi@itland.ir"
 msgid "&More"
 msgstr "&بیشتر‌"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Contents"
-msgstr "ذخیره محتویات تخته یادداشت هنگام &خروج‌"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -977,6 +971,11 @@ msgstr "غیرفعال کردن این بالاپر"
 #, kde-format
 msgid "&Cancel"
 msgstr "&لغو‌"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Contents"
+#~ msgstr "ذخیره محتویات تخته یادداشت هنگام &خروج‌"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

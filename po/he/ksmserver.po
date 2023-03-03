@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2017-05-16 12:20-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "בעיה בהתקנת סביבת העבודה פלזמה"
 
-#: main.cpp:193
+#: main.cpp:194
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -132,22 +132,22 @@ msgstr ""
 "מנהל ההפעלה האמין של KDE שעושה שימוש בפרוטוקול ניהול\n"
 "ההפעלה הסטנדרטי של XSMP) X11R6)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "משחזר את ההפעלה שנשמרה, אם זמינה כזאת"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "אפשר גם חיבורים מרוחקים"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "מתחיל את ההפעלה במצב נעול"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-11 06:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -785,7 +785,7 @@ msgstr "ძებნა…"
 msgid "Invalid regular expression, %1"
 msgstr "არასწორი რეგულარული გამოსახულება: %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
@@ -795,7 +795,7 @@ msgstr "ბუფერი ცარიელია"
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -893,11 +893,6 @@ msgstr "Temuri.doghonadze@gmail.com"
 msgid "&More"
 msgstr "&მეტი"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "ბუფერის შემცველობა"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -907,3 +902,6 @@ msgstr "ამ მხტუნარას გათიშვა"
 #, kde-format
 msgid "&Cancel"
 msgstr "&შეწყვეტა"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "ბუფერის შემცველობა"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-09-19 19:17+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -37,22 +37,22 @@ msgstr "Иҷрокунанда"
 msgid "Run Command interface"
 msgstr "Восити корбарии иҷроиши фармонҳо"
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr ""
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr ""
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:69
+#: main.cpp:70
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""

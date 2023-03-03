@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2009-12-16 21:43+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -837,7 +837,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "සාමාන්‍ය ප්‍රකාශන:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard is empty"
@@ -849,7 +849,7 @@ msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමා
 msgid "No matches"
 msgstr "<ගැලපුම් නොමැත>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -953,12 +953,6 @@ msgstr "danishka@gmail.com"
 msgid "&More"
 msgstr "තවත් (&M)"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Keep clipboard contents"
-msgid "Clipboard Contents"
-msgstr "ක්ලිප්පුවරු අන්තර්ගතය තබාගන්න"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -968,6 +962,11 @@ msgstr "මෙම පොප්අප් අක්‍රීය කරන්න"
 #, kde-format
 msgid "&Cancel"
 msgstr "අවලංගු කරන්න (&C)"
+
+#, fuzzy
+#~| msgid "Keep clipboard contents"
+#~ msgid "Clipboard Contents"
+#~ msgstr "ක්ලිප්පුවරු අන්තර්ගතය තබාගන්න"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

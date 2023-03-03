@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -838,7 +838,7 @@ msgstr "തിരയുക..."
 msgid "Invalid regular expression, %1"
 msgstr "റെഗുലര്‍ എക്സ്പ്രഷന്‍:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ശൂന്യമാണു്"
@@ -849,7 +849,7 @@ msgstr "ഓര്‍മ്മച്ചെപ്പ് ശൂന്യമാണ�
 msgid "No matches"
 msgstr "<ചേര്‍ച്ചയില്ല>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "ക്ലിപ്പര്‍"
@@ -948,11 +948,6 @@ msgstr "libregeek@gmail.com,ershad92@gmail.com"
 msgid "&More"
 msgstr "കൂടുതല്‍"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "ഓര്‍മ്മച്ചെപ്പിലെ ഉള്ളടക്കങ്ങള്‍"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -962,6 +957,9 @@ msgstr "പൊങ്ങിവരുന്ന ഈ ജാലകത്തിനെ 
 #, kde-format
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "ഓര്‍മ്മച്ചെപ്പിലെ ഉള്ളടക്കങ്ങള്‍"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക?"

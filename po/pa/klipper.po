@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2021-06-08 22:41-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -838,7 +838,7 @@ msgstr "ਖੋਜੋ..."
 msgid "Invalid regular expression, %1"
 msgstr "ਰੈਗੂਲਰ ਸਮੀਕਰਨ:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
@@ -848,7 +848,7 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 msgid "No matches"
 msgstr "ਕੋਈ ਮੇਲ ਨਹੀਂ"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "ਕੇਲਿੱਪਰ"
@@ -947,11 +947,6 @@ msgstr "aalam@users.sf.net"
 msgid "&More"
 msgstr "ਹੋਰ(&M)"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -961,6 +956,9 @@ msgstr "ਇਹ ਪੋਪਅੱਪ ਅਯੋਗ"
 #, kde-format
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਹਟਾਉਣਾ ਹੈ?"

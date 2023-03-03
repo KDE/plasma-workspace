@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-19 12:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -861,7 +861,7 @@ msgstr "Търсене…"
 msgid "Invalid regular expression, %1"
 msgstr "Неправилен регулярен израз, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буферът е празен"
@@ -871,7 +871,7 @@ msgstr "Буферът е празен"
 msgid "No matches"
 msgstr "Няма съвпадения"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -969,11 +969,6 @@ msgstr "yasen@lindeas.com,radnev@yahoo.com"
 msgid "&More"
 msgstr "&Допълнителни"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Съдържание на буфера"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -983,3 +978,6 @@ msgstr "Изключване на този изскачащ прозорец"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Съдържание на буфера"

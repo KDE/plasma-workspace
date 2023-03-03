@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -810,7 +810,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""
@@ -820,7 +820,7 @@ msgstr ""
 msgid "No matches"
 msgstr ""
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr ""
@@ -921,11 +921,6 @@ msgstr "yannig@marchegay.org"
 #: popupproxy.cpp:145
 #, kde-format
 msgid "&More"
-msgstr ""
-
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
 msgstr ""
 
 #: urlgrabber.cpp:199

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2014-08-15 14:42+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -839,7 +839,7 @@ msgstr "Söken..."
 msgid "Invalid regular expression, %1"
 msgstr "Reguleer Utdruck:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Twischenaflaag is leddig"
@@ -850,7 +850,7 @@ msgstr "Twischenaflaag is leddig"
 msgid "No matches"
 msgstr "<keen Övereenstimmen>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -949,11 +949,6 @@ msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 msgid "&More"
 msgstr "&Mehr"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Twischenaflaag-Inholt"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -963,6 +958,9 @@ msgstr "Dit Popup utmaken"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Afbreken"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Twischenaflaag-Inholt"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Twischenaflaag-Vörgeschicht leddig maken?"

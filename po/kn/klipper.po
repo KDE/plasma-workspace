@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -849,7 +849,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "ಸಾಮಾನ್ಯ ಎಕ್ಸ್‍ಪ್ರೆಶನ್:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
@@ -860,7 +860,7 @@ msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
 msgid "No matches"
 msgstr "<ಹೋಲಿಕೆ ಇಲ್ಲ>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -966,12 +966,6 @@ msgstr ""
 msgid "&More"
 msgstr "(&ಹ)ಹೆಚ್ಚು"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Keep clipboard contents"
-msgid "Clipboard Contents"
-msgstr "ನಕಲು ಫಲಕದ ವಿಷಯಗಳನ್ನು ಇರಿಸು"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -981,6 +975,11 @@ msgstr "ಈ ಪುಟಿಕೆಯನ್ನು ನಿಶ್ಚೇತಗೊಳಿ�
 #, kde-format
 msgid "&Cancel"
 msgstr "ರದ್ದುಮಾಡು(&C)"
+
+#, fuzzy
+#~| msgid "Keep clipboard contents"
+#~ msgid "Clipboard Contents"
+#~ msgstr "ನಕಲು ಫಲಕದ ವಿಷಯಗಳನ್ನು ಇರಿಸು"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರವು ಮಾಡಬೇಕೆ?"

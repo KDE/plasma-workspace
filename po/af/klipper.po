@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2005-11-23 23:00+0200\n"
 "Last-Translator: Kobus <kabousv@therugby.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -844,7 +844,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -856,7 +856,7 @@ msgstr "Klipbord geskiedenis grootte:"
 msgid "No matches"
 msgstr "<geen saampassings>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -953,12 +953,6 @@ msgstr "frix@expertron.co.za, juanita.franz@vr-web.de, kabousv@therugby.co.za"
 msgid "&More"
 msgstr "Meer"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Contents"
-msgstr "Stoor klipbord inhoud op beïendig"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -968,6 +962,11 @@ msgstr "Versper hierdie opspring"
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Contents"
+#~ msgstr "Stoor klipbord inhoud op beïendig"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

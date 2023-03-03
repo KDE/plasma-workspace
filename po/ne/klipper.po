@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2007-11-01 18:39+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -848,7 +848,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "नियमित अभिव्यक्ति"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -860,7 +860,7 @@ msgstr "क्लिपबोर्ड इतिहास साइज:"
 msgid "No matches"
 msgstr "<no matches>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "क्लिपर"
@@ -964,12 +964,6 @@ msgstr "nabin@mpp.org.np, shyamkrishna_bal@yahoo.com"
 msgid "&More"
 msgstr "धेरै"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Contents"
-msgstr "'अन्त्य गर्नुहोस्' बटनमा क्लिपबोर्ड सामग्री बचत गर्नुहोस्"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -979,6 +973,11 @@ msgstr "यो पपअप अक्षम पार्नुहोस्"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Contents"
+#~ msgstr "'अन्त्य गर्नुहोस्' बटनमा क्लिपबोर्ड सामग्री बचत गर्नुहोस्"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

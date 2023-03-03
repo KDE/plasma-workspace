@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-09-15 10:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "KRunner"
 msgid "Run Command interface"
 msgstr "Interfície d'execució ordres"
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Usa el contingut del porta-retalls com a consulta per al KRunner"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Inicia el KRunner en segon pla, no el mostris."
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: main.cpp:69
+#: main.cpp:70
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "La consulta a executar, només s'usa si no es proporciona «-c»"

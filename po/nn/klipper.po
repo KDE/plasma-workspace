@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-06-19 00:26+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -783,7 +783,7 @@ msgstr "Søk …"
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Utklippstavla er tom"
@@ -793,7 +793,7 @@ msgstr "Utklippstavla er tom"
 msgid "No matches"
 msgstr "Ingen treff"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -891,11 +891,6 @@ msgstr "gaute@verdsveven.com,eirbir@gmail.com,karl@huftis.org"
 msgid "&More"
 msgstr "&Fleire"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Innhald på utklippstavla"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -905,3 +900,6 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Innhald på utklippstavla"

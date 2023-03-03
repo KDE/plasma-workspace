@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-10-31 00:05+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -37,22 +37,22 @@ msgstr "KRunner"
 msgid "Run Command interface"
 msgstr "Käsu käivitamise liides"
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Lõikepuhvri sisu tarvitamine KRunneri päringuks"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "KRunneri käivitamise taustal, ilma seda näitamata."
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Töötava isendi asendamine"
 
-#: main.cpp:69
+#: main.cpp:70
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Käivitatav päring, kasutatakse ainult siis, kui pole antud võtit -c"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2009-01-05 12:55+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -843,7 +843,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "রেগুলার এক্সপ্রেশন"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -855,7 +855,7 @@ msgstr "ক্লিপবোর্ডের পূর্ববর্তী ত�
 msgid "No matches"
 msgstr "<no matches>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -959,12 +959,6 @@ msgstr "runab@redhat.com"
 msgid "&More"
 msgstr "অতিরিক্ত (&M)"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Contents"
-msgstr "প্রস্থানকালে, ক্লিপবোর্ডের তথ্য সংরক্ষণ করা হবে (&x)"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -974,6 +968,11 @@ msgstr "এই পপ-আপ নিষ্ক্রিয় করা হবে"
 #, kde-format
 msgid "&Cancel"
 msgstr "বাতিল (&C)"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Contents"
+#~ msgstr "প্রস্থানকালে, ক্লিপবোর্ডের তথ্য সংরক্ষণ করা হবে (&x)"
 
 #, fuzzy
 #~| msgid "C&lear Clipboard History"

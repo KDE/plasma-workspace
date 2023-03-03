@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -805,7 +805,7 @@ msgstr "Ҷустуҷӯ..."
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""
@@ -815,7 +815,7 @@ msgstr ""
 msgid "No matches"
 msgstr ""
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr ""
@@ -910,11 +910,6 @@ msgstr "victor.ibragimov@gmail.com"
 msgid "&More"
 msgstr "&Бештар"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Муҳтавои ҳофизаи муваққатӣ"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -924,6 +919,9 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "&Бекор кардан"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Муҳтавои ҳофизаи муваққатӣ"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"

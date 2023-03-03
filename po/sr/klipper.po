@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2017-11-04 20:03+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -850,7 +850,7 @@ msgstr "Тражи..."
 msgid "Invalid regular expression, %1"
 msgstr "Регуларни израз:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Клипборд је празан"
@@ -861,7 +861,7 @@ msgstr "Клипборд је празан"
 msgid "No matches"
 msgstr "<нема поклапања>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Клипер"
@@ -960,11 +960,6 @@ msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
 msgid "&More"
 msgstr "&Више"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Садржај клипборда"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -974,6 +969,9 @@ msgstr "Искључи ово искакање"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Одустани"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Садржај клипборда"
 
 #~ msgid "Remove whitespace when executing actions"
 #~ msgstr "Уклони празнине при извршавању радњи"

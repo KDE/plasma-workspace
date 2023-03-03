@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -839,7 +839,7 @@ msgstr "Otsing..."
 msgid "Invalid regular expression, %1"
 msgstr "Regulaaravaldis:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Lõikepuhver on tühi"
@@ -850,7 +850,7 @@ msgstr "Lõikepuhver on tühi"
 msgid "No matches"
 msgstr "<sobivused puuduvad>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -949,11 +949,6 @@ msgstr "hasso@linux.ee, qiilaq69@gmail.com"
 msgid "&More"
 msgstr "Rohke&m"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Lõikepuhvri sisu"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -963,6 +958,9 @@ msgstr "Selle hüpikakna keelamine"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Loobu"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Lõikepuhvri sisu"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Kas kustutada lõikepuhvri ajalugu?"

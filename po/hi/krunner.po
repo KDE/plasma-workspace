@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2020-08-14 10:05+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Kde-hindi\n"
@@ -38,22 +38,22 @@ msgstr "केरनर"
 msgid "Run Command interface"
 msgstr "कमांड लाइन अंतराफलक चालू करें"
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "क्लिपबोर्ड की विषय सूची केरनर में पृच्छा की भाँति उपयोग करें"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "केरनर पृष्ठभूमि में प्रारंभ करें, दिखाएँ नहीं।"
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "अभूत इंस्टैंस को स्थानान्तरित करें"
 
-#: main.cpp:69
+#: main.cpp:70
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "पृच्छा, -c न प्रदान करने पर ही उपयोग होगी"

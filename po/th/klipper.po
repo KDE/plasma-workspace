@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -836,7 +836,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "เงื่อนไขการค้นหา:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "คลิปบอร์ดว่าง"
@@ -847,7 +847,7 @@ msgstr "คลิปบอร์ดว่าง"
 msgid "No matches"
 msgstr "<ไม่พบที่เข้าคู่>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "คลิปเปอร์"
@@ -947,11 +947,6 @@ msgstr "donga.nb@gmail.com"
 msgid "&More"
 msgstr "เพิ่มเ&ติม"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "เนื้อหาในคลิปบอร์ด"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -961,6 +956,9 @@ msgstr "ปิดการใช้งานหน้าต่างผุดน
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "เนื้อหาในคลิปบอร์ด"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "ลบประวัติของคลิปบอร์ดหรือไม่ ?"

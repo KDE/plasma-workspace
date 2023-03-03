@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-17 17:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -877,7 +877,7 @@ msgstr "Buscar..."
 msgid "Invalid regular expression, %1"
 msgstr "Expresión regular no válida, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El portapapeles está vacío"
@@ -887,7 +887,7 @@ msgstr "El portapapeles está vacío"
 msgid "No matches"
 msgstr "Sin coincidencias"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -986,11 +986,6 @@ msgstr ""
 msgid "&More"
 msgstr "&Más"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Contenido del portapapeles"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -1000,6 +995,9 @@ msgstr "Inhabilitar este menú emergente"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Contenido del portapapeles"
 
 #~ msgctxt "@info"
 #~ msgid ""

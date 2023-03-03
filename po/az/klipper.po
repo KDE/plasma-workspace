@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-18 13:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -857,7 +857,7 @@ msgstr "Axtarış..."
 msgid "Invalid regular expression, %1"
 msgstr "Səhv müntəzəm ifadə, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Mübadilə buferi boşdur"
@@ -867,7 +867,7 @@ msgstr "Mübadilə buferi boşdur"
 msgid "No matches"
 msgstr "Oxşarları yoxdur"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -965,11 +965,6 @@ msgstr "xxmn77@gmail.com"
 msgid "&More"
 msgstr "&Daha çox"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Mübadilə buferi tərkibləri"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -979,6 +974,9 @@ msgstr "Bu menyu pəncərəsini bağlamaq"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Mübadilə buferi tərkibləri"
 
 #~ msgctxt "@info"
 #~ msgid ""

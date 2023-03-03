@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-06 11:18+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -784,7 +784,7 @@ msgstr "Hledat…"
 msgid "Invalid regular expression, %1"
 msgstr "Neplatný regulární výraz, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
@@ -794,7 +794,7 @@ msgstr "Schránka je prázdná"
 msgid "No matches"
 msgstr "Žádné shody"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -892,11 +892,6 @@ msgstr "lukas@kde.org,flidr@kky.zcu.cz,ztlusty@netscape.net"
 msgid "&More"
 msgstr "&Více"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Obsah schránky"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -906,3 +901,6 @@ msgstr "Zakázat toto okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Obsah schránky"

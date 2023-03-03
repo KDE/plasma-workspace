@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2006-01-10 20:23+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -780,7 +780,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr ""
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""
@@ -790,7 +790,7 @@ msgstr ""
 msgid "No matches"
 msgstr ""
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -883,11 +883,6 @@ msgstr "boerre@skolelinux.no"
 #: popupproxy.cpp:145
 #, kde-format
 msgid "&More"
-msgstr ""
-
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
 msgstr ""
 
 #: urlgrabber.cpp:199

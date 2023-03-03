@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2010-01-29 15:54+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -833,7 +833,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "नियमित एक्सप्रेशन."
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड अछि खाली"
@@ -844,7 +844,7 @@ msgstr "क्लिपबोर्ड अछि खाली"
 msgid "No matches"
 msgstr "<कोनो जोड़ नहि>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "क्लिपर"
@@ -948,12 +948,6 @@ msgstr "sangeeta09@gmail.com"
 msgid "&More"
 msgstr " बेसी (&M)"
 
-#: tray.cpp:25
-#, fuzzy, kde-format
-#| msgid "Keep clipboard contents"
-msgid "Clipboard Contents"
-msgstr "क्लिपबोर्ड सामग्री राखू"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -963,6 +957,11 @@ msgstr "ई पापअप केँ अक्षम करू"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करू (&C)"
+
+#, fuzzy
+#~| msgid "Keep clipboard contents"
+#~ msgid "Clipboard Contents"
+#~ msgstr "क्लिपबोर्ड सामग्री राखू"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "मेटाबू क्लिपबोर्ड इतिहास?"

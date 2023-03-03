@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2009-01-12 16:47+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr ""
 
-#: main.cpp:193
+#: main.cpp:194
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -107,22 +107,22 @@ msgstr ""
 "X11R6 সেশান ম্যানেজমেন্ট প্রোটোকল (XSMP) \n"
 "প্রয়োগকারী, KDE-র নির্ভরযোগ্য সেশান পরিচালন ব্যবস্থা।"
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "ব্যবহারকারী দ্বারা সংরক্ষিত সেশন উপলব্ধ থাকলে তা পুনরায় স্থাপন করা হয়"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "দূরবর্তী সংযোগ অনুমোদিত হবে"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr ""
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

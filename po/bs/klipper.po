@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -852,7 +852,7 @@ msgstr "Traži..."
 msgid "Invalid regular expression, %1"
 msgstr "Regularni izraz:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klipbord je prazan"
@@ -863,7 +863,7 @@ msgstr "Klipbord je prazan"
 msgid "No matches"
 msgstr "<placeholder>nema poklapanja</placeholder>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -962,11 +962,6 @@ msgstr "Caslav.ilic@gmx.net,samir.ribic@etf.unsa.ba"
 msgid "&More"
 msgstr "&Više"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Zadrži sadržaj klipborda"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -976,6 +971,9 @@ msgstr "Isključi ovo iskakanje"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Odustani"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Zadrži sadržaj klipborda"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Obrisati istorijat klipborda?"

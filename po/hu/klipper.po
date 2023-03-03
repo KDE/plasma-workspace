@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-02-01 11:32+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -867,7 +867,7 @@ msgstr "Keresés…"
 msgid "Invalid regular expression, %1"
 msgstr "Reguláris kifejezés:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A vágólap üres"
@@ -877,7 +877,7 @@ msgstr "A vágólap üres"
 msgid "No matches"
 msgstr "Nincs találat"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -976,11 +976,6 @@ msgstr "ulysses@kubuntu.org,biro_arpad@yahoo.com,tszanto@interware.hu"
 msgid "&More"
 msgstr "&Továbbiak"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "A vágólap tartalma"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -990,6 +985,9 @@ msgstr "Ez az ablak ne jelenjen meg többé"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégsem"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "A vágólap tartalma"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Törli a vágólapnaplót?"

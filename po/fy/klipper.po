@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -839,7 +839,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "Reguliere ekspresje:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klamboerd is leech"
@@ -850,7 +850,7 @@ msgstr "Klamboerd is leech"
 msgid "No matches"
 msgstr "<gjin oerienkomsten>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -954,11 +954,6 @@ msgstr "berendy@bigfoot.com"
 msgid "&More"
 msgstr "&Mear"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Klamboerd ynhâld"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -968,6 +963,9 @@ msgstr "Dizze popup útsette"
 #, kde-format
 msgid "&Cancel"
 msgstr "Ofbre&kke"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Klamboerd ynhâld"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Klamboerdskiednis wiskje?"

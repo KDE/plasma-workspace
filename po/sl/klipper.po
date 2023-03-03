@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-03 08:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -860,7 +860,7 @@ msgstr "Poišči…"
 msgid "Invalid regular expression, %1"
 msgstr "Neveljaven regularni izraz, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
@@ -870,7 +870,7 @@ msgstr "Odložišče je prazno"
 msgid "No matches"
 msgstr "Ni ujemanj"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -970,11 +970,6 @@ msgstr ""
 msgid "&More"
 msgstr "Več"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Vsebina odložišča"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -984,6 +979,9 @@ msgstr "Onemogoči to pojavno okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Prekliči"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Vsebina odložišča"
 
 #~ msgctxt "@info"
 #~ msgid ""

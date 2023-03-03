@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-05 18:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -884,7 +884,7 @@ msgstr "Поиск…"
 msgid "Invalid regular expression, %1"
 msgstr "Недопустимое регулярное выражение, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
@@ -894,7 +894,7 @@ msgstr "Буфер обмена пуст"
 msgid "No matches"
 msgstr "Совпадений не найдено"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -992,11 +992,6 @@ msgstr "szh@chat.ru,skull@kde.ru,leon@asplinux.ru"
 msgid "&More"
 msgstr "&Больше"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Содержимое буфера обмена"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -1006,6 +1001,9 @@ msgstr "Запретить выпадающее меню"
 #, kde-format
 msgid "&Cancel"
 msgstr "О&тмена"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Содержимое буфера обмена"
 
 #~ msgctxt "@info"
 #~ msgid ""

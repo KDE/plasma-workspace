@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-12-27 07:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma -ის დაყენების პრობლემა გაქვთ!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -111,22 +111,22 @@ msgstr ""
 "საიმედო Plasma-ის სესიების მმართველი, რომელიც სტანდარტულ X11R6-ის\n"
 "სესიის მართვის პროტოკოლით (XSMP) ლაპარაკობს."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "შენახული მომხმარებლის სესიის აღდგენა, თუ ის ხელმისაწვდომია"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "დაშორებული მიერთებების დაშვება"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "სესიის დაბლოკილ რეჟიმში გაშვება"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

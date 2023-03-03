@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-18 20:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -814,7 +814,7 @@ msgstr "தேடு…"
 msgid "Invalid regular expression, %1"
 msgstr "செல்லுபடியாகாத சுருங்குறித் தொடர், %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
@@ -824,7 +824,7 @@ msgstr "பிடிப்புப்பலகை காலியாக உள�
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "க்ளிப்பர்"
@@ -924,11 +924,6 @@ msgstr ""
 msgid "&More"
 msgstr "&மேலும்"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "பிடிப்புப்பலகையின் உள்ளடக்கம்"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -938,6 +933,9 @@ msgstr "இந்த மேல்தோன்றும் துப்பை ம
 #, kde-format
 msgid "&Cancel"
 msgstr "&ரத்து செய்"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "பிடிப்புப்பலகையின் உள்ளடக்கம்"
 
 #~ msgctxt "@info"
 #~ msgid ""

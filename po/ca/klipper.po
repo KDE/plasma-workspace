@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-17 10:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -868,7 +868,7 @@ msgstr "Cerca…"
 msgid "Invalid regular expression, %1"
 msgstr "Expressió regular no vàlida: %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"
@@ -878,7 +878,7 @@ msgstr "El porta-retalls està buit"
 msgid "No matches"
 msgstr "Sense coincidències"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -976,11 +976,6 @@ msgstr "sps@sastia.com"
 msgid "&More"
 msgstr "&Més"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Contingut del porta-retalls"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -990,6 +985,9 @@ msgstr "Desactiva aquest emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Contingut del porta-retalls"
 
 #~ msgctxt "@info"
 #~ msgid ""

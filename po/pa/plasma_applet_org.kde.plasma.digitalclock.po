@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-01-03 11:34-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -382,7 +382,7 @@ msgstr "…ਤਾਰੀਖ ਤੇ ਵੇਲੇ ਨੂੰ ਦਰੁਸਤ ਕਰ�
 msgid "Set Time Format…"
 msgstr "…ਵੇਲਾ ਫਾਰਮੈਟ ਦਿਓ"
 
-#: package/contents/ui/Tooltip.qml:32
+#: package/contents/ui/Tooltip.qml:33
 #, fuzzy, kde-format
 #| msgctxt "Reset calendar to today"
 #| msgid "Today"
@@ -390,7 +390,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "ਅੱਜ"
 
-#: package/contents/ui/Tooltip.qml:112
+#: package/contents/ui/Tooltip.qml:113
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-19 02:18+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -866,7 +866,7 @@ msgstr "Cerca…"
 msgid "Invalid regular expression, %1"
 msgstr "Espressione regolare non valida, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
@@ -876,7 +876,7 @@ msgstr "Gli appunti sono vuoti"
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -974,11 +974,6 @@ msgstr "toscano.pino@tiscali.it,"
 msgid "&More"
 msgstr "&Di più"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Contenuto degli appunti"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -988,6 +983,9 @@ msgstr "Disabilita questo menu a comparsa"
 #, kde-format
 msgid "&Cancel"
 msgstr "Ann&ulla"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Contenuto degli appunti"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2021-09-27 20:36+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -839,7 +839,7 @@ msgstr "Søg…"
 msgid "Invalid regular expression, %1"
 msgstr "Regulært udtryk:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Udklipsholderen er tom"
@@ -849,7 +849,7 @@ msgstr "Udklipsholderen er tom"
 msgid "No matches"
 msgstr "Ingen fund"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -948,11 +948,6 @@ msgstr "erik@binghamton.edu"
 msgid "&More"
 msgstr "&Mere"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Udklipsholderindhold"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -962,6 +957,9 @@ msgstr "Deaktivér denne popop"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annullér"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Udklipsholderindhold"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Slet udklipsholderhistorik?"

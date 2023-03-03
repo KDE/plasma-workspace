@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-10-19 21:59+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -850,7 +850,7 @@ msgstr "Buscar…"
 msgid "Invalid regular expression, %1"
 msgstr "Expresión regular:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "O portapapeis está baleiro"
@@ -861,7 +861,7 @@ msgstr "O portapapeis está baleiro"
 msgid "No matches"
 msgstr "<sen coincidencias>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -960,11 +960,6 @@ msgstr "xabigf@gmx.net, jba@pobox.com, mvillarino@users.sourceforge.net"
 msgid "&More"
 msgstr "&Máis"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Contido do portapapeis"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -974,6 +969,9 @@ msgstr "Desactivar esta xanela emerxente"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Contido do portapapeis"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Quere eliminar o historial do portapapeis?"

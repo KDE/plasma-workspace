@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-12-29 19:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -388,13 +388,13 @@ msgstr "Ajustează data și ora…"
 msgid "Set Time Format…"
 msgstr "Stabilește formatul orei…"
 
-#: package/contents/ui/Tooltip.qml:32
+#: package/contents/ui/Tooltip.qml:33
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Azi e %1"
 
-#: package/contents/ui/Tooltip.qml:112
+#: package/contents/ui/Tooltip.qml:113
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

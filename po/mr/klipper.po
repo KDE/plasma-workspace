@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -836,7 +836,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "नियमित अभिव्यक्ति :"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड रिकामा आहे"
@@ -847,7 +847,7 @@ msgstr "क्लिपबोर्ड रिकामा आहे"
 msgid "No matches"
 msgstr "<जुळवणी आढळली नाही>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "क्लिपर"
@@ -951,11 +951,6 @@ msgstr ""
 msgid "&More"
 msgstr "अधिक (&M)"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "क्लिपबोर्ड मजकूर"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -965,6 +960,9 @@ msgstr "हे पॉपअप अकार्यान्वित करा"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करा (&C)"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "क्लिपबोर्ड मजकूर"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "क्लिपबोर्ड इतिहास नष्ट करायचा का?"

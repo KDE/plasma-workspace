@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2012-11-14 22:26+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -838,7 +838,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "Erîlêye ratourneure :"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Li presse-papî est vude"
@@ -849,7 +849,7 @@ msgstr "Li presse-papî est vude"
 msgid "No matches"
 msgstr "<èn corespond nén>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -949,11 +949,6 @@ msgstr "jean.cayron@gmail.com,laurent.hendschel@skynet.be,pablo@walon.org"
 msgid "&More"
 msgstr "&Co des ôtes"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Ådvins do presse-papî"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -963,6 +958,9 @@ msgstr "Dismete cist aspitant purnea chal"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rinoncî"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Ådvins do presse-papî"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Disfacer l' istwere do presse-papî ?"

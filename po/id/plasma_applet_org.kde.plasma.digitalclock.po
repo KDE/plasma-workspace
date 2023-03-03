@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-06-05 07:46+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -396,7 +396,7 @@ msgstr "Setel Tanggal dan Waktu..."
 msgid "Set Time Format…"
 msgstr "Atur Format Waktu..."
 
-#: package/contents/ui/Tooltip.qml:32
+#: package/contents/ui/Tooltip.qml:33
 #, fuzzy, kde-format
 #| msgctxt "Reset calendar to today"
 #| msgid "Today"
@@ -404,7 +404,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hari ini"
 
-#: package/contents/ui/Tooltip.qml:112
+#: package/contents/ui/Tooltip.qml:113
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

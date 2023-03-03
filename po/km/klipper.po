@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -833,7 +833,7 @@ msgstr ""
 msgid "Invalid regular expression, %1"
 msgstr "កន្សោម​ធម្មតា ៖"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "រវត្តិ​​ក្ដារ​តម្បៀត​ទទេ​ខ្ទាស់"
@@ -844,7 +844,7 @@ msgstr "រវត្តិ​​ក្ដារ​តម្បៀត​ទទេ
 msgid "No matches"
 msgstr "<គ្មាន​ដំណូច>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -944,11 +944,6 @@ msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.in
 msgid "&More"
 msgstr "បន្ថែម​​ទៀត"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -958,6 +953,9 @@ msgstr "មិន​អនុញ្ញាត​ការ​លេច​ឡើង
 #, kde-format
 msgid "&Cancel"
 msgstr "បោះបង់​"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "លុប​ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់ ?"

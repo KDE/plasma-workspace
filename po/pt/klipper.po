@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -866,7 +866,7 @@ msgstr "Procurar…"
 msgid "Invalid regular expression, %1"
 msgstr "Expressão regular inválida: %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
@@ -876,7 +876,7 @@ msgstr "A área de transferência está em branco"
 msgid "No matches"
 msgstr "Sem correspondências"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -974,11 +974,6 @@ msgstr "zepires@gmail.com,morais@kde.org"
 msgid "&More"
 msgstr "&Mais"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Conteúdo da Área de Transferência"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -988,6 +983,9 @@ msgstr "Desactivar este menu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Conteúdo da Área de Transferência"
 
 #~ msgctxt "@info"
 #~ msgid ""

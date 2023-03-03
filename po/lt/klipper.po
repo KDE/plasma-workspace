@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-12-12 21:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -810,7 +810,7 @@ msgstr "Ieškoti…"
 msgid "Invalid regular expression, %1"
 msgstr "Neteisingas reguliarusis reiškinys, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
@@ -820,7 +820,7 @@ msgstr "Iškarpinė tuščia"
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -918,11 +918,6 @@ msgstr "rch@richard.eu.org, dgvirtual@akl.lt, skroblas@erdves.lt, <>"
 msgid "&More"
 msgstr "&Daugiau"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Iškarpinės turinys"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -932,6 +927,9 @@ msgstr "Išjungti šį iškylantįjį langą"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atsisakyti"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Iškarpinės turinys"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Ištrinti iškarpinės istoriją?"

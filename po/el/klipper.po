@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2014-10-28 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -845,7 +845,7 @@ msgstr "Αναζήτηση..."
 msgid "Invalid regular expression, %1"
 msgstr "Κανονική έκφραση:"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι κενό"
@@ -856,7 +856,7 @@ msgstr "Το πρόχειρο είναι κενό"
 msgid "No matches"
 msgstr "<κανένα ταίριασμα>"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -955,11 +955,6 @@ msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
 msgid "&More"
 msgstr "&Περισσότερα"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Περιεχόμενα του προχείρου"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -969,6 +964,9 @@ msgstr "Απενεργοποίηση αυτού του αναδυόμενου μ
 #, kde-format
 msgid "&Cancel"
 msgstr "&Ακύρωση"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Περιεχόμενα του προχείρου"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Διαγραφή ιστορικού προχείρου;"

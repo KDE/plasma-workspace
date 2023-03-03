@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-26 11:00+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -866,7 +866,7 @@ msgstr "Suchen ..."
 msgid "Invalid regular expression, %1"
 msgstr "Ungültiger regulärer Ausdruck, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Die Zwischenablage ist leer"
@@ -876,7 +876,7 @@ msgstr "Die Zwischenablage ist leer"
 msgid "No matches"
 msgstr "Keine Übereinstimmungen"
 
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -974,11 +974,6 @@ msgstr "thd@kde.org"
 msgid "&More"
 msgstr "&Mehr"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Inhalt der Zwischenablage"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -988,6 +983,9 @@ msgstr "Aufklappmenü deaktivieren"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Abbrechen"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Inhalt der Zwischenablage"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Verlauf der Zwischenablage löschen?"

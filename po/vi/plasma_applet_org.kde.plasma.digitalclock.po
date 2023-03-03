@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -388,13 +388,13 @@ msgstr "Điều chỉnh ngày và giờ…"
 msgid "Set Time Format…"
 msgstr "Đặt định dạng thời gian…"
 
-#: package/contents/ui/Tooltip.qml:32
+#: package/contents/ui/Tooltip.qml:33
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hôm nay là %1"
 
-#: package/contents/ui/Tooltip.qml:112
+#: package/contents/ui/Tooltip.qml:113
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

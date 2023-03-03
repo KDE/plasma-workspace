@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-08-02 22:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -862,7 +862,7 @@ msgstr "Etsi…"
 msgid "Invalid regular expression, %1"
 msgstr "Virheellinen säännöllinen lauseke, %1"
 
-#: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
+#: klipperpopup.cpp:172
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"
@@ -874,7 +874,7 @@ msgstr "Ei osumia"
 
 # pmap: =/gen=Klipperin/
 # pmap: =/elat=Klipperistä/
-#: main.cpp:27 tray.cpp:22
+#: main.cpp:27
 #, kde-format
 msgid "Klipper"
 msgstr "Klipper"
@@ -978,11 +978,6 @@ msgstr ""
 msgid "&More"
 msgstr "&Lisää"
 
-#: tray.cpp:25
-#, kde-format
-msgid "Clipboard Contents"
-msgstr "Leikepöydän sisältö"
-
 #: urlgrabber.cpp:199
 #, kde-format
 msgid "Disable This Popup"
@@ -992,6 +987,9 @@ msgstr "Älä näytä tätä ponnahdusikkunaa"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Peru"
+
+#~ msgid "Clipboard Contents"
+#~ msgstr "Leikepöydän sisältö"
 
 #~ msgctxt "@info"
 #~ msgid ""
