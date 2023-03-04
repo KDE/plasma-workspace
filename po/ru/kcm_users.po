@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 01:00+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2023-01-18 10:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -437,13 +437,13 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Паркет из твёрдого дерева"
 
-#: package/contents/ui/PicturesSheet.qml:71
+#: package/contents/ui/PicturesSheet.qml:73
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Выбор изображения"
 
-#: package/contents/ui/PicturesSheet.qml:103
+#: package/contents/ui/PicturesSheet.qml:105
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"

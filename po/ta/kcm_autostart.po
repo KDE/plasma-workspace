@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-07-05 19:49+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,63 +37,63 @@ msgstr "\"%1\" ஒரு கோப்பு இல்லை."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\"-ஐ படிக்க முடியவில்லை."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "இயக்கவல்லதாக்கு"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr "வெளியேறும்போது இயக்கப்பட, '%1' எனும் கோப்பு இயக்கவல்லதாக இருக்கவேண்டும்."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "நுழையும்போது இயக்கப்பட, '%1' எனும் கோப்பு இயக்கவல்லதாக இருக்கவேண்டும்."
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "பண்புகள்"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "நீக்கு"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "நுழைவு சிறுநிரல்கள்"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "துவக்கத்திற்கு முன் இயக்க வேண்டிய சிறுநிரல்கள்"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "வெளியேற்ற சிறுநிரல்கள்"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "பயனரால் அமைக்கப்பட்ட சுயதுவக்க நிரல்கள் எதுவும் இல்லை"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "சிலவற்றை சேர்க்க <interface>சேர்…</interface> பட்டனை அழுத்துங்கள்"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "நுழைவு சிறுநிரலைத் தேர்ந்தெடுத்தல்"
@@ -103,22 +103,22 @@ msgstr "நுழைவு சிறுநிரலைத் தேர்ந்�
 msgid "Choose Logout Script"
 msgstr "வெளியேற்ற சிறுநிரலைத் தேர்ந்தெடுத்தல்"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "சேர்…"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "செயலியை சேர்…"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "நுழைவு சிறுநிரலை சேர்…"
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "வெளியேற்ற சிறுநிரலை சேர்…"

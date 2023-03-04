@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 01:00+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-10-17 17:23+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -509,14 +509,14 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Harðviður"
 
-#: package/contents/ui/PicturesSheet.qml:71
+#: package/contents/ui/PicturesSheet.qml:73
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Velja mynd"
 
-#: package/contents/ui/PicturesSheet.qml:103
+#: package/contents/ui/PicturesSheet.qml:105
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"

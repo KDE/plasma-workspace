@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2023-01-30 14:24+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -40,61 +40,61 @@ msgstr "„%1“ ist keine Datei"
 msgid "\"%1\" is not readable."
 msgstr "„%1“ ist nicht lesbar."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Ausführbar machen"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Die Datei „%1“ muss ausführbar sein, um beim Abmelden gestartet werden zu "
 "können."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "Die Datei „%1“ muss ausführbar sein, um beim Anmelden gestartet werden zu "
 "können."
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Entfernen"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Programme"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Anmeldungs-Skript"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripte vor der Anmeldung"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Abmeldungs-Skript"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Kein benutzerdefinierten Autostart-Einträge vorhanden"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -102,7 +102,7 @@ msgstr ""
 "Klicken Sie unten auf den Knopf <interface>Hinzufügen ...</interface> um "
 "folgende Einträge hinzuzufügen:"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Anmeldungs-Skript auswählen"
@@ -112,22 +112,22 @@ msgstr "Anmeldungs-Skript auswählen"
 msgid "Choose Logout Script"
 msgstr "Abmeldungs-Skript auswählen"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Hinzufügen ..."
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Anwendung hinzufügen ..."
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Anmeldungs-Skript hinzufügen ..."
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Abmeldungs-Skript hinzufügen ..."

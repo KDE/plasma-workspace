@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-07-02 19:33+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -39,61 +39,61 @@ msgstr "\"%1\" не е файл."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" не се чете."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Задаване като изпълним"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Файлът \"%1\" трябва да е изпълним, за да се стартира при излизане от "
 "системата."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "Файлът \"%1\" трябва да е изпълним, за да се стартира при влизане в "
 "системата."
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Свойства"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Скриптове при влизане"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Скриптове преди стартиране"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Скриптове при излизане"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Няма елементи за автоматично стартиране, зададени от потребителя"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -101,7 +101,7 @@ msgstr ""
 "Щракнете върху бутона<interface> Добавяне... </interface> по-долу, за "
 "добавяне"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Избиране на скрипт за влизане"
@@ -111,22 +111,22 @@ msgstr "Избиране на скрипт за влизане"
 msgid "Choose Logout Script"
 msgstr "Избиране на скрипт за излизане"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Добавяне…"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Добавяне на приложение…"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Добавяне на скрипт при влизане…"
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Добавяне на скрипт при излизане…"

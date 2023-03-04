@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-07-03 13:02+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -37,66 +37,66 @@ msgstr "\"%1\" fayl deyil."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" oxunabilən deyil."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "İcra olunabilən edin"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Sİstemdən çıxarkən işə salmaq üçün \"%1\" faylı icra ediləbilən olmalıdır."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "Sistemə girişdə işə düşməsi üçün \"%1\" faylı icra ediləbilən olmalıdır."
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Xüsusiyyətlər"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Silmək"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Tətbiqlər"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Sistemə Giriş Skriptləri"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Yenidən başlatma skriptləri"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Sistemdən Çıxış Skriptləri"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "İstifadəçi avtomatik başladılacaq elementləri göstərilməyib"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Əlavə etmək üçün aşağıda <interface>Əlavə edin...</interface> düyməsinə vurun"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Giriş Skriptini Seçmək"
@@ -106,22 +106,22 @@ msgstr "Giriş Skriptini Seçmək"
 msgid "Choose Logout Script"
 msgstr "Çıxış Skriptini Seçmək"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Əlavə edin…"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Tətbiq əlavə edin..."
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Giriş skripti əlavə edin..."
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Çıxış skript əlavə edin..."

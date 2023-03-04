@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-08-11 14:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -48,64 +48,64 @@ msgstr "«%1» не является файлом."
 msgid "\"%1\" is not readable."
 msgstr "«%1» нечитаемо."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Сделать исполняемым"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Файл «%1» должен быть исполняемым для его запуска при выходе из системы."
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "Файл «%1» должен быть исполняемым для его запуска при входе в систему."
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Свойства"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Удалить"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Сценарии входа в систему"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Сценарии, выполняемые перед началом сеанса"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Сценарии выхода из системы"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Нет ни одного объекта для автоматического запуска"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr "Для добавления нажмите кнопку <interface>Добавить...</interface>"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Выбор сценария, выполняемого при входе"
@@ -115,22 +115,22 @@ msgstr "Выбор сценария, выполняемого при входе"
 msgid "Choose Logout Script"
 msgstr "Выбор сценария, выполняемого при выходе"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Добавить…"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Добавить приложение…"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Добавить сценарий входа в систему..."
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Добавить сценарий выхода из системы..."

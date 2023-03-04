@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 01:00+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-02-24 09:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -448,14 +448,14 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Erezett keményfa"
 
-#: package/contents/ui/PicturesSheet.qml:71
+#: package/contents/ui/PicturesSheet.qml:73
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Válasszon képet"
 
-#: package/contents/ui/PicturesSheet.qml:103
+#: package/contents/ui/PicturesSheet.qml:105
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdereview/kcm_autostart.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-21 01:01+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2008-03-22 08:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -37,66 +37,66 @@ msgstr ""
 msgid "\"%1\" is not readable."
 msgstr ""
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr ""
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "&Properties..."
 msgid "Properties"
 msgstr "&Airíonna..."
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgid "Remove"
 msgstr "&Bain"
 
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Pre-KDE startup"
 msgid "Pre-startup Scripts"
 msgstr "Tosú Réámh-KDE"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Choose Login Script"
@@ -107,23 +107,23 @@ msgstr "Cuir Script Leis..."
 msgid "Choose Logout Script"
 msgstr ""
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr ""
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr ""
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Add Login Script…"
 msgstr "Cuir Script Leis..."
 
-#: package/contents/ui/main.qml:210
+#: package/contents/ui/main.qml:209
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Add Logout Script…"

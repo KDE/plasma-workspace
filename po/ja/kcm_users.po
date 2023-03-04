@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 01:00+0000\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
 "PO-Revision-Date: 2022-06-17 23:46-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -490,14 +490,14 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr ""
 
-#: package/contents/ui/PicturesSheet.qml:71
+#: package/contents/ui/PicturesSheet.qml:73
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "画像を選択"
 
-#: package/contents/ui/PicturesSheet.qml:103
+#: package/contents/ui/PicturesSheet.qml:105
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
