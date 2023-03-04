@@ -37,11 +37,13 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
 {
     if (m_lastStartDate == startDate && m_lastEndDate == endDate) {
         Q_EMIT dataReady(m_lastData);
+        Q_EMIT subLabelReady(m_lastSubLabelData);
         return;
     }
 
     m_lastData.clear();
     QMultiHash<QDate, CalendarEvents::EventData> data;
+    QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> subLabelData;
 
     for (KHolidays::HolidayRegion *region : qAsConst(m_regions)) {
         const KHolidays::Holiday::List holidays = region->rawHolidays(startDate, endDate);
@@ -59,12 +61,21 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
             for (QDate d = holiday.observedStartDate(); d <= holiday.observedEndDate(); d = d.addDays(1)) {
                 data.insert(d, eventData);
             }
+
+            if (!holiday.name().isEmpty()) {
+                CalendarEvents::CalendarEventsPlugin::SubLabel sublabel;
+                sublabel.dayLabel = holiday.name();
+                sublabel.label = holiday.name();
+                sublabel.priority = CalendarEvents::CalendarEventsPlugin::SubLabelPriority::Default;
+                subLabelData.insert(holiday.observedStartDate(), sublabel);
+            }
         }
     }
 
     m_lastStartDate = startDate;
     m_lastEndDate = endDate;
     m_lastData = data;
+    m_lastSubLabelData = subLabelData;
 
     qDebug() << data.size();
 
