@@ -63,7 +63,7 @@ void ImageFinder::run()
                 if (filterCondition(realwp) && !realwp.isSymLink()) {
                     images.append(realwp.filePath());
                 }
-            } else if (realwp.isDir()) {
+            } else if (realwp.isDir() && !realwp.absoluteFilePath().contains(QLatin1String("contents/images"))) {
                 // add this to the directories we should be looking at
                 if (!m_paths.contains(realwp.filePath())) {
                     m_paths.append(realwp.filePath());
