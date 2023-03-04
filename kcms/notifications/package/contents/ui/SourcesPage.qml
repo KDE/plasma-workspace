@@ -106,7 +106,7 @@ Kirigami.Page {
                         id: sourceDelegate
                         width: sourcesList.width
                         text: model.display
-                        icon: model.decoration
+                        icon.name: model.decoration
                         highlighted: ListView.isCurrentItem
                         onClicked: {
                             sourcesList.forceActiveFocus();
