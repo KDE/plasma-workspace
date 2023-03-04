@@ -11,10 +11,8 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kirigami 2.5 as Kirigami
 
-Item {
+ColumnLayout {
     id: calendarPage
-    width: childrenRect.width
-    height: childrenRect.height
 
     signal configurationChanged
 
@@ -34,10 +32,7 @@ Item {
     }
 
     Kirigami.FormLayout {
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
+        Layout.fillWidth: true
 
         QtControls.CheckBox {
             id: showWeekNumbers
