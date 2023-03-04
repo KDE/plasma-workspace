@@ -71,4 +71,4 @@ NoDisplay=true
 X-systemd-skip=true
 
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management,org_kde_kwin_keystate,zkde_screencast_unstable_v1,org_kde_plasma_activation_feedback
-X-KDE-DBUS-Restricted-Interfaces=org.kde.kwin.Screenshot,org.kde.KWin.ScreenShot2
+X-KDE-DBUS-Restricted-Interfaces=org.kde.KWin.ScreenShot2
