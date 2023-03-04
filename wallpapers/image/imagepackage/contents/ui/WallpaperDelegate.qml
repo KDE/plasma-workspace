@@ -6,7 +6,6 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls.Private 1.0
 import QtQuick.Controls 2.3 as QtControls2
 import Qt5Compat.GraphicalEffects
 
