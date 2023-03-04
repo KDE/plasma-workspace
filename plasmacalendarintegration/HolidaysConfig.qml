@@ -5,11 +5,10 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.5
-import QtQuick.Controls 1.4 as QQC1
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.3
-import QtQuick.Dialogs 1.1
+import Qt.labs.qmlmodels as QMLModels
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kholidays 1.0 as KHolidays
@@ -18,8 +17,8 @@ import org.kde.kirigami 2.15 as Kirigami
 
 ColumnLayout {
     id: holidaysConfig
-    anchors.left: parent.left
-    anchors.right: parent.right
+
+    spacing: 0
 
     signal configurationChanged
 
@@ -28,50 +27,21 @@ ColumnLayout {
         configHelper.saveConfig();
     }
 
-    // This is just for getting the column width
-    QQC2.CheckBox {
-        id: checkbox
-        visible: false
-    }
-
     QmlConfigHelper {
         id: configHelper
     }
 
-    Kirigami.SearchField {
-        id: filter
-        Layout.fillWidth: true
-    }
+    QMLModels.DelegateChooser {
+        id: chooser
 
-    // Still QQC1 bevcause there's no QQC2 TableView
-    QQC1.TableView {
-        id: holidaysView
-
-        signal toggleCurrent
-
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-
-        Keys.onSpacePressed: toggleCurrent()
-
-        model: PlasmaCore.SortFilterModel {
-            sourceModel: KHolidays.HolidayRegionsModel {
-                id: holidaysModel
-            }
-            // SortFilterModel doesn't have a case-sensitivity option...
-            // but filterRegExp always causes case-insensitive sorting
-            filterRegExp: filter.text
-            filterRole: "name"
-        }
-
-        QQC1.TableViewColumn {
-            width: checkbox.width
+        QMLModels.DelegateChoice {
+            column: 0
             delegate: QQC2.CheckBox {
-                id: checkBox
-                anchors.centerIn: parent
-                checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
                 activeFocusOnTab: false // only let the TableView as a whole get focus
-                onClicked: {
+                checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
+                text: model.region
+
+                onToggled: {
                     //needed for model's setData to be called
                     if (checked) {
                         configHelper.addRegion(model.region);
@@ -81,21 +51,83 @@ ColumnLayout {
                     holidaysConfig.configurationChanged();
                 }
             }
+        }
 
-            resizable: false
-            movable: false
+        QMLModels.DelegateChoice {
+            column: 1
+            delegate: QQC2.Label {
+                text: model.display
+                wrapMode: Text.Wrap
+            }
         }
-        QQC1.TableViewColumn {
-            role: "region"
-            title: i18nd("kholidays_calendar_plugin", "Region")
+
+        QMLModels.DelegateChoice {
+            column: 2
+            delegate: QQC2.Label {
+                text: model.display
+                wrapMode: Text.Wrap
+            }
         }
-        QQC1.TableViewColumn {
-            role: "name"
-            title: i18nd("kholidays_calendar_plugin", "Name")
+    }
+
+    Kirigami.SearchField {
+        id: filter
+        Layout.fillWidth: true
+    }
+
+    QQC2.HorizontalHeaderView {
+        id: horizontalHeader
+        Layout.fillWidth: true
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        syncView: holidaysView
+    }
+
+    TableView {
+        id: holidaysView
+
+        signal toggleCurrent
+
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        Layout.topMargin: rowSpacing
+
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
+
+        Keys.onSpacePressed: toggleCurrent()
+
+        clip: true
+        columnWidthProvider: function(column) {
+            switch (column) {
+            case 1:
+                return 0.4 * holidaysConfig.width;
+            case 2:
+                return 0.4 * holidaysConfig.width - holidaysView.columnSpacing * 2;
+            case 0:
+            default:
+                return 0.2 * holidaysConfig.width;
+            }
         }
-        QQC1.TableViewColumn {
-            role: "description"
-            title: i18nd("kholidays_calendar_plugin", "Description")
+        delegate: chooser
+        model: PlasmaCore.SortFilterModel {
+            sourceModel: KHolidays.HolidayRegionsModel {
+                id: holidaysModel
+            }
+            // SortFilterModel doesn't have a case-sensitivity option...
+            // but filterRegExp always causes case-insensitive sorting
+            filterRegExp: filter.text
+            filterRole: "name"
+        }
+        reuseItems: true
+
+        QMLModels.TableModelColumn {
+            display: "region"
+        }
+        QMLModels.TableModelColumn {
+            display: "name"
+        }
+        QMLModels.TableModelColumn {
+            display: "description"
         }
     }
 }
