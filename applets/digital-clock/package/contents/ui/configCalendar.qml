@@ -6,7 +6,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.4 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
+import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kirigami 2.5 as Kirigami
@@ -45,8 +45,8 @@ Item {
             text: i18n("Show week numbers")
         }
 
-        QtLayouts.RowLayout {
-            QtLayouts.Layout.fillWidth: true
+        RowLayout {
+            Layout.fillWidth: true
             Kirigami.FormData.label: i18n("First day of week:")
 
             QtControls.ComboBox {
@@ -69,14 +69,14 @@ Item {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.ColumnLayout {
+        ColumnLayout {
             Kirigami.FormData.label: i18n("Available Plugins:")
             Kirigami.FormData.buddyFor: children[1] // 0 is the Repeater
 
             Repeater {
                 id: calendarPluginsRepeater
                 model: eventPluginsManager.model
-                delegate: QtLayouts.RowLayout {
+                delegate: RowLayout {
                     QtControls.CheckBox {
                         text: model.display
                         checked: model.checked
