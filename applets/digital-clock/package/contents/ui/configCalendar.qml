@@ -71,15 +71,13 @@ ColumnLayout {
             Repeater {
                 id: calendarPluginsRepeater
                 model: eventPluginsManager.model
-                delegate: RowLayout {
-                    QtControls.CheckBox {
-                        text: model.display
-                        checked: model.checked
-                        onClicked: {
-                            //needed for model's setData to be called
-                            model.checked = checked;
-                            calendarPage.configurationChanged();
-                        }
+                delegate: QtControls.CheckBox {
+                    text: model.display
+                    checked: model.checked
+                    onClicked: {
+                        //needed for model's setData to be called
+                        model.checked = checked;
+                        calendarPage.configurationChanged();
                     }
                 }
             }
