@@ -275,7 +275,7 @@ msgstr ""
 "Le popup de action non essera monstrate automaticamente per iste fenestras, "
 "anque si es habilitate. Isto es proque, por exemplo, un navigator web pote "
 "evidentiar un URL in le barra de adresse, durante que on typa, assi que le "
-"menu monstrarea per cata battimento de clave.<nl/><nal/>Si le menu de action "
+"menu monstrarea per cata battimento de clave.<nl/><nl/>Si le menu de action "
 "appare inexpectatemente quando on usa un particular application, alora adde "
 "lo a iste lista <link>Como trovar le nomine de insertar</link>. "
 
@@ -687,7 +687,7 @@ msgid ""
 msgstr ""
 "Contento selectionate con le cursor es automaticamente copiate in le area de "
 "transferentia assi que illo pote esser collate o con un action de Collar o "
-"con un click in le medie.<br/><ahref=\"1\">Plus re le selection e area de "
+"con un click in le medie.<br/><href=\"1\">Plus re le selection e area de "
 "transferentia</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
