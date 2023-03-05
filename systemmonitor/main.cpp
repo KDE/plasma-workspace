@@ -23,8 +23,6 @@ int main(int argc, char **argv)
     KAboutData about(QStringLiteral("systemmonitor"), i18n("System Activity"));
     KAboutData::setApplicationData(about);
 
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
     QDBusConnection con = QDBusConnection::sessionBus();
     if (!con.registerService(QStringLiteral("org.kde.systemmonitor"))) {
         return 0;
