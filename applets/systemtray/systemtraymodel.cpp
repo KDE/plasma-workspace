@@ -15,7 +15,6 @@
 #include <KLocalizedString>
 #include <Plasma/Applet>
 #include <Plasma/DataContainer>
-#include <PluginLoader>
 
 #include <QIcon>
 #include <QQuickItem>

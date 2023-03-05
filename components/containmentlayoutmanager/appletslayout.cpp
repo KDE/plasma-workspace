@@ -15,11 +15,10 @@
 #include <QTimer>
 
 // Plasma
-#include <Containment>
-#include <Corona>
+#include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <PlasmaQuick/AppletQuickItem>
 #include <chrono>
-#include <plasma/containment.h>
 
 using namespace std::chrono_literals;
 

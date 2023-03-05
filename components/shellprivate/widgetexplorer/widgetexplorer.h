@@ -12,7 +12,7 @@
 #include <QObject>
 #include <QQmlParserStatus>
 
-#include <Plasma>
+#include <Plasma/Plasma>
 
 #include "plasmaappletitemmodel_p.h"
 
