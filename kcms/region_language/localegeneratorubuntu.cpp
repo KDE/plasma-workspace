@@ -89,9 +89,13 @@ void LocaleGeneratorUbuntu::ubuntuLangCheck(int statusCode, QProcess::ExitStatus
                 return;
             }
             auto transaction = PackageKit::Daemon::installPackages(m_packageIDs);
-            connect(transaction, &PackageKit::Transaction::errorCode, this, [this](PackageKit::Transaction::Error error, const QString &details) {
+            connect(transaction, &PackageKit::Transaction::errorCode, this, [this, packages](PackageKit::Transaction::Error error, const QString &details) {
                 qCDebug(KCM_REGIONANDLANG) << "install error:" << error << details;
-                Q_EMIT userHasToGenerateManually(i18nc("%1 is a list of package names", "Failed to install package %1", details));
+                const QString packagesString = packages.join(QStringLiteral(", "));
+                Q_EMIT userHasToGenerateManually(i18nc("%1 is a list of package names, %2 is the error explanation",
+                                                       "Failed to install language packages (%1): %2",
+                                                       packagesString,
+                                                       details));
             });
             connect(transaction, &PackageKit::Transaction::finished, this, [this](PackageKit::Transaction::Exit status, uint code) {
                 qCDebug(KCM_REGIONANDLANG) << "install finished:" << status << code;
