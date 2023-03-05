@@ -255,7 +255,7 @@ msgstr "أعد التشغيل بدون تأكيد"
 #~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
 
 #~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "(C) 2000, مطوري كدي"
+#~ msgstr "(C) 2000, مطوري كِيدِي"
 
 #~ msgid "Matthias Ettrich"
 #~ msgstr "Matthias Ettrich"

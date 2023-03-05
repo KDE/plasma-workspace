@@ -2337,7 +2337,7 @@ msgstr "المنطقة الزّمنيّة المحليّة للنظام"
 
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Yerevan"
-#~ msgstr "يِرڤان"
+#~ msgstr "يِرفان"
 
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Zagreb"

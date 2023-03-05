@@ -171,7 +171,7 @@ msgstr "أضف سكربت الخروج…"
 #, fuzzy
 #~| msgid "Autostart only in KDE"
 #~ msgid "Autostart only in Plasma"
-#~ msgstr "ابدأ آليًّا فقط في كدي"
+#~ msgstr "ابدأ آليًّا فقط في كِيدِي"
 
 #~ msgid "Name"
 #~ msgstr "الاسم"
@@ -196,7 +196,7 @@ msgstr "أضف سكربت الخروج…"
 #, fuzzy
 #~| msgid "KDE Autostart Manager"
 #~ msgid "Session Autostart Manager"
-#~ msgstr "مدير كدي للبدء الآليّ"
+#~ msgstr "مدير كِيدِي للبدء الآليّ"
 
 #~ msgctxt "The program will be run"
 #~ msgid "Enabled"

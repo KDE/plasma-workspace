@@ -2390,7 +2390,7 @@ msgstr "يي"
 
 #, fuzzy
 #~ msgid "KDE Font Manager"
-#~ msgstr "مثّبت خطوط كدي"
+#~ msgstr "مثّبت خطوط كِيدِي"
 
 #~ msgid "Type here to filter on %1"
 #~ msgstr "اكتب هنا للترشيح على %1"

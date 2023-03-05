@@ -1416,7 +1416,7 @@ msgstr " * %1 (تشكيلة الألوان الحالية)"
 #, fuzzy
 #~| msgid "Apply colors to &non-KDE4 applications"
 #~ msgid "Apply colors to &non-Qt applications"
-#~ msgstr "طبق الألوان على غير تطبيقات كيدي4"
+#~ msgstr "طبق الألوان على غير تطبيقات كِيدِي4"
 
 #~ msgid "(c) 2007 Matthew Woehlke"
 #~ msgstr "(c) 2007 Matthew Woehlke"
