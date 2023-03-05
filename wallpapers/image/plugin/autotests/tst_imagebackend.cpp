@@ -31,9 +31,6 @@ private:
 
 TestSetup::TestSetup()
 {
-    // For target size test
-    QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
-
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     renameBizarreFile(m_dataDir);
 

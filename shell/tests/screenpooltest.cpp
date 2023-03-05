@@ -52,9 +52,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
-        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
-    } else {
-        QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     }
 
     QGuiApplication::setApplicationDisplayName(QStringLiteral("ScreenPool test"));

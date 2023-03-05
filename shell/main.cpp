@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
     // even if we don't use Qt scaling the compositor will try to scale us anyway so we have no choice
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
-        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     }
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 

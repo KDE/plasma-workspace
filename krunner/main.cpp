@@ -36,7 +36,6 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
-        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     }
 
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
