@@ -111,10 +111,14 @@ void Mpris2Engine::initialFetchFinished(PlayerContainer *container)
 
     // Check if the player follows the specification dutifully.
     const auto data = container->data();
-    if (data.value(QStringLiteral("Identity")).toString().isEmpty() || !data.value(QStringLiteral("SupportedUriSchemes")).isValid()
-        || !data.value(QStringLiteral("SupportedMimeTypes")).isValid()) {
+    if (data.value(QStringLiteral("Identity")).toString().isEmpty()) {
         qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "isn't standard-compliant, ignoring";
         return;
+    }
+
+    if (!data.value(QStringLiteral("SupportedUriSchemes")).isValid() || !data.value(QStringLiteral("SupportedMimeTypes")).isValid()) {
+        // BUG 466288: BlueZ mpris-proxy doesn't provide the two properties
+        qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "does not provide valid SupportedUriSchemes or SupportedMimeTypes.";
     }
 
     addSource(container);
