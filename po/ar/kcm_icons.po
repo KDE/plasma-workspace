@@ -322,7 +322,7 @@ msgstr "ملفات السمة (*.tar.gz *.tar.bz2)"
 #~ "and make it available for KDE applications"
 #~ msgstr ""
 #~ "إذا كنت تملك سمة مضغوطة، هذا الزر سيفك الضغط عنها ويجعلها متوفرة لتطبيقات "
-#~ "كدي"
+#~ "كِيدِي"
 
 #~ msgid "Get new themes from the Internet"
 #~ msgstr "استيراد مخطط اللون من الإنترنت"

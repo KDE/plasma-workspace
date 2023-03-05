@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2010-09-25 16:33-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toyohiro@ksmplus.com,tsuno@ngy.1st.ne.jp,phanective@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -45,7 +45,7 @@ msgstr ""
 "フォントを個人用にインストールしますか？ (あなたのみが使用可能)それともシステ"
 "ム全体にインストールしますか？ (すべてのユーザが使用可能)"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
 #, kde-format
 msgid "Where to Install"
 msgstr "インストール先"
@@ -362,13 +362,13 @@ msgid "Delete"
 msgstr "削除"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable"
 msgstr "有効化"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable"
 msgstr "無効化"
@@ -779,53 +779,22 @@ msgstr "選択したすべてのフォントを削除"
 msgid "Change Preview Text…"
 msgstr "プレビューのテキストを変更..."
 
-#: kcmfontinst/KCmFontInst.cpp:375
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy one into the folder.</p>"
-msgstr ""
-"<h1>フォントインストーラ</h1><p>このモジュールでは TrueType, Type1, ビット"
-"マップフォントをインストールします。</p><p>フォントのインストールは "
-"Konqueror からも行えます。場所バーに fonts:/ と入力すると、インストール済みの"
-"フォントが表示されます。そのフォルダにフォントをコピーするだけでインストール"
-"することができます。</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:382
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy it into the appropriate "
-"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
-"wide fonts (available to all).</p>"
-msgstr ""
-"<h1>フォントインストーラ</h1><p>このモジュールでは TrueType, Type1, ビット"
-"マップフォントをインストールします。</p><p>フォントのインストールは "
-"Konqueror からも行えます。場所バーに fonts:/ と入力すると、インストール済みの"
-"フォントが表示されます。適切なフォルダにフォントをコピーするだけでインストー"
-"ルすることができます。あなただけが使用するフォントは「%1」へ、すべてのユーザ"
-"が使用するシステム全体用のフォントは「%2」へコピーしてください。</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:437
+#: kcmfontinst/KCmFontInst.cpp:415
 #, kde-format
 msgid "Add Fonts"
 msgstr "フォントを追加"
 
-#: kcmfontinst/KCmFontInst.cpp:562
+#: kcmfontinst/KCmFontInst.cpp:540
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "印刷するフォントのリストを保存できませんでした。"
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "フォントプリンタを開始できませんでした。"
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:568
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -834,60 +803,60 @@ msgstr ""
 "印刷可能なフォントがありません。\n"
 "ビットマップ以外で有効化されているフォントのみ印刷できます。"
 
-#: kcmfontinst/KCmFontInst.cpp:592
+#: kcmfontinst/KCmFontInst.cpp:570
 #, kde-format
 msgid "Cannot Print"
 msgstr "印刷できません"
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "削除するフォントが選択されていません。"
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "削除するものがありません"
 
-#: kcmfontinst/KCmFontInst.cpp:622
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>本当に以下を削除しますか？</p><p><b>%1</b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Delete Font"
 msgstr "フォントを削除"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "本当にこのフォントを削除しますか？"
 msgstr[1] "本当にこれら %1 個のフォントを削除しますか？"
 
-#: kcmfontinst/KCmFontInst.cpp:634
+#: kcmfontinst/KCmFontInst.cpp:612
 #, kde-format
 msgid "Delete Fonts"
 msgstr "フォントを削除"
 
-#: kcmfontinst/KCmFontInst.cpp:639
+#: kcmfontinst/KCmFontInst.cpp:617
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "フォントを削除しています..."
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "移動するフォントが選択されていません。"
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Nothing to Move"
 msgstr "移動するものがありません"
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:642
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -895,17 +864,17 @@ msgid ""
 "%3</i>?</p>"
 msgstr "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:669
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Move Font"
 msgstr "フォントを移動"
 
-#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
 #, kde-format
 msgid "Move"
 msgstr "移動"
 
-#: kcmfontinst/KCmFontInst.cpp:675
+#: kcmfontinst/KCmFontInst.cpp:653
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -915,77 +884,77 @@ msgid_plural ""
 msgstr[0] "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
 msgstr[1] "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:659
 #, kde-format
 msgid "Move Fonts"
 msgstr "フォントを移動"
 
-#: kcmfontinst/KCmFontInst.cpp:686
+#: kcmfontinst/KCmFontInst.cpp:664
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "フォントを移動しています..."
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
 msgid "Export Group"
 msgstr "グループをエクスポート"
 
-#: kcmfontinst/KCmFontInst.cpp:726
+#: kcmfontinst/KCmFontInst.cpp:704
 #, kde-format
 msgid "No files?"
 msgstr "ファイルがありません？"
 
-#: kcmfontinst/KCmFontInst.cpp:729
+#: kcmfontinst/KCmFontInst.cpp:707
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "‘%1’ を書き込みのために開けませんでした"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Create New Group"
 msgstr "新しいグループを作成"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "新しいグループを作成"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "New Group"
 msgstr "新しいグループ"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Preview Text"
 msgstr "プレビューテキスト"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Please enter new text:"
 msgstr "新しいテキストを入力してください:"
 
-#: kcmfontinst/KCmFontInst.cpp:829
+#: kcmfontinst/KCmFontInst.cpp:807
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "フォントリストをスキャン中..."
 
-#: kcmfontinst/KCmFontInst.cpp:888
+#: kcmfontinst/KCmFontInst.cpp:866
 #, kde-format
 msgid "No fonts"
 msgstr "フォントがありません"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:871
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "1 フォント"
 msgstr[1] "%1 フォント"
 
-#: kcmfontinst/KCmFontInst.cpp:902
+#: kcmfontinst/KCmFontInst.cpp:880
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -1001,7 +970,7 @@ msgstr ""
 "フォント:</td><td>%2</td></tr><tr><td>一部有効化されたフォント:</td><td>%3</"
 "td></tr><tr><td>フォント総数:</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:912
+#: kcmfontinst/KCmFontInst.cpp:890
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -1016,104 +985,104 @@ msgstr ""
 "フォント:</td><td>%2</td></tr><tr><td>一部有効化されたフォント:</td><td>%3</"
 "td></tr><tr><td>フォント総数:</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:989
+#: kcmfontinst/KCmFontInst.cpp:967
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "関連ファイルを探しています..."
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:971
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "ファイルをスキャン中..."
 
-#: kcmfontinst/KCmFontInst.cpp:994
+#: kcmfontinst/KCmFontInst.cpp:972
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "インストールする追加ファイルを探しています..."
 
-#: kcmfontinst/KCmFontInst.cpp:1009
+#: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 に関連付けられたファイルを探しています"
 
-#: kcmfontinst/KCmFontInst.cpp:1037
+#: kcmfontinst/KCmFontInst.cpp:1015
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "フォントをインストールしています..."
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "有効化するフォントが選択されていません。"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "無効化するフォントが選択されていません。"
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "有効化するものがありません"
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "無効化するものがありません"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>本当に以下を有効化しますか？</p><p><b>%1</b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>本当に以下を無効化しますか？</p><p><b>%1</b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1124
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<p>本当に以下を有効化しますか？</p><p><b>%1</b> (グループ “%2”)</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1106
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<p>本当に以下を無効化しますか？</p><p><b>%1</b> (グループ “%2”)</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "Enable Font"
 msgstr "フォントを有効化"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Disable Font"
 msgstr "フォントを無効化"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "本当にこのフォントを有効化しますか？"
 msgstr[1] "本当にこれら %1 個のフォントを有効化しますか？"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "本当にこのフォントを無効化しますか？"
 msgstr[1] "本当にこれら %1 個のフォントを無効化しますか？"
 
-#: kcmfontinst/KCmFontInst.cpp:1145
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1124,7 +1093,7 @@ msgid_plural ""
 msgstr[0] "<p>本当にグループ “%2” のこのフォントを有効化しますか？</p>"
 msgstr[1] "<p>本当にグループ “%2” の %1 個のフォントを有効化しますか？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1135,23 +1104,23 @@ msgid_plural ""
 msgstr[0] "<p>本当にグループ “%2” のこのフォントを無効化しますか？</p>"
 msgstr[1] "<p>本当にグループ “%2” の %1 個のフォントを無効化しますか？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable Fonts"
 msgstr "フォントを有効化"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable Fonts"
 msgstr "フォントを無効化"
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "フォントを有効化しています..."
 
-#: kcmfontinst/KCmFontInst.cpp:1166
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -2410,3 +2379,32 @@ msgstr "パスパ文字"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "イ文字"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy one into the "
+#~ "folder.</p>"
+#~ msgstr ""
+#~ "<h1>フォントインストーラ</h1><p>このモジュールでは TrueType, Type1, ビット"
+#~ "マップフォントをインストールします。</p><p>フォントのインストールは "
+#~ "Konqueror からも行えます。場所バーに fonts:/ と入力すると、インストール済"
+#~ "みのフォントが表示されます。そのフォルダにフォントをコピーするだけでインス"
+#~ "トールすることができます。</p>"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy it into the "
+#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
+#~ "\"%2\" for system-wide fonts (available to all).</p>"
+#~ msgstr ""
+#~ "<h1>フォントインストーラ</h1><p>このモジュールでは TrueType, Type1, ビット"
+#~ "マップフォントをインストールします。</p><p>フォントのインストールは "
+#~ "Konqueror からも行えます。場所バーに fonts:/ と入力すると、インストール済"
+#~ "みのフォントが表示されます。適切なフォルダにフォントをコピーするだけでイン"
+#~ "ストールすることができます。あなただけが使用するフォントは「%1」へ、すべて"
+#~ "のユーザが使用するシステム全体用のフォントは「%2」へコピーしてください。</"
+#~ "p>"

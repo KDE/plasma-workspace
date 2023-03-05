@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2022-08-08 12:26+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -163,7 +163,7 @@ msgid "12-Hour"
 msgstr "12-tuntinen"
 
 #: package/contents/ui/configAppearance.qml:131
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:53
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Käytä alueen oletusta"
@@ -256,22 +256,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Valitse fontti"
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "General:"
 msgstr "Yleistä:"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "Show week numbers"
 msgstr "Näytä viikkonumerot"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "First day of week:"
 msgstr "Viikon ensimmäinen päivä:"
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:68
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Saatavilla olevat liitännäiset:"

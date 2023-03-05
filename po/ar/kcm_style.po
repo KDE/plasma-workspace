@@ -288,7 +288,7 @@ msgstr "تسمية شريط الأدوات الثانوي"
 #~ "If you enable this option, applications will show small icons alongside "
 #~ "some important buttons."
 #~ msgstr ""
-#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستظهر  أيقونات صغيرة بجانب بعض "
+#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كِيدِي ستظهر  أيقونات صغيرة بجانب بعض "
 #~ "الأزرار المهمة."
 
 #, fuzzy
@@ -296,7 +296,7 @@ msgstr "تسمية شريط الأدوات الثانوي"
 #~ "If you enable this option, applications will show small icons alongside "
 #~ "most menu items."
 #~ msgstr ""
-#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستظهر  أيقونات صغيرة بجانب بعض "
+#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كِيدِي ستظهر  أيقونات صغيرة بجانب بعض "
 #~ "الأزرار المهمة."
 
 #, fuzzy
@@ -336,7 +336,7 @@ msgstr "تسمية شريط الأدوات الثانوي"
 #~ msgstr "مربع مجموعة"
 
 #~ msgid "KDE Style Module"
-#~ msgstr "وحدة الأسلوب لكدي"
+#~ msgstr "وحدة الأسلوب لكِيدِي"
 
 #~ msgid "Ralf Nolden"
 #~ msgstr "Ralf Nolden"
@@ -361,7 +361,7 @@ msgstr "تسمية شريط الأدوات الثانوي"
 
 #~ msgid ""
 #~ "If you enable this option, KDE Applications will run internal animations."
-#~ msgstr "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستشغل التحريكات الداخلية."
+#~ msgstr "إذا مكّنت هذا الخيار، فإن تطبيقات كِيدِي ستشغل التحريكات الداخلية."
 
 #~ msgid "kcmstyle"
 #~ msgstr "kcmstyle"

@@ -900,6 +900,3 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Innhald på utklippstavla"

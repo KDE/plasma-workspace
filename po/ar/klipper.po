@@ -869,7 +869,7 @@ msgstr "كليبر"
 #: main.cpp:29
 #, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "أداة كدي لمحفوظات اللقص واللصق"
+msgstr "أداة كِيدِي لمحفوظات اللقص واللصق"
 
 #: main.cpp:31
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -38,7 +38,7 @@ msgstr ""
 "이 글꼴을 개인적(혼자서 사용)으로 설치하시겠습니까? 시스템 전역적(전체 사용자"
 "가 사용)으로 설치하시겠습니까?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
 #, kde-format
 msgid "Where to Install"
 msgstr "설치할 장소"
@@ -339,13 +339,13 @@ msgid "Delete"
 msgstr "삭제"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable"
 msgstr "활성화"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable"
 msgstr "비활성화"
@@ -727,51 +727,22 @@ msgstr "선택한 글꼴 삭제…"
 msgid "Change Preview Text…"
 msgstr "미리 보기 텍스트 바꾸기…"
 
-#: kcmfontinst/KCmFontInst.cpp:375
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy one into the folder.</p>"
-msgstr ""
-"<h1>글꼴 설치기</h1><p>이 모듈은 트루타입, Type 1, 비트맵 글꼴을 설치하는 것"
-"을 도와줍니다.</p><p>Konqueror를 사용해서도 글꼴을 설치할 수 있습니다. 주소 "
-"표시줄에 fonts:/를 입력하면 설치된 글꼴 목록을  보여 줍니다. 글꼴을 설치하려"
-"면 폴더에 복사하십시오.</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:382
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy it into the appropriate "
-"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
-"wide fonts (available to all).</p>"
-msgstr ""
-"<h1>글꼴 설치기</h1><p>이 모듈은 트루타입, Type 1, 비트맵 글꼴을 설치하는 것"
-"을 도와줍니다.</p><p>Konqueror를 사용해서도 글꼴을 설치할 수 있습니다. 주소 "
-"표시줄에 fonts:/를 입력하면 설치된 글꼴 목록을  보여 줍니다. 글꼴을 설치하려"
-"면 적당한 폴더에 복사하십시오 - \"%1\" 폴더에 복사하면 개인용, \"%2\" 폴더에 "
-"복사하면 시스템 글꼴이 됩니다.</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:437
+#: kcmfontinst/KCmFontInst.cpp:415
 #, kde-format
 msgid "Add Fonts"
 msgstr "글꼴 추가"
 
-#: kcmfontinst/KCmFontInst.cpp:562
+#: kcmfontinst/KCmFontInst.cpp:540
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "인쇄할 글꼴 목록을 저장할 수 없습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "글꼴 인쇄기를 시작할 수 없습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:568
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -780,58 +751,58 @@ msgstr ""
 "인쇄 가능한 글꼴이 없습니다.\n"
 "비 비트맵 글꼴과 활성화된 글꼴만 인쇄가 가능합니다."
 
-#: kcmfontinst/KCmFontInst.cpp:592
+#: kcmfontinst/KCmFontInst.cpp:570
 #, kde-format
 msgid "Cannot Print"
 msgstr "인쇄할 수 없습니다"
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "삭제할 항목을 선택하지 않았습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "삭제할 항목이 없습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:622
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>을(를) 삭제하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Delete Font"
 msgstr "글꼴 삭제"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "이 글꼴 %1개를 삭제하시겠습니까?"
 
-#: kcmfontinst/KCmFontInst.cpp:634
+#: kcmfontinst/KCmFontInst.cpp:612
 #, kde-format
 msgid "Delete Fonts"
 msgstr "글꼴 삭제"
 
-#: kcmfontinst/KCmFontInst.cpp:639
+#: kcmfontinst/KCmFontInst.cpp:617
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "글꼴 삭제 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "이동할 항목을 선택하지 않았습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Nothing to Move"
 msgstr "이동할 항목이 없습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:642
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -840,17 +811,17 @@ msgstr ""
 "<p>'<b>%1</b>'을(를)</p><p><i>%2</i>에서 <i>%3</i>(으)로</p><p>이동하시겠습니"
 "까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:669
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Move Font"
 msgstr "글꼴 이동"
 
-#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
 #, kde-format
 msgid "Move"
 msgstr "이동"
 
-#: kcmfontinst/KCmFontInst.cpp:675
+#: kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -858,73 +829,73 @@ msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>글꼴 %1개를 <i>%2</i>에서 <i>%3</i>(으)로 이동하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:659
 #, kde-format
 msgid "Move Fonts"
 msgstr "글꼴 이동"
 
-#: kcmfontinst/KCmFontInst.cpp:686
+#: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "글꼴 이동 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
 msgid "Export Group"
 msgstr "그룹 내보내기"
 
-#: kcmfontinst/KCmFontInst.cpp:726
+#: kcmfontinst/KCmFontInst.cpp:704
 #, kde-format
 msgid "No files?"
 msgstr "파일 없음?"
 
-#: kcmfontinst/KCmFontInst.cpp:729
+#: kcmfontinst/KCmFontInst.cpp:707
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "파일 %1에 쓰려고 열 수 없음"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Create New Group"
 msgstr "새 그룹 만들기"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Name of new group:"
 msgstr "새 그룹 이름:"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "New Group"
 msgstr "새 그룹"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Preview Text"
 msgstr "미리 보기 문자열"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Please enter new text:"
 msgstr "새 문자열을 입력하십시오:"
 
-#: kcmfontinst/KCmFontInst.cpp:829
+#: kcmfontinst/KCmFontInst.cpp:807
 #, kde-format
 msgid "Scanning font list…"
 msgstr "글꼴 목록 검사 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:888
+#: kcmfontinst/KCmFontInst.cpp:866
 #, kde-format
 msgid "No fonts"
 msgstr "글꼴 없음"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:871
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "글꼴 %1개"
 
-#: kcmfontinst/KCmFontInst.cpp:902
+#: kcmfontinst/KCmFontInst.cpp:880
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -936,7 +907,7 @@ msgstr ""
 "\"right\">비활성:</td><td>%2</td></tr><tr><td align=\"right\">부분적 활성:</"
 "td><td>%3</td></tr><tr><td align=\"right\">합계:</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:912
+#: kcmfontinst/KCmFontInst.cpp:890
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -947,62 +918,62 @@ msgstr ""
 "\"right\">비활성:</td><td>%2</td></tr><tr><td align=\"right\">합계:</td><td>"
 "%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:989
+#: kcmfontinst/KCmFontInst.cpp:967
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "연결된 파일 찾는 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:971
 #, kde-format
 msgid "Scanning Files…"
 msgstr "파일 검사 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:994
+#: kcmfontinst/KCmFontInst.cpp:972
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "설치할 추가 파일 찾는 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:1009
+#: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1와(과) 연결된 파일 찾는 중"
 
-#: kcmfontinst/KCmFontInst.cpp:1037
+#: kcmfontinst/KCmFontInst.cpp:1015
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "글꼴 설치 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "활성화할 항목을 선택하지 않았습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "비활성화할 항목을 선택하지 않았습니다."
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "활성화할 항목이 없습니다"
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "비활성화할 항목이 없습니다"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>을(를) 활성화하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>을(를) 비활성화하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1124
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1010,7 +981,7 @@ msgid ""
 msgstr ""
 "<p>그룹 '<b>%2</b>'에 포함된</p><p>'<b>%1</b>'을(를) 활성화 시키겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1106
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1019,29 +990,29 @@ msgstr ""
 "<p>그룹 '<b>%2</b>'에 포함된</p><p>'<b>%1</b>'을(를) 비활성화 시키겠습니까?</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "Enable Font"
 msgstr "글꼴 활성화"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Disable Font"
 msgstr "글꼴 비활성화"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "이 %1개 글꼴을 활성화시키시겠습니까?"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "이 %1개 글꼴을 비활성화시키시겠습니까?"
 
-#: kcmfontinst/KCmFontInst.cpp:1145
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1051,7 +1022,7 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>그룹 '<b>%2</b>'에 포함된 글꼴 %1개를 활성화하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1061,22 +1032,22 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>그룹 '<b>%2</b>'에 포함된 글꼴 %1개를 삭제하시겠습니까?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable Fonts"
 msgstr "글꼴 활성화"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable Fonts"
 msgstr "글꼴 비활성화"
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "글꼴 활성화 중…"
 
-#: kcmfontinst/KCmFontInst.cpp:1166
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "글꼴 비활성화 중…"
@@ -2292,6 +2263,32 @@ msgstr "파스파 문자"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "이 문자"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy one into the "
+#~ "folder.</p>"
+#~ msgstr ""
+#~ "<h1>글꼴 설치기</h1><p>이 모듈은 트루타입, Type 1, 비트맵 글꼴을 설치하는 "
+#~ "것을 도와줍니다.</p><p>Konqueror를 사용해서도 글꼴을 설치할 수 있습니다. "
+#~ "주소 표시줄에 fonts:/를 입력하면 설치된 글꼴 목록을  보여 줍니다. 글꼴을 "
+#~ "설치하려면 폴더에 복사하십시오.</p>"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy it into the "
+#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
+#~ "\"%2\" for system-wide fonts (available to all).</p>"
+#~ msgstr ""
+#~ "<h1>글꼴 설치기</h1><p>이 모듈은 트루타입, Type 1, 비트맵 글꼴을 설치하는 "
+#~ "것을 도와줍니다.</p><p>Konqueror를 사용해서도 글꼴을 설치할 수 있습니다. "
+#~ "주소 표시줄에 fonts:/를 입력하면 설치된 글꼴 목록을  보여 줍니다. 글꼴을 "
+#~ "설치하려면 적당한 폴더에 복사하십시오 - \"%1\" 폴더에 복사하면 개인용, "
+#~ "\"%2\" 폴더에 복사하면 시스템 글꼴이 됩니다.</p>"
 
 #~ msgid "Print..."
 #~ msgstr "인쇄..."

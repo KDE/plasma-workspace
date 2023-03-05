@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2016-08-04 13:04+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -165,7 +165,7 @@ msgid "12-Hour"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:131
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:53
 #, kde-format
 msgid "Use Region Defaults"
 msgstr ""
@@ -260,23 +260,23 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "General:"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:40
 #, fuzzy, kde-format
 #| msgid "Show week numbers in Calendar"
 msgid "Show week numbers"
 msgstr "Εμφάνιση αριθμών εβδομάδων στο ημερολόγιο"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "First day of week:"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:68
 #, fuzzy, kde-format
 #| msgid "Available Calendar Plugins"
 msgid "Available Plugins:"

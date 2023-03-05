@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-28 01:00+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2022-03-29 20:46+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in, karunakar@indlinux.org, raghu@raghukamath.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -38,7 +38,7 @@ msgstr ""
 "क्या आप व्यक्तिगत उपयोग (केवल आपके लिए उपलब्ध), या तंत्र-व्यापी (सभी उपयोक्ताओं के लिए "
 "उपलब्ध) के लिए फ़ॉन्ट स्थापित करना चाहते हैं?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
 #, kde-format
 msgid "Where to Install"
 msgstr "कहां संस्थापित करना है"
@@ -342,13 +342,13 @@ msgid "Delete"
 msgstr "मिटाएँ"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable"
 msgstr "सक्षम करें"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable"
 msgstr "अक्षम"
@@ -733,51 +733,22 @@ msgstr "चयनित फ़ॉन्ट को मिटाएँ..."
 msgid "Change Preview Text…"
 msgstr "पूर्वावलोकन पाठ बदलें..."
 
-#: kcmfontinst/KCmFontInst.cpp:375
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy one into the folder.</p>"
-msgstr ""
-"<h1>फ़ॉन्ट इंस्टालर</h1><p> यह मॉड्यूल आपको ट्रू टाइप, टाइप1 और बिटमैप फोंट स्थापित करने "
-"की अनुमति देता है। </p><p>आप कॉन्करर का उपयोग करके फोंट भी स्थापित कर सकते हैं:  "
-"कॉन्करर के स्थान पट्टी में fonts:/ टाइप करें और यह आपके स्थापित फोंट को प्रदर्शित करेगा। "
-"एक फ़ॉन्ट स्थापित करने के लिए, बस एक को फ़ोल्डर में नकल करें।"
-
-#: kcmfontinst/KCmFontInst.cpp:382
-#, kde-format
-msgid ""
-"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
-"type fonts:/ into Konqueror's location bar and this will display your "
-"installed fonts. To install a font, simply copy it into the appropriate "
-"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
-"wide fonts (available to all).</p>"
-msgstr ""
-"<h1>फ़ॉन्ट इंस्टालर</h1><p> यह मॉड्यूल आपको ट्रू टाइप, टाइप1 और बिटमैप फोंट स्थापित करने "
-"की अनुमति देता है।</p><p>आप कॉन्करर का उपयोग करके फोंट भी स्थापित कर सकते हैं: कॉन्करर "
-"के स्थान पट्टी में fonts:/  टाइप करें और यह आपके स्थापित फोंट को प्रदर्शित करेगा। एक फ़ॉन्ट "
-"स्थापित करने के लिए, बस इसे उपयुक्त फ़ोल्डर में कॉपी करें - \"%1\" केवल आपके लिए उपलब्ध "
-"फ़ॉन्ट्स के लिए, या तंत्र-व्यापी फ़ॉन्ट्स के लिए \"%2\" (सभी के लिए उपलब्ध)। </p>"
-
-#: kcmfontinst/KCmFontInst.cpp:437
+#: kcmfontinst/KCmFontInst.cpp:415
 #, kde-format
 msgid "Add Fonts"
 msgstr "फ़ॉन्ट्स जोड़ें"
 
-#: kcmfontinst/KCmFontInst.cpp:562
+#: kcmfontinst/KCmFontInst.cpp:540
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "मुद्रित करने के लिए फ़ॉन्ट की सूची सहेजने में विफल ।"
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "फ़ॉन्ट प्रिंटर प्रारंभ करने में विफल।"
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:568
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -786,59 +757,59 @@ msgstr ""
 "कोई छापने योग्य फ़ॉन्ट नहीं हैं।\n"
 "आप केवल गैर-बिटमैप और सक्षम फ़ॉन्ट प्रिंट कर सकते हैं।"
 
-#: kcmfontinst/KCmFontInst.cpp:592
+#: kcmfontinst/KCmFontInst.cpp:570
 #, kde-format
 msgid "Cannot Print"
 msgstr "मुद्रित नहीं किया जा सकता"
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "मिटाने के लिए आपने कुछ चुना नहीं है."
 
-#: kcmfontinst/KCmFontInst.cpp:607
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "मिटाने के लिए कुछ नहीं "
 
-#: kcmfontinst/KCmFontInst.cpp:622
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>क्या आप सचमुच में </p><p>'<b>%1</b>' को मिटाना चाहते हैं?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Delete Font"
 msgstr "फ़ॉन्ट मिटाएँ"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "क्या आप सचमुच इस फ़ॉन्ट को मिटाना चाहते हैं?"
 msgstr[1] "क्या आप सचमुच इन %1 फ़ॉन्टों को मिटाना चाहते हैं?"
 
-#: kcmfontinst/KCmFontInst.cpp:634
+#: kcmfontinst/KCmFontInst.cpp:612
 #, kde-format
 msgid "Delete Fonts"
 msgstr "फ़ॉन्ट्स मिटाएँ"
 
-#: kcmfontinst/KCmFontInst.cpp:639
+#: kcmfontinst/KCmFontInst.cpp:617
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "फ़ॉन्ट मिटाया जा रहा है..."
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "स्थानांतरण के लिए आपने कुछ चुना नहीं है।"
 
-#: kcmfontinst/KCmFontInst.cpp:654
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Nothing to Move"
 msgstr "स्थानांतरण के लिए कुछ नहीं है"
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:642
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -847,17 +818,17 @@ msgstr ""
 "<p>क्या आप सचमुच </p><p>'<b>%1</b>' को</p><p> <i>%2</i> से <i>%3</i> पर ले जाना "
 "चाहते हैं ? </p>"
 
-#: kcmfontinst/KCmFontInst.cpp:669
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Move Font"
 msgstr "फ़ॉन्ट स्थानांतरित करें"
 
-#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
 #, kde-format
 msgid "Move"
 msgstr "खिसकाएँ"
 
-#: kcmfontinst/KCmFontInst.cpp:675
+#: kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -868,74 +839,74 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>क्या आप सचमुच इन %1 फ़ॉन्ट्स को <i>%2</i> से <i>%3</i> पर ले जाना चाहते हैं ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:659
 #, kde-format
 msgid "Move Fonts"
 msgstr "फ़ॉन्ट स्थानांतरित करें"
 
-#: kcmfontinst/KCmFontInst.cpp:686
+#: kcmfontinst/KCmFontInst.cpp:664
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "फ़ॉन्ट स्थानांतरित किया जा रहा है..."
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:678
 #, kde-format
 msgid "Export Group"
 msgstr "समूह निर्यात"
 
-#: kcmfontinst/KCmFontInst.cpp:726
+#: kcmfontinst/KCmFontInst.cpp:704
 #, kde-format
 msgid "No files?"
 msgstr "कोई फ़ाइलें नहीं ?"
 
-#: kcmfontinst/KCmFontInst.cpp:729
+#: kcmfontinst/KCmFontInst.cpp:707
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "लिखने के लिए %1 खोलने में असफल"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Create New Group"
 msgstr "नया समूह बनाएँ"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Name of new group:"
 msgstr "नए समूह का नाम :"
 
-#: kcmfontinst/KCmFontInst.cpp:749
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "New Group"
 msgstr "नया समूह"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Preview Text"
 msgstr "पूर्वावलोकन पाठ"
 
-#: kcmfontinst/KCmFontInst.cpp:777
+#: kcmfontinst/KCmFontInst.cpp:755
 #, kde-format
 msgid "Please enter new text:"
 msgstr "कृपया नया पाठ भरें:"
 
-#: kcmfontinst/KCmFontInst.cpp:829
+#: kcmfontinst/KCmFontInst.cpp:807
 #, kde-format
 msgid "Scanning font list…"
 msgstr "फ़ॉन्ट सूची स्कैन की जा रही है…"
 
-#: kcmfontinst/KCmFontInst.cpp:888
+#: kcmfontinst/KCmFontInst.cpp:866
 #, kde-format
 msgid "No fonts"
 msgstr "कोई फ़ॉन्ट नहीं"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:871
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "१ फ़ॉन्ट"
 msgstr[1] "%1 फ़ॉन्ट"
 
-#: kcmfontinst/KCmFontInst.cpp:902
+#: kcmfontinst/KCmFontInst.cpp:880
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -948,7 +919,7 @@ msgstr ""
 "td></tr><tr><td align=\"right\">आंशिक रूप से सक्षम :</td><td>%3</td></tr><tr><td "
 "align=\"right\">कुल :</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:912
+#: kcmfontinst/KCmFontInst.cpp:890
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -959,62 +930,62 @@ msgstr ""
 "\"right\">अक्षम:</td><td>%2</td></tr><tr><td align=\"right\">कुल:</td><td>%3</"
 "td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:989
+#: kcmfontinst/KCmFontInst.cpp:967
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "कोई भी संबद्धित फ़ाइल खोजी जा रही है..."
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:971
 #, kde-format
 msgid "Scanning Files…"
 msgstr "फ़ाइलें स्कैन की जा रही हैं..."
 
-#: kcmfontinst/KCmFontInst.cpp:994
+#: kcmfontinst/KCmFontInst.cpp:972
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "संस्थापित करने के लिए अतिरिक्त फ़ाइलें खोजी जा रही हैं…"
 
-#: kcmfontinst/KCmFontInst.cpp:1009
+#: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 से संबद्धित फ़ाइल खोजी जा रही है"
 
-#: kcmfontinst/KCmFontInst.cpp:1037
+#: kcmfontinst/KCmFontInst.cpp:1015
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "फ़ॉन्ट संस्थापित किया जा रहा है..."
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "सक्षम करने के लिए आपने कुछ चुना नहीं है।"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1080
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "अक्षम करने के लिए आपने कुछ चुना नहीं है ।"
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "सक्षम करने के लिए कुछ नहीं"
 
-#: kcmfontinst/KCmFontInst.cpp:1103
+#: kcmfontinst/KCmFontInst.cpp:1081
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "अक्षम करने के लिए कुछ नहीं"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>क्या आप सचमुच में </p><p>'<b>%1</b>' को सक्षम करना चाहते हैं ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>क्या आप सचमुच में </p><p>'<b>%1</b>' को अक्षम करना चाहते हैं ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1124
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1023,7 +994,7 @@ msgstr ""
 "<p>क्या आप सचमुच '<b>%1</b>' को सक्षम करना चाहते हैं,</p><p>जो समूह '<b>%2</b>' में "
 "समाहित है ? </p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1106
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1032,31 +1003,31 @@ msgstr ""
 "<p>क्या आप सचमुच '<b>%1</b>' को अक्षम करना चाहते हैं, </p><p>जो समूह '<b>%2</b>' में "
 "समाहित है ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "Enable Font"
 msgstr "फ़ॉन्ट सक्षम करें"
 
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Disable Font"
 msgstr "फ़ॉन्ट अक्षम करें"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "क्या आप सचमुच इस फ़ॉन्ट को सक्षम करना चाहते हैं ?"
 msgstr[1] "क्या आप सचमुच इन %1 फ़ॉन्ट्स को सक्षम करना चाहते हैं ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "क्या आप सचमुच इस फ़ॉन्ट को अक्षम करना चाहते हैं ?"
 msgstr[1] "क्या आप सचमुच इन %1 फ़ॉन्ट्स को अक्षम करना चाहते हैं?"
 
-#: kcmfontinst/KCmFontInst.cpp:1145
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1069,7 +1040,7 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>क्या आप सचमुच समूह '<b>%2</b>' में निहित इन %1 फोंट को सक्षम करना चाहते हैं ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1082,22 +1053,22 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>क्या आप सचमुच समूह '<b>%2</b>' में निहित इन %1 फोंट को अक्षम करना चाहते हैं ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable Fonts"
 msgstr "फ़ॉन्ट्स सक्षम करें"
 
-#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disable Fonts"
 msgstr "फ़ॉन्ट्स अक्षम करें"
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "फ़ॉन्ट सक्षम किया जा रहा है..."
 
-#: kcmfontinst/KCmFontInst.cpp:1166
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "फ़ॉन्ट अक्षम किया जा रहा है..."
@@ -2312,6 +2283,33 @@ msgstr "फ़ाग्स पा"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "यी"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy one into the "
+#~ "folder.</p>"
+#~ msgstr ""
+#~ "<h1>फ़ॉन्ट इंस्टालर</h1><p> यह मॉड्यूल आपको ट्रू टाइप, टाइप1 और बिटमैप फोंट स्थापित "
+#~ "करने की अनुमति देता है। </p><p>आप कॉन्करर का उपयोग करके फोंट भी स्थापित कर सकते "
+#~ "हैं:  कॉन्करर के स्थान पट्टी में fonts:/ टाइप करें और यह आपके स्थापित फोंट को प्रदर्शित "
+#~ "करेगा। एक फ़ॉन्ट स्थापित करने के लिए, बस एक को फ़ोल्डर में नकल करें।"
+
+#~ msgid ""
+#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
+#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
+#~ "display your installed fonts. To install a font, simply copy it into the "
+#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
+#~ "\"%2\" for system-wide fonts (available to all).</p>"
+#~ msgstr ""
+#~ "<h1>फ़ॉन्ट इंस्टालर</h1><p> यह मॉड्यूल आपको ट्रू टाइप, टाइप1 और बिटमैप फोंट स्थापित "
+#~ "करने की अनुमति देता है।</p><p>आप कॉन्करर का उपयोग करके फोंट भी स्थापित कर सकते हैं: "
+#~ "कॉन्करर के स्थान पट्टी में fonts:/  टाइप करें और यह आपके स्थापित फोंट को प्रदर्शित "
+#~ "करेगा। एक फ़ॉन्ट स्थापित करने के लिए, बस इसे उपयुक्त फ़ोल्डर में कॉपी करें - \"%1\" केवल "
+#~ "आपके लिए उपलब्ध फ़ॉन्ट्स के लिए, या तंत्र-व्यापी फ़ॉन्ट्स के लिए \"%2\" (सभी के लिए "
+#~ "उपलब्ध)। </p>"
 
 #~ msgid "Print..."
 #~ msgstr "छापें..."

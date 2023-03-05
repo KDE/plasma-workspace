@@ -495,7 +495,7 @@ msgstr "اختر خطًا"
 #~| msgid ""
 #~| "If this option is selected, KDE will smooth the edges of curves in fonts."
 #~ msgid "Select this option to smooth the edges of curves in fonts."
-#~ msgstr "إذا تم انتقاء هذا الخيار، سيقوم كيدي بتحسين حواف الخطوط."
+#~ msgstr "إذا تم انتقاء هذا الخيار، سيقوم كِيدِي بتحسين حواف الخطوط."
 
 #~ msgctxt "font usage"
 #~ msgid "Taskbar"

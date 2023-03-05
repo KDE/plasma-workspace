@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-05 03:10+0000\n"
 "PO-Revision-Date: 2019-09-23 21:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -164,7 +164,7 @@ msgid "12-Hour"
 msgstr "12-соата"
 
 #: package/contents/ui/configAppearance.qml:131
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:53
 #, kde-format
 msgid "Use Region Defaults"
 msgstr ""
@@ -256,22 +256,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:39
 #, kde-format
 msgid "General:"
 msgstr "Умумӣ:"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "Show week numbers"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "First day of week:"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:68
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Васлкунакҳои дастрас:"
