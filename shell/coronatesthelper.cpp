@@ -29,7 +29,7 @@ void CoronaTestHelper::processContainment(Plasma::Containment *containment)
 
 void CoronaTestHelper::processApplet(Plasma::Applet *applet)
 {
-    PlasmaQuick::AppletQuickItem *obj = applet->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
+    PlasmaQuick::AppletQuickItem *obj = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
     if (applet->failedToLaunch()) {
         qCWarning(PLASMASHELL) << "cannot test an applet with a launch error" << applet->launchErrorMessage();
         qGuiApp->exit(1);

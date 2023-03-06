@@ -8,6 +8,7 @@
 #include "debug.h"
 
 #include <Plasma/Corona>
+#include <PlasmaQuick/AppletQuickItem>
 #include <QAction>
 #include <kactioncollection.h>
 
@@ -80,8 +81,12 @@ void SystemTrayContainer::ensureSystrayExists()
 
     m_innerContainment->setLocation(location());
 
-    m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
-    Q_EMIT internalSystrayChanged();
+    auto oldInternalSystray = m_internalSystray;
+    m_internalSystray = PlasmaQuick::AppletQuickItem::itemForApplet(m_innerContainment);
+
+    if (m_internalSystray != oldInternalSystray) {
+        Q_EMIT internalSystrayChanged();
+    }
 
     actions()->addAction("configure", m_innerContainment->actions()->action("configure"));
     connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this, [this](Plasma::Applet *applet) {

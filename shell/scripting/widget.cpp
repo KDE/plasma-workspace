@@ -14,6 +14,7 @@
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
+#include <PlasmaQuick/AppletQuickItem>
 
 namespace WorkspaceScripting
 {
@@ -137,7 +138,7 @@ void Widget::setIndex(int index)
 
 QJSValue Widget::geometry() const
 {
-    QQuickItem *appletItem = d->applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    QQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(d->applet);
 
     if (appletItem) {
         QJSValue rect = engine()->newObject();

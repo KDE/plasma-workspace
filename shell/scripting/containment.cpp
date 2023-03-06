@@ -15,6 +15,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include "scriptengine.h"
 #include "shellcorona.h"
@@ -171,7 +172,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         QQuickItem *containmentItem = nullptr;
 
         if (geometry.x() >= 0 && geometry.y() >= 0) {
-            containmentItem = d->containment->property("_plasma_graphicObject").value<QQuickItem *>();
+            containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(d->containment);
 
             if (containmentItem) {
                 QMetaObject::invokeMethod(containmentItem,

@@ -29,6 +29,7 @@
 #include <kwindowsystem.h>
 
 #include <Plasma/Containment>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -1130,7 +1131,7 @@ bool PanelView::event(QEvent *e)
 
 bool PanelView::containmentContainsPosition(const QPointF &point) const
 {
-    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+    QQuickItem *containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
 
     if (!containmentItem) {
         return false;
@@ -1143,7 +1144,7 @@ bool PanelView::containmentContainsPosition(const QPointF &point) const
 
 QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
 {
-    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+    QQuickItem *containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
 
     if (!containmentItem) {
         return point;

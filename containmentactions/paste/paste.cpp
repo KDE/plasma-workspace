@@ -12,6 +12,7 @@
 #include <QMimeData>
 
 #include <Plasma/Containment>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include <QAction>
 #include <QDebug>
@@ -43,7 +44,7 @@ void Paste::doPaste()
     Q_ASSERT(c);
 
     // get the actual graphic object of the containment
-    QObject *graphicObject = c->property("_plasma_graphicObject").value<QObject *>();
+    QObject *graphicObject = PlasmaQuick::AppletQuickItem::itemForApplet(c);
     if (!graphicObject) {
         return;
     }

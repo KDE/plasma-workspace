@@ -9,6 +9,7 @@
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include <KActionCollection>
 
@@ -206,10 +207,11 @@ void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
     }
 }
 
+// FIXME why const Plasma::Applet *?
 template<class UnaryPredicate>
 QQuickItem *ContainmentInterface::findPlasmaGraphicObjectChildIf(const Plasma::Applet *applet, UnaryPredicate predicate)
 {
-    QQuickItem *gObj = qobject_cast<QQuickItem *>(applet->property("_plasma_graphicObject").value<QObject *>());
+    QQuickItem *gObj = PlasmaQuick::AppletQuickItem::itemForApplet(const_cast<Plasma::Applet *>(applet));
 
     if (!gObj) {
         return nullptr;

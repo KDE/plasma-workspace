@@ -15,6 +15,8 @@
 #include <QQuickItem>
 #include <QResizeEvent>
 
+#include <PlasmaQuick/AppletQuickItem>
+
 #include <KActionCollection>
 #include <KIconLoader>
 #include <KLocalizedString>
@@ -54,7 +56,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         return;
     }
 
-    m_appletInterface = applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    m_appletInterface = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
 
     if (!m_appletInterface) {
         return;
@@ -152,7 +154,7 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
         return;
     }
 
-    QQuickItem *i = m_applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    QQuickItem *i = PlasmaQuick::AppletQuickItem::itemForApplet(m_applet);
     if (!i) {
         return;
     }

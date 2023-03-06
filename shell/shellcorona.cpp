@@ -26,6 +26,7 @@
 #include <QJsonObject>
 
 #include <Plasma/PluginLoader>
+#include <PlasmaQuick/AppletQuickItem>
 #include <PlasmaQuick/Dialog>
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
@@ -2483,7 +2484,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
         for (auto *applet : applets) {
             const auto &provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
             if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
-                if (QQuickItem *appletInterface = applet->property("_plasma_graphicObject").value<QQuickItem *>()) {
+                if (QQuickItem *appletInterface = PlasmaQuick::AppletQuickItem::itemForApplet(applet)) {
                     const auto &childItems = appletInterface->childItems();
                     if (childItems.isEmpty()) {
                         continue;

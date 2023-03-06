@@ -16,6 +16,7 @@
 #include <KX11Extras>
 
 #include <Plasma/Containment>
+#include <PlasmaQuick/AppletQuickItem>
 #include <PlasmaQuick/Dialog>
 
 #include "draghelper.h"
@@ -102,7 +103,7 @@ QQuickItem *NotificationApplet::systemTrayRepresentation() const
         return nullptr;
     }
 
-    return c->property("_plasma_graphicObject").value<QQuickItem *>();
+    return PlasmaQuick::AppletQuickItem::itemForApplet(c);
 }
 
 bool NotificationApplet::isPrimaryScreen(const QRect &rect) const

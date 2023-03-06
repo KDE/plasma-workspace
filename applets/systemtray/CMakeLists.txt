@@ -42,6 +42,7 @@ target_link_libraries(systemtraymodel_static
     KF6::I18n
     KF6::ItemModels
     KF6::Plasma
+    KF6::PlasmaQuick
     KF6::IconThemes
     KF6::WindowSystem
     dbusmenuqt)

@@ -15,6 +15,7 @@
 #include <KLocalizedString>
 #include <Plasma/Applet>
 #include <Plasma/DataContainer>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include <QIcon>
 #include <QQuickItem>
@@ -110,7 +111,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
 
     const PlasmoidModel::Item &item = m_items[index.row()];
     const KPluginMetaData &pluginMetaData = item.pluginMetaData;
-    const Plasma::Applet *applet = item.applet;
+    Plasma::Applet *applet = item.applet;
 
     if (role <= Qt::UserRole) {
         switch (role) {
@@ -152,7 +153,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
 
     switch (static_cast<Role>(role)) {
     case Role::Applet:
-        return applet ? applet->property("_plasma_graphicObject") : QVariant();
+        return applet ? QVariant::fromValue(PlasmaQuick::AppletQuickItem::itemForApplet(applet)) : QVariant();
     case Role::HasApplet:
         return applet != nullptr;
     default:

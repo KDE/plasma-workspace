@@ -17,6 +17,8 @@
 #include <QScreen>
 #include <qopenglshaderprogram.h>
 
+#include <PlasmaQuick/AppletQuickItem>
+
 #include <KAuthorized>
 #include <KStartupInfo>
 #include <kactivities/controller.h>
@@ -252,7 +254,7 @@ QVariantMap DesktopView::candidateContainmentsGraphicItems() const
     }
 
     for (auto cont : corona()->containmentsForScreen(containment()->screen())) {
-        map[cont->activity()] = cont->property("_plasma_graphicObject");
+        map[cont->activity()] = QVariant::fromValue(PlasmaQuick::AppletQuickItem::itemForApplet(cont));
     }
     return map;
 }

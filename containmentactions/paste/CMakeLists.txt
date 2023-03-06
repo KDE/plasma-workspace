@@ -3,6 +3,7 @@ target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets
     KF6::Plasma
+    KF6::PlasmaQuick
     KF6::KIOCore
 )
 
