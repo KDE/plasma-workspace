@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 01:00+0000\n"
+"POT-Creation-Date: 2023-03-06 02:13+0000\n"
 "PO-Revision-Date: 2020-01-17 19:18+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -108,18 +108,18 @@ msgstr "壁紙画像を開く"
 msgid "Next Wallpaper Image"
 msgstr "次の壁紙画像"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "保存フォルダを開く"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Restore wallpaper"
 msgstr "新しい壁紙を取得..."
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Remove Wallpaper"

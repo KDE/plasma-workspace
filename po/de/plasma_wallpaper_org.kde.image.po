@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 01:00+0000\n"
+"POT-Creation-Date: 2023-03-06 02:13+0000\n"
 "PO-Revision-Date: 2023-02-02 21:48+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -97,17 +97,17 @@ msgstr "Hintergrundbild öffnen"
 msgid "Next Wallpaper Image"
 msgstr "Nächstes Hintergrundbild"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Hintergrundbild wiederherstellen"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Hintergrundbild entfernen"

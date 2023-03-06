@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 01:00+0000\n"
+"POT-Creation-Date: 2023-03-06 02:13+0000\n"
 "PO-Revision-Date: 2008-10-05 11:04+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -107,18 +107,18 @@ msgstr "Vybiery fajł z špalerami"
 msgid "Next Wallpaper Image"
 msgstr "Vybiery fajł z špalerami"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Restore wallpaper"
 msgstr "Vaźmi novyja špalery..."
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Remove Wallpaper"
