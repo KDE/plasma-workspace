@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2010-07-16 13:02+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Nederlands <kde-i18n-nl@kde.org>\n"
@@ -41,29 +41,29 @@ msgstr ""
 msgid "Where to Install"
 msgstr "Wêr te ynstallearjen"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "Lettertype ynstallaasjeprogramma"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "Ienfâldich lettertype-ynstallaasjeteprogramma"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Soarget derfoar dat it finster har gedraacht as dialoochfinster foar in X11-"
 "app dy omskreaun wurdt troch winid."
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "URL-adres om te ynstallearjen"
@@ -135,17 +135,17 @@ msgstr "Lettertype om sjen te litten selektearje"
 msgid "URL to open"
 msgstr "Te iepenjen URL-adres"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Lettertypewerjefte"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Ienfâldich lettertype-werjefteprogramma"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

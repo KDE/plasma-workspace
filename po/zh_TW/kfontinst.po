@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2023-02-18 00:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -51,27 +51,27 @@ msgstr "您希望安裝此字型為個人使用還是系統字型？"
 msgid "Where to Install"
 msgstr "要安裝到何處"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "字型安裝程式"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "簡易字型安裝程式"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "讓 X 應用程式對話框的瞬變值由 winid 指定"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "要安裝到何處"
@@ -140,17 +140,17 @@ msgstr "選取要檢視的字型"
 msgid "URL to open"
 msgstr "要開啟的網址"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "字型檢視器"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "簡易字型檢視器"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

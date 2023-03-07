@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-12-12 21:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -918,12 +918,12 @@ msgstr "rch@richard.eu.org, dgvirtual@akl.lt, skroblas@erdves.lt, <>"
 msgid "&More"
 msgstr "&Daugiau"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Išjungti šį iškylantįjį langą"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atsisakyti"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2009-02-05 17:58+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -41,27 +41,27 @@ msgstr ""
 msgid "Where to Install"
 msgstr "कहां इनस्टाल करव"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "फोंट संस्थापक"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "सादा फोंट संस्थापक"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) क्रेग ड्रमांड, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "विनआईडी(winid) से निरधारित एक एक्स-एप्प(X app) बर गोठ ट्रांजिएंट बनाथे  "
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "इनस्टाल करे बर यूआरएल"
@@ -131,17 +131,17 @@ msgstr "देखे बर फोंट चुनव"
 msgid "URL to open"
 msgstr "खोले बर यूआरएल"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "फोंट प्रदर्सक"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "सादा फोंट प्रदर्सक"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(c) क्रेग ड्रमांड, 2004-2007"

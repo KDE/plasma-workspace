@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2002-10-25 11:59SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -39,27 +39,27 @@ msgstr ""
 msgid "Where to Install"
 msgstr "Faka..."
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, fuzzy, kde-format
 msgid "Font Installer"
 msgstr "Faka..."
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, fuzzy, kde-format
 msgid "Simple font installer"
 msgstr "Faka..."
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr ""
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, fuzzy, kde-format
 msgid "URL to install"
 msgstr "Faka..."
@@ -126,17 +126,17 @@ msgstr ""
 msgid "URL to open"
 msgstr ""
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, fuzzy, kde-format
 msgid "Font Viewer"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, fuzzy, kde-format
 msgid "Simple font viewer"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr ""

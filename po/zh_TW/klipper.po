@@ -13,26 +13,26 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011, 2014.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2021-09-06 00:59+0800\n"
-"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
-"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"PO-Revision-Date: 2023-03-06 21:43+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "選取區與剪貼簿"
+msgstr "選取區與剪貼簿："
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -49,69 +49,67 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"使用滑鼠或鍵盤選擇文字或區域使其被突顯時，它叫做 <emphasis>選取區</"
+"emphasis>。使用滑鼠中鍵會貼上選取區。<nl/><nl/>如果選取區被使用 <interface>複"
+"製</interface> 或 <interface>剪下</interface> 動作明確的複製，它會被儲存到 "
+"<emphasis>剪貼簿</emphasis> 裡。剪貼簿可以使用 <interface>貼上</interface> 動"
+"作貼上。<nl/><nl/>開啟這個選項時，選取區和剪貼簿會被同步，使得選取任何東西時"
+"可以馬上用任何方式貼上它。關閉這個選項的話，選取區可能還是會被儲存到剪貼簿歷"
+"史紀錄裡（根據下方選項），但它只能被使用滑鼠中鍵貼上。"
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "剪貼簿歷史紀錄"
+msgstr "剪貼簿歷史紀錄："
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " 個項目"
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Always save in history"
-msgstr "重做歷史清單中的項目"
+msgstr "總是儲存到歷史紀錄中"
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Text selection only"
+#, kde-format
 msgid "Text selection:"
-msgstr "只有選取的文字"
+msgstr "文字選取區："
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "只在明確複製時"
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "確定要刪除整個剪貼簿的歷史紀錄嗎？"
+msgstr "文字選取區是否應該要儲存到剪貼簿歷史紀錄中。"
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "忽略選取"
+msgstr "非文字的選取區："
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Never save in history"
-msgstr "重做歷史清單中的項目"
+msgstr "不要儲存到歷史紀錄"
 
 #: configdialog.cpp:185
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
-msgstr ""
+msgstr "非文字的選取區（例如影像等）是否應該要儲存到剪貼簿歷史紀錄中。"
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "動作彈跳選單的逾時時間："
+msgstr "顯示動作彈出式選單："
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -123,16 +121,17 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"當符合動作樣式的文字被選取起來或被從剪貼簿歷史紀錄中選取時，自動顯示包含可用"
+"動作的彈出式選單。如果這個自動選單被從這裡關掉，或因為在已排除的視窗中而沒有"
+"顯示它時，可以使用 <shortcut>%1</shortcut> 鍵盤快捷鍵來顯示它。"
 
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "排除視窗…"
 
 #: configdialog.cpp:283
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
@@ -142,19 +141,17 @@ msgstr[0] " 秒"
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "無"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "動作"
+msgstr "選項："
 
 #: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "排除視窗"
 
 #: configdialog.cpp:350
 #, kde-kuit-format
@@ -164,16 +161,17 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"當 <interface>比對樣式</interface> 與剪貼簿內容符合時，它的 <interface>命令</"
+"interface> 將會出現在 Klipper 的彈出式視窗而可被執行。"
 
 #: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "比對樣式與命令"
 
 #: configdialog.cpp:359
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "描述"
@@ -200,6 +198,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"這些動作會出現在一個彈出式選單裡，可以在 <interface>動作選單</interface> 頁面"
+"進行設定。"
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -207,13 +207,12 @@ msgctxt "@info"
 msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
-msgstr ""
+msgstr "確定要刪除已選動作 <resource>%1</resource><nl/>以及它的所有命令嗎？"
 
 #: configdialog.cpp:566
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "刪除動作"
+msgstr "確認刪除動作"
 
 #: configdialog.cpp:595
 #, kde-format
@@ -227,23 +226,18 @@ msgid "General Configuration"
 msgstr "一般設定"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "動作"
+msgstr "動作選單"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "動作"
+msgstr "動作選單"
 
 #: configdialog.cpp:597
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "動作設定"
@@ -275,6 +269,10 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"動作彈出視窗不會在這些視窗裡自動顯示，即使它已被啟用。這是因為有些視窗不適合"
+"自動彈出視窗，例如網路瀏覽器可能會在網址列輸入時自動突顯網址而使彈出選單每按"
+"一次鍵就出現一次。<nl/><nl/>如果動作選單在使用某個應用程式時突然自動出現，則"
+"請將它加入到這個列表裡。<link>如何尋找要輸入的名稱</link>。"
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -286,6 +284,10 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"需要輸入到這裡的名稱是要排除的視窗的 WM_CLASS 名稱。要尋找某個視窗的 "
+"WM_CLASS 名稱，請在另一個終端機視窗裡輸入此命令：<nl/><nl/>&nbsp;&nbsp;"
+"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>然後點擊您要排除的視窗。在終端"
+"機視窗裡顯示，在 = 符號後方的第一個名稱就是您需要輸入的名稱。"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -305,12 +307,12 @@ msgstr "新增到剪貼簿"
 #: editactiondialog.cpp:122
 #, kde-format
 msgid "Command"
-msgstr "指令"
+msgstr "命令"
 
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "輸出"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -331,16 +333,19 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"一個動作會在它的 <interface>比對樣式</interface> 與剪貼簿內容相符時生效。生效"
+"時，動作的 <interface>命令</interface> 會出現在 Klipper 彈出式視窗中；若選取"
+"其中一個，則該命令將被執行。"
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "輸入要與剪貼簿比對的樣式"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "比對樣式："
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -350,11 +355,13 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"比對樣式是一個正則表達式。關於正則表達式的更多資訊請參考它的<link url="
+"\"https://zh.wikipedia.org/zh-tw/正則表達式\">維基百科條目</link>。"
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "輸入動作的描述"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -364,7 +371,7 @@ msgstr "描述："
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "包含在自動彈出選單裡"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -376,52 +383,51 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"這個比對的命令將被包含在自動彈出選單中（如果它在 <interface>動作選單</"
+"interface> 啟用的話）。如果關閉這個選項，這個比對的命令不會被包含在自動彈出選"
+"單中，但手動使用 <shortcut>%1</shortcut> 鍵盤快捷鍵叫出動作選單時則還是會包"
+"含。"
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "新增命令"
+msgstr "新增命令…"
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "新增命令"
+msgstr "編輯命令…"
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "移除命令"
+msgstr "刪除命令"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "確定要刪除已選命令 <resource>%1</resource> 嗎？"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "確認刪除命令"
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "動作屬性"
+msgstr "命令屬性"
 
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "輸入命令與參數"
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "指令"
+msgstr "命令："
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -432,43 +438,44 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"命令中的 <placeholder>&#37;s</placeholder> 將被替換為完整的剪貼簿內容。"
+"<placeholder>&#37;0</placeholder> 到 <placeholder>&#37;9</placeholder> 將被替"
+"換為比對樣式中相對應的擷取文字。"
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "輸入命令的描述"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "命令的輸出："
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "取代剪貼簿"
+msgstr "取代目前剪貼簿"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "新增到剪貼簿"
+msgstr "加到剪貼簿後方"
 
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "執行命令後它的標準輸出要如何處理。"
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "為命令重設圖示為預設值"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "圖示："
 
 #: historyimageitem.cpp:36
 #, kde-format
@@ -476,82 +483,70 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:155
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "動作彈跳選單的逾時時間："
+msgstr "自動動作彈出選單"
 
 #: klipper.cpp:194
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪貼簿歷史紀錄(&L)"
 
 #: klipper.cpp:201
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "剪貼簿設定(&C)"
+msgstr "設定 Klipper(&C)…"
 
 #: klipper.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "離開(&Q)"
 
 #: klipper.cpp:212
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "手動啟動在現在剪貼簿裡的行為"
+msgstr "手動在目前剪貼簿上觸發動作"
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "&Edit Contents…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "編輯內容(%E)…"
 
 #: klipper.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Show Barcode…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "顯示條碼(&S)…"
 
 #: klipper.cpp:237
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "下一個歷史紀錄項目"
 
 #: klipper.cpp:242
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "前一個歷史紀錄項目"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "在滑鼠游標位置開啟 Klipper"
+msgstr "在滑鼠游標位置顯示項目"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - 剪貼簿工具"
+msgstr "%1 - 剪貼簿工具"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -560,6 +555,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"您可以之後在剪貼簿小工具設定視窗中的 <interface>動作</interface> 頁面啟用網址"
+"動作"
 
 #: klipper.cpp:595
 #, kde-format
@@ -592,16 +589,14 @@ msgid "Mobile Barcode"
 msgstr "行動條碼"
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "確定要刪除整個剪貼簿的歷史紀錄嗎？"
+msgstr "您確定要清空並刪除整個剪貼簿歷史紀錄嗎？"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "清除剪貼簿歷史紀錄(&L)"
+msgstr "清空剪貼簿歷史紀錄"
 
 #: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
@@ -633,7 +628,7 @@ msgstr "Klipper 版本"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "在桌面工作階段之間儲存歷史"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -641,14 +636,13 @@ msgstr ""
 msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
-msgstr ""
+msgstr "保留剪貼簿歷史紀錄，讓它在您下次登入時仍然可用。"
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "避免清空剪貼簿"
+msgstr "防止剪貼簿被清空"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -656,14 +650,13 @@ msgstr "避免清空剪貼簿"
 msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
-msgstr ""
+msgstr "不要讓剪貼簿在例如離開應用程式時被清空。"
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "選取區與剪貼簿"
+msgstr "同步選取區與剪貼簿"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -673,13 +666,14 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"使用游標選取的內容會自動複製到剪貼簿，讓它可以被使用貼上動作或是滑鼠中鍵貼"
+"上。<br/><a href=\"1\">關於選取區與剪貼簿的更多資訊</a>。"
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
-msgstr "忽略選取"
+msgstr "忽略選取區"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -689,12 +683,14 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"使用游標選取但未被明確複製的內容不會自動儲存到剪貼簿歷史紀錄中，因而只能使用"
+"滑鼠中鍵貼上。"
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Text selection only"
-msgstr "只有選取的文字"
+msgstr "僅文字選取區"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -703,20 +699,20 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"只將文字選取區儲存到剪貼簿歷史紀錄，選取區內是影像或其他資料類型時則不儲存。"
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore images"
+#, kde-format
 msgid "Always ignore images"
-msgstr "忽略影像"
+msgstr "總是忽略影像"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
 #, kde-format
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
+msgstr "不管是否明確複製，都不要儲存影像到剪貼簿歷史紀錄中。"
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -726,17 +722,16 @@ msgstr "使用圖形化的正則表達式編輯器"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "忽略選取"
+msgstr "選取時馬上"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
-msgstr ""
+msgstr "選取內容時馬上顯示包含可用動作的彈出選單。"
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -746,30 +741,27 @@ msgstr "沒有 WM_CLASS 的動作"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "動作彈跳選單的逾時時間："
+msgstr "自動動作選單時間："
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "動作彈跳選單的逾時時間："
+msgstr "自動動作彈出選單要顯示多久。"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "剪貼簿歷史紀錄大小："
+msgstr "歷史紀錄大小："
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "剪貼簿歷史紀錄最多儲存的項目數量。"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
@@ -779,10 +771,9 @@ msgstr "在動作樹狀元件裡用於指示變更的空項目"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "當執行動作時移除空白字元"
+msgstr "從選取區移除前後空白字元"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -793,29 +784,28 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"執行動作前從已選文字開頭及結尾移除空白字元。舉例來說，這可以確保貼到瀏覽器的"
+"網址能被正常讀取。存在剪貼簿裡的文字不會受影響。"
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "將從歷史清單中所選的項目重新作用一次"
+msgstr "為從歷史紀錄中選擇的項目"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "確定要刪除整個剪貼簿的歷史紀錄嗎？"
+msgstr "從剪貼簿歷史紀錄選擇項目時顯示包含可用動作的彈出式選單。"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "開啟 MIME-based 動作"
+msgstr "包含 MIME 動作"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -824,13 +814,13 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"選取檔案名稱或網址時，在彈出選單中包含可以接受它的 MIME 類型的應用程式。"
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "剪貼簿內容"
+msgstr "%1 - 剪貼簿項目"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -838,10 +828,9 @@ msgid "Search…"
 msgstr "搜尋…"
 
 #: klipperpopup.cpp:167
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "正則表達式："
+msgstr "無效的正則表達式，%1"
 
 #: klipperpopup.cpp:172
 #, kde-format
@@ -859,10 +848,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE 剪貼歷程的工具程式"
+msgstr "Plasma 剪貼歷史工具程式"
 
 #: main.cpp:31
 #, kde-format
@@ -939,25 +927,27 @@ msgstr "維護者"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "鄭原真,林耕宇,Tsung-Chien Ho"
+msgstr "鄭原真,林耕宇,Tsung-Chien Ho,Kisaragi Hiu"
 
 #: main.cpp:46
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ycheng@sinica.edu.tw,s9321028@ncnu.edu.tw,iitze@hotmail.com"
+msgstr ""
+"ycheng@sinica.edu.tw,s9321028@ncnu.edu.tw,iitze@hotmail.com,mail@kisaragi-"
+"hiu.com"
 
 #: popupproxy.cpp:145
 #, kde-format
 msgid "&More"
 msgstr "更多(&M)"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
-msgstr "取消這個彈出式視窗"
+msgstr "停用這個彈出式視窗"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"

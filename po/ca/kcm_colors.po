@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2023-02-02 12:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -94,47 +94,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Si s'ha d'aplicar el color d'accent a partir del fons de pantalla"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Utilitat per a editar i crear esquemes de color"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
 msgstr "Creació de la utilitat"
 
-#: editor/kcolorschemeeditor.cpp:30
+#: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "Codi del KCM (es torna a usar aquí)"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:35
+#: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Esquema per a editar o fer servir com a base."
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -143,7 +143,7 @@ msgstr ""
 "Mostra el botó «Aplica» que desa els canvis sense preguntar (a diferència "
 "del botó «Desa com a»)"
 
-#: editor/kcolorschemeeditor.cpp:41
+#: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
@@ -151,7 +151,7 @@ msgstr ""
 "Fa transitori el diàleg per a una altra finestra d'aplicació especificada "
 "pel gestor"
 
-#: editor/kcolorschemeeditor.cpp:57
+#: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "No s'ha trobat l'esquema, es torna de nou a l'actual.\n"

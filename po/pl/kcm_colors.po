@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1645110 $
+# Version: $Revision: 1646208 $
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2023-02-04 08:34+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -93,47 +93,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Określa kiedy stosować barwy akcentu z tapety"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Narzędzie do edycji i tworzenia zestawów kolorów"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
 msgstr "Twórca narzędzia"
 
-#: editor/kcolorschemeeditor.cpp:30
+#: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "Kod KCM (wykorzystany tutaj)"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:35
+#: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Zestaw do edycji lub użycia jako podstawa."
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -142,7 +142,7 @@ msgstr ""
 "Pokaz przycisk 'Zastosuj', po którym zmiany zapisywane są bez pytania (w "
 "przeciwieństwie przycisku 'Zapisz jako')"
 
-#: editor/kcolorschemeeditor.cpp:41
+#: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
@@ -150,7 +150,7 @@ msgstr ""
 "Sprawia, że okno dialogowe jest traktowane jako tymczasowe dla okna z innej "
 "aplikacji o określonym uchwycie"
 
-#: editor/kcolorschemeeditor.cpp:57
+#: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Nie znaleziono zestawu, powrócono do bieżącego.\n"

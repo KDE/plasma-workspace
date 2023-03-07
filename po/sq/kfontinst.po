@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2009-05-23 18:07+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -41,27 +41,27 @@ msgstr ""
 msgid "Where to Install"
 msgstr "Ku ta Instaloj"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "Instaluesi i Gërmave"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "Instalues i thjeshtë gërmash"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "URl që do të instalohet"
@@ -131,17 +131,17 @@ msgstr "Zgjidh Gërmën Që Do Të Shfaqësh"
 msgid "URL to open"
 msgstr "URL që do të hapet"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Treguesi i Fonteve"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Shfaqës i thjeshtë gërmash"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

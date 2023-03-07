@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2005-11-25 21:56+0200\n"
 "Last-Translator: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -39,29 +39,29 @@ msgstr ""
 msgid "Where to Install"
 msgstr "Waar om te Installeer"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, fuzzy, kde-format
 msgid "Font Installer"
 msgstr "KDE Lettertipe Installeerder"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Simple font installer"
 msgstr "Eenvoudeige lettertipe vertoner"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2004"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, fuzzy, kde-format
 #| msgid "Where to Install"
 msgid "URL to install"
@@ -132,17 +132,17 @@ msgstr "Kies Lettertipe om te Vertoon"
 msgid "URL to open"
 msgstr "URL om oop te maak"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Lettertipe Vertoner"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Eenvoudeige lettertipe vertoner"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2004-2007"

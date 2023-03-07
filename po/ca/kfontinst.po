@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-09-07 18:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,28 +49,28 @@ msgstr ""
 msgid "Where to Install"
 msgstr "On s'ha d'instal·lar"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "Instal·lador de tipus de lletra"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "Instal·lador senzill de tipus de lletra"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Fes el diàleg transitori per a una aplicació X especificada pel «winid»"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "URL a instal·lar"
@@ -140,17 +140,17 @@ msgstr "Trieu el tipus de lletra per a visualitzar"
 msgid "URL to open"
 msgstr "URL a obrir"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Visualitzador del tipus de lletra"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Visualitzador simple de tipus de lletra"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2023-02-07 23:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -94,60 +94,60 @@ msgstr "使用者切換至桌布顏色或預設顏色之前所最後使用的自
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "是否應該套用來自桌布的強調色"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "編輯並建立配色的工具"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
 msgstr "工具建立"
 
-#: editor/kcolorschemeeditor.cpp:30
+#: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM 程式碼（在此重用）"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:35
+#: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "要編輯或是做為基礎的配色方案。"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr "顯示「套用」按鈕，直接儲存變更而不像「另存新檔」按鈕般詢問"
 
-#: editor/kcolorschemeeditor.cpp:41
+#: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "讓對話框能暫時讓其他應用程式視窗能透過處理函式指定"
 
-#: editor/kcolorschemeeditor.cpp:57
+#: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "找不到配色方案，退回至目前這一個。\n"

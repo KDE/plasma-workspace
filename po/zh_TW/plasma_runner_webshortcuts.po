@@ -4,20 +4,20 @@
 #
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2008.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009, 2010.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2010-03-30 10:03+0800\n"
-"Last-Translator: Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv "
-"dot tw>\n"
-"Language-Team: Chinese Traditional <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-03-06 21:54+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
@@ -33,14 +33,14 @@ msgstr "開啟網頁瀏覽器，並在 %1 查詢 :q:。"
 #: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "使用 DuckDuckGo 的驚歎號語法搜尋"
 
 #: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "在隱私視窗中搜尋"
 
 #: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "在無痕視窗中搜尋"

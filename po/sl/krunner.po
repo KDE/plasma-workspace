@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-09-16 06:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -32,32 +32,32 @@ msgstr ""
 "andrej.vernekar@moj.net,jlp@holodeck1.com,andrejm@ubuntu.si,matjaz."
 "jeran@amis.net"
 
-#: main.cpp:57 view.cpp:47
+#: main.cpp:56 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:57
+#: main.cpp:56
 #, kde-format
 msgid "Run Command interface"
 msgstr "Vmesnik za zagon ukaza"
 
-#: main.cpp:63
+#: main.cpp:62
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Uporabite vsebino odložišča kot poizvedbo za KRunner"
 
-#: main.cpp:64
+#: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Zaženi KRunner v ozadju in ne prikaži ga."
 
-#: main.cpp:65
+#: main.cpp:64
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Zamenjaj obstoječi pojavek"
 
-#: main.cpp:70
+#: main.cpp:69
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Poizvedba za zagon, uporabna samo, če ni naveden -c"

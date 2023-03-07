@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-12-28 02:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -36,32 +36,32 @@ msgstr "liudas@akmc.lt, opensuse.lietuviu.kalba@gmail.com, <>"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfigūruoti pelės veiksmų priedą"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma apvalkalas"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Įjungti QML JavaScript derintuvę"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Po lūžimo, nepaleisti automatiškai Plasma apvalkalo iš naujo"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Priverstinai įkelti nurodytą apvalkalo priedą"
 
-#: main.cpp:111
+#: main.cpp:108
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -70,12 +70,12 @@ msgstr ""
 "Įkelti Plasma apvalkalą kaip atskirą programą, reikalauja, kad būtų nurodyta "
 "„shell-plugin“ parinktis"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Pakeisti esamą egzempliorių"
 
-#: main.cpp:116
+#: main.cpp:113
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -84,22 +84,22 @@ msgstr ""
 "Įjungia testavimo veikseną ir nurodo testavimo aplinkos nustatymui skirtą "
 "išdėstymo javascript failą"
 
-#: main.cpp:117
+#: main.cpp:114
 #, kde-format
 msgid "file"
 msgstr "failas"
 
-#: main.cpp:121
+#: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Išvardija prieinamas naudotojo grįžtamojo ryšio parinktis"
 
-#: main.cpp:221
+#: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Nepavyko paleisti Plasma darbalaukio"
 
-#: main.cpp:222
+#: main.cpp:219
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -208,57 +208,57 @@ msgstr "%1 %2 ties %3"
 msgid "Disconnected Screen %1"
 msgstr "Atjungtas ekranas %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:175 shellcorona.cpp:177
 #, kde-format
 msgid "Show Desktop"
 msgstr "Rodyti darbalaukį"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:177
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Slėpti darbalaukį"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Rodyti veiklų perjungiklį"
 
-#: shellcorona.cpp:201
+#: shellcorona.cpp:202
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stabdyti dabartinę veiklą"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Perjungti į ankstesnę veiklą"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Perjungti į kitą veiklą"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Tvarkyti darbalaukius ir skydelius..."
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:1915
+#: shellcorona.cpp:1916
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:1951
+#: shellcorona.cpp:1952
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

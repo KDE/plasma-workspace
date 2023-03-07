@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -91,47 +91,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Ці павінен быць ужыты дамінантны колер са шпалер"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Утыліта для рэдагавання і стварэння колеравых схемаў"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
 msgstr "Стварэнне"
 
-#: editor/kcolorschemeeditor.cpp:30
+#: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "Код KCM (паўторна выкарыстаны тут)"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:35
+#: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Схема для рэдагавання або выкарыстання як асновы."
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -140,7 +140,7 @@ msgstr ""
 "Паказваць кнопку \"Ужыць\", якая захоўвае змены без пацвярджэння (у "
 "адрозненне ад кнопкі \"Захаваць як\")"
 
-#: editor/kcolorschemeeditor.cpp:41
+#: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
@@ -148,7 +148,7 @@ msgstr ""
 "Робіць дыялогавае акно пераходным для іншага акна праграмы, вызначанага "
 "адзнакай"
 
-#: editor/kcolorschemeeditor.cpp:57
+#: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Схема не знойдзеная, была вернутая бягучая.\n"

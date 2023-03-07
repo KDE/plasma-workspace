@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-09-07 18:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,28 +49,28 @@ msgstr ""
 msgid "Where to Install"
 msgstr "On s'ha d'instal·lar"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "Instal·lador de tipus de lletra"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "Instal·lador senzill de tipus de lletra"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Fes el diàleg transitori per a una aplicació X especificada per «winid»"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "URL que s'ha d'instal·lar"
@@ -140,17 +140,17 @@ msgstr "Seleccioneu el tipus de lletra per a visualitzar"
 msgid "URL to open"
 msgstr "URL que s'ha d'obrir"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Visor del tipus de lletra"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Visor simple de tipus de lletra"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"
@@ -673,7 +673,7 @@ msgstr "S'ha produït un error inesperat en processar: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:169
 #, kde-format
 msgid "Font Management"
-msgstr "Gestioneu els tipus de lletra"
+msgstr "Gestió dels tipus de lletra"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
@@ -2316,34 +2316,3 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy one into the "
-#~ "folder.</p>"
-#~ msgstr ""
-#~ "<h1>Instal·lador de tipus de lletra</h1><p> Este mòdul permet instal·lar "
-#~ "tipus de lletra TrueType, Type1 i Bitmap.</p><p>També podeu instal·lar "
-#~ "tipus de lletra utilitzant Konqueror: teclegeu fonts:/ en la barra "
-#~ "d'ubicació de Konqueror i mostrarà els tipus de lletra instal·lats. Per a "
-#~ "instal·lar un tipus de lletra, senzillament copieu-ne un a dins de la "
-#~ "carpeta apropiada.</p>"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy it into the "
-#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
-#~ "\"%2\" for system-wide fonts (available to all).</p>"
-#~ msgstr ""
-#~ "<h1>Instal·lador de tipus de lletra</h1><p> Este mòdul permet instal·lar "
-#~ "tipus de lletra TrueType, Type1, i Bitmap.</p><p>També podeu instal·lar "
-#~ "tipus de lletra utilitzant Konqueror: teclejant fonts:/ en la barra "
-#~ "d'ubicació de Konqueror es mostraran els tipus de lletra instal·lats. Per "
-#~ "a instal·lar un tipus de lletra, senzillament copieu-lo a dins de la "
-#~ "carpeta apropiada -  «%1» sols per als vostres tipus de lletra, o «%2» "
-#~ "per als tipus de lletra per a tot el sistema (disponibles per a tothom).</"
-#~ "p>"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-12-20 19:22+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,32 +32,32 @@ msgstr "mkondarev@yahoo.de"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Конфигуриране на приставката за действия на мишката"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Обвивка на Plasma"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активиране на QML Javascript откриване на грешки"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Без автоматично рестартиране на Plasma обвивка след срив"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудително зареждане на дадената приставка на обвивката"
 
-#: main.cpp:111
+#: main.cpp:108
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -66,12 +66,12 @@ msgstr ""
 "Зареждане на plasmashell като самостоятелно приложение, необходимо е "
 "задаване на опция за shell-plugin"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменяне на съществуваща инстанция"
 
-#: main.cpp:116
+#: main.cpp:113
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -80,22 +80,22 @@ msgstr ""
 "Активира тестовия режим и определя файла с оформление на javascript, за да "
 "настрои среда за тестване"
 
-#: main.cpp:117
+#: main.cpp:114
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:121
+#: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Списък на наличните опции за обратна връзка от потребителите"
 
-#: main.cpp:221
+#: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma не успя да стартира"
 
-#: main.cpp:222
+#: main.cpp:219
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -204,57 +204,57 @@ msgstr "%1 %2 on %3"
 msgid "Disconnected Screen %1"
 msgstr "Прекъснат екран %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:175 shellcorona.cpp:177
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:177
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:201
+#: shellcorona.cpp:202
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Спиране на текущата дейност"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активиране на запис от управление на задачите %1"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Настройване на работния плот и панелите..."
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:1915
+#: shellcorona.cpp:1916
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:1951
+#: shellcorona.cpp:1952
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

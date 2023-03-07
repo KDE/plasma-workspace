@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -88,47 +88,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "നിറക്കൂട്ടുകൾ എഡിറ്റു ചെയ്യാനും സൃഷ്ടിക്കാനുമുള്ള ഉപകരണം"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:29
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
 msgstr "ഉപയോഗയോഗ്യത സൃഷ്ടി"
 
-#: editor/kcolorschemeeditor.cpp:30
+#: editor/kcolorschemeeditor.cpp:26
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM കോഡ് (ഇവിടെ വീണ്ടും ഉപയോഗിച്ചിരിക്കുന്നു)"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:35
+#: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "എഡിറ്റു ചെയ്യുന്നതിനോ അടിസ്ഥാനമായി ഉപയോഗിക്കുന്നതിനോ ഉള്ള സ്കീം."
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -137,14 +137,14 @@ msgstr ""
 "ചോദിക്കാതെ മാറ്റങ്ങൾ സംരക്ഷിക്കുന്ന 'പ്രയോഗിക്കുക' ബട്ടൺ കാണിക്കുക('സേവ് ആസ്' ബട്ടണിൽ നിന്ന് "
 "വ്യത്യസ്തമായി)"
 
-#: editor/kcolorschemeeditor.cpp:41
+#: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr ""
 "ഹാൻഡിൽ വഴി വ്യക്തമാക്കിയിട്ടുള്ള മറ്റൊരു ആപ്ലിക്കേഷൻ ജാലകത്തിനായി ഡയലോഗ് ക്ഷണികമാക്കുന്നു"
 
-#: editor/kcolorschemeeditor.cpp:57
+#: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "സ്കീം കണ്ടെത്തിയില്ല, നിലവിലുള്ളതിലേക്ക് മടങ്ങുന്നു.\n"

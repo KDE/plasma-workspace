@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -42,27 +42,27 @@ msgstr ""
 msgid "Where to Install"
 msgstr "എവിടെ ഇന്‍സ്റ്റാള്‍ ചെയ്യണം"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, kde-format
 msgid "Font Installer"
 msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, kde-format
 msgid "Simple font installer"
 msgstr "ലളിതമായ അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2007"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "വിനിഡ് വ്യക്തമാക്കിയ X അപ്ലിക്കേഷനായി ഡയലോഗ് താത്കാലികമാക്കുന്നു"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, kde-format
 msgid "URL to install"
 msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനുള്ള യുആര്‍എല്‍"
@@ -134,17 +134,17 @@ msgstr "കാണുന്നതിനായി അക്ഷരസഞ്ചയ�
 msgid "URL to open"
 msgstr "തുറക്കുവാനുള്ള യുആര്‍എല്‍"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "അക്ഷരസഞ്ചയദര്‍ശിനി"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "അക്ഷരസഞ്ചയം കാണുന്നതിനുള്ള ലളിതമായ പ്രയോഗം"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2004-2007"

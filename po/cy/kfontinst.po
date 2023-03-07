@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 03:10+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2005-01-27 20:19+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -41,29 +41,29 @@ msgstr ""
 msgid "Where to Install"
 msgstr "Lle i Arsefydlu"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:108
 #, fuzzy, kde-format
 msgid "Font Installer"
 msgstr "Arsefydlydd Wynebfathau KDE"
 
-#: apps/Installer.cpp:112
+#: apps/Installer.cpp:110
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Simple font installer"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#: apps/Installer.cpp:112 apps/Printer.cpp:329
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2007"
 msgstr "(h) Craig Drummond, 2004"
 
-#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#: apps/Installer.cpp:118 apps/Printer.cpp:335
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:120
 #, fuzzy, kde-format
 #| msgid "Where to Install"
 msgid "URL to install"
@@ -134,17 +134,17 @@ msgstr "Dewis Wynebfath i'w Gweld"
 msgid "URL to open"
 msgstr "URL i agor"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Font Viewer"
 msgstr "Gwelydd Wynebfathau"
 
-#: apps/Viewer.cpp:154
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Viewer.cpp:156
+#: apps/Viewer.cpp:155
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2004-2007"

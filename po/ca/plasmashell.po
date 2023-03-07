@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 02:22+0000\n"
 "PO-Revision-Date: 2022-12-16 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -36,34 +36,34 @@ msgstr "antonibella5@yahoo.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configura el connector d'accions del ratolí"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: main.cpp:88
+#: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intèrpret d'ordres del Plasma"
 
-#: main.cpp:100
+#: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Habilita el depurador de JavaScript del QML"
 
-#: main.cpp:103
+#: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automàticament l'intèrpret d'ordres del Plasma després d'una "
 "fallada"
 
-#: main.cpp:106
+#: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Força la càrrega del connector d'intèrpret d'ordres indicat"
 
-#: main.cpp:111
+#: main.cpp:108
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -72,12 +72,12 @@ msgstr ""
 "Carrega el «plasmashell» com una aplicació independent, necessita "
 "especificar l'opció del «shell-plugin»"
 
-#: main.cpp:113
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: main.cpp:116
+#: main.cpp:113
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -86,22 +86,22 @@ msgstr ""
 "Activa el mode prova i especifica el fitxer en JavaScript de disposició per "
 "a definir l'entorn de prova"
 
-#: main.cpp:117
+#: main.cpp:114
 #, kde-format
 msgid "file"
 msgstr "fitxer"
 
-#: main.cpp:121
+#: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 
-#: main.cpp:221
+#: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Ha fallat en iniciar el Plasma"
 
-#: main.cpp:222
+#: main.cpp:219
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -211,57 +211,57 @@ msgstr "%1 %2 a %3"
 msgid "Disconnected Screen %1"
 msgstr "Pantalla desconnectada %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:175 shellcorona.cpp:177
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostra l'escriptori"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:177
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Oculta l'escriptori"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:201
+#: shellcorona.cpp:202
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Atura l'activitat actual"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gestiona escriptoris i plafons..."
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els plafons"
 
-#: shellcorona.cpp:1915
+#: shellcorona.cpp:1916
 #, kde-format
 msgid "Add Panel"
 msgstr "Afegeix un plafó"
 
-#: shellcorona.cpp:1951
+#: shellcorona.cpp:1952
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

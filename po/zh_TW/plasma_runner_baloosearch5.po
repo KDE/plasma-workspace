@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2023-01-29 23:31+0900\n"
+"PO-Revision-Date: 2023-03-06 21:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,68 +18,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: baloosearchrunner.cpp:65
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "開啟存放資料夾"
+msgstr "開啟所在資料夾"
 
 #: baloosearchrunner.cpp:87
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audios"
 msgstr "音效"
 
 #: baloosearchrunner.cpp:88
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
 msgstr "影像"
 
 #: baloosearchrunner.cpp:89
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
 msgstr "影片"
 
 #: baloosearchrunner.cpp:90
-#, fuzzy, kde-format
-#| msgid "Spreadsheet"
+#, kde-format
 msgid "Spreadsheets"
 msgstr "試算表"
 
 #: baloosearchrunner.cpp:91
-#, fuzzy, kde-format
-#| msgid "Presentation"
+#, kde-format
 msgid "Presentations"
 msgstr "簡報"
 
 #: baloosearchrunner.cpp:92
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
 msgstr "資料夾"
 
 #: baloosearchrunner.cpp:93
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
 msgstr "文件"
 
 #: baloosearchrunner.cpp:94
-#, fuzzy, kde-format
-#| msgid "Archive"
+#, kde-format
 msgid "Archives"
 msgstr "封存"
 
 #: baloosearchrunner.cpp:95
-#, fuzzy, kde-format
-#| msgid "Text"
+#, kde-format
 msgid "Texts"
 msgstr "文字"
 
 #: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "檔案"
