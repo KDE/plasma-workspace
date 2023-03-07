@@ -53,6 +53,7 @@
         "Description[uk]": "Встановити зображення як фонове (для вікна блокування)",
         "Description[x-test]": "xxSet image as (lockscreen) wallpaperxx",
         "Description[zh_CN]": "设置图像为 (锁屏) 壁纸",
+        "Description[zh_TW]": "設定影像為（鎖定螢幕）桌布",
         "License": "GPL",
         "MimeTypes": [
             "image/avif",
@@ -89,6 +90,7 @@
         "Name[tr]": "Ayarla",
         "Name[uk]": "Встановити як",
         "Name[x-test]": "xxSet asxx",
-        "Name[zh_CN]": "设为"
+        "Name[zh_CN]": "设为",
+        "Name[zh_TW]": "設為"
     }
 }
