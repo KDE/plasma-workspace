@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1642531 $
+# Version: $Revision: 1646213 $
 # Norbert Popiołek <norbert@kde.com.pl>
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 03:06+0000\n"
 "PO-Revision-Date: 2022-12-03 09:51+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -976,12 +976,12 @@ msgstr "&Więcej"
 msgid "Clipboard Contents"
 msgstr "Zawartość schowka"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Wyłącz to okno"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anuluj"

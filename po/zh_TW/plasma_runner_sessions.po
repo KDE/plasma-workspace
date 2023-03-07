@@ -11,24 +11,23 @@ msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 11:11+0000\n"
-"PO-Revision-Date: 2023-02-07 20:16+0900\n"
+"PO-Revision-Date: 2023-03-07 02:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "登出"
+msgstr "登出;logout;log out"
 
 #: sessionrunner.cpp:26
 #, kde-format
@@ -36,14 +35,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "登出，離開現有的桌面工作階段"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "關機"
+msgstr "關機;shutdown;shut down"
 
 #: sessionrunner.cpp:36
 #, kde-format
@@ -51,14 +48,12 @@ msgid "Turns off the computer"
 msgstr "關閉電腦"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "重新啟動"
+msgstr "restart;reboot;重新啟動;重啟;重開機;重新開機"
 
 #: sessionrunner.cpp:46
 #, kde-format
@@ -66,12 +61,11 @@ msgid "Reboots the computer"
 msgstr "重新開機"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "鎖定螢幕"
+msgstr "lock;lock screen;鎖定螢幕;鎖定"
 
 #: sessionrunner.cpp:56
 #, kde-format
@@ -79,13 +73,12 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "鎖定目前的工作階段，啟動螢幕保護程式"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "新工作階段"
+msgstr "save;save session;儲存;儲存工作階段"
 
 #: sessionrunner.cpp:66
 #, kde-format
@@ -93,13 +86,12 @@ msgid "Saves the current session for session restoration"
 msgstr "為工作階段回復功能儲存目前工作階段"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "切換使用者"
+msgstr "switch user;new session;新工作階段;切換使用者"
 
 #: sessionrunner.cpp:76
 #, kde-format
@@ -107,12 +99,10 @@ msgid "Starts a new session as a different user"
 msgstr "用不同使用者開始新的工作階段"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr "工作階段"
+msgstr "sessions;工作階段"
 
 #: sessionrunner.cpp:84
 #, kde-format
@@ -120,12 +110,10 @@ msgid "Lists all sessions"
 msgstr "列出所有工作階段"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "切換"
+msgstr "switch;切換"
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -138,20 +126,16 @@ msgstr "切換到使用者 :q: 的工作階段，若沒有提供 :q: 則列出�
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "登出"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shut down computer command"
-#| msgid "shut down"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "關機"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "重新啟動"
@@ -160,7 +144,7 @@ msgstr "重新啟動"
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "鎖定"
 
 #: sessionrunner.cpp:151
 #, kde-format
@@ -181,6 +165,10 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>您即將進入新的桌面工作階段。</p><p>將會顯示一個登入畫面，而目前工作階段則"
+"會被隱藏。</p><p>您可以透過以下方式在桌面工作階段之間切換：</p><ul><li>Ctrl"
+"+Alt+F{工作階段數字}</li><li>Plasma 搜尋（輸入 '%1'）</li><li>Plasma 元件（例"
+"如應用程式啟動器）</li></ul>"
 
 #: sessionrunner.cpp:287
 #, kde-format

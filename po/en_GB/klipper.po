@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 03:06+0000\n"
 "PO-Revision-Date: 2022-12-31 16:56+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -970,12 +970,12 @@ msgstr "&More"
 msgid "Clipboard Contents"
 msgstr "Clipboard Contents"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Disable This Popup"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel"

@@ -2,40 +2,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010, 2014.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-17 00:48+0000\n"
-"PO-Revision-Date: 2014-09-14 09:18+0800\n"
-"Last-Translator: Franklin\n"
-"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-03-07 02:49+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: freespacenotifier.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning..."
+#, kde-format
 msgid "Configure Warning…"
-msgstr "設定警告..."
+msgstr "設定警告…"
 
 #: freespacenotifier.cpp:95
 #, kde-format
 msgid "Open in Filelight"
-msgstr ""
+msgstr "在 Filelight 中開啟"
 
 #: freespacenotifier.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "Opens a file manager like dolphin"
-#| msgid "Open File Manager..."
+#, kde-format
 msgid "Open in File Manager"
-msgstr "開啟檔案管理員..."
+msgstr "在檔案管理員開啟"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
@@ -68,30 +65,18 @@ msgid " MiB"
 msgstr " MB"
 
 #: module.cpp:37
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Warns the user that the system is running low on space on his home "
-#| "folder, indicating the percentage and absolute MiB size remaining"
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)"
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
-msgstr "您的家目錄磁碟空間即將用完。您還剩 %1 MiB（%2%）"
+msgstr "您的家目錄磁碟空間即將用完，您還剩 %1 MiB（%2%）。"
 
 #: module.cpp:45
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Warns the user that the system is running low on space on his home "
-#| "folder, indicating the percentage and absolute MiB size remaining"
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)"
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
-msgstr "您的家目錄磁碟空間即將用完。您還剩 %1 MiB（%2%）"
+msgstr "您的根目錄所在分割區磁碟空間即將用完，您還剩 %1 MiB（%2%）。"
 
 #: module.cpp:62
 #, kde-format

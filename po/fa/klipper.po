@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 03:06+0000\n"
 "PO-Revision-Date: 2007-09-02 15:24+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -968,12 +968,12 @@ msgstr "&بیشتر‌"
 msgid "Clipboard Contents"
 msgstr "ذخیره محتویات تخته یادداشت هنگام &خروج‌"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "غیرفعال کردن این بالاپر"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&لغو‌"

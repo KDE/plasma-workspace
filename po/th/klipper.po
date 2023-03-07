@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 03:06+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -952,12 +952,12 @@ msgstr "เพิ่มเ&ติม"
 msgid "Clipboard Contents"
 msgstr "เนื้อหาในคลิปบอร์ด"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "ปิดการใช้งานหน้าต่างผุดนี้"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-07 03:06+0000\n"
 "PO-Revision-Date: 2022-10-18 20:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -929,12 +929,12 @@ msgstr "&மேலும்"
 msgid "Clipboard Contents"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கம்"
 
-#: urlgrabber.cpp:199
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
 msgstr "இந்த மேல்தோன்றும் துப்பை முடக்கு"
 
-#: urlgrabber.cpp:205
+#: urlgrabber.cpp:206
 #, kde-format
 msgid "&Cancel"
 msgstr "&ரத்து செய்"

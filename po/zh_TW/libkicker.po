@@ -4,13 +4,13 @@
 # Franklin, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 02:38+0000\n"
-"PO-Revision-Date: 2022-07-10 17:45+0900\n"
+"PO-Revision-Date: 2023-03-07 02:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: plugin/actionlist.cpp:86
 #, kde-format
@@ -46,30 +46,25 @@ msgid "Pin to Task Manager"
 msgstr "釘選到工作管理員"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "最近使用的文件"
+msgstr "最近的檔案"
 
 #: plugin/actionlist.cpp:317
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Forget Recent Files"
-msgstr "忘掉最近的文件"
+msgstr "遺忘最近的檔案"
 
 #: plugin/actionlist.cpp:395
-#, fuzzy, kde-format
-#| msgid "Edit Application..."
+#, kde-format
 msgid "Edit Application…"
-msgstr "編輯應用程式..."
+msgstr "編輯應用程式…"
 
 #: plugin/actionlist.cpp:429
-#, fuzzy, kde-format
-#| msgctxt "@action opens a software center with the application"
-#| msgid "Uninstall or Manage Add-Ons..."
+#, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr "解除安裝或管理外掛程式..."
+msgstr "解除安裝或管理外掛程式…"
 
 #: plugin/appentry.cpp:308
 #, kde-format
@@ -121,10 +116,9 @@ msgid "Computer"
 msgstr "電腦"
 
 #: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
-#, fuzzy, kde-format
-#| msgid "Show Contact Information..."
+#, kde-format
 msgid "Show Contact Information…"
-msgstr "顯示聯絡人資訊..."
+msgstr "顯示聯絡人資訊…"
 
 #. i18n.
 #: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
@@ -156,7 +150,7 @@ msgstr "最近使用"
 #: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "檔案"
 
 #: plugin/recentusagemodel.cpp:238
 #, kde-format
@@ -169,10 +163,9 @@ msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
 
 #: plugin/recentusagemodel.cpp:335
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget File"
-msgstr "全部遺忘"
+msgstr "遺忘檔案"
 
 #: plugin/recentusagemodel.cpp:472
 #, kde-format
@@ -185,10 +178,9 @@ msgid "Forget All Applications"
 msgstr "遺忘所有應用程式"
 
 #: plugin/recentusagemodel.cpp:477
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget All Files"
-msgstr "全部遺忘"
+msgstr "遺忘所有檔案"
 
 #: plugin/rootmodel.cpp:95
 #, kde-format
@@ -203,7 +195,7 @@ msgstr "所有應用程式"
 #: plugin/rootmodel.cpp:410
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "這不應該是可見的！請使用 KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:422
 #, kde-format
@@ -211,10 +203,9 @@ msgid "Recent Contacts"
 msgstr "最近使用的聯絡人"
 
 #: plugin/rootmodel.cpp:429
-#, fuzzy, kde-format
-#| msgid "Often Used Documents"
+#, kde-format
 msgid "Often Used Files"
-msgstr "經常使用的文件"
+msgstr "經常使用的檔案"
 
 #: plugin/rootmodel.cpp:438
 #, kde-format
