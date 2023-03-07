@@ -95,6 +95,7 @@
         "Description[vi]": "Một biểu tượng chung",
         "Description[x-test]": "xxA generic iconxx",
         "Description[zh_CN]": "通用图标",
+        "Description[zh_TW]": "通用圖示",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.icon",
         "License": "GPL",
