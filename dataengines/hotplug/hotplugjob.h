@@ -8,9 +8,9 @@
 
 #include "hotplugengine.h"
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
-class HotplugJob : public Plasma::ServiceJob
+class HotplugJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

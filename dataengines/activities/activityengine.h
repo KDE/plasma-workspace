@@ -8,8 +8,8 @@
 
 #include <QHash>
 
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/Service>
 
 #include "ActivityData.h"
 #include "ActivityRankingInterface.h"
@@ -24,13 +24,13 @@ class Controller;
 class Info;
 }
 
-class ActivityEngine : public Plasma::DataEngine
+class ActivityEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
 public:
     ActivityEngine(QObject *parent, const QVariantList &args);
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
     void init();
 
 public Q_SLOTS:

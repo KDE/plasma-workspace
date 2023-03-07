@@ -11,14 +11,14 @@
 using namespace NotificationManager;
 
 JobControl::JobControl(QObject *parent, Job *job)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
     , m_job(job)
 {
     setName(QStringLiteral("applicationjobs"));
     setDestination(KuiserverEngine::sourceName(job));
 }
 
-Plasma::ServiceJob *JobControl::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *JobControl::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new JobAction(m_job, operation, parameters, this);
 }

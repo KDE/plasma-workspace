@@ -8,12 +8,12 @@
 #include "packagekitjob.h"
 
 PackagekitService::PackagekitService(QObject *parent)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
 {
     setName(QStringLiteral("packagekit"));
 }
 
-Plasma::ServiceJob *PackagekitService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *PackagekitService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new PackagekitJob(destination(), operation, parameters, this);
 }

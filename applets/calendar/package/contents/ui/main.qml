@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.12
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.workspace.calendar 2.0
@@ -33,7 +34,7 @@ Item {
     Layout.minimumWidth: PlasmaCore.Units.iconSizes.large
     Layout.minimumHeight: PlasmaCore.Units.iconSizes.large
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: dataSource
         engine: "time"
         connectedSources: ["Local"]

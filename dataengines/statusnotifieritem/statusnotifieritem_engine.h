@@ -8,12 +8,12 @@
 #pragma once
 
 #include "statusnotifierwatcher_interface.h"
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/Service>
 #include <QDBusConnection>
 
 // Define our plasma Runner
-class StatusNotifierItemEngine : public Plasma::DataEngine
+class StatusNotifierItemEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -21,7 +21,7 @@ public:
     // Basic Create/Destroy
     StatusNotifierItemEngine(QObject *parent, const QVariantList &args);
     ~StatusNotifierItemEngine() override;
-    Plasma::Service *serviceForSource(const QString &name) override;
+    Plasma5Support::Service *serviceForSource(const QString &name) override;
 
 protected:
     virtual void init();

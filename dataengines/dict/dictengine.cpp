@@ -14,10 +14,10 @@
 #include <QTcpSocket>
 #include <QUrl>
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 DictEngine::DictEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_tcpSocket(nullptr)
 {
     Q_UNUSED(args)

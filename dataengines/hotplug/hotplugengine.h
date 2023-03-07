@@ -8,8 +8,8 @@
 
 #include <QObject>
 
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/Service>
 
 #include <Solid/Predicate>
 
@@ -18,7 +18,7 @@ class KDirWatch;
 /**
  * This class is connected with solid, filter devices and provide signal with source for applet in Plasma
  */
-class HotplugEngine : public Plasma::DataEngine
+class HotplugEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -26,7 +26,7 @@ public:
     HotplugEngine(QObject *parent, const QVariantList &args);
     ~HotplugEngine() override;
     void init();
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 protected Q_SLOTS:
     void onDeviceAdded(const QString &udi);

@@ -17,14 +17,14 @@
 #include <QDBusPendingReply>
 
 PlayerControl::PlayerControl(PlayerContainer *container, QObject *parent)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
     , m_container(container)
 {
     setObjectName(container->objectName() + QLatin1String(" controller"));
     setName(QStringLiteral("mpris2"));
     setDestination(container->objectName());
 
-    connect(container, &Plasma::DataContainer::dataUpdated, this, &PlayerControl::updateEnabledOperations);
+    connect(container, &Plasma5Support::DataContainer::dataUpdated, this, &PlayerControl::updateEnabledOperations);
     connect(container, &QObject::destroyed, this, &PlayerControl::containerDestroyed);
     updateEnabledOperations();
 }
@@ -113,7 +113,7 @@ void PlayerControl::changeVolume(double delta, bool showOSD)
     });
 }
 
-Plasma::ServiceJob *PlayerControl::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *PlayerControl::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     if (!m_container)
         return nullptr;

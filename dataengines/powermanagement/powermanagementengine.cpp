@@ -33,7 +33,7 @@
 #include <QIcon>
 
 #include "powermanagementservice.h"
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
 
@@ -64,7 +64,7 @@ void createAsyncDBusMethodCallAndCallback(QObject *parent,
 }
 
 PowermanagementEngine::PowermanagementEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_sources(basicSourceNames())
     , m_session(new SessionManagement(this))
 {
@@ -409,10 +409,10 @@ bool PowermanagementEngine::updateSourceEvent(const QString &source)
         setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
         return true;
     }
-    return Plasma::DataEngine::updateSourceEvent(source);
+    return Plasma5Support::DataEngine::updateSourceEvent(source);
 }
 
-Plasma::Service *PowermanagementEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *PowermanagementEngine::serviceForSource(const QString &source)
 {
     if (source == QLatin1String("PowerDevil")) {
         return new PowerManagementService(this);

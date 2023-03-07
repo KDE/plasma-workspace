@@ -8,9 +8,9 @@
 
 #include "soliddeviceengine.h"
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
-class SolidDeviceJob : public Plasma::ServiceJob
+class SolidDeviceJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

@@ -96,7 +96,7 @@ public:
     Ip *q;
     bool m_countryResolved = false;
     bool m_geoLocationResolved = false;
-    Plasma::DataEngine::Data m_data;
+    Plasma5Support::DataEngine::Data m_data;
     QNetworkAccessManager m_nam;
 };
 
@@ -142,7 +142,7 @@ void Ip::update()
 {
     d->clear();
     if (!NetworkManager::isNetworkingEnabled()) {
-        setData(Plasma::DataEngine::Data());
+        setData(Plasma5Support::DataEngine::Data());
         return;
     }
     const QJsonArray wifiAccessPoints = accessPoints();

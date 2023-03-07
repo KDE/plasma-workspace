@@ -755,7 +755,7 @@ bool UKMETIon::readObservationXMLData(const QString &source, QXmlStreamReader &x
     }
 
     bool solarDataSourceNeedsConnect = false;
-    Plasma::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
+    Plasma5Support::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
     if (timeEngine) {
         const bool canCalculateElevation = (data.observationDateTime.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
@@ -930,7 +930,7 @@ void UKMETIon::updateWeather(const QString &source)
     weatherSource.replace(QStringLiteral("bbcukmet|"), QStringLiteral("bbcukmet|weather|"));
     weatherSource.append(QLatin1Char('|') + place.sourceExtraArg);
 
-    Plasma::DataEngine::Data data;
+    Plasma5Support::DataEngine::Data data;
 
     // work-around for buggy observation RSS feed missing the station name
     QString stationName = weatherData.stationName;
@@ -1034,7 +1034,7 @@ void UKMETIon::updateWeather(const QString &source)
     setData(weatherSource, data);
 }
 
-void UKMETIon::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
+void UKMETIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
 {
     const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
 

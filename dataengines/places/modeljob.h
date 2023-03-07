@@ -5,10 +5,10 @@
 */
 #pragma once
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 #include <kfileplacesmodel.h>
 
-class ModelJob : public Plasma::ServiceJob
+class ModelJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

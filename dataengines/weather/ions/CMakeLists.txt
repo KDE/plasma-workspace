@@ -9,7 +9,7 @@ ecm_qt_declare_logging_category(ionlib_SRCS
 
 add_library (weather_ion SHARED ${ionlib_SRCS})
 generate_export_header(weather_ion BASE_NAME ion)
-target_link_libraries (weather_ion PRIVATE KF6::I18n PUBLIC Qt::Core KF6::Plasma)
+target_link_libraries (weather_ion PRIVATE KF6::I18n PUBLIC Qt::Core KF6::Plasma KF6::Plasma5Support)
 
 set_target_properties(weather_ion PROPERTIES
    VERSION 7.0.0
@@ -20,7 +20,7 @@ install (TARGETS weather_ion EXPORT kdeworkspaceLibraryTargets ${KDE_INSTALL_TAR
 
 install (FILES ion.h
                ${CMAKE_CURRENT_BINARY_DIR}/ion_export.h
-         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/plasma/weather COMPONENT Devel)
+         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/plasma5support/weather COMPONENT Devel)
 
 # install (FILES includes/Ion
 #          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KDE/Plasma/Weather COMPONENT Devel)

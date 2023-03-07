@@ -14,12 +14,12 @@
 #include "statusnotifieritemsource.h"
 
 // plasma
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 /**
  * Task Job
  */
-class StatusNotifierItemJob : public Plasma::ServiceJob
+class StatusNotifierItemJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

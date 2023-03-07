@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include <plasma/service.h>
+#include <plasma5support/service.h>
 
 #include <QPointer>
 
 #include "job.h"
 
-class JobControl : public Plasma::Service
+class JobControl : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -20,7 +20,7 @@ public:
     JobControl(QObject *parent, NotificationManager::Job *job);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     QPointer<NotificationManager::Job> m_job;

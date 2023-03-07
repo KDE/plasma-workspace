@@ -23,7 +23,7 @@ public:
     void update();
 
 Q_SIGNALS:
-    void dataReady(const Plasma::DataEngine::Data &data);
+    void dataReady(const Plasma5Support::DataEngine::Data &data);
 
 protected:
     void run() override;

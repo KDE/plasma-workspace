@@ -13,7 +13,7 @@
 #include "faviconprovider.h"
 
 FaviconsEngine::FaviconsEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
 }
 

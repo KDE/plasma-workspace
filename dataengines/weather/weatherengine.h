@@ -14,8 +14,8 @@
 #endif
 #include <QTimer>
 
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/DataEngineConsumer>
 
 #include "ions/ion.h"
 
@@ -44,7 +44,7 @@
  * with the extra strings appended after extra
  */
 
-class WeatherEngine : public Plasma::DataEngine, public Plasma::DataEngineConsumer
+class WeatherEngine : public Plasma5Support::DataEngine, public Plasma5Support::DataEngineConsumer
 {
     Q_OBJECT
 
@@ -57,7 +57,7 @@ public:
 
     ~WeatherEngine() override;
 
-protected: // Plasma::DataEngine API
+protected: // Plasma5Support::DataEngine API
     /**
      * We use it to communicate to the Ion plugins to set the data sources.
      * @param source The datasource name.
@@ -75,7 +75,7 @@ protected Q_SLOTS: // expected DataEngine class method
      * @param source The datasource to be updated.
      * @param data The new data updated.
      */
-    void dataUpdated(const QString &source, const Plasma::DataEngine::Data &data);
+    void dataUpdated(const QString &source, const Plasma5Support::DataEngine::Data &data);
 
 private Q_SLOTS:
     void forceUpdate(IonInterface *ion, const QString &source);

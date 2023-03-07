@@ -8,6 +8,7 @@ target_link_libraries(plasma-geolocation-interface
         Qt::Core
         Qt::Network
         KF6::Plasma
+        KF6::Plasma5Support
     PRIVATE
         KF6::KIOCore
 )
@@ -27,13 +28,14 @@ generate_export_header(plasma_engine_geolocation EXPORT_FILE_NAME "geolocation_e
 target_link_libraries(plasma_engine_geolocation
     plasma-geolocation-interface
     KF6::Plasma
+    KF6::Plasma5Support
     KF6::CoreAddons
     KF6::KIOCore
     KF6::NetworkManagerQt
     KF6::Service
     KF6::Solid)
 
-kcoreaddons_add_plugin(plasma-geolocation-ip SOURCES location_ip.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
+kcoreaddons_add_plugin(plasma-geolocation-ip SOURCES location_ip.cpp INSTALL_NAMESPACE plasma5support/geolocationprovider)
 ecm_qt_declare_logging_category(plasma-geolocation-ip HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF6::NetworkManagerQt)
@@ -41,7 +43,7 @@ target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF6::Ne
 pkg_check_modules(LIBGPS libgps IMPORTED_TARGET)
 
 if(TARGET PkgConfig::LIBGPS)
-    kcoreaddons_add_plugin(plasma-geolocation-gps SOURCES location_gps.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
+    kcoreaddons_add_plugin(plasma-geolocation-gps SOURCES location_gps.cpp INSTALL_NAMESPACE plasma5support/geolocationprovider)
     ecm_qt_declare_logging_category(plasma-geolocation-gps HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface PkgConfig::LIBGPS)
 endif()

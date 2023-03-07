@@ -5,9 +5,10 @@ set(favicons_engine_SRCS
     faviconprovider.h
 )
 
-kcoreaddons_add_plugin(plasma_engine_favicons SOURCES ${favicons_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_favicons SOURCES ${favicons_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_favicons
     KF6::Plasma
+    KF6::Plasma5Support
     KF6::KIOCore
     Qt::Gui
 )

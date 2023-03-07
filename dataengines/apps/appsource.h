@@ -7,7 +7,7 @@
 #pragma once
 
 // plasma
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 #include <KService>
 #include <KServiceGroup>
@@ -15,7 +15,7 @@
 /**
  * App Source
  */
-class AppSource : public Plasma::DataContainer
+class AppSource : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 
@@ -25,7 +25,7 @@ public:
     ~AppSource() override;
 
 protected:
-    Plasma::Service *createService();
+    Plasma5Support::Service *createService();
     KService::Ptr getApp();
     bool isApp() const;
 

@@ -9,7 +9,7 @@
 #include <QPoint>
 #include <QTimerEvent>
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <config-X11.h>
 
@@ -17,7 +17,7 @@
 class CursorNotificationHandler;
 #endif
 
-class MouseEngine : public Plasma::DataEngine
+class MouseEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

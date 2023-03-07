@@ -10,7 +10,7 @@
 
 #include "../ion.h"
 
-#include <Plasma/DataEngineConsumer>
+#include <Plasma5Support/DataEngineConsumer>
 
 #include <QDateTime>
 #include <QVector>
@@ -72,7 +72,7 @@ public:
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
 
-class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma::DataEngineConsumer
+class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma5Support::DataEngineConsumer
 {
     Q_OBJECT
 
@@ -85,7 +85,7 @@ public: // IonInterface API
 
 public Q_SLOTS:
     // for solar data pushes from the time engine
-    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
+    void dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;

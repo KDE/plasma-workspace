@@ -8,14 +8,14 @@
 
 #include "playercontainer.h"
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 #include <QDBusObjectPath>
 
 class OrgFreedesktopDBusPropertiesInterface;
 class OrgMprisMediaPlayer2Interface;
 class OrgMprisMediaPlayer2PlayerInterface;
 
-class PlayerControl : public Plasma::Service
+class PlayerControl : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -49,7 +49,7 @@ public:
 
     QDBusObjectPath trackId() const;
 
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
     void changeVolume(double delta, bool showOSD);
 

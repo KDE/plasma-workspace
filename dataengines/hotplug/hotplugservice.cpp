@@ -9,14 +9,14 @@
 #include "hotplugjob.h"
 
 HotplugService::HotplugService(HotplugEngine *parent, const QString &source)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
     , m_engine(parent)
 {
     setName(QStringLiteral("hotplug"));
     setDestination(source);
 }
 
-Plasma::ServiceJob *HotplugService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *HotplugService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new HotplugJob(m_engine, destination(), operation, parameters, this);
 }

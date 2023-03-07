@@ -38,7 +38,7 @@ void Gpsd::run()
 #endif
 
     while (!m_abort) {
-        Plasma::DataEngine::Data d;
+        Plasma5Support::DataEngine::Data d;
 
 #if GPSD_API_MAJOR_VERSION >= 7
         if (gps_read(m_gpsdata, NULL, 0) != -1) {
@@ -88,7 +88,7 @@ Gps::Gps(QObject *parent, const QVariantList &args)
 #endif
         qCDebug(DATAENGINE_GEOLOCATION) << "gpsd found.";
         m_gpsd = new Gpsd(m_gpsdata);
-        connect(m_gpsd, SIGNAL(dataReady(Plasma::DataEngine::Data)), this, SLOT(setData(Plasma::DataEngine::Data)));
+        connect(m_gpsd, SIGNAL(dataReady(Plasma5Support::DataEngine::Data)), this, SLOT(setData(Plasma5Support::DataEngine::Data)));
     } else {
         qCWarning(DATAENGINE_GEOLOCATION) << "gpsd not found";
     }

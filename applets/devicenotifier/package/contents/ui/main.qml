@@ -11,6 +11,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
@@ -66,7 +67,7 @@ Item {
 
     Plasmoid.status: (filterModel.count > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: hpSource
         engine: "hotplug"
         connectedSources: sources
@@ -100,7 +101,7 @@ Item {
     }
     Plasmoid.fullRepresentation: FullRepresentation {}
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: sdSource
         engine: "soliddevice"
         interval: 0
@@ -171,7 +172,7 @@ Item {
 
     PlasmaCore.SortFilterModel {
         id: filterModel
-        sourceModel: PlasmaCore.DataModel {
+        sourceModel: P5Support.DataModel {
             dataSource: sdSource
         }
         filterRole: "Removable"
@@ -188,7 +189,7 @@ Item {
         sortOrder: Qt.DescendingOrder
     }
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: statusSource
         engine: "devicenotifications"
         property string last

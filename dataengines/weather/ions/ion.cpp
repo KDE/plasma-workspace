@@ -24,7 +24,7 @@ public:
 };
 
 IonInterface::IonInterface(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , d(new Private(this))
 {
 }
@@ -45,7 +45,7 @@ bool IonInterface::sourceRequestEvent(const QString &source)
     // sooner or later (doesn't depend upon initialization
     // this will avoid problems if updateIonSource() fails for any reason
     // but later it's able to retrieve the data
-    setData(source, Plasma::DataEngine::Data());
+    setData(source, Plasma5Support::DataEngine::Data());
 
     // if initialized, then we can try to grab the data
     if (d->initialized) {
@@ -56,7 +56,7 @@ bool IonInterface::sourceRequestEvent(const QString &source)
 }
 
 /**
- * Update the ion's datasource. Triggered when a Plasma::DataEngine::connectSource() timeout occurs.
+ * Update the ion's datasource. Triggered when a Plasma5Support::DataEngine::connectSource() timeout occurs.
  */
 bool IonInterface::updateSourceEvent(const QString &source)
 {

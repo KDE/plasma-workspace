@@ -35,14 +35,14 @@ void PackagekitEngine::init()
     setData(QStringLiteral("Status"), QStringLiteral("available"), m_pk_available);
 }
 
-Plasma::Service *PackagekitEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *PackagekitEngine::serviceForSource(const QString &source)
 {
     if (m_pk_available) {
         return new PackagekitService(this);
     }
 
     // if packagekit not available, return null service
-    return Plasma::DataEngine::serviceForSource(source);
+    return Plasma5Support::DataEngine::serviceForSource(source);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(PackagekitEngine, "plasma-dataengine-packagekit.json")

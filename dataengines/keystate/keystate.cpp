@@ -10,7 +10,7 @@
 #include <klocalizedstring.h>
 
 KeyStatesEngine::KeyStatesEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     m_mods.insert(Qt::Key_Shift, kli18n("Shift"));
     m_mods.insert(Qt::Key_Control, kli18n("Ctrl"));
@@ -63,7 +63,7 @@ void KeyStatesEngine::init()
     connect(&m_keyInfo, &KModifierKeyInfo::keyRemoved, this, &KeyStatesEngine::keyRemoved);
 }
 
-Plasma::Service *KeyStatesEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *KeyStatesEngine::serviceForSource(const QString &source)
 {
     const auto end = m_mods.constEnd();
     for (auto it = m_mods.constBegin(); it != end; ++it) {
@@ -72,7 +72,7 @@ Plasma::Service *KeyStatesEngine::serviceForSource(const QString &source)
         }
     }
 
-    return Plasma::DataEngine::serviceForSource(source);
+    return Plasma5Support::DataEngine::serviceForSource(source);
 }
 
 void KeyStatesEngine::keyPressed(Qt::Key key, bool state)

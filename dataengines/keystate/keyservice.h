@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include <Plasma/Service>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
 
 class KModifierKeyInfo;
 
-class KeyService : public Plasma::Service
+class KeyService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -21,14 +21,14 @@ public:
     void latch(bool lock);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     KModifierKeyInfo *m_keyInfo;
     Qt::Key m_key;
 };
 
-class LockKeyJob : public Plasma::ServiceJob
+class LockKeyJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 
@@ -40,7 +40,7 @@ private:
     KeyService *m_service;
 };
 
-class LatchKeyJob : public Plasma::ServiceJob
+class LatchKeyJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

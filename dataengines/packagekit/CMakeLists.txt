@@ -7,10 +7,10 @@ set(packagekit_engine_SRCS
     packagekitservice.h
 )
 
-kcoreaddons_add_plugin(plasma_engine_packagekit SOURCES ${packagekit_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_packagekit SOURCES ${packagekit_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 
-target_link_libraries(plasma_engine_packagekit KF6::Plasma KF6::CoreAddons Qt::DBus )
+target_link_libraries(plasma_engine_packagekit KF6::Plasma KF6::Plasma5Support KF6::CoreAddons Qt::DBus )
 
 install(FILES packagekit.operations
-    DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+    DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 

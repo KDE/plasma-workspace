@@ -8,9 +8,9 @@
 
 #include "notificationsengine.h"
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
-class NotificationAction : public Plasma::ServiceJob
+class NotificationAction : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

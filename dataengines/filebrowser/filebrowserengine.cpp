@@ -6,7 +6,7 @@
 
 #include "filebrowserengine.h"
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 #include <KDirWatch>
 #include <QDebug>
@@ -18,7 +18,7 @@
         if (dir == QDir(it.key()))
 
 FileBrowserEngine::FileBrowserEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_dirWatch(new KDirWatch(this))
 {
     Q_UNUSED(args)

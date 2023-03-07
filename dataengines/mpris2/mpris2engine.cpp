@@ -20,7 +20,7 @@
 #include "playercontrol.h"
 
 Mpris2Engine::Mpris2Engine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     auto watcher =
         new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
@@ -31,7 +31,7 @@ Mpris2Engine::Mpris2Engine(QObject *parent, const QVariantList &args)
     connect(callWatcher, &QDBusPendingCallWatcher::finished, this, &Mpris2Engine::serviceNameFetchFinished);
 }
 
-Plasma::Service *Mpris2Engine::serviceForSource(const QString &source)
+Plasma5Support::Service *Mpris2Engine::serviceForSource(const QString &source)
 {
     if (source == Multiplexer::sourceName) {
         if (!m_multiplexer) {

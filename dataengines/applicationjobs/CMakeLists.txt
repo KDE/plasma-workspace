@@ -13,9 +13,10 @@ target_link_libraries(plasma_engine_applicationjobs
   KF6::I18n
   KF6::KIOCore
   KF6::Plasma
+  KF6::Plasma5Support
   KF6::Service
   PW::LibNotificationManager
 )
 
-install(TARGETS plasma_engine_applicationjobs DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
-install(FILES applicationjobs.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(TARGETS plasma_engine_applicationjobs DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
+install(FILES applicationjobs.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

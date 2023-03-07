@@ -13,5 +13,5 @@ target_link_libraries (ion_noaa
     KF6::I18n
 )
 
-install (TARGETS ion_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install (TARGETS ion_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

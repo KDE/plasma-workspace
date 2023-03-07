@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 class FaviconProvider;
 
@@ -17,7 +17,7 @@ class FaviconProvider;
  *
  * the queries are just the url of websites we want to fetch an icon
  */
-class FaviconsEngine : public Plasma::DataEngine
+class FaviconsEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

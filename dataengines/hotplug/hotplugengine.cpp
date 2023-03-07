@@ -16,7 +16,7 @@
 #include <KDesktopFile>
 #include <KDirWatch>
 #include <KService>
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 #include <QDebug>
 #include <kdesktopfileactions.h>
 
@@ -31,7 +31,7 @@
 // #define HOTPLUGENGINE_TIMING
 
 HotplugEngine::HotplugEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_dirWatch(new KDirWatch(this))
 {
     const QStringList folders =
@@ -74,7 +74,7 @@ void HotplugEngine::init()
     processNextStartupDevice();
 }
 
-Plasma::Service *HotplugEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *HotplugEngine::serviceForSource(const QString &source)
 {
     return new HotplugService(this, source);
 }
@@ -134,7 +134,7 @@ void HotplugEngine::updatePredicates(const QString &path)
         const QStringList predicates = predicatesForDevice(device);
         if (!predicates.isEmpty()) {
             if (sources().contains(udi)) {
-                Plasma::DataEngine::Data data;
+                Plasma5Support::DataEngine::Data data;
                 data.insert(QStringLiteral("predicateFiles"), predicates);
                 data.insert(QStringLiteral("actions"), actionsForPredicates(predicates));
                 setData(udi, data);
@@ -173,7 +173,7 @@ QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) 
         const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
         QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(actionUrl), true);
         if (!services.isEmpty()) {
-            Plasma::DataEngine::Data action;
+            Plasma5Support::DataEngine::Data action;
             action.insert(QStringLiteral("predicate"), desktop);
             action.insert(QStringLiteral("text"), services[0].text());
             action.insert(QStringLiteral("icon"), services[0].icon());
@@ -230,7 +230,7 @@ void HotplugEngine::handleDeviceAdded(Solid::Device &device, bool added)
         // qDebug() << device.product();
         // qDebug() << device.vendor();
         // qDebug() << "number of interesting desktop file : " << interestingDesktopFiles.size();
-        Plasma::DataEngine::Data data;
+        Plasma5Support::DataEngine::Data data;
         data.insert(QStringLiteral("added"), added);
         data.insert(QStringLiteral("udi"), device.udi());
 

@@ -21,8 +21,8 @@
 #include "devicesignalmapper.h"
 #include "hddtemp.h"
 #include <KIO/FileSystemFreeSpaceJob>
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/Service>
 
 enum State {
     Idle = 0,
@@ -39,7 +39,7 @@ enum OperationResult {
 /**
  * This class evaluates the basic expressions given in the interface.
  */
-class SolidDeviceEngine : public Plasma::DataEngine
+class SolidDeviceEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
     friend class SolidDeviceService;
@@ -47,7 +47,7 @@ class SolidDeviceEngine : public Plasma::DataEngine
 public:
     SolidDeviceEngine(QObject *parent, const QVariantList &args);
     ~SolidDeviceEngine() override;
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 protected:
     bool sourceRequestEvent(const QString &name) override;

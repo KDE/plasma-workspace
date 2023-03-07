@@ -18,13 +18,14 @@ ecm_qt_declare_logging_category(weather_SRCS
     DEFAULT_SEVERITY Info
 )
 
-kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_compile_definitions(plasma_engine_weather PRIVATE -DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
 
 target_link_libraries (plasma_engine_weather
             KF6::KIOCore
             KF6::Solid
             KF6::Plasma
+            KF6::Plasma5Support
             KF6::Service
             Qt::Network
             weather_ion)

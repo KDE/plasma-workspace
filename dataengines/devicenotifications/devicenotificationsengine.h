@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include "ksolidnotify.h"
 
@@ -15,7 +15,7 @@
  *  Engine which provides data sources for device notifications.
  *  Each notification is represented by one source.
  */
-class DeviceNotificationsEngine : public Plasma::DataEngine
+class DeviceNotificationsEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:

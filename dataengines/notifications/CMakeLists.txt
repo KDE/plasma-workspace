@@ -14,7 +14,7 @@ ecm_qt_declare_logging_category(notifications_engine_SRCS HEADER debug.h
                                                CATEGORY_NAME kde.dataengine.notifications`
                                                DEFAULT_SEVERITY Info)
 
-kcoreaddons_add_plugin(plasma_engine_notifications SOURCES ${notifications_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_notifications SOURCES ${notifications_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 
 target_link_libraries(plasma_engine_notifications
     Qt::DBus
@@ -23,9 +23,10 @@ target_link_libraries(plasma_engine_notifications
     KF6::KIOCore
     KF6::Notifications
     KF6::Plasma
+    KF6::Plasma5Support
     KF6::Service
     KF6::NotifyConfig
     PW::LibNotificationManager
 )
 
-install(FILES notifications.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES notifications.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

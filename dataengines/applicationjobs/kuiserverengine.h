@@ -8,8 +8,8 @@
 
 #include <QVector>
 
-#include <Plasma/DataContainer>
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataContainer>
+#include <Plasma5Support/DataEngine>
 
 #include "jobsmodel.h"
 
@@ -18,12 +18,12 @@ namespace NotificationManager
 class Job;
 }
 
-namespace Plasma
+namespace Plasma5Support
 {
 class Service;
-} // namespace Plasma
+} // namespace Plasma5Support
 
-class KuiserverEngine : public Plasma::DataEngine
+class KuiserverEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -33,7 +33,7 @@ public:
 
     void init();
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
     static QString sourceName(NotificationManager::Job *job);
     static uint jobId(const QString &sourceName);

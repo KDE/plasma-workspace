@@ -31,7 +31,7 @@ qt_add_dbus_interface(mpris2_engine_SRCS org.freedesktop.DBus.Properties.xml dbu
 qt_add_dbus_interface(mpris2_engine_SRCS org.mpris.MediaPlayer2.Player.xml mprisplayer)
 qt_add_dbus_interface(mpris2_engine_SRCS org.mpris.MediaPlayer2.xml mprisroot)
 
-kcoreaddons_add_plugin(plasma_engine_mpris2 SOURCES ${mpris2_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_mpris2 SOURCES ${mpris2_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_mpris2
    Qt::DBus
    KF6::ConfigCore
@@ -39,7 +39,8 @@ target_link_libraries(plasma_engine_mpris2
    KF6::I18n
    KF6::Service
    KF6::Plasma
+   KF6::Plasma5Support
    KF6::XmlGui
 )
 
-install(FILES mpris2.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES mpris2.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

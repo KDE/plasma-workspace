@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 class SolidDeviceEngine;
 
-class SolidDeviceService : public Plasma::Service
+class SolidDeviceService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -18,7 +18,7 @@ public:
     SolidDeviceService(SolidDeviceEngine *parent, const QString &source);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     SolidDeviceEngine *m_engine;

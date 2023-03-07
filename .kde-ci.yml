@@ -58,6 +58,7 @@ Dependencies:
     'plasma/libksysguard': '@same'
     'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
+    'plasma/plasma5support': '@same'
     'libraries/plasma-wayland-protocols': '@latest-kf6'
     'libraries/kuserfeedback': '@stable'
     'graphics/libkexiv2': '@latest-kf6'

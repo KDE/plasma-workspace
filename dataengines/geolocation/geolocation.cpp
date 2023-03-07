@@ -15,7 +15,7 @@
 static const char SOURCE[] = "location";
 
 Geolocation::Geolocation(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     setMinimumPollingInterval(500);
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::networkingEnabledChanged, this, &Geolocation::networkStatusChanged);

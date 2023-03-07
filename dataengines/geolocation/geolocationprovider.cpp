@@ -18,11 +18,11 @@ GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &ar
     Q_UNUSED(args)
     m_updateTimer.setSingleShot(true);
     m_updateTimer.setInterval(0);
-    qRegisterMetaType<Plasma::DataEngine::Data>("Plasma::DataEngine::Data");
+    qRegisterMetaType<Plasma5Support::DataEngine::Data>("Plasma5Support::DataEngine::Data");
     connect(&m_updateTimer, &QTimer::timeout, this, &GeolocationProvider::updated);
 }
 
-void GeolocationProvider::init(Plasma::DataEngine::Data *data, EntryAccuracy *accuracies)
+void GeolocationProvider::init(Plasma5Support::DataEngine::Data *data, EntryAccuracy *accuracies)
 {
     m_sharedData = data;
     m_sharedAccuracies = accuracies;
@@ -57,7 +57,7 @@ GeolocationProvider::UpdateTriggers GeolocationProvider::updateTriggers() const
 
 bool GeolocationProvider::populateSharedData()
 {
-    Plasma::DataEngine::Data::const_iterator it = m_data.constBegin();
+    Plasma5Support::DataEngine::Data::const_iterator it = m_data.constBegin();
     bool changed = false;
 
     while (it != m_data.constEnd()) {
@@ -88,7 +88,7 @@ void GeolocationProvider::setIsAvailable(bool available)
     Q_EMIT availabilityChanged(this);
 }
 
-void GeolocationProvider::setData(const Plasma::DataEngine::Data &data)
+void GeolocationProvider::setData(const Plasma5Support::DataEngine::Data &data)
 {
     m_updating = false;
     m_data = data;

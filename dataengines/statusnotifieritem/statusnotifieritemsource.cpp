@@ -47,7 +47,7 @@ private:
 };
 
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
-    : Plasma::DataContainer(parent)
+    : Plasma5Support::DataContainer(parent)
     , m_customIconLoader(nullptr)
     , m_menuImporter(nullptr)
     , m_refreshing(false)
@@ -133,7 +133,7 @@ KIconLoader *StatusNotifierItemSource::iconLoader() const
     return m_customIconLoader ? m_customIconLoader : KIconLoader::global();
 }
 
-Plasma::Service *StatusNotifierItemSource::createService()
+Plasma5Support::Service *StatusNotifierItemSource::createService()
 {
     return new StatusNotifierItemService(this);
 }

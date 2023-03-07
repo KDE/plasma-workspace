@@ -9,14 +9,14 @@
 #include "soliddevicejob.h"
 
 SolidDeviceService::SolidDeviceService(SolidDeviceEngine *parent, const QString &source)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
     , m_engine(parent)
 {
     setName(QStringLiteral("soliddevice"));
     setDestination(source);
 }
 
-Plasma::ServiceJob *SolidDeviceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *SolidDeviceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     if (operation == QLatin1String("updateFreespace")) {
         m_engine->updateStorageSpace(destination());

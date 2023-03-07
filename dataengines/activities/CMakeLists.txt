@@ -14,6 +14,7 @@ add_library(plasma_engine_activities MODULE ${activity_engine_SRCS})
 target_link_libraries(plasma_engine_activities
                       KF6::CoreAddons
                       KF6::Plasma
+                      KF6::Plasma5Support
                       KF6::Activities
                       KF6::I18n
                       KF6::Service
@@ -22,7 +23,7 @@ target_link_libraries(plasma_engine_activities
                       )
 
 install(TARGETS plasma_engine_activities
-        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 
 install(FILES activities.operations
-        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+        DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

@@ -592,7 +592,7 @@ void DWDIon::updateWeather(const QString &source)
     QString placeCode = m_place[source];
     QString weatherSource = QStringLiteral("dwd|weather|%1|%2").arg(source, placeCode);
 
-    Plasma::DataEngine::Data data;
+    Plasma5Support::DataEngine::Data data;
 
     data.insert(QStringLiteral("Place"), source);
     data.insert(QStringLiteral("Station"), source);

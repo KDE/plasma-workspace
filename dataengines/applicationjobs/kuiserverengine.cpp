@@ -20,7 +20,7 @@
 using namespace NotificationManager;
 
 KuiserverEngine::KuiserverEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     init();
 }
@@ -39,7 +39,7 @@ uint KuiserverEngine::jobId(const QString &sourceName)
     return QStringView(sourceName).mid(4 /*length of Job + space*/).toUInt();
 }
 
-Plasma::Service *KuiserverEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *KuiserverEngine::serviceForSource(const QString &source)
 {
     const uint id = jobId(source);
     if (!id) {

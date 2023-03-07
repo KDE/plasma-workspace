@@ -8,13 +8,13 @@
 
 #include <QTimer>
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include "geolocationprovider.h"
 
 class GeolocationProvider;
 
-class Geolocation : public Plasma::DataEngine
+class Geolocation : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

@@ -14,7 +14,7 @@
 #include <KLocalizedString>
 
 MultiplexedService::MultiplexedService(Multiplexer *multiplexer, QObject *parent)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
 {
     setObjectName(Multiplexer::sourceName + QLatin1String(" controller"));
     setName(QStringLiteral("mpris2"));
@@ -25,7 +25,7 @@ MultiplexedService::MultiplexedService(Multiplexer *multiplexer, QObject *parent
     activePlayerChanged(multiplexer->activePlayer());
 }
 
-Plasma::ServiceJob *MultiplexedService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *MultiplexedService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     if (m_control) {
         return m_control.data()->createJob(operation, parameters);

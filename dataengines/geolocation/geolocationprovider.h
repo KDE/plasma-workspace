@@ -10,7 +10,7 @@
 #include <QObject>
 #include <QTimer>
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include "geolocation_export.h"
 
@@ -29,7 +29,7 @@ public:
     Q_DECLARE_FLAGS(UpdateTriggers, UpdateTrigger)
 
     explicit GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
-    void init(Plasma::DataEngine::Data *data, EntryAccuracy *accuracies);
+    void init(Plasma5Support::DataEngine::Data *data, EntryAccuracy *accuracies);
 
     UpdateTriggers updateTriggers() const;
     int accuracy() const;
@@ -49,13 +49,13 @@ protected:
     virtual void update();
 
 protected Q_SLOTS:
-    void setData(const Plasma::DataEngine::Data &data);
+    void setData(const Plasma5Support::DataEngine::Data &data);
     void setData(const QString &key, const QVariant &value);
 
 private:
-    Plasma::DataEngine::Data *m_sharedData;
+    Plasma5Support::DataEngine::Data *m_sharedData;
     EntryAccuracy *m_sharedAccuracies;
-    Plasma::DataEngine::Data m_data;
+    Plasma5Support::DataEngine::Data m_data;
     QTimer m_updateTimer;
     int m_accuracy;
     UpdateTriggers m_updateTriggers;

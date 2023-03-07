@@ -13,7 +13,7 @@
 #endif
 
 MouseEngine::MouseEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , timerId(0)
 #ifdef HAVE_XFIXES
     , handler(nullptr)

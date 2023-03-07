@@ -7,8 +7,8 @@
 #pragma once
 
 // plasma
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/Service>
 
 #include <KService>
 #include <KServiceGroup>
@@ -28,14 +28,14 @@
  * The data and operations are provided and handled by the taskmanager library.
  * It should be noted that only a subset of data and operations are exposed.
  */
-class AppsEngine : public Plasma::DataEngine
+class AppsEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
 public:
     AppsEngine(QObject *parent, const QVariantList &args);
     ~AppsEngine() override;
-    Plasma::Service *serviceForSource(const QString &name) override;
+    Plasma5Support::Service *serviceForSource(const QString &name) override;
 
 protected:
     virtual void init();

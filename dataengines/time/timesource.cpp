@@ -26,7 +26,7 @@
 #endif
 
 TimeSource::TimeSource(const QString &name, QObject *parent)
-    : Plasma::DataContainer(parent)
+    : Plasma5Support::DataContainer(parent)
     , m_offset(0)
     , m_latitude(0)
     , m_longitude(0)

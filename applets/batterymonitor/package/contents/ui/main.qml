@@ -13,6 +13,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.1 // For KCMShell
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.plasmoid 2.0
 
 import "logic.js" as Logic
@@ -20,7 +21,7 @@ import "logic.js" as Logic
 Item {
     id: batterymonitor
 
-    property QtObject pmSource: PlasmaCore.DataSource {
+    property QtObject pmSource: P5Support.DataSource {
         id: pmSource
         engine: "powermanagement"
         connectedSources: sources
@@ -44,7 +45,7 @@ Item {
             sortRole: "Pretty Name"
             sortOrder: Qt.AscendingOrder
             sortCaseSensitivity: Qt.CaseInsensitive
-            sourceModel: PlasmaCore.DataModel {
+            sourceModel: P5Support.DataModel {
                 dataSource: pmSource
                 sourceFilter: "Battery[0-9]+"
             }
@@ -341,7 +342,7 @@ Item {
             batterymonitor.powermanagementDisabled = disabled
         }
 
-        PlasmaCore.DataSource {
+        P5Support.DataSource {
             id: notificationSource
             engine: "notifications"
         }

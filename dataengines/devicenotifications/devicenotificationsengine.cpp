@@ -7,10 +7,10 @@
 
 #include "devicenotificationsengine.h"
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 DeviceNotificationsEngine::DeviceNotificationsEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_solidNotify(new KSolidNotify(this))
 {
     connect(m_solidNotify, &KSolidNotify::notify, this, &DeviceNotificationsEngine::notify);
@@ -25,7 +25,7 @@ void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QStrin
 {
     const QString source = QStringLiteral("%1 notification").arg(udi);
 
-    Plasma::DataEngine::Data notificationData;
+    Plasma5Support::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("solidError"), solidError);
     notificationData.insert(QStringLiteral("error"), error);
     notificationData.insert(QStringLiteral("errorDetails"), errorDetails);

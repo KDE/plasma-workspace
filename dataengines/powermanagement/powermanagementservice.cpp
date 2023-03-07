@@ -8,7 +8,7 @@
 #include "powermanagementjob.h"
 
 PowerManagementService::PowerManagementService(QObject *parent)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
 {
     setName(QStringLiteral("powermanagementservice"));
 }

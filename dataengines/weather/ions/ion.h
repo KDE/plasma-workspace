@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include "ion_export.h"
 
@@ -16,7 +16,7 @@
  * The idea is that you can have multiple ions which provide weather information from different services to the engine from which an applet will request the
  * data from.
  *
- * Basically an ion is a Plasma::DataEngine, which is queried by the WeatherEngine instead of some applet.
+ * Basically an ion is a Plasma5Support::DataEngine, which is queried by the WeatherEngine instead of some applet.
  *
  *
  * Find following the currently used entries of the data for a "SOMEION|weather|SOMEPLACE" source.
@@ -99,7 +99,7 @@
  * "Credit": string, credit line for the data, required
  * "Credit Url": string, url related to the credit for the data (can be also webpage with more forecast), optional
  */
-class ION_EXPORT IonInterface : public Plasma::DataEngine
+class ION_EXPORT IonInterface : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -198,7 +198,7 @@ public:
 public Q_SLOTS:
 
     /**
-     * Reimplemented from Plasma::DataEngine
+     * Reimplemented from Plasma5Support::DataEngine
      * @param source the name of the datasource to be updated
      */
     bool updateSourceEvent(const QString &source) override;
@@ -221,7 +221,7 @@ protected:
     void setInitialized(bool initialized);
 
     /**
-     * Reimplemented from Plasma::DataEngine
+     * Reimplemented from Plasma5Support::DataEngine
      * @param source The datasource being requested
      */
     bool sourceRequestEvent(const QString &source) override;

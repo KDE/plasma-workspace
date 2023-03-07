@@ -9,9 +9,10 @@ add_library(plasma_engine_dict MODULE ${dict_engine_SRCS})
 
 target_link_libraries (plasma_engine_dict
   KF6::Plasma
+  KF6::Plasma5Support
   KF6::Service
   KF6::I18n
   Qt::Network
 )
 
-install(TARGETS plasma_engine_dict DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(TARGETS plasma_engine_dict DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)

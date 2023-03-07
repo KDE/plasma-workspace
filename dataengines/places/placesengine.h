@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <kfileplacesmodel.h>
 
 class PlacesProxyModel;
 
-class PlacesEngine : public Plasma::DataEngine
+class PlacesEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -20,7 +20,7 @@ public:
     PlacesEngine(QObject *parent, const QVariantList &args);
     ~PlacesEngine() override;
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 private:
     KFilePlacesModel *m_placesModel = nullptr;

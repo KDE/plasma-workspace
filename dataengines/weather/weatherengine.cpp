@@ -10,20 +10,20 @@
 #include <KPluginMetaData>
 #include <KSycoca>
 
-#include <Plasma/DataContainer>
-#include <Plasma/PluginLoader>
+#include <Plasma5Support/DataContainer>
+#include <Plasma5Support/PluginLoader>
 
 #include "weatherenginedebug.h"
 
 // Constructor
 WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     m_reconnectTimer.setSingleShot(true);
     connect(&m_reconnectTimer, &QTimer::timeout, this, &WeatherEngine::startReconnect);
 
     // Globally notify all plugins to remove their sources (and unload plugin)
-    connect(this, &Plasma::DataEngine::sourceRemoved, this, &WeatherEngine::removeIonSource);
+    connect(this, &Plasma5Support::DataEngine::sourceRemoved, this, &WeatherEngine::removeIonSource);
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged, this, &WeatherEngine::onOnlineStateChanged);
@@ -48,7 +48,7 @@ WeatherEngine::~WeatherEngine()
 void WeatherEngine::updateIonList()
 {
     removeAllData(QStringLiteral("ions"));
-    const auto infos = Plasma::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
+    const auto infos = Plasma5Support::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
     for (const KPluginMetaData &info : infos) {
         const QString data = info.name() + QLatin1Char('|') + info.pluginId();
         setData(QStringLiteral("ions"), info.pluginId(), data);
@@ -89,7 +89,7 @@ void WeatherEngine::removeIonSource(const QString &source)
 /**
  * SLOT: Push out new data to applet
  */
-void WeatherEngine::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
+void WeatherEngine::dataUpdated(const QString &source, const Plasma5Support::DataEngine::Data &data)
 {
     qCDebug(WEATHER) << "dataUpdated() for:" << source;
     setData(source, data);
@@ -200,7 +200,7 @@ void WeatherEngine::startReconnect()
 void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
 {
     Q_UNUSED(ion);
-    Plasma::DataContainer *container = containerForSource(source);
+    Plasma5Support::DataContainer *container = containerForSource(source);
     if (container) {
         qCDebug(WEATHER) << "immediate update of" << source;
         container->forceImmediateUpdate();

@@ -12,12 +12,12 @@
 #include <KLocalizedString>
 #include <QDebug>
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 #include <ksgrd/SensorManager.h>
 
 SystemMonitorEngine::SystemMonitorEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     KSGRD::SensorMgr = new KSGRD::SensorManager(this);
     KSGRD::SensorMgr->engage(QStringLiteral("localhost"), QLatin1String(""), QStringLiteral("ksysguardd"));
@@ -131,9 +131,9 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
                 // HACK: for backwards compatibility
                 // in case this source was created in sourceRequestEvent, stop it being
                 // automagically removed when disconnected from
-                Plasma::DataContainer *s = containerForSource(newSensor);
+                Plasma5Support::DataContainer *s = containerForSource(newSensor);
                 if (s) {
-                    disconnect(s, &Plasma::DataContainer::becameUnused, this, &SystemMonitorEngine::removeSource);
+                    disconnect(s, &Plasma5Support::DataContainer::becameUnused, this, &SystemMonitorEngine::removeSource);
                 }
             }
             DataEngine::Data d;
@@ -144,8 +144,8 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             ++count;
         }
 
-        QHash<QString, Plasma::DataContainer *> sourceDict = containerDict();
-        QHashIterator<QString, Plasma::DataContainer *> it(sourceDict);
+        QHash<QString, Plasma5Support::DataContainer *> sourceDict = containerDict();
+        QHashIterator<QString, Plasma5Support::DataContainer *> it(sourceDict);
         while (it.hasNext()) {
             it.next();
             if (!sensors.contains(it.key())) {

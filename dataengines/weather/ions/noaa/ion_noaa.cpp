@@ -465,7 +465,7 @@ bool NOAAIon::readXMLData(const QString &source, QXmlStreamReader &xml)
     }
 
     bool solarDataSourceNeedsConnect = false;
-    Plasma::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
+    Plasma5Support::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
     if (timeEngine) {
         const bool canCalculateElevation = (data.observationDateTime.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
@@ -528,7 +528,7 @@ void NOAAIon::updateWeather(const QString &source)
         return;
     }
 
-    Plasma::DataEngine::Data data;
+    Plasma5Support::DataEngine::Data data;
 
     data.insert(QStringLiteral("Place"), weatherData.locationName);
     data.insert(QStringLiteral("Station"), weatherData.stationID);
@@ -890,7 +890,7 @@ void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
     weatherData.isForecastsDataPending = false;
 }
 
-void NOAAIon::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
+void NOAAIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
 {
     const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
 

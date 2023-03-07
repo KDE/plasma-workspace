@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <ksgrd/SensorClient.h>
 
@@ -18,12 +18,12 @@ class QTimer;
 /**
  * This class evaluates the basic expressions given in the interface.
  */
-class SystemMonitorEngine : public Plasma::DataEngine, public KSGRD::SensorClient
+class SystemMonitorEngine : public Plasma5Support::DataEngine, public KSGRD::SensorClient
 {
     Q_OBJECT
 
 public:
-    /** Inherited from Plasma::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
+    /** Inherited from Plasma5Support::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
     QStringList sources() const override;
     SystemMonitorEngine(QObject *parent, const QVariantList &args);
     ~SystemMonitorEngine() override;

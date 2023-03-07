@@ -32,15 +32,16 @@ ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
                                                CATEGORY_NAME kde.dataengine.sni
                                                DEFAULT_SEVERITY Info)
 
-kcoreaddons_add_plugin(plasma_engine_statusnotifieritem SOURCES ${statusnotifieritem_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+kcoreaddons_add_plugin(plasma_engine_statusnotifieritem SOURCES ${statusnotifieritem_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_statusnotifieritem
     Qt::DBus
     KF6::Service
     KF6::Plasma
+    KF6::Plasma5Support
     KF6::IconThemes
     KF6::WindowSystem
     dbusmenuqt
 )
 
-install(FILES statusnotifieritem.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 

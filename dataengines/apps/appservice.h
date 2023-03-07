@@ -7,8 +7,8 @@
 #pragma once
 
 // plasma
-#include <Plasma/Service>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
 
 // own
 #include "appsource.h"
@@ -16,7 +16,7 @@
 /**
  * App Service
  */
-class AppService : public Plasma::Service
+class AppService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -25,7 +25,7 @@ public:
     ~AppService() override;
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     AppSource *m_source;

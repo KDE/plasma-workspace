@@ -8,17 +8,17 @@
 
 #include "activityengine.h"
 
-#include <Plasma/Service>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
 
-using namespace Plasma;
+using namespace Plasma5Support;
 
 namespace KActivities
 {
 class Controller;
 } // namespace KActivities
 
-class ActivityService : public Plasma::Service
+class ActivityService : public Plasma5Support::Service
 {
     Q_OBJECT
 
