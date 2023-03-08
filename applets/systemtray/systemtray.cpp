@@ -26,7 +26,7 @@
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
@@ -252,7 +252,7 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
         return;
     }
 
-    Plasma::ServiceJob *sjob = qobject_cast<Plasma::ServiceJob *>(job);
+    Plasma5Support::ServiceJob *sjob = qobject_cast<Plasma5Support::ServiceJob *>(job);
     if (!sjob) {
         return;
     }

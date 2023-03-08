@@ -181,7 +181,7 @@ QString StatusNotifierItemSource::windowId() const
     return m_windowId;
 }
 
-Plasma::Service *StatusNotifierItemSource::createService()
+Plasma5Support::Service *StatusNotifierItemSource::createService()
 {
     return new StatusNotifierItemService(this);
 }

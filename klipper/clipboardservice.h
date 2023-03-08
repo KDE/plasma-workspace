@@ -5,11 +5,11 @@
 */
 #pragma once
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 class Klipper;
 
-class ClipboardService : public Plasma::Service
+class ClipboardService : public Plasma5Support::Service
 {
     Q_OBJECT
 public:
@@ -17,7 +17,7 @@ public:
     ~ClipboardService() override = default;
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QVariantMap &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QVariantMap &parameters) override;
 
 private:
     Klipper *m_klipper;

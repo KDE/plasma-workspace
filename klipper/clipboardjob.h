@@ -5,12 +5,12 @@
 */
 #pragma once
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 class KFileItem;
 class Klipper;
 
-class ClipboardJob : public Plasma::ServiceJob
+class ClipboardJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 public:

@@ -8,14 +8,14 @@
 #include "clipboardjob.h"
 
 ClipboardService::ClipboardService(Klipper *klipper, const QString &uuid)
-    : Plasma::Service()
+    : Plasma5Support::Service()
     , m_klipper(klipper)
     , m_uuid(uuid)
 {
     setName(QStringLiteral("org.kde.plasma.clipboard"));
 }
 
-Plasma::ServiceJob *ClipboardService::createJob(const QString &operation, QVariantMap &parameters)
+Plasma5Support::ServiceJob *ClipboardService::createJob(const QString &operation, QVariantMap &parameters)
 {
     return new ClipboardJob(m_klipper, m_uuid, operation, parameters, this);
 }

@@ -11,13 +11,13 @@
 #include "statusnotifieritemsource.h"
 
 // plasma
-#include <Plasma/Service>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
 
 /**
  * StatusNotifierItem Service
  */
-class StatusNotifierItemService : public Plasma::Service
+class StatusNotifierItemService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -26,7 +26,7 @@ public:
     ~StatusNotifierItemService() override;
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     StatusNotifierItemSource *m_source;

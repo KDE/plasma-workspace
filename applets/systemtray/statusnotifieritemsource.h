@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
 #include <QString>
@@ -24,7 +24,7 @@ class StatusNotifierItemSource : public QObject
 public:
     StatusNotifierItemSource(const QString &service, QObject *parent);
     ~StatusNotifierItemSource() override;
-    Plasma::Service *createService();
+    Plasma5Support::Service *createService();
 
     void activate(int x, int y);
     void secondaryActivate(int x, int y);

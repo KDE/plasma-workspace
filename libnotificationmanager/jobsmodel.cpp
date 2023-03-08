@@ -14,10 +14,6 @@
 #include <KJob>
 #include <KLocalizedString>
 
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
-#include <Plasma/ServiceJob>
-
 #include "job.h"
 #include "job_p.h"
 

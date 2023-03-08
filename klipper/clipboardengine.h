@@ -5,18 +5,18 @@
 */
 #pragma once
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 class Klipper;
 
-class ClipboardEngine : public Plasma::DataEngine
+class ClipboardEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:
     ClipboardEngine(QObject *parent, const QVariantList &args);
     ~ClipboardEngine() override;
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 private:
     Klipper *m_klipper;

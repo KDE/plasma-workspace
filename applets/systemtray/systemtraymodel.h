@@ -13,7 +13,7 @@
 
 #include <KCoreAddons/KPluginMetaData>
 #include <Plasma/Plasma>
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 namespace Plasma
 {
@@ -141,7 +141,7 @@ public Q_SLOTS:
 public:
     struct Item {
         QString source;
-        Plasma::Service *service = nullptr;
+        Plasma5Support::Service *service = nullptr;
     };
     int indexOfSource(const QString &source) const;
 

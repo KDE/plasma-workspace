@@ -25,7 +25,7 @@ const static QString s_previewHeightKey = QStringLiteral("previewHeight");
 const static QString s_urlKey = QStringLiteral("url");
 
 ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent)
-    : Plasma::ServiceJob(destination, operation, parameters, parent)
+    : Plasma5Support::ServiceJob(destination, operation, parameters, parent)
     , m_klipper(klipper)
 {
 }
