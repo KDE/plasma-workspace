@@ -7,17 +7,17 @@
 
 #include "colorcorrect_export.h"
 
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
+#include <Plasma5Support/DataEngine>
+#include <Plasma5Support/DataEngineConsumer>
 
-namespace Plasma
+namespace Plasma5Support
 {
 class DataEngine;
 }
 
 namespace ColorCorrect
 {
-class COLORCORRECT_EXPORT Geolocator : public QObject, public Plasma::DataEngineConsumer
+class COLORCORRECT_EXPORT Geolocator : public QObject, public Plasma5Support::DataEngineConsumer
 {
     Q_OBJECT
 
@@ -41,7 +41,7 @@ public Q_SLOTS:
     /**
      * Called when data is updated by Plasma::DataEngine
      */
-    void dataUpdated(const QString &source, const Plasma::DataEngine::Data &data);
+    void dataUpdated(const QString &source, const Plasma5Support::DataEngine::Data &data);
 
 Q_SIGNALS:
     void locationChanged(double latitude, double longitude);
@@ -49,7 +49,7 @@ Q_SIGNALS:
     void longitudeChanged();
 
 private:
-    Plasma::DataEngine *m_engine = nullptr;
+    Plasma5Support::DataEngine *m_engine = nullptr;
 
     double m_latitude = 0;
     double m_longitude = 0;

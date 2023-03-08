@@ -19,7 +19,7 @@ Geolocator::Geolocator(QObject *parent)
     }
 }
 
-void Geolocator::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
+void Geolocator::dataUpdated(const QString &source, const Plasma5Support::DataEngine::Data &data)
 {
     Q_UNUSED(source);
 
@@ -31,8 +31,8 @@ void Geolocator::dataUpdated(const QString &source, const Plasma::DataEngine::Da
         return;
     }
 
-    auto readGeoDouble = [](const Plasma::DataEngine::Data &data, const QString &key) -> double {
-        const Plasma::DataEngine::Data::ConstIterator it = data.find(key);
+    auto readGeoDouble = [](const Plasma5Support::DataEngine::Data &data, const QString &key) -> double {
+        const Plasma5Support::DataEngine::Data::ConstIterator it = data.find(key);
 
         if (it == data.end()) {
             return qQNaN();
