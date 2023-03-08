@@ -27,8 +27,9 @@
 
 #include <KPackage/Package>
 
-#include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
+
+#include <LayerShellQt/Window>
 
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
@@ -40,7 +41,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
     , m_accentColor(Qt::transparent)
     , m_windowType(Desktop)
-    , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
 
@@ -85,6 +85,14 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         }
     });
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
+
+    if (KWindowSystem::isPlatformWayland()) {
+        if (LayerShellQt::Window *layerShellWindow = LayerShellQt::Window::get(this)) {
+            layerShellWindow->setScope(QStringLiteral("desktop"));
+            layerShellWindow->setLayer(LayerShellQt::Window::LayerBackground);
+            layerShellWindow->setDesiredOutput(screen());
+        }
+    }
 }
 
 DesktopView::~DesktopView()
@@ -124,8 +132,6 @@ QScreen *DesktopView::screenToFollow() const
 
 void DesktopView::adaptToScreen()
 {
-    ensureWindowType();
-
     // This happens sometimes, when shutting down the process
     if (!m_screenToFollow) {
         return;
@@ -188,51 +194,6 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
     Q_EMIT windowTypeChanged();
 }
 
-void DesktopView::ensureWindowType()
-{
-    // This happens sometimes, when shutting down the process
-    if (!screen()) {
-        return;
-    }
-
-    if (m_windowType == Window) {
-        setFlags(Qt::Window);
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::clearState(winId(), NET::FullScreen);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
-
-    } else if (m_windowType == Desktop) {
-        setFlags(Qt::Window | Qt::FramelessWindowHint);
-        KWindowSystem::setType(winId(), NET::Desktop);
-        KWindowSystem::setState(winId(), NET::KeepBelow);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
-            m_shellSurface->setSkipTaskbar(true);
-        }
-
-    } else if (m_windowType == WindowedDesktop) {
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::clearState(winId(), NET::FullScreen);
-        setFlags(Qt::FramelessWindowHint | flags());
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
-
-    } else if (m_windowType == FullScreen) {
-        setFlags(Qt::Window);
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::setState(winId(), NET::FullScreen);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
-    }
-}
-
 DesktopView::SessionType DesktopView::sessionType() const
 {
     if (qobject_cast<ShellCorona *>(corona())) {
@@ -262,18 +223,7 @@ Q_INVOKABLE QString DesktopView::fileFromPackage(const QString &key, const QStri
 
 bool DesktopView::event(QEvent *e)
 {
-    if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
-        case QPlatformSurfaceEvent::SurfaceCreated:
-            setupWaylandIntegration();
-            ensureWindowType();
-            break;
-        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-            delete m_shellSurface;
-            m_shellSurface = nullptr;
-            break;
-        }
-    } else if (e->type() == QEvent::FocusOut) {
+    if (e->type() == QEvent::FocusOut) {
         m_krunnerText.clear();
     }
 
@@ -409,9 +359,6 @@ void DesktopView::screenGeometryChanged()
     const QRect geo = m_screenToFollow->geometry();
     //     qDebug() << "newGeometry" << this << geo << geometry();
     setGeometry(geo);
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(geo.topLeft());
-    }
     Q_EMIT geometryChanged();
 }
 
@@ -419,27 +366,6 @@ void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
     setContainment(nullptr);
     setSource(package.fileUrl("views", QStringLiteral("Desktop.qml")));
-}
-
-void DesktopView::setupWaylandIntegration()
-{
-    if (m_shellSurface) {
-        // already setup
-        return;
-    }
-    if (ShellCorona *c = qobject_cast<ShellCorona *>(corona())) {
-        using namespace KWayland::Client;
-        PlasmaShell *interface = c->waylandPlasmaShellInterface();
-        if (!interface) {
-            return;
-        }
-        Surface *s = Surface::fromWindow(this);
-        if (!s) {
-            return;
-        }
-        m_shellSurface = interface->createSurface(s, this);
-        m_shellSurface->setPosition(m_screenToFollow->geometry().topLeft());
-    }
 }
 
 void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
