@@ -15,8 +15,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
 #include <Plasma/PluginLoader>
 #include <Plasma/Theme>
 

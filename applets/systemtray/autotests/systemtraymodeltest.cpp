@@ -8,7 +8,6 @@
 #include <QtTest>
 
 #include <Plasma/Applet>
-#include <Plasma/DataEngine>
 #include <Plasma/PluginLoader>
 
 #include <KConfigLoader>
