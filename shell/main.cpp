@@ -67,6 +67,7 @@ int main(int argc, char *argv[])
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
+    qputenv("QT_WAYLAND_SHELL_INTEGRATION", "plasma-shell");
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
@@ -75,6 +76,13 @@ int main(int argc, char *argv[])
         qunsetenv("QT_QPA_PLATFORM");
     }
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
+
+    {
+        // force qtwayland to load shell integration
+        QWindow w;
+        w.create();
+    }
+    qunsetenv("QT_WAYLAND_SHELL_INTEGRATION");
 
     KLocalizedString::setApplicationDomain("plasmashell");
 
