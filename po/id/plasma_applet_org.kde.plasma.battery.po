@@ -1,16 +1,16 @@
 # Indonesian translations for plasma_applet_battery package.
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_battery package.
-#
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
 # Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021.
-# Linerly <linerly@protonmail.com>, 2022.
+# Linerly <linerly@protonmail.com>, 2022, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:48+0000\n"
-"PO-Revision-Date: 2022-02-25 15:26+0700\n"
+"PO-Revision-Date: 2023-03-03 09:52+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -48,12 +49,12 @@ msgstr "Waktu Tersisa:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Memperkirakan..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
 msgid "Battery Health:"
-msgstr "Kewarasan Baterai:"
+msgstr "Kesehatan Baterai:"
 
 #: package/contents/ui/BatteryItem.qml:210
 #, kde-format
@@ -64,7 +65,8 @@ msgstr "%1%"
 #: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "Baterai Anda telah dikonfigurasi ke hanya pengisian sampai %1%."
+msgstr ""
+"Baterai Anda telah dikonfigurasi ke hanya pengisian kira-kira sampai %1%."
 
 #: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
@@ -82,22 +84,22 @@ msgstr "%1%"
 #: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Fully Charged"
-msgstr "Tercas Penuh"
+msgstr "Terisi Penuh"
 
 #: package/contents/ui/logic.js:28
 #, kde-format
 msgid "Discharging"
-msgstr "Nonngecas"
+msgstr "Tidak Dicas"
 
 #: package/contents/ui/logic.js:30
 #, kde-format
 msgid "Charging"
-msgstr "Mengecas"
+msgstr "Mengisi Daya"
 
 #: package/contents/ui/logic.js:32
 #, kde-format
 msgid "Not Charging"
-msgstr "Tidak Mengecas"
+msgstr "Tidak Mengisi Daya"
 
 #: package/contents/ui/logic.js:35
 #, kde-format
@@ -128,38 +130,38 @@ msgstr "Pengelolaan Daya"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Baterai %1%, tidak Mengecas"
+msgstr "Baterai %1%, tidak Mengisi Daya"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
-msgstr "Baterai %1%, padahal tercolok namun masih tidak mengecas"
+msgstr "Baterai %1%, padahal tercolok namun masih tidak mengisi daya"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Baterai %1%, Mengecas"
+msgstr "Baterai %1%, Mengisi Daya"
 
 #: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Baterai %1%"
+msgstr "Baterai di %1%"
 
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr "Power supply tidak cukup hebat untuk mengecas baterai"
+msgstr "Penyedia daya tidak cukup berdaya untuk mengisi daya baterai"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
-msgstr "Tak Ada Baterai Tersedia"
+msgstr "Tidak Ada Baterai Tersedia"
 
 #: package/contents/ui/main.qml:177
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
-msgstr "%1 sampai tercas penuh"
+msgstr "%1 sampai terisi penuh"
 
 #: package/contents/ui/main.qml:179
 #, kde-format
@@ -170,7 +172,7 @@ msgstr "Tersisa %1"
 #: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Not charging"
-msgstr "Tidak mengecas"
+msgstr "Tidak mengisi daya"
 
 #: package/contents/ui/main.qml:186
 #, kde-format
@@ -178,38 +180,33 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Tidur otomatis dan penguncian layar dinonfungsikan"
 
 #: package/contents/ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Satu aplikasi telah meminta mengaktifkan %2:"
-msgstr[1] "%1 aplikasi telah meminta mengaktifkan %2:"
+msgstr[0] "Sebuah aplikasi telah meminta mengaktifkan mode Performa"
+msgstr[1] "%1 aplikasi telah meminta mengaktifkan mode Performa"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistem dalam mode Performa"
 
 #: package/contents/ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Satu aplikasi telah meminta mengaktifkan %2:"
-msgstr[1] "%1 aplikasi telah meminta mengaktifkan %2:"
+msgstr[0] "Sebuah aplikasi telah meminta mengaktifkan mode Penghemat Daya"
+msgstr[1] "%1 aplikasi telah meminta mengaktifkan mode Penghemat Daya"
 
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistem dalam mode Penghemat Daya"
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Kecerahan Layar"
+msgstr "Gulir untuk mengatur kecerahan layar"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -227,10 +224,9 @@ msgid "&Show Energy Information…"
 msgstr "&Tampilkan Informasi Energi..."
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Tampilkan Persentase Baterai pada Ikon"
+msgstr "Tampilkan Persentase Baterai pada Ikon Ketika Belum Terisi Penuh"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -240,12 +236,12 @@ msgstr "&Konfigurasikan Penghematan Daya..."
 #: package/contents/ui/PopupDialog.qml:117
 #, kde-format
 msgid "Display Brightness"
-msgstr "Kecerahan Displai"
+msgstr "Kecerahan Layar"
 
 #: package/contents/ui/PopupDialog.qml:146
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr "Kecerahan Keyboard"
+msgstr "Kecerahan Papan Ketik"
 
 #: package/contents/ui/PowerManagementItem.qml:42
 #, kde-format
@@ -261,7 +257,7 @@ msgid ""
 "external monitor is connected."
 msgstr ""
 "Laptop Anda telah dikonfigurasi untuk tidak tidur ketika layar ditutup saat "
-"monitor external telah terhubung."
+"monitor eksternal telah terhubung."
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
@@ -291,12 +287,12 @@ msgstr "%1: %2"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
-msgstr "%1: alasan tak diketahui"
+msgstr "%1: alasan tidak diketahui"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
-msgstr "Hemat Daya"
+msgstr "Penghemat Daya"
 
 #: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format

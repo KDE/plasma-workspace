@@ -4,20 +4,21 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # Serdar Soytetir <tulliana@gmail.com>, 2012, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2022-02-27 14:09+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2023-03-07 20:48+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: soliddeviceengine.cpp:114
 msgid "Parent UDI"
@@ -518,7 +519,7 @@ msgstr "Pili Görüntüle"
 
 #: soliddeviceengine.cpp:392
 msgid "Gaming Input Battery"
-msgstr "Oyun Girdi Pili"
+msgstr "Oyun Giriş Pili"
 
 #: soliddeviceengine.cpp:392
 msgid "Bluetooth Battery"

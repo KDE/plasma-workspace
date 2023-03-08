@@ -673,7 +673,7 @@ msgstr "S'ha produït un error inesperat en processar: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:169
 #, kde-format
 msgid "Font Management"
-msgstr "Gestioneu els tipus de lletra"
+msgstr "Gestió dels tipus de lletra"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format

@@ -150,7 +150,7 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr ""
-"S'ha produït un error en intentar definir el fons de pantalla de Plasma:\n"
+"S'ha produït un error en intentar establir el fons de pantalla de Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
