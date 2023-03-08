@@ -58,6 +58,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Wayland::Client
                             Wayland::Server
                             SharedClientTest
+                            LayerShellQt::Interface
                                      )
                if (QT_MAJOR_VERSION STREQUAL "6")
                     target_link_libraries(${_testname} KF6::ConfigQml)

@@ -29,6 +29,7 @@ target_link_libraries(screenpoolmanualtest
             KF6::WindowSystem
             KF6::WaylandClient
             Wayland::Client
+            LayerShellQt::Interface
                         )
 if(HAVE_X11)
     target_link_libraries(screenpoolmanualtest XCB::XCB XCB::RANDR)
