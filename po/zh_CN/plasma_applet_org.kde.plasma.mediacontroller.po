@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,7 +24,7 @@ msgid "No title"
 msgstr "无标题"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
@@ -42,28 +42,28 @@ msgid "Shuffle"
 msgstr "随机播放"
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "上一首"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "暂停"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "播放"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -79,30 +79,30 @@ msgstr "重复曲目"
 msgid "Repeat"
 msgstr "重复"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "打开"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "停止"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "退出"
 
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Choose player automatically"
 msgstr "自动选择播放器"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -114,7 +114,7 @@ msgstr ""
 "中键单击以暂停\n"
 "滚动滑轮以调节音量"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 "中键单击以暂停\n"
 "滚动滑轮以调节音量"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -138,7 +138,7 @@ msgstr ""
 "中键单击以播放\n"
 "滚动滑轮以调节音量"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2019-01-05 10:47+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -71,23 +71,23 @@ msgstr "A creación do código de barras fallou."
 msgid "The QR code is too large to be displayed"
 msgstr ""
 
-#: contents/ui/clipboard.qml:27
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Contido do portapapeis"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "O portapapeis está baleiro"
 
-#: contents/ui/clipboard.qml:56
+#: contents/ui/clipboard.qml:57
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "Configurar o portapapeis…"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:59
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"

@@ -4,21 +4,22 @@
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
 # Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+# Linerly <linerly@protonmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-01 23:30+0000\n"
-"PO-Revision-Date: 2022-05-30 11:02+0700\n"
-"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
+"PO-Revision-Date: 2023-03-03 09:54+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -119,11 +120,10 @@ msgid "Until manually disabled"
 msgstr "Sampai dinonfungsikan secara manual"
 
 #: package/contents/ui/FullRepresentation.qml:204
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Disembunyikan secara otomatis"
+msgstr "Secara otomatis berakhir: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
@@ -317,12 +317,12 @@ msgstr "Jangan ganggu sampai %1"
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Mode jangan ganggu aktif; klik tengah untuk keluar"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Klik tengah untuk memasuki mode jangan ganggu"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -335,9 +335,7 @@ msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfigurasikan Notifikasi Peristiwa dan Aksi..."
 
 #: package/contents/ui/NotificationHeader.qml:122
-#, fuzzy, kde-format
-#| msgctxt "notification was just added, keep short"
-#| msgid "Just now"
+#, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Baru saja"

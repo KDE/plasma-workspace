@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2021-07-06 19:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -23,7 +23,7 @@ msgid "No title"
 msgstr ""
 
 #: package/contents/ui/AlbumArtStackView.qml:181
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
@@ -41,28 +41,28 @@ msgid "Shuffle"
 msgstr "फेंटें"
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "पिछले गीत पर जाएँ"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "ठहराएँ"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "बजाएँ"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -78,30 +78,30 @@ msgstr "गीत दोहराएँ"
 msgid "Repeat"
 msgstr "दोहराएँ"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "खोलें"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "रोकें"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "बाहर जाएँ"
 
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Choose player automatically"
 msgstr "स्वचालित रूप से वादक चुनें"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -112,7 +112,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 के द्वारा (ठहरा हुआ, %2)"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -121,7 +121,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"
@@ -132,7 +132,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "%1 के द्वारा (ठहरा हुआ, %2)"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
 #| msgid "by %1 (paused, %2)"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -70,58 +70,58 @@ msgstr "安全移除"
 msgid "Mount"
 msgstr "挂载"
 
-#: package/contents/ui/FullRepresentation.qml:41
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "移除全部"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "单击可安全移除所有设备"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No removable devices attached"
 msgstr "未连接可移动设备"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No disks available"
 msgstr "没有可用的数据盘"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "最近使用的设备"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "无可用设备"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "可移动设备"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "固定设备"
 
-#: package/contents/ui/main.qml:257
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "所有设备"
 
-#: package/contents/ui/main.qml:265
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "插入新设备时弹窗提示"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2021-11-01 20:40+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -71,22 +71,22 @@ msgstr "Ustvarjanje kode QR ni uspelo"
 msgid "The QR code is too large to be displayed"
 msgstr "QR koda je prevelika, da bi jo lahko prikazal"
 
-#: contents/ui/clipboard.qml:27
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Vsebina odložišča"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
 
-#: contents/ui/clipboard.qml:56
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavi odložišče…"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2022-02-12 15:09+0100\n"
 "Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -69,22 +69,22 @@ msgstr "Създаването на баркод е неуспешно"
 msgid "The QR code is too large to be displayed"
 msgstr "Баркодът е твърде голям, за да бъде показан"
 
-#: contents/ui/clipboard.qml:27
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Съдържание на клипборда"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буферът е празен"
 
-#: contents/ui/clipboard.qml:56
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Конфигуриране на клипборда…"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Изчистване на история"

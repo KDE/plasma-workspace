@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -64,22 +64,22 @@ msgstr "Não foi possível criar o código QR"
 msgid "The QR code is too large to be displayed"
 msgstr "O código QR é demasiado grande para ser apresentado"
 
-#: contents/ui/clipboard.qml:27
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: contents/ui/clipboard.qml:28 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
 
-#: contents/ui/clipboard.qml:56
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar o Histórico"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2022-09-02 06:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -70,58 +70,58 @@ msgstr "უსაფრთხოდ მოცილება"
 msgid "Mount"
 msgstr "მიმაგრება"
 
-#: package/contents/ui/FullRepresentation.qml:41
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "ყველას გამოერთება"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "მოწყობილობების უსაფრთხოდ გამოსაძრობად აქ დააწკაპუნეთ"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No removable devices attached"
 msgstr "მოხსნადი მოწყობილობები შეერთებული არაა"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No disks available"
 msgstr "დისკები მიუწვდომელია"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ახლახანს გამოყენებული მოწყობილობა"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "მოწყობილობები მიუწვდომელია"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "მოხსნადი მოწყობილობები"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "მოწყობილობები, რომლებსაც ვერ გამოაერთებთ"
 
-#: package/contents/ui/main.qml:257
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "ყველა მოწყობილობა"
 
-#: package/contents/ui/main.qml:265
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "ახალი მოწყობილობის შეერთებისას მხტუნავი ფანჯრის ჩვენება"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2022-12-11 20:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "No title"
 msgstr "Aucun titre"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
 msgstr "Aucun média en lecture"
@@ -47,28 +47,28 @@ msgid "Shuffle"
 msgstr "Mélanger"
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Piste précédente"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pause"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Lecture"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -84,30 +84,30 @@ msgstr "Répéter la piste"
 msgid "Repeat"
 msgstr "Répéter"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Ouvrir"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Arrêter"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Quitter"
 
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Sélectionner un lecteur automatiquement"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -119,7 +119,7 @@ msgstr ""
 "Faites un clic central pour mettre en pause\n"
 "Faites défiler pour ajuster le volume"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 "Faites défiler pour ajuster le volume"
 
 # Faut-il écrire « par » ou « de » ?
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -143,7 +143,7 @@ msgstr ""
 "par %1 (mis en pause, %2)\n"
 "Faites un clic central pour lire Faites défiler pour ajuster le volume"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

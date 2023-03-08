@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2022-12-16 22:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgid "No title"
 msgstr "Necun titulo"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
 msgstr "Necun media reproducente"
@@ -41,28 +41,28 @@ msgid "Shuffle"
 msgstr "Shuffle (miscer)"
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Previe tracia"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pausa"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Reproduce"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -78,30 +78,30 @@ msgstr "Repete tracia"
 msgid "Repeat"
 msgstr "Repete"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Aperi"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Stoppa"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Quita"
 
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Selige reproductor automaticamente"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 "Pulsa in le medie per pausar\n"
 "Rola pro adjustr volumine"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "Pulsa in le medie per pausar\n"
 "Rola per adjustar volumine"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 "Pulsa in le medieper sonar\n"
 "Rola per adjustar volumine"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

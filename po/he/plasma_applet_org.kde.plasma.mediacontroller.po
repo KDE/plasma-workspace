@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-03-08 02:24+0000\n"
 "PO-Revision-Date: 2017-05-22 05:26-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "No title"
 msgstr ""
 
 #: package/contents/ui/AlbumArtStackView.qml:181
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
 msgstr "לא מנוגנת מדיה"
@@ -42,28 +42,28 @@ msgid "Shuffle"
 msgstr ""
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "הרצועה הקודמת"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "השהה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "נגן"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
@@ -81,30 +81,30 @@ msgstr "הרצועה הבאה"
 msgid "Repeat"
 msgstr ""
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "פתח"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "עצור"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "יציאה"
 
-#: package/contents/ui/main.qml:238
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Choose player automatically"
 msgstr "בחר נגן אוטומטית"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -115,7 +115,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "על ידי %1 (מושהה)"
 
-#: package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -124,7 +124,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -135,7 +135,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "על ידי %1 (מושהה)"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:304
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
