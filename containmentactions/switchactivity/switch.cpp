@@ -13,8 +13,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <Plasma/DataEngine>
-#include <Plasma/ServiceJob>
 
 Q_DECLARE_METATYPE(QWeakPointer<Plasma::Containment>)
 
