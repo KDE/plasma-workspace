@@ -88,7 +88,7 @@
         "Description[sl]": "Programček, ki nadzoruje prepustnost in vhod/izhod trdega diska",
         "Description[sv]": "Ett miniprogram som övervakar hårddiskprestanda samt in- och utmatning",
         "Description[ta]": "வட்டின் உள்ளீடு/வெளியீடு மற்றும் செயல் வீதம் ஆகியவற்றை கண்காணிக்கும் பிளாஸ்மாய்ட்",
-        "Description[tr]": "Sabit disk girdisini/çıktısını izleyen bir uygulamacık",
+        "Description[tr]": "Sabit disk girişini/çıkışını izleyen bir uygulamacık",
         "Description[uk]": "Аплет, який стежить за даними, які записуються на жорсткий диск та читаються з жорсткого диска",
         "Description[vi]": "Một tiểu ứng dụng giám sát vào/ra và thông lượng của đĩa cứng",
         "Description[x-test]": "xxAn applet that monitors hard disk throughput and input/outputxx",
