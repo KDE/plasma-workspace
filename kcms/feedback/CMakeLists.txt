@@ -18,7 +18,7 @@ target_link_libraries(kcm_feedback
     KF6::I18n
     KF6::KCMUtils
     KF6::QuickAddons
-    KUserFeedbackCore
+    KUserFeedbackCoreQt6
 )
 
 ecm_qt_declare_logging_category(kcm_feedback

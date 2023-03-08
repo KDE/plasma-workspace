@@ -3,7 +3,7 @@ add_subdirectory(krdb)
 add_subdirectory(desktoptheme)
 add_subdirectory(icons)
 
-if(KUserFeedback_FOUND)
+if(KUserFeedbackQt6_FOUND)
     add_subdirectory(feedback)
 endif()
 

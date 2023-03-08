@@ -15,8 +15,8 @@
 #include <QFileInfo>
 #include <QVector>
 
-#include <KUserFeedback/FeedbackConfigUiController>
-#include <KUserFeedback/Provider>
+#include <KUserFeedbackQt6/FeedbackConfigUiController>
+#include <KUserFeedbackQt6/Provider>
 
 #include "feedbackdata.h"
 #include "feedbacksettings.h"
