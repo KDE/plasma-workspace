@@ -44,11 +44,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 {
     QObject::setParent(corona);
 
-    // Setting clear color to black makes the panel lose alpha channel on X11. This looks like
-    // a QtXCB bug, so set clear color only on Wayland to let the compositor optimize rendering.
-    if (KWindowSystem::isPlatformWayland()) {
-        setColor(Qt::black);
-    }
+    setColor(Qt::black);
 
     if (targetScreen) {
         setScreenToFollow(targetScreen);
