@@ -98,7 +98,6 @@
             "desktop"
         ],
         "Icon": "preferences-desktop-color",
-        "Id": "kcm_colors",
         "License": "GPL",
         "Name": "Colors",
         "Name[ar]": "الألوان",

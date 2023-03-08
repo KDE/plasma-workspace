@@ -46,7 +46,6 @@
             "desktop"
         ],
         "Icon": "preferences-desktop-locale",
-        "Id": "kcm_regionandlang",
         "Name": "Region & Language",
         "Name[ar]": "اللغة والمنطقة",
         "Name[az]": "Bölgə və Dil",
