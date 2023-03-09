@@ -158,8 +158,7 @@
         "Name[x-test]": "xxBattery and Brightnessxx",
         "Name[zh_CN]": "电池和亮度",
         "Name[zh_TW]": "電池與亮度",
-        "Version": "3.0",
-        "Website": "https://vizzzion.org"
+        "Version": "3.0"
     },
     "Keywords": "Power Management;Battery;System;Energy;",
     "Keywords[ar]": "إدارة الطاقة;بطارية;نظام;طاقة;",
