@@ -65,13 +65,13 @@ install(FILES klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
-kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
+kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma5support/dataengine")
 target_link_libraries(plasma_engine_clipboard
     libklipper_common_static
     KF6::Plasma5Support
 )
 
-install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
