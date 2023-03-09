@@ -160,8 +160,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "3.0",
-        "Website": "https://vizzzion.org"
+        "Version": "3.0"
     },
     "Keywords": "Power Management;Battery;System;Energy;",
     "Keywords[ar]": "إدارة الطاقة;بطارية;نظام;طاقة;",
