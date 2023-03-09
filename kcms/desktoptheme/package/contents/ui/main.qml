@@ -21,7 +21,6 @@ import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 KCM.GridViewKCM {
     id: root
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plasma style.")
 
     view.model: kcm.filteredModel
     view.currentIndex: kcm.filteredModel.selectedThemeIndex

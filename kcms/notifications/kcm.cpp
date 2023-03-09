@@ -37,7 +37,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>(); registerPlugin<NotificationsData>();)
 
 KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new NotificationsData(this))
@@ -237,7 +237,7 @@ bool KCMNotifications::isDefaultsBehaviorSettings() const
 
 void KCMNotifications::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
 
     bool firstLoad = m_firstLoad;
     if (m_firstLoad) {
@@ -285,7 +285,7 @@ void KCMNotifications::load()
 
 void KCMNotifications::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     m_data->saveBehaviorSettings();
 
     if (m_toggleDoNotDisturbShortcutDirty) {
@@ -296,7 +296,7 @@ void KCMNotifications::save()
 
 void KCMNotifications::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     m_data->defaultsBehaviorSettings();
 
     setToggleDoNotDisturbShortcut(QKeySequence());

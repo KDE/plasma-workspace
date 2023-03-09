@@ -7,14 +7,14 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <KSharedConfig>
 
 class FeedbackSettings;
 class FeedbackData;
 
-class Feedback : public KQuickAddons::ManagedConfigModule
+class Feedback : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

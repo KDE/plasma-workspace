@@ -43,7 +43,7 @@ target_link_libraries(kcm_cursortheme
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::NewStuffCore
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     PW::KWorkspace
     krdb
 )

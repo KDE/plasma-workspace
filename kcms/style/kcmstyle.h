@@ -18,7 +18,7 @@
 
 #include <QPointer>
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "gtkpage.h"
 #include "stylesettings.h"
@@ -29,7 +29,7 @@ class QQuickItem;
 class StyleData;
 class StyleConfigDialog;
 
-class KCMStyle : public KQuickAddons::ManagedConfigModule
+class KCMStyle : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

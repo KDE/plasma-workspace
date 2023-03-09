@@ -52,7 +52,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>(); registerPlugin<IconsData>();)
 
 IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_data(new IconsData(this))
     , m_model(new IconsModel(m_data->settings(), this))
     , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))
@@ -108,7 +108,7 @@ QList<int> IconModule::availableIconSizes(int group) const
 
 void IconModule::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
     m_model->load();
     // Model has been cleared so pretend the theme name changed to force view update
     Q_EMIT iconsSettings()->ThemeChanged();
@@ -126,7 +126,7 @@ void IconModule::save()
         }
     }
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     processPendingDeletions();
 
@@ -407,7 +407,7 @@ void IconModule::defaults()
     for (int i = 0, count = m_model->rowCount(QModelIndex()); i < count; ++i) {
         m_model->setData(m_model->index(i), false, IconsModel::Roles::PendingDeletionRole);
     }
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
 }
 
 #include "main.moc"

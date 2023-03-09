@@ -73,7 +73,7 @@ target_link_libraries(kcm_regionandlang
     Qt::DBus
     KF6::I18n
     KF6::KCMUtils
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::ItemModels)
 if (QT_MAJOR_VERSION EQUAL "6")
     target_link_libraries(kcm_regionandlang Qt::Core5Compat) # for QTextCodec

@@ -21,7 +21,7 @@ namespace ColorCorrect
 K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<KCMNightColor>(); registerPlugin<NightColorData>();)
 
 KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_data(new NightColorData(this))
 {
     qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);
@@ -51,7 +51,7 @@ bool KCMNightColor::isIconThemeBreeze()
 
 void KCMNightColor::save()
 {
-    KQuickAddons::ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     // load/unload colorcorrectlocationupdater based on whether user set it to automatic location
     QDBusConnection dbus = QDBusConnection::sessionBus();

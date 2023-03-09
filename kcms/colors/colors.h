@@ -15,7 +15,7 @@
 
 #include <KSharedConfig>
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <optional>
 
@@ -33,7 +33,7 @@ class FileCopyJob;
 class FilterProxyModel;
 class ColorsData;
 
-class KCMColors : public KQuickAddons::ManagedConfigModule
+class KCMColors : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

@@ -47,7 +47,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>(); registerPlugin<CursorThemeData>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_data(new CursorThemeData(this))
     , m_canInstall(true)
     , m_canResize(true)
@@ -297,7 +297,7 @@ QString CursorThemeConfig::cursorThemeFromIndex(int index) const
 
 void CursorThemeConfig::save()
 {
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
     int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
@@ -314,7 +314,7 @@ void CursorThemeConfig::save()
 
 void CursorThemeConfig::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
     // Disable the listview and the buttons if we're in kiosk mode
@@ -330,7 +330,7 @@ void CursorThemeConfig::load()
 
 void CursorThemeConfig::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     m_preferredSize = cursorThemeSettings()->cursorSize();
 }
 

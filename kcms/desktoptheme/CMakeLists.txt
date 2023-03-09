@@ -23,6 +23,7 @@ kconfig_add_kcfg_files(kcm_desktoptheme_SRCS desktopthemesettings.kcfgc GENERATE
 kcoreaddons_add_plugin(kcm_desktoptheme SOURCES ${kcm_desktoptheme_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_desktoptheme
+  Qt::Quick
   KF6::CoreAddons
   KF6::KCMUtils
   KF6::KIOCore
@@ -30,7 +31,7 @@ target_link_libraries(kcm_desktoptheme
   KF6::I18n
   KF6::Plasma
   KF6::Declarative
-  KF6::QuickAddons
+  KF6::KCMUtilsQuick
 )
 
 set(plasma-apply-desktoptheme_SRCS

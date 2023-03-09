@@ -21,7 +21,7 @@ kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAM
 kcmutils_generate_desktop_file(kcm_nightcolor)
 
 target_link_libraries(kcm_nightcolor
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::I18n
     KF6::KCMUtils
     PW::LibColorCorrect

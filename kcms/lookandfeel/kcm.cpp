@@ -55,7 +55,7 @@
 #endif
 
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_lnf(new LookAndFeelManager(this))
     , m_themeContents(LookAndFeelManager::Empty)
     , m_selectedContents(LookAndFeelManager::AppearanceSettings)
@@ -280,7 +280,7 @@ bool KCMLookandFeel::isSaveNeeded() const
 
 void KCMLookandFeel::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
 
     m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), lookAndFeelSettings()->lookAndFeelPackage());
 }
@@ -295,7 +295,7 @@ void KCMLookandFeel::save()
         return;
     }
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     m_lnf->save(package, m_package, m_selectedContents);
     m_package.setPath(newLnfPackage);
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
@@ -303,7 +303,7 @@ void KCMLookandFeel::save()
 
 void KCMLookandFeel::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
     Q_EMIT showConfirmation();
 }
 

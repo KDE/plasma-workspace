@@ -44,7 +44,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFont
 /**** KFonts ****/
 
 KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
@@ -96,7 +96,7 @@ QAbstractItemModel *KFonts::hintingOptionsModel() const
 void KFonts::load()
 {
     // first load all the settings
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
 
     // Load preview
     // NOTE: This needs to be done AFTER AA settings is loaded
@@ -121,7 +121,7 @@ void KFonts::save()
 
     auto forceFontDPIChanged = dpiItem->isSaveNeeded();
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
 #if HAVE_X11
     // if the setting is reset in the module, remove the dpi value,

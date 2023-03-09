@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <QHash>
 #include <QKeySequence>
@@ -27,7 +27,7 @@ namespace NotificationManager
 class BehaviorSettings;
 }
 
-class KCMNotifications : public KQuickAddons::ManagedConfigModule
+class KCMNotifications : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

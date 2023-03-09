@@ -10,7 +10,7 @@ set(kcm_autostart_PART_SRCS
 kcoreaddons_add_plugin(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file (kcm_autostart)
 
-target_link_libraries(kcm_autostart KF6::I18n KF6::KIOCore KF6::KIOWidgets KF6::QuickAddons PW::KWorkspace)
+target_link_libraries(kcm_autostart Qt6::Quick KF6::I18n KF6::KIOCore KF6::KIOWidgets KF6::KCMUtilsQuick PW::KWorkspace)
 
 ecm_qt_declare_logging_category(kcm_autostart
     HEADER kcm_autostart_debug.h

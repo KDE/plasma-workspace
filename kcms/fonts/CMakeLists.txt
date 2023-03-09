@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_fonts\")
 ########### next target ###############
 
 add_library(kcm_fonts_static STATIC kxftconfig.cpp)
-target_link_libraries(kcm_fonts_static Qt::Xml KF6::I18n KF6::WindowSystem KF6::KCMUtils KF6::QuickAddons KF6::Declarative kfontinst krdb)
+target_link_libraries(kcm_fonts_static Qt::Core Qt::Xml KF6::I18n KF6::WindowSystem KF6::KCMUtils KF6::KCMUtilsQuick KF6::Declarative kfontinst krdb)
 
 set_property(TARGET kcm_fonts_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
@@ -39,7 +39,7 @@ kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsba
 kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 kcmutils_generate_desktop_file (kcm_fonts)
 
-target_link_libraries(kcm_fonts kcm_fonts_static)
+target_link_libraries(kcm_fonts Qt::Quick kcm_fonts_static)
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

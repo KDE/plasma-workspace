@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "desktopthemesettings.h"
 #include "themesmodel.h"
@@ -31,7 +31,7 @@ class QQuickItem;
 class DesktopThemeData;
 class FilterProxyModel;
 
-class KCMDesktopTheme : public KQuickAddons::ManagedConfigModule
+class KCMDesktopTheme : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

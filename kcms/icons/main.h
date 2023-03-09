@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include <QCache>
 
@@ -32,7 +32,7 @@ class FileCopyJob;
 class IconsModel;
 class IconSizeCategoryModel;
 
-class IconModule : public KQuickAddons::ManagedConfigModule
+class IconModule : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(IconsSettings *iconsSettings READ iconsSettings CONSTANT)
@@ -60,7 +60,7 @@ public:
     void load() override;
     Q_INVOKABLE void reloadConfig()
     {
-        ManagedConfigModule::load();
+        KQuickManagedConfigModule::load();
     }
 
     void save() override;

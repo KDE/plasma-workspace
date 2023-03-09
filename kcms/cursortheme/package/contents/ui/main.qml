@@ -17,7 +17,6 @@ import org.kde.private.kcm_cursortheme 1.0
 
 KCM.GridViewKCM {
     id: root
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the mouse cursor theme.")
 
     view.model: kcm.cursorsModel
     view.delegate: Delegate {}

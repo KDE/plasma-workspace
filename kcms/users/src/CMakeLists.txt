@@ -74,7 +74,7 @@ target_link_libraries(kcm_users
     KF6::CoreAddons
     KF6::Declarative
     KF6::I18n
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::Wallet
     Qt::DBus
     crypt

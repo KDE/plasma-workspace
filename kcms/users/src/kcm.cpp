@@ -40,7 +40,7 @@ inline auto asyncCall(OrgFreedesktopAccountsInterface *ptr, const QString &metho
 }
 
 KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, data, args)
+    : KQuickConfigModule(parent, data, args)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
                                                           QStringLiteral("/org/freedesktop/Accounts"),
                                                           QDBusConnection::systemBus(),
@@ -105,7 +105,7 @@ KCMUser::~KCMUser()
 
 void KCMUser::save()
 {
-    KQuickAddons::ConfigModule::save();
+    KQuickConfigModule::save();
     Q_EMIT apply();
 }
 

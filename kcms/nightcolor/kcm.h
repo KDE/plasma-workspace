@@ -5,7 +5,7 @@
 */
 #pragma once
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "nightcolorsettings.h"
 
@@ -13,7 +13,7 @@ class NightColorData;
 
 namespace ColorCorrect
 {
-class KCMNightColor : public KQuickAddons::ManagedConfigModule
+class KCMNightColor : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

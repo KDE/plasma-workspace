@@ -47,6 +47,7 @@ kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "
 kcmutils_generate_desktop_file (kcm_colors)
 target_link_libraries(kcm_colors
     Qt::DBus
+    Qt::Quick
     KF6::KCMUtils
     KF6::CoreAddons
     KF6::Declarative
@@ -55,7 +56,7 @@ target_link_libraries(kcm_colors
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::NewStuffCore
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::WindowSystem
     krdb
 )

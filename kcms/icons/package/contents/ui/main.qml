@@ -19,8 +19,6 @@ import org.kde.private.kcms.icons 1.0 as Private
 KCM.GridViewKCM {
     id: root
 
-    KCM.ConfigModule.quickHelp: i18n("This module allows you to choose the icons for your desktop.")
-
     view.model: kcm.iconsModel
     view.currentIndex: kcm.pluginIndex(kcm.iconsSettings.theme)
     enabled: !kcm.downloadingFile

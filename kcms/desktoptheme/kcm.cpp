@@ -37,7 +37,7 @@ Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>(); registerPlugin<DesktopThemeData>();)
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_data(new DesktopThemeData(this))
     , m_model(new ThemesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
@@ -178,7 +178,7 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
 
 void KCMDesktopTheme::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
     m_model->load();
     m_model->setSelectedTheme(desktopThemeSettings()->name());
 }
@@ -195,14 +195,14 @@ void KCMDesktopTheme::save()
     // animation start event before we potentially trigger client side changes
     QDBusConnection::sessionBus().call(msg);
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     Plasma::Theme().setThemeName(desktopThemeSettings()->name());
     processPendingDeletions();
 }
 
 void KCMDesktopTheme::defaults()
 {
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
 
     // can this be done more elegantly?
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true);

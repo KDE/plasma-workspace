@@ -18,8 +18,6 @@ import org.kde.private.kcms.lookandfeel 1.0 as Private
 KCM.GridViewKCM {
     id: root
 
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the global look and feel.")
-
     readonly property bool hasAppearance: kcm.themeContents & Private.LookandFeelManager.AppearanceSettings
     readonly property bool hasLayout: kcm.themeContents & Private.LookandFeelManager.LayoutSettings
     readonly property bool showLayoutInfo: kcm.themeContents & Private.LookandFeelManager.DesktopLayout

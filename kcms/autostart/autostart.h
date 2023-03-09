@@ -7,17 +7,17 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 #include "autostartmodel.h"
 
-class Autostart : public KQuickAddons::ConfigModule
+class Autostart : public KQuickConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(AutostartModel *model READ model CONSTANT)
 
 public:
-    explicit Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &);
+    explicit Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~Autostart() override;
 
     void load() override;

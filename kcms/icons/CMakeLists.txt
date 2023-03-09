@@ -19,12 +19,13 @@ kcmutils_generate_desktop_file (kcm_icons    )
 target_link_libraries(kcm_icons
     Qt::Widgets
     Qt::Svg
+    Qt::Quick
     KF6::KCMUtils
     KF6::I18n
     KF6::IconThemes
     KF6::Archive
     KF6::KIOWidgets
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
 )
 
 file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/config.h CONTENT "#define CMAKE_INSTALL_FULL_LIBEXECDIR \"${CMAKE_INSTALL_FULL_LIBEXECDIR}\"")

@@ -63,7 +63,7 @@ Q_DECL_EXPORT void kcminit()
 }
 
 KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
 {
@@ -248,7 +248,7 @@ void KCMStyle::load()
 
     m_gtkPage->load();
 
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
     m_model->load();
     m_previousStyle = styleSettings()->widgetStyle();
 
@@ -278,7 +278,7 @@ void KCMStyle::save()
         }
     }
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
@@ -318,7 +318,7 @@ void KCMStyle::defaults()
     // TODO the old code had a fallback chain but do we actually support not having Breeze for Plasma?
     // defaultStyle() -> oxygen -> plastique -> windows -> platinum -> motif
 
-    ManagedConfigModule::defaults();
+    KQuickManagedConfigModule::defaults();
 
     loadSettingsToModel();
 }

@@ -18,7 +18,7 @@
 #include <QStandardItemModel>
 #include <config-X11.h>
 
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "fontsaasettings.h"
 #include "fontssettings.h"
@@ -28,7 +28,7 @@ class FontsData;
 /**
  * The Desktop/fonts tab in kcontrol.
  */
-class KFonts : public KQuickAddons::ManagedConfigModule
+class KFonts : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(FontsSettings *fontsSettings READ fontsSettings CONSTANT)

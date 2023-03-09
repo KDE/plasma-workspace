@@ -14,13 +14,13 @@
 #include "settingtype.h"
 
 #include <KConfigGroup>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 class RegionAndLangSettings;
 class OptionsModel;
 class LocaleGeneratorBase;
 
-class KCMRegionAndLang : public KQuickAddons::ManagedConfigModule
+class KCMRegionAndLang : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(RegionAndLangSettings *settings READ settings CONSTANT)

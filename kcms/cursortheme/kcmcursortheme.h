@@ -8,7 +8,7 @@
 #pragma once
 
 #include <KNSCore/Entry>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "cursorthemesettings.h"
 #include "launchfeedbacksettings.h"
@@ -27,7 +27,7 @@ namespace KIO
 class FileCopyJob;
 }
 
-class CursorThemeConfig : public KQuickAddons::ManagedConfigModule
+class CursorThemeConfig : public KQuickManagedConfigModule
 {
     Q_OBJECT
 

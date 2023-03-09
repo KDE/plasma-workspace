@@ -15,7 +15,6 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 KCM.SimpleKCM {
     id: root
-    KCM.ConfigModule.quickHelp: i18n("This module lets you manage application and system notifications.")
 
     // Sidebar on SourcesPage is 1/3 of the width at a minimum of 12, so assume 3 * 12 = 36 as preferred
     implicitWidth: Kirigami.Units.gridUnit * 36

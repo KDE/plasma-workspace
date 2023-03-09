@@ -47,7 +47,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
 KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new ColorsData(this))
@@ -369,7 +369,7 @@ bool KCMColors::isSaveNeeded() const
 
 void KCMColors::load()
 {
-    ManagedConfigModule::load();
+    KQuickManagedConfigModule::load();
     m_model->load();
 
     m_config->markAsClean();
@@ -404,7 +404,7 @@ void KCMColors::save()
         saveColors();
     }
 
-    ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
     notifyKcmChange(GlobalChangeType::PaletteChanged);
     m_activeSchemeEdited = false;
 

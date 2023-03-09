@@ -20,7 +20,7 @@
 #include <QStandardItemModel>
 
 #include <KPackage/Package>
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 
 #include "lookandfeelmanager.h"
 #include "lookandfeelsettings.h"
@@ -28,7 +28,7 @@
 class QQuickItem;
 class LookAndFeelManager;
 
-class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
+class KCMLookandFeel : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
@@ -70,7 +70,7 @@ public:
     Q_INVOKABLE void knsEntryChanged(const KNSCore::Entry &entry);
     Q_INVOKABLE void reloadConfig()
     {
-        ManagedConfigModule::load();
+        KQuickManagedConfigModule::load();
     }
 
     LookAndFeelManager *lookAndFeel() const

@@ -40,6 +40,7 @@ set_property(TARGET lookandfeelmanager PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 target_link_libraries(lookandfeelmanager
     Qt::DBus
+    Qt::Quick
     KF6::ConfigCore
     KF6::GuiAddons
     KF6::I18n
@@ -66,7 +67,7 @@ target_link_libraries(kcm_lookandfeel_objects
     KF6::IconThemes
     KF6::JobWidgets
     KF6::KIOGui
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     PW::KWorkspace
 )
 

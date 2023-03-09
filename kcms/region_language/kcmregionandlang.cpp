@@ -31,7 +31,7 @@ using namespace KCM_RegionAndLang;
 K_PLUGIN_CLASS_WITH_JSON(KCMRegionAndLang, "kcm_regionandlang.json")
 
 KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, data, args)
+    : KQuickManagedConfigModule(parent, data, args)
     , m_settings(new RegionAndLangSettings(this))
     , m_optionsModel(new OptionsModel(this))
     , m_generator(LocaleGenerator::getGenerator())
@@ -49,8 +49,6 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     } else {
         connect(m_generator, &LocaleGeneratorBase::userHasToGenerateManually, this, &KCMRegionAndLang::takeEffectNextTime);
     }
-
-    setQuickHelp(i18n("You can configure the formats used for time, dates, money and other numbers here."));
 
     qmlRegisterAnonymousType<RegionAndLangSettings>("kcmregionandlang", 1);
     qmlRegisterAnonymousType<OptionsModel>("kcmregionandlang", 1);
@@ -154,7 +152,7 @@ void KCMRegionAndLang::save()
 
 void KCMRegionAndLang::saveToConfigFile()
 {
-    KQuickAddons::ManagedConfigModule::save();
+    KQuickManagedConfigModule::save();
 }
 
 RegionAndLangSettings *KCMRegionAndLang::settings() const

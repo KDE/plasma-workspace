@@ -8,14 +8,14 @@
 
 #include "fingerprintmodel.h"
 #include "usermodel.h"
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 class OrgFreedesktopAccountsInterface;
 
 class QQuickView;
 class QQuickItemGrabResult;
 
-class KCMUser : public KQuickAddons::ConfigModule
+class KCMUser : public KQuickConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(UserModel *userModel MEMBER m_model CONSTANT)

@@ -14,8 +14,6 @@ import org.kde.private.kcms.style 1.0 as Private
 KCM.GridViewKCM {
     id: root
 
-    KCM.ConfigModule.quickHelp: i18n("This module allows you to modify the visual appearance of applications' user interface elements.")
-
     view.model: kcm.model
     view.currentIndex: kcm.model.selectedStyleIndex
 
