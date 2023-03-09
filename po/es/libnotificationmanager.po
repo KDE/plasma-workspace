@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-03-09 02:16+0000\n"
 "PO-Revision-Date: 2022-12-01 16:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -93,7 +93,7 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "a %1"
 
-#: jobsmodel.cpp:109
+#: jobsmodel.cpp:105
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"

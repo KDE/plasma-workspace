@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-03-09 02:16+0000\n"
 "PO-Revision-Date: 2022-10-17 12:03+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -110,7 +110,7 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "в «%1»"
 
-#: jobsmodel.cpp:109
+#: jobsmodel.cpp:105
 #, fuzzy, kde-format
 #| msgctxt "Copying n files to location"
 #| msgid "%1 file to %2"

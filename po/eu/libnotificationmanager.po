@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-03-09 02:16+0000\n"
 "PO-Revision-Date: 2022-12-01 22:11+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -94,7 +94,7 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "%1-era"
 
-#: jobsmodel.cpp:109
+#: jobsmodel.cpp:105
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"

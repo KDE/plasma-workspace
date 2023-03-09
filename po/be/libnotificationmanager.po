@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-09 01:04+0000\n"
+"POT-Creation-Date: 2023-03-09 02:16+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -109,7 +109,7 @@ msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
 msgstr "у %1"
 
-#: jobsmodel.cpp:109
+#: jobsmodel.cpp:105
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
