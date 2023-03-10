@@ -901,6 +901,3 @@ msgstr "Zakázat toto okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Obsah schránky"
