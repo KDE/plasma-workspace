@@ -26,3 +26,8 @@ target_link_libraries(testKlipperUtils
 )
 add_test(NAME klipper-testUtils COMMAND testKlipperUtils)
 ecm_mark_as_test(testKlipperUtils)
+
+# Klipper test
+ecm_add_test(klippertest.cpp TEST_NAME klippertest
+    LINK_LIBRARIES Qt::Test libklipper_common_static)
+
