@@ -1,7 +1,7 @@
 # Translation of klipper to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 1999, 2000, 2002, 2003, 2004, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2010, 2015, 2018, 2020, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2010, 2015, 2018, 2020, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021, 2022.
 msgid ""
@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 03:06+0000\n"
-"PO-Revision-Date: 2022-06-19 00:26+0200\n"
+"PO-Revision-Date: 2023-03-09 20:13+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -64,7 +64,7 @@ msgstr "Lagra alltid i historikken"
 #: configdialog.cpp:135
 #, kde-format
 msgid "Text selection:"
-msgstr "Tekstutval:"
+msgstr "Merkt tekst:"
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
@@ -74,12 +74,12 @@ msgstr "Berre ved direkte kopiering"
 #: configdialog.cpp:142
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
+msgstr "Om merkt tekst skal lagrast på utklippstavla."
 
 #: configdialog.cpp:173
 #, kde-format
 msgid "Non-text selection:"
-msgstr ""
+msgstr "Merkt ikkje-tekst:"
 
 #: configdialog.cpp:180
 #, kde-format
@@ -92,6 +92,7 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Om merkt ikkje-tekst (eksempelvis bilete) skal lagrast på utklippstavla."
 
 #: configdialog.cpp:250
 #, kde-format
@@ -189,6 +190,7 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Vil du sletta handlinga <resource>%1</resource><nl/>og alle kommandoane der?"
 
 #: configdialog.cpp:566
 #, kde-format
@@ -329,7 +331,7 @@ msgstr ""
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Skriv inn ei skildring for handlinga"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -339,7 +341,7 @@ msgstr "Skildring:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Ta med i automatisk sprettopp"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -406,7 +408,7 @@ msgstr ""
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Skriv inn ei skildring for kommandoen"
 
 #: editcommanddialog.cpp:91
 #, kde-format
@@ -426,12 +428,12 @@ msgstr "Legg til på utklippstavla"
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Kva som skal gjerast med standard-utdata frå kommandokøyringa."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Tilbakestill ikonet til til standard for kommandoen"
 
 #: editcommanddialog.cpp:121
 #, kde-format
@@ -441,7 +443,7 @@ msgstr "Ikon:"
 #: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
-msgstr "%1 × %2 %3 b/p"
+msgstr "%1 × %2 %3 b/p"
 
 #: klipper.cpp:155
 #, kde-format
@@ -501,13 +503,13 @@ msgstr "Førre historikkelement"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr ""
+msgstr "Vis element ved musepeikaren"
 
 #: klipper.cpp:260
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr ""
+msgstr "%1 – utklippstavle-verktøy"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -550,12 +552,12 @@ msgstr "Mobil strekkode"
 #: klipper.cpp:1059
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr ""
+msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
 
 #: klipper.cpp:1060
 #, kde-format
 msgid "Clear Clipboard History"
-msgstr "&Tøm utklippshistorikken"
+msgstr "Tøm utklippshistorikken"
 
 #: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
@@ -587,7 +589,7 @@ msgstr "Klipper-versjon"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Lagra historikk på tvers av skrivebordsøkter"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -596,12 +598,14 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Ta vare på utklippshistorikken, slik at han er tilgjengeleg neste gongar du "
+"loggar inn."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
 #, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr ""
+msgstr "Hindra tømming av utklippstavla"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -610,6 +614,8 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"Ikkje tillat at utklippstavla vert automatisk tømt, for eksempel når eit "
+"program vert lukka."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
@@ -654,6 +660,7 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Berre lagra tekstutval i historikken, ikkje bilete eller andre typar data."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -667,6 +674,8 @@ msgstr "Ignorer alltid bilete"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Ikkje lagra bilete i utklippshistorikken, heller ikkje om dei vert manuelt "
+"kopierte."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -771,7 +780,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr ""
+msgstr "%1 – utklippstavleelement"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -781,7 +790,7 @@ msgstr "Søk …"
 #: klipperpopup.cpp:167
 #, kde-format
 msgid "Invalid regular expression, %1"
-msgstr ""
+msgstr "Ugyldig regulært uttrykk: %1"
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
@@ -801,7 +810,7 @@ msgstr "Klipper"
 #: main.cpp:29
 #, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr ""
+msgstr "Plasma-verktøy for kopiering og innliming"
 
 #: main.cpp:31
 #, kde-format
