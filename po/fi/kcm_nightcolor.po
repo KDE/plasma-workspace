@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-10-28 22:09+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2022-11-11 22:21+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -65,20 +65,14 @@ msgid "Longitude:"
 msgstr "Pituusaste:"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
-#| "the time of your choosing."
+#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Yöväri tekee näytön väreistä lämpimämpiä valitsemaasi aikaan silmärasituksen "
-"vähentämiseksi."
+msgstr "Sinisen valon suodatin tekee näyttöväreistä lämpimämmät."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Käyttöönottoaika:"
+msgstr "Vaihtoajat:"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
@@ -86,28 +80,24 @@ msgid "Always off"
 msgstr "Aina pois käytöstä"
 
 #: package/contents/ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
+#, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr "Auringonlaskusta auringonnousuun nykyisessä sijainnissa"
+msgstr "Auringonlasku ja -nousu nykyisessä sijainnissa"
 
 #: package/contents/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
+#, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Auringonlaskusta auringonnousuun asetetussa sijainnissa"
+msgstr "Auringonlaskusta ja -nousu asetetussa sijainnissa"
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Custom time"
+#, kde-format
 msgid "Custom times"
-msgstr "Mukautettu aika"
+msgstr "Aikojen mukautus"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Aina käytössä"
+msgstr "Yöväri aina käytössä"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format
@@ -122,10 +112,9 @@ msgstr ""
 "services.mozilla.com/\">Mozillan paikannuspalveluun</a>."
 
 #: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
+#, kde-format
 msgid "Day color temperature:"
-msgstr "Yövärin lämpötila:"
+msgstr "Päivävärin lämpötila:"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
 #, kde-format
@@ -164,7 +153,7 @@ msgstr "Leveysaste: %1°  Pituusaste: %2°"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Yövärin aloitusaika:"
 
 #: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
 #, kde-format
@@ -174,7 +163,7 @@ msgstr "Syötemuoto: TT:MM"
 #: package/contents/ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Päivävärin aloitusaika:"
 
 # Ellei transition ole astronomisessa kielessä vakiintunut muuksi kuin ”siirtymäksi”?
 #: package/contents/ui/main.qml:353
@@ -206,20 +195,21 @@ msgid "Locating…"
 msgstr "Paikannetaan…"
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "Yöväri alkaa vaihtua %1 ja on täysi %2"
+msgstr ""
+"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut yöväriksi %2 mennessä"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "Yöväri alkaa vaihtua %1 ja on täysi %2"
+msgstr ""
+"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut päiväväriksi %2 "
+"mennessä"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."

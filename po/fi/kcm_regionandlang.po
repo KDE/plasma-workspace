@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Tommi Nieminen <translator@legisign.org>, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2022-07-21 18:53+0300\n"
+"PO-Revision-Date: 2023-03-04 18:08+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -51,165 +51,163 @@ msgstr "A4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "c/o"
 
 #: exampleutility.cpp:65
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Pispalan keppi ja sateenvarjo"
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Kehitysosasto"
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Päärakennus"
 
 #: exampleutility.cpp:68
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "Pääkatu"
 
 #: exampleutility.cpp:69
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr ""
+msgstr "A-talo"
 
 #: exampleutility.cpp:71
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:72
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "Huone 2"
 
 #: exampleutility.cpp:73
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "3. kerros"
 
 #: exampleutility.cpp:75
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Keskusta"
 
 #: exampleutility.cpp:76
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "12345"
 
 #: exampleutility.cpp:77
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr ""
+msgstr "Kaupunki"
 
 #: exampleutility.cpp:78
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr ""
+msgstr "Maakunta"
 
 #: exampleutility.cpp:91
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "Sukunimi"
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "SUKUNIMI"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "Etunimi"
 
 #: exampleutility.cpp:94
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "E"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "Etunimi"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "ToinenNimi"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "Lisänimi"
 
 #: exampleutility.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "A4"
+#, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "A4"
+msgstr "L"
 
 #: exampleutility.cpp:99
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
-msgstr ""
+msgstr "Ammatti"
 
 #: exampleutility.cpp:100
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "Tohtori"
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr ""
+msgstr "Tri"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr ""
+msgstr "Tri"
 
 #: exampleutility.cpp:103
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -217,7 +215,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Tällä maa-asetustolle ei löydy esimerkkiä"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -236,6 +234,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>locatectl</command>-työkalulla ei löytynyt järjestelmässä "
+"käytettävissä olevia maa-asetuksia. Ilmoita tästä ohjelmavirheenä "
+"osoitteessa <link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -373,21 +374,19 @@ msgstr "Paperikoko"
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
-msgstr ""
+msgstr "Osoite"
 
 #: optionsmodel.cpp:31
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "Nimen tyyli"
 
 #: optionsmodel.cpp:32
-#, fuzzy, kde-format
-#| msgctxt "@info:title"
-#| msgid "Numbers"
+#, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr "Numerot"
+msgstr "Puhelinnumerot"
 
 #: optionsmodel.cpp:114 optionsmodel.cpp:295
 #, kde-format
@@ -408,19 +407,15 @@ msgid "Language"
 msgstr "Kieli"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Amerikanenglannin sijoittaminen muiden edelle voi aiheuttaa joissakin "
-"sovelluksissa epätoivottua toimintaa. Jos haluat järjestelmän käyttävän "
-"amerikanenglantia, poista kaikki muut kielet."
+"Englannin sijoittaminen muiden edelle voi aiheuttaa joissakin sovelluksissa "
+"epätoivottua toimintaa. Jos haluat järjestelmän käyttävän englantia, poista "
+"muut kielet."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -554,19 +549,19 @@ msgstr "Paperikoko"
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
-msgstr ""
+msgstr "Osoite"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr ""
+msgstr "Puhelinnumero"
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27

@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014.
-# Vit Pelcak <vit@pelcak.org>, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-22 00:46+0000\n"
-"PO-Revision-Date: 2014-10-20 15:38+0200\n"
-"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2023-03-10 12:58+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -48,12 +48,12 @@ msgstr ""
 #: shellpackage.cpp:43
 #, kde-format
 msgid "Error message shown when an applet fails to load"
-msgstr ""
+msgstr "Chybová hláška zobrazená pokud se nepovede načíst applet"
 
 #: shellpackage.cpp:44
 #, kde-format
 msgid "QML component that shows an applet in a popup"
-msgstr ""
+msgstr "Komponenta QML, která zobrazuje applet ve vyskakovací nabídce"
 
 #: shellpackage.cpp:48
 #, kde-format

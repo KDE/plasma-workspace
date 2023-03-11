@@ -4,7 +4,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2017, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2017, 2019, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 #
 # KDE Finnish translation sprint participants:
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 02:24+0000\n"
-"PO-Revision-Date: 2022-03-18 23:13+0200\n"
+"PO-Revision-Date: 2023-03-04 18:19+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "Aikaa jäljellä:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Arvioidaan…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -186,39 +186,34 @@ msgstr "Automaattinen valmiustila ja näytön lukitus on poistettu käytöstä"
 
 # Käännös on väännetty mutkalle, jotta %2:n sijaksi saadaan nominatiivi
 #: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Yksi sovellus on pyytänyt, että %2 aktivoidaan:"
-msgstr[1] "%1 sovellusta on pyytänyt, että %2 aktivoimaan:"
+msgstr[0] "Sovellus on pyytänyt ottamaan käyttöön suorituskykytilan"
+msgstr[1] "%1 sovellusta on pyytänyt ottamaan käyttöön suorituskykytilan"
 
 #: package/contents/ui/main.qml:196
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Järjestelmä on suorituskykytilassa"
 
 # Käännös on väännetty mutkalle, jotta %2:n sijaksi saadaan nominatiivi
 #: package/contents/ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Yksi sovellus on pyytänyt, että %2 aktivoidaan:"
-msgstr[1] "%1 sovellusta on pyytänyt, että %2 aktivoimaan:"
+msgstr[0] "Sovellus on pyytänyt ottamaan käyttöön virransäästötilan"
+msgstr[1] "%1 sovellusta on pyytänyt ottamaan käyttöön virransäästötilan"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Järjestelmä on virransäästötilassa"
 
 #: package/contents/ui/main.qml:209
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Näytön kirkkaus:"
+msgstr "Säädä näytön kirkkautta vierittämällä"
 
 #: package/contents/ui/main.qml:311
 #, kde-format
@@ -238,10 +233,9 @@ msgid "&Show Energy Information…"
 msgstr "Näytä &virrankulutustiedot…"
 
 #: package/contents/ui/main.qml:379
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Näytä kuvakkeessa akun varaus"
+msgstr "Näytä kuvakkeessa akun varaus, ellei varaus ole täysi"
 
 #: package/contents/ui/main.qml:385
 #, kde-format
@@ -292,20 +286,17 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 estää lukituksen ja valmiustilan (tuntemattomasta syystä)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "Valmiustilan ja näytön lukituksen estää %1 sovellus:"
+msgstr "Sovellus estää valmiustilan ja näytön lukitsemisen (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 estää lukituksen ja valmiustilan (tuntemattomasta syystä)"
+msgstr ""
+"Sovellus estää valmiustilan ja näytön lukitsemisen (tuntemattomasta syystä)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -323,15 +314,13 @@ msgstr "%1: tuntematon syy"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Tuntematon sovellus: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: tuntematon syy"
+msgstr "Tuntematon sovellus: tuntematon syy"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format

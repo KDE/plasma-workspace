@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-11 02:41+0000\n"
 "PO-Revision-Date: 2018-06-24 21:50+0100\n"
 "Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -86,7 +86,7 @@ msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
-#: ../sddm-theme/Main.qml:590
+#: ../sddm-theme/Main.qml:595
 #, kde-format
 msgid "Login Failed"
 msgstr "Innlogging mislyktes"

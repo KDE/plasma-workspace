@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-11 02:41+0000\n"
 "PO-Revision-Date: 2022-08-20 23:20-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -85,7 +85,7 @@ msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "仮想キーボード"
 
-#: ../sddm-theme/Main.qml:590
+#: ../sddm-theme/Main.qml:595
 #, kde-format
 msgid "Login Failed"
 msgstr "ログイン失敗"

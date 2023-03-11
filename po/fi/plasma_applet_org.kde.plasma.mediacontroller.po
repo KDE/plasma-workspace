@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2016, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2020, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2020, 2022, 2023.
 #
 # Larso, 2014.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 02:24+0000\n"
-"PO-Revision-Date: 2022-07-11 22:07+0300\n"
+"PO-Revision-Date: 2023-03-04 18:22+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Ei otsikkoa"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:83
@@ -104,15 +104,16 @@ msgid "Choose player automatically"
 msgstr "Valitse soitin automaattisesti"
 
 #: package/contents/ui/main.qml:293
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "artistilta %1 (tauko, %2)"
+msgstr ""
+"artistilta %1 (%2)\n"
+"Keskinapsautuksella tauko\n"
+"Säädä äänenvoimakkuuden vierittämällä"
 
 #: package/contents/ui/main.qml:293
 #, kde-format
@@ -122,28 +123,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Tauko keskinapsautuksella\n"
+"Säädä äänenvoimakkuutta vierittämällä"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "artistilta %1 (tauko, %2)"
+msgstr ""
+"artistilta %1 (tauko, %2)\n"
+"Tauko keskinapsautuksella\n"
+"Säädä äänenvoimakkuutta vierittämällä"
 
 #: package/contents/ui/main.qml:304
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "artistilta %1 (tauko, %2)"
+msgstr ""
+"Tauko (%1)\n"
+"Toista keskinapsautuksella\n"
+"Säädä äänenvoimakkuutta vierittämällä"
 
 #~ msgid "General"
 #~ msgstr "Yleistä"
