@@ -9,7 +9,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2016, 2017, 2022.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2021, 2022.
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2022-10-17 01:36+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2022-11-11 22:18+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -35,10 +35,9 @@ msgid "Main Toolbar"
 msgstr "Päätyökalurivi"
 
 #: iconsizecategorymodel.cpp:15
-#, fuzzy, kde-format
-#| msgid "&Second color:"
+#, kde-format
 msgid "Secondary Toolbars"
-msgstr "&Toinen väri:"
+msgstr "Toissijaiset työkalurivit"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
@@ -141,11 +140,15 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Tässä voi mukauttaa eri kuvaketyyppien oletuskokoja järjestelmänlaajuisesti. "
+"Huomaa, etteivät kaikki sovellukset kunnioita näitä arvoja.<nl/><nl/>Jos "
+"jotkin näyttöalkiot ovat yleisesti liian pieniä tai suuria, saattaa "
+"kannattaa säätää tämän sijaan yleismittakaavaa."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Säädä yleismittakaavaa…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

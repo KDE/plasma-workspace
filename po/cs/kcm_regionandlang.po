@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2023-01-04 14:51+0100\n"
+"PO-Revision-Date: 2023-03-10 12:54+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -215,7 +215,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Nepovedlo se najít příklad pro tento jazyk"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -270,7 +270,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
-msgstr ""
+msgstr "Instalace balíčku %1 selhala"
 
 #: localegenhelper/localegenhelper.cpp:43
 #, kde-format
@@ -285,12 +285,12 @@ msgstr ""
 #: localegenhelper/localegenhelper.cpp:113
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr ""
+msgstr "Nelze otevřít soubor `/etc/locale.gen`"
 
 #: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr ""
+msgstr "Nelze najít spustitelný soubor `locale-gen`"
 
 #: localegenhelper/localegenhelper.cpp:159
 #, kde-format
@@ -321,7 +321,7 @@ msgstr "%1 (%2)"
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr ""
+msgstr "Výchozí systémový C"
 
 #: localelistmodel.cpp:166
 #, kde-format
@@ -414,7 +414,7 @@ msgstr ""
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr ""
+msgstr "Jazyk \"%1\" není podporován"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
@@ -468,7 +468,7 @@ msgstr "Přidat další..."
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "Změny se projeví při vašem příštím přihlášení."
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -481,7 +481,7 @@ msgctxt "@info"
 msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
-msgstr ""
+msgstr "Generuji soubory pro podporu jazyka. Ještě nevypínejte počítač."
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -500,6 +500,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"Nutné soubory pro podporu jazyka byly nainstalovány. Nyní můžete počítač "
+"vypnout."
 
 #: package/contents/ui/main.qml:139
 #, kde-format

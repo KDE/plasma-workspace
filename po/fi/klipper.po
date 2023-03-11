@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 03:06+0000\n"
-"PO-Revision-Date: 2022-08-02 22:48+0300\n"
+"PO-Revision-Date: 2022-11-11 22:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:26+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -551,19 +551,16 @@ msgid "Previous History Item"
 msgstr "Edellinen historiatietue"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Avaa Klipper hiiriosoittimen kohdalle"
+msgstr "Avaa kohteet hiiriosoittimen kohdalle"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper – leikepöytätyökalu"
+msgstr "%1 – Leikepöytätyökalu"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -846,11 +843,10 @@ msgstr ""
 "sen MIME-tyypin hyväksyvät sovellukset."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Leikepöydän sisältö"
+msgstr "%1 – Leikepöydän sisältö"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -880,10 +876,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE:n leikepöydän historia"
+msgstr "Plasman leikepöytähistoriatyökalu"
 
 #: main.cpp:31
 #, kde-format

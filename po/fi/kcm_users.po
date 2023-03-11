@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-25 04:10+0000\n"
-"PO-Revision-Date: 2022-07-24 09:26+0300\n"
+"PO-Revision-Date: 2023-03-04 18:16+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -149,7 +149,7 @@ msgstr "Sormenjälkiasetukset"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr ""
+msgstr "Tyhjennä kaikki"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -173,204 +173,144 @@ msgstr "Kirjataan sormenjälkeä"
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti oikeaa etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:127
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:135
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti vasenta etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti vasenta keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:139
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:141
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Paina toistuvasti vasenta peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:147
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti oikeaa etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:149
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:151
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti vasenta etusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:159
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti vasenta keskisormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:161
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
 
 # *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
 #: package/contents/ui/FingerprintDialog.qml:165
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+#, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "%1 %2 toistuvasti sormenjälkitunnistimelle."
+msgstr "Pyyhkäise toistuvasti vasenta peukaloa sormenjälkitunnistimella."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
 msgid "Finger Enrolled"
-msgstr "Sormi on kirjattu"
+msgstr "Sormi on muistissa"
 
 #: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
@@ -383,10 +323,9 @@ msgid "Re-enroll finger"
 msgstr "Kirjaa sormi uudelleen"
 
 #: package/contents/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
+#, kde-format
 msgid "Delete fingerprint"
-msgstr "Tyhjennä sormenjäljet"
+msgstr "Poista sormenjälki"
 
 #: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
@@ -404,141 +343,121 @@ msgid "Add New User"
 msgstr "Lisää uusi käyttäjä"
 
 #: package/contents/ui/PicturesSheet.qml:19
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
+#, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Vaihda tunnuskuva"
 
 #: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
+#, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Ei mitään"
 
 #: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Urhea flamingo"
 
 #: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Pitaija"
 
 #: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Bataatti"
 
 #: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Ambient Amber"
 
 #: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Kimalteleva säde"
 
 #: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Sitruuna-limetti"
 
 #: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Vehreä lumo"
 
 #: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Lempeä niitty"
 
 #: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Vaisu sinivihreä"
 
 #: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasmansininen"
 
 #: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Ponpurppura"
 
 #: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajopurppura"
 
 #: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Poltettu hiili"
 
 #: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Paper Perfection"
 
 #: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Kahvionruskea"
 
 #: package/contents/ui/PicturesSheet.qml:38
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
 #: package/contents/ui/PicturesSheet.qml:72
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
+#, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Valitse kuva"
 
 #: package/contents/ui/PicturesSheet.qml:104
-#, fuzzy, kde-format
-#| msgid "Choose File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Valitse tiedosto…"

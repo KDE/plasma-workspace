@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 03:06+0000\n"
-"PO-Revision-Date: 2023-01-06 11:18+0100\n"
+"PO-Revision-Date: 2023-03-10 11:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -40,6 +40,16 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Pokud je text nebo oblast obrazovky vybrána pomocí myši nebo klávesnice, "
+"říká se tomu  <emphasis>výběr</emphasis>. Lze jej vložit pomocí prostředního "
+"tlačítka myši.<nl/><nl/>Pokud je výběr explicitně kopírován pomocí činnosti "
+"<interface>Kopírovat</interface> nebo <interface>Vyjmout</interface>, je "
+"uložen do <emphasis>schránky</emphasis>. Lze jej vložit pomocí činnosti "
+"<interface>Vložit</interface>. <nl/><nl/>Pokud je zapnuta, tato volba "
+"udržuje výběr a schránku stejné, takže výběr je okamžitě dostupný pro "
+"vložení libovolným způsobem. Pokud je vypnuta, výběr stále lze ukládat do "
+"historie schránky (podle voleb níže), ale lze vložit pouze pomocí "
+"prostředního tlačítka myši."
 
 #: configdialog.cpp:106
 #, kde-format
@@ -73,12 +83,12 @@ msgstr "Pouze pokud explicitně kopírováno."
 #: configdialog.cpp:142
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
+msgstr "Zda je vybraný text uložen v historii schránky."
 
 #: configdialog.cpp:173
 #, kde-format
 msgid "Non-text selection:"
-msgstr ""
+msgstr "Netextový výběr:"
 
 #: configdialog.cpp:180
 #, kde-format
@@ -90,12 +100,12 @@ msgstr "Nikdy neukládat v historii"
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
-msgstr ""
+msgstr "Zda je netextový výběr (např. obrázky) uložen v historii schránky."
 
 #: configdialog.cpp:250
 #, kde-format
 msgid "Show action popup menu:"
-msgstr ""
+msgstr "Zobrazit vyskakovací nabídku činností:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -111,7 +121,7 @@ msgstr ""
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Výjimka pro okna..."
 
 #: configdialog.cpp:283
 #, kde-format
@@ -137,7 +147,7 @@ msgstr "Volby:"
 #: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Výjimka pro okna"
 
 #: configdialog.cpp:350
 #, kde-kuit-format
@@ -147,12 +157,15 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Když <interface>vzor porovnání</interface> odpovídá obsahu schránky, jeho "
+"<interface>příkazy</interface> budou zobrazeny v nabídce Klipperu a bude "
+"možné je spustit."
 
 #: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Vzor porovnání a příkazy"
 
 #: configdialog.cpp:359
 #, kde-format
@@ -182,6 +195,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Tyto činnosti budou zobrazeny ve vyskakovací nabídce, kterou lze nastavit na "
+"straně <interface>Nabídka činností</interface>."
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -251,6 +266,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Vyskakovací nabídka činnosti se nebude automaticky zobrazovat pro tato okna "
+"ani když je povolena. To například proto, že webový prohlížeč může během "
+"psaní zvýrazňovat URL v adresním řádku během psaní, takže nabídka by "
+"ukazovala každý stisk klávesy.<nl/><nl/>Pokud se nečekaně zobrazí nabídka "
+"činnosti během používání konkrétní aplikace, přidejte ji do tohoto seznamu. "
+"<link>Jak zjistit, jaký název zadat</link>."
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -307,16 +328,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Činnost je k dispozici kduž <interface>vzor porovnání</interface> odpovídá "
+"obsahu schránky. Když k tomu dojde, činnosti  <interface>příkazů</interface> "
+"budou zobrazeny ve vyskakovací nabídce Klipper. Pokud kteroukoliv vyberete, "
+"příkaz bude proveden."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Zadejte vzor pro porovnání se schránkou"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Vzor porovnání:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -326,11 +351,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"Vzor porovnání je regulární výraz. Více informací k tomuto tématu naleznete "
+"na <link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Stránce "
+"Wikipedia</link>."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Zadejte popis činnosti"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -340,7 +368,7 @@ msgstr "Popis:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Zahrnout v automatické vyskakovací nabídce"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -352,6 +380,11 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Příkazy pro tuto schodu budou zahrnuty v automatické vyskakovací nabídce "
+"činností, pokud je povolena v <interface>Nabídce činností</interface>. Pokud "
+"je tato volba vypnuta, příkazy pro tuto shodu nebudou zahrnuty v automatické "
+"vyskakovací nabídce ale budou zahrnuty pokud je nabídka aktivována manuálně "
+"pomocí klávesové zkratky <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -403,6 +436,10 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"<placeholder>&#37;s</placeholder> v příkazu bude nahrazeno kompletním "
+"obsahem schránky. <placeholder>&#37;0</placeholder> až <placeholder>&#37;9</"
+"placeholder> bude nahrazeno odpovídajícími zachycenými texty ze vzoru "
+"porovnání."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -448,7 +485,7 @@ msgstr "%1x%2 %3bpp"
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr ""
+msgstr "Automatická nabídka automatické činnosti"
 
 #: klipper.cpp:194
 #, kde-format
@@ -588,7 +625,7 @@ msgstr "Verze Klipperu"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Ukládat historii napříč sezeními pracovní plochy"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -616,7 +653,7 @@ msgstr ""
 #: klipper.kcfg:27
 #, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr ""
+msgstr "Udržovat výběr a schránku shodné"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -626,6 +663,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Obsah vybraný kurzorem je automaticky kopírován do schránky, takže jej lze "
+"vložit činností vložení nebo prostředním tlačítkem myši.<br/><a href="
+"\"1\">Více o výběru a schránce</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -641,6 +681,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Obsah vybraný kurzorem ale ne explicitně kopírovaný do schránky není "
+"automaticky ukládán v historii schránky a lze jej pouze vložit prostředním "
+"tlačítkem myši."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -668,6 +711,7 @@ msgstr "Vždy ignorovat obrázky"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Neukládat obrázky v historii schránky ani když jsou explicitně kopírovány."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -679,7 +723,7 @@ msgstr "Použít grafický editor regulárních výrazů"
 #: klipper.kcfg:51
 #, kde-format
 msgid "Immediately on selection"
-msgstr ""
+msgstr "Okamžitě po vybrání"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -698,13 +742,13 @@ msgstr "Žádná činnost pro WM_CLASS"
 #: klipper.kcfg:60
 #, kde-format
 msgid "Automatic action menu time:"
-msgstr ""
+msgstr "Čas do nabídky automatické činnosti:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr ""
+msgstr "Zobrazit automatickou vyskakovací nabídku činností po tuto dobu."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
@@ -728,7 +772,7 @@ msgstr "Falešný záznam pro zjištění změn ve widgetu stromu činností"
 #: klipper.kcfg:84
 #, kde-format
 msgid "Trim whitespace from selection"
-msgstr ""
+msgstr "Oříznout mezery z výběru"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -739,6 +783,9 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Odstranit každou mezeru ze začátku nebo konce vybraného textu před "
+"provedením činnosti. To například zajišťuje, že URL vložená do prohlížeče je "
+"zobrazena podle očekávání. Text uložený ve schránce není nijak ovlivněn."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -767,6 +814,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Pokud je vybrán název souboru nebo URL, nabídnout ve vyskakovací nabídce "
+"aplikace, které přijímají tento typ MIME."
 
 #: klipperpopup.cpp:105
 #, kde-format

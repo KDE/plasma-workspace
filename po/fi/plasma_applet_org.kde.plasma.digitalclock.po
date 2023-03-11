@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 # Larso, 2014.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-05 02:43+0000\n"
-"PO-Revision-Date: 2022-08-08 12:26+0300\n"
+"PO-Revision-Date: 2023-03-04 18:20+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -269,6 +269,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Vinkki: Jos matkustat usein, lisää kotiaikavyöhykkeesi luetteloon. Se "
+"näytetään vain, kun järjestelmän aikavyöhyke on jotakin muuta."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -282,13 +284,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Piilossa, kun tämä on paikallinen aikavyöhyke"
 
 #: package/contents/ui/configTimeZones.qml:117
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Vaihda paikallista aikavyöhykettä…"
+msgstr "Vaihda järjestelmän aikavyöhykettä…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -296,10 +297,9 @@ msgid "Remove this time zone"
 msgstr "Poista tämä aikavyöhyke"
 
 #: package/contents/ui/configTimeZones.qml:135
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Järjestelmän paikallinen aikavyöhyke"
+msgstr "Järjestelmän aikavyöhyke"
 
 #: package/contents/ui/configTimeZones.qml:135
 #, kde-format
@@ -326,18 +326,13 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Vaihda näytettyä aikavyöhykettä rullaamalla hiirtä kellosovelman yllä"
 
 #: package/contents/ui/configTimeZones.qml:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Huomaa, ettei eri aikavyöhykkeen käyttäminen kellossa muuta järjestelmän "
-"paikallista aikavyöhykettä. Matkustaessasi muuta mieluummin paikallista "
-"aikavyöhykettä."
+"Huomaa, ettei tämä muuta järjestelmän aikavyöhykettä. Matkustaessasi vaihda "
+"mieluummin se."
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format
@@ -388,7 +383,7 @@ msgstr "Tänään on %1"
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format

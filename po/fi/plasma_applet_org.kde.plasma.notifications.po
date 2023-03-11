@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2022-04-07 13:49+0300\n"
+"PO-Revision-Date: 2022-11-11 22:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -118,11 +118,10 @@ msgid "Until manually disabled"
 msgstr "Kunnes käyttäjä poistaa käytöstä"
 
 #: package/contents/ui/FullRepresentation.qml:205
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Piilota automaattisesti"
+msgstr "Päättyy automaattisesti: %1"
 
 #: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
@@ -309,20 +308,19 @@ msgstr[1] "%1 uutta ilmoitusta"
 
 # *** TARKISTA: Onko %1 vain kellonaika tai päivämäärä vai voiko se olla esim. jonon ”Four 1 hour” tyylinen jono?
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Älä häiritse ennen kuin %1"
+msgstr "Häiritse vasta %1; lopeta nyt keskinapsautuksella"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Älä häiritse -tila aktiivinen: lopeta keskinapsautuksella"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Siirry älä häiritse -tilaan keskinapsautuksella"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -335,9 +333,7 @@ msgid "&Configure Event Notifications and Actions…"
 msgstr "&Tapahtumailmoitusten ja -toimintojen asetukset…"
 
 #: package/contents/ui/NotificationHeader.qml:122
-#, fuzzy, kde-format
-#| msgctxt "notification was just added, keep short"
-#| msgid "Just now"
+#, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Juuri nyt"
