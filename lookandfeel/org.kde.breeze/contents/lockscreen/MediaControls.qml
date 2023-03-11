@@ -11,6 +11,7 @@ import QtQuick.Window 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 Item {
     visible: mpris2Source.hasPlayer
@@ -24,7 +25,7 @@ Item {
 
         enabled: mpris2Source.canControl
 
-        PlasmaCore.DataSource {
+        P5Support.DataSource {
             id: mpris2Source
 
             readonly property string source: "@multiplex"

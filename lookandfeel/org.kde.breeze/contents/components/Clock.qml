@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 ColumnLayout {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
@@ -27,7 +28,7 @@ ColumnLayout {
         font.pointSize: 24
         Layout.alignment: Qt.AlignHCenter
     }
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: timeSource
         engine: "time"
         connectedSources: ["Local"]

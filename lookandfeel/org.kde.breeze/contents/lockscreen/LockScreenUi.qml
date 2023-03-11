@@ -13,6 +13,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -95,7 +96,7 @@ PlasmaCore.ColorScope {
         showNewSessionEntry: false
     }
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: keystateSource
         engine: "keystate"
         connectedSources: "Caps Lock"
