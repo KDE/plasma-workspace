@@ -164,11 +164,11 @@ Item {
         engine: "mpris2"
         connectedSources: sources
 
-        onSourceAdded: {
+        onSourceAdded: source => {
             updateMprisSourcesModel()
         }
 
-        onSourceRemoved: {
+        onSourceRemoved: source => {
             // if player is closed, reset to multiplex source
             if (source === current) {
                 current = multiplexSource

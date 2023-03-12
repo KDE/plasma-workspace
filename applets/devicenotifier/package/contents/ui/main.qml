@@ -73,12 +73,12 @@ Item {
         connectedSources: sources
         interval: 0
 
-        onSourceAdded: {
+        onSourceAdded: source => {
             disconnectSource(source);
             connectSource(source);
             sdSource.connectedSources = sources
         }
-        onSourceRemoved: {
+        onSourceRemoved: source => {
             disconnectSource(source);
         }
     }
@@ -106,7 +106,7 @@ Item {
         engine: "soliddevice"
         interval: 0
         property string last
-        onSourceAdded: {
+        onSourceAdded: source => {
             disconnectSource(source);
             connectSource(source);
             last = source;
@@ -117,7 +117,7 @@ Item {
             }
         }
 
-        onSourceRemoved: {
+        onSourceRemoved: source => {
             disconnectSource(source);
             var index = devicenotifier.connectedRemovables.indexOf(source);
             if (index >= 0) {
@@ -139,7 +139,7 @@ Item {
             }
         }
 
-        onNewData: {
+        onNewData: (sourceName, data) => {
             last = sourceName;
             processLastDevice(false);
         }
@@ -197,12 +197,12 @@ Item {
         property string lastDescription
         property string lastMessage
         property string lastIcon
-        onSourceAdded: {
+        onSourceAdded: source => {
             last = source;
             disconnectSource(source);
             connectSource(source);
         }
-        onSourceRemoved: disconnectSource(source)
+        onSourceRemoved: source => disconnectSource(source)
         onDataChanged: {
             if (last) {
                 lastUdi = data[last].udi
