@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 02:41+0000\n"
+"POT-Creation-Date: 2023-03-12 04:11+0000\n"
 "PO-Revision-Date: 2022-04-04 10:12+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "Parolă"
 msgid "Log In"
 msgstr "Autentificare"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:300
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
 
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Adormire"
 
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Repornire"
 
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Deconectare"
 
-#: ../sddm-theme/Main.qml:233
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Altul…"
 
-#: ../sddm-theme/Main.qml:448
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Tastați numele de utilizator și parola"
 
-#: ../sddm-theme/Main.qml:482
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "Enumeră utilizatorii"
 
-#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:575
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Tastatură virtuală"
 
-#: ../sddm-theme/Main.qml:595
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Autentificare eșuată"
@@ -94,12 +94,12 @@ msgstr "Autentificare eșuată"
 msgid "Desktop Session: %1"
 msgstr "Sesiune de birou: %1"
 
-#: contents/components/Battery.qml:53
+#: contents/components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:54
+#: contents/components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Acumulator la %1%"
@@ -154,42 +154,42 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:38
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:315
 #, kde-format
 msgid "Sleep"
 msgstr "Adormire"
 
-#: contents/lockscreen/LockScreenUi.qml:320 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:327
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"
 
-#: contents/lockscreen/LockScreenUi.qml:522
+#: contents/lockscreen/LockScreenUi.qml:523
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Comută la această sesiune"
 
-#: contents/lockscreen/LockScreenUi.qml:530
+#: contents/lockscreen/LockScreenUi.qml:531
 #, kde-format
 msgid "Start New Session"
 msgstr "Începe o sesiune nouă"
 
-#: contents/lockscreen/LockScreenUi.qml:543
+#: contents/lockscreen/LockScreenUi.qml:544
 #, kde-format
 msgid "Back"
 msgstr "Înapoi"
 
-#: contents/lockscreen/LockScreenUi.qml:589
+#: contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -201,27 +201,27 @@ msgstr "Schimbă aranjamentul"
 msgid "Unlock"
 msgstr "Deblochează"
 
-#: contents/lockscreen/MediaControls.qml:110
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Nimic în redare"
 
-#: contents/lockscreen/MediaControls.qml:140
+#: contents/lockscreen/MediaControls.qml:141
 #, kde-format
 msgid "Previous track"
 msgstr "Pista precedentă"
 
-#: contents/lockscreen/MediaControls.qml:152
+#: contents/lockscreen/MediaControls.qml:153
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Redă sau întrerupe multimedia"
 
-#: contents/lockscreen/MediaControls.qml:166
+#: contents/lockscreen/MediaControls.qml:167
 #, kde-format
 msgid "Next track"
 msgstr "Pista următoare"

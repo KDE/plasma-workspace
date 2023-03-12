@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 02:41+0000\n"
+"POT-Creation-Date: 2023-03-12 04:11+0000\n"
 "PO-Revision-Date: 2022-10-09 19:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -37,53 +37,53 @@ msgstr "Password"
 msgid "Log In"
 msgstr "Accedi"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:300
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Il blocco maiuscole è attivo"
 
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Sospendi"
 
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Riavvia"
 
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Spegni"
 
-#: ../sddm-theme/Main.qml:233
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Altro…"
 
-#: ../sddm-theme/Main.qml:448
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Digita nome utente e password"
 
-#: ../sddm-theme/Main.qml:482
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "Elenca utenti"
 
-#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:575
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Tastiera virtuale"
 
-#: ../sddm-theme/Main.qml:595
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Accesso non riuscito"
@@ -93,12 +93,12 @@ msgstr "Accesso non riuscito"
 msgid "Desktop Session: %1"
 msgstr "Sessione del desktop: %1"
 
-#: contents/components/Battery.qml:53
+#: contents/components/Battery.qml:54
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/components/Battery.qml:54
+#: contents/components/Battery.qml:55
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Batteria al %1%"
@@ -151,42 +151,42 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Mostra sotto richiesta di sblocco"
 
-#: contents/lockscreen/LockScreenUi.qml:37
+#: contents/lockscreen/LockScreenUi.qml:38
 #, kde-format
 msgid "Unlocking failed"
 msgstr "Sblocco non riuscito"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:315
 #, kde-format
 msgid "Sleep"
 msgstr "Sospendi"
 
-#: contents/lockscreen/LockScreenUi.qml:320 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Ibernazione"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:327
 #, kde-format
 msgid "Switch User"
 msgstr "Cambia utente"
 
-#: contents/lockscreen/LockScreenUi.qml:522
+#: contents/lockscreen/LockScreenUi.qml:523
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Passa a questa sessione"
 
-#: contents/lockscreen/LockScreenUi.qml:530
+#: contents/lockscreen/LockScreenUi.qml:531
 #, kde-format
 msgid "Start New Session"
 msgstr "Avvia nuova sessione"
 
-#: contents/lockscreen/LockScreenUi.qml:543
+#: contents/lockscreen/LockScreenUi.qml:544
 #, kde-format
 msgid "Back"
 msgstr "Indietro"
 
-#: contents/lockscreen/LockScreenUi.qml:589
+#: contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -198,27 +198,27 @@ msgstr "Cambia disposizione"
 msgid "Unlock"
 msgstr "Sblocca"
 
-#: contents/lockscreen/MediaControls.qml:110
+#: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "No title"
 msgstr "Nessun titolo"
 
-#: contents/lockscreen/MediaControls.qml:111
+#: contents/lockscreen/MediaControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Nessun supporto in riproduzione"
 
-#: contents/lockscreen/MediaControls.qml:140
+#: contents/lockscreen/MediaControls.qml:141
 #, kde-format
 msgid "Previous track"
 msgstr "Traccia precedente"
 
-#: contents/lockscreen/MediaControls.qml:152
+#: contents/lockscreen/MediaControls.qml:153
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Riproduci o sospendi supporto"
 
-#: contents/lockscreen/MediaControls.qml:166
+#: contents/lockscreen/MediaControls.qml:167
 #, kde-format
 msgid "Next track"
 msgstr "Traccia successiva"

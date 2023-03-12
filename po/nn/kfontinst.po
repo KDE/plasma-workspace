@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 02:22+0000\n"
-"PO-Revision-Date: 2023-01-15 12:52+0100\n"
+"PO-Revision-Date: 2023-03-11 14:58+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -121,12 +121,12 @@ msgstr "Fjern fila som inneheld lista over skrifter som skal skrivast ut"
 #: apps/Viewer.cpp:48
 #, kde-format
 msgid "Open an existing font file"
-msgstr ""
+msgstr "Opna ei skriftfil som finst frå før"
 
 #: apps/Viewer.cpp:49
 #, kde-format
 msgid "Print font preview"
-msgstr ""
+msgstr "Førehandsvising av utskrift av skrift"
 
 #: apps/Viewer.cpp:66
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "Skriftduplikatar"
 #: kcmfontinst/DuplicatesDialog.cpp:77
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr ""
+msgstr "Ser etter om det finst skriftduplikat. Vent litt …"
 
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
