@@ -42,14 +42,12 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt::WaylandClient
                             KF6::Activities
                             KF6::ConfigCore
-                            KF6::Declarative
                             KF6::Service
                             KF6::WaylandClient
                             KF6::WindowSystem
                             KF6::Package
                             KF6::Plasma
                             KF6::PlasmaQuick
-                            KF6::QuickAddons
                             KF6::XmlGui
                             KF6::I18n
                             KF6::GlobalAccel

@@ -13,12 +13,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace KDeclarative
+namespace PlasmaQuick
 {
-class QmlObjectSharedEngine;
-}
-namespace Plasma
-{
+class SharedQmlEngine;
 }
 
 class QTimer;
@@ -62,7 +59,7 @@ private:
     void showOsd();
 
     QUrl m_osdUrl;
-    KDeclarative::QmlObjectSharedEngine *m_osdObject = nullptr;
+    PlasmaQuick::SharedQmlEngine *m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;
 

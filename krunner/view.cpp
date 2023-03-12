@@ -25,8 +25,6 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <kdeclarative/qmlobject.h>
-
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/surface.h>
@@ -66,13 +64,13 @@ View::View(QWindow *)
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
-    m_qmlObj = new KDeclarative::QmlObject(this);
-    m_qmlObj->setInitializationDelayed(true);
-    connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
+    m_engine = new PlasmaQuick::SharedQmlEngine(this);
+    m_engine->setInitializationDelayed(true);
+    connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
 
-    m_qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
-    m_qmlObj->setSource(QUrl(QStringLiteral("qrc:/krunner/RunCommand.qml")));
-    m_qmlObj->completeInitialization();
+    m_engine->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
+    m_engine->setSource(QUrl(QStringLiteral("qrc:/krunner/RunCommand.qml")));
+    m_engine->completeInitialization();
 
     auto screenRemoved = [this](QScreen *screen) {
         if (screen == this->screen()) {
@@ -104,7 +102,7 @@ View::~View()
 
 void View::objectIncubated()
 {
-    auto mainItem = qobject_cast<QQuickItem *>(m_qmlObj->rootObject());
+    auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
     connect(mainItem, &QQuickItem::widthChanged, this, &View::resetScreenPos);
     setMainItem(mainItem);
 }
@@ -288,32 +286,32 @@ void View::displaySingleRunner(const QString &runnerName)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("singleRunner", runnerName);
-    m_qmlObj->rootObject()->setProperty("query", QString());
+    m_engine->rootObject()->setProperty("singleRunner", runnerName);
+    m_engine->rootObject()->setProperty("query", QString());
 }
 
 void View::displayWithClipboardContents()
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("singleRunner", QString());
-    m_qmlObj->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
+    m_engine->rootObject()->setProperty("singleRunner", QString());
+    m_engine->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
 }
 
 void View::query(const QString &term)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("singleRunner", QString());
-    m_qmlObj->rootObject()->setProperty("query", term);
+    m_engine->rootObject()->setProperty("singleRunner", QString());
+    m_engine->rootObject()->setProperty("query", term);
 }
 
 void View::querySingleRunner(const QString &runnerName, const QString &term)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("singleRunner", runnerName);
-    m_qmlObj->rootObject()->setProperty("query", term);
+    m_engine->rootObject()->setProperty("singleRunner", runnerName);
+    m_engine->rootObject()->setProperty("query", term);
 }
 
 void View::switchUser()

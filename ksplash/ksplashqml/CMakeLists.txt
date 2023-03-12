@@ -11,8 +11,8 @@ target_link_libraries(ksplashqml
     Qt::DBus
     KF6::ConfigCore
     KF6::Package
-    KF6::QuickAddons
     KF6::WindowSystem
+    KF6::PlasmaQuick
     PW::KWorkspace
     LayerShellQt::Interface
    )

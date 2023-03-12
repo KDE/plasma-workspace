@@ -50,7 +50,6 @@ target_link_libraries(kcm_colors
     Qt::Quick
     KF6::KCMUtils
     KF6::CoreAddons
-    KF6::Declarative
     KF6::GuiAddons
     KF6::I18n
     KF6::KIOCore

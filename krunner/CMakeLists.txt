@@ -17,7 +17,6 @@ target_link_libraries(krunner
     Qt::Quick
     Qt::Widgets
     KF6::KIOGui
-    KF6::Declarative
     KF6::I18n
     KF6::PlasmaQuick
     KF6::DBusAddons

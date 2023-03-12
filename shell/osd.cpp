@@ -13,7 +13,7 @@
 #include <QTimer>
 #include <QWindow>
 
-#include <KDeclarative/QmlObjectSharedEngine>
+#include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
 
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
@@ -165,7 +165,7 @@ bool Osd::init()
     }
 
     if (!m_osdObject) {
-        m_osdObject = new KDeclarative::QmlObjectSharedEngine(this);
+        m_osdObject = new PlasmaQuick::SharedQmlEngine(this);
     }
 
     m_osdObject->setSource(m_osdUrl);

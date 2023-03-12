@@ -16,11 +16,11 @@
 #include <sensors/SensorQuery.h>
 
 #include <KConfigLoader>
-#include <KDeclarative/QmlObjectSharedEngine>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KNotifications/KNotificationJobUiDelegate>
 #include <KService>
+#include <PlasmaQuick/SharedQmlEngine>
 
 SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
@@ -43,9 +43,9 @@ void SystemMonitor::init()
     configChanged();
 
     // FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
-    KDeclarative::QmlObjectSharedEngine *qmlObject = new KDeclarative::QmlObjectSharedEngine();
+    auto qmlObject = new PlasmaQuick::SharedQmlEngine();
     KConfigGroup cg = config();
-    m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine());
+    m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine().get());
     qmlObject->deleteLater();
 
     if (!m_pendingStartupPreset.isNull()) {

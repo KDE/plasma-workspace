@@ -6,10 +6,10 @@ target_link_libraries(org.kde.plasma.systemmonitor
                       Qt::Quick
                       Qt::DBus
                       KF6::Plasma
+                      KF6::PlasmaQuick
                       KF6::I18n
                       KF6::ConfigCore
                       KF6::ConfigGui
-                      KF6::Declarative
                       KF6::KIOGui
                       KF6::Notifications
                       KSysGuard::SysGuard

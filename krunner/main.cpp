@@ -21,8 +21,6 @@
 #include <KAuthorized>
 #include <KDBusService>
 
-#include <kdeclarative/qmlobject.h>
-
 #include <kworkspace.h>
 
 #include "view.h"

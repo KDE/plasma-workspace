@@ -36,9 +36,9 @@
 #include <KMessageBox>
 #include <KWindowSystem>
 #include <KX11Extras>
+#include <PlasmaQuick/SharedQmlEngine>
 #include <kactivities/consumer.h>
 #include <kactivities/controller.h>
-#include <kdeclarative/qmlobjectsharedengine.h>
 #include <kdirwatch.h>
 #include <ksycoca.h>
 
@@ -863,7 +863,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         return;
     }
 
-    auto *qmlObj = new KDeclarative::QmlObjectSharedEngine(this);
+    auto *qmlObj = new PlasmaQuick::SharedQmlEngine(this);
     qmlObj->setInitializationDelayed(true);
     qmlObj->setSource(alternativesQML);
 

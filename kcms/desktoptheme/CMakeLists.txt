@@ -30,7 +30,6 @@ target_link_libraries(kcm_desktoptheme
   KF6::KIOWidgets
   KF6::I18n
   KF6::Plasma
-  KF6::Declarative
   KF6::KCMUtilsQuick
 )
 

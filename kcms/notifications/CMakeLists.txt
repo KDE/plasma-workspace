@@ -13,7 +13,6 @@ kcmutils_generate_desktop_file(kcm_notifications)
 target_link_libraries(kcm_notifications
     KF6::KCMUtils
     KF6::CoreAddons
-    KF6::Declarative
     KF6::GlobalAccel
     KF6::GuiAddons
     KF6::I18n

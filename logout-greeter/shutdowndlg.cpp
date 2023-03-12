@@ -73,7 +73,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         }
     }
 
-    setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
+    setResizeMode(PlasmaQuick::QuickViewSharedEngine::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows
     // FIXME: or does it?
@@ -145,7 +145,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
 
     // engine stuff
-    engine()->rootContext()->setContextObject(new KLocalizedContext(engine()));
+    engine()->rootContext()->setContextObject(new KLocalizedContext(engine().get()));
 }
 
 void KSMShutdownDlg::init(const KPackage::Package &package)
@@ -198,7 +198,7 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 {
-    KQuickAddons::QuickViewSharedEngine::resizeEvent(e);
+    PlasmaQuick::QuickViewSharedEngine::resizeEvent(e);
 
     if (KX11Extras::compositingActive()) {
         // TODO: reenable window mask when we are without composite?

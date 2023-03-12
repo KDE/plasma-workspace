@@ -10,7 +10,7 @@
 
 #include <QScreen>
 
-#include <kquickaddons/quickviewsharedengine.h>
+#include <PlasmaQuick/QuickViewSharedEngine>
 #include <kworkspace.h>
 #include <sessionmanagement.h>
 
@@ -18,7 +18,7 @@
 #include <KPackage/PackageLoader>
 
 // The confirmation dialog
-class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
+class KSMShutdownDlg : public PlasmaQuick::QuickViewSharedEngine
 {
     Q_OBJECT
 

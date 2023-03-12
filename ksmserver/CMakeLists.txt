@@ -45,7 +45,6 @@ target_link_libraries(ksmserver
     KF6::KIOCore
     KF6::KIOGui
     KF6::Solid
-    KF6::Declarative
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package

@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_fonts\")
 ########### next target ###############
 
 add_library(kcm_fonts_static STATIC kxftconfig.cpp)
-target_link_libraries(kcm_fonts_static Qt::Core Qt::Xml KF6::I18n KF6::WindowSystem KF6::KCMUtils KF6::KCMUtilsQuick KF6::Declarative kfontinst krdb)
+target_link_libraries(kcm_fonts_static Qt::Core Qt::Xml KF6::I18n KF6::WindowSystem KF6::KCMUtils KF6::KCMUtilsQuick kfontinst krdb)
 
 set_property(TARGET kcm_fonts_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 

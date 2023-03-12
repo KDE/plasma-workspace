@@ -72,7 +72,6 @@ target_link_libraries(kcm_users
     Qt::QuickWidgets
     Qt::Concurrent
     KF6::CoreAddons
-    KF6::Declarative
     KF6::I18n
     KF6::KCMUtilsQuick
     KF6::Wallet

@@ -17,11 +17,7 @@
 #include <KWayland/Client/plasmashell.h>
 
 #include <PlasmaQuick/Dialog>
-
-namespace KDeclarative
-{
-class QmlObject;
-}
+#include <PlasmaQuick/SharedQmlEngine>
 
 namespace KWayland
 {
@@ -91,7 +87,7 @@ protected Q_SLOTS:
 private:
     void writeHistory();
     QPoint m_customPos;
-    KDeclarative::QmlObject *m_qmlObj;
+    PlasmaQuick::SharedQmlEngine *m_engine;
     KConfigGroup m_config;
     KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;

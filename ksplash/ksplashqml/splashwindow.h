@@ -8,12 +8,12 @@
 
 #include <QScreen>
 
-#include <KQuickAddons/QuickViewSharedEngine>
+#include <PlasmaQuick/QuickViewSharedEngine>
 
 class QMouseEvent;
 class QKeyEvent;
 
-class SplashWindow : public KQuickAddons::QuickViewSharedEngine
+class SplashWindow : public PlasmaQuick::QuickViewSharedEngine
 {
 public:
     SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen);
