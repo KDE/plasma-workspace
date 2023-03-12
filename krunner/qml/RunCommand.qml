@@ -17,7 +17,7 @@ import org.kde.milou 0.1 as Milou
 ColumnLayout {
     id: root
     property string query
-    property string runner
+    property string singleRunner
     property bool showHistory: false
     property alias runnerManager: results.runnerManager
 
@@ -45,7 +45,7 @@ ColumnLayout {
                 if (runnerManager.retainPriorSearch) {
                     runnerManager.priorSearch = root.query
                 }
-                root.runner = ""
+                root.singleRunner = ""
                 root.query = ""
                 root.showHistory = false
             }
@@ -87,8 +87,8 @@ ColumnLayout {
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
 
             activeFocusOnPress: true
-            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
-                                                         "Search '%1'…", results.runnerName)
+            placeholderText: results.singleRunnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
+                                                         "Search '%1'…", results.singleRunnerName)
                                                 : i18nc("Textfield placeholder text", "Search…")
 
             PlasmaComponents3.BusyIndicator {
@@ -256,7 +256,7 @@ ColumnLayout {
         Milou.ResultsView {
             id: results
             queryString: root.query
-            runner: root.runner
+            singleRunner: root.singleRunner
 
             Keys.onPressed: {
                 var ctrl = event.modifiers & Qt.ControlModifier;

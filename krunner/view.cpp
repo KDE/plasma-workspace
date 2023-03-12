@@ -288,7 +288,7 @@ void View::displaySingleRunner(const QString &runnerName)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("runner", runnerName);
+    m_qmlObj->rootObject()->setProperty("singleRunner", runnerName);
     m_qmlObj->rootObject()->setProperty("query", QString());
 }
 
@@ -296,7 +296,7 @@ void View::displayWithClipboardContents()
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("runner", QString());
+    m_qmlObj->rootObject()->setProperty("singleRunner", QString());
     m_qmlObj->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
 }
 
@@ -304,7 +304,7 @@ void View::query(const QString &term)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("runner", QString());
+    m_qmlObj->rootObject()->setProperty("singleRunner", QString());
     m_qmlObj->rootObject()->setProperty("query", term);
 }
 
@@ -312,7 +312,7 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("runner", runnerName);
+    m_qmlObj->rootObject()->setProperty("singleRunner", runnerName);
     m_qmlObj->rootObject()->setProperty("query", term);
 }
 
