@@ -29,5 +29,6 @@ private:
     QDate m_lastEndDate;
     QList<KHolidays::HolidayRegion *> m_regions;
     QMultiHash<QDate, CalendarEvents::EventData> m_lastData;
+    QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> m_lastSubLabelData;
     KSharedConfig::Ptr m_config;
 };
