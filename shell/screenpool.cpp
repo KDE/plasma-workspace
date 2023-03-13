@@ -27,7 +27,19 @@ ScreenPool::ScreenPool(QObject *parent)
     : QObject(parent)
 {
     qRegisterMetaType<QList<QScreen *>>("QList<QScreen *>");
-    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded);
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, [this](QScreen *screen) {
+        connect(screen, &QScreen::geometryChanged, this, [this, screen]() {
+            handleScreenGeometryChanged(screen);
+        });
+        handleScreenAdded(screen);
+    });
+
+    for (auto screen : qApp->screens()) {
+        connect(screen, &QScreen::geometryChanged, this, [this, screen]() {
+            handleScreenGeometryChanged(screen);
+        });
+    }
+
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved);
 
     // Note that the ScreenPool must process the QGuiApplication::screenAdded signal
@@ -166,19 +178,17 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
     m_sizeSortedScreens.insert(before, screen);
 }
 
+void ScreenPool::handleScreenGeometryChanged(QScreen *screen)
+{
+    m_sizeSortedScreens.removeAll(screen);
+    insertSortedScreen(screen);
+    reconsiderOutputOrder();
+}
+
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
     qCDebug(SCREENPOOL) << "handleScreenAdded" << screen << screen->geometry();
-    connect(
-        screen,
-        &QScreen::geometryChanged,
-        this,
-        [this, screen]() {
-            m_sizeSortedScreens.removeAll(screen);
-            insertSortedScreen(screen);
-            reconsiderOutputOrder();
-        },
-        Qt::UniqueConnection);
+
     insertSortedScreen(screen);
 
     if (isOutputFake(screen)) {

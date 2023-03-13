@@ -53,6 +53,7 @@ private:
     void handleScreenAdded(QScreen *screen);
     void handleScreenRemoved(QScreen *screen);
     void handleOutputOrderChanged(const QStringList &newOrder);
+    void handleScreenGeometryChanged(QScreen *screen);
 
     void screenInvariants();
 
