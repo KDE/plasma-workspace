@@ -26,7 +26,7 @@
     <entry key="LC_MEASUREMENT" name="measurement" type="String">
         <default code="true">i18n("Inherit Language")</default>
     </entry>
-    <entry key="LC_PAGE" name="paperSize" type="String">
+    <entry key="LC_PAPER" name="paperSize" type="String">
         <default code="true">i18n("Inherit Language")</default>
     </entry>
     <entry key="LC_ADDRESS" name="address" type="String">
