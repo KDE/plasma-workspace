@@ -50,8 +50,29 @@ void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &retu
         return;
     }
 
+    // First check KWallet for a saved password; if found, don't even show the dialog
     Solid::Device device(udi);
+    QString uuid;
+    if (device.is<Solid::StorageVolume>()) {
+        uuid = device.as<Solid::StorageVolume>()->uuid();
 
+        KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), (WId)wId);
+        const QString folderName = QString::fromLatin1("SolidLuks");
+        if (wallet && wallet->hasFolder(folderName)) {
+            wallet->setFolder(folderName);
+            QString savedPassword;
+            if (wallet->readPassword(uuid, savedPassword) == 0) {
+                decryptVolume(returnService, returnObject, savedPassword);
+                wallet->closeWallet(wallet->walletName(), false);
+                delete wallet;
+                return;
+            }
+        }
+        wallet->closeWallet(wallet->walletName(), false);
+        delete wallet;
+    }
+
+    // No saved password? Prompt the user for a password with a dialog
     KPasswordDialog *dialog = new KPasswordDialog(nullptr, KPasswordDialog::ShowKeepPassword);
 
     QString label = device.vendor();
@@ -64,27 +85,8 @@ void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &retu
     dialog->setProperty("soliduiserver.udi", udi);
     dialog->setProperty("soliduiserver.returnService", returnService);
     dialog->setProperty("soliduiserver.returnObject", returnObject);
-
-    QString uuid;
-    if (device.is<Solid::StorageVolume>())
-        uuid = device.as<Solid::StorageVolume>()->uuid();
-
-    // read the password from wallet and prefill it to the dialog
     if (!uuid.isEmpty()) {
         dialog->setProperty("soliduiserver.uuid", uuid);
-
-        KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), (WId)wId);
-        const QString folderName = QString::fromLatin1("SolidLuks");
-        if (wallet && wallet->hasFolder(folderName)) {
-            wallet->setFolder(folderName);
-            QString savedPassword;
-            if (wallet->readPassword(uuid, savedPassword) == 0) {
-                dialog->setKeepPassword(true);
-                dialog->setPassword(savedPassword);
-            }
-            wallet->closeWallet(wallet->walletName(), false);
-        }
-        delete wallet;
     }
 
     connect(dialog, &KPasswordDialog::gotPassword, this, &SolidUiServer::onPassphraseDialogCompleted);
@@ -103,30 +105,26 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
     if (dialog) {
         QString returnService = dialog->property("soliduiserver.returnService").toString();
         QString returnObject = dialog->property("soliduiserver.returnObject").toString();
-        QDBusInterface returnIface(returnService, returnObject);
-
-        QDBusReply<void> reply = returnIface.call(QStringLiteral("passphraseReply"), pass);
-
         QString udi = dialog->property("soliduiserver.udi").toString();
         m_idToPassphraseDialog.remove(returnService + ':' + udi);
 
-        if (!reply.isValid()) {
-            qCWarning(SOLIDUISERVER_DEBUG) << "Impossible to send the passphrase to the application, D-Bus said: " << reply.error().name() << ", "
-                                           << reply.error().message() << Qt::endl;
-            return; // don't save into wallet if an error occurs
-        }
+        if (!pass.isEmpty()) {
+            const bool success = decryptVolume(returnService, returnObject, pass);
 
-        if (keep) { // save the password into the wallet
-            KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), 0);
-            if (wallet) {
-                const QString folderName = QString::fromLatin1("SolidLuks");
-                const QString uuid = dialog->property("soliduiserver.uuid").toString();
-                if (!wallet->hasFolder(folderName))
-                    wallet->createFolder(folderName);
-                if (wallet->setFolder(folderName))
-                    wallet->writePassword(uuid, pass);
-                wallet->closeWallet(wallet->walletName(), false);
-                delete wallet;
+            // If we decrypted the volume successfully and the user asked to save
+            // the password into the wallet, do so
+            if (success && keep) {
+                KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), 0);
+                if (wallet) {
+                    const QString folderName = QString::fromLatin1("SolidLuks");
+                    const QString uuid = dialog->property("soliduiserver.uuid").toString();
+                    if (!wallet->hasFolder(folderName))
+                        wallet->createFolder(folderName);
+                    if (wallet->setFolder(folderName))
+                        wallet->writePassword(uuid, pass);
+                    wallet->closeWallet(wallet->walletName(), false);
+                    delete wallet;
+                }
             }
         }
     }
@@ -156,6 +154,19 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
     // allow dialog activation even if it interrupts, better than trying hacks
     // with keeping the dialog on top or on all desktops
     KUserTimestamp::updateUserTimestamp();
+}
+
+bool SolidUiServer::decryptVolume(const QString &returnService, const QString &returnObject, const QString &pass)
+{
+    QDBusInterface returnIface(returnService, returnObject);
+    QDBusReply<void> reply = returnIface.call(QStringLiteral("passphraseReply"), pass);
+
+    if (!reply.isValid()) {
+        qCWarning(SOLIDUISERVER_DEBUG) << "Impossible to send the passphrase to the application, D-Bus said: " << reply.error().name() << ", "
+                                       << reply.error().message() << Qt::endl;
+        return false;
+    }
+    return true;
 }
 
 #include "soliduiserver.moc"

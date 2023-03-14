@@ -31,6 +31,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void onPassphraseDialogCompleted(const QString &pass, bool keep);
     void onPassphraseDialogRejected();
+    bool decryptVolume(const QString &returnService, const QString &returnObject, const QString &pass);
 
 private:
     void reparentDialog(QWidget *dialog, WId wId, const QString &appId, bool modal);
