@@ -893,8 +893,8 @@ void KSMServer::setupShortcuts()
         KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
         connect(a, &QAction::triggered, this, &KSMServer::logoutWithoutConfirmation);
 
-        a = actionCollection->addAction(QStringLiteral("Halt Without Confirmation"));
-        a->setText(i18n("Halt Without Confirmation"));
+        a = actionCollection->addAction(QStringLiteral("Shut Down Without Confirmation"));
+        a->setText(i18n("Shut Down Without Confirmation"));
         KGlobalAccel::self()->setGlobalShortcut(a, QKeySequence());
         connect(a, &QAction::triggered, this, &KSMServer::haltWithoutConfirmation);
 
