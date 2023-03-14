@@ -10,6 +10,7 @@
 
 #include "klipper.h"
 
+#include <unordered_set>
 #include <zlib.h>
 
 #include "klipper_debug.h"
@@ -480,8 +481,16 @@ bool Klipper::loadHistory()
     delete[] version;
 
     QVector<HistoryItemPtr> items;
+    std::unordered_set<QByteArray> uuidSet;
     for (HistoryItemPtr item = HistoryItem::create(history_stream); !item.isNull(); item = HistoryItem::create(history_stream)) {
+        // BUG 466236 Due to a catastrophic bug existing in 5.27 beta and 5.27.0, there could be
+        // duplicate items in klipper's history file, so filter them out here.
+        if (uuidSet.count(item->uuid()) > 0) {
+            qCWarning(KLIPPER_LOG) << "One item in history has the same UUID with another item, ignored.";
+            continue;
+        }
         items.append(item);
+        uuidSet.insert(item->uuid());
     }
 
     history()->clearAndBatchInsert(items);
