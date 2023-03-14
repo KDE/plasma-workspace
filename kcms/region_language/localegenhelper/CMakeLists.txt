@@ -21,7 +21,7 @@ target_link_libraries(plasma-localegen-helper
     KF6::I18n
 )
 ecm_install_configured_files(INPUT org.kde.localegenhelper.service.in DESTINATION ${KDE_INSTALL_DBUSSYSTEMSERVICEDIR} @ONLY)
-install(TARGETS plasma-localegen-helper ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS plasma-localegen-helper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 option(USE_CMAKE_PREFIX "Use CMAKE_INSTALL_PREFIX instead of `/usr` for DBus and PolicyKit config files" ON)
 set(POLICY_FILES_INSTALL_DIR "/usr")
