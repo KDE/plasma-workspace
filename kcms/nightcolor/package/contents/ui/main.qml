@@ -406,7 +406,7 @@ KCM.SimpleKCM {
             visible: kcm.nightColorSettings.mode === NightColorMode.Automatic || kcm.nightColorSettings.mode === NightColorMode.Location
                 && kcm.nightColorSettings.active
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
-            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
 
             Kirigami.LoadingPlaceholder {
                 visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
@@ -416,9 +416,13 @@ KCM.SimpleKCM {
 
             TimingsView {
                 id: timings
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    right: parent.right
+                }
                 visible: kcm.nightColorSettings.mode === NightColorMode.Location ||
                     (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) && kcm.nightColorSettings.active
-                anchors.centerIn: parent
                 enabled: kcm.nightColorSettings.active
                 latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
                     && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
