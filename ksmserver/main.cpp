@@ -80,7 +80,9 @@ void sanity_check(int argc, char *argv[])
         if (errno == ENOENT)
             msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
         else if (readOnly.isEmpty())
-            msg = i18n("No write access to $HOME directory (%1).", QFile::decodeName(path));
+            msg = xi18nc("@info",
+                         "No write access to $HOME directory (%1). If this is intentional, set <envar>KDE_HOME_READONLY=1</envar> in your environment.",
+                         QFile::decodeName(path));
     }
     if (msg.isEmpty() && access(path.data(), R_OK)) {
         if (errno == ENOENT)
