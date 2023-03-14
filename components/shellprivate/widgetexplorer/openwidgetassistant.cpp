@@ -16,8 +16,8 @@
 #include <QDebug>
 #include <QUrl>
 
+#include <KPackage/PackageJob>
 #include <KPackage/PackageLoader>
-#include <KPackage/PackageStructure>
 
 namespace Plasma
 {
@@ -59,11 +59,12 @@ void OpenWidgetAssistant::finished()
         return;
     }
 
-    KPackage::Package installer = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
-
-    if (!installer.install(packageFilePath)) {
-        KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath), i18n("Installation Failure"));
-    }
+    auto job = KPackage::PackageJob::install(QStringLiteral("Plasma/Applet"), packageFilePath);
+    connect(job, &KJob::result, this, [packageFilePath, this](KJob *job) {
+        if (job->error()) {
+            KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath), i18n("Installation Failure"));
+        }
+    });
 }
 
 } // Plasma namespace

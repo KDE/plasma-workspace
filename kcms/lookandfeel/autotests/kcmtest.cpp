@@ -10,7 +10,7 @@
 // Qt
 #include <KJob>
 #include <KPackage/Package>
-#include <KPackage/PackageLoader>
+#include <KPackage/PackageJob>
 #include <KSycoca>
 #include <QtTest>
 
@@ -64,14 +64,15 @@ void KcmTest::initTestCase()
     f.close();
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
-
-    KPackage::Package p = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    p.setPath(packagePath);
-    QVERIFY(p.isValid());
-
     const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/plasma/look-and-feel/";
-    auto installJob = p.install(packagePath, packageRoot);
-    installJob->exec();
+    auto installJob = KPackage::PackageJob::install(QStringLiteral("Plasma/LookAndFeel"), packagePath, packageRoot);
+    connect(installJob, &KJob::result, this, [installJob]() {
+        QCOMPARE(installJob->errorText(), QString());
+        QCOMPARE(installJob->error(), KJob::NoError);
+        QVERIFY(installJob->package().isValid());
+    });
+    QSignalSpy spy(installJob, &KPackage::PackageJob::finished);
+    spy.wait();
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "KDE");

@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "Id": "lookandfeel",
         "Description": "Test global theme package",
         "Description[ast]": "Paquete d'aspeutu y sentir de prueba",
         "Description[bs]": "Test paketa Pogledaj i Osjeti",

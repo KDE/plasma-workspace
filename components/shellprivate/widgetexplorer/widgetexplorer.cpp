@@ -27,6 +27,7 @@
 #include <KActivities/Consumer>
 
 #include <KPackage/Package>
+#include <KPackage/PackageJob>
 #include <KPackage/PackageLoader>
 #include <KPackage/PackageStructure>
 
@@ -478,11 +479,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
 {
     static const QString packageRoot =
         QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
-
-    KPackage::PackageStructure *structure = KPackage::PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/Applet"));
-
-    KPackage::Package pkg(structure);
-    pkg.uninstall(pluginName, packageRoot);
+    KPackage::PackageJob::uninstall(QStringLiteral("Plasma/Applet"), pluginName, packageRoot);
 
     // FIXME: moreefficient way rather a linear scan?
     for (int i = 0; i < d->itemModel.rowCount(); ++i) {
