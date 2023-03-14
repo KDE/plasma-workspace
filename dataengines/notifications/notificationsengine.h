@@ -80,5 +80,3 @@ private:
 
     friend class NotificationAction;
 };
-
-Q_DECLARE_METATYPE(NotificationInhibitonPtr);

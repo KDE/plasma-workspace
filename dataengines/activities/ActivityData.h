@@ -23,8 +23,6 @@ public:
 };
 
 typedef QList<ActivityData> ActivityDataList;
-Q_DECLARE_METATYPE(ActivityData)
-Q_DECLARE_METATYPE(ActivityDataList)
 
 QDBusArgument &operator<<(QDBusArgument &arg, const ActivityData);
 const QDBusArgument &operator>>(const QDBusArgument &arg, ActivityData &rec);

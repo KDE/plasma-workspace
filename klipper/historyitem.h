@@ -119,8 +119,3 @@ inline QDataStream &operator<<(QDataStream &lhs, HistoryItem const *const rhs)
     }
     return lhs;
 }
-
-Q_DECLARE_METATYPE(HistoryItem *)
-Q_DECLARE_METATYPE(HistoryItemPtr)
-Q_DECLARE_METATYPE(HistoryItemConstPtr)
-Q_DECLARE_METATYPE(HistoryItemType)

@@ -21,7 +21,6 @@
 
 K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
-// Q_DECLARE_METATYPE(KRunner::RunnerContext)
 PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : KRunner::AbstractRunner(parent, metaData, args)
 {

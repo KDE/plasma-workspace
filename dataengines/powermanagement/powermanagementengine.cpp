@@ -37,9 +37,6 @@
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
 
-Q_DECLARE_METATYPE(QList<InhibitionInfo>)
-Q_DECLARE_METATYPE(InhibitionInfo)
-
 namespace
 {
 template<typename ReplyType>

@@ -558,5 +558,3 @@ void RecentUsageModel::refresh()
 
     setSourceModel(model);
 }
-
-Q_DECLARE_METATYPE(KServiceAction)

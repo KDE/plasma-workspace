@@ -447,5 +447,3 @@ AbstractModel *AppGroupEntry::childModel() const
 {
     return m_childModel;
 }
-
-Q_DECLARE_METATYPE(KServiceAction)

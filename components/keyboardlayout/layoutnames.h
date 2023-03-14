@@ -19,7 +19,6 @@ public:
     QString displayName;
     QString longName;
 };
-Q_DECLARE_METATYPE(LayoutNames)
 
 QDBusArgument &operator<<(QDBusArgument &argument, const LayoutNames &layoutNames);
 const QDBusArgument &operator>>(const QDBusArgument &argument, LayoutNames &layoutNames);

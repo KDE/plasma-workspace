@@ -131,8 +131,6 @@ struct ClipCommand {
     QString serviceStorageId;
 };
 
-Q_DECLARE_METATYPE(ClipCommand::Output)
-
 /**
  * Represents one configured action. An action consists of one regular
  * expression, an (optional) description and a list of ClipCommands

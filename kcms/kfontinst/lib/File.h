@@ -65,6 +65,5 @@ inline Q_DECL_EXPORT uint qHash(const File &key)
 
 }
 
-Q_DECLARE_METATYPE(KFI::File)
 Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::File &obj);
 Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::File &obj);

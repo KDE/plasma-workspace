@@ -514,5 +514,3 @@ QString resolvedServiceEntryPath(const KService::Ptr &service)
 }
 
 }
-
-Q_DECLARE_METATYPE(KServiceAction)

@@ -267,5 +267,3 @@ AbstractModel *RunnerMatchesModel::favoritesModel()
 {
     return static_cast<RunnerModel *>(parent())->favoritesModel();
 }
-
-Q_DECLARE_METATYPE(KServiceAction)

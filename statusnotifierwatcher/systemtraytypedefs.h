@@ -26,7 +26,3 @@ struct KDbusToolTipStruct {
     QString title;
     QString subTitle;
 };
-
-Q_DECLARE_METATYPE(KDbusImageStruct)
-Q_DECLARE_METATYPE(KDbusImageVector)
-Q_DECLARE_METATYPE(KDbusToolTipStruct)

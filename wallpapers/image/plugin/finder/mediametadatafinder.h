@@ -15,7 +15,6 @@ struct MediaMetadata {
     QString author;
     QSize resolution;
 };
-Q_DECLARE_METATYPE(MediaMetadata)
 
 /**
  * A runnable that helps find the metadata of an image or a video.

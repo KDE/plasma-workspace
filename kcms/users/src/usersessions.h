@@ -15,10 +15,8 @@ struct UserInfo {
     QString name;
     QDBusObjectPath path;
 };
-Q_DECLARE_METATYPE(UserInfo)
 
 using UserInfoList = QList<UserInfo>;
-Q_DECLARE_METATYPE(UserInfoList)
 
 class QDBusPendingCallWatcher;
 class OrgFreedesktopLogin1ManagerInterface;

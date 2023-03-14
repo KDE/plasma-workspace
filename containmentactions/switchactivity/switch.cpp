@@ -14,8 +14,6 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-Q_DECLARE_METATYPE(QWeakPointer<Plasma::Containment>)
-
 SwitchActivity::SwitchActivity(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
 {

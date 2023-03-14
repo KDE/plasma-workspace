@@ -447,5 +447,3 @@ QModelIndex DaysModel::parent(const QModelIndex &child) const
     }
     return QModelIndex();
 }
-
-Q_DECLARE_METATYPE(CalendarEvents::EventData)

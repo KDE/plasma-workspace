@@ -227,6 +227,4 @@ private:
     QDateTime m_time;
 };
 
-Q_DECLARE_METATYPE(KXftConfig::Hint::Style)
-Q_DECLARE_METATYPE(KXftConfig::SubPixel::Type)
 #endif

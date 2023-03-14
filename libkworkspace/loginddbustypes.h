@@ -156,17 +156,3 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, Inhibitor 
     argument.endStructure();
     return argument;
 }
-
-Q_DECLARE_METATYPE(SessionInfo);
-Q_DECLARE_METATYPE(QList<SessionInfo>);
-
-Q_DECLARE_METATYPE(UserInfo);
-Q_DECLARE_METATYPE(QList<UserInfo>);
-
-Q_DECLARE_METATYPE(NamedSeatPath);
-Q_DECLARE_METATYPE(QList<NamedSeatPath>);
-
-Q_DECLARE_METATYPE(NamedUserPath);
-
-Q_DECLARE_METATYPE(Inhibitor);
-Q_DECLARE_METATYPE(QList<Inhibitor>);

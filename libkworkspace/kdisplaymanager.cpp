@@ -73,8 +73,6 @@ struct NamedDBusObjectPath {
     QString name;
     QDBusObjectPath path;
 };
-Q_DECLARE_METATYPE(NamedDBusObjectPath)
-Q_DECLARE_METATYPE(QList<NamedDBusObjectPath>)
 
 // Marshall the NamedDBusObjectPath data into a D-Bus argument
 QDBusArgument &operator<<(QDBusArgument &argument, const NamedDBusObjectPath &namedPath)
@@ -98,7 +96,6 @@ struct NumberedDBusObjectPath {
     uint num;
     QDBusObjectPath path;
 };
-Q_DECLARE_METATYPE(NumberedDBusObjectPath)
 
 // Marshall the NumberedDBusObjectPath data into a D-Bus argument
 QDBusArgument &operator<<(QDBusArgument &argument, const NumberedDBusObjectPath &numberedPath)
