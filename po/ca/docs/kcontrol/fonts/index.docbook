@@ -206,7 +206,7 @@
 
 <note
 ><para
->La possibilitat d'emprar tipus de lletra i icones suavitzades requereix que hi tingueu la funcionalitat tant a X com al conjunt d'eines de les &Qt;, que hàgiu instal·lat els tipus de lletra adequats i que s'estiguin emprant les capacitats del servei de tipus de lletra integrades del servidor de visualització. Si continueu tenint problemes, si us plau, contacteu amb la llista de correu adequada del &kde;.</para
+>La possibilitat d'emprar tipus de lletra i icones suavitzades requereix que hi tingueu la funcionalitat tant a X com al conjunt d'eines de les &Qt;, que hàgiu instal·lat els tipus de lletra adequats i que s'estiguin emprant les capacitats del servei integrat de tipus de lletra del servidor de visualització. Si continueu tenint problemes, si us plau, contacteu amb la llista de correu adequada del &kde;.</para
 ></note>
 
 </sect2>
