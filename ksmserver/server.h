@@ -117,7 +117,9 @@ private Q_SLOTS:
 
     void defaultLogout();
     void logoutWithoutConfirmation();
+    void haltWithConfirmation();
     void haltWithoutConfirmation();
+    void rebootWithConfirmation();
     void rebootWithoutConfirmation();
 
 private:
