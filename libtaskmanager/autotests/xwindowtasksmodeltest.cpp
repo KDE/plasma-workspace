@@ -232,42 +232,37 @@ void XWindowTasksModelTest::test_openCloseWindow()
         return false;
     };
 
-    int modelCount = model.rowCount();
-
     // Create a window to test if XWindowTasksModel can receive it
     QSignalSpy rowInsertedSpy(&model, &XWindowTasksModel::rowsInserted);
 
-    const QString qmlFileName = QFINDTESTDATA("data/windows/SampleWindow.qml");
-    QQmlApplicationEngine engine;
-    QVariantMap initialProperties;
-    initialProperties.insert(QStringLiteral("title"), QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString()));
-    engine.setInitialProperties(initialProperties);
-    engine.load(qmlFileName);
+    const QString title = QStringLiteral("__testwindow__%1").arg(QDateTime::currentDateTime().toString());
+    QModelIndex index;
+    auto window = createSingleWindow(title, index);
 
     // A new window appears
-    QVERIFY(rowInsertedSpy.wait());
-    QCOMPARE(modelCount + 1, model.rowCount());
     // Find the window in the model
-    QVERIFY(findWindow(initialProperties[QStringLiteral("title")].toString()));
+    QVERIFY(findWindow(title));
 
     // Change the title of the window
-    QSignalSpy dataChangedSpy(&model, &XWindowTasksModel::dataChanged);
-    const QString newTitle = initialProperties[QStringLiteral("title")].toString() + QStringLiteral("__newtitle__");
-    QCoreApplication::processEvents();
-    dataChangedSpy.clear();
-    QVERIFY(engine.rootObjects().at(0)->setProperty("title", newTitle));
-    QVERIFY(dataChangedSpy.wait());
-    QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
-    // Make sure the title is updated
-    QVERIFY(!findWindow(initialProperties[QStringLiteral("title")].toString()));
-    QVERIFY(findWindow(newTitle));
+    {
+        QSignalSpy dataChangedSpy(&model, &XWindowTasksModel::dataChanged);
+        const QString newTitle = title + QStringLiteral("__newtitle__");
+        window->setTitle(newTitle);
+        QVERIFY(dataChangedSpy.wait());
+        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
+        // Make sure the title is updated
+        QVERIFY(!findWindow(title));
+        QVERIFY(findWindow(newTitle));
+    }
 
     // Now close the window
-    modelCount = model.rowCount();
-    QSignalSpy rowsRemovedSpy(&model, &XWindowTasksModel::rowsRemoved);
-    QMetaObject::invokeMethod(engine.rootObjects().at(0), "close", Qt::QueuedConnection);
-    QVERIFY(rowsRemovedSpy.wait());
-    QCOMPARE(modelCount - 1, model.rowCount());
+    {
+        int modelCount = model.rowCount();
+        QSignalSpy rowsRemovedSpy(&model, &XWindowTasksModel::rowsRemoved);
+        window->close();
+        QVERIFY(rowsRemovedSpy.wait());
+        QCOMPARE(modelCount - 1, model.rowCount());
+    }
 }
 
 void XWindowTasksModelTest::test_modelData()
