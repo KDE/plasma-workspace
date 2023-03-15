@@ -11,10 +11,13 @@
 class FunnelModel : public ForwardingModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool sorted READ sorted NOTIFY sourceModelChanged)
 
 public:
     explicit FunnelModel(QObject *parent = nullptr);
     ~FunnelModel() override;
+
+    bool sorted() const;
 
     void setSourceModel(QAbstractItemModel *model) override;
 };

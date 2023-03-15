@@ -5,6 +5,7 @@
 */
 
 #include "funnelmodel.h"
+#include "appsmodel.h"
 
 FunnelModel::FunnelModel(QObject *parent)
     : ForwardingModel(parent)
@@ -83,4 +84,13 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
     Q_EMIT sourceModelChanged();
     Q_EMIT descriptionChanged();
+}
+
+bool FunnelModel::sorted() const
+{
+    if (qobject_cast<AppsModel *>(m_sourceModel) != nullptr) {
+        return qobject_cast<AppsModel *>(m_sourceModel)->sorted();
+    }
+
+    return false;
 }
