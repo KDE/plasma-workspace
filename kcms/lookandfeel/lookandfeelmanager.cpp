@@ -679,12 +679,8 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
                                   + QDir::separator() + QStringLiteral("themes"));
         if (widgetStyleDir.exists()) {
             // Read config to get style name
-            const QStringList styleFileList = widgetStyleDir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+            const QStringList styleFileList = widgetStyleDir.entryList({QStringLiteral("*.themerc")}, QDir::Files | QDir::NoDotAndDotDot);
             for (const QString &path : styleFileList) {
-                if (!path.endsWith(QLatin1String(".themerc"))) {
-                    continue;
-                }
-
                 auto widgetStyleConfig = KSharedConfig::openConfig(widgetStyleDir.absoluteFilePath(path), KConfig::SimpleConfig);
                 KConfigGroup widgetStyleKDEGroup(widgetStyleConfig, "KDE");
                 if (widgetStyleKDEGroup.exists() && widgetStyleKDEGroup.hasKey("WidgetStyle")) {
