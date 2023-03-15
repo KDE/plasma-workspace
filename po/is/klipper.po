@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 03:06+0000\n"
+"POT-Creation-Date: 2023-03-15 02:48+0000\n"
 "PO-Revision-Date: 2023-01-02 13:46+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -498,73 +498,73 @@ msgstr "Tákn:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Sjálfvirk sprettivalmynd aðgerða"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Hreinsa k&lippispjaldsferil"
 
-#: klipper.cpp:201
+#: klipper.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Stilla &Klipper..."
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Hætta"
 
-#: klipper.cpp:212
+#: klipper.cpp:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Framkvæma aðgerð handvirkt á núverandi klippispjaldi"
 
-#: klipper.cpp:220
+#: klipper.cpp:221
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Breyta innihaldi…"
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Sýna strikamerki..."
 
-#: klipper.cpp:237
+#: klipper.cpp:238
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Næsta atriði í ferli"
 
-#: klipper.cpp:242
+#: klipper.cpp:243
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Fyrra atriði í ferli"
 
-#: klipper.cpp:249
+#: klipper.cpp:250
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Birta atriði við bendil"
 
-#: klipper.cpp:260
+#: klipper.cpp:261
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - klippispjaldsverkfæri"
 
-#: klipper.cpp:556
+#: klipper.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -574,62 +574,62 @@ msgstr ""
 "Þú getur virkjað slóðaraðgerðir seinna á síðunni <interface>Aðgerðir</"
 "interface> í grunnstillingarglugga klippispjaldsforritsins"
 
-#: klipper.cpp:595
+#: klipper.cpp:604
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Ætti Klipper að fara sjálfkrafa í gang þegar þú skráir þig inn?"
 
-#: klipper.cpp:596
+#: klipper.cpp:605
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Ræsa Klipper sjálfkrafa?"
 
-#: klipper.cpp:597
+#: klipper.cpp:606
 #, kde-format
 msgid "Start"
 msgstr "Ræsa"
 
-#: klipper.cpp:598
+#: klipper.cpp:607
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ekki ræsa"
 
-#: klipper.cpp:945
+#: klipper.cpp:954
 #, kde-format
 msgid "Edit Contents"
 msgstr "Breyta innihaldi"
 
-#: klipper.cpp:1012
+#: klipper.cpp:1021
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Strikamerki fyrir farsíma"
 
-#: klipper.cpp:1059
+#: klipper.cpp:1068
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Viltu örugglega hreinsa og eyða öllum ferli klippispjaldsins?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:1069
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Hreinsa klippispjaldsferil"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1085 klipper.cpp:1094
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klippispjaldsferill"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1111
 #, kde-format
 msgid "up"
 msgstr "upp"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1118
 #, kde-format
 msgid "current"
 msgstr "núverandi"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1125
 #, kde-format
 msgid "down"
 msgstr "niður"

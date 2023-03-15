@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 03:06+0000\n"
+"POT-Creation-Date: 2023-03-15 02:48+0000\n"
 "PO-Revision-Date: 2022-10-18 12:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -517,73 +517,73 @@ msgstr "Icône :"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu contextuel automatique d'action :"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Effacer &l'historique du presse-papier"
 
-#: klipper.cpp:201
+#: klipper.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurer Klipper..."
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Fermer"
 
-#: klipper.cpp:212
+#: klipper.cpp:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Démarrer manuellement une action concernant le presse-papier actuel"
 
-#: klipper.cpp:220
+#: klipper.cpp:221
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifi&er les contenus..."
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "A&fficher le code barre..."
 
-#: klipper.cpp:237
+#: klipper.cpp:238
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Élément suivant de l'historique"
 
-#: klipper.cpp:242
+#: klipper.cpp:243
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Élément précédent de l'historique"
 
-#: klipper.cpp:249
+#: klipper.cpp:250
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Afficher les éléments à la position de la souris"
 
-#: klipper.cpp:260
+#: klipper.cpp:261
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Outil de presse-papier"
 
-#: klipper.cpp:556
+#: klipper.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -594,65 +594,65 @@ msgstr ""
 "<interface>Actions</interface> de la fenêtre de configuration pour l'applet "
 "de presse-papier."
 
-#: klipper.cpp:595
+#: klipper.cpp:604
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 "Le presse-papier Klipper doit-il démarrer automatiquement à votre connexion ?"
 
-#: klipper.cpp:596
+#: klipper.cpp:605
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Démarrer Klipper automatiquement ?"
 
-#: klipper.cpp:597
+#: klipper.cpp:606
 #, kde-format
 msgid "Start"
 msgstr "Démarrer"
 
-#: klipper.cpp:598
+#: klipper.cpp:607
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ne pas démarrer"
 
-#: klipper.cpp:945
+#: klipper.cpp:954
 #, kde-format
 msgid "Edit Contents"
 msgstr "Modifier les contenus"
 
-#: klipper.cpp:1012
+#: klipper.cpp:1021
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Code barre mobile"
 
-#: klipper.cpp:1059
+#: klipper.cpp:1068
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Voulez-vous vraiment effacer et supprimer tout l'historique du presse-"
 "papier ?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:1069
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Effacer l'historique du presse-papier"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1085 klipper.cpp:1094
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historique du presse-papier"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1111
 #, kde-format
 msgid "up"
 msgstr "haut"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1118
 #, kde-format
 msgid "current"
 msgstr "actuel"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1125
 #, kde-format
 msgid "down"
 msgstr "bas"

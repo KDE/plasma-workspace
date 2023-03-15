@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 03:06+0000\n"
+"POT-Creation-Date: 2023-03-15 02:48+0000\n"
 "PO-Revision-Date: 2023-02-17 18:08+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -453,73 +453,73 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu Tindakan Sembulan Otomatis"
 
-#: klipper.cpp:194
+#: klipper.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Bersihkan Riwayat Papan Klip"
 
-#: klipper.cpp:201
+#: klipper.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigurasi Klipper..."
 
-#: klipper.cpp:207
+#: klipper.cpp:208
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Keluar"
 
-#: klipper.cpp:212
+#: klipper.cpp:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Panggil Tindakan Secara Manual di Papan Klip Saat Ini"
 
-#: klipper.cpp:220
+#: klipper.cpp:221
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Sunting Konten..."
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Tampilkan Kode Bilah..."
 
-#: klipper.cpp:237
+#: klipper.cpp:238
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item Riwayat Selanjutnya"
 
-#: klipper.cpp:242
+#: klipper.cpp:243
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item Riwayat Sebelumnya"
 
-#: klipper.cpp:249
+#: klipper.cpp:250
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Tampilkan Item di Posisi Mouse"
 
-#: klipper.cpp:260
+#: klipper.cpp:261
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Alat Papan Klip"
 
-#: klipper.cpp:556
+#: klipper.cpp:565
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -529,62 +529,62 @@ msgstr ""
 "Kamu bisa memfungsikan aksi URL nanti di halaman <interface>Aksi</interface> "
 "pada jendela konfigurasi applet Clipboard"
 
-#: klipper.cpp:595
+#: klipper.cpp:604
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Haruskan Klipper dijalankan secara otomatis ketika anda login?"
 
-#: klipper.cpp:596
+#: klipper.cpp:605
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Secara Otomatis Menjalankan Klipper?"
 
-#: klipper.cpp:597
+#: klipper.cpp:606
 #, kde-format
 msgid "Start"
 msgstr "Jalankan"
 
-#: klipper.cpp:598
+#: klipper.cpp:607
 #, kde-format
 msgid "Do Not Start"
 msgstr "Jangan Jalankan"
 
-#: klipper.cpp:945
+#: klipper.cpp:954
 #, kde-format
 msgid "Edit Contents"
 msgstr "Edit Isi"
 
-#: klipper.cpp:1012
+#: klipper.cpp:1021
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
-#: klipper.cpp:1059
+#: klipper.cpp:1068
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:1069
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bersihkan Riwayat Papan Klip"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1085 klipper.cpp:1094
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histori papan klip"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1111
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1118
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1125
 #, kde-format
 msgid "down"
 msgstr "bawah"
