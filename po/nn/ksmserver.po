@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2020-04-25 13:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -31,47 +31,50 @@ msgstr "Utlogging avbroten av «%1»."
 msgid "$HOME not set!"
 msgstr "$HOME er ikke definert"
 
-#: main.cpp:81 main.cpp:87
+#: main.cpp:81 main.cpp:89
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME-mappa (%1) finst ikkje."
 
-#: main.cpp:83
-#, kde-format
-msgid "No write access to $HOME directory (%1)."
-msgstr "Har ikkje skrivetilgang til $HOME-mappa (%1)."
+#: main.cpp:84
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No write access to $HOME directory (%1). If this is intentional, set "
+"<envar>KDE_HOME_READONLY=1</envar> in your environment."
+msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Har ikkje lesetilgang til $HOME-mappa (%1)."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME-mappa (%1) har ikkje meir ledig plass."
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Klarte ikkje skriva til $HOME-mappa (%2): %1"
 
-#: main.cpp:109 main.cpp:144
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Har ikkje skrivetilgang til «%1»."
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:113 main.cpp:148
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Har ikkje lesetilgang til «%1»."
 
-#: main.cpp:119 main.cpp:132
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Mappa for mellombelse filer (%1) har ikkje meir ledig plass."
 
-#: main.cpp:122 main.cpp:135
+#: main.cpp:124 main.cpp:137
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -81,7 +84,7 @@ msgstr ""
 "\n"
 "Feilmelding: %1"
 
-#: main.cpp:150
+#: main.cpp:152
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -90,7 +93,7 @@ msgstr ""
 "Oppdaga følgjande installasjonsproblem ved\n"
 "forsøk på å starta Plasma:"
 
-#: main.cpp:153
+#: main.cpp:155
 #, kde-format
 msgid ""
 "\n"
@@ -101,12 +104,12 @@ msgstr ""
 "\n"
 "Kan ikkje starta Plasma.\n"
 
-#: main.cpp:160
+#: main.cpp:162
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Feil ved installasjon av Plasma-arbeidsområde"
 
-#: main.cpp:194
+#: main.cpp:196
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -115,22 +118,22 @@ msgstr ""
 "Den pålitelege økthandsamaren til Plasma som snakkar med den \n"
 "normale økthandsamingsprotokollen til X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:200
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Gjenopprettar tilstanden frå den førre økta, om det går"
 
-#: main.cpp:201
+#: main.cpp:203
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Tillat nettverkstilkoplingar"
 
-#: main.cpp:204
+#: main.cpp:206
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startar økta i låst modus"
 
-#: main.cpp:208
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -144,22 +147,36 @@ msgstr ""
 msgid "Session Management"
 msgstr "Økthandsaming"
 
-#: server.cpp:887
+#: server.cpp:889
 #, kde-format
 msgid "Log Out"
 msgstr "Logg ut"
 
-#: server.cpp:892
+#: server.cpp:894
+#, kde-format
+msgid "Shut Down"
+msgstr ""
+
+#: server.cpp:899
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Logg ut utan stadfesting"
 
-#: server.cpp:897
-#, kde-format
-msgid "Halt Without Confirmation"
+#: server.cpp:910
+#, fuzzy, kde-format
+#| msgid "Halt Without Confirmation"
+msgid "Shut Down Without Confirmation"
 msgstr "Stopp datamaskina utan stadfesting"
 
-#: server.cpp:902
+#: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Start datamaskina på nytt utan stadfesting"
+
+#~ msgid "No write access to $HOME directory (%1)."
+#~ msgstr "Har ikkje skrivetilgang til $HOME-mappa (%1)."

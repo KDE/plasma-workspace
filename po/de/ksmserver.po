@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2020-09-06 12:20+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -27,48 +27,51 @@ msgstr "Abmeldung abgebrochen durch „%1“"
 msgid "$HOME not set!"
 msgstr "$HOME ist nicht angegeben"
 
-#: main.cpp:81 main.cpp:87
+#: main.cpp:81 main.cpp:89
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Der Ordner &HOME (%1) ist nicht vorhanden."
 
-#: main.cpp:83
-#, kde-format
-msgid "No write access to $HOME directory (%1)."
-msgstr "Kein Schreibzugriff auf den Ordner $HOME (%1)."
+#: main.cpp:84
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No write access to $HOME directory (%1). If this is intentional, set "
+"<envar>KDE_HOME_READONLY=1</envar> in your environment."
+msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Kein Lesezugriff auf den Ordner $HOME (%1)."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Im Ordner $HOME (%1) nicht mehr genug Speicherplatz verfügbar."
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 "Das Schreiben in den Ordner $HOME (%2) ist mit dem Fehler „%1“ fehlgeschlagen"
 
-#: main.cpp:109 main.cpp:144
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Kein Schreibzugriff auf „%1“."
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:113 main.cpp:148
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Kein Lesezugriff auf „%1“."
 
-#: main.cpp:119 main.cpp:132
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Im temporären Ordner (%1) nicht mehr genug Speicherplatz verfügbar."
 
-#: main.cpp:122 main.cpp:135
+#: main.cpp:124 main.cpp:137
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -77,7 +80,7 @@ msgstr ""
 "Das Schreiben in den temporären Ordner  (%2) ist mit\n"
 "dem Fehler „%1“ fehlgeschlagen"
 
-#: main.cpp:150
+#: main.cpp:152
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -86,7 +89,7 @@ msgstr ""
 "Das folgende Installationsproblem wurde beim\n"
 "Start von Plasma entdeckt:"
 
-#: main.cpp:153
+#: main.cpp:155
 #, kde-format
 msgid ""
 "\n"
@@ -97,12 +100,12 @@ msgstr ""
 "\n"
 "Plasma kann nicht gestartet werden.\n"
 
-#: main.cpp:160
+#: main.cpp:162
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Installationsproblem des Plasma-Arbeitsbereichs."
 
-#: main.cpp:194
+#: main.cpp:196
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -111,22 +114,22 @@ msgstr ""
 "Die zuverlässige Plasma-Sitzungsverwaltung, die auch das standardisierte "
 "X11R6-Protokoll (XSMP) beherrscht."
 
-#: main.cpp:198
+#: main.cpp:200
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Stellt die vorherige Sitzung wieder her, falls verfügbar."
 
-#: main.cpp:201
+#: main.cpp:203
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Verbindungen mit fremden Rechnern zulassen"
 
-#: main.cpp:204
+#: main.cpp:206
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startet die Sitzung im gesperrten Modus"
 
-#: main.cpp:208
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -140,25 +143,39 @@ msgstr ""
 msgid "Session Management"
 msgstr "Sitzungsverwaltung"
 
-#: server.cpp:887
+#: server.cpp:889
 #, kde-format
 msgid "Log Out"
 msgstr "Abmelden"
 
-#: server.cpp:892
+#: server.cpp:894
+#, kde-format
+msgid "Shut Down"
+msgstr "Herunterfahren"
+
+#: server.cpp:899
+#, kde-format
+msgid "Reboot"
+msgstr "Neustarten"
+
+#: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Ohne Rückfrage abmelden"
 
-#: server.cpp:897
-#, kde-format
-msgid "Halt Without Confirmation"
+#: server.cpp:910
+#, fuzzy, kde-format
+#| msgid "Halt Without Confirmation"
+msgid "Shut Down Without Confirmation"
 msgstr "Ohne Rückfrage herunterfahren"
 
-#: server.cpp:902
+#: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Ohne Rückfrage neu starten"
+
+#~ msgid "No write access to $HOME directory (%1)."
+#~ msgstr "Kein Schreibzugriff auf den Ordner $HOME (%1)."
 
 #~ msgid ""
 #~ "Starts <wm> in case no other window manager is \n"
@@ -169,12 +186,6 @@ msgstr "Ohne Rückfrage neu starten"
 
 #~ msgid "wm"
 #~ msgstr "wm"
-
-#~ msgid "Shut Down"
-#~ msgstr "Herunterfahren"
-
-#~ msgid "Reboot"
-#~ msgstr "Neustarten"
 
 #~ msgid "Logout"
 #~ msgstr "Abmelden"

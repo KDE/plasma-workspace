@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2023-01-14 16:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -190,17 +190,17 @@ msgstr "فشل تثبيت الحزمة %1."
 msgid "Installation Failure"
 msgstr "فشل التّثبيت"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 #, kde-format
 msgid "All Widgets"
 msgstr "كلّ الودجات"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 #, kde-format
 msgid "Running"
 msgstr "العاملة"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -209,17 +209,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "غير قابلة للإزالة"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format
 msgid "Categories:"
 msgstr "الفئات:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:198
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "نزّل ودجات بلازما جديدة"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:207
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ثبّت ودجة من ملفّ محليّ..."

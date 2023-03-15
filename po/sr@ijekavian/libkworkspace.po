@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2009-12-28 21:23+0100\n"
 "Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Environment: kde\n"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:777
+#: kdisplaymanager.cpp:774
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -29,7 +29,7 @@ msgid "%1: TTY login"
 msgstr "%1: ТТИ пријава"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:779
 #, fuzzy, kde-format
 #| msgctxt "... location (TTY or X display)"
 #| msgid "Unused"
@@ -38,13 +38,13 @@ msgid "Unused"
 msgstr "неупотријебљено"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, kde-format
 msgid "X login on remote host"
 msgstr "Икс пријава на удаљени домаћин"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -53,14 +53,14 @@ msgid "X login on %1"
 msgstr "Икс пријава на %1"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:785
+#: kdisplaymanager.cpp:782
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 # >> @item:intext
-#: kdisplaymanager.cpp:796
+#: kdisplaymanager.cpp:793
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

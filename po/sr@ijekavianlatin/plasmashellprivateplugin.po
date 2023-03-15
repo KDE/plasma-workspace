@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -188,17 +188,17 @@ msgstr "Instaliranje paketa %1 nije uspelo."
 msgid "Installation Failure"
 msgstr "Neuspeh instaliranja"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 #, kde-format
 msgid "All Widgets"
 msgstr "Svi vidžeti"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 #, kde-format
 msgid "Running"
 msgstr "U pogonu"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -208,18 +208,18 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Moguće deinstalirati"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format
 msgid "Categories:"
 msgstr "Kategorije:"
 
 # >> @title:window
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:198
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Preuzimanje novih plasma vidžeta"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:207
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"

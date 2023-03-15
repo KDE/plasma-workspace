@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2023-01-19 02:31+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -180,17 +180,17 @@ msgstr "A instalação do pacote %1 foi mal-sucedida."
 msgid "Installation Failure"
 msgstr "Problema de Instalação"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 #, kde-format
 msgid "All Widgets"
 msgstr "Todos os Elementos"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 #, kde-format
 msgid "Running"
 msgstr "Em execução"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -199,17 +199,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Desinstalável"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format
 msgid "Categories:"
 msgstr "Categorias:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:198
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Obter Novos Elementos do Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:207
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar um Elemento do Ficheiro Local…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2023-02-19 06:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -186,17 +186,17 @@ msgstr "安裝軟體包 %1 失敗。"
 msgid "Installation Failure"
 msgstr "安裝失敗"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 #, kde-format
 msgid "All Widgets"
 msgstr "所有元件"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 #, kde-format
 msgid "Running"
 msgstr "執行中"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -205,17 +205,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "可被解除安裝"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format
 msgid "Categories:"
 msgstr "類別："
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:198
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "下載新的 Plasma 元件"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:207
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "從本地端檔案安裝元件…"

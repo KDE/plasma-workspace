@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -186,17 +186,17 @@ msgstr "%1 പാക്കേജ് ഇൻസ്റ്റാൾ ചെയ്യ�
 msgid "Installation Failure"
 msgstr "ഇൻസ്റ്റാളേഷൻ പരാജയം"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 #, kde-format
 msgid "All Widgets"
 msgstr "എല്ലാ വിഡ്ജറ്റുകളും"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 #, kde-format
 msgid "Running"
 msgstr "പ്രവർത്തിക്കുന്നു"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -206,17 +206,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "അൺഇൻസ്റ്റാൾ ചെയ്യാവുന്നത്"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format
 msgid "Categories:"
 msgstr "വിഭാഗങ്ങള്‍:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:198
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "പുതിയ പ്ലാസ്മ വിഡ്ജറ്റുകൾ ഡൗെൺലോഡ് ചെയ്യുക"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:207
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "തദ്ദേശ ഫയലിൽ നിന്ന് വിഡ്ജറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുക…"

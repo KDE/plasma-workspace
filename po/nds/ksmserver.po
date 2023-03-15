@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2014-06-20 02:05+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -30,49 +30,52 @@ msgstr "\"%1\" hett dat Afmellen afbraken"
 msgid "$HOME not set!"
 msgstr "$HOME nich fastleggt!"
 
-#: main.cpp:81 main.cpp:87
+#: main.cpp:81 main.cpp:89
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Dat gifft den $HOME-Orner (%1) nich."
 
-#: main.cpp:83
-#, kde-format
-msgid "No write access to $HOME directory (%1)."
-msgstr "Du hest binnen den $HOME-Orner (%1) keen Schriefverlööf."
+#: main.cpp:84
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No write access to $HOME directory (%1). If this is intentional, set "
+"<envar>KDE_HOME_READONLY=1</envar> in your environment."
+msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Du hest binnen den $HOME-Orner (%1) keen Leesverlööf."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr ""
 "Dat gifft binne den $HOME-Orner (%1) keen free Ruum op de Fastplaat mehr."
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Schrieven na den $HOME-Orner (%2) is fehlslaan mit den Fehler „%1“."
 
-#: main.cpp:109 main.cpp:144
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Keen Schrieftogriep op „%1“."
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:113 main.cpp:148
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Keen Leestogriep op „%1“."
 
-#: main.cpp:119 main.cpp:132
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr ""
 "Dat gifft binne den Temporeerorner (%1) keen free Ruum op de Fastplaat mehr."
 
-#: main.cpp:122 main.cpp:135
+#: main.cpp:124 main.cpp:137
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -81,7 +84,7 @@ msgstr ""
 "Schrieven na den Temporeerorner (%2) is fehlslaan\n"
 "   mit den Fehler „%1“."
 
-#: main.cpp:150
+#: main.cpp:152
 #, fuzzy, kde-format
 #| msgid ""
 #| "The following installation problem was detected\n"
@@ -91,7 +94,7 @@ msgid ""
 "while trying to start Plasma:"
 msgstr "Bi't Starten vun KDE wöör en Problem funnen:"
 
-#: main.cpp:153
+#: main.cpp:155
 #, fuzzy, kde-format
 #| msgid ""
 #| "\n"
@@ -106,12 +109,12 @@ msgstr ""
 "\n"
 "KDE lett sik nich starten.\n"
 
-#: main.cpp:160
+#: main.cpp:162
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problem mit de Plasma-Arbeitrebeet-Installeren!"
 
-#: main.cpp:194
+#: main.cpp:196
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -123,22 +126,22 @@ msgstr ""
 "De KDE-Törnpleger op den Verlaat is, de ok dat Standard-X11R6-\n"
 "Törnpleegprotokoll (\"XSMP\") snackt."
 
-#: main.cpp:198
+#: main.cpp:200
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Stellt den sekerten Brukertörn wedder her (wenn mööglich)"
 
-#: main.cpp:201
+#: main.cpp:203
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Ok Verbinnen mit anner Reekners tolaten"
 
-#: main.cpp:204
+#: main.cpp:206
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Start den Törn afslaten"
 
-#: main.cpp:208
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -151,25 +154,39 @@ msgstr ""
 msgid "Session Management"
 msgstr "De KDE-Törnpleger"
 
-#: server.cpp:887
+#: server.cpp:889
 #, kde-format
 msgid "Log Out"
 msgstr "Afmellen"
 
-#: server.cpp:892
+#: server.cpp:894
+#, kde-format
+msgid "Shut Down"
+msgstr ""
+
+#: server.cpp:899
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Ahn Nafraag afmellen"
 
-#: server.cpp:897
-#, kde-format
-msgid "Halt Without Confirmation"
+#: server.cpp:910
+#, fuzzy, kde-format
+#| msgid "Halt Without Confirmation"
+msgid "Shut Down Without Confirmation"
 msgstr "Ahn Nafraag utmaken"
 
-#: server.cpp:902
+#: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Ahn Nafraag nieg starten"
+
+#~ msgid "No write access to $HOME directory (%1)."
+#~ msgstr "Du hest binnen den $HOME-Orner (%1) keen Schriefverlööf."
 
 #~ msgid ""
 #~ "Starts <wm> in case no other window manager is \n"

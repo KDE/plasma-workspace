@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2022-06-28 09:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -29,47 +29,50 @@ msgstr "Излизането е отменено от \"%1\""
 msgid "$HOME not set!"
 msgstr "$HOME не е зададена!"
 
-#: main.cpp:81 main.cpp:87
+#: main.cpp:81 main.cpp:89
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Директория $HOME (%1) не съществува."
 
-#: main.cpp:83
-#, kde-format
-msgid "No write access to $HOME directory (%1)."
-msgstr "Няма достъп за запис в директорията $HOME (%1)."
+#: main.cpp:84
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No write access to $HOME directory (%1). If this is intentional, set "
+"<envar>KDE_HOME_READONLY=1</envar> in your environment."
+msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Няма достъп за четене до директория $HOME (%1)."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "В директорията $HOME (%1) няма достатъчно дисково пространство."
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Записът в директорията $HOME (%2) не бе успешен, грешка \"%1\""
 
-#: main.cpp:109 main.cpp:144
+#: main.cpp:111 main.cpp:146
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Няма достъп за запис на \"%1\"."
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:113 main.cpp:148
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Няма достъп за четене на \"%1\"."
 
-#: main.cpp:119 main.cpp:132
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Временната директория (%1) няма достатъчно дисково пространство ."
 
-#: main.cpp:122 main.cpp:135
+#: main.cpp:124 main.cpp:137
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -78,7 +81,7 @@ msgstr ""
 "Записът във временната директория (%2) не бе успешен, \n"
 "    грешка '%1'"
 
-#: main.cpp:150
+#: main.cpp:152
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -87,7 +90,7 @@ msgstr ""
 "Открит е следният проблем с инсталацията \n"
 "докато се опитвате да стартирате Plasma:"
 
-#: main.cpp:153
+#: main.cpp:155
 #, kde-format
 msgid ""
 "\n"
@@ -98,12 +101,12 @@ msgstr ""
 "\n"
 "Plasma не може да стартира.\n"
 
-#: main.cpp:160
+#: main.cpp:162
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Проблем с инсталирането на Plasma!"
 
-#: main.cpp:194
+#: main.cpp:196
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -112,22 +115,22 @@ msgstr ""
 "Надеждният мениджър на сесии на Plasma , който разбира стандартния X11R6 \n"
 "протокол за управление на сесии (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:200
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Възстановяване на записана сесия"
 
-#: main.cpp:201
+#: main.cpp:203
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Разрешаване на отдалечени връзки"
 
-#: main.cpp:204
+#: main.cpp:206
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Стартира сесията в заключен режим"
 
-#: main.cpp:208
+#: main.cpp:210
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -141,22 +144,36 @@ msgstr ""
 msgid "Session Management"
 msgstr "Управление на сесиите"
 
-#: server.cpp:887
+#: server.cpp:889
 #, kde-format
 msgid "Log Out"
 msgstr "Изход"
 
-#: server.cpp:892
+#: server.cpp:894
+#, kde-format
+msgid "Shut Down"
+msgstr ""
+
+#: server.cpp:899
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Изход без потвърждение"
 
-#: server.cpp:897
-#, kde-format
-msgid "Halt Without Confirmation"
+#: server.cpp:910
+#, fuzzy, kde-format
+#| msgid "Halt Without Confirmation"
+msgid "Shut Down Without Confirmation"
 msgstr "Изключване без потвърждение"
 
-#: server.cpp:902
+#: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Рестартиране без потвърждение"
+
+#~ msgid "No write access to $HOME directory (%1)."
+#~ msgstr "Няма достъп за запис в директорията $HOME (%1)."

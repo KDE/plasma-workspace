@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2021-06-22 14:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -20,36 +20,36 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: kdisplaymanager.cpp:777
+#: kdisplaymanager.cpp:774
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: ولج إلىTTY"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:779
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "غير مستخدم"
 
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, kde-format
 msgid "X login on remote host"
 msgstr "دخول اكس على مضيف بعيد"
 
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr " دخول اكس على %1"
 
-#: kdisplaymanager.cpp:785
+#: kdisplaymanager.cpp:782
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:796
+#: kdisplaymanager.cpp:793
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

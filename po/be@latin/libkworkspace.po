@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2008-10-26 00:42+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 
-#: kdisplaymanager.cpp:777
+#: kdisplaymanager.cpp:774
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -28,7 +28,7 @@ msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: Uvachod z „TTY”"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:779
 #, fuzzy, kde-format
 #| msgctxt "... location (TTY or X display)"
 #| msgid "Unused"
@@ -36,12 +36,12 @@ msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Niaŭžytaje"
 
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, kde-format
 msgid "X login on remote host"
 msgstr "Uvachod u dalokuju systemu „X”"
 
-#: kdisplaymanager.cpp:783
+#: kdisplaymanager.cpp:780
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -49,13 +49,13 @@ msgctxt "… host"
 msgid "X login on %1"
 msgstr "Uvachod u systemu „X” na „%1”"
 
-#: kdisplaymanager.cpp:785
+#: kdisplaymanager.cpp:782
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:796
+#: kdisplaymanager.cpp:793
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,17 +18,17 @@ msgstr ""
 "plasma_runner_placesrunner.pot\n"
 "X-Crowdin-File-ID: 4658\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "位置"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "查找所有文件管理器的位置"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "查找匹配 :q: 的文件管理器位置"

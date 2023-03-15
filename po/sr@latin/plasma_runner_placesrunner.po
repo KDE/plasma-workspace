@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2009-12-29 22:11+0100\n"
 "Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "mesta"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Nabraja sve lokacije menadžera fajlova"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Nalazi lokacije menadžera fajlova koje poklapaju :q:"

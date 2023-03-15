@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2015-12-07 21:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "stadar"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Viser alle stadene i filhandsamaren"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Finn filadresser i samsvar med :q:."

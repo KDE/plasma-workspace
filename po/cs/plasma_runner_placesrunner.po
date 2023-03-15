@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2010-01-21 17:05+0100\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "místa"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "Vypíše všechna umístění správce souborů"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Vyhledá ve správci souborů místa odpovídající :q:."

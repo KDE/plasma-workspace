@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2009-12-06 19:15+0900\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "위치"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "모든 파일 관리자 위치를 표시합니다"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr ":q:와(과) 일치하는 파일 관리자 위치를 찾습니다."

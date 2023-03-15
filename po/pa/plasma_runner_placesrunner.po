@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 02:12+0000\n"
 "PO-Revision-Date: 2020-09-04 07:43-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Generator: Lokalize 19.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: placesrunner.cpp:29 placesrunner.cpp:83
+#: placesrunner.cpp:28 placesrunner.cpp:82
 #, kde-format
 msgid "places"
 msgstr "ਥਾਵਾਂ"
 
-#: placesrunner.cpp:29
+#: placesrunner.cpp:28
 #, kde-format
 msgid "Lists all file manager locations"
 msgstr "ਸਭ ਫਾਈਲ ਮੈਨੇਜਰ ਟਿਕਾਣੇ ਵੇਖੋ"
 
-#: placesrunner.cpp:31
+#: placesrunner.cpp:30
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "ਫਾਈਲ ਮੈਨੇਜਰ ਟਿਕਾਣੇ ਲੱਭੋ, ਜੋ ਕਿ :q: ਨਾਲ ਮਿਲਦੇ ਹਨ"
