@@ -98,7 +98,8 @@ class SystemTrayTests(unittest.TestCase):
         """
         Take screenshot when the current test fails
         """
-        self.driver.get_screenshot_as_file(f"failed_test_shot_#{self.id()}.png")
+        if not self._outcome.result.wasSuccessful():
+            self.driver.get_screenshot_as_file(f"systemtraytest_failed_test_shot_#{self.id()}.png")
         self.kded.kill()
 
     @classmethod
