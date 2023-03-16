@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2023-02-08 21:24+0300\n"
+"PO-Revision-Date: 2023-03-15 11:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -34,7 +34,7 @@ msgstr "$HOME ayarlanmamış!"
 #: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME dizini (%1) mevcut değil."
+msgstr "$HOME dizini (%1) yok."
 
 #: main.cpp:124
 #, kde-format
@@ -103,7 +103,7 @@ msgstr ""
 #: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr "Plasma Çalışma Alanı kurulum problemi!"
+msgstr "Plasma Çalışma Alanı kurulum sorunu!"
 
 #: main.cpp:237
 #, kde-format
@@ -117,7 +117,7 @@ msgstr ""
 #: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Mümkünse kaydedilen oturumu yeniden yükler"
+msgstr "Olanaklıysa kaydedilen oturumu geri yükler"
 
 #: main.cpp:244
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "Çık"
 #: server.cpp:892
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "Onaylama Olmaksızın Çık"
+msgstr "Onay Olmadan Çık"
 
 #: server.cpp:897
 #, kde-format
@@ -161,4 +161,4 @@ msgstr "Onaylama Olmaksızın Kapat"
 #: server.cpp:902
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Onaylama Olmaksızın Yeniden Başlat"
+msgstr "Onay Olmadan Yeniden Başlat"
