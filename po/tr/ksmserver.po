@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2023-02-08 21:24+0300\n"
+"PO-Revision-Date: 2023-03-15 11:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -34,7 +34,7 @@ msgstr "$HOME ayarlanmamış!"
 #: main.cpp:81 main.cpp:89
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME dizini (%1) mevcut değil."
+msgstr "$HOME dizini (%1) yok."
 
 #: main.cpp:84
 #, kde-kuit-format
@@ -43,6 +43,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME dizinine yazma izni yok (%1). Bu bilginiz dahilindeyse ortamınızda "
+"<envar>KDE_HOME_READONLY=1</envar> çevre değişkenini ayarlayın."
 
 #: main.cpp:91
 #, kde-format
@@ -106,7 +108,7 @@ msgstr ""
 #: main.cpp:162
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr "Plasma Çalışma Alanı kurulum problemi!"
+msgstr "Plasma Çalışma Alanı kurulum sorunu!"
 
 #: main.cpp:196
 #, kde-format
@@ -120,7 +122,7 @@ msgstr ""
 #: main.cpp:200
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Mümkünse kaydedilen oturumu yeniden yükler"
+msgstr "Olanaklıysa kaydedilen oturumu geri yükler"
 
 #: main.cpp:203
 #, kde-format
@@ -154,28 +156,27 @@ msgstr "Çık"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Kapat"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Yeniden Başlat"
 
 #: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "Onaylama Olmaksızın Çık"
+msgstr "Onay Olmadan Çık"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Onaylama Olmaksızın Kapat"
+msgstr "Onay Olmadan Kapat"
 
 #: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Onaylama Olmaksızın Yeniden Başlat"
+msgstr "Onay Olmadan Yeniden Başlat"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "$HOME dizinine (%1) yazma izni yok."
