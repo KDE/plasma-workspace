@@ -2,7 +2,7 @@
 # translation of kcmstyle.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_style.po 1643844 2023-02-04 01:50:30Z scripty $
+# $Id: kcm_style.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-16 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -123,25 +123,17 @@ msgstr "Izberi arhiv tem GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arhiv tem GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Ta modul vam omogoča, da spremenite videz predmetov uporabniškega vmesnika."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Nastavi slog…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Nastavi ikone in orodne vrstice"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Nastavi slog GNOME/GTK…"
@@ -217,6 +209,13 @@ msgstr "Oznaka glavne orodne letvice"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Oznaka drugotne orodne letvice"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Ta modul vam omogoča, da spremenite videz predmetov uporabniškega "
+#~ "vmesnika."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

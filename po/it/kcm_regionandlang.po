@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-15 15:05+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -217,16 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Impossibile trovare un esempio in questa lingua"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Qui puoi configurare i formati usati per l'ora, le date, le valute e gli "
-"altri numeri."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -576,6 +567,13 @@ msgstr "Numero di telefono"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Eredita lingua"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Qui puoi configurare i formati usati per l'ora, le date, le valute e gli "
+#~ "altri numeri."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

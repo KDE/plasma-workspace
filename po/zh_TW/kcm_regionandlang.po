@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-06 20:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -220,14 +220,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "找不到這個地域的例子"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr "您可在此設定時間、日期、金錢和其他數字所使用的單位。"
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -566,6 +559,11 @@ msgstr "電話號碼"
 #, kde-format
 msgid "Inherit Language"
 msgstr "使用語言預設值"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr "您可在此設定時間、日期、金錢和其他數字所使用的單位。"
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2014-04-22 18:33+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -51,67 +51,62 @@ msgstr "Temainstallasjon mislyktes."
 msgid "Removing theme failed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr ""
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "All Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr ""
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Edit Theme…"
 msgstr ""
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "Fjern tema"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Restore Theme"
 msgstr ""
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr ""
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "Åpne tema"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.zip *.tar.gz *.tar.bz2)"

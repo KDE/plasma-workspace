@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-05-16 06:52-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -51,74 +51,68 @@ msgstr "התקנת ערכת הנושא נכשלה."
 msgid "Removing theme failed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgid "This module lets you configure the desktop theme."
-msgid "This module lets you choose the Plasma style."
-msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "All Themes"
 msgstr "פתח ערכת נושא"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "Light Themes"
 msgstr "פתח ערכת נושא"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr ""
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "Edit Theme…"
 msgstr "פתח ערכת נושא"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "הסר ערכה"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "הסר ערכה"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Install from File"
 msgid "Install from File…"
 msgstr "התקן מקובץ"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Get new Theme"
 msgid "Get New Plasma Styles…"
 msgstr "קבל ערכות חדשות..."
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "פתח ערכת נושא"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "קובצי ערכת נושא (*.zip *.tar.gz *.tar.bz2)"
@@ -167,6 +161,11 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
+
+#, fuzzy
+#~| msgid "This module lets you configure the desktop theme."
+#~ msgid "This module lets you choose the Plasma style."
+#~ msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

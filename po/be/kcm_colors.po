@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -1171,106 +1171,101 @@ msgstr "Адвольны дамінанты колер"
 msgid "Choose custom accent color"
 msgstr "Абраць адвольны дамінанты колер"
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr "Гэты модуль дазваляе абраць колеравую схему."
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 "Колеравая схема \"%1\" не ўсталяваная. Замест яе абраная прадвызначаная тэма."
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "Усе схемы"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "Светлыя схемы"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Цёмныя схемы"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "Загаловак акна"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "Тэкст акна"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "Кнопка"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "cпасылка"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "наведанае"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "Звычайны тэкст"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "Падсветлены тэкст"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "Дэактываваны тэкст"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Рэдагаваць колеравую схему…"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Выдаліць колеравую схему"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Аднавіць колеравую схему"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "Усталяваць з файла…"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Атрымаць новыя колеравыя схемы…"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Адкрыць колеравую схему"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы колеравых схемаў (*.colors)"
@@ -1370,6 +1365,9 @@ msgstr "У вашай сістэме ёсць наступныя колерав�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (бягучая колеравая схема)"
+
+#~ msgid "This module lets you choose the color scheme."
+#~ msgstr "Гэты модуль дазваляе абраць колеравую схему."
 
 #~ msgid "Use accent color:"
 #~ msgstr "Выкарыстоўваць дамінанты колер:"

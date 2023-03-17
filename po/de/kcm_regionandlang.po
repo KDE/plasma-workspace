@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-30 22:01+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
 #: exampleutility.cpp:29
@@ -221,16 +221,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Es wurde kein Beispiel für diese Lokalisierung gefunden"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Hier können Sie die Formate für Zeiten, Daten, Währung und weitere "
-"Zahlenformate einrichten."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -589,6 +580,13 @@ msgstr "Telefonnummer"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Abgeleitete Sprache"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Hier können Sie die Formate für Zeiten, Daten, Währung und weitere "
+#~ "Zahlenformate einrichten."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

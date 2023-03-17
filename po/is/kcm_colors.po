@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-17 16:26+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -1175,105 +1175,100 @@ msgstr "Veldu sérsniðinn áherslulit"
 msgid "Choose custom accent color"
 msgstr "Veldu sérsniðinn áherslulit"
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr "Í þessari einingu geturðu valið litastef."
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "Litastefið '%1' er ekki uppsett. Sjálfgefið þema valið í staðinn."
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "Öll litastef"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "Ljós litastef"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Dökk litastef"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "Gluggatitill"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "Gluggatexti"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "Hnappur"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "tengill"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "heimsótt"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "Venjulegur texti"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "Áherslulitaður texti"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "Óvirkur texti"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Breyta litastefi..."
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Fjarlægja litastef"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Endurheimta litastef"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "Setja inn úr skrá…"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Sækja ný litastef..."
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Opna litastef"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Litastefsskrár (*.colors)"
@@ -1376,6 +1371,9 @@ msgstr "Þú ert með eftirfarandi litastef á kerfinu þínu:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (núverandi litastef)"
+
+#~ msgid "This module lets you choose the color scheme."
+#~ msgstr "Í þessari einingu geturðu valið litastef."
 
 #~ msgid "Use accent color:"
 #~ msgstr "Nota áherslulit:"

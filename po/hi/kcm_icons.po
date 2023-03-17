@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-07-28 13:31+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -144,52 +144,50 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "आकारः"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "यह मॉड्यूल आपको अपने डेस्कटॉप के लिए प्रतीक चुनने की अनुमति देता है।"
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "प्रतीक प्रसंग हटाएँ"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "प्रतीक प्रसंग बहाल करें"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "फाइल से संस्थापित करें..."
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "नए प्रतीक प्राप्त करें..."
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "प्रसंग खोलें"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "यह मॉड्यूल आपको अपने डेस्कटॉप के लिए प्रतीक चुनने की अनुमति देता है।"
 
 #~ msgid "Toolbar"
 #~ msgstr "औज़ार पट्टी"

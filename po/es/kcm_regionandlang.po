@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-11 15:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -219,16 +219,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "No se ha encontrado ningún ejemplo para esta configuración local"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Aquí puede configurar los formatos que se usan para la hora, las fechas, la "
-"moneda y otros números."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -576,6 +567,13 @@ msgstr "Número de teléfono"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Heredar idioma"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Aquí puede configurar los formatos que se usan para la hora, las fechas, "
+#~ "la moneda y otros números."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

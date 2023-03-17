@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-06-28 09:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -114,26 +114,17 @@ msgstr "Избиране на архив с теми на GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Архив с теми на GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Този модул ви позволява да променяте визуалния облик на  интерфейсните "
-"елементи на приложенията."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Конфигуриране на стил…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Конфигуриране на икони и ленти с инструменти"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Конфигуриране на стила на GNOME/GTK приложения…"
@@ -209,3 +200,10 @@ msgstr "Етикет на основната лента с инструмент�
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Етикет на вторичната лента с инструменти"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Този модул ви позволява да променяте визуалния облик на  интерфейсните "
+#~ "елементи на приложенията."

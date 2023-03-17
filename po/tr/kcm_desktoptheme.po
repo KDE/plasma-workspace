@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-02-27 13:55+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -50,67 +50,62 @@ msgstr "Tema kurulumu başarısız."
 msgid "Removing theme failed: %1"
 msgstr "%1 temasını kaldırma işlemi başarısız oldu"
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr "Bu modül Plasma biçemini yapılandırmanızı sağlar."
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "All Themes"
 msgstr "Tüm Temalar"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
 msgstr "Aydınlık Temalar"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr "Karanlık Temalar"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Renk şeması uyumlu"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Renk şeması olanlar"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Temayı Düzenle…"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "Temayı Kaldır"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Restore Theme"
 msgstr "Temayı Geri Yükle"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr "Dosyadan kur…"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Yeni Plasma Biçemleri Al…"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "Tema Aç"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Tema Dosyaları (*.zip *.tar.gz *.tar.bz2)"
@@ -168,3 +163,6 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Sisteminizde aşağıdaki Plasma temaları var:"
+
+#~ msgid "This module lets you choose the Plasma style."
+#~ msgstr "Bu modül Plasma biçemini yapılandırmanızı sağlar."

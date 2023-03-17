@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-03 04:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -163,38 +163,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid "This module lets you choose the mouse cursor theme."
-msgstr "Este módulo le permite escoger el tema de cursores de ratón."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Size:"
 msgstr "Tamaño:"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Configurar la notificación de lanzamiento..."
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalar desde archivo..."
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "&Obtener nuevos cursores..."
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas de cursores (*.tar.gz *.tar.bz2)"
@@ -289,6 +284,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tamaños disponibles: %1)"
+
+#~ msgid "This module lets you choose the mouse cursor theme."
+#~ msgstr "Este módulo le permite escoger el tema de cursores de ratón."
 
 #~ msgid "Name"
 #~ msgstr "Nombre"

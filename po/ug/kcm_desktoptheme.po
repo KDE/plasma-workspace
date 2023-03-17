@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -49,75 +49,70 @@ msgstr ""
 msgid "Removing theme failed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr ""
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Available themes"
 msgid "All Themes"
 msgstr "بار ئۆرنەكلەر"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Light Themes"
 msgstr "ئۆرنەك"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "رەڭ لايىھىسى"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "ئۆرنەك"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "ئۆرنەكنى چىقىرىۋەت"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "ئۆرنەكنى چىقىرىۋەت"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New Plasma Styles…"
 msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
 msgstr "ئۆرنەك"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -144,50 +144,45 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Talha :"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr ""
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr ""
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr ""
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Install from File…"
 msgstr "Installar un tèma novèl..."
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Get New Icons…"
 msgstr "Installar un tèma novèl..."
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr ""
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

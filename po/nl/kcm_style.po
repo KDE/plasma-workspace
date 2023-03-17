@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-15 09:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -113,26 +113,17 @@ msgstr "GTK-thema-archief selecteren"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-thema-archief (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"In deze module kunt u het uiterlijk van de verschillende elementen van de "
-"gebruikersinterface van toepassingen wijzigen."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Stijl configureren…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Pictogrammen en werkbalken configureren"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Stijl van GNOME/GTK-toepassingen configureren…"
@@ -208,6 +199,13 @@ msgstr "Label van hoofdwerkbalk"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Label van secondaire werkbalk"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "In deze module kunt u het uiterlijk van de verschillende elementen van de "
+#~ "gebruikersinterface van toepassingen wijzigen."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

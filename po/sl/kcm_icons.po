@@ -1,7 +1,7 @@
 # translation of kcmicons.po to Slovenian
 # Translation of kcmicons.po to Slovenian
 # Copyright (C) 2001, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: kcm_icons.po 1636675 2022-10-25 01:33:34Z scripty $
+# $Id: kcm_icons.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-24 08:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -153,51 +153,49 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Velikost:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "Ta modul omogoča izbiro ikon za vaše namizje."
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Odstrani temo ikon"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Obnovi temo ikon"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Nastavi velikost ikon"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Dobi nove ikone…"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Konfiguriraj velikost ikon"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Odpri temo"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Datoteke tem (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "Ta modul omogoča izbiro ikon za vaše namizje."
 
 #~ msgid "Toolbar"
 #~ msgstr "Orodna vrstica"

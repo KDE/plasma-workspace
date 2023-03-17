@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-03-19 18:55-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: kdeshqip\n"
@@ -52,73 +52,68 @@ msgstr ""
 msgid "Removing theme failed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr ""
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "All Themes"
 msgstr "Emri i Temës"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "Light Themes"
 msgstr "Emri i Temës"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr ""
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "Edit Theme…"
 msgstr "Emri i Temës"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "Hiqe Temën"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "Hiqe Temën"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "Get New Plasma Styles…"
 msgstr "Emri i Temës"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "Open Theme"
 msgstr "Emri i Temës"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""

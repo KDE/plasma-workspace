@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-11 11:18+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -217,16 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Kon geen voorbeeld vinden voor deze regiocode"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"U kunt de opmaak gebruikt voor tijd, datums, geld en andere nummers hier "
-"configureren."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -575,6 +566,13 @@ msgstr "Telefoonnummer"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Taal erven"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "U kunt de opmaak gebruikt voor tijd, datums, geld en andere nummers hier "
+#~ "configureren."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

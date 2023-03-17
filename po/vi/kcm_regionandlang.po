@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-08 09:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -217,16 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Không tìm được ví dụ cho thiết lập vùng này"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Tại đây bạn có thể cấu hình các định dạng dùng cho thời gian, ngày tháng, "
-"tiền tệ và các loại số khác."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -575,6 +566,13 @@ msgstr "Số điện thoại"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Kế thừa từ ngôn ngữ"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Tại đây bạn có thể cấu hình các định dạng dùng cho thời gian, ngày tháng, "
+#~ "tiền tệ và các loại số khác."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

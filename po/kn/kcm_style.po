@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2008-12-29 16:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -121,30 +121,18 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"<h1>ಶೈಲಿ</h1>ಈ ಮಾಡ್ಯೂಲ್ ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನ ಘಟಕಗಳ ವಿಜೆಟ್ ಶೈಲಿ ಹಾಗು ಪರಿಣಾಮಗಳಂತಹ "
-"ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸಲು ನೆರವಾಗುತ್ತದೆ."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "ಸಂರಚಿಸು(&f)..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
@@ -228,6 +216,17 @@ msgstr ""
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#~| "user interface elements, such as the widget style and effects."
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "<h1>ಶೈಲಿ</h1>ಈ ಮಾಡ್ಯೂಲ್ ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನ ಘಟಕಗಳ ವಿಜೆಟ್ ಶೈಲಿ ಹಾಗು ಪರಿಣಾಮಗಳಂತಹ "
+#~ "ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸಲು ನೆರವಾಗುತ್ತದೆ."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

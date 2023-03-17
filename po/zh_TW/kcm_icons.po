@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -151,51 +151,49 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "大小："
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "這個模組允許你為你的桌面選擇圖示"
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "移除圖示主題"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "恢復圖示主題"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "設定圖示大小"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "從檔案安裝…"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "取得新圖示…"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "設定圖示大小"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "開啟主題"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "主題檔案 (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "這個模組允許你為你的桌面選擇圖示"
 
 #~ msgid "Toolbar"
 #~ msgstr "工具列"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-19 20:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -38,7 +38,7 @@ msgstr ""
 "Anda ingin menginstal font untuk penggunaan pribadi (hanya tersedia bagi "
 "anda), atau sistem-luas (tersedia bagi semua pengguna)?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
 #, kde-format
 msgid "Where to Install"
 msgstr "Tempat Menginstal"
@@ -343,13 +343,13 @@ msgid "Delete"
 msgstr "Hapus"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable"
 msgstr "Fungsikan"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable"
 msgstr "Nonfungsikan"
@@ -653,107 +653,87 @@ msgstr "Autentikasi gagal.<br><i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Galat tak diharapkan ketika memproses: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:169
-#, kde-format
-msgid "Font Management"
-msgstr "Pengelolaan Font"
-
-#: kcmfontinst/KCmFontInst.cpp:173
-#, kde-format
-msgid "(C) Craig Drummond, 2000 - 2009"
-msgstr "(C) Craig Drummond, 2000 - 2009"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Craig Drummond"
-msgstr "Craig Drummond"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Developer and maintainer"
-msgstr "Pengembang dan pengelola"
-
-#: kcmfontinst/KCmFontInst.cpp:202
+#: kcmfontinst/KCmFontInst.cpp:193
 #, kde-format
 msgid "Create New Group…"
 msgstr "Buat Grup Baru..."
 
-#: kcmfontinst/KCmFontInst.cpp:204
+#: kcmfontinst/KCmFontInst.cpp:195
 #, kde-format
 msgid "Remove Group…"
 msgstr "Hapus Grup..."
 
-#: kcmfontinst/KCmFontInst.cpp:206
+#: kcmfontinst/KCmFontInst.cpp:197
 #, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "Fungsikan Font di Grup..."
 
-#: kcmfontinst/KCmFontInst.cpp:208
+#: kcmfontinst/KCmFontInst.cpp:199
 #, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "Nonfungsikan Font di Grup..."
 
-#: kcmfontinst/KCmFontInst.cpp:233
+#: kcmfontinst/KCmFontInst.cpp:224
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Ini menampilkan pratinjau font terpilih."
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Find Duplicates…"
 msgstr "Temukan Duplikat..."
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "Pindai Font-font Duplikat..."
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal dari File..."
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "Instal font dari file lokal"
 
-#: kcmfontinst/KCmFontInst.cpp:252
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Get New Fonts…"
 msgstr "Dapatkan Font Baru..."
 
-#: kcmfontinst/KCmFontInst.cpp:253
+#: kcmfontinst/KCmFontInst.cpp:244
 #, kde-format
 msgid "Download new fonts"
 msgstr "Unduh font baru"
 
-#: kcmfontinst/KCmFontInst.cpp:255
+#: kcmfontinst/KCmFontInst.cpp:246
 #, kde-format
 msgid "Delete Selected Fonts…"
 msgstr "Hapus Font Terpilih..."
 
-#: kcmfontinst/KCmFontInst.cpp:313
+#: kcmfontinst/KCmFontInst.cpp:304
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "Ubah Teks Pratinjau..."
 
-#: kcmfontinst/KCmFontInst.cpp:415
+#: kcmfontinst/KCmFontInst.cpp:406
 #, kde-format
 msgid "Add Fonts"
 msgstr "Tambah Font"
 
-#: kcmfontinst/KCmFontInst.cpp:540
+#: kcmfontinst/KCmFontInst.cpp:532
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Gagal menyimpan senarai font untuk dicetak."
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:554
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Gagal menjalankan printer font."
 
-#: kcmfontinst/KCmFontInst.cpp:568
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -762,59 +742,59 @@ msgstr ""
 "Tidak ada font yang dapat dicetak.\n"
 "Anda hanya dapat mencetak font non-bitmap dan difungsikan."
 
-#: kcmfontinst/KCmFontInst.cpp:570
+#: kcmfontinst/KCmFontInst.cpp:563
 #, kde-format
 msgid "Cannot Print"
 msgstr "Tak Dapat Cetak"
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Anda tidak memilih apapun untuk dihapus."
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Tak Ada Yang Akan Dihapus"
 
-#: kcmfontinst/KCmFontInst.cpp:600
+#: kcmfontinst/KCmFontInst.cpp:593
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Anda yakin ingin menghapus</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:596
 #, kde-format
 msgid "Delete Font"
 msgstr "Hapus Font"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Anda yakin ingin menghapus font ini?"
 msgstr[1] "Anda yakin ingin menghapus %1 font tersebut?"
 
-#: kcmfontinst/KCmFontInst.cpp:612
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Hapus Font"
 
-#: kcmfontinst/KCmFontInst.cpp:617
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "Menghapus font..."
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Anda tidak memilih apapun untuk dipindahkan."
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Tak Ada Yang Akan Dipindah"
 
-#: kcmfontinst/KCmFontInst.cpp:642
+#: kcmfontinst/KCmFontInst.cpp:635
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -823,17 +803,17 @@ msgstr ""
 "<p>Anda yakin ingin memindahkan</p><p>'<b>%1</b>'</p><p>dari <i>%2</i> ke <i>"
 "%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:647
+#: kcmfontinst/KCmFontInst.cpp:640
 #, kde-format
 msgid "Move Font"
 msgstr "Pindahkan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid "Move"
 msgstr "Pindah"
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:646
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -844,74 +824,74 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>Anda yakin ingin memindahkan %1 font ini dari <i>%2</i> ke <i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:659
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move Fonts"
 msgstr "Pindahkan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "Memindah font..."
 
-#: kcmfontinst/KCmFontInst.cpp:678
+#: kcmfontinst/KCmFontInst.cpp:671
 #, kde-format
 msgid "Export Group"
 msgstr "Ekspor Grup"
 
-#: kcmfontinst/KCmFontInst.cpp:704
+#: kcmfontinst/KCmFontInst.cpp:697
 #, kde-format
 msgid "No files?"
 msgstr "Tak ada file?"
 
-#: kcmfontinst/KCmFontInst.cpp:707
+#: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "Gagal membuka %1 untuk penulisan"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Create New Group"
 msgstr "Ciptakan Grup Baru"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Name of new group:"
 msgstr "Nama grup baru:"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "New Group"
 msgstr "Grup Baru"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Preview Text"
 msgstr "Teks Pratinjau"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Silakan masukkan teks baru:"
 
-#: kcmfontinst/KCmFontInst.cpp:807
+#: kcmfontinst/KCmFontInst.cpp:800
 #, kde-format
 msgid "Scanning font list…"
 msgstr "Memindai daftar font..."
 
-#: kcmfontinst/KCmFontInst.cpp:866
+#: kcmfontinst/KCmFontInst.cpp:859
 #, kde-format
 msgid "No fonts"
 msgstr "Tanpa font"
 
-#: kcmfontinst/KCmFontInst.cpp:871
+#: kcmfontinst/KCmFontInst.cpp:864
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "1 Font"
 msgstr[1] "%1 Font"
 
-#: kcmfontinst/KCmFontInst.cpp:880
+#: kcmfontinst/KCmFontInst.cpp:873
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -924,7 +904,7 @@ msgstr ""
 "\">Sebagian difungsikan:</td><td>%3</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:890
+#: kcmfontinst/KCmFontInst.cpp:883
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -935,62 +915,62 @@ msgstr ""
 "align=\"right\">Dinonfungsikan:</td><td>%2</td></tr><tr><td align=\"right"
 "\">Total:</td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:967
+#: kcmfontinst/KCmFontInst.cpp:960
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "Mencari file apapun yang berhubungan..."
 
-#: kcmfontinst/KCmFontInst.cpp:971
+#: kcmfontinst/KCmFontInst.cpp:964
 #, kde-format
 msgid "Scanning Files…"
 msgstr "Memindai File..."
 
-#: kcmfontinst/KCmFontInst.cpp:972
+#: kcmfontinst/KCmFontInst.cpp:965
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "Mencari file tambahan untuk diinstal..."
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:980
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Mencari file yang terkait dengan %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1015
+#: kcmfontinst/KCmFontInst.cpp:1008
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "Menginstal font..."
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Anda tidak memilih apapun untuk difungsikan."
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Anda tidak memilih apapun untuk dinonfungsikan."
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Tak Ada Yang Akan Difungsikan"
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Tak Ada Yang Akan Dinonfungsikan"
 
-#: kcmfontinst/KCmFontInst.cpp:1098
+#: kcmfontinst/KCmFontInst.cpp:1091
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Anda yakin ingin memfungsikan</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Anda yakin ingin menonfungsikan</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -999,7 +979,7 @@ msgstr ""
 "<p>Anda yakin ingin memfungsikan</p><p>'<b>%1</b>', berisi di dalam grup '<b>"
 "%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1106
+#: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1008,31 +988,31 @@ msgstr ""
 "<p>Anda yakin ingin menonfungsikan</p><p>'<b>%1</b>', berisi di dalam grup "
 "'<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Enable Font"
 msgstr "Fungsikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
 #, kde-format
 msgid "Disable Font"
 msgstr "Nonfungsikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Anda yakin ingin memfungsikan font ini?"
 msgstr[1] "Anda yakin ingin memfungsikan %1 font tersebut?"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "Anda yakin ingin menonfungsikan font ini?"
 msgstr[1] "Anda yakin ingin menonfungsikan %1 font tersebut?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1047,7 +1027,7 @@ msgstr[1] ""
 "<p>Anda yakin ingin memfungsikan %1 font tersebut yang berisi di dalam grup "
 "'<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1062,22 +1042,22 @@ msgstr[1] ""
 "<p>Anda yakin ingin menonfungsikan %1 font tersebut yang berisi di dalam "
 "grup '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Fungsikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Nonfungsikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "Memfungsikan fon..."
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "Menonfungsikan font..."
@@ -2293,6 +2273,18 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Management"
+#~ msgstr "Pengelolaan Font"
+
+#~ msgid "(C) Craig Drummond, 2000 - 2009"
+#~ msgstr "(C) Craig Drummond, 2000 - 2009"
+
+#~ msgid "Craig Drummond"
+#~ msgstr "Craig Drummond"
+
+#~ msgid "Developer and maintainer"
+#~ msgstr "Pengembang dan pengelola"
 
 #~ msgid ""
 #~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "

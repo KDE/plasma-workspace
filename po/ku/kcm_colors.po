@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-01-06 14:36+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -1235,121 +1235,116 @@ msgstr "Rengê neçalak"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr ""
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "All Schemes"
 msgstr "Dirb Bîne Nava Xwe..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "&Dirb"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "Dirbê Tomar Bike..."
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Nivîsara Paceyê"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, fuzzy, kde-format
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Nivîsara paceyê"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Button"
 msgid "Button"
 msgstr "Bişkoj"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "lînk"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "visited"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ziyaretkirî"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Nivîsara normal"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Nivîsa Ziyaretkirî"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Neçalakkirî"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Dirb Bîne Nava Xwe..."
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Dirba Rengê Tomar Bike"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Dirba Rengê Bîne Nava Xwe"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "Dirbên &Nû Bîne"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Dirba Rengê Tomar Bike"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

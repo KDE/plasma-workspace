@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -144,54 +144,52 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "വ്യാപ്തി:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "ഈ മൊഡ്യൂള്‍ നിങ്ങളുടെ ഡെസ്ക്ടോപ്പിനായുള്ള ചിഹ്നങ്ങള്‍ തിരഞ്ഞെടുക്കാന്‍ സഹായിക്കും."
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "പ്രമേയം ഫയലില്‍ നിന്നും ചേര്‍ക്കുക..."
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Get New Icons..."
 msgid "Get New Icons…"
 msgstr "പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "പ്രമേയം തുറക്കുക"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "ഈ മൊഡ്യൂള്‍ നിങ്ങളുടെ ഡെസ്ക്ടോപ്പിനായുള്ള ചിഹ്നങ്ങള്‍ തിരഞ്ഞെടുക്കാന്‍ സഹായിക്കും."
 
 #~ msgid "Toolbar"
 #~ msgstr "ഉപകരണപ്പട്ട"

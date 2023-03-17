@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2002-10-23 12:00SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -145,53 +145,48 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Ubungakanani:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr ""
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Susa Umxholo"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Susa Umxholo"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Install from File…"
 msgstr "Faka Umxholo Omtsha..."
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Get New Icons…"
 msgstr "Faka Umxholo Omtsha..."
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Susa Umxholo"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

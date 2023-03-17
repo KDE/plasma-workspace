@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-22 09:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -152,48 +152,46 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Mida:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "Este mòdul permet escollir les icones de l'escriptori."
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Elimina un tema d'icones"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restaura el tema d'icones"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Configura la mida de les icones"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal·la des d'un fitxer…"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Obtín icones noves…"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configureu la mida de les icones"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Obri un tema"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de tema (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "Este mòdul permet escollir les icones de l'escriptori."

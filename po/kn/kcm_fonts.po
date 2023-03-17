@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2007-09-14 12:03+0530\n"
 "Last-Translator: Manu B <iammanu@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -139,18 +139,13 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "ಪೂರ್ಣ"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid "This module lets you configure the system fonts."
-msgstr ""
-
-#: package/contents/ui/main.qml:26
+#: package/contents/ui/main.qml:24
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "Adjust Global Scale…"
 msgstr "ಎಲ್ಲಾ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು &ಸರಿಹೊಂದಿಸು"
 
-#: package/contents/ui/main.qml:37
+#: package/contents/ui/main.qml:35
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Some changes such as DPI will only affect newly started applications.</"
@@ -162,114 +157,114 @@ msgstr ""
 "<p>ಚುಕ್ಕಿಗಳು ಪ್ರತಿ ಅಂಗುಲಕ್ಕೆ ರೀತಿಯ ಬದಲಾವಣೆಗಳು ಕೇವಲ ಹೊಸದಾಗಿ ಪ್ರಾರಂಭವಾದ ಅನ್ವಯಗಳಲ್ಲಿ "
 "ಪರಿಣಾಮ ಬೀರುತ್ತವೆ.</p>"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
 
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "&Adjust All Fonts…"
 msgstr "ಎಲ್ಲಾ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು &ಸರಿಹೊಂದಿಸು"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "Select general font"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Fixed width:"
 msgstr "ನಿಗದಿತ ಅಗಲ"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:130
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Select fixed width font"
 msgstr "ನಿಗದಿತ ಅಗಲ"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr ""
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "Select small font"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Toolbar:"
 msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:154
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Select toolbar font"
 msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Menu"
 msgid "Menu:"
 msgstr "ಪರಿವಿಡಿ"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr ""
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Window title:"
 msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:177
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Select window title font"
 msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
 
-#: package/contents/ui/main.qml:194
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr ""
 
-#: package/contents/ui/main.qml:199
+#: package/contents/ui/main.qml:197
 #, fuzzy, kde-format
 msgid "Enable"
 msgstr "ಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -280,29 +275,29 @@ msgid ""
 "problems."
 msgstr ""
 
-#: package/contents/ui/main.qml:217
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr ""
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid " to "
 msgid "to"
 msgstr "ಗೆ"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr ""
 
-#: package/contents/ui/main.qml:324
+#: package/contents/ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +311,13 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: package/contents/ui/main.qml:329
+#: package/contents/ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr ""
 
-#: package/contents/ui/main.qml:370
+#: package/contents/ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -332,13 +327,13 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: package/contents/ui/main.qml:380
+#: package/contents/ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Force fonts DPI:"
 msgid "Force font DPI:"
 msgstr "ಪ್ರಬಲ ಅಕ್ಷರಶೈಲಿಗಳಲ್ಲಿ ಚುಕ್ಕಿಗಳು ಪ್ರತಿ ಅಂಗುಲಕ್ಕೆ:"
 
-#: package/contents/ui/main.qml:422
+#: package/contents/ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -350,7 +345,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: package/contents/ui/main.qml:428
+#: package/contents/ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr ""

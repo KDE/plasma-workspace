@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-07-25 14:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -114,26 +114,17 @@ msgstr "Alege arhiva cu tematică GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arhivă cu tematică GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Acest modul permite modificarea aspectului vizual al elementelor de "
-"interfață cu utilizatorul ale aplicațiilor."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Configurează stilul…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configurează barele de unelte și pictogramele"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configurează stilul aplicațiilor GNOME/GTK…"
@@ -209,6 +200,13 @@ msgstr "Etichetă pe bara de unelte principală"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Etichetă pe bara de unelte secundară"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Acest modul permite modificarea aspectului vizual al elementelor de "
+#~ "interfață cu utilizatorul ale aplicațiilor."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

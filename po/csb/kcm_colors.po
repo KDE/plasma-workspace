@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2009-12-20 19:03+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -1196,56 +1196,51 @@ msgstr "Nieaktiwnô farwa"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr ""
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "All Schemes"
 msgstr "Impòrtëjë palétã ..."
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "&Paléta"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "Zapiszë palétã..."
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Test òkna"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Tekst òkna"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Knąpa"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1253,7 +1248,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "lënk"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1261,61 +1256,61 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ju òbzéróny"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Zwëczajny tekst"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Przezdrzóny tekst"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Wëłączony"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Impòrtëjë palétã ..."
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Zapiszë palétã farwów"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Impòrtëjë palétã farwów"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "&Zladëjë nowé palétë..."
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Zapiszë palétã farwów"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

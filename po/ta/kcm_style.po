@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-09 21:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -115,24 +115,17 @@ msgstr "GTK தோற்றத்திட்ட பெட்டகத்தை 
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK தோற்றத்திட்ட பெட்டகம் (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr "செயலிகளின் பயனர் இடைமுகப்பு உறுப்புகளை நீங்கள் மாற்றியமைக்க இந்த கூறு உதவும்."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "தோற்றத்தை அமை…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "சின்னங்களையும் கருவிப்பட்டைகளையும் அமை"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "GNOME/GTK செயலி தோற்றத்தை அமை…"
@@ -208,6 +201,11 @@ msgstr "பிரதான கருவிப்பட்டையில் ப�
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "மற்ற கருவிப்பட்டைகளில் பெயர்கள்"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr "செயலிகளின் பயனர் இடைமுகப்பு உறுப்புகளை நீங்கள் மாற்றியமைக்க இந்த கூறு உதவும்."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-22 12:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -103,54 +103,47 @@ msgstr "Повернутися до компонування стільниці 
 msgid "Global look and feel"
 msgstr "Загальний вигляд і поведінка"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid "This module lets you choose the global look and feel."
-msgstr ""
-"За допомогою цього модуля ви можете вибрати загальний вигляд і поведінку "
-"робочого простору."
-
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "Остаточне вилучення"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "Ви хочете остаточно вилучити цю тему?"
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "Вилучити остаточно"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Містить компонування стільниці"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "Попередній перегляд теми"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Вилучити тему"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -158,27 +151,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Застосувати %1?"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Виберіть, що застосовувати…"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показати скорочений список…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "Застосувати"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Отримати нові загальні теми…"
@@ -299,6 +292,11 @@ msgstr ""
 "У цій загальній темі не передбачено жодних параметрів вікон програм. Будь "
 "ласка, зв'яжіться із супровідником цієї загальної теми, оскільки, можливо, "
 "тема є непрацездатною."
+
+#~ msgid "This module lets you choose the global look and feel."
+#~ msgstr ""
+#~ "За допомогою цього модуля ви можете вибрати загальний вигляд і поведінку "
+#~ "робочого простору."
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

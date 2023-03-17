@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-04 20:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -161,38 +161,33 @@ msgstr[0] "%1 sekundzie"
 msgstr[1] "%1 sekundach"
 msgstr[2] "%1 sekundach"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid "This module lets you choose the mouse cursor theme."
-msgstr "Moduł ten umożliwia wybranie zestawu wskaźników."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Size:"
 msgstr "Rozmiar:"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Ustawienia odzewu przy uru&chamianiu…"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "&Install from File…"
 msgstr "Wgraj z pl&iku..."
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "&Pobierz nowe wskaźniki..."
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Open Theme"
 msgstr "Otwórz zestaw"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Pliki zestawu wskaźników (*.tar.gz *.tar.bz2)"
@@ -284,6 +279,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dostępne rozmiary: %1)"
+
+#~ msgid "This module lets you choose the mouse cursor theme."
+#~ msgstr "Moduł ten umożliwia wybranie zestawu wskaźników."
 
 #~ msgid "Name"
 #~ msgstr "Nazwa"

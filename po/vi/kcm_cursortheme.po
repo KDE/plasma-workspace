@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-08 16:09+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -161,38 +161,33 @@ msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 giây"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid "This module lets you choose the mouse cursor theme."
-msgstr "Khối này cho phép bạn chọn chủ đề của con trỏ chuột."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Size:"
 msgstr "Cỡ:"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Cấu hình phản hồi khởi chạy…"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Cài từ tệp…"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "&Lấy con trỏ mới…"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Open Theme"
 msgstr "Mở chủ đề"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tệp chủ đề của con trỏ (*.tar.gz *.tar.bz2)"
@@ -282,6 +277,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Cỡ khả dụng: %1)"
+
+#~ msgid "This module lets you choose the mouse cursor theme."
+#~ msgstr "Khối này cho phép bạn chọn chủ đề của con trỏ chuột."
 
 #~ msgid "Name"
 #~ msgstr "Tên"

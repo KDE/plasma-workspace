@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-10-24 16:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -148,51 +148,49 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Dimensione:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr "Questo modulo ti permette di scegliere le icone per il tuo desktop."
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Rimuovi tema di icone"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Ripristina tema di icone"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Configura le dimensioni delle icone"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa da file…"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Ottieni nuove icone…"
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configura le dimensioni delle icone"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Apri tema"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "File di tema (*.tar.gz *.tar.bz2)"
+
+#~ msgid "This module allows you to choose the icons for your desktop."
+#~ msgstr "Questo modulo ti permette di scegliere le icone per il tuo desktop."
 
 #~ msgid "Toolbar"
 #~ msgstr "Barra degli strumenti"

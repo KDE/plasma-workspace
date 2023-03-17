@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-02 19:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1180,106 +1180,101 @@ msgstr "விருப்பமான சிறப்பு நிறம்"
 msgid "Choose custom accent color"
 msgstr "விருப்பமான சிறப்பு நிறத்தைத் தேர்ந்தெடுத்தல்"
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr "நிறத்திட்டத்தை அமைக்க இந்த கூறு உதவும்."
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 "'%1' என்ற நிறத்திட்டம் நிறுவப்படாமையால் இயல்பிருப்பு நிறத்திட்டமே தேர்ந்தெடுக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "அனைத்து திட்டங்கள்"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "வெளிர்ந்த திட்டங்கள்"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "கருமையான திட்டங்கள்"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "சாளர தலைப்பு"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "சாளர உரை"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "பட்டன்"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "இணைப்பு"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "அணுகப்பட்டது"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "இயல்பான உரை"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "தேர்ந்தெடுக்கப்பட்டுள்ள உரை"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "முடக்கப்பட்டதன் உரை"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "நிறத்திட்டத்தை திருத்து…"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "நிறத்திட்டத்தை நீக்கு"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "நிறத்திட்டத்தை மீட்டெடு"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "புதிய நிறத்திட்டங்களை பெறு…"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "நிறத்திட்டத்தை திற"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "நிறத்திட்ட கோப்புகள் (*.colors)"
@@ -1366,6 +1361,9 @@ msgstr "உங்கள் கணினியில் பின்வரும�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (தற்போதைய நிறத்திட்டம்)"
+
+#~ msgid "This module lets you choose the color scheme."
+#~ msgstr "நிறத்திட்டத்தை அமைக்க இந்த கூறு உதவும்."
 
 #~ msgid "Use accent color:"
 #~ msgstr "சிறப்பு நிறத்தை பயன்படுத்து:"

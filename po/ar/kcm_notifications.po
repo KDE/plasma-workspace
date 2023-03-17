@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:50+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-12-27 18:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -39,7 +39,7 @@ msgid "Show in do not disturb mode"
 msgstr "أظهر في وضع عدم الإزعاج"
 
 #: package/contents/ui/ApplicationConfiguration.qml:90
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "أظهر في التاريخ"
@@ -61,12 +61,7 @@ msgid ""
 "basis."
 msgstr "لا يدعم هذا التطبيق تكوين الإشعارات على أساس كل حدث."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid "This module lets you manage application and system notifications."
-msgstr "تتيح لك هذه الوحدة إدارة إشعارات التطبيق والنظام."
-
-#: package/contents/ui/main.qml:42
+#: package/contents/ui/main.qml:41
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -76,107 +71,107 @@ msgstr ""
 "تعذر العثور على أداة \"الإشعارات\" المطلوبة لعرض الإشعارات. تأكد من تمكينها "
 "إما في صينية النظام أو كأداة مستقلة."
 
-#: package/contents/ui/main.qml:53
+#: package/contents/ui/main.qml:52
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "الإشعارات تزود حاليا بواسطة '%1 %2' عوضا عن بلازما."
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:56
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "الإشعارات لا تزود بواسطة بلازما حاليًا."
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "نمط عدم الإزعاج"
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
 msgstr "مكّن:"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "عندما تكون الشاشات معكوسة"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "أثناء مشاركة الشاشة"
 
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
 msgstr "اختصار لوحة المفاتيح:"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "شروط الظهور"
 
-#: package/contents/ui/main.qml:109
+#: package/contents/ui/main.qml:108
 #, kde-format
 msgid "Critical notifications:"
 msgstr "إشعارات حرجة:"
 
-#: package/contents/ui/main.qml:110
+#: package/contents/ui/main.qml:109
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "أظهر في وضع عدم الإزعاج"
 
-#: package/contents/ui/main.qml:122
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Normal notifications:"
 msgstr "إشعارات عادية:"
 
-#: package/contents/ui/main.qml:123
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "أظهر فوق نوافذ مالئة الشاشة"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "إشعارات ذات أولوية منخفضة:"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Show popup"
 msgstr "أظهر المنبثقات"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "المنبثقات"
 
-#: package/contents/ui/main.qml:171
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "المكان:"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:171
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "قرب أيقونة الإشعار"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "اختر موضع مخصص..."
 
-#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
+#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:233
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -187,52 +182,52 @@ msgstr[3] "%1 ثواني"
 msgstr[4] "%1 ثانية"
 msgstr[5] "%1 ثانية"
 
-#: package/contents/ui/main.qml:223
+#: package/contents/ui/main.qml:222
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "أخف بعد:"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:245
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "تغذية إضافية"
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:250
 #, kde-format
 msgid "Application progress:"
 msgstr "تقدم التطبيق:"
 
-#: package/contents/ui/main.qml:252 package/contents/ui/main.qml:292
+#: package/contents/ui/main.qml:251 package/contents/ui/main.qml:291
 #, kde-format
 msgid "Show in task manager"
 msgstr "أظهر في مدير المهام"
 
-#: package/contents/ui/main.qml:264
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "أظهر في التنبيهات"
 
-#: package/contents/ui/main.qml:278
+#: package/contents/ui/main.qml:277
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "أبقِ النوافذ المنبثقة مفتوحة أثناء التقدم "
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Notification badges:"
 msgstr "شارات إشعار:"
 
-#: package/contents/ui/main.qml:303
+#: package/contents/ui/main.qml:302
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "إعدادات مخصصة لتطبيقات معينة"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:307
 #, kde-format
 msgid "Configure…"
 msgstr "اضبط…"
@@ -273,6 +268,9 @@ msgstr "حدد تطبيقًا من القائمة لتكوين إعدادات ا
 #, kde-format
 msgid "Other Applications"
 msgstr "التطبيقات الأخرى"
+
+#~ msgid "This module lets you manage application and system notifications."
+#~ msgstr "تتيح لك هذه الوحدة إدارة إشعارات التطبيق والنظام."
 
 #~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
 #~ msgid "Toggle with:"

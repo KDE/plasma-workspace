@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1647049 2023-03-15 02:27:52Z scripty $
+# $Id: ksmserver.po 1647185 2023-03-17 02:50:43Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.
@@ -9,20 +9,20 @@
 # Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009, 2010, 2012.
 # Andrej Vernekar <andrej.vernekar@gmail.com>, 2012.
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-06-08 20:05+0200\n"
+"PO-Revision-Date: 2023-03-16 10:55+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
@@ -48,6 +48,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Ni dostopa za pisanje do imenika $HOME (%1). Če je to namerno, nastavite "
+"<envar>KDE_HOME_READONLY=1</envar> v vašem okolju."
 
 #: main.cpp:91
 #, kde-format
@@ -159,12 +161,12 @@ msgstr "Odjavi"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Zaustavi"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Ponovno zaženi"
 
 #: server.cpp:905
 #, kde-format
@@ -172,8 +174,7 @@ msgid "Log Out Without Confirmation"
 msgstr "Odjavi brez potrditve"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Zaustavi brez potrditve"
 

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-02 12:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1175,12 +1175,7 @@ msgstr "Color d'accent personalitzat"
 msgid "Choose custom accent color"
 msgstr "Seleccioneu el color d'accent personalitzat"
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr "Este mòdul permet triar l'esquema de color."
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1188,94 +1183,94 @@ msgstr ""
 "L'esquema de color «%1» no està instal·lat. En el seu lloc se selecciona el "
 "tema predeterminat."
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "Tots els esquemes"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "Esquemes clars"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Esquemes foscos"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "Títol de la finestra"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "Text de la finestra"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "Botó"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "enllaç"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visitat"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "Text normal"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "Text ressaltat"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "Text desactivat"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edita l'esquema de color…"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Elimina l'esquema de color"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restaura l'esquema de color"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal·la des d'un fitxer…"
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Obtín esquemes nous de color…"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Obri un esquema de color"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fitxers d'esquema de color (*.colors)"
@@ -1383,3 +1378,6 @@ msgstr "En el sistema hi ha els següents esquemes de color:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de color actual)"
+
+#~ msgid "This module lets you choose the color scheme."
+#~ msgstr "Este mòdul permet triar l'esquema de color."

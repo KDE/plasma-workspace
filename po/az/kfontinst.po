@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-27 00:23+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -37,7 +37,7 @@ msgstr ""
 "sistem üçün (bütün istifadəçilər istifadə edə bilər) quraşdırmaq "
 "istəyirsiniz?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
 #, kde-format
 msgid "Where to Install"
 msgstr "Quraşdırma yeri"
@@ -341,13 +341,13 @@ msgid "Delete"
 msgstr "Silmək"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable"
 msgstr "Aktiv etmək"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable"
 msgstr "Söndürmək"
@@ -652,107 +652,87 @@ msgstr "Doğrulama alınmadı.<br><i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Əməliyyat zamanı gözlənilməz xəta: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:169
-#, kde-format
-msgid "Font Management"
-msgstr "Şrift idarəetməsi"
-
-#: kcmfontinst/KCmFontInst.cpp:173
-#, kde-format
-msgid "(C) Craig Drummond, 2000 - 2009"
-msgstr "(C) Craig Drummond, 2000 - 2009"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Craig Drummond"
-msgstr "Craig Drummond"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Developer and maintainer"
-msgstr "Tərtibatçı və müşayətçi"
-
-#: kcmfontinst/KCmFontInst.cpp:202
+#: kcmfontinst/KCmFontInst.cpp:193
 #, kde-format
 msgid "Create New Group…"
 msgstr "Yeni Qrup yaradın..."
 
-#: kcmfontinst/KCmFontInst.cpp:204
+#: kcmfontinst/KCmFontInst.cpp:195
 #, kde-format
 msgid "Remove Group…"
 msgstr "Qrupu silin..."
 
-#: kcmfontinst/KCmFontInst.cpp:206
+#: kcmfontinst/KCmFontInst.cpp:197
 #, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "Qrupdakı Şrifləri Aktiv etmək..."
 
-#: kcmfontinst/KCmFontInst.cpp:208
+#: kcmfontinst/KCmFontInst.cpp:199
 #, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "Qrupdakı Şrifləri Söndürmək..."
 
-#: kcmfontinst/KCmFontInst.cpp:233
+#: kcmfontinst/KCmFontInst.cpp:224
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Bu, seçilmiş şriftin ilkin görüntüsünü göstərir."
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Find Duplicates…"
 msgstr "Təkrarlarını Tapmaq..."
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "Təkrarlanan Şriftləri Tapmaq..."
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install from File…"
 msgstr "Fayldan quraşdırmaq..."
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "Şrifti yerli fayldan quraşdırmaq"
 
-#: kcmfontinst/KCmFontInst.cpp:252
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Get New Fonts…"
 msgstr "Yeni Şriftlər Almaq..."
 
-#: kcmfontinst/KCmFontInst.cpp:253
+#: kcmfontinst/KCmFontInst.cpp:244
 #, kde-format
 msgid "Download new fonts"
 msgstr "Yeni şriftləri yükləmək"
 
-#: kcmfontinst/KCmFontInst.cpp:255
+#: kcmfontinst/KCmFontInst.cpp:246
 #, kde-format
 msgid "Delete Selected Fonts…"
 msgstr "Seçilmiş şriftləri silmək..."
 
-#: kcmfontinst/KCmFontInst.cpp:313
+#: kcmfontinst/KCmFontInst.cpp:304
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "Öncədən baxış mətnini dəyişmək..."
 
-#: kcmfontinst/KCmFontInst.cpp:415
+#: kcmfontinst/KCmFontInst.cpp:406
 #, kde-format
 msgid "Add Fonts"
 msgstr "Şriftlər əlavə etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:540
+#: kcmfontinst/KCmFontInst.cpp:532
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Çap etmək üçün şriftlərin siyahısıni saxlamaq mümkün olmadı."
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:554
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Şriftləri çap etmək olmadı."
 
-#: kcmfontinst/KCmFontInst.cpp:568
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -761,59 +741,59 @@ msgstr ""
 "Çap ediləbilən şriftlər yoxdur.\n"
 "Siz ancaq bitmap olmayan və aktiv edilmiş şriftləri çap edə bilərsiniz."
 
-#: kcmfontinst/KCmFontInst.cpp:570
+#: kcmfontinst/KCmFontInst.cpp:563
 #, kde-format
 msgid "Cannot Print"
 msgstr "Çap edilmədi"
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Silmək üçün heç nə seçmədiniz."
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Silmək üçün heç nə yoxdur"
 
-#: kcmfontinst/KCmFontInst.cpp:600
+#: kcmfontinst/KCmFontInst.cpp:593
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>\"<b>%1</b>\"<p><p>Silmək istədiyinizə əminsiniz?</p></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:596
 #, kde-format
 msgid "Delete Font"
 msgstr "Şrifti silmək"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Siz doğrudan %1 şriftini silmək istəyirsiniz?"
 msgstr[1] "Siz doğrudan %1 şriftlərini silmək istəyirsiniz?"
 
-#: kcmfontinst/KCmFontInst.cpp:612
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Şriftləri silmək"
 
-#: kcmfontinst/KCmFontInst.cpp:617
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "Şrift(lər) silinir..."
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Siz köçürmək üçün heç nə seçmədiniz."
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Köçürmək üçün heç nə yoxdur"
 
-#: kcmfontinst/KCmFontInst.cpp:642
+#: kcmfontinst/KCmFontInst.cpp:635
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -822,17 +802,17 @@ msgstr ""
 "<p></p><p>\"<b>%1</b>\"</p><p> şriftini <i>%2</i>-dən <i>%3</i>-ə "
 "<p>Köçürmək istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:647
+#: kcmfontinst/KCmFontInst.cpp:640
 #, kde-format
 msgid "Move Font"
 msgstr "Şrifti köçürmək"
 
-#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid "Move"
 msgstr "Köçürmək"
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:646
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -843,74 +823,74 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>Bu %1 şrifti <i>%2</i>-dən <i>%3</i>-ə köşürmək istədiyinizə əminsiniz</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:659
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move Fonts"
 msgstr "Şriftləri köçürmək"
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "Şrift(lər) köçürülür..."
 
-#: kcmfontinst/KCmFontInst.cpp:678
+#: kcmfontinst/KCmFontInst.cpp:671
 #, kde-format
 msgid "Export Group"
 msgstr "Qrupu ixrac etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:704
+#: kcmfontinst/KCmFontInst.cpp:697
 #, kde-format
 msgid "No files?"
 msgstr "Fayl yoxdur?"
 
-#: kcmfontinst/KCmFontInst.cpp:707
+#: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "Yazmaq üçün %1 açılmadı"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Create New Group"
 msgstr "Yeni Qrup yaratmaq"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Name of new group:"
 msgstr "Yeni qrupun adı?"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "New Group"
 msgstr "Yeni Qrup"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Preview Text"
 msgstr "Mətnə öncədən baxış"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Lütfən, yeni mətn daxil edin:"
 
-#: kcmfontinst/KCmFontInst.cpp:807
+#: kcmfontinst/KCmFontInst.cpp:800
 #, kde-format
 msgid "Scanning font list…"
 msgstr "Şriftlər siyahısı axtarılır..."
 
-#: kcmfontinst/KCmFontInst.cpp:866
+#: kcmfontinst/KCmFontInst.cpp:859
 #, kde-format
 msgid "No fonts"
 msgstr "Şriftlər yoxdur"
 
-#: kcmfontinst/KCmFontInst.cpp:871
+#: kcmfontinst/KCmFontInst.cpp:864
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "%1 Şrift"
 msgstr[1] "%1 Şrift"
 
-#: kcmfontinst/KCmFontInst.cpp:880
+#: kcmfontinst/KCmFontInst.cpp:873
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -923,7 +903,7 @@ msgstr ""
 "\">Qismən aktiv edilib:</td><td>%3</td></tr><tr><td align=\"right\">Yekun:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:890
+#: kcmfontinst/KCmFontInst.cpp:883
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -934,63 +914,63 @@ msgstr ""
 "align=\"right\">Qeyri-aktiv edilib:</td><td>%2</td></tr><tr><td align=\"right"
 "\">Yekun:</td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:967
+#: kcmfontinst/KCmFontInst.cpp:960
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "Hər bir əlaqəli sənədlər axtarılır..."
 
-#: kcmfontinst/KCmFontInst.cpp:971
+#: kcmfontinst/KCmFontInst.cpp:964
 #, kde-format
 msgid "Scanning Files…"
 msgstr "Fayllar axtarılır..."
 
-#: kcmfontinst/KCmFontInst.cpp:972
+#: kcmfontinst/KCmFontInst.cpp:965
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "Quraşdırmaq üçün əlavə fayllar axatarılır..."
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:980
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 ilə əlaqəli fayllar axtarılır"
 
-#: kcmfontinst/KCmFontInst.cpp:1015
+#: kcmfontinst/KCmFontInst.cpp:1008
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "Şrift(lər) quaraşdırılır..."
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Siz akiv etmək üçün bir şey seçmədiniz."
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Siz qeyri-aktiv üçün heç nə seçmədiniz."
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Aktiv etmək üçün heç nə yoxdur"
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Qeyri-aktiv etmək üçün heç nə yoxdur"
 
-#: kcmfontinst/KCmFontInst.cpp:1098
+#: kcmfontinst/KCmFontInst.cpp:1091
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>' </p><p>şriftini aktiv etmək istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<p>'<b>%1</b>' </p><p>şriftini qeyri-aktiv etmək istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -999,7 +979,7 @@ msgstr ""
 "<p>'<b>%2</b>' daxilindəki '<b>%1</b>' </p><p>şriftini aktiv etmək "
 "istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1106
+#: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1008,31 +988,31 @@ msgstr ""
 "<p>'<b>%2</b>' daxilindəki '<b>%1</b>' </p><p>şriftini qeyri-aktiv etmək "
 "istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Enable Font"
 msgstr "Şrifit aktiv etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
 #, kde-format
 msgid "Disable Font"
 msgstr "Şrifti qeyri-aktiv etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "%1 şriftinia aktiv etmək istədiyinizə əminsiniz?"
 msgstr[1] "%1 şriftlərini aktiv etmək istədiyinizə əminsiniz?"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "%1 şriftinia qeyri-aktiv etmək istədiyinizə əminsiniz?"
 msgstr[1] "%1 şriftinia qeyri-aktiv etmək istədiyinizə əminsiniz?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1047,7 +1027,7 @@ msgstr[1] ""
 "<p>'<b>%2</b>' qrupu daxilindəki %1 şriftlərini aktiv etmək istədiyinizə "
 "əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1062,22 +1042,22 @@ msgstr[1] ""
 "<p>'<b>%2</b>' qrupu daxilindəki %1 şriftlərini qeyri-aktiv etmək "
 "istədiyinizə əminsiniz?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Şriftləri aktiv etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Şriftləri qeyri-aktiv etmək"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "Şrift(lər) aktiv edilir..."
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "Şrift(lər) qeyri-aktiv edilir..."
@@ -2294,6 +2274,18 @@ msgstr "Laqba-Lamı kvadrat yazısı"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi yazısı"
+
+#~ msgid "Font Management"
+#~ msgstr "Şrift idarəetməsi"
+
+#~ msgid "(C) Craig Drummond, 2000 - 2009"
+#~ msgstr "(C) Craig Drummond, 2000 - 2009"
+
+#~ msgid "Craig Drummond"
+#~ msgstr "Craig Drummond"
+
+#~ msgid "Developer and maintainer"
+#~ msgstr "Tərtibatçı və müşayətçi"
 
 #~ msgid ""
 #~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "

@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1646208 $
+# Version: $Revision: 1647185 $
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-04 08:34+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -1173,105 +1173,100 @@ msgstr "Własny kolor akcentu"
 msgid "Choose custom accent color"
 msgstr "Wybierz własny kolor akcentu"
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr "Ten moduł umożliwia wybranie zestawu kolorów."
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "Zestaw kolorów '%1' nie został wgrany. Wybrano domyślny zestaw."
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "Wszystkie zestawy"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "Jasne zestawy"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Ciemne zestawy"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "Tytuł okna"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "Tekst okna"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "Przycisk"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "odnośnik"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "odwiedzony"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "Zwykły tekst"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "Podświetlony tekst"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "Wyłączony tekst"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edytuj zestaw kolorów..."
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Usuń zestaw kolorów"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Przywróć zestaw kolorów"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "Wgraj z pliku..."
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Pobierz nowe zestawy kolorów..."
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Otwórz zestaw kolorów"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Pliki zestawu kolorów (*.colors)"
@@ -1377,6 +1372,9 @@ msgstr "Masz następujące zestawy kolorów na swoim systemie:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (bieżącego zestaw kolorów)"
+
+#~ msgid "This module lets you choose the color scheme."
+#~ msgstr "Ten moduł umożliwia wybranie zestawu kolorów."
 
 #~ msgid "Use accent color:"
 #~ msgstr "Użyj koloru akcentu:"

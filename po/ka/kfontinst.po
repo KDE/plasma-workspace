@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-30 12:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:934
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -37,7 +37,7 @@ msgstr ""
 "გნებავთ ფონტ(ებ)-ი პირადად თქვენთვის დააყენოთ, თუ მთელი "
 "სისტემისთვის(დაინახავს ყველა მომხმარებელი)?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:937
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
 #, kde-format
 msgid "Where to Install"
 msgstr "სად დავაყენო"
@@ -338,13 +338,13 @@ msgid "Delete"
 msgstr "წაშლა"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable"
 msgstr "ჩართვა"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable"
 msgstr "გამორთვა"
@@ -631,107 +631,87 @@ msgstr "ავთენტიკაციის შეცდომა.<br><i>%1<
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "დამუშავების მოულოდნელი შეცდომა: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:169
-#, kde-format
-msgid "Font Management"
-msgstr "ფონტების მართვა"
-
-#: kcmfontinst/KCmFontInst.cpp:173
-#, kde-format
-msgid "(C) Craig Drummond, 2000 - 2009"
-msgstr "(C) Craig Drummond, 2000 - 2009"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Craig Drummond"
-msgstr "Craig Drummond"
-
-#: kcmfontinst/KCmFontInst.cpp:174
-#, kde-format
-msgid "Developer and maintainer"
-msgstr "პროგრამისტი და წამყვანი"
-
-#: kcmfontinst/KCmFontInst.cpp:202
+#: kcmfontinst/KCmFontInst.cpp:193
 #, kde-format
 msgid "Create New Group…"
 msgstr "ახალი ჯგუფის შექმნა…"
 
-#: kcmfontinst/KCmFontInst.cpp:204
+#: kcmfontinst/KCmFontInst.cpp:195
 #, kde-format
 msgid "Remove Group…"
 msgstr "ჯგუფის წაშლა…"
 
-#: kcmfontinst/KCmFontInst.cpp:206
+#: kcmfontinst/KCmFontInst.cpp:197
 #, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "ჯგუფში ფონტების ჩართვა…"
 
-#: kcmfontinst/KCmFontInst.cpp:208
+#: kcmfontinst/KCmFontInst.cpp:199
 #, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "ჯგუფში ფონტების გამორთვა…"
 
-#: kcmfontinst/KCmFontInst.cpp:233
+#: kcmfontinst/KCmFontInst.cpp:224
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "გაჩვენებთ მონიშნული ფონტის სწრაფ ხედს."
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Find Duplicates…"
 msgstr "დუბლიკატების პოვნა…"
 
-#: kcmfontinst/KCmFontInst.cpp:249
+#: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "დუბლიკატი ფონტების სკანირება…"
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install from File…"
 msgstr "ფაილიდან დაყენება…"
 
-#: kcmfontinst/KCmFontInst.cpp:251
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "ფონტის ლოკალური ფაილიდან დაყენება"
 
-#: kcmfontinst/KCmFontInst.cpp:252
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Get New Fonts…"
 msgstr "ახალი ფონტების მიღება…"
 
-#: kcmfontinst/KCmFontInst.cpp:253
+#: kcmfontinst/KCmFontInst.cpp:244
 #, kde-format
 msgid "Download new fonts"
 msgstr "გადმოწერეთ ახალი ფონტები"
 
-#: kcmfontinst/KCmFontInst.cpp:255
+#: kcmfontinst/KCmFontInst.cpp:246
 #, kde-format
 msgid "Delete Selected Fonts…"
 msgstr "მონიშნული ფონტების წაშლა…"
 
-#: kcmfontinst/KCmFontInst.cpp:313
+#: kcmfontinst/KCmFontInst.cpp:304
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "გადახედვის ტექსტის შეცვლა…"
 
-#: kcmfontinst/KCmFontInst.cpp:415
+#: kcmfontinst/KCmFontInst.cpp:406
 #, kde-format
 msgid "Add Fonts"
 msgstr "ფონტების დამატება"
 
-#: kcmfontinst/KCmFontInst.cpp:540
+#: kcmfontinst/KCmFontInst.cpp:532
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "დასაბეჭდი ფონტების სიის შენახვის შეცდომა."
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:554
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "ფონტის დაბეჭვდის დაწყების შეცდომა."
 
-#: kcmfontinst/KCmFontInst.cpp:568
+#: kcmfontinst/KCmFontInst.cpp:561
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -740,59 +720,59 @@ msgstr ""
 "ამ ფონტებით ბეჭდვა შეუძლებელია.\n"
 "ბეჭდვა მხოლოდ არა-ბიტური-რუკების მქონე და ჩართული ფონტებით შეგიძლიათ."
 
-#: kcmfontinst/KCmFontInst.cpp:570
+#: kcmfontinst/KCmFontInst.cpp:563
 #, kde-format
 msgid "Cannot Print"
 msgstr "დაბეჭდვა შეუძლებელია"
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "წასაშლელად არაფერი მოგინიშნავთ."
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:578
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "წასაშლელი არაფერია"
 
-#: kcmfontinst/KCmFontInst.cpp:600
+#: kcmfontinst/KCmFontInst.cpp:593
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>მართლა გნებავთ, წაშალოთ </p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:596
 #, kde-format
 msgid "Delete Font"
 msgstr "ფონტის წაშლა"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:603
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "მართლა გნებავთ ფონტის წაშლა?"
 msgstr[1] "მართლა გნებავთ %1 ფონტის წაშლა?"
 
-#: kcmfontinst/KCmFontInst.cpp:612
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Delete Fonts"
 msgstr "ფონტების წაშლა"
 
-#: kcmfontinst/KCmFontInst.cpp:617
+#: kcmfontinst/KCmFontInst.cpp:610
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "ფონტების წაშლა…"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "გადასატანად არაფერი მოგინიშნავთ."
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Nothing to Move"
 msgstr "გადასატანი არაფერია"
 
-#: kcmfontinst/KCmFontInst.cpp:642
+#: kcmfontinst/KCmFontInst.cpp:635
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -801,17 +781,17 @@ msgstr ""
 "<p>მართლა გნებავთ გადაიტანოთ</p><p>'<b>%1</b>'</p><p>წყაროდან <i>%2</i> "
 "სამიზნემდე <i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:647
+#: kcmfontinst/KCmFontInst.cpp:640
 #, kde-format
 msgid "Move Font"
 msgstr "ფონტის გადატანა"
 
-#: kcmfontinst/KCmFontInst.cpp:648 kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid "Move"
 msgstr "გადატანა"
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:646
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -822,74 +802,74 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>მართლა გნებავთ %1 ფონტის გადატანა <i>%2-დან</i> <i>%3-მდე</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:659
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move Fonts"
 msgstr "ფონტების გადატანა"
 
-#: kcmfontinst/KCmFontInst.cpp:664
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "ფონტე(ებ)-ის გადატანა…"
 
-#: kcmfontinst/KCmFontInst.cpp:678
+#: kcmfontinst/KCmFontInst.cpp:671
 #, kde-format
 msgid "Export Group"
 msgstr "ჯგუფის გატანა"
 
-#: kcmfontinst/KCmFontInst.cpp:704
+#: kcmfontinst/KCmFontInst.cpp:697
 #, kde-format
 msgid "No files?"
 msgstr "ფაილების გარეშე?"
 
-#: kcmfontinst/KCmFontInst.cpp:707
+#: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "%1-ის ჩასაწერად გახსნის შეცდომა"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Create New Group"
 msgstr "ახალი ჯგუფის შექმნა"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Name of new group:"
 msgstr "ახალი ჯგუფის სახელი:"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "New Group"
 msgstr "ახალი ჯგუფი"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Preview Text"
 msgstr "ტექსტის გადახედვა"
 
-#: kcmfontinst/KCmFontInst.cpp:755
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Please enter new text:"
 msgstr "შეიყვანეთ ახალი ტექსტი:"
 
-#: kcmfontinst/KCmFontInst.cpp:807
+#: kcmfontinst/KCmFontInst.cpp:800
 #, kde-format
 msgid "Scanning font list…"
 msgstr "ფონტების სიის სკანირება…"
 
-#: kcmfontinst/KCmFontInst.cpp:866
+#: kcmfontinst/KCmFontInst.cpp:859
 #, kde-format
 msgid "No fonts"
 msgstr "ფონტების გარეშე"
 
-#: kcmfontinst/KCmFontInst.cpp:871
+#: kcmfontinst/KCmFontInst.cpp:864
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "1 ფონტი"
 msgstr[1] "%1 ფონტი"
 
-#: kcmfontinst/KCmFontInst.cpp:880
+#: kcmfontinst/KCmFontInst.cpp:873
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -902,7 +882,7 @@ msgstr ""
 "ჩართული:</td><td>%3</td></tr><tr><td align=\"right\">სულ:</td><td>%4</td></"
 "tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:890
+#: kcmfontinst/KCmFontInst.cpp:883
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -913,62 +893,62 @@ msgstr ""
 "\"right\">ჩამორთული:</td><td>%2</td></tr><tr><td align=\"right\">სულ:</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:967
+#: kcmfontinst/KCmFontInst.cpp:960
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "მიმაგრებული ფაილების მოძებნა…"
 
-#: kcmfontinst/KCmFontInst.cpp:971
+#: kcmfontinst/KCmFontInst.cpp:964
 #, kde-format
 msgid "Scanning Files…"
 msgstr "ფაილების სკანირება…"
 
-#: kcmfontinst/KCmFontInst.cpp:972
+#: kcmfontinst/KCmFontInst.cpp:965
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "დამატებითი დასაყენებელი ფაილების მოძებნა…"
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:980
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1-სთან მიმაგრებული ფაილების მოძებნა"
 
-#: kcmfontinst/KCmFontInst.cpp:1015
+#: kcmfontinst/KCmFontInst.cpp:1008
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "ფონტების დაყენება…"
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "არაფერი ჩასართავი არ აგირჩევიათ."
 
-#: kcmfontinst/KCmFontInst.cpp:1080
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "არაფერი გამოსართავი არ აგირჩევიათ."
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "ჩასართავი არაფერი"
 
-#: kcmfontinst/KCmFontInst.cpp:1081
+#: kcmfontinst/KCmFontInst.cpp:1074
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "გამოსართავი არაფერია"
 
-#: kcmfontinst/KCmFontInst.cpp:1098
+#: kcmfontinst/KCmFontInst.cpp:1091
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>მართლა გნებავთ, ჩართოთ </p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>გამართლა გნებავთ, გამორთოთ</p><p>'<b>%1</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -977,7 +957,7 @@ msgstr ""
 "<p>მართლა გნებავთ ჩართოთ</p><p>'<b>%1</b>', რომელსაც შეიცავს ჯგუფი '<b>%2</"
 "b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1106
+#: kcmfontinst/KCmFontInst.cpp:1099
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -986,31 +966,31 @@ msgstr ""
 "<p>მართლა გნებავთ გამორთოთ</p><p>'<b>%1</b>', რომელსაც შეცავს ჯგუფი '<b>%2</"
 "b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Enable Font"
 msgstr "ფონტის ჩართვა"
 
-#: kcmfontinst/KCmFontInst.cpp:1110 kcmfontinst/KCmFontInst.cpp:1112
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
 #, kde-format
 msgid "Disable Font"
 msgstr "ფონტის გამორთვა"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "მართლა გნებავთ %1 ფონტის ჩართვა?"
 msgstr[1] "მართლა გნებავთ %1 ფონტის გამორთვა?"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "მართლა გნებავთ ფონტის გამორთვა?"
 msgstr[1] "მართლა გნებავთ %1 ფონტის გამორთვა?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1023,7 +1003,7 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>მართლა გნებავთ %1 ფონტის ჩართვა, რომელსაც შეიცავს ჯგუფი:  '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1038,22 +1018,22 @@ msgstr[1] ""
 "<p>მართლა გნებავთ %1 ფონტის გამორთვა, რომელსაც შეიცავს ჯგუფი: '<b>%2</b>'?</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Enable Fonts"
 msgstr "ფონტების ჩართვა"
 
-#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid "Disable Fonts"
 msgstr "ფონტების გამორთვა"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "ფონტების ჩართვა…"
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "ფონტების გამორთვა…"
@@ -2269,3 +2249,15 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "იოქტი"
+
+#~ msgid "Font Management"
+#~ msgstr "ფონტების მართვა"
+
+#~ msgid "(C) Craig Drummond, 2000 - 2009"
+#~ msgstr "(C) Craig Drummond, 2000 - 2009"
+
+#~ msgid "Craig Drummond"
+#~ msgstr "Craig Drummond"
+
+#~ msgid "Developer and maintainer"
+#~ msgstr "პროგრამისტი და წამყვანი"

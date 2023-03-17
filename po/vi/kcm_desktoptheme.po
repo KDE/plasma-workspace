@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-26 21:12+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -48,67 +48,62 @@ msgstr "Cài đặt chủ đề thất bại."
 msgid "Removing theme failed: %1"
 msgstr "Xoá chủ đề thất bại: %1"
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr "Khối này cho phép bạn chọn kiểu cách Plasma."
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "All Themes"
 msgstr "Tất cả chủ đề"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
 msgstr "Chủ đề sáng"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr "Chủ đề tối"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Tương thích với quy hoạch màu"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Tuân theo quy hoạch màu"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Sửa chủ đề…"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "Xoá chủ đề"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Restore Theme"
 msgstr "Khôi phục chủ đề"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr "Cài từ tệp…"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Lấy kiểu cách Plasma mới…"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "Mở chủ đề"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Tệp chủ đề (*.zip *.tar.gz *.tar.bz2)"
@@ -165,6 +160,9 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Bạn có các chủ đề Plasma sau trong hệ thống:"
+
+#~ msgid "This module lets you choose the Plasma style."
+#~ msgstr "Khối này cho phép bạn chọn kiểu cách Plasma."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-07 23:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -100,52 +100,47 @@ msgstr "重設 Plasma 桌面版面配置"
 msgid "Global look and feel"
 msgstr "全域視覺與使用體驗"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid "This module lets you choose the global look and feel."
-msgstr "這個模組讓你可以選擇全域的「外觀與感覺」。"
-
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "永久刪除"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "您確定要永久刪除這個主題嗎？"
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "永久刪除"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "含有桌面佈局"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "預覽主題"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "移除主題"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -153,27 +148,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "套用 %1？"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "選擇要套用的…"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "顯示較少選項…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "套用"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "取得新全域主題…"
@@ -289,6 +284,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr "這個全域主題沒有提供任何適用的設定。它可能是損毀的，請聯絡它的維護者。"
+
+#~ msgid "This module lets you choose the global look and feel."
+#~ msgstr "這個模組讓你可以選擇全域的「外觀與感覺」。"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -113,24 +113,17 @@ msgstr "GTK 테마 압축 파일 선택"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK 테마 압축 파일 (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr "이 모듈에서는 사용자 인터페이스의 시각적 부분을 설정할 수 있습니다."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "스타일 설정…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "아이콘과 도구 모음 설정"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "그놈/GTK 프로그램 스타일 설정…"
@@ -206,6 +199,11 @@ msgstr "주 도구 모음 텍스트"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "보조 도구 모음 텍스트"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr "이 모듈에서는 사용자 인터페이스의 시각적 부분을 설정할 수 있습니다."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

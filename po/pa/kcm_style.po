@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-06-08 22:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -112,29 +112,17 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK ਥੀਮ ਅਕਾਇਵ (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"<h1>ਸਟਾਈਲ</h1>ਇਹ ਮੋਡੀਊਲ ਤਹਾਨੂੰ ਯੂਜ਼ਰ ਇੰਟਰਫੇਸ ਇਕਾਈਆਂ, ਜਿਵੇਂ ਕਿ ਵਿਦਜੈੱਟ ਸਟਾਈਲ ਅਤੇ ਪਰਭਾਵ ਆਦਿ "
-"ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
@@ -210,6 +198,17 @@ msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#~| "user interface elements, such as the widget style and effects."
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "<h1>ਸਟਾਈਲ</h1>ਇਹ ਮੋਡੀਊਲ ਤਹਾਨੂੰ ਯੂਜ਼ਰ ਇੰਟਰਫੇਸ ਇਕਾਈਆਂ, ਜਿਵੇਂ ਕਿ ਵਿਦਜੈੱਟ ਸਟਾਈਲ ਅਤੇ ਪਰਭਾਵ "
+#~ "ਆਦਿ ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

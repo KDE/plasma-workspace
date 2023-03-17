@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-05-26 07:08+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -115,26 +115,17 @@ msgstr "GTK-Designarchiv auswählen"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-Designarchive (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Dieses Modul ermöglicht Einstellungen zur optischen Erscheinung von "
-"Elementen der Benutzeroberfläche."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Stil einrichten ..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Symbole und Werkzeugleisten einrichten"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "GNOME/GTK Anwendungs-Stil einrichten ..."
@@ -210,6 +201,13 @@ msgstr "Text auf Haupt-Werkzeugleiste"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Text auf anderen Werkzeugleisten"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Dieses Modul ermöglicht Einstellungen zur optischen Erscheinung von "
+#~ "Elementen der Benutzeroberfläche."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

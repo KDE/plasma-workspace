@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
-"PO-Revision-Date: 2023-02-11 10:05+0300\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"PO-Revision-Date: 2023-03-16 12:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -217,16 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Bu yerel için bir örnek bulunamadı"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Zaman, tarih, para birimi ve diğer sayılar için kullanılan biçimleri burada "
-"yapılandırabilirsiniz."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -268,7 +259,7 @@ msgstr "check-language-support başarısız oldu, çıktı: %1"
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr "Eksik paketlerin tümü çözülemedi! %1"
+msgstr "Eksik paketlerin tümü çözülemedi: %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
@@ -573,6 +564,13 @@ msgstr "Telefon numarası"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Dili Devral"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Zaman, tarih, para birimi ve diğer sayılar için kullanılan biçimleri "
+#~ "burada yapılandırabilirsiniz."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-22 17:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -100,52 +100,47 @@ msgstr "Plasma のデスクトップレイアウトをリセット"
 msgid "Global look and feel"
 msgstr "グローバル ルックアンドフィール"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid "This module lets you choose the global look and feel."
-msgstr "このモジュールでグローバル ルックアンドフィールを選択できます。"
-
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "永久的に削除"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "本当にこのテーマを永久的に削除しますか？"
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "永久的に削除"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "デスクトップレイアウトを含む"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "テーマをプレビュー"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "テーマを削除"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -153,27 +148,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 を適用しますか？"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "適用するものを選んでください..."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "適用"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "新しいグローバルテーマを取得..."
@@ -293,3 +288,6 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
+
+#~ msgid "This module lets you choose the global look and feel."
+#~ msgstr "このモジュールでグローバル ルックアンドフィールを選択できます。"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-09-09 23:30-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -49,73 +49,68 @@ msgstr "Насбкунии мавзӯъ қатъ шуд."
 msgid "Removing theme failed: %1"
 msgstr "Тозакунии мавзӯи зерин қатъ шуд: %1"
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr "Модули ҷорӣ ба шумо барои интихоб кардани услуби Плазма имкон медиҳад."
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "All Themes"
 msgstr "Кушодани мавзӯъ"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
 msgstr "Мавзӯъҳои равшан"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr "Мавзӯъҳои торик"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Нақшаи рангин"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Edit Theme..."
 msgid "Edit Theme…"
 msgstr "Таҳрир кардани мавзӯъ…"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "Тоза кардани мавзӯъ"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Restore Theme"
 msgstr "Барқарор кардани мавзӯъ"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Аз файл насб кардан..."
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Get New Plasma Styles..."
 msgid "Get New Plasma Styles…"
 msgstr "Гирифтани услубҳои нави Плазма..."
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "Кушодани мавзӯъ"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Файлҳои мавзӯъ (*.zip *.tar.gz *.tar.bz2)"
@@ -164,6 +159,10 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
+
+#~ msgid "This module lets you choose the Plasma style."
+#~ msgstr ""
+#~ "Модули ҷорӣ ба шумо барои интихоб кардани услуби Плазма имкон медиҳад."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

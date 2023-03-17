@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-06-23 14:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -49,67 +49,62 @@ msgstr "فشل في تثبيت السمة."
 msgid "Removing theme failed: %1"
 msgstr "فشل في إزالة السمة: %1"
 
-#: package/contents/ui/main.qml:24
-#, kde-format
-msgid "This module lets you choose the Plasma style."
-msgstr "هذه الوحدة تجعلك تختار نمط بلازما"
-
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "All Themes"
 msgstr "جميع السمات"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
 msgstr "سمات فاتحة"
 
-#: package/contents/ui/main.qml:71
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
 msgstr "سمات مظلمة"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "متوافق مع تشكيلة الألوان"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
 msgstr "تتبع تشكيلة الألوان"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Edit Theme…"
 msgstr "حرر السمة..."
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
 msgstr "أزل السمة"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Restore Theme"
 msgstr "استعد السمة"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "احصل على أنماط بلازما جديدة..."
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "ملفات السمة (*.zip *.tar.gz *.tar.bz2)"
@@ -164,6 +159,9 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "لديك سمات بلازما التالية على نظامك:"
+
+#~ msgid "This module lets you choose the Plasma style."
+#~ msgstr "هذه الوحدة تجعلك تختار نمط بلازما"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

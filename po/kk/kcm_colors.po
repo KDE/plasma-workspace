@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-01-03 06:19+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1184,56 +1184,51 @@ msgstr "Белсенді емес түсі"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
-#, kde-format
-msgid "This module lets you choose the color scheme."
-msgstr ""
-
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "All Schemes"
 msgstr "&Сұлбаны жүктеп беру"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "&Сұлба"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "Түстер сұлбаны сақтау..."
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Терезедегі мәтін"
 
-#: package/contents/ui/main.qml:198
+#: package/contents/ui/main.qml:197
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Терезедегі мәтін"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:204
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Батырма"
 
-#: package/contents/ui/main.qml:243
+#: package/contents/ui/main.qml:242
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1241,7 +1236,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "сілтеме"
 
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1249,62 +1244,62 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "жолыққан"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:251
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Кәдімгі мәтін"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Жолыққанның мәтіні"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Рұқсат етілмеген"
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:284
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "&Сұлбаны жүктеп беру"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Түстер сұлбаны сақтау"
 
-#: package/contents/ui/main.qml:298
+#: package/contents/ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Түстер сұлбаны импорттау"
 
-#: package/contents/ui/main.qml:342
+#: package/contents/ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:347
+#: package/contents/ui/main.qml:346
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "&Жаңа сұлбаны алу..."
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Түстер сұлбаны сақтау"
 
-#: package/contents/ui/main.qml:367
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

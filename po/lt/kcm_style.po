@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-17 21:16+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -116,26 +116,17 @@ msgstr "Pasirinkti GTK apipavidalinimo archyvą"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK apipavidalinimo archyvas (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Šis modulis jums leidžia modifikuoti programų naudotojo sąsajos elementų "
-"vaizdinę išvaizdą."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Konfigūruoti stilių…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Konfigūruoti piktogramas ir įrankių juostas"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Konfigūruoti GNOME/GTK programų stilių…"
@@ -211,6 +202,13 @@ msgstr "Pagrindinės įrankių juostos etiketė"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Antrinės įrankių juostos etiketė"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Šis modulis jums leidžia modifikuoti programų naudotojo sąsajos elementų "
+#~ "vaizdinę išvaizdą."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

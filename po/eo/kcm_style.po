@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-03-01 15:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -115,26 +115,17 @@ msgstr "Elekti GTK-Etosan Arkivon"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-Etosa Arkivo (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Tiu modulo permesas ŝanĝi la aperon de la grafikaj elementoj kiel "
-"fenestraĵostilo kaj efektoj."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Agordi Stilon…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Agordi Piktogramojn kaj Ilbretojn"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Agordi GNOME/GTK Aplikaĵstilon…"
@@ -210,3 +201,10 @@ msgstr "Ĉef-ilobreta etikedo"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Etikedo de duaranga ilobreto"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Tiu modulo permesas ŝanĝi la aperon de la grafikaj elementoj kiel "
+#~ "fenestraĵostilo kaj efektoj."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-24 02:00+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -110,26 +110,17 @@ msgstr "Seleccionar o Pacote de Temas do GTK"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Pacote de Temas do GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Este módulo permite ao utilizador modificar a aparência visual dos elementos "
-"da interface do utilizador."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Configurar o Estilo…"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Configurar os Ícones e Barras de Ferramentas"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Configurar o Estilo de Aplicações do GNOME/GTK…"
@@ -205,6 +196,13 @@ msgstr "Texto da barra principal"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Texto da barra secundária"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Este módulo permite ao utilizador modificar a aparência visual dos "
+#~ "elementos da interface do utilizador."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

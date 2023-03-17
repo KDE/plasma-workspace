@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-22 21:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -219,16 +219,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Fann ikkje noko eksempel for dette språkområdet"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Her kan du setja opp formata som vert brukt for tid, dato, pengar og andre "
-"tal."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -576,3 +567,10 @@ msgstr "Telefonnummer"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Arv språkval"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Her kan du setja opp formata som vert brukt for tid, dato, pengar og "
+#~ "andre tal."

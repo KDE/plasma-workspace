@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2013-06-11 08:31+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -149,53 +149,48 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Izmērs:"
 
-#: package/contents/ui/main.qml:22
-#, kde-format
-msgid "This module allows you to choose the icons for your desktop."
-msgstr ""
-
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Izdzēst tēmu"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Izdzēst tēmu"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install Theme File..."
 msgid "Install from File…"
 msgstr "Instalēt tēmas failu..."
 
-#: package/contents/ui/main.qml:251
+#: package/contents/ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New Icons…"
 msgstr "Ielādēt jaunas tēmas..."
 
-#: package/contents/ui/main.qml:273
+#: package/contents/ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:285
+#: package/contents/ui/main.qml:283
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Izdzēst tēmu"
 
-#: package/contents/ui/main.qml:287
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

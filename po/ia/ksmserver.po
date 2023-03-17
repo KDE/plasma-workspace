@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2012, 2013, 2021.
+# g.sora <g.sora@tiscali.it>, 2010, 2012, 2013, 2021, 2023.
 # Giovanni Sora <g.sora@tioscali.it>, 2014, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2021-12-21 14:47+0100\n"
+"PO-Revision-Date: 2023-03-16 11:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -151,12 +151,12 @@ msgstr "Claude session"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Arresto (shut down)"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Reboot (re-initia)"
 
 #: server.cpp:905
 #, kde-format
@@ -164,8 +164,7 @@ msgid "Log Out Without Confirmation"
 msgstr "Claude session sin confirmation"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Stoppa  (halto) sin confirmation"
 

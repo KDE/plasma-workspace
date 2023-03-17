@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2010-07-13 12:38+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -127,30 +127,18 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"<h1>Styl</h1>Mei dizze module kinne jo it úterlik fan de ferskillende "
-"eleminten lykas de widgetstyl en -effekten fan de brûkersynterface wizigje."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "&Ynstelle..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
@@ -235,6 +223,18 @@ msgstr "Haadbalke tekst:"
 #| msgid "Secondary toolbar text:"
 msgid "Secondary toolbar label"
 msgstr "Sekundêra arkbalke tekst:"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#~| "user interface elements, such as the widget style and effects."
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "<h1>Styl</h1>Mei dizze module kinne jo it úterlik fan de ferskillende "
+#~ "eleminten lykas de widgetstyl en -effekten fan de brûkersynterface "
+#~ "wizigje."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

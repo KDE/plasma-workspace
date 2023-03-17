@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-02-23 15:14+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -217,16 +217,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Non pote trovar un exemplo pro iste  configuration regional ( locale)"
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Tu pote configurare le formatos usate per tempore, datas, moneta e altere "
-"numeros hic."
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -575,3 +566,10 @@ msgstr "Numero de telephono:"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Heredita Linguage"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr ""
+#~ "Tu pote configurare le formatos usate per tempore, datas, moneta e altere "
+#~ "numeros hic."

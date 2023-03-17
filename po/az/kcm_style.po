@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-16 18:38+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -113,26 +113,17 @@ msgstr "GTK Mövzu arxivini seçmək"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK Mövzu arxivi (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Bu modul tətbiqlərin istifadəçi interfeysi elementlərinin vizual görünüşünü "
-"dəyişdirməyə imkan verir."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Üslubu tənzimləmək..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "İkon və Alətlər panelini tənzimləmək"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "GNOME/GTK Tətbiqlər üslubunu tənzimləmək..."
@@ -208,6 +199,13 @@ msgstr "Əsas alətlər paneli yarlığı"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "İkinci alətlər paneli yarlığı"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Bu modul tətbiqlərin istifadəçi interfeysi elementlərinin vizual "
+#~ "görünüşünü dəyişdirməyə imkan verir."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

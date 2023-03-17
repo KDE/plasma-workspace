@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-08-15 16:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -123,26 +123,17 @@ msgstr "Aukeratu GTK gai artxiboa"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK gai artxiboa (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"Modulu honek aplikazioen erabiltzaile-interfazeko elementuen ikus-itxura "
-"aldatzen uzten dizu."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Configure Style…"
 msgstr "Konfiguratu estiloa..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr "Konfiguratu ikonoak eta tresna-barrak"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Konfiguratu GNOME/GTK aplikazio-estiloa..."
@@ -218,6 +209,13 @@ msgstr "Tresna-barra nagusiko etiketa"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Bigarren mailako tresna-barrako etiketa"
+
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "Modulu honek aplikazioen erabiltzaile-interfazeko elementuen ikus-itxura "
+#~ "aldatzen uzten dizu."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

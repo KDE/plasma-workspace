@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2017-05-23 08:29-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -134,30 +134,18 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"<h1>סגנון</h1> מודול זה מאפשר לך לשנות את המראה החזותי של מרכיבי ממשק המשתמש "
-"הגרפי, כגון סגנון הפריטים והאפקטים שלהם."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "&תצורה..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
@@ -242,6 +230,17 @@ msgstr "טקסט בסרגל הראשי"
 #| msgid "Secondary toolbar text:"
 msgid "Secondary toolbar label"
 msgstr "טקסט בסרגל המשני"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#~| "user interface elements, such as the widget style and effects."
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "<h1>סגנון</h1> מודול זה מאפשר לך לשנות את המראה החזותי של מרכיבי ממשק "
+#~ "המשתמש הגרפי, כגון סגנון הפריטים והאפקטים שלהם."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

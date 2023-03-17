@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2023-01-03 13:23+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -161,38 +161,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 seconde"
 msgstr[1] "%1 seconden"
 
-#: package/contents/ui/main.qml:20
-#, kde-format
-msgid "This module lets you choose the mouse cursor theme."
-msgstr "Deze module laat u het muiscursorthema kiezen."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Size:"
 msgstr "Grootte:"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Opstartnotificatie &configureren…"
 
-#: package/contents/ui/main.qml:145
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "&Install from File…"
 msgstr "Uit bestand &installeren…"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "&Get New Cursors…"
 msgstr "Nieuwe cursors &ophalen…"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Open Theme"
 msgstr "Thema openen"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Cursorthemabestanden (*.tar.gz *.tar.bz2)"
@@ -289,6 +284,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Beschikbare afmetingen: %1)"
+
+#~ msgid "This module lets you choose the mouse cursor theme."
+#~ msgstr "Deze module laat u het muiscursorthema kiezen."
 
 #~ msgid "Name"
 #~ msgstr "Naam"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-09 21:46+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -99,54 +99,49 @@ msgstr "Đặt lại bố cục Bàn làm việc Plasma"
 msgid "Global look and feel"
 msgstr "Cách nhìn và cảm toàn cục"
 
-#: package/contents/ui/main.qml:21
-#, kde-format
-msgid "This module lets you choose the global look and feel."
-msgstr "Khối này cho phép bạn chọn cách nhìn và cảm toàn cục."
-
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr ""
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr ""
 
-#: package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr ""
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Bao gồm bố cục bàn làm việc"
 
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "Xem thử chủ đề"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Xem thử chủ đề"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -154,27 +149,27 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Áp dụng %1?"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Chọn thứ để áp dụng…"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Hiện bớt lựa chọn…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "Áp dụng"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Lấy các chủ đề toàn cục mới…"
@@ -294,6 +289,9 @@ msgid ""
 msgstr ""
 "Không có thiết lập nào dùng được trong chủ đề toàn cục này. Vui lòng liên hệ "
 "bảo trì viên của chủ đề toàn cục này, có thể nó đã bị hỏng."
+
+#~ msgid "This module lets you choose the global look and feel."
+#~ msgstr "Khối này cho phép bạn chọn cách nhìn và cảm toàn cục."
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

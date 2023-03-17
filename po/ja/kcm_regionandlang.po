@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2022-08-18 22:15+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -216,14 +216,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr ""
 
-#: kcmregionandlang.cpp:53
-#, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr "ここでは、時間、日付、通貨やその他の数値の形式を設定できます。"
-
-#: kcmregionandlang.cpp:88
+#: kcmregionandlang.cpp:86
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -571,6 +564,11 @@ msgstr ""
 #, kde-format
 msgid "Inherit Language"
 msgstr "言語を引き継ぐ"
+
+#~ msgid ""
+#~ "You can configure the formats used for time, dates, money and other "
+#~ "numbers here."
+#~ msgstr "ここでは、時間、日付、通貨やその他の数値の形式を設定できます。"
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2004-07-04 17:23+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -125,30 +125,18 @@ msgstr ""
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
-msgid ""
-"This module allows you to modify the visual appearance of applications' user "
-"interface elements."
-msgstr ""
-"<h1>Arddull</h1>Mae'r modiwl hwn yn galluogi chi i newid golwg elfennau y "
-"rhyngwyneb defnyddiwr, er enghraifft ardulliau ac effeithiau y celfigion."
-
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:82
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "Ffurf&weddu..."
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Configure Icons and Toolbars"
 msgstr ""
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Configure GNOME/GTK Application Style…"
@@ -230,6 +218,17 @@ msgstr ""
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#~| "user interface elements, such as the widget style and effects."
+#~ msgid ""
+#~ "This module allows you to modify the visual appearance of applications' "
+#~ "user interface elements."
+#~ msgstr ""
+#~ "<h1>Arddull</h1>Mae'r modiwl hwn yn galluogi chi i newid golwg elfennau y "
+#~ "rhyngwyneb defnyddiwr, er enghraifft ardulliau ac effeithiau y celfigion."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
