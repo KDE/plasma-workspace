@@ -4,11 +4,12 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
+import QtCore
 import QtQuick 2.7
 import QtQuick.Window 2.2 // for Screen
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
-import QtQuick.Dialogs 1.1 as QtDialogs
+import QtQuick.Dialogs as QtDialogs
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.3 as KCM
@@ -165,11 +166,11 @@ KCM.GridViewKCM {
         active: false
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Theme")
-            folder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
-                kcm.installThemeFromFile(fileUrls[0])
+                kcm.installThemeFromFile(selectedFile)
                 fileDialogLoader.active = false
             }
             onRejected: {
