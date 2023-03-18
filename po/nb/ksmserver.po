@@ -167,6 +167,3 @@ msgstr "Stopp datamaskinen uten bekreftelse"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Start datamaskinen om igjen uten bekreftelse"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "Ingen skrivetilgang til $HOME-mappa (%1),"

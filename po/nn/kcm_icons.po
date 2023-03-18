@@ -189,6 +189,3 @@ msgstr "Opna tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2)"
-
-#~ msgid "This module allows you to choose the icons for your desktop."
-#~ msgstr "Med denne modulen kan du velja ikon til skrivebordet."

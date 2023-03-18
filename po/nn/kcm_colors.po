@@ -1366,6 +1366,3 @@ msgstr "Du har desse temaa for fargeoppsetta tilgjengeleg:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (gjeldande fargeoppsett)"
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Med denne modulen kan du velja fargeoppsett."

@@ -277,6 +277,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tilgjengelege storleikar: %1)"
-
-#~ msgid "This module lets you choose the mouse cursor theme."
-#~ msgstr "Med denne modulen kan du velja musepeikartemaet."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2022-12-27 07:26+0100\n"
+"PO-Revision-Date: 2023-03-17 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -40,6 +40,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME საქაღალდეში (%1) ჩაწერის უფლებების გარეშე. თუ ეს ძალით ქენით, თქვენს "
+"გარემოში დააყენეთ ცვლადი <envar>kDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:91
 #, kde-format
@@ -151,12 +153,12 @@ msgstr "გასვლა"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "გამორთვა"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "გადატვირთვა"
 
 #: server.cpp:905
 #, kde-format
@@ -164,8 +166,7 @@ msgid "Log Out Without Confirmation"
 msgstr "გასვლა დადასტურების გარეშე"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "გამორთვა დადასტურების გარეშე"
 

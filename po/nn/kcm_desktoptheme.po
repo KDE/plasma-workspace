@@ -163,6 +163,3 @@ msgstr "Fann ikkje temaet «%1». Temaet må vera eitt av følgjande: %2"
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Du har desse tema for Plasma-tema tilgjengeleg:"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Med denne modulen kan du velja Plasma-stil."

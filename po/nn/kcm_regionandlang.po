@@ -567,10 +567,3 @@ msgstr "Telefonnummer"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Arv språkval"
-
-#~ msgid ""
-#~ "You can configure the formats used for time, dates, money and other "
-#~ "numbers here."
-#~ msgstr ""
-#~ "Her kan du setja opp formata som vert brukt for tid, dato, pengar og "
-#~ "andre tal."

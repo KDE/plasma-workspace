@@ -291,6 +291,3 @@ msgid ""
 msgstr ""
 "Dette globale temaet inneheld ikkje nokon aktuelle innstillingar. Ta kontakt "
 "med utviklarane av teamet, då det truleg er øydelagt."
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "Med denne modulen kan du velja globalt tema for utsjånad og åtferd."

@@ -204,10 +204,3 @@ msgstr "Tekst på hovudverktøylinje"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Tekst på underverktøylinjer"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "I denne modulen kan du velja utsjånaden på element i brukarflata til "
-#~ "program."

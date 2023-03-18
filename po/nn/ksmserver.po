@@ -160,7 +160,7 @@ msgstr ""
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Start på nytt"
 
 #: server.cpp:905
 #, kde-format
@@ -177,6 +177,3 @@ msgstr "Stopp datamaskina utan stadfesting"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Start datamaskina på nytt utan stadfesting"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "Har ikkje skrivetilgang til $HOME-mappa (%1)."

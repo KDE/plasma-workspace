@@ -902,6 +902,3 @@ msgstr "Skru av denne sprettoppmenyen"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Innhold i utklippstavla"

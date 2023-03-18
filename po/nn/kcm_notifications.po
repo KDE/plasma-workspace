@@ -268,6 +268,3 @@ msgstr ""
 #, kde-format
 msgid "Other Applications"
 msgstr "Andre program"
-
-#~ msgid "This module lets you manage application and system notifications."
-#~ msgstr "Med denne modulen kan du setja opp program- og systemvarslingar."
