@@ -21,12 +21,12 @@ KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent)
     setupUi(this);
 }
 
-KillRunnerConfig::KillRunnerConfig(QWidget *parent, const QVariantList &args)
+KillRunnerConfig::KillRunnerConfig(QObject *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    m_ui = new KillRunnerConfigForm(this);
+    m_ui = new KillRunnerConfigForm(widget());
 
-    QGridLayout *layout = new QGridLayout(this);
+    QGridLayout *layout = new QGridLayout(widget());
     layout->addWidget(m_ui, 0, 0);
 
     m_ui->sorting->addItem(i18n("CPU usage"), CPU);
@@ -51,7 +51,7 @@ void KillRunnerConfig::load()
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, NONE)));
 
-    Q_EMIT changed(false);
+    setNeedsSave(false);
 }
 
 void KillRunnerConfig::save()
@@ -66,7 +66,7 @@ void KillRunnerConfig::save()
     grp.writeEntry(CONFIG_SORTING, m_ui->sorting->itemData(m_ui->sorting->currentIndex()));
     grp.sync();
 
-    Q_EMIT changed(false);
+    setNeedsSave(false);
 }
 
 void KillRunnerConfig::defaults()
@@ -77,7 +77,7 @@ void KillRunnerConfig::defaults()
     m_ui->triggerWord->setText(i18n("kill"));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData((int)NONE));
 
-    markAsChanged();
+    setNeedsSave(true);
 }
 
 #include "killrunner_config.moc"

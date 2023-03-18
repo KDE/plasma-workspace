@@ -26,7 +26,7 @@ class KillRunnerConfig : public KCModule
     Q_OBJECT
 
 public:
-    explicit KillRunnerConfig(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit KillRunnerConfig(QObject *parent, const QVariantList &args);
 
 public Q_SLOTS:
     void save() override;
