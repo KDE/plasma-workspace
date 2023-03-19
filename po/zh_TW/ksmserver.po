@@ -10,21 +10,22 @@
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2012, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-04-26 12:57+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-03-19 09:10+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -153,28 +154,27 @@ msgstr "登出"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "關機"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "重新啟動"
 
 #: server.cpp:905
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "不需確認直接登出"
+msgstr "不經確認直接登出"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "不顯示關閉電腦的詢問訊息"
+msgstr "不經確認直接關機"
 
 #: server.cpp:915
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "不顯示重新啟動的詢問訊息"
+msgstr "不經確認直接重新啟動"
 
 #~ msgid "No write access to $HOME directory (%1)."
 #~ msgstr "沒有寫入 $HOME 目錄（%1）的權限。"
