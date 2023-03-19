@@ -284,6 +284,8 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     endif()
 endif()
 
+find_package(epoll)
+
 find_package(ICU COMPONENTS i18n uc)
 set_package_properties(ICU
         PROPERTIES DESCRIPTION "Unicode and Globalization support for software applications"
@@ -364,6 +366,7 @@ add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
 
+add_subdirectory(libclock)
 add_subdirectory(libtaskmanager)
 add_subdirectory(libnotificationmanager)
 add_subdirectory(libcolorcorrect)
