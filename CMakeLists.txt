@@ -418,6 +418,7 @@ add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
 add_subdirectory(oom-notifier)
 
+add_subdirectory(libclock)
 add_subdirectory(libtaskmanager)
 add_subdirectory(libkmpris)
 add_subdirectory(libnotificationmanager)
