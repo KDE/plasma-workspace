@@ -275,7 +275,7 @@ void ContextMenu::configureDisplays()
 
     // Open in System Settings if it's available
     if (KService::serviceByDesktopName(systemSettings)) {
-        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), {kscreenKCM});
+        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"), {kscreenKCM});
         job->setDesktopName(systemSettings);
     } else {
         job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {kscreenKCM});

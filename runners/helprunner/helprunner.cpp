@@ -98,7 +98,7 @@ void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
             QStringLiteral("--args"),
             match.data().value<KPluginMetaData>().pluginId(),
         };
-        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), args);
+        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"), args);
         job->start();
     } else if (match.type() == QueryMatch::CompletionMatch) {
         const KPluginMetaData data = match.data().value<KPluginMetaData>();

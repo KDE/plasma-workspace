@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=systemsettings5
+Exec=systemsettings
 Icon=preferences-system
 Type=Application
 X-KDE-StartupNotify=true
