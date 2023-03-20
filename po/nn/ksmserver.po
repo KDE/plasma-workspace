@@ -1,21 +1,21 @@
 # Translation of ksmserver to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2000, 2002, 2003, 2004, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2005, 2007, 2008, 2015, 2016, 2018, 2020.
+# Karl Ove Hufthammer <karl@huftis.org>, 2005, 2007, 2008, 2015, 2016, 2018, 2020, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-04-25 13:46+0200\n"
+"PO-Revision-Date: 2023-03-19 14:35+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -43,6 +43,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Har ikkje skrivetilgang til $HOME-mappa (%1). Viss dette er meininga, "
+"registrer miljø­variabelen <envar>KDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:91
 #, kde-format
@@ -155,7 +157,7 @@ msgstr "Logg ut"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Slå av"
 
 #: server.cpp:899
 #, kde-format
@@ -168,10 +170,9 @@ msgid "Log Out Without Confirmation"
 msgstr "Logg ut utan stadfesting"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Stopp datamaskina utan stadfesting"
+msgstr "Slå av datamaskina utan stadfesting"
 
 #: server.cpp:915
 #, kde-format

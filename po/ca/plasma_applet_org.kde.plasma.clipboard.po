@@ -135,15 +135,3 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
-
-#~ msgid "Clear history"
-#~ msgstr "Neteja l'historial"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"
-
-#~ msgid "Clipboard history is empty."
-#~ msgstr "L'historial del porta-retalls està buit."
-
-#~ msgid "Configure"
-#~ msgstr "Configura"

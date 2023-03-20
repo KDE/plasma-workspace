@@ -166,20 +166,3 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "En el sistema hi ha els temes següents del Plasma:"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Aquest mòdul permet triar l'estil del Plasma."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Plasma Style"
-#~ msgstr "Estil del Plasma"
-
-#~ msgid "David Rosca"
-#~ msgstr "David Rosca"

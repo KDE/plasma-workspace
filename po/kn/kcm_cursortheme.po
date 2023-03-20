@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-03-20 02:19+0000\n"
 "PO-Revision-Date: 2008-01-11 11:48+0530\n"
 "Last-Translator: Umesh Rudrapatna <umeshrs@gmail.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -167,35 +167,35 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Size:"
 msgstr ""
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "&Get New Cursors…"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತಿದ್ದಿಬರೆಯಬೇಕೆ?"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "Open Theme"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತಿದ್ದಿಬರೆಯಬೇಕೆ?"
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

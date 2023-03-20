@@ -97,10 +97,3 @@ msgstr "&Ordena per"
 #, kde-format
 msgid "It is not sure, that this will take effect"
 msgstr "No és segur que això tindrà efecte"
-
-#~ msgid ""
-#~ "Process ID: %1\n"
-#~ "Running as user: %2"
-#~ msgstr ""
-#~ "ID del procés: %1\n"
-#~ "S'està executant com a usuari: %2"

@@ -33,12 +33,3 @@ msgstr "%1 - %2"
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "Cerca aplicacions on el seu nom o descripció coincideixi amb :q:"
-
-#~ msgid "System Information"
-#~ msgstr "Informació del sistema"
-
-#~ msgid "System Settings"
-#~ msgstr "Arranjament del sistema"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicacions"

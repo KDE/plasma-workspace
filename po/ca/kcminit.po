@@ -50,6 +50,3 @@ msgstr "Llista els mòduls que s'executen en engegar"
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Mòdul de configuració a executar"
-
-#~ msgid "Module %1 not found"
-#~ msgstr "No s'ha trobat el mòdul %1"

@@ -2,13 +2,13 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2022-02-24 21:49+0530\n"
+"PO-Revision-Date: 2023-03-19 11:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -40,6 +40,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME (%1) அடைவிற்கு எழுத முடியவில்லை. இவ்வாறு நீங்கள் வேண்டுமென்றே அமைத்திருந்தால், "
+"<envar>KDE_HOME_READONLY=1</envar> என்ற மாறியை உங்கள் சூழலில் அமையுங்கள்."
 
 #: main.cpp:91
 #, kde-format
@@ -151,12 +153,12 @@ msgstr "அமர்விலிருந்து வெளியேறு"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "கணினியை நிறுத்து"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "மீள்துவக்கு"
 
 #: server.cpp:905
 #, kde-format
@@ -164,10 +166,9 @@ msgid "Log Out Without Confirmation"
 msgstr "உறுதிப்படுத்தாமல் அமர்விலிருந்து வெளியேறு"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "உறுதிப்படுத்தாமல் நிறுத்து"
+msgstr "உறுதிப்படுத்தாமல் கணினியை நிறுத்து"
 
 #: server.cpp:915
 #, kde-format

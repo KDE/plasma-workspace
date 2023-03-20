@@ -207,33 +207,3 @@ msgstr "Etiqueta de la barra d'eines principal"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Etiqueta de la barra d'eines secundària"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Aquest mòdul permet modificar l'aparença visual dels elements de la "
-#~ "interfície d'usuari de les aplicacions."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Sebastià Pla i Sanz,Antoni Bella"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "sps@sastia.com,antonibella5@yahoo.com"
-
-#~ msgid "Application Style"
-#~ msgstr "Estil de l'aplicació"
-
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
-#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Szwed"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"

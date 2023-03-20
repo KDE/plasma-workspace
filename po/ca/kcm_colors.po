@@ -1377,6 +1377,3 @@ msgstr "En el sistema hi ha els següents esquemes de color:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de color actual)"
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Aquest mòdul permet triar l'esquema de color."
