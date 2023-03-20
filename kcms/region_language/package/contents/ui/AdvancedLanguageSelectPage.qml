@@ -162,8 +162,8 @@ KCM.ScrollViewKCM {
             cacheBuffer: Math.max(0, contentHeight)
             reuseItems: true
         }
-        onSheetOpenChanged: {
-            if (!sheetOpen) {
+        onVisibleChanged: {
+            if (!visible) {
                 titleText = i18nc("@title:window", "Add Languages");
             }
         }
@@ -181,7 +181,7 @@ KCM.ScrollViewKCM {
             }
 
             checkable: true
-            checked: addLanguagesSheet.sheetOpen
+            checked: addLanguagesSheet.visible
         }
         RowLayout {
             Layout.alignment: Qt.AlignHCenter

@@ -182,10 +182,10 @@ ColumnLayout {
     Kirigami.OverlaySheet {
         id: timezoneSheet
 
-        onSheetOpenChanged: {
+        onVisibleChanged: {
             filter.text = "";
             messageWidget.visible = false;
-            if (sheetOpen) {
+            if (visible) {
                 filter.forceActiveFocus()
             }
         }

@@ -139,7 +139,7 @@ Kirigami.OverlaySheet {
         }
     }
 
-    onSheetOpenChanged: if (!sheetOpen) {
+    onVisibleChanged: if (!visible) {
         destroy(Kirigami.Units.humanMoment);
     }
 
