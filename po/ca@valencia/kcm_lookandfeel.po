@@ -294,6 +294,3 @@ msgid ""
 msgstr ""
 "Este tema global no proporciona cap configuració aplicable. Contacteu amb el "
 "mantenidor d'este tema global, ja que podria estar trencat."
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "Este mòdul permet triar l'aspecte i el comportament global."

@@ -280,6 +280,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dostupné velikosti: %1)"
-
-#~ msgid "This module lets you choose the mouse cursor theme."
-#~ msgstr "Tento modul vám umožní nastavit motiv ukazatele myši."

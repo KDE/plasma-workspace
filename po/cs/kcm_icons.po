@@ -181,6 +181,3 @@ msgstr "Otevřít motiv"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů (*.tar.gz *.tar.bz2)"
-
-#~ msgid "This module allows you to choose the icons for your desktop."
-#~ msgstr "Tento modul vám umožňuje vybrat ikony pro vaši pracovní plochu."

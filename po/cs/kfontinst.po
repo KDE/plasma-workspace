@@ -2293,15 +2293,3 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "Font Management"
-#~ msgstr "Správa písem"
-
-#~ msgid "(C) Craig Drummond, 2000 - 2009"
-#~ msgstr "(C) Craig Drummond, 2000 - 2009"
-
-#~ msgid "Craig Drummond"
-#~ msgstr "Craig Drummond"
-
-#~ msgid "Developer and maintainer"
-#~ msgstr "Vývojář a správce"

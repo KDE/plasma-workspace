@@ -287,6 +287,3 @@ msgid ""
 msgstr ""
 "tento globální motiv neposkytuje jakékoliv použitelné nastavení. Prosím "
 "kontaktujte správce tohoto globálního motivu, jelikož může být poškozen."
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "Tento modul vám umožní nastavit celkový vzhled."

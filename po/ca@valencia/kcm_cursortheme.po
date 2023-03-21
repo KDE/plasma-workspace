@@ -287,6 +287,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mides disponibles: %1)"
-
-#~ msgid "This module lets you choose the mouse cursor theme."
-#~ msgstr "Este mòdul permet configurar el tema del cursor del ratolí."

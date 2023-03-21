@@ -265,6 +265,3 @@ msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit."
 #, kde-format
 msgid "Other Applications"
 msgstr "Ostatní aplikace"
-
-#~ msgid "This module lets you manage application and system notifications."
-#~ msgstr "Tento modul umožňuje správu upozornění v aplikacích a systému."

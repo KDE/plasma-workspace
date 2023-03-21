@@ -331,6 +331,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Vybrat písmo"
-
-#~ msgid "This module lets you configure the system fonts."
-#~ msgstr "Tento modul vám umožní nastavit písmo systému."

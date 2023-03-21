@@ -572,10 +572,3 @@ msgstr "Número de telèfon"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Idioma heretat"
-
-#~ msgid ""
-#~ "You can configure the formats used for time, dates, money and other "
-#~ "numbers here."
-#~ msgstr ""
-#~ "Ací podeu configurar els formats utilitzats per a l'hora, dates, moneda i "
-#~ "altres nombres."

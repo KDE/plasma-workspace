@@ -165,6 +165,3 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "En el sistema hi ha els temes següents de Plasma:"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Este mòdul permet triar l'estil de Plasma."

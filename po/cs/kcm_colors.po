@@ -1362,6 +1362,3 @@ msgstr "Ve vašem systému jsou dostupná následující barevná schémata:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuální barevné schéma)"
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Tento modul vám umožní vybrat barevné schéma."

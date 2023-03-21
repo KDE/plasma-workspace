@@ -202,10 +202,3 @@ msgstr "Hlavní text panelu nástrojů"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Pomocný text nástrojového panelu"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Tento modul vám umožňuje změnit vizuální vzhled prvků uživatelského "
-#~ "rozhraní a efektů."

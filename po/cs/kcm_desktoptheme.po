@@ -162,6 +162,3 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Ve vašem systému jsou dostupné následující motivy Plasma:"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Tento modul vám umožní vybrat styl Plasma."

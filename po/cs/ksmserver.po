@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
-# Vít Pelčák <vit@pelcak.org>, 2012, 2013, 2014, 2020.
+# Vít Pelčák <vit@pelcak.org>, 2012, 2013, 2014, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-06-04 11:12+0200\n"
+"PO-Revision-Date: 2023-03-16 16:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -153,12 +153,12 @@ msgstr "Odhlásit se"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Vypnout"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Restartovat"
 
 #: server.cpp:905
 #, kde-format
@@ -166,8 +166,7 @@ msgid "Log Out Without Confirmation"
 msgstr "Odhlásit se bez potvrzení"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Vypnout bez potvrzení"
 
@@ -175,6 +174,3 @@ msgstr "Vypnout bez potvrzení"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Restartovat bez potvrzení"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "K adresáři $HOME (%1) nemáte práva pro zápis."

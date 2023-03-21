@@ -192,6 +192,3 @@ msgstr "Obri un tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de tema (*.tar.gz *.tar.bz2)"
-
-#~ msgid "This module allows you to choose the icons for your desktop."
-#~ msgstr "Este mòdul permet escollir les icones de l'escriptori."

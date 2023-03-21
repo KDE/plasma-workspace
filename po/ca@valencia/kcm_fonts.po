@@ -361,6 +361,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccioneu el tipus de lletra"
-
-#~ msgid "This module lets you configure the system fonts."
-#~ msgstr "Este mòdul permet configurar els tipus de lletra del sistema."

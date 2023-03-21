@@ -553,9 +553,3 @@ msgstr "Telefonní číslo"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Zdědit jazyk"
-
-#~ msgid ""
-#~ "You can configure the formats used for time, dates, money and other "
-#~ "numbers here."
-#~ msgstr ""
-#~ "Zde můžete nastavovat formáty času, data, měn a jiných číselných hodnot."

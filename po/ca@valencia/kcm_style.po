@@ -206,10 +206,3 @@ msgstr "Etiqueta de la barra d'eines principal"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Etiqueta de la barra d'eines secundària"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Este mòdul permet modificar l'aparença visual dels elements de la "
-#~ "interfície d'usuari de les aplicacions."
