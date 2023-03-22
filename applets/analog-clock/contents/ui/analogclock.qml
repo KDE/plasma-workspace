@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2012 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
-    SPDX-FileCopyrightText: 2013 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2013-2023 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -12,8 +12,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.plasma5support 2.0 as P5Support
-
+import org.kde.plasma.clock 1.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 
 Item {
@@ -22,45 +21,24 @@ Item {
     width: PlasmaCore.Units.gridUnit * 15
     height: PlasmaCore.Units.gridUnit * 15
 
-    readonly property string currentTime: Qt.formatTime(dataSource.data["Local"]["DateTime"],  Qt.locale().timeFormat(Locale.LongFormat))
-    readonly property string currentDate: Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
+    readonly property string currentTime: Qt.formatTime(clockSource.dateTime,  Qt.locale().timeFormat(Locale.LongFormat))
+    readonly property string currentDate: Qt.formatDate(clockSource.dateTime, Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
-    property int hours
-    property int minutes
-    property int seconds
+    property int hours: clockSource.dateTime.getHours()
+    property int minutes: clockSource.dateTime.getMinutes()
+    property int seconds: clockSource.dateTime.getSeconds()
     property bool showSecondsHand: Plasmoid.configuration.showSecondHand
     property bool showTimezone: Plasmoid.configuration.showTimezoneString
-    property int tzOffset
 
     Plasmoid.backgroundHints: "NoBackground";
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
-    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
+    Plasmoid.toolTipMainText: Qt.formatDate(clockSource.dateTime,"dddd")
     Plasmoid.toolTipSubText: `${currentTime}\n${currentDate}`
 
-
-    function dateTimeChanged() {
-        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset !== tzOffset) {
-            tzOffset = currentTZOffset;
-            Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
-        }
-    }
-
-    P5Support.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: "Local"
-        interval: showSecondsHand || Plasmoid.compactRepresentationItem.containsMouse ? 1000 : 30000
-        onDataChanged: {
-            var date = new Date(data["Local"]["DateTime"]);
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            seconds = date.getSeconds();
-        }
-        Component.onCompleted: {
-            onDataChanged();
-        }
+    Clock {
+        id: clockSource
+        trackSeconds: showSecondsHand || Plasmoid.compactRepresentationItem.containsMouse
     }
 
     Plasmoid.compactRepresentation: MouseArea {
@@ -226,7 +204,7 @@ Item {
                 id: timezoneText
                 x: timezoneBg.margins.left
                 y: timezoneBg.margins.top
-                text: dataSource.data["Local"]["Timezone"]
+                text: clockSource.timeZoneName
             }
         }
     }
@@ -239,11 +217,6 @@ Item {
 
         readonly property var appletInterface: Plasmoid.self
 
-        today: dataSource.data["Local"]["DateTime"]
-    }
-
-    Component.onCompleted: {
-        tzOffset = new Date().getTimezoneOffset();
-        dataSource.onDataChanged.connect(dateTimeChanged);
+        today: clockSource.dateTime
     }
 }
