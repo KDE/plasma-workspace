@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2017-05-16 06:57-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -32,11 +32,6 @@ msgstr "ttv200@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "הגדר תוסף פעולות עכבר"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "פלזמה"
 
 #: main.cpp:85
 #, kde-format
@@ -288,6 +283,9 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#~ msgid "Plasma"
+#~ msgstr "פלזמה"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "לא יכול לטעון את הסקריפט: %1"

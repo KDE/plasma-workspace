@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2020-10-04 17:15+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "mschlander@opensuse.org"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Plugin til at indstille musehandlinger"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -292,6 +287,9 @@ msgstr "Panelantal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Tæller panelerne"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Kan ikke indlæse script-fil: %1"

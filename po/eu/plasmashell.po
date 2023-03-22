@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-17 10:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque\n"
@@ -34,11 +34,6 @@ msgstr "xalba@ni.eus"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfiguratu sagu-ekintzen plugina"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -295,6 +290,9 @@ msgstr "Panel kopurua"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panelak zenbatzen ditu"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Ezezaguna %1"

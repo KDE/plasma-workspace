@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-22 09:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,11 +33,6 @@ msgstr "safa1996alfulaij@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "بلازما"
 
 #: main.cpp:85
 #, kde-format
@@ -289,6 +284,9 @@ msgstr "عدد اللوحات"
 #, kde-format
 msgid "Counts the panels"
 msgstr "يعد عدد اللوحات"
+
+#~ msgid "Plasma"
+#~ msgstr "بلازما"
 
 #~ msgid "Unknown %1"
 #~ msgstr "مجهول %1"

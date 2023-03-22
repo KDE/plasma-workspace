@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -35,11 +35,6 @@ msgstr ""
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "മൗസ് പ്രവർത്തന പ്ലഗിൻ ക്രമീകരിക്കുക"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "പ്ലാസ്മ"
 
 #: main.cpp:85
 #, kde-format
@@ -296,6 +291,9 @@ msgstr "പാളി എണ്ണം"
 #, kde-format
 msgid "Counts the panels"
 msgstr "പാളികൾ എണ്ണുന്നു"
+
+#~ msgid "Plasma"
+#~ msgstr "പ്ലാസ്മ"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "സ്ക്രിപ്റ്റ് ഫയൽ ലോഡ് ചെയ്യാൻ സാധിച്ചില്ല: %1"

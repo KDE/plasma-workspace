@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2023-02-01 22:35+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -30,11 +30,6 @@ msgstr "kde-i18n-de@kde.org"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Modul zum Einrichten von Maus-Aktionen"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -290,6 +285,9 @@ msgstr "Kontrollleistenanzahl"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Zahlt die Kontrollleisten"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Unbekannt %1"

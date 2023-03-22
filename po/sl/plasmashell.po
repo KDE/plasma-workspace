@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-17 07:14+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -34,11 +34,6 @@ msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Nastavi vstavek za dejanja miške"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -294,6 +289,9 @@ msgstr "Število pultov"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Poštej pulte"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Neznano %1"

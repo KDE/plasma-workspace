@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2023-01-22 16:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -46,11 +46,6 @@ msgstr "shafff@ukr.net, darkstar@altlinux.ru"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Настройка модуля действий мыши"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -309,6 +304,9 @@ msgstr "Количество панелей"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Подсчёт количества панелей"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Неизвестный %1"

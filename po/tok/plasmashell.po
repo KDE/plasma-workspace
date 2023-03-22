@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -35,11 +35,6 @@ msgstr ""
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "o lawa e ilo lili pi ilo luka"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "ilo Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -290,6 +285,9 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#~ msgid "Plasma"
+#~ msgstr "ilo Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "sona ala %1"

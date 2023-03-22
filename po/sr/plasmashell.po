@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -33,11 +33,6 @@ msgstr "caslav.ilic@gmx.net"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Подешавање прикључка за радње мишем"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Плазма"
 
 #: main.cpp:85
 #, kde-format
@@ -303,6 +298,9 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#~ msgid "Plasma"
+#~ msgstr "Плазма"
 
 #~ msgid "Activities..."
 #~ msgstr "Активности..."

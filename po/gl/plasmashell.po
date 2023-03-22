@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2019-10-19 21:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -32,11 +32,6 @@ msgstr "adrian@chaves.io"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar o complemento de accións do rato"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -295,6 +290,9 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Non foi posíbel cargar o ficheiro de script: %1"

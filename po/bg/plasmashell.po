@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-20 19:22+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "mkondarev@yahoo.de"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Конфигуриране на приставката за действия на мишката"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -291,3 +286,6 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"

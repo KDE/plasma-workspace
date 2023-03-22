@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-20 19:27+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "Kde-l10n-ta@kde.org"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "சுட்டி செயல்கள் செருகுநிரலை அமைத்தல்"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "பிளாஸ்மா"
 
 #: main.cpp:85
 #, kde-format
@@ -284,6 +279,9 @@ msgstr "பலகைகளின் எண்ணிக்கை"
 #, kde-format
 msgid "Counts the panels"
 msgstr "பலகைகளை எண்ணும்"
+
+#~ msgid "Plasma"
+#~ msgstr "பிளாஸ்மா"
 
 #~ msgid "Unknown %1"
 #~ msgstr "தெரியாத %1"

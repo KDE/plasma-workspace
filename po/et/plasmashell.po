@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -32,11 +32,6 @@ msgstr "qiilaq69@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiretoimingute plugina seadistamine"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -292,6 +287,9 @@ msgstr "Paneelide arv"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Paneelide arv"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Skriptifaili laadimine nurjus: %1"

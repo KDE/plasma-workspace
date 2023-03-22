@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2020-07-31 11:04+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -32,11 +32,6 @@ msgstr "maris.kde@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfigurēt peles darbību spraudni"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -292,6 +287,9 @@ msgstr "Paneļu skaits"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Saskaita paneļus"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Nebija iespējams ielādēt skripta datni: %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-16 22:40+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "g.sora@tiscali.it"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configura Plugin de Actiones de Mus"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -291,6 +286,9 @@ msgstr "Computo de Pannello"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Computa le pannellos"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Incognite %1"

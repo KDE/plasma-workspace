@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2023-01-02 07:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -32,11 +32,6 @@ msgstr "wantoyek@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfigurasikan Plugin Aksi Mouse"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -293,6 +288,9 @@ msgstr "Cacah Panel"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cacahnya panel-panel"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Tak diketahui %1"

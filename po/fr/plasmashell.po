@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-17 14:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -38,11 +38,6 @@ msgstr "thomas.vergnaud@mailo.eu, sdepiets@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurer le module externe pour les actions de la souris"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -299,6 +294,9 @@ msgstr "Compteur de panneaux"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compte les panneaux"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "%1 inconnu"

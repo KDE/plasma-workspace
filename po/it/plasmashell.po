@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2022-12-17 07:45+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "smart2128vr@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configura estensione delle azioni del mouse"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -291,6 +286,9 @@ msgstr "Conteggio pannelli"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Conteggio dei pannelli"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "%1 sconosciuto"

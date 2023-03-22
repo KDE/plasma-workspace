@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2023-02-19 14:02+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -31,11 +31,6 @@ msgstr "xxmn77@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Siçan fəaliyyəti modulunun tənzimlənməsi"
-
-#: main.cpp:85
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, kde-format
@@ -291,6 +286,9 @@ msgstr "Panellərin sayı"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panellərin sayını göstərir"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "%1 naməlum"

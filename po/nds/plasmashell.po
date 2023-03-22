@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-22 02:45+0000\n"
 "PO-Revision-Date: 2014-08-21 16:24+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -32,13 +32,6 @@ msgstr "s_dibbern@web.de"
 #| msgid "Configure Plugin"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Moduul instellen"
-
-#: main.cpp:85
-#, fuzzy, kde-format
-#| msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-#| msgid "Plasma"
-msgid "Plasma"
-msgstr "Plasma"
 
 #: main.cpp:85
 #, fuzzy, kde-format
@@ -292,6 +285,12 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~| msgid "Plasma"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Skriptdatei „%1“ lett sik nich laden"
