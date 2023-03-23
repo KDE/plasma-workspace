@@ -66,7 +66,7 @@ msgstr "Latitud:"
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
-msgstr "Llargària:"
+msgstr "Longitud:"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "Temperatura del color de nit:"
 #: package/contents/ui/main.qml:298
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Latitud: %1°   Llargària: %2°"
+msgstr "Latitud: %1°   Longitud: %2°"
 
 #: package/contents/ui/main.qml:308
 #, kde-format

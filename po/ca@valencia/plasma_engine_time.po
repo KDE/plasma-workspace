@@ -58,7 +58,7 @@ msgstr "Latitud"
 
 #: timesource.cpp:147
 msgid "Longitude"
-msgstr "Llargària"
+msgstr "Longitud"
 
 #: timesource.cpp:148
 msgid "Solar"
