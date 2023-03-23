@@ -76,6 +76,7 @@ set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed for the File Search runner."
                       )
 
+find_package(PkgConfig REQUIRED)
 pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 
 find_package(KWinDBusInterface CONFIG REQUIRED)
@@ -151,7 +152,6 @@ else()
     set(HAVE_XFIXES 0)
 endif()
 
-find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
 add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
 
