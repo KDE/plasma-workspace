@@ -1,60 +1,56 @@
-# Translation of plasmashell to Norwegian Nynorsk
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
-# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
+# gummi <gudmundure@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 02:45+0000\n"
-"PO-Revision-Date: 2023-01-15 13:01+0100\n"
-"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
-"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
-"Language: nn\n"
+"PO-Revision-Date: 2023-03-16 20:22+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Karl Ove Hufthammer"
+msgstr "Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "karl@huftis.org"
+msgstr "gudmundure@gmail.com"
 
 #: currentcontainmentactionsmodel.cpp:205
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
-msgstr "Tillegg for oppsett av musehandlingar"
+msgstr "Grunnstilla músaraðgerðaviðbót"
 
 #: main.cpp:85
 #, kde-format
 msgid "Plasma Shell"
-msgstr "Plasma-skal"
+msgstr "Plasma-skel"
 
 #: main.cpp:97
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "Slå på QML JavaScript-feilsøkjar"
+msgstr "Virkja QML Javascript-aflúsara"
 
 #: main.cpp:100
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "Ikkje start plasma-shell automatisk på nytt etter ein krasj"
+msgstr "Ekki endurræsa plasmaskel sjálfkrafa eftir hrun"
 
-# Fjerna «oppgjeve». Men bør eg bruke bunden eller ubunden form av «velje»? :S
 #: main.cpp:103
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "Tving innlasting av det valde skal-tillegget"
+msgstr "Þvinga keyrslu á tiltekinni skeljaviðbót"
 
 #: main.cpp:108
 #, kde-format
@@ -62,14 +58,13 @@ msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
 msgstr ""
-"Last inn plasmashell som eit frittstående program (treng at valet «shell-"
-"plugin» er oppgjeve)"
+"Hlaða plasmaskel sem sjálfstætt forrit, þarf að hafa "
+"skeljaviðbótarvalkostinn tilgreindan"
 
-# Erstatt eller byt ut?
 #: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "Erstatt ein instans som finst frå før"
+msgstr "Skipta út fyrirliggjandi tilviki"
 
 #: main.cpp:113
 #, kde-format
@@ -77,22 +72,23 @@ msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
-"Slår på testmodus og vel JavaScript-fil for utforming av testomgjevnaden"
+"Kveikir á prófunarsniði og tilgreinir javascript framsetningarskrá til að "
+"setja upp prófunarumhverfið"
 
 #: main.cpp:114
 #, kde-format
 msgid "file"
-msgstr "fil"
+msgstr "skrá"
 
 #: main.cpp:118
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "Vis tilgjengelege val for tilbakemeldingar"
+msgstr "Birtir lista yfir tiltæka valkosti fyrir umsagnir notenda"
 
 #: main.cpp:218
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "Klarte ikkje starta Plasma"
+msgstr "Mistókst að ræss Plasma"
 
 #: main.cpp:219
 #, kde-format
@@ -101,75 +97,75 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Kan ikkje starta Plasma, då programmet ikkje klarar å bruka OpenGL 2 eller "
-"programvarebasert resevereløysing på rett vis.\n"
-"Sjå til at skjermkortdrivarane er sette skikkeleg opp."
+"Ekki tókst að keyra Plasma þar sem það gat ekki notað OpenGL 2 rétt eða "
+"varahugbúnað\n"
+"Kannaðu hvort skjákortsrekillinn sé rétt uppsettur."
 
 #: osd.cpp:53
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr "Dempa lyd"
+msgstr "Hljóð þaggað"
 
 #: osd.cpp:71
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr "Mikrofon slått av"
+msgstr "Hljóðnemi þaggaður"
 
 #: osd.cpp:87
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr "%1 dempa"
+msgstr "%1 þaggað"
 
 #: osd.cpp:109
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr "Styreplate på"
+msgstr "Kveikt á snertiplatta"
 
 #: osd.cpp:111
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr "Styreplate av"
+msgstr "Slökkt á snertiplatta"
 
 #: osd.cpp:118
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr "Trådlaus på"
+msgstr "Kveikt á Wifi"
 
 #: osd.cpp:120
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr "Trådlaus av"
+msgstr "Slökkt á Wifi"
 
 #: osd.cpp:127
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr "Bluetooth på"
+msgstr "Kveikt á bluetooth"
 
 #: osd.cpp:129
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr "Bluetooth av"
+msgstr "Slökkt á bluetooth"
 
 #: osd.cpp:136
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Mobilt samband på"
+msgstr "Kveikt á ferðaneti (MiFi)"
 
 #: osd.cpp:138
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Mobilt samband av"
+msgstr "Slökkt á ferðaneti (MiFi)"
 
 #: osd.cpp:146
 #, kde-format
@@ -177,7 +173,7 @@ msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
 "short"
 msgid "On-Screen Keyboard Activated"
-msgstr "Skjermtastatur på"
+msgstr "Skjályklaborð virkjað"
 
 #: osd.cpp:149
 #, kde-format
@@ -185,109 +181,111 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr "Skjermtastatur av"
+msgstr "Skjályklaborð óvirkjað"
 
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr "Intern skjerm på %1"
+msgstr "Innri skjár á %1"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr "%1 %2 på %3"
+msgstr "%1 %2 á %3"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr "Fråkopla skjerm %1"
+msgstr "Aftengdur skjár %1"
 
 #: shellcorona.cpp:175 shellcorona.cpp:177
 #, kde-format
 msgid "Show Desktop"
-msgstr "Vis skrivebord"
+msgstr "Sýna skjáborðið"
 
 #: shellcorona.cpp:177
 #, kde-format
 msgid "Hide Desktop"
-msgstr "Gøym skrivebord"
+msgstr "Fela skjáborðið"
 
 #: shellcorona.cpp:192
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr "Vis aktivitetsbytar"
+msgstr "Sýna athafnastjóra"
 
 #: shellcorona.cpp:202
 #, kde-format
 msgid "Stop Current Activity"
-msgstr "Stopp gjeldande aktivitet"
+msgstr "Stöðva núverandi athöfn"
 
 #: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr "Byt til førre aktivitet"
+msgstr "Skipta í fyrri athöfn"
 
 #: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr "Byt til neste aktivitet"
+msgstr "Skipta í næstu athöfn"
 
 #: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "Gå til oppføring %1 på oppgåvelinja"
+msgstr "Virkja verkefnastjóra færslu %1"
 
 #: shellcorona.cpp:257
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr "Handsam skrivebord og panel …"
+msgstr "Vinna með skjáborð og skjáborðsstikur..."
 
 #: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "Flytt tastaturfokus mellom panel"
+msgstr "Færa lyklaborðsfókus á milli skjáborðsstika"
 
 #: shellcorona.cpp:1916
 #, kde-format
 msgid "Add Panel"
-msgstr "Legg til panel"
+msgstr "Bæta við skjáborðsstiku"
 
-# Eksempel «Oppgåvepanel for telefon (tomt)», men helst «Tomt oppgåvepanel for telefon».
 #: shellcorona.cpp:1952
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr "%1 (tomt)|/|Tomt $[litenfor %1]"
+msgstr "Tóm %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "Brukar programvarebasert oppteiknar"
+msgstr "Hugbúnaðarmyndgerð í notkun"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "Brukar programvarebasert oppteiknar"
+msgstr "Hugbúnaðarmyndgerð í notkun"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr "Grafikkvaliteten kan verta forringa"
+msgstr "Myndgerð gæti verið gölluð"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format
 msgid "Never show again"
-msgstr "Ikkje vis denne meldinga igjen"
+msgstr "Aldrei sýna aftur"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr "Paneltal"
+msgstr "Fjöldi skjáborðsstika"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr "Tel panela"
+msgstr "Telur skjáborðsstikurnar"
+
+#~ msgid "Plasma"
+#~ msgstr "Plasma"

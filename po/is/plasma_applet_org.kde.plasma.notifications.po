@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2010, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-01 23:30+0000\n"
-"PO-Revision-Date: 2022-10-19 00:12+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2023-03-16 20:42+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -122,11 +122,10 @@ msgid "Until manually disabled"
 msgstr "Þar til gert óvirkt handvirkt"
 
 #: package/contents/ui/FullRepresentation.qml:204
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Fela sjálfkrafa"
+msgstr "Hættir sjálfkrafa: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
@@ -312,20 +311,19 @@ msgstr[0] "%1 ólesin tilkynning"
 msgstr[1] "%1 ólesnar tilkynningar"
 
 #: package/contents/ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Ekki ónáða fyrr en %1"
+msgstr "Ekki ónáða fyrr en %1. Miðjusmelltu til að hætta núna"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Stillingin 'Ekki ónáða' er virk. Miðjusmelltu til að hætta"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Miðjusmelltu til að virkja sniðið 'Ekki ónáða'"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
