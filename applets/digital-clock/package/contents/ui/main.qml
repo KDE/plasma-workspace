@@ -8,11 +8,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.plasma5support 2.0 as P5Support
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 
 Item {
@@ -22,14 +19,6 @@ Item {
     height: PlasmaCore.Units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
-    property date tzDate: {
-        // get the time for the given timezone from the dataengine
-        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        return new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
-    }
 
     function initTimezones() {
         var tz  = Array()
@@ -39,18 +28,11 @@ Item {
         root.allTimezones = tz.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
-    function timeForZone(zone, showSecondsForZone) {
+    function formatTime(dateTime, showSecondsForZone) {
         var compactRepresentationItem = Plasmoid.compactRepresentationItem;
         if (!compactRepresentationItem) {
             return "";
         }
-
-        // get the time for the given timezone from the dataengine
-        var now = dataSource.data[zone]["DateTime"];
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
 
         var formattedTime;
         if (showSecondsForZone) {
@@ -59,20 +41,21 @@ Item {
             formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
         }
 
-        if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
-            formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
-        }
+        // FIXME
+        // if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
+        //     formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
+        // }
 
         return formattedTime;
     }
-
+/*
     function nameForZone(zone) {
         // add the timezone string to the clock
         var timezoneString = Plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
                                                                           : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
 
         return timezoneString;
-    }
+    }*/
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock {
@@ -104,13 +87,6 @@ Item {
         function onSelectedTimeZonesChanged() { root.initTimezones(); }
     }
 
-    P5Support.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: allTimezones
-        interval: intervalAlignment === P5Support.Types.NoAlignment ? 1000 : 60000
-        intervalAlignment: Plasmoid.configuration.showSeconds === 2 || (Plasmoid.configuration.showSeconds === 1 && Plasmoid.compactRepresentationItem && Plasmoid.compactRepresentationItem.containsMouse) ? P5Support.Types.NoAlignment : P5Support.Types.AlignToMinute
-    }
 
     function setDateFormatString() {
         // remove "dddd" from the locale format string

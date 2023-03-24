@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2013 Heena Mahour <heena393@gmail.com>
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2013 Martin Klapetek <mklapetek@kde.org>
-    SPDX-FileCopyrightText: 2014 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2014-2023 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -14,6 +14,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as Components
 import org.kde.plasma.private.digitalclock 1.0
+import org.kde.plasma.clock 1.0
 
 MouseArea {
     id: main
@@ -65,6 +66,8 @@ MouseArea {
     property bool wasExpanded
     property int wheelDelta: 0
 
+
+
     onDateFormatChanged: {
         setupLabels();
     }
@@ -77,37 +80,27 @@ MouseArea {
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
+
+// TODO, shadow Plasmoid.configuration.selectedTimeZones, sorting it or returning "Local" so we always have one entry
+//     -        sortArray.sort(function(a, b) {
+// -            return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
+// -        });
+// -        Plasmoid.configuration.selectedTimeZones = sortArray;
+// -
+
+
+    Clock {
+        id: clock
+        timeZone: Plasmoid.configuration.selectedTimeZones[tzIndex]
+        // Plasmoid.configuration.showSeconds
+    }
+
     Connections {
         target: Plasmoid.self
         function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = (Plasmoid.configuration.showSeconds === 2);
-            ClipboardMenu.currentDate = main.getCurrentTime();
+            ClipboardMenu.currentDate = clock.dateTime;
         }
-    }
-
-    Connections {
-        target: Plasmoid.configuration
-        function onSelectedTimeZonesChanged() {
-            // If the currently selected timezone was removed,
-            // default to the first one in the list
-            var lastSelectedTimezone = Plasmoid.configuration.lastSelectedTimezone;
-            if (Plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) === -1) {
-                Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[0];
-            }
-
-            setupLabels();
-            setTimezoneIndex();
-        }
-    }
-
-    function getCurrentTime() {
-        // get the time for the given timezone from the dataengine
-        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        var currentTime = new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
-        return currentTime;
     }
 
     function pointToPixel(pointSize) {
@@ -471,9 +464,6 @@ MouseArea {
         if (newIndex !== main.tzIndex) {
             Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
             main.tzIndex = newIndex;
-
-            dataSource.dataChanged();
-            setupLabels();
         }
     }
 
@@ -508,7 +498,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(main.getCurrentTime(), Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                text: Qt.formatTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -623,35 +613,35 @@ MouseArea {
     }
 
     function setupLabels() {
-        var showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
-                                                        && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
-
-        var timezoneString = "";
-
-        if (showTimezone) {
-            // format timezone as tz code, city or UTC offset
-            if (displayTimezoneFormat === 0) {
-                timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
-            } else if (displayTimezoneFormat === 1) {
-                timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
-            } else if (displayTimezoneFormat === 2) {
-                var lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
-                var symbol = lastOffset > 0 ? '+' : '';
-                var hours = Math.floor(lastOffset / 3600);
-                var minutes = Math.floor(lastOffset % 3600 / 60);
-
-                timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
-            }
-
-            timezoneLabel.text = (main.showDate || main.oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
-        } else {
-            // this clears the label and that makes it hidden
-            timezoneLabel.text = timezoneString;
-        }
+        // var showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
+        //                                                 && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
+        //
+        // var timezoneString = "";
+        //
+        // if (showTimezone) {
+        //     // format timezone as tz code, city or UTC offset
+        //     if (displayTimezoneFormat === 0) {
+        //         timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
+        //     } else if (displayTimezoneFormat === 1) {
+        //         timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
+        //     } else if (displayTimezoneFormat === 2) {
+        //         var lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
+        //         var symbol = lastOffset > 0 ? '+' : '';
+        //         var hours = Math.floor(lastOffset / 3600);
+        //         var minutes = Math.floor(lastOffset % 3600 / 60);
+        //
+        //         timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
+        //     }
+        //
+        //     timezoneLabel.text = (main.showDate || main.oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
+        // } else {
+        //     // this clears the label and that makes it hidden
+        //     timezoneLabel.text = timezoneString;
+        // }
 
 
         if (main.showDate) {
-            dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
+            dateLabel.text = Qt.formatDate(clock.dateTime, main.dateFormat);
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
@@ -685,33 +675,7 @@ MouseArea {
         fontHelper.text = sizehelper.text
     }
 
-    function dateTimeChanged()
-    {
-        var doCorrections = false;
-
-        if (main.showDate) {
-            // If the date has changed, force size recalculation, because the day name
-            // or the month name can now be longer/shorter, so we need to adjust applet size
-            const currentDate = Qt.formatDateTime(main.getCurrentTime(), "yyyy-MM-dd");
-            if (main.lastDate !== currentDate) {
-                doCorrections = true;
-                main.lastDate = currentDate
-            }
-        }
-
-        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset !== tzOffset) {
-            doCorrections = true;
-            tzOffset = currentTZOffset;
-            Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
-        }
-
-        if (doCorrections) {
-            timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
-        }
-    }
-
-    function setTimezoneIndex() {
+    function setInitialTimezoneIndex() {
         for (var i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
             if (Plasmoid.configuration.selectedTimeZones[i] === Plasmoid.configuration.lastSelectedTimezone) {
                 main.tzIndex = i;
@@ -720,20 +684,7 @@ MouseArea {
         }
     }
 
-    Component.onCompleted: {
-        // Sort the timezones according to their offset
-        // Calling sort() directly on Plasmoid.configuration.selectedTimeZones
-        // has no effect, so sort a copy and then assign the copy to it
-        var sortArray = Plasmoid.configuration.selectedTimeZones;
-        sortArray.sort(function(a, b) {
-            return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
-        });
-        Plasmoid.configuration.selectedTimeZones = sortArray;
-
-        setTimezoneIndex();
-        tzOffset = -(new Date().getTimezoneOffset());
-        dateTimeChanged();
-        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
-        dataSource.onDataChanged.connect(dateTimeChanged);
+    Component.onCompleted : {
+        setInitialTimezoneIndex();
     }
 }

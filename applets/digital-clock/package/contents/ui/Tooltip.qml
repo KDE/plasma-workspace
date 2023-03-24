@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2023 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -12,6 +13,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.clock 1.0
+
 
 Item {
     id: tooltipContentItem
@@ -37,6 +40,13 @@ Item {
             description.push(`${timezoneRepeater.itemAt(i).text}: ${timezoneRepeater.itemAt(i + 1).text}`);
         }
         return description.join('; ');
+    }
+
+    // just share with DC?
+    Clock {
+        id: clock
+        timeZone: Plasmoid.configuration.selectedTimeZones[Plasmoid.configuration.lastSelectedTimezone]
+        // Plasmoid.configuration.showSeconds
     }
 
     ColumnLayout {
@@ -97,11 +107,13 @@ Item {
                          * with this use case, when they're back in their normal local time zone,
                          * the clocks list would show two entries for the same city. To avoid
                          * this, let's suppress the duplicate.
-                         */
-                        if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
-                            timezones.push(thisTzData);
-                            timezones.push(thisTzData);
-                        }
+                        //  */
+
+                        // FIXME
+                        // if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
+                        //     timezones.push(thisTzData);
+                        //     timezones.push(thisTzData);
+                        // }
                     }
 
                     return timezones;
@@ -110,10 +122,15 @@ Item {
                 PlasmaComponents3.Label {
                     // Layout.fillWidth is buggy here
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
-                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData)) : timeForZone(modelData, Plasmoid.configuration.showSeconds > 0)
+                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", clock.timeZoneName) : formatTime(clock.dateTime, Plasmoid.configuration.showSeconds > 0)
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone
+
+                    Clock {
+                        id: clock
+                        timeZone: modelData
+                    }
                 }
             }
         }

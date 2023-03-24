@@ -77,7 +77,7 @@ AlignedTimer::~AlignedTimer()
 
 void AlignedTimer::initTimer()
 {
-    itimerspec timespec = {0, 0};
+    itimerspec timespec = {{0, 0}};
     timespec.it_value.tv_sec = m_interval;
     timespec.it_interval.tv_sec = m_interval;
 
