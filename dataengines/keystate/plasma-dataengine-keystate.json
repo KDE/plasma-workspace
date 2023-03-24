@@ -95,7 +95,6 @@
         "Description[zh_TW]": "鍵盤組合鍵與滑鼠按鍵狀態",
         "EnabledByDefault": true,
         "Icon": "input-keyboard",
-        "Id": "keystate",
         "License": "LGPL",
         "Name": "Keyboard and Mouse State",
         "Name[ar]": "حالة الفارة ولوحة المفاتيح",

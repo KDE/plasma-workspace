@@ -96,7 +96,6 @@
         "Description[zh_CN]": "通过 Solid 获得设备数据",
         "Description[zh_TW]": "來自 Solid 的裝置資料",
         "Icon": "drive-harddisk",
-        "Id": "soliddevice",
         "Name": "Device Information",
         "Name[ar]": "معلومات الأجهزة",
         "Name[az]": "Cihaz haqqında",

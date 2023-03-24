@@ -95,7 +95,6 @@
         "Description[zh_TW]": "各時區的日期和時間",
         "EnabledByDefault": true,
         "Icon": "preferences-system-time",
-        "Id": "time",
         "License": "LGPL",
         "Name": "Date and Time",
         "Name[ar]": "التاريخ والوقت",
