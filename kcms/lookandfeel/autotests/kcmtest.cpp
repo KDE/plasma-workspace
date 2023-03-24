@@ -35,7 +35,6 @@ private Q_SLOTS:
     void testSplashScreen();
     void testLockScreen();
     void testWindowSwitcher();
-    void testDesktopSwitcher();
     void testKCMSave();
 
 private:
@@ -201,21 +200,6 @@ void KcmTest::testWindowSwitcher()
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testDesktopSwitcher()
-{
-    m_KCMLookandFeel->lookAndFeel()->setDesktopSwitcher(QStringLiteral("customTestValue"));
-
-    KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, "TabBox");
-    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QString());
-    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QString());
-
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc", KConfig::SimpleConfig);
-    KConfigGroup cgd(&configDefault, "TabBox");
-    QCOMPARE(cgd.readEntry("DesktopLayout", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cgd.readEntry("DesktopListLayout", QString()), QStringLiteral("customTestValue"));
-}
-
 void KcmTest::testKCMSave()
 {
     // TODO: Previous bussiness code was effectively filtering every item from
@@ -284,11 +268,7 @@ void KcmTest::testKCMSave()
     cg = KConfigGroup(&kwinConfig, "TabBox");
     cgd = KConfigGroup(&kwinConfigDefault, "TabBox");
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
-    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QString());
-    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QString());
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cgd.readEntry("DesktopLayout", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cgd.readEntry("DesktopListLayout", QString()), QStringLiteral("customTestValue"));
 }
 
 QTEST_MAIN(KcmTest)

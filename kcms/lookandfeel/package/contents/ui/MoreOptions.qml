@@ -26,7 +26,6 @@ ColumnLayout {
                 model: [
                     { text: i18n("Desktop layout"),
                       flag: Private.LookandFeelManager.DesktopLayout
-                            | Private.LookandFeelManager.DesktopSwitcher
                             | Private.LookandFeelManager.WindowPlacement
                             | Private.LookandFeelManager.ShellPackage
                     },

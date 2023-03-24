@@ -31,7 +31,6 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     package->addFileDefinition("loginmanagerpreview", QStringLiteral("previews/loginmanager.png"), i18n("Preview for the Login Manager"));
     package->addFileDefinition("lockscreenpreview", QStringLiteral("previews/lockscreen.png"), i18n("Preview for the Lock Screen"));
     package->addFileDefinition("userswitcherpreview", QStringLiteral("previews/userswitcher.png"), i18n("Preview for the Userswitcher"));
-    package->addFileDefinition("desktopswitcherpreview", QStringLiteral("previews/desktopswitcher.png"), i18n("Preview for the Virtual Desktop Switcher"));
     package->addFileDefinition("splashpreview", QStringLiteral("previews/splash.png"), i18n("Preview for Splash Screen"));
     package->addFileDefinition("runcommandpreview", QStringLiteral("previews/runcommand.png"), i18n("Preview for KRunner"));
     package->addFileDefinition("windowdecorationpreview", QStringLiteral("previews/windowdecoration.png"), i18n("Preview for the Window Decorations"));
@@ -48,11 +47,6 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
 
     package->addDirectoryDefinition("userswitcher", QStringLiteral("userswitcher"), i18n("UI for fast user switching"));
     package->addFileDefinition("userswitchermainscript", QStringLiteral("userswitcher/UserSwitcher.qml"), i18n("Main Script for User Switcher"));
-
-    package->addDirectoryDefinition("desktopswitcher", QStringLiteral("desktopswitcher"), i18n("Virtual Desktop Switcher"));
-    package->addFileDefinition("desktopswitchermainscript",
-                               QStringLiteral("desktopswitcher/DesktopSwitcher.qml"),
-                               i18n("Main Script for Virtual Desktop Switcher"));
 
     package->addDirectoryDefinition("osd", QStringLiteral("osd"), i18n("On-Screen Display Notifications"));
     package->addFileDefinition("osdmainscript", QStringLiteral("osd/Osd.qml"), i18n("Main Script for On-Screen Display Notifications"));

@@ -103,7 +103,6 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
         contents.setFlag(Cursors, configProvides(conf, "kcminputrc/Mouse", "cursorTheme"));
 
         contents.setFlag(WindowSwitcher, configProvides(conf, "kwinrc/WindowSwitcher", "LayoutName"));
-        contents.setFlag(DesktopSwitcher, configProvides(conf, "kwinrc/DesktopSwitcher", "LayoutName"));
         contents.setFlag(WindowDecoration, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"library", "NoPlugin"}));
 
         contents.setFlag(Fonts,
@@ -152,21 +151,6 @@ void LookAndFeelManager::setWindowSwitcher(const QString &theme)
     }
 
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("TabBox"), QStringLiteral("LayoutName"), theme);
-}
-
-void LookAndFeelManager::setDesktopSwitcher(const QString &theme)
-{
-    if (theme.isEmpty()) {
-        return;
-    }
-
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kwinrc"));
-    KConfigGroup group(config, QStringLiteral("TabBox"));
-
-    KConfig configDefault(configDefaults(QStringLiteral("kwinrc")));
-    KConfigGroup defaultGroup(&configDefault, QStringLiteral("TabBox"));
-    writeNewDefaults(group, defaultGroup, QStringLiteral("DesktopLayout"), theme);
-    writeNewDefaults(group, defaultGroup, QStringLiteral("DesktopListLayout"), theme);
 }
 
 void LookAndFeelManager::setWindowPlacement(const QString &value)
@@ -533,12 +517,6 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             setWindowSwitcher(group.readEntry("LayoutName", QString()));
         }
 
-        if (itemsToApply.testFlag(DesktopSwitcher)) {
-            group = KConfigGroup(conf, "kwinrc");
-            group = KConfigGroup(&group, "DesktopSwitcher");
-            setDesktopSwitcher(group.readEntry("LayoutName", QString()));
-        }
-
         if (itemsToApply.testFlag(WindowPlacement)) {
             group = KConfigGroup(conf, "kwinrc");
             group = KConfigGroup(&group, "Windows");
@@ -736,18 +714,6 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
                 return meta.pluginId() == layoutName;
             });
         for (const auto &meta : windowSwitcherPackages) {
-            QFileInfo(meta.fileName()).absoluteDir().removeRecursively();
-        }
-    }
-
-    if (itemsToRemove.testFlag(DesktopSwitcher)) {
-        const QString layoutName = configValue(config, "kwinrc/DesktopSwitcher", "LayoutName");
-        const auto desktopSwitcherPackages =
-            // A Desktop Switcher package is actually a Window Switcher but applied over a desktop list
-            KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/WindowSwitcher"), QString(), [&layoutName](const KPluginMetaData &meta) {
-                return meta.pluginId() == layoutName;
-            });
-        for (const auto &meta : desktopSwitcherPackages) {
             QFileInfo(meta.fileName()).absoluteDir().removeRecursively();
         }
     }

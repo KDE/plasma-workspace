@@ -50,13 +50,12 @@ public:
         TitlebarLayout = 1 << 17,
         WindowPlacement = 1 << 18,
         ShellPackage = 1 << 19,
-        DesktopSwitcher = 1 << 20,
-        LayoutSettings = (1 << 21) - (1 << 16), // All the contents within Layout
+        LayoutSettings = (1 << 20) - (1 << 16), // All the contents within Layout
         // Maybe unused or deprecated?
         RunCommand = 1 << 24,
         LogOutScript = 1 << 25,
         // General Flag combinations
-        KWinSettings = WindowSwitcher | WindowDecoration | DesktopSwitcher | WindowPlacement | TitlebarLayout,
+        KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout,
         AllSettings = (1 << 26) - 1,
     };
     Q_DECLARE_FLAGS(Contents, ContentFlags)
@@ -87,7 +86,6 @@ public:
     void setLatteLayout(const QString &filepath, const QString &name);
     void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
-    void setDesktopSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme, bool noPlugin);
     void setTitlebarLayout(const QString &leftbtns, const QString &rightbtns);
     void setBorderlessMaximized(const QString &value);

@@ -19,9 +19,6 @@ cursorTheme=breeze_cursors
 [kwinrc][WindowSwitcher]
 LayoutName=org.kde.breeze.desktop
 
-[kwinrc][DesktopSwitcher]
-LayoutName=org.kde.breeze.desktop
-
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
 
