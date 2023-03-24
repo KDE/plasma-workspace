@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 
     bool replace = false;
 
-    ShellCorona *corona;
+    ShellCorona *corona = nullptr;
     {
         QCommandLineParser cliOptions;
 
