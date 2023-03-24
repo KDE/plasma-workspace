@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2022-09-24 15:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: main.cpp:56 view.cpp:47
+#: main.cpp:54 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "Kör program"
 
-#: main.cpp:56
+#: main.cpp:54
 #, kde-format
 msgid "Run Command interface"
 msgstr "Gränssnitt för att köra kommandon"
 
-#: main.cpp:62
+#: main.cpp:60
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Använd klippbordets innehåll som fråga till Kör program"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Starta Kör program i bakgrunden, visa det inte."
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ersätt en befintlig instans"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Frågan att besvara, bara använd om -c inte anges"

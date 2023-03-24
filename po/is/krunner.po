@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2023-03-16 20:24+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gudmundure@gmail.com"
 
-#: main.cpp:56 view.cpp:47
+#: main.cpp:54 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:56
+#: main.cpp:54
 #, kde-format
 msgid "Run Command interface"
 msgstr "Keyra skipanaviðmót"
 
-#: main.cpp:62
+#: main.cpp:60
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Nota innihald klippispjalds sem fyrirspurn í KRunner"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Ræsa KRunner í bakgrunni, en ekki birta það."
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Skipta út fyrirliggjandi tilviki"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Fyrirspurn sem á að keyra, aðeins notað ef -c er ekki gefið upp"

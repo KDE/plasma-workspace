@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,32 +29,32 @@ msgstr ""
 "kde-china@kde.org, EasternLi@kde.org, fusionfuture@kde.org, i@guoyunhe.me, "
 "tysontan@tysontan.com"
 
-#: main.cpp:56 view.cpp:47
+#: main.cpp:54 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:56
+#: main.cpp:54
 #, kde-format
 msgid "Run Command interface"
 msgstr "运行命令界面"
 
-#: main.cpp:62
+#: main.cpp:60
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "使用剪贴板内容作为 KRunner 查询条件"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "启动 KRunner 到后台，不显示界面。"
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "替换已有实例"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "要运行的查询，只在未提供 -c 参数时使用"

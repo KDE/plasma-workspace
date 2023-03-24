@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2023-01-24 22:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "necdetyucel@gmail.com, emir_sari@icloud.com"
 
-#: main.cpp:56 view.cpp:47
+#: main.cpp:54 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "K Çalıştır"
 
-#: main.cpp:56
+#: main.cpp:54
 #, kde-format
 msgid "Run Command interface"
 msgstr "Komut Arayüzünü Çalıştır"
 
-#: main.cpp:62
+#: main.cpp:60
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Pano içeriğini K Çalıştır için sorgu olarak kullan"
 
-#: main.cpp:63
+#: main.cpp:61
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "K Çalıştır'ı arka planda başlat, gösterme."
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Var olan bir örneği değiştir"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Çalıştırılacak sorgu, yalnızca -c sağlanmadığında kullanılır"
