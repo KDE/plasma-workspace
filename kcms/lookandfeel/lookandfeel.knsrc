@@ -50,5 +50,5 @@ Name[zh_TW]=全域主題
 Categories=121
 StandardResource=tmp
 Uncompress=kpackage
-KPackageType=Plasma/LookAndFeel
+KPackageStructure=Plasma/LookAndFeel
 AdoptionCommand=plasma-apply-lookandfeel --apply %f

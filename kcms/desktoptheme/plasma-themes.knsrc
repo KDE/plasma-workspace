@@ -49,7 +49,7 @@ Name[zh_TW]=Plasma 風格
 Categories=Plasma Theme
 StandardResource=tmp
 Uncompress=kpackage
-KPackageType=Plasma/Theme
+KPackageStructure=Plasma/Theme
 TagFilter=ghns_excluded!=1,plasma##version==5
 DownloadTagFilter=plasma##version==5
 AdoptionCommand=plasma-apply-desktoptheme %f
