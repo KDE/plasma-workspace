@@ -149,12 +149,14 @@ msgid "Log Out"
 msgstr "Keluar Log"
 
 #: server.cpp:894
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shut Down"
 msgid "Shut Down"
 msgstr "Matikan"
 
 #: server.cpp:899
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reboot"
 msgid "Reboot"
 msgstr "Reboot"
 
