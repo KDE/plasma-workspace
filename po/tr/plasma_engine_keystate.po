@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2009.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_keystate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2022-03-12 15:27+0300\n"
+"PO-Revision-Date: 2023-03-24 16:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: keystate.cpp:15
 msgid "Shift"
-msgstr "Shift"
+msgstr "Üst Karakter"
 
 #: keystate.cpp:16
 msgid "Ctrl"
-msgstr "Ctrl"
+msgstr "Kontrol"
 
 #: keystate.cpp:17
 msgid "Alt"
-msgstr "Alt"
+msgstr "Seçenek"
 
 #: keystate.cpp:18
 msgid "Meta"
@@ -44,19 +44,19 @@ msgstr "Hiper"
 
 #: keystate.cpp:21
 msgid "AltGr"
-msgstr "AltGr"
+msgstr "Üst Seçenek"
 
 #: keystate.cpp:22
 msgid "Num Lock"
-msgstr "Num Lock"
+msgstr "Sayı Kilidi"
 
 #: keystate.cpp:23
 msgid "Caps Lock"
-msgstr "Caps Lock"
+msgstr "Büyük Harf"
 
 #: keystate.cpp:24
 msgid "Scroll Lock"
-msgstr "Scroll Lock"
+msgstr "Sarma Kilidi"
 
 #: keystate.cpp:26
 msgid "Left Button"
