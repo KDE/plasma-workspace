@@ -50,7 +50,6 @@
         ],
         "EnabledByDefault": true,
         "Icon": "document-open-recent",
-        "Id": "recentdocuments",
         "License": "LGPL",
         "Name": "Recent Files",
         "Name[ar]": "الملفات الحديثة",

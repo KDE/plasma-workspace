@@ -92,7 +92,6 @@
         "Description[zh_TW]": "使用關鍵字在網路上進行搜尋",
         "EnabledByDefault": true,
         "Icon": "internet-web-browser",
-        "Id": "webshortcuts",
         "License": "LGPL",
         "Name": "Web Search Keywords",
         "Name[ar]": "كلمات بحث الويب",

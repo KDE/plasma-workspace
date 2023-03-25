@@ -94,7 +94,6 @@
         "Description[zh_TW]": "開啟裝置與資料夾書籤",
         "EnabledByDefault": true,
         "Icon": "user-home",
-        "Id": "places",
         "License": "LGPL",
         "Name": "Places",
         "Name[ar]": "أماكن",

@@ -94,7 +94,6 @@
         "Description[zh_TW]": "讓您尋找軟體",
         "EnabledByDefault": true,
         "Icon": "applications-other",
-        "Id": "appstream",
         "License": "GPL",
         "Name": "Software Center",
         "Name[ar]": "مركز التطبيقات",

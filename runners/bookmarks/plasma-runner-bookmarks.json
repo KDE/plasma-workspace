@@ -94,7 +94,6 @@
         "Description[zh_TW]": "尋找並開啟書籤",
         "EnabledByDefault": true,
         "Icon": "bookmarks",
-        "Id": "bookmarks",
         "License": "LGPL",
         "Name": "Bookmarks",
         "Name[ar]": "العلامات",

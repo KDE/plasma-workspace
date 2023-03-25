@@ -96,7 +96,6 @@
         "Description[zh_TW]": "進行算式的計算",
         "EnabledByDefault": true,
         "Icon": "accessories-calculator",
-        "Id": "calculator",
         "License": "LGPL",
         "Name": "Calculator",
         "Name[ar]": "آلة حاسبة",

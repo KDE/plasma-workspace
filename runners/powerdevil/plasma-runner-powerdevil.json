@@ -94,7 +94,6 @@
         "Description[zh_TW]": "基本的電源管理操作",
         "EnabledByDefault": true,
         "Icon": "preferences-system-power-management",
-        "Id": "PowerDevil",
         "License": "GPL",
         "Name": "Power",
         "Name[ar]": "الطاقة",

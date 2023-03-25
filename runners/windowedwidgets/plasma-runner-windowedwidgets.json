@@ -95,7 +95,6 @@
         "Description[zh_TW]": "尋找可以在獨立視窗執行的 Plasma 元件",
         "EnabledByDefault": true,
         "Icon": "plasma",
-        "Id": "org.kde.windowedwidgets",
         "License": "LGPL",
         "Name": "Windowed widgets",
         "Name[ar]": "الودجات ذات النوافذ",

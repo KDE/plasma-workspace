@@ -96,7 +96,6 @@
         "Description[zh_TW]": "檔案與網址開啟器",
         "EnabledByDefault": true,
         "Icon": "system-file-manager",
-        "Id": "locations",
         "License": "LGPL",
         "Name": "Locations",
         "Name[ar]": "المواقع",

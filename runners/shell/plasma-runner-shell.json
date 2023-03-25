@@ -96,7 +96,6 @@
         "Description[zh_TW]": "執行 shell 命令",
         "EnabledByDefault": true,
         "Icon": "system-run",
-        "Id": "shell",
         "License": "LGPL",
         "Name": "Command Line",
         "Name[ar]": "سطر الأوامر",

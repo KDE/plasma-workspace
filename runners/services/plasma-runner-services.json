@@ -96,7 +96,6 @@
         "Description[zh_TW]": "尋找應用程式、控制面板與服務",
         "EnabledByDefault": true,
         "Icon": "applications-other",
-        "Id": "services",
         "License": "LGPL",
         "Name": "Applications",
         "Name[af]": "Programme",
