@@ -51,8 +51,12 @@ AbstractItem {
         })
     }
 
-    onContextMenu: {
-        openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
+    onContextMenu: mouse => {
+        if (mouse === null) {
+            openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, taskIcon.width / 2, taskIcon.height / 2));
+        } else {
+            openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y));
+        }
     }
 
     onClicked: {
