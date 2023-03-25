@@ -107,6 +107,7 @@ KWin.TabBoxSwitcher {
                                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                                 maximumLineCount: 2
                                 lineHeight: 0.95
+                                textFormat: Text.PlainText
                             }
                         }
                     }
