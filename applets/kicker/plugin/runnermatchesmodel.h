@@ -10,33 +10,29 @@
 #include "abstractmodel.h"
 
 #include <KRunner/QueryMatch>
+#include <KRunner/ResultsModel>
+#include <optional>
 
 namespace KRunner
 {
 class RunnerManager;
 }
 
-class RunnerMatchesModel : public AbstractModel
+class RunnerMatchesModel : public KRunner::ResultsModel
 {
     Q_OBJECT
 
     Q_PROPERTY(QString name READ name CONSTANT)
 
 public:
-    explicit RunnerMatchesModel(const QString &runnerId, const QString &name, KRunner::RunnerManager *manager, QObject *parent = nullptr);
+    explicit RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent = nullptr);
 
-    QString description() const override;
+    // QString description() const override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
-
-    QString runnerId() const
-    {
-        return m_runnerId;
-    }
     QString name() const
     {
         return m_name;
@@ -44,13 +40,11 @@ public:
 
     void setMatches(const QList<KRunner::QueryMatch> &matches);
 
-    AbstractModel *favoritesModel() override;
+    // AbstractModel *favoritesModel() override;
 
     Q_SIGNAL void requestUpdateQueryString(const QString &term);
 
 private:
-    QString m_runnerId;
+    const QString m_runnerId;
     QString m_name;
-    KRunner::RunnerManager *m_runnerManager;
-    QList<KRunner::QueryMatch> m_matches;
 };

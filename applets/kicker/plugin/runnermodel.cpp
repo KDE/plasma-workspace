@@ -14,6 +14,7 @@
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
 #include <chrono>
+#include <optional>
 
 using namespace std::chrono_literals;
 
@@ -21,7 +22,6 @@ RunnerModel::RunnerModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_favoritesModel(nullptr)
     , m_appletInterface(nullptr)
-    , m_runnerManager(nullptr)
     , m_mergeResults(false)
     , m_deleteWhenEmpty(false)
 {
@@ -108,14 +108,15 @@ void RunnerModel::setMergeResults(bool merge)
 {
     if (m_mergeResults != merge) {
         m_mergeResults = merge;
-
-        clear();
-
-        if (!m_query.isEmpty()) {
-            m_queryTimer.start();
-        }
-
         Q_EMIT mergeResultsChanged();
+
+        // If we haven't lazy-initialzed our models, we do not need to re-create them
+        if (!m_models.isEmpty()) {
+            qDeleteAll(m_models);
+            m_models.clear();
+            // Just re-create all models,
+            initializeModels();
+        }
     }
 }
 
@@ -158,15 +159,19 @@ QStringList RunnerModel::runners() const
 
 void RunnerModel::setRunners(const QStringList &runners)
 {
-    if (QSet<QString>(runners.cbegin(), runners.cend()) != QSet<QString>(m_runners.cbegin(), m_runners.cend())) {
-        m_runners = runners;
-
-        if (m_runnerManager) {
-            m_runnerManager->setAllowedRunners(runners);
+    // Update the existing models only, if we have intialized the models
+    if (!m_models.isEmpty()) {
+        if (m_mergeResults) {
+            m_models.first()->runnerManager()->setAllowedRunners(runners);
+        } else {
+            // Just re-create all the models, it is an edge-case anyway
+            qDeleteAll(m_models);
+            m_models.clear();
+            initializeModels();
         }
-
-        Q_EMIT runnersChanged();
     }
+    m_runners = runners;
+    Q_EMIT runnersChanged();
 }
 
 QString RunnerModel::query() const
@@ -189,186 +194,34 @@ void RunnerModel::startQuery()
 {
     if (m_query.isEmpty()) {
         clear();
-    }
-
-    if (m_query.isEmpty() && m_runnerManager) {
-        return;
-    }
-
-    createManager();
-
-    m_runnerManager->launchQuery(m_query);
-}
-
-void RunnerModel::matchesChanged(const QList<KRunner::QueryMatch> &matches)
-{
-    // Group matches by runner.
-    // We do not use a QMultiHash here because it keeps values in LIFO order, while we want FIFO.
-    QHash<QString, QList<KRunner::QueryMatch>> matchesForRunner;
-
-    for (const KRunner::QueryMatch &match : matches) {
-        auto it = matchesForRunner.find(match.runner()->id());
-
-        if (it == matchesForRunner.end()) {
-            it = matchesForRunner.insert(match.runner()->id(), QList<KRunner::QueryMatch>());
-        }
-
-        it.value().append(match);
-    }
-
-    // Sort matches for all runners in descending order, note the reverse iterators. This allows the best
-    // match to win whilest preserving order between runners.
-    for (auto &list : matchesForRunner) {
-        std::sort(list.rbegin(), list.rend());
-    }
-
-    bool countHasChanged = false;
-
-    if (m_mergeResults) {
-        RunnerMatchesModel *matchesModel = nullptr;
-
+    } else {
         if (m_models.isEmpty()) {
-            matchesModel = new RunnerMatchesModel(QString(), i18n("Search results"), m_runnerManager, this);
-            connect(matchesModel, &RunnerMatchesModel::requestUpdateQueryString, this, &RunnerModel::requestUpdateQuery);
-
-            beginInsertRows(QModelIndex(), 0, 0);
-            m_models.append(matchesModel);
-            endInsertRows();
-            countHasChanged = true;
-        } else {
-            matchesModel = m_models.at(0);
+            initializeModels();
         }
-
-        QList<KRunner::QueryMatch> matches;
-        // To preserve the old behavior when allowing all runners we use static sorting
-        const static QStringList runnerIds = {
-            QStringLiteral("desktopsessions"),
-            QStringLiteral("services"),
-            QStringLiteral("krunner_systemsettings"),
-            QStringLiteral("places"),
-            QStringLiteral("PowerDevil"),
-            QStringLiteral("calculator"),
-            QStringLiteral("unitconverter"),
-            QStringLiteral("shell"),
-            QStringLiteral("bookmarks"),
-            QStringLiteral("recentdocuments"),
-            QStringLiteral("locations"),
-        };
-        if (m_runners.isEmpty()) {
-            const auto baloo = matchesForRunner.take(QStringLiteral("baloosearch"));
-            const auto appstream = matchesForRunner.take(QStringLiteral("krunner_appstream"));
-            for (const QString &runnerId : runnerIds) {
-                matches.append(matchesForRunner.take(runnerId));
-            }
-            for (const auto &match : matchesForRunner) {
-                matches.append(match);
-            }
-            matches.append(baloo);
-            matches.append(appstream);
-        } else {
-            for (const QString &runnerId : qAsConst(m_runners)) {
-                matches.append(matchesForRunner.take(runnerId));
-            }
+        for (KRunner::ResultsModel *model : std::as_const(m_models)) {
+            model->setQueryString(m_query);
         }
-
-        matchesModel->setMatches(matches);
-
-        if (countHasChanged) {
-            Q_EMIT countChanged();
-        }
-
-        return;
-    }
-
-    // Assign matches to existing models. If there is no match for a model, delete it.
-    for (int row = m_models.count() - 1; row >= 0; --row) {
-        RunnerMatchesModel *matchesModel = m_models.at(row);
-        QList<KRunner::QueryMatch> matches = matchesForRunner.take(matchesModel->runnerId());
-
-        if (m_deleteWhenEmpty && matches.isEmpty()) {
-            beginRemoveRows(QModelIndex(), row, row);
-            m_models.removeAt(row);
-            delete matchesModel;
-            endRemoveRows();
-            countHasChanged = true;
-        } else {
-            matchesModel->setMatches(matches);
-        }
-    }
-
-    // At this point, matchesForRunner contains only matches for runners which
-    // do not have a model yet. Create new models for them.
-    if (!matchesForRunner.isEmpty()) {
-        auto it = matchesForRunner.constBegin();
-        auto end = matchesForRunner.constEnd();
-
-        QList<RunnerMatchesModel *> toPrepend;
-        QList<RunnerMatchesModel *> toAppend;
-
-        for (; it != end; ++it) {
-            QList<KRunner::QueryMatch> matches = it.value();
-            Q_ASSERT(!matches.isEmpty());
-            RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(), matches.first().runner()->name(), m_runnerManager, this);
-            matchesModel->setMatches(matches);
-
-            if (it.key() == QLatin1String("services")) {
-                toPrepend.append(matchesModel);
-            } else {
-                toAppend.append(matchesModel);
-            }
-        }
-
-        if (!toPrepend.isEmpty()) {
-            beginInsertRows(QModelIndex(), 0, toPrepend.count() - 1);
-            for (auto match : std::as_const(toPrepend)) {
-                m_models.prepend(match);
-            }
-            endInsertRows();
-            countHasChanged = true;
-        }
-
-        if (!toAppend.isEmpty()) {
-            beginInsertRows(QModelIndex(), m_models.count(), m_models.count() + toAppend.count() - 1);
-            m_models.append(toAppend);
-            endInsertRows();
-            countHasChanged = true;
-        }
-    }
-
-    if (countHasChanged) {
-        Q_EMIT countChanged();
-    }
-}
-
-void RunnerModel::createManager()
-{
-    if (!m_runnerManager) {
-        m_runnerManager = new KRunner::RunnerManager(QStringLiteral("krunnerrc"), this);
-        if (!m_runners.isEmpty()) {
-            m_runnerManager->setAllowedRunners(m_runners);
-        }
-        connect(m_runnerManager, &KRunner::RunnerManager::matchesChanged, this, &RunnerModel::matchesChanged);
-        connect(m_runnerManager, &KRunner::RunnerManager::queryFinished, this, &RunnerModel::queryFinished);
     }
 }
 
 void RunnerModel::clear()
 {
-    if (m_runnerManager) {
-        m_runnerManager->reset();
-        m_runnerManager->matchSessionComplete();
+    for (KRunner::ResultsModel *model : std::as_const(m_models)) {
+        model->clear();
     }
+}
 
-    if (m_models.isEmpty()) {
-        return;
-    }
-
+void RunnerModel::initializeModels()
+{
     beginResetModel();
-
-    qDeleteAll(m_models);
-    m_models.clear();
-
+    if (m_mergeResults) {
+        auto model = new RunnerMatchesModel(QString(), i18n("Search results"), this);
+        model->runnerManager()->setAllowedRunners(m_runners);
+        m_models.append(model);
+    } else {
+        for (const QString &runnerId : std::as_const(m_runners)) {
+            m_models.append(new RunnerMatchesModel(runnerId, std::nullopt, this));
+        }
+    }
     endResetModel();
-
-    Q_EMIT countChanged();
 }

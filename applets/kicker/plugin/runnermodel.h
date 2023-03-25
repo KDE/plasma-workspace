@@ -77,15 +77,14 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void startQuery();
-    void matchesChanged(const QList<KRunner::QueryMatch> &matches);
 
 private:
-    void createManager();
     void clear();
+    // Initializes the models when the first query is run or mergeResults changed
+    void initializeModels();
 
     AbstractModel *m_favoritesModel = nullptr;
     QObject *m_appletInterface = nullptr;
-    KRunner::RunnerManager *m_runnerManager = nullptr;
     QStringList m_runners;
     QList<RunnerMatchesModel *> m_models;
     QString m_query;

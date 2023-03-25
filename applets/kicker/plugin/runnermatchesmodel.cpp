@@ -20,28 +20,39 @@
 
 #include <Plasma/Plasma>
 
-RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name, KRunner::RunnerManager *manager, QObject *parent)
-    : AbstractModel(parent)
+RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent)
+    : KRunner::ResultsModel(parent)
     , m_runnerId(runnerId)
-    , m_name(name)
-    , m_runnerManager(manager)
 {
-    connect(m_runnerManager, &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
+    if (name.has_value()) {
+        m_name = name.value();
+    } else {
+        Q_ASSERT(!runnerId.isEmpty());
+        const KPluginMetaData data(QLatin1String("kf6/krunner/") + runnerId);
+        runnerManager()->loadRunner(data);
+        auto runner = runnerManager()->runner(runnerId);
+        if (runner) { // Should ever be false if the runnerId does not exist or the plugin could not be loaded
+            m_name = runner->name();
+        }
+    }
+    connect(runnerManager(), &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
 }
 
-QString RunnerMatchesModel::description() const
+/*QString RunnerMatchesModel::description() const
 {
     return m_name;
-}
+}*/
 
 QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_matches.count()) {
+    if (!index.isValid() || index.row() >= rowCount()) {
         return QVariant();
     }
 
-    KRunner::QueryMatch match = m_matches.at(index.row());
+    KRunner::QueryMatch match = runnerManager()->matches().at(index.row());
+    qWarning() << Q_FUNC_INFO << index << role;
 
+    // Since we have different enums than the KRunner model, we have to implement reading all the data manually
     if (role == Qt::DisplayRole) {
         return match.text();
     } else if (role == Qt::DecorationRole) {
@@ -53,22 +64,21 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::DescriptionRole) {
         return match.subtext();
     } else if (role == Kicker::FavoriteIdRole) {
-        if (match.runner()->id() == QLatin1String("services")) {
+        if (match.runner()->id() == QLatin1String("krunner_services")) {
             return match.data().toString();
         }
     } else if (role == Kicker::UrlRole) {
         const QList<QUrl> urls = match.urls();
-
         if (!urls.isEmpty()) {
             return urls.first();
         }
     } else if (role == Kicker::HasActionListRole) {
-        return match.runner()->id() == QLatin1String("services") || !match.runner()->findChildren<QAction *>().isEmpty();
+        return match.runner()->id() == QLatin1String("krunner_services") || !match.runner()->findChildren<QAction *>().isEmpty();
     } else if (role == Kicker::IsMultilineTextRole) {
         return match.isMultiLine();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
-        const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
+        const QList<QAction *> actions = runnerManager()->actionsForMatch(match);
         for (QAction *action : actions) {
             QVariantMap item = Kicker::createActionItem(action->text(), //
                                                         action->icon().name(),
@@ -82,7 +92,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         // that any other runner returns something we want to turn into a KService is
         // unsafe, e.g. files from the Baloo runner might match a storageId just by
         // accident, creating a dangerous false positive.
-        if (match.runner()->id() != QLatin1String("services") && match.runner()->id() != QLatin1String("krunner_systemsettings")) {
+        if (match.runner()->id() != QLatin1String("krunner_services") && match.runner()->id() != QLatin1String("krunner_systemsettings")) {
             return actionList;
         }
 
@@ -159,18 +169,13 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-int RunnerMatchesModel::rowCount(const QModelIndex &parent) const
-{
-    return parent.isValid() ? 0 : m_matches.count();
-}
-
 bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row < 0 || row >= m_matches.count()) {
+    if (row < 0 || row >= rowCount()) {
         return false;
     }
 
-    KRunner::QueryMatch match = m_matches.at(row);
+    KRunner::QueryMatch match = runnerManager()->matches().at(row);
 
     if (!match.isEnabled()) {
         return false;
@@ -190,10 +195,10 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
             if (!action) {
                 return false;
             }
-            return m_runnerManager->run(match, action);
+            return runnerManager()->run(match, action);
         }
 
-        return m_runnerManager->run(match);
+        return runnerManager()->run(match);
     }
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
@@ -221,49 +226,4 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     }
 
     return false;
-}
-
-void RunnerMatchesModel::setMatches(const QList<KRunner::QueryMatch> &matches)
-{
-    int oldCount = m_matches.count();
-    int newCount = matches.count();
-
-    bool emitCountChange = (oldCount != newCount);
-
-    int ceiling = qMin(oldCount, newCount);
-    bool emitDataChange = false;
-
-    for (int row = 0; row < ceiling; ++row) {
-        if (!(m_matches.at(row) == matches.at(row))) {
-            emitDataChange = true;
-            m_matches[row] = matches.at(row);
-        }
-    }
-
-    if (emitDataChange) {
-        Q_EMIT dataChanged(index(0, 0), index(ceiling - 1, 0));
-    }
-
-    if (newCount > oldCount) {
-        beginInsertRows(QModelIndex(), oldCount, newCount - 1);
-
-        m_matches = matches;
-
-        endInsertRows();
-    } else if (newCount < oldCount) {
-        beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
-
-        m_matches = matches;
-
-        endRemoveRows();
-    }
-
-    if (emitCountChange) {
-        Q_EMIT countChanged();
-    }
-}
-
-AbstractModel *RunnerMatchesModel::favoritesModel()
-{
-    return static_cast<RunnerModel *>(parent())->favoritesModel();
 }
