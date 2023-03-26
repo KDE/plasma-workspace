@@ -18,7 +18,7 @@
 #include <KConfigLoader>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
-#include <KNotifications/KNotificationJobUiDelegate>
+#include <KNotificationJobUiDelegate>
 #include <KService>
 #include <PlasmaQuick/SharedQmlEngine>
 

@@ -20,6 +20,7 @@
 #include <QTimer>
 
 #include <KActivities/ResourceInstance>
+#include <KApplicationTrader>
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/JobUiDelegate>
@@ -28,7 +29,6 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KService/KApplicationTrader>
 #include <KService>
 
 #include <KActivities/Stats/Cleaning>
