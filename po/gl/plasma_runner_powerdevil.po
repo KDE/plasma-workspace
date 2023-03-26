@@ -1,24 +1,25 @@
 # translation of plasma_runner_powerdevil.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2011.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-27 00:45+0000\n"
-"PO-Revision-Date: 2019-02-28 18:59+0100\n"
+"PO-Revision-Date: 2023-03-25 15:11+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -76,33 +77,26 @@ msgid "Suspends the system to disk"
 msgstr "Suspende o sistema no disco"
 
 #: PowerDevilRunner.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword"
-#| msgid "screen brightness"
+#, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
-msgstr "brillo da pantalla"
+msgstr "brillo <porcentaxe>"
 
 #: PowerDevilRunner.cpp:67
-#, fuzzy, no-c-format, kde-format
-#| msgid ""
-#| "Lists screen brightness options or sets it to the brightness defined by :"
-#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
-#| "brightness"
+#, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
-"Lista as opcións de brillo da pantalla ou axústaa ao brillo definido por :"
-"q:, p.ex. un brillo de 50 atenuará a pantalla ao 50% do brillo máximo"
+"Lista as opcións de brillo da pantalla ou axústaa ao brillo definido polo "
+"termo de busca, p. ex. brillo 50 atenuará a pantalla ao 50% do brillo máximo"
 
 #: PowerDevilRunner.cpp:95
-#, fuzzy, kde-format
-#| msgid "Set Brightness to %1"
+#, kde-format
 msgid "Set Brightness to %1%"
-msgstr "Trocar o brillo a %1"
+msgstr "Trocar o brillo a %1%"
 
 #: PowerDevilRunner.cpp:104
 #, kde-format
@@ -137,20 +131,16 @@ msgid "Suspend to disk"
 msgstr "Suspender no disco"
 
 #: PowerDevilRunner.cpp:218
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword"
-#| msgid "screen brightness"
+#, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
-msgstr "brillo da pantalla"
+msgstr "brillo"
 
 #: PowerDevilRunner.cpp:220
-#, fuzzy, kde-format
-#| msgctxt "Note this is a KRunner keyword"
-#| msgid "dim screen"
+#, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "
-msgstr "Escurecer a pantalla"
+msgstr "escurecer"
 
 #~ msgctxt "Note this is a KRunner keyword"
 #~ msgid "screen brightness"
