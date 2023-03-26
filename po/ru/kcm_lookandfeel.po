@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-03-26 02:14+0000\n"
 "PO-Revision-Date: 2023-01-28 22:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -184,12 +184,12 @@ msgstr "Параметры расположения виджетов"
 msgid "Desktop layout"
 msgstr "Расположение виджетов"
 
-#: package/contents/ui/MoreOptions.qml:33
+#: package/contents/ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Кнопки в заголовках"
 
-#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/MoreOptions.qml:46
 #: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
@@ -199,57 +199,57 @@ msgstr ""
 "При применении параметра текущие конфигурации рабочих столов, панелей, доков "
 "и виджетов будет заменены на определённые в оформлении"
 
-#: package/contents/ui/MoreOptions.qml:55
+#: package/contents/ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Параметры оформления:"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: package/contents/ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "Цвета"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "Оформление приложений"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "Оформление окон"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "Значки"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Оформление рабочего стола"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "Курсоры мыши"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "Переключение окон"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "Заставка"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "Экран блокировки"

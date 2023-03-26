@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-03-26 02:14+0000\n"
 "PO-Revision-Date: 2023-01-23 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -183,12 +183,12 @@ msgstr "Nastavitve razporeda:"
 msgid "Desktop layout"
 msgstr "Razpored namizja"
 
-#: package/contents/ui/MoreOptions.qml:33
+#: package/contents/ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Razpored gumbov naslovne letvice"
 
-#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/MoreOptions.qml:46
 #: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
@@ -198,57 +198,57 @@ msgstr ""
 "Uveljavljanje razporeda namizja zamenja trenutno konfiguracijo namizij, "
 "plošč in gradnikov"
 
-#: package/contents/ui/MoreOptions.qml:55
+#: package/contents/ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Nastavitve videza:"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: package/contents/ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "Barve"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "Slog aplikacij"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "Dekoracije oken"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "Ikone"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Slog Plasme"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "Kazalke"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "Pisave"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "Preklopnik dejavnosti"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "Pozdravno okno"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "Zakleni zaslon"

@@ -4,26 +4,27 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021, 2022.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2022-02-27 13:55+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2023-03-25 16:14+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "Geçerli Plasma Biçeminin adı"
+msgstr "Geçerli Plasma biçeminin adı"
 
 #: kcm.cpp:110
 #, kde-format
@@ -58,12 +59,12 @@ msgstr "Tüm Temalar"
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Light Themes"
-msgstr "Aydınlık Temalar"
+msgstr "Açık Temalar"
 
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Dark Themes"
-msgstr "Karanlık Temalar"
+msgstr "Koyu Temalar"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
@@ -73,7 +74,7 @@ msgstr "Renk şeması uyumlu"
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Follows color scheme"
-msgstr "Renk şeması olanlar"
+msgstr "Renk şemasını izleyen"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
@@ -93,7 +94,7 @@ msgstr "Temayı Geri Yükle"
 #: package/contents/ui/main.qml:173
 #, kde-format
 msgid "Install from File…"
-msgstr "Dosyadan kur…"
+msgstr "Dosyadan Kur…"
 
 #: package/contents/ui/main.qml:178
 #, kde-format

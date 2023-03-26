@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-03-26 02:14+0000\n"
 "PO-Revision-Date: 2023-01-22 19:35+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -184,12 +184,12 @@ msgstr "Impostazioni della disposizione:"
 msgid "Desktop layout"
 msgstr "Disposizione del desktop"
 
-#: package/contents/ui/MoreOptions.qml:33
+#: package/contents/ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Disposizione dei pulsanti della barra del titolo"
 
-#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/MoreOptions.qml:46
 #: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
@@ -199,57 +199,57 @@ msgstr ""
 "L'applicazione di una disposizione del desktop sostituisce la tua "
 "configurazione attuale di desktop, pannelli, aree di aggancio e oggetti"
 
-#: package/contents/ui/MoreOptions.qml:55
+#: package/contents/ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Impostazioni dell'aspetto:"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: package/contents/ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "Colori"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "Stile delle applicazioni"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "Decorazioni delle finestre"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "Icone"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Stile di Plasma"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "Puntatori"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "Caratteri"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "Selettore delle attività"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "Schermata iniziale"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "Blocca schermo"

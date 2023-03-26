@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-03-26 02:14+0000\n"
 "PO-Revision-Date: 2023-01-23 07:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -182,12 +182,12 @@ msgstr "განლაგების პარამეტრები:"
 msgid "Desktop layout"
 msgstr "სამუშაო მაგიდის განლაგება"
 
-#: package/contents/ui/MoreOptions.qml:33
+#: package/contents/ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "სათაურის ქუდის ღილაკების განლაგება"
 
-#: package/contents/ui/MoreOptions.qml:47
+#: package/contents/ui/MoreOptions.qml:46
 #: package/contents/ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
@@ -197,57 +197,57 @@ msgstr ""
 "სამუშაო მაგიდის განლაგების გადატარება თქვენი სამუშაო მაგიდების, პანელების, "
 "მიმაგრებების და ვიჯეტების განლაგებასაც შეცვლის"
 
-#: package/contents/ui/MoreOptions.qml:55
+#: package/contents/ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "გარეგნობის პარამეტრები:"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: package/contents/ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "ფერები"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: package/contents/ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "აპლიკაციის სტილი"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: package/contents/ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "ფანჯრის დეკორაციები"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: package/contents/ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "ხატულები"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: package/contents/ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma-ის სტილი"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: package/contents/ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "კურსორები"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: package/contents/ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "ფონტები"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "ამოცანების გადამრთველი"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: package/contents/ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "მისასალმებელი ფანჯარა"
 
-#: package/contents/ui/MoreOptions.qml:68
+#: package/contents/ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "ეკრანის დაბლოკვა"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-04 02:12+0000\n"
-"PO-Revision-Date: 2023-01-11 09:31+0100\n"
+"PO-Revision-Date: 2023-03-25 13:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -145,7 +145,7 @@ msgstr "Crea"
 #: package/contents/ui/FingerprintDialog.qml:57
 #, kde-format
 msgid "Configure Fingerprints"
-msgstr "Configura les empremtes dactilars"
+msgstr "Configureu les empremtes dactilars"
 
 #: package/contents/ui/FingerprintDialog.qml:67
 #, kde-format
@@ -337,7 +337,7 @@ msgstr "S'ha registrat el dit"
 #: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr "Triu un dit per a registrar"
+msgstr "Seleccioneu un dit per a registrar"
 
 #: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format

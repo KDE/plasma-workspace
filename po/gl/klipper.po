@@ -1,12 +1,6 @@
 # translation of klipper.po to galician
 # Galician translation of klipper.
 # Copyright (C) 2000 Jesús Bravo Álvarez.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en http://trasno.gpul.org
-#
-# First Version: 2000-11-04 14:02+0100
-#
 # Jesús Bravo Álvarez <jba@pobox.com>, 2000.
 # Xabi García <xabigf@gmx.net>, 2003.
 # Xabi G. Feal <xabigf@gmx.net>, 2006.
@@ -15,13 +9,19 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en http://trasno.gpul.org
+#
+# First Version: 2000-11-04 14:02+0100
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 02:22+0000\n"
-"PO-Revision-Date: 2019-10-19 21:59+0200\n"
+"PO-Revision-Date: 2023-03-25 18:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -29,13 +29,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "Selección e portapapeis"
+msgstr "Selección e portapapeis:"
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -52,17 +51,25 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Cando realza texto ou unha zona da pantalla co rato ou o teclado, iso é a "
+"<emphasis>selección</emphasis>. Pode pegarse co botón central do rato.<nl/"
+"><nl/>Se a selección se copia de maneira explícita usando unha acción de "
+"<interface>copiar</interface> ou de <interface>pegar</interface>, gárdase no "
+"<emphasis>portapapeis</emphasis>. Pode pegarse cunha acción de "
+"<interface>pegar</interface>. <nl/><nl/>Ao activar esta opción, a selección "
+"e o portapapeis sincronízanse, de xeito que calquera selección pasa "
+"inmediatamente a estar dispoñíbel para pegar de calquera xeito. Ao "
+"desactivala, a selección podería aínda así gardarse no historial do "
+"portapapeis (dependendo das seguintes opcións), pero só se pode pegar "
+"mediante o botón central do rato."
 
 #: configdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Historial do portapapeis"
+msgstr "Historial do portapapeis:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -70,39 +77,34 @@ msgstr[0] " entrada"
 msgstr[1] " entradas"
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Always save in history"
-msgstr "Reproducir a acción do historial"
+msgstr "Gardar sempre no historial"
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Text selection only"
+#, kde-format
 msgid "Text selection:"
-msgstr "Só o texto da selección"
+msgstr "Selección de texto:"
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Só cando se copia explicitamente"
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "Está seguro de que quere eliminar todo o historial do portapapeis?"
+msgstr "Se as seleccións de texto se gardan no historial do portapapeis."
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "Ignorar a selección"
+msgstr "Selección de non texto:"
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Never save in history"
-msgstr "Reproducir a acción do historial"
+msgstr "Nunca gardar no historial"
 
 #: configdialog.cpp:185
 #, kde-format
@@ -110,12 +112,13 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Se as seleccións de non texto (p. ex. imaxes) se gardan no historial do "
+"portapapeis."
 
 #: configdialog.cpp:250
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Tempo de agarda para xanelas emerxentes de acción:"
+msgstr "Mostrar un menú emerxente de accións:"
 
 #: configdialog.cpp:260
 #, kde-kuit-format
@@ -127,16 +130,19 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Cando texto que cadra cun padrón de acción se selecciona ou se escolle do "
+"historial do portapapeis, mostrar automaticamente o menú emerxente coas "
+"accións correspondentes. Se desactiva o menú automático aquí, ou non se "
+"mostra para unha xanela excluída, pode mostrarse usando o atallo de teclado "
+"<shortcut>%1</shortcut>."
 
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Excluír xanelas…"
 
 #: configdialog.cpp:283
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
@@ -147,19 +153,17 @@ msgstr[1] " segundos"
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "Cero"
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Accións"
+msgstr "Opcións:"
 
 #: configdialog.cpp:320
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Excluír xanelas"
 
 #: configdialog.cpp:350
 #, kde-kuit-format
@@ -169,16 +173,18 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Cando un <interface>padrón de coincidencia</interface> cadra co contido do "
+"portapapeis, as súas <interface>ordes</interface> aparecen no menú emerxente "
+"de Klipper e poden executarse."
 
 #: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Padrón de coincidencia e ordes"
 
 #: configdialog.cpp:359
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descrición"
@@ -205,6 +211,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Estas accións aparecen no menú emerxente que se pode configurar na páxina "
+"<interface>Menú de accións</interface>."
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -213,12 +221,13 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Eliminar a acción seleccionada <resource>%1</resource><nl/>e todas as súas "
+"ordes?"
 
 #: configdialog.cpp:566
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Eliminar a acción"
+msgstr "Confirmar a eliminación da acción"
 
 #: configdialog.cpp:595
 #, kde-format
@@ -232,23 +241,18 @@ msgid "General Configuration"
 msgstr "Configuración xeral"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Accións"
+msgstr "Menú de accións"
 
 #: configdialog.cpp:596
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Accións"
+msgstr "Menú de accións"
 
 #: configdialog.cpp:597
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuración das accións"
@@ -280,6 +284,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"O menú emerxente de accións non se mostrará automaticamente para estas "
+"xanelas, aínda que estea activado. Isto é porque, por exemplo, un navegador "
+"web podería realzar un URL na barra de enderezos mentres escribe, polo que o "
+"menú aparecería cada vez que teclease.<nl/><nl/>Se o menú de accións aparece "
+"de maneira inesperada ao usar unha aplicación concreta, engádaa a esta "
+"lista. <link>Como atopar o nome que introducir</link>."
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -291,6 +301,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"O nome que debe introducirse aquí é o nome WM_CLASS da xanela para excluír. "
+"Para atopar o nome WM_CLASS dunha xanela, execute a seguinte orde noutra "
+"xanela de terminal:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>e prema a xanela que quere excluír. O primeiro nome que "
+"mostre tras o signo de igual é o que ten que introducir."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -315,7 +330,7 @@ msgstr "Orde"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Saída"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -336,16 +351,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Unha acción ten efecto cando o seu <interface>padrón de coincidencia</"
+"interface> cadra co contido do portapapeis. Cando sucede, as "
+"<interface>ordes</interface> da acción aparecen no menú emerxente de "
+"Klipper; se escolle unha delas, execútase."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Escriba un padrón para comparar co portapapeis"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Padrón de coincidencia:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -355,11 +374,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"O padrón de coincidencia é unha expresión regular. Para máis información "
+"consulte a <link url=\"https://gl.wikipedia.org/wiki/Expresi%C3%B3n_regular"
+"\">entrada de Wikipedia</link> sobre o tema."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Escriba unha descrición da acción"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -369,7 +391,7 @@ msgstr "Descrición:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Incluír no menú emerxente automático"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -381,52 +403,52 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"As ordes desta coincidencia incluiranse no menú emerxente automático de "
+"accións, se este está activado na páxina <interface>Menú de accións</"
+"interface>. Se a opción está desactivada, as ordes desta coincidencia non se "
+"incluirán no menú emerxente automático pero incluiranse se o menú emerxente "
+"se activa manualmente co atallo de teclado <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Engadir unha orde"
+msgstr "Engadir unha orde…"
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Engadir unha orde"
+msgstr "Editar a orde…"
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Retirar a orde"
+msgstr "Eliminar a orde"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Eliminar a orde seleccionada <resource>%1</resource>?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Confirmar a eliminación da orde"
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Propiedades da acción"
+msgstr "Propiedades da orde"
 
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Introduza a orde e os argumentos"
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Orde"
+msgstr "Orde:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -437,126 +459,116 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"Un <placeholder>&#37;s</placeholder> na orde substituirase polo contido "
+"completo do portapapeis. Do <placeholder>&#37;0</placeholder> ao "
+"<placeholder>&#37;9</placeholder> substituiranse polos textos capturados "
+"correspondentes do padrón de coincidencia."
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Escriba unha descrición da orde"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Saída da orde:"
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Substituír o portapapeis"
+msgstr "Substituír o portapapeis actual"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
 msgstr "Engadir ao portapapeis"
 
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Que ocorre coa saída estándar da orde que se executa."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Restabelecer a icona predeterminada da orde"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Icona:"
 
 #: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
-msgstr ""
+msgstr "%1×%2 %3bpp"
 
 #: klipper.cpp:155
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Tempo de agarda para xanelas emerxentes de acción:"
+msgstr "Menú emerxente automático de accións"
 
 #: klipper.cpp:194
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Ba&leirar o historial do portapapeis"
 
 #: klipper.cpp:201
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar Klipper…"
 
 #: klipper.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Saír"
 
 #: klipper.cpp:212
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente a acción no portapapeis actual"
 
 #: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Editar o contido"
+msgstr "&Editar o contido…"
 
 #: klipper.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Show Barcode..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Mostrar o código de barras…"
 
 #: klipper.cpp:237
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Seguinte elemento do historial"
 
 #: klipper.cpp:242
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento do historial"
 
 #: klipper.cpp:249
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Abrir Klipper na posición do rato"
+msgstr "Mostrar os elementos na posición do rato"
 
 #: klipper.cpp:260
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper, a utilidade de portapapeis"
+msgstr "%1 - Utilidade de portapapeis"
 
 #: klipper.cpp:556
 #, kde-kuit-format
@@ -565,6 +577,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"Pode activar as accións de URL máis adiante na páxina de <interface>Accións</"
+"interface> da xanela de configuración do miniaplicativo de portapapeis"
 
 #: klipper.cpp:595
 #, kde-format
@@ -597,16 +611,14 @@ msgid "Mobile Barcode"
 msgstr "Código de barras de móbil"
 
 #: klipper.cpp:1059
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Está seguro de que quere eliminar todo o historial do portapapeis?"
+msgstr "Seguro que quere borrar e eliminar todo o historial do portapapeis?"
 
 #: klipper.cpp:1060
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "Ba&leirar o historial do portapapeis"
+msgstr "Baleirar o historial do portapapeis"
 
 #: klipper.cpp:1076 klipper.cpp:1085
 #, kde-format
@@ -638,7 +650,7 @@ msgstr "Versión do Klipper"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Gardar o historial entre sesións de escritorio"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -647,13 +659,14 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Manter o historial do portapapeis, para que siga dispoñíbel a seguinte vez "
+"que inicie sesión."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "Evitar ter o portapapeis baleiro"
+msgstr "Impedir que se borre o portapapeis"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -662,13 +675,14 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"Non permitir que se borre o portapapeis, por exemplo, ao saír dunha "
+"aplicación."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Selección e portapapeis"
+msgstr "Manter a selección e o portapapeis sincronizados"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -678,11 +692,13 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Contido seleccionado co cursor cópiase automaticamente no portapapeis para "
+"poder ser pegado ben cunha acción de pegar ou ben cun clic central.<br/><a "
+"href=\"1\">Máis información sobre a selección e o portapapeis</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
 msgstr "Ignorar a selección"
 
@@ -694,6 +710,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Contido seleccionado co cursor pero non copiado explicitamente no "
+"portapapeis non se almacena automaticamente no historial do portapapeis, e "
+"só pode pegarse usando un clic central."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -708,13 +727,14 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Só almacenar as seleccións de texto no historial do portapapeis, non imaxes "
+"nin outros tipos de datos."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore images"
+#, kde-format
 msgid "Always ignore images"
-msgstr "Ignorar as imaxes"
+msgstr "Ignorar sempre as imaxes"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -722,6 +742,8 @@ msgstr "Ignorar as imaxes"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Non almacenar imaxes no historial do portapapeis, aínda que se copien "
+"explicitamente."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -731,10 +753,9 @@ msgstr "Empregar un editor gráfico de expresións regulares"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Ignorar a selección"
+msgstr "Inmediatamente ao seleccionar"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -742,6 +763,7 @@ msgstr "Ignorar a selección"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Mostrar o menú emerxente de accións aplicables en canto se faga a selección."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -751,30 +773,28 @@ msgstr "Non hai ningunha acción para a WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "Tempo de agarda para xanelas emerxentes de acción:"
+msgstr "Tempo do menú automático de accións:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Tempo de agarda para xanelas emerxentes de acción:"
+msgstr "Mostrar o menú emerxente automático de accións durante este tempo."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Tamaño do historial do portapapeis:"
+msgstr "Tamaño do historial:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
+"O historial do portapapeis almacenará como moito esta cantidade de elementos."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
@@ -785,10 +805,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Quitar o espazo en branco cando se execute algunha acción"
+msgstr "Recortar o espazo en branco do principio e o final da selección"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -799,29 +818,32 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Eliminar espazo en branco do principio e o final do texto seleccionado, "
+"antes de realizar unha acción. Por exemplo, isto asegúrase de que un URL "
+"pegado non navegador se interpreta da maneira esperada. O texto gardado no "
+"portapapeis non se ve afectado."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Reproducir as accións nun elemento escollido do historial"
+msgstr "Para un elemento escollido do historial"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Está seguro de que quere eliminar todo o historial do portapapeis?"
+msgstr ""
+"Mostrar o menú emerxente de accións aplicábeis se se escolle unha entrada do "
+"historial do portapapeis."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Activar as accións baseadas no tipo MIME"
+msgstr "Incluír as accións MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -830,25 +852,24 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Se se selecciona un nome de ficheiro ou URL, incluír no menú emerxente as "
+"aplicacións que admiten o seu tipo MIME."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Contido do portapapeis"
+msgstr "%1 - Elementos do portapapeis"
 
 #: klipperpopup.cpp:109
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
 msgstr "Buscar…"
 
 #: klipperpopup.cpp:167
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Expresión regular:"
+msgstr "A expresión regular é incorrecta, %1"
 
 #: klipperpopup.cpp:172
 #, kde-format
@@ -856,10 +877,9 @@ msgid "Clipboard is empty"
 msgstr "O portapapeis está baleiro"
 
 #: klipperpopup.cpp:174
-#, fuzzy, kde-format
-#| msgid "<no matches>"
+#, kde-format
 msgid "No matches"
-msgstr "<sen coincidencias>"
+msgstr "Non hai coincidencias"
 
 #: main.cpp:27
 #, kde-format
@@ -867,10 +887,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Utilidade do historial de cortar e pegar de KDE"
+msgstr "Un historial de cortar e pegar para Plasma"
 
 #: main.cpp:31
 #, kde-format

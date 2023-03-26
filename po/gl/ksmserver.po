@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2019-03-03 11:44+0100\n"
+"PO-Revision-Date: 2019-08-19 20:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -169,7 +169,8 @@ msgid "Log Out"
 msgstr "Saír"
 
 #: server.cpp:894
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shut Down"
 msgid "Shut Down"
 msgstr "Apagar"
 
