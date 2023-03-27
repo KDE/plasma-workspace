@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2022-12-31 00:06+0300\n"
+"PO-Revision-Date: 2023-03-26 16:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -52,14 +52,14 @@ msgstr "Bildirim rozetlerini göster"
 #: package/contents/ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Configure Events…"
-msgstr "Etkinlikleri Yapılandır…"
+msgstr "Olayları Yapılandır…"
 
 #: package/contents/ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
-msgstr "Bu uygulama etkinlik başına bildirimleri yapılandırmayı desteklemiyor."
+msgstr "Bu uygulama, olay başına bildirimleri yapılandırmayı desteklemiyor."
 
 #: package/contents/ui/main.qml:41
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Sistem Hizmetleri"
 #: package/contents/ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
-msgstr "Arama teriminizle hiçbir uygulama veya etkinlik eşleşmiyor."
+msgstr "Arama teriminizle hiçbir uygulama veya olay eşleşmiyor."
 
 #: package/contents/ui/SourcesPage.qml:152
 #, kde-format
