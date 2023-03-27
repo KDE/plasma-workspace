@@ -29,5 +29,6 @@ then
 	<includedir>/opt/kde-dbus-scripts/interfaces/</includedir>
 </busconfig>
 EOF
+    sudo mkdir -p /etc/dbus-1/
     sudo mv session-local.conf /etc/dbus-1/
 fi
