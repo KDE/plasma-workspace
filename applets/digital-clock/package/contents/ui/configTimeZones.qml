@@ -7,7 +7,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.8 as QQC2
 import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.1
 
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0

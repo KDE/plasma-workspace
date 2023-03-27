@@ -9,7 +9,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.15
-import QtQuick.Dialogs 1.1 as QtDialogs
+import QtQuick.Dialogs as QtDialogs
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
@@ -254,7 +254,7 @@ ColumnLayout {
                 icon.name: "settings-configure"
                 enabled: manualFontAndSizeRadioButton.checked
                 onClicked: {
-                    fontDialog.font = fontDialog.fontChosen
+                    fontDialog.selectedFont = fontDialog.fontChosen
                     fontDialog.open()
                 }
             }
@@ -280,7 +280,7 @@ ColumnLayout {
         property font fontChosen: Qt.Font()
 
         onAccepted: {
-            fontChosen = font
+            fontChosen = selectedFont
         }
     }
 
