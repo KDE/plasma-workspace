@@ -1,20 +1,15 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_icons\")
 
-########### next target ###############
+kcmutils_add_qml_kcm(kcm_icons)
 
-set(kcm_icons_PART_SRCS main.cpp iconsmodel.cpp iconsizecategorymodel.cpp iconssettings.cpp ../kcms-common.cpp)
-
-kcmutils_generate_module_data(
-    kcm_icons_PART_SRCS
+target_sources(kcm_icons PRIVATE main.cpp iconsmodel.cpp iconsizecategorymodel.cpp iconssettings.cpp ../kcms-common.cpp)
+kcmutils_generate_module_data(kcm_icons
     MODULE_DATA_HEADER iconsdata.h
     MODULE_DATA_CLASS_NAME IconsData
     SETTINGS_HEADERS iconssettings.h
     SETTINGS_CLASSES IconsSettings
 )
-
-kconfig_add_kcfg_files(kcm_icons_PART_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_icons SOURCES ${kcm_icons_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file (kcm_icons    )
+kconfig_add_kcfg_files(kcm_icons iconssettingsbase.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_icons
     Qt::Widgets
@@ -51,4 +46,3 @@ install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc DESTINATION ${KDE_INSTALL_KNSRCDI
 
 install(TARGETS plasma-changeicons DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
 
-kpackage_install_package(package kcm_icons kcms)

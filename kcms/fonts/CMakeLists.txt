@@ -36,14 +36,12 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file (kcm_fonts)
+kcmutils_add_qml_kcm(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS})
 
 target_link_libraries(kcm_fonts Qt::Quick kcm_fonts_static)
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-kpackage_install_package(package kcm_fonts kcms)
 
 add_custom_command(TARGET kcm_fonts POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_fonts.so kcm_fonts_init.so)

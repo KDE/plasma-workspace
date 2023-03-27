@@ -8,8 +8,7 @@ set(kcm_notifications_SRCS
     notificationsdata.cpp
 )
 
-kcoreaddons_add_plugin(kcm_notifications SOURCES ${kcm_notifications_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_notifications)
+kcmutils_add_qml_kcm(kcm_notifications SOURCES ${kcm_notifications_SRCS})
 target_link_libraries(kcm_notifications
     KF6::KCMUtils
     KF6::CoreAddons
@@ -21,6 +20,3 @@ target_link_libraries(kcm_notifications
     KF6::Service
     PW::LibNotificationManager
 )
-
-kpackage_install_package(package kcm_notifications kcms)
-

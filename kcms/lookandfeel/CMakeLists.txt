@@ -73,8 +73,7 @@ target_link_libraries(kcm_lookandfeel_objects
 
 set_property(TARGET kcm_lookandfeel_objects PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
-kcmutils_generate_desktop_file(kcm_lookandfeel)
+kcmutils_add_qml_kcm(kcm_lookandfeel SOURCES kcmmain.cpp)
 target_link_libraries(kcm_lookandfeel kcm_lookandfeel_objects)
 
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
@@ -83,8 +82,6 @@ install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
-
-kpackage_install_package(package kcm_lookandfeel kcms)
 
 ###### Command line tool
 

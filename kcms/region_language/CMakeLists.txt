@@ -58,9 +58,8 @@ if(REGION_LANG_GENERATE_LOCALE)
 endif()
 
 #################### Declare target #######################
-kcoreaddons_add_plugin(kcm_regionandlang SOURCES ${kcm_regionandlang_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_add_qml_kcm(kcm_regionandlang SOURCES ${kcm_regionandlang_PART_SRCS})
 
-kcmutils_generate_desktop_file(kcm_regionandlang)
 ecm_qt_install_logging_categories(
     EXPORT kcm_regionandlang
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
@@ -81,8 +80,6 @@ endif()
 if(UBUNTU_LOCALE)
     target_link_libraries(kcm_regionandlang PK::packagekitqt${QT_MAJOR_VERSION})
 endif()
-########### install files ###############
-kpackage_install_package(package kcm_regionandlang kcms)
 
 ########### unit tests ##############
 if(BUILD_TESTING)
