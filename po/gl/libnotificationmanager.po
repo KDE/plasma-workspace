@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-10 02:54+0000\n"
-"PO-Revision-Date: 2019-10-19 21:55+0200\n"
+"PO-Revision-Date: 2023-03-26 12:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,16 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: abstractnotificationsmodel.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr "%1 ficheiro a %2"
+msgstr "%1 de %2"
 
 #: job_p.cpp:183
 #, kde-format
@@ -59,23 +56,20 @@ msgstr[0] "%1 ficheiro"
 msgstr[1] "%1 ficheiros"
 
 #: job_p.cpp:201
-#, fuzzy, kde-format
-#| msgctxt "Copying n of m files"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 de %1 ficheiro"
-msgstr[1] "%2 de %1 ficheiros"
+msgstr[0] "%2 de %1 elemento"
+msgstr[1] "%2 de %1 elementos"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 elemento"
+msgstr[1] "%1 elementos"
 
 #: job_p.cpp:211
 #, kde-format
@@ -84,15 +78,12 @@ msgid "%1 to %2"
 msgstr "%1 a %2"
 
 #: job_p.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
 msgstr[0] "%1 ficheiro a %2"
-msgstr[1] "%1 ficheiros a %2"
+msgstr[1] "%1 elementos a %2"
 
 #: job_p.cpp:234
 #, kde-format
@@ -101,13 +92,10 @@ msgid "to %1"
 msgstr "a %1"
 
 #: jobsmodel.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "Copying n files to location"
-#| msgid "%1 file to %2"
-#| msgid_plural "%1 files to %2"
+#, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr "%1 ficheiro a %2"
+msgstr "%1 de %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format

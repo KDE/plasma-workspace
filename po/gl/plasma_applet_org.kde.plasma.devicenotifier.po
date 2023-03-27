@@ -1,19 +1,19 @@
 # translation of plasma_applet_devicenotifier.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2019-10-19 21:50+0200\n"
+"PO-Revision-Date: 2023-03-26 19:17+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -21,34 +21,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/DeviceItem.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
+#, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%1 libre"
+msgstr "%1 libre de %2"
 
 #: package/contents/ui/DeviceItem.qml:189
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Accessing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "Estase a acceder…"
+msgstr "Accedendo…"
 
 #: package/contents/ui/DeviceItem.qml:192
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
+#, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
@@ -58,39 +48,38 @@ msgstr "Retirando…"
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "Non desconecte aínda! Aínda se están transferindo ficheiros…"
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "Abrir no xestor de ficheiros"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "Montar e abrir"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "Expulsar"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "Retirar con seguridade"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "Montar"
 
 #: package/contents/ui/FullRepresentation.qml:41
 #: package/contents/ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid "Remove all"
+#, kde-format
 msgid "Remove All"
-msgstr "Retiralo todo"
+msgstr "Retiralos todos"
 
 #: package/contents/ui/FullRepresentation.qml:42
 #, kde-format
@@ -98,15 +87,14 @@ msgid "Click to safely remove all devices"
 msgstr "Prema para retirar con seguridade todos os dispositivos"
 
 #: package/contents/ui/FullRepresentation.qml:186
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "No removable devices attached"
-msgstr "Só os dispositivos non extraíbeis"
+msgstr "Non hai dispositivos extraíbeis conectados"
 
 #: package/contents/ui/FullRepresentation.qml:186
-#, fuzzy, kde-format
+#, kde-format
 msgid "No disks available"
-msgstr "Non hai ningún dispositivo dispoñíbel"
+msgstr "Non hai discos dispoñíbeis"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -119,36 +107,30 @@ msgid "No Devices Available"
 msgstr "Non hai ningún dispositivo dispoñíbel"
 
 #: package/contents/ui/main.qml:245
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
+#, kde-format
 msgid "Removable Devices"
-msgstr "Só os dispositivos extraíbeis"
+msgstr "Dispositivos extraíbeis"
 
 #: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "Non Removable Devices"
-msgstr "Só os dispositivos non extraíbeis"
+msgstr "Dispositivos non extraíbeis"
 
 #: package/contents/ui/main.qml:257
-#, fuzzy, kde-format
-#| msgid "All devices"
+#, kde-format
 msgid "All Devices"
 msgstr "Todos os dispositivos"
 
 #: package/contents/ui/main.qml:265
-#, fuzzy, kde-format
-#| msgid "Open popup when new device is plugged in"
+#, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr "Abrir unha xanela emerxente ao conectar dispositivos novos."
+msgstr "Mostrar unha xanela emerxente ao conectar dispositivos novos."
 
 #: package/contents/ui/main.qml:274
-#, fuzzy, kde-format
-#| msgctxt "Open auto mounter kcm"
-#| msgid "Configure Removable Devices"
+#, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "Configurar os dispositivos extraíbeis"
+msgstr "Configurar os dispositivos extraíbeis…"
 
 #~ msgid "Show:"
 #~ msgstr "Mostrar:"

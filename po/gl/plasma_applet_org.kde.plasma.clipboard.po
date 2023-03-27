@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2019-01-05 10:47+0100\n"
+"PO-Revision-Date: 2023-03-26 10:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/BarcodePage.qml:36
 #, kde-format
@@ -49,27 +50,24 @@ msgid "Code 93"
 msgstr "Código 93"
 
 #: contents/ui/BarcodePage.qml:62
-#, fuzzy, kde-format
-#| msgid "Code 39"
+#, kde-format
 msgid "Code 128"
-msgstr "Código 39"
+msgstr "Código 128"
 
 #: contents/ui/BarcodePage.qml:85
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
+#, kde-format
 msgid "Change the QR code type"
-msgstr "Cambiar o tipo de código de barras"
+msgstr "Cambiar o tipo de código QR"
 
 #: contents/ui/BarcodePage.qml:114
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
+#, kde-format
 msgid "Creating QR code failed"
-msgstr "A creación do código de barras fallou."
+msgstr "A creación do código QR fallou."
 
 #: contents/ui/BarcodePage.qml:123
 #, kde-format
 msgid "The QR code is too large to be displayed"
-msgstr ""
+msgstr "O código QR é grande de máis para mostralo."
 
 #: contents/ui/clipboard.qml:27
 #, kde-format
@@ -82,16 +80,14 @@ msgid "Clipboard is empty"
 msgstr "O portapapeis está baleiro"
 
 #: contents/ui/clipboard.qml:56
-#, fuzzy, kde-format
-#| msgid "Configure Clipboard..."
+#, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar o portapapeis…"
 
 #: contents/ui/clipboard.qml:58
-#, fuzzy, kde-format
-#| msgid "Clear history"
+#, kde-format
 msgid "Clear History"
-msgstr "Eliminar o historial"
+msgstr "Borrar o historial"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
@@ -99,10 +95,9 @@ msgid "Invoke action"
 msgstr "Invocar unha acción"
 
 #: contents/ui/DelegateToolButtons.qml:38
-#, fuzzy, kde-format
-#| msgid "Show barcode"
+#, kde-format
 msgid "Show QR code"
-msgstr "Mostrar o código de barras"
+msgstr "Mostrar o código QR"
 
 #: contents/ui/DelegateToolButtons.qml:54
 #, kde-format
@@ -118,18 +113,18 @@ msgstr "Retirar do historial"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Gardar"
 
 #: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: contents/ui/Menu.qml:126
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "Non hai coincidencias"
 
 #: contents/ui/UrlItemDelegate.qml:99
 #, kde-format

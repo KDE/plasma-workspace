@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:35+0000\n"
-"PO-Revision-Date: 2023-02-02 19:06+0300\n"
+"PO-Revision-Date: 2023-03-26 19:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -99,7 +99,7 @@ msgstr "Vurgu renginin duvar kağıdından uygulanıp uygulanmayacağı"
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr "KColorSchemeEditor"
+msgstr "K Renk Şeması Düzenleyici"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "Düğme"
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Normal Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Normal Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -204,7 +204,7 @@ msgstr "Seçili metin"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Bağlantı Metni"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Bağlantı Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -220,7 +220,7 @@ msgstr "bağlantı"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Tıklanılmış Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Tıklanılmış Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -236,7 +236,7 @@ msgstr "ziyaret edilmiş"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Etkin Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Etkin Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -252,7 +252,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Etkin Olmayan Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Etkin Olmayan Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -268,7 +268,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Negatif Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Negatif Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -284,7 +284,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Nötr Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Nötr Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -300,7 +300,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Seçili Normal Arka Plan üzerine Seçili Pozitif Metin"
+msgstr "Seçim Normal Arka Plan üzerine Seçili Pozitif Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -316,7 +316,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "Normal Arka Plan üzerine Normal Metin"
+msgstr "Görünüm Normal Arka Plan üzerine Normal Metni"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -330,43 +330,43 @@ msgstr "Normal metin"
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Bağlantı Metni"
+msgstr "Görünüm Normal Arka Plan üzerindeki Bağlantı Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Ziyaret Edilmiş Bağlantı Metni"
+msgstr "Görünüm Normal Arka Plan üzerindeki Ziyaret Edilmiş Bağlantı Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Etkin Metin"
+msgstr "Görünüm Normal Arka Plan üzerindeki Etkin Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Alternatif Arka Plan üzerindeki Pasif Metin"
+msgstr "Görünüm Alternatif Arka Plan üzerindeki Etkin Olmayan Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Negatif Metin"
+msgstr "Görünüm Normal Arka Plan üzerindeki Negatif Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Tarafsız Metin"
+msgstr "Görünüm Normal Arka Plan üzerindeki Tarafsız Metni"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "Normal Arka Plan üzerindeki Pozitif Metin"
+msgstr "Görünüm Normal Arka Plan üzerindeki Pozitif Metni"
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
@@ -381,7 +381,7 @@ msgstr "Normal Arka Plan"
 #: editor/scmeditorcolors.cpp:100
 #, kde-format
 msgid "Alternate Background"
-msgstr "Değişken Arka Plan"
+msgstr "Alternatif Arka Plan"
 
 #: editor/scmeditorcolors.cpp:101
 #, kde-format
@@ -434,7 +434,7 @@ msgstr "Pozitif Metin"
 #: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
-msgstr "Odaklama Dekorasyonu"
+msgstr "Odak Dekorasyonu"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
@@ -446,7 +446,7 @@ msgstr "Üzerine Gelme Dekorasyonu"
 #: editor/scmeditorcolors.ui:23
 #, kde-format
 msgid "Color set:"
-msgstr "Renk dizisi:"
+msgstr "Renk kümesi:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:36
@@ -552,13 +552,13 @@ msgstr "1"
 #: editor/scmeditorcolors.ui:258
 #, kde-format
 msgid "View Background"
-msgstr "Arka Planı Göster"
+msgstr "Görünüm Arka Planı"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:263
 #, kde-format
 msgid "View Text"
-msgstr "Metni Göster"
+msgstr "Görünüm Metni"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:268
@@ -600,7 +600,7 @@ msgstr "Seçim Metni"
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "Etkin Olmayan Seçim Metni"
+msgstr "Seçim Etkin Olmayan Metin"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
@@ -663,7 +663,7 @@ msgstr "Renkler"
 #: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
-msgstr "Devre dışı"
+msgstr "Devre Dışı"
 
 #: editor/scmeditordialog.cpp:94
 #, kde-format
@@ -708,7 +708,7 @@ msgstr "Hata"
 #: editor/scmeditordialog.cpp:191
 #, kde-format
 msgid "Inactive"
-msgstr "Etkin değil"
+msgstr "Etkin Olmayan"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: editor/scmeditoreffects.ui:17
@@ -726,7 +726,7 @@ msgstr "Yoğunluk:"
 #: editor/scmeditoreffects.ui:37
 #, kde-format
 msgid "Disabled color effect type"
-msgstr "Devre Dışı renk efekti türü"
+msgstr "Devre dışı renk efekti türü"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
@@ -740,7 +740,7 @@ msgstr "Hiçbiri"
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Desaturate"
-msgstr "Solgunlaştır"
+msgstr "Doygunluğu Gider"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:51
@@ -760,7 +760,7 @@ msgstr "Renklendir"
 #: editor/scmeditoreffects.ui:64
 #, kde-format
 msgid "Disabled intensity effect type"
-msgstr "Devre Dışı yoğunluk efekti türü"
+msgstr "Devre dışı yoğunluk efekti türü"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
@@ -781,14 +781,14 @@ msgstr "Gölgele"
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Darken"
-msgstr "Karart"
+msgstr "Koyulaştır"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:83
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Lighten"
-msgstr "Aydınlat"
+msgstr "Açıklaştır"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: editor/scmeditoreffects.ui:107
@@ -800,25 +800,25 @@ msgstr "Karşıtlık:"
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr "Devre Dışı renk efekti toplamı"
+msgstr "Devre dışı renk efekti toplamı"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
 #, kde-format
 msgid "Disabled intensity effect amount"
-msgstr "Devre Dışı yoğunluk efekti toplamı"
+msgstr "Devre dışı yoğunluk efekti toplamı"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
 #, kde-format
 msgid "Disabled color"
-msgstr "Devre Dışı renk"
+msgstr "Devre dışı renk"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
 #, kde-format
 msgid "Disabled contrast type"
-msgstr "Devre Dışı karşıtlık türü"
+msgstr "Devre dışı karşıtlık türü"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -845,13 +845,13 @@ msgstr "Renklendir"
 #: editor/scmeditoreffects.ui:222
 #, kde-format
 msgid "Disabled contrast amount"
-msgstr "Devre Dışı karşıtlık toplamı"
+msgstr "Devre dışı karşıtlık toplamı"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "Etkin olmayan pencerelere renk &efektlerini uygula"
+msgstr "Etkin olmayan pencerelere &efektleri uygula"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
@@ -863,7 +863,7 @@ msgstr "Etkin olmay&an seçimler için farklı renkler kullan"
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "Listeler &içerisindeki sıralanmış sütunları gölgele"
+msgstr "Listelerdeki &sıralı sütunları gölgele"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:38
@@ -875,13 +875,13 @@ msgstr "Tüm renkleri vurgu rengiyle renklendir"
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr "Pencere başlık çubuklarını v&urgu rengi yap"
+msgstr "Pencere başlık çubuklarını &vurgu rengiyle renklendir"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr "Renklendirme düzeyi:"
+msgstr "Renklendirme gücü:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -982,7 +982,7 @@ msgstr "etkin"
 #: editor/setpreview.ui:109
 #, kde-format
 msgid "Inactive Text on Normal Background"
-msgstr "Normal Arka Plandaki Pasif Metin Rengi"
+msgstr "Normal Arka Plandaki Etkin Olmayan Metin Rengi"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore1)
@@ -1052,7 +1052,7 @@ msgstr "Normal Arka Plan Üzerine Gelme"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "hover"
-msgstr "üzerine gelinmiş"
+msgstr "üzerine gelme"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
 #: editor/setpreview.ui:211
@@ -1062,7 +1062,7 @@ msgid ""
 "(Note: Link Background is derived from Link Text and cannot be separately "
 "configured at this time)"
 msgstr ""
-"Bağlantı Arka Planı üzerinde Bağlantı Metni\n"
+"Bağlantı Arka Planı üzerindeki Bağlantı Metni\n"
 "(Not: Bağlantı Arka Planı Bağlantı Metninden türemiştir ve ayrıca "
 "yapılandırılamaz)"
 
@@ -1074,7 +1074,7 @@ msgid ""
 "(Note: Visited Background is derived from Visited Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Ziyaret Edilmiş Arka Planı üzerinde Ziyaret Edilmiş Metni\n"
+"Ziyaret Edilmiş Arka Plan üzerindeki Ziyaret Edilmiş Metni\n"
 "(Not: Ziyaret Edilmiş Arka Planı Ziyaret Edilmiş Metninden türemiştir ve "
 "ayrıca yapılandırılamaz)"
 
@@ -1086,14 +1086,14 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Etkin Arka Plan üzerinde Etkin Metin\n"
+"Etkin Arka Plan üzerindeki Etkin Metin\n"
 "(Not: Etkin Arka Planı Etkin Metninden türemiştir ve ayrıca yapılandırılamaz)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
 #, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "Alternatif Arka Plan Üzerindeki Pasif Metin"
+msgstr "Alternatif Arka Plan üzerindeki Etkin Olmayan Metin"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1101,7 +1101,7 @@ msgstr "Alternatif Arka Plan Üzerindeki Pasif Metin"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "alternate"
-msgstr "değiştir"
+msgstr "alternatif"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
 #: editor/setpreview.ui:283
@@ -1111,8 +1111,8 @@ msgid ""
 "(Note: Negative Background is derived from Negative Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Negatif Arka Planı üzerinde Negatif Metni\n"
-"(Not: Negatif Arka Planı Negatif Metninden türemiştir ve ayrıca "
+"Negatif Arka Plan üzerindeki Negatif Metin\n"
+"(Not: Negatif Arka Plan Negatif Metninden türemiştir ve ayrıca "
 "yapılandırılamaz)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
@@ -1123,7 +1123,7 @@ msgid ""
 "(Note: Neutral Background is derived from Neutral Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Nötr Arka Planı üzerinde Nötr Metni\n"
+"Nötr Arka Plan üzerindeki Nötr Metin\n"
 "(Not: Nötr Arka Planı Nötr Metninden türemiştir ve ayrıca yapılandırılamaz)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
@@ -1134,7 +1134,7 @@ msgid ""
 "(Note: Positive Background is derived from Positive Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"Pozitif Arka Planı üzerinde Pozitif Metni\n"
+"Pozitif Arka Plan üzerindeki Pozitif Metin\n"
 "(Not: Pozitif Arka Planı Pozitif Metninden türemiştir ve ayrıca "
 "yapılandırılamaz)"
 
@@ -1142,7 +1142,7 @@ msgstr ""
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "Normal Arka Plandaki Odaklama"
+msgstr "Normal Arka Plandaki Odak"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
@@ -1150,7 +1150,7 @@ msgstr "Normal Arka Plandaki Odaklama"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "focus"
-msgstr "odaklanmış"
+msgstr "odak"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1171,12 +1171,12 @@ msgstr "Tüm Şemalar"
 #: package/contents/ui/main.qml:109
 #, kde-format
 msgid "Light Schemes"
-msgstr "Aydınlık Şemalar"
+msgstr "Açık Şemalar"
 
 #: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Dark Schemes"
-msgstr "Karanlık Şemalar"
+msgstr "Koyu Şemalar"
 
 #: package/contents/ui/main.qml:143
 #, kde-format

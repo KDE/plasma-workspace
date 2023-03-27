@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-27 00:50+0000\n"
-"PO-Revision-Date: 2019-10-19 22:06+0200\n"
+"PO-Revision-Date: 2023-03-26 12:11+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcm.cpp:64
-#, fuzzy, kde-format
-#| msgid "Do not disturb:"
+#, kde-format
 msgid "Toggle do not disturb"
-msgstr "Non molestar:"
+msgstr "Conmutar non molestar"
 
 #: kcm.cpp:192
 #, kde-format
@@ -50,8 +49,7 @@ msgid "Show notification badges"
 msgstr "Mostrar os emblemas de notificacións"
 
 #: package/contents/ui/ApplicationConfiguration.qml:119
-#, fuzzy, kde-format
-#| msgid "Configure Events..."
+#, kde-format
 msgid "Configure Events…"
 msgstr "Configurar os eventos…"
 
@@ -76,58 +74,56 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
+"Non se puido atopar un trebello de «Notificacións», necesario para mostrar "
+"notificacións. Asegúrese de que está activado ben na área de notificacións "
+"ou nun trebello independente."
 
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
-msgstr ""
+msgstr "Actualmente as notificacións fornéceas «%1 %2» e non Plasma."
 
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
-msgstr ""
+msgstr "Actualmente as notificacións non as fornece Plasma."
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Do not disturb:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Non molestar:"
+msgstr "Modo de non molestar"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Activar:"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Cando as pantallas están reflectidas"
 
 #: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Cando as pantallas están reflectidas"
+msgstr "Durante a compartición de pantalla"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
-msgstr ""
+msgstr "Atallo de teclado:"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Condicións de visibilidade"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -135,21 +131,19 @@ msgid "Critical notifications:"
 msgstr "Notificacións críticas:"
 
 #: package/contents/ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "Show in do not disturb mode"
+#, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Mostrar no modo de non molestar"
 
 #: package/contents/ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Critical notifications:"
+#, kde-format
 msgid "Normal notifications:"
-msgstr "Notificacións críticas:"
+msgstr "Notificacións normais:"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Show over full screen windows"
-msgstr ""
+msgstr "Mostrar sobre as xanelas a pantalla completa"
 
 #: package/contents/ui/main.qml:135
 #, kde-format
@@ -162,30 +156,25 @@ msgid "Show popup"
 msgstr "Mostrar a mensaxe emerxente"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Popup Position"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Posición da mensaxe emerxente"
+msgstr "Xanelas emerxentes"
 
 #: package/contents/ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Aplicacións:"
+msgstr "Localización:"
 
 #: package/contents/ui/main.qml:172
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Near the notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Canda a icona da notificación"
 
 #: package/contents/ui/main.qml:209
-#, fuzzy, kde-format
-#| msgid "Choose Custom Position..."
+#, kde-format
 msgid "Choose Custom Position…"
 msgstr "Escoller unha posición personalizada…"
 
@@ -197,17 +186,16 @@ msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
 #: package/contents/ui/main.qml:223
-#, fuzzy, kde-format
-#| msgid "Hide popup after:"
+#, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
-msgstr "Agochar a mensaxe emerxente tras:"
+msgstr "Agochar tras:"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Información adicional"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
@@ -237,15 +225,13 @@ msgid "Notification badges:"
 msgstr "Emblemas das notificacións:"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Configuración da aplicación"
+msgstr "Configuración específica de aplicacións"
 
 #: package/contents/ui/main.qml:308
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "Configure…"
 msgstr "Configurar…"
 
@@ -284,10 +270,9 @@ msgstr ""
 "comportamento."
 
 #: sourcesmodel.cpp:363
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Other Applications"
-msgstr "Aplicacións"
+msgstr "Outras aplicacións"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
