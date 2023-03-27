@@ -96,7 +96,6 @@
         "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",
         "Description[zh_TW]": "追蹤熱插拔裝置的插入與拔除。",
         "Icon": "drive-removable-media-usb",
-        "Id": "hotplug",
         "License": "",
         "Name": "Hotplug Events",
         "Name[ar]": "أحدات التوصيل المباشر",

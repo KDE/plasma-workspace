@@ -94,7 +94,6 @@
         "Description[zh_CN]": "地理位置数据引擎",
         "Description[zh_TW]": "地理位置資料引擎",
         "Icon": "applications-internet",
-        "Id": "geolocation",
         "Name": "Geolocation",
         "Name[ar]": "الموقع الجغرافي",
         "Name[az]": "Coğrafi məkan",

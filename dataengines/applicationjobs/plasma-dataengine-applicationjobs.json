@@ -53,7 +53,6 @@
         "Description[zh_CN]": "程序任务更新信息 (通过 kuiserver)",
         "Description[zh_TW]": "應用程式工作更新（透過 kuiserver）",
         "Icon": "tool-animator",
-        "Id": "applicationjobs",
         "Name": "Application Job Information",
         "Name[ar]": "معلومات مهمّة التطبيق",
         "Name[az]": "Tətbiq Tapşırığı Məlumatları",

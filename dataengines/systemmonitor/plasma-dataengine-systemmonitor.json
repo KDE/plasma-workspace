@@ -53,7 +53,6 @@
         "Description[zh_CN]": "系统状态信息",
         "Description[zh_TW]": "系統狀態資訊",
         "Icon": "utilities-system-monitor",
-        "Id": "systemmonitor",
         "Name": "System Monitor",
         "Name[af]": "Stelsel Monitor",
         "Name[ar]": "مرقاب النظام",

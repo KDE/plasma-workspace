@@ -51,7 +51,6 @@
         "Description[zh_CN]": "用于获取网站图标的数据引擎",
         "Description[zh_TW]": "取得網站圖示用的資料引擎",
         "Icon": "view-web-browser-dom-tree",
-        "Id": "favicons",
         "Name": "Favicons",
         "Name[ar]": "الأيقونات",
         "Name[az]": "Veb səhifələrin işarələri",

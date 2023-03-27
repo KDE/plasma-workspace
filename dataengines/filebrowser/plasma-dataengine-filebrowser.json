@@ -53,7 +53,6 @@
         "Description[zh_CN]": "关于文件和目录的信息。",
         "Description[zh_TW]": "關於檔案與目錄的資訊。",
         "Icon": "system-file-manager",
-        "Id": "filebrowser",
         "License": "",
         "Name": "Files and Directories",
         "Name[ar]": "ملفات وأدلة",

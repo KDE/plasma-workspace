@@ -95,7 +95,6 @@
         "Description[zh_TW]": "Plasma 活動的資訊",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-activities",
-        "Id": "org.kde.activities",
         "License": "LGPL",
         "Name": "Activities Engine",
         "Name[ar]": "محرّك الأنشطة",

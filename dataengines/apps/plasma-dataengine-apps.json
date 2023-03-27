@@ -93,7 +93,6 @@
         "Description[zh_TW]": "查看應用程式選單中所有應用程式的資訊，或是啟動它們。",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
-        "Id": "apps",
         "License": "LGPL",
         "Name": "Application Information",
         "Name[ar]": "معلومات التطبيقات",

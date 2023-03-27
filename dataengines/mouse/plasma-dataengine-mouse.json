@@ -53,7 +53,6 @@
         "Description[zh_CN]": "鼠标位置和光标",
         "Description[zh_TW]": "滑鼠位置與游標",
         "Icon": "input-mouse",
-        "Id": "mouse",
         "Name": "Pointer Position",
         "Name[ar]": "موقع المؤشّر",
         "Name[az]": "Kursorun yeri",

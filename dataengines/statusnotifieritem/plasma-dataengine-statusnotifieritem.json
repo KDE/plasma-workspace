@@ -94,7 +94,6 @@
         "Description[zh_TW]": "提供應用程式狀態的資訊引擎，使用狀態通知器協定。",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-notification",
-        "Id": "statusnotifieritem",
         "License": "GPL",
         "Name": "Status Notifier Information",
         "Name[ar]": "معلومات مُخطِر الحالة",

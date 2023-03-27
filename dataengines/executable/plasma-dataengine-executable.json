@@ -53,7 +53,6 @@
         "Description[zh_CN]": "运行程序数据引擎",
         "Description[zh_TW]": "執行可執行檔的資料引擎",
         "Icon": "application-x-executable-script",
-        "Id": "executable",
         "Name": "Run Commands",
         "Name[ar]": "شغّل أوامر",
         "Name[az]": "Əmrləri başlatmaq",

@@ -94,7 +94,6 @@
         "Description[zh_CN]": "多个在线信息源提供的天气数据",
         "Description[zh_TW]": "來自數種不同線上來源的天氣資料",
         "Icon": "weather-clear",
-        "Id": "weather",
         "License": "GPLv2+",
         "Name": "Weather",
         "Name[ar]": "الطقس",

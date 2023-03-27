@@ -94,7 +94,6 @@
         "Description[zh_TW]": "在檔案管理員與檔案對話框中看到的「書籤」項目。",
         "EnabledByDefault": true,
         "Icon": "folder-favorites",
-        "Id": "places",
         "License": "LGPL",
         "Name": "Places",
         "Name[ar]": "أماكن",

@@ -94,7 +94,6 @@
         "Description[zh_CN]": "PackageKit 数据引擎",
         "Description[zh_TW]": "PackageKit 資料引擎",
         "Icon": "package-x-generic",
-        "Id": "packagekit",
         "License": "GPL",
         "Name": "PackageKit",
         "Name[ar]": "عُدّة الحزم",

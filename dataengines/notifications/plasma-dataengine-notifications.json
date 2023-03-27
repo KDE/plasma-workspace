@@ -52,7 +52,6 @@
         "Description[zh_CN]": "为用户提供被动出现的视觉通知。",
         "Description[zh_TW]": "給使用者的被動視覺通知。",
         "Icon": "preferences-desktop-notification-bell",
-        "Id": "notifications",
         "Name": "Application Notifications",
         "Name[ar]": "إخطارات التطبيقات",
         "Name[az]": "Tətbiq bildirişləri",
