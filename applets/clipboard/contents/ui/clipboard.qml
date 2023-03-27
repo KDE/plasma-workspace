@@ -65,7 +65,7 @@ Item {
     P5Support.DataSource {
         id: clipboardSource
         property bool editing: false;
-        engine: "org.kde.plasma.clipboard"
+        engine: "clipboard"
         connectedSources: "clipboard"
         function service(uuid, op) {
             var service = clipboardSource.serviceForSource(uuid);

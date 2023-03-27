@@ -96,7 +96,6 @@
         "Description[zh_TW]": "剪貼簿工具。",
         "EnabledByDefault": true,
         "Icon": "klipper",
-        "Id": "org.kde.plasma.clipboard",
         "License": "GPL-2.0+",
         "Name": "Clipboard",
         "Name[ar]": "الحافظة",
