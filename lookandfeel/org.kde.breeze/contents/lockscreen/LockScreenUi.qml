@@ -134,10 +134,6 @@ PlasmaCore.ColorScope {
             } else if (uiVisible) {
                 fadeoutTimer.restart();
             }
-            if (!calledUnlock) {
-                calledUnlock = true
-                authenticator.tryUnlock();
-            }
         }
         onBlockUIChanged: {
             if (blockUI) {
@@ -307,6 +303,7 @@ PlasmaCore.ColorScope {
 
                 onPasswordResult: {
                     authenticator.respond(password)
+                    authenticator.tryUnlock()
                 }
 
                 actionItems: [
