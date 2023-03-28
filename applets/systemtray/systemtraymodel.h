@@ -11,7 +11,7 @@
 #include <QList>
 #include <QPointer>
 
-#include <KCoreAddons/KPluginMetaData>
+#include <KPluginMetaData>
 #include <Plasma/Plasma>
 #include <Plasma5Support/Service>
 
