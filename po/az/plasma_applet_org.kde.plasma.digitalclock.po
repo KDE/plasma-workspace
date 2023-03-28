@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-03-28 02:57+0000\n"
 "PO-Revision-Date: 2023-02-19 14:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -275,7 +275,7 @@ msgstr "Həftənin ilk günü:"
 msgid "Available Plugins:"
 msgstr "Mövcud Əlavələr:"
 
-#: package/contents/ui/configTimeZones.qml:39
+#: package/contents/ui/configTimeZones.qml:38
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add another entry for your home time zone to "
@@ -286,12 +286,12 @@ msgstr ""
 "əlavə edin. Bu siyahı yalnız sistemin vaxt zonasını dəyişdiyinizdə istifadə "
 "olunur."
 
-#: package/contents/ui/configTimeZones.qml:101
+#: package/contents/ui/configTimeZones.qml:100
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Saat, hal-hazıra bu saat qurşağını istifadə edir"
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,27 +300,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Yerli saat qurşağı şəhəri olduqda gizlətmək"
 
-#: package/contents/ui/configTimeZones.qml:117
+#: package/contents/ui/configTimeZones.qml:116
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Sistemin saat qurşağını dəyişmək..."
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:125
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Bu saat qurşağını silmək"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Sistemin saat qirşağı"
 
-#: package/contents/ui/configTimeZones.qml:135
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Əlavə Saat Qurşaları"
 
-#: package/contents/ui/configTimeZones.qml:148
+#: package/contents/ui/configTimeZones.qml:147
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,17 +329,17 @@ msgstr ""
 "Hamısını bildiriş pəncərəsi əlavəsində göstərmək üçün daha çox saat qurşağı "
 "əlavə edin və ya saatın özü üçün onlardan birini istifadə edin"
 
-#: package/contents/ui/configTimeZones.qml:155
+#: package/contents/ui/configTimeZones.qml:154
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Saat qurşağı əlavə edin..."
 
-#: package/contents/ui/configTimeZones.qml:165
+#: package/contents/ui/configTimeZones.qml:164
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Saat əlavəsi üzərində sürüşdürərək saat qurşağını dəyişin"
 
-#: package/contents/ui/configTimeZones.qml:172
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -348,12 +348,12 @@ msgstr ""
 "Bu funksiyanı istifadə etmək sistemi saat qurşağını dəyişmir. Səyahət "
 "etdiyiniz zaman sistemin saat qurşağını dəyişin."
 
-#: package/contents/ui/configTimeZones.qml:198
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Daha çox saat qurşaqları əlavə etmək"
 
-#: package/contents/ui/configTimeZones.qml:209
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -362,12 +362,12 @@ msgstr ""
 "Ən azı bir saat qurşağını aktiv etmək lazımdır. Sizin yerli saat qurşağınız "
 "avtomatik aktiv edilib."
 
-#: package/contents/ui/configTimeZones.qml:234
+#: package/contents/ui/configTimeZones.qml:233
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:234
+#: package/contents/ui/configTimeZones.qml:233
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
