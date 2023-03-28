@@ -235,6 +235,15 @@ MouseArea {
                     elide: Text.ElideRight
                     horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
                     maximumLineCount: 1
+
+                    opacity: root.isPlaying ? 1 : 0.6
+                    Behavior on opacity {
+                        NumberAnimation {
+                            duration: PlasmaCore.Units.shortDuration
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+
                     text: root.track
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
