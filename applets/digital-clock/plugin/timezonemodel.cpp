@@ -9,6 +9,7 @@
 #include "timezonesi18n.h"
 
 #include <KLocalizedString>
+#include <QDBusConnection>
 #include <QStringMatcher>
 #include <QTimeZone>
 
@@ -64,6 +65,13 @@ TimeZoneModel::TimeZoneModel(QObject *parent)
     , m_timezonesI18n(new TimezonesI18n(this))
 {
     update();
+
+    QDBusConnection::sessionBus().connect(QString(),
+                                          QStringLiteral("/org/kde/kcmshell_clock"), //
+                                          QStringLiteral("org.kde.kcmshell_clock"),
+                                          QStringLiteral("clockUpdated"),
+                                          this,
+                                          SLOT(slotUpdate()));
 }
 
 TimeZoneModel::~TimeZoneModel()
@@ -207,12 +215,7 @@ void TimeZoneModel::setSelectedTimeZones(const QStringList &selectedTimeZones)
 void TimeZoneModel::selectLocalTimeZone()
 {
     m_data[0].checked = true;
-
-    QModelIndex index = createIndex(0, 0);
-    Q_EMIT dataChanged(index, index);
-
-    m_selectedTimeZones << m_data[0].id;
-    Q_EMIT selectedTimeZonesChanged();
+    Q_EMIT dataChanged(index(0, 0), index(0, 0), QVector<int>{CheckedRole});
 }
 
 QString TimeZoneModel::localTimeZoneCity()
@@ -220,6 +223,12 @@ QString TimeZoneModel::localTimeZoneCity()
     const QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
     const QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
     return m_timezonesI18n->i18nCity(data.last());
+}
+
+void TimeZoneModel::slotUpdate()
+{
+    update();
+    setProperty("selectedTimeZones", m_selectedTimeZones);
 }
 
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
