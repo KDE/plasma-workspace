@@ -283,6 +283,3 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
