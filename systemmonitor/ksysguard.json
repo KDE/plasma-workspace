@@ -38,7 +38,7 @@
         "Description[sl]": "Zažene KSysguard ob pritisku Ctrl + Escape",
         "Description[sv]": "Startar KDE:s systemövervakare vid Ctrl+Esc",
         "Description[ta]": "Ctrl + Escape அழுத்தப்படும்போது கேஸிஸ்கார்டை இயக்கும்",
-        "Description[tr]": "Ctrl + Escape ile KSysguard'ı başlatır",
+        "Description[tr]": "Kontrol + Vazgeç ile KSysguard'ı başlatır",
         "Description[uk]": "Запускає KSysguard у відповідь на натискання Ctrl + Esc",
         "Description[vi]": "Khởi chạy KSysguard khi ấn Ctrl + Escape",
         "Description[x-test]": "xxLaunches KSysguard on Ctrl + Escapexx",
