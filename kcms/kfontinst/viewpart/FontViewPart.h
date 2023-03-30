@@ -33,7 +33,7 @@ class CFontViewPart : public KParts::ReadOnlyPart
     Q_OBJECT
 
 public:
-    CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &args);
+    CFontViewPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &data);
     ~CFontViewPart() override;
 
     bool openUrl(const QUrl &url) override;

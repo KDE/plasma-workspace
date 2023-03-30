@@ -47,8 +47,8 @@ static QString getFamily(const QString &font)
 
 K_PLUGIN_CLASS_WITH_JSON(CFontViewPart, "kfontviewpart.json")
 
-CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
-    : KParts::ReadOnlyPart(parent)
+CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &data)
+    : KParts::ReadOnlyPart(parent, data)
     , m_config(KSharedConfig::openConfig())
     , m_proc(nullptr)
     , m_tempDir(nullptr)
