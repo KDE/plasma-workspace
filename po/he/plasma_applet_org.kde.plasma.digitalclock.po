@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-28 02:57+0000\n"
+"POT-Creation-Date: 2023-03-30 02:10+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -422,13 +422,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr ""
 
-#: plugin/timezonemodel.cpp:141
+#: plugin/timezonemodel.cpp:149
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "מקומי"
 
-#: plugin/timezonemodel.cpp:143
+#: plugin/timezonemodel.cpp:151
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "System's local time zone"
