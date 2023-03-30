@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-03-27 17:15+0300\n"
+"PO-Revision-Date: 2023-03-29 16:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1035,8 +1035,8 @@ msgstr ""
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
-"<p></p><p>'<b>%1</b>' yazıtipini gerçekten pasifleştirmek istiyor musunuz?</"
-"p>"
+"<p></p><p>'<b>%1</b>' yazıtipini gerçekten devre dışı bırakmak istiyor "
+"musunuz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1124
 #, kde-format
@@ -1053,7 +1053,7 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini pasifleştirmek "
+"<p>'<b>%2</b>' grubundaki</p><p>'<b>%1</b>' ögesini devre dışı bırakmak "
 "istediğinizden emin misiniz?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
