@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_package_plasmashell\")
 
-kcoreaddons_add_plugin(plasma_packagestructure_plasmashell SOURCES shellpackage.cpp INSTALL_NAMESPACE "kpackage/packagestructure")
+kcoreaddons_add_plugin(plasma_packagestructure_plasmashell SOURCES shellpackage.cpp INSTALL_NAMESPACE "kf6/packagestructure")
 
 target_link_libraries(plasma_packagestructure_plasmashell
    KF6::I18n
