@@ -289,6 +289,3 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
