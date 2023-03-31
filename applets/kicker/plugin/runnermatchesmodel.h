@@ -23,11 +23,10 @@ class RunnerMatchesModel : public KRunner::ResultsModel
     Q_OBJECT
 
     Q_PROPERTY(QString name READ name CONSTANT)
+    Q_PROPERTY(QString description READ description CONSTANT)
 
 public:
     explicit RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent = nullptr);
-
-    // QString description() const override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -36,6 +35,10 @@ public:
     QString name() const
     {
         return m_name;
+    }
+    QString description() const
+    {
+        return name();
     }
 
     void setMatches(const QList<KRunner::QueryMatch> &matches);

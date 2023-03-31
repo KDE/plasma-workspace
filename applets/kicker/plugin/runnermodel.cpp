@@ -181,6 +181,9 @@ QString RunnerModel::query() const
 
 void RunnerModel::setQuery(const QString &query)
 {
+    if (m_models.isEmpty()) {
+        initializeModels();
+    }
     if (m_query != query) {
         m_query = query;
 
@@ -195,9 +198,6 @@ void RunnerModel::startQuery()
     if (m_query.isEmpty()) {
         clear();
     } else {
-        if (m_models.isEmpty()) {
-            initializeModels();
-        }
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
