@@ -35,24 +35,19 @@ public:
 
         package->addDirectoryDefinition("images", QStringLiteral("images"));
         package->addDirectoryDefinition("theme", QStringLiteral("theme"));
-        QStringList mimetypes;
-        mimetypes << QStringLiteral("image/svg+xml") << QStringLiteral("image/png") << QStringLiteral("image/jpeg");
+        const QStringList mimetypes{QStringLiteral("image/svg+xml"), QStringLiteral("image/png"), QStringLiteral("image/jpeg")};
         package->setMimeTypes("images", mimetypes);
         package->setMimeTypes("theme", mimetypes);
 
         package->addDirectoryDefinition("config", QStringLiteral("config"));
-        mimetypes.clear();
-        mimetypes << QStringLiteral("text/xml");
-        package->setMimeTypes("config", mimetypes);
+        package->setMimeTypes("config", QStringList{QStringLiteral("text/xml")});
 
         package->addDirectoryDefinition("ui", QStringLiteral("ui"));
 
         package->addDirectoryDefinition("data", QStringLiteral("data"));
 
         package->addDirectoryDefinition("scripts", QStringLiteral("code"));
-        mimetypes.clear();
-        mimetypes << QStringLiteral("text/plain");
-        package->setMimeTypes("scripts", mimetypes);
+        package->setMimeTypes("scripts", QStringList{QStringLiteral("text/plain")});
 
         package->addDirectoryDefinition("translations", QStringLiteral("locale"));
     }

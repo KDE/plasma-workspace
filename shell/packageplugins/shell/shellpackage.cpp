@@ -29,16 +29,16 @@ public:
         package->addDirectoryDefinition("explorer", QStringLiteral("explorer"));
         package->addDirectoryDefinition("views", QStringLiteral("views"));
 
-        package->setMimeTypes("applet", QStringList() << QStringLiteral("text/x-qml"));
-        package->setMimeTypes("configuration", QStringList() << QStringLiteral("text/x-qml"));
-        package->setMimeTypes("views", QStringList() << QStringLiteral("text/x-qml"));
+        package->setMimeTypes("applet", QStringList{QStringLiteral("text/x-qml")});
+        package->setMimeTypes("configuration", QStringList{QStringLiteral("text/x-qml")});
+        package->setMimeTypes("views", QStringList{QStringLiteral("text/x-qml")});
 
         // Files
         // Default layout
         package->addFileDefinition("defaultlayout", QStringLiteral("layout.js"));
         package->addFileDefinition("defaults", QStringLiteral("defaults"));
-        package->setMimeTypes("defaultlayout", QStringList() << QStringLiteral("application/javascript") << QStringLiteral("text/javascript"));
-        package->setMimeTypes("defaults", QStringList() << QStringLiteral("text/plain"));
+        package->setMimeTypes("defaultlayout", QStringList{QStringLiteral("application/javascript"), QStringLiteral("text/javascript")});
+        package->setMimeTypes("defaults", QStringList{QStringLiteral("text/plain")});
 
         // Applet furniture
         package->addFileDefinition("appleterror", QStringLiteral("applet/AppletError.qml"));

@@ -25,17 +25,18 @@ public:
         package->addDirectoryDefinition("images", QStringLiteral("images/"));
         package->addDirectoryDefinition(QByteArrayLiteral("images_dark"), QStringLiteral("images_dark%1").arg(QDir::separator()));
 
-        QStringList mimetypes;
-        mimetypes << QStringLiteral("image/avif") //
-                  << QStringLiteral("image/bmp") //
-                  << QStringLiteral("image/gif") //
-                  << QStringLiteral("image/heif") //
-                  << QStringLiteral("image/jpeg") //
-                  << QStringLiteral("image/jpg") //
-                  << QStringLiteral("image/png") //
-                  << QStringLiteral("image/svg") //
-                  << QStringLiteral("image/tiff") //
-                  << QStringLiteral("image/webp");
+        const QStringList mimetypes{
+            QStringLiteral("image/avif"),
+            QStringLiteral("image/bmp"),
+            QStringLiteral("image/gif"),
+            QStringLiteral("image/heif"),
+            QStringLiteral("image/jpeg"),
+            QStringLiteral("image/jpg"),
+            QStringLiteral("image/png"),
+            QStringLiteral("image/svg"),
+            QStringLiteral("image/tiff"),
+            QStringLiteral("image/webp"),
+        };
         package->setMimeTypes("images", mimetypes);
         package->setMimeTypes(QByteArrayLiteral("images_dark"), mimetypes);
 
@@ -70,7 +71,7 @@ public:
         package->setRequired(QByteArrayLiteral("images_dark"), false);
 
         if (isFullPackage) {
-            package->setContentsPrefixPaths(QStringList() << QStringLiteral("contents/"));
+            package->setContentsPrefixPaths(QStringList{QStringLiteral("contents/")});
         } else {
             package->addFileDefinition("screenshot", info.fileName());
             package->addFileDefinition("preferred", info.fileName());
