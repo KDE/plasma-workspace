@@ -23,7 +23,7 @@ public:
     void initPackage(KPackage::Package *package) override
     {
         package->addDirectoryDefinition("images", QStringLiteral("images/"));
-        package->addDirectoryDefinition(QByteArrayLiteral("images_dark"), QStringLiteral("images_dark%1").arg(QDir::separator()));
+        package->addDirectoryDefinition("images_dark", QStringLiteral("images_dark%1").arg(QDir::separator()));
 
         const QStringList mimetypes{
             QStringLiteral("image/avif"),
@@ -38,10 +38,10 @@ public:
             QStringLiteral("image/webp"),
         };
         package->setMimeTypes("images", mimetypes);
-        package->setMimeTypes(QByteArrayLiteral("images_dark"), mimetypes);
+        package->setMimeTypes("images_dark", mimetypes);
 
         package->setRequired("images", true);
-        package->setRequired(QByteArrayLiteral("images_dark"), false);
+        package->setRequired("images_dark", false);
         package->addFileDefinition("screenshot", QStringLiteral("screenshot.png"));
         package->setAllowExternalPaths(true);
     }
@@ -66,16 +66,16 @@ public:
         QFileInfo info(ppath);
         const bool isFullPackage = info.isDir();
         package->removeDefinition("preferred");
-        package->removeDefinition(QByteArrayLiteral("preferredDark"));
+        package->removeDefinition("preferredDark");
         package->setRequired("images", isFullPackage);
-        package->setRequired(QByteArrayLiteral("images_dark"), false);
+        package->setRequired("images_dark", false);
 
         if (isFullPackage) {
             package->setContentsPrefixPaths(QStringList{QStringLiteral("contents/")});
         } else {
             package->addFileDefinition("screenshot", info.fileName());
             package->addFileDefinition("preferred", info.fileName());
-            package->addFileDefinition(QByteArrayLiteral("preferredDark"), info.fileName());
+            package->addFileDefinition("preferredDark", info.fileName());
             package->setContentsPrefixPaths(QStringList());
             package->setPath(info.path());
         }
