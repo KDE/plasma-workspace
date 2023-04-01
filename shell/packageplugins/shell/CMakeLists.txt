@@ -1,3 +1,0 @@
-kcoreaddons_add_plugin(plasma_packagestructure_plasmashell SOURCES shellpackage.cpp INSTALL_NAMESPACE "kf6/packagestructure")
-target_link_libraries(plasma_packagestructure_plasmashell KF6::Package)
-set_target_properties(plasma_packagestructure_plasmashell PROPERTIES OUTPUT_NAME plasma_shell)
