@@ -5,14 +5,23 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "layouttemplate.h"
+#include <KPackage/PackageStructure>
 
-void LayoutTemplatePackage::initPackage(KPackage::Package *package)
+class LayoutTemplatePackage : public KPackage::PackageStructure
 {
-    package->setDefaultPackageRoot(QStringLiteral("plasma/layout-templates/"));
-    package->addFileDefinition("mainscript", QStringLiteral("layout.js"));
-    package->setRequired("mainscript", true);
-}
+    Q_OBJECT
+public:
+    LayoutTemplatePackage(QObject *, const QVariantList &)
+    {
+    }
+
+    void initPackage(KPackage::Package *package) override
+    {
+        package->setDefaultPackageRoot(QStringLiteral("plasma/layout-templates/"));
+        package->addFileDefinition("mainscript", QStringLiteral("layout.js"));
+        package->setRequired("mainscript", true);
+    }
+};
 
 K_PLUGIN_CLASS_WITH_JSON(LayoutTemplatePackage, "plasma-packagestructure-layouttemplate.json")
 
