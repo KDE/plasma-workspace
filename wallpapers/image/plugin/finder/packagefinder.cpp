@@ -145,13 +145,11 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
     const QString preferredDark = findBestMatch(QByteArrayLiteral("images_dark"));
 
     package.removeDefinition("preferred");
-    package.addFileDefinition("preferred", QStringLiteral("images/") + preferred, i18n("Recommended wallpaper file"));
+    package.addFileDefinition("preferred", QStringLiteral("images/") + preferred);
 
     if (!preferredDark.isEmpty()) {
         package.removeDefinition("preferredDark");
-        package.addFileDefinition("preferredDark",
-                                  QStringLiteral("images_dark%1").arg(QDir::separator()) + preferredDark,
-                                  QStringLiteral("Recommended dark wallpaper file"));
+        package.addFileDefinition("preferredDark", QStringLiteral("images_dark%1").arg(QDir::separator()) + preferredDark);
     }
 }
 
