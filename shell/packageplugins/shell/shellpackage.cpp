@@ -17,10 +17,7 @@ class ShellPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
 public:
-    explicit ShellPackage(QObject *parent, const QVariantList &)
-        : KPackage::PackageStructure(parent)
-    {
-    }
+    using KPackage::PackageStructure::PackageStructure;
 
     void initPackage(KPackage::Package *package)
     {

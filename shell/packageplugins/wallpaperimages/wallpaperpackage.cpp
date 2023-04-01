@@ -18,10 +18,7 @@ class WallpaperPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
 public:
-    explicit WallpaperPackage(QObject *parent, const QVariantList &args)
-        : KPackage::PackageStructure(parent, args)
-    {
-    }
+    using KPackage::PackageStructure::PackageStructure;
 
     void initPackage(KPackage::Package *package) override
     {

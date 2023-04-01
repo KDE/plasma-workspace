@@ -12,9 +12,7 @@ class QmlWallpaperPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
 public:
-    explicit QmlWallpaperPackage(QObject *, const QVariantList &)
-    {
-    }
+    using KPackage::PackageStructure::PackageStructure;
 
     void initPackage(KPackage::Package *package)
     {

@@ -14,9 +14,8 @@ class LookAndFeelPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
 public:
-    LookAndFeelPackage(QObject *, const QVariantList &)
-    {
-    }
+    using KPackage::PackageStructure::PackageStructure;
+
     void initPackage(KPackage::Package *package)
     {
         // https://community.kde.org/Plasma/lookAndFeelPackage#
