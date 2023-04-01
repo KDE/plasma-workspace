@@ -5,7 +5,6 @@
 */
 
 #include "shellpackage.h"
-#include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
 #include <QDebug>
@@ -23,10 +22,10 @@ void ShellPackage::initPackage(KPackage::Package *package)
     package->setDefaultPackageRoot(QStringLiteral("plasma/shells/"));
 
     // Directories
-    package->addDirectoryDefinition("applet", QStringLiteral("applet"), i18n("Applets furniture"));
-    package->addDirectoryDefinition("configuration", QStringLiteral("configuration"), i18n("Applets furniture"));
-    package->addDirectoryDefinition("explorer", QStringLiteral("explorer"), i18n("Explorer UI for adding widgets"));
-    package->addDirectoryDefinition("views", QStringLiteral("views"), i18n("User interface for the views that will show containments"));
+    package->addDirectoryDefinition("applet", QStringLiteral("applet"));
+    package->addDirectoryDefinition("configuration", QStringLiteral("configuration"));
+    package->addDirectoryDefinition("explorer", QStringLiteral("explorer"));
+    package->addDirectoryDefinition("views", QStringLiteral("views"));
 
     package->setMimeTypes("applet", QStringList() << QStringLiteral("text/x-qml"));
     package->setMimeTypes("configuration", QStringList() << QStringLiteral("text/x-qml"));
@@ -34,40 +33,27 @@ void ShellPackage::initPackage(KPackage::Package *package)
 
     // Files
     // Default layout
-    package->addFileDefinition("defaultlayout", QStringLiteral("layout.js"), i18n("Default layout file"));
-    package->addFileDefinition("defaults", QStringLiteral("defaults"), i18n("Default plugins for containments, containmentActions, etc."));
+    package->addFileDefinition("defaultlayout", QStringLiteral("layout.js"));
+    package->addFileDefinition("defaults", QStringLiteral("defaults"));
     package->setMimeTypes("defaultlayout", QStringList() << QStringLiteral("application/javascript") << QStringLiteral("text/javascript"));
     package->setMimeTypes("defaults", QStringList() << QStringLiteral("text/plain"));
 
     // Applet furniture
-    package->addFileDefinition("appleterror", QStringLiteral("applet/AppletError.qml"), i18n("Error message shown when an applet fails to load"));
-    package->addFileDefinition("compactapplet", QStringLiteral("applet/CompactApplet.qml"), i18n("QML component that shows an applet in a popup"));
-    package->addFileDefinition(
-        "defaultcompactrepresentation",
-        QStringLiteral("applet/DefaultCompactRepresentation.qml"),
-        i18n("Compact representation of an applet when collapsed in a popup, for instance as an icon. Applets can override this component."));
+    package->addFileDefinition("appleterror", QStringLiteral("applet/AppletError.qml"));
+    package->addFileDefinition("compactapplet", QStringLiteral("applet/CompactApplet.qml"));
+    package->addFileDefinition("defaultcompactrepresentation", QStringLiteral("applet/DefaultCompactRepresentation.qml"));
 
     // Configuration
-    package->addFileDefinition("appletconfigurationui",
-                               QStringLiteral("configuration/AppletConfiguration.qml"),
-                               i18n("QML component for the configuration dialog for applets"));
-    package->addFileDefinition("containmentconfigurationui",
-                               QStringLiteral("configuration/ContainmentConfiguration.qml"),
-                               i18n("QML component for the configuration dialog for containments"));
-    package->addFileDefinition("panelconfigurationui", QStringLiteral("configuration/PanelConfiguration.qml"), i18n("Panel configuration UI"));
-    package->addFileDefinition("appletalternativesui",
-                               QStringLiteral("explorer/AppletAlternatives.qml"),
-                               i18n("QML component for choosing an alternate applet"));
-    package->addFileDefinition("containmentmanagementui",
-                               QStringLiteral("configuration/ShellContainmentConfiguration.qml"),
-                               i18n("QML component for the configuration dialog of containments"));
+    package->addFileDefinition("appletconfigurationui", QStringLiteral("configuration/AppletConfiguration.qml"));
+    package->addFileDefinition("containmentconfigurationui", QStringLiteral("configuration/ContainmentConfiguration.qml"));
+    package->addFileDefinition("panelconfigurationui", QStringLiteral("configuration/PanelConfiguration.qml"));
+    package->addFileDefinition("appletalternativesui", QStringLiteral("explorer/AppletAlternatives.qml"));
+    package->addFileDefinition("containmentmanagementui", QStringLiteral("configuration/ShellContainmentConfiguration.qml"));
 
     // Widget explorer
-    package->addFileDefinition("widgetexplorer", QStringLiteral("explorer/WidgetExplorer.qml"), i18n("Widgets explorer UI"));
+    package->addFileDefinition("widgetexplorer", QStringLiteral("explorer/WidgetExplorer.qml"));
 
-    package->addFileDefinition("interactiveconsole",
-                               QStringLiteral("InteractiveConsole.qml"),
-                               i18n("A UI for writing, loading and running desktop scripts in the current live session"));
+    package->addFileDefinition("interactiveconsole", QStringLiteral("InteractiveConsole.qml"));
 }
 
 void ShellPackage::pathChanged(KPackage::Package *package)

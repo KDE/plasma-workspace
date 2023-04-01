@@ -7,12 +7,10 @@
 
 #include "layouttemplate.h"
 
-#include <KLocalizedString>
-
 void LayoutTemplatePackage::initPackage(KPackage::Package *package)
 {
     package->setDefaultPackageRoot(QStringLiteral("plasma/layout-templates/"));
-    package->addFileDefinition("mainscript", QStringLiteral("layout.js"), i18n("Main Script File"));
+    package->addFileDefinition("mainscript", QStringLiteral("layout.js"));
     package->setRequired("mainscript", true);
 }
 

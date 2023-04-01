@@ -10,8 +10,6 @@
 #include <QDir>
 #include <QFileInfo>
 
-#include <klocalizedstring.h>
-
 WallpaperPackage::WallpaperPackage(QObject *parent, const QVariantList &args)
     : KPackage::PackageStructure(parent, args)
 {
@@ -19,10 +17,8 @@ WallpaperPackage::WallpaperPackage(QObject *parent, const QVariantList &args)
 
 void WallpaperPackage::initPackage(KPackage::Package *package)
 {
-    package->addDirectoryDefinition("images", QStringLiteral("images/"), i18n("Images"));
-    package->addDirectoryDefinition(QByteArrayLiteral("images_dark"),
-                                    QStringLiteral("images_dark%1").arg(QDir::separator()),
-                                    i18n("Images for dark color scheme"));
+    package->addDirectoryDefinition("images", QStringLiteral("images/"));
+    package->addDirectoryDefinition(QByteArrayLiteral("images_dark"), QStringLiteral("images_dark%1").arg(QDir::separator()));
 
     QStringList mimetypes;
     mimetypes << QStringLiteral("image/avif") //
@@ -40,7 +36,7 @@ void WallpaperPackage::initPackage(KPackage::Package *package)
 
     package->setRequired("images", true);
     package->setRequired(QByteArrayLiteral("images_dark"), false);
-    package->addFileDefinition("screenshot", QStringLiteral("screenshot.png"), i18n("Screenshot"));
+    package->addFileDefinition("screenshot", QStringLiteral("screenshot.png"));
     package->setAllowExternalPaths(true);
 }
 
@@ -71,9 +67,9 @@ void WallpaperPackage::pathChanged(KPackage::Package *package)
     if (isFullPackage) {
         package->setContentsPrefixPaths(QStringList() << QStringLiteral("contents/"));
     } else {
-        package->addFileDefinition("screenshot", info.fileName(), i18n("Preview"));
-        package->addFileDefinition("preferred", info.fileName(), QString());
-        package->addFileDefinition(QByteArrayLiteral("preferredDark"), info.fileName(), QString());
+        package->addFileDefinition("screenshot", info.fileName());
+        package->addFileDefinition("preferred", info.fileName());
+        package->addFileDefinition(QByteArrayLiteral("preferredDark"), info.fileName());
         package->setContentsPrefixPaths(QStringList());
         package->setPath(info.path());
     }
