@@ -359,34 +359,40 @@ QPixmap IconModule::getBestIcon(KIconTheme &theme, const QStringList &iconNames,
         KIconTheme theme(themeName);
 
         for (const QString &iconName : iconNames) {
-            QString path = theme.iconPath(QStringLiteral("%1.png").arg(iconName), iconSize, KIconLoader::MatchBest);
-            if (!path.isEmpty()) {
-                QPixmap pixmap(path);
+            const QString pixmapPath = theme.iconPath(QStringLiteral("%1.png").arg(iconName), iconSize, KIconLoader::MatchBest);
+            QPixmap pixmap(pixmapPath);
+            if (!pixmap.isNull()) {
                 pixmap.setDevicePixelRatio(dpr);
-                return pixmap;
+                if (pixmap.width() >= iconSize && pixmap.height() >= iconSize) {
+                    return pixmap;
+                }
             }
 
             // could not find the .png, try loading the .svg or .svgz
-            path = theme.iconPath(QStringLiteral("%1.svg").arg(iconName), iconSize, KIconLoader::MatchBest);
-            if (path.isEmpty()) {
-                path = theme.iconPath(QStringLiteral("%1.svgz").arg(iconName), iconSize, KIconLoader::MatchBest);
+            QString scalablePath = theme.iconPath(QStringLiteral("%1.svg").arg(iconName), iconSize, KIconLoader::MatchBest);
+            if (scalablePath.isEmpty()) {
+                scalablePath = theme.iconPath(QStringLiteral("%1.svgz").arg(iconName), iconSize, KIconLoader::MatchBest);
             }
 
-            if (path.isEmpty()) {
+            if (scalablePath.isEmpty()) {
+                if (!pixmap.isNull()) {
+                    return pixmap;
+                }
+
                 continue;
             }
 
-            if (!renderer.load(path)) {
+            if (!renderer.load(scalablePath)) {
                 continue;
             }
 
-            QPixmap pixmap(iconSize, iconSize);
-            pixmap.setDevicePixelRatio(dpr);
-            pixmap.fill(QColor(Qt::transparent));
-            QPainter p(&pixmap);
+            QPixmap svgPixmap(iconSize, iconSize);
+            svgPixmap.setDevicePixelRatio(dpr);
+            svgPixmap.fill(QColor(Qt::transparent));
+            QPainter p(&svgPixmap);
             p.setViewport(0, 0, size, size);
             renderer.render(&p);
-            return pixmap;
+            return svgPixmap;
         }
     }
 
