@@ -61,8 +61,7 @@ public:
     bool sortRowInsertQueueStale = false;
     std::shared_ptr<VirtualDesktopInfo> virtualDesktopInfo;
     QHash<QString, int> activityTaskCounts;
-    static ActivityInfo *activityInfo;
-    static int activityInfoUsers;
+    std::shared_ptr<ActivityInfo> activityInfo;
 
     bool groupInline = false;
     int groupingWindowTasksThreshold = -1;
@@ -111,8 +110,6 @@ private:
 int TasksModel::Private::instanceCount = 0;
 WindowTasksModel *TasksModel::Private::windowTasksModel = nullptr;
 StartupTasksModel *TasksModel::Private::startupTasksModel = nullptr;
-ActivityInfo *TasksModel::Private::activityInfo = nullptr;
-int TasksModel::Private::activityInfoUsers = 0;
 
 TasksModel::Private::Private(TasksModel *q)
     : q(q)
@@ -124,17 +121,11 @@ TasksModel::Private::~Private()
 {
     --instanceCount;
 
-    if (sortMode == SortActivity) {
-        --activityInfoUsers;
-    }
-
     if (!instanceCount) {
         delete windowTasksModel;
         windowTasksModel = nullptr;
         delete startupTasksModel;
         startupTasksModel = nullptr;
-        delete activityInfo;
-        activityInfo = nullptr;
     }
 }
 
@@ -1210,21 +1201,12 @@ void TasksModel::setSortMode(SortMode mode)
         }
 
         if (mode == SortActivity) {
-            if (!d->activityInfo) {
-                d->activityInfo = new ActivityInfo();
-            }
-
-            ++d->activityInfoUsers;
+            d->activityInfo = activityInfo();
 
             d->updateActivityTaskCounts();
             setSortRole(AbstractTasksModel::Activities);
         } else if (d->sortMode == SortActivity) {
-            --d->activityInfoUsers;
-
-            if (!d->activityInfoUsers) {
-                delete d->activityInfo;
-                d->activityInfo = nullptr;
-            }
+            d->activityInfo = nullptr;
 
             d->activityTaskCounts.clear();
             setSortRole(Qt::DisplayRole);
@@ -2033,5 +2015,16 @@ std::shared_ptr<VirtualDesktopInfo> TasksModel::virtualDesktopInfo() const
         return ptr;
     }
     return s_virtualDesktopInfo.lock();
+}
+
+std::shared_ptr<ActivityInfo> TasksModel::activityInfo() const
+{
+    static std::weak_ptr<ActivityInfo> s_activityInfo;
+    if (s_activityInfo.expired()) {
+        auto ptr = std::make_shared<ActivityInfo>();
+        s_activityInfo = ptr;
+        return ptr;
+    }
+    return s_activityInfo.lock();
 }
 }

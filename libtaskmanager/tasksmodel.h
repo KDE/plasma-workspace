@@ -17,6 +17,7 @@
 
 namespace TaskManager
 {
+class ActivityInfo;
 class VirtualDesktopInfo;
 
 /**
@@ -931,6 +932,11 @@ protected:
      * @return a shared pointer to VirtualDesktopInfo to access virtual desktop information
      */
     std::shared_ptr<VirtualDesktopInfo> virtualDesktopInfo() const;
+
+    /**
+     * @return a shared pointer to ActivityInfo to access activity information
+     */
+    std::shared_ptr<ActivityInfo> activityInfo() const;
 
 private:
     Q_INVOKABLE void updateLauncherCount();
