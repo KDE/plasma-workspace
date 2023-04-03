@@ -315,6 +315,10 @@ set_package_properties(KIOFuse PROPERTIES DESCRIPTION "Provide KIO support to le
                                       TYPE RUNTIME
                                       )
 
+if(Qt6WaylandClient_VERSION VERSION_LESS "6.6.0")
+    pkg_check_modules(XKBCOMMON xkbcommon REQUIRED IMPORTED_TARGET)
+endif()
+
 # Clipboard applet
 ecm_find_qmlmodule(org.kde.prison 1.0)
 
@@ -396,6 +400,10 @@ add_subdirectory(menu)
 add_subdirectory(phonon)
 
 add_subdirectory(interactiveconsole)
+
+if(Qt6WaylandClient_VERSION VERSION_LESS "6.6.0")
+    add_subdirectory(qtwayland-integration)
+endif()
 
 # This ensures pressing the eject button on a CD drive ejects the disc
 # It listens to the Solid::OpticalDrive::ejectPressed signal that is only
