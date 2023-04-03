@@ -16,7 +16,7 @@ AbstractModel::~AbstractModel()
 {
 }
 
-QHash<int, QByteArray> AbstractModel::roleNames() const
+QHash<int, QByteArray> AbstractModel::staticRoleNames()
 {
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");

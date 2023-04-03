@@ -43,7 +43,10 @@ public:
 
     void setMatches(const QList<KRunner::QueryMatch> &matches);
 
-    // AbstractModel *favoritesModel() override;
+    QHash<int, QByteArray> roleNames() const override
+    {
+        return AbstractModel::staticRoleNames();
+    }
 
     Q_SIGNAL void requestUpdateQueryString(const QString &term);
 

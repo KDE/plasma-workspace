@@ -30,7 +30,11 @@ public:
     explicit AbstractModel(QObject *parent = nullptr);
     ~AbstractModel() override;
 
-    QHash<int, QByteArray> roleNames() const override;
+    static QHash<int, QByteArray> staticRoleNames();
+    QHash<int, QByteArray> roleNames() const override
+    {
+        return staticRoleNames();
+    }
 
     virtual QString description() const = 0;
 

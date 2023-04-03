@@ -45,12 +45,10 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
 
 QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= rowCount()) {
+    KRunner::QueryMatch match = getQueryMatch(index);
+    if (!match.isValid()) {
         return QVariant();
     }
-
-    KRunner::QueryMatch match = runnerManager()->matches().at(index.row());
-    qWarning() << Q_FUNC_INFO << index << role;
 
     // Since we have different enums than the KRunner model, we have to implement reading all the data manually
     if (role == Qt::DisplayRole) {
