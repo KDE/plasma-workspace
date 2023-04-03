@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 02:44+0000\n"
-"PO-Revision-Date: 2023-01-20 20:48+0100\n"
+"PO-Revision-Date: 2023-04-02 15:22+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:19
@@ -270,6 +270,9 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
+"Tip: ak často cestujete, pridajte do tohto zoznamu ďalšiu položku pre svoje "
+"domáce časové pásmo. Zobrazí sa len vtedy, keď zmeníte systémové časové "
+"pásmo na iné."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -283,7 +286,7 @@ msgctxt ""
 "local time zone's city, and will be hidden in the timezone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Skryté, keď je toto mesto mestom miestneho časového pásma"
 
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
