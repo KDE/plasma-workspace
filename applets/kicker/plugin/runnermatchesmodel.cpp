@@ -29,19 +29,12 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
     } else {
         Q_ASSERT(!runnerId.isEmpty());
         const KPluginMetaData data(QLatin1String("kf6/krunner/") + runnerId);
-        runnerManager()->loadRunner(data);
-        auto runner = runnerManager()->runner(runnerId);
-        if (runner) { // Should ever be false if the runnerId does not exist or the plugin could not be loaded
+        if (auto runner = runnerManager()->loadRunner(data)) {
             m_name = runner->name();
         }
     }
     connect(runnerManager(), &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
 }
-
-/*QString RunnerMatchesModel::description() const
-{
-    return m_name;
-}*/
 
 QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 {
