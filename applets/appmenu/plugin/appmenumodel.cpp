@@ -97,9 +97,9 @@ AppMenuModel::AppMenuModel(QObject *parent)
         connect(searchBar, &QLineEdit::textChanged, [=]() mutable {
             insertSearchActionsIntoMenu(searchBar->text());
         });
-        connect(searchBar, &QLineEdit::returnPressed, [=]() mutable {
-            if (m_currentSearchActions.first()) {
-                m_currentSearchActions.first()->trigger();
+        connect(searchBar, &QLineEdit::returnPressed, [this]() mutable {
+            if (!m_currentSearchActions.empty()) {
+                m_currentSearchActions.constFirst()->trigger();
             }
         });
         connect(this, &AppMenuModel::modelNeedsUpdate, this, [this, searchBar]() mutable {
@@ -295,6 +295,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
     QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
     connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=](QMenu *menu) {
+
         m_menu = m_importer->menu();
         if (m_menu.isNull() || menu != m_menu) {
             return;
