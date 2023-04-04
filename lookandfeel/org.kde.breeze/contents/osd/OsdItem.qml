@@ -63,7 +63,7 @@ RowLayout {
     // to the maximum width to avoid the progress bad resizing itself
     TextMetrics {
         id: widestLabelSize
-        text: i18n("100%")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "100%")
         font: percentageLabel.font
     }
 
@@ -77,7 +77,7 @@ RowLayout {
         level: 3
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        text: i18nc("Percentage value", "%1%", progressBar.value)
+        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Percentage value", "%1%", progressBar.value)
         visible: showingProgress
         // Display a subtle visual indication that the volume might be
         // dangerously high
