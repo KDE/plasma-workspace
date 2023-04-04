@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2023-03-04 18:08+0200\n"
+"PO-Revision-Date: 2023-03-13 22:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,25 +15,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
+# Tähän on hyvä lisätä ”yksiköt”, koska tämä näkyy myös kielivalinnassa sellaisenaan omalla rivillään lukumuotojen ja päivämäärä- ja kellonaikamuotojen välissä.
 #: exampleutility.cpp:29
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr "Anglosaksiset (Britannia)"
+msgstr "Anglosaksiset yksiköt (Britannia)"
 
+# Tähän on hyvä lisätä ”yksiköt”, koska tämä näkyy myös kielivalinnassa sellaisenaan omalla rivillään lukumuotojen ja päivämäärä- ja kellonaikamuotojen välissä.
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr "Anglosaksiset (Yhdysvallat)"
+msgstr "Anglosaksiset yksiköt (Yhdysvallat)"
 
+# Tähän on hyvä lisätä ”yksiköt”, koska tämä näkyy myös kielivalinnassa sellaisenaan omalla rivillään lukumuotojen ja päivämäärä- ja kellonaikamuotojen välissä.
 #: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
-msgstr "Metriset"
+msgstr "Metriset yksiköt"
 
 #: exampleutility.cpp:47
 #, kde-format
@@ -47,6 +50,7 @@ msgctxt "PaperSize combobox"
 msgid "A4"
 msgstr "A4"
 
+# Tämä tulee omalle rivilleen eikä sitä ilmeisesti voi muuttaa.
 #: exampleutility.cpp:64
 #, kde-format
 msgctxt "Care of person or organization"
@@ -75,13 +79,13 @@ msgstr "Päärakennus"
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr "Pääkatu"
+msgstr "Hämeenkatu"
 
 #: exampleutility.cpp:69
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr "A-talo"
+msgstr "A-rakennus"
 
 #: exampleutility.cpp:71
 #, kde-format
@@ -89,11 +93,12 @@ msgctxt "Whitespace field for locale address style example"
 msgid " "
 msgstr " "
 
+# Tämän pitää olla pienellä, koska tulee ”3. kerroksen” jatkoksi välimerkeittä.
 #: exampleutility.cpp:72
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr "Huone 2"
+msgstr "huone 2"
 
 #: exampleutility.cpp:73
 #, kde-format
@@ -111,8 +116,9 @@ msgstr "Keskusta"
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr "12345"
+msgstr "FI-12345"
 
+# Tämä tulee valitettavasti postinumeron JÄLKEEN, eikä sitä voi muuttaa.
 #: exampleutility.cpp:77
 #, kde-format
 msgctxt "Town or city"
@@ -147,7 +153,7 @@ msgstr "Etunimi"
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr "E"
+msgstr "E."
 
 #: exampleutility.cpp:95
 #, kde-format
@@ -171,7 +177,7 @@ msgstr "Lisänimi"
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "L"
+msgstr "L."
 
 #: exampleutility.cpp:99
 #, kde-format

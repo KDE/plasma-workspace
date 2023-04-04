@@ -1,6 +1,6 @@
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kde-workspace package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-26 02:32+0000\n"
-"PO-Revision-Date: 2022-11-11 22:26+0200\n"
+"PO-Revision-Date: 2023-03-29 09:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -87,35 +87,41 @@ msgstr "Valitse kaikki"
 msgid "Do not disturb"
 msgstr "Älä häiritse"
 
+# Jostakin syystä ainakaan 5.27.x ei näytä valintaruudun ponnahdusvalikossa alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "For 1 hour"
-msgstr "yhteen tuntiin"
+msgstr "Älä häiritse tuntiin"
 
+# Jostakin syystä ainakaan 5.27.x ei ilmoitusaluekuvakkeen valintaruudun ponnahdusvalikossa näytä alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:120
 #, kde-format
 msgid "For 4 hours"
-msgstr "neljään tuntiin"
+msgstr "Älä häiritse neljään tuntiin"
 
+# Jostakin syystä ainakaan 5.27.x ei ilmoitusaluekuvakkeen valintaruudun ponnahdusvalikossa näytä alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:129
 #, kde-format
 msgid "Until this evening"
-msgstr "ennen iltaa"
+msgstr "Älä häiritse ennen iltaa"
 
+# Jostakin syystä ainakaan 5.27.x ei ilmoitusaluekuvakkeen valintaruudun ponnahdusvalikossa näytä alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until tomorrow morning"
-msgstr "ennen huomisaamua"
+msgstr "Älä häiritse ennen aamua"
 
+# Jostakin syystä ainakaan 5.27.x ei ilmoitusaluekuvakkeen valintaruudun ponnahdusvalikossa näytä alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:151
 #, kde-format
 msgid "Until Monday"
-msgstr "ennen maanantaita"
+msgstr "Älä häiritse ennen maanantaita"
 
+# Jostakin syystä ainakaan 5.27.x ei näytä valintaruudun ponnahdusvalikossa alkua ”Älä häiritse”, jolloin nämä viestit jäävät arvoituksellisiksi.
 #: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "Until manually disabled"
-msgstr "Kunnes käyttäjä poistaa käytöstä"
+msgstr "Älä häiritse ennen kuin poistetaan käytöstä"
 
 #: package/contents/ui/FullRepresentation.qml:205
 #, kde-format
