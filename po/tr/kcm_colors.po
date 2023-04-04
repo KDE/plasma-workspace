@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-03-26 19:53+0300\n"
+"PO-Revision-Date: 2023-04-04 00:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -733,7 +733,7 @@ msgstr "Devre dışı renk efekti türü"
 #, kde-format
 msgctxt "no disabled color effect"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:46
@@ -767,7 +767,7 @@ msgstr "Devre dışı yoğunluk efekti türü"
 #, kde-format
 msgctxt "no disabled intensity effect"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:73
@@ -825,7 +825,7 @@ msgstr "Devre dışı karşıtlık türü"
 #, kde-format
 msgctxt "no disabled contrast"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:190

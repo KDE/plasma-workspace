@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-03-27 18:58+0300\n"
+"PO-Revision-Date: 2023-04-04 00:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -85,7 +85,7 @@ msgstr "Satıcı öntanımlısı"
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #: kxftconfig.cpp:462
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Orta"
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #: kxftconfig.cpp:502
 #, kde-format

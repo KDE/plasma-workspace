@@ -8,7 +8,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Joonas Niilola <juippis@roskakori.org>, 2006.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2018, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2018, 2020, 2021, 2023.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2011.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015.
 #
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2021-07-22 13:44+0300\n"
+"PO-Revision-Date: 2023-04-02 17:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:27+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -52,6 +52,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Ei kirjoitusoikeutta $HOME-kansioon (%1). Jos näin on tarkoitus, aseta "
+"ympäristömuuttuja <envar>KDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:91
 #, kde-format
@@ -163,12 +165,12 @@ msgstr "Kirjaudu ulos"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Sammuta"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Käynnistä uudelleen"
 
 #: server.cpp:905
 #, kde-format
@@ -176,8 +178,7 @@ msgid "Log Out Without Confirmation"
 msgstr "Kirjaudu kyselemättä ulos"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Sammuta kyselemättä"
 
