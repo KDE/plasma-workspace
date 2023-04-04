@@ -43,7 +43,6 @@
 #include <X11/Xlib.h>
 
 #include <QFileInfo>
-#include <updatelaunchenvjob.h>
 
 #ifdef HAVE_XCURSOR
 #include "../cursortheme/xcursor/xcursortheme.h"
@@ -443,8 +442,6 @@ void KCMLookandFeel::cursorsChanged(const QString &themeName)
     if (!CursorTheme::haveXfixes()) {
         return;
     }
-
-    UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_THEME"), themeName);
 
     // Update the Xcursor X resources
     runRdb(0);

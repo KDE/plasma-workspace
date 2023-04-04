@@ -10,8 +10,6 @@
 
 #include "../../krdb/krdb.h"
 
-#include <updatelaunchenvjob.h>
-
 #include <QFile>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
@@ -33,11 +31,6 @@ bool applyTheme(const CursorTheme *theme, const int size)
     if (!theme) {
         return false;
     }
-
-    QByteArray themeName = QFile::encodeName(theme->name());
-
-    // Set up the proper launch environment for newly started apps
-    UpdateLaunchEnvJob launchEnvJob(QStringLiteral("XCURSOR_THEME"), themeName);
 
     // Update the Xcursor X resources
     runRdb(0);
