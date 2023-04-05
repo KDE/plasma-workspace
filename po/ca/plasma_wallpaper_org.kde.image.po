@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 11:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -176,11 +176,6 @@ msgstr ""
 "El fitxer passat per a definir com a fons de pantalla no existeix, o no s'ha "
 "pogut identificar com a fons de pantalla: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Fitxer de fons de pantalla recomanat"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -320,3 +315,6 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Hi ha hagut un error en intentar obrir el fitxer de configuració "
 "«kscreenlockerrc»."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Fitxer de fons de pantalla recomanat"

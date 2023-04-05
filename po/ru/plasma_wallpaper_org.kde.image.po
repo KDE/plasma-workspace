@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 18:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -177,11 +177,6 @@ msgstr ""
 "Файл, который был указан в качестве фона рабочего стола, не существует или "
 "не не может быть использован в качестве обоев рабочего стола: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Рекомендованные обои"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -325,6 +320,9 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Не удалось открыть файл конфигурации kscreenlockerrc."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Рекомендованные обои"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "В слайд-шоу не добавлены ни одни обои"

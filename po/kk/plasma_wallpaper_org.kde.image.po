@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2013-09-26 05:29+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -164,11 +164,6 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Лайық түсқағаз файлы"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -309,6 +304,9 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Лайық түсқағаз файлы"
 
 #, fuzzy
 #~| msgid "Use system-installed wallpapers in slideshow"

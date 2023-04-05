@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2021-09-28 14:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -169,11 +169,6 @@ msgstr ""
 "A háttérképként használni kívánt fájl nem létezik, vagy nem azonosítható "
 "háttérképként: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Ajánlott háttérképfájl"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -312,6 +307,9 @@ msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Ajánlott háttérképfájl"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Nincsenek háttérképek ebben a diavetítésben"

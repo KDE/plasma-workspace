@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2015-02-04 14:28+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -169,11 +169,6 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Preporučena datoteka pozadinske slike"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -318,6 +313,9 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Preporučena datoteka pozadinske slike"
 
 #, fuzzy
 #~| msgid "Remove wallpaper"

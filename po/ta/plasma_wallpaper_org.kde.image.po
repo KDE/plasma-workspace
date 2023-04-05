@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2022-05-24 21:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -161,11 +161,6 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr "பின்புல படமாக நீங்கள் குறிப்பிட்ட கோப்பு இல்லை, அல்லது அக்கோப்பு ஓர் படம் இல்லை: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "பரிந்துரைக்கப்படும் பின்னணிப் படம்"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -304,6 +299,9 @@ msgstr "பிளாஸ்மாவுக்கான பின்புல ப�
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "பிளாஸ்மாவுக்கான பின்புல படத்தை அமைக்கும்போது சிக்கல் ஏற்பட்டது:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "பரிந்துரைக்கப்படும் பின்னணிப் படம்"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "இந்த வில்லைக்காட்சியில் பின்புல படங்கள் ஏதுமில்லை"

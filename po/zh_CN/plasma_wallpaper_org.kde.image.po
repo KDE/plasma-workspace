@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -160,11 +160,6 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr "要设为壁纸的文件不存在，或者无法识别为壁纸：%1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "推荐的壁纸文件"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -297,3 +292,6 @@ msgstr "尝试设置 Plasma 壁纸时出错：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "尝试打开 kscreenlockerrc 配置文件时出错。"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "推荐的壁纸文件"

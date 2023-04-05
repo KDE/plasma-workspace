@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 07:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -164,11 +164,6 @@ msgstr ""
 "ფაილი, რომელიც ფონურ სურათად დასაყენებლად გადაეცით, ან არ არსებობს, ან ვერ "
 "აღვიქვამ, როგორც ფონურ სურათს: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "ფონის რეკომენდებული სურათი"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -304,3 +299,6 @@ msgstr "შეცდომა Plasma-ის ფონის სურათი�
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "შეცდომა kscreenlockerrc-ის გახსნის მცდელობისას."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "ფონის რეკომენდებული სურათი"

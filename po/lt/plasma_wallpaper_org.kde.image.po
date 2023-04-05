@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2022-11-18 00:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -173,11 +173,6 @@ msgstr ""
 "Failo, kuris buvo perduotas, kad būtų nustatytas darbalaukio fonu, nėra, "
 "arba nepavyksta jo atpažinti kaip darbalaukio fono: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Rekomenduojamas darbalaukio fono failas"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -322,6 +317,9 @@ msgstr "Bandant nustatyti Plasma darbalaukio foną, įvyko klaida:\n"
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Bandant nustatyti Plasma darbalaukio foną, įvyko klaida:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Rekomenduojamas darbalaukio fono failas"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Šiame skaidrių rodyme nėra jokių paveikslų"

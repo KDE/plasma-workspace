@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2022-05-22 10:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr ""
 "Filen som skickades för att användas som skrivbordsunderlägg finns inte, "
 "eller kan inte identifieras som ett skrivbordsunderlägg: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Rekommenderat skrivbordsunderlägg"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -316,6 +311,9 @@ msgstr ""
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Ett fel uppstod vid försök att ställa in Plasma-skrivbordsunderlägget:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Rekommenderat skrivbordsunderlägg"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Det finns inga skrivbordsunderlägg i bildspelet"

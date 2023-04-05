@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-27 19:11+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -165,11 +165,6 @@ msgstr ""
 "الملف الذي تم تمريره ليتم تعيينه كخلفية غير موجود ، أو لا يمكننا تحديده "
 "كخلفية: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "ملف الخلفيّة المستحسن"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -317,6 +312,9 @@ msgstr "حدث خطأ أثناء محاولة تعيين خلفية البلاز
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "حدث خطأ في أثناء محاولة فتح ملف ضبط kscreenlockerrc."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "ملف الخلفيّة المستحسن"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "لا توجد خلفيات في عرض الشرائح هذا"

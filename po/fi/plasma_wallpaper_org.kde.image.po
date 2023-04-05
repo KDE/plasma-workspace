@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-03-04 18:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr ""
 "Taustakuvaksi asetettavaa tiedostoa ei löydy tai sitä ei voida tunnistaa "
 "taustakuvaksi: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Suositeltu taustakuvatiedosto"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -313,6 +308,9 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Yritettäessä avata kscreenlockerrc-asetustiedostoa tapahtui virhe."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Suositeltu taustakuvatiedosto"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Tässä diaesityksessä ei ole taustakuvia"

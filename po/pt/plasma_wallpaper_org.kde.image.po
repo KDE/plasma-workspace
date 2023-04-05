@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2022-05-23 03:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -170,11 +170,6 @@ msgstr ""
 "O ficheiro passado para ser atribuído como papel de parede não existe, ou "
 "então não é possível identificá-lo como um papel de parede: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Ficheiro recomendado de papel de parede"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -313,6 +308,9 @@ msgstr "Ocorreu um erro ao tentar atribuir o papel de parede do Plasma:\n"
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Ocorreu um erro ao tentar atribuir o papel de parede do Plasma:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Ficheiro recomendado de papel de parede"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Não existem papéis de parede nesta apresentação"

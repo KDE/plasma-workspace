@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 11:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr ""
 "Duvar kağıdı olarak ayarlanmak istenen dosya yok veya onu duvar kağıdı "
 "olarak tanımlayamıyoruz: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Önerilen duvar kağıdı dosyası"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -312,6 +307,9 @@ msgstr "Plasma duvar kağıdını ayarlamaya çalışırken bir hata oluştu:<nl
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "kscreenlockerrc yapılandırma dosyasını açmaya çalışırken bir hata oluştu."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Önerilen duvar kağıdı dosyası"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Bu slayt gösterisinde duvar kağıdı yok"

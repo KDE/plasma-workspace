@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-01-10 11:45+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -164,11 +164,6 @@ msgstr ""
 "Súbor odovzdaný na nastavenie ako tapety neexistuje, alebo ho nemôžeme "
 "identifikovať ako tapetu: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Odporúčaný súbor tapety"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -310,6 +305,9 @@ msgstr "Pri pokuse o nastavenie Plasma tapety sa vyskytla chyba:\n"
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Pri pokuse o nastavenie Plasma tapety sa vyskytla chyba:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Odporúčaný súbor tapety"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "V tejto prezentácií nie sú žiadne pozadia"

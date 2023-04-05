@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -167,11 +167,6 @@ msgstr ""
 "Divar kağızı kimi quraşdırılmağa ayrılan fayl mövcud deyil və ya biz onu "
 "divar kağızı faylı kimi tanıya bilmədik: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Tövsiyyə olunan divar kağızı faylı"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -308,6 +303,9 @@ msgstr "Plasma divar kağızı təyin edərkən xəta baş verdi:<nl/>%1"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "\"kscreenlockerrc\" tənzimləmə faylını açmağa cəhd edərkən xəta baş verdi."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Tövsiyyə olunan divar kağızı faylı"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Bu slaydda divar kağızları yoxdur"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 09:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -173,11 +173,6 @@ msgstr ""
 "Файла, вказаного як файл зображення тла, не існує або його не вдалося "
 "ідентифікувати як зображення тла: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Рекомендований файл зображення тла"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -321,6 +316,9 @@ msgstr ""
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Під час спроби відкрити файл налаштувань kscreenlockerrc сталася помилка."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Рекомендований файл зображення тла"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "У цьому показі слайдів немає зображень тла стільниці"

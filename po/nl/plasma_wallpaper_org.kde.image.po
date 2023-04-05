@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 18:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -173,11 +173,6 @@ msgstr ""
 "bestaat niet of we kunnen het niet identificeren als een "
 "achtergrondafbeelding: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Aanbevolen achtergrondbestand"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -317,6 +312,9 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Er deed zich een fout voor tijdens het openen van het configuratiebestand "
 "kscreenlockerrc."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Aanbevolen achtergrondbestand"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Er zijn geen achtergrondafbeeldingen in deze diashow"

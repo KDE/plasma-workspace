@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-22 21:31+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -169,11 +169,6 @@ msgstr ""
 "Oppgjeven fil for bakgrunnsbilete finst ikkje, eller så er ho ikkje ei "
 "biletfil: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Anbefalt bakgrunnsbilete"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -309,3 +304,6 @@ msgstr "Det oppstod ein feil ved val av bakgrunnsbilete for Plasma:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Det oppstod ein feil ved opning av oppsettfila «kscreenlockerrc»."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Anbefalt bakgrunnsbilete"

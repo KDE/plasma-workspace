@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2022-06-14 15:18+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -170,11 +170,6 @@ msgstr ""
 "File yang diloloskan untuk disetel sebagai wallpaper tidak berada, atau kita "
 "tidak bisa mengidentifikasinya sebagai wallpaper: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "File wallpaper yang direkomendasikan"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -313,6 +308,9 @@ msgstr "Sebuah galat terjadi ketika berupaya menyetel wallpaper Plasma:\n"
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Sebuah galat terjadi ketika berupaya menyetel wallpaper Plasma:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "File wallpaper yang direkomendasikan"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Tidak adanya wallpaper dalam salindia ini"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-03-11 08:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -167,11 +167,6 @@ msgstr ""
 "Datoteka, ki naj bi bila nastavljena za ozadje ali ne obstaja ali pa je ni "
 "mogoče prepoznati kot ozadje: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Priporočena datoteka za ozadje"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -314,6 +309,9 @@ msgstr "Prišlo je do napake pri poskusu nastavitve ozadja Plasme:<nl/>%1"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Prišlo je do napake pri poskusu odpiranja datoteke kscreenlockerrc config."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Priporočena datoteka za ozadje"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Ni slik ozadja v tej predstavi"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-02 21:48+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr ""
 "Die zur Verwendung als Hintergrundbild übergebene Datei existiert nicht oder "
 "wird nicht als Hintergrundbild erkannt: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Empfohlenes Hintergrundbild"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -318,6 +313,9 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Beim Versuch das Plasma-Hintergrundbildes festzulegen ist ein Fehler "
 "aufgetreten:\n"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Empfohlenes Hintergrundbild"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "Es gibt keine Hintergrundbilder in dieser Diaschau"

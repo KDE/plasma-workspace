@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -168,11 +168,6 @@ msgstr ""
 "वॉलपेपर के रूप में नियत करने के लिए दी गई फ़ाइल मौजूद नहीं है, या हम इसे वॉलपेपर के रूप में "
 "नहीं पहचान सकते: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "अनुशंसित वॉलपेपर फ़ाइल"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -309,6 +304,9 @@ msgstr "प्लाज्मा वॉलपेपर नियत करने
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc कॉन्फ़िग फ़ाइल खोलने का प्रयास करते समय एक त्रुटि उत्पन्न हुई।"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "अनुशंसित वॉलपेपर फ़ाइल"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "इस स्लाइड शो में कोई वॉलपेपर नहीं हैं"

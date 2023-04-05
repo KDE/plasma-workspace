@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-03-06 21:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -165,11 +165,6 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr "傳遞來要設成桌布的檔案不存在，或我們無法將其辨識為桌布：%1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "建議桌布檔案"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -302,6 +297,9 @@ msgstr "嘗試設定 Plasma 桌布時出錯：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "嘗試開啟 kscreenlockerrc 設定檔案時出錯。"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "建議桌布檔案"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "此投影播放中沒有桌布"

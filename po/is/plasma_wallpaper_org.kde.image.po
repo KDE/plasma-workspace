@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-03-16 20:45+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -169,11 +169,6 @@ msgstr ""
 "Skráin sem átti að velja sem veggfóður er ekki til, eða við getum ekki séð "
 "að hún geti verið veggfóður: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Veggfóðursskrá sem mælt er með"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -311,6 +306,9 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Óvænt villa kom upp þegar reynt var að opna kscreenlockerrc "
 "grunnstillingaskrá."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Veggfóðursskrá sem mælt er með"
 
 #, fuzzy
 #~| msgid "Get New Wallpapers..."

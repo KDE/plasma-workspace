@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 02:13+0000\n"
+"POT-Creation-Date: 2023-04-05 02:19+0000\n"
 "PO-Revision-Date: 2023-02-19 09:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -171,11 +171,6 @@ msgstr ""
 "El archivo usado para definir como fondo del escritorio no existe o no se ha "
 "podido identificar como un fondo de escritorio: %1"
 
-#: plugin/finder/packagefinder.cpp:148
-#, kde-format
-msgid "Recommended wallpaper file"
-msgstr "Archivo de fondo de escritorio recomendado"
-
 #: plugin/imagebackend.cpp:243
 #, kde-format
 msgid "Directory with the wallpaper to show slides from"
@@ -317,6 +312,9 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Ha ocurrido un error al intentar abrir el archivo de configuración "
 "«kscreenlockerrc»."
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Archivo de fondo de escritorio recomendado"
 
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "No existen fondos de escritorio en esta presentación"
