@@ -82,7 +82,7 @@ MouseArea {
     onWheel: {
         const service = mpris2Source.serviceForSource(mpris2Source.current)
         const operation = service.operationDescription("ChangeVolume")
-        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x
+        wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x)
         while (wheelDelta >= 120) {
             wheelDelta -= 120;
             operation.delta = volumePercentStep / 100;
