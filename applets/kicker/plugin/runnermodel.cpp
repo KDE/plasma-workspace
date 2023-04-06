@@ -162,6 +162,7 @@ void RunnerModel::setRunners(const QStringList &runners)
     // Update the existing models only, if we have intialized the models
     if (!m_models.isEmpty()) {
         if (m_mergeResults) {
+            Q_ASSERT(m_models.length() == 1);
             m_models.first()->runnerManager()->setAllowedRunners(runners);
         } else {
             // Just re-create all the models, it is an edge-case anyway
@@ -186,9 +187,7 @@ void RunnerModel::setQuery(const QString &query)
     }
     if (m_query != query) {
         m_query = query;
-
         m_queryTimer.start();
-
         Q_EMIT queryChanged();
     }
 }

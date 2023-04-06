@@ -11,6 +11,7 @@
 
 #include <QAction>
 #include <QIcon>
+#include <QPluginLoader>
 #include <QUrlQuery>
 
 #include <KIO/ApplicationLauncherJob>
@@ -28,9 +29,14 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
         m_name = name.value();
     } else {
         Q_ASSERT(!runnerId.isEmpty());
-        const KPluginMetaData data(QLatin1String("kf6/krunner/") + runnerId);
-        if (auto runner = runnerManager()->loadRunner(data)) {
-            m_name = runner->name();
+        runnerManager()->setAllowedRunners({runnerId});
+
+        const static auto availableRunners = KRunner::RunnerManager::runnerMetaDataList();
+        for (const KPluginMetaData &runner : availableRunners) {
+            if (runner.pluginId() == runnerId) {
+                auto instance = runnerManager()->loadRunner(runner);
+                m_name = instance ? instance->name() : QString();
+            }
         }
     }
     connect(runnerManager(), &KRunner::RunnerManager::requestUpdateQueryString, this, &RunnerMatchesModel::requestUpdateQueryString);
