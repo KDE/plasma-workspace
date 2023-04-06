@@ -125,7 +125,7 @@ void KSMServer::shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::Shutdo
                                 : confirm == KWorkSpace::ShutdownConfirmNo ? true
                                                                            : !cg.readEntry("confirmLogout", true));
 
-    int shutdownType = (sdtype != KWorkSpace::ShutdownTypeDefault ? sdtype : cg.readEntry("shutdownType", (int)KWorkSpace::ShutdownType::ShutdownTypeLogout));
+    int shutdownType = (sdtype != KWorkSpace::ShutdownTypeDefault ? sdtype : cg.readEntry("shutdownType", (int)KWorkSpace::ShutdownType::ShutdownTypeHalt));
 
     if (!logoutConfirmed) {
         OrgKdeLogoutPromptInterface logoutPrompt(QStringLiteral("org.kde.LogoutPrompt"), QStringLiteral("/LogoutPrompt"), QDBusConnection::sessionBus());
