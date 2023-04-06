@@ -365,14 +365,17 @@ void runRdb(uint flags)
     // Export the Xcursor theme & size settings
     KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), "Mouse");
     QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
-    QString size = mousecfg.readEntry("cursorSize", QStringLiteral("24"));
+    int cursorSize = mousecfg.readEntry("cursorSize", 24);
+
+    if (KWindowSystem::isPlatformWayland()) {
+        KConfig kwinConfig(QStringLiteral("kwinrc"));
+        KConfigGroup xwaylandGroup(&kwinConfig, "Xwayland");
+        cursorSize *= xwaylandGroup.readEntry("Scale", 1.0);
+    }
+
     QString contents;
-
-    if (!theme.isNull())
-        contents = "Xcursor.theme: " + theme + '\n';
-
-    if (!size.isNull())
-        contents += "Xcursor.size: " + size + '\n';
+    contents += "Xcursor.theme: " + theme + '\n';
+    contents += "Xcursor.size: " + QString::number(cursorSize) + '\n';
 
     if (exportXftSettings) {
         contents += QLatin1String("Xft.antialias: ");
