@@ -150,7 +150,12 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     }
 #endif
 
-    MathStructure result = CALCULATOR->calculate(ctext, eo);
+    constexpr int timeout = 10000;
+    MathStructure result;
+    if (!CALCULATOR->calculate(&result, ctext, timeout, eo)) {
+        // BUG 468084: stop libqalculate thread if timeout is reached
+        return {};
+    }
 
     PrintOptions po;
     po.base = base;
@@ -168,7 +173,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 
     result.format(po);
 
-    m_lastResult = result.print(po).c_str();
+    m_lastResult = QString::fromStdString(CALCULATOR->print(result, timeout, po));
 
     if (isApproximate) {
         *isApproximate = result.isApproximate();
