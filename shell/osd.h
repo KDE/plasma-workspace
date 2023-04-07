@@ -46,7 +46,7 @@ public Q_SLOTS:
     void showText(const QString &icon, const QString &text);
 
 Q_SIGNALS:
-    void osdProgress(const QString &icon, const int percent, const QString &additionalText);
+    void osdProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText);
     void osdText(const QString &icon, const QString &text);
 
 private Q_SLOTS:

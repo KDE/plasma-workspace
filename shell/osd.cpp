@@ -200,7 +200,7 @@ void Osd::showProgress(const QString &icon, const int percent, const int maximum
     rootObject->setProperty("showingProgress", true);
     rootObject->setProperty("icon", icon);
 
-    Q_EMIT osdProgress(icon, value, additionalText);
+    Q_EMIT osdProgress(icon, value, maximumPercent, additionalText);
     showOsd();
 }
 
