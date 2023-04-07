@@ -175,6 +175,3 @@ msgstr "Изключване без потвърждение"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Рестартиране без потвърждение"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "Няма достъп за запис в директорията $HOME (%1)."

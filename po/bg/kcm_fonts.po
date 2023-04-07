@@ -356,6 +356,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Избиране на шрифт"
-
-#~ msgid "This module lets you configure the system fonts."
-#~ msgstr "Този модул ви позволява да конфигурирате системните шрифтове."

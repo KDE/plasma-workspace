@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Simgeler</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>simge</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma;, birkaç boyutta tam simge kümeleri ile birlikte gelir. Bu simgeler, &plasma;'nın her yerinde kullanılırlar: Masaüstü, panel, &dolphin; dosya yöneticisi, her bir &plasma; uygulamasının araç çubuklarında vb. Simgeler denetim modülü, &plasma;'nın simgeleri işleme yolunu özelleştirmek için esnek yordamlar sunar.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>İşte simge teması yöneticisinin bir ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&plasma; simgelerini özelleştirmek</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Bu modülde şunları yapabilirsiniz:</para>
+<itemizedlist>
+<listitem
+><para
+>simge temaları kurmak ve onları seçmek</para
+></listitem>
+<listitem
+><para
+>değişik simge boyutları seçmek</para
+></listitem>
+<listitem
+><para
+>simge temalarını kaldırmak</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Lütfen bu ayarlardan bazılarının seçtiğiniz simge temasına bağlı olabileceğini unutmayın. &plasma; öntanımlı olarak Esinti, Esinti Koyu ve Oksijen olmak üzere birkaç simge temasıyla birlikte gelir.</para
+></important>
+
+<para
+>En üstte, geçerli tema simgelerinin bir önizlemesi bulunur. Çoğu öntanımlı kurulum, aralarında &plasma; öntanımlısı olan Esinti temasının olduğu birkaç simge teması içerir. Ayrıca <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> adresinden daha fazlasını indirebilir veya yerel bir dosyadan kurabilirsiniz.</para>
+
+<para
+>Fareyle üzerine gelindiğinde canlandırmalı bir önizleme; rastgele bir seçimi, ortak MIME türlerini ve ortak klasör simgelerini gösterir. </para>
+
+<para
+>Bir temayı kaldırmak için simge temasının sağ alt köşesindeki <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> kaplama simgesine tıklayın. To undo this action click on the <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> icon. If you hit the <guibutton
+>Apply</guibutton
+> button the themes selected for removal are actually deleted, so you cannot undo individual or all deletions. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Simge Boyutlarını Yapılandır</guilabel
+></term>
+<listitem>
+<para
+>Bileşenlerden birini seçin ve ilgili boyuta uyarlamak için kaydırıcıyı kullanın. </para>
+<para>
+<screenshot>
+<screeninfo
+>Simge Boyutlarını Yapılandır</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Simge Boyutlarını Yapılandır</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Yeni Simgeler Al...</guilabel
+></term>
+<listitem>
+<para
+>Kullanmak için internete bağlı olmanız gerekir. Bu düğmeye tıklamak, yeni bir simge teması seçebileceğiniz bir iletişim kutusu görüntüler. İletişim kutusundaki <guibutton
+>Kur</guibutton
+> seçeneğine tıklamak, seçilen simge temasını kurar ve Kur ekranını <guibutton
+>Kapat</guibutton
+>'tıktan sonra yeni temayı hemen kullanabilirsiniz. </para>
+<para>
+<screenshot>
+<screeninfo
+>Yeni Simgeler Al</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Yeni Simgeler Al</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Dosyadan Kur...</guilabel
+></term>
+<listitem>
+<para
+>İnternetten yeni temalar indirdiyseniz yeni indirilen temaların konumuna göz atmak için bunu kullanabilirsiniz. Bu düğmeye tıklamak, diskinizde bulunan simge teması arşiv paketini seçmenizi sağlayacak dosya iletişim kutusunu açar.</para>
+
+<para
+>Bu iletişim kutusunda işaret ettiğiniz dosya için <guibutton
+>Aç</guibutton
+> düğmesine tıklamak temayı kurar ve tema listesinde kullanılabilir yapar. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

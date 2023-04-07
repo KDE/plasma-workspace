@@ -978,6 +978,3 @@ msgstr "Изключване на този изскачащ прозорец"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Съдържание на буфера"

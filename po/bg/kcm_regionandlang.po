@@ -566,10 +566,3 @@ msgstr "Телефонен номер"
 #, kde-format
 msgid "Inherit Language"
 msgstr "Наследяване на език"
-
-#~ msgid ""
-#~ "You can configure the formats used for time, dates, money and other "
-#~ "numbers here."
-#~ msgstr ""
-#~ "Тук можете да конфигурирате формати, използвани за дата и час, валута и "
-#~ "мерни единици."

@@ -1,0 +1,260 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Yazıtipi Yönetimi</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>yazıtipleri</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Yazıtipi Yönetimi</title>
+
+<para
+>Bu modül; yazıtiplerinizi kurmaktan, kaldırmaktan, önizlemekten ve yönetmekten sorumludur.</para>
+
+<sect2 id="font-groups">
+<title
+>Yazıtipi Grupları</title>
+<para
+>Dört adet önceden tanımlı özel yazıtipi grubu vardır:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Tüm Yazıtipleri</quote
+> Bu, tüm yazıtiplerini görüntüler, hem kişisel hem sistem.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Kişisel Yazıtipleri</quote
+> Gösterilen yazıtipleri, sizin kişisel yazıtipleriniz olacaktır; başka kullanıcılar bunları kullanamaz.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Sistem Yazıtipleri</quote
+> Burada gösterilen yazıtiplerini bütün kullanıcılar kullanabilir. Bir yazıtipini sistem genelinde kurmak veya sistem genelinde kurulu bir yazıtipini kaldırmak, yönetici ayrıcalıkları gerektirir.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Sınıflandırılmamış</quote
+> Bu, kullanıcı tanımlı herhangi bir gruba yerleştirilmemiş tüm yazıtiplerini listeler. Bu grup yalnızca daha önceden kullanıcı tanımlı gruplar oluşturulmuşsa görünür.</para
+></listitem>
+</orderedlist>
+<para
+>Bir gruba bir yazıtipini eklemek için listeden bir grubun üzerine sürükleyin. Bir yazıtipini gruptan kaldırmak için yazıtipini <quote
+>Tüm Yazıtipleri</quote
+> grubuna sürükleyin.</para>
+<para
+>Bu listenin altında yeni bir grup oluşturmak, bir grubu kaldırmak ve geçerli gruptaki yazıtiplerini etkinleştirmek veya devre dışı bırakmak için düğmeler bulacaksınız.</para>
+<para
+>Bu listenin bağlam menüsünde yazıtipi örnekleri yazdırmak ve bir yazıtipini bir zip arşivine dışa aktarmak için ek menü ögeleri bulunur.</para>
+
+<sect3 id="font-hiding">
+<title
+>Etkinleştirmek ve Devre Dışı Bırakmak</title>
+<para
+>Çok sayıda yazıtipine sahip kullanıcılar, belirli zamanlarda yalnızca belirli yazıtiplerinin etkinleştirilmesini (veya etkin olmasını) yararlı bulabilir. Bunu kolaylaştırmak için bu modül, tek tek yazıtiplerini veya tüm yazıtipi gruplarını devre dışı bırakmanıza izin verecektir. Bir yazıtipini devre dışı bırakmak, yazıtipini sistemden kaldırmaz, yalnızca gizler, böylece artık uygulamalarda görünmez. Bir yazıtipini yeniden etkinleştirmek, artık kullanılmasına izin verir.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Yazıtipi Listesi</title>
+<para
+>Ana ekran, yazıtiplerinin aile adına göre gruplandırılmış kurulu yazıtiplerinin bir listesidir - köşeli parantez içindeki sayı, o aile için kurulu biçemlerin sayısını temsil eder. Örneğin, <quote
+>Times</quote
+> yazıtipi şu şekilde listelenebilir: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Düzenli</para
+></listitem>
+        <listitem
+><para
+>Yatık</para
+></listitem>
+        <listitem
+><para
+>Kalın</para
+></listitem>
+        <listitem
+><para
+>Kalın Yatık</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Bir yazıtipi kurmak için <guibutton
+>Dosyadan Kur...</guibutton
+> düğmesine basın ve dosya iletişim kutusundan istediğiniz yazıtiplerini seçin. Seçili yazıtipi grubu, yazıtiplerinin nereye kurulacağını denetleyecektir.</para>
+<para
+>Yazıtiplerini kaldırmak için uygun yazıtiplerini listeden seçin ve <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> düğmesine basın.</para>
+
+<para
+><guilabel
+>Etkinleştir</guilabel
+>, <guilabel
+>Devre Dışı Bırak</guilabel
+>, <guilabel
+>Yazdır</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Yazıtipi Görüntüleyicide Aç</guilabel
+></ulink
+>ve <guilabel
+>Yeniden Yükle</guilabel
+> gibi ek özellikleri görmek için &RMB; ile tıklayarak bağlam menüsünü açın.</para>
+
+<sect3 id="font-filter">
+<title
+>Yazıtipi Süzmek</title>
+<para
+>Yazıtipi önizlemesinin üstündeki bir metin alanı, yazıtipi listesini süzebilmenizi sağlar. Yazıtiplerini farklı kategorilere göre süzebilirsiniz:</para>
+        <orderedlist>
+        <listitem
+><para
+>Aile.</para
+></listitem>
+        <listitem
+><para
+>Biçem.</para
+></listitem>
+        <listitem
+><para
+>Dökümevi.</para
+></listitem>
+        <listitem
+><para
+>FontConfig eşleşmesi. Bu, bir aile adı girerek FontConfig'in özünde kullanacağı aile adını görebilmenizi sağlar.</para
+></listitem>
+        <listitem
+><para
+>Yazıtipi dosyası türü.</para
+></listitem>
+        <listitem
+><para
+>Yazıtipi dosyası adı.</para
+></listitem>
+        <listitem
+><para
+>Yazıtipi dosyası konumu.</para
+></listitem>
+        <listitem
+><para
+>Yazı sistemi.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Yeni Yazıtipleri Al</title>
+<para
+>Yeni yazıtipleri yerel dosyalardan veya <guilabel
+>Yeni Çıkanları Al</guilabel
+> yerinden indirilebilir. Araç kutusunda bulunan <guilabel
+>Yeni Yazıtipleri Al...</guilabel
+> düğmesi (grup listesinin üstünde bulunur), internetten yazıtipleri kurmanıza izin verir. Böyle kurulan yazıtipleri <quote
+>Kişisel Yazıtipleri</quote
+> grubunuza gider. Sistem geneline kurmak için onları <quote
+>Sistem Yazıtipleri</quote
+> grubuna kaldırmanız gerekir - bunu, yazıtiplerini <quote
+>Sistem Yazıtipleri</quote
+> grubu girdisine sürükleyerek yapabilirsiniz; sizden yönetici parolası istenecektir.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Yinelenmiş Yazıtipleri</title>
+<para
+>Sisteminizde çok fazla yazıtipi varsa belki aralarından birkaçı aynı olabilir.</para
+> 
+<para
+>Kendileriyle ilişkilendirilmiş birden çok dosyaya sahip yazıtiplerini aramak için sisteminizi tarayacak basit bir aracı açmak üzere <guilabel
+>Yinelenmişleri Bul...</guilabel
+> düğmesine tıklayın. Örneğin, <quote
+>/usr/local/share/fonts</quote
+> içinde <quote
+>times.ttf</quote
+> ve <quote
+>times.TTF</quote
+> kuruluysa altında yatan yazıtipi mekanizması (<quote
+>FontConfig</quote
+>), bunlardan yalnızca birini görecektir. Bu nedenle, yazıtipini kaldırırsanız dosyalardan yalnızca biri kaldırılacağı için yeniden görünecektir. Bu aracı çalıştırmak, birden çok dosyaya sahip her yazıtipini ve karşılık gelen dosya listesini listeleyen bir iletişim kutusu oluşturur. Silinecek bir dosya seçmek için çöp kutusu simgesini içeren sütuna tıklayın.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Önizleme</title>
+<para
+>Bu, değişik yazıtipi boyutlarında bir önizleme metni görüntüler.</para>
+<para
+>Bağlam menüsünü kullanarak yakınlaştırabilir/uzaklaştırabilir ve bir önizleme türü seçebilir (<guilabel
+>Standart Önizleme</guilabel
+> veya <guilabel
+>Tüm Karakterler</guilabel
+>), ayrıca önizleme metnini değiştirebilirsiniz.</para>
+
+<para
+>Unicode Blokları için ek önizleme türlerine gereksiniminiz varsa &kfontview; uygulamasını başlatın. </para>
+</sect2>
+</sect1>
+</article>

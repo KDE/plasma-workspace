@@ -1365,19 +1365,3 @@ msgstr "Имате следните цветови схеми на вашата 
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (текуща цветова схема)"
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Този модул ви позволява да изберете цветовата схема."
-
-#~ msgid "Use accent color:"
-#~ msgstr "Цвят за акцентиране:"
-
-#~ msgid "From current color scheme"
-#~ msgstr "От текущата цветова схема"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "От текущия тапет"
-
-#~ msgid "Custom:"
-#~ msgstr "Персонализиран:"

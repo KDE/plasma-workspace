@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2023-03-26 18:05+0200\n"
+"PO-Revision-Date: 2023-04-06 21:05+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -179,7 +179,7 @@ msgstr[1] "%1 minutos"
 #: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr "Minutos de entrada (mín. 1, máx. 600)"
+msgstr "Minutos de entrada (mínimo 1, máximo 600)"
 
 #: package/contents/ui/main.qml:393
 #, kde-format

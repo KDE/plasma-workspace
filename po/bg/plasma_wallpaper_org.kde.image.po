@@ -302,6 +302,3 @@ msgstr "Възникна грешка при опит за задаване на
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Възникна грешка при опит за отваряне на конфигурационния файл kscreenlockerrc"
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Препоръчителен файл за тапет"

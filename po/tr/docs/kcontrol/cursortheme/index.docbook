@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="cursortheme" lang="&language;">
+<articleinfo>
+<title
+>İmleç Teması</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-29</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<abstract>
+<para
+>Bu, fare imleci görünüşünü özelleştirmek için kullanılan &systemsettings; modülünün belgelendirmesidir. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>fare</keyword>
+<keyword
+>imleç</keyword>
+<keyword
+>işaretçi</keyword>
+<keyword
+>zıplayan</keyword>
+<keyword
+>yanıp sönen</keyword>
+<keyword
+>canlandırma</keyword>
+<keyword
+>başlat</keyword>
+<keyword
+>geri bildirim</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="cursorthemes">
+<title
+>İmleç Teması</title>
+
+<para
+>Bu modül, şunları yapmanıza izin verir <itemizedlist>
+<listitem
+><para
+>bir imleç teması seçmenize</para
+></listitem>
+<listitem
+><para
+>uygulamaları başlatmak için bir imleç canlandırması yapılandırmanıza</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Bu modül tarafından sağlanan özellikler bazı sistemlerde kullanılamayabilir.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>İmleç Teması Yönetimi</title>
+
+<screenshot>
+<screeninfo
+>İmleç Teması Yöneticisi'nin ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Bir imleç temasını kullanmak için onu seçin ve <guilabel
+>Uygula</guilabel
+> düğmesine tıklayın.</para>
+
+<para
+>Fare işaretçisini listedeki tema ögesinin üzerine getirdiğinizde görünen çöp kutusu düğmesini kullanarak imleç temalarını kaldırabilirsiniz. Kurulu gelen temaları kaldıramayacağınızı unutmayın.</para>
+
+<para
+><guilabel
+>Yeni İmleçler İndir</guilabel
+> iletişim kutusunu başlatmak için <guilabel
+>Yeni İmleçler Al...</guilabel
+> düğmesine tıklayın ve internetten yeni temalar indirin.</para>
+
+<screenshot>
+<screeninfo
+>Yeni İmleçler Al ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>İndirdiğiniz veya başka yollarla edildiğiniz imleç temalarını kurmak için <guilabel
+>Dosyadan Kur...</guilabel
+> düğmesini kullanın.</para>
+
+<para
+>Kendi imleç temanızı oluşturmak istiyorsanız bununla ilgili bilgiyi <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>burada</ulink
+> bulabilirsiniz.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>İmleç boyutu</title>
+
+<para
+>Bazı temalar, imleç boyutunu seçmenize izin verir. <guilabel
+>Boyut</guilabel
+> alanını kullanarak size uygun boyutu seçin.</para>
+
+<screenshot>
+<screeninfo
+>İmleç Boyutu ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Başlatma geri bildirimi</title>
+
+<para
+>Bazen bilgisayarınızın komutlarınızı görmezden gelmediğini ve perde arkasında bir şeyler olduğunu bilmek güven vericidir. Bu <guilabel
+>Başlatma Geri Bildirimini Yapılandır...</guilabel
+> iletişim kutusunda, o simgeye gerçekten basıp basmadığınızı anlamanıza yardımcı olması için görünür geri bildirimi yapılandırabilirsiniz.</para>
+
+<screenshot>
+<screeninfo
+>Başlatma Geri Bildirimi ekran görüntüsü</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>Bilgisayarınızın meşgul olduğunu belirtmenin geleneksel yolu imleci değiştirmektir ve bunu bir <guilabel
+>İmleç</guilabel
+> seçerek açabilirsiniz.</para>
+
+<para
+>Bu seçenek etkinleştirildiğinde, yeni bir uygulama başlatılırken imlecinize kısa bir süre için eklenmiş bir simge olacaktır. <guilabel
+>Canlandırmayı şundan sonra durdur:</guilabel
+> döndürme kutusuyla bu simgenin imlecinizin yanında ne kadar süre görüntüleneceğini yapılandırabilirsiniz. Öntanımlı ayar 5 saniyedir.</para>
+
+<para
+>Meşgul imlecinin birden çok çeşidi vardır: <guilabel
+>Geri bildirim yok</guilabel
+>, <guilabel
+>Yanıp sönen</guilabel
+>, <guilabel
+>Zıplayan</guilabel
+>, <guilabel
+>Durgun</guilabel
+>.</para>
+
+<para
+>Geleneksel &plasma; başlatma bildirimi, burada da etkinleştirip devre dışı bırakabileceğiniz başka bir biçim aldı. Normalde bir uygulamayı başlattığınızda, görev çubuğuna anında bir giriş yapılır ve simge, bir şeyler olduğunu size bildirmek için dönen bir kum saati ile değiştirilir. <guilabel
+>Canlandırmayı etkinleştir</guilabel
+> onay kutusuyla bu davranışı açıp kapatabilirsiniz.</para>
+
+<para
+>Başlattığınız tüm uygulamalar sonunda görev çubuğunda bir pencere veya giriş göstermez. Örneğin bazıları &plasma; sistem tepsisine rıhtımlanır. Alternatif olarak, farklı bir sanal masaüstüne gönderilmiş olabilir ve <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Görev Yöneticisi Ayarları</guilabel
+></ulink
+>'nın <guilabel
+>Davranış</guilabel
+> bölümünde <guilabel
+>Görevleri yalnızca</guilabel
+> ayarı <guilabel
+>Geçerli masaüstünden göster</guilabel
+> olarak ayarlanmış olabilir. Bir zaman aşımı ayarlamak, böyle durumlarda hâlâ başlangıç geri bildirimi almanızı sağlar ve iş bittiğinde bildirim kendiliğinden gider.</para>
+
+</sect2>
+
+</sect1>
+
+</article>

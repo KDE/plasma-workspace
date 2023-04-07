@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Sistem Bildirim Ayarları</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>sistem bildirimi</keyword>
+<keyword
+>bildirim</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Sistem Bildirim Ayarları</title>
+
+<para
+>Tüm uygulamalar gibi &plasma; da bir sorun oluştuğunda, bir görev tamamlandığında veya başka bir şey olduğunda kullanıcıya bildirmesi gerekir. &plasma;, neler olup bittiği hakkında kullanıcıyı bilgilendirmek için bir <quote
+>Sistem Bildirimleri</quote
+> kümesi kullanır.</para>
+
+<para
+>Bu modülü kullanarak, &plasma;'nın her bir olay için nasıl iletişim kuracağını belirleyebilirsiniz.</para>
+
+<sect2 id="notification-settings">
+<title
+>Bildirim Ayarları</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Rahatsız Etmeyin kipi</title>
+
+    <para
+>Bu kip, geçerli görevinize odaklanmanızı sağlamak için tüm görsel ve çoğu sesli bildirimleri devre dışı bırakır. Bu bölümdeki ayarlar, &plasma;'nın hangi durumlarda otomatik olarak rahatsız etmeyin kipini etkinleştireceğini belirlemenize izin verir.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ekranlar yansıtıldığında</guiicon
+></term>
+    <listitem
+><para
+>Örneğin bir sunum sırasında ekranlarınızı yansıttığınızda, rahatsız etmeyin kipini otomatik olarak etkinleştirin.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ekran paylaşımı sırasında</guiicon
+></term>
+    <listitem
+><para
+>Örneğin bir çevrimiçi ders sırasında ekranınızı paylaştığınızda, rahatsız etmeyin kipini otomatik olarak etkinleştirin.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Kritik bildirimleri göster</guiicon
+></term>
+    <listitem
+><para
+>Pilinizin bitmek üzere olması gibi kritik bildirimlerin rahatsız etmeyin kipindeyken bile gösterilip gösterilmeyeceği.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Şununla aç/kapat:</guiicon
+></term>
+    <listitem
+><para
+>Rahatsız etmeyin kipini istediğiniz zaman etkinleştirmek ve devre dışı bırakmak için kullanabileceğiniz global bir kısayol.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Süzgeçler</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Kritik bildirimler: <guiicon
+>Her zaman üstte</guiicon
+></term>
+    <listitem
+><para
+>Pilinizin bitmek üzere olması gibi kritik bildirimleri her zaman üstte tutun. Bu, tam ekran video izlerken veya sunum yaparken de görünür olmalarını sağlar.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Normal bildirimler: <guiicon
+>Her zaman üstte</guiicon
+></term>
+    <listitem
+><para
+>İletiler gibi normal bildirimleri her zaman üstte tutun. Bu, tam ekran video izlerken veya sunum yaparken de görünür olmalarını sağlar.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Düşük öncelikli bildirimler: <guiicon
+>Açılır pencere göster</guiicon
+> ve <guiicon
+>Geçmişte göster</guiicon
+></term>
+    <listitem
+><para
+>Ortam oynatıcınızdaki değişiklikleri izlemek gibi düşük öncelikli bildirimlerin sırasıyla açılır pencere olarak mı yoksa geçmişte mi gösterileceği.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Davranış</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Açılır pencere: <guiicon
+>Bildirim simgesi yakınında</guiicon
+></term>
+    <listitem
+><para
+>Panelinizde bildirim simgenizin bulunduğu yere yakın bildirim açılır pencereleri gösterin.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Özel Konum Seç...</guiicon
+></term>
+    <listitem
+><para
+>Bildirim açılır pencerelerinin konumlandırılacağı sabit bir ekran köşesi seçmenizi sağlar.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Şundan sonra gizle:</guiicon
+></term>
+    <listitem
+><para
+>Bildirim açılır penceresi kaç saniye sonra otomatik olarak kaybolur. 1-120 saniye arasında herhangi bir seçim yapabilirsiniz.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Uygulama İlerlemesi ve Rozetler</title>
+
+    <sect4 id="application-progress">
+        <title
+>Uygulama ilerlemesi</title>
+
+        <para
+>Bu bölümdeki seçenekler, bir dosyanın kopyalanması veya indirilmesi gibi uygulama ilerlemesinin nasıl sunulacağını denetler.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Görev yöneticisinde göster</guiicon
+></term>
+        <listitem
+><para
+>İlerlemeye göre paneldeki pencereyi renklendirin.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Bildirimlerde göster</guiicon
+></term>
+        <listitem
+><para
+>İlerleme sırasında bir bildirim açılır penceresi gösterin.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>İlerleme sırasında açılır pencereyi açık tut</guiicon
+></term>
+        <listitem
+><para
+>Açılır pencerenin tüm ilerleme süresi boyunca görünür kalması mı yoksa otomatik olarak gizlenmesi mi gerektiği. Görev bittiğinde veya başarısız olduğunda her zaman yeniden gösterilecektir.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Bildirim rozetleri</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Görev yöneticisinde göster</guiicon
+></term>
+        <listitem
+><para
+>Uygulamaların panelde okunmamış ileti sayısı gibi rozetleri göstermesine izin verin.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Uygulama Ayarları</title>
+
+<para
+>Listenin sonundaki <guilabel
+>Yapılandır...</guilabel
+> düğmesine tıklamak, uygulama ve hizmet bazında bildirim davranışını yapılandırmanıza izin veren uygulama ayarları sayfasını açar.</para>
+
+<para
+><guilabel
+>Uygulamalar</guilabel
+> veya <guilabel
+>Sistem Hizmetleri</guilabel
+> kategorisinden bir giriş seçmek için soldaki kenar çubuğunu kullanın.</para>
+
+<para
+>Genel uyarı açılır pencerelerinin yanı sıra başlatma ve kapatma sesleri <guilabel
+>Plasma Çalışma Alanı</guilabel
+> hizmetinin altında bulunur.</para>
+
+<para
+>Kabuk betikleri gibi uygun tanımlama sağlamayan uygulamalar, <guilabel
+>Diğer Uygulamalar</guilabel
+> girişi kullanılarak yapılandırılabilir.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Açılır pencereleri göster</guiicon
+></term>
+    <listitem
+><para
+>Bu uygulamanın açılır bildirimler gösterip gösteremeyeceği.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Rahatsız Etmeyin kipinde göster</guiicon
+></term>
+    <listitem
+><para
+>Bu uygulamanın, rahatsız etmeyin kipindeyken bile açılır pencere bildirimleri gösterip gösteremeyeceği.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Geçmişte göster</guiicon
+></term>
+    <listitem
+><para
+>Bu uygulamanın bildirimlerinin bildirim geçmişinde tutulup tutulmayacağı.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Bildirim rozetlerini göster</guiicon
+></term>
+    <listitem
+><para
+>Bu uygulamanın panelde okunmamış ileti sayısı gibi işaretler gösterip gösteremeyeceği.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Olayları Yapılandır...</guiicon
+></term>
+    <listitem
+><para
+>&kde; uygulamaları için ayrıca her bildirimi ayrı ayrı yapılandırabilirsiniz.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

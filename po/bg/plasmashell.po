@@ -286,6 +286,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"

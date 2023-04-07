@@ -161,6 +161,3 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Имате следните теми на курсора на мишката на вашата система:"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Този модул ви позволява да изберете стила на Plasmaта."

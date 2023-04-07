@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Uygulama Biçemi</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>biçem</keyword>
+<keyword
+>uygulama</keyword>
+<keyword
+>araç takımları</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Bu modül, bireysel araç takımlarının &plasma; tarafından nasıl çizildiğini yapılandırmak için kullanılır.</para>
+
+<note
+><para
+><emphasis
+>Araç takımı</emphasis
+>, düğmeler, menüler ve kaydırma çubukları gibi Kullanıcı Arayüzü ögelerini belirtmek için yaygın olarak kullanılan bir programcı terimidir. Bunları, uygulamanızı yapmak için bir araya getirilen temel parçalar olarak düşünebilirsiniz.</para
+></note>
+
+<para
+>Bu modül ile araç takımlarının nasıl çizileceğini yapılandırabilirsiniz; ancak araç takımlarının rengini değiştirmek için <ulink url="help:/kcontrol/colors/index.html"
+>Renkler</ulink
+> başlıklı bölüme bakmalısınız.</para>
+
+<para
+><guilabel
+>Uygulama Biçemi</guilabel
+> etiketli üst ızgara, önceden tanımlanmış biçemlerin önizlemelerinin bir listesini içerir. Her biçemin bir adı vardır ve fare imleciyle ögenin üzerine geldiğinizde kısa bir açıklama gösterilir.</para>
+
+<para
+>Bir &plasma; temasını yapılandırmak istiyorsanız ızgaradaki araç takımı biçemi simgesinin sağ alt köşesindeki <guilabel
+>Biçemi Yapılandır...</guilabel
+> kaplama simgesini kullanın.</para>
+
+<para
+>Uygulanırsa biçemin hemen hemen her yönünü değiştirmek olanaklıdır: sekme çubuğu sekmelerini ortalayın, araç çubuğu öge ayırıcıları çizin, listelerde odak göstergesi çizin, kaydırıcı onay imleri çizin, genişletilmiş yeniden boyutlandırma işleyicilerini etkinleştirin, klavye hızlandırıcı görünürlüğünü tanımlayın, pencerelerin sürükleme kipini değiştirin, daha iyi erişilebilirlik için çerçeveler kullanın, kaydırma çubuklarındaki düğmeleri kullanın, saydam menüler kullanın.</para>
+
+<para
+>Genel yapılandırma, ızgaranın altındaki <guibutton
+>Simgeleri ve Araç Çubuklarını Yapılandır</guibutton
+> düğmesine basılarak yapılabilir. Bu düğme, daha fazla ayar seçmek için bir bölme açar.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Simgeleri göster: Düğmelerde</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse eylem düğmelerinin (<guibutton
+>Tamam</guibutton
+> ve <guibutton
+>Uygula</guibutton
+> gibi) içlerinde görsel başvuru görevi görecek küçük bir simgesi olacaktır. Bu seçenek seçilmezse düğmede yalnızca metin görünür.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Simgeleri göster: Menülerde</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek seçilirse &kde; uygulamalarının çoğu menü ögesinin yanında küçük simgeler gösterilir. Bu seçenek seçilmezse menülerde yalnızca metin görüntülenecektir. Menü simgelerinin görünürlüğündeki değişiklikler yalnızca yeni başlatılan uygulamaları etkiler.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Ana araç çubuğu etiketi</guilabel
+>, <guilabel
+>İkincil araç çubuğu etiketi</guilabel
+></term>
+<listitem>
+<para
+>Bu açılır kutular, düğmenin metin adının her iki araç çubuğunda düğmenin neresinde öntanımlı olarak görüneceğini belirlemenizi sağlar. <guilabel
+>Yok</guilabel
+> seçilirse araç çubuğu düğmelerinde metin olmaz. <guilabel
+>Yalnızca metin</guilabel
+> seçilirse düğmenin simgesi, düğmenin metin adıyla değiştirilir. <guilabel
+>Simgelerin yanında</guilabel
+> seçilirse düğmenin adı simgenin <emphasis
+>sağ</emphasis
+> yanına yerleştiriir. <guilabel
+>Simgenin altında</guilabel
+> seçilirse öntanımlı olarak düğmenin metni simgenin <emphasis
+>altında</emphasis
+> olur.</para>
+
+<tip
+><para
+>Bu seçenekler yalnızca <emphasis
+>öntanımlı</emphasis
+> konumu belirtir. Her uygulama bu panelde kullanılan ayarları geçersiz kılabilir.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+><guibutton
+>GNOME/GTK Uygulama Biçemini Yapılandır...</guibutton
+> düğmesi, <guilabel
+>GTK temasını</guilabel
+> seçebileceğiniz veya dosyadan ve/veya <guibutton
+>Yeni GNOME/GTK Uygulama Biçemleri Al</guibutton
+> düğmesiyle internetten kurabileceğiniz bir yapılandırma sekmesini açar. </para>
+
+</article>
