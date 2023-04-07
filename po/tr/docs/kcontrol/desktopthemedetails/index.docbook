@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Plasma Biçemi</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>masaüstü</keyword>
+<keyword
+>biçem</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma;, birden çok biçemle birlikte gelir. &plasma; biçemi, &plasma;'nın değişik bileşenlerinin (&eg;; Plasmoid'ler, paneller, araç takımları) nasıl görüntülendiğini tanımlar. </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>İşte &plasma; biçem yöneticisinin bir ekran görüntüsü</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>&plasma; biçemini özelleştirmek</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Bu modülde şunları yapabilirsiniz:</para>
+<itemizedlist>
+  <listitem
+><para
+>&plasma; biçemleri kurmak ve seçmek</para
+></listitem>
+  <listitem
+><para
+>&plasma; biçemlerini düzenlemek</para
+></listitem>
+  <listitem
+><para
+>&plasma; biçemlerini kaldırmak</para
+></listitem>
+</itemizedlist>
+
+<para
+>Biçem listesini, ızgaranın üzerindeki <guilabel
+>Ara...</guilabel
+> alanını kullanarak süzebilirsiniz. Dahası, bu alanın yanındaki çoklu kutuyu kullanarak yalnızca <guimenuitem
+>Açık Temalar</guimenuitem
+>, <guimenuitem
+>Koyu Temalar</guimenuitem
+>'ı veya <guimenuitem
+>Renk şeması uyumlu</guimenuitem
+> temaları gösterek biçimde ayarlayabilirsiniz. </para>
+
+<para
+>Bir biçemi kaldırmak istiyorsanız biçem simgesinin sağ alt köşesindeki <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> kaplama simgesini kullanın. Bu eylemi geri almak için <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> simgesine tıklayın. <guibutton
+>Uygula</guibutton
+> düğmesine basarsanız kaldırılmak üzere imlenmiş biçemler gerçekten silinir ve bu işlemi geri alamazsınız. </para>
+
+<para
+>Sisteminizde plasma-sdk paketi kuruluysa bir biçem önizlemesinin üzerine geldiğinizde bir düğme görünür ve <application
+>Plasma Tema Gezgini</application
+>'ni başlatmanıza izin verir. </para>
+<para
+>Ek teknik bilgi için <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>bu sayfayı</ulink
+> ziyaret edin. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Yeni Plasma Biçemleri Al...</guilabel
+></term>
+    <listitem>
+    <para
+>Kullanmak için internete bağlı olmanız gerekir. Bu düğmeye tıklamak, yeni bir Plasma biçemini seçebileceğiniz bir iletişim kutusu açar. <guibutton
+>Kur</guibutton
+> düğmesine tıklamak, seçili &plasma; biçemini kurar ve Kur ekranını <guibutton
+>Kapat</guibutton
+>'tığınızda yeni biçemi hemen kullanabilirsiniz. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Yeni Plasma Biçemleri Al...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Yeni Plasma Biçemleri Al...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Dosyadan Kur...</guilabel
+></term>
+    <listitem>
+      <para
+>İnternetten yeni biçemler indirdiyseniz bu yeni indirilen biçemlerin konumuna göz atmak için bunu kullanabilirsiniz. Bu düğmeye tıklamak, size diskinizde bulunan &plasma; biçemi arşiv paketini seçmenizi sağlayacak dosya iletişim kutusunu açar.</para>
+
+      <para
+>Bu iletişim kutusunda işaret ettiğiniz dosya için <guibutton
+>Aç</guibutton
+> düğmesine tıklamak biçemi kurar ve biçem listesinde kullanılabilir yapar. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

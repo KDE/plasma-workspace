@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Global Tema</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-26</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>görünüş</keyword>
+<keyword
+>Global Tema</keyword>
+<keyword
+>biçem</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>görünüm</keyword>
+<keyword
+>his</keyword>
+<keyword
+>global</keyword>
+<keyword
+>masaüstü</keyword>
+<keyword
+>deri</keyword>
+<keyword
+>tasarım</keyword>
+<keyword
+>Kullanıcı Arayüzü</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Global Temalar</title>
+
+<para
+>Global Temalar, aynı anda birçok bileşen için ortak bir görünüm ve his sağlar: </para>
+<itemizedlist>
+  <listitem
+><para
+>Masaüstü Yerleşimi: Paneller ve araç takımlarından oluşan bir aranjman - örneğin görev yöneticisi ve uygulama başlatıcı içeren bir alt panel veya global menü ve sistem tepsisi içeren bir üst panel</para
+></listitem>
+  <listitem
+><para
+>Renk Şeması: &plasma; ve uygulamalar boyunca kullanılan renk paleti</para
+></listitem>
+  <listitem
+><para
+>Uygulama Biçemi: Düğmeler, menüler ve sarma çubukları gibi kullanıcı arayüzü ögeleri</para
+></listitem>
+  <listitem
+><para
+>Plasma Biçemi: Panellerin ve araç takımlarının görünüşü</para
+></listitem>
+  <listitem
+><para
+>Pencere Dekorasyonu: Pencere kenarlıkları ve başlık çubuğu düğmeleri</para
+></listitem>
+  <listitem
+><para
+>Simgeler: &plasma; ve uygulamalar boyunca kullanılan simgeler</para
+></listitem>
+  <listitem
+><para
+>İmleçler: Fare işaretçileri</para
+></listitem>
+  <listitem
+><para
+>Görev Değiştirici: Açık pencereler arasında geçiş yapmak için kullanılan kaplama; genelde Seçenek+Sekme düğmeleri ile çağrılır</para
+></listitem>
+  <listitem
+><para
+>Açılış Ekranı: &plasma; başlangıcında gösterilen yükleme ekranı</para
+></listitem>
+  <listitem
+><para
+>Oturum Açma Ekranı: Bilgisayar başlatıldığında bir kullanıcı seçici ve parola istemi bulunan ekran</para
+></listitem>
+  <listitem
+><para
+>Kilit Ekranı: Bilgisayar kilitli olduğunda gösterilen, içinde bir parola istemi bulunan ekran</para
+></listitem>
+  <listitem
+><para
+>Duvar Kağıdı: Bir masaüstü arka plan görseli</para
+></listitem>
+</itemizedlist>
+
+<para
+>Bir Global Tema uygulayarak, yukarıdakilerin hepsini birlikte değiştirebilirsiniz. Renk şeması veya pencere dekorasyonu gibi yalnızca Global Tema'nın bazı bileşenlerini de uygulayabilirsiniz. Bir Global Tema uygularken hangi bileşenlerin değiştirileceğini seçebilir veya diğer Sistem Ayarları alt bölümlerini kullanarak tek tek bileşenleri uygulayabilirsiniz. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Global Temaları Yönetmek</title>
+
+<para
+>Bu modülde şunları yapabilirsiniz: <itemizedlist>
+    <listitem
+><para
+>Global Temaları uygulamak</para
+></listitem>
+    <listitem
+><para
+>Yeni Global Temalar kurmak ve kurulu Global Temaları kaldırmak</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Global Tema Yöneticisi ekran görüntüsü</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Global Temalar Uygulamak</title>
+
+<para
+>Bir tema küçük görselinin üzerine geldiğinizde görünen görsel simgesine tıklayarak her temanın önizlemesini görebilirsiniz. </para>
+
+<para
+>Bir Global Tema'ya tıkladığınızda, temanın hangi bileşenlerini uygulamak istediğinizi soran bir iletişim kutusu açılacaktır. Çeşitli görünüş ayarları ve masaüstü yerleşimi arasından seçim yapabilirsiniz. <screenshot>
+    <screeninfo
+>Global Tema bileşeni seçici ekran görüntüsü</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Global Tema bileşeni seçici ekran görüntüsü</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Seçiminizi yaptıktan sonra onaylamak için <guibutton
+>Uygula</guibutton
+> düğmesine tıklayın. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Global Temalar Kurmak</title>
+
+<para
+><guilabel
+>Yeni Global Temalar Al...</guilabel
+> düğmesiyle, üçüncü taraf sağlayıcılar tarafından yeni Global Temalar kurabilirsiniz. Bu temalara erişmek için internete bağlı olmanız gerekir. İletişim kutusundaki temalardan birinde <guibutton
+>Kur</guibutton
+>'a tıklamak, seçili Global Tema'yı yükler ve iletişim kutusunu kapattıktan sonra yeni temanız hemen kullanılabilir. <screenshot>
+  <screeninfo
+>Yeni Global Temalar Al...</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Yeni Global Temalar Al...</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Kurulu bir Global Tema'yı kaldırmak için bir tema küçük görselinin üzerine geldiğinizde görünen çöp kutusu simgesinin bulunduğu düğmeyi tıklayın. Yalnızca kendi indirdiğiniz Global Temaları kaldırabileceğinizi unutmayın. </para>
+
+<para
+>Kendi temanızı oluşturmak isterseniz çeşitli bileşenler hakkında ayrıntılı bilgiyi <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>buradan</ulink
+> alabilirsiniz. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,441 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Renkler</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-29</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>renk</keyword>
+<keyword
+>kcm</keyword>
+<keyword
+>vurgu</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Renkler</title>
+
+<sect2 id="color-scheme">
+  <title
+>Şema Yönetimi</title>
+
+  <para
+>Bu modül, makinenizdeki renk şemalarını yönetmenizi sağlar. &plasma; ile gelen renk şemalarının bir listesini ve üstte bir önizleme gösterir. Aynı anda yalnızca bir şema etkindir; ancak şemaları düzenleyebilirsiniz. Fare işaretçisini ızgaradaki bir ögenin üzerine getirdiğinizde gösterilen <guibutton
+>Şemayı Kaldır</guibutton
+> düğmesini kullanarak şemaları kaldırabilirsiniz. Sistem şemalarının kaldırılamayacağını unutmayın; bu eylem için düğme devre dışıdır.</para>
+
+  <para
+>Şema listesini, ızgaranın üstünde bulunan <guilabel
+>Ara...</guilabel
+> alanıyla süzmek olanaklıdır. Dahası, alanın yanındaki seçim kutusunu kullanarak yalnızca <guimenuitem
+>Açık Şemalar</guimenuitem
+>'ı veya <guimenuitem
+>Koyu Şemalar</guimenuitem
+>'ı görüntüleyebilirsiniz. </para>
+
+  <para
+>İnternet bağlantınız varsa <guibutton
+>Yeni Renk Şemaları Al...</guibutton
+> düğmesiyle kullanıcılar tarafından oluşturulmuş şemalara göz atabilirsiniz.</para>
+
+  <para
+>İndirdiğiniz veya başka yollarla edildiğiniz şemaları veya &quot;*.colors&quot; biçimli &kde; 4 şemalarını da kurabilirsiniz. </para>
+
+  <note>
+  <para
+>Bu belge, bazen &quot;geçerli&quot; veya &quot;etkin&quot; şemaya atıfta bulunur. &quot;Geçerli&quot; şema, en son uygulanan renkler ve renk şeması seçenekleridir; &ie;, <guibutton
+>İptal</guibutton
+>'e tıklarsanız alacağınız ayarlardır. &quot;Etkin&quot; şemaysa sizin tarafınızdan en son değiştirilen şemadır; &ie;, <guibutton
+>Uygula</guibutton
+> düğmesine tıkladığınızda alacağınız düzendir.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Vurgu Rengi</title>
+
+  <para
+>Vurgu rengi, odaklanılan veya seçilen ögelerin vurgulandığı renktir ve kaydırıcılar veya klasör simgeleri gibi diğer bazı arabirim ögeleri için de kullanılır. Tüm renkleri vurgu rengiyle renklendirmek de olanaklıdır (aşağıdaki renk şeması seçenekleri hakkında daha fazla bilgi edinin). <guilabel
+>Vurgu rengi kullan</guilabel
+> ile vurgu rengi seçmek için üç seçeneğiniz vardır: </para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Geçerli renk şemasından</guilabel
+>: Bu, vurgulanan ögelerin rengini renk şemasından alır ve tüm şemalar için genel bir vurgu rengi ayarlamaz. Aşağıdaki bölümde renk şemalarını düzenleme hakkında daha fazla bilgi edinebilirsiniz. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Geçerli duvar kağıdından</guilabel
+>: Bu, masaüstü arka plan görselinizden otomatik olarak eşleşen bir renk çıkarır. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Custom</guilabel
+>: Burada önceden tanımlanmış bir dizi renk arasından seçim yapabilir veya özel bir renk seçebilirsiniz. </para
+></listitem>
+    </itemizedlist>
+
+</sect2>
+
+<sect2>
+  <title
+>Şemalar Oluşturmak veya Düzenlemek</title>
+  <para
+>Yeni şemalar oluşturmak veya onları düzenlemek için listeden bir şema seçin ve <guibutton
+>Şemayı Düzenle</guibutton
+> düğmesine basın. Üç sekmeli bir iletişim kutusu açılır: <guilabel
+>Seçenekler</guilabel
+>, <guilabel
+>Renkler</guilabel
+>, ve <guilabel
+>Devre Dışı</guilabel
+>. Hoşunuza giden bir şemayı oluşturduğunuzda, onu yükleyebilir, sıfırlayabilir veya farklı bir adla kaydedebilir veya etkin şemanın üzerine yazabilirsiniz. </para>
+
+<sect3 id="color-options">
+  <title
+>Renk Şeması Seçenekleri</title>
+
+  <para
+><guilabel
+>Seçenekler</guilabel
+> sekmesi, renk şemasının nasıl kullanıldığıyla ilgili bazı özelliklerin yanı sıra, gerçekte renk atamaktan farklı olarak renk şemasını değiştiren bazı seçenekleri değiştirmenize olanak tanır.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Etkin olmayan pencerelere efektleri uygula</guilabel
+> &mdash; İşaretlenirse durum efektleri (<link linkend="color-effects"
+>aşağıya</link
+> bakın) etkin olmayan pencerelere uygulanır. Bu, etkin pencerelerle etkin olmayan pencereleri görsel olarak ayırt etmenize yardımcı olur ve zevkinize bağlı olarak estetik değer taşır. Ancak bazı kullanıcılar, pencereler etkin olmayan duruma geçtiğinde yeniden çizilmeleri gerektiğinden bunun rahatsız edici &quot;titreşmelere&quot; neden olduğunu düşünüyorlar. Masaüstü efektlerinin aksine, renk durumu efektleri bileşikleştirme desteğine gereksinim duymaz ve tüm sistemlerde çalışır; ancak bu yalnızca &kde; uygulamaları için geçerlidir. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Etkin olmayan seçimler için farklı renkler kullan</guilabel
+> &mdash; İşaretlenirse giriş odağı olmayan ögelerdeki geçerli seçim farklı bir renk kullanılarak çizilir. Bu, bazı uygulamalarda, özellikle birden fazla listeyi aynı anda görüntüleyen uygulamalarda, giriş odaklı ögenin görsel olarak tanımlanmasına yardımcı olabilir. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Listelerdeki sıralı sütunları gölgele</guilabel
+> &mdash;İşaretlenirse çok sütunlu listeler, bilgileri listedeki ögeleri sıralamak için kullanılan sütunu boyamak için biraz farklı bir renk kullanır. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Tüm renkleri vurgu rengiyle renklendir</guilabel
+> &mdash; İşaretlenirse tüm renklere vurgu renginin bir kısmı harmanlanır. <guilabel
+>Renklendirme gücü</guilabel
+> kaydırıcısını hareket ettirerek vurgu renginin ne kadar güçlü karışması gerektiğini denetleyebilirsiniz. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Pencere başlık çubuklarını vurgu rengiyle renklendir</guilabel
+> &mdash; İşaretlenirse başlık çubuğunun rengi ve pencere başlığı vurgu rengiyle renklendirilir. Etkin pencereler, vurgu renginde güçlü bir biçimde vurgulanacaktır; etkin olmayan pencerelerse vurgu renginin daha soluk bir şekilde harmanlanmasını sağlar. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Karşıtlık</guilabel
+> &mdash; Bu kaydırıcı, gölgelenen ögelerin karşıtlığını denetler; örneğin çerçeve kenarlıkları ve çoğu biçem tarafından kullanılan &quot;3B&quot; efektler. Düşük bir değer daha az karşıtlık verir ve daha yumuşak kenarlara neden olur; yüksekçe bir değer ise kenarların daha çok &quot;ortaya çıkmasını&quot; sağlar. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Renkler</title>
+
+  <para
+><guilabel
+>Renkler</guilabel
+> sekmesi, etkin renk şemasındaki renkleri değiştirmenize olanak sağlar.</para>
+
+  <para
+>Bir şema oluşturmak veya değiştirmek, renk listesindeki renk örneğine tıklayıp yeni bir renk seçmek kadar basit bir konudur. İşiniz bittiğinde planınızı kaydetmeniz önerilir.</para>
+
+  <para
+>İlk başta görüntülenen <guilabel
+>Ana Renkler</guilabel
+> kümesi, özünde Plasma'nın kullandığı gibi bir &quot;küme&quot; değildir (sonraki bölüme bakın); ancak şemayı tümüyle düzenlemeyi kolay kılan bir sayıda renk rolleri sunar. Yeni bir renk şeması oluştururken öncelikle bu renkleri değiştirirsiniz ve gerekise diğer renklere geçersiniz.</para>
+
+  <para
+><guilabel
+>Ana Renkler</guilabel
+> kümseinin tüm kümelerden rolleri kullanılabilir yaptığını not edin. Örneğin, &quot;Görünüm Arka Planı&quot;, burada Görünüm kümesindeki Normal Arka Plan rolü için bir kısaltmadır. Ayrıca, belirli bir kümeye başvurmayan renkler ayarlamak, <emphasis
+>tüm</emphasis
+> kümelerdeki renkleri değiştirir. (bir istisna olarak, &quot;Etkin Olmayan Metin&quot; tüm kümeler için renkleri değiştirir; <emphasis
+>yalnızca</emphasis
+> Seçim'e dokunmaz; bunun için ayrı olarak Seçim kümesinde Etkin Olmayan Metin için &quot;Seçim Etkin Olmayan Metin&quot; vardır). Bazı roller <guilabel
+>Ana Renkler</guilabel
+> altında görünür bile olmayabilir ve yalnızca ilgili küme seçilerek değişirilebilir (gerekirse).</para>
+
+  <sect4>
+    <title
+>Renk Kümeleri</title>
+
+    <para
+>Plasma, renk şemasını kullanıcı arabirimi ögesinin türüne bağlı olarak aşağıdaki gibi birkaç kümeye ayırır:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Görünüm</guilabel
+> &mdash; listeler, ağaçlar, metin giriş kutuları vb. gibi bilgi sunum ögeleri. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Pencere</guilabel
+> &mdash; düğme veya görünüm olmayan pencere ögeleri. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Düğme</guilabel
+> &mdash; düğmeler ve benzeri ögeler. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Seçim</guilabel
+> &mdash; seçili metin ve ögeler. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>İpucu</guilabel
+> &mdash; araç ipuçları, &quot;Bu Nedir&quot; ipuçları ve benzeri ögeler. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Tamamlayıcı</guilabel
+> &mdash; Alternatif renk şemasına iye uygulama alanları; genellikle açık renk şemaları için koyu bir arka plana sahip olanlar. Bu tersine çevrilmiş renk şemasına sahip alanlara örnek olarak oturumu kapatma arayüzü, kilit ekranı ve bazı uygulamalar için tam ekran kipi gösterilebilir. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Her küme bir dizi renk rolü içerir. Her küme aynı rollere sahiptir. Tüm renkler yukarıdaki kümelerden biriyle ilişkilidir.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Renk Rolleri</title>
+
+    <para
+>Her renk kümesi, diğer tüm kümelerde bulunan bir dizi rolden oluşur. Belirgin Normal Metin ve Normal Arka Plan'a ek olarak, bu roller aşağıdaki gibidir:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Alternatif Arka Plan &mdash; öge ilişkilendirmesine yardımcı olmak için arka planı ustaca değiştirmeye gereksinim duyulduğunda kullanılır. Bu; &eg;, bir başlığın arka planı olarak kullanılır; ancak çoğunlukla listelerde, özellikle çok sütunlu listelerde satırları görsel olarak izlemeye yardımcı olmak için değişen satırlarda da işe yarar. </para
+></listitem>
+      <listitem
+><para
+>Bağlantı Metni &mdash; köprüler için veya başka bir şekilde &quot;ziyaret edilebilecek bir şey&quot; veya ilişkileri göstermek için. </para
+></listitem>
+      <listitem
+><para
+>Ziyaret Edilmiş Metin &mdash; &quot;ziyaret edilmiş&quot; (&eg;, bir köprü) veya "eski" bir şeyi belirtmek için kullanılır. </para
+></listitem>
+      <listitem
+><para
+>Etkin Metin &mdash; etkin bir ögeyi belirtmek veya dikkat çekmek için kullanılır; &eg;, uyarılar, bildirimler; ayrıca üzerine gelinen köprüler için. </para
+></listitem>
+      <listitem
+><para
+>Etkin Olmayan Metin &mdash; göze batmaması gereken metinler için kullanılır; &eg;, yorumlar, &quot;altyazılar&quot;, önemsiz bilgiler vb. </para
+></listitem>
+      <listitem
+><para
+>Negatif Metin &mdash; hatalar, başarısızlık bildirimleri, bir eylemin tehlikeli olabileceğine dair bildirimler (&eg;,. güvenli olmayan web sayfası veya güvenlik içeriği), vb. için kullanılır. </para
+></listitem>
+      <listitem
+><para
+>Nötr Metin &mdash; başka bir rol uygun olmadığında dikkat çekmek için kullanılır; &eg;, uyarılar, güvenli/şifreli içeriği belirtmek için vb. </para
+></listitem>
+      <listitem
+><para
+>Pozitif Metin &mdash; başarı bildirimleri, güvenilir içeriği belirtmek vb. için kullanılır. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Metin rollerinin yanı sıra, çizgiler çizmek veya kullanıcı arayüzü ögelerini gölgelendirmek için kullanılan birkaç ek &quot;dekorasyon&quot; rolü de vardır (yukarıdakiler, uygun durumlarda, bu amaç için de kullanılabilirken, aşağıdakiler özellikle metin çizmek için <emphasis
+>değildir</emphasis
+>). Bunlar:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Odak Dekorasyonu &mdash; etkin giriş odağına sahip olan ögeyi belirtmek için kullanılır. </para
+></listitem>
+      <listitem
+><para
+>Üzerine Gelme Dekorasyonu &mdash; fareyle üzerine gelme efektleri için kullanılır; &eg;, düğmeler için "aydınlatma" efektleri. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Ayrıca Etkin Olmayan Metin dışında, metin rollerinin her biri için karşılık gelen bir arka plan rolü vardır. Şu anda (Normal ve Alternatif Arka Plan hariç), bu renkler kullanıcı tarafından seçilmez, Normal Arka Plan ve ilgili Metin rengine göre otomatik olarak belirlenir. Bu renkler, "Ana Renkler" dışındaki kümelerden biri seçilerek önizlenebilir.</para>
+
+    <para
+>Renk rolünün seçimi geliştiriciye bırakılmıştır; yukarıdakiler, tipik kullanımı temsil etmesi amaçlanan yönergelerdir.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Pencere Yöneticisi Renkleri</title>
+
+    <para
+>Daha önce belirtildiği gibi, Pencere Yöneticisi kümesinin diğer kümelerden bağımsız olarak kendi rolleri vardır. Bunlara (şu anda) yalnızca <guilabel
+>Ana Renkler</guilabel
+> üzerinden erişilebilir ve aşağıdaki gibidir:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Etkin Başlık Çubuğu &mdash; etkin pencere (yani, giriş odaklı pencere) için başlık çubuğu arka planını, kenarlıklarını ve/veya dekorasyonlarını çizmek için kullanılır. Tüm pencere dekorasyonları bunu aynı şekilde kullanmaz ve hatta bazıları başlık çubuğunu çizmek için Pencere kümesindeki Normal Arka Plan'ı kullanabilir. </para
+></listitem>
+      <listitem
+><para
+>Etkin Başlık Çubuğu Metni &mdash; başlık çubuğu arka planını çizmek için Etkin Başlık Çubuğu kullanıldığında, başlık çubuğu metnini çizmek için kullanılır. Arka plan olarak Etkin Başlık Çubuğu kullanan diğer ön plan ögeleri için de kullanılabilir. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Etkin Olmayan Başlık Çubuğu [Metin] rolleri, yukarıdakilerle aynıdır; ancak etkin pencereler yerine etkin olmayan pencereler içindir.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Devre Dışı</title>
+
+  <para
+>Bu sekmedeki renk durumu efektleri, etkin olmayan (odağı olmayan pencereler; yalnızca <guilabel
+>Etkin olmayan pencere efektleri uygula</guilabel
+> etkinleştirilmişse) veya devre dışı bırakılmış durumdaki arayüz ögelerine uygulanır. Efektler değiştirilerek, bu durumlardaki ögelerin görünümü değiştirilebilir. Genellikle, etkin olmayan ögelerin karşıtlığı azalır (metin hafifçe arka planda kaybolur) ve yoğunluğu biraz azalırken, devre dışı bırakılan ögelerin karşıtlığı büyük ölçüde azalır ve genellikle belirgin şekilde daha koyu veya daha açık olur. </para>
+
+  <para
+>Her duruma üç tür efekt uygulanabilir (iki durumun etkileri bağımsızdır). Bunlar Yoğunluk, Renk ve Kontrasttır. İlk ikisi (Yoğunluk, Renk) genel rengi kontrol ederken, sonuncusu (karşıtlık) arka plana göre ön plan renkleriyle ilgilenir.</para>
+
+  <sect4>
+    <title
+>Yoğunluk</title>
+
+    <para
+>Yoğunluk, genel rengin açılmasını veya koyulaşmasını sağlar. Kaydırıcıyı ortaya ayarlamak herhangi bir değişiklik yaratmaz. Kullanılabilir efektler şunlardır:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Gölgele &mdash; her şeyi denetimli bir biçimde daha açık veya daha koyu yapar. Her bir &quot;tik&quot;, kaydırıcıda toplam yoğunluğu (&ie; algılanan parlaklığı) mutlak bir miktarda artırır veya azaltır. </para
+></listitem>
+      <listitem
+><para
+>Koyulaştır &mdash; yoğunluğu başlangıç değerinin bir yüzdesine değiştirir. Orta ve en yüksek arasında bir kaydırıcı ayarı, özgünün yarısı kadar yoğun bir renkle sonuçlanır. En düşük, özgünden iki kat daha yoğun bir renk verir. </para
+></listitem>
+      <listitem
+><para
+>Açıklaştır &mdash; kavramsal olarak koyulaştırmanın tersidir; açıklaştırma "beyazdan uzaklık" ile çalışırken, koyulaştırma "siyahtan uzaklık" ile çalışıyor olarak düşünülebilir. En düşük, özgünden iki kat daha beyaz &quot;uzaklığındadır&quot;; orta ve en yükseğin ortası ise özgün renk ile beyazın ortasında bir yoğunluk verir. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Renk</title>
+
+    <para
+>Renk ayrıca genel rengi de değiştirir; ancak yoğunlukla sınırlı değildir. Kullanılabilir efektler şunlardır:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Doygunluğu Gider &mdash; göreceli kromayı değiştirir. Orta ayar herhangi bir değişiklik üretmez; en yüksek, algısal yoğunluğu özgün renginkine eşit olan bir gri verir. Daha düşük ayarlar kromayı artırarak özgünden daha az gri / daha "canlı" bir renk verir. </para
+></listitem>
+      <listitem
+><para
+>Solgunlaştır &mdash; özgün rengi sorunsuz bir şekilde başvuru rengine karıştırır. Kaydırıcıdaki en düşük ayar herhangi bir değişiklik üretmez; en yüksek ise başvuru rengini verir. </para
+></listitem>
+      <listitem
+><para
+>Renklendir &mdash; kaydırıcı değeri arttıkça yoğunluğun daha yavaş değişmesi ve rengin (ton ve kroma) daha hızlı değişmesi dışında solmaya benzer. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Karşıtlık</title>
+
+    <para
+>Karşıtlık efektleri, arka plan rengini başvuru rengi olarak kullanarak metne uygulanmaları ve doygunluk gidermenin kullanılamaması dışında renk efektlerine benzer. Solgunlaştır, &quot;soluklaşan&quot; metin üretirken; Renklendir, arka planla daha hızlı eşleşecek şekilde renk değiştiren ve daha uzun süre daha yüksek karşıtlık yoğunluğunu koruyan metin üretir (&quot;daha uzun&quot;, kaydırıcıda daha yüksek ayarlar anlamına gelir). Karşıtlık efektleri için kaydırıcıdaki en düşük ayar herhangi bir değişiklik oluşturmazken en yüksek ayar, metnin tümüyle arka planda kaybolmasına neden olur.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

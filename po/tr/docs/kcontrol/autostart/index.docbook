@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Otomatik Başlatma</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-05</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>otomatik başlatma</keyword>
+<keyword
+>masaüstü dosyası</keyword>
+<keyword
+>betik dosyası</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Otomatik Başlatma Yöneticisi</title>
+
+<para
+>Bu modül, kişisel &plasma;'nız ile hangi programların başlatılacağını yönetmek için bir yapılandırma aracıdır. Programları veya betikleri eklemenize izin verir, böylece &plasma; oturumunuz başlatılırken veya kapatılırken otomatik olarak çalıştırılr ve onları ayrıca yönetebilirsiniz.</para>
+
+<note
+><para
+>Lütfen bu modülde tüm değişikliklerin anında uygulandığını unutmayın.</para
+></note>
+
+<para
+>Program; <filename
+>$HOME/.config/autostart/</filename
+> dosyasını uygulamalar ve otorum açma betikleri, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> dosyasını başlangıç öncesi betikleri ve <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> dosyasını oturumu kapatma betikleri için; hangi programların ve betiklerin halihazırda orada olduğunu denetler ve onları görüntüler. Bu araçla ile, bunları kolayca yönetebilirsiniz. </para>
+
+<para
+>Oturum açma betikleri, bir <literal
+>X-KDE-AutostartScript=true</literal
+> anahtarı içeren <filename class="extension"
+>.desktop</filename
+> dosyalarıdır. Başlangıç öncesi betikleri daha önceden çalıştırılır ve çevre değişkenlerini ayarlamak için kullanılabilir. </para>
+
+<note
+><para
+><filename class="directory"
+>autostart</filename
+> klasörünüzün konumunu, &systemsettings;'nın <guilabel
+>Kişiselleştirme</guilabel
+>kategorisinde <menuchoice
+><guimenu
+>Uygulamalar</guimenu
+> <guimenuitem
+>Konumlar</guimenuitem
+></menuchoice
+> bölümünden değiştirebilir ve <filename class="directory"
+>$HOME/.config/autostart</filename
+> klasöründen başkasına ayarlayabilirsiniz.</para
+></note>
+
+<para
+>&plasma; oturumunuzun başiangıç davranışını yapılandırma hakkında daha fazla bilgi için lütfen <ulink url="help:/kcontrol/kcmsmserver"
+>Masaüstü Oturumu</ulink
+> ve <ulink url="help:/kcontrol/kded"
+>Arka Plan Hizmetleri</ulink
+> bölümlerine bakın.</para>
+
+<para
+>Bazı &kde; uygulamaları, otomatik başlatma davranışını kendileri yapılandırırlar; &eg;, bir uygulamanın otomatik başlatmasını onun ayarlar iletişim kutusunda etkinleştirebilir veya devre dışı bırakabilirsiniz (&kalarm;) veya <menuchoice
+><guimenu
+>Dosya</guimenu
+><guimenuitem
+>Çık</guimenuitem
+></menuchoice
+> seçeneğini kullanmalısınız (&konversation;, &kopete;), yoksa uygulama sistem tepsisinde çalışmayı sürdürür ve bir sonraki oturum açmada yeniden başlatılır. </para>
+
+<sect2 id="migration">
+<title
+>&kde; Çalışma Alanları 4'den göç</title>
+<para
+>Kişisel otomatik başlatma ayarlarınızı &kde; Çalışma Alanları 4'ten aktarmak için:</para>
+<simplelist>
+<member
+>Masaüstü dosyalarını <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> konumundan <filename class="directory"
+>$HOME/.config/autostart</filename
+> konumuna taşı</member>
+<member
+>Başlangıç öncesi betikleri dosyalarını <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> konumundan <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> konumuna taşı</member>
+<member
+>Kapatma betikleri dosyalarını <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> konumundan <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> konumuna taşı</member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Dağıtımınız Tarafından Sağlanan Otomatik Başlatma Dosyalarını Devre Dışı Bırakma</title>
+<para
+>Bir otomatik başlatma ögesini; örneğin arada sırada yazıcınızı kullanıyorsanız bir yazıcı uygulamacığını, devre dışı bırakmanın doğru yolu, onun <filename class="extension"
+>.desktop</filename
+> dosyasını kendi otomatik başlatma klasörünüze taşımaktır. <filename class="directory"
+>$HOME/.config/autostart</filename
+> konumundaki aynı adlı herhangi bir şey, öntanımlı paketteki <filename class="extension"
+>.desktop</filename
+> dosyasını geçersiz kılar. Kopyalanan <filename class="extension"
+>.desktop</filename
+> dosyasına şu satırı ekleyin:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Dosyalar ekranı</title>
+<para
+>Modülün ana kısmı, &plasma; başlatıldığında yüklenen programları ve &plasma; başlatıldığında veya kapatıldığında çalışan betikleri görüntüler.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Simge</guilabel
+></term>
+<listitem>
+<para
+>Bu sütun, &plasma; ile başlatmak istediğiniz programın veya betiğin simgesini gösterir. Simge, bir programın .desktop dosyasının Icon anahtarından çıkarılır ve betiğin öntanımlı simgesidir. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ad</guilabel
+></term>
+<listitem>
+<para
+>Bu sütun, &plasma; ile başlatmak istediğiniz programın veya betiğin adını gösterir. Ad, bir programın <filename class="extension"
+>.desktop</filename
+> dosyasının <literal
+>Name</literal
+> anahtarından çıkarılır ve betiğin dosya adıdır. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Özellikler</guilabel
+></term>
+<listitem>
+<para
+>Bu düğme yalnızca ögenin üzerine fare imleciyle geldiğinizde gösterilir. Düğme (yalnızca programlar ve oturum açma betikleri; &ie;, <filename class="extension"
+>.desktop</filename
+> dosyaları için etkindir), programın veya betiğin özelliklerini değiştirmenize olanak tanır. Genel özelliklere, izin özelliklerine, uygun olduğunda bir önizlemeye ve uygulama veya oturum açma betiğiyle ilgili özelliklere sahipsiniz. Öntanımlı komut, <filename class="extension"
+>.desktop</filename
+> dosyasının <literal
+>Exec</literal
+> anahtarından çıkarılır. </para>
+<para
+>Oturum kapatma betiği için komut, betiğe giden yoldur ve değiştirilemez. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Kaldır</guilabel
+></term>
+<listitem>
+<para
+>Bu düğme yalnızca ögenin üzerine fare imleciyle geldiğinizde gösterilir. <guibutton
+>&minus;</guibutton
+> düğmesine basmak, programın Desktop dosyasını veya <filename class="directory"
+>Autostart</filename
+> klasöründeki betiği veya sembolik bağlantıyı hemen kaldıracaktır. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Eylemler</title>
+<para
+>Altta, eklemek istediğiniz öge türünü seçmek için birleştirilmiş <guibutton
+>Ekle...</guibutton
+> düğmesi vardır. Programlar ve oturum açma veya oturum kapatma betikleri ekleyebilirsiniz. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Program Ekle</guimenuitem
+></term>
+<listitem>
+<para
+>Bu ögeye tıklandığında standart &plasma; <guilabel
+>Uygulama Seç</guilabel
+> iletişim kutusu açılır ve hangi programı başlatmak istediğinizi seçmenize olanak tanır. Programı seçtikten sonra, <guibutton
+>Tamam</guibutton
+>'a tıklayarak bu programa ait özellikleri görebilirsiniz. </para>
+<para
+>Bu, programın <filename class="extension"
+>.desktop</filename
+> dosyasını <filename class="directory"
+>autostart</filename
+> klasörünüze kopyalar. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Oturum Açma Betiği Ekle...</guimenuitem
+></term>
+<listitem>
+<para
+>Bu, eklemek istediğiniz betiğin konumunu soran bir iletişim kutusu açar. Oturum açılışında çalıştırılmak üzere ayarlanmış betiklerin <filename class="directory"
+>autostart</filename
+> klasörünüzde oluşturulmuş ilişkili bir <filename class="extension"
+>.desktop</filename
+> dosyası vardır ve Plasma başlangıcında çalıştırılacaktır. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Oturum Kapatma Betiği Ekle...</guimenuitem
+></term>
+<listitem>
+<para
+>Bu, eklemek istediğiniz betiğin konumunu soran bir iletişim kutusu açar. Oturumu kapanışında çalıştırılmak üzere ayarlanmış betikler <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> dizinine kopyalanır veya sembolik bağlantı oluşturulur ve kullanıcı oturumu kapattıktan sonta &plasma; kapanışında otomatik olarak çalıştırılacaktır. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

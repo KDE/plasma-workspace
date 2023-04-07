@@ -1,0 +1,655 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>&klipper; El Kitabı </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2022-05-05</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<abstract>
+<para
+>&klipper;, &plasma; panosu için kes ve yapıştır izlencesidir.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>pano</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>Giriş</title>
+<para
+>&klipper;, &plasma; pano izlencesidir. Pano geçmişini depolar ve pano içeriğini uygulama eylemlerine bağlamanıza izin verir. Herhangi bir sorunu veya özellik isteğini lütfen <ulink url="http://bugs.kde.org"
+>KDE hata izleyicisine</ulink
+> bildirin.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>&klipper; Kullanımı</title>
+
+<sect1 id="basic-usage">
+<title
+>Temel Kullanım</title>
+<para
+>&klipper;'ı sistem tepsisinde bir &plasma; araç takımı veya klasik bir uygulama olarak kullanabilirsiniz. İkisi de aynı işlevselliği paylaşır; ancak kullanıcı arayüzleri farklıdır ve sistem tepsisindeki &klipper; simgesinin üzerine fare ile geldiğinizde panodaki son ögeyi gösterirler. </para>
+
+<screenshot>
+<screeninfo
+>&klipper; simgesi.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&klipper; simgesi</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Pano boşsa &klipper; araç takımı gizlidir.</para>
+
+<para
+>Pano geçmişini görüntülemek için sistem tepsisindeki &klipper; simgesine tıklayın.</para>
+
+<sect2 id="klipper-widget">
+<title
+>&klipper; Araç Takımı</title>
+<screenshot>
+<screeninfo
+>&klipper; Araç Takımı.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&klipper; Araç Takımı</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Fare işaretçisi ile bir girişin üzerine gelin ve bir eylemi başlatmanıza, kare kod göstermenize, içeriği düzenlemenize veya girdiyi geçmişten kaldırmanıza olanak tanıyan dört simge görünür. Kare kodları yakalamak ve kaydetmek için &spectacle; kullanın. </para>
+
+<para
+>Pano geçmişini açıp (&klipper;'a tıklayın) ve sorgunuzu yazarak arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
+
+<para
+>Bağlam menüsündeki <guilabel
+>Panoyu Yapılandır...</guilabel
+> eylemi, <link linkend="preferences"
+>ayarlar iletişim kutusunu</link
+> açar. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>Eylemler</title>
+
+<para
+>&klipper;, pano içeriği üzerinde belirli düzenli ifadeyle eşleşip eşleşmediğine göre çeşitli eylemler gerçekleştirebilir. Örneğin, <quote
+>http://</quote
+> ile başlayan herhangi bir pano içeriği Firefox'a veya &konqueror;'a açılacak &URL;'ler olarak aktarılabilir. Ek olarak, içerik bir yolla eşleşiyorsa dosyanın türüne bağlı olarak benzer eylemler gerçekeştirilebilir; &eg;, eğer bir <acronym
+>PDF</acronym
+> dosyasına giden bir yol panoya kopyalanırsa dosya &okular;'da görüntülenebilir.</para>
+
+<para
+>Bu özelliği kullanmak için bir &URL; veya yol seçin. &klipper;'ın listesinde eşleşen bir düzenli ifade varsa seçiminiz için programları gösteren bir menü görüntülenir. Bir program seçmek için fare veya imleç düğmelerini kullanın ve &klipper; seçimin işaret ettiği adresi açarak bu programı çalıştırır.</para>
+
+<para
+>Pano içeriğinde herhangi bir işlem yapmak istemiyorsanız daha önce yaptığınız işe geri dönmek için açılır menüden <guimenuitem
+>Bu Açılır Pencereyi Devre Dışı Bırak</guimenuitem
+> ögesini seçin. Menüden çıkarsanız sizi işinize geri döndürüp kaybolur. Ayarlar iletişim kutusunda <guilabel
+>Genel</guilabel
+> sayfası altındaki <guilabel
+>Eylem açılır menüsünü göster</guilabel
+> seçeneği ile menünün kalacağı süreyi değiştirebilirsiniz. <guilabel
+>Eylem Menüsü</guilabel
+> sayfası altındaki <guilabel
+>MIME eylemlerini içer</guilabel
+> seçeneğini kullanarak dosya yolu bölümünü ayrı olarak devre dışı bırakabilirsiniz.</para>
+
+<para
+>Eylemler, <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+> kısayoluyla tümüyle devre dışı bırakılabilir.</para>
+
+<para
+>Düzenli bir ifadeyle eşleşen pano içeriği de üzerilerinde bir işlem yapılmadan önce düzenlenebilir. Pano girişinin sağındaki <guimenuitem
+>İçeriği düzenle...</guimenuitem
+> ögesini seçin ve uygun olanı çalıştırmak için <guibutton
+>Kaydet</guibutton
+> düğmesine basmadan önce açılan iletişim kutusunda pano içeriğini uygun eylemle değiştirebilirsiniz.</para>
+
+<para
+><keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> kısayoluna basmak, &klipper;'ın gerçekleştirdiği son eylemi yinelemek için açılır menüyü gösterir.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>Pano/Seçim Davranışı</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>Genel</title>
+<para
+>&klipper;, &plasma;'daki pano ve seçim davranışlarını ayarlamak için kullanılabilir. </para>
+
+<note
+><para
+>&X-Window;, iki ayrı pano arabelleği kullanır: <quote
+>Seçim</quote
+> ve <quote
+>pano</quote
+>. Metin, seçildiğinde seçim arabelleğine yerleştirilir ve orta fare düğmesiyle yapıştırılabilir. Pano arabelleğine metin yerleştirmek için onu seçin ve <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> veya <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+> kısayollarını kullanın. Pano arabelleğindeki metin <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> veya bir bağlam menüsündeki <guimenuitem
+>Yapıştır</guimenuitem
+> komutuyla yapıştırılabilir.</para>
+</note>
+
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>Pano/Seçim Davranışını Değiştirmek</title>
+<para
+>Pano/seçim davranışını değiştirmek için &klipper; bağlam menüsünden <guimenuitem
+>Panoyu Yapılandır...</guimenuitem
+>'ı seçin ve açılan iletişim kutusundan <guilabel
+>Genel</guilabel
+> sayfasına geçin. <guilabel
+>Seçim ve Pano</guilabel
+> seçeneğinin içeriğini kaldırmak pano ve seçim işlevlerini yukarıda anlatıldığı üzere tümüyle ayrı arabelleklerde tutar. Bu seçenek ayarlandığında, <guilabel
+>Yok Say</guilabel
+> eylemi, &klipper;'ın seçim içeriğini onun pano geçmişine almasına ve seçimin üzerinde eylemler gerçekleştirmesine engel olur. <guilabel
+>Seçim ve Pano</guilabel
+> seçeneğini işaretlemek pano ve seçim arabelleklerinin her zaman aynı olmasına neden olur ve seçilen metnin hem <mousebutton
+>orta</mousebutton
+> fare düğmesi hem de <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> düğme kombinasyonuyla ve pano arabelleğindeki metnin de aynı biçimde yapıştırılabilmesine izin verir. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>&klipper; Yapılandırması</title>
+
+<sect1 id="general-page">
+<title
+>Genel Seçenekler</title>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Seçim ve Pano</guilabel
+></term>
+<listitem
+><para
+>Metin veya ekranın bir alanı fare veya klavye ile vurgulandığında, bu <emphasis
+>seçim</emphasis
+>'dir. Orta fare düğmesi kullanılarak yapıştırılabilir.</para
+><para
+>Seçim, <guimenuitem
+>Kopyala</guimenuitem
+> veya <guimenuitem
+>Yapıştır</guimenuitem
+> eylemleriyle açıkça kopyalanmışsa <emphasis
+>panoya</emphasis
+> kopyalanır. Bir<guimenuitem
+>Yapıştır</guimenuitem
+> eylemi kullanılarak yapıştırılabilir.</para
+><para
+>Bu seçenek etkinleştirildiğinde, seçim ve pano aynı kalır, böylece herhangi bir seçim herhangi bir yolla hemen yapıştırılabilir. Kapatılırsa seçim yine de pano geçmişine kaydedilebilir (aşağıdaki seçeneklere tabidir); ancak yalnızca farenin orta düğmesi kullanılarak yapıştırılabilir.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Pano geçmişi</guilabel
+></term>
+<listitem
+><para
+>Pano geçmişini açar/kapatır.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Girdi sayısı</guilabel
+></term>
+<listitem
+><para
+>Pano geçmişinde tutulan ögelerin sayısını ayarlar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Metin seçimi</guilabel
+></term>
+<listitem
+><para
+>Ekranın bir bölümü fare veya klavyeyle seçildiğinde, buna <quote
+>seçim</quote
+> denir. Bu seçenek, metin seçimlerinin panoya kaydedilip kaydedilmeyeceğini belirler. <guilabel
+>Her zaman geçmişe kaydet</guilabel
+> ve <guilabel
+>Yalnızca açıkça kopyalandığında</guilabel
+> arasında seçim yapılabilir. <guilabel
+>Her zaman geçmişe kaydet</guilabel
+> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman otomatik olarak kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Metin olmayan seçim</guilabel
+></term>
+<listitem
+><para
+>Bu seçenek, metin olmayan seçimlerin (örn. görseller) pano geçmişine kaydedilip kaydedlimeyeceğini belirler. <guilabel
+>Her zamang geçmişe kaydet</guilabel
+>, <guilabel
+>Yalnızca açıkça kopyalandığında</guilabel
+> ve <guilabel
+>Asla geçmişe kaydetme</guilabel
+> arasından seçim yapılabilir. <guilabel
+>Her zaman geçmişe kaydet</guilabel
+> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman otomatik olarak kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+</listitem>
+</varlistentry
+> 
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>Eylem Menüsü</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Eylem açılır menüsünü göster</guilabel
+></term>
+<listitem
+><para
+>Hiçbir şey yapmazsanız açılır menünün kalacağı süreyi ayarlayın.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Geçmişten seçilen bir ögedeki eylemleri yinele</guilabel
+></term>
+<listitem
+><para
+>Bu açıksa geçmişten bir ögeyi seçmek uygunsa &klipper;'ın o öge üzerinde eylem açılır menüsünü göstermesini sağlar.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Pencereleri Dışarıda Tut</guibutton
+></term>
+<listitem
+><para
+><guilabel
+>WM_CLASS türündeki pencereler için Eylemleri Devre Dışı Bırak</guilabel
+> iletişim kutusunu getirir.</para>
+<para
+>&konqueror; gibi bazı programlar panoyu kendi içinde kullanır. Belirli bir uygulamayı kullanırken sürekli istenmeyen &klipper; açılır pencerleri alıyorsanız şunu yapın:</para>
+
+<orderedlist>
+<listitem
+><para
+>Uygulamayı açın.</para
+></listitem>
+<listitem
+><para
+>Bir uçbirimden <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> komutunu çalıştırıp kullandığınız uygulamanın penceresine tıklayın.</para
+></listitem
+> 
+<listitem
+><para
+>Eşittir iminden sonraki ilk diziyi girin.</para
+></listitem>
+</orderedlist>
+
+<para
+>WM_CLASS eklendikten sonra o uygulamanın pencereleri için artık bir daha eylemler üretilmeyecektir.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Seçimden boşlukları kırp</guilabel
+></term>
+<listitem
+><para
+>Seçilirse pano içeriği bir uygulamaya aktarılmadan önce pano içeriğinin başındaki ve sonundaki boşluklar (boşluklar, sekmeler &etc;.) kaldırılır. Bu; örneğin, pano bir web tarayıcısı tarafından açıldığında hataya neden olacak boşluklar içeren bir &URL; içeriyorsa kullanışlıdır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>MIME eylemlerini içer</guilabel
+></term>
+<listitem
+><para
+>Seçilirse açılır menüde seçili bir dosya adı veya URL'nin &MIME; türünü kabul edebilen uygulamaları içerin.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>Eylemler Yapılandırması</title>
+
+<variablelist>
+<varlistentry>
+<term
+>İfadeleri/Eylemleri Düzenlemek</term>
+<listitem
+><para
+><guilabel
+>Eylemler</guilabel
+> sayfasında, düzenlemek istediğiniz düzenli ifadeye veya eyleme çift tıklayın veya onu seçip <guibutton
+>Eylemi Düzenle</guibutton
+> düğmesine tıklayın. İfade metnini istediğiniz gibi düzenleyebileceğiniz bir iletişim kutusu açılacaktır.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>İfadeler/Eylemler Eklemek</term>
+<listitem
+><para
+>&klipper;'ın eşleşeceği bir düzenli ifade eklemek için <guibutton
+>Eylem Ekle...</guibutton
+> düğmesine tıklayın. &klipper;, &Qt;'nin PCRE (Perl Uyumlu Düzenli İfadeler) kullanan <classname
+>QRegularExpression</classname
+> sınıfını kullanır.</para>
+<para
+>Düzenli ifadenin türünü (&eg;, <quote
+>HTTP URL</quote
+>), <guilabel
+>Açıklama</guilabel
+> sütununa <mousebutton
+>sol</mousebutton
+> fare düğmesiyle tıklayarak ekleyebilirsiniz.</para
+>   
+
+<note
+><para
+><classname
+>QRegularExpression</classname
+> düzenli ifadelerinin kullanımına ilişkin ayrıntılı bilgiyi <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>Qt belgelendirmesinde</ulink
+> bulabilirsiniz.</para
+></note>
+
+<para
+>Normal ifadeyi yukarıda açıklandığı gibi düzenleyin. Yürütülecek bir komut eklemek için, <guimenuitem
+>Komut Ekle</guimenuitem
+> ögesini tıklayın ve komutu metin düzenleme kutusunda düzenleyin. Bir komuta çift tıklamak onu düzenlemenizi sağlar.</para>
+
+<para
+>Komut satırındaki <token
+>%s</token
+>'nin pano içeriğiyle değiştirildiğini not edin; &eg;, komut tanımınız <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> ise ve pano içeriğiniz <filename
+>/home/umay/metindosyası</filename
+> ise <userinput
+><command
+>kwrite</command
+> <filename
+>/home/umay/metindosyası</filename
+></userinput
+> çalıştırılır. <token
+>%s</token
+> ögesini komut satırında içermek için onu bir ters eğik çizgi ile kaçırın: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+><userinput
+><token
+>%0</token
+></userinput
+>-<userinput
+><token
+>%9</token
+></userinput
+> arasındaki girdiler, eşleşme dizgisindeki ilgili yakalanmış metinlerle değiştirilir. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>Kısayollar Seçenekleri</title>
+
+<para
+>Kısayollar sayfası, &klipper; işlevlerine erişmek için kullanılan klavye kısayollarını değiştirmenize olanak tanır. Kısayolu üç şeyden biriyle değiştirebilirsiniz:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yok</guilabel
+></term>
+<listitem
+><para
+>Seçili eyleme klavyeden doğrudan erişilemez</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Öntanımlı</guilabel
+></term>
+<listitem
+><para
+>Seçili eylem, &klipper;'ın öntanımlı düğmesini kullanır. Bunlar, bu el kitabında söz edilen kısayollardır.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Özel</guilabel
+></term>
+<listitem
+><para
+>Seçili eyleme sizin seçtiğiniz düğmeler atanmıştır.</para>
+<para
+>Seçtiğiniz eyleme özel bir düğme atamak isterseniz <guilabel
+>Özel</guilabel
+>'e ve ardından <guilabel
+>Yok</guilabel
+>'a tıklayın. Şimdi, başka &kde; uygulamalarında da yaptığınız gibi, istediğiniz kısayolu girin. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+><guilabel
+>Fare Konumunda Ögeleri Göster</guilabel
+> için bir kısayol atarsanız &klipper; açılır menüsü, öntanımlı konumu yerine (&plasma; paneli) fare imlecinin konumunda açılacaktır. Fareyi klavyeden daha çok kullanıyorsanız yararlıdır.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Emeği Geçenler ve Lisans</title>
+
+<para
+>&klipper; </para>
+<para
+>Program telif hakkı 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>Program telif hakkı 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Geçerli bakımcı: Esben Mose Hansen. İletişim bilgileri için <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+> sayfasına bakın. </para>
+
+<para
+>Belgelendirme telif hakkı 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>Emir SARI<email
+>emir_sari@icloud.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+

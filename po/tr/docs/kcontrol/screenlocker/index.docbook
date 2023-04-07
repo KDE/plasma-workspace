@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Ekran Kilitleme</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>sistem ayarları</keyword>
+<keyword
+>ekran kilidi</keyword>
+<keyword
+>ekran kilidi</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Bu modülü kullanarak, ekran kilidinin etkinleştirilmesi için ne kadar zaman geçmesi gerektiğini belirleyebilir, şifre olmadan ekran kilidini açmak için yetkisiz kullanım süresini yapılandırabilir ve ekran kilitleyicinizin görünüşünü seçebilirsiniz.</para>
+
+<para
+>En üstte, ekran kilidininin otomatik olarak başlatılması için <guilabel
+>Ekranı kendiliğinden kilitle</guilabel
+> seçeneği ve kilidin çalışmaya başlayacağı boşta kalma süresini ayarlamak için bir döndürme kutusu bulunur. İstediğiniz bir pozitif tamsayıyı girebilirsiniz.</para>
+
+<para
+><guilabel
+>Uykudan uyandıktan sonra</guilabel
+> onay kutusu ile sistem uyanınca ekranın kilitli kalmasını sağlayabilir ve parola isteyebilirsiniz.</para>
+
+<para
+>Bunun altında <guilabel
+>Parola istemeden kilit açma süresi</guilabel
+> diye bir döndürme kutusu bulunur. Dönen kutudaki süreden önce ekran kilidini sonlandırmak ve işinize geri dönmek için bir düğmeye veya fare düğmesine bastığınızda, şifre girmezsiniz. Kullanılan parola, makinenizde oturum açmak için kullandığınız parolayla aynıdır.</para>
+
+<para
+>Ekranın elle kilitlenmesi, parola korumasının hemen devreye girmesine neden olur.</para>
+
+<para
+><guilabel
+>Klavye kısayolu</guilabel
+> alanını kullanarak ekranı kilitlemek için bir kısayol tanımlayabilirsiniz.</para>
+
+<para
+>Öntanımlı kısayol olan <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+>, ekranı elle kilitlemek için tez bir yol sunar.</para>
+
+<para
+>Kilitli durumdaki arka plan görselini değiştirmek için <guibutton
+>Görünüş</guibutton
+> etiketinin yanında bulunan <guilabel
+>Yapılandır</guilabel
+> düğmesine tıklayın. Sonrasında, <guilabel
+>Duvar kağıdı türü</guilabel
+>'nü yapılandırabilirsiniz.</para>
+
+<para
+>Duvar kağıdı türü olarak <guilabel
+>Düz Renk</guilabel
+> seçebilirsiniz.</para>
+
+<para
+>Alternatif olarak, tek bir görsel veya bir klasördeki görsellerle bir slayt gösterisi kullanın veya internetten yeni duvar kağıtları yükleyin.</para>
+
+</article>

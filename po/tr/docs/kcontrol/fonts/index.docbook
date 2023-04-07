@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Yazıtipleri</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>yazıtipleri</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Yazıtipleri</title>
+
+<para
+>Bu modül, &kde; masaüstünün farklı bölümleri için farklı yazıtiplerini kolaylıkla seçebilmeniz için tasarlanmıştır.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>İşte yazıtipi ayarları modülünün bir ekran görüntüsü</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Yazıtipi ayarları modülü</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Panel, yazıtiplerinizi yapılandırmada size çok fazla esneklik sağlamak için farklı yazıtipi gruplarından oluşur: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Genel:</guilabel
+> Diğer yazıtipi gruplarının geçerli olmadığı her yerde kullanılır</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Eş aralıklı:</guilabel
+> Orantısız bir yazıtipinin belirtildiği her yerde</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Küçük:</guilabel
+> Küçük yazıtipleri kullanıldığında</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Araç çubuğu:</guilabel
+> &kde; uygulamalarının araç çubuklarında kullanılan yazıtipi</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menü:</guilabel
+> &kde; uygulamaları menülerinde kullanılan yazıtipi</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Pencere başlığı:</guilabel
+> Pencere başlığında kullanılan yazıtipi</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Görev çubuğu:</guilabel
+> Görev çubuğu panel uygulamacığında kullanılan yazıtipi</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Masaüstü:</guilabel
+> Masaüstünde ve etiketlerde kullanılan yazıtipi</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Her yazıtipinin karşılık gelen bir <guibutton
+>Seç...</guibutton
+> düğmesi vardır. Bu düğmeye tıkladığınızda bir iletişim kutusu görünür. Yeni bir yazıtipi, yazıtipi biçemini ve boyutunu seçmek için bu iletişim kutusunu kullanabilirsiniz. Ardından <guibutton
+>Tamam</guibutton
+>'a basın.</para>
+
+<para
+>Eş aralıklı olmayan tüm yazıtiplerini listeden süzmek için <guilabel
+>Yalnızca eş aralıklı yazıtiplerini göster</guilabel
+> seçeneğini işaretleyin.</para>
+
+<para
+>Seçtiğiniz yazıtipinin bir örneği, yazıtipi grubu adı ve <guibutton
+>Seç...</guibutton
+> düğmesi arasında görüntülenir.</para>
+
+<para
+>İşiniz bittiğinde <guibutton
+>Tamam</guibutton
+>'a tıklayın ve değişikliklerinizin hemen etkili olması için &kde;'nin ilgili bileşenleri yeniden başlatılacaktır.</para>
+
+<para
+><guibutton
+>Tüm Yazıtiplerini Ayarla...</guibutton
+> düğmesi, yukarıda seçili tüm yazıtiplerinin özelliklerini tez ayarlamanıza olanak tanır. Standart olana benzer bir yazıtipi seçme iletişim kutusu açılır; ancak <guilabel
+>Yazıtipi</guilabel
+>, <guilabel
+>Yazıtipi biçemi</guilabel
+> veya <guilabel
+>Boyut</guilabel
+> alanlarını birbirinden bağımsız olarak değiştirmenize izin veren onay kutuları bulunur. Bu seçeneklerden herhangi birini, ikisini veya üçünü seçebilirsiniz ve bunlar tüm yazıtipi gruplarına uygulanacaktır.</para>
+
+<para
+>Eş aralıklı olmayan tüm yazıtiplerini listeden süzmek için <guilabel
+>Yalnızca eş aralıklı yazıtiplerini göster</guilabel
+> seçeneğini işaretleyin.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Tüm yazıtiplerini ayarlamak</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Tüm Yazıtiplerini Ayarla... iletişim kutusu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Örneğin, yukarıda birkaç farklı yazıyüzü seçtiyseniz ve hepsinin boyutunun çok büyük olduğunu fark ettiyseniz (bu, örneğin ekran çözünürlüğünü değiştirdiğinizde sıklıkla olur), tüm özelleştirilmiş yazıyüzlerinizi ve biçemlerinizi etkilemeden yeni bir yazıtipi boyutu uygulayabilirsiniz.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Metin kenarı yumuşatma</title>
+
+<para
+>Kenar yumuşatma ayarlarını kullanmak için yalnızca <guilabel
+>Etkin</guilabel
+> onay kutusunu işaretleyin ve özel ayarlarınızı seçin.</para>
+
+<para
+><guilabel
+>Aralığı kenar yumuşatma dışında bırak</guilabel
+> onay kutusuna bir işaret koymak, hangi yazıtipi aralığının kenar yumuşatma <emphasis
+>yapmayacağını</emphasis
+> belirtmenize olanak tanır. Bu aralık, aşağıdaki iki açılan kutu ile belirtilir.</para>
+
+<para
+>Ayrıca yazıtipleriniz için bir kenar yumuşatma görünümü oluşturma yöntemini ve ne kadar güçlü görünmesi gerektiğini <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+> Alt piksel sunumu</ulink
+> ve <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+> yazıtipi gölgelendirmesini</ulink
+> değiştirerek ayarlayabilirsiniz. <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>Ekran sunumu</ulink
+> için <guilabel
+>Yazıtipi DPI'sini zorla</guilabel
+>'mak da olanaklıdır. Bu ayarların ne anlama geldiğini bilmiyorsanız değiştirmemeniz en iyisidir.</para>
+
+<note
+><para
+>Kenar yumuşatılmış yazıtiplerini ve simgeleri kullanabilmek için hem ekran sunucusunda hem de &Qt; araç kitinde destek olduğundan, uygun yazı tiplerinin kurulu olduğundan ve ekran sunucusunun yerleşik yazıtipi sunma özelliklerini kullandığınızdan emin olun. Hâlâ sorun yaşıyorsanız lütfen ilgili &kde; posta listesine yazın.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>Yazıtipi DPI'si</title>
+
+<para
+><guilabel
+>Force fonts DPI:</guilabel
+> ayarı, size bu ayar <guilabel
+>Devre Dışı</guilabel
+> olduğunda öntanımlı olarak kullanılandan farklı bir DPI önerir. X sunucunuzun hangi DPI'ye ayarlı olduğunu bir uçbirim penceresinde <userinput
+>xdpyinfo | grep resolution</userinput
+> yazarak denetleyebilir ve ardından açılır kutuyu kullanarak DPI'yı değiştirebilirsiniz. Bu yalnızca yeni başlatılan uygulamalara uygulanır.</para>
+</sect2>
+
+</sect1>
+
+</article>

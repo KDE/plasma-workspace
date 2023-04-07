@@ -404,7 +404,7 @@ msgstr "Ilık Deniz Mavisi"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr "Plazma Mavisi"
+msgstr "Plasma Mavisi"
 
 #: package/contents/ui/PicturesSheet.qml:33
 #, kde-format
@@ -575,33 +575,3 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Diğer Hesaplar"
-
-#~ msgid "Continue"
-#~ msgstr "Sürdür"
-
-#~ msgid "Please repeatedly "
-#~ msgstr "Lütfen tekrarlayarak "
-
-#~ msgctxt "Example email address"
-#~ msgid "john.doe@kde.org"
-#~ msgstr "john.doe@kde.org"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Mesut Öztürk, Volkan Gezer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "doktormesut@gmail.com, volkangezer@gmail.com"
-
-#~ msgid "Manage user accounts"
-#~ msgstr "Kullanıcı hesaplarını yönet"
-
-#~ msgid "Nicolas Fella"
-#~ msgstr "Nicolas Fella"
-
-#~ msgid "Carson Black"
-#~ msgstr "Carson Black"
-
-#~ msgid "Devin Lin"
-#~ msgstr "Devin Lin"

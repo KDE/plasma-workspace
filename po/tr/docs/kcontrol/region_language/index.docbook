@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Turkish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>Bölge ve Dil</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
+<othercredit role="translator"
+><firstname
+>Emir</firstname
+><surname
+>SARI</surname
+><affiliation
+><address
+><email
+>emir_sari@icloud.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
+ </authorgroup>
+
+          <date
+>2022-06-23</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>sistem ayarları</keyword>
+		<keyword
+>yerel ayar</keyword>
+		<keyword
+>ülke</keyword>
+		<keyword
+>dil</keyword>
+		<keyword
+>sayı</keyword>
+                <keyword
+>çeviri</keyword>
+		<keyword
+>para birimi</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Bu sayfada, &plasma; Çalışma Alanı ve uygulamalarının kullanacağı dili ve biçimleri ayarlayabilirsiniz. </para>
+
+<para
+>Çoğu durumda dili seçmeniz yeterlidir ve tüm seçenekler uygun şekilde ayarlanır. &plasma; Çalışma Alanı ve &kde; uygulamaları Amerikan İngilizcesi ile yazılır ve gönüllülerden oluşan ekipler tarafından birçok farklı dile çevrilir. Bu çevirilerin kullanılabilmesi için önce kurulmaları gerekir. </para>
+<note
+><para
+>Kullanmak istediğiniz dil için &plasma; dil paketlerinin veya çevirilerinin kurulu olduğundan emin olun.</para>
+<para
+>&plasma;, &Qt; kitaplıkları üzerine yapıldığından, tümüyle çevrilmiş bir arayüze sahip olmak için seçili diller için olan &Qt; çevirileri gerekir.</para
+></note>
+
+
+<para
+>Her seçim çubuğunda, ayarların nasıl göründüğüne ve hangi ölçü birimlerinin kullanıldığına dair örnekler görebilirsiniz. Sayılara ek olarak, para birimi değerlerinin, tarihlerin ve saatlerin uzun ve kısa biçimde nasıl görüntülendiğini görebilirsiniz. Ayarlardan herhangi birini değiştirdiğinizde, önizleme, siz uygulamadan önce değişikliklerin etkilerini gösterir. </para>
+
+<para
+>Dil alt sayfasında <guilabel
+>Daha Fazla Ekle...</guilabel
+> düğmesine tıklamak ilk önce geçerli seçili dili ve sonrasında kullanılabilir diğer dillerin bir listesini gösterir. Eğer seçim <quote
+>Yapılandırılmış Dil Yok</quote
+> gösteriyorsa bir ülke seçmediğinizi ve sistemin öntanımlı dil değerlerine geri döndüğünü gösterir. Bu genelde C'dir. Kullanmak istediğiniz dil bu listede yoksa sisteminiz için olan normal yollarla bunu kurmalısınız. </para>
+
+<para
+>Ana listeden bir dili, onu seçip <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> simgesine tıklayarak kaldırabilirsiniz. Listedeki kullanım tercihi sırasını, bir dili seçip <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> simgesine tıklayarak değiştirebilirsiniz. </para>
+
+<para
+>Değişik bireysel biçim ayarlarına gerek duyuyorsanız <guilabel
+>Sayılar</guilabel
+>, <guilabel
+>Zaman</guilabel
+>, <guilabel
+>Para Birimi</guilabel
+> ve <guilabel
+>Ölçü Birimleri</guilabel
+> için olan yerel ayarları değiştirebilirsiniz. </para>
+
+<note>
+<para
+>Daha öncesinde, Dil ve Biçimler ayrı ayarlardı. &plasma; 5.26 sürümünden bu yana, Bölge ve Dil adı verilen bu ayar sayfasında toplandılar. Bir dili değiştirmek, o dil için olan sayıları, para birimini &etc; <emphasis
+>otomatik olarak</emphasis
+> ilgili ülkeye veya bölgeye göre değiştirir. Ancak, bu değişiklik eski yapılandırmayı bozmaz. Yapılandırma dosyası halen <emphasis
+>~/.config/plasma-localerc</emphasis
+> konumunda bulunur. </para>
+</note>
+</article>
