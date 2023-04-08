@@ -249,7 +249,7 @@ void XWindowTasksModelTest::test_openCloseWindow()
         const QString newTitle = title + QStringLiteral("__newtitle__");
         window->setTitle(newTitle);
         QVERIFY(dataChangedSpy.wait());
-        QVERIFY(dataChangedSpy.takeLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
+        QTRY_VERIFY(dataChangedSpy.constLast().at(2).value<QVector<int>>().contains(Qt::DisplayRole));
         // Make sure the title is updated
         QTRY_VERIFY(!findWindow(title));
         QTRY_VERIFY(findWindow(newTitle));
