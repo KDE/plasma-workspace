@@ -409,11 +409,6 @@ void KCMColors::save()
     m_activeSchemeEdited = false;
 
     processPendingDeletions();
-
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/kdeglobals"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
-    const QHash<QString, QByteArrayList> changes = {{QStringLiteral("General"), {"accentColorFromWallpaper", "AccentColor"}}};
-    message.setArguments({QVariant::fromValue(changes)});
-    QDBusConnection::sessionBus().send(message);
 }
 
 void KCMColors::saveColors()
