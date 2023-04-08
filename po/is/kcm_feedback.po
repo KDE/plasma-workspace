@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2022-10-17 15:17+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -26,12 +26,12 @@ msgstr ""
 "Athugasemdir frá notendum hafa verið gerðar óvirkar miðlægt. Hafðu samband "
 "við dreifingaraðila þinn."
 
-#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -50,17 +50,17 @@ msgstr ""
 "url='https://kde.org/privacypolicy-apps.php'>persónuverndarstefnu okkar hér."
 "</link>"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Eftirfarandi upplýsingar verða sendar:"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr "Skoða send gögn:"

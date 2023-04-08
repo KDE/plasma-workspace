@@ -1,7 +1,9 @@
 # translation of krdb.po to Esperanto
+# Copyright (C) 2004 Free Software Foundation, Inc.
 # Matthias Peick <matthias@peick.de>, 2004.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
@@ -9,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2023-01-02 17:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>Language-"
-"Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

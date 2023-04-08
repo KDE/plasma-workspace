@@ -111,7 +111,7 @@ msgstr ""
 #: main.cpp:216
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Etoso instalita sukcese."
 
 #: main.cpp:260
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Instalante piktogrametosojn…"
 #: main.cpp:270
 #, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instalante %1 etoson…"
+msgstr "Instalante etoson %1…"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -132,11 +132,15 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Ĉi tie vi povas agordi la defaŭltajn grandecojn de variaj piktogramtipoj je "
+"sistem-ampleksa nivelo. Rimarku ke ne ĉiuj aplikoj respektos tiujn metojn."
+"<nl/><nl/>Se vi trvoas ke objektoj surekrane estas ĝenerale tro malgrandaj "
+"aŭ tro grandaj, konsideru ĝustigi la ĉiean skalon anstataŭe."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Ĝustigi ĉiean skalon…"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format

@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 02:24+0000\n"
-"PO-Revision-Date: 2023-01-03 16:00+0100\n"
+"PO-Revision-Date: 2023-04-07 20:05+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -33,22 +33,24 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
+"La sano de ĉi tiu kuirilaro estas je nur %1% kaj ĝi devus esti "
+"anstataŭigita. Kontaktu la fabrikiston."
 
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Time To Full:"
-msgstr ""
+msgstr "Tempo por Plenigi:"
 
 #: package/contents/ui/BatteryItem.qml:187
 #, kde-format
 msgid "Remaining Time:"
-msgstr ""
+msgstr "Restanta tempo:"
 
 #: package/contents/ui/BatteryItem.qml:192
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Taksante..."
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -64,7 +66,7 @@ msgstr "%1%"
 #: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr ""
+msgstr "Baterio estas agordita por ŝargi ĝis proksimume %1%."
 
 #: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
@@ -148,12 +150,12 @@ msgstr "Baterio ĉe %1%"
 #: package/contents/ui/main.qml:168
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr ""
+msgstr "La nutrado ne estas sufiĉe potenca por ŝargi la kuirilaron"
 
 #: package/contents/ui/main.qml:172
 #, kde-format
 msgid "No Batteries Available"
-msgstr ""
+msgstr "Neniuj Baterioj Disponeblaj"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
@@ -175,7 +177,7 @@ msgstr "Ne ŝarganta"
 #: package/contents/ui/main.qml:187
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
-msgstr ""
+msgstr "Aŭtomata dormo kaj ekranŝlosado estas malŝaltitaj"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
@@ -187,7 +189,7 @@ msgstr[1] ""
 #: package/contents/ui/main.qml:196
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "Sistemo estas en Efikeca reĝimo"
 
 #: package/contents/ui/main.qml:200
 #, kde-format
@@ -199,7 +201,7 @@ msgstr[1] ""
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "Sistemo estas en Power Save reĝimo"
 
 #: package/contents/ui/main.qml:209
 #, kde-format
@@ -214,7 +216,7 @@ msgstr "La bateriapleto enŝaltis tutsisteman malebligon"
 #: package/contents/ui/main.qml:365
 #, kde-format
 msgid "Failed to activate %1 mode"
-msgstr ""
+msgstr "Malsukcesis aktivigi %1 reĝimon"
 
 #: package/contents/ui/main.qml:377
 #, kde-format
@@ -224,7 +226,7 @@ msgstr "&Montri Energiinformon…"
 #: package/contents/ui/main.qml:379
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr ""
+msgstr "Montri Baterian Procenton sur Piktogramo Kiam Ne Plene Ŝargita"
 
 #: package/contents/ui/main.qml:385
 #, kde-format
@@ -245,7 +247,7 @@ msgstr "Klavarbrileco"
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
-msgstr ""
+msgstr "Mane bloki dormon kaj ekranŝlosadon"
 
 #: package/contents/ui/PowerManagementItem.qml:71
 #, kde-format
@@ -254,6 +256,8 @@ msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
+"Via tekkomputilo estas agordita por ne dormi kiam oni fermas la kovrilon dum "
+"ekstera monitoro estas konektita."
 
 #: package/contents/ui/PowerManagementItem.qml:84
 #, kde-format
@@ -273,18 +277,17 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 aktuale estas blokanta dormon kaj ekranŝlosadon (nekonata kialo)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (%2)"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 aktuale estas blokanta dormon kaj ekranŝlosadon (%2)"
+msgstr "Aplikaĵo aktuale estas blokanta dormon kaj ekranŝlosadon (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 aktuale estas blokanta dormon kaj ekranŝlosadon (nekonata kialo)"
+msgstr ""
+"Aplikaĵo aktuale estas blokanta dormon kaj ekranŝlosadon (nekonata kialo)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -302,15 +305,13 @@ msgstr "%1: nekonata kialo"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Nekonata aplikaĵo: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: nekonata kialo"
+msgstr "Nekonata aplikaĵo: nekonata kialo"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
@@ -338,6 +339,8 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
+"Reĝimo de rendimento estis malŝaltita por redukti varmegon ĉar la komputilo "
+"detektis, ke ĝi povas sidas sur via sino."
 
 #: package/contents/ui/PowerProfileItem.qml:193
 #, kde-format
@@ -356,6 +359,8 @@ msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
 "has detected that it may be sitting on your lap."
 msgstr ""
+"Efikeco povas esti malaltigita por redukti varmegon ĉar la komputilo "
+"detektis, ke ĝi povas sidas sur via sino."
 
 #: package/contents/ui/PowerProfileItem.qml:210
 #, kde-format
@@ -380,4 +385,4 @@ msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
 "activating performance mode"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"

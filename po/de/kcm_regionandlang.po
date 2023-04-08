@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-30 22:01+0100\n"
+"PO-Revision-Date: 2023-03-29 20:19+0200\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -407,19 +407,15 @@ msgid "Language"
 msgstr "Sprache"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Wenn Sie Englisch (US) über andere Sprachen setzen, führt dies bei einigen "
+"Wenn Sie eine andere Sprache unter Englisch setzen, führt dies bei einigen "
 "Anwendungen zu unerwünschtem Verhalten. Wenn Sie möchten, dass Ihr System "
-"Englisch (US) verwendet, entfernen Sie alle anderen Sprachen."
+"Englisch verwendet, entfernen Sie alle anderen Sprachen."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format

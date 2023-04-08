@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2022-02-17 11:39+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -17,7 +17,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -25,12 +25,12 @@ msgstr ""
 "Reacțiile utilizatorului au fost dezactivate centralizat. Contactați-vă "
 "distribuitorul."
 
-#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -50,17 +50,17 @@ msgstr ""
 "url='https://kde.org/privacypolicy-apps.php'>politica noastră de "
 "confidențialitate aici</link>."
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Se vor trimite următoarele informații:"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr "Vezi datele trimise:"

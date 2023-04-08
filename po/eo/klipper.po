@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-07 02:22+0000\n"
-"PO-Revision-Date: 2023-01-03 22:03+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>Language-"
-"Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"PO-Revision-Date: 2023-04-07 20:05+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:80
@@ -38,6 +38,16 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Kiam teksto aŭ areo de la ekrano estas reliefigita per la muso aŭ klavaro, "
+"tio estas la <emphasis>elekto</emphasis>. Ĝi povas esti gluita per la meza "
+"musbutono.<nl/><nl/>Se la elekto estas eksplicite kopiita per ago "
+"<interface>Kopii</interface> aŭ <interface>Tranĉi</interface>, ĝi estas "
+"konservita al la <emphasis>tondujo</emphasis>. Ĝi povas esti algluita per "
+"ago <interface>Alglui</interface>. <nl/><nl/>Kiam estas ŝaltita ĉi tiu opcio "
+"konservas la elekton kaj la tondujo la samaj, tiel ke ajna elekto estas tuj "
+"disponebla por alglui ia ajn. Se ĝi estas malŝaltita, la elekto ankoraŭ "
+"povas esti konservita en la tondujo-historio (laŭ la subaj elektoj), sed ĝi "
+"povas esti algluita nur per la meza musbutono."
 
 #: configdialog.cpp:106
 #, kde-format
@@ -65,7 +75,7 @@ msgstr "Tekstelekto:"
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Nur kiam eksplicite kopiite"
 
 #: configdialog.cpp:142
 #, kde-format
@@ -88,6 +98,7 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Ĉu netekstaj elektoj (kiel bildoj) estas konservitaj en la tondujo-historio."
 
 #: configdialog.cpp:250
 #, kde-format
@@ -104,11 +115,16 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Kiam teksto, kiu kongruas kun ago-ŝablono, estas elektita aŭ estas elektita "
+"el la tondujo-historio, aŭtomate montru la ŝprucmenuon kun aplikeblaj agoj. "
+"Se la aŭtomata menuo estas malŝaltita ĉi tie, aŭ ĝi ne estas montrata por "
+"ekskludita fenestro, tiam ĝi povas esti montrita uzante la klavkombinon "
+"<shortcut>%1</shortcut>."
 
 #: configdialog.cpp:269
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Ekskludi Vindozon..."
 
 #: configdialog.cpp:283
 #, kde-format
@@ -142,12 +158,15 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Kiam <interface>kongrua ŝablono</interface> kongruas kun la enhavo de la "
+"tondujo, ĝiaj <interface>komandoj</interface> aperas en la ŝprucmenuo de "
+"Klipper kaj povas esti plenumitaj."
 
 #: configdialog.cpp:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Kongrui ŝablonon kaj komandojn"
 
 #: configdialog.cpp:359
 #, kde-format
@@ -177,6 +196,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Ĉi tiuj agoj aperas en la ŝprucmenuo kiu povas esti agordita sur la paĝo "
+"<interface>Agomenuo</interface>."
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -185,6 +206,8 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Ĉu forigi la elektitan agon <resource>%1</resource><nl/>kaj ĉiujn ĝiajn "
+"ordonojn?"
 
 #: configdialog.cpp:566
 #, kde-format
@@ -246,6 +269,11 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"La aga ŝprucfenestro ne aperos aŭtomate por ĉi tiuj fenestroj, eĉ se ĝi "
+"estas ebligita. Ĉi tio estas ĉar, ekzemple, TTT-legilo povas reliefigi URL "
+"en la adresbreto dum tajpado, do la menuo montrus por ĉiu klavopremo.<nl/"
+"><nl/>Se la agmenuo aperas neatendite kiam oni uzas apartan aplikaĵon, poste "
+"aldonu ĝin al ĉi tiu listo. <link>Kiel trovi la nomon por enigi</link>."
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -257,6 +285,12 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"La nomo, kiu devas esti enigita ĉi tie, estas la nomo WM_CLASS de la "
+"fenestro por esti ekskludita. Por trovi la nomon WM_CLASS por fenestro, en "
+"alia fina fenestro enigu la komandon:<nl/><nl/>  <icode>xprop | grep "
+"WM_CLASS</icode><nl/><nl/>kaj alklaku la fenestron, kiun vi volas ekskludi. "
+"La antaŭnomo, kiun ĝi montras post la egala signo, estas tiu, kiun vi devas "
+"enigi."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -281,7 +315,7 @@ msgstr "Komando"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Eligo"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -291,7 +325,7 @@ msgstr "Priskribo"
 #: editactiondialog.cpp:179
 #, kde-format
 msgid "Action Properties"
-msgstr ""
+msgstr "Agaj Propraĵoj"
 
 #: editactiondialog.cpp:191
 #, kde-kuit-format
@@ -302,16 +336,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Ago efektiviĝas kiam ĝia <interface>kongrua ŝablono</interface> kongruas kun "
+"la enhavo de la tondujo. Kiam tio okazas, la <interface>komandoj</interface> "
+"de la ago aperas en la ŝprucmenuo de Klipper; se unu el ili estas elektita, "
+"la komando estas ekzekutita."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Enigi ŝablonon por kongrui kun la tondujo"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Kongrua ŝablono:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -321,11 +359,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"La kongrua ŝablono estas regula esprimo. Por pliaj informoj vidu la <link "
+"url=\"https://en.wikipedia.org/wiki/Regular_expression\">Vikipedia enskribo</"
+"link> por ĉi tiu etoso."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Enigi priskribon por la ago"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -335,7 +376,7 @@ msgstr "Priskribo:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Inkluzivi en aŭtomata ŝprucfenestro"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -347,6 +388,12 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"La komandoj por ĉi tiu kongruo estos inkluzivitaj en la aŭtomata aga "
+"ŝprucfenestro, se ĝi estas ebligita en la paĝo <interface>Ago-Menuo</"
+"interface>. Se ĉi tiu opcio estas malŝaltita, la komandoj por ĉi tiu kongruo "
+"ne estos inkluzivitaj en la aŭtomata ŝprucfenestro sed ili estos "
+"inkluzivitaj se la ŝprucfenestro estas aktivigita permane per la klavkomando "
+"<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -367,12 +414,12 @@ msgstr "Forigi Komandon"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Ĉu forigi la elektitan komandon <resource>%1</resource>?"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Konfirmi Forigan Komandon"
 
 #: editcommanddialog.cpp:46
 #, kde-format
@@ -382,7 +429,7 @@ msgstr "Trajtoj de Komando"
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Enigi la komandon kaj argumentojn"
 
 #: editcommanddialog.cpp:62
 #, kde-format
@@ -398,16 +445,20 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"<placeholder>&#37;s</placeholder> en la komando estos anstataŭigita per la "
+"kompleta enhavo de la tondujo. <placeholder>&#37;0</placeholder> ĝis "
+"<placeholder>&#37;9</placeholder> estos anstataŭigitaj per la respondaj "
+"kaptitaj tekstoj de la kongrua ŝablono."
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Enigi priskribon por la komando"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Eligo de komando:"
 
 #: editcommanddialog.cpp:93
 #, kde-format
@@ -422,22 +473,22 @@ msgstr "Aldoni al poŝo"
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Kio okazas al la norma eligo de la komando efektivigita."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Restarigi la piktogramon al la defaŭlta por la komando"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Piktogramo:"
 
 #: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
-msgstr ""
+msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:155
 #, kde-format
@@ -479,7 +530,7 @@ msgstr "Redakti &Enhavon…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr ""
+msgstr "&Montri Strekokodon..."
 
 #: klipper.cpp:237
 #, kde-format
@@ -512,6 +563,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"Vi povas ebligi URL-agojn poste en la paĝo <interface>Agoj</interface> de la "
+"agorda fenestro de la apleto Clipboard."
 
 #: klipper.cpp:595
 #, kde-format
@@ -541,7 +594,7 @@ msgstr "Modifi enhavon"
 #: klipper.cpp:1012
 #, kde-format
 msgid "Mobile Barcode"
-msgstr ""
+msgstr "Poŝtelefono Strekokodo"
 
 #: klipper.cpp:1059
 #, kde-format
@@ -583,7 +636,7 @@ msgstr "Klipper versio"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Konservi historion tra labortablaj seancoj"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -592,6 +645,8 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Konservu la tondujohistorion, do ĝi estos disponebla la venontan fojon kiam "
+"vi ensalutos."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
@@ -605,7 +660,7 @@ msgstr "Eviti ke la poŝo estu forviŝata"
 msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
-msgstr ""
+msgstr "Ne permesu ke la tondujo estu forigita, ekzemple kiam aplikaĵo eliras."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
@@ -621,6 +676,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Enhavo elektita per la kursoro estas aŭtomate kopiita al la tondujo tiel ke "
+"ĝi povas esti algluita per aŭ alglui ago aŭ mezklako.<br/><a href=\"1\">Pli "
+"pri la elekto kaj tondujo</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -636,6 +694,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Enhavo elektita per la kursoro sed ne eksplicite kopiita al la tondujo ne "
+"estas aŭtomate stokita en la tondujo-historio, kaj povas esti algluita nur "
+"per mezklako."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -650,6 +711,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Konservu nur tekstajn elektojn en la tondujo-historio, ne bildojn aŭ ajnan "
+"alian tipon de datumoj."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -662,13 +725,13 @@ msgstr "Ĉiam ignori bildojn"
 #, kde-format
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
+msgstr "Ne konservi bildojn en la tondujohistorio, eĉ se eksplicite kopiitaj."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
 #, kde-format
 msgid "Use graphical regexp editor"
-msgstr ""
+msgstr "Uzi grafikan regexp-redaktilon"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
@@ -681,13 +744,13 @@ msgstr "Senpere je elekto"
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
-msgstr ""
+msgstr "Montru la ŝprucmenuon de aplikeblaj agoj tuj kiam elekto estas farita."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
 #, kde-format
 msgid "No actions for WM_CLASS"
-msgstr ""
+msgstr "Neniuj agoj por WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
@@ -711,13 +774,13 @@ msgstr "Grando de la historio:"
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "La tondujo-historio stokos ĝis tiom da eroj."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr ""
+msgstr "Imita eniro por indiki ŝanĝojn en la arbfenestraĵo de ago"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
@@ -734,6 +797,10 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Forigu ajnan blankspacon de la komenco kaj fino de elektita teksto, antaŭ ol "
+"fari agon. Ekzemple, ĉi tio certigas, ke URL algluita en retumilo estas "
+"interpretita kiel atendite. La teksto konservita en la tondujo ne estas "
+"tuŝita."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -764,6 +831,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Se estas elektita dosiernomo aŭ URL, inkludu aplikaĵojn kiuj povas akcepti "
+"ĝian MIME-tipo en la ŝprucmenuo."
 
 #: klipperpopup.cpp:105
 #, kde-format
@@ -865,7 +934,7 @@ msgstr "Antaŭa Prizorganto"
 #: main.cpp:44
 #, kde-format
 msgid "Martin Gräßlin"
-msgstr ""
+msgstr "Martin Gräßlin"
 
 #: main.cpp:44
 #, kde-format
@@ -900,6 +969,3 @@ msgstr "Malebligi ĉi tiun ŝprucmesaĝon"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rezigni"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Poŝenhavo"

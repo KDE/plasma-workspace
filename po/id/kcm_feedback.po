@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2023-01-02 07:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -26,12 +26,12 @@ msgstr ""
 "Umpan Balik Pengguna telah dinonfungsikan secara terpusat. Silakan kontak "
 "distributormu."
 
-#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -50,17 +50,17 @@ msgstr ""
 "informasi yang dapat mengidentifikasi Anda.<nl/><nl/>Anda dapat membaca "
 "tentang kebijakan kami di tautan berikut:"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Informasi berikut akan dikirim:"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr "Tampilkan data yang akan dikirim:"

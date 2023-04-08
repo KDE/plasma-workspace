@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"POT-Creation-Date: 2023-04-08 02:19+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr ""
 "ഉപയോക്തൃ അഭിപ്രായം കേന്ദ്രീകൃതമായി അപ്രാപ്‌തമാക്കി. നിങ്ങളുടെ വിതരണക്കാരനുമായി ബന്ധപ്പെടുക."
 
-#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "പ്ലാസ്മ:"
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:52
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -58,17 +58,17 @@ msgstr ""
 "കഴിയുന്ന വിവരങ്ങൾ ഞങ്ങൾ ഒരിക്കലും ശേഖരിക്കുന്നില്ല.<nl/><nl/>ഞങ്ങളുടെ നയം ചുവടെയുള്ള "
 "ലിങ്കിലൂടെ വായിക്കാം:"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "പ്ലാസ്മ"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "ഈ പറയുന്ന വിവരങ്ങൾ അയക്കും:"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr ""

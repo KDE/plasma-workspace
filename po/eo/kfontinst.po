@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-04-07 02:28+0100\n"
+"PO-Revision-Date: 2023-04-07 20:05+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Simbolo/alia"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Filtri per %1…"
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "Tiparo"
 #: kcmfontinst/FontList.cpp:556
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "Statuso"
 
 #: kcmfontinst/FontList.cpp:570
 #, kde-format
@@ -571,12 +571,12 @@ msgstr "Ĝisdatiganta la tiparan agordon. Bonvolu atendi…"
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
 msgid "Unable to start backend."
-msgstr ""
+msgstr "Ne eblas komenci backend."
 
 #: kcmfontinst/JobRunner.cpp:460
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr ""
+msgstr "Backend mortis, sed estis rekomencita. Bonvolu reprovi."
 
 #: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
@@ -591,7 +591,7 @@ msgstr "Fiaskis elŝuti <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
+msgstr "Sistema backend mortis. Bonvolu provi denove.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:701
 #, kde-format
@@ -622,7 +622,7 @@ msgstr "Ne eblis forigi ĉiujn dosierojn kiuj rilatas al <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr ""
+msgstr "Malsukcesis lanĉi la sisteman demonon.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
@@ -637,7 +637,7 @@ msgstr "<i>%1</i> ne ekzistas."
 #: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
-msgstr ""
+msgstr "Permeso malakceptita.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:719
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Aŭtentigo malsukcesis.<br><i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:723
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr ""
+msgstr "Neatendita eraro dum prilaborado: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:193
 #, kde-format
@@ -697,7 +697,7 @@ msgstr "Instali el Dosiero…"
 #: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Instali tiparojn de loka dosiero"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
@@ -707,7 +707,7 @@ msgstr "Ricevi Novajn Tiparojn…"
 #: kcmfontinst/KCmFontInst.cpp:244
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "Elŝuti novajn tiparojn"
 
 #: kcmfontinst/KCmFontInst.cpp:246
 #, kde-format
@@ -1103,7 +1103,7 @@ msgstr "48pt"
 #: kio/KioFonts.cpp:208
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr ""
+msgstr "Povas nur instali tiparojn aŭ \"%1\" aŭ \"%2\"."
 
 #: kio/KioFonts.cpp:211
 #, kde-format
@@ -1142,7 +1142,7 @@ msgstr "Elektu \"%1\" aŭ \"%2\"."
 #: kio/KioFonts.cpp:505
 #, kde-format
 msgid "No special methods supported."
-msgstr ""
+msgstr "Neniuj specialaj metodoj subtenataj."
 
 #: kio/KioFonts.cpp:579
 #, kde-format
@@ -1157,7 +1157,7 @@ msgstr "Malsukcesis lanĉi la tiparan presilon."
 #: kio/KioFonts.cpp:711
 #, kde-format
 msgid "Backend died"
-msgstr ""
+msgstr "Backend mortis"
 
 #: kio/KioFonts.cpp:714
 #, kde-format
@@ -2271,43 +2271,3 @@ msgstr "Phagspa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "Font Management"
-#~ msgstr "Tiparmastrumado"
-
-#~ msgid "(C) Craig Drummond, 2000 - 2009"
-#~ msgstr "(C) Craig Drummond, 2000-2009"
-
-#~ msgid "Craig Drummond"
-#~ msgstr "Craig Drummond"
-
-#~ msgid "Developer and maintainer"
-#~ msgstr "Programisto kaj zorganto"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy one into the "
-#~ "folder.</p>"
-#~ msgstr ""
-#~ "<h1>Tiparinstalilo</h1><p>Tiu modulo ebligas al vi instali tiparojn de "
-#~ "Trutajpa, Type1,  kaj rastrumaj.</p> <p> Vi ankaŭ povas instali tiparojn "
-#~ "per Konkeranto: tajpu \"fonts:/\" en la Konkerantan adresbreton kaj tio "
-#~ "vidigos viajn instalitajn tiparojn. Por instali tiparon nur kopiu ĝin en "
-#~ "ĝustan dosierujon.</p>"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy it into the "
-#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
-#~ "\"%2\" for system-wide fonts (available to all).</p>"
-#~ msgstr ""
-#~ "<h1>Tiparinstalilo</h1><p>Tiu modulo ebligas la instalon de tiparoj de "
-#~ "Trutajpa, Type1, kaj rastrumaj.</p> <p> Vi ankaŭ povas instali tiparojn "
-#~ "per Konkeranto: tajpu \"fonts:/\" en la Konkerantan adresbreton kaj tio "
-#~ "vidigos viajn instalitajn tiparojn. Por instali tiparon nur kopiu ĝin en "
-#~ "ĝustan dosierujon -  \"%1\" por personaj tiparoj, aŭ  \"%2\" por "
-#~ "tutsistemaj tiparoj (disponeblaj al ĉiuj).</p>"

@@ -4,14 +4,14 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009, 2010.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
-# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016, 2020, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016, 2020, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-02-02 21:33+0100\n"
+"PO-Revision-Date: 2023-04-04 19:41+0200\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -82,6 +82,8 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Die zuletzt verwendete benutzerdefinierte Akzentfarbe bevor zu einer aus dem "
+"Hintergrundbild abgeleiteten oder der Standard-Akzentfarbe gewechselt wurde"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
@@ -1148,24 +1150,22 @@ msgid "focus"
 msgstr "Aktivierung"
 
 #: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Farbschema wiederherstellen"
+msgstr "Akzentfarbe aus dem Farbschema"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Akzentfarbe aus dem Hintergrundbild"
 
 #: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Choose custom accent color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Benutzerdefinierte Akzentfarbe auswählen"
+msgstr "Benutzerdefinierte Akzentfarbe"
 
 #: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
@@ -1279,6 +1279,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Dieses Werkzeug ermöglicht es, das Farbschema für die aktuelle Plasma-"
+"Sitzung festzulegen, ohne versehentlich ein nicht verfügbares oder bereits "
+"ausgewähltes zu verwenden."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1286,6 +1289,9 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Der Name des Farbschemas, das Sie für die aktuelle Plasma-Sitzung festlegen "
+"möchten (bei Angabe des vollständigen Pfades wird nur der letzte Teil "
+"verwendet)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1293,6 +1299,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Alle auf dem System verfügbaren Farbschemata anzeigen (und welches das "
+"aktuelle ist)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1301,6 +1309,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Der Name der festzulegenden Akzentfarbe. SVG-Farbnamen (https://www.w3.org/"
+"TR/SVG11/types.html#ColorKeywords) und HEX-Farbcodes werden unterstützt. "
+"Setzen Sie den HEX-Code in Anführungszeichen, wenn die Möglichkeit einer "
+"Shell-Expansion besteht."
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1308,11 +1320,15 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Das gewählte Design „%1“ wird bereits für die aktuelle Plasma-Sitzung "
+"verwendet."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
+"Das Farbschema „%1“ wurde erfolgreich für die aktuelle Plasma-Sitzung "
+"übernommen."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
@@ -1320,6 +1336,8 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Das Design „%1“ wurde nicht gefunden. Es sollte eines der folgenden Designs "
+"gewählt werden: %2"
 
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
@@ -1327,6 +1345,8 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
+"Ihnen ist es gelungen, einen leeren Farbschema-Namen zu übergeben. Dies wird "
+"nicht unterstützt."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
@@ -1334,6 +1354,8 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Die Datei %1, die Sie versucht haben als Farbschema festzulegen, kann nicht "
+"als solches identifiziert werden."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
