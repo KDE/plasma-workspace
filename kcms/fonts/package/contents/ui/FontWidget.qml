@@ -9,7 +9,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import org.kde.kirigami 2.3 as Kirigami
-import org.kde.kcm 1.0
+import org.kde.kcm 1.6
 
 
 FocusScope {
@@ -30,7 +30,7 @@ FocusScope {
         QtControls.TextField {
             readOnly: true
             Kirigami.Theme.inherit: true
-            text: root.font.family + " " + root.font.pointSize + "pt"
+            text: i18nc("%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans 10pt", "%1 %2pt", root.font.family, root.font.pointSize)
             font: root.font
         }
 
