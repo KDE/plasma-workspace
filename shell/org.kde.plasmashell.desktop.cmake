@@ -14,7 +14,6 @@ Name[da]=Plasma Desktop Workspace
 Name[de]=Plasma-Arbeitsflächenbereich
 Name[el]=Χώρος επιφάνειας εργασίας Plasma
 Name[en_GB]=Plasma Desktop Workspace
-Name[eo]=Plasma Fenestrila Laborspaco
 Name[es]=Espacio de trabajo del escritorio Plasma
 Name[et]=Plasma töölaua töötsoon
 Name[eu]=Plasma mahaigainaren lanerako guneak
