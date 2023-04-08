@@ -28,6 +28,9 @@ int main(int argc, char **argv)
         qputenv("QT_WAYLAND_FORCE_DPI", QByteArray::number(dpi));
     }
 
+    // Let clients try to reconnect to kwin after a restart
+    qputenv("QT_WAYLAND_RECONNECT", "1");
+
     // Query whether org.freedesktop.locale1 is available. If it is, try to
     // set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
     {
