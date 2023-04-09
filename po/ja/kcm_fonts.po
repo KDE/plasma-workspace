@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-09 02:10+0000\n"
 "PO-Revision-Date: 2021-09-26 21:31+0900\n"
 "Last-Translator: Ryunosuke Toda <toda.ryunosuke@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -141,6 +141,14 @@ msgstr "軽く"
 msgctxt "full hinting"
 msgid "Full"
 msgstr "完全に"
+
+#: package/contents/ui/FontWidget.qml:33
+#, kde-format
+msgctxt ""
+"%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
+"10pt"
+msgid "%1 %2pt"
+msgstr ""
 
 #: package/contents/ui/main.qml:24
 #, fuzzy, kde-format

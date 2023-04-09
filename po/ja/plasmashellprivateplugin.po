@@ -1,11 +1,12 @@
 # Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2023-02-23 12:14+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2023-04-07 23:52-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +67,7 @@ msgstr "イベントなし"
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr "%2年 %1"
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
@@ -201,7 +202,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr "アンインストールできません"
+msgstr "アンインストール可能"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 #, kde-format

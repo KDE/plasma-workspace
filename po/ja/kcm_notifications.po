@@ -1,12 +1,13 @@
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020, 2021.
 # Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-02-04 02:03+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2023-04-07 23:30-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -221,7 +222,7 @@ msgstr "通知バッジ:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "アプリケーション特有の設定"
+msgstr "アプリケーション固有の設定"
 
 #: package/contents/ui/main.qml:307
 #, kde-format
@@ -264,6 +265,3 @@ msgstr "リストからアプリケーションを選択して通知設定と動
 #, kde-format
 msgid "Other Applications"
 msgstr "その他のアプリケーション"
-
-#~ msgid "This module lets you manage application and system notifications."
-#~ msgstr "このモジュールでアプリケーションとシステムの通知を管理できます。"

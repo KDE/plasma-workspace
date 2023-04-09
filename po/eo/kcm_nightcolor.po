@@ -1,0 +1,214 @@
+# translation of kcm_nightcolor.pot to Esperanto
+# Copyright (C) 2017 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/LocationsFixedView.qml:39
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Frapi por elekti vian lokon sur la mapo."
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Klaki por elekti vian lokon sur la mapo."
+
+#: package/contents/ui/LocationsFixedView.qml:78
+#: package/contents/ui/LocationsFixedView.qml:103
+#, kde-format
+msgid "Zoom in"
+msgstr "Zomi enen"
+
+#: package/contents/ui/LocationsFixedView.qml:222
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Modifita el <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Monda lokmapo</link> de TUBS / "
+"Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
+"sa/3.0'>CC BY-SA 3.0</link>"
+
+#: package/contents/ui/LocationsFixedView.qml:235
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Latitude:"
+msgstr "Latitudo:"
+
+#: package/contents/ui/LocationsFixedView.qml:261
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Longitude:"
+msgstr "Longitudo:"
+
+#: package/contents/ui/main.qml:87
+#, kde-format
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr "La blua lumfiltrilo faras la kolorojn sur la ekrano pli varmaj."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Switching times:"
+msgstr "Ŝanĝtempoj:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Always off"
+msgstr "Ĉiam for"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Sunsubiro kaj sunleviĝo ĉe nuna loko"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Sunsubiro kaj sunleviĝo ĉe mana loko"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgid "Custom times"
+msgstr "Propraj tempoj"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "Always on night color"
+msgstr "Ĉiam sur nokta koloro"
+
+#: package/contents/ui/main.qml:156
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The device's location will be periodically updated using GPS (if available), "
+"or by sending network information to <link url='https://location.services."
+"mozilla.com'>Mozilla Location Service</link>."
+msgstr ""
+"La loko de la aparato estos periode ĝisdatigita per GPS (se disponebla), aŭ "
+"sendante retajn informojn al <link url='https://location.services.mozilla."
+"com'>Mozilla Location Service</link>."
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Day color temperature:"
+msgstr "Taga kolortemperaturo:"
+
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Varma"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "No blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Malvarmeta (neniu filtrilo)"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr "Malvarmeta"
+
+#: package/contents/ui/main.qml:234
+#, kde-format
+msgid "Night color temperature:"
+msgstr "Nokta kolortemperaturo:"
+
+#: package/contents/ui/main.qml:298
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Latitudo: %1° Longitudo: %2°"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Begin night color at:"
+msgstr "Komenci noktan koloron ĉe:"
+
+#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr "Eniga formato: HH:MM"
+
+#: package/contents/ui/main.qml:331
+#, kde-format
+msgid "Begin day color at:"
+msgstr "Komenci tagan koloron ĉe:"
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "Transition duration:"
+msgstr "Daŭro de transiro:"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minuto"
+msgstr[1] "%1 minutoj"
+
+#: package/contents/ui/main.qml:375
+#, kde-format
+msgid "Input minutes - min. 1, max. 600"
+msgstr "Enigo minutoj - min. 1, maks. 600"
+
+#: package/contents/ui/main.qml:393
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "Eraro: Transira tempo interkovras."
+
+#: package/contents/ui/main.qml:413
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Locating…"
+msgstr "Lokante…"
+
+#: package/contents/ui/TimingsView.qml:32
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"Kolora temperaturo komencas ŝanĝiĝi al nokta tempo ĉe %1 kaj estas plene "
+"ŝanĝita de %2"
+
+#: package/contents/ui/TimingsView.qml:39
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"Kolora temperaturo komencas ŝanĝiĝi al taga tempo ĉe %1 kaj estas plene "
+"ŝanĝita de %2"

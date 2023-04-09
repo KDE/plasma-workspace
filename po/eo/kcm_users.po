@@ -1,0 +1,601 @@
+# translation of kcm_users.pot to Esperanto
+# Copyright (C) 2021 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/ChangePassword.qml:28
+#: package/contents/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Ŝanĝi Pasvorton"
+
+#: package/contents/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Agordi Pasvorton"
+
+#: package/contents/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Pasvorto"
+
+#: package/contents/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Konfirmi pasvorton"
+
+#: package/contents/ui/ChangePassword.qml:90
+#: package/contents/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "La pasvortoj devas kongrui"
+
+#: package/contents/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Ŝanĝi la Pasvorton de Monujo?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Nun kiam vi ŝanĝis vian ensalutan pasvorton, vi eble ankaŭ volas ŝanĝi la "
+"pasvorton en via defaŭlta KWallet por kongrui kun ĝi."
+
+#: package/contents/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Kio estas KWallet?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet estas pasvortmanaĝero, kiu konservas viajn pasvortojn por sendrataj "
+"retoj kaj aliaj ĉifritaj rimedoj. Ĝi estas ŝlosita per sia propra pasvorto, "
+"kiu diferencas de via ensaluta pasvorto. Se la du pasvortoj kongruas, ĝi "
+"povas esti malŝlosita ĉe ensaluto aŭtomate, por ke vi ne devas mem enigi la "
+"pasvorton de KWallet."
+
+#: package/contents/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Ŝanĝi Pasvorton de Monujo"
+
+#: package/contents/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Lasi Senŝanĝa"
+
+#: package/contents/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Krei Uzanton"
+
+#: package/contents/ui/CreateUser.qml:33
+#: package/contents/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Nomo:"
+
+#: package/contents/ui/CreateUser.qml:37
+#: package/contents/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Uzantnomo:"
+
+#: package/contents/ui/CreateUser.qml:47
+#: package/contents/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Normo"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Administranto"
+
+#: package/contents/ui/CreateUser.qml:51
+#: package/contents/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Tipo de konto:"
+
+#: package/contents/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Pasvorto:"
+
+#: package/contents/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Konfirmi pasvorton:"
+
+#: package/contents/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Krei"
+
+#: package/contents/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Agordi Fingrospurojn"
+
+#: package/contents/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "Forigi Ĉion"
+
+#: package/contents/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Aldoni"
+
+#: package/contents/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: package/contents/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Farita"
+
+#: package/contents/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Enskribanta Fingrosignon"
+
+#: package/contents/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian dekstran montran fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian dekstran mezan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian dekstran ringan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian dekstran etfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian dekstran dikfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian maldekstran montrofingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian maldekstran mezan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian maldekstran ringan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian maldekstran etfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje premi vian maldekstran dikfingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian dekstran montrofingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian dekstran mezan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian dekstran ringan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian dekstran etfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian dekstran dikfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian maldekstran montrofingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian maldekstran mezan fingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian maldekstran ringfingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian maldekstran etfingron sur la fingrospura sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Bonvolu plurfoje gliti vian maldekstran dikfingron sur la fingrospura "
+"sensilo."
+
+#: package/contents/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Fingro Enskribita"
+
+#: package/contents/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Elekti fingron por enskribiĝi"
+
+#: package/contents/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Reenskribi fingron"
+
+#: package/contents/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Forigi fingrospuron"
+
+#: package/contents/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Neniuj fingrospuroj aldonitaj"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Administri Uzantoj"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Aldoni Novan Uzanton"
+
+#: package/contents/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Ŝanĝi avataron"
+
+#: package/contents/ui/PicturesSheet.qml:21
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Estas nenio"
+
+#: package/contents/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: package/contents/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Drako-Frukto"
+
+#: package/contents/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Batato"
+
+#: package/contents/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ĉirkaŭa Sukceno"
+
+#: package/contents/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Scintila Sunradio"
+
+#: package/contents/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Citron-kalko"
+
+#: package/contents/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Ĉarmo"
+
+#: package/contents/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Dolĉa Herbejo"
+
+#: package/contents/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Varma Kreko"
+
+#: package/contents/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Bluo"
+
+#: package/contents/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purpuro"
+
+#: package/contents/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Malalta Purpuro"
+
+#: package/contents/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Bruligita Lignokarbo"
+
+#: package/contents/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Papera Perfekteco"
+
+#: package/contents/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: package/contents/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Riĉa Durligno"
+
+#: package/contents/ui/PicturesSheet.qml:73
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Elekti bildon"
+
+#: package/contents/ui/PicturesSheet.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Elekti dosieron…"
+
+#: package/contents/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Ŝanĝi avataron"
+
+#: package/contents/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "Retpoŝta adreso:"
+
+#: package/contents/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Forigi dosierojn"
+
+#: package/contents/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Konservi dosierojn"
+
+#: package/contents/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Forigi Uzanton…"
+
+#: package/contents/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Agordi fingrospuran aŭtentikigon…"
+
+#: package/contents/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Fingrospuroj povas esti uzataj anstataŭ pasvorton kiam oni malŝlosas la "
+"ekranon kaj donas administrantajn permesojn al aplikaĵoj kaj komandliniaj "
+"programoj kiuj petas ilin.<nl/><nl/>Ensaluti en la sistemon per via "
+"fingrospuro ankoraŭ ne estas subtenata."
+
+#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "Neniu fingrospura aparato trovita."
+
+#: src/fingerprintmodel.cpp:331
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Reprovu skani vian fingron."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "Glito tro mallonga. Provu denove."
+
+#: src/fingerprintmodel.cpp:335
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "Fingro ne centrita sur la leganto. Provu denove."
+
+#: src/fingerprintmodel.cpp:337
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Forigu vian fingron de la leganto, kaj provu denove."
+
+#: src/fingerprintmodel.cpp:345
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "Enskribo de fingrospuro malsukcesis."
+
+#: src/fingerprintmodel.cpp:348
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+"Ne restas spaco por ĉi tiu aparato, forigu aliajn fingrospurojn por daŭrigi."
+
+#: src/fingerprintmodel.cpp:351
+#, kde-format
+msgid "The device was disconnected."
+msgstr "La aparato estis malkonektita."
+
+#: src/fingerprintmodel.cpp:356
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "Nekonata eraro okazis."
+
+#: src/user.cpp:279
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "Ne eblis akiri permeson konservi uzanton %1"
+
+#: src/user.cpp:284
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "Okazis eraro dum konservado de ŝanĝoj"
+
+#: src/user.cpp:380
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "Malsukcesis regrandigi bildon: malfermi tempdosieron malsukcesis"
+
+#: src/user.cpp:388
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "Malsukcesis regrandigi bildon: skribo al tempdosiero malsukcesis"
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Your Account"
+msgstr "Via Konto"
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Other Accounts"
+msgstr "Aliaj Kontoj"
