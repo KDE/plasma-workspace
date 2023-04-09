@@ -12,6 +12,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.1 // For KCMShell
+import org.kde.notification 1.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.plasmoid 2.0
@@ -342,12 +343,15 @@ Item {
             batterymonitor.powermanagementDisabled = disabled
         }
 
-        P5Support.DataSource {
-            id: notificationSource
-            engine: "notifications"
+        Notification {
+            id: powerProfileError
+            componentName: "plasma_workspace"
+            eventId: "warning"
+            iconName: "speedometer"
+            title: i18n("Battery and Brightness")
         }
 
-        onActivateProfileRequested: {
+        onActivateProfileRequested: profile => {
             dialogItem.activeProfile = profile;
             const service = pmSource.serviceForSource("PowerDevil");
             const op = service.operationDescription("setPowerProfile");
@@ -357,13 +361,8 @@ Item {
             job.finished.connect(job => {
                 dialogItem.activeProfile = Qt.binding(() => actuallyActiveProfile);
                 if (!job.result) {
-                    const notifications = notificationSource.serviceForSource("notification")
-                    const operation = notifications.operationDescription("createNotification");
-                    operation.appName = i18n("Battery and Brightness");
-                    operation.appIcon = "dialog-error";
-                    operation.icon = "dialog-error";
-                    operation.body = i18n("Failed to activate %1 mode", profile);
-                    notifications.startOperationCall(operation);
+                    powerProfileError.text = i18n("Failed to activate %1 mode", profile);
+                    powerProfileError.sendEvent();
                 }
             });
         }
