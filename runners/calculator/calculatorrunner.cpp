@@ -35,6 +35,7 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), description));
     addSyntax(KRunner::RunnerSyntax(QStringLiteral("=:q:"), description));
     addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:="), description));
+    addSyntax(KRunner::RunnerSyntax(QStringLiteral("sqrt(4)"), i18n("Enter a common math function")));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), this)};
     setMinLetterCount(2);
@@ -95,10 +96,23 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
         userFriendlyMultiplication(cmd);
     }
 
+    const static QRegularExpression functionName(QStringLiteral("^([a-zA-Z]+)\\(.+\\)"));
     if (foundPrefix) {
         cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
     } else if (cmd.endsWith(QLatin1Char('='))) {
         cmd.chop(1);
+    } else if (auto match = functionName.match(cmd); match.hasMatch()) { // BUG: 467418
+        {
+            QMutexLocker lock(&s_initMutex);
+            if (!m_engine) {
+                m_engine = std::make_unique<QalculateEngine>();
+            }
+        }
+        const QString functionName = match.captured(1);
+        if (!m_engine->isKnownFunction(functionName)) {
+            return;
+        }
+
     } else if (!parseHex) {
         bool foundDigit = false;
         for (int i = 0; i < cmd.length(); ++i) {

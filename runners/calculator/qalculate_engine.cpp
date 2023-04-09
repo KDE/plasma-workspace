@@ -260,3 +260,8 @@ bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customB
 #endif
     return false;
 }
+
+bool QalculateEngine::isKnownFunction(const QString &str)
+{
+    return CALCULATOR->getFunction(str.toLocal8Bit().constData()) != nullptr;
+}

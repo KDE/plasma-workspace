@@ -25,6 +25,9 @@ public:
 
     static bool findPrefix(QString basePrefix, int *base, QString *customBase);
 
+    // This is not static, because the CALCULATOR needs to be initialized
+    bool isKnownFunction(const QString &str);
+
 public Q_SLOTS:
     QString evaluate(const QString &expression, bool *isApproximate = nullptr, int base = 10, const QString &customBase = "");
     void updateExchangeRates();

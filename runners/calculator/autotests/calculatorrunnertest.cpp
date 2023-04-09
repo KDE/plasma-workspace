@@ -22,6 +22,7 @@ private Q_SLOTS:
 #if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
     void testErrorDetection();
 #endif
+    void testFunctions();
 };
 
 void CalculatorRunnerTest::initTestCase()
@@ -94,6 +95,24 @@ void CalculatorRunnerTest::testErrorDetection()
     QVERIFY(manager->matches().isEmpty());
 }
 #endif
+
+void CalculatorRunnerTest::testFunctions()
+{
+    // BUG: 467418
+    launchQuery("sqrt(4)");
+    QCOMPARE(manager->matches().size(), 1);
+
+    launchQuery("=sqrt(4)");
+    QCOMPARE(manager->matches().size(), 1);
+
+    // Goes to qalculate
+    launchQuery("=sqrt 4");
+    QCOMPARE(manager->matches().size(), 1);
+
+    // Does not match the prefixless queries and function-pattern
+    launchQuery("sqrt 4");
+    QCOMPARE(manager->matches().size(), 0);
+}
 
 QTEST_MAIN(CalculatorRunnerTest)
 
