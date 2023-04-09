@@ -1,11 +1,11 @@
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
-# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2022-08-13 21:40-0700\n"
+"PO-Revision-Date: 2023-04-07 23:40-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "タイトルなし"
 
 #: package/contents/ui/AlbumArtStackView.qml:181
 #: package/contents/ui/main.qml:82
@@ -102,15 +102,16 @@ msgid "Choose player automatically"
 msgstr "プレーヤーを自動的に選択"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "by %1 (一時停止中、%2)"
+msgstr ""
+"by %1 (%2)\n"
+"中クリックして一時停止\n"
+"スクロールして音量調整"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -120,25 +121,30 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"中クリックして一時停止\n"
+"スクロールして音量調整"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "by %1 (一時停止中、%2)"
+msgstr ""
+"by %1 (一時停止中、%2)\n"
+"中クリックして再生\n"
+"スクロールして音量調整"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "by Artist (paused, player name)"
-#| msgid "by %1 (paused, %2)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "by %1 (一時停止中、%2)"
+msgstr ""
+"一時停止中 (%1)\n"
+"中クリックして再生\n"
+"スクロールして音量調整"

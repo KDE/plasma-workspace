@@ -5,14 +5,16 @@
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2020-01-17 19:18+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2023-04-07 23:43-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -21,17 +23,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Yukiko Bando"
+msgstr "Yukiko Bando,Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ybando@k6.dion.ne.jp"
+msgstr "ybando@k6.dion.ne.jp,ryuichi_ya220@outlook.jp"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
@@ -67,12 +69,12 @@ msgstr "タイル状に表示"
 #: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Background:"
-msgstr ""
+msgstr "背景:"
 
 #: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "ぼかし"
 
 #: imagepackage/contents/ui/config.qml:151
 #, kde-format
@@ -82,19 +84,17 @@ msgstr ""
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr ""
+msgstr "背景色を選択"
 
 # ACCELERATOR changed by translator
 #: imagepackage/contents/ui/config.qml:207
-#, fuzzy, kde-format
-#| msgid "Add Image..."
+#, kde-format
 msgid "Add Image…"
 msgstr "画像を追加..."
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Get New Wallpapers…"
 msgstr "新しい壁紙を取得..."
 
@@ -114,16 +114,14 @@ msgid "Open Containing Folder"
 msgstr "保存フォルダを開く"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Restore wallpaper"
-msgstr "新しい壁紙を取得..."
+msgstr "壁紙を復元"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Remove Wallpaper"
-msgstr "新しい壁紙を取得..."
+msgstr "壁紙を削除"
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
@@ -180,103 +178,97 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
 #: plugin/imagebackend.cpp:353
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgid "Open Image"
-msgstr "壁紙画像を開く"
+msgstr "画像を開く"
 
 #: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Image Files"
-msgstr ""
+msgstr "画像ファイル"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "順番:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "ランダム"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:49
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "A から Z"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "Z から A"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:57
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "更新日 (新しいものを先に)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:61
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "更新日 (古いものを先に)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "フォルダごとにグループ化"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
-#, fuzzy, kde-format
-#| msgid "C&hange images every:"
+#, kde-format
 msgid "Change every:"
-msgstr "画像を変更する間隔(&H):"
+msgstr "画像を変更する間隔:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1時間"
+msgstr[1] "%1時間"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1分"
+msgstr[1] "%1分"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1秒"
+msgstr[1] "%1秒"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Folders"
-msgstr "新しい壁紙を取得..."
+msgstr "フォルダ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Remove Folder"
-msgstr "新しい壁紙を取得..."
+msgstr "フォルダを削除"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:225
 #, kde-format
 msgid "Open Folder"
-msgstr ""
+msgstr "フォルダを開く"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "設定された壁紙の場所はありません"
 
-# ACCELERATOR changed by translator
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "&Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "フォルダを追加(&Y)..."
+msgstr "フォルダを追加..."

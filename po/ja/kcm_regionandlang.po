@@ -1,11 +1,12 @@
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2022-08-18 22:15+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2023-04-07 23:31-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -38,13 +39,13 @@ msgstr "メートル法"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr ""
+msgstr "レター"
 
 #: exampleutility.cpp:49
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
-msgstr ""
+msgstr "A4"
 
 #: exampleutility.cpp:64
 #, kde-format
@@ -214,7 +215,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "この言語の例が見つかりませんでした"
 
 #: kcmregionandlang.cpp:53
 #, kde-format
@@ -231,6 +232,8 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>localectl</command>で利用可能なロケールを見つけることができませんで"
+"した。<link>https://bugs.kde.org</link>でバグを報告してください。"
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -244,7 +247,7 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1 (ブラジル)"
 
 #: localegeneratorubuntu.cpp:42
 #, kde-format
@@ -362,25 +365,25 @@ msgstr "計量単位"
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
-msgstr ""
+msgstr "紙のサイズ"
 
 #: optionsmodel.cpp:30
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
-msgstr ""
+msgstr "住所"
 
 #: optionsmodel.cpp:31
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "名前の形式"
 
 #: optionsmodel.cpp:32
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr ""
+msgstr "電話番号"
 
 #: optionsmodel.cpp:114 optionsmodel.cpp:295
 #, kde-format
@@ -393,7 +396,7 @@ msgstr "システムのデフォルト"
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr "(%1 での標準形式)"
+msgstr "(%1での標準形式)"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
@@ -514,7 +517,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
-msgstr ""
+msgstr "変更..."
 
 #: package/contents/ui/main.qml:180
 #, kde-format
@@ -539,25 +542,25 @@ msgstr "計量単位"
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Paper Size"
-msgstr ""
+msgstr "紙のサイズ"
 
 #: package/contents/ui/main.qml:190
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
-msgstr ""
+msgstr "住所"
 
 #: package/contents/ui/main.qml:192
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: package/contents/ui/main.qml:194
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr ""
+msgstr "電話番号"
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
@@ -567,14 +570,3 @@ msgstr ""
 #, kde-format
 msgid "Inherit Language"
 msgstr "言語を引き継ぐ"
-
-#~ msgctxt "@info:warning"
-#~ msgid ""
-#~ "Locale has been configured, but this KCM currently doesn't support auto "
-#~ "locale generation on non-glibc systems, please refer to your "
-#~ "distribution's manual to install fonts and generate locales"
-#~ msgstr ""
-#~ "ロケールは設定されましたが、現在この KCM (KDE 設定モジュール) は非 glibc "
-#~ "システムでのロケールの自動生成をサポートしていません。フォントのインストー"
-#~ "ルおよびロケールの生成については、お使いのディストリビューションのマニュア"
-#~ "ルを参照してください。"
