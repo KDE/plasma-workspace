@@ -7,7 +7,6 @@
 #include "simplefavoritesmodel.h"
 #include "actionlist.h"
 #include "appentry.h"
-#include "contactentry.h"
 #include "fileentry.h"
 #include "systementry.h"
 
@@ -312,8 +311,6 @@ AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)
 
     if ((s.isEmpty() && id.contains(QLatin1String(".desktop"))) || s == QLatin1String("preferred")) {
         return new AppEntry(this, id);
-    } else if (s == QLatin1String("ktp")) {
-        return new ContactEntry(this, id);
     } else if (url.isValid() && !url.scheme().isEmpty()) {
         return new FileEntry(this, url);
     } else {

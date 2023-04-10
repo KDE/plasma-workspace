@@ -9,7 +9,6 @@
 #include "appsmodel.h"
 
 class KAStatsFavoritesModel;
-class RecentContactsModel;
 class RecentUsageModel;
 class SystemModel;
 
@@ -41,7 +40,6 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showAllAppsCategorized READ showAllAppsCategorized WRITE setShowAllAppsCategorized NOTIFY showAllAppsCategorizedChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
-    Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
     Q_PROPERTY(int recentOrdering READ recentOrdering WRITE setRecentOrdering NOTIFY recentOrderingChanged)
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
     Q_PROPERTY(bool showFavoritesPlaceholder READ showFavoritesPlaceholder WRITE setShowFavoritesPlaceholder NOTIFY showFavoritesPlaceholderChanged)
@@ -66,9 +64,6 @@ public:
     bool showRecentDocs() const;
     void setShowRecentDocs(bool show);
 
-    bool showRecentContacts() const;
-    void setShowRecentContacts(bool show);
-
     int recentOrdering() const;
     void setRecentOrdering(int ordering);
 
@@ -88,7 +83,6 @@ Q_SIGNALS:
     void showAllAppsCategorizedChanged() const;
     void showRecentAppsChanged() const;
     void showRecentDocsChanged() const;
-    void showRecentContactsChanged() const;
     void showPowerSessionChanged() const;
     void recentOrderingChanged() const;
     void recentAppsModelChanged() const;
@@ -105,12 +99,10 @@ private:
     bool m_showAllAppsCategorized;
     bool m_showRecentApps;
     bool m_showRecentDocs;
-    bool m_showRecentContacts;
     int m_recentOrdering;
     bool m_showPowerSession;
     bool m_showFavoritesPlaceholder;
 
     RecentUsageModel *m_recentAppsModel;
     RecentUsageModel *m_recentDocsModel;
-    RecentContactsModel *m_recentContactsModel;
 };

@@ -42,7 +42,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
-                    CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
+                    CoreAddons ActivitiesStats Activities KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor
                     OPTIONAL_COMPONENTS DocTools)
 

@@ -8,7 +8,6 @@
 #include "kastatsfavoritesmodel.h"
 #include "actionlist.h"
 #include "appentry.h"
-#include "contactentry.h"
 #include "debug.h"
 #include "fileentry.h"
 
@@ -36,16 +35,13 @@ using namespace KAStats;
 using namespace KAStats::Terms;
 
 #define AGENT_APPLICATIONS QStringLiteral("org.kde.plasma.favorites.applications")
-#define AGENT_CONTACTS QStringLiteral("org.kde.plasma.favorites.contacts")
 #define AGENT_DOCUMENTS QStringLiteral("org.kde.plasma.favorites.documents")
 
 QString agentForUrl(const QString &url)
 {
     QUrl u(url);
     // clang-format off
-    return url.startsWith(QLatin1String("ktp:"))
-                ? AGENT_CONTACTS
-         : url.startsWith(QLatin1String("preferred:"))
+    return url.startsWith(QLatin1String("preferred:"))
                 ? AGENT_APPLICATIONS
          : url.startsWith(QLatin1String("applications:"))
                 ? AGENT_APPLICATIONS
@@ -152,10 +148,7 @@ public:
 
         const auto agent = agentForUrl(resource);
 
-        if (agent == AGENT_CONTACTS) {
-            return SP(new ContactEntry(q, resource));
-
-        } else if (agent == AGENT_DOCUMENTS) {
+        if (agent == AGENT_DOCUMENTS) {
             if (resource.startsWith(QLatin1String("/"))) {
                 return SP(new FileEntry(q, QUrl::fromLocalFile(resource), mimeType));
             } else {
@@ -176,8 +169,7 @@ public:
 
     Private(KAStatsFavoritesModel *parent, const QString &clientId)
         : q(parent)
-        , m_query(LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_CONTACTS, AGENT_DOCUMENTS} | Type::any() | Activity::current() | Activity::global()
-                  | Limit::all())
+        , m_query(LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::current() | Activity::global() | Limit::all())
         , m_watcher(m_query)
         , m_clientId(clientId)
     {
@@ -764,7 +756,7 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
         return {};
     }
 
-    auto query = LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_CONTACTS, AGENT_DOCUMENTS} | Type::any() | Activity::any() | Url(url) | Limit::all();
+    auto query = LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_DOCUMENTS} | Type::any() | Activity::any() | Url(url) | Limit::all();
 
     ResultSet results(query);
 

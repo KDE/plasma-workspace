@@ -15,7 +15,6 @@ set(kickerplugin_SRCS
     plugin/appentry.cpp
     plugin/appsmodel.cpp
     plugin/computermodel.cpp
-    plugin/contactentry.cpp
     plugin/containmentinterface.cpp
     plugin/draghelper.cpp
     plugin/simplefavoritesmodel.cpp
@@ -31,7 +30,6 @@ set(kickerplugin_SRCS
     plugin/rootmodel.cpp
     plugin/runnermodel.cpp
     plugin/runnermatchesmodel.cpp
-    plugin/recentcontactsmodel.cpp
     plugin/recentusagemodel.cpp
     plugin/submenu.cpp
     plugin/systementry.cpp
@@ -76,8 +74,6 @@ target_link_libraries(kickerplugin
                       KF6::KIOWidgets
                       KF6::KIOFileWidgets
                       KF6::Notifications
-                      KF6::People
-                      KF6::PeopleWidgets
                       KF6::PlasmaQuick
                       KF6::Runner
                       KF6::Service

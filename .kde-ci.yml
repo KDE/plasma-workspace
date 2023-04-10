@@ -50,7 +50,6 @@ Dependencies:
     'frameworks/kquickcharts': '@latest-kf6'
     'frameworks/kded': '@latest-kf6'
     'frameworks/kdesu': '@latest-kf6'
-    'frameworks/kpeople': '@latest-kf6'
     'frameworks/prison': '@latest-kf6'
     'frameworks/kwayland': '@latest-kf6'
     'plasma/layer-shell-qt': '@same'

@@ -7,7 +7,6 @@
 #include "rootmodel.h"
 #include "actionlist.h"
 #include "kastatsfavoritesmodel.h"
-#include "recentcontactsmodel.h"
 #include "recentusagemodel.h"
 #include "systemmodel.h"
 
@@ -58,13 +57,11 @@ RootModel::RootModel(QObject *parent)
     , m_showAllAppsCategorized(false)
     , m_showRecentApps(true)
     , m_showRecentDocs(true)
-    , m_showRecentContacts(false)
     , m_recentOrdering(RecentUsageModel::Recent)
     , m_showPowerSession(true)
     , m_showFavoritesPlaceholder(false)
     , m_recentAppsModel(nullptr)
     , m_recentDocsModel(nullptr)
-    , m_recentContactsModel(nullptr)
 {
 }
 
@@ -85,7 +82,7 @@ QVariant RootModel::data(const QModelIndex &index, int role) const
             const GroupEntry *group = static_cast<const GroupEntry *>(entry);
             AbstractModel *model = group->childModel();
 
-            if (model == m_recentAppsModel || model == m_recentDocsModel || model == m_recentContactsModel) {
+            if (model == m_recentAppsModel || model == m_recentDocsModel) {
                 if (role == Kicker::HasActionListRole) {
                     return true;
                 } else if (role == Kicker::ActionListRole) {
@@ -116,10 +113,6 @@ bool RootModel::trigger(int row, const QString &actionId, const QVariant &argume
                 return true;
             } else if (model == m_recentDocsModel) {
                 setShowRecentDocs(false);
-
-                return true;
-            } else if (model == m_recentContactsModel) {
-                setShowRecentContacts(false);
 
                 return true;
             }
@@ -192,22 +185,6 @@ void RootModel::setShowRecentDocs(bool show)
         refresh();
 
         Q_EMIT showRecentDocsChanged();
-    }
-}
-
-bool RootModel::showRecentContacts() const
-{
-    return m_showRecentContacts;
-}
-
-void RootModel::setShowRecentContacts(bool show)
-{
-    if (show != m_showRecentContacts) {
-        m_showRecentContacts = show;
-
-        refresh();
-
-        Q_EMIT showRecentContactsChanged();
     }
 }
 
@@ -286,7 +263,6 @@ void RootModel::refresh()
     AppsModel *allModel = nullptr;
     m_recentAppsModel = nullptr;
     m_recentDocsModel = nullptr;
-    m_recentContactsModel = nullptr;
 
     if (m_showAllApps) {
         QHash<QString, AbstractEntry *> appsHash;
@@ -414,12 +390,6 @@ void RootModel::refresh()
 
         favoritesPlaceholderModel->setDescription(QStringLiteral("KICKER_FAVORITES_MODEL")); // Intentionally no i18n.
         m_entryList.prepend(new GroupEntry(this, i18n("Favorites"), QStringLiteral("bookmarks"), favoritesPlaceholderModel));
-        ++separatorPosition;
-    }
-
-    if (m_showRecentContacts) {
-        m_recentContactsModel = new RecentContactsModel(this);
-        m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QStringLiteral("view-history"), m_recentContactsModel));
         ++separatorPosition;
     }
 
