@@ -159,6 +159,7 @@ protected:
 Q_SIGNALS:
     void passivePopup(const QString &caption, const QString &text);
     void editFinished(std::shared_ptr<const HistoryItem> item, int result);
+    Q_SCRIPTABLE void clipboardHistoryUpdated();
 
 public Q_SLOTS:
     void slotPopupMenu();

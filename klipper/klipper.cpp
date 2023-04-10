@@ -128,7 +128,9 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
         setenv("KSNI_NO_DBUSMENU", "1", 1);
     }
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"),
+                                                 this,
+                                                 QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     updateTimestamp(); // read initial X user time
     m_clip = KSystemClipboard::instance();
@@ -146,6 +148,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     connect(m_history, &History::changed, this, &Klipper::slotHistoryChanged);
     connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
     connect(m_history, &History::topIsUserSelectedSet, m_popup, &KlipperPopup::slotTopIsUserSelectedSet);
+    connect(m_history, &History::changed, this, &Klipper::clipboardHistoryUpdated);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection(this);
