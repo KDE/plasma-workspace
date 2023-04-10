@@ -71,3 +71,8 @@ Dependencies:
     'libraries/polkit-qt-1': '@latest-kf6'
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
     'third-party/packagekit-qt': '@latest'
+
+RuntimeDependencies:
+- 'on': ['@all']
+  'require':
+    'network/kio-extras': '@latest-kf6'
