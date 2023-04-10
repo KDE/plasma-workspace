@@ -1,32 +1,31 @@
 # Translation of ksmserver.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2017, The Free Software Foundation, Inc.
-# Copyright (C) 2018-2020, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE Euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2017, 2020.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2014, 2017, 2020, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-04-25 18:16+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"PO-Revision-Date: 2023-04-09 22:07+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "'%1'-(e)k bertan behera utzi du saio-bukaera"
+msgstr "'%1'(e)k saio-ixtea bertan behera utzi du"
 
 #: main.cpp:77
 #, kde-format
@@ -45,6 +44,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME direktoriora (%1) idazteko sarbiderik ez. Nahita egina bada, ezarri "
+"<envar>KDE_HOME_READONLY=1</envar> zure ingurunean."
 
 #: main.cpp:91
 #, kde-format
@@ -156,12 +157,12 @@ msgstr "Amaitu saioa"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Itzali"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Berrabiarazi"
 
 #: server.cpp:905
 #, kde-format
@@ -169,10 +170,9 @@ msgid "Log Out Without Confirmation"
 msgstr "Amaitu saioa berrespenik gabe"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Gelditu berrespenik gabe"
+msgstr "Itzali berrespenik gabe"
 
 #: server.cpp:915
 #, kde-format

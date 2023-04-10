@@ -8,14 +8,14 @@
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
 # Pablo de Vicente <p.devicente@oan.es>, 2007.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2012, 2014, 2017, 2018, 2019, 2020, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2012, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-09 02:10+0000\n"
-"PO-Revision-Date: 2022-10-15 12:36+0200\n"
+"PO-Revision-Date: 2023-04-09 11:48+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@valux.org>\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.03.90\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
@@ -143,7 +143,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2 pt"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
