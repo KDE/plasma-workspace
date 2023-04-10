@@ -168,6 +168,7 @@ PlasmaCore.ColorScope {
             interval: 10000
             onTriggered: {
                 if (!lockScreenRoot.blockUI) {
+                    mainBlock.mainPasswordBox.showPassword = false;
                     lockScreenRoot.uiVisible = false;
                 }
             }
