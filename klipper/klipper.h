@@ -44,15 +44,6 @@ enum class KlipperMode {
     DataEngine,
 };
 
-class ClipboardContentTextEdit : public KTextEdit
-{
-    Q_OBJECT
-public:
-    ClipboardContentTextEdit(QWidget *parent);
-    void keyPressEvent(QKeyEvent *event) override;
-    Q_SIGNAL void done();
-};
-
 class Klipper : public QObject
 {
     Q_OBJECT
@@ -100,7 +91,6 @@ public:
         return m_popup;
     }
 
-    void editData(std::shared_ptr<const HistoryItem> item);
     void showBarcode(std::shared_ptr<const HistoryItem> item);
 
 public Q_SLOTS:
@@ -199,7 +189,6 @@ private:
     KToggleAction *m_toggleURLGrabAction;
     QAction *m_clearHistoryAction;
     QAction *m_repeatAction;
-    QAction *m_editAction;
     QAction *m_showBarcodeAction;
     QAction *m_configureAction;
     QAction *m_quitAction;

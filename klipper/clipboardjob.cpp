@@ -67,14 +67,6 @@ void ClipboardJob::start()
             setResult(true);
             return;
         }
-        connect(m_klipper, &Klipper::editFinished, this, [this, item](HistoryItemConstPtr editedItem, int result) {
-            if (item != editedItem) {
-                // not our item
-                return;
-            }
-            setResult(result);
-        });
-        m_klipper->editData(item);
         return;
     } else if (operation == QLatin1String("barcode")) {
         int pixelWidth = parameters().value(QStringLiteral("width")).toInt();

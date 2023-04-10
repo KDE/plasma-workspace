@@ -93,25 +93,6 @@ private:
 };
 }
 
-ClipboardContentTextEdit::ClipboardContentTextEdit(QWidget *parent)
-    : KTextEdit(parent)
-{
-}
-
-void ClipboardContentTextEdit::keyPressEvent(QKeyEvent *event)
-{
-    // Handle Ctrl+Enter to accept
-    const int key = event->key();
-    if (key == Qt::Key_Return || key == Qt::Key_Enter) {
-        if ((key == Qt::Key_Enter && (event->modifiers() == Qt::KeypadModifier)) || !event->modifiers()) {
-            Q_EMIT done();
-            event->accept();
-            return;
-        }
-    }
-    KTextEdit::keyPressEvent(event);
-}
-
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode)
     : QObject(parent)
@@ -217,15 +198,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_R));
     connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
 
-    // add an edit-possibility
-    m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
-    m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
-    m_editAction->setText(i18nc("@action:inmenu", "&Edit Contents…"));
-    KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
-    connect(m_editAction, &QAction::triggered, this, [this]() {
-        editData(m_history->first());
-    });
-
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18nc("@action:inmenu", "&Show Barcode…"));
@@ -265,7 +237,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
         m_actionsPopup->addAction(m_clearHistoryAction);
         m_actionsPopup->addAction(m_configureAction);
         m_actionsPopup->addAction(m_repeatAction);
-        m_actionsPopup->addAction(m_editAction);
         m_actionsPopup->addAction(m_showBarcodeAction);
 
         m_actionsPopup->addSeparator();
@@ -940,50 +911,6 @@ void Klipper::updateTimestamp()
         QX11Info::setAppTime(QX11Info::getTimestamp());
     }
 #endif
-}
-
-void Klipper::editData(std::shared_ptr<const HistoryItem> item)
-{
-    QPointer<QDialog> dlg(new QDialog());
-    dlg->setWindowTitle(i18n("Edit Contents"));
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dlg);
-    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
-    connect(dlg.data(), &QDialog::finished, dlg.data(), [this, dlg, item](int result) {
-        Q_EMIT editFinished(item, result);
-        dlg->deleteLater();
-    });
-
-    ClipboardContentTextEdit *edit = new ClipboardContentTextEdit(dlg);
-    edit->setAcceptRichText(false);
-    if (item) {
-        edit->setPlainText(item->text());
-    }
-    edit->setFocus();
-    edit->setMinimumSize(300, 40);
-    QVBoxLayout *layout = new QVBoxLayout(dlg);
-    layout->addWidget(edit);
-    layout->addWidget(buttons);
-    dlg->adjustSize();
-
-    connect(edit, &ClipboardContentTextEdit::done, dlg.data(), &QDialog::accept);
-    connect(dlg.data(), &QDialog::accepted, this, [this, edit, item]() {
-        QString text = edit->toPlainText();
-        if (item) {
-            m_history->remove(item);
-        }
-        m_history->insert(HistoryItemPtr(new HistoryStringItem(text)));
-        if (m_myURLGrabber) {
-            m_myURLGrabber->checkNewData(HistoryItemConstPtr(m_history->first()));
-        }
-    });
-
-    if (m_mode == KlipperMode::Standalone) {
-        dlg->setModal(true);
-        dlg->exec();
-    } else if (m_mode == KlipperMode::DataEngine) {
-        dlg->open();
-    }
 }
 
 class BarcodeLabel : public QLabel
