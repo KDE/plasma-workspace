@@ -48,7 +48,7 @@
 #include <KProcess>
 #include <KWindowSystem>
 
-#include <updatelaunchenvjob.h>
+#include <KUpdateLaunchEnvironmentJob>
 
 #include "krdb.h"
 #if HAVE_X11
@@ -126,7 +126,9 @@ static void applyGtkStyles(int version)
 
     // Pass env. var to kdeinit.
     const QString value = list.join(QLatin1Char(':'));
-    UpdateLaunchEnvJob(varName, value);
+    QProcessEnvironment newEnv;
+    newEnv.insert(varName, value);
+    new KUpdateLaunchEnvironmentJob(newEnv);
 }
 
 // -----------------------------------------------------------------------------

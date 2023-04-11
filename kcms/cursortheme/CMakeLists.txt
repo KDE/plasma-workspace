@@ -37,6 +37,7 @@ target_link_libraries(kcm_cursortheme
     Qt::Quick
     KF6::Archive
     KF6::KCMUtils
+    KF6::DBusAddons
     KF6::I18n
     KF6::GuiAddons
     KF6::WindowSystem
@@ -44,7 +45,6 @@ target_link_libraries(kcm_cursortheme
     KF6::KIOWidgets
     KF6::NewStuffCore
     KF6::KCMUtilsQuick
-    PW::KWorkspace
     krdb
 )
 
@@ -76,11 +76,11 @@ add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
 
 target_link_libraries(plasma-apply-cursortheme
     Qt::DBus
+    KF6::DBusAddons
     KF6::GuiAddons
     KF6::I18n
     KF6::KCMUtils
     KF6::WindowSystem
-    PW::KWorkspace
 )
 
 if (HAVE_X11)

@@ -21,6 +21,7 @@ target_link_libraries(startplasma PUBLIC
     Qt::Core
     Qt::DBus
     KF6::ConfigCore
+    KF6::DBusAddons
     KF6::Notifications
     KF6::Package
     ${PHONON_LIBRARIES}

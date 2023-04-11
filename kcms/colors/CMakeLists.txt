@@ -19,7 +19,6 @@ set(plasma-accentcolor-service_SRCS
     accentColorService/accentColorService.cpp
     colorsapplicator.cpp
     ../kcms-common.cpp
-    ../krdb/krdb.cpp
 )
 
 
@@ -74,7 +73,6 @@ set(plasma-apply-colorscheme_SRCS
     colorsapplicator.cpp
     colorsmodel.cpp
     ../kcms-common.cpp
-    ../krdb/krdb.cpp
 )
 
 kconfig_add_kcfg_files(plasma-apply-colorscheme_SRCS colorssettings.kcfgc GENERATE_MOC)
@@ -93,6 +91,7 @@ target_link_libraries(plasma-apply-colorscheme
     KF6::WindowSystem
     PW::KWorkspace
     X11::X11
+    krdb
 )
 
 target_link_libraries(plasma_accentcolor_service
@@ -106,6 +105,7 @@ target_link_libraries(plasma_accentcolor_service
     KF6::DBusAddons
     PW::KWorkspace
     X11::X11
+    krdb
 )
 
 

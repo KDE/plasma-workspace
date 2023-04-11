@@ -29,7 +29,8 @@
 #include <unistd.h>
 
 #include <autostartscriptdesktopfile.h>
-#include <updatelaunchenvjob.h>
+
+#include <KUpdateLaunchEnvironmentJob>
 
 #include "startplasma.h"
 
@@ -471,8 +472,11 @@ bool syncDBusEnvironment()
     }
 
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-    auto job = new UpdateLaunchEnvJob(environment);
-    return job->exec();
+    auto job = new KUpdateLaunchEnvironmentJob(environment);
+    QEventLoop e;
+    QObject::connect(job, &KUpdateLaunchEnvironmentJob::finished, &e, &QEventLoop::quit);
+    e.exec();
+    return true;
 }
 
 static bool desktopLockedAtStart = false;

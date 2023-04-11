@@ -38,8 +38,6 @@
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
 
-#include <updatelaunchenvjob.h>
-
 #ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
 #endif

@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"krdb\")
 
 add_library(krdb krdb.cpp)
-target_link_libraries(krdb PRIVATE Qt::Widgets Qt::DBus KF6::GuiAddons KF6::I18n KF6::WindowSystem KF6::ConfigWidgets PW::KWorkspace X11::X11)
+target_link_libraries(krdb PRIVATE Qt::Widgets Qt::DBus KF6::CoreAddons KF6::DBusAddons KF6::GuiAddons KF6::I18n KF6::WindowSystem KF6::ConfigWidgets X11::X11)
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(krdb PRIVATE Qt6::X11Extras)
 else()
