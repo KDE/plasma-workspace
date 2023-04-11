@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2023-01-26 11:00+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -498,73 +498,67 @@ msgstr "Symbol:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatisches Aufklappmenü für Aktionen"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Bisherigen Inhalt der Zwischenablage löschen"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Klipper einrichten ..."
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "Be&enden"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Aktionen der aktuellen Zwischenablage manuell aufrufen"
 
-#: klipper.cpp:220
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "&Inhalt bearbeiten ..."
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Strichcode anzeigen ..."
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nächstes Element im Verlauf"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Vorheriges Element im Verlauf"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Elemente an Mausposition anzeigen"
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Verwaltung der Zwischenablage"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -574,63 +568,58 @@ msgstr ""
 "Sie können URL-Aktionen später auf der Seite <interface>Aktionen</interface> "
 "des Einrichtungsdialogs aktivieren."
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 "Soll Klipper automatisch gestartet werden, wenn Sie sich am System anmelden?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Klipper automatisch starten?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "Automatisch starten"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nicht automatisch starten"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "Inhalt bearbeiten"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobiler Strichcode"
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Möchten Sie wirklich den gesamten Verlauf der Zwischenablage löschen?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bisherigen Inhalt der Zwischenablage löschen"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr "Verlauf der Zwischenablage"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr "nach oben"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr "aktuelle"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr "nach unten"
@@ -983,6 +972,13 @@ msgstr "Aufklappmenü deaktivieren"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Abbrechen"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "&Inhalt bearbeiten ..."
+
+#~ msgid "Edit Contents"
+#~ msgstr "Inhalt bearbeiten"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Inhalt der Zwischenablage"

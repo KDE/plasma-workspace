@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2011-01-13 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -474,82 +474,75 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Had masa tamat untuk aksi pop k&eluar"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Kosongkan Rekod Papan K&lip"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Selaraskan Kli&pper..."
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Keluar"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Panggil Aksi pada Papan Klip Secara Manual"
 
-#: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "Edit Kandungan"
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item Sejarah Berikut"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item Sejarah Terdahulu"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "Klipper - Alatan Papan Klip"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -557,65 +550,60 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Perlukah Klipper dimulakan secara automatik semasa anda log masuk?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Mulakan Klipper Secara Automatik?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "Mula"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr ""
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "Edit Kandungan"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Kosongkan Rekod Papan K&lip"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Kosongkan Rekod Papan K&lip"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Saiz rekod papan k&lip:"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr ""
@@ -959,6 +947,15 @@ msgstr "Matikan Pop keluar Ini"
 #, fuzzy, kde-format
 msgid "&Cancel"
 msgstr "&Batal"
+
+#, fuzzy
+#~| msgid "Edit Contents"
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "Edit Kandungan"
+
+#~ msgid "Edit Contents"
+#~ msgstr "Edit Kandungan"
 
 #, fuzzy
 #~| msgid "Save clipboard contents on e&xit"

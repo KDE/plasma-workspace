@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1646208 $
+# Version: $Revision: 1649203 $
 # Norbert Popiołek <norbert@kde.com.pl>
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2022-12-03 09:51+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -500,73 +500,67 @@ msgstr "Ikona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu wysuwne domyślnego działania"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Wyczyść historię schowka"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Ustawienia Klippera..."
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "Za&kończ"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ręcznie wywołaj działanie na zawartości schowka"
 
-#: klipper.cpp:220
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "Zmi&eń zawartość..."
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Pokaż kod kre&skowy..."
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Następny element historii"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Poprzedni element historii"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Pokaż rzeczy pod wskaźnikiem myszy"
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - narzędzie schowka"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -576,62 +570,57 @@ msgstr ""
 "Możesz włączyć działania na adresach URL później na stronie "
 "<interface>Działań</interface> ustawień apletu schowka"
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Czy uruchamiać Klippera automatycznie po zalogowaniu?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Samoczynnie uruchamiać Klippera?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "Uruchom"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nie uruchamiaj"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "Zmień zawartość"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Komórkowy kod kreskowy"
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Czy na pewno wyczyścić i usunąć całą historię schowka?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Wyczyść historię schowka"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historia schowka"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr "w górę"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr "aktualna"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr "w dół"
@@ -980,6 +969,13 @@ msgstr "Wyłącz to okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anuluj"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "Zmi&eń zawartość..."
+
+#~ msgid "Edit Contents"
+#~ msgstr "Zmień zawartość"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Zawartość schowka"

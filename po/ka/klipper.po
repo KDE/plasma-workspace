@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
-"PO-Revision-Date: 2023-02-11 06:07+0100\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"PO-Revision-Date: 2023-04-10 06:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -186,6 +186,8 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"წავშალო მონიშნული ქმედება <resource>%1</resource><nl/> და ყველა მისი "
+"ბრძანება?"
 
 #: configdialog.cpp:566
 #, kde-format
@@ -440,73 +442,67 @@ msgstr "ხატულა:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper-ის &მორგება…"
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&გასვლა"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "მიმდინარე ბუფერზე ქმედების ხელით გაშვება"
 
-#: klipper.cpp:220
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "შემცველობის &ჩასწორება…"
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&ბარკოდის ჩვენება…"
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ისტორიის შემდეგი ჩანაწერი"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ისტორიის წინა ჩანაწერი"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "თაგუნას მდგომარეობაზე მყოფი ჩანაწერების ჩვენება"
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - ბუფერის მმართველი"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -514,62 +510,57 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "გაეშვას Klipper-ი ავტომატურად, როცა შეხვალთ?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "გავუშვა Klipper-ი ავტომატურად?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "გაშვება"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "არ გაშვება"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "შემცველობის ჩასწორება"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "მობილური შტრიხკოდი"
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr "დაბლა"
@@ -592,7 +583,7 @@ msgstr "ისტორიის შენახვა სამუშაო მ
 msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
-msgstr ""
+msgstr "ბუფერის ისტორია თქვენს შემდეგ შემოსვლამდე იქნება შენარჩუნებული."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
@@ -638,6 +629,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"შემცველობა მონიშნულია კურსორით, მაგრამ ბუფერში არ დაკოპირებულა, ამიტომ ის "
+"ბუფერის ისტორიაში შენახული არ იქნება, მაგრამ მისი ჩასმა თაგუნას შუა ღილაკით "
+"შეგიძლიათ."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -652,6 +646,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"ბუფერის მეხსიერებაში მხოლოდ ტექსტი იქნება დამახსოვრებული. არა გამოსახულებები "
+"ან რამე სხვა ტიპის მონაცემები."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -740,6 +736,9 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"ქმედების გაშვებამდე მონიშნული ტექსტის თავში და ბოლოში ცარიელი ადგილების "
+"გამოტოვება. მაგალითად, ეს უზრუნველყოფს, რომ ბრაუზერში დაკოპირებული მისამართი "
+"სწორად ითარგმნება. ბუფერში შენახულ ტექსტი არ იცვლება."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -754,6 +753,8 @@ msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
+"შესაბამისი ქმედებების შემცველი მხტუნარა მენიუს ჩვენება ბუფერის ისტორიის "
+"ჩანაწერის არჩევის შემთხვევაში."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
@@ -768,6 +769,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"თუ არჩეულია ფაილის სახელი ან URL, მხტუნარა მენიუ მისი MIME ტიპის შესაბამის "
+"აპლიკაციებსაც შეიცავს."
 
 #: klipperpopup.cpp:105
 #, kde-format
@@ -902,6 +905,13 @@ msgstr "ამ მხტუნარას გათიშვა"
 #, kde-format
 msgid "&Cancel"
 msgstr "&შეწყვეტა"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "შემცველობის &ჩასწორება…"
+
+#~ msgid "Edit Contents"
+#~ msgstr "შემცველობის ჩასწორება"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "ბუფერის შემცველობა"

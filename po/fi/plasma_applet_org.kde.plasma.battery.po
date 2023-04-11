@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2023-03-04 18:19+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -86,7 +86,7 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:146
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Fully Charged"
 msgstr "Täydessä latauksessa"
@@ -112,132 +112,132 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Ei ole"
 
-#: package/contents/ui/main.qml:119 package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Akku ja kirkkaus"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Brightness"
 msgstr "Kirkkaus"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Battery"
 msgstr "Akku"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Power Management"
 msgstr "Virranhallinta"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Varaus %1 %, ei lataudu"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Varaus %1 %, virta kytketty mutta ei lataudu"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Varaus %1 %, latautuu"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:161
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Akun varaus %1 %"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Virtalähde ei ole tarpeeksi tehokas lataamaan akkua"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Ei akkuja"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 täyteen lataukseen"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 jäljellä"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Not charging"
 msgstr "Ei lataudu"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automaattinen valmiustila ja näytön lukitus on poistettu käytöstä"
 
 # Käännös on väännetty mutkalle, jotta %2:n sijaksi saadaan nominatiivi
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Sovellus on pyytänyt ottamaan käyttöön suorituskykytilan"
 msgstr[1] "%1 sovellusta on pyytänyt ottamaan käyttöön suorituskykytilan"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "Järjestelmä on suorituskykytilassa"
 
 # Käännös on väännetty mutkalle, jotta %2:n sijaksi saadaan nominatiivi
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Sovellus on pyytänyt ottamaan käyttöön virransäästötilan"
 msgstr[1] "%1 sovellusta on pyytänyt ottamaan käyttöön virransäästötilan"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "Järjestelmä on virransäästötilassa"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Säädä näytön kirkkautta vierittämällä"
 
-#: package/contents/ui/main.qml:311
+#: package/contents/ui/main.qml:312
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr ""
 "Akkuvalvontasovelma on ottanut käyttöön virranhallinnan "
 "järjestelmänlaajuisen eston"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Tilan %1 aktivoiminen epäonnistui"
 
-#: package/contents/ui/main.qml:377
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Näytä &virrankulutustiedot…"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Näytä kuvakkeessa akun varaus, ellei varaus ole täysi"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Virransäästön asetukset…"

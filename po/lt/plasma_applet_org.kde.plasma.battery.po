@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2022-12-12 20:04+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -84,7 +84,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
-#: package/contents/ui/main.qml:146
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Fully Charged"
 msgstr "Pilnai įkrautas"
@@ -110,79 +110,79 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Nėra"
 
-#: package/contents/ui/main.qml:119 package/contents/ui/main.qml:362
+#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Akumuliatorius ir ryškumas"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Brightness"
 msgstr "Ryškumas"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Battery"
 msgstr "Akumuliatorius"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Power Management"
 msgstr "Energijos valdymas"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Akumuliatorius ties %1%, nekraunamas"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Akumuliatorius ties %1%, prijungtas, bet vis tiek išsikrauna"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Akumuliatorius ties %1%, įkraunamas"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:161
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Akumuliatorius ties %1%"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Maitinimo šaltinis nėra pakankamai galingas, kad įkrautų akumuliatorių"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Nėra jokių prieinamų akumuliatorių"
 
-#: package/contents/ui/main.qml:178
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 iki pilnai įkrauto"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Liko %1"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "Not charging"
 msgstr "Nekraunamas"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatinis pristabdymas ir ekrano užrakinimas yra išjungti"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
@@ -191,12 +191,12 @@ msgstr[1] "%1 programos paprašė aktyvuoti našumo veikseną"
 msgstr[2] "%1 programų paprašė aktyvuoti našumo veikseną"
 msgstr[3] "%1 programa paprašė aktyvuoti našumo veikseną"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:197
 #, kde-format
 msgid "System is in Performance mode"
 msgstr "Sistema yra našumo veiksenoje"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -205,39 +205,39 @@ msgstr[1] "%1 programos paprašė aktyvuoti energijos taupymo veikseną"
 msgstr[2] "%1 programų paprašė aktyvuoti energijos taupymo veikseną"
 msgstr[3] "%1 programa paprašė aktyvuoti energijos taupymo veikseną"
 
-#: package/contents/ui/main.qml:204
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "System is in Power Save mode"
 msgstr "Sistema yra energijos taupymo veiksenoje"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Slinkite norėdami derinti ekrano ryškumą"
 
-#: package/contents/ui/main.qml:311
+#: package/contents/ui/main.qml:312
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Baterijos papildinys įjungė sulaikymą sistemos mastu"
 
-#: package/contents/ui/main.qml:365
+#: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Nepavyko aktyvuoti veiksenos %1"
 
-#: package/contents/ui/main.qml:377
+#: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Rodyti energijos informaciją…"
 
-#: package/contents/ui/main.qml:379
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Kai akumuliatorius nėra pilnai įkrautas, rodyti piktogramoje jo įkrovos "
 "procentinę dalį"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "&Konfigūruoti energijos taupymą…"

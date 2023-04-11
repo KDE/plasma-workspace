@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2009-01-06 01:03+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -469,7 +469,7 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -477,71 +477,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Çalakî"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Naverokê Biguherîne"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr ""
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Derkeve"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "Naverokê Biguherîne"
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Peydeker"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr ""
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -549,63 +542,58 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr ""
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "Destpê Bike"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "Destpê Neke"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "Naverokê Biguherîne"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Clear Clipboard History"
 msgstr "Naverokê Biguherîne"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr ""
@@ -945,6 +933,15 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "&Betal"
+
+#, fuzzy
+#~| msgid "Edit Contents"
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "Naverokê Biguherîne"
+
+#~ msgid "Edit Contents"
+#~ msgstr "Naverokê Biguherîne"
 
 #, fuzzy
 #~| msgid "Edit Contents"

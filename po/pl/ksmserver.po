@@ -1,16 +1,16 @@
 # translation of ksmserver.po to Polish
 # translation of ksmserver.po to
-# Version: $Revision: 1647049 $
+# Version: $Revision: 1649203 $
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009, 2010, 2011.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2014, 2015, 2018, 2020.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2014, 2015, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-10-03 08:17+0200\n"
+"PO-Revision-Date: 2023-04-10 11:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 ">\n"
-"X-Generator: Lokalize 20.07.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -44,6 +44,9 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nie masz uprawnień do zapisu do katalogu $HOME (%1). Jeśli jest to "
+"zamierzone, to ustaw zmienną<envar>KDE_HOME_READONLY=1</envar> w swoim "
+"środowisku."
 
 #: main.cpp:91
 #, kde-format
@@ -156,7 +159,7 @@ msgstr "Wyloguj"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Wyłącz"
 
 #: server.cpp:899
 #, kde-format
@@ -169,10 +172,9 @@ msgid "Log Out Without Confirmation"
 msgstr "Wyloguj bez potwierdzenia"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Zatrzymaj bez potwierdzenia"
+msgstr "Zamknij bez potwierdzenia"
 
 #: server.cpp:915
 #, kde-format

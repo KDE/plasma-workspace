@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-09 02:10+0000\n"
-"PO-Revision-Date: 2023-02-11 06:02+0100\n"
+"PO-Revision-Date: 2023-04-10 05:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -134,7 +134,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2წრტ"
 
 #: package/contents/ui/main.qml:24
 #, kde-format
@@ -338,6 +338,13 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>შეიყვანეთ თქვენი ეკრანის DPI, რათა ეკრანის ფონტების ზომა დაბეჭდვისას "
+"როგორც გამოჩნდება, იმას დაემთხვეს. ამ პარამეტრის ნაგულისხმები მნიშვნელობიდან "
+"შეცვლა ბევრ აპლიკაციასთან გამოიწვევს კონფლიქტს. ზოგიერთი ხატულები და "
+"გამოსახულებები შეიძლება, როგორც მოსალოდნელი იყო, ისე კარგად არ "
+"მასშტაბირდებოდეს.</para><para>ტექსტის ზომის გასაზრდელად შეცვალეთ ფონტის ზომა "
+"ზემოთ. ყველაფრის მასშტაბირებისთვის გამოიყენეთ ჩოჩია<interface>ეკრანისა და "
+"ჩვენების </interface> გვერდზე.</para>"
 
 #: package/contents/ui/main.qml:426
 #, kde-format

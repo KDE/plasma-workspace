@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -469,84 +469,77 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ช่วงเวลาแสดงหน้าต่างผุดของการกระทำ:"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ล้างประวัติของคลิปบอร์ด"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&ปรับแต่งคลิปเปอร์..."
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&ออก"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "สั่งเรียกการกระทำบนคลิปบอร์ดปัจจุบันเอง"
 
-#: klipper.cpp:220
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "แก้ไขเนื้อหา"
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "แ&สดงบาร์โค้ด..."
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ตัวถัดไปในรายการประวัติ"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ตัวก่อนหน้านี้ในรายการประวัติ"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "เรียกเมนูผุดที่ตำแหน่งตัวชี้ของเมาส์"
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "คลิปเปอร์ (Klipper) - เครื่องมือคลิปบอร์ด"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -554,64 +547,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "คุณต้องการให้คลิปเปอร์เริ่มทำงานอัตโนมัติเมื่อล็อกอินหรือไม่ ?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "จะให้คลิปเปอร์เริ่มทำงานอัตโนมัติหรือไม่ ?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "เริ่ม"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "ไม่ให้เริ่ม"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "แก้ไขเนื้อหา"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "บาร์โค้ดสำหรับโทรศัพท์เคลื่อนที่"
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ต้องการจะลบรายการประวัติทั้งหมดในคลิปบอร์ดจริงหรือไม่ ?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&ล้างประวัติของคลิปบอร์ด"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr "ขึ้น"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr "ปัจจุบัน"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr "ลง"
@@ -956,6 +944,15 @@ msgstr "ปิดการใช้งานหน้าต่างผุดน
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
+
+#, fuzzy
+#~| msgid "Edit Contents"
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "แก้ไขเนื้อหา"
+
+#~ msgid "Edit Contents"
+#~ msgstr "แก้ไขเนื้อหา"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "เนื้อหาในคลิปบอร์ด"

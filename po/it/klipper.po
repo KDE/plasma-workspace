@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 02:22+0000\n"
+"POT-Creation-Date: 2023-04-11 02:55+0000\n"
 "PO-Revision-Date: 2022-10-19 02:18+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -497,73 +497,67 @@ msgstr "Icona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:155
+#: klipper.cpp:139
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu a comparsa delle azioni automatiche"
 
-#: klipper.cpp:194
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ripulisci la cronologia degli appunti"
 
-#: klipper.cpp:201
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configura Klipper…"
 
-#: klipper.cpp:207
+#: klipper.cpp:191
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Esci"
 
-#: klipper.cpp:212
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:220
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Edit Contents…"
-msgstr "Modifica i cont&enuti…"
-
-#: klipper.cpp:228
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:237
+#: klipper.cpp:212
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Elemento successivo nella cronologia"
 
-#: klipper.cpp:242
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Elemento precedente nella cronologia"
 
-#: klipper.cpp:249
+#: klipper.cpp:224
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Mostra gli elementi alla posizione del mouse"
 
-#: klipper.cpp:260
+#: klipper.cpp:235
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Strumento degli appunti"
 
-#: klipper.cpp:556
+#: klipper.cpp:530
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -574,63 +568,58 @@ msgstr ""
 "<interface>Azioni</interface> della finestra di configurazione dell'applet "
 "degli appunti"
 
-#: klipper.cpp:595
+#: klipper.cpp:569
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Vuoi avviare Klipper automaticamente quando accedi al computer?"
 
-#: klipper.cpp:596
+#: klipper.cpp:570
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Avviare Klipper automaticamente?"
 
-#: klipper.cpp:597
+#: klipper.cpp:571
 #, kde-format
 msgid "Start"
 msgstr "Avvia"
 
-#: klipper.cpp:598
+#: klipper.cpp:572
 #, kde-format
 msgid "Do Not Start"
 msgstr "Non avviare"
 
-#: klipper.cpp:945
-#, kde-format
-msgid "Edit Contents"
-msgstr "Modifica contenuti"
-
-#: klipper.cpp:1012
+#: klipper.cpp:942
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codice a barre per cellulari"
 
-#: klipper.cpp:1059
+#: klipper.cpp:989
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: klipper.cpp:1060
+#: klipper.cpp:990
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: klipper.cpp:1076 klipper.cpp:1085
+#: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:1102
+#: klipper.cpp:1032
 #, kde-format
 msgid "up"
 msgstr "su"
 
-#: klipper.cpp:1109
+#: klipper.cpp:1039
 #, kde-format
 msgid "current"
 msgstr "corrente"
 
-#: klipper.cpp:1116
+#: klipper.cpp:1046
 #, kde-format
 msgid "down"
 msgstr "giù"
@@ -983,6 +972,13 @@ msgstr "Disabilita questo menu a comparsa"
 #, kde-format
 msgid "&Cancel"
 msgstr "Ann&ulla"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Edit Contents…"
+#~ msgstr "Modifica i cont&enuti…"
+
+#~ msgid "Edit Contents"
+#~ msgstr "Modifica contenuti"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Contenuto degli appunti"
