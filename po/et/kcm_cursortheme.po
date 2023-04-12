@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2020-09-26 10:21+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -33,33 +33,33 @@ msgstr "Aktiivse kursoriteema nimi"
 msgid "Current cursor size"
 msgstr "Praegune kursorisuurus"
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Muudatuste rakendamiseks tuleb Plasma seanss uuesti käivitada."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ajutise faili loomine nurjus."
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ikooniteema arhiivi allalaadimine nurjus: %1"
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fail ei ole korrektne ikooniteema arhiiv."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Kataloogi 'icons' loomine nurjus."
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +67,12 @@ msgid ""
 msgstr ""
 "Teema nimega %1 on ikooniteemade kataloogis juba olemas. Kas asendada see?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Kas kirjutada teema üle?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teema paigaldati edukalt."

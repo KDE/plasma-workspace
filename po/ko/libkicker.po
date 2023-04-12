@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-05-28 02:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "패널에 추가(위젯)"
 msgid "Pin to Task Manager"
 msgstr "작업 관리자에 고정"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "최근 파일"
@@ -112,32 +112,12 @@ msgstr "검색, 계산 또는 명령 실행"
 msgid "Computer"
 msgstr "컴퓨터"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "연락처 정보 보기…"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "책갈피"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "연락처"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "연락처 잊기"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "모든 연락처 잊기"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -179,42 +159,37 @@ msgstr "모든 프로그램 잊기"
 msgid "Forget All Files"
 msgstr "모든 파일 잊기"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 숨기기"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "모든 프로그램"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "표시되면 안 됩니다! KICKER_FAVORITES_MODEL을 사용하십시오"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "최근 연락처"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "자주 사용한 파일"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "최근 프로그램"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "자주 사용한 프로그램"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "전원/세션"
@@ -316,6 +291,21 @@ msgstr "컴퓨터를 끕니다"
 #, kde-format
 msgid "System actions"
 msgstr "시스템 동작"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "연락처 정보 보기…"
+
+#~ msgid "Contacts"
+#~ msgstr "연락처"
+
+#~ msgid "Forget Contact"
+#~ msgstr "연락처 잊기"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "모든 연락처 잊기"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "최근 연락처"
 
 #~ msgid "Documents"
 #~ msgstr "문서"

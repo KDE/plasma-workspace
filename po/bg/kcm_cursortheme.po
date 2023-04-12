@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-01-07 18:08+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -31,45 +31,45 @@ msgstr "Име на текущата тема на курсора"
 msgid "Current cursor size"
 msgstr "Текущ размер на курсора"
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Трябва да рестартирате сесията, за да влязат в сила тези промени."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не може да се създаде временен файл."
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не може да се изтегли архивът с теми на иконите: %1"
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Файлът не е валиден архив на тема на икони."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Създаването на папка  \"икони\" е неуспешно."
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "Вече има тема с име \"%1\". Искате ли да бъде презаписана?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Презапис на тема?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Темата е инсталирана успешно."

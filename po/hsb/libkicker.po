@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-10-25 19:03+0200\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "K panelej dodać (widget)"
 msgid "Pin to Task Manager"
 msgstr "Na rjadowar programow přilěpić"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Njedawno wužiwane dataje"
@@ -112,32 +112,12 @@ msgstr "Pytać, ličić, abo přikaz wuwjesć"
 msgid "Computer"
 msgstr "Kompjuter"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "Kontaktnu informaciju pokazać..."
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Najlubše"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Kontakty"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Kontakt zabyć"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Wšitke kontakty zabyć"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -179,42 +159,37 @@ msgstr "Wšitke aplikacije zabyć"
 msgid "Forget All Files"
 msgstr "Wšitke dataje zabyć"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 chować"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Wšitke aplikacije"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Tole njeměło so widźeć! Wužiwaj KICKER_FABOVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Njedawno wužiwane kontakty"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Husto wužiwane dataje"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Njedawno wužiwane aplikacije"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Husto wužiwane aplikacije"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Milina / Posedźenje"
@@ -316,3 +291,18 @@ msgstr "Kompjuter hasnyć"
 #, kde-format
 msgid "System actions"
 msgstr "Systemowe akcije"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "Kontaktnu informaciju pokazać..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakty"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Kontakt zabyć"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Wšitke kontakty zabyć"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Njedawno wužiwane kontakty"

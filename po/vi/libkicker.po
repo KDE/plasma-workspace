@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-05-26 21:06+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Thêm vào Bảng (Phụ kiện)"
 msgid "Pin to Task Manager"
 msgstr "Ghim vào Trình quản lí tác vụ"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Tệp gần đây"
@@ -112,32 +112,12 @@ msgstr "Tìm kiếm, tính toán, hoặc chạy một lệnh"
 msgid "Computer"
 msgstr "Máy tính"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "Hiện thông tin liên hệ…"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Ưa thích"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Liên hệ"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Quên liên hệ đi"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Quên tất cả liên hệ đi"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -179,42 +159,37 @@ msgstr "Quên tất cả ứng dụng đi"
 msgid "Forget All Files"
 msgstr "Quên tất cả tệp đi"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Ẩn %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Tất cả ứng dụng"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Không nên hiện cái này! Dùng KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Liên hệ gần đây"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Tệp hay dùng"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Ứng dụng gần đây"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Ứng dụng hay dùng"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Nguồn điện / Phiên"
@@ -316,3 +291,18 @@ msgstr "Tắt máy tính"
 #, kde-format
 msgid "System actions"
 msgstr "Các hành động của hệ thống"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "Hiện thông tin liên hệ…"
+
+#~ msgid "Contacts"
+#~ msgstr "Liên hệ"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Quên liên hệ đi"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Quên tất cả liên hệ đi"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Liên hệ gần đây"

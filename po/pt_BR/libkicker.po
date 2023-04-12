@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2022-03-24 12:01-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Adicionar ao painel (widget)"
 msgid "Pin to Task Manager"
 msgstr "Fixar no gerenciador de tarefas"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Arquivos recentes"
@@ -114,32 +114,12 @@ msgstr "Pesquisar, calcular ou executar um comando"
 msgid "Computer"
 msgstr "Computador"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "Mostrar informações do contato..."
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Contatos"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Esquecer os contatos"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Esquecer todos os contatos"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -181,37 +161,32 @@ msgstr "Esquecer todos os aplicativos"
 msgid "Forget All Files"
 msgstr "Esquecer todos os arquivos"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Ocultar %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Isto não deveria estar visível! Use KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Contatos recentes"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Arquivos usados frequentemente"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicativos recentes"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicativos frequentemente usados"
@@ -219,7 +194,7 @@ msgstr "Aplicativos frequentemente usados"
 # 'Power' foi traduzido como 'Desligar', porque trata-se de menu com os seguintes itens:
 # Bloquear, Encerrar sessão, Nova sessão, Reiniciar e Desligar.
 # A tradução como 'Energia' não fica adequada. (Alvarenga)
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Desligar / Sessão"
@@ -321,6 +296,21 @@ msgstr "Desligar computador"
 #, kde-format
 msgid "System actions"
 msgstr "Ações do sistema"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "Mostrar informações do contato..."
+
+#~ msgid "Contacts"
+#~ msgstr "Contatos"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Esquecer os contatos"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Esquecer todos os contatos"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Contatos recentes"
 
 #~ msgid "Documents"
 #~ msgstr "Documentos"

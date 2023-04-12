@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-26 02:14+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-02-02 00:15+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
-#: kcm.cpp:479
+#: kcm.cpp:476
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -34,7 +34,7 @@ msgstr ""
 "Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
 "werden."
 
-#: kcm.cpp:480
+#: kcm.cpp:477
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Zeiger-Einstellungen geändert"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-12-16 12:54+0100\n"
 "Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -45,7 +45,7 @@ msgstr "Legg på panelet"
 msgid "Pin to Task Manager"
 msgstr "Fest til oppgåvelinja"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Nyleg brukte filer"
@@ -116,32 +116,12 @@ msgstr "Søk, gjer utrekningar og køyr kommandoar"
 msgid "Computer"
 msgstr "Datamaskin"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "Vis kontaktinformasjon …"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Favorittar"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Kontaktar"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Gløym kontakt"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Gløym alle kontaktane"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -183,42 +163,37 @@ msgstr "Gløym alle programma"
 msgid "Forget All Files"
 msgstr "Gløym alle filer"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Gøym %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Alle program"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Denne meldinga skal aldri vera synleg! Bruk KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Nyleg brukte kontaktar"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Ofte brukte filer"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nyleg brukte program"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Ofte brukte program"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Straum / økt"
@@ -320,3 +295,18 @@ msgstr "Slå av datamaskina"
 #, kde-format
 msgid "System actions"
 msgstr "Systemhandlingar"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "Vis kontaktinformasjon …"
+
+#~ msgid "Contacts"
+#~ msgstr "Kontaktar"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Gløym kontakt"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Gløym alle kontaktane"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Nyleg brukte kontaktar"

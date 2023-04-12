@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2016-07-23 22:40+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for these changes to take effect."
@@ -41,29 +41,29 @@ msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Morate ponovo pokrenuti sesiju Plasme da bi izmjene stupile u dejstvo."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne mogu da pronađem arhivu teme pokazivača %1."
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "Fajl %1 ne izgleda kao pravilna arhiva teme pokazivača."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -72,12 +72,12 @@ msgstr ""
 "Tema ikonica po imenu %1 već postoji u fascikli tema. Želite li da je "
 "zamijenite ovom?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Prebrisati temu?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

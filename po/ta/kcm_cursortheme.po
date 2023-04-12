@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-01-03 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -28,33 +28,33 @@ msgstr "தற்போதைய சுட்டிக்குறி திட�
 msgid "Current cursor size"
 msgstr "தற்போதைய சுட்டிக்குறி அளவு"
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "இந்த மாற்றங்கள் செயல்பட பிளாஸ்மாவை நீங்கள் மீள்துவக்க வேண்டும்."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "இக்கோப்பு ஒரு முறையான திட்டமுறையை கொண்ட பெட்டகம் போல் தெரியவில்லை."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' அடைவை உருவாக்க முடியவில்லை."
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -62,12 +62,12 @@ msgid ""
 msgstr ""
 "%1 என்ற பெயருள்ள தோற்றத்திட்டம் ஏற்கனவே உள்ளது. அதற்கு பதிலாக இதை நிறுவ வேண்டுமா?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "திட்டமுறையை மேலெழுதலாமா?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."

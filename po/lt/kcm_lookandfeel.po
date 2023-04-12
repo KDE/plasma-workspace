@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-26 02:14+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-02-04 19:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -30,14 +30,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "liudas@akmc.lt, <>"
 
-#: kcm.cpp:479
+#: kcm.cpp:476
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Tam, kad šie pakeitimai įsigaliotų, turite iš naujo paleisti Plasma seansą."
 
-#: kcm.cpp:480
+#: kcm.cpp:477
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Žymeklio nuostatos pakeistos"

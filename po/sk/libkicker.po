@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-01-10 11:44+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Pridať do panela (miniaplikácia)"
 msgid "Pin to Task Manager"
 msgstr "Pripnúť k správcovi úloh"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávne súbory"
@@ -113,32 +113,12 @@ msgstr "Hľadať, vypočítať alebo spustiť príkaz"
 msgid "Computer"
 msgstr "Počítač"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "Zobraziť informácie o kontakte…"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Obľúbené"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Kontakty"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Zabudnúť kontakt"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Zabudnúť všetky kontakty"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -180,42 +160,37 @@ msgstr "Zabudnúť všetky aplikácie"
 msgid "Forget All Files"
 msgstr "Zabudnúť všetky súbory"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Skryť %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Všetky aplikácie"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Toto by nemalo byť viditeľné. Použite KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Nedávne kontakty"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Často používané súbory"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nedávne aplikácie"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Často použité aplikácie"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Napájanie / Sedenie"
@@ -317,6 +292,21 @@ msgstr "Vypne počítač"
 #, kde-format
 msgid "System actions"
 msgstr "Systémové akcie"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "Zobraziť informácie o kontakte…"
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakty"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Zabudnúť kontakt"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Zabudnúť všetky kontakty"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Nedávne kontakty"
 
 #~ msgid "Documents"
 #~ msgstr "Dokumenty"

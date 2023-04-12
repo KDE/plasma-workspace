@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2019-11-10 12:37+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Pievienot panelim (logdaļa)"
 msgid "Pin to Task Manager"
 msgstr "Piespraust pie uzdevumu pārvaldnieka"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -118,33 +118,12 @@ msgstr "Meklē, rēķini vai darbini komandu"
 msgid "Computer"
 msgstr "Dators"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, fuzzy, kde-format
-#| msgid "Show Contact Information..."
-msgid "Show Contact Information…"
-msgstr "Rādīt kontaktinformāciju..."
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "Iecienītās"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "Kontakti"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "Aizmirst kontaktu"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "Aizmirst visus kontaktus"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -188,43 +167,38 @@ msgstr "Aizmirst visas programmas"
 msgid "Forget All Files"
 msgstr "Aizmirst visu"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Slēpt %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Visas programmas"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "Nesenie kontakti"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, fuzzy, kde-format
 #| msgid "Often Used Documents"
 msgid "Often Used Files"
 msgstr "Biežāk lietotie dokumenti"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nesenās programmas"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Biežāk lietotās programmas"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Izslēgšana / sesija"
@@ -326,6 +300,23 @@ msgstr "Izslēdz datoru"
 #, kde-format
 msgid "System actions"
 msgstr "Sistēmas darbības"
+
+#, fuzzy
+#~| msgid "Show Contact Information..."
+#~ msgid "Show Contact Information…"
+#~ msgstr "Rādīt kontaktinformāciju..."
+
+#~ msgid "Contacts"
+#~ msgstr "Kontakti"
+
+#~ msgid "Forget Contact"
+#~ msgstr "Aizmirst kontaktu"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "Aizmirst visus kontaktus"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "Nesenie kontakti"
 
 #~ msgid "Documents"
 #~ msgstr "Dokumenti"

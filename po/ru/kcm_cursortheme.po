@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-01-18 10:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -47,39 +47,39 @@ msgstr "Название текущего набора курсоров"
 msgid "Current cursor size"
 msgstr "Текущий размер курсора"
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Чтобы изменения вступили в силу, необходимо перезапустить сеанс Plasma."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не удалось создать временный файл."
 
 # BUGME: it's mouse cursor theme, not icon theme --aspotashev
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не удалось загрузить с сервера архив с набором курсоров: %1"
 
 # BUGME: it's mouse cursor theme, not icon theme --aspotashev
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Выбранный файл не является архивом темы курсоров."
 
 # BUGME: folder -> directory? --aspotashev
 # BUGME: 'cursors'? --ayavorsky 20200901
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Не удалось создать папку «icons»."
 
 # BUGME: it's mouse cursor theme, not icon theme --ayavorsky 2020091
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -88,12 +88,12 @@ msgstr ""
 "Набор с именем «%1» уже существует в папке наборов курсоров. Заменить новым "
 "набором?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Заменить набор?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Набор курсоров мыши успешно установлен."

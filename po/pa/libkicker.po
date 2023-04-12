@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-06-08 22:41-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -43,7 +43,7 @@ msgstr "ਪੈਨਲ ਵਿੱਚ ਜੋੜੋ (ਵਿਦਜੈੱਟ)"
 msgid "Pin to Task Manager"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਟੰਗੋ"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "ਤਾਜ਼ਾ ਫ਼ਾਇਲਾਂ"
@@ -113,32 +113,12 @@ msgstr "ਖੋਜੋ, ਗਿਣਤੀ ਕਰੋ ਜਾਂ ਕਮਾਂਡ ਚਲ
 msgid "Computer"
 msgstr "ਕੰਪਿਊਟਰ"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "…ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਨੂੰ ਵੇਖਾਓ"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "ਸੰਪਰਕ"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "ਸੰਪਰਕ ਨੂੰ ਭੁਲਾਓ"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "ਸਾਰੇ ਸੰਪਰਕਾਂ ਨੂੰ ਭੁਲਾਓ"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -180,42 +160,37 @@ msgstr "ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਭੁਲਾ
 msgid "Forget All Files"
 msgstr "ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ ਭੁਲਾਓ"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 ਨੂੰ ਲੁਕਾਓ"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "ਸਭ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "ਤਾਜ਼ਾ ਸੰਪਰਕ"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "ਅਕਸਰ ਵਰਤੀਆਂ ਫ਼ਾਈਲਾਂ"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "ਤਾਜ਼ਾ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "ਅਕਸਰ ਵਰਤੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "ਪਾਵਰ / ਸ਼ੈਸ਼ਨ"
@@ -317,6 +292,21 @@ msgstr "ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਕਰੋ"
 #, kde-format
 msgid "System actions"
 msgstr "ਸਿਸਟਮ ਕਾਰਵਾਈਆਂ"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "…ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਨੂੰ ਵੇਖਾਓ"
+
+#~ msgid "Contacts"
+#~ msgstr "ਸੰਪਰਕ"
+
+#~ msgid "Forget Contact"
+#~ msgstr "ਸੰਪਰਕ ਨੂੰ ਭੁਲਾਓ"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "ਸਾਰੇ ਸੰਪਰਕਾਂ ਨੂੰ ਭੁਲਾਓ"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "ਤਾਜ਼ਾ ਸੰਪਰਕ"
 
 #~ msgid "Documents"
 #~ msgstr "ਦਸਤਾਵੇਜ਼"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2010-07-16 13:14+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -30,36 +30,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Start KDE op 'e nij om de feroarings te aktivearjen."
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "It oanwizerstylargyf %1 is net fûn."
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "De triem %1 is gjin jildich oanwizersstyltriem."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgstr ""
 "In styl mei de namme %1 bestiet al yn jo byldkaikestylmap. Wolle jo it "
 "ferfange mei dizze?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Styl oerskriuwe?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

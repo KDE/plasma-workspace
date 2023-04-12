@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -45,7 +45,7 @@ msgstr "Dodaj na panel"
 msgid "Pin to Task Manager"
 msgstr ""
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -117,32 +117,12 @@ msgstr ""
 msgid "Computer"
 msgstr ""
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr ""
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Dodaj u omiljene"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, fuzzy, kde-format
-msgid "Contacts"
-msgstr "Skorašnji dokumenti"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, fuzzy, kde-format
-msgid "Forget Contact"
-msgstr "Zaboravi dokument"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, fuzzy, kde-format
-msgid "Forget All Contacts"
-msgstr "Zaboravi sve dokumente"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -184,42 +164,37 @@ msgstr "Zaboravi sve aplikacije"
 msgid "Forget All Files"
 msgstr "Zaboravi sve dokumente"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, fuzzy, kde-format
 msgid "All Applications"
 msgstr "Zaboravi sve aplikacije"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: plugin/rootmodel.cpp:422
-#, fuzzy, kde-format
-msgid "Recent Contacts"
-msgstr "Skorašnji dokumenti"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "Skorašnji dokumenti"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Skorašnji programi"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Skorašnji programi"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Napajanje / Sesija"
@@ -321,6 +296,22 @@ msgstr ""
 #, kde-format
 msgid "System actions"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Contacts"
+#~ msgstr "Skorašnji dokumenti"
+
+#, fuzzy
+#~ msgid "Forget Contact"
+#~ msgstr "Zaboravi dokument"
+
+#, fuzzy
+#~ msgid "Forget All Contacts"
+#~ msgstr "Zaboravi sve dokumente"
+
+#, fuzzy
+#~ msgid "Recent Contacts"
+#~ msgstr "Skorašnji dokumenti"
 
 #, fuzzy
 #~ msgid "Documents"

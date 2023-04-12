@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2020-09-01 00:10+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: krdb.cpp:260
+#: krdb.cpp:262
 #, kde-format
 msgid ""
 "# created by KDE Plasma, %1\n"

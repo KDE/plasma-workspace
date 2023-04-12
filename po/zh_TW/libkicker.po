@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2023-03-06 21:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -45,7 +45,7 @@ msgstr "新增到面板（元件）"
 msgid "Pin to Task Manager"
 msgstr "釘選到工作管理員"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "最近使用的檔案"
@@ -115,32 +115,12 @@ msgstr "搜尋、計算或執行指令"
 msgid "Computer"
 msgstr "電腦"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "顯示聯絡人資訊…"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "我的最愛"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "聯絡人"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "遺忘聯絡人"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "遺忘所有聯絡人"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -182,42 +162,37 @@ msgstr "遺忘所有應用程式"
 msgid "Forget All Files"
 msgstr "遺忘所有檔案"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "隱藏 %1"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "所有應用程式"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "這不應該是可見的！請使用 KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "最近使用的聯絡人"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "經常使用的檔案"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "最近使用的應用程式"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "經常使用的應用程式"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "電源 / 工作階段"
@@ -319,6 +294,21 @@ msgstr "關閉電腦"
 #, kde-format
 msgid "System actions"
 msgstr "系統動作"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "顯示聯絡人資訊…"
+
+#~ msgid "Contacts"
+#~ msgstr "聯絡人"
+
+#~ msgid "Forget Contact"
+#~ msgstr "遺忘聯絡人"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "遺忘所有聯絡人"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "最近使用的聯絡人"
 
 #~ msgid "Documents"
 #~ msgstr "文件"

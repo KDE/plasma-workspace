@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:19+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2021-06-08 22:25-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -31,34 +31,34 @@ msgstr ""
 msgid "Current cursor size"
 msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਆਕਾਰ"
 
-#: kcmcursortheme.cpp:308
+#: kcmcursortheme.cpp:306
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
-#: kcmcursortheme.cpp:382
+#: kcmcursortheme.cpp:380
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:393
+#: kcmcursortheme.cpp:391
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ਕਰਸਰ ਥੀਮ ਅਕਾਇਵ %1 ਲੱਭਣ ਤੋਂ ਅਸਫਲ।"
 
-#: kcmcursortheme.cpp:424
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ਇਹ ਫਾਇਲ਼ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਈਵ ਨਹੀਂ ਹੈ।"
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਆਈਕਾਨ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ ਥੀਮ %1 ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਤਬਦੀਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ਥੀਮ ਉੱਤੇ ਲਿਖਣਾ ਹੈ?"
 
-#: kcmcursortheme.cpp:468
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

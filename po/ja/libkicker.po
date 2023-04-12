@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-12 02:13+0000\n"
 "PO-Revision-Date: 2022-06-17 23:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "パネル (ウィジェット) に追加"
 msgid "Pin to Task Manager"
 msgstr "タスクマネージャにピン留め"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "最近使用したファイル"
@@ -114,32 +114,12 @@ msgstr "検索や計算もしくはコマンドを実行"
 msgid "Computer"
 msgstr "コンピュータ"
 
-#: plugin/contactentry.cpp:105 plugin/recentcontactsmodel.cpp:82
-#, kde-format
-msgid "Show Contact Information…"
-msgstr "連絡先情報を表示…"
-
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:550 plugin/rootmodel.cpp:416
-#: plugin/simplefavoritesmodel.cpp:31
+#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:30
 #, kde-format
 msgid "Favorites"
 msgstr "お気に入り"
-
-#: plugin/recentcontactsmodel.cpp:40
-#, kde-format
-msgid "Contacts"
-msgstr "連絡先"
-
-#: plugin/recentcontactsmodel.cpp:73
-#, kde-format
-msgid "Forget Contact"
-msgstr "連絡先を忘れる"
-
-#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
-#, kde-format
-msgid "Forget All Contacts"
-msgstr "すべての連絡先を忘れる"
 
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
@@ -181,42 +161,37 @@ msgstr "すべてのアプリケーションを忘れる"
 msgid "Forget All Files"
 msgstr "すべてのファイルを忘れる"
 
-#: plugin/rootmodel.cpp:95
+#: plugin/rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 を隠す"
 
-#: plugin/rootmodel.cpp:398
+#: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "すべてのアプリケーション"
 
-#: plugin/rootmodel.cpp:410
+#: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: plugin/rootmodel.cpp:422
-#, kde-format
-msgid "Recent Contacts"
-msgstr "最近使用した連絡先"
-
-#: plugin/rootmodel.cpp:429
+#: plugin/rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "よく使用するファイル"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "最近使用したアプリケーション"
 
-#: plugin/rootmodel.cpp:438
+#: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "よく使用するアプリケーション"
 
-#: plugin/rootmodel.cpp:453
+#: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "電源/セッション"
@@ -318,3 +293,18 @@ msgstr "コンピュータを停止する"
 #, kde-format
 msgid "System actions"
 msgstr "システムのアクション"
+
+#~ msgid "Show Contact Information…"
+#~ msgstr "連絡先情報を表示…"
+
+#~ msgid "Contacts"
+#~ msgstr "連絡先"
+
+#~ msgid "Forget Contact"
+#~ msgstr "連絡先を忘れる"
+
+#~ msgid "Forget All Contacts"
+#~ msgstr "すべての連絡先を忘れる"
+
+#~ msgid "Recent Contacts"
+#~ msgstr "最近使用した連絡先"
