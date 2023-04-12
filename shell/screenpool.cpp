@@ -308,6 +308,9 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 
 void ScreenPool::reconsiderOutputOrder()
 {
+    // prevent race condition between us and the watcher. depending on who receives signals first,
+    // the current screens may not be the ones the watcher knows about -> force an update.
+    m_outputOrderWatcher->refresh();
     handleOutputOrderChanged(m_outputOrderWatcher->outputOrder());
 }
 
