@@ -193,7 +193,7 @@ void X11OutputOrderWatcher::refresh()
         ScopedPointer<xcb_randr_get_output_info_reply_t> output(
             xcb_randr_get_output_info_reply(QX11Info::connection(), xcb_randr_get_output_info(QX11Info::connection(), randr_outputs[i], timestamp), NULL));
 
-        if (output == NULL || output->connection == XCB_RANDR_CONNECTION_DISCONNECTED) {
+        if (output == NULL || output->connection == XCB_RANDR_CONNECTION_DISCONNECTED || output->crtc == 0) {
             continue;
         }
 
