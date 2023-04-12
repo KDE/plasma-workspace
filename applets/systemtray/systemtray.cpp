@@ -215,11 +215,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         }
     }
 
-    QAction *runAssociatedApplication = applet->actions()->action(QStringLiteral("run associated application"));
-    if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
-        desktopMenu->addAction(runAssociatedApplication);
-    }
-
     if (applet->actions()->action(QStringLiteral("configure"))) {
         desktopMenu->addAction(applet->actions()->action(QStringLiteral("configure")));
     }

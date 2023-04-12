@@ -187,11 +187,6 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
     }
 
     if (!m_applet->failedToLaunch()) {
-        QAction *runAssociatedApplication = m_applet->actions()->action(QStringLiteral("run associated application"));
-        if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
-            menu.addAction(runAssociatedApplication);
-        }
-
         QAction *configureApplet = m_applet->actions()->action(QStringLiteral("configure"));
         if (configureApplet && configureApplet->isEnabled()) {
             menu.addAction(configureApplet);

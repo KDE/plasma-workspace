@@ -78,7 +78,6 @@ void ContextMenu::restore(const KConfigGroup &config)
         disabled.insert(QStringLiteral("configure shortcuts"));
         disabled.insert(QStringLiteral("_open_terminal"));
         disabled.insert(QStringLiteral("_run_command"));
-        disabled.insert(QStringLiteral("run associated application"));
         disabled.insert(QStringLiteral("_lock_screen"));
         disabled.insert(QStringLiteral("_logout"));
     }
