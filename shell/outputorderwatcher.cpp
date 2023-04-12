@@ -178,7 +178,7 @@ void X11OutputOrderWatcher::refresh()
         OutputOrderWatcher::refresh();
         return;
     }
-    QHash<int, QString> orderMap;
+    QMap<int, QString> orderMap;
 
     ScopedPointer<xcb_randr_get_screen_resources_current_reply_t> reply(
         xcb_randr_get_screen_resources_current_reply(QX11Info::connection(),
@@ -214,17 +214,15 @@ void X11OutputOrderWatcher::refresh()
 
         const uint32_t order = *xcb_randr_get_output_property_data(orderReply.data());
 
-        if (order > 0) {
+        if (order > 0) { // 0 is the special case for disabled, so we ignore it
             orderMap[order] = screenName;
         }
     }
 
     QStringList pendingOutputOrder;
 
-    // 0 is the special case for disabled, so we ignore it
-    for (int i = 1; i <= orderMap.size(); ++i) {
-        Q_ASSERT(orderMap.contains(i));
-        pendingOutputOrder.append(orderMap[i]);
+    for (const auto &screenName : orderMap) {
+        pendingOutputOrder.append(screenName);
     }
 
     for (const auto &name : std::as_const(pendingOutputOrder)) {
