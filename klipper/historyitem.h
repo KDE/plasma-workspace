@@ -52,11 +52,14 @@ public:
     }
 
     /**
-     * Return the current item as pixmap
-     * A text would be returned as a null pixmap,
+     * Return the current item as \QImage
+     * A text would be returned as a null \QImage,
      * which is also the default implementation
      */
-    inline virtual QPixmap image() const;
+    virtual QImage image() const
+    {
+        return {};
+    }
 
     /**
      * Returns a pointer to a QMimeData suitable for QClipboard::setMimeData().
@@ -106,11 +109,6 @@ protected:
 private:
     QByteArray m_uuid;
 };
-
-inline QPixmap HistoryItem::image() const
-{
-    return QPixmap();
-}
 
 inline QDataStream &operator<<(QDataStream &lhs, HistoryItem const *const rhs)
 {

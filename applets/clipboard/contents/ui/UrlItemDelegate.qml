@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -14,6 +14,13 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 Item {
     id: previewItem
     height: PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
+
+    Drag.active: dragHandler.active
+    Drag.dragType: Drag.Automatic
+    Drag.supportedActions: Qt.CopyAction
+    Drag.mimeData: {
+        "text/uri-list": DisplayRole.split(" "),
+    }
 
     ListView {
         id: previewList

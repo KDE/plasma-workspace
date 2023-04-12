@@ -51,11 +51,11 @@ QMimeData *HistoryImageItem::mimeData() const
     return data;
 }
 
-QPixmap HistoryImageItem::image() const
+QImage HistoryImageItem::image() const
 {
     if (m_model->displayImages()) {
-        return QPixmap::fromImage(m_data);
+        return m_data;
     }
-    static QPixmap imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)));
+    static const QImage imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)).toImage());
     return imageIcon;
 }

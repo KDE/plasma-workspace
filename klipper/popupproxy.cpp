@@ -75,14 +75,14 @@ void PopupProxy::slotAboutToShow()
 void PopupProxy::tryInsertItem(HistoryItem const *const item, int &remainingHeight, const int index)
 {
     QAction *action = new QAction(m_proxy_for_menu);
-    QPixmap image(item->image());
+    const QImage image(item->image());
     if (image.isNull()) {
         // Squeeze text strings so that do not take up the entire screen (or more)
         QString text = m_proxy_for_menu->fontMetrics().elidedText(Utils::simplifiedText(item->text(), 1000), Qt::ElideRight, m_menu_width);
         text.replace(QLatin1Char('&'), QLatin1String("&&"));
         action->setText(text);
     } else {
-        action->setIcon(QIcon(image));
+        action->setIcon(QIcon(QPixmap::fromImage(image)));
     }
 
     action->setData(item->uuid());
