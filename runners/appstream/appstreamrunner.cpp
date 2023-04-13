@@ -148,14 +148,13 @@ void InstallerRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
 {
     QMutexLocker locker(&m_appstreamMutex);
-    QString error;
     static bool warnedOnce = false;
-    static bool opened = m_db.load(&error);
+    static bool opened = m_db.load();
     if (!opened) {
         if (warnedOnce) {
-            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << m_db.lastError();
         } else {
-            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << m_db.lastError();
             warnedOnce = true;
         }
     }
