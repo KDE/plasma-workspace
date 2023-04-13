@@ -66,6 +66,14 @@ public:
      **/
     Q_INVOKABLE QString activityName(const QString &id);
 
+    /**
+     * The icon of the activity of the given id.
+     *
+     * @param id An activity id string.
+     * @returns the name or file path of the activity of the given id.
+     **/
+    Q_INVOKABLE QString activityIcon(const QString &id);
+
 Q_SIGNALS:
     void currentActivityChanged() const;
     void numberOfRunningActivitiesChanged() const;

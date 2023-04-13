@@ -105,4 +105,14 @@ QString ActivityInfo::activityName(const QString &id)
     return QString();
 }
 
+QString ActivityInfo::activityIcon(const QString &id)
+{
+    KActivities::Info info(id);
+
+    if (info.state() != KActivities::Info::Invalid) {
+        return info.icon();
+    }
+
+    return QString();
+}
 }
