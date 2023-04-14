@@ -291,18 +291,3 @@ msgstr "Изключване на компютъра"
 #, kde-format
 msgid "System actions"
 msgstr "Системни действия"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Показване на информация за контакт…"
-
-#~ msgid "Contacts"
-#~ msgstr "Контакти"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Забравяне на контакт"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Забравяне на всички контакти"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Скорошни контакти"

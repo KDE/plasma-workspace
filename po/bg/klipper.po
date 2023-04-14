@@ -967,10 +967,3 @@ msgstr "Изключване на този изскачащ прозорец"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Редактиране на съдържанието…"
-
-#~ msgid "Edit Contents"
-#~ msgstr "Редактиране на съдържанието"

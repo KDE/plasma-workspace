@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-02-03 12:34+0100\n"
+"PO-Revision-Date: 2023-04-12 22:49+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.90\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "Nombre del esquema de color"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr "Color de acentuación"
+msgstr "Color de acento"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -91,7 +91,7 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"El último color de acentuación personalizado que se ha usado antes de que el "
+"El último color de acento personalizado que se ha usado antes de que el "
 "usuario cambiara al color generado del fondo de pantalla o al color "
 "predeterminado"
 
@@ -99,7 +99,7 @@ msgstr ""
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr "Si se debe aplicar el color de acentuación del fondo de pantalla"
+msgstr "Si se debe aplicar el color de acento del fondo de pantalla"
 
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
@@ -873,14 +873,13 @@ msgstr "Oscurecer columnas ordenadas en l&istas"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Teñir todos los colores con el color de acentuación"
+msgstr "Teñir todos los colores con el color de acento"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
-"Hacer que las barras de título de las ventanas usen el color de acentuación"
+msgstr "Hacer que las barras de título de las ventanas usen el color de acento"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
@@ -1163,24 +1162,24 @@ msgstr "foco"
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Color de acentuación del esquema de color"
+msgstr "Color de acento del esquema de color"
 
 #: package/contents/ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr "Color de acentuación del fondo de escritorio"
+msgstr "Color de acento del fondo de escritorio"
 
 #: package/contents/ui/AccentColorUI.qml:40
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Color de acentuación personalizado"
+msgstr "Color de acento personalizado"
 
 #: package/contents/ui/AccentColorUI.qml:165
 #, kde-format
 msgid "Choose custom accent color"
-msgstr "Escoger color de acentuación personalizado"
+msgstr "Escoger color de acento personalizado"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
@@ -1318,10 +1317,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
-"El nombre del color de acentuación que quiere definir. Se permiten nombres "
-"de color SVG (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) y "
-"códigos de color en hexadecimal. Use comillas con el código hexadecimal si "
-"existe la posibilidad de que se pueda expandir en la línea de órdenes."
+"El nombre del color de acento que quiere definir. Se permiten nombres de "
+"color SVG (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) y códigos "
+"de color en hexadecimal. Use comillas con el código hexadecimal si existe la "
+"posibilidad de que se pueda expandir en la línea de órdenes."
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1368,12 +1367,12 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr "Color de acentuación %1 aplicado correctamente"
+msgstr "Color de acento %1 aplicado correctamente"
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
-msgstr "Color de acentuación no válido "
+msgstr "Color de acento no válido "
 
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
