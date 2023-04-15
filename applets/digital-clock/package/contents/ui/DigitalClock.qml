@@ -41,7 +41,6 @@ MouseArea {
     property int use24hFormat: Plasmoid.configuration.use24hFormat
 
     property string lastDate: ""
-    property int tzOffset
 
     // This is the index in the list of user selected timezones
     property int tzIndex: 0
@@ -66,8 +65,6 @@ MouseArea {
     property bool wasExpanded
     property int wheelDelta: 0
 
-
-
     onDateFormatChanged: {
         setupLabels();
     }
@@ -87,12 +84,12 @@ MouseArea {
 // -        });
 // -        Plasmoid.configuration.selectedTimeZones = sortArray;
 // -
-
+// don't update the configuration, that's just ridiculous
 
     Clock {
         id: clock
         timeZone: Plasmoid.configuration.selectedTimeZones[tzIndex]
-        // Plasmoid.configuration.showSeconds
+        trackSeconds: Plasmoid.configuration.showSeconds
     }
 
     Connections {
@@ -436,7 +433,7 @@ MouseArea {
 
     onPressed: wasExpanded = Plasmoid.expanded
     onClicked: Plasmoid.expanded = !wasExpanded
-    onWheel: {
+    onWheel: wheel => {
         if (!Plasmoid.configuration.wheelChangesTimezone) {
             return;
         }

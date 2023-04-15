@@ -16,6 +16,7 @@ import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.digitalclock 1.0
+import org.kde.plasma.clock 1.0
 
 // Top-level layout containing:
 // - Left column with world clock and agenda view
@@ -587,7 +588,14 @@ PlasmaExtras.Representation {
             borderOpacity: 0.25
 
             eventPluginsManager: eventPluginsManager
-            today: root.tzDate
+            today: clock.dateTime
+
+            Clock {
+                id: clock
+                // timeZone: Plasmoid.configuration.selectedTimeZones[tzIndex]
+                trackSeconds: false
+            }
+
             firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
                 ? Plasmoid.configuration.firstDayOfWeek
                 : Qt.locale().firstDayOfWeek

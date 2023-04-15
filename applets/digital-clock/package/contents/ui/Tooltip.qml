@@ -46,7 +46,7 @@ Item {
     Clock {
         id: clock
         timeZone: Plasmoid.configuration.selectedTimeZones[Plasmoid.configuration.lastSelectedTimezone]
-        // Plasmoid.configuration.showSeconds
+        trackSeconds: Plasmoid.configuration.showSeconds
     }
 
     ColumnLayout {
@@ -66,17 +66,17 @@ Item {
             Layout.maximumWidth: preferredTextWidth
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
+            text: clocks.visible ? Qt.formatDate(clock.dateTime, Locale.LongFormat) : Qt.formatDate(clock.dateTime,"dddd")
         }
 
         PlasmaComponents3.Label {
             id: tooltipSubtext
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
-            text: Plasmoid.configuration.showSeconds === 0 ? Qt.formatDate(tzDate, dateFormatString)
-                                                           : Qt.formatTime(tzDate, Qt.locale().timeFormat(Locale.LongFormat))
+            text: Plasmoid.configuration.showSeconds === 0 ? Qt.formatDate(clock.dateTime, dateFormatString)
+                                                           : Qt.formatTime(clock.dateTime, Qt.locale().timeFormat(Locale.LongFormat))
                                                              + "\n"
-                                                             + Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString))
+                                                             + Qt.formatDate(clock.dateTime, Qt.formatDate(clock.dateTime, dateFormatString))
             opacity: 0.6
             visible: !clocks.visible
         }
@@ -109,13 +109,10 @@ Item {
                          * this, let's suppress the duplicate.
                         //  */
 
-                        // FIXME
-                        // if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
-                        //     timezones.push(thisTzData);
-                        //     timezones.push(thisTzData);
-                        // }
+                        if (thisTzData !== "Local") {
+                            timezones.push(thisTzData);
+                        }
                     }
-
                     return timezones;
                 }
 
@@ -130,6 +127,7 @@ Item {
                     Clock {
                         id: clock
                         timeZone: modelData
+                        trackSeconds: Plasmoid.configuration.showSeconds
                     }
                 }
             }
