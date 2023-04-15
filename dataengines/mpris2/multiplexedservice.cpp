@@ -48,6 +48,10 @@ void MultiplexedService::updateEnabledOperations()
 
 void MultiplexedService::activePlayerChanged(PlayerContainer *container)
 {
+    if (m_control && m_control->container() == container) {
+        return;
+    }
+
     delete m_control.data();
 
     if (container) {

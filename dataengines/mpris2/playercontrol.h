@@ -53,6 +53,11 @@ public:
 
     void changeVolume(double delta, bool showOSD);
 
+    PlayerContainer *container() const
+    {
+        return m_container;
+    }
+
 Q_SIGNALS:
     void enabledOperationsChanged();
 
