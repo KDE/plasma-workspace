@@ -939,10 +939,3 @@ msgstr "Zakázat toto okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Upravit obsah…"
-
-#~ msgid "Edit Contents"
-#~ msgstr "Upravit obsah"

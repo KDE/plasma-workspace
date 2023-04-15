@@ -300,6 +300,3 @@ msgstr "Při pokusu o nastavení tapety Plasma došlo k chybě:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Nastala chyba při otevírání souboru nastavení kscreenlockerrc"
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Doporučovaný soubor s tapetou"

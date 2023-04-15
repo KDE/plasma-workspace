@@ -294,18 +294,3 @@ msgstr "Vypnout počítač"
 #, kde-format
 msgid "System actions"
 msgstr "Činnosti systému"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Zobrazit informace o kontaktu…"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontakty"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Zapomenout kontakt"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Zapomenout všechny kontakty"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Nedávné kontakty"
