@@ -12,7 +12,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>();)
+K_PLUGIN_CLASS(KillRunnerConfig)
 
 KillRunnerConfig::KillRunnerConfig(QObject *parent)
     : KCModule(parent)
