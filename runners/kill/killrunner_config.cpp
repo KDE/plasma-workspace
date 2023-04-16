@@ -5,9 +5,8 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-// Project-Includes
 #include "killrunner_config.h"
-// KDE-Includes
+
 #include "config_keys.h"
 #include <KConfigGroup>
 #include <KPluginFactory>

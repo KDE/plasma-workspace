@@ -7,11 +7,8 @@
 
 #pragma once
 
-// Project-Includes
 #include "ui_killrunner_config.h"
-// KDE-Includes
 #include <KCModule>
-// Qt
 
 class KillRunnerConfigForm : public QWidget, public Ui::KillRunnerConfigUi
 {
