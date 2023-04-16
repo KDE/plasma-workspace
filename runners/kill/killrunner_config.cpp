@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 Jan Gerrit Marker <jangerrit@weiler-marker.com>
-    SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+    SPDX-FileCopyrightText: 2020-2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -14,19 +14,11 @@
 
 K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>();)
 
-KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent)
-    : QWidget(parent)
-{
-    setupUi(this);
-}
-
 KillRunnerConfig::KillRunnerConfig(QObject *parent)
     : KCModule(parent)
 {
-    m_ui = new KillRunnerConfigForm(widget());
-
-    QGridLayout *layout = new QGridLayout(widget());
-    layout->addWidget(m_ui, 0, 0);
+    m_ui = new Ui::KillRunnerConfigUi();
+    m_ui->setupUi(widget());
 
     m_ui->sorting->addItem(i18n("CPU usage"), CPU);
     m_ui->sorting->addItem(i18n("inverted CPU usage"), CPUI);

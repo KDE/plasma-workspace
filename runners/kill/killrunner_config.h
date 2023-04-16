@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 Jan Gerrit Marker <jangerrit@weiler-marker.com>
-    SPDX-FileCopyrightText: 2020 Alexander Lohnau <alexander.lohnau@gmx.de>
+    SPDX-FileCopyrightText: 2020-2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -9,14 +9,6 @@
 
 #include "ui_killrunner_config.h"
 #include <KCModule>
-
-class KillRunnerConfigForm : public QWidget, public Ui::KillRunnerConfigUi
-{
-    Q_OBJECT
-
-public:
-    explicit KillRunnerConfigForm(QWidget *parent);
-};
 
 class KillRunnerConfig : public KCModule
 {
@@ -31,5 +23,5 @@ public Q_SLOTS:
     void defaults() override;
 
 private:
-    KillRunnerConfigForm *m_ui;
+    Ui::KillRunnerConfigUi *m_ui;
 };
