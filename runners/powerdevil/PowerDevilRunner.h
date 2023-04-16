@@ -21,7 +21,7 @@ class PowerDevilRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT
 public:
-    PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData);
     ~PowerDevilRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

@@ -32,7 +32,7 @@ class PlacesRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    PlacesRunner(QObject *parent, const KPluginMetaData &metaData);
     ~PlacesRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

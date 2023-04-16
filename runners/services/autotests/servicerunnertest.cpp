@@ -71,7 +71,7 @@ void ServiceRunnerTest::cleanupTestCase()
 
 void ServiceRunnerTest::testExcutableExactMatch()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
 
@@ -85,7 +85,7 @@ void ServiceRunnerTest::testExcutableExactMatch()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("kons"));
 
@@ -120,7 +120,7 @@ void ServiceRunnerTest::testSystemSettings()
     // first it will be added to the seen cache, however disqualification of already seen items
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("settings"));
 
@@ -144,7 +144,7 @@ void ServiceRunnerTest::testSystemSettings()
 
 void ServiceRunnerTest::testSystemSettings2()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
     context.setQuery(QStringLiteral("sy"));
 
@@ -168,7 +168,7 @@ void ServiceRunnerTest::testSystemSettings2()
 
 void ServiceRunnerTest::testCategories()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("System"));
@@ -197,7 +197,7 @@ void ServiceRunnerTest::testCategories()
 
 void ServiceRunnerTest::testJumpListActions()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
@@ -241,7 +241,7 @@ void ServiceRunnerTest::testINotifyUsage()
     // The expectation here is that this KDW instance is not persistently claiming an inotify instance.
     bool inotifyCountCool = false;
     auto thread = QThread::create([&] {
-        ServiceRunner runner(nullptr, KPluginMetaData(), QVariantList());
+        ServiceRunner runner(nullptr, KPluginMetaData());
         KRunner::RunnerContext context;
         context.setQuery(QStringLiteral("settings"));
 
@@ -259,7 +259,7 @@ void ServiceRunnerTest::testINotifyUsage()
 
 void ServiceRunnerTest::testSpecialArgs()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("kpat"));
@@ -273,7 +273,7 @@ void ServiceRunnerTest::testSpecialArgs()
 
 void ServiceRunnerTest::testEnv()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    ServiceRunner runner(this, KPluginMetaData());
     KRunner::RunnerContext context;
 
     context.setQuery(QStringLiteral("audacity"));

@@ -22,8 +22,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
-ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Command"));
     // The results from the services runner are preferred, consequently we set a low priority

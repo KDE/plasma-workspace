@@ -21,8 +21,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
-KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
     , m_processes(nullptr)
 {
     setObjectName(QStringLiteral("Kill Runner"));

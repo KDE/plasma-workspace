@@ -21,8 +21,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(WindowedWidgetsRunner, "plasma-runner-windowedwidgets.json")
 
-WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("WindowedWidgets"));
     setPriority(AbstractRunner::HighestPriority);

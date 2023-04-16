@@ -15,7 +15,7 @@ class InstallerRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    InstallerRunner(QObject *parent, const KPluginMetaData &metaData);
     ~InstallerRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

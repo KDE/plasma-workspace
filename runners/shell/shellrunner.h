@@ -19,7 +19,7 @@ class ShellRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ShellRunner(QObject *parent, const KPluginMetaData &metaData);
     ~ShellRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

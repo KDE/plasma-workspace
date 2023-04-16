@@ -23,8 +23,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
-PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
     , m_session(new SessionManagement(this))
 {
     setObjectName(QStringLiteral("PowerDevil"));

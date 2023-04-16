@@ -23,7 +23,7 @@ class CalculatorRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    CalculatorRunner(QObject *parent, const KPluginMetaData &metaData);
     ~CalculatorRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

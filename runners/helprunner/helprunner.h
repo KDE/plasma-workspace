@@ -17,7 +17,7 @@ using namespace KRunner;
 class HelpRunner : public AbstractRunner
 {
 public:
-    HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args);
+    HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData);
 
     void match(RunnerContext &context) override;
     void run(const RunnerContext &context, const QueryMatch &match) override;

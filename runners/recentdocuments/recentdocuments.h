@@ -16,7 +16,7 @@ class RecentDocuments : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    RecentDocuments(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    RecentDocuments(QObject *parent, const KPluginMetaData &metaData);
     ~RecentDocuments() override;
 
     void match(KRunner::RunnerContext &context) override;

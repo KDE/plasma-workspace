@@ -21,8 +21,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
-PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Places"));
     KRunner::RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));

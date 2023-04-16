@@ -26,8 +26,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
-BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
     , m_browser(nullptr)
     , m_browserFactory(new BrowserFactory(this))
 {

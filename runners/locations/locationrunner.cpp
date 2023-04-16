@@ -24,8 +24,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
-LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));

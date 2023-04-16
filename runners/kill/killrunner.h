@@ -26,7 +26,7 @@ class KillRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    KillRunner(QObject *parent, const KPluginMetaData &metaData);
     ~KillRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

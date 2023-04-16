@@ -13,7 +13,7 @@ class LocationsRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    LocationsRunner(QObject *parent, const KPluginMetaData &metaData);
     ~LocationsRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

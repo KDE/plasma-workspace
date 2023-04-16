@@ -20,7 +20,7 @@ class SessionRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    SessionRunner(QObject *parent, const KPluginMetaData &metaData);
     ~SessionRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

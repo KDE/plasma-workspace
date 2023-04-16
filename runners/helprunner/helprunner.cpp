@@ -9,8 +9,8 @@
 #include <KLocalizedString>
 #include <KPluginMetaData>
 
-HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args)
-    : AbstractRunner(parent, pluginMetaData, args)
+HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData)
+    : AbstractRunner(parent, pluginMetaData)
 {
     setTriggerWords({i18nc("this is a runner keyword", "help"), QStringLiteral("?")});
     m_manager = qobject_cast<RunnerManager *>(parent);

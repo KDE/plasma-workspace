@@ -21,7 +21,7 @@ class ServiceRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ServiceRunner(QObject *parent, const KPluginMetaData &metaData);
     ~ServiceRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

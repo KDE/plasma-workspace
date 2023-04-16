@@ -24,8 +24,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
-InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Installation Suggestions"));
     // We want to give the other runners time to check if there are matching applications already installed

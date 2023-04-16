@@ -23,7 +23,7 @@ class WindowedWidgetsRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData);
     ~WindowedWidgetsRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

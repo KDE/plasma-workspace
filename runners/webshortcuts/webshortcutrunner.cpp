@@ -19,8 +19,8 @@
 #include <QAction>
 #include <QDBusConnection>
 
-WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
     , m_match(this)
     , m_filterBeforeRun(false)
 {

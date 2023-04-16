@@ -19,7 +19,7 @@ class BookmarksRunner : public KRunner::AbstractRunner
     Q_OBJECT
 
 public:
-    BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    BookmarksRunner(QObject *parent, const KPluginMetaData &metaData);
     ~BookmarksRunner() override;
 
     void match(KRunner::RunnerContext &context) override;

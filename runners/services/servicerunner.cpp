@@ -404,8 +404,8 @@ private:
     int weightedTermLength = -1;
 };
 
-ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KRunner::AbstractRunner(parent, metaData, args)
+ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
+    : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);
