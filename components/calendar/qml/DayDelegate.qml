@@ -147,7 +147,6 @@ PlasmaComponents3.AbstractButton {
 
     contentItem: Item {
         // ColumnLayout makes scrolling too slow, so use anchors to position labels
-        anchors.fill: parent
 
         PlasmaExtras.Heading {
             id: label
