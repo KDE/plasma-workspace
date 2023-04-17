@@ -295,18 +295,3 @@ msgstr "Slå av datamaskina"
 #, kde-format
 msgid "System actions"
 msgstr "Systemhandlingar"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Vis kontaktinformasjon …"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontaktar"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Gløym kontakt"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Gløym alle kontaktane"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Nyleg brukte kontaktar"

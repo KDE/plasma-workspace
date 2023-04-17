@@ -304,6 +304,3 @@ msgstr "Det oppstod ein feil ved val av bakgrunnsbilete for Plasma:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Det oppstod ein feil ved opning av oppsettfila «kscreenlockerrc»."
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Anbefalt bakgrunnsbilete"

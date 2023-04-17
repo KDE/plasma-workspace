@@ -294,6 +294,3 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Anbefalt bakgrunnsbilde"

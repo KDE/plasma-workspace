@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-17 03:28+0000\n"
 "PO-Revision-Date: 2019-08-19 20:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -19,24 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: menu.cpp:99
+#: menu.cpp:98
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Mostrar KRunner"
 
-#: menu.cpp:104
+#: menu.cpp:103
 #, kde-format
 msgid "Open Terminal"
 msgstr ""
 
-#: menu.cpp:108
+#: menu.cpp:107
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Bloquear a pantalla"
 
-#: menu.cpp:117
+#: menu.cpp:116
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
 #| msgid "Leave..."
@@ -44,31 +44,31 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Saír…"
 
-#: menu.cpp:126
+#: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:291
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Configurar o complemento de menú contextual"
 
-#: menu.cpp:301
+#: menu.cpp:300
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "(outras accións)"
 
-#: menu.cpp:304
+#: menu.cpp:303
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Accións do fondo de escritorio"
 
-#: menu.cpp:308
+#: menu.cpp:307
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

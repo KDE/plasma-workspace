@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-17 03:28+0000\n"
 "PO-Revision-Date: 2022-11-11 11:32+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: menu.cpp:99
+#: menu.cpp:98
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "KRunner-i göstər"
 
-#: menu.cpp:104
+#: menu.cpp:103
 #, kde-format
 msgid "Open Terminal"
 msgstr "Terminalı aç"
 
-#: menu.cpp:108
+#: menu.cpp:107
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Ekranı Kilidləmək"
 
-#: menu.cpp:117
+#: menu.cpp:116
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Tərk etmək..."
 
-#: menu.cpp:126
+#: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr "Ekran ayarlarını tənzimləyin..."
 
-#: menu.cpp:291
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Sağ düymə menyusu modulunu ayarlamaq"
 
-#: menu.cpp:301
+#: menu.cpp:300
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Digər Əməllər]"
 
-#: menu.cpp:304
+#: menu.cpp:303
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Divar Kağızı əməlləri"
 
-#: menu.cpp:308
+#: menu.cpp:307
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

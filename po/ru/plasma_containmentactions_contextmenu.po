@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"POT-Creation-Date: 2023-04-17 03:28+0000\n"
 "PO-Revision-Date: 2022-09-24 14:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -22,55 +22,55 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: menu.cpp:99
+#: menu.cpp:98
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Показать строку поиска и запуска"
 
-#: menu.cpp:104
+#: menu.cpp:103
 #, kde-format
 msgid "Open Terminal"
 msgstr "Открыть терминал"
 
-#: menu.cpp:108
+#: menu.cpp:107
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Заблокировать экран"
 
-#: menu.cpp:117
+#: menu.cpp:116
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Leave…"
 msgstr "Завершить работу..."
 
-#: menu.cpp:126
+#: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr "Настроить параметры экрана…"
 
 # BUGME: please add ctxt @title:window --aspotashev
-#: menu.cpp:291
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Настройка модуля контекстного меню"
 
-#: menu.cpp:301
+#: menu.cpp:300
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Другие действия]"
 
-#: menu.cpp:304
+#: menu.cpp:303
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Действия с обоями"
 
-#: menu.cpp:308
+#: menu.cpp:307
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

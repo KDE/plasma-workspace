@@ -891,6 +891,3 @@ msgstr "Skru av denne sprettoppmenyen"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Edit Contents"
-#~ msgstr "Rediger innhold"

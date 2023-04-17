@@ -963,10 +963,3 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Rediger innhald …"
-
-#~ msgid "Edit Contents"
-#~ msgstr "Rediger innhald"

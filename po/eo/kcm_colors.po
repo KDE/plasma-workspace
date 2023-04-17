@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-04-07 20:08+0100\n"
+"PO-Revision-Date: 2023-04-16 12:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -844,7 +844,7 @@ msgstr "Apliki &efektojn al neaktivaj fenestroj"
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "Uzi malsamajn kolorojn por ne&aktivaj elektoj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
@@ -862,7 +862,7 @@ msgstr "Neaktiva koloro"
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Igi fenestrajn titolbretojn em&faz-koloraj"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
