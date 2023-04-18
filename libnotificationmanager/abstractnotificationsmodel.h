@@ -16,9 +16,11 @@
 #include "notifications.h"
 #include "server.h"
 
+#include "notificationmanager_export.h"
+
 namespace NotificationManager
 {
-class Q_DECL_EXPORT AbstractNotificationsModel : public QAbstractListModel
+class NOTIFICATIONMANAGER_EXPORT AbstractNotificationsModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(QWindow *window READ window WRITE setWindow NOTIFY windowChanged)

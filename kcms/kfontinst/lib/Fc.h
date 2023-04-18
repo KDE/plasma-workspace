@@ -11,6 +11,8 @@
 #include <QUrl>
 #include <fontconfig/fontconfig.h>
 
+#include "kfontinst_export.h"
+
 #if (FC_VERSION < 20200)
 
 #define KFI_FC_NO_WIDTHS
@@ -65,46 +67,46 @@ namespace FC
 #define KFI_FC_WIDTH_ULTRAEXPANDED FC_WIDTH_ULTRAEXPANDED
 #endif
 
-extern Q_DECL_EXPORT QUrl encode(const QString &name, quint32 style, const QString &file = QString(), int index = 0);
-extern Q_DECL_EXPORT Misc::TFont decode(const QUrl &url);
-extern Q_DECL_EXPORT QString getFile(const QUrl &url);
-extern Q_DECL_EXPORT int getIndex(const QUrl &url);
-extern Q_DECL_EXPORT int weight(int w); // round w to nearest fc weight
-extern Q_DECL_EXPORT int width(int w); // round w to nearest fc width
-extern Q_DECL_EXPORT int slant(int s); // round s to nearest fc slant
-extern Q_DECL_EXPORT int spacing(int s); // round s to nearest fc spacing
-extern Q_DECL_EXPORT int strToWeight(const QString &str, QString &newStr);
-extern Q_DECL_EXPORT int strToWidth(const QString &str, QString &newStr);
-extern Q_DECL_EXPORT int strToSlant(const QString &str);
-extern Q_DECL_EXPORT quint32 createStyleVal(const QString &name);
-inline Q_DECL_EXPORT quint32 createStyleVal(int weight, int width, int slant)
+extern KFONTINST_EXPORT QUrl encode(const QString &name, quint32 style, const QString &file = QString(), int index = 0);
+extern KFONTINST_EXPORT Misc::TFont decode(const QUrl &url);
+extern KFONTINST_EXPORT QString getFile(const QUrl &url);
+extern KFONTINST_EXPORT int getIndex(const QUrl &url);
+extern KFONTINST_EXPORT int weight(int w); // round w to nearest fc weight
+extern KFONTINST_EXPORT int width(int w); // round w to nearest fc width
+extern KFONTINST_EXPORT int slant(int s); // round s to nearest fc slant
+extern KFONTINST_EXPORT int spacing(int s); // round s to nearest fc spacing
+extern KFONTINST_EXPORT int strToWeight(const QString &str, QString &newStr);
+extern KFONTINST_EXPORT int strToWidth(const QString &str, QString &newStr);
+extern KFONTINST_EXPORT int strToSlant(const QString &str);
+extern KFONTINST_EXPORT quint32 createStyleVal(const QString &name);
+inline KFONTINST_EXPORT quint32 createStyleVal(int weight, int width, int slant)
 {
     return ((weight & 0xFF) << 16) + ((width & 0xFF) << 8) + (slant & 0xFF);
 }
-extern Q_DECL_EXPORT QString styleValToStr(quint32 style);
-extern Q_DECL_EXPORT void decomposeStyleVal(quint32 styleInfo, int &weight, int &width, int &slant);
-extern Q_DECL_EXPORT quint32 styleValFromStr(const QString &style);
+extern KFONTINST_EXPORT QString styleValToStr(quint32 style);
+extern KFONTINST_EXPORT void decomposeStyleVal(quint32 styleInfo, int &weight, int &width, int &slant);
+extern KFONTINST_EXPORT quint32 styleValFromStr(const QString &style);
 
-extern Q_DECL_EXPORT QString getFcString(FcPattern *pat, const char *val, int index = 0);
+extern KFONTINST_EXPORT QString getFcString(FcPattern *pat, const char *val, int index = 0);
 #ifdef KFI_USE_TRANSLATED_FAMILY_NAME
-extern Q_DECL_EXPORT QString getFcLangString(FcPattern *pat, const char *val, const char *valLang);
+extern KFONTINST_EXPORT QString getFcLangString(FcPattern *pat, const char *val, const char *valLang);
 #endif
-extern Q_DECL_EXPORT int getFcInt(FcPattern *pat, const char *val, int index = 0, int def = -1);
-extern Q_DECL_EXPORT QString getName(const QString &file);
-extern Q_DECL_EXPORT void getDetails(FcPattern *pat, QString &family, quint32 &styleVal, int &index, QString &foundry);
-extern Q_DECL_EXPORT QString createName(FcPattern *pat);
-extern Q_DECL_EXPORT QString createName(const QString &family, quint32 styleInfo);
-extern Q_DECL_EXPORT QString createName(const QString &family, int weight, int width, int slant);
-inline Q_DECL_EXPORT QString createName(const Misc::TFont &font)
+extern KFONTINST_EXPORT int getFcInt(FcPattern *pat, const char *val, int index = 0, int def = -1);
+extern KFONTINST_EXPORT QString getName(const QString &file);
+extern KFONTINST_EXPORT void getDetails(FcPattern *pat, QString &family, quint32 &styleVal, int &index, QString &foundry);
+extern KFONTINST_EXPORT QString createName(FcPattern *pat);
+extern KFONTINST_EXPORT QString createName(const QString &family, quint32 styleInfo);
+extern KFONTINST_EXPORT QString createName(const QString &family, int weight, int width, int slant);
+inline KFONTINST_EXPORT QString createName(const Misc::TFont &font)
 {
     return createName(font.family, font.styleInfo);
 }
-extern Q_DECL_EXPORT QString createStyleName(quint32 styleInfo);
-extern Q_DECL_EXPORT QString createStyleName(int weight, int width, int slant);
-extern Q_DECL_EXPORT QString weightStr(int w, bool emptyNormal = true);
-extern Q_DECL_EXPORT QString widthStr(int w, bool emptyNormal = true);
-extern Q_DECL_EXPORT QString slantStr(int s, bool emptyNormal = true);
-extern Q_DECL_EXPORT QString spacingStr(int s);
-extern Q_DECL_EXPORT bool bitmapsEnabled();
+extern KFONTINST_EXPORT QString createStyleName(quint32 styleInfo);
+extern KFONTINST_EXPORT QString createStyleName(int weight, int width, int slant);
+extern KFONTINST_EXPORT QString weightStr(int w, bool emptyNormal = true);
+extern KFONTINST_EXPORT QString widthStr(int w, bool emptyNormal = true);
+extern KFONTINST_EXPORT QString slantStr(int s, bool emptyNormal = true);
+extern KFONTINST_EXPORT QString spacingStr(int s);
+extern KFONTINST_EXPORT bool bitmapsEnabled();
 }
 }

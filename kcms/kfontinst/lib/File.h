@@ -58,12 +58,12 @@ private:
 
 typedef QSet<File> FileCont;
 
-inline Q_DECL_EXPORT uint qHash(const File &key)
+inline KFONTINST_EXPORT uint qHash(const File &key)
 {
     return qHash(key.path()); // +qHash(key.index());
 }
 
 }
 
-Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::File &obj);
-Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::File &obj);
+KFONTINST_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::File &obj);
+KFONTINST_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::File &obj);

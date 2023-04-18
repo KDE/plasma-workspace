@@ -91,12 +91,12 @@ private:
 
 typedef QSet<Style> StyleCont;
 
-inline Q_DECL_EXPORT uint qHash(const Style &key)
+inline KFONTINST_EXPORT uint qHash(const Style &key)
 {
     return key.value();
 }
 
 }
 
-Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Style &obj);
-Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Style &obj);
+KFONTINST_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Style &obj);
+KFONTINST_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Style &obj);

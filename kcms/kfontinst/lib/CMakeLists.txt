@@ -20,6 +20,8 @@ endif()
 
 set_target_properties(kfontinst PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 
+generate_export_header(kfontinst)
+
 add_library(kfontinstui SHARED ${kfontinstui_LIB_SRCS})
 target_link_libraries(kfontinstui KF6::KIOCore KF6::KIOWidgets X11::X11 X11::Xft XCB::IMAGE kfontinst )
 if (QT_MAJOR_VERSION EQUAL "5")

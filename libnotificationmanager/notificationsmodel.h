@@ -9,9 +9,11 @@
 
 #include "abstractnotificationsmodel.h"
 
+#include "notificationmanager_export.h"
+
 namespace NotificationManager
 {
-class Q_DECL_EXPORT NotificationsModel : public AbstractNotificationsModel
+class NOTIFICATIONMANAGER_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
 public:
     using Ptr = std::shared_ptr<NotificationsModel>;

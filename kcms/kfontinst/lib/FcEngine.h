@@ -14,6 +14,8 @@
 // #include "Misc.h"
 #include "Fc.h"
 
+#include "kfontinst_export.h"
+
 // Enable the following to use locale aware family name - if font supports this.
 // #define KFI_USE_TRANSLATED_FAMILY_NAME
 
@@ -25,7 +27,7 @@ typedef struct _XftColor XftColor;
 
 namespace KFI
 {
-class Q_DECL_EXPORT CFcEngine
+class KFONTINST_EXPORT CFcEngine
 {
 public:
     class Xft;

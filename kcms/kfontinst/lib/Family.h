@@ -74,14 +74,14 @@ struct KFONTINST_EXPORT Families {
     FamilyCont items;
 };
 
-inline Q_DECL_EXPORT uint qHash(const Family &key)
+inline KFONTINST_EXPORT uint qHash(const Family &key)
 {
     return qHash(key.name());
 }
 
 }
 
-Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Family &obj);
-Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Family &obj);
-Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Families &obj);
-Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Families &obj);
+KFONTINST_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Family &obj);
+KFONTINST_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Family &obj);
+KFONTINST_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Families &obj);
+KFONTINST_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Families &obj);

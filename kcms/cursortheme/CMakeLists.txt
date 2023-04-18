@@ -11,7 +11,7 @@ xcursor/sortproxymodel.cpp
 ../kcms-common.cpp
 )
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )
 
 ########### next target ###############
 
