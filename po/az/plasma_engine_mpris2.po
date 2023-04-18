@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-04-18 02:16+0000\n"
 "PO-Revision-Date: 2020-10-30 14:43+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,48 +17,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.08.2\n"
 
-#: multiplexedservice.cpp:68
+#: multiplexedservice.cpp:72
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Media oxuducunun idarə olunması"
 
-#: multiplexedservice.cpp:70
+#: multiplexedservice.cpp:74
 #, kde-format
 msgid "Play/Pause media playback"
 msgstr "Media oxutmanı başlatmaq/fasilə"
 
-#: multiplexedservice.cpp:88
+#: multiplexedservice.cpp:92
 #, kde-format
 msgid "Media playback next"
 msgstr "Növbəti media oxutma"
 
-#: multiplexedservice.cpp:97
+#: multiplexedservice.cpp:101
 #, kde-format
 msgid "Media playback previous"
 msgstr "Əvvəlki media oxutma"
 
-#: multiplexedservice.cpp:106
+#: multiplexedservice.cpp:110
 #, kde-format
 msgid "Stop media playback"
 msgstr "Media oxutmanı dayandırmaq"
 
-#: multiplexedservice.cpp:115
+#: multiplexedservice.cpp:119
 #, kde-format
 msgid "Pause media playback"
 msgstr "Media oxudulmasına fasilə"
 
-#: multiplexedservice.cpp:124
+#: multiplexedservice.cpp:128
 #, kde-format
 msgid "Play media playback"
 msgstr "Medianı oxutmağa başlatmaq"
 
-#: multiplexedservice.cpp:133
+#: multiplexedservice.cpp:137
 #, kde-format
 msgid "Media volume up"
 msgstr "Səsi artırmaq"
 
-#: multiplexedservice.cpp:142
+#: multiplexedservice.cpp:146
 #, kde-format
 msgid "Media volume down"
 msgstr "Səsi azaltmaq"

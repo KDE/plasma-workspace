@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-04-18 02:16+0000\n"
 "PO-Revision-Date: 2020-10-03 11:30+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,48 +20,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: multiplexedservice.cpp:68
+#: multiplexedservice.cpp:72
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Mediestyring"
 
-#: multiplexedservice.cpp:70
+#: multiplexedservice.cpp:74
 #, kde-format
 msgid "Play/Pause media playback"
 msgstr "Spel av / pausa mediespeling"
 
-#: multiplexedservice.cpp:88
+#: multiplexedservice.cpp:92
 #, kde-format
 msgid "Media playback next"
 msgstr "Media spel neste"
 
-#: multiplexedservice.cpp:97
+#: multiplexedservice.cpp:101
 #, kde-format
 msgid "Media playback previous"
 msgstr "Media spel førre"
 
-#: multiplexedservice.cpp:106
+#: multiplexedservice.cpp:110
 #, kde-format
 msgid "Stop media playback"
 msgstr "Stopp mediespeling"
 
-#: multiplexedservice.cpp:115
+#: multiplexedservice.cpp:119
 #, kde-format
 msgid "Pause media playback"
 msgstr "Pausa mediespeling"
 
-#: multiplexedservice.cpp:124
+#: multiplexedservice.cpp:128
 #, kde-format
 msgid "Play media playback"
 msgstr "Spel av mediespeling"
 
-#: multiplexedservice.cpp:133
+#: multiplexedservice.cpp:137
 #, kde-format
 msgid "Media volume up"
 msgstr "Media høgare lyd"
 
-#: multiplexedservice.cpp:142
+#: multiplexedservice.cpp:146
 #, kde-format
 msgid "Media volume down"
 msgstr "Media lågare lyd"

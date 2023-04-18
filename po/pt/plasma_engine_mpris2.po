@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_mpris2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-04-18 02:16+0000\n"
 "PO-Revision-Date: 2020-09-21 10:11+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -12,48 +12,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: multiplexedservice.cpp:68
+#: multiplexedservice.cpp:72
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Controlador Multimédia"
 
-#: multiplexedservice.cpp:70
+#: multiplexedservice.cpp:74
 #, kde-format
 msgid "Play/Pause media playback"
 msgstr "Reproduzir/pausar o conteúdo"
 
-#: multiplexedservice.cpp:88
+#: multiplexedservice.cpp:92
 #, kde-format
 msgid "Media playback next"
 msgstr "Reprodução do conteúdo seguinte"
 
-#: multiplexedservice.cpp:97
+#: multiplexedservice.cpp:101
 #, kde-format
 msgid "Media playback previous"
 msgstr "Reprodução do conteúdo anterior"
 
-#: multiplexedservice.cpp:106
+#: multiplexedservice.cpp:110
 #, kde-format
 msgid "Stop media playback"
 msgstr "Parar a reprodução do conteúdo"
 
-#: multiplexedservice.cpp:115
+#: multiplexedservice.cpp:119
 #, kde-format
 msgid "Pause media playback"
 msgstr "Pausar a reprodução do conteúdo"
 
-#: multiplexedservice.cpp:124
+#: multiplexedservice.cpp:128
 #, kde-format
 msgid "Play media playback"
 msgstr "Reproduzir o conteúdo"
 
-#: multiplexedservice.cpp:133
+#: multiplexedservice.cpp:137
 #, kde-format
 msgid "Media volume up"
 msgstr "Subir o volume"
 
-#: multiplexedservice.cpp:142
+#: multiplexedservice.cpp:146
 #, kde-format
 msgid "Media volume down"
 msgstr "Descer o volume"

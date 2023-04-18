@@ -6,19 +6,20 @@
 # Michal Sulek <misurel@gmail.com>, 2009, 2010.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2017.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:12+0000\n"
-"PO-Revision-Date: 2020-04-27 18:36+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2023-04-14 18:15+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: logout.cpp:340
@@ -43,6 +44,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Nie je prístup na zápis do adresára $HOME (%1). Ak je to zámerné, nastavte "
+"vo svojom prostredí <envar>KDE_HOME_READONLY=1</envar>."
 
 #: main.cpp:91
 #, kde-format
@@ -154,12 +157,12 @@ msgstr "Odhlásiť"
 #: server.cpp:894
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Vypnúť"
 
 #: server.cpp:899
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Reštartovať"
 
 #: server.cpp:905
 #, kde-format
@@ -167,8 +170,7 @@ msgid "Log Out Without Confirmation"
 msgstr "Odhlásiť bez potvrdenia"
 
 #: server.cpp:910
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Vypnúť bez potvrdenia"
 

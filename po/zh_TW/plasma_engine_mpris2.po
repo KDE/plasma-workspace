@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-04-18 02:16+0000\n"
 "PO-Revision-Date: 2023-03-06 21:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -19,48 +19,48 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: multiplexedservice.cpp:68
+#: multiplexedservice.cpp:72
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "媒體控制器"
 
-#: multiplexedservice.cpp:70
+#: multiplexedservice.cpp:74
 #, kde-format
 msgid "Play/Pause media playback"
 msgstr "播放/暫停媒體"
 
-#: multiplexedservice.cpp:88
+#: multiplexedservice.cpp:92
 #, kde-format
 msgid "Media playback next"
 msgstr "播放下一首"
 
-#: multiplexedservice.cpp:97
+#: multiplexedservice.cpp:101
 #, kde-format
 msgid "Media playback previous"
 msgstr "播放前一首"
 
-#: multiplexedservice.cpp:106
+#: multiplexedservice.cpp:110
 #, kde-format
 msgid "Stop media playback"
 msgstr "停止媒體播放"
 
-#: multiplexedservice.cpp:115
+#: multiplexedservice.cpp:119
 #, kde-format
 msgid "Pause media playback"
 msgstr "暫停媒體"
 
-#: multiplexedservice.cpp:124
+#: multiplexedservice.cpp:128
 #, kde-format
 msgid "Play media playback"
 msgstr "播放媒體"
 
-#: multiplexedservice.cpp:133
+#: multiplexedservice.cpp:137
 #, kde-format
 msgid "Media volume up"
 msgstr "媒體音量增大"
 
-#: multiplexedservice.cpp:142
+#: multiplexedservice.cpp:146
 #, kde-format
 msgid "Media volume down"
 msgstr "媒體音量減小"

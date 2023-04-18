@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-11 21:28+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-04-14 18:25+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -95,20 +96,16 @@ msgid "Enable:"
 msgstr "Povoliť:"
 
 #: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Povoliť keď sa obrazovka zrkadlí"
+msgstr "Pri zrkadlení obrazoviek"
 
 #: package/contents/ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Povoliť keď sa obrazovka zdieľa"
+msgstr "Počas zdieľania obrazovky"
 
 #: package/contents/ui/main.qml:96
 #, kde-format
@@ -120,7 +117,7 @@ msgstr "Klávesová skratka:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Podmienky viditeľnosti"
 
 #: package/contents/ui/main.qml:108
 #, kde-format
@@ -193,7 +190,7 @@ msgstr "Skryť po:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Dodatočná odozva"
 
 #: package/contents/ui/main.qml:250
 #, kde-format
@@ -223,11 +220,10 @@ msgid "Notification badges:"
 msgstr "Odznaky aplikácií:"
 
 #: package/contents/ui/main.qml:302
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Application-specific settings"
-msgstr "Nastavenia aplikácií"
+msgstr "Špecifické nastavenia aplikácií"
 
 #: package/contents/ui/main.qml:307
 #, kde-format

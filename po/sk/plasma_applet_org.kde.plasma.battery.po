@@ -7,19 +7,20 @@
 # Mthw <jari_45@hotmail.com>, 2018.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
 # Dušan Kazik <prescott66@gmail.com>, 2020.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-11 02:55+0000\n"
-"PO-Revision-Date: 2022-06-21 08:30+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-04-16 18:32+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/BatteryItem.qml:106
@@ -51,7 +52,7 @@ msgstr "Zostávajúci čas:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Estimating…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -181,39 +182,35 @@ msgid "Automatic sleep and screen locking are disabled"
 msgstr "Automatický spánok a uzamknutie obrazovky sú vypnuté"
 
 #: package/contents/ui/main.qml:193
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Jedna aplikácia požiadala o aktiváciu %2:"
-msgstr[1] "%1 aplikácií požiadalo o aktiváciu %2:"
-msgstr[2] "%1 aplikácií požiadalo o aktiváciu %2:"
+msgstr[0] "An application has requested activating Performance mode"
+msgstr[1] "%1 aplikácie požiadali o aktiváciu režimu Vysokého výkonu"
+msgstr[2] "%1 aplikácií požiadalo o aktiváciu režimu Vysokého výkonu"
 
 #: package/contents/ui/main.qml:197
 #, kde-format
 msgid "System is in Performance mode"
-msgstr ""
+msgstr "System je v režime Vysokého výkonu"
 
 #: package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Jedna aplikácia požiadala o aktiváciu %2:"
-msgstr[1] "%1 aplikácií požiadalo o aktiváciu %2:"
-msgstr[2] "%1 aplikácií požiadalo o aktiváciu %2:"
+msgstr[0] "Aplikácia požiadala o aktiváciu Úsporného režimu"
+msgstr[1] "%1 aplikácie požiadali o aktiváciu Úsporného režimu"
+msgstr[2] "%1 aplikácií požiadalo o aktiváciu Úsporného režimu"
 
 #: package/contents/ui/main.qml:205
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr ""
+msgstr "System je v režime Šetrenia energie"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Posúvaním upraviť jas obrazovky"
 
 #: package/contents/ui/main.qml:312
 #, kde-format
@@ -231,10 +228,9 @@ msgid "&Show Energy Information…"
 msgstr "Zo&braziť informácie o energii…"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Zobraziť percento batérie na ikone"
+msgstr "Zobrazenie percenta batérie na ikone, keď nie je úplne nabitá"
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -286,20 +282,16 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 aplikácia zabraňuje spánku a uzamknutiu obrazovky (neznámy dôvod)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 aplikácia zabraňuje spánku a uzamknutiu obrazovky:"
+msgstr "Aplikácia zabraňuje spánku a uzamknutiu obrazovky (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 aplikácia zabraňuje spánku a uzamknutiu obrazovky (neznámy dôvod)"
+msgstr "Aplikácia zabraňuje spánku a uzamknutiu obrazovky (neznámy dôvod)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
@@ -317,15 +309,13 @@ msgstr "%1: neznámy dôvod"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Neznáma aplikácia: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: neznámy dôvod"
+msgstr "Neznáma aplikácia: neznámy dôvod"
 
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
@@ -353,8 +343,8 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
-"Režim výkonu bol deaktivovaný, aby sa znížilo vytváranie tepla, pretože "
-"počítač zistil, že vám možno sedí na kolenách."
+"Režim vysokého výkonu bol deaktivovaný, aby sa znížilo vytváranie tepla, "
+"pretože počítač zistil, že vám možno sedí na kolenách."
 
 #: package/contents/ui/PowerProfileItem.qml:193
 #, kde-format

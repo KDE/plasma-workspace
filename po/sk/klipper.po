@@ -7,19 +7,20 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014.
 # Mthw <jari_45@hotmail.com>, 2018.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022, 2023.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-11 02:55+0000\n"
-"PO-Revision-Date: 2023-01-12 13:49+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-04-17 18:49+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: configdialog.cpp:80
@@ -541,18 +542,16 @@ msgid "Previous History Item"
 msgstr "Predchádzajúca položka histórie"
 
 #: klipper.cpp:224
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Otvoriť Klipper na polohe myši"
+msgstr "Zobraziť položky na pozícii myši"
 
 #: klipper.cpp:235
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Nástroj pre schránku"
+msgstr "%1 - Nástroj pre schránku"
 
 #: klipper.cpp:530
 #, kde-kuit-format
@@ -829,11 +828,10 @@ msgstr ""
 "prijať jeho MIME typ vo vyskakovacej ponuke."
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Obsah schránky"
+msgstr "%1 - Položky schránky"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -861,10 +859,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "KDE nástroj na históriu Kopíruj & Vlož"
+msgstr "Plasma nástroj histórie vystrihnutia a vloženia"
 
 #: main.cpp:31
 #, kde-format

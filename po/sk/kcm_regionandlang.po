@@ -1,19 +1,20 @@
 # translation of kcm_regionandlang.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2022.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2023.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-01-11 21:27+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-04-15 19:43+0200\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: exampleutility.cpp:29
@@ -50,25 +51,25 @@ msgstr "A4"
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "c/o"
 
 #: exampleutility.cpp:65
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Spoločnosť Acme"
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Oddelenie vývoja"
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Budova vývoja"
 
 #: exampleutility.cpp:68
 #, kde-format
@@ -86,7 +87,7 @@ msgstr "Dom 1"
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:72
 #, kde-format
@@ -110,7 +111,7 @@ msgstr "Predmestie"
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:77
 #, kde-format
@@ -128,19 +129,19 @@ msgstr "Štát"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "Priezvisko"
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "PRIEZVISKO"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "KrstnéMeno"
 
 #: exampleutility.cpp:94
 #, kde-format
@@ -152,19 +153,19 @@ msgstr "F"
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "KrstnéMeno"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "InéMeno"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "ĎalšieMeno"
 
 #: exampleutility.cpp:98
 #, kde-format
@@ -224,6 +225,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Nepodarilo sa nájsť dostupné lokalizácie systému pomocou nástroja "
+"<command>localectl</command>. Prosím, podajte o tom hlásenie o chybe na "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:84
 #, kde-format
@@ -394,19 +398,15 @@ msgid "Language"
 msgstr "Jazyk"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Uprednostňovanie americkej angličtiny pred inými jazykmi spôsobí neželané "
-"správanie v niektorých aplikáciách. Ak chcete, aby váš systém používal "
-"americkú angličtinu, odstráňte všetky ostatné jazyky."
+"Umiestnenie akýchkoľvek iných jazykov pod angličtinu spôsobí v niektorých "
+"aplikáciách nežiaduce správanie. Ak chcete používať systém v angličtine, "
+"odstráňte všetky ostatné jazyky."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
