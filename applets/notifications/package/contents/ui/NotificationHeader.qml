@@ -106,7 +106,6 @@ RowLayout {
         opacity: 0.9
         wrapMode: Text.NoWrap
         text: generateRemainingText() || agoText
-        Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime())
@@ -182,79 +181,74 @@ RowLayout {
         }
     }
 
-    RowLayout {
-        id: headerButtonsRow
-        spacing: 0
+    PlasmaComponents3.ToolButton {
+        id: configureButton
+        icon.name: "configure"
+        visible: false
 
-        PlasmaComponents3.ToolButton {
-            id: configureButton
-            icon.name: "configure"
-            visible: false
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+        Accessible.description: applicationNameLabel.text
 
-            display: PlasmaComponents3.AbstractButton.IconOnly
-            text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
-            Accessible.description: applicationNameLabel.text
+        onClicked: notificationHeading.configureClicked()
 
-            onClicked: notificationHeading.configureClicked()
+        PlasmaComponents3.ToolTip {
+            text: parent.text
+        }
+    }
 
-            PlasmaComponents3.ToolTip {
-                text: parent.text
-            }
+    PlasmaComponents3.ToolButton {
+        id: dismissButton
+        icon.name: notificationHeading.dismissed ? "window-restore" : "window-minimize"
+        visible: false
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: notificationHeading.dismissed
+            ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
+            : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
+        Accessible.description: applicationNameLabel.text
+
+        onClicked: notificationHeading.dismissClicked()
+
+        PlasmaComponents3.ToolTip {
+            text: parent.text
+        }
+    }
+
+    PlasmaComponents3.ToolButton {
+        id: closeButton
+        visible: false
+        icon.name: "window-close"
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: closeButtonToolTip.text
+        Accessible.description: applicationNameLabel.text
+
+        onClicked: notificationHeading.closeClicked()
+
+        PlasmaComponents3.ToolTip {
+            id: closeButtonToolTip
+            text: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
         }
 
-        PlasmaComponents3.ToolButton {
-            id: dismissButton
-            icon.name: notificationHeading.dismissed ? "window-restore" : "window-minimize"
-            visible: false
+        Charts.PieChart {
+            id: chart
+            anchors.fill: parent.contentItem
+            anchors.margins: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
 
-            display: PlasmaComponents3.AbstractButton.IconOnly
-            text: notificationHeading.dismissed
-                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
-                : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
-            Accessible.description: applicationNameLabel.text
-
-            onClicked: notificationHeading.dismissClicked()
-
-            PlasmaComponents3.ToolTip {
-                text: parent.text
-            }
-        }
-
-        PlasmaComponents3.ToolButton {
-            id: closeButton
-            visible: false
-            icon.name: "window-close"
-
-            display: PlasmaComponents3.AbstractButton.IconOnly
-            text: closeButtonToolTip.text
-            Accessible.description: applicationNameLabel.text
-
-            onClicked: notificationHeading.closeClicked()
-
-            PlasmaComponents3.ToolTip {
-                id: closeButtonToolTip
-                text: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
+            opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
+            Behavior on opacity {
+                NumberAnimation { duration: PlasmaCore.Units.longDuration }
             }
 
-            Charts.PieChart {
-                id: chart
-                anchors.fill: parent.contentItem
-                anchors.margins: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
+            range { from: 0; to: notificationHeading.timeout; automatic: false }
 
-                opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
-                Behavior on opacity {
-                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
-                }
+            valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
+            colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
 
-                range { from: 0; to: notificationHeading.timeout; automatic: false }
+            thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
 
-                valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
-                colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
-
-                thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
-
-                transform: Scale { origin.x: chart.width / 2; xScale: -1 }
-            }
+            transform: Scale { origin.x: chart.width / 2; xScale: -1 }
         }
     }
 
