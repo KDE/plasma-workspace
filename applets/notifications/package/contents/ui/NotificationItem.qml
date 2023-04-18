@@ -107,10 +107,12 @@ ColumnLayout {
     // Header
     Item {
         id: headingElement
-        Layout.fillWidth: true
+        Layout.fillWidth: !notificationItem.inGroup
         Layout.preferredHeight: notificationHeading.implicitHeight
         Layout.preferredWidth: notificationHeading.implicitWidth
-        Layout.bottomMargin: -parent.spacing
+        Layout.alignment: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Qt.AlignTop : 0
+        Layout.topMargin: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Math.max(0, (summaryLabelTextMetrics.height - Layout.preferredHeight) / 2) : 0
+        Layout.bottomMargin: notificationItem.inGroup ? 0 : -parent.spacing
 
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
         PlasmaCore.ColorScope.inherit: false
@@ -175,6 +177,7 @@ ColumnLayout {
                 id: summaryLabel
                 Layout.fillWidth: true
                 Layout.preferredHeight: implicitHeight
+                Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
                 textFormat: Text.PlainText
                 maximumLineCount: 3
                 wrapMode: Text.WordWrap
@@ -212,6 +215,12 @@ ColumnLayout {
                     return "";
                 }
                 visible: text !== ""
+
+                TextMetrics {
+                    id: summaryLabelTextMetrics
+                    font: summaryLabel.font
+                    text: summaryLabel.text
+                }
             }
 
             // inGroup headerItem is reparented here
