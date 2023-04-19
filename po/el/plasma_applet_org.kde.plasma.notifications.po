@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-19 02:23+0000\n"
 "PO-Revision-Date: 2017-09-08 16:25+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -369,7 +369,7 @@ msgstr "Καθαρισμός ειδοποιήσεων"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Διαμόρφωση ειδοποιήσεων συμβάντων και ενεργειών..."
 
-#: package/contents/ui/NotificationHeader.qml:122
+#: package/contents/ui/NotificationHeader.qml:121
 #, fuzzy, kde-format
 #| msgctxt "notification was just added, keep short"
 #| msgid "Just now"
@@ -377,7 +377,7 @@ msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Μόλις τώρα"
 
-#: package/contents/ui/NotificationHeader.qml:128
+#: package/contents/ui/NotificationHeader.qml:127
 #, fuzzy, kde-format
 #| msgctxt "minutes ago, keep short"
 #| msgid "%1 min ago"
@@ -388,7 +388,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "1 λεπτό πριν"
 msgstr[1] "%1 λεπτά πριν"
 
-#: package/contents/ui/NotificationHeader.qml:162
+#: package/contents/ui/NotificationHeader.qml:161
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -398,7 +398,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 (%2 απομένει)"
 msgstr[1] "%1 (%2 απομένει)"
 
-#: package/contents/ui/NotificationHeader.qml:166
+#: package/contents/ui/NotificationHeader.qml:165
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -408,7 +408,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 (%2 απομένει)"
 msgstr[1] "%1 (%2 απομένει)"
 
-#: package/contents/ui/NotificationHeader.qml:171
+#: package/contents/ui/NotificationHeader.qml:170
 #, fuzzy, kde-format
 #| msgctxt "Speed and estimated time to completion"
 #| msgid "%1 (%2 remaining)"
@@ -418,28 +418,28 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 (%2 απομένει)"
 msgstr[1] "%1 (%2 απομένει)"
 
-#: package/contents/ui/NotificationHeader.qml:195
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:212
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:213
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr ""
 
-#: package/contents/ui/NotificationHeader.qml:236
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr ""
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:192
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -447,7 +447,7 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (σε παύση)"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:197
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, failed to complete"
 #| msgid "%1: Failed"
@@ -455,12 +455,12 @@ msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1: Απέτυχε"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Failed"
 msgstr "Αποτυχία εργασίας"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:203
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, has finished"
 #| msgid "%1: Finished"
@@ -468,12 +468,12 @@ msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1: Ολοκληρώθηκε"
 
-#: package/contents/ui/NotificationItem.qml:202
+#: package/contents/ui/NotificationItem.qml:205
 #, kde-format
 msgid "Job Finished"
 msgstr "Η εργασία ολοκληρώθηκε"
 
-#: package/contents/ui/NotificationItem.qml:344
+#: package/contents/ui/NotificationItem.qml:353
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-04-19 02:23+0000\n"
 "PO-Revision-Date: 2022-10-18 13:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -329,13 +329,13 @@ msgstr "Bütün bildirişləri silin"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Tədbir bildirişləri və əməllərini quraşdırın..."
 
-#: package/contents/ui/NotificationHeader.qml:122
+#: package/contents/ui/NotificationHeader.qml:121
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Elə indi"
 
-#: package/contents/ui/NotificationHeader.qml:128
+#: package/contents/ui/NotificationHeader.qml:127
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -343,7 +343,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 dəqiqə əvvəl"
 msgstr[1] "%1 dəqiqə əvvəl"
 
-#: package/contents/ui/NotificationHeader.qml:162
+#: package/contents/ui/NotificationHeader.qml:161
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -351,7 +351,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 san. qaldı"
 msgstr[1] "%1 san. qaldı"
 
-#: package/contents/ui/NotificationHeader.qml:166
+#: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -359,7 +359,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 dəq. qaldı"
 msgstr[1] "%1 dəq. qaldı"
 
-#: package/contents/ui/NotificationHeader.qml:171
+#: package/contents/ui/NotificationHeader.qml:170
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -367,56 +367,56 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 saat qaldı"
 msgstr[1] "%1 saat qaldı"
 
-#: package/contents/ui/NotificationHeader.qml:195
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr "Tənzimləmək"
 
-#: package/contents/ui/NotificationHeader.qml:212
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Bərpa etmək"
 
-#: package/contents/ui/NotificationHeader.qml:213
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr "Kiçiltmək"
 
-#: package/contents/ui/NotificationHeader.qml:236
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr "Bağlamaq"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:192
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (fasilədə)"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (alınmadı)"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Failed"
 msgstr "Tapşırıq alınmadı"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:203
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (başa çatdı)"
 
-#: package/contents/ui/NotificationItem.qml:202
+#: package/contents/ui/NotificationItem.qml:205
 #, kde-format
 msgid "Job Finished"
 msgstr "İş başa çatdı"
 
-#: package/contents/ui/NotificationItem.qml:344
+#: package/contents/ui/NotificationItem.qml:353
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
