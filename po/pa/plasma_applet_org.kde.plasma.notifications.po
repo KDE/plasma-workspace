@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-26 02:32+0000\n"
+"POT-Creation-Date: 2023-04-19 02:55+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -336,7 +336,7 @@ msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
 msgid "&Configure Event Notifications and Actions…"
 msgstr "…ਈਵੈਂਟ ਸੂਚਨਾਵਾਂ ਤੇ ਕਾਰਵਾਈ ਸੰਰਚਨਾ(&C)"
 
-#: package/contents/ui/NotificationHeader.qml:122
+#: package/contents/ui/NotificationHeader.qml:121
 #, fuzzy, kde-format
 #| msgctxt "notification was just added, keep short"
 #| msgid "Just now"
@@ -344,7 +344,7 @@ msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "ਹੁਣੇ ਹੀ"
 
-#: package/contents/ui/NotificationHeader.qml:128
+#: package/contents/ui/NotificationHeader.qml:127
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -352,7 +352,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 ਮਿੰਟ ਪਹਿਲਾਂ"
 msgstr[1] "%1 ਮਿੰਟ ਪਹਿਲਾਂ"
 
-#: package/contents/ui/NotificationHeader.qml:162
+#: package/contents/ui/NotificationHeader.qml:161
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -360,7 +360,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 ਸ ਬਾਕੀ"
 msgstr[1] "%1 ਸ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:166
+#: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -368,7 +368,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 ਮਿੰਟ ਬਾਕੀ"
 msgstr[1] "%1 ਮਿੰਟ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:171
+#: package/contents/ui/NotificationHeader.qml:170
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -376,56 +376,56 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 ਘੰ ਬਾਕੀ"
 msgstr[1] "%1 ਘੰ ਬਾਕੀ"
 
-#: package/contents/ui/NotificationHeader.qml:195
+#: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
 msgstr "ਸੰਰਚਨਾ"
 
-#: package/contents/ui/NotificationHeader.qml:212
+#: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "ਬਹਾਲ ਕਰੋ"
 
-#: package/contents/ui/NotificationHeader.qml:213
+#: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
 msgstr "ਘੱਟੋ-ਘੱਟ"
 
-#: package/contents/ui/NotificationHeader.qml:236
+#: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/NotificationItem.qml:189
+#: package/contents/ui/NotificationItem.qml:192
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (ਵਿਰਾਮ ਹੈ)"
 
-#: package/contents/ui/NotificationItem.qml:194
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (ਫੇਲ੍ਹ ਹੈ)"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Failed"
 msgstr "ਜਾਬ ਅਸਫ਼ਲ ਹੋਈ"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:203
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (ਮੁਕੰਮਲ)"
 
-#: package/contents/ui/NotificationItem.qml:202
+#: package/contents/ui/NotificationItem.qml:205
 #, kde-format
 msgid "Job Finished"
 msgstr "ਜਾਬ ਪੂਰੀ ਹੋਈ"
 
-#: package/contents/ui/NotificationItem.qml:344
+#: package/contents/ui/NotificationItem.qml:353
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
