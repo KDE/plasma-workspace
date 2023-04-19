@@ -298,6 +298,7 @@ void ShellCorona::init()
      * The unique connection makes sure we don't reload plasma if KAMD ever crashes and reloads, the signal is disconnected in the body of load
      */
     connect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
+    connect(m_screenPool, &ScreenPool::screenOrderChanged, this, &ShellCorona::load, Qt::UniqueConnection);
     load();
 }
 
@@ -736,9 +737,17 @@ void ShellCorona::load()
                 "activatable.");
         }
         return;
+    } else {
+        disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
     }
 
-    disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
+    const auto screens = m_screenPool->screenOrder();
+    if (screens.length() == 0) {
+        return;
+    } else {
+        disconnect(m_screenPool, &ScreenPool::screenOrderChanged, this, &ShellCorona::load);
+    }
+
 
     // TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
@@ -775,7 +784,6 @@ void ShellCorona::load()
     // NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
     // it needs to be after of loadLayout() as it would always create new
     // containments on each startup otherwise
-    const auto screens = m_screenPool->screenOrder();
     for (QScreen *screen : screens) {
         QSet<QScreen *> managedScreens;
         for (auto *desk : m_desktopViewForScreen) {
