@@ -752,7 +752,7 @@ void waitForKonqi()
 
 void playStartupSound()
 {
-    KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
+    KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
     if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
         // no startup sound configured
