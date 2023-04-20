@@ -684,7 +684,7 @@ msgstr "Dishabilita Fontes in gruppo..."
 #: kcmfontinst/KCmFontInst.cpp:224
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Isto monstra un vista preliminari del font selectionate."
+msgstr "Isto monstra un vista preliminar del font selectionate."
 
 #: kcmfontinst/KCmFontInst.cpp:240
 #, kde-format
@@ -724,7 +724,7 @@ msgstr "Dele fontes selectionate ..."
 #: kcmfontinst/KCmFontInst.cpp:304
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Cambia texto de vista preliminari..."
+msgstr "Cambia texto de vista preliminar..."
 
 #: kcmfontinst/KCmFontInst.cpp:406
 #, kde-format
@@ -874,7 +874,7 @@ msgstr "Nove gruppo"
 #: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Preview Text"
-msgstr "Vista preliminari de texto"
+msgstr "Vista preliminar de texto"
 
 #: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
@@ -1574,7 +1574,7 @@ msgstr "Il non pote leger font."
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
-msgstr "Catena de vista preliminari"
+msgstr "Catena de vista preliminar"
 
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
