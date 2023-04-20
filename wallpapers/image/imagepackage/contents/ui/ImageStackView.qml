@@ -136,6 +136,7 @@ QQC2.StackView {
 
         targetSize: view.sourceSize
 
+        onModelImageChanged: loadImageImmediately();
         onActualSizeChanged: Qt.callLater(loadImage);
         onColorSchemeChanged: loadImageImmediately();
     }

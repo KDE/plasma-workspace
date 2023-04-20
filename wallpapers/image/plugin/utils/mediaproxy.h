@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <KDirWatch>
+
 #include <QObject>
 #include <QPalette>
 #include <QQmlParserStatus>
@@ -151,6 +153,7 @@ private:
     QColor m_customColor = Qt::transparent;
 
     bool m_isDarkColorScheme;
+    KDirWatch *m_dirWatch;
 
     friend class ImageFrontendTest;
 };

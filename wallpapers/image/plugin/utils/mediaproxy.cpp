@@ -29,7 +29,13 @@ MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
+    , m_dirWatch(new KDirWatch(this))
 {
+    connect(m_dirWatch, &KDirWatch::created, [&](const QString &file) {
+            if (file == m_source.toLocalFile()) {
+		Q_EMIT modelImageChanged();
+            }
+        });
 }
 
 void MediaProxy::classBegin()
@@ -70,7 +76,11 @@ void MediaProxy::setSource(const QString &url)
         return;
     }
 
+    if (!m_source.isEmpty()) {
+        m_dirWatch->removeFile(m_source.toLocalFile());
+    }
     m_source = sanitizedUrl;
+    m_dirWatch->addFile(m_source.toLocalFile());
     Q_EMIT sourceChanged();
 
     determineProviderType();
