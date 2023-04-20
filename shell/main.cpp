@@ -66,7 +66,12 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
+    // this works around a bug of Qt and the plasmashell protocol
+    // consider disabling when layer-shell lands
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
+    // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
+    // bespoke wayland code disable for now. consider disabling when layer-shell lands
+    qunsetenv("QT_WAYLAND_RECONNECT");
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
@@ -75,6 +80,7 @@ int main(int argc, char *argv[])
         qunsetenv("QT_QPA_PLATFORM");
     }
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
+    qputenv("QT_WAYLAND_RECONNECT", "1");
 
     KLocalizedString::setApplicationDomain("plasmashell");
 
