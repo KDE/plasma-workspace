@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-01-31 06:53+0100\n"
+"PO-Revision-Date: 2023-04-19 05:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -321,6 +321,10 @@ msgid ""
 "the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
+"<p>ეს სია დაყენებულ ფონტებს გაჩვენებთ. ფონტები დაჯგუფებულია ოჯახის მიხედვით "
+"და რიცხვი კვადრატულ ფრჩხილებში სტილების იმ რაოდენობას წარმოადგენს, რომელშიც "
+"ეს ოჯახია ხელმისაწვდომი. მაგ: </p><ul><li>Times[4]<ul><li> "
+"ჩვეულებრივი<ul><li> სქელი <ul><li>სქელი კურსივი <ul><li>კურსივი"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, kde-format
@@ -395,6 +399,8 @@ msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
+"<p>მართლა გნებავთ '<b>%1-ის</b>' წაშლა?</p><p><i> ეს მხოლოდ ჯგუფს წაშლის და "
+"არა თვითონ ფონტებს.</i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
 #, kde-format
@@ -422,6 +428,13 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
+"<h3>ფონტის ჯგუფები</h3><p> ეს სია თქვენს სისტემაში არსებულ ფონტებს შეიცავს. "
+"არსებობს ფონტის ჯგუფების ორი მთავარი ტიპი: <ul><li><b>სტანდარტული </b>- "
+"სპეციალური ჯგუფებია, რომლებსაც ფონტების მმართველი იყენებს <ul>%1</ul></"
+"li><li><b>მორგებული</b> თქვენს მიერ შექმნილი ჯგუფებია. რომელიმე ამ "
+"ჯგუფებისთვის ფონტების ოჯახის დასამატებლად უბრალოდ გადმოათრიეთ ის ფონტების "
+"სიიდან და შესაბამის ჯგუფში ჩააგდე. ოჯახის ჯგუფიდან წასაშლელად კი ფონტი "
+"\"ყველა ფონტის\" ჯგუფში ჩააგდეთ.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
 #, kde-format
@@ -430,6 +443,9 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
+"<li><i>ყველა ფონტი</i> თქვენს სისტემაში დაყენებულ ყველა ფონტს მოიცავს. </"
+"li><li><i>დაულაგებელი</i> შეიცავს ყველა ფონტს, რომელიც ჯერ \"მორგებულთა\" "
+"ჯგუფში არაა.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -441,6 +457,12 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
+"<li><i>ყველა ფონტი თქვენს სისტემაში დაყენებულ ყველა ფონტს მოიცავს, ორივეს - "
+"\"სისტემურს\" და პირადს\". </li><li><i>სისტემური</i> ფონტები მთელი "
+"სისტემისთვის დაყენებულ ფონტებს მოიცავს (ანუ ისინი ხელმისაწვდომია ყველა "
+"მომხმარებლისთვის).</li><li><i> პირადი</i> კი თქვენს პირად ფონტებს შეიცავს. </"
+"li><li><i>დაულაგებელი</i> შეიცავს ყველა ფონტს, რომელიც ჯერ \"მორგებულთა\" "
+"სიაში არაა.</li>"
 
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
@@ -499,6 +521,8 @@ msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
+"<h3>დასრულდა</h3><p> იმისთვის, რომ ცვლილებები ძალაში შევიდეს, დარწმუნდით, "
+"რომ ყველა აპლიკაციას გადატვირთავთ.</p>"
 
 #: kcmfontinst/JobRunner.cpp:211
 #, kde-format

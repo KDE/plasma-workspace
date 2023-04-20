@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-15 02:48+0000\n"
-"PO-Revision-Date: 2023-02-13 09:28+0100\n"
+"PO-Revision-Date: 2023-04-19 05:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -38,6 +38,17 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"როდესაც ტექსტი ან ეკრანის ფართობი ხაზგასმულია მაუსის ან კლავიატურით, ეს არის "
+"<emphasis>შერჩევა</emphasis>. მისი ჩასმა შესაძლებელია მაუსის შუა ღილაკის "
+"გამოყენებით.<nl/><nl/> თუ შერჩევა აშკარად კოპირებულია <interface>ასლის</"
+"interface> ან <interface>დაჭრილი</interface> მოქმედების გამოყენებით, იგი "
+"ინახება <emphasis>ბუფერში</emphasis>. მისი ჩასმა შესაძლებელია "
+"<interface>პასტის</interface> მოქმედების გამოყენებით. <nl/><nl/> როდესაც "
+"ჩართულია ამ ვარიანტზე, ინარჩუნებს შერჩევას და ბუფერს იგივე, ისე, რომ "
+"ნებისმიერი შერჩევა დაუყოვნებლივ ხელმისაწვდომი იყოს ნებისმიერი საშუალებით. თუ "
+"ის გამორთულია, შერჩევა შეიძლება კვლავ შეინახოთ ბუფერის ისტორიაში (ქვემოთ "
+"მოცემული ვარიანტების გათვალისწინებით), მაგრამ მისი ჩასმა შესაძლებელია მხოლოდ "
+"მაუსის შუა ღილაკის გამოყენებით."
 
 #: configdialog.cpp:106
 #, kde-format
@@ -105,6 +116,11 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"როცა მონიშნულია ან ბუფერის ისტორიიდან არჩეულია ტექსტი, რომელიც ქმედების "
+"ნიმუშს ემთხვევა, ავტომატურად ნაჩვენები იქნება მხტუნარა მენიუ, რომელიც "
+"შესაბამის ქმედებებს სეიცავს. თუ ავტომატური მენიუს აქ გამორთავთ, ამოღებული "
+"ფანჯრისთვის ის ნაჩვენები არ იქნება. თუ მაინც გნებავთ, ნახოთ, გამოიყენეთ "
+"კლავიატურის მალსახმობი <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:269
 #, kde-format
@@ -143,6 +159,9 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"როცა <interface>დამთხვევის ნიმუში</interface> ბუფერის შემცველობას ემთხვევა, "
+"მისი <interface>ბრძნებები</interface> Klipper-ის მხტუნარა მენიუში გამოჩნდება "
+"და შეგეძლებათ, გაუშვათ ისინი."
 
 #: configdialog.cpp:359
 #, kde-format
@@ -178,6 +197,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"ეს ქმედებები გამოჩნდებიან მხტუნარა მენიუში, რომლის მორგებაც "
+"<interface>ქმედების მენიუს</interface> გვერდზე შეგიძლიათ."
 
 #: configdialog.cpp:565
 #, kde-kuit-format
@@ -186,6 +207,8 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"წავშალო მონიშნული ქმედება <resource>%1</resource><nl/> და ყველა მისი "
+"ბრძანება?"
 
 #: configdialog.cpp:566
 #, kde-format
@@ -247,6 +270,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"ქმედების მხტუნარა ნაჩვენები არ იქნება ამ ფანჯრებისთვის მაშინაც კი, თუ ის "
+"ჩართულია. ეს იმიტომ ხდება, რომ მაგალითად, ბრაუზერს შეუძლია გამოკვეთოს URL "
+"მისამართების ზოლში აკრეფისას, ასე რომ, მენიუ ღილაკის თითოეული დაჭერისას "
+"გამოჩნდებოდა.<nl/><nl/>თუ ქმედებების მენიუ მოულოდნელად გამოჩნდება ხოლმე "
+"რომელიმე კონკრეტული აპლიკაციის გამოყენებისას, დაამატეთ ის ამ სიაში.. "
+"<link>როგორ ვიპოვოთ, რა შევიყვანოთ აქ</link>."
 
 #: configdialog.cpp:693
 #, kde-kuit-format
@@ -258,6 +287,12 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"სახელი, რომელიც აქ უნდა შეიყვანოთ, არის ფანჯრის WM_CLASS სახელი, რომელიც "
+"უნდა გამოირიცხოს. ფანჯრის WM_CLASS სახელის მოსაძებნად, სხვა ტერმინალის "
+"ფანჯარაში შეიყვანეთ ბრძანება:<nl/><nl/>  <icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>და დააჭირეთ ფანჯარას, რომლის გამორიცხვაც გსურთ. პირველი "
+"სახელი, რომელსაც იგი აჩვენებს თანაბარი ნიშნის შემდეგ, არის ის, რაც თქვენ "
+"უნდა შეიყვანოთ."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -303,6 +338,10 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"ქმედებას აზრი აქვს, როცა ის <interface>ნიმუში</interface> ბუფერის "
+"შემცველობას ემთხვევა. როცა ეს მოხდება, Klipper-ის მხტუნარა მენიუში ქმედების "
+"<interface>ბრძანებები</interface> გამოჩნდება. თუ ერთ-ერთს აირჩევთ, ბრძანება "
+"შესრულდება."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -322,6 +361,9 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"დამთხვევის ნიმუში რეგულარული გამოსახულებაა. ამ თემის შესახებ მეტი "
+"ინფორმაციისთვის იხილეთ ეს <link url=\"https://en.wikipedia.org/wiki/"
+"Regular_expression\">ბმული</link>."
 
 #: editactiondialog.cpp:219
 #, kde-format
@@ -348,6 +390,11 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"ამ დამთხვევის შემთხვევაში მხტუნარა მენიუ ამ ბრძანებებს შეიცავს. თუ ის "
+"ჩართულია <interface>ქმედებების მენიუს</interface> გვერდზე. თუ ეს პარამეტრი "
+"გამორთულია, ბრძანება ამ დამთხვევისთვის მხუტუნარა მენიუში არ გამოჩნდება, "
+"მაგრამ გამოჩნდება, თუ მხტუნარას <shortcut>%1</shortcut> კლავიატურის "
+"მალსახმობით გამოიძახებთ."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -399,6 +446,9 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"<placeholder>ბრძანებაში %s</placeholder> შეიცვლება სრული ბუფერული შინაარსით. "
+"<placeholder>% 0</placeholder><placeholder>% 9-ის</placeholder> მეშვეობით "
+"შეიცვლება შესაბამისი დატყვევებული ტექსტები მატჩის ნიმუშიდან."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -513,6 +563,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"URL მოქმედებების ჩართვა მოგვიანებით ბუფერდის ვაშლის კონფიგურაციის ფანჯრის "
+"<interface>მოქმედებების</interface> გვერდზე"
 
 #: klipper.cpp:604
 #, kde-format
@@ -592,7 +644,7 @@ msgstr "ისტორიის შენახვა სამუშაო მ
 msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
-msgstr ""
+msgstr "ბუფერის ისტორია თქვენს შემდეგ შემოსვლამდე იქნება შენარჩუნებული."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
@@ -623,6 +675,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"კურსორით მონიშნული შემცველობა ავტომატურად დაკოპირდება ბუფერში, ასე რომ, "
+"სადაც გნებავთ, იქ ჩასვამთ, ან 'ჩასმის ქმედებით, ან თაგუნას შუა-წკაპით.<br/"
+"><a href=\"1\">გაიგეთ მეტი მონიშვნაზე და ბუფერზე</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -638,6 +693,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"შემცველობა მონიშნულია კურსორით, მაგრამ ბუფერში არ დაკოპირებულა, ამიტომ ის "
+"ბუფერის ისტორიაში შენახული არ იქნება, მაგრამ მისი ჩასმა თაგუნას შუა ღილაკით "
+"შეგიძლიათ."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -652,6 +710,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"ბუფერის მეხსიერებაში მხოლოდ ტექსტი იქნება დამახსოვრებული. არა გამოსახულებები "
+"ან რამე სხვა ტიპის მონაცემები."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -740,6 +800,9 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"ქმედების გაშვებამდე მონიშნული ტექსტის თავში და ბოლოში ცარიელი ადგილების "
+"გამოტოვება. მაგალითად, ეს უზრუნველყოფს, რომ ბრაუზერში დაკოპირებული მისამართი "
+"სწორად ითარგმნება. ბუფერში შენახულ ტექსტი არ იცვლება."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -754,6 +817,8 @@ msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
+"შესაბამისი ქმედებების შემცველი მხტუნარა მენიუს ჩვენება ბუფერის ისტორიის "
+"ჩანაწერის არჩევის შემთხვევაში."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
@@ -768,6 +833,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"თუ არჩეულია ფაილის სახელი ან URL, მხტუნარა მენიუ მისი MIME ტიპის შესაბამის "
+"აპლიკაციებსაც შეიცავს."
 
 #: klipperpopup.cpp:105
 #, kde-format

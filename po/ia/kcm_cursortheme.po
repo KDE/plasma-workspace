@@ -353,7 +353,7 @@ msgstr "(Dimensiones disponibile: %1)"
 #~ msgid ""
 #~ "Select the cursor theme you want to use (hover preview to test cursor):"
 #~ msgstr ""
-#~ "Selige le thema de cursor que tu vole usar (plana sur vista preliminari "
+#~ "Selige le thema de cursor que tu vole usar (plana sur vista preliminar "
 #~ "pro essayar cursor)"
 
 #~ msgid "Select the cursor theme you want to use:"

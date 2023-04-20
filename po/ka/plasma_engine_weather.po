@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2023-01-31 07:04+0100\n"
+"PO-Revision-Date: 2023-04-19 05:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -181,25 +181,25 @@ msgstr "მსუბუქი წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain shower"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპი"
 
 #: bbcukmet_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "light shower"
-msgstr ""
+msgstr "მსუბუქი შხაპი"
 
 #: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
 #, kde-format
 msgctxt "weather condition"
 msgid "light showers"
-msgstr ""
+msgstr "მსუბუქი შხაპები"
 
 #: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
 #: ions/wetter.com/ion_wettercom.cpp:185
@@ -212,13 +212,13 @@ msgstr "მსუბუქი თოვლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow shower"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპი"
 
 #: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპები"
 
 #: bbcukmet_i18n.dat:34
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "შეუსაბამო"
 #, kde-format
 msgctxt "weather condition"
 msgid "na"
-msgstr ""
+msgstr "შ/გ"
 
 #: bbcukmet_i18n.dat:38
 #, kde-format
@@ -284,13 +284,13 @@ msgstr "მზიანი"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr ""
+msgstr "მზიანი ინტერვალები"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr ""
+msgstr "სქელი ღრუბელი"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
@@ -303,13 +303,13 @@ msgstr "ჭექა-ქუხილი"
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery shower"
-msgstr ""
+msgstr "ჭექა-ქუხილიანი შხაპი"
 
 #: bbcukmet_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr ""
+msgstr "ჭექა-ქუხილიანი შხაპები"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -483,25 +483,25 @@ msgstr "მსუბუქი წვიმა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain shower"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპი"
 
 #: bbcukmet_i18n.dat:78
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები"
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
 msgctxt "weather forecast"
 msgid "light shower"
-msgstr ""
+msgstr "მსუბუქი შხაპი"
 
 #: bbcukmet_i18n.dat:80
 #, kde-format
 msgctxt "weather forecast"
 msgid "light showers"
-msgstr ""
+msgstr "მსუბუქი შხაპები"
 
 #: bbcukmet_i18n.dat:81
 #, kde-format
@@ -513,13 +513,13 @@ msgstr "მსუბუქი თოვლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow shower"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპი"
 
 #: bbcukmet_i18n.dat:83
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow showers"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპები"
 
 #: bbcukmet_i18n.dat:84
 #, kde-format
@@ -537,7 +537,7 @@ msgstr "ნისლიანი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "na"
-msgstr ""
+msgstr "შ/გ"
 
 #: bbcukmet_i18n.dat:87
 #, kde-format
@@ -579,13 +579,13 @@ msgstr "მზიანი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny intervals"
-msgstr ""
+msgstr "მზიანი ინტერვალები"
 
 #: bbcukmet_i18n.dat:94
 #, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr ""
+msgstr "სქელი ღრუბელი"
 
 #: bbcukmet_i18n.dat:95
 #, kde-format
@@ -597,13 +597,13 @@ msgstr "ჭექა-ქუხილი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "thundery shower"
-msgstr ""
+msgstr "ჭექა-ქუხილიანი შხაპი"
 
 #: bbcukmet_i18n.dat:97
 #, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
-msgstr ""
+msgstr "ჭექა-ქუხილიანი შხაპები"
 
 #: bbcukmet_i18n.dat:98
 #, kde-format
@@ -657,7 +657,7 @@ msgstr "ძალიან ცუდი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow"
-msgstr ""
+msgstr "ქარბუქი"
 
 #: envcan_i18n.dat:3 noaa_i18n.dat:10
 #, kde-format
@@ -675,19 +675,19 @@ msgstr "მოღრუბლული"
 #, kde-format
 msgctxt "weather condition"
 msgid "Decreasing Cloud"
-msgstr ""
+msgstr "შემცირებადი ღრუბლიანობა"
 
 #: envcan_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "Distant Precipitation"
-msgstr ""
+msgstr "ადგილ-ადგილ ნალექები"
 
 #: envcan_i18n.dat:7
 #, kde-format
 msgctxt "weather condition"
 msgid "Drifting Snow"
-msgstr ""
+msgstr "ნამქერი"
 
 #: envcan_i18n.dat:8 noaa_i18n.dat:13
 #, kde-format
@@ -705,7 +705,7 @@ msgstr "მტვერი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Devils"
-msgstr ""
+msgstr "მტვრის ქარიშხალი"
 
 #: envcan_i18n.dat:11 noaa_i18n.dat:27
 #, kde-format
@@ -717,19 +717,19 @@ msgstr "ნისლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Bank Near Station"
-msgstr ""
+msgstr "ნისლის ზოლი სადგურთან ახლოს"
 
 #: envcan_i18n.dat:13
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Depositing Ice"
-msgstr ""
+msgstr "ყინულწარმომქმნელი ნისლი"
 
 #: envcan_i18n.dat:14
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog Patches"
-msgstr ""
+msgstr "აქა-იქ ნისლი"
 
 #: envcan_i18n.dat:15
 #, kde-format
@@ -747,7 +747,7 @@ msgstr "გაყინული წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud"
-msgstr ""
+msgstr "ძაბრის ფორმის ღრუბელი"
 
 #: envcan_i18n.dat:18 noaa_i18n.dat:42
 #, kde-format
@@ -765,37 +765,37 @@ msgstr "თხელი ნისლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Blowing Snow"
-msgstr ""
+msgstr "ძლიერი ქარბუქი"
 
 #: envcan_i18n.dat:21
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drifting Snow"
-msgstr ""
+msgstr "ძლიერი ნამქერი"
 
 #: envcan_i18n.dat:22 noaa_i18n.dat:46
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი"
 
 #: envcan_i18n.dat:23
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Hail"
-msgstr ""
+msgstr "ძლიერი სეტყვა"
 
 #: envcan_i18n.dat:24
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Mixed Rain and Drizzle"
-msgstr ""
+msgstr "ძლიერი შერეული წვიმა და ჟინჟღლი"
 
 #: envcan_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Mixed Rain and Snow Shower"
-msgstr ""
+msgstr "ძლიერი შერეული წვიმა და თოვლის შხაპი"
 
 #: envcan_i18n.dat:26 noaa_i18n.dat:62
 #, kde-format
@@ -807,13 +807,13 @@ msgstr "თავსხმა წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain and Snow"
-msgstr ""
+msgstr "ძლიერი შერეული წვიმა და თოვლი"
 
 #: envcan_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rainshower"
-msgstr ""
+msgstr "ძლიერი თავსხმა წვიმა"
 
 #: envcan_i18n.dat:29 noaa_i18n.dat:78
 #, kde-format
@@ -825,13 +825,13 @@ msgstr "თოვლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Pellets"
-msgstr ""
+msgstr "მძიმე თოვლის მარცვლები"
 
 #: envcan_i18n.dat:31
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snowshower"
-msgstr ""
+msgstr "ძლიერი თავსხმა თოვლი"
 
 #: envcan_i18n.dat:32 noaa_i18n.dat:225
 #, kde-format
@@ -843,13 +843,13 @@ msgstr "ჭექა-ქუხილი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm with Hail"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი სეტყვასთან ერთად"
 
 #: envcan_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm with Rain"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი წვიმასთან ერთად"
 
 #: envcan_i18n.dat:35 noaa_i18n.dat:101
 #, kde-format
@@ -873,19 +873,19 @@ msgstr "ზრდადი ღრუბელი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლი"
 
 #: envcan_i18n.dat:39 noaa_i18n.dat:111
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle"
-msgstr ""
+msgstr "მსუბუქი გადაციებული ჟინჟღლი"
 
 #: envcan_i18n.dat:40 noaa_i18n.dat:115
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain"
-msgstr ""
+msgstr "მსუბუქი გადაციებული წვიმა"
 
 #: envcan_i18n.dat:41 noaa_i18n.dat:121
 #, kde-format
@@ -897,7 +897,7 @@ msgstr "მსუბუქი წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rainshower"
-msgstr ""
+msgstr "მსუბუქი თავსხმა წვიმა"
 
 #: envcan_i18n.dat:43 noaa_i18n.dat:137
 #, kde-format
@@ -909,19 +909,19 @@ msgstr "მსუბუქი თოვლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Pellets"
-msgstr ""
+msgstr "მსუბუქი თოვლის მარცვლები"
 
 #: envcan_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snowshower"
-msgstr ""
+msgstr "მსუბუქი თავსხმა თოვლი"
 
 #: envcan_i18n.dat:46
 #, kde-format
 msgctxt "weather condition"
 msgid "Lightning Visible"
-msgstr ""
+msgstr "ხილული ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:47
 #, kde-format
@@ -945,25 +945,25 @@ msgstr "ბურუსი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mixed Rain and Drizzle"
-msgstr ""
+msgstr "შერეული წვიმა და ჟინჟღლი"
 
 #: envcan_i18n.dat:51
 #, kde-format
 msgctxt "weather condition"
 msgid "Mixed Rain and Snow Shower"
-msgstr ""
+msgstr "შერეული წვიმა და თოვლის შხაპი"
 
 #: envcan_i18n.dat:52 noaa_i18n.dat:164
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy"
-msgstr ""
+msgstr "უმეტესად ღრუბლიანი"
 
 #: envcan_i18n.dat:53
 #, kde-format
 msgctxt "weather condition"
 msgid "Not Reported"
-msgstr ""
+msgstr "ანგარიშის გარეშე"
 
 #: envcan_i18n.dat:54 noaa_i18n.dat:174
 #, kde-format
@@ -981,115 +981,115 @@ msgstr "წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain and Snow"
-msgstr ""
+msgstr "წვიმა და თოვლი"
 
 #: envcan_i18n.dat:57
 #, kde-format
 msgctxt "weather condition"
 msgid "Rainshower"
-msgstr ""
+msgstr "თავსხმა წვიმა"
 
 #: envcan_i18n.dat:58
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Drizzle"
-msgstr ""
+msgstr "ბოლოდროინდელი ჟინჟღლი"
 
 #: envcan_i18n.dat:59
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Dust or Sand Storm"
-msgstr ""
+msgstr "ბოლოდროინდელი მტვრის ან ქვიშის ქარიშხალი"
 
 #: envcan_i18n.dat:60
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Fog"
-msgstr ""
+msgstr "ბოლოდროინდელი ნისლი"
 
 #: envcan_i18n.dat:61
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Freezing Precipitation"
-msgstr ""
+msgstr "ბოლოდროინდელი გადაცილებული ნალექი"
 
 #: envcan_i18n.dat:62
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Hail"
-msgstr ""
+msgstr "ბოლოდროინდელი სეტყვა"
 
 #: envcan_i18n.dat:63
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rain"
-msgstr ""
+msgstr "ბოლოდროინდელი წვიმა"
 
 #: envcan_i18n.dat:64
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rain and Snow"
-msgstr ""
+msgstr "ბოლოდროინდელი წვიმა და თოვლი"
 
 #: envcan_i18n.dat:65
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Rainshower"
-msgstr ""
+msgstr "ბოლოდროინდელი თავსხმა წვიმა"
 
 #: envcan_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Snow"
-msgstr ""
+msgstr "ბოლოდროინდელი თოვლი"
 
 #: envcan_i18n.dat:67
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Snowshower"
-msgstr ""
+msgstr "ბოლოდროინდელი თავსხმა თოვლი"
 
 #: envcan_i18n.dat:68
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm"
-msgstr ""
+msgstr "ბოლოდროინდელი ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:69
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Hail"
-msgstr ""
+msgstr "ბოლოდროინდელი ჭექა-ქუხილი სეტყვასთან ერთად"
 
 #: envcan_i18n.dat:70
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Heavy Hail"
-msgstr ""
+msgstr "ბოლოდროინდელი ჭექა-ქუხილი ძლიერ სეტყვასთან ერთად"
 
 #: envcan_i18n.dat:71
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Heavy Rain"
-msgstr ""
+msgstr "ბოლოდროინდელი ჭექა-ქუხილი ძლიერ წვიმასთან ერთად"
 
 #: envcan_i18n.dat:72
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Thunderstorm with Rain"
-msgstr ""
+msgstr "ბოლოდროინდელი ჭექა-ქუხილი წვიმასთან ერთად"
 
 #: envcan_i18n.dat:73
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand or Dust Storm"
-msgstr ""
+msgstr "მტვრის ან ქვიშის ქარიშხალი"
 
 #: envcan_i18n.dat:74
 #, kde-format
 msgctxt "weather condition"
 msgid "Severe Sand or Dust Storm"
-msgstr ""
+msgstr "ძლიერი მტვრის ან ქვიშის ქარიშხალი"
 
 #: envcan_i18n.dat:75 noaa_i18n.dat:194
 #, kde-format
@@ -1125,7 +1125,7 @@ msgstr "თოვლის მარცვლები"
 #, kde-format
 msgctxt "weather condition"
 msgid "Squalls"
-msgstr ""
+msgstr "ძლიერი ქარი"
 
 #: envcan_i18n.dat:81
 #, kde-format
@@ -1137,37 +1137,37 @@ msgstr "მზიანი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი სეტყვასთან ერთად"
 
 #: envcan_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Rain"
-msgstr ""
+msgstr "ჭექა-ქუხილი წვიმასთან ერთად"
 
 #: envcan_i18n.dat:84
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr ""
+msgstr "ჭექა-ქუხილი მსუბუქ წვიმასთან ერთად"
 
 #: envcan_i18n.dat:85
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად"
 
 #: envcan_i18n.dat:86
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Sand or Dust Storm"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერი მტვრის ან ქვიშის ქარიშხალით"
 
 #: envcan_i18n.dat:87
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm without Precipitation"
-msgstr ""
+msgstr "ჭექა-ქუხილი ნალექის გარეშე"
 
 #: envcan_i18n.dat:88
 #, kde-format
@@ -1185,241 +1185,241 @@ msgstr "რამდენიმე ღრუბელი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries"
-msgstr ""
+msgstr "რამდენიმე ქარის უეცარი დაბერვა"
 
 #: envcan_i18n.dat:91
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries mixed with ice pellets"
-msgstr ""
+msgstr "რამდენიმე ყინულის მარცვლებთან შერეული ქარის უეცარი დაბერვა"
 
 #: envcan_i18n.dat:92
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries or rain showers"
-msgstr ""
+msgstr "რამდენიმე ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:93
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few flurries or thundershowers"
-msgstr ""
+msgstr "რამდენიმე ქარის უეცარი დაბერვა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:94
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few rain showers or flurries"
-msgstr ""
+msgstr "რამდენიმე ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:95
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few rain showers or wet flurries"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:96
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers"
-msgstr ""
+msgstr "რამდენიმე შხაპი"
 
 #: envcan_i18n.dat:97
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or drizzle"
-msgstr ""
+msgstr "რამდენიმე შხაპი ან ჟინჟღლი"
 
 #: envcan_i18n.dat:98
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or thundershowers"
-msgstr ""
+msgstr "რამდენიმე შხაპი ან ჭექა-ქუხილი წვიმით"
 
 #: envcan_i18n.dat:99
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or thunderstorms"
-msgstr ""
+msgstr "რამდენიმე შხაპი ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:100
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few thundershowers"
-msgstr ""
+msgstr "რამდენიმე ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:101
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few thunderstorms"
-msgstr ""
+msgstr "რამდენიმე ჭექა-ქუხილი წვიმით"
 
 #: envcan_i18n.dat:102
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few wet flurries"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა"
 
 #: envcan_i18n.dat:103
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few wet flurries or rain showers"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:104
 #, kde-format
 msgctxt "weather forecast"
 msgid "A mix of sun and cloud"
-msgstr ""
+msgstr "მზისა და ღრუბლის ნაზავი"
 
 #: envcan_i18n.dat:105
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blizzard"
-msgstr ""
+msgstr "თოვლიანი ქარბორბალა"
 
 #: envcan_i18n.dat:106
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle"
-msgstr ""
+msgstr "ჟინჟღლის შანსი"
 
 #: envcan_i18n.dat:107
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლისა და ჟინჟღლის შანსი"
 
 #: envcan_i18n.dat:108
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with rain"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლისა და წვიმის შანსი"
 
 #: envcan_i18n.dat:109
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle or rain"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლის ან წვიმის შანსი"
 
 #: envcan_i18n.dat:110
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries"
-msgstr ""
+msgstr "ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:111
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries at times heavy"
-msgstr ""
+msgstr "ქარის უეცარი დაბერვის შანსი, ზოგჯერ ძლიერის"
 
 #: envcan_i18n.dat:112
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries mixed with ice pellets"
-msgstr ""
+msgstr "ყინულის მარცვლებიანი ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:113
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or ice pellets"
-msgstr ""
+msgstr "ყინულის მარცვლების ან ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:114
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or rain showers"
-msgstr ""
+msgstr "წვიმის შხაპების ან ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:115
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of flurries or thundershowers"
-msgstr ""
+msgstr "წვიმიანი ჭექა-ქუხილის ან ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:116
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლის შანსი"
 
 #: envcan_i18n.dat:117
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain"
-msgstr ""
+msgstr "გადაციებული წვიმის შანსი"
 
 #: envcan_i18n.dat:118
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain mixed with snow"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული თოვლის შანსი"
 
 #: envcan_i18n.dat:119
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or rain"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული წვიმის შანსი"
 
 #: envcan_i18n.dat:120
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or snow"
-msgstr ""
+msgstr "გადაციებულ წვიმის ან თოვლის შანსი"
 
 #: envcan_i18n.dat:121
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow"
-msgstr ""
+msgstr "მსუბუქი თოვლის შანსი"
 
 #: envcan_i18n.dat:122
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow and blowing snow"
-msgstr ""
+msgstr "მსუბუქი თოვლისა და ქარბუქის შანსი"
 
 #: envcan_i18n.dat:123
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული გადაციებული ჟინჟლის შანსი"
 
 #: envcan_i18n.dat:124
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with ice pellets"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული ყინულის მარცვლების შანსი"
 
 #: envcan_i18n.dat:125
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with rain"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული წვიმის შანსი"
 
 #: envcan_i18n.dat:126
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or freezing rain"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული გადაციებული წვიმის შანსი"
 
 #: envcan_i18n.dat:127
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or ice pellets"
-msgstr ""
+msgstr "მსუბუქი თოვლის ან ყინულის მარცვლების შანსი"
 
 #: envcan_i18n.dat:128
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or rain"
-msgstr ""
+msgstr "მსუბუქი თოვლის ან წვიმის შანსი"
 
 #: envcan_i18n.dat:129
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light wet snow"
-msgstr ""
+msgstr "მსუბუქი სველი თოვლის შანსი"
 
 #: envcan_i18n.dat:130
 #, kde-format
@@ -1431,187 +1431,187 @@ msgstr "წვიმის შანსი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain at times heavy"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმის შანსი"
 
 #: envcan_i18n.dat:132
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain mixed with snow"
-msgstr ""
+msgstr "წვიმაში შერეული თოვლის შანსი"
 
 #: envcan_i18n.dat:133
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or drizzle"
-msgstr ""
+msgstr "გადაციებულ წვიმის ან ჟინჟღვლის შანსი"
 
 #: envcan_i18n.dat:134
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or freezing rain"
-msgstr ""
+msgstr "გადაციებულ წვიმის ან წვიმის შანსი"
 
 #: envcan_i18n.dat:135
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or snow"
-msgstr ""
+msgstr "წვიმის ან თოვლის შანსი"
 
 #: envcan_i18n.dat:136
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain showers or flurries"
-msgstr ""
+msgstr "წვიმის შხაპების ან ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:137
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain showers or wet flurries"
-msgstr ""
+msgstr "წვიმის შხაპების ან სველი ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:138
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of severe thunderstorms"
-msgstr ""
+msgstr "ძალიან ძლიერი ჭექა-ქუხილის შანსი"
 
 #: envcan_i18n.dat:139
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers"
-msgstr ""
+msgstr "შხაპების შანსი"
 
 #: envcan_i18n.dat:140
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy"
-msgstr ""
+msgstr "ხანდახან ძლიერი შხაპების შანსი"
 
 #: envcan_i18n.dat:141
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thundershowers"
-msgstr ""
+msgstr "ჭექა ქუხილის ან ხანდახან ძლიერი შხაპების შანსი"
 
 #: envcan_i18n.dat:142
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thunderstorms"
-msgstr ""
+msgstr "ჭექა ქუხილის ან ხანდახან ძლიერი შხაპების შანსი"
 
 #: envcan_i18n.dat:143
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or drizzle"
-msgstr ""
+msgstr "სხაპების"
 
 #: envcan_i18n.dat:144
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or thundershowers"
-msgstr ""
+msgstr "ჭექა ქუხილის ან შხაპების შანსი"
 
 #: envcan_i18n.dat:145
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or thunderstorms"
-msgstr ""
+msgstr "ჭექა ქუხილის ან შხაპების შანსი"
 
 #: envcan_i18n.dat:146
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow"
-msgstr ""
+msgstr "თოვლის შანსი"
 
 #: envcan_i18n.dat:147
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow and blizzard"
-msgstr ""
+msgstr "თოვლისა და ქარბუქის შანსი"
 
 #: envcan_i18n.dat:148
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing drizzle"
-msgstr ""
+msgstr "თოვლში შერეული გადაციებული ჟინჟლის შანსი"
 
 #: envcan_i18n.dat:149
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing rain"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული თოვლის შანსი"
 
 #: envcan_i18n.dat:150
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with rain"
-msgstr ""
+msgstr "თოვლში შერეული წვიმის შანსი"
 
 #: envcan_i18n.dat:151
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow or rain"
-msgstr ""
+msgstr "თოვლის ან წვიმის შანსი"
 
 #: envcan_i18n.dat:152
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow squalls"
-msgstr ""
+msgstr "თოვლიანი გრიგალის შანსი"
 
 #: envcan_i18n.dat:153
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thundershowers"
-msgstr ""
+msgstr "ჭექა ქუხილის შანსი"
 
 #: envcan_i18n.dat:154
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms"
-msgstr ""
+msgstr "ჭექა ქუხილის შანსი"
 
 #: envcan_i18n.dat:155
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms and possible hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი და შესაძლო სეტყვის შანსი"
 
 #: envcan_i18n.dat:156
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries"
-msgstr ""
+msgstr "სველი ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:157
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries at times heavy"
-msgstr ""
+msgstr "სველი ქარის უეცარი დაბერვის შანსი, ზოგჯერ ძლიერის"
 
 #: envcan_i18n.dat:158
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet flurries or rain showers"
-msgstr ""
+msgstr "წვიმის შხაპების ან სველი ქარის უეცარი დაბერვის შანსი"
 
 #: envcan_i18n.dat:159
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow"
-msgstr ""
+msgstr "სველი თოვლის შანსი"
 
 #: envcan_i18n.dat:160
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow mixed with rain"
-msgstr ""
+msgstr "წვიმაში შერეული სველი თოვლის შანსი"
 
 #: envcan_i18n.dat:161
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of wet snow or rain"
-msgstr ""
+msgstr "სველი თოვლის ან წვიმის შანსი"
 
 #: envcan_i18n.dat:162 noaa_i18n.dat:355
 #, kde-format
@@ -1653,7 +1653,7 @@ msgstr "ღრუბლიანი პერიოდები"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cloudy with sunny periods"
-msgstr ""
+msgstr "ღრუბლიანი, მზიანი პერიოდებით"
 
 #: envcan_i18n.dat:169 noaa_i18n.dat:317
 #, kde-format
@@ -1665,67 +1665,67 @@ msgstr "ჟინჟღლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "გადაციებულ ჟინჟღლში შერეული ჟინჟღლი"
 
 #: envcan_i18n.dat:171
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with rain"
-msgstr ""
+msgstr "წვიმასთან შერეული ჟინჟღლი"
 
 #: envcan_i18n.dat:172
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or freezing drizzle"
-msgstr ""
+msgstr "ჟინჟღლი ან გადაციებული ჟინჟღლი"
 
 #: envcan_i18n.dat:173
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or rain"
-msgstr ""
+msgstr "ჟინჟღლი ან წვიმა"
 
 #: envcan_i18n.dat:174 noaa_i18n.dat:309
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries"
-msgstr ""
+msgstr "ქარის უეცარი ამოვარდნა"
 
 #: envcan_i18n.dat:175
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries at times heavy"
-msgstr ""
+msgstr "ქარის უეცარი ამოვარდნა, ზოგჯერ ძლიერის"
 
 #: envcan_i18n.dat:176
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries at times heavy or rain showers"
-msgstr ""
+msgstr "ქარის უეცარი ამოვარდნა, ზოგჯერ ძლიერის, ან წვიმის შხაპი"
 
 #: envcan_i18n.dat:177
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries mixed with ice pellets"
-msgstr ""
+msgstr "ყინულის მარცვლებიანი ქარის უეცარი ამოვარდნა"
 
 #: envcan_i18n.dat:178
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or ice pellets"
-msgstr ""
+msgstr "ყინულის მარცვლები ან ქარის უეცარი ამოვარდნა"
 
 #: envcan_i18n.dat:179
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or rain showers"
-msgstr ""
+msgstr "ყინულის მარცვლები ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:180
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries or thundershowers"
-msgstr ""
+msgstr "ქარბორბალები ან ქარის უეცარი ამოვარდნა"
 
 #: envcan_i18n.dat:181 noaa_i18n.dat:336
 #, kde-format
@@ -1737,19 +1737,19 @@ msgstr "ნისლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog developing"
-msgstr ""
+msgstr "ნისლის განვითარება"
 
 #: envcan_i18n.dat:183
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog dissipating"
-msgstr ""
+msgstr "ნისლის გაფანტვა"
 
 #: envcan_i18n.dat:184
 #, kde-format
 msgctxt "weather forecast"
 msgid "Fog patches"
-msgstr ""
+msgstr "აქა-იქ ნისლი"
 
 #: envcan_i18n.dat:185
 #, kde-format
@@ -1767,97 +1767,97 @@ msgstr "გაყინული წვიმა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with ice pellets"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:188
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with rain"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული წვიმა"
 
 #: envcan_i18n.dat:189
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with snow"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული თოვლ"
 
 #: envcan_i18n.dat:190
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or ice pellets"
-msgstr ""
+msgstr "გადაციებული წვიმა ან ყინულის მარცვლები"
 
 #: envcan_i18n.dat:191
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or rain"
-msgstr ""
+msgstr "გადაციებული წვიმა ან წვიმა"
 
 #: envcan_i18n.dat:192
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or snow"
-msgstr ""
+msgstr "გადაციებული წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:193
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice fog"
-msgstr ""
+msgstr "ყინულოვანი ნისლი"
 
 #: envcan_i18n.dat:194
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice fog developing"
-msgstr ""
+msgstr "ყინულწარმომქმნელი ნისლის განვითარება"
 
 #: envcan_i18n.dat:195
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice fog dissipating"
-msgstr ""
+msgstr "ყინულწარმომქმნელი ნისლის გაფანტვა"
 
 #: envcan_i18n.dat:196
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
-msgstr ""
+msgstr "ყინულის მარცვლები"
 
 #: envcan_i18n.dat:197
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr ""
+msgstr "გადაციებულ წვიმასთან შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:198
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with snow"
-msgstr ""
+msgstr "თოვლში შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:199
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr ""
+msgstr "ყინულის მარცვლები ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:200
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
-msgstr ""
+msgstr "ყინულის მარცვლები ან თოვლი"
 
 #: envcan_i18n.dat:201
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing cloudiness"
-msgstr ""
+msgstr "მზარდი ღრუბლიანობა"
 
 #: envcan_i18n.dat:202
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing clouds"
-msgstr ""
+msgstr "მზარდი ღრუბლები"
 
 #: envcan_i18n.dat:203
 #, kde-format
@@ -1869,91 +1869,91 @@ msgstr "მსუბუქი თოვლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blizzard"
-msgstr ""
+msgstr "მსუბუქი თოვლი და ქარბუქი"
 
 #: envcan_i18n.dat:205
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blizzard and blowing snow"
-msgstr ""
+msgstr "მსუბუქი თოვლი და ქარბუქი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:206
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow and blowing snow"
-msgstr ""
+msgstr "მსუბუქი თოვლისა და ქარბუქი"
 
 #: envcan_i18n.dat:207
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული გადაციებული ჟინჟლი"
 
 #: envcan_i18n.dat:208
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing rain"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:209
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with ice pellets"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:210
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with rain"
-msgstr ""
+msgstr "მსუბუქ თოვლში შერეული წვიმა"
 
 #: envcan_i18n.dat:211
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing drizzle"
-msgstr ""
+msgstr "მსუბუქი თოვლი ან გადაციებული ჟინჟლი"
 
 #: envcan_i18n.dat:212
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing rain"
-msgstr ""
+msgstr "მსუბუქი თოვლი ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:213
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or ice pellets"
-msgstr ""
+msgstr "მსუბუქი თოვლი ან ყინულის მარცვლები"
 
 #: envcan_i18n.dat:214
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or rain"
-msgstr ""
+msgstr "მსუბუქი თოვლი ან წვიმა"
 
 #: envcan_i18n.dat:215
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light wet snow"
-msgstr ""
+msgstr "მსუბუქი სველი თოვლი"
 
 #: envcan_i18n.dat:216
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light wet snow or rain"
-msgstr ""
+msgstr "მსუბუქი სველი თოვლი ან წვიმა"
 
 #: envcan_i18n.dat:217
 #, kde-format
 msgctxt "weather forecast"
 msgid "Local snow squalls"
-msgstr ""
+msgstr "ლოკალური თოვლიანი გრიგალი"
 
 #: envcan_i18n.dat:218
 #, kde-format
 msgctxt "weather forecast"
 msgid "Near blizzard"
-msgstr ""
+msgstr "თითქმის თოვლიანი ქარბორბალა"
 
 #: envcan_i18n.dat:219
 #, kde-format
@@ -1965,349 +1965,349 @@ msgstr "მოღრუბლული"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle"
-msgstr ""
+msgstr "ჟინჟღლის პერიოდები"
 
 #: envcan_i18n.dat:221
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with freezing drizzle"
-msgstr ""
+msgstr "ჟინჟღლის პერიოდები, გადაციებულ ჟინჟღლთან შერეული"
 
 #: envcan_i18n.dat:222
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with rain"
-msgstr ""
+msgstr "ჟინჟღლის პერიოდები, წვიმასთან შერეული"
 
 #: envcan_i18n.dat:223
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or freezing drizzle"
-msgstr ""
+msgstr "პერიოდული ჟინჟღლი ან გადაციებული ჟინჟღლი"
 
 #: envcan_i18n.dat:224
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or rain"
-msgstr ""
+msgstr "პერიოდული ჟინჟღლი ან წვიმა"
 
 #: envcan_i18n.dat:225
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებული ჟინჟღლი"
 
 #: envcan_i18n.dat:226
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებული ჟინჟღლი ან ჟინჟღლი"
 
 #: envcan_i18n.dat:227
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or rain"
-msgstr ""
+msgstr "პერიოდული გადაციებული ჟინჟღლი ან წვიმა"
 
 #: envcan_i18n.dat:228
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:229
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლებში შერეული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:230
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმაში შერეული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:231
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with snow"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმაში შერეული გადაციებული თოვლი"
 
 #: envcan_i18n.dat:232
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:233
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმა ან წვიმა"
 
 #: envcan_i18n.dat:234
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or snow"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:235
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:236
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლებში შერეული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:237
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლებში შერეული გადაციებული თოვლი"
 
 #: envcan_i18n.dat:238
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:239
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები ან თოვლი"
 
 #: envcan_i18n.dat:240
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow"
-msgstr ""
+msgstr "პერიოდული მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:241
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard"
-msgstr ""
+msgstr "პერიოდული მსუბუქი თოვლი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:242
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blizzard and blowing snow"
-msgstr ""
+msgstr "პერიოდული მსუბუქი თოვლი და თოვლიანი ქარბუქი და გრიგალი"
 
 #: envcan_i18n.dat:243
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow and blowing snow"
-msgstr ""
+msgstr "პერიოდული მსუბუქი თოვლი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:244
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებულ ჟინჟღლში შერეული მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:245
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმაში შერეული მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:246
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლებში შერეული მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:247
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with rain"
-msgstr ""
+msgstr "პერიოდული წვიმაში შერეული მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:248
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებულ ჟინჟღლი ან მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:249
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმა ან მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:250
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები ან მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:251
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or rain"
-msgstr ""
+msgstr "პერიოდული წვიმა ან მსუბუქი თოვლი"
 
 #: envcan_i18n.dat:252
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow"
-msgstr ""
+msgstr "პერიოდული მსუბუქი სველი თოვლი"
 
 #: envcan_i18n.dat:253
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow mixed with rain"
-msgstr ""
+msgstr "პერიოდული წვიმაში შერეული მსუბუქი სველი თოვლი"
 
 #: envcan_i18n.dat:254
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light wet snow or rain"
-msgstr ""
+msgstr "პერიოდული წვიმა ან მსუბუქი სველი თოვლი"
 
 #: envcan_i18n.dat:255
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain"
-msgstr ""
+msgstr "პერიოდული წვიმა"
 
 #: envcan_i18n.dat:256
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain mixed with freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმაში შერეული წვიმა"
 
 #: envcan_i18n.dat:257
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain mixed with snow"
-msgstr ""
+msgstr "პერიოდული თოვლში შერეული წვიმა"
 
 #: envcan_i18n.dat:258
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or drizzle"
-msgstr ""
+msgstr "პერიოდული წვიმა ან ჟინჟღლი"
 
 #: envcan_i18n.dat:259
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებული წვიმა ან წვიმა"
 
 #: envcan_i18n.dat:260
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or snow"
-msgstr ""
+msgstr "პერიოდული წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:261
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or thundershowers"
-msgstr ""
+msgstr "პერიოდული წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:262
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or thunderstorms"
-msgstr ""
+msgstr "პერიოდული წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:263
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow"
-msgstr ""
+msgstr "პერიოდული თოვლი"
 
 #: envcan_i18n.dat:264
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blizzard"
-msgstr ""
+msgstr "პერიოდული თოვლი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:265
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blizzard and blowing snow"
-msgstr ""
+msgstr "პერიოდული თოვლი და თოვლიანი ქარბუქი და გრიგალი"
 
 #: envcan_i18n.dat:266
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow and blowing snow"
-msgstr ""
+msgstr "პერიოდული თოვლი და გრიგალი"
 
 #: envcan_i18n.dat:267
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებულ ჟინჟღლში შერეული თოვლი"
 
 #: envcan_i18n.dat:268
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმაში შერეული თოვლი"
 
 #: envcan_i18n.dat:269
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლებში შერეული თოვლი"
 
 #: envcan_i18n.dat:270
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with rain"
-msgstr ""
+msgstr "პერიოდული წვიმაში შერეული თოვლი"
 
 #: envcan_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing drizzle"
-msgstr ""
+msgstr "პერიოდული გადაციებულ ჟინჟღლი ან თოვლი"
 
 #: envcan_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing rain"
-msgstr ""
+msgstr "პერიოდული გადაციებულ წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:273
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or ice pellets"
-msgstr ""
+msgstr "პერიოდული ყინულის მარცვლები ან თოვლი"
 
 #: envcan_i18n.dat:274
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or rain"
-msgstr ""
+msgstr "პერიოდული წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:275
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow"
-msgstr ""
+msgstr "პერიოდული სველი თოვლი"
 
 #: envcan_i18n.dat:276
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow mixed with rain"
-msgstr ""
+msgstr "პერიოდული წვიმაში შერეული სველი თოვლი"
 
 #: envcan_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of wet snow or rain"
-msgstr ""
+msgstr "პერიოდული წვიმა ან სველი თოვლი"
 
 #: envcan_i18n.dat:278 noaa_i18n.dat:321
 #, kde-format
@@ -2319,145 +2319,145 @@ msgstr "წვიმა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა"
 
 #: envcan_i18n.dat:280
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy mixed with freezing rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა, გადაციებულ წვიმასთან შერეული"
 
 #: envcan_i18n.dat:281
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy mixed with snow"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა, თოვლთან შერეული"
 
 #: envcan_i18n.dat:282
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or drizzle"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა ან ჟინჟღლი"
 
 #: envcan_i18n.dat:283
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or freezing rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or snow"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or thundershowers"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or thunderstorms"
-msgstr ""
+msgstr "ხანდახან ძლიერი წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:287
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain mixed with freezing rain"
-msgstr ""
+msgstr "გადაციებულ წვიმაში შერეული წვიმა"
 
 #: envcan_i18n.dat:288
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain mixed with snow"
-msgstr ""
+msgstr "წვიმაში შერეული თოვლი"
 
 #: envcan_i18n.dat:289
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or drizzle"
-msgstr ""
+msgstr "წვიმა ან ჟინჟღლი"
 
 #: envcan_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or freezing rain"
-msgstr ""
+msgstr "გადაციებულ წვიმა ან წვიმა"
 
 #: envcan_i18n.dat:291
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or snow"
-msgstr ""
+msgstr "წვიმა ან თოვლი"
 
 #: envcan_i18n.dat:292
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or thundershowers"
-msgstr ""
+msgstr "წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:293
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or thunderstorms"
-msgstr ""
+msgstr "წვიმა ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:294
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain showers or flurries"
-msgstr ""
+msgstr "რამდენიმე ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:295
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain showers or wet flurries"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:296
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers"
-msgstr ""
+msgstr "შხაპები"
 
 #: envcan_i18n.dat:297
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy"
-msgstr ""
+msgstr "ხანდახან მძიმე შხაპები"
 
 #: envcan_i18n.dat:298
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy or thundershowers"
-msgstr ""
+msgstr "ხანდახან მძიმე შხაპები ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:299
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy or thunderstorms"
-msgstr ""
+msgstr "ხანდახან მძიმე შხაპები ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:300
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or drizzle"
-msgstr ""
+msgstr "შხაპები ან ჟინჟღლი"
 
 #: envcan_i18n.dat:301
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or thundershowers"
-msgstr ""
+msgstr "შხაპები ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:302
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or thunderstorms"
-msgstr ""
+msgstr "შხაპები ან ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:303 noaa_i18n.dat:328
 #, kde-format
@@ -2475,133 +2475,133 @@ msgstr "თოვლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blizzard"
-msgstr ""
+msgstr "თოვლი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:306
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blizzard and blowing snow"
-msgstr ""
+msgstr "თოვლი და თოვლიანი ქარბუქი და გრიგალი"
 
 #: envcan_i18n.dat:307
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow and blowing snow"
-msgstr ""
+msgstr "თოვლი და გრიგალი"
 
 #: envcan_i18n.dat:308
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy"
-msgstr ""
+msgstr "ხანდახან მძიმე თოვლი"
 
 #: envcan_i18n.dat:309
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy and blizzard"
-msgstr ""
+msgstr "ხანდახან მძიმე თოვლი და ქარბუქი"
 
 #: envcan_i18n.dat:310
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy and blowing snow"
-msgstr ""
+msgstr "ხანდახან მძიმე თოვლი და თოვლიანი ქარბუქი"
 
 #: envcan_i18n.dat:311
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing drizzle"
-msgstr ""
+msgstr "ხანდახან ძლიერი თოვლი, ჟინჟღლში შერეული"
 
 #: envcan_i18n.dat:312
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი თოვლი, გადაციებულ წვიმასთან შერეული"
 
 #: envcan_i18n.dat:313
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with ice pellets"
-msgstr ""
+msgstr "ხანდახან ძლიერ თოვლში შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:314
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი თოვლი, წვიმასთან შერეული"
 
 #: envcan_i18n.dat:315
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or freezing rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი თოვლი ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:316
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or ice pellets"
-msgstr ""
+msgstr "ხანდახან ძლიერ თოვლი ან ყინულის მარცვლები"
 
 #: envcan_i18n.dat:317
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or rain"
-msgstr ""
+msgstr "ხანდახან ძლიერი თოვლი ან წვიმა"
 
 #: envcan_i18n.dat:318
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing drizzle"
-msgstr ""
+msgstr "თოვლში შერეული გადაციებული ჟინჟლი"
 
 #: envcan_i18n.dat:319
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing rain"
-msgstr ""
+msgstr "თოვლში შერეული გადაციებული წვიმა"
 
 #: envcan_i18n.dat:320
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with ice pellets"
-msgstr ""
+msgstr "თოვლში შერეული ყინულის მარცვლები"
 
 #: envcan_i18n.dat:321
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with rain"
-msgstr ""
+msgstr "თოვლში შერეული წვიმა"
 
 #: envcan_i18n.dat:322
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing drizzle"
-msgstr ""
+msgstr "გადაციებულ ჟინჟღლი ან თოვლი"
 
 #: envcan_i18n.dat:323
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing rain"
-msgstr ""
+msgstr "თოვლი ან გადაციებული წვიმა"
 
 #: envcan_i18n.dat:324
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or ice pellets"
-msgstr ""
+msgstr "თოვლი ან ყინულის მარცვლები"
 
 #: envcan_i18n.dat:325
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or rain"
-msgstr ""
+msgstr "თოვლი ან წვიმა"
 
 #: envcan_i18n.dat:326
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow squalls"
-msgstr ""
+msgstr "თოვლიანი გრიგალის"
 
 #: envcan_i18n.dat:327 noaa_i18n.dat:347
 #, kde-format
@@ -2619,73 +2619,73 @@ msgstr "ძირითადად მზიანი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Sunny with cloudy periods"
-msgstr ""
+msgstr "მზიანი და ღრუბლიანი პერიოდები"
 
 #: envcan_i18n.dat:330 noaa_i18n.dat:273
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms"
-msgstr ""
+msgstr "ჭექა-ქუხილი"
 
 #: envcan_i18n.dat:331
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms and possible hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი და შესაძლო სეტყვა"
 
 #: envcan_i18n.dat:332
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა"
 
 #: envcan_i18n.dat:333
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries at times heavy"
-msgstr ""
+msgstr "ხანდახან ძლიერი რამდენიმე სველი ქარის უეცარი დაბერვა"
 
 #: envcan_i18n.dat:334
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries at times heavy or rain showers"
-msgstr ""
+msgstr "ხანდახან ძლიერი რამდენიმე სველი ქარის უეცარი დაბერვა ან წვიმის შხაპი"
 
 #: envcan_i18n.dat:335
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries or rain showers"
-msgstr ""
+msgstr "რამდენიმე სველი ქარის უეცარი დაბერვა ან წვიმის შხაპები"
 
 #: envcan_i18n.dat:336
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow"
-msgstr ""
+msgstr "სველი თოვლი"
 
 #: envcan_i18n.dat:337
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow at times heavy"
-msgstr ""
+msgstr "ხანდახან სველი თოვლი"
 
 #: envcan_i18n.dat:338
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow at times heavy mixed with rain"
-msgstr ""
+msgstr "ხანდახან სველი თოვლი, წვიმასთან შერეული"
 
 #: envcan_i18n.dat:339
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow mixed with rain"
-msgstr ""
+msgstr "წვიმასთან შერეული სველი თოვლი"
 
 #: envcan_i18n.dat:340
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet snow or rain"
-msgstr ""
+msgstr "სველი თოვლი ან წვიმა"
 
 #: envcan_i18n.dat:341 noaa_i18n.dat:337
 #, kde-format
@@ -2768,13 +2768,13 @@ msgstr "პარ"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
-msgstr ""
+msgstr "მონაცემები BBC ამინდიდან"
 
 #: ions/dwd/ion_dwd.cpp:686
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "წყარო: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
 #: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
@@ -2811,13 +2811,13 @@ msgstr "ტრეისი"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr ""
+msgstr "მონაცემები კანადის გარემოს დაცვის სერვისიდან"
 
 #: ions/noaa/ion_noaa.cpp:633
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
-msgstr ""
+msgstr "მონაცემები NOAA-ის ნაციონალური ამინდის სერვისისგან"
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -2842,7 +2842,7 @@ msgstr "თხელი ნისლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "fog with icing"
-msgstr ""
+msgstr "ნისლი ყინულით"
 
 #: ions/wetter.com/ion_wettercom.cpp:169
 #, kde-format
@@ -2866,7 +2866,7 @@ msgstr "გაყინული ჟინჟღლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy freezing drizzle"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი"
 
 #: ions/wetter.com/ion_wettercom.cpp:174
 #, kde-format
@@ -2884,7 +2884,7 @@ msgstr "საშუალო წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "light freezing rain"
-msgstr ""
+msgstr "მსუბუქი ყინვა, წვიმა"
 
 #: ions/wetter.com/ion_wettercom.cpp:180
 #, kde-format
@@ -2896,13 +2896,13 @@ msgstr "გაყინული წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain snow"
-msgstr ""
+msgstr "მსუბუქი წვიმა თოვლი"
 
 #: ions/wetter.com/ion_wettercom.cpp:182
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain snow"
-msgstr ""
+msgstr "ძლიერი წვიმა, თოვლი"
 
 #: ions/wetter.com/ion_wettercom.cpp:183
 #, kde-format
@@ -2920,19 +2920,19 @@ msgstr "საშუალო თოვლი"
 #, kde-format
 msgctxt "weather condition"
 msgid "showers"
-msgstr ""
+msgstr "შხაპები"
 
 #: ions/wetter.com/ion_wettercom.cpp:192
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow rain showers"
-msgstr ""
+msgstr "მსუბუქი თოვლი წვიმის შხაპებით"
 
 #: ions/wetter.com/ion_wettercom.cpp:193
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow rain showers"
-msgstr ""
+msgstr "ძლიერი თოვლი წვიმის შხაპებით"
 
 #: ions/wetter.com/ion_wettercom.cpp:195
 #, kde-format
@@ -2944,13 +2944,13 @@ msgstr "თოვლის წვიმა"
 #, kde-format
 msgctxt "weather condition"
 msgid "light thunderstorm"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი"
 
 #: ions/wetter.com/ion_wettercom.cpp:199
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy thunderstorm"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი"
 
 #: ions/wetter.com/ion_wettercom.cpp:200
 #, kde-format
@@ -2962,13 +2962,13 @@ msgstr "მიუწვდომელია"
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
-msgstr ""
+msgstr "%1, %2, %3"
 
 #: ions/wetter.com/ion_wettercom.cpp:363
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
-msgstr ""
+msgstr "%1 (%2), %3, %4"
 
 #: ions/wetter.com/ion_wettercom.cpp:684
 #, kde-format
@@ -3020,73 +3020,73 @@ msgstr "ქვიშიანი ქარი"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow in Vicinity"
-msgstr ""
+msgstr "ახლომახლს თოვლიანი ქარბუქია"
 
 #: noaa_i18n.dat:9
 #, kde-format
 msgctxt "weather condition"
 msgid "Breezy"
-msgstr ""
+msgstr "ნიავი"
 
 #: noaa_i18n.dat:11
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear and Breezy"
-msgstr ""
+msgstr "მოწმენდილი და ნიავიანი"
 
 #: noaa_i18n.dat:12
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear with Haze"
-msgstr ""
+msgstr "სუფთა ცა თხელი ნისლით"
 
 #: noaa_i18n.dat:14
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Fog"
-msgstr ""
+msgstr "ჟინჟღლიანი ნისლი"
 
 #: noaa_i18n.dat:15
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Fog/Mist"
-msgstr ""
+msgstr "ჟინჟღლიანი ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Ice Pellets"
-msgstr ""
+msgstr "ჟინჟღლიანი ყინურის მარცვლები"
 
 #: noaa_i18n.dat:17
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Snow"
-msgstr ""
+msgstr "ჟინჟღლიანი თოვლი"
 
 #: noaa_i18n.dat:19
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust/Sand Whirls"
-msgstr ""
+msgstr "მტვრის /ქვიშის მორევები"
 
 #: noaa_i18n.dat:20
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust/Sand Whirls in Vicinity"
-msgstr ""
+msgstr "მტვერი/ქვიშის მორევები სიახლოვეს"
 
 #: noaa_i18n.dat:21
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Storm"
-msgstr ""
+msgstr "მტვრის ქარიშხალი"
 
 #: noaa_i18n.dat:22
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Storm in Vicinity"
-msgstr ""
+msgstr "მტვრის ქარიშხალი სიახლოვეს"
 
 #: noaa_i18n.dat:23
 #, kde-format
@@ -3098,769 +3098,769 @@ msgstr "ნორმალური"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Breezy"
-msgstr ""
+msgstr "მოწმენდილი და ნიავიანი"
 
 #: noaa_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Windy"
-msgstr ""
+msgstr "მოწმენდილი და ქარიანი"
 
 #: noaa_i18n.dat:26
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair with Haze"
-msgstr ""
+msgstr "მოწმენდილი თხელი ნისლით"
 
 #: noaa_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog in Vicinity"
-msgstr ""
+msgstr "ნისლი სიახლოვეში"
 
 #: noaa_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "Fog/Mist"
-msgstr ""
+msgstr "ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:30
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი"
 
 #: noaa_i18n.dat:31
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle in Vicinity"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი ახლომახლოს"
 
 #: noaa_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Rain"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:33
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Snow"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი თოვლით"
 
 #: noaa_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog"
-msgstr ""
+msgstr "გაყინული ნისლი"
 
 #: noaa_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog in Vicinity"
-msgstr ""
+msgstr "გადაციებული ნისლი ახლომახლოს"
 
 #: noaa_i18n.dat:36
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain"
-msgstr ""
+msgstr "გადაციებული წვიმა"
 
 #: noaa_i18n.dat:37
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain in Vicinity"
-msgstr ""
+msgstr "გადაციებული წვიმა ახლომახლოს"
 
 #: noaa_i18n.dat:38
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Rain"
-msgstr ""
+msgstr "გადაციებული წვიმა, წვიმა"
 
 #: noaa_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Snow"
-msgstr ""
+msgstr "გადაციებული წვიმა, თოვლი"
 
 #: noaa_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud in Vicinity"
-msgstr ""
+msgstr "ძაბრის ფორმის ღრუბელი ახლომახლოს"
 
 #: noaa_i18n.dat:43
 #, kde-format
 msgctxt "weather condition"
 msgid "Hail Showers"
-msgstr ""
+msgstr "სეტყვის შხაპები"
 
 #: noaa_i18n.dat:47
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი ნისლით"
 
 #: noaa_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog/Mist"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი ნისლით/ბურუსით"
 
 #: noaa_i18n.dat:49
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Ice Pellets"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Snow"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი თოვლით"
 
 #: noaa_i18n.dat:51
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Dust Storm"
-msgstr ""
+msgstr "ძლიერი მტვრის ქარიშხალი"
 
 #: noaa_i18n.dat:52
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი"
 
 #: noaa_i18n.dat:53
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Rain"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:54
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Snow"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი თოვლით"
 
 #: noaa_i18n.dat:55
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Fog"
-msgstr ""
+msgstr "ძლიერი გადაციებული ნისლი"
 
 #: noaa_i18n.dat:56
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain"
-msgstr ""
+msgstr "ძლიერი გადაციებული წვიმა"
 
 #: noaa_i18n.dat:57
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Rain"
-msgstr ""
+msgstr "ძლიერი გადაციებული წვიმა, წვიმა"
 
 #: noaa_i18n.dat:58
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Snow"
-msgstr ""
+msgstr "ძლიერი გადაციებული წვიმა, თოვლი"
 
 #: noaa_i18n.dat:59
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets"
-msgstr ""
+msgstr "ძლიერი ყინულის მარცვლები"
 
 #: noaa_i18n.dat:60
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Drizzle"
-msgstr ""
+msgstr "ძლიერი ჟინჟღლი ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:61
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Rain"
-msgstr ""
+msgstr "ძლიერი წვიმა ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:63
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog"
-msgstr ""
+msgstr "ძლიერი წვიმა, ნისლი"
 
 #: noaa_i18n.dat:64
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog/Mist"
-msgstr ""
+msgstr "ძლიერი წვიმა ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:65
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Drizzle"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Rain"
-msgstr ""
+msgstr "ძლიერი გადაციებული წვიმა, წვიმა"
 
 #: noaa_i18n.dat:67
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Ice Pellets"
-msgstr ""
+msgstr "ძლიერი წვიმა ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:68
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Showers"
-msgstr ""
+msgstr "ძლიერი თავსხმა წვიმა"
 
 #: noaa_i18n.dat:69
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Showers Fog/Mist"
-msgstr ""
+msgstr "ძლიერი თავსხმა წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:70
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Snow"
-msgstr ""
+msgstr "ძლიერი წვიმა, თოვლი"
 
 #: noaa_i18n.dat:71
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Sand Storm"
-msgstr ""
+msgstr "ძლიერი ქვიშის ქარიშხალი"
 
 #: noaa_i18n.dat:72
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain"
-msgstr ""
+msgstr "ძლიერი თავსხმა წვიმა"
 
 #: noaa_i18n.dat:73
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain Fog/Mist"
-msgstr ""
+msgstr "ძლიერი თავსხმა წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:74
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow"
-msgstr ""
+msgstr "ძლიერი თავსხმა თოვლი"
 
 #: noaa_i18n.dat:75
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog"
-msgstr ""
+msgstr "ძლიერი თავსხმა თოვლი, ნისლი"
 
 #: noaa_i18n.dat:76
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog/Mist"
-msgstr ""
+msgstr "ძლიერი თავსხმა თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:77
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy small Hail/Snow Pellets"
-msgstr ""
+msgstr "ძლიერი მცირე სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:79
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Blowing Snow"
-msgstr ""
+msgstr "ძლიერი ქარბუქი, თოვლით"
 
 #: noaa_i18n.dat:80
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog"
-msgstr ""
+msgstr "ძლიერი თოვლი, ნისლი"
 
 #: noaa_i18n.dat:81
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog/Mist"
-msgstr ""
+msgstr "ძლიერი თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:82
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Drizzle"
-msgstr ""
+msgstr "ძლიერი გადაციებული ჟინჟღლი თოვლით"
 
 #: noaa_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Rain"
-msgstr ""
+msgstr "ძლიერი თოვლი, გადაციებული წვიმა"
 
 #: noaa_i18n.dat:84
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Grains"
-msgstr ""
+msgstr "ძლიერი თოვლის მარცვლები"
 
 #: noaa_i18n.dat:85
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Low Drifting Snow"
-msgstr ""
+msgstr "ძლიერი თოვლი, ნამქერი"
 
 #: noaa_i18n.dat:86
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Rain"
-msgstr ""
+msgstr "ძლიერი თოვლი, წვიმა"
 
 #: noaa_i18n.dat:87
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers"
-msgstr ""
+msgstr "ძლიერი თოვლი"
 
 #: noaa_i18n.dat:88
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog"
-msgstr ""
+msgstr "ძლიერი თოვლი, ნისლი"
 
 #: noaa_i18n.dat:89
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog/Mist"
-msgstr ""
+msgstr "ძლიერი თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:90
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი წვიმასთან ერთად"
 
 #: noaa_i18n.dat:91
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი წვიმასთან ერთად, ნისლი"
 
 #: noaa_i18n.dat:92
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog and Windy"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი წვიმასთან ერთად, ნისლი და ქარი"
 
 #: noaa_i18n.dat:93
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი წვიმასთან ერთად, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:94
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი სეტყვით"
 
 #: noaa_i18n.dat:95
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი სეტყვით, ნისლი"
 
 #: noaa_i18n.dat:96
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog/Hail"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი სეტყვით, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:97
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Haze"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი სეტყვით, ნისლი"
 
 #: noaa_i18n.dat:98
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Haze"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი ნისლი"
 
 #: noaa_i18n.dat:99
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი, წვიმა, პატარა სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:100
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Snow"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი, თვლი"
 
 #: noaa_i18n.dat:103
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets Drizzle"
-msgstr ""
+msgstr "ჟინჟღლი ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:104
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets in Vicinity"
-msgstr ""
+msgstr "ყინულის მარცვლები ახლომახლოს"
 
 #: noaa_i18n.dat:105
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Pellets Rain"
-msgstr ""
+msgstr "წვიმა ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:107
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი ნისლი"
 
 #: noaa_i18n.dat:108
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:109
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Ice Pellets"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი ყინულის მარცვლები"
 
 #: noaa_i18n.dat:110
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Snow"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი თოვლი"
 
 #: noaa_i18n.dat:112
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Rain"
-msgstr ""
+msgstr "მსუბუქი გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:113
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Snow"
-msgstr ""
+msgstr "მსუბუქი გადაციებული ჟინჟღლი თვლით"
 
 #: noaa_i18n.dat:114
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Fog"
-msgstr ""
+msgstr "მსუბუქი გადაციებული ნისლი"
 
 #: noaa_i18n.dat:116
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Rain"
-msgstr ""
+msgstr "მსუბუქი გადაციებული წვიმა წვიმით"
 
 #: noaa_i18n.dat:117
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Snow"
-msgstr ""
+msgstr "მსუბუქი გადაციებული წვიმა თოვლით"
 
 #: noaa_i18n.dat:118
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets"
-msgstr ""
+msgstr "მსუბუქი ყინულის მარცვლები"
 
 #: noaa_i18n.dat:119
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Drizzle"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი ყინულის მარცვლები"
 
 #: noaa_i18n.dat:120
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Rain"
-msgstr ""
+msgstr "მსუბუქი ყინულის მარცვლები, წვიმით"
 
 #: noaa_i18n.dat:122
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain and Breezy"
-msgstr ""
+msgstr "მსუბუქი წვიმა და ნიავი"
 
 #: noaa_i18n.dat:123
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog"
-msgstr ""
+msgstr "მსუბუქი წვიმა, ნისლი"
 
 #: noaa_i18n.dat:124
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი წვიმა ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:125
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Drizzle"
-msgstr ""
+msgstr "მსუბუქი გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:126
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Rain"
-msgstr ""
+msgstr "მსუბუქი გადაციებული წვიმა წვიმით"
 
 #: noaa_i18n.dat:127
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Ice Pellets"
-msgstr ""
+msgstr "მსუბუქი ყინულის მარცვლები, წვიმით"
 
 #: noaa_i18n.dat:128
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Showers"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები"
 
 #: noaa_i18n.dat:129
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Showers Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:130
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Snow"
-msgstr ""
+msgstr "მსუბუქი წვიმა თოვლი"
 
 #: noaa_i18n.dat:131
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები"
 
 #: noaa_i18n.dat:132
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი წვიმის შხაპები ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:133
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპები"
 
 #: noaa_i18n.dat:134
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog"
-msgstr ""
+msgstr "მსუბუქი თავსხმა თოვლი, ნისლი"
 
 #: noaa_i18n.dat:135
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი თავსხმა თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:136
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Small Hail/Snow Pellets"
-msgstr ""
+msgstr "მსუბუქი მცირე სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:138
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow"
-msgstr ""
+msgstr "მსუბუქი თოვლიანი ქარბუქი და თოვლი"
 
 #: noaa_i18n.dat:139
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი თოვლიანი ქარბუქი და თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:140
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Drizzle"
-msgstr ""
+msgstr "მსუბუქი ჟინჟღლიანი თოვლი"
 
 #: noaa_i18n.dat:141
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog"
-msgstr ""
+msgstr "მსუბუქი თოვლი ნისლით"
 
 #: noaa_i18n.dat:142
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი თოვლი ნისლით/ბურუსით"
 
 #: noaa_i18n.dat:143
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Drizzle"
-msgstr ""
+msgstr "მსუბუქი თოვლი ან გადაციებული ჟინჟლი"
 
 #: noaa_i18n.dat:144
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Rain"
-msgstr ""
+msgstr "მსუბუქი თოვლი გადაციებული წვიმით"
 
 #: noaa_i18n.dat:145
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Grains"
-msgstr ""
+msgstr "მსუბუქი თოვლის მარცვლები"
 
 #: noaa_i18n.dat:146
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Low Drifting Snow"
-msgstr ""
+msgstr "მსუბუქი თოვლი, ნამქერი"
 
 #: noaa_i18n.dat:147
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Rain"
-msgstr ""
+msgstr "მსუბუქი თოვლი წვიმით"
 
 #: noaa_i18n.dat:148
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers"
-msgstr ""
+msgstr "მსუბუქი თოვლის შხაპები"
 
 #: noaa_i18n.dat:149
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog"
-msgstr ""
+msgstr "მსუბუქი თავსხმა თოვლი, ნისლი"
 
 #: noaa_i18n.dat:150
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი თავსხმა თოვლი, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:151
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმასთან ერთად"
 
 #: noaa_i18n.dat:152
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმასთან ერთად, ნისლი"
 
 #: noaa_i18n.dat:153
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმასთან ერთად, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:154
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმით და სეტყვით"
 
 #: noaa_i18n.dat:155
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმით, სეტყვით და ნისლით"
 
 #: noaa_i18n.dat:156
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog/Mist"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმით, სეტყვით და ნისლით/ბურუსით"
 
 #: noaa_i18n.dat:157
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Haze"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმით, სეტყვით და თხელი ნისლით"
 
 #: noaa_i18n.dat:158
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Haze"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი წვიმით და თხელი ნისლით"
 
 #: noaa_i18n.dat:159
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი, წვიმა, პატარა სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:160
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Snow"
-msgstr ""
+msgstr "მსუბუქი ჭექა-ქუხილი თოვლი"
 
 #: noaa_i18n.dat:161
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Dust"
-msgstr ""
+msgstr "მტვრის ქარბუქი"
 
 #: noaa_i18n.dat:162
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Sand"
-msgstr ""
+msgstr "ქვიშის ქარბუქი"
 
 #: noaa_i18n.dat:163
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Snow"
-msgstr ""
+msgstr "თოვლი, ქარბუქი"
 
 #: noaa_i18n.dat:165
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Breezy"
-msgstr ""
+msgstr "უმეტესად ღრუბლიანი და ნიავი"
 
 #: noaa_i18n.dat:166
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Windy"
-msgstr ""
+msgstr "უმეტესად ღრუბლიანი და ქარიანი"
 
 #: noaa_i18n.dat:167
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy with Haze"
-msgstr ""
+msgstr "უმეტესად ღრუბლიანი, მსუბუქი ნისლით"
 
 #: noaa_i18n.dat:168
 #, kde-format
@@ -3872,127 +3872,127 @@ msgstr "მოღრუბლული"
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Breezy"
-msgstr ""
+msgstr "მოღრუბლული და ნიავი"
 
 #: noaa_i18n.dat:170
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Windy"
-msgstr ""
+msgstr "მოღრუბლული და ქარი"
 
 #: noaa_i18n.dat:171
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast with Haze"
-msgstr ""
+msgstr "მოღრუბლული და თხელი ნისლი"
 
 #: noaa_i18n.dat:172
 #, kde-format
 msgctxt "weather condition"
 msgid "Partial Fog"
-msgstr ""
+msgstr "ნაწილობრივი ნისლი"
 
 #: noaa_i18n.dat:173
 #, kde-format
 msgctxt "weather condition"
 msgid "Partial Fog in Vicinity"
-msgstr ""
+msgstr "ნაწილობრივი ნისლი სიახლოვეში"
 
 #: noaa_i18n.dat:175
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Breezy"
-msgstr ""
+msgstr "ნაწილობრივ მოღრუბლული და ნიავი"
 
 #: noaa_i18n.dat:176
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Windy"
-msgstr ""
+msgstr "ნაწილობრივ მოღრუბლული და ქარი"
 
 #: noaa_i18n.dat:177
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy with Haze"
-msgstr ""
+msgstr "ნაწილობრივ მოღრუბლული და თხელი ნისლი"
 
 #: noaa_i18n.dat:178
 #, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr ""
+msgstr "აქა-იქ გადაციებული ნისლი"
 
 #: noaa_i18n.dat:179
 #, kde-format
 msgctxt "weather condition"
 msgid "Patches of Fog"
-msgstr ""
+msgstr "აქა-იქ ნისლი"
 
 #: noaa_i18n.dat:180
 #, kde-format
 msgctxt "weather condition"
 msgid "Patches of Fog in Vicinity"
-msgstr ""
+msgstr "აქა-იქ ნისლი, სიახლოვეში"
 
 #: noaa_i18n.dat:181
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Fog"
-msgstr ""
+msgstr "წვიმა, ნისლი"
 
 #: noaa_i18n.dat:182
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Fog/Mist"
-msgstr ""
+msgstr "წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:183
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი წვიმით"
 
 #: noaa_i18n.dat:184
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Rain"
-msgstr ""
+msgstr "გადაციებული წვიმა წვიმით"
 
 #: noaa_i18n.dat:185
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Ice Pellets"
-msgstr ""
+msgstr "წვიმა ყინულის მარცვლებით"
 
 #: noaa_i18n.dat:186
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers"
-msgstr ""
+msgstr "წვიმის შხაპები"
 
 #: noaa_i18n.dat:187
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers Fog/Mist"
-msgstr ""
+msgstr "წვიმის შხაპები, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:188
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity"
-msgstr ""
+msgstr "თავსხმა წვიმები სიახლოვეს"
 
 #: noaa_i18n.dat:189
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity Fog/Mist"
-msgstr ""
+msgstr "წვიმის შხაპები სიახლოვეში, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:190
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Snow"
-msgstr ""
+msgstr "წვიმიანი თოვლი"
 
 #: noaa_i18n.dat:191
 #, kde-format
@@ -4004,397 +4004,397 @@ msgstr "ქვიშა"
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand Storm"
-msgstr ""
+msgstr "ქვიშის ქარიშხალი"
 
 #: noaa_i18n.dat:193
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand Storm in Vicinity"
-msgstr ""
+msgstr "ქვიშის ქარიშხალი სიახლოვეს"
 
 #: noaa_i18n.dat:195
 #, kde-format
 msgctxt "weather condition"
 msgid "Shallow Fog in Vicinity"
-msgstr ""
+msgstr "არაღრმა ნისლი სიახლოვეს"
 
 #: noaa_i18n.dat:196
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Hail"
-msgstr ""
+msgstr "სეტყვის შხაპები"
 
 #: noaa_i18n.dat:197
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Ice Pellets"
-msgstr ""
+msgstr "წვიმის შხაპები სიახლოვეში, ნისლი"
 
 #: noaa_i18n.dat:198
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Fog"
-msgstr ""
+msgstr "შხაპები სიახლოვეში, ნისლი"
 
 #: noaa_i18n.dat:199
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Snow"
-msgstr ""
+msgstr "შხაპები სიახლოვეში, თოვლი"
 
 #: noaa_i18n.dat:200
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain"
-msgstr ""
+msgstr "თავსხმა წვიმა"
 
 #: noaa_i18n.dat:201
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain Fog/Mist"
-msgstr ""
+msgstr "თავსხმა წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:202
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity"
-msgstr ""
+msgstr "თავსხმა წვიმა სიახლოვეში"
 
 #: noaa_i18n.dat:203
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity Fog/Mist"
-msgstr ""
+msgstr "თავსხმა წვიმა სიახლოვეში, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:204
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow"
-msgstr ""
+msgstr "თოვლის შხაპები"
 
 #: noaa_i18n.dat:205
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog"
-msgstr ""
+msgstr "თოვლის შხაპები, ნისლი"
 
 #: noaa_i18n.dat:206
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog/Mist"
-msgstr ""
+msgstr "თოვლის შხაპები, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:207
 #, kde-format
 msgctxt "weather condition"
 msgid "Small Hail/Snow Pellets"
-msgstr ""
+msgstr "მცირე სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:210
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Blowing Snow"
-msgstr ""
+msgstr "ძლიერი ქარბუქი, თოვლით"
 
 #: noaa_i18n.dat:211
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Drizzle"
-msgstr ""
+msgstr "ჟინჟღლიანი თოვლი"
 
 #: noaa_i18n.dat:212
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog"
-msgstr ""
+msgstr "თოვლი ნისლით"
 
 #: noaa_i18n.dat:213
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog/Mist"
-msgstr ""
+msgstr "თოვლი ნისლით/ბურუსით"
 
 #: noaa_i18n.dat:214
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი თოვლით"
 
 #: noaa_i18n.dat:215
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Rain"
-msgstr ""
+msgstr "თოვლი გადაციებული წვიმით"
 
 #: noaa_i18n.dat:217
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Low Drifting Snow"
-msgstr ""
+msgstr "თოვლი, ნამქერი"
 
 #: noaa_i18n.dat:218
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Rain"
-msgstr ""
+msgstr "თოვლი წვიმით"
 
 #: noaa_i18n.dat:219
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers"
-msgstr ""
+msgstr "თოვლის შხაპები"
 
 #: noaa_i18n.dat:220
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers Fog"
-msgstr ""
+msgstr "თოვლის სხაპები, ნისლი"
 
 #: noaa_i18n.dat:221
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers Fog/Mist"
-msgstr ""
+msgstr "თოვლის სხაპები, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:222
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity"
-msgstr ""
+msgstr "თოვლის შხაპები სიახლოვეში"
 
 #: noaa_i18n.dat:223
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog"
-msgstr ""
+msgstr "თოვლის შხაპები სიახლოვეში, ნისლი"
 
 #: noaa_i18n.dat:224
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog/Mist"
-msgstr ""
+msgstr "თოვლის შხაპები სიახლოვეში, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:226
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი წვიმასთან ერთად, ნისლი"
 
 #: noaa_i18n.dat:227
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი სეტყვასთან ერთად"
 
 #: noaa_i18n.dat:228
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Hail Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი სეტყვით, ნისლი"
 
 #: noaa_i18n.dat:229
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი ნისლი ახლომახლოს"
 
 #: noaa_i18n.dat:230
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity Hail"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი ნისლი ახლომახლოს, სეტყვა"
 
 #: noaa_i18n.dat:231
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად"
 
 #: noaa_i18n.dat:232
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, ნისლი"
 
 #: noaa_i18n.dat:233
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:234
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, სეტყვა"
 
 #: noaa_i18n.dat:235
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, სეტყვა, ნისლი"
 
 #: noaa_i18n.dat:236
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, სეტყვა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:237
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, სეტყვა, მსუბუქი ნისლი"
 
 #: noaa_i18n.dat:238
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი ძლიერ წვიმასთან ერთად, მსუბუქი ნისლი"
 
 #: noaa_i18n.dat:239
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Ice Pellets"
-msgstr ""
+msgstr "ჭექა-ქუხილი, ყინულის მარცვლები"
 
 #: noaa_i18n.dat:240
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში"
 
 #: noaa_i18n.dat:241
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, ნისლი"
 
 #: noaa_i18n.dat:242
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:243
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, სეტყვა"
 
 #: noaa_i18n.dat:244
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Hail Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, სეტყვა, თხელი ნისლი"
 
 #: noaa_i18n.dat:245
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm in Vicinity Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, თხელი ნისლი"
 
 #: noaa_i18n.dat:246
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა"
 
 #: noaa_i18n.dat:247
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, ნისლი"
 
 #: noaa_i18n.dat:248
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:249
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, სეტყვა"
 
 #: noaa_i18n.dat:250
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Fog"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, სეტყვა, ნისლი"
 
 #: noaa_i18n.dat:251
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, სეტყვა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:252
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Hail Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, მსუბუქი წვიმა, სეტყვა, თხელი ნისლი"
 
 #: noaa_i18n.dat:253
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Light Rain Haze"
-msgstr ""
+msgstr "ჭექა-ქუხილი სიახლოვეში, თხელი ნისლი"
 
 #: noaa_i18n.dat:254
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain"
-msgstr ""
+msgstr "ჭექა-ქუხილი, წვიმა"
 
 #: noaa_i18n.dat:255
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი, წვიმა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:256
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Hail Fog/Mist"
-msgstr ""
+msgstr "ჭექა-ქუხილი, წვიმა, სეტყვა, ნისლი/ბურუსი"
 
 #: noaa_i18n.dat:257
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr ""
+msgstr "ჭექა-ქუხილი, წვიმა, მცირე სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:258
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Showers in Vicinity"
-msgstr ""
+msgstr "ჭექა-ქუხილის შხაპები სიახლოვეში"
 
 #: noaa_i18n.dat:259
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Showers in Vicinity Hail"
-msgstr ""
+msgstr "ჭექა-ქუხილის შხაპები სიახლოვეში, სეტყვა"
 
 #: noaa_i18n.dat:260
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Small Hail/Snow Pellets"
-msgstr ""
+msgstr "ჭექა-ქუხილი, მცირე სეტყვა/თოვლის ფიფქები"
 
 #: noaa_i18n.dat:261
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Snow"
-msgstr ""
+msgstr "ჭექა-ქუხილი, თოვლი"
 
 #: noaa_i18n.dat:262
 #, kde-format
 msgctxt "weather condition"
 msgid "Tornado/Water Spout"
-msgstr ""
+msgstr "წყლის ქარბორბალა/ტორნადო"
 
 #: noaa_i18n.dat:263
 #, kde-format
@@ -4412,223 +4412,223 @@ msgstr "ყინულის კრისტალები"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Volcanic Ash"
-msgstr ""
+msgstr "ვულკანური ფერფლი"
 
 #: noaa_i18n.dat:267
 #, kde-format
 msgctxt "weather forecast"
 msgid "Water Spout"
-msgstr ""
+msgstr "წყლის ქარბორბალა"
 
 #: noaa_i18n.dat:268
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Spray"
-msgstr ""
+msgstr "გადაციებული მტვერი"
 
 #: noaa_i18n.dat:269
 #, kde-format
 msgctxt "weather forecast"
 msgid "Frost"
-msgstr ""
+msgstr "სუსხი"
 
 #: noaa_i18n.dat:270
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Thunderstorms"
-msgstr ""
+msgstr "ჭექა ქუხილის მცირედი შანსი"
 
 #: noaa_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Thunderstorms"
-msgstr ""
+msgstr "ჭექა-ქუხილის შანსი"
 
 #: noaa_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms Likely"
-msgstr ""
+msgstr "მოსალოდნელი ჭექაქუხილი"
 
 #: noaa_i18n.dat:274
 #, kde-format
 msgctxt "weather forecast"
 msgid "Severe Tstms"
-msgstr ""
+msgstr "ძლიერი ჭექა-ქუხილი"
 
 #: noaa_i18n.dat:275
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr ""
+msgstr "თოვლის/ჭყაპის ოდნავი შანსი"
 
 #: noaa_i18n.dat:276
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow/Sleet"
-msgstr ""
+msgstr "თოვლის/ჭყაპის შანსი"
 
 #: noaa_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet Likely"
-msgstr ""
+msgstr "თოვლი/ჭყაპი მოსალოდნელია"
 
 #: noaa_i18n.dat:278
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet"
-msgstr ""
+msgstr "თოვლი/ჭყაპი"
 
 #: noaa_i18n.dat:279
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr ""
+msgstr "წვიმის/ჭყაპის ოდნავი შანსი"
 
 #: noaa_i18n.dat:280
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Sleet"
-msgstr ""
+msgstr "ჭყაპის/წვიმის შანსი"
 
 #: noaa_i18n.dat:281
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet Likely"
-msgstr ""
+msgstr "წვიმა/ჭყაპი სავარაუდოდ"
 
 #: noaa_i18n.dat:282
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet"
-msgstr ""
+msgstr "წვიმა/ჭყაპი"
 
 #: noaa_i18n.dat:283
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr ""
+msgstr "წვიმის/გადაციებული წვიმის ოდნავი შანსი"
 
 #: noaa_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Freezing Rain"
-msgstr ""
+msgstr "წვიმის/გადაციებული წვიმის შანსი"
 
 #: noaa_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain Likely"
-msgstr ""
+msgstr "გადაციებული წვიმა/წვიმა სავარაუდოდ"
 
 #: noaa_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain"
-msgstr ""
+msgstr "წვიმა/გადაციებული წვია"
 
 #: noaa_i18n.dat:287
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr ""
+msgstr "დიდი შანსია წვიმის თოვლით"
 
 #: noaa_i18n.dat:288
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix"
-msgstr ""
+msgstr "თოვლი წვიმით"
 
 #: noaa_i18n.dat:289
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლის მცირედი შანსი"
 
 #: noaa_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლის შანსი"
 
 #: noaa_i18n.dat:291
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle Likely"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლის შანსი"
 
 #: noaa_i18n.dat:292
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle"
-msgstr ""
+msgstr "გადაციებული ჟინჟღლი"
 
 #: noaa_i18n.dat:293
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr ""
+msgstr "გადაციებული წვიმის ოდნავი შანსი"
 
 #: noaa_i18n.dat:294
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Rain"
-msgstr ""
+msgstr "გადაციებული წვიმის შანსი"
 
 #: noaa_i18n.dat:295
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain Likely"
-msgstr ""
+msgstr "გადაციებული წვიმის შანსი"
 
 #: noaa_i18n.dat:296
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain"
-msgstr ""
+msgstr "გადაციებული წვიმა"
 
 #: noaa_i18n.dat:297
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr ""
+msgstr "წვიმის/თოვლის ოდნავი შანსი"
 
 #: noaa_i18n.dat:298
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Snow"
-msgstr ""
+msgstr "წვიმის/თოვლის შანსი"
 
 #: noaa_i18n.dat:299
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow Likely"
-msgstr ""
+msgstr "წვიმა/თოვლი სავარაუდოდ"
 
 #: noaa_i18n.dat:300
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow"
-msgstr ""
+msgstr "წვიმა/თოვლი"
 
 #: noaa_i18n.dat:301
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr ""
+msgstr "თოვლის ოდნავი შანსი"
 
 #: noaa_i18n.dat:302
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow"
-msgstr ""
+msgstr "მოსალოდნელი თოვლი"
 
 #: noaa_i18n.dat:303
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Likely"
-msgstr ""
+msgstr "თოვლი მოსალოდნელია"
 
 #: noaa_i18n.dat:305
 #, kde-format
@@ -4640,79 +4640,79 @@ msgstr "თოვლი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr ""
+msgstr "ქარის უეცარი დაბერვის ოდნავი შანსი"
 
 #: noaa_i18n.dat:307
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Flurries"
-msgstr ""
+msgstr "ქარის უეცარი დაბერვის შანსი"
 
 #: noaa_i18n.dat:308
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries Likely"
-msgstr ""
+msgstr "ქარის უეცარი ამოვარდნის დიდი შანსი"
 
 #: noaa_i18n.dat:310
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr ""
+msgstr "თოვლის შხაპების ოდნავი შანსი"
 
 #: noaa_i18n.dat:311
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow Showers"
-msgstr ""
+msgstr "თოვლის შხაპების შანსი"
 
 #: noaa_i18n.dat:312
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Showers Likely"
-msgstr ""
+msgstr "თოვლის შხაპების შანსი"
 
 #: noaa_i18n.dat:313
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Showers"
-msgstr ""
+msgstr "თოვლის შხაპები"
 
 #: noaa_i18n.dat:314
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr ""
+msgstr "ჟინჟღლის ოდნავი შანსი"
 
 #: noaa_i18n.dat:315
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Drizzle"
-msgstr ""
+msgstr "ჟინჟღლის შანსი"
 
 #: noaa_i18n.dat:316
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle Likely"
-msgstr ""
+msgstr "ჟინჟღლი სავარაუდოდ"
 
 #: noaa_i18n.dat:318
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr ""
+msgstr "წვიმის ოდნავი შანსი"
 
 #: noaa_i18n.dat:319
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain"
-msgstr ""
+msgstr "წვიმის შანსი"
 
 #: noaa_i18n.dat:320
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Likely"
-msgstr ""
+msgstr "წვიმა სავარაუდოდ"
 
 #: noaa_i18n.dat:322
 #, kde-format
@@ -4724,25 +4724,25 @@ msgstr "თავსხმა წვიმა"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr ""
+msgstr "წვიმის შხაპების ოდნავი შანსი"
 
 #: noaa_i18n.dat:324
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain Showers"
-msgstr ""
+msgstr "წვიმის შხაპების შანსი"
 
 #: noaa_i18n.dat:325
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Showers Likely"
-msgstr ""
+msgstr "წვიმის შხაპები სავარაუდოდ"
 
 #: noaa_i18n.dat:326
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Showers"
-msgstr ""
+msgstr "წვიმის შხაპები"
 
 #: noaa_i18n.dat:327
 #, kde-format
@@ -4754,13 +4754,13 @@ msgstr "ჭყაპი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Fog"
-msgstr ""
+msgstr "გაყინული ნისლი"
 
 #: noaa_i18n.dat:330
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice Fog"
-msgstr ""
+msgstr "ყინულოვანი ნისლი"
 
 #: noaa_i18n.dat:331
 #, kde-format
@@ -4784,31 +4784,31 @@ msgstr "მტვრიანი ქარი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blowing Snow"
-msgstr ""
+msgstr "ქარბუქი"
 
 #: noaa_i18n.dat:335
 #, kde-format
 msgctxt "weather forecast"
 msgid "Dense Fog"
-msgstr ""
+msgstr "მკვრივი ნისლი"
 
 #: noaa_i18n.dat:338
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blustery"
-msgstr ""
+msgstr "ზუზუნა ქარი"
 
 #: noaa_i18n.dat:339
 #, kde-format
 msgctxt "weather forecast"
 msgid "Breezy"
-msgstr ""
+msgstr "ნიავი"
 
 #: noaa_i18n.dat:340
 #, kde-format
 msgctxt "weather forecast"
 msgid "Cold"
-msgstr ""
+msgstr "ცივი"
 
 #: noaa_i18n.dat:341
 #, kde-format
@@ -4820,7 +4820,7 @@ msgstr "ცხელი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Cloudy"
-msgstr ""
+msgstr "უმეტესად ღრუბლიანი"
 
 #: noaa_i18n.dat:344
 #, kde-format
@@ -4832,7 +4832,7 @@ msgstr "ნაწილობრივ მოღრუბლული"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Sunny"
-msgstr ""
+msgstr "უმეტესად მზიანი"
 
 #: noaa_i18n.dat:346
 #, kde-format
@@ -4844,40 +4844,40 @@ msgstr "ნაწილობრივ მზიანი"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing Clouds"
-msgstr ""
+msgstr "მზარდი ღრუბლები"
 
 #: noaa_i18n.dat:349
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Cloudy"
-msgstr ""
+msgstr "ხდება ღრუბლიანი"
 
 #: noaa_i18n.dat:351
 #, kde-format
 msgctxt "weather forecast"
 msgid "Gradual Clearing"
-msgstr ""
+msgstr "თანდათანობითი მოწმენდა"
 
 #: noaa_i18n.dat:352
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing Late"
-msgstr ""
+msgstr "მოგვიანებით მოწმენდა"
 
 #: noaa_i18n.dat:353
 #, kde-format
 msgctxt "weather forecast"
 msgid "Decreasing Clouds"
-msgstr ""
+msgstr "შემცირებადი ღრუბლები"
 
 #: noaa_i18n.dat:354
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Sunny"
-msgstr ""
+msgstr "ხდება მზიანი"
 
 #: noaa_i18n.dat:356
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr ""
+msgstr "უმეტესად მოწმენდილი"

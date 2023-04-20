@@ -258,7 +258,7 @@ msgstr "Etiquetta de barra de instrumentos secundari"
 #~ "This area shows a preview of the currently selected style without having "
 #~ "to apply it to the whole desktop."
 #~ msgstr ""
-#~ "Iste area monstra un vista preliminari del stilo currentemente seligite "
+#~ "Iste area monstra un vista preliminar del stilo currentemente seligite "
 #~ "sin ja haber lo applicate a le scriptorio integre."
 
 #~ msgid ""
