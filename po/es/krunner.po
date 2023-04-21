@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2022-09-15 18:02+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -29,32 +29,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: main.cpp:54 view.cpp:45
+#: main.cpp:60 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:54
+#: main.cpp:60
 #, kde-format
 msgid "Run Command interface"
 msgstr "Interfaz para ejecutar una orden"
 
-#: main.cpp:60
+#: main.cpp:66
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Usar el contenido del portapapeles como consulta para KRunner"
 
-#: main.cpp:61
+#: main.cpp:67
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Iniciar KRunner en segundo plano, sin mostrarlo."
 
-#: main.cpp:62
+#: main.cpp:68
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Sustituir una instancia existente"
 
-#: main.cpp:67
+#: main.cpp:73
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "La consulta a ejecutar; se usa solo si no se ha usado -c"

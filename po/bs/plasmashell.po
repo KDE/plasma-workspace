@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 02:45+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2014-12-28 11:43+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -36,28 +36,28 @@ msgstr "fademovic2@etf.unsa.ba"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfiguriši dodatak"
 
-#: main.cpp:85
+#: main.cpp:91
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgid "Plasma Shell"
 msgstr "Plazma"
 
-#: main.cpp:97
+#: main.cpp:103
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Omogući QML Javascript otklanjivač grešaka"
 
-#: main.cpp:100
+#: main.cpp:106
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne restartuj plazma-ljusku automatski nakon krahiranja"
 
-#: main.cpp:103
+#: main.cpp:109
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forsiraj učitavanje zadanog dodatka ljuske"
 
-#: main.cpp:108
+#: main.cpp:114
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -66,34 +66,34 @@ msgstr ""
 "Učitaj plazma ljusku kao samostalnu aplikaciju, potrebno da bude specifirana "
 "opcija dodatka za ljusku"
 
-#: main.cpp:110
+#: main.cpp:116
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:113
+#: main.cpp:119
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
 
-#: main.cpp:114
+#: main.cpp:120
 #, kde-format
 msgid "file"
 msgstr ""
 
-#: main.cpp:118
+#: main.cpp:124
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:218
+#: main.cpp:224
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr ""
 
-#: main.cpp:219
+#: main.cpp:225
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

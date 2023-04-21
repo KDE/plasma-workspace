@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2015-08-27 17:05+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -29,32 +29,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org"
 
-#: main.cpp:54 view.cpp:45
+#: main.cpp:60 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr ""
 
-#: main.cpp:54
+#: main.cpp:60
 #, kde-format
 msgid "Run Command interface"
 msgstr "Kjør kommando-grensesnitt"
 
-#: main.cpp:60
+#: main.cpp:66
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:67
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:68
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:73
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 02:45+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2023-01-22 16:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -47,27 +47,27 @@ msgstr "shafff@ukr.net, darkstar@altlinux.ru"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Настройка модуля действий мыши"
 
-#: main.cpp:85
+#: main.cpp:91
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Оболочка Plasma"
 
-#: main.cpp:97
+#: main.cpp:103
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Включить отладчик QML Javascript."
 
-#: main.cpp:100
+#: main.cpp:106
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перезапускать Plasma автоматически после сбоя."
 
-#: main.cpp:103
+#: main.cpp:109
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудительный запуск указанного модуля."
 
-#: main.cpp:108
+#: main.cpp:114
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -76,12 +76,12 @@ msgstr ""
 "Запустить plasmashell как самостоятельное приложение. Требуется подача "
 "параметра «--shell-plugin»."
 
-#: main.cpp:110
+#: main.cpp:116
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменить существующий запущенный процесс."
 
-#: main.cpp:113
+#: main.cpp:119
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -90,22 +90,22 @@ msgstr ""
 "Включить режим тестирования и задать файл сценария на JavaScript, который "
 "настроит тестовое окружение."
 
-#: main.cpp:114
+#: main.cpp:120
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:118
+#: main.cpp:124
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показать список данных обратной связи."
 
-#: main.cpp:218
+#: main.cpp:224
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не удалось запустить Plasma"
 
-#: main.cpp:219
+#: main.cpp:225
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

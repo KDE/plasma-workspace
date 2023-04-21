@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2022-09-17 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: main.cpp:54 view.cpp:45
+#: main.cpp:60 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:54
+#: main.cpp:60
 #, kde-format
 msgid "Run Command interface"
 msgstr "ბრძანების ინტერფეისის გაშვება"
 
-#: main.cpp:60
+#: main.cpp:66
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Krunner-ის მოთხოვნისთვის ბუფერის შემცველობის გამოყენება"
 
-#: main.cpp:61
+#: main.cpp:67
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Krunner-ის ფონურად გაშვება, არ ჩვენება."
 
-#: main.cpp:62
+#: main.cpp:68
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "გაშვებული ასლის ჩანაცვლება"
 
-#: main.cpp:67
+#: main.cpp:73
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""

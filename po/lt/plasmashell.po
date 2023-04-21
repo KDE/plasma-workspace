@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 02:45+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2022-12-28 02:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -36,27 +36,27 @@ msgstr "liudas@akmc.lt, opensuse.lietuviu.kalba@gmail.com, <>"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfigūruoti pelės veiksmų priedą"
 
-#: main.cpp:85
+#: main.cpp:91
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma apvalkalas"
 
-#: main.cpp:97
+#: main.cpp:103
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Įjungti QML JavaScript derintuvę"
 
-#: main.cpp:100
+#: main.cpp:106
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Po lūžimo, nepaleisti automatiškai Plasma apvalkalo iš naujo"
 
-#: main.cpp:103
+#: main.cpp:109
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Priverstinai įkelti nurodytą apvalkalo priedą"
 
-#: main.cpp:108
+#: main.cpp:114
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -65,12 +65,12 @@ msgstr ""
 "Įkelti Plasma apvalkalą kaip atskirą programą, reikalauja, kad būtų nurodyta "
 "„shell-plugin“ parinktis"
 
-#: main.cpp:110
+#: main.cpp:116
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Pakeisti esamą egzempliorių"
 
-#: main.cpp:113
+#: main.cpp:119
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -79,22 +79,22 @@ msgstr ""
 "Įjungia testavimo veikseną ir nurodo testavimo aplinkos nustatymui skirtą "
 "išdėstymo javascript failą"
 
-#: main.cpp:114
+#: main.cpp:120
 #, kde-format
 msgid "file"
 msgstr "failas"
 
-#: main.cpp:118
+#: main.cpp:124
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Išvardija prieinamas naudotojo grįžtamojo ryšio parinktis"
 
-#: main.cpp:218
+#: main.cpp:224
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Nepavyko paleisti Plasma darbalaukio"
 
-#: main.cpp:219
+#: main.cpp:225
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

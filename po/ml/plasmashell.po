@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 02:45+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -36,27 +36,27 @@ msgstr ""
 msgid "Configure Mouse Actions Plugin"
 msgstr "മൗസ് പ്രവർത്തന പ്ലഗിൻ ക്രമീകരിക്കുക"
 
-#: main.cpp:85
+#: main.cpp:91
 #, kde-format
 msgid "Plasma Shell"
 msgstr "പ്ലാസ്മ ഷെൽ"
 
-#: main.cpp:97
+#: main.cpp:103
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML ജാവാസ്ക്രിപ്റ്റ് ഡീബഗ്ഗർ പ്രവർത്തനക്ഷമമാകുക"
 
-#: main.cpp:100
+#: main.cpp:106
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "തകർച്ചക് ശേഷം പ്ലാസ്മ-ഷെൽ വീണ്ടും ആരംഭിക്കാതിരിക്കുക"
 
-#: main.cpp:103
+#: main.cpp:109
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "നിർബന്ധമായി തന്നിരിക്കുന്ന ഷെൽ പ്ലഗിൻ ലോഡ് ചെയുക"
 
-#: main.cpp:108
+#: main.cpp:114
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -65,12 +65,12 @@ msgstr ""
 "പ്ലാസ്മ ഷെൽ ഒരു ഒറ്റയ്ക്കുള്ള അപ്പ്ലിക്കേഷനായി ലോഡ് ചെയുക, ഷെൽ-സംയോജകങ്ങൾ ഐച്ഛികം "
 "പറഞ്ഞിരിക്കണം"
 
-#: main.cpp:110
+#: main.cpp:116
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ഇപ്പോൾ ഉള്ളതിൽ നിന്ന് മാറ്റുക"
 
-#: main.cpp:113
+#: main.cpp:119
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -79,22 +79,22 @@ msgstr ""
 "ടെസ്റ്റ് മോഡ് പ്രവർത്തനക്ഷമമാക്കുകയും ടെസ്റ്റിംഗ് പരിസ്ഥിതി സജ്ജീകരിക്കുന്നതിന് ലേഔട്ട് "
 "ജാവാസ്ക്രിപ്റ്റ് ഫയൽ വ്യക്തമാക്കുകയും ചെയ്യുന്നു"
 
-#: main.cpp:114
+#: main.cpp:120
 #, kde-format
 msgid "file"
 msgstr "ഫയൽ"
 
-#: main.cpp:118
+#: main.cpp:124
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "ഉപയോക്തൃ അഭിപ്രായത്തിനായി ലഭ്യമായ ഓപ്ഷനുകൾ പട്ടികപ്പെടുത്തുന്നു"
 
-#: main.cpp:218
+#: main.cpp:224
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "പ്ലാസ്മ തുടങ്ങുവാൻ സാധിച്ചില്ല"
 
-#: main.cpp:219
+#: main.cpp:225
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

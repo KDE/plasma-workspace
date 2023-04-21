@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-04-21 02:18+0000\n"
 "PO-Revision-Date: 2019-12-05 23:39+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@kubuntu.org"
 
-#: main.cpp:54 view.cpp:45
+#: main.cpp:60 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:54
+#: main.cpp:60
 #, kde-format
 msgid "Run Command interface"
 msgstr "Parancsindító felület"
 
-#: main.cpp:60
+#: main.cpp:66
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "A vágólap tartalmának használata lekérdezésként a KRunnerben"
 
-#: main.cpp:61
+#: main.cpp:67
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "A Krunner indítása a háttérben."
 
-#: main.cpp:62
+#: main.cpp:68
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Meglévő példány cseréje"
 
-#: main.cpp:67
+#: main.cpp:73
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "A futtatandó lekérdezés, csak ha a -c kapcsoló nincs megadva"
