@@ -33,7 +33,12 @@ MediaProxy::MediaProxy(QObject *parent)
 {
     connect(m_dirWatch, &KDirWatch::created, [&](const QString &file) {
             if (file == m_source.toLocalFile()) {
-		Q_EMIT modelImageChanged();
+                if (m_providerType == Provider::Type::Unknown) {
+                    m_source.clear();
+                    setSource(file);
+                }
+                Q_EMIT modelImageChanged();
+                return;
             }
         });
 }
