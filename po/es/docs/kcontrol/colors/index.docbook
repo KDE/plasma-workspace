@@ -1,0 +1,408 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Colores</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-30</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>color</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Colores</title>
+
+<sect2 id="color-scheme">
+  <title
+>Gestión de esquemas de color</title>
+
+  <para
+>This module lets you manage the color schemes on your machine. It shows a list of color schemes shipped with &plasma; and a preview at the top. Only one scheme is active at once, but you may edit schemes. You can remove schemes using <guibutton
+>Remove Scheme</guibutton
+>. Note that system schemes cannot be removed; the button for this action is disabled.</para>
+
+  <para
+>Si dispone de conexión a Internet, también puede obtener esquemas creados por usuarios en <guibutton
+>Obtener nuevos esquemas de color...</guibutton
+>.</para>
+
+  <para
+>También puede instalar esquemas de color de un archivo que haya descargado  u obtenido de otra manera, así como importar los de &kde; 3. Los esquemas de color de &kde; 4 se nombran como &quot;*.colors&quot;. </para>
+
+  <para
+>If <guilabel
+>Apply colors to non-Qt applications</guilabel
+> is checked, Plasma will attempt to export its color scheme so that non-Qt applications will use the same colors. Most applications will honor the exported scheme to varying degrees, though some may have bugs or otherwise not honor the exported scheme. </para>
+
+  <para
+>Note: This documentation will sometimes refer to the &quot;current&quot; scheme, or the &quot;active&quot; scheme. The &quot;current&quot; scheme is the set of colors and color scheme options that was most recently applied, &ie; what you would get if you choose <guibutton
+>Cancel</guibutton
+>. The &quot;active&quot; scheme is the set of colors as has been most recently edited by you, &ie; what you would get if you choose <guibutton
+>Apply</guibutton
+>.</para>
+</sect2>
+
+<sect2>
+  <title
+>Editar o crear esquemas</title>
+  <para
+>To edit or create new schemes select a scheme from the list and press the <guibutton
+>Edit Scheme</guibutton
+> button to open a dialog with three tabs <guilabel
+>Options</guilabel
+>, <guilabel
+>Colors</guilabel
+>, <guilabel
+>Disabled</guilabel
+> and <guilabel
+>Inactive</guilabel
+>. When you have created a scheme you like, you can upload it, reset it or save it under a different name or overwrite the active scheme. </para>
+
+<sect3 id="color-options">
+  <title
+>Opciones de esquema de color</title>
+
+  <para
+>La pestaña <guilabel
+>Opciones</guilabel
+> le permite modificar algunas propiedades sobre la forma de utilizar el esquema de color, y otras que lo modifican de otras maneras distintas a la asignación de colores.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Apply effects to inactive windows</guilabel
+> &mdash; If checked, state effects (see below) will be applied to inactive windows. This can help visually identify active versus inactive windows, and may have aesthetic value, depending on your taste. However, some users feel that it causes distracting &quot;flickering&quot; since windows must be repainted when they become inactive. Unlike desktop effects, color state effects do not require compositing support and will work on all systems, however they will only work on &kde; applications. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Usar colores diferentes para selecciones inactivas</guilabel
+> &mdash; Si está marcada, la selección actual en elementos que no tienen foco de entrada se dibujará con un color diferente. Esto puede ayudar a la identificación visual del elemento con foco de entrada en algunas aplicaciones, especialmente las que muestran varias listas de forma simultánea. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Sombrear columna ordenada en listas</guilabel
+> &mdash; Si está marcada, las listas de varias columnas usarán un color ligeramente diferente para pintar la columna cuya información se utiliza para ordenar los elementos de la lista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Contraste</guilabel
+> &mdash; Este deslizador controla el contraste de los elementos sombreados, como los bordes del marco y los efectos «3D» que usan la mayoría de los estilos. Un valor más bajo proporciona menos contraste y, por lo tanto, bordes más suaves, mientras que un valor más alto hacen que los bordes «destaquen» más. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Colores</title>
+
+  <para
+>La pestaña <guilabel
+>Colores</guilabel
+> le permite cambiar los colores del esquema de color activo.</para>
+
+  <para
+>Crear o cambiar un esquema es solo cuestión de hacer clic en la muestra de la lista de colores y seleccionar un nuevo color. Se recomienda que guarde el esquema cuando haya terminado.</para>
+
+  <para
+>El conjunto de <guilabel
+>Colores comunes</guilabel
+>, que se muestra inicialmente, no es en realidad un «conjunto» en el sentido usado por Plasma (consulte la siguiente sección), pero presenta una serie de roles de color de una manera que facilita la edición del esquema como un todo. Al crear un nuevo esquema de color, seguramente cambiará estos colores primero y usará los otros conjuntos para modificar colores específicos, si es necesario.</para>
+
+  <para
+>Tenga en cuenta que los <guilabel
+>Colores comunes</guilabel
+> hace que estén disponibles los roles de todos los conjuntos. Por ejemplo, «Fondo de la vista» es aquí un atajo para el rol de fondo normal del conjunto de vistas. Además, establecer colores que no se refieran a un conjunto específico cambiará ese color en <emphasis
+>todos</emphasis
+> los conjuntos. (Como excepción, «Texto inactivo» cambiará el color de todos los conjuntos <emphasis
+>excepto</emphasis
+> para la selección; hay un «Texto inactivo de la selección» independiente para el texto inactivo en el conjunto de la selección). Es posible que algunos roles no estén visibles en <guilabel
+>Colores comunes</guilabel
+> y que solo se pueden cambiar (si es necesario) seleccionando el conjunto apropiado.</para>
+
+  <sect4>
+    <title
+>Conjuntos de colores</title>
+
+    <para
+>Plasma 4 divide los esquemas de color en los siguientes conjuntos, basados en el tipo de elemento de la interfaz de usuario:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Vista</guilabel
+> &mdash; elementos para presentar información, como listas, árboles, cuadros de texto, etc. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Ventana</guilabel
+> &mdash; elementos de ventana que no son botones ni vistas. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Botón</guilabel
+> &mdash; botones y elementos similares. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Selección</guilabel
+> &mdash; texto y elementos seleccionados. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Ayuda emergente</guilabel
+> &mdash; ayudas emergentes, informaciones «¿Qué es esto?» y elementos similares. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementario</guilabel
+> &mdash; Áreas de aplicaciones con un esquema de color alternativo; generalmente con un fondo oscuro para esquemas de colores claros. Ejemplos de áreas con este esquema de color invertido son la interfaz del cierre de sesión, la pantalla de bloqueo y el modo de pantalla completa para algunas aplicaciones. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Cada conjunto contiene una serie de roles de color. Cada conjunto tiene los mismos roles. Todos los colores están asociados con uno de los conjuntos anteriores.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Roles de color</title>
+
+    <para
+>Cada conjunto de colores se compone de una serie de roles que están disponibles en todos los demás conjuntos. Además del texto normal y del fondo normal, dichos roles son los siguientes:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Fondo alternativo: se usa cuando es necesario cambiar sutilmente el fondo para favorecer la asociación de elementos. Se podría usar, por ejemplo, como fondo de un encabezado, aunque se usa principalmente para alternar filas en las listas, especialmente en las listas de varias columnas, para favorecer el seguimiento visual de las filas. </para
+></listitem>
+      <listitem
+><para
+>Texto del enlace: se usa para hipervínculos o para indicar de otro modo «algo que se puede visitar», o para mostrar relaciones. </para
+></listitem>
+      <listitem
+><para
+>Texto visitado: se usa para «algo (por ejemplo, un hipervínculo) que ha sido visitado», o para indicar algo que es «antiguo». </para
+></listitem>
+      <listitem
+><para
+>Texto activo &mdash; usado para señalar un elemento activo o que atrae la atención, como alertas, notificaciones; también para hipervínculos sobre los que se pasa el ratón. </para
+></listitem>
+      <listitem
+><para
+>Texto inactivo: se usa para texto que debe ser discreto (por ejemplo, comentarios), «subtítulos», información sin importancia, etc. </para
+></listitem>
+      <listitem
+><para
+>Texto negativo: se usa para errores, avisos de fallos, notificaciones sobre una acción que puede ser peligrosa (por ejemplo, una página web insegura o un contexto de seguridad), etc. </para
+></listitem>
+      <listitem
+><para
+>Texto neutro: se usa para llamar la atención cuando otro rol no es apropiado (por ejemplo, advertencias, para indicar contenido seguro o cifrado, etc.). </para
+></listitem>
+      <listitem
+><para
+>Texto positivo: se usa para avisos de éxito, para indicar contenido fiable, etc. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Además de los roles de texto, existen varios roles «decorativos» adicionales que se usan para dibujar líneas o sombrear elementos de la interfaz de usuario (aunque los anteriores también se pueden usar, en circunstancias apropiadas, para este propósito, los siguientes <emphasis
+>no</emphasis
+> son específicamente indicados para dibujar texto). Son los siguientes:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Decoración del foco: se usa para indicar el elemento que tiene el foco de entrada activo. </para
+></listitem>
+      <listitem
+><para
+>Decoración flotante: se usa para los efectos que se muestran al situar el ratón sobre algo (por ejemplo, los efectos de «iluminación» de los botones). </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Además, a excepción del texto inactivo, existe un rol de fondo correspondiente para cada uno de los roles de texto. Actualmente (excepto para el fondo normal y el fondo alternativo), el usuario no puede elegir estos colores, sino que se determinan automáticamente según el fondo normal y el color de texto correspondiente. Se puede mostrar una vista previa de estos colores seleccionando uno de los conjuntos que no sea «Colores comunes».</para>
+
+    <para
+>La elección del papel del color se deja al desarrollador; las anteriores son pautas destinadas a representar el uso típico.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Colores del gestor de ventanas</title>
+
+    <para
+>Como se ha indicado anteriormente, el conjunto «Gestor de ventanas» tiene sus propios roles, independientes de los de otros conjuntos. En la actualidad, solo se puede acceder a ellos a través de los <guilabel
+>Colores comunes</guilabel
+>, y son los siguientes:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Barra de título activa: se usa para dibujar el fondo de la barra de título, los bordes y las decoraciones de la ventana activa (es decir, la que tiene el foco de entrada). No todas las decoraciones de ventanas usarán esto de la misma manera, y algunas incluso pueden usar el fondo normal del conjunto «Ventana» para dibujar la barra de título. </para
+></listitem>
+      <listitem
+><para
+>Texto de la barra de título activa: se usa para dibujar el texto de la barra de título cuando se usa «Barra de título activa» para dibujar el fondo de la barra de título. También se puede usar para otros elementos de primer plano que usan la «Barra de título activa» como fondo. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Los roles de la «Barra de título inactiva» [Texto] son los mismos que los anteriores, pero para ventanas inactivas, en lugar de para ventanas activas.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Color State Effects</title>
+
+  <para
+>Color state effects are applied to interface elements in the inactive (windows that do not have focus; only if <guilabel
+>Apply inactive window color effects</guilabel
+> is enabled) or disabled states. By changing the effects, the appearance of elements in these states can be changed. Usually, inactive elements will have reduced contrast (text fades slightly into the background) and may have slightly reduced intensity, while disabled elements will have strongly reduced contrast and are often notably darker or lighter. </para>
+
+  <para
+>Three types of effect may be applied to each state (with the effects of the two states being independent). These are Intensity, Color and Contrast. The first two (Intensity, Color) control the overall color, while the last (Contrast) deals with the foreground colors relative to the background.</para>
+
+  <sect4>
+    <title
+>Intensidad</title>
+
+    <para
+>La intensidad permite aclarar u oscurecer el color general. Si posiciona el deslizador en el centro no se producirá ningún cambio. Los efectos disponibles son:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Sombrear: aclara o oscurece todo de forma controlada. Cada «marca» del deslizador aumenta o disminuye la intensidad general (es decir, el brillo percibido) en una cantidad absoluta. </para
+></listitem>
+      <listitem
+><para
+>Oscurecer: cambia la intensidad a un porcentaje del valor inicial. Un ajuste del deslizador a mitad de camino entre el centro y el máximo da como resultado un color la mitad de intenso que el original. El mínimo da un color el doble de intenso que el original. </para
+></listitem>
+      <listitem
+><para
+>Aclarar: es, conceptualmente, lo contrario de «Oscurecer»; se puede pensar que «Aclarar» funciona como «distancia del blanco», mientras que «Oscurecer» funciona como «distancia del negro». El mínimo es un color el doble de «lejos» del blanco que el original; mientras que a mitad de camino entre el centro y el máximo, da una intensidad a mitad de camino entre el color original y el blanco. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Color</title>
+
+    <para
+>El «Color» también cambia el color general, pero no se limita a la intensidad. Los efectos disponibles son:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Desaturar: cambia el croma relativo. El ajuste medio no produce cambios; el máximo da un gris cuya intensidad perceptible es igual a la del color original. Los ajustes más bajos aumentan el croma, dando un color que es menos gris o más «vibrante» que el original. </para
+></listitem>
+      <listitem
+><para
+>Fade &mdash; smoothly blends the original color into a reference color. The minimum setting on the slider produces no change; maximum gives the reference color. </para
+></listitem>
+      <listitem
+><para
+>Tintar: similar a «Desvanecer», excepto que el color (tono y croma) cambia más rápidamente, mientras que la intensidad cambia más lentamente a medida que aumenta el valor del deslizador. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Contraste</title>
+
+    <para
+>Los efectos de contraste son similares a los efectos de color, excepto que se aplican al texto, usando el color de fondo como color de referencia, y que la desaturación no está disponible. «Desvanecer» produce texto que «desaparece» más rápido, aunque mantiene su color durante más tiempo, mientras que «Tintar» produce texto que cambia de color para que coincida con el fondo más rápidamente mientras mantiene un mayor contraste de intensidad durante más tiempo (donde «más» significa un ajuste más alto del deslizador). Para los efectos de «Contraste», un ajuste mínimo del deslizador no produce ningún cambio, mientras que el máximo hace que el texto desaparezca por completo en el fondo.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->
