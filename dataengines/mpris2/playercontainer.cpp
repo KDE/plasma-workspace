@@ -264,6 +264,7 @@ void PlayerContainer::copyProperty(const QString &propName, const QVariant &_val
 
 void PlayerContainer::updateFromMap(const QVariantMap &map, UpdateType updType)
 {
+    const auto oldCaps = m_caps;
     QMap<QString, QVariant>::const_iterator i = map.constBegin();
     while (i != map.constEnd()) {
         QVariant::Type type = expPropType(i.key());
@@ -301,6 +302,10 @@ void PlayerContainer::updateFromMap(const QVariantMap &map, UpdateType updType)
             }
         }
         ++i;
+    }
+
+    if (m_caps != oldCaps) {
+        Q_EMIT capsChanged(m_caps);
     }
 }
 

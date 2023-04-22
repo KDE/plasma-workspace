@@ -24,6 +24,7 @@ PlayerControl::PlayerControl(PlayerContainer *container, QObject *parent)
     setName(QStringLiteral("mpris2"));
     setDestination(container->objectName());
 
+    connect(container, &PlayerContainer::capsChanged, this, &PlayerControl::updateEnabledOperations);
     connect(container, &Plasma::DataContainer::dataUpdated, this, &PlayerControl::updateEnabledOperations);
     connect(container, &QObject::destroyed, this, &PlayerControl::containerDestroyed);
     updateEnabledOperations();
