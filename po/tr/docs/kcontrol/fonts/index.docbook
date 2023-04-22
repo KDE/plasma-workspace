@@ -205,7 +205,7 @@
 >Aralığı kenar yumuşatma dışında bırak</guilabel
 > onay kutusuna bir işaret koymak, hangi yazıtipi aralığının kenar yumuşatma <emphasis
 >yapmayacağını</emphasis
-> belirtmenize olanak tanır. Bu aralık, aşağıdaki iki açılan kutu ile belirtilir.</para>
+> belirtmenize olanak tanır. Bu aralık, aşağıdaki iki çoklu kutu ile belirtilir.</para>
 
 <para
 >Ayrıca yazıtipleriniz için bir kenar yumuşatma görünümü oluşturma yöntemini ve ne kadar güçlü görünmesi gerektiğini <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
