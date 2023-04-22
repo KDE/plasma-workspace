@@ -410,7 +410,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);
 
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
+    addSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:"));
 }
 
 ServiceRunner::~ServiceRunner() = default;

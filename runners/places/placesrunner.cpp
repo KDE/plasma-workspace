@@ -25,9 +25,8 @@ PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Places"));
-    KRunner::RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));
-    addSyntax(defaultSyntax);
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
+    addSyntax(i18n("places"), i18n("Lists all file manager locations"));
+    addSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:"));
 
     // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
     // otherwise crashes ensue

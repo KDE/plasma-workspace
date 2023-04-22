@@ -32,8 +32,8 @@ BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaDat
     , m_browserFactory(new BrowserFactory(this))
 {
     setObjectName(QStringLiteral("Bookmarks"));
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));
-    addSyntax(KRunner::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks")));
+    addSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:."));
+    addSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks"));
 
     connect(this, &KRunner::AbstractRunner::prepare, this, &BookmarksRunner::prep);
     setMinLetterCount(3);

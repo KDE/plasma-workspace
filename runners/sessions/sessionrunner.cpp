@@ -23,61 +23,37 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLogout()) {
-        KRunner::RunnerSyntax logoutSyntax(m_logoutKeywords.first(), i18n("Logs out, exiting the current desktop session"));
-        for (QString keyword : m_logoutKeywords.mid(1)) {
-            logoutSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(logoutSyntax);
+        addSyntax(m_logoutKeywords, i18n("Logs out, exiting the current desktop session"));
     }
 
     m_shutdownKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to shut down the computer", "shutdown;shut down")
                              .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canShutdown()) {
-        KRunner::RunnerSyntax shutdownSyntax(m_shutdownKeywords.first(), i18n("Turns off the computer"));
-        for (QString keyword : m_shutdownKeywords.mid(1)) {
-            shutdownSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(shutdownSyntax);
+        addSyntax(m_shutdownKeywords, i18n("Turns off the computer"));
     }
 
     m_restartKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to restart the computer", "restart;reboot")
                             .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canReboot()) {
-        KRunner::RunnerSyntax restartSyntax(m_restartKeywords.first(), i18n("Reboots the computer"));
-        for (QString keyword : m_restartKeywords.mid(1)) {
-            restartSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(restartSyntax);
+        addSyntax(m_restartKeywords, i18n("Reboots the computer"));
     }
 
     m_lockKeywords =
         i18nc("KRunner keywords (split by semicolons without whitespace) to lock the screen", "lock;lock screen").split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLock()) {
-        KRunner::RunnerSyntax lockSyntax(m_lockKeywords.first(), i18n("Locks the current sessions and starts the screen saver"));
-        for (QString keyword : m_lockKeywords.mid(1)) {
-            lockSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(lockSyntax);
+        addSyntax(m_lockKeywords, i18n("Locks the current sessions and starts the screen saver"));
     }
 
     m_saveKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to save the desktop session", "save;save session")
                          .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canSaveSession()) {
-        KRunner::RunnerSyntax saveSyntax(m_saveKeywords.first(), i18n("Saves the current session for session restoration"));
-        for (QString keyword : m_saveKeywords.mid(1)) {
-            saveSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(saveSyntax);
+        addSyntax(m_saveKeywords, i18n("Saves the current session for session restoration"));
     }
 
     m_usersKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to switch user sessions", "switch user;new session")
                           .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canSwitchUser()) {
-        KRunner::RunnerSyntax usersSyntax(m_usersKeywords.first(), i18n("Starts a new session as a different user"));
-        for (QString keyword : m_usersKeywords.mid(1)) {
-            usersSyntax.addExampleQuery(keyword);
-        }
-        addSyntax(usersSyntax);
+        addSyntax(m_usersKeywords, i18n("Starts a new session as a different user"));
     }
 
     m_sessionsKeyword = i18nc("KRunner keyword to list user sessions", "sessions");
@@ -85,9 +61,8 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     addSyntax(sessionsSyntax);
 
     m_switchKeyword = i18nc("KRunner keyword to switch user sessions", "switch");
-    KRunner::RunnerSyntax switchSyntax(m_switchKeyword + QStringLiteral(" :q:"),
-                                       i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
-    addSyntax(switchSyntax);
+    addSyntax(m_switchKeyword + QStringLiteral(" :q:"),
+              i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
 
     setMinLetterCount(3);
 }

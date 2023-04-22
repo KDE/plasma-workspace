@@ -32,10 +32,10 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     QString description = i18n(
         "Calculates the value of :q: when :q: is made up of numbers and "
         "mathematical symbols such as +, -, /, *, ! and ^.");
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), description));
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral("=:q:"), description));
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:="), description));
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral("sqrt(4)"), i18n("Enter a common math function")));
+    addSyntax(QStringLiteral(":q:"), description);
+    addSyntax(QStringLiteral("=:q:"), description);
+    addSyntax(QStringLiteral(":q:="), description);
+    addSyntax(QStringLiteral("sqrt(4)"), i18n("Enter a common math function"));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), this)};
     setMinLetterCount(2);

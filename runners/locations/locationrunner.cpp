@@ -29,8 +29,7 @@ LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaDat
 {
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));
-    addSyntax(
-        KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
+    addSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:."));
 }
 
 LocationsRunner::~LocationsRunner()

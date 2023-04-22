@@ -31,7 +31,7 @@ InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaDat
     // We want to give the other runners time to check if there are matching applications already installed
     setPriority(AbstractRunner::LowestPriority);
 
-    addSyntax(KRunner::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
+    addSyntax(":q:", i18n("Looks for non-installed components according to :q:"));
     setMinLetterCount(3);
 }
 

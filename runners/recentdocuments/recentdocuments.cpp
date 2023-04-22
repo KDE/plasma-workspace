@@ -33,7 +33,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 {
     setObjectName(QStringLiteral("Recent Documents"));
 
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
+    addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this)};
     setMinLetterCount(3);

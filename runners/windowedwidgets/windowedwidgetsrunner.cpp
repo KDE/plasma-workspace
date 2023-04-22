@@ -27,9 +27,8 @@ WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaD
     setObjectName(QStringLiteral("WindowedWidgets"));
     setPriority(AbstractRunner::HighestPriority);
 
-    addSyntax(KRunner::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
-    addSyntax(KRunner::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"),
-                                    i18n("list all Plasma widgets that can run as standalone applications")));
+    addSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:"));
+    addSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications"));
     setMinLetterCount(3);
     connect(this, &AbstractRunner::teardown, this, [this]() {
         m_applets.clear();

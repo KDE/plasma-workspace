@@ -61,13 +61,11 @@ void PowerDevilRunner::updateSyntaxes()
         addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Suspends the system to disk"));
     }
 
-    KRunner::RunnerSyntax brightnessSyntax(
-        i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
-        // xgettext:no-c-format
-        i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
-             "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
-    brightnessSyntax.addExampleQuery(i18nc("Note this is a KRunner keyword", "dim screen"));
-    addSyntax(brightnessSyntax);
+    addSyntax(QStringList{i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
+                          i18nc("Note this is a KRunner keyword", "dim screen")},
+              // xgettext:no-c-format
+              i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
+                   "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
 }
 
 PowerDevilRunner::~PowerDevilRunner()
@@ -205,11 +203,11 @@ bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keyword
 
 void PowerDevilRunner::addSyntaxForKeyword(const QList<RunnerKeyword> &keywords, const QString &description)
 {
-    KRunner::RunnerSyntax syntax(keywords.first().translatedTriggerWord, description);
-    for (int i = 1; i < keywords.size(); ++i) {
-        syntax.addExampleQuery(keywords.at(i).translatedTriggerWord);
+    QStringList exampleQueries;
+    for (const auto &keyword : keywords) {
+        exampleQueries << keyword.translatedTriggerWord;
     }
-    addSyntax(syntax);
+    addSyntax(exampleQueries, description);
 }
 
 int PowerDevilRunner::matchesScreenBrightnessKeywords(const QString &query) const
