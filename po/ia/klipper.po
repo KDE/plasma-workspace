@@ -687,7 +687,7 @@ msgid ""
 msgstr ""
 "Contento selectionate con le cursor es automaticamente copiate in le area de "
 "transferentia assi que illo pote esser collate o con un action de Collar o "
-"con un click in le medie.<br/><href=\"1\">Plus re le selection e area de "
+"con un click in le medie.<br/><a href=\"1\">Plus re le selection e area de "
 "transferentia</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
