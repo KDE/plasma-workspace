@@ -20,9 +20,6 @@ if(AppStreamQt_FOUND)
     add_subdirectory(appstream)
 endif()
 
-if(NOT WIN32)
- add_subdirectory(powerdevil)
- add_subdirectory(sessions)
- add_subdirectory(kill)
-endif()
-#
+add_subdirectory(powerdevil)
+add_subdirectory(sessions)
+add_subdirectory(kill)
