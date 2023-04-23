@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-23 03:28+0000\n"
 "PO-Revision-Date: 2010-11-12 09:11+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -186,9 +186,15 @@ msgstr "ប្រអប់​ធីក"
 msgid "Radio button"
 msgstr "ប៊ូតុង​មូល"
 
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr ""
+
 #  i18n: file stylepreview.ui line 269
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:133
+#: stylepreview.ui:136
 #, kde-format
 msgid "Tab 2"
 msgstr "ផ្ទាំង ២"
