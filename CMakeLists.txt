@@ -38,13 +38,18 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network Core5Compat)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons ActivitiesStats Activities KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor
                     OPTIONAL_COMPONENTS DocTools)
+
+if (BUILD_TESTING)
+    include(ECMAddTests)
+    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test QuickTest)
+endif()
 
 find_package(KF6KDED CONFIG REQUIRED)
 find_package(KPipeWire CONFIG)

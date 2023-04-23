@@ -1,5 +1,3 @@
-include(ECMAddTests)
-
 set(samplewidgetwindowExecutablePath ${CMAKE_BINARY_DIR}/bin/samplewidgetwindow)
 configure_file(
     ${CMAKE_CURRENT_SOURCE_DIR}/data/windows/samplewidgetwindow.h.in

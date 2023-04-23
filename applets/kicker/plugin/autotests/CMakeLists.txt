@@ -1,10 +1,3 @@
-find_package(Qt${QT_MAJOR_VERSION}QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
-
-if(NOT TARGET Qt::QuickTest)
-    message(STATUS "Qt6QuickTest not found, autotests will not be built.")
-    return()
-endif()
-
 add_executable(qmltest qmltest.cpp)
 target_link_libraries(qmltest Qt::QuickTest)
 
@@ -27,8 +20,6 @@ endmacro()
 qtquick_add_tests(
     tst_triangleFilter
 )
-
-include(ECMAddTests)
 
 ecm_add_test(
     testrunnermodel.cpp

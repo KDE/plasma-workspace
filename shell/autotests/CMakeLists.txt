@@ -1,7 +1,5 @@
 add_subdirectory(mockserver)
 
-include(ECMAddTests)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 MACRO(PLASMASHELL_UNIT_TESTS)

@@ -4,7 +4,6 @@
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(Threads REQUIRED)
-include(ECMAddTests)
 
 ecm_add_test(servicerunnertest.cpp TEST_NAME servicerunnertest
     LINK_LIBRARIES Qt::Test Qt::Gui krunner_services_static Threads::Threads)

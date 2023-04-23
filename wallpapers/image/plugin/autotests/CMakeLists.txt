@@ -1,8 +1,6 @@
 include(ECMMarkAsTest)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS QuickTest)
-
 # ImageFinder test
 ecm_add_test(test_imagefinder.cpp TEST_NAME testimagefinder
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
