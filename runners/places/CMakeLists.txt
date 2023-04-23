@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_placesrunner\")
 
 kcoreaddons_add_plugin(krunner_placesrunner SOURCES placesrunner.h placesrunner.cpp INSTALL_NAMESPACE "kf6/krunner")

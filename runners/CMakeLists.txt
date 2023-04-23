@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: BSD-2-Clause
 if(KF6Baloo_FOUND)
  add_subdirectory(baloo)
 endif()

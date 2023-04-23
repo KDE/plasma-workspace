@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
+# SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_kill\")
 
 kcoreaddons_add_plugin(kcm_krunner_kill SOURCES killrunner_config.h killrunner_config.cpp INSTALL_NAMESPACE "kf6/krunner/kcms")
