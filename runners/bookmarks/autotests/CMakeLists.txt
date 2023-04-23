@@ -3,14 +3,7 @@
 
 include(ECMAddTests)
 
-ecm_add_test(chrome/testchromebookmarks.cpp TEST_NAME testChromeBookmarks
+ecm_add_tests(chrome/testchromebookmarks.cpp firefox/testfirefoxbookmarks.cpp bookmarksmatchtest.cpp
     LINK_LIBRARIES Qt::Test krunner_bookmarks_common
 )
 
-ecm_add_test(firefox/testfirefoxbookmarks.cpp TEST_NAME testFirefoxBookmarks
-    LINK_LIBRARIES Qt::Test krunner_bookmarks_common
-)
-
-ecm_add_test(bookmarksmatchtest.cpp TEST_NAME testBookmarksMatch
-    LINK_LIBRARIES Qt::Test krunner_bookmarks_common
-)

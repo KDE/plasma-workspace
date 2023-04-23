@@ -1,11 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_locations\")
 
-set(krunner_locations_SRCS
-    locationrunner.cpp
-    locationrunner.h
-)
-
-kcoreaddons_add_plugin(locations SOURCES ${krunner_locations_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
+kcoreaddons_add_plugin(locations SOURCES locationrunner.h locationrunner.cpp INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(locations
     KF6::KIOCore
     KF6::KIOWidgets

@@ -17,10 +17,7 @@ target_link_libraries(baloorunner
   Qt::DBus
 )
 
-install(
-  TARGETS baloorunner
-  DESTINATION ${KDE_INSTALL_LIBEXECDIR}
-)
+install(TARGETS baloorunner DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
 install(
   FILES plasma-runner-baloosearch.desktop
@@ -28,9 +25,9 @@ install(
 )
 
 ecm_generate_dbus_service_file(NAME org.kde.runners.baloo
-                                                           EXECUTABLE ${KDE_INSTALL_FULL_LIBEXECDIR}/baloorunner
-                                                           SYSTEMD_SERVICE plasma-baloorunner.service
-                                                           DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
+    EXECUTABLE ${KDE_INSTALL_SYSTEMDUSERUNITDIR_FULL_LIBEXECDIR}/baloorunner
+    SYSTEMD_SERVICE plasma-baloorunner.service
+    DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
+)
 
-ecm_install_configured_files(INPUT plasma-baloorunner.service.in @ONLY DESTINATION
-        ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+ecm_install_configured_files(INPUT plasma-baloorunner.service.in @ONLY DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})

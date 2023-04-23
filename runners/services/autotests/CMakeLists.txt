@@ -8,4 +8,3 @@ include(ECMAddTests)
 
 ecm_add_test(servicerunnertest.cpp TEST_NAME servicerunnertest
     LINK_LIBRARIES Qt::Test Qt::Gui krunner_services_static Threads::Threads)
-set_target_properties(servicerunnertest PROPERTIES CXX_STANDARD 17) # std::optional
