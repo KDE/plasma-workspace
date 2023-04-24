@@ -18,8 +18,13 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.digitalclock 1.0
 
 // Top-level layout containing:
-// - Left column with world clock and agenda view
-// - Right column with current date header and calendar
+// - Leading column with world clock and agenda view
+// - Trailing column with current date header and calendar
+//
+// Trailing column fills exactly half of the popup width, then there's 1
+// logical pixel wide separator, and the rest is left for the Leading.
+// Representation's header is intentionally zero-sized, because Calendar view
+// brings its own header, and there's currently no other way to stack them.
 PlasmaExtras.Representation {
     id: calendar
 
@@ -36,7 +41,7 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
-    readonly property int paddings: PlasmaCore.Units.smallSpacing
+    readonly property int paddings: PlasmaCore.Units.smallSpacing * 2
     readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
@@ -56,114 +61,100 @@ PlasmaExtras.Representation {
         }
     }
 
-    header: Item {
-        PlasmaExtras.PlasmoidHeading {
-            width: Math.round(parent.width / 2) - monthView.anchors.leftMargin
-            visible: eventHeader.visible
-
-            anchors {
-                left: eventHeader.left
-                top: eventHeader.top
-                bottom: eventHeader.bottom
-            }
-        }
-
-        // Agenda view header
-        // -----------------
-        ColumnLayout {
-            id: eventHeader
-
-            anchors.left: parent.left
-            width: visible ? parent.width / 2 - 1 : 0
-            height: visible ? monthView.viewHeader.height : 0
-            spacing: 0
-
-            visible: calendar.showAgenda || calendar.showClocks
-
-            PlasmaExtras.Heading {
-                Layout.alignment: Qt.AlignTop
-                Layout.fillWidth: true
-                Layout.leftMargin: calendar.paddings // Match calendar title
-
-                text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
-            }
-
-            PlasmaComponents3.Label {
-                visible: monthView.currentDateAuxilliaryText.length > 0
-                Layout.leftMargin: calendar.paddings
-                font.pixelSize: PlasmaCore.Theme.smallestFont.pixelSize
-                text: monthView.currentDateAuxilliaryText
-            }
-
-            RowLayout {
-                Layout.alignment: Qt.AlignBottom
-                Layout.bottomMargin: Math.round(PlasmaCore.Units.smallSpacing * 1.5)
-                // Heading text
-                PlasmaExtras.Heading {
-                    visible: agenda.visible
-
-                    Layout.fillWidth: true
-                    Layout.leftMargin: calendar.paddings
-
-                    level: 2
-
-                    text: i18n("Events")
-                    maximumLineCount: 1
-                    elide: Text.ElideRight
-                }
-                PlasmaComponents3.ToolButton {
-                    id: addEventButton
-
-                    visible: agenda.visible && ApplicationIntegration.calendarInstalled
-                    text: i18nc("@action:button Add event", "Add…")
-                    Layout.rightMargin: calendar.paddings
-                    icon.name: "list-add"
-
-                    Accessible.description: i18nc("@info:tooltip", "Add a new event")
-                    KeyNavigation.down: KeyNavigation.tab
-                    KeyNavigation.right: monthView.viewHeader.tabBar
-
-                    onClicked: ApplicationIntegration.launchCalendar()
-                    KeyNavigation.tab: calendar.showAgenda && holidaysList.count ? holidaysList : holidaysList.KeyNavigation.down
-                }
-            }
-        }
-        // Vertical separator line between columns
-        // =======================================
-        PlasmaCore.SvgItem {
-            id: headerSeparator
-            anchors.left: eventHeader.right
-            anchors.bottomMargin: PlasmaCore.Units.smallSpacing * 2
-            width: visible ? 1 : 0
-            height: monthView.viewHeader.height - PlasmaCore.Units.smallSpacing * 2
-            visible: eventHeader.visible
-
-            elementId: "vertical-line"
-            svg: PlasmaCore.Svg {
-                imagePath: "widgets/line"
-            }
-        }
-    }
-
     PlasmaCalendar.EventPluginsManager {
         id: eventPluginsManager
         enabledPlugins: Plasmoid.configuration.enabledCalendarPlugins
     }
 
-    // Left column containing agenda view and time zones
+    // Having this in place helps preserving top margins for Pin and Configure
+    // buttons somehow. Actual headers are spread across leading and trailing
+    // columns.
+    header: Item {}
+
+    // Leading column containing agenda view and time zones
     // ==================================================
     ColumnLayout {
-        id: leftColumn
+        id: leadingColumn
 
         visible: calendar.showAgenda || calendar.showClocks
-        width: parent.width / 2 - 1
+
         anchors {
-            left: parent.left
             top: parent.top
+            left: parent.left
+            right: mainSeparator.left
             bottom: parent.bottom
-            topMargin: monthView.viewHeader.height
         }
 
+        spacing: 0
+
+        PlasmaExtras.PlasmoidHeading {
+            Layout.fillWidth: true
+            Layout.preferredHeight: monthView.viewHeader.height
+
+            // Agenda view header
+            // -----------------
+            contentItem: ColumnLayout {
+                spacing: 0
+
+                PlasmaExtras.Heading {
+                    Layout.alignment: Qt.AlignTop
+                    // Match calendar title
+                    Layout.leftMargin: calendar.paddings
+                    Layout.rightMargin: calendar.paddings
+                    Layout.fillWidth: true
+
+                    text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
+                }
+
+                PlasmaComponents3.Label {
+                    visible: monthView.currentDateAuxilliaryText.length > 0
+
+                    Layout.leftMargin: calendar.paddings
+                    Layout.rightMargin: calendar.paddings
+                    Layout.fillWidth: true
+
+                    font.pixelSize: PlasmaCore.Theme.smallestFont.pixelSize
+                    text: monthView.currentDateAuxilliaryText
+                }
+
+                RowLayout {
+                    spacing: PlasmaCore.Units.smallSpacing
+
+                    Layout.alignment: Qt.AlignBottom
+                    Layout.bottomMargin: Math.round(PlasmaCore.Units.smallSpacing * 1.5)
+
+                    // Heading text
+                    PlasmaExtras.Heading {
+                        visible: agenda.visible
+
+                        Layout.fillWidth: true
+                        Layout.leftMargin: calendar.paddings
+                        Layout.rightMargin: calendar.paddings
+
+                        level: 2
+
+                        text: i18n("Events")
+                        maximumLineCount: 1
+                        elide: Text.ElideRight
+                    }
+                    PlasmaComponents3.ToolButton {
+                        id: addEventButton
+
+                        visible: agenda.visible && ApplicationIntegration.calendarInstalled
+                        text: i18nc("@action:button Add event", "Add…")
+                        Layout.rightMargin: PlasmaCore.Units.smallSpacing
+                        icon.name: "list-add"
+
+                        Accessible.description: i18nc("@info:tooltip", "Add a new event")
+                        KeyNavigation.down: KeyNavigation.tab
+                        KeyNavigation.right: monthView.viewHeader.tabBar
+
+                        onClicked: ApplicationIntegration.launchCalendar()
+                        KeyNavigation.tab: calendar.showAgenda && holidaysList.count ? holidaysList : holidaysList.KeyNavigation.down
+                    }
+                }
+            }
+        }
 
         // Agenda view itself
         Item {
@@ -278,8 +269,9 @@ PlasmaExtras.Representation {
                     delegate: PlasmaComponents3.ItemDelegate {
                         id: eventItem
                         width: holidaysList.width
-                        padding: calendar.paddings
-                        leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
+
+                        leftPadding: calendar.paddings
+
                         text: eventTitle.text
                         hoverEnabled: true
                         highlighted: ListView.isCurrentItem
@@ -389,7 +381,7 @@ PlasmaExtras.Representation {
 
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: holidaysView
-                width: holidaysView.width - (PlasmaCore.Units.largeSpacing * 8)
+                width: holidaysView.width - (PlasmaCore.Units.gridUnit * 8)
 
                 visible: holidaysList.count == 0
 
@@ -417,13 +409,20 @@ PlasmaExtras.Representation {
         // Header text + button to change time & timezone
         PlasmaExtras.PlasmoidHeading {
             visible: worldClocks.visible
+
+            // Normally gets some positive/negative values from base component.
+            topInset: 0
+            topPadding: PlasmaCore.Units.smallSpacing
+
             leftInset: 0
             rightInset: 0
-            rightPadding: PlasmaCore.Units.smallSpacing
+            leftPadding: mirrored ? PlasmaCore.Units.smallSpacing : calendar.paddings
+            rightPadding: mirrored ? calendar.paddings : PlasmaCore.Units.smallSpacing
 
             contentItem: RowLayout {
+                spacing: PlasmaCore.Units.smallSpacing
+
                 PlasmaExtras.Heading {
-                    Layout.leftMargin: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
                     Layout.fillWidth: true
 
                     level: 2
@@ -513,10 +512,11 @@ PlasmaExtras.Representation {
                 delegate: PlasmaComponents3.ItemDelegate {
                     id: listItem
                     readonly property bool isCurrentTimeZone: modelData === Plasmoid.configuration.lastSelectedTimezone
-                    width: clocksList.width
-                    padding: calendar.paddings
-                    leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
-                    rightPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
+                    width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
+
+                    leftPadding: calendar.paddings
+                    rightPadding: calendar.paddings
+
                     highlighted: ListView.isCurrentItem
                     Accessible.name: root.nameForZone(modelData)
                     Accessible.description: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
@@ -524,6 +524,7 @@ PlasmaExtras.Representation {
 
                     contentItem: RowLayout {
                         PlasmaComponents3.Label {
+                            Layout.fillWidth: true
                             text: root.nameForZone(modelData)
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             maximumLineCount: 1
@@ -531,7 +532,6 @@ PlasmaExtras.Representation {
                         }
 
                         PlasmaComponents3.Label {
-                            Layout.fillWidth: true
                             horizontalAlignment: Qt.AlignRight
                             text: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
@@ -548,13 +548,18 @@ PlasmaExtras.Representation {
     // =======================================
     PlasmaCore.SvgItem {
         id: mainSeparator
-        visible: leftColumn.visible
+
         anchors {
-            right: monthViewWrapper.left
             top: parent.top
+            right: monthViewWrapper.left
             bottom: parent.bottom
+            // Stretch all the way to the top of a dialog. This magic comes
+            // from PlasmaCore.Dialog::margins and CompactApplet containment.
+            topMargin: calendar.parent ? -calendar.parent.y : 0
         }
-        width: 1
+
+        width: naturalSize.width
+        visible: calendar.showAgenda || calendar.showClocks
 
         elementId: "vertical-line"
         svg: PlasmaCore.Svg {
@@ -562,14 +567,19 @@ PlasmaExtras.Representation {
         }
     }
 
-    // Right column containing calendar
+    // Trailing column containing calendar
     // ===============================
     FocusScope {
         id: monthViewWrapper
-        width: calendar.showAgenda || calendar.showClocks ? parent.width / 2 : parent.width
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
+
+        anchors {
+            top: parent.top
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        // Not anchoring to horizontalCenter to avoid sub-pixel misalignments
+        width: (calendar.showAgenda || calendar.showClocks) ? Math.round(parent.width / 2) : parent.width
 
         onActiveFocusChanged: if (activeFocus) {
             monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
