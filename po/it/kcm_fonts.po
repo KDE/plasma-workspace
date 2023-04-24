@@ -7,7 +7,7 @@
 # Leonardo Finetti <finex@finex.org>, 2007, 2008, 2010, 2012.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2017, 2018, 2020, 2021, 2022, 2023.
-# Paolo Zamponi <zapaolo@email.it>, 2018, 2019, 2022.
+# Paolo Zamponi <feus73@gmail.com>, 2018, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
