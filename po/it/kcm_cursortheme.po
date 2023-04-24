@@ -4,7 +4,7 @@
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
 # Nicola Ruggero <nicola@nxnt.org>, 2010, 2011, 2012.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2015, 2020, 2021, 2022, 2023.
-# Paolo Zamponi <zapaolo@email.it>, 2018, 2019.
+# Paolo Zamponi <feus73@gmail.com>, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"

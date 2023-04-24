@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-24 02:40+0000\n"
 "PO-Revision-Date: 2021-06-08 22:41-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -195,7 +195,7 @@ msgstr "ਅਕਸਰ ਵਰਤੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ"
 msgid "Power / Session"
 msgstr "ਪਾਵਰ / ਸ਼ੈਸ਼ਨ"
 
-#: plugin/runnermodel.cpp:231
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "ਖੋਜ ਦੇ ਨਤੀਜੇ"

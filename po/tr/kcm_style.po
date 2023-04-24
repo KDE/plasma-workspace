@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-23 03:28+0000\n"
-"PO-Revision-Date: 2023-04-20 15:01+0300\n"
+"PO-Revision-Date: 2023-04-23 11:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,17 +23,17 @@ msgstr ""
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr "%1 geçerli bir GTK Tema arşivi değil."
+msgstr "%1 geçerli bir GTK Teması arşivi değil."
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "Bu stil için yapılandırma penceresi yüklenemedi."
+msgstr "Bu biçemin yapılandırma iletişim kutusu yüklenemedi."
 
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr "Seçilen '%1' biçemi uygulanamadı."
+msgstr "Seçili '%1' biçemi uygulanamadı."
 
 #: package/contents/ui/EffectSettingsPopup.qml:32
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "GTK teması:"
 #: package/contents/ui/GtkStylePage.qml:69
 #, kde-format
 msgid "Preview…"
-msgstr "Önizleme…"
+msgstr "Önizle…"
 
 #: package/contents/ui/GtkStylePage.qml:88
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "Radyo düğmesi"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%​%p"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -188,13 +188,13 @@ msgstr "Uygulama biçemi"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Show icons on buttons"
-msgstr "Düğmeler üzerinde simge göster"
+msgstr "Düğmelerde simgeleri göster"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
 #, kde-format
 msgid "Show icons in menus"
-msgstr "Menülerde simge göster"
+msgstr "Menülerde simgeleri göster"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23

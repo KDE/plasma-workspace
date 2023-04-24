@@ -2,7 +2,7 @@
 # Copyright (C) 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # Luciano Montanaro <mikelima@cirulla.net>, 2003, 2007, 2008, 2010, 2011, 2012, 2016.
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
-# Paolo Zamponi <zapaolo@email.it>, 2019, 2021.
+# Paolo Zamponi <feus73@gmail.com>, 2019, 2021.
 #
 msgid ""
 msgstr ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
 "PO-Revision-Date: 2021-11-30 18:45+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Paolo Zamponi,Andrea Rizzi"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zapaolo@email.it,"
+msgstr "feus73@gmail.com,"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
 #, kde-format

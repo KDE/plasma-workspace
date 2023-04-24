@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-24 02:40+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -196,7 +196,7 @@ msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച പ്രയ�
 msgid "Power / Session"
 msgstr "ഊർജ്ജം / സെഷൻ"
 
-#: plugin/runnermodel.cpp:231
+#: plugin/runnermodel.cpp:217
 #, kde-format
 msgid "Search results"
 msgstr "തിരച്ചില്‍ ഫലങ്ങള്‍"
