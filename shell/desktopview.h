@@ -12,12 +12,9 @@
 
 #include <KConfigWatcher>
 
-namespace KWayland
+namespace LayerShellQt
 {
-namespace Client
-{
-class PlasmaShellSurface;
-}
+class Window;
 }
 
 class DesktopView : public PlasmaQuick::ContainmentView
@@ -83,15 +80,13 @@ Q_SIGNALS:
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);
-    void ensureWindowType();
-    void setupWaylandIntegration();
     void setAccentColorFromWallpaper(const QColor &accentColor);
     bool handleKRunnerTextInput(QKeyEvent *e);
 
     QColor m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_screenToFollow;
-    KWayland::Client::PlasmaShellSurface *m_shellSurface;
+    LayerShellQt::Window *m_layerWindow = nullptr;
     QString m_krunnerText;
 
     // KRunner config

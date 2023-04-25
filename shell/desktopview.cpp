@@ -27,19 +27,29 @@
 
 #include <KPackage/Package>
 
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/surface.h>
+#include <LayerShellQt/Window>
 
 #include <private/qtx11extras_p.h>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
     , m_accentColor(Qt::transparent)
-    , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
 
     setColor(Qt::black);
+    setFlags(Qt::Window | Qt::FramelessWindowHint);
+
+    if (KWindowSystem::isPlatformWayland()) {
+        m_layerWindow = LayerShellQt::Window::get(this);
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        m_layerWindow->setExclusiveZone(-1);
+        m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
+        m_layerWindow->setScope(QStringLiteral("desktop"));
+    } else {
+        KWindowSystem::setType(winId(), NET::Desktop);
+        KWindowSystem::setState(winId(), NET::KeepBelow);
+    }
 
     if (targetScreen) {
         setScreenToFollow(targetScreen);
@@ -47,7 +57,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         setTitle(corona->kPackage().metadata().name());
     }
 
-    setFlags(Qt::Window | Qt::FramelessWindowHint);
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
@@ -99,12 +108,22 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    // layer surfaces can't be moved between outputs, so hide and show the window on a new output
+    const bool remap = m_layerWindow && isVisible();
+    if (remap) {
+        setVisible(false);
+    }
+
     if (m_screenToFollow) {
         disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
     m_screenToFollow = screen;
     setScreen(screen);
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
+
+    if (remap) {
+        setVisible(true);
+    }
 
     QString rectString;
     QDebug(&rectString) << screen->geometry();
@@ -119,8 +138,6 @@ QScreen *DesktopView::screenToFollow() const
 
 void DesktopView::adaptToScreen()
 {
-    ensureWindowType();
-
     // This happens sometimes, when shutting down the process
     if (!m_screenToFollow) {
         return;
@@ -163,22 +180,6 @@ void DesktopView::setAccentColor(const QColor &accentColor)
     setAccentColorFromWallpaper(m_accentColor);
 }
 
-void DesktopView::ensureWindowType()
-{
-    // This happens sometimes, when shutting down the process
-    if (!screen()) {
-        return;
-    }
-
-    setFlags(Qt::Window | Qt::FramelessWindowHint);
-    KWindowSystem::setType(winId(), NET::Desktop);
-    KWindowSystem::setState(winId(), NET::KeepBelow);
-    if (m_shellSurface) {
-        m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
-        m_shellSurface->setSkipTaskbar(true);
-    }
-}
-
 QVariantMap DesktopView::candidateContainmentsGraphicItems() const
 {
     QVariantMap map;
@@ -199,19 +200,10 @@ Q_INVOKABLE QString DesktopView::fileFromPackage(const QString &key, const QStri
 
 bool DesktopView::event(QEvent *e)
 {
-    if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
-        case QPlatformSurfaceEvent::SurfaceCreated:
-            setupWaylandIntegration();
-            ensureWindowType();
-            break;
-        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-            delete m_shellSurface;
-            m_shellSurface = nullptr;
-            break;
-        }
-    } else if (e->type() == QEvent::FocusOut) {
+    if (e->type() == QEvent::FocusOut) {
         m_krunnerText.clear();
+    } else if (e->type() == QEvent::Close) {
+        return true;
     }
 
     return PlasmaQuick::ContainmentView::event(e);
@@ -343,12 +335,7 @@ void DesktopView::slotScreenChanged(int newId)
 
 void DesktopView::screenGeometryChanged()
 {
-    const QRect geo = m_screenToFollow->geometry();
-    //     qDebug() << "newGeometry" << this << geo << geometry();
-    setGeometry(geo);
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(geo.topLeft());
-    }
+    setGeometry(m_screenToFollow->geometry());
     Q_EMIT geometryChanged();
 }
 
@@ -356,27 +343,6 @@ void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
     setContainment(nullptr);
     setSource(package.fileUrl("views", QStringLiteral("Desktop.qml")));
-}
-
-void DesktopView::setupWaylandIntegration()
-{
-    if (m_shellSurface) {
-        // already setup
-        return;
-    }
-    if (ShellCorona *c = qobject_cast<ShellCorona *>(corona())) {
-        using namespace KWayland::Client;
-        PlasmaShell *interface = c->waylandPlasmaShellInterface();
-        if (!interface) {
-            return;
-        }
-        Surface *s = Surface::fromWindow(this);
-        if (!s) {
-            return;
-        }
-        m_shellSurface = interface->createSurface(s, this);
-        m_shellSurface->setPosition(m_screenToFollow->geometry().topLeft());
-    }
 }
 
 void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)

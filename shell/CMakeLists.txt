@@ -103,6 +103,7 @@ target_link_libraries(plasmashell
  KF6::Service
  PW::KWorkspace
  Wayland::Client
+ LayerShellQt::Interface
 )
 if (QT_MAJOR_VERSION STREQUAL "6")
     target_link_libraries(plasmashell KF6::ConfigQml)

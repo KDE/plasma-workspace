@@ -55,6 +55,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt::DBus
                             Wayland::Client
                             Wayland::Server
+                            LayerShellQt::Interface
                             SharedClientTest
                                      )
                if (QT_MAJOR_VERSION STREQUAL "6")
