@@ -39,7 +39,6 @@
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
     , m_accentColor(Qt::transparent)
-    , m_windowType(Desktop)
     , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
@@ -131,9 +130,7 @@ void DesktopView::adaptToScreen()
         return;
     }
 
-    if (m_windowType == Desktop || m_windowType == WindowedDesktop) {
-        screenGeometryChanged();
-    }
+    screenGeometryChanged();
 }
 
 bool DesktopView::usedInAccentColor() const
@@ -170,24 +167,6 @@ void DesktopView::setAccentColor(const QColor &accentColor)
     setAccentColorFromWallpaper(m_accentColor);
 }
 
-DesktopView::WindowType DesktopView::windowType() const
-{
-    return m_windowType;
-}
-
-void DesktopView::setWindowType(DesktopView::WindowType type)
-{
-    if (m_windowType == type) {
-        return;
-    }
-
-    m_windowType = type;
-
-    adaptToScreen();
-
-    Q_EMIT windowTypeChanged();
-}
-
 void DesktopView::ensureWindowType()
 {
     // This happens sometimes, when shutting down the process
@@ -195,41 +174,12 @@ void DesktopView::ensureWindowType()
         return;
     }
 
-    if (m_windowType == Window) {
-        setFlags(Qt::Window);
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::clearState(winId(), NET::FullScreen);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
-
-    } else if (m_windowType == Desktop) {
-        setFlags(Qt::Window | Qt::FramelessWindowHint);
-        KWindowSystem::setType(winId(), NET::Desktop);
-        KWindowSystem::setState(winId(), NET::KeepBelow);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
-            m_shellSurface->setSkipTaskbar(true);
-        }
-
-    } else if (m_windowType == WindowedDesktop) {
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::clearState(winId(), NET::FullScreen);
-        setFlags(Qt::FramelessWindowHint | flags());
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
-
-    } else if (m_windowType == FullScreen) {
-        setFlags(Qt::Window);
-        KWindowSystem::setType(winId(), NET::Normal);
-        KWindowSystem::setState(winId(), NET::FullScreen);
-        if (m_shellSurface) {
-            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
-            m_shellSurface->setSkipTaskbar(false);
-        }
+    setFlags(Qt::Window | Qt::FramelessWindowHint);
+    KWindowSystem::setType(winId(), NET::Desktop);
+    KWindowSystem::setState(winId(), NET::KeepBelow);
+    if (m_shellSurface) {
+        m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
+        m_shellSurface->setSkipTaskbar(true);
     }
 }
 
