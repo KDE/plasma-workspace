@@ -900,7 +900,7 @@ void PanelView::integrateScreen()
 {
     updateMask();
     KX11Extras::setOnAllDesktops(winId(), true);
-    KWindowSystem::setType(winId(), NET::Dock);
+    KX11Extras::setType(winId(), NET::Dock);
 #if HAVE_X11
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QXcbWindowFunctions::setWmWindowType(this, QXcbWindowFunctions::Dock);
