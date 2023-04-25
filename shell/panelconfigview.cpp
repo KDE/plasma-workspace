@@ -47,13 +47,13 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_screenSyncTimer.setInterval(150ms);
     connect(&m_screenSyncTimer, &QTimer::timeout, [=]() {
         setScreen(panelView->screen());
-        KWindowSystem::setType(winId(), NET::Dock);
+        KX11Extras::setType(winId(), NET::Dock);
         KWindowSystem::setState(winId(), NET::KeepAbove);
         syncGeometry();
         syncLocation();
     });
 
-    KWindowSystem::setType(winId(), NET::Dock);
+    KX11Extras::setType(winId(), NET::Dock);
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KX11Extras::forceActiveWindow(winId());
 
@@ -190,7 +190,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
 {
     QQuickWindow::showEvent(ev);
 
-    KWindowSystem::setType(winId(), NET::Dock);
+    KX11Extras::setType(winId(), NET::Dock);
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)) | Qt::X11BypassWindowManagerHint
              | Qt::WindowStaysOnTopHint);
     KWindowSystem::setState(winId(), NET::KeepAbove);
@@ -259,6 +259,7 @@ bool PanelConfigView::event(QEvent *e)
                 }
                 m_shellSurface = interface->createSurface(s, this);
                 m_shellSurface->setPanelTakesFocus(true);
+                m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
             }
             break;
         case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:

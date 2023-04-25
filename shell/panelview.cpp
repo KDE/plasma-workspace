@@ -895,7 +895,7 @@ void PanelView::integrateScreen()
 {
     updateMask();
     KX11Extras::setOnAllDesktops(winId(), true);
-    KWindowSystem::setType(winId(), NET::Dock);
+    KX11Extras::setType(winId(), NET::Dock);
 #if HAVE_X11
     // QXcbWindow isn't installed and thus inaccessible to us, but it does read this magic property...
     setProperty("_q_xcb_wm_window_type", QNativeInterface::Private::QXcbWindow::Dock);
