@@ -49,11 +49,7 @@ protected:
     void paint(QPainter *) override;
     void hoverMoveEvent(QHoverEvent *event) override;
     void hoverLeaveEvent(QHoverEvent *e) override;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#else
     void geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry) override;
-#endif
 
 private:
     void layoutItems();

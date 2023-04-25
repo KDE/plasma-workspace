@@ -329,19 +329,11 @@ void PreviewItem::resizeWidget(const QSizeF &newSize)
     m_widget->resize(std::ceil(size.width()), std::ceil(size.height()));
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void PreviewItem::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-#else
 void PreviewItem::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
-#endif
 {
     if (newGeometry != oldGeometry) {
         resizeWidget(newGeometry.size());
     }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QQuickPaintedItem::geometryChanged(newGeometry, oldGeometry);
-#else
     QQuickPaintedItem::geometryChange(newGeometry, oldGeometry);
-#endif
 }

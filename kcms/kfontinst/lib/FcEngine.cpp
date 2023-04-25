@@ -13,15 +13,11 @@
 #include <QFontDatabase>
 #include <QPainter>
 #include <QTextStream>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 #include <X11/Xft/Xft.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrender.h>
 #include <math.h>
+#include <private/qtx11extras_p.h>
 #include <xcb/xcb_image.h>
 // #define KFI_FC_DEBUG
 

@@ -30,11 +30,7 @@
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)

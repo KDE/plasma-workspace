@@ -482,29 +482,17 @@ void AppletsLayout::releaseSpace(ItemContainer *item)
     m_layoutManager->releaseSpace(item);
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void AppletsLayout::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-#else
 void AppletsLayout::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
-#endif
 {
     // Ignore completely moves without resize
     if (newGeometry.size() == oldGeometry.size()) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        QQuickItem::geometryChanged(newGeometry, oldGeometry);
-#else
         QQuickItem::geometryChange(newGeometry, oldGeometry);
-#endif
         return;
     }
 
     // Don't care for anything happening before startup completion
     if (!m_containment || !m_containment->corona() || !m_containment->corona()->isStartupCompleted()) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        QQuickItem::geometryChanged(newGeometry, oldGeometry);
-#else
         QQuickItem::geometryChange(newGeometry, oldGeometry);
-#endif
         return;
     }
 
@@ -514,11 +502,7 @@ void AppletsLayout::geometryChange(const QRectF &newGeometry, const QRectF &oldG
         m_layoutChangeTimer->start();
     }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QQuickItem::geometryChanged(newGeometry, oldGeometry);
-#else
     QQuickItem::geometryChange(newGeometry, oldGeometry);
-#endif
 }
 
 void AppletsLayout::updatePolish()

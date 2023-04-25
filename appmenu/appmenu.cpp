@@ -29,11 +29,7 @@
 #include <kpluginfactory.h>
 
 #if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 #endif
 
 static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");

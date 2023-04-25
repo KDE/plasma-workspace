@@ -189,20 +189,7 @@ void ContainmentConfigView::applyWallpaper()
 
     syncWallpaperObjects();
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    if (m_currentWallpaperConfig && m_ownWallpaperConfig) {
-        for (const auto &key : m_ownWallpaperConfig->keys()) {
-            auto value = m_ownWallpaperConfig->value(key);
-            m_currentWallpaperConfig->insert(key, value);
-            m_currentWallpaperConfig->valueChanged(key, value);
-        }
-    }
-
-    delete m_ownWallpaperConfig;
-    m_ownWallpaperConfig = nullptr;
-#else
     static_cast<KConfigPropertyMap *>(m_currentWallpaperConfig)->writeConfig();
-#endif
 
     Q_EMIT wallpaperConfigurationChanged();
 }

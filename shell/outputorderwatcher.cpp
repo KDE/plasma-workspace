@@ -19,11 +19,7 @@
 #include <QtWaylandClient/QtWaylandClientVersion>
 
 #if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 
 #include <xcb/randr.h>
 #include <xcb/xcb_event.h>
@@ -40,11 +36,7 @@ public:
         : QWaylandClientExtensionTemplate(1)
     {
         setParent(parent);
-#if QTWAYLANDCLIENT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
         initialize();
-#else
-        QMetaObject::invokeMethod(this, "addRegistryListener");
-#endif
     }
 
 protected:
@@ -249,11 +241,7 @@ void X11OutputOrderWatcher::refresh()
     }
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
-#else
 bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
-#endif
 {
     Q_UNUSED(result);
     // a particular edge case: when we switch the only enabled screen

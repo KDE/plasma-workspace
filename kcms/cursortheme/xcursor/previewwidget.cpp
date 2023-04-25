@@ -301,11 +301,7 @@ void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
     unsetCursor();
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void PreviewWidget::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-#else
 void PreviewWidget::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
-#endif
 {
     Q_UNUSED(newGeometry)
     Q_UNUSED(oldGeometry)

@@ -8,12 +8,6 @@
 
 #include <QQuickItem>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#define geometryChangedFn geometryChanged
-#else
-#define geometryChangedFn geometryChange
-#endif
-
 class MaskMouseArea : public QQuickItem
 {
     Q_OBJECT
@@ -24,7 +18,7 @@ class MaskMouseArea : public QQuickItem
     void updateMask();
 
 protected:
-    void geometryChangedFn(const QRectF &newGeometry, const QRectF &oldGeometry) override;
+    void geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
     void hoverEnterEvent(QHoverEvent *event) override;

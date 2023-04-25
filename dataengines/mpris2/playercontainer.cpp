@@ -192,17 +192,9 @@ void PlayerContainer::copyProperty(const QString &propName, const QVariant &_val
         }
     }
     if (value.type() != expType) {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        const char *gotTypeCh = QDBusMetaType::typeToSignature(value.userType());
-#else
         const char *gotTypeCh = QDBusMetaType::typeToSignature(value.metaType());
-#endif
         QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        const char *expTypeCh = QDBusMetaType::typeToSignature(expType);
-#else
         const char *expTypeCh = QDBusMetaType::typeToSignature(QMetaType(expType));
-#endif
         QString expType = expTypeCh ? QString::fromLatin1(expTypeCh) : QStringLiteral("<unknown>");
 
         qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName << "as D-Bus type" << gotType << "but it should be D-Bus type" << expType;
@@ -280,11 +272,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map, UpdateType updType)
                     m_caps &= ~cap;
                 }
             } else {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-                const char *gotTypeCh = QDBusMetaType::typeToSignature(i.value().userType());
-#else
                 const char *gotTypeCh = QDBusMetaType::typeToSignature(i.value().metaType());
-#endif
                 QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
 
                 qCWarning(MPRIS2) << m_dbusAddress << "exports" << i.key() << "as D-Bus type" << gotType << "but it should be D-Bus type \"b\"";

@@ -1,21 +1,21 @@
 /*
-    KRDB - puts current KDE color scheme into preprocessor statements
-    cats specially written application default files and uses xrdb -merge to
-    write to RESOURCE_MANAGER. Thus it gives a  simple way to make non-KDE
-    applications fit in with the desktop
+   KRDB - puts current KDE color scheme into preprocessor statements
+   cats specially written application default files and uses xrdb -merge to
+   write to RESOURCE_MANAGER. Thus it gives a  simple way to make non-KDE
+   applications fit in with the desktop
 
-    SPDX-FileCopyrightText: 1998 Mark Donohoe
-    SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
-    SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
-    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
+   SPDX-FileCopyrightText: 1998 Mark Donohoe
+   SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
+   SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
+   SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
-    reworked for KDE 2.0:
-    SPDX-FileCopyrightText: 1999 Dirk A. Mueller
+   reworked for KDE 2.0:
+   SPDX-FileCopyrightText: 1999 Dirk A. Mueller
 
-    add support for GTK applications:
-    SPDX-FileCopyrightText: 2001 Matthias Ettrich
+   add support for GTK applications:
+   SPDX-FileCopyrightText: 2001 Matthias Ettrich
 
-    SPDX-License-Identifier: GPL-2.0-or-later
+   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include <config-X11.h>
@@ -52,12 +52,8 @@
 
 #include "krdb.h"
 #if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 #include <X11/Xlib.h>
+#include <private/qtx11extras_p.h>
 #endif
 
 #include <filesystem>

@@ -36,13 +36,8 @@
 
 #if HAVE_X11
 #include <NETWM>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #include <qpa/qplatformwindow_p.h>
-#else
-#include <QX11Info>
-#include <QtPlatformHeaders/QXcbWindowFunctions>
-#endif
 #include <xcb/xcb.h>
 #endif
 #include <chrono>
@@ -902,12 +897,8 @@ void PanelView::integrateScreen()
     KX11Extras::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
 #if HAVE_X11
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QXcbWindowFunctions::setWmWindowType(this, QXcbWindowFunctions::Dock);
-#else
     // QXcbWindow isn't installed and thus inaccessible to us, but it does read this magic property...
     setProperty("_q_xcb_wm_window_type", QNativeInterface::Private::QXcbWindow::Dock);
-#endif
 #endif
     if (m_shellSurface) {
         m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);

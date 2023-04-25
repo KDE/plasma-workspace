@@ -53,11 +53,8 @@
 
 #include <config-X11.h>
 #if HAVE_X11
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
+
 #include <chrono>
 #include <xcb/xcb.h>
 
@@ -161,11 +158,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     m_saveFileTimer->setSingleShot(true);
     m_saveFileTimer->setInterval(5s);
     connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        QtConcurrent::run(this, &Klipper::saveHistory, false);
-#else
         QtConcurrent::run(&Klipper::saveHistory, this, false);
-#endif
     });
     connect(m_history, &History::changed, this, [this] {
         if (m_bKeepContents) {

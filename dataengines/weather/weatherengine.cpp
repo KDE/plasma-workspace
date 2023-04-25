@@ -25,12 +25,8 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
     // Globally notify all plugins to remove their sources (and unload plugin)
     connect(this, &Plasma5Support::DataEngine::sourceRemoved, this, &WeatherEngine::removeIonSource);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged, this, &WeatherEngine::onOnlineStateChanged);
-#else
     QNetworkInformation::load(QNetworkInformation::Feature::Reachability);
     connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &WeatherEngine::onOnlineStateChanged);
-#endif
 
     // Get the list of available plugins but don't load them
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WeatherEngine::updateIonList);
@@ -122,13 +118,8 @@ bool WeatherEngine::sourceRequestEvent(const QString &source)
     // is down. when it comes up again, then it will be refreshed
     ion->connectSource(source, this);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    qCDebug(WEATHER) << "sourceRequestEvent(): Network is: " << m_networkConfigurationManager.isOnline();
-    if (!m_networkConfigurationManager.isOnline()) {
-#else
     qCDebug(WEATHER) << "sourceRequestEvent(): Network is: " << QNetworkInformation::instance()->reachability();
     if (QNetworkInformation::instance()->reachability() != QNetworkInformation::Reachability::Online) {
-#endif
         setData(source, Data());
         return true;
     }
@@ -146,13 +137,8 @@ bool WeatherEngine::sourceRequestEvent(const QString &source)
  */
 bool WeatherEngine::updateSourceEvent(const QString &source)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    qCDebug(WEATHER) << "updateSourceEvent(): Network is: " << m_networkConfigurationManager.isOnline();
-    if (!m_networkConfigurationManager.isOnline()) {
-#else
     qCDebug(WEATHER) << "updateSourceEvent(): Network is: " << QNetworkInformation::instance()->reachability();
     if (QNetworkInformation::instance()->reachability() != QNetworkInformation::Reachability::Online) {
-#endif
         return false;
     }
 
@@ -165,15 +151,9 @@ bool WeatherEngine::updateSourceEvent(const QString &source)
     return ion->updateSourceEvent(source);
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void WeatherEngine::onOnlineStateChanged(bool isOnline)
-{
-    if (isOnline) {
-#else
 void WeatherEngine::onOnlineStateChanged(QNetworkInformation::Reachability reachability)
 {
     if (reachability == QNetworkInformation::Reachability::Online) {
-#endif
         qCDebug(WEATHER) << "starting m_reconnectTimer";
         // allow the network to settle down and actually come up
         m_reconnectTimer.start(1000);

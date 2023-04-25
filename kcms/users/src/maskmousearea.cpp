@@ -39,7 +39,7 @@ void MaskMouseArea::updateMask()
     });
 }
 
-void MaskMouseArea::geometryChangedFn(const QRectF &newGeometry, const QRectF &oldGeometry)
+void MaskMouseArea::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
 {
     Q_UNUSED(newGeometry)
     Q_UNUSED(oldGeometry)

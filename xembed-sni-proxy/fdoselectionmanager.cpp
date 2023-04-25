@@ -11,11 +11,7 @@
 
 #include <QCoreApplication>
 #include <QTimer>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 
 #include <KSelectionOwner>
 
@@ -105,11 +101,7 @@ bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
     return true;
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
-#else
 bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
-#endif
 {
     Q_UNUSED(result)
 

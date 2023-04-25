@@ -338,11 +338,7 @@ void ItemContainer::contentData_append(QQmlListProperty<QObject> *prop, QObject 
     container->m_contentData.append(object);
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-int ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
-#else
 qsizetype ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
-#endif
 {
     ItemContainer *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
@@ -352,11 +348,7 @@ qsizetype ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
     return container->m_contentData.count();
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, int index)
-#else
 QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, qsizetype index)
-#endif
 {
     ItemContainer *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
@@ -384,18 +376,10 @@ QQmlListProperty<QObject> ItemContainer::contentData()
     return QQmlListProperty<QObject>(this, nullptr, contentData_append, contentData_count, contentData_at, contentData_clear);
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-void ItemContainer::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-#else
 void ItemContainer::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
-#endif
 {
     syncChildItemsGeometry(newGeometry.size());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QQuickItem::geometryChanged(newGeometry, oldGeometry);
-#else
     QQuickItem::geometryChange(newGeometry, oldGeometry);
-#endif
     Q_EMIT contentWidthChanged();
     Q_EMIT contentHeightChanged();
 }

@@ -109,11 +109,7 @@ void Menu::stop(const QList<uint> &ids)
             // TODO is there a nicer algorithm for that?
             // TODO remove all m_menus also?
             m_subscriptions.erase(
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-                std::remove_if(m_subscriptions.begin(), m_subscriptions.end(), std::bind(&QList<uint>::contains, m_subscriptions, std::placeholders::_1)),
-#else
                 std::remove_if(m_subscriptions.begin(), m_subscriptions.end(), std::bind(&QList<uint>::contains<uint>, m_subscriptions, std::placeholders::_1)),
-#endif
                 m_subscriptions.end());
 
             if (m_subscriptions.isEmpty()) {
