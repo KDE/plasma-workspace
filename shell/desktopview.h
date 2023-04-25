@@ -24,9 +24,6 @@ class DesktopView : public PlasmaQuick::ContainmentView
 {
     Q_OBJECT
 
-    // What kind of plasma session we're in: are we in a full workspace, an application?...
-    Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
-
     Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
 
     /**
@@ -41,12 +38,6 @@ class DesktopView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
 
 public:
-    enum SessionType {
-        ApplicationSession, /** our session is a normal application */
-        ShellSession, /** We are running as the primary user interface of this machine */
-    };
-    Q_ENUM(SessionType)
-
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = nullptr);
     ~DesktopView() override;
 
@@ -63,8 +54,6 @@ public:
 
     QColor accentColor() const;
     void setAccentColor(const QColor &);
-
-    SessionType sessionType() const;
 
     QVariantMap candidateContainmentsGraphicItems() const;
 

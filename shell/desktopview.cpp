@@ -183,15 +183,6 @@ void DesktopView::ensureWindowType()
     }
 }
 
-DesktopView::SessionType DesktopView::sessionType() const
-{
-    if (qobject_cast<ShellCorona *>(corona())) {
-        return ShellSession;
-    } else {
-        return ApplicationSession;
-    }
-}
-
 QVariantMap DesktopView::candidateContainmentsGraphicItems() const
 {
     QVariantMap map;
