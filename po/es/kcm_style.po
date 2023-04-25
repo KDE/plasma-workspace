@@ -10,13 +10,13 @@
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2012, 2014, 2017, 2019, 2020, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2012, 2014, 2017, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-24 03:15+0000\n"
-"PO-Revision-Date: 2021-08-15 11:57+0200\n"
+"PO-Revision-Date: 2023-04-24 19:05+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 23.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: gtkpage.cpp:59
@@ -189,7 +189,7 @@ msgstr "Botón de selección excluyente"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
