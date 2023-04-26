@@ -142,14 +142,14 @@ KCM.GridViewKCM {
 
         actions: [
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18n("Remove Icon Theme")
                 enabled: model.removable
                 visible: !model.pendingDeletion
                 onTriggered: model.pendingDeletion = true
             },
             Kirigami.Action {
-                iconName: "edit-undo"
+                icon.name: "edit-undo"
                 tooltip: i18n("Restore Icon Theme")
                 visible: model.pendingDeletion
                 onTriggered: model.pendingDeletion = false
