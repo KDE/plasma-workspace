@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-04-26 02:17+0000\n"
 "PO-Revision-Date: 2022-07-13 11:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:320
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\"은(는) 절대 URL이 아닙니다."
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:323
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\"이(가) 없습니다."
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:326
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\"이(가) 파일이 아닙니다."
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:329
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\"에서 읽을 수 없습니다."

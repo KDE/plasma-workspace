@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-04-26 02:17+0000\n"
 "PO-Revision-Date: 2022-11-18 20:58+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.1\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:320
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "„%1“ nėra absoliutusis url."
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:323
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "„%1“ nėra."
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:326
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "„%1“ nėra failas."
 
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:329
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "„%1“ yra neskaitomas."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-04-26 02:17+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,24 +18,24 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: autostartmodel.cpp:322
+#: autostartmodel.cpp:320
 #, fuzzy, kde-format
 #| msgid "\"%1\" is not an absolute path."
 msgid "\"%1\" is not an absolute url."
 msgstr "‘%1’ није апсолутна путања."
 
-#: autostartmodel.cpp:325
+#: autostartmodel.cpp:323
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "‘%1’ не постоји."
 
-#: autostartmodel.cpp:328
+#: autostartmodel.cpp:326
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "‘%1’ није фајл."
 
 # >> %1 file path
-#: autostartmodel.cpp:331
+#: autostartmodel.cpp:329
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "‘%1’ није читљив."

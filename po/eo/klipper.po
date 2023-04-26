@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-11 02:55+0000\n"
-"PO-Revision-Date: 2023-04-16 12:22+0100\n"
+"PO-Revision-Date: 2023-04-25 19:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -593,7 +593,7 @@ msgstr "Ĉu vi vere volas viŝi kaj forigi la kompletan poŝohistorion?"
 #: klipper.cpp:990
 #, kde-format
 msgid "Clear Clipboard History"
-msgstr "&Forviŝi Poŝohistorion"
+msgstr "Forviŝi Poŝohistorion"
 
 #: klipper.cpp:1006 klipper.cpp:1015
 #, kde-format
