@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -70,11 +71,13 @@ Item {
         }
 
         QtLayouts.ColumnLayout {
+            id: calendarPluginsLayout
+
             Kirigami.FormData.label: i18n("Available Plugins:")
-            Kirigami.FormData.buddyFor: children[1] // 0 is the Repeater
 
             Repeater {
                 id: calendarPluginsRepeater
+
                 model: eventPluginsManager.model
                 delegate: QtLayouts.RowLayout {
                     QtControls.CheckBox {
@@ -85,6 +88,14 @@ Item {
                             model.checked = checked;
                             calendarPage.configurationChanged();
                         }
+                    }
+                }
+
+                onItemAdded: (index, item) => {
+                    if (index === 0) {
+                        // Set buddy once, for an item in the first row.
+                        // No, it doesn't work as a binding on children list.
+                        calendarPluginsLayout.Kirigami.FormData.buddyFor = item;
                     }
                 }
             }
