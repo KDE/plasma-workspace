@@ -3,10 +3,6 @@
     SPDX-FileCopyrightText: 2021 Alexander Lohnau <alexander.lonau@gmx.de>
 */
 
-// See https://phabricator.kde.org/T14499, this plugin's id should be renamed
-#undef KRUNNER_TEST_RUNNER_PLUGIN_NAME
-#define KRUNNER_TEST_RUNNER_PLUGIN_NAME "shell"
-
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QTest>
