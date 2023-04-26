@@ -53,6 +53,16 @@ Kirigami.OverlaySheet {
 
         Keys.onEscapePressed: picturesSheet.close();
 
+        function forceCurrentIndex(index) {
+            // There is a peculiar bug in SwipeView with repeatedly switching index where it will eventually get
+            // confused between SwipeView and its Container base about what the index actually should be. We
+            // consequently end up on the wrong page. But only in right-to-left UI mode!
+            // Forcing complete index resets fixes this problem.
+            // https://bugs.kde.org/show_bug.cgi?id=439081
+            setCurrentIndex(-1)
+            setCurrentIndex(index)
+        }
+
         ColumnLayout {
             id: cols
 
@@ -132,7 +142,7 @@ Kirigami.OverlaySheet {
                         text: kcm.initializeString(user.displayPrimaryName)
                     }
 
-                    onClicked: stackSwitcher.currentIndex = 1
+                    onClicked: stackSwitcher.forceCurrentIndex(initialPictures.QQC2.SwipeView.index)
                 }
 
                 QQC2.Button {
@@ -147,7 +157,7 @@ Kirigami.OverlaySheet {
                         source: "user-identity"
                     }
 
-                    onClicked: stackSwitcher.currentIndex = 2
+                    onClicked: stackSwitcher.forceCurrentIndex(iconPictures.QQC2.SwipeView.index)
                 }
 
 
@@ -227,7 +237,7 @@ Kirigami.OverlaySheet {
                         }
                     }
 
-                    onClicked: stackSwitcher.currentIndex = 0
+                    onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
                 }
 
                 Repeater {
@@ -305,7 +315,7 @@ Kirigami.OverlaySheet {
                         }
                     }
 
-                    onClicked: stackSwitcher.currentIndex = 0
+                    onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
                 }
 
                 Repeater {
