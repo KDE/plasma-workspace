@@ -338,7 +338,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         Q_EMIT nonExecutableScript(url.toLocalFile(), kind);
     }
 
-    const QString fileName = url.fileName();
+    QString fileName = url.fileName();
 
     if (kind == AutostartModel::AutostartEntrySource::XdgScripts) {
         int lastLoginScript = -1;
@@ -354,18 +354,13 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         if (QFileInfo::exists(newFilePath)) {
             const QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
-            QString newName = suggestName(baseUrl, fileName + QStringLiteral(".desktop"));
+            fileName = suggestName(baseUrl, fileName + QStringLiteral(".desktop"));
 
             // remove the .desktop part from String
-            newName.chop(8);
-
-            AutostartScriptDesktopFile desktopFile(newName, file.filePath());
-            insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
-
-        } else {
-            AutostartScriptDesktopFile desktopFile(fileName, file.filePath());
-            insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
+            fileName.chop(8);
         }
+        AutostartScriptDesktopFile desktopFile(fileName, KShell::quoteArg(file.filePath()));
+        insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
 
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
         const QUrl destinationScript = QUrl::fromLocalFile(QDir(m_xdgConfigPath.filePath(QStringLiteral("plasma-workspace/shutdown/"))).filePath(fileName));
