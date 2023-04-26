@@ -41,19 +41,22 @@ Item {
 
     ColumnLayout {
         id: mainLayout
+
         anchors {
             left: parent.left
             top: parent.top
-            margins: PlasmaCore.Units.gridUnit / 2
+            margins: PlasmaCore.Units.smallSpacing * 2
         }
 
         spacing: 0
 
         PlasmaExtras.Heading {
             id: tooltipMaintext
-            level: 3
+
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
+
+            level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
             text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
@@ -61,18 +64,26 @@ Item {
 
         PlasmaComponents3.Label {
             id: tooltipSubtext
+
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
-            text: Plasmoid.configuration.showSeconds === 0 ? Qt.formatDate(tzDate, dateFormatString)
-                                                           : Qt.formatTime(tzDate, Qt.locale().timeFormat(Locale.LongFormat))
-                                                             + "\n"
-                                                             + Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString))
+
+            text: {
+                if (Plasmoid.configuration.showSeconds === 0) {
+                    return Qt.formatDate(tzDate, dateFormatString);
+                } else {
+                    return "%1\n%2"
+                        .arg(Qt.formatTime(tzDate, Qt.locale().timeFormat(Locale.LongFormat)))
+                        .arg(Qt.formatDate(tzDate, Qt.formatDate(tzDate, dateFormatString)))
+                }
+            }
             opacity: 0.6
             visible: !clocks.visible
         }
 
         GridLayout {
             id: clocks
+
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             Layout.minimumHeight: childrenRect.height
@@ -110,7 +121,13 @@ Item {
                 PlasmaComponents3.Label {
                     // Layout.fillWidth is buggy here
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
-                    text: index % 2 == 0 ? i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData)) : timeForZone(modelData, Plasmoid.configuration.showSeconds > 0)
+                    text: {
+                        if (index % 2 === 0) {
+                            return i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData));
+                        } else {
+                            return timeForZone(modelData, Plasmoid.configuration.showSeconds > 0);
+                        }
+                    }
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone

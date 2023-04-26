@@ -5,23 +5,22 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.4 as QtControls
+import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
     id: calendarPage
 
-    signal configurationChanged
+    signal configurationChanged()
 
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property int cfg_firstDayOfWeek
 
-    function saveConfig()
-    {
+    function saveConfig() {
         Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
     }
 
@@ -35,7 +34,7 @@ ColumnLayout {
     Kirigami.FormLayout {
         Layout.fillWidth: true
 
-        QtControls.CheckBox {
+        QQC2.CheckBox {
             id: showWeekNumbers
             Kirigami.FormData.label: i18n("General:")
             text: i18n("Show week numbers")
@@ -45,19 +44,15 @@ ColumnLayout {
             Layout.fillWidth: true
             Kirigami.FormData.label: i18n("First day of week:")
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: firstDayOfWeekCombo
                 textRole: "text"
-                model: [-1, 0, 1, 5, 6].map((day) => {
-                    return {
-                        day,
-                        text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day)
-                    };
-                })
+                model: [-1, 0, 1, 5, 6].map(day => ({
+                    day,
+                    text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day),
+                }))
                 onActivated: cfg_firstDayOfWeek = model[index].day
-                currentIndex: model.findIndex((item) => {
-                    return item.day === cfg_firstDayOfWeek;
-                })
+                currentIndex: model.findIndex(item => item.day === cfg_firstDayOfWeek)
             }
         }
 
@@ -75,9 +70,10 @@ ColumnLayout {
 
                 model: eventPluginsManager.model
 
-                delegate: QtControls.CheckBox {
+                delegate: QQC2.CheckBox {
                     text: model.display
                     checked: model.checked
+
                     onClicked: {
                         //needed for model's setData to be called
                         model.checked = checked;
@@ -96,4 +92,3 @@ ColumnLayout {
         }
     }
 }
-

@@ -2,21 +2,20 @@
     SPDX-FileCopyrightText: 2013 Bhushan Shah <bhush94@gmail.com>
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 import QtQuick.Dialogs as QtDialogs
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
-import org.kde.kirigami 2.5 as Kirigami
-
-
+import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
     id: appearancePage
@@ -50,12 +49,12 @@ ColumnLayout {
         RowLayout {
             Kirigami.FormData.label: i18n("Information:")
 
-            QtControls.CheckBox {
+            QQC2.CheckBox {
                 id: showDate
                 text: i18n("Show date")
             }
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: dateDisplayFormat
                 enabled: showDate.checked
                 visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
@@ -68,7 +67,7 @@ ColumnLayout {
             }
         }
 
-        QtControls.ComboBox {
+        QQC2.ComboBox {
             id: showSecondsComboBox
             Kirigami.FormData.label: i18n("Show seconds:")
             model: [
@@ -87,12 +86,12 @@ ColumnLayout {
             Kirigami.FormData.label: i18n("Show time zone:")
             Kirigami.FormData.buddyFor: showLocalTimeZoneWhenDifferent
 
-            QtControls.RadioButton {
+            QQC2.RadioButton {
                 id: showLocalTimeZoneWhenDifferent
                 text: i18n("Only when different from local time zone")
             }
 
-            QtControls.RadioButton {
+            QQC2.RadioButton {
                 id: showLocalTimezone
                 text: i18n("Always")
             }
@@ -105,7 +104,7 @@ ColumnLayout {
         RowLayout {
             Kirigami.FormData.label: i18n("Display time zone as:")
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: displayTimezoneFormat
                 model: [
                     i18n("Code"),
@@ -124,7 +123,7 @@ ColumnLayout {
             Layout.fillWidth: true
             Kirigami.FormData.label: i18n("Time display:")
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: use24hFormat
                 model: [
                     i18n("12-Hour"),
@@ -134,7 +133,7 @@ ColumnLayout {
                 onCurrentIndexChanged: cfg_use24hFormat = currentIndex
             }
 
-            QtControls.Button {
+            QQC2.Button {
                 visible: KCMShell.authorize("kcm_regionandlang.desktop").length > 0
                 text: i18n("Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
@@ -150,42 +149,39 @@ ColumnLayout {
             Kirigami.FormData.label: i18n("Date format:")
             enabled: showDate.checked
 
-            QtControls.ComboBox {
+            QQC2.ComboBox {
                 id: dateFormat
                 textRole: "label"
                 model: [
                     {
-                        'label': i18n("Long Date"),
-                        'name': "longDate",
+                        label: i18n("Long Date"),
+                        name: "longDate",
                         format: Qt.SystemLocaleLongDate
                     },
                     {
-                        'label': i18n("Short Date"),
-                        'name': "shortDate",
+                        label: i18n("Short Date"),
+                        name: "shortDate",
                         format: Qt.SystemLocaleShortDate
                     },
                     {
-                        'label': i18n("ISO Date"),
-                        'name': "isoDate",
+                        label: i18n("ISO Date"),
+                        name: "isoDate",
                         format: Qt.ISODate
                     },
                     {
-                        'label': i18nc("custom date format", "Custom"),
-                        'name': "custom"
+                        label: i18nc("custom date format", "Custom"),
+                        name: "custom"
                     }
                 ]
                 onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
 
                 Component.onCompleted: {
-                    for (var i = 0; i < model.length; i++) {
-                        if (model[i]["name"] === Plasmoid.configuration.dateFormat) {
-                            dateFormat.currentIndex = i;
-                        }
-                    }
+                    const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
+                    currentIndex = model.findIndex(isConfiguredDateFormat);
                 }
             }
 
-            QtControls.Label {
+            QQC2.Label {
                 Layout.fillWidth: true
                 textFormat: Text.PlainText
                 text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
@@ -193,44 +189,44 @@ ColumnLayout {
             }
         }
 
-        QtControls.TextField {
+        QQC2.TextField {
             id: customDateFormat
             Layout.fillWidth: true
             enabled: showDate.checked
-            visible: cfg_dateFormat == "custom"
+            visible: cfg_dateFormat === "custom"
         }
 
-        QtControls.Label {
+        QQC2.Label {
             text: i18n("<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
             enabled: showDate.checked
-            visible: cfg_dateFormat == "custom"
+            visible: cfg_dateFormat === "custom"
             wrapMode: Text.Wrap
+
             Layout.preferredWidth: Layout.maximumWidth
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
 
-            onLinkActivated: Qt.openUrlExternally(link)
-            MouseArea {
-                anchors.fill: parent
-                acceptedButtons: Qt.NoButton // We don't want to eat clicks on the Label
-                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+            HoverHandler {
+                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : undefined
             }
+
+            onLinkActivated: link => Qt.openUrlExternally(link)
         }
 
         Item {
             Kirigami.FormData.isSection: true
         }
 
-        QtControls.ButtonGroup {
+        QQC2.ButtonGroup {
             buttons: [autoFontAndSizeRadioButton, manualFontAndSizeRadioButton]
         }
 
-        QtControls.RadioButton {
+        QQC2.RadioButton {
             Kirigami.FormData.label: i18nc("@label:group", "Text display:")
             id: autoFontAndSizeRadioButton
             text: i18nc("@option:radio", "Automatic")
         }
 
-        QtControls.Label {
+        QQC2.Label {
             text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
             Layout.fillWidth: true
             wrapMode: Text.Wrap
@@ -238,7 +234,7 @@ ColumnLayout {
         }
 
         RowLayout {
-            QtControls.RadioButton {
+            QQC2.RadioButton {
                 id: manualFontAndSizeRadioButton
                 text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")
                 checked: !cfg_autoFontAndSize
@@ -249,7 +245,7 @@ ColumnLayout {
                 }
             }
 
-            QtControls.Button {
+            QQC2.Button {
                 text: i18nc("@action:button", "Choose Style…")
                 icon.name: "settings-configure"
                 enabled: manualFontAndSizeRadioButton.checked
@@ -261,7 +257,7 @@ ColumnLayout {
 
         }
 
-        QtControls.Label {
+        QQC2.Label {
             visible: manualFontAndSizeRadioButton.checked
             text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
             font: fontDialog.fontChosen

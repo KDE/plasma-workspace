@@ -4,15 +4,15 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.8 as QQC2
-import QtQuick.Layouts 1.0
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Layouts 1.15
 
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
     id: timeZonesPage
@@ -20,10 +20,9 @@ ColumnLayout {
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
 
-
     TimeZoneModel {
-
         id: timeZones
+
         onSelectedTimeZonesChanged: {
             if (selectedTimeZones.length === 0) {
                 // Don't let the user remove all time zones
@@ -46,7 +45,11 @@ ColumnLayout {
         // rather than the list becoming scrollable, which is what we want
         Layout.maximumHeight: timeZonesPage.parent.height - Kirigami.Units.gridUnit * 7
 
-        Component.onCompleted: background.visible = true // enable border
+        Component.onCompleted: {
+            if (background) {
+                background.visible = true // enable frame
+            }
+        }
 
         // HACK: Hide unnecesary horizontal scrollbar (https://bugreports.qt.io/browse/QTBUG-83890)
         QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
@@ -131,7 +134,7 @@ ColumnLayout {
             section {
                 property: "isLocalTimeZone"
                 delegate: Kirigami.ListSectionHeader {
-                    label: section == "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
+                    label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
                 }
             }
 
@@ -216,7 +219,6 @@ ColumnLayout {
         }
 
         ListView {
-            id: listView
             focus: true // keyboard navigation
             activeFocusOnTab: true // keyboard navigation
             implicitWidth: Kirigami.Units.gridUnit * 25
@@ -227,15 +229,31 @@ ColumnLayout {
             }
 
             delegate: QQC2.CheckDelegate {
-                id: checkbox
-                width: listView.width
+                required property int index
+                required property var model
+
+                required checked
+                required property string city
+                required property string comment
+                required property string region
+
+                width: ListView.view.width
                 focus: true // keyboard navigation
-                text: !city || city.indexOf("UTC") === 0 ? comment : comment ? i18n("%1, %2 (%3)", city, region, comment) : i18n("%1, %2", city, region)
-                checked: model.checked
+                text: {
+                    if (!city || city.indexOf("UTC") === 0) {
+                        return comment;
+                    } else if (comment) {
+                        return i18n("%1, %2 (%3)", city, region, comment);
+                    } else {
+                        return i18n("%1, %2", city, region)
+                    }
+                }
+
                 onToggled: {
-                    model.checked = checkbox.checked
-                    listView.currentIndex = index // highlight
-                    listView.forceActiveFocus() // keyboard navigation
+                    model.checked = checked
+
+                    ListView.view.currentIndex = index // highlight
+                    ListView.view.forceActiveFocus() // keyboard navigation
                 }
                 highlighted: ListView.isCurrentItem
             }

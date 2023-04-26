@@ -23,16 +23,20 @@ Item {
     property string dateFormatString: setDateFormatString()
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
     property date tzDate: {
+        const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
+        if (data === undefined) {
+            return new Date();
+        }
         // get the time for the given timezone from the dataengine
-        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
+        const now = data["DateTime"];
         // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
-        return new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+        return new Date(msUTC + (data["Offset"] * 1000));
     }
 
     function initTimezones() {
-        var tz  = Array()
+        const tz = []
         if (Plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
             tz.push("Local");
         }
@@ -40,19 +44,19 @@ Item {
     }
 
     function timeForZone(zone, showSecondsForZone) {
-        var compactRepresentationItem = Plasmoid.compactRepresentationItem;
+        const compactRepresentationItem = Plasmoid.compactRepresentationItem;
         if (!compactRepresentationItem) {
             return "";
         }
 
         // get the time for the given timezone from the dataengine
-        var now = dataSource.data[zone]["DateTime"];
+        const now = dataSource.data[zone]["DateTime"];
         // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
-        var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
+        const dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
 
-        var formattedTime;
+        let formattedTime;
         if (showSecondsForZone) {
             formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormatWithSeconds);
         } else {
@@ -68,10 +72,11 @@ Item {
 
     function nameForZone(zone) {
         // add the timezone string to the clock
-        var timezoneString = Plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
-                                                                          : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
-
-        return timezoneString;
+        if (Plasmoid.configuration.displayTimezoneAsCode) {
+            return dataSource.data[zone]["Timezone Abbreviation"];
+        } else {
+            return TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
+        }
     }
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
@@ -93,7 +98,7 @@ Item {
         Layout.minimumHeight: item ? item.implicitHeight : 0
         Layout.maximumHeight: item ? item.implicitHeight : 0
 
-        source: "Tooltip.qml"
+        source: Qt.resolvedUrl("Tooltip.qml")
     }
 
     //We need Local to be *always* present, even if not disaplayed as
@@ -109,7 +114,16 @@ Item {
         engine: "time"
         connectedSources: allTimezones
         interval: intervalAlignment === P5Support.Types.NoAlignment ? 1000 : 60000
-        intervalAlignment: Plasmoid.configuration.showSeconds === 2 || (Plasmoid.configuration.showSeconds === 1 && Plasmoid.compactRepresentationItem && Plasmoid.compactRepresentationItem.containsMouse) ? P5Support.Types.NoAlignment : P5Support.Types.AlignToMinute
+        intervalAlignment: {
+            if (Plasmoid.configuration.showSeconds === 2
+                || (Plasmoid.configuration.showSeconds === 1
+                    && Plasmoid.compactRepresentationItem
+                    && Plasmoid.compactRepresentationItem.containsMouse)) {
+                return P5Support.Types.NoAlignment;
+            } else {
+                return P5Support.Types.AlignToMinute;
+            }
+        }
     }
 
     function setDateFormatString() {
@@ -117,7 +131,7 @@ Item {
         // /all/ locales in LongFormat have "dddd" either
         // at the beginning or at the end. so we just
         // remove it + the delimiter and space
-        var format = Qt.locale().dateFormat(Locale.LongFormat);
+        let format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
         return format;
     }

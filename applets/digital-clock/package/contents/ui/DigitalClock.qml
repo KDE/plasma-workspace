@@ -90,7 +90,7 @@ MouseArea {
         function onSelectedTimeZonesChanged() {
             // If the currently selected timezone was removed,
             // default to the first one in the list
-            var lastSelectedTimezone = Plasmoid.configuration.lastSelectedTimezone;
+            const lastSelectedTimezone = Plasmoid.configuration.lastSelectedTimezone;
             if (Plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) === -1) {
                 Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[0];
             }
@@ -595,21 +595,21 @@ MouseArea {
     // What happens here is that it looks for the delimiter between "h" and "m", takes it
     // and appends it after "mm" and then appends "ss" for the seconds.
     function timeFormatCorrection(timeFormatString) {
-        var regexp = /(hh*)(.+)(mm)/i
-        var match = regexp.exec(timeFormatString);
+        const regexp = /(hh*)(.+)(mm)/i
+        const match = regexp.exec(timeFormatString);
 
-        var hours = match[1];
-        var delimiter = match[2];
-        var minutes = match[3]
-        var seconds = "ss";
-        var amPm = "AP";
-        var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") === -1;
+        const hours = match[1];
+        const delimiter = match[2];
+        const minutes = match[3]
+        const seconds = "ss";
+        const amPm = "AP";
+        const uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") === -1;
 
         // because QLocale is incredibly stupid and does not convert 12h/24h clock format
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
-        var result = hours.toLowerCase() + delimiter + minutes;
+        let result = hours.toLowerCase() + delimiter + minutes;
 
-        var result_sec = result + delimiter + seconds;
+        let result_sec = result + delimiter + seconds;
 
         // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
         if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
@@ -623,10 +623,10 @@ MouseArea {
     }
 
     function setupLabels() {
-        var showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
+        const showTimezone = main.showLocalTimezone || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
                                                         && dataSource.data["Local"]["Timezone City"] !== dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
 
-        var timezoneString = "";
+        let timezoneString = "";
 
         if (showTimezone) {
             // format timezone as tz code, city or UTC offset
@@ -635,10 +635,10 @@ MouseArea {
             } else if (displayTimezoneFormat === 1) {
                 timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
             } else if (displayTimezoneFormat === 2) {
-                var lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
-                var symbol = lastOffset > 0 ? '+' : '';
-                var hours = Math.floor(lastOffset / 3600);
-                var minutes = Math.floor(lastOffset % 3600 / 60);
+                const lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
+                const symbol = lastOffset > 0 ? '+' : '';
+                const hours = Math.floor(lastOffset / 3600);
+                const minutes = Math.floor(lastOffset % 3600 / 60);
 
                 timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
             }
@@ -649,7 +649,6 @@ MouseArea {
             timezoneLabel.text = timezoneString;
         }
 
-
         if (main.showDate) {
             dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
         } else {
@@ -658,24 +657,24 @@ MouseArea {
         }
 
         // find widest character between 0 and 9
-        var maximumWidthNumber = 0;
-        var maximumAdvanceWidth = 0;
-        for (var i = 0; i <= 9; i++) {
-            var advanceWidth = timeMetrics.advanceWidth(i);
+        let maximumWidthNumber = 0;
+        let maximumAdvanceWidth = 0;
+        for (let i = 0; i <= 9; i++) {
+            const advanceWidth = timeMetrics.advanceWidth(i);
             if (advanceWidth > maximumAdvanceWidth) {
                 maximumAdvanceWidth = advanceWidth;
                 maximumWidthNumber = i;
             }
         }
         // replace all placeholders with the widest number (two digits)
-        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        const format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
-        var date = new Date(2000, 0, 1, 1, 0, 0);
-        var timeAm = Qt.formatTime(date, format);
-        var advanceWidthAm = timeMetrics.advanceWidth(timeAm);
+        const date = new Date(2000, 0, 1, 1, 0, 0);
+        const timeAm = Qt.formatTime(date, format);
+        const advanceWidthAm = timeMetrics.advanceWidth(timeAm);
         date.setHours(13);
-        var timePm = Qt.formatTime(date, format);
-        var advanceWidthPm = timeMetrics.advanceWidth(timePm);
+        const timePm = Qt.formatTime(date, format);
+        const advanceWidthPm = timeMetrics.advanceWidth(timePm);
         // set the sizehelper's text to the widest time string
         if (advanceWidthAm > advanceWidthPm) {
             sizehelper.text = timeAm;
@@ -685,9 +684,8 @@ MouseArea {
         fontHelper.text = sizehelper.text
     }
 
-    function dateTimeChanged()
-    {
-        var doCorrections = false;
+    function dateTimeChanged() {
+        let doCorrections = false;
 
         if (main.showDate) {
             // If the date has changed, force size recalculation, because the day name
@@ -699,7 +697,7 @@ MouseArea {
             }
         }
 
-        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
+        const currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
         if (currentTZOffset !== tzOffset) {
             doCorrections = true;
             tzOffset = currentTZOffset;
@@ -712,23 +710,17 @@ MouseArea {
     }
 
     function setTimezoneIndex() {
-        for (var i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
-            if (Plasmoid.configuration.selectedTimeZones[i] === Plasmoid.configuration.lastSelectedTimezone) {
-                main.tzIndex = i;
-                break;
-            }
-        }
+        main.tzIndex = Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone);
     }
 
     Component.onCompleted: {
         // Sort the timezones according to their offset
         // Calling sort() directly on Plasmoid.configuration.selectedTimeZones
         // has no effect, so sort a copy and then assign the copy to it
-        var sortArray = Plasmoid.configuration.selectedTimeZones;
-        sortArray.sort(function(a, b) {
-            return dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
-        });
-        Plasmoid.configuration.selectedTimeZones = sortArray;
+        const sortedTimeZones = Plasmoid.configuration.selectedTimeZones;
+        const byOffset = (a, b) => dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"];
+        sortedTimeZones.sort(byOffset);
+        Plasmoid.configuration.selectedTimeZones = sortedTimeZones;
 
         setTimezoneIndex();
         tzOffset = -(new Date().getTimezoneOffset());
