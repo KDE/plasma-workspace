@@ -46,7 +46,7 @@ Kirigami.OverlaySheet {
     contentItem: QQC2.SwipeView {
         id: stackSwitcher
 
-        Layout.preferredWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4
+        implicitWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4
 
         focus: true
         interactive: false
