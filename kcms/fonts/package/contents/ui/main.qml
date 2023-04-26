@@ -22,7 +22,7 @@ KCM.SimpleKCM {
         id: kscreenAction
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
         text: i18n("Adjust Global Scale…")
-        iconName: "preferences-desktop-display"
+        icon.name: "preferences-desktop-display"
         onTriggered: KCMShell.open("kcm_kscreen")
     }
 

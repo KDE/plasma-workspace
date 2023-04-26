@@ -280,20 +280,20 @@ KCM.GridViewKCM {
 
         actions: [
             Kirigami.Action {
-                iconName: "document-edit"
+                icon.name: "document-edit"
                 tooltip: i18n("Edit Color Scheme…")
                 enabled: !model.pendingDeletion
                 onTriggered: kcm.editScheme(model.schemeName, root)
             },
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18n("Remove Color Scheme")
                 enabled: model.removable
                 visible: !model.pendingDeletion
                 onTriggered: model.pendingDeletion = true
             },
             Kirigami.Action {
-                iconName: "edit-undo"
+                icon.name: "edit-undo"
                 tooltip: i18n("Restore Color Scheme")
                 visible: model.pendingDeletion
                 onTriggered: model.pendingDeletion = false

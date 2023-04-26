@@ -94,13 +94,13 @@ KCM.ScrollViewKCM {
                     Kirigami.Action {
                         enabled: index > 0
                         visible: languageListView.count > 1
-                        iconName: "go-top"
+                        icon.name: "go-top"
                         tooltip: i18nc("@info:tooltip", "Move to top")
                         onTriggered: languageListModel.selectedLanguageModel.move(index, 0)
                     },
                     Kirigami.Action {
                         visible: languageListView.count > 1
-                        iconName: "edit-delete"
+                        icon.name: "edit-delete"
                         tooltip: i18nc("@info:tooltip", "Remove")
                         onTriggered: languageListModel.selectedLanguageModel.remove(index);
                     }]

@@ -113,21 +113,21 @@ KCM.GridViewKCM {
 
         actions: [
             Kirigami.Action {
-                iconName: "document-edit"
+                icon.name: "document-edit"
                 tooltip: i18n("Edit Theme…")
                 enabled: !model.pendingDeletion
                 visible: kcm.canEditThemes
                 onTriggered: kcm.editTheme(model.pluginName)
             },
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18n("Remove Theme")
                 enabled: model.isLocal
                 visible: !model.pendingDeletion
                 onTriggered: model.pendingDeletion = true;
             },
             Kirigami.Action {
-                iconName: "edit-undo"
+                icon.name: "edit-undo"
                 tooltip: i18n("Restore Theme")
                 visible: model.pendingDeletion
                 onTriggered: model.pendingDeletion = false;

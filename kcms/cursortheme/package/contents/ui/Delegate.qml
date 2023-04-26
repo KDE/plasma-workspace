@@ -50,14 +50,14 @@ KCM.GridDelegate {
 
     actions: [
         Kirigami.Action {
-            iconName: "edit-delete"
+            icon.name: "edit-delete"
             tooltip: i18n("Remove Theme")
             enabled: model.isWritable
             visible: !model.pendingDeletion
             onTriggered: model.pendingDeletion = true
         },
         Kirigami.Action {
-            iconName: "edit-undo"
+            icon.name: "edit-undo"
             tooltip: i18n("Restore Cursor Theme")
             visible: model.pendingDeletion
             onTriggered: model.pendingDeletion = false

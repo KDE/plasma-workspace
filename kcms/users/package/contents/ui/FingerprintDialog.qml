@@ -287,7 +287,7 @@ Kirigami.OverlaySheet {
                 Layout.fillWidth: true
                 actions: [
                     Kirigami.Action {
-                        iconName: "dialog-close"
+                        icon.name: "dialog-close"
                         onTriggered: fingerprintModel.currentError = ""
                     }
                 ]
@@ -318,7 +318,7 @@ Kirigami.OverlaySheet {
                     }
                     actions: [
                         Kirigami.Action {
-                            iconName: "edit-entry"
+                            icon.name: "edit-entry"
                             onTriggered: {
                                 fingerprintRoot.currentFinger = finger.internalName;
                                 fingerprintModel.startEnrolling(finger.internalName);
@@ -326,7 +326,7 @@ Kirigami.OverlaySheet {
                             tooltip: i18n("Re-enroll finger")
                         },
                         Kirigami.Action {
-                            iconName: "entry-delete"
+                            icon.name: "entry-delete"
                             onTriggered: {
                                 fingerprintModel.deleteFingerprint(finger.internalName);
                             }
