@@ -78,7 +78,7 @@ KCM.GridViewKCM {
 
         actions: [
             Kirigami.Action {
-                iconName: "document-edit"
+                icon.name: "document-edit"
                 tooltip: i18n("Configure Style…")
                 enabled: model.configurable
                 onTriggered: kcm.configure(model.display, model.styleName, delegate)
