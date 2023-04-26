@@ -99,7 +99,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 visible: model.fullScreenPreview !== ""
-                iconName: "view-preview"
+                icon.name: "view-preview"
                 tooltip: i18n("Preview Theme")
                 onTriggered: {
                     previewWindow.url = model.fullScreenPreview
@@ -107,7 +107,7 @@ KCM.GridViewKCM {
                 }
             },
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18nc("@action:button", "Remove Theme")
                 enabled: model.uninstallable && !delegate.GridView.isCurrentItem
                 onTriggered: confirmDeletionDialog.incubateObject(root, {
