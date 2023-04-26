@@ -2394,7 +2394,7 @@ QString ShellCorona::defaultContainmentPlugin() const
 void ShellCorona::updateStruts()
 {
     for (PanelView *view : qAsConst(m_panelViews)) {
-        view->updateStruts();
+        view->updateExclusiveZone();
     }
 }
 

@@ -31,6 +31,7 @@ ecm_qt_declare_logging_category(plasmashell HEADER screenpool-debug.h
                                                DEFAULT_SEVERITY Info)
 set (plasma_shell_SRCS
     alternativeshelper.cpp
+    autohidescreenedge.cpp
     main.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
@@ -70,6 +71,7 @@ if (QT_MAJOR_VERSION EQUAL "5")
 else()
     qt6_generate_wayland_protocol_client_sources(plasmashell FILES
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
     )
 endif()
 

@@ -16,14 +16,12 @@
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
 
+class AutoHideScreenEdge;
 class ShellCorona;
 
-namespace KWayland
+namespace LayerShellQt
 {
-namespace Client
-{
-class PlasmaShellSurface;
-}
+class Window;
 }
 
 class PanelView : public PlasmaQuick::ContainmentView
@@ -191,7 +189,7 @@ public:
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
     static KConfigGroup panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
 
-    void updateStruts();
+    void updateExclusiveZone();
 
     /*This is different from screen() as is always there, even if the window is
       temporarily outside the screen or if is hidden: only plasmashell will ever
@@ -255,8 +253,6 @@ private:
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
-    void setupWaylandIntegration();
-    void visibilityModeToWayland();
     bool edgeActivated() const;
     bool canSetStrut() const;
 
@@ -290,10 +286,11 @@ private:
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
-    KWayland::Client::PlasmaShellSurface *m_shellSurface;
+    LayerShellQt::Window *m_layerWindow = nullptr;
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;
+    AutoHideScreenEdge *m_autoHideScreenEdge = nullptr;
 
     static const int STRUTSTIMERDELAY = 200;
 };

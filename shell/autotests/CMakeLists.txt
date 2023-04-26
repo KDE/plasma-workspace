@@ -26,6 +26,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                     ../panelshadows.cpp
                     ../desktopview.cpp
                     ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../outputorderwatcher.cpp
+		    ../autohidescreenedge.cpp
                         )
                set(plasmashell_dbusXML ../dbus/org.kde.PlasmaShell.xml)
                qt_add_dbus_adaptor(test_SRCS ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
