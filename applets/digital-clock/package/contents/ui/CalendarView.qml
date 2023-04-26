@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
     SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
