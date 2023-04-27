@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-04-09 22:07+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -27,17 +27,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "'%1'(e)k saio-ixtea bertan behera utzi du"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME ezarri gabe!"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME direktorioa (%1) ez dago."
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -47,37 +47,37 @@ msgstr ""
 "$HOME direktoriora (%1) idazteko sarbiderik ez. Nahita egina bada, ezarri "
 "<envar>KDE_HOME_READONLY=1</envar> zure ingurunean."
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Irakurtzeko sarbiderik ez $HOME direktoriora (%1)."
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME direktorioa (%1) disko-lekurik gabe dago."
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "%HOME direktoriora (%2) idaztea huts egin du '%1' errorearekin"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Idazteko sarbiderik ez '%1'-era."
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Irakurtzeko sarbiderik ez '%1'-era."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Aldi baterako direktorioa (%1) disko-lekurik gabe dago."
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -86,7 +86,7 @@ msgstr ""
 "Aldi baterako direktoriora (%2) idaztea huts egin du\n"
 "    '%1' errorearekin"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -95,7 +95,7 @@ msgstr ""
 "Ondoko instalazio arazoa antzeman da\n"
 "Plasma abiatzen saiatzean:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -106,12 +106,12 @@ msgstr ""
 "\n"
 "Plasma ezin da abiatu.\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma Langunearen instalazio arazoa!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -120,22 +120,22 @@ msgstr ""
 "Plasmaren saio-kudeatzaile fidagarria, X11R6 saio-kudeaketa protokolo\n"
 "estandarrean (XSMP) mintzo dena."
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Erabiltzailearen saio gordea berreskuratzen du, erabilgarria bada."
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Urruneko konexioak ere onartzen ditu."
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Giltzatuta moduan hasten du saioa"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -144,37 +144,37 @@ msgstr ""
 "Pantaila giltzatzeko euskarri gabe abiatzen da. Beharrezkoa soilik beste "
 "osagaiek pantaila giltzatzea hornitzen badute."
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "Saio-kudeaketa"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "Amaitu saioa"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr "Itzali"
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr "Berrabiarazi"
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Amaitu saioa berrespenik gabe"
 
-#: server.cpp:910
+#: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Itzali berrespenik gabe"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Berrabiarazi berrespenik gabe"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-09 02:10+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-10-18 13:15+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -65,63 +65,63 @@ msgstr "Menyu şrifti"
 msgid "Window title font"
 msgstr "Pəncərə Başlığı şrifti"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:454
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "Əsas satıcı"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:456
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "Heç biri"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:466
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "Şaquli RGB"
 
-#: kxftconfig.cpp:468
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "Şaquli BGR"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:492
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "Əsas satıcı"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:494
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "Orta"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:496
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "Heç biri"
 
-#: kxftconfig.cpp:502
+#: kxftconfig.cpp:498
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "Yüngül"
 
-#: kxftconfig.cpp:504
+#: kxftconfig.cpp:500
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"

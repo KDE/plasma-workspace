@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-17 15:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Clausura de session cancellate per '%1'"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME non fixate!"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME directorio (%1) non existe."
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -43,37 +43,37 @@ msgstr ""
 "Nulle accesso a scriber a directorio $HOME  (%1). Si isto es  intentional, "
 "fixa <envar>KDE_HOME_READONLY=1</envar> in tu ambiente."
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Necun accesso in lectura al directorio $HOME  (%1)."
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME directorio (%1) ha exaurite le spatio de disco."
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Scriber in le directorio $HOME (%2) falleva con le error '%1'"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Necun accesso in scriptura a '%1'."
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Necun accesso in lectura a '%1'."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Directorio temporanee (%1) ha exaurite le spatio de disco."
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -82,7 +82,7 @@ msgstr ""
 "Scriber le directorio temporanee (%2) falleva con\n"
 "  le error '%1'"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Le sequente problema de installation esseva detigite\n"
 "durante que essayava startar Plasma:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -102,12 +102,12 @@ msgstr ""
 "\n"
 "Plasma es incapace de initiar.\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Problema de installation de Spatio de Labor de Plasma!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -116,22 +116,22 @@ msgstr ""
 "Le gerente de session de Plasma digne de fide que parla le protocollo\n"
 "de gestion de session standard de X11R6 (XSMP)"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Il restabili le session salvate del usator, si disponibile"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permitte anque connexiones remote"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Initia le session de modo blocate"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -140,37 +140,37 @@ msgstr ""
 "Starta sin supporto de schermo blocate. Solmente  necessari si altere "
 "componente forni le schermo blocate."
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "Gestion de Session"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "Claude session"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr "Arresto (shut down)"
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr "Reboot (re-initia)"
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Claude session sin confirmation"
 
-#: server.cpp:910
+#: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Stoppa  (halto) sin confirmation"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Re-starta (reboot) sin confirmation"

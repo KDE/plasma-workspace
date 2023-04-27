@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-01-03 13:23+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -29,7 +29,7 @@ msgstr "Naam van het huidige cursorthema"
 msgid "Current cursor size"
 msgstr "Huidige grootte cursor"
 
-#: kcmcursortheme.cpp:306
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -37,27 +37,27 @@ msgstr ""
 "Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op te "
 "starten."
 
-#: kcmcursortheme.cpp:380
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kon geen tijdelijk bestand aanmaken."
 
-#: kcmcursortheme.cpp:391
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Het pictogramthema-archief %1 kan niet gedownload worden"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Het bestand is geen geldig pictogramthema-archief."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Map 'pictogrammen' kon niet aangemaakt worden."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgstr ""
 "Een stijl met naam %1 bestaat al in uw pictogramstijlmap. Wilt u die "
 "vervangen door deze?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Thema overschrijven?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Het thema werd succesvol geïnstalleerd."
@@ -277,7 +277,7 @@ msgstr "U hebt de volgende cursorthema's voor de muis op uw system:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Huidige thema voor deze Plasma-sessie)"
 
-#: xcursor/xcursortheme.cpp:60
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-12-16 03:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -34,28 +34,28 @@ msgstr "ecuadra@eloihr.net"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar complemento de acciones del ratón"
 
-#: main.cpp:91
+#: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intérprete de Plasma"
 
-#: main.cpp:103
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activar el depurador JavaScripit QML"
 
-#: main.cpp:106
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automáticamente el intérprete de órdenes de Plasma tras un fallo"
 
-#: main.cpp:109
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forzar la carga del complemento del intérprete de órdenes indicado"
 
-#: main.cpp:114
+#: main.cpp:132
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -64,12 +64,12 @@ msgstr ""
 "Cargar el intérprete de órdenes de Plasma como aplicación independiente; "
 "necesita que se especifique la opción «shell-plugin»"
 
-#: main.cpp:116
+#: main.cpp:134
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Sustituir una instancia existente"
 
-#: main.cpp:119
+#: main.cpp:137
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -78,22 +78,22 @@ msgstr ""
 "Activa el modo de pruebas e indica el archivo javascripit para configurar el "
 "entorno de pruebas"
 
-#: main.cpp:120
+#: main.cpp:138
 #, kde-format
 msgid "file"
 msgstr "archivo"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista todas las opciones disponibles para los comentarios del usuario"
 
-#: main.cpp:224
+#: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "El inicio de Plasma ha fallado"
 
-#: main.cpp:225
+#: main.cpp:240
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -203,57 +203,57 @@ msgstr "%1 %2 en %3"
 msgid "Disconnected Screen %1"
 msgstr "Pantalla %1 desconectada"
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:171 shellcorona.cpp:173
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostrar el escritorio"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:173
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Ocultar el escritorio"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:188
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostrar el selector de actividad"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Detener la actividad actual"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Cambiar a la actividad anterior"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:212
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Cambiar a la actividad siguiente"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activar la entrada %1 del gestor de tareas"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:253
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gestión de escritorios y paneles..."
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover el foco del teclado entre paneles"
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Añadir panel"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

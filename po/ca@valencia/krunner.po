@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-09-15 10:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,32 +32,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "montoro_mde@gva.es,antonibella5@yahoo.com"
 
-#: main.cpp:60 view.cpp:45
+#: main.cpp:79 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:60
+#: main.cpp:79
 #, kde-format
 msgid "Run Command interface"
 msgstr "Interfície d'execució ordres"
 
-#: main.cpp:66
+#: main.cpp:85
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Utilitza el contingut del porta-retalls com a consulta per a KRunner"
 
-#: main.cpp:67
+#: main.cpp:86
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Inicia KRunner en segon pla, no el mostres."
 
-#: main.cpp:68
+#: main.cpp:87
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituïx una instància existent"
 
-#: main.cpp:73
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-09 02:10+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2010-02-12 01:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -79,7 +79,7 @@ msgstr ""
 msgid "Window title font"
 msgstr "แบบอักษรของหัวหน้าต่าง"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:454
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -87,33 +87,33 @@ msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "ใช้ตามค่าระบบ"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:456
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "ไม่ใช้"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:466
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "RGB ทางแนวตั้ง"
 
-#: kxftconfig.cpp:468
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "BGR ทางแนวตั้ง"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:492
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -121,27 +121,27 @@ msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "ใช้ตามค่าระบบ"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:494
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "ปานกลาง"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:496
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "ไม่ใช้"
 
-#: kxftconfig.cpp:502
+#: kxftconfig.cpp:498
 #, fuzzy, kde-format
 #| msgid "Slight"
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "เล็กน้อย"
 
-#: kxftconfig.cpp:504
+#: kxftconfig.cpp:500
 #, fuzzy, kde-format
 #| msgid "Full"
 msgctxt "full hinting"

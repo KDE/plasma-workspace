@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-19 09:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -32,17 +32,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "登出已由 %1 取消"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "未設定 $HOME。"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME 目錄（%1）不存在。"
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -50,51 +50,51 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "沒有讀取 $HOME 目錄（%1）的權限。"
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME 目錄（%1）磁碟空間已用盡。"
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "寫入 $HOME 目錄（%2）時發生錯誤 '%1'"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "沒有寫入 '%1' 的權限。"
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "沒有讀取 '%1' 的權限。"
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "暫存目錄（%1）磁碟空間已用盡。"
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr "寫入暫存目錄（%2）時發生錯誤 '%1'"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr "啟動 Plasma 時偵測到以下的安裝問題："
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -105,12 +105,12 @@ msgstr ""
 "\n"
 "無法啟動 Plasma。\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma 工作空間安裝發生問題。"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -119,59 +119,59 @@ msgstr ""
 "可信賴的 Plasma 工作階段管理者應該使用標準的\n"
 "X11R6 工作階段管理協定 (XSMP)。"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "如果可以，回復之前的工作階段"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "也允許遠端連接"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "以鎖定模式啟動工作階段"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr "以不支援鎖定螢幕的方式啟動。只在有其他組件提供鎖定螢幕時才需要。"
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "工作階段管理"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr "重新啟動"
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "不經確認直接登出"
 
-#: server.cpp:910
+#: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "不經確認直接關機"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "不經確認直接重新啟動"

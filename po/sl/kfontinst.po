@@ -1,6 +1,6 @@
 # translation of kfontinst.po to Slovenian
 # Translation of kfontinst.po to Slovenian
-# $Id: kfontinst.po 1647732 2023-03-24 02:31:16Z scripty $
+# $Id: kfontinst.po 1650408 2023-04-27 02:27:23Z scripty $
 # $Source$
 #
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-23 08:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -513,22 +513,22 @@ msgstr "Premakni v osebno mapo."
 msgid "Move to system folder."
 msgstr "Premakni v sistemsko mapo."
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:140
 #, kde-format
 msgid "Skip"
 msgstr "Preskoči"
 
-#: kcmfontinst/JobRunner.cpp:146
+#: kcmfontinst/JobRunner.cpp:143
 #, kde-format
 msgid "AutoSkip"
 msgstr "Samodejno preskoči"
 
-#: kcmfontinst/JobRunner.cpp:191
+#: kcmfontinst/JobRunner.cpp:188
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Preklic?</h3><p>Ali zares želite preklicati?</p>"
 
-#: kcmfontinst/JobRunner.cpp:203
+#: kcmfontinst/JobRunner.cpp:200
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -537,83 +537,83 @@ msgstr ""
 "<h3>Zaključeno</h3><p>Zapomnite si, da boste morali odprte programe znova "
 "zagnati, da se v njih uveljavijo spremembe.</p>"
 
-#: kcmfontinst/JobRunner.cpp:211
+#: kcmfontinst/JobRunner.cpp:208
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Tega sporočila ne prikaži več"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:318
 #, kde-format
 msgid "Installing"
 msgstr "Nameščanje"
 
-#: kcmfontinst/JobRunner.cpp:324
+#: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Uninstalling"
 msgstr "Odstranjevanje"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Enabling"
 msgstr "Omogočanje"
 
-#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
 #, kde-format
 msgid "Moving"
 msgstr "Premikanje"
 
-#: kcmfontinst/JobRunner.cpp:333
+#: kcmfontinst/JobRunner.cpp:330
 #, kde-format
 msgid "Updating"
 msgstr "Posodabljanje"
 
-#: kcmfontinst/JobRunner.cpp:337
+#: kcmfontinst/JobRunner.cpp:334
 #, kde-format
 msgid "Removing"
 msgstr "Odstranjevanje"
 
-#: kcmfontinst/JobRunner.cpp:341
+#: kcmfontinst/JobRunner.cpp:338
 #, kde-format
 msgid "Disabling"
 msgstr "Onemogočanje"
 
-#: kcmfontinst/JobRunner.cpp:379
+#: kcmfontinst/JobRunner.cpp:376
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "Posodabljanje nastavitev za pisave. Počakajte…"
 
-#: kcmfontinst/JobRunner.cpp:451
+#: kcmfontinst/JobRunner.cpp:448
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Ni mogoče zagnati zaledja."
 
-#: kcmfontinst/JobRunner.cpp:460
+#: kcmfontinst/JobRunner.cpp:457
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Zaledje se je sesulo, a je bilo znova zagnano. Poskusite znova."
 
-#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
+#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Napaka</h3>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Ni bilo mogoče prejeti <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Sistemsko zaledje se je sesulo. Poskusite znova.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr "<i>%1</i> je bitna pisava, le te pa so na vašem sistemu onemogočene."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -621,47 +621,47 @@ msgid ""
 msgstr ""
 "<i>%1</i> vsebuje pisavo <b>%2</b>, ki je že nameščena na vašem sistemu."
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> ni pisava."
 
-#: kcmfontinst/JobRunner.cpp:707
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Ni bilo mogoče odstraniti vseh datotek povezanih z <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Sistemskega ozadnjega programa ni bilo mogoče zagnati.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> že obstaja."
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> ne obstaja."
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Nimate dovoljenja.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Nepodprto dejanje.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:721
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Overitev ni uspela.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:723
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Nepričakovana napaka med obdelovanjem: <i>%1</i>"
@@ -1209,54 +1209,54 @@ msgstr "Ni bilo mogoče odstraniti vseh datotek povezanih z %1"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: lib/FcEngine.cpp:858
+#: lib/FcEngine.cpp:854
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:860
+#: lib/FcEngine.cpp:856
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcČčDdEeFfGgHhIiJjKkLlMmNnOoPpRrSsŠšTtUuVvZzŽž0123456789"
 
-#: lib/FcEngine.cpp:1022
+#: lib/FcEngine.cpp:1018
 #, kde-format
 msgid "No characters found."
 msgstr "Ni najdenih znakov."
 
-#: lib/FcEngine.cpp:1060
+#: lib/FcEngine.cpp:1056
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Šerif bo za vajo spet skuhal domače žgance"
 
-#: lib/FcEngine.cpp:1065
+#: lib/FcEngine.cpp:1061
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCČDEFGHIJKLMNOPRSŠTUVZŽ"
 
-#: lib/FcEngine.cpp:1070
+#: lib/FcEngine.cpp:1066
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcčdefghijklmnoprsštuvzž"
 
-#: lib/FcEngine.cpp:1075
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]»«"
 
-#: lib/FcEngine.cpp:1473
+#: lib/FcEngine.cpp:1469
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "NAPAKA: ni mogoče določiti imena pisave."
 
-#: lib/FcEngine.cpp:1476
+#: lib/FcEngine.cpp:1472
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

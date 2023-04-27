@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 04:11+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2014-12-28 11:33+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -41,56 +41,56 @@ msgstr "Šifra"
 msgid "Log In"
 msgstr "Odjavi se"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je uključen"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:191
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
 msgstr "Ugasi"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:235
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:449
+#: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:483
+#: ../sddm-theme/Main.qml:484
 #, fuzzy, kde-format
 #| msgctxt "Button to change keyboard layout"
 #| msgid "Switch layout"
 msgid "List Users"
 msgstr "Zamijeni raspored"
 
-#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:577
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:596
+#: ../sddm-theme/Main.qml:597
 #, kde-format
 msgid "Login Failed"
 msgstr "Neuspjela prijava"
@@ -167,41 +167,41 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "Otključavanje nije uspjelo"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Sleep"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:322 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:328
 #, fuzzy, kde-format
 #| msgctxt "Button to change keyboard layout"
 #| msgid "Switch layout"
 msgid "Switch User"
 msgstr "Zamijeni raspored"
 
-#: contents/lockscreen/LockScreenUi.qml:523
+#: contents/lockscreen/LockScreenUi.qml:524
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "Switch to This Session"
 msgstr "Nova sesija"
 
-#: contents/lockscreen/LockScreenUi.qml:531
+#: contents/lockscreen/LockScreenUi.qml:532
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "Start New Session"
 msgstr "Nova sesija"
 
-#: contents/lockscreen/LockScreenUi.qml:544
+#: contents/lockscreen/LockScreenUi.qml:545
 #, kde-format
 msgid "Back"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:590
+#: contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

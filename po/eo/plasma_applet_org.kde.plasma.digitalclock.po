@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:17+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -163,7 +163,7 @@ msgid "12-Hour"
 msgstr "12-Horo"
 
 #: package/contents/ui/configAppearance.qml:131
-#: package/contents/ui/configCalendar.qml:53
+#: package/contents/ui/configCalendar.qml:54
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Uzi Regionajn Defaŭltojn"
@@ -258,22 +258,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Elekti Tiparon"
 
-#: package/contents/ui/configCalendar.qml:39
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "General:"
 msgstr "Ĝenerala:"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:41
 #, kde-format
 msgid "Show week numbers"
 msgstr "Montri semajnajn nombrojn"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "First day of week:"
 msgstr "Unua tago de semajno:"
 
-#: package/contents/ui/configCalendar.qml:68
+#: package/contents/ui/configCalendar.qml:71
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Disponeblaj Kromaĵoj:"

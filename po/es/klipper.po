@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-10-17 17:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -510,67 +510,67 @@ msgstr "Icono:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:139
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergente de acciones automático"
 
-#: klipper.cpp:178
+#: klipper.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Borrar historial del portapapeles"
 
-#: klipper.cpp:185
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar Klipper..."
 
-#: klipper.cpp:191
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Salir"
 
-#: klipper.cpp:196
+#: klipper.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente la acción en el portapapeles actual"
 
-#: klipper.cpp:203
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mostrar código de &barras..."
 
-#: klipper.cpp:212
+#: klipper.cpp:205
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Siguiente elemento del historial"
 
-#: klipper.cpp:217
+#: klipper.cpp:210
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
-#: klipper.cpp:224
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Mostrar elementos en la posición del ratón"
 
-#: klipper.cpp:235
+#: klipper.cpp:228
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Herramienta del portapapeles"
 
-#: klipper.cpp:530
+#: klipper.cpp:523
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -581,57 +581,57 @@ msgstr ""
 "<interface>Acciones</interface> de la ventana de configuración de la "
 "miniaplicación del portapapeles."
 
-#: klipper.cpp:569
+#: klipper.cpp:562
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "¿Desea iniciar Klipper automáticamente cada vez que inicie una sesión?"
 
-#: klipper.cpp:570
+#: klipper.cpp:563
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "¿Iniciar Klipper de forma automática?"
 
-#: klipper.cpp:571
+#: klipper.cpp:564
 #, kde-format
 msgid "Start"
 msgstr "Iniciar"
 
-#: klipper.cpp:572
+#: klipper.cpp:565
 #, kde-format
 msgid "Do Not Start"
 msgstr "No iniciar"
 
-#: klipper.cpp:942
+#: klipper.cpp:935
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de barras para móvil"
 
-#: klipper.cpp:989
+#: klipper.cpp:982
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "¿Realmente desea limpiar y borrar todo el historial del portapapeles?"
 
-#: klipper.cpp:990
+#: klipper.cpp:983
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpiar el historial del portapapeles"
 
-#: klipper.cpp:1006 klipper.cpp:1015
+#: klipper.cpp:999 klipper.cpp:1008
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1025
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1032
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:1046
+#: klipper.cpp:1039
 #, kde-format
 msgid "down"
 msgstr "abajo"

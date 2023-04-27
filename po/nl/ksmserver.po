@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-15 13:23+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -32,17 +32,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Afmelden geannuleerd door '%1'"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME niet ingesteld!"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Map $HOME (%1) bestaat niet."
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -52,37 +52,37 @@ msgstr ""
 "Geen schrijftoegang tot map $HOME (%1). Als dit de bedoeling is, zet dan "
 "<envar>KDE_HOME_READONLY=1</envar> in uw omgeving."
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Geen leestoegang tot map $HOME (%1)."
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "Map $HOME (%1) heeft geen ruimte op schijf meer."
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "Schrijven naar de map $HOME (%2) is mislukt met de fout '%1'"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Geen schrijftoegang tot '%1'."
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Geen leestoegang tot '%1'."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "Tijdelijke map (%1) heeft geen ruimte op schijf meer."
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Schrijven naar de tijdelijke map (%2) is mislukt\n"
 "    met de fout '%1'"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -100,7 +100,7 @@ msgstr ""
 "Het volgende installatieprobleem is gedetecteerd\n"
 "bij een poging om Plasma te starten:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -111,12 +111,12 @@ msgstr ""
 "\n"
 "Plasma kan niet starten.\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Installatieprobleem van Plasma Workspace!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -125,22 +125,22 @@ msgstr ""
 "De betrouwbare Plasma-sessiebeheerder die het standaard X11R6-\n"
 "sessiebeheerprotocol (XSMP) gebruikt."
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Herstelt, indien beschikbaar, de vorige sessie"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Ook externe verbindingen toestaan"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Start de sessie in de modus vergrendeld"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -149,37 +149,37 @@ msgstr ""
 "Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als een "
 "andere component de schermvergrendeling levert."
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "Sessiebeheer"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "Afmelden"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr "Systeem afsluiten"
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr "Systeem herstarten"
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Afmelden zonder bevestiging"
 
-#: server.cpp:910
+#: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Afsluiten zonder bevestiging"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Computer herstarten zonder bevestiging"

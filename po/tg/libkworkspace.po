@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2019-09-16 18:52+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:770
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -25,7 +25,7 @@ msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: воридшавии TTY"
 
-#: kdisplaymanager.cpp:779
+#: kdisplaymanager.cpp:775
 #, fuzzy, kde-format
 #| msgctxt "... location (TTY or X display)"
 #| msgid "Unused"
@@ -33,12 +33,12 @@ msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Истифоданашуда"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
 msgstr "Воридшавии X дар мизбони дурдаст"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -46,13 +46,13 @@ msgctxt "… host"
 msgid "X login on %1"
 msgstr "Воридшавии X дар %1"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:778
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:793
+#: kdisplaymanager.cpp:789
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

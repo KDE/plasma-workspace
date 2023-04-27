@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2021-05-28 02:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,36 +18,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.3\n"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:770
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: TTY 로그인"
 
-#: kdisplaymanager.cpp:779
+#: kdisplaymanager.cpp:775
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "사용하지 않음"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
 msgstr "원격 호스트에서의 X 로그인"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "%1에서의 X 로그인"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:778
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:793
+#: kdisplaymanager.cpp:789
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

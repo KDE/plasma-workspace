@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,45 +29,45 @@ msgstr "当前光标主题名称"
 msgid "Current cursor size"
 msgstr "当前光标大小"
 
-#: kcmcursortheme.cpp:306
+#: kcmcursortheme.cpp:303
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "要让这些更改生效，您必须重新启动 Plasma 会话。"
 
-#: kcmcursortheme.cpp:380
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "无法创建临时文件。"
 
-#: kcmcursortheme.cpp:391
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "无法下载图标主题压缩包：%1"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:419
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "文件不是一个有效的图标主题压缩包。"
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "无法创建“icons”文件夹。"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "您的图标主题文件夹中已存在名为 %1 的主题。您想要用此主题替换它吗？"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "覆盖主题吗？"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "主题安装成功。"
@@ -259,7 +259,7 @@ msgstr "您的系统已安装以下鼠标光标主题："
 msgid "(Current theme for this Plasma session)"
 msgstr "(此 Plasma 会话的当前主题)"
 
-#: xcursor/xcursortheme.cpp:60
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

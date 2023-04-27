@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-15 08:04+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -29,17 +29,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "Вихід скасовано «%1»"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "Змінну $HOME не встановлено!"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "Каталогу $HOME (%1) не існує."
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -49,39 +49,39 @@ msgstr ""
 "Немає доступу до запису до каталогу $HOME (%1). Якщо так зроблено навмисно, "
 "встановіть у вашому середовищі <envar>KDE_HOME_READONLY=1</envar>."
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "Немає доступу на читання до каталогу $HOME (%1)."
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "У каталозі $HOME (%1) недостатньо місця на диску."
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr ""
 "Спроба запису до каталогу $HOME (%2) зазнала невдачі. Повідомлення про "
 "помилку: «%1»"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Немає доступу на запис до «%1»."
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Немає доступу на читання до «%1»."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "У каталозі для тимчасових даних (%1) недостатньо місця на диску."
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -90,7 +90,7 @@ msgstr ""
 "Спроба запису до каталогу тимчасових даних (%2) зазнала невдачі.\n"
 "   Повідомлення про помилку: «%1»"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -99,7 +99,7 @@ msgstr ""
 "Під час спроби запустити Плазму виявлено таку проблему\n"
 "зі встановленими компонентами:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -110,12 +110,12 @@ msgstr ""
 "\n"
 "Не вдалося запустити Плазму.\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "Проблема зі встановленням робочого простору Плазми!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -124,22 +124,22 @@ msgstr ""
 "Надійний менеджер сеансів Плазми, який вміє спілкуватися стандартним \n"
 "протоколом X11R6 для менеджерів сеансів (XSMP)."
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Якщо можливо відновлює попередній сеанс"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Дозволити також з'єднання по мережі"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Розпочинає сеанс у режимі блокування"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -148,37 +148,37 @@ msgstr ""
 "Запуск без підтримки блокування екрана. Потрібен, лише якщо блокування "
 "екрана забезпечується іншим компонентом."
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "Керування сеансами"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "Завершити сеанс"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr "Вимкнути"
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr "Перезавантажити"
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Завершити сеанс без підтвердження"
 
-#: server.cpp:910
+#: server.cpp:907
 #, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "Завершити роботу комп’ютера без підтвердження дії"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Перезавантажити без підтвердження"

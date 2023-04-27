@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:770
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr ""
 
-#: kdisplaymanager.cpp:779
+#: kdisplaymanager.cpp:775
 #, fuzzy, kde-format
 #| msgid "Untrusted"
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "njewěsty"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
 msgstr ""
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr ""
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:778
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr ""
 
-#: kdisplaymanager.cpp:793
+#: kdisplaymanager.cpp:789
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2010-05-30 00:57-0700\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -515,22 +515,22 @@ msgstr "ব্যক্তিগত ফোল্ডারে সরিয়ে ন
 msgid "Move to system folder."
 msgstr "সিস্টেম ফোল্ডারে সরিয়ে নিয়ে যাও।"
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:140
 #, kde-format
 msgid "Skip"
 msgstr "ছেড়ে যাও"
 
-#: kcmfontinst/JobRunner.cpp:146
+#: kcmfontinst/JobRunner.cpp:143
 #, kde-format
 msgid "AutoSkip"
 msgstr "নিজে থেকে ছেড়ে যাও"
 
-#: kcmfontinst/JobRunner.cpp:191
+#: kcmfontinst/JobRunner.cpp:188
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>বাতিল করব?</h3><p>আপনি কি বাতিল করার ব্যাপারে নিশ্চিত?</p>"
 
-#: kcmfontinst/JobRunner.cpp:203
+#: kcmfontinst/JobRunner.cpp:200
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Please note that any open applications will need to be restarted in "
@@ -542,84 +542,84 @@ msgstr ""
 "<p>মনে রাখবেন যে পরিবর্তনগুলি কেবলমাত্র নতুন করে চালানো অ্যাপলিকেশন-এর ক্ষেত্রেই "
 "কার্যকরী কবে।</p>"
 
-#: kcmfontinst/JobRunner.cpp:211
+#: kcmfontinst/JobRunner.cpp:208
 #, kde-format
 msgid "Do not show this message again"
 msgstr "এই বার্তাটি আর দেখিও না"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:318
 #, kde-format
 msgid "Installing"
 msgstr "ইনস্টল করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:324
+#: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Uninstalling"
 msgstr "আন-ইনস্টল করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Enabling"
 msgstr "সক্রিয় করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
 #, kde-format
 msgid "Moving"
 msgstr "সরানো হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:333
+#: kcmfontinst/JobRunner.cpp:330
 #, kde-format
 msgid "Updating"
 msgstr "আপডেট করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:337
+#: kcmfontinst/JobRunner.cpp:334
 #, kde-format
 msgid "Removing"
 msgstr "সরানো হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:341
+#: kcmfontinst/JobRunner.cpp:338
 #, kde-format
 msgid "Disabling"
 msgstr "নিষ্ক্রিয় করা হচ্ছে"
 
-#: kcmfontinst/JobRunner.cpp:379
+#: kcmfontinst/JobRunner.cpp:376
 #, fuzzy, kde-format
 #| msgid "Updating font configuration. Please wait..."
 msgid "Updating font configuration. Please wait…"
 msgstr "ফন্ট কনফিগারেশন আপডেট করা হচ্ছে। অনুগ্রহ করে অপেক্ষা করুন..."
 
-#: kcmfontinst/JobRunner.cpp:451
+#: kcmfontinst/JobRunner.cpp:448
 #, kde-format
 msgid "Unable to start backend."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:460
+#: kcmfontinst/JobRunner.cpp:457
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
+#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>ত্রুটি</h3>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> ডাউনলোড করতে ব্যর্থ"
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr "<i>%1</i> একটি বিটম্যাপ ফন্ট, এবং আপনার সিস্টেমে এগুলি নিষ্ক্রিয় করা রয়েছে।"
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -628,47 +628,47 @@ msgstr ""
 "<i>%1</i>-এ <b>%2</b> ফন্ট-টি রয়েছে, যে নামের একটি ফন্ট আগে থেকেই ইনস্টল করা "
 "রয়েছে।"
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> একটি ফন্ট নয়।"
 
-#: kcmfontinst/JobRunner.cpp:707
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i>-এর সঙ্গে সংযুক্ত সমস্ত ফাইল মুছে ফেলা যায়নি"
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> আগে থেকেই আছে।"
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> নেই।"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "অনুমতি পাওয়া যায়নি। <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "অসমর্থিত ক্রিয়া।<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:721
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "যাচাই প্রক্রিয়া ব্যর্থ। <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:723
+#: kcmfontinst/JobRunner.cpp:720
 #, fuzzy, kde-format
 #| msgid "Unexpected error whilst processing: <i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
@@ -1234,54 +1234,54 @@ msgstr "%1-এর সঙ্গে সংযুক্ত সমস্ত ফা�
 msgid "Unknown"
 msgstr "Unknown"
 
-#: lib/FcEngine.cpp:858
+#: lib/FcEngine.cpp:854
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:860
+#: lib/FcEngine.cpp:856
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789অআইঈউঊঋএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহয়ড়ঢ়০১২৩৪৫৬৭৮৯"
 
-#: lib/FcEngine.cpp:1022
+#: lib/FcEngine.cpp:1018
 #, kde-format
 msgid "No characters found."
 msgstr "কোনও অক্ষর খুঁজে পাওয়া যায়নি।"
 
-#: lib/FcEngine.cpp:1060
+#: lib/FcEngine.cpp:1056
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "চটপট খয়েরী শিয়ালটি লাফ দেয় অলস কুকুরের উপর"
 
-#: lib/FcEngine.cpp:1065
+#: lib/FcEngine.cpp:1061
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1070
+#: lib/FcEngine.cpp:1066
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1075
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1473
+#: lib/FcEngine.cpp:1469
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "সমস্যা: ফন্ট-এর নাম নির্ধারণ করা যায়নি।"
 
-#: lib/FcEngine.cpp:1476
+#: lib/FcEngine.cpp:1472
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

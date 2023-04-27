@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-09 02:10+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-04-07 20:05+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -69,63 +69,63 @@ msgstr "Menutiparo"
 msgid "Window title font"
 msgstr "Fenestra titoltiparo"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:454
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "Vendista defaŭlto"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:456
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "neniu"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "RVB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "BVR"
 
-#: kxftconfig.cpp:466
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "Vertikala RVB"
 
-#: kxftconfig.cpp:468
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "Vertikala BVR"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:492
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "Vendista defaŭlto"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:494
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "Meze"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:496
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "neniu"
 
-#: kxftconfig.cpp:502
+#: kxftconfig.cpp:498
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "Iomete"
 
-#: kxftconfig.cpp:504
+#: kxftconfig.cpp:500
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"

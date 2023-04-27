@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2021-12-12 14:50+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -504,22 +504,22 @@ msgstr "Perkelti į asmeninį aplanką."
 msgid "Move to system folder."
 msgstr "Perkelti į sistemos aplanką."
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:140
 #, kde-format
 msgid "Skip"
 msgstr "Praleisti"
 
-#: kcmfontinst/JobRunner.cpp:146
+#: kcmfontinst/JobRunner.cpp:143
 #, kde-format
 msgid "AutoSkip"
 msgstr "Automatiškai praleisti"
 
-#: kcmfontinst/JobRunner.cpp:191
+#: kcmfontinst/JobRunner.cpp:188
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Atsisakyti?</h3><p>Ar tikrai norite atsisakyti?</p>"
 
-#: kcmfontinst/JobRunner.cpp:203
+#: kcmfontinst/JobRunner.cpp:200
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -528,84 +528,84 @@ msgstr ""
 "<h3>Užbaigta</h3><p>Atkreipkite dėmesį, kad visos veikiančios programos turi "
 "būti paleistos iš naujo, kad įsigaliotų pasikeitimai.</p>"
 
-#: kcmfontinst/JobRunner.cpp:211
+#: kcmfontinst/JobRunner.cpp:208
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Daugiau neberodyti šio pranešimo"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:318
 #, kde-format
 msgid "Installing"
 msgstr "Įdiegiama"
 
-#: kcmfontinst/JobRunner.cpp:324
+#: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Uninstalling"
 msgstr "Šalinama"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Enabling"
 msgstr "Įjungiama"
 
-#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
 #, kde-format
 msgid "Moving"
 msgstr "Perkeliama"
 
-#: kcmfontinst/JobRunner.cpp:333
+#: kcmfontinst/JobRunner.cpp:330
 #, kde-format
 msgid "Updating"
 msgstr "Atnaujinama"
 
-#: kcmfontinst/JobRunner.cpp:337
+#: kcmfontinst/JobRunner.cpp:334
 #, kde-format
 msgid "Removing"
 msgstr "Šalinama"
 
-#: kcmfontinst/JobRunner.cpp:341
+#: kcmfontinst/JobRunner.cpp:338
 #, kde-format
 msgid "Disabling"
 msgstr "Išjungiama"
 
-#: kcmfontinst/JobRunner.cpp:379
+#: kcmfontinst/JobRunner.cpp:376
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "Atnaujinama šriftų konfigūracija. Palaukite…"
 
-#: kcmfontinst/JobRunner.cpp:451
+#: kcmfontinst/JobRunner.cpp:448
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Nepavyko paleisti vidinės pusės."
 
-#: kcmfontinst/JobRunner.cpp:460
+#: kcmfontinst/JobRunner.cpp:457
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Vidinė pusė numirė, tačiau paleista iš naujo. Bandykite dar kartą."
 
-#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
+#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Klaida</h3>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Nepavyko atsisiųsti <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Sistemos vidinė pusė numirė. Bandykite dar kartą.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "<i>%1</i> yra taškinis šriftas, o jūsų sistemoje tokie šriftai yra išjungti."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -613,47 +613,47 @@ msgid ""
 msgstr ""
 "<i>%1</i> viduje yra šriftas <b>%2</b>, kuris jau įdiegtas jūsų sistemoje."
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> nėra šriftas."
 
-#: kcmfontinst/JobRunner.cpp:707
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Nepavyko pašalinti visų, su <i>%1</i> susietų, failų."
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Nepavyko paleisti sistemos tarnybos.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> jau yra."
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> nėra."
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Leidimas atmestas.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Nepalaikomas veiksmas.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:721
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Tapatybės nustatymas nepavyko.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:723
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Netikėta klaida apdorojant: <i>%1</i>"
@@ -1210,54 +1210,54 @@ msgstr "Nepavyko pašalinti visų failų, susijusių su %1"
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: lib/FcEngine.cpp:858
+#: lib/FcEngine.cpp:854
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:860
+#: lib/FcEngine.cpp:856
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaĄąBbCcČčDdEeĘęĖėFfGgHhIiĮįYyJjKkLlMmNnOoPpRrSsŠšTtUuŲųŪūVvZzŽž0123456789"
 
-#: lib/FcEngine.cpp:1022
+#: lib/FcEngine.cpp:1018
 #, kde-format
 msgid "No characters found."
 msgstr "Nerasta jokių simbolių."
 
-#: lib/FcEngine.cpp:1060
+#: lib/FcEngine.cpp:1056
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Įlinkdama fechtuotojo špaga sublykčiojusi pragręžė apvalų arbūzą"
 
-#: lib/FcEngine.cpp:1065
+#: lib/FcEngine.cpp:1061
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
 
-#: lib/FcEngine.cpp:1070
+#: lib/FcEngine.cpp:1066
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "aąbcčdeęėfghiįyjklmnoprsštuųūvzž"
 
-#: lib/FcEngine.cpp:1075
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1473
+#: lib/FcEngine.cpp:1469
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "KLAIDA: Nepavyko nustatyti šrifto pavadinimo."
 
-#: lib/FcEngine.cpp:1476
+#: lib/FcEngine.cpp:1472
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

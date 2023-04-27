@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:306
+#: kcmcursortheme.cpp:303
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for these changes to take effect."
@@ -49,29 +49,29 @@ msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "יש להפעיל מחדש את KDE על מנת שהשינוי הללו יכנסו לתוקף."
 
-#: kcmcursortheme.cpp:380
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:391
+#: kcmcursortheme.cpp:388
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "לא ניתן למצוא את ארכיון ערכת הנושא למצביע %1."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:419
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "הקובץ %1 אינו ארכיון ערכת נושא למצביע תקף."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:426
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -80,12 +80,12 @@ msgstr ""
 "ערכת נושא בשם %1 כבר קיים בתיקיית ערכות הנושא לסמלים שלך. האם ברצונך להחליפה "
 "בערכת נושא זו?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:439
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "לשכתב ערכת נושא?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:463
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
@@ -280,7 +280,7 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: xcursor/xcursortheme.cpp:60
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

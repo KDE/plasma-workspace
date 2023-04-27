@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2021-10-13 08:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -507,22 +507,22 @@ msgstr "Пересунути до особистої теки."
 msgid "Move to system folder."
 msgstr "Пересунути до системної теки."
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:140
 #, kde-format
 msgid "Skip"
 msgstr "Пропустити"
 
-#: kcmfontinst/JobRunner.cpp:146
+#: kcmfontinst/JobRunner.cpp:143
 #, kde-format
 msgid "AutoSkip"
 msgstr "Автоматично пропускати"
 
-#: kcmfontinst/JobRunner.cpp:191
+#: kcmfontinst/JobRunner.cpp:188
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Скасувати?</h3><p>Ви справді бажаєте скасувати дію?</p>"
 
-#: kcmfontinst/JobRunner.cpp:203
+#: kcmfontinst/JobRunner.cpp:200
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -531,81 +531,81 @@ msgstr ""
 "<h3>Завершено</h3><p>Будь ласка, пам'ятайте, що будь-які відкриті програми "
 "потрібно перезапустити, перш ніж зміни набудуть чинності.</p>"
 
-#: kcmfontinst/JobRunner.cpp:211
+#: kcmfontinst/JobRunner.cpp:208
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Більше не показувати це повідомлення"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:318
 #, kde-format
 msgid "Installing"
 msgstr "Встановлення"
 
-#: kcmfontinst/JobRunner.cpp:324
+#: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Uninstalling"
 msgstr "Прибирання"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Enabling"
 msgstr "Увімкнення"
 
-#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
 #, kde-format
 msgid "Moving"
 msgstr "Пересування"
 
-#: kcmfontinst/JobRunner.cpp:333
+#: kcmfontinst/JobRunner.cpp:330
 #, kde-format
 msgid "Updating"
 msgstr "Оновлення"
 
-#: kcmfontinst/JobRunner.cpp:337
+#: kcmfontinst/JobRunner.cpp:334
 #, kde-format
 msgid "Removing"
 msgstr "Вилучення"
 
-#: kcmfontinst/JobRunner.cpp:341
+#: kcmfontinst/JobRunner.cpp:338
 #, kde-format
 msgid "Disabling"
 msgstr "Вимкнення"
 
-#: kcmfontinst/JobRunner.cpp:379
+#: kcmfontinst/JobRunner.cpp:376
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "Оновлення налаштування шрифтів. Будь ласка, зачекайте…"
 
-#: kcmfontinst/JobRunner.cpp:451
+#: kcmfontinst/JobRunner.cpp:448
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Не вдалося запустити сервер."
 
-#: kcmfontinst/JobRunner.cpp:460
+#: kcmfontinst/JobRunner.cpp:457
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
 "Сервер неочікувано завершив роботу, його було перезапущено. Будь ласка, "
 "повторіть спробу."
 
-#: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
+#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Помилка</h3>"
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Спроба отримання <i>%1</i> зазнала невдачі"
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "Системний сервер неочікувано завершив роботу. Будь ласка, повторіть спробу."
 "<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -613,7 +613,7 @@ msgstr ""
 "Файл <i>%1</i> містить растровий шрифт, підтримку таких шрифтів у вашій "
 "системі вимкнено."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -622,47 +622,47 @@ msgstr ""
 "У файлі <i>%1</i> міститься шрифт <b>%2</b>. Шрифт з цією назвою вже "
 "встановлено."
 
-#: kcmfontinst/JobRunner.cpp:705
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> не є шрифтом."
 
-#: kcmfontinst/JobRunner.cpp:707
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Не вдалося вилучити всі файли, пов’язані з <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
+#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> вже існує."
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> не існує."
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Відмовлено у доступі.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:719
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Дія не підтримується.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:721
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Спроба розпізнавання завершилася невдало.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:723
+#: kcmfontinst/JobRunner.cpp:720
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Під час обробки сталася несподівана помилка: <i>%1</i>"
@@ -1228,54 +1228,54 @@ msgstr "Не вдалося вилучити всі файли, пов’яза�
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: lib/FcEngine.cpp:858
+#: lib/FcEngine.cpp:854
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Аа"
 
-#: lib/FcEngine.cpp:860
+#: lib/FcEngine.cpp:856
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "АаБбВвГгҐґДдЕеЄєЖжЗзИиIіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЮюЯяЬь0123456789"
 
-#: lib/FcEngine.cpp:1022
+#: lib/FcEngine.cpp:1018
 #, kde-format
 msgid "No characters found."
 msgstr "Не знайдено символів."
 
-#: lib/FcEngine.cpp:1060
+#: lib/FcEngine.cpp:1056
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Тест українських та English символів"
 
-#: lib/FcEngine.cpp:1065
+#: lib/FcEngine.cpp:1061
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ"
 
-#: lib/FcEngine.cpp:1070
+#: lib/FcEngine.cpp:1066
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
 
-#: lib/FcEngine.cpp:1075
+#: lib/FcEngine.cpp:1071
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")№%^&-+@~£$€<>{}[]ІіЄєҐґ«»"
 
-#: lib/FcEngine.cpp:1473
+#: lib/FcEngine.cpp:1469
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ПОМИЛКА: не вдається визначити назву шрифту."
 
-#: lib/FcEngine.cpp:1476
+#: lib/FcEngine.cpp:1472
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

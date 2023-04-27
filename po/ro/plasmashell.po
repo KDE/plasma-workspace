@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-02-17 23:04+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -33,27 +33,27 @@ msgstr "sergiu@cip.md"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurare extensie acțiuni de maus"
 
-#: main.cpp:91
+#: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Învelișul Plasma"
 
-#: main.cpp:103
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activează depanatorul Javascript QML"
 
-#: main.cpp:106
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nu reporni învelișul Plasma automat după prăbușire"
 
-#: main.cpp:109
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Forțează încărcarea extensiei de înveliș date"
 
-#: main.cpp:114
+#: main.cpp:132
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -62,12 +62,12 @@ msgstr ""
 "Încarcă plasmashell ca aplicație de sine stătătoare, necesită specificarea "
 "opțiunii shell-plugin"
 
-#: main.cpp:116
+#: main.cpp:134
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
-#: main.cpp:119
+#: main.cpp:137
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -76,22 +76,22 @@ msgstr ""
 "Activează regimul de testare și specifică fișierul Javascript de aranjament "
 "pentru configurat mediul de testare"
 
-#: main.cpp:120
+#: main.cpp:138
 #, kde-format
 msgid "file"
 msgstr "fișier"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Enumeră opțiunile disponibile pentru reacții din partea utilizatorului"
 
-#: main.cpp:224
+#: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Pornirea Plasma a eșuat"
 
-#: main.cpp:225
+#: main.cpp:240
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -200,57 +200,57 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:171 shellcorona.cpp:173
 #, kde-format
 msgid "Show Desktop"
 msgstr "Arată biroul"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:173
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Ascunde biroul"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:188
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Arată comutatorul de activități"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Oprește activitatea curentă"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Treci la activitatea precedentă"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:212
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Treci la activitatea următoare"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activează înregistrarea %1 din gestionarul de sarcini"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:253
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Gestionează birouri și panouri…"
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mută focalizarea tastaturii între panouri"
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Adaugă panou"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1948
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

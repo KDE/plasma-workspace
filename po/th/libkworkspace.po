@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2008-12-14 20:04+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:770
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -27,7 +27,7 @@ msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "ผู้ใช้ %1: ล็อกอินทางเทอร์มินัล"
 
-#: kdisplaymanager.cpp:779
+#: kdisplaymanager.cpp:775
 #, fuzzy, kde-format
 #| msgctxt "... location (TTY or X display)"
 #| msgid "Unused"
@@ -35,12 +35,12 @@ msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "ไม่ได้ใช้"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
 msgstr "ล็อกอิน X บนเครื่องทางไกล"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -48,13 +48,13 @@ msgctxt "… host"
 msgid "X login on %1"
 msgstr "ล็อกอิน X บนเครื่อง %1"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:778
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "ผู้ใช้ %1: %2"
 
-#: kdisplaymanager.cpp:793
+#: kdisplaymanager.cpp:789
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

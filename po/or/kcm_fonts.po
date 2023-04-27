@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-09 02:10+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2009-01-02 11:44+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -68,63 +68,63 @@ msgstr ""
 msgid "Window title font"
 msgstr ""
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:454
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr ""
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:456
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr ""
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr ""
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr ""
 
-#: kxftconfig.cpp:466
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr ""
 
-#: kxftconfig.cpp:468
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr ""
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:492
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr ""
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:494
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr ""
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:496
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr ""
 
-#: kxftconfig.cpp:502
+#: kxftconfig.cpp:498
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr ""
 
-#: kxftconfig.cpp:504
+#: kxftconfig.cpp:500
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"

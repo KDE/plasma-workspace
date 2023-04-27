@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-11 14:49+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -493,67 +493,67 @@ msgstr "Ikon:"
 msgid "%1x%2 %3bpp"
 msgstr "%1 × %2 %3 b/p"
 
-#: klipper.cpp:139
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Sprett automatisk opp handlingsmeny"
 
-#: klipper.cpp:178
+#: klipper.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tøm utklippshistorikken"
 
-#: klipper.cpp:185
+#: klipper.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Set opp Klipper …"
 
-#: klipper.cpp:191
+#: klipper.cpp:184
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Avslutt"
 
-#: klipper.cpp:196
+#: klipper.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Start handling på utklippstavla manuelt"
 
-#: klipper.cpp:203
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vis &strekkode …"
 
-#: klipper.cpp:212
+#: klipper.cpp:205
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Neste historikkelement"
 
-#: klipper.cpp:217
+#: klipper.cpp:210
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Førre historikkelement"
 
-#: klipper.cpp:224
+#: klipper.cpp:217
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Vis element ved musepeikaren"
 
-#: klipper.cpp:235
+#: klipper.cpp:228
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 – utklippstavleverktøy"
 
-#: klipper.cpp:530
+#: klipper.cpp:523
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -563,57 +563,57 @@ msgstr ""
 "Du kan setja opp nettadresse­handlingar seinare på sida "
 "<interface>Handlingar</interface> i innstillings­vindauget til utklippstavla."
 
-#: klipper.cpp:569
+#: klipper.cpp:562
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Skal Klipper startast automatisk når du loggar inn?"
 
-#: klipper.cpp:570
+#: klipper.cpp:563
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Automatisk start av Klipper?"
 
-#: klipper.cpp:571
+#: klipper.cpp:564
 #, kde-format
 msgid "Start"
 msgstr "Start"
 
-#: klipper.cpp:572
+#: klipper.cpp:565
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ikkje start"
 
-#: klipper.cpp:942
+#: klipper.cpp:935
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil strekkode"
 
-#: klipper.cpp:989
+#: klipper.cpp:982
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
 
-#: klipper.cpp:990
+#: klipper.cpp:983
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tøm utklippshistorikken"
 
-#: klipper.cpp:1006 klipper.cpp:1015
+#: klipper.cpp:999 klipper.cpp:1008
 #, kde-format
 msgid "Clipboard history"
 msgstr "Utklippshistorikk"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1025
 #, kde-format
 msgid "up"
 msgstr "opp"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1032
 #, kde-format
 msgid "current"
 msgstr "gjeldande"
 
-#: klipper.cpp:1046
+#: klipper.cpp:1039
 #, kde-format
 msgid "down"
 msgstr "ned"

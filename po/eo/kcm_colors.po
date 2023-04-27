@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2023-04-16 12:22+0100\n"
+"PO-Revision-Date: 2023-04-26 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -35,7 +35,7 @@ msgstr "pedrotpmx@wanadoo.fr"
 #: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Ne eblas krei provizoran dosieron."
 
 #: colors.cpp:248
 #, kde-format
@@ -50,17 +50,17 @@ msgstr "Tiu dosiero ne estas kolorardosiero."
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "Malsukcesis krei 'color-scheme' datumdosierujon."
 
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "Malsukcesis kopii kolorskemon en 'color-scheme' datumdosierujon."
 
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "Kolorskemo instalita sukcese."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
@@ -81,17 +81,19 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"La propra akcentokoloro laste uzata antaŭ ol uzanto ŝanĝis al tapet-generita "
+"koloro aŭ defaŭlta koloro"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Ĉu akcentkoloro de tapeto estu aplikata"
 
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr ""
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -101,12 +103,12 @@ msgstr "Utilaĵo por redakti kaj krei kolorarojn"
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "Kreado de utilaĵo"
 
 #: editor/kcolorschemeeditor.cpp:26
 #, kde-format
@@ -116,7 +118,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM-kodo (reuzita ĉi tie)"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -126,7 +128,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "Skemo redaktenda aŭ uzenda kiel bazo."
 
 #: editor/kcolorschemeeditor.cpp:33
 #, kde-format
@@ -134,17 +136,19 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"Montri la butonon 'Apliki', kiu konservas ŝanĝojn sen peti (malkiel la "
+"butono 'Konservi kiel')"
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
-msgstr ""
+msgstr "Faras la dialogon pasema por alia aplikofenestro specifita per tenilo"
 
 #: editor/kcolorschemeeditor.cpp:53
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "Skemo ne trovita, revenante al la aktuala.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -496,7 +500,7 @@ msgstr "Ŝpruchelpilo"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr ""
+msgstr "Komplementa"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -504,7 +508,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "Kapo"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -656,7 +660,7 @@ msgstr "Malŝaltita"
 #: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr ""
+msgstr "Vi havas nekonservitajn ŝanĝojn. Ĉu vi vere volas ĉesi?"
 
 #: editor/scmeditordialog.cpp:95
 #, kde-format
@@ -868,7 +872,7 @@ msgstr "Igi fenestrajn titolbretojn em&faz-koloraj"
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Nuancforto:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -1167,6 +1171,8 @@ msgstr "Elekti propran akcentkoloron"
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
+"La kolorskemo '%1' ne estas instalita. Elektante la defaŭltan temon "
+"anstataŭe."
 
 #: package/contents/ui/main.qml:114
 #, kde-format
@@ -1267,6 +1273,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Ĉi tiu ilo permesas al vi agordi la kolorskemon por la nuna Plasma-seanco, "
+"sen hazarde agordi ĝin al iu, kiu aŭ ne disponeblas, aŭ kiu jam estas "
+"agordita."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1274,6 +1283,8 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"La nomo de la kolorskemo, kiun vi volas agordi por via nuna Plasma-seanco "
+"(pasi plenan vojon uzos nur la lastan parton de la vojo)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1281,6 +1292,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Montru ĉiujn kolorskemojn disponeblajn en la sistemo (kaj montri kiu estas "
+"la nuna etoso)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1289,6 +1302,9 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"La nomo de la akcentkoloro, kiun vi volas agordi. SVG-kolornomoj (https://"
+"www.w3.org/TR/SVG11/types.html#ColorKeywords) kaj heks-kolorkodoj estas "
+"subtenataj. Citu la deksesuman kodon se ekzistas ebleco de ŝel-ekspansio"
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1296,6 +1312,8 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"La petita temo \"%1\" jam estas agordita kiel la temo por la nuna Plasma "
+"seanco."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
@@ -1308,6 +1326,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Ne eblis trovi etoson \"%1\". La etoso devus esti unu el la sekvaj opcioj: %2"
 
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
@@ -1315,6 +1334,8 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
+"Vi sukcesis transdoni malplenan kolorskemnomon, kiu ne estas subtenata "
+"konduto."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
@@ -1322,6 +1343,8 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"La dosiero, kiun vi provis agordi kiel vian skemon, %1, ne povis esti "
+"identigita kiel kolorskemo."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
@@ -1342,10 +1365,3 @@ msgstr "Vi havas la sekvajn kolorarojn en via sistemo:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuala koloraro)"
-
-#~ msgid "From current color scheme"
-#~ msgstr "De aktuala koloraro"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "De aktuala ekranfono"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 04:11+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "암호"
 msgid "Log In"
 msgstr "로그인"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "대기 모드"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "다시 시작"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:235
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "기타…"
 
-#: ../sddm-theme/Main.qml:449
+#: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "사용자 이름과 암호 입력"
 
-#: ../sddm-theme/Main.qml:483
+#: ../sddm-theme/Main.qml:484
 #, kde-format
 msgid "List Users"
 msgstr "사용자 목록"
 
-#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:577
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "가상 키보드"
 
-#: ../sddm-theme/Main.qml:596
+#: ../sddm-theme/Main.qml:597
 #, kde-format
 msgid "Login Failed"
 msgstr "로그인 실패"
@@ -157,37 +157,37 @@ msgstr "잠금 해제 프롬프트 아래쪽에 표시"
 msgid "Unlocking failed"
 msgstr "잠금 해제 실패"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Sleep"
 msgstr "절전"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:322 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "최대 절전 모드"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgid "Switch User"
 msgstr "사용자 전환"
 
-#: contents/lockscreen/LockScreenUi.qml:523
+#: contents/lockscreen/LockScreenUi.qml:524
 #, kde-format
 msgid "Switch to This Session"
 msgstr "이 세션으로 전환"
 
-#: contents/lockscreen/LockScreenUi.qml:531
+#: contents/lockscreen/LockScreenUi.qml:532
 #, kde-format
 msgid "Start New Session"
 msgstr "새 세션 시작하기"
 
-#: contents/lockscreen/LockScreenUi.qml:544
+#: contents/lockscreen/LockScreenUi.qml:545
 #, kde-format
 msgid "Back"
 msgstr "뒤로"
 
-#: contents/lockscreen/LockScreenUi.qml:590
+#: contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

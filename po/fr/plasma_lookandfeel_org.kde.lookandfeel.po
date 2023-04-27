@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 04:11+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-10-10 07:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -44,53 +44,53 @@ msgstr "Mot de passe"
 msgid "Log In"
 msgstr "Connexion"
 
-#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:302
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Verrouillage des majuscules activé"
 
-#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Veille"
 
-#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Éteindre"
 
-#: ../sddm-theme/Main.qml:234
+#: ../sddm-theme/Main.qml:235
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Autre…"
 
-#: ../sddm-theme/Main.qml:449
+#: ../sddm-theme/Main.qml:450
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Saisissez votre nom d'utilisateur et votre mot de passe"
 
-#: ../sddm-theme/Main.qml:483
+#: ../sddm-theme/Main.qml:484
 #, kde-format
 msgid "List Users"
 msgstr "Lister les utilisateurs"
 
-#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:577
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Clavier virtuel"
 
-#: ../sddm-theme/Main.qml:596
+#: ../sddm-theme/Main.qml:597
 #, kde-format
 msgid "Login Failed"
 msgstr "Échec de la connexion"
@@ -163,37 +163,37 @@ msgstr "Afficher sous l'invite de déverrouillage"
 msgid "Unlocking failed"
 msgstr "Échec du déverrouillage"
 
-#: contents/lockscreen/LockScreenUi.qml:315
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgid "Sleep"
 msgstr "Veille"
 
-#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:322 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Mettre en hibernation"
 
-#: contents/lockscreen/LockScreenUi.qml:327
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgid "Switch User"
 msgstr "Changer d'utilisateur"
 
-#: contents/lockscreen/LockScreenUi.qml:523
+#: contents/lockscreen/LockScreenUi.qml:524
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Basculer vers cette session"
 
-#: contents/lockscreen/LockScreenUi.qml:531
+#: contents/lockscreen/LockScreenUi.qml:532
 #, kde-format
 msgid "Start New Session"
 msgstr "Démarrer une nouvelle session"
 
-#: contents/lockscreen/LockScreenUi.qml:544
+#: contents/lockscreen/LockScreenUi.qml:545
 #, kde-format
 msgid "Back"
 msgstr "Retour"
 
-#: contents/lockscreen/LockScreenUi.qml:590
+#: contents/lockscreen/LockScreenUi.qml:591
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

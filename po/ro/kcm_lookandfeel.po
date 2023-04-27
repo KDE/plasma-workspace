@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-08-14 16:57+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sergiu@cip.md"
 
-#: kcm.cpp:476
+#: kcm.cpp:472
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -35,7 +35,7 @@ msgstr ""
 "Trebuie să reporniți sesiunea Plasma pentru ca modificările să intre în "
 "vigoare."
 
-#: kcm.cpp:477
+#: kcm.cpp:473
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Configurările cursorului s-au schimbat"

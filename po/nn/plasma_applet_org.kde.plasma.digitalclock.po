@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:17+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-02-22 21:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -163,7 +163,7 @@ msgid "12-Hour"
 msgstr "12-timars ur"
 
 #: package/contents/ui/configAppearance.qml:131
-#: package/contents/ui/configCalendar.qml:53
+#: package/contents/ui/configCalendar.qml:54
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Bruk regionsinnstillingane"
@@ -258,22 +258,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Vel skrift"
 
-#: package/contents/ui/configCalendar.qml:39
+#: package/contents/ui/configCalendar.qml:40
 #, kde-format
 msgid "General:"
 msgstr "Generelt:"
 
-#: package/contents/ui/configCalendar.qml:40
+#: package/contents/ui/configCalendar.qml:41
 #, kde-format
 msgid "Show week numbers"
 msgstr "Vis vekenummer"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "First day of week:"
 msgstr "Første dagen i veka:"
 
-#: package/contents/ui/configCalendar.qml:68
+#: package/contents/ui/configCalendar.qml:71
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Tilgjengelege programtillegg:"

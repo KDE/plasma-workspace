@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2019-11-22 20:19+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: main.cpp:60 view.cpp:45
+#: main.cpp:79 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:60
+#: main.cpp:79
 #, kde-format
 msgid "Run Command interface"
 msgstr "Brugerflade til at køre kommando"
 
-#: main.cpp:66
+#: main.cpp:85
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Brug udklipsholderindholdet som forespørgsel til KRunner"
 
-#: main.cpp:67
+#: main.cpp:86
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Start KRunner i baggrunden, vis den ikke."
 
-#: main.cpp:68
+#: main.cpp:87
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Erstat en eksisterende instans"
 
-#: main.cpp:73
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Den forespørgsel der skal køres, bruges kun hvis -c ikke er angivet"

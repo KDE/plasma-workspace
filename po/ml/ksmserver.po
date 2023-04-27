@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2021-04-11 13:39+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -22,17 +22,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "പുറത്തിറങ്ങുന്നതു് %1 റദ്ദാക്കി"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME സജ്ജമാക്കിയിട്ടില്ല!"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME ഹോം കൂട (%1) നിലവിലില്ല."
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -40,37 +40,37 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME കൂടയിലേക്ക് വായനാവകാശമില്ല (%1)."
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME കൂടയിൽ (%1) ഡിസ്ക് ഇടമില്ല."
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME കൂടയിലേക്ക് (%2) എഴുതുന്നത് '%1' പിശക് കാരണം പരാജയപ്പെട്ടു"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' ലേക്ക് എഴുത്തവകാശമില്ല."
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' ലേക്ക് വായനാവകാശമില്ല."
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "താൽക്കാലിക കൂടയിൽ (%1) ഡിസ്ക് ഇടമില്ല."
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -79,7 +79,7 @@ msgstr ""
 "താൽക്കാലിക കൂടയിലേക്ക് (%2) എഴുതുന്നത് \n"
 "     %1 പിശക് കാരണം  പരാജയപ്പെട്ടു"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -88,7 +88,7 @@ msgstr ""
 "പ്ലാസ്മ ആരംഭിക്കാൻ ശ്രമിക്കുമ്പോൾ\n"
 "ഇനിപ്പറയുന്ന ഇൻസ്റ്റാളേഷൻ പിശക് കണ്ടെത്തി:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -99,12 +99,12 @@ msgstr ""
 "\n"
 "പ്ലാസ്മ ആരംഭിക്കാൻ കഴിഞ്ഞില്ല.\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "പ്ലാസ്മ പണിയിടം ഇൻസ്റ്റാളേഷൻ പ്രശ്നം!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -113,22 +113,22 @@ msgstr ""
 "സ്റ്റാൻഡേർഡ് എക്സ് 11 ആർ 6 മായി സംവദിക്കുന്ന വിശ്വസനീയമായ പ്ലാസ്മ സെഷൻ മാനേജർ\n"
 "സെഷൻ മാനേജുമെന്റ് പ്രോട്ടോക്കോൾ (എക്സ്എസ്എംപി)."
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "ഉപയോക്താവിന്റെ സൂക്ഷിച്ചിരിക്കുന്ന സെഷന്‍ തിരികെ കൊണ്ടുവരുന്നു ലഭ്യമാണെങ്കില്‍"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "വിദൂര കണക്ഷനുകളും അനുവദിക്കുന്നു"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "ലോക്കുചെയ്ത മോഡിൽ സെഷൻ ആരംഭിക്കുന്നു"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -137,38 +137,38 @@ msgstr ""
 "ലോക്ക് സ്ക്രീൻ പിന്തുണയില്ലാതെ ആരംഭിക്കുന്നു. മറ്റ് ഘടകങ്ങൾ ലോക്ക് സ്ക്രീൻ നൽകുന്നുവെങ്കിൽ മാത്രം "
 "ആവശ്യമാണ്."
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "സെഷന്‍ നടത്തിപ്പുകാരന്‍"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "പുറത്തിറങ്ങുക"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ പുറത്ത് കടക്കുക"
 
-#: server.cpp:910
+#: server.cpp:907
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ നിർത്തുക"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "സ്ഥിരീകരണമില്ലാതെ പുനഃരാരംഭിക്കുക"

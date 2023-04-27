@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-01-22 16:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -47,27 +47,27 @@ msgstr "shafff@ukr.net, darkstar@altlinux.ru"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Настройка модуля действий мыши"
 
-#: main.cpp:91
+#: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Оболочка Plasma"
 
-#: main.cpp:103
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Включить отладчик QML Javascript."
 
-#: main.cpp:106
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перезапускать Plasma автоматически после сбоя."
 
-#: main.cpp:109
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудительный запуск указанного модуля."
 
-#: main.cpp:114
+#: main.cpp:132
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -76,12 +76,12 @@ msgstr ""
 "Запустить plasmashell как самостоятельное приложение. Требуется подача "
 "параметра «--shell-plugin»."
 
-#: main.cpp:116
+#: main.cpp:134
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменить существующий запущенный процесс."
 
-#: main.cpp:119
+#: main.cpp:137
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -90,22 +90,22 @@ msgstr ""
 "Включить режим тестирования и задать файл сценария на JavaScript, который "
 "настроит тестовое окружение."
 
-#: main.cpp:120
+#: main.cpp:138
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показать список данных обратной связи."
 
-#: main.cpp:224
+#: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не удалось запустить Plasma"
 
-#: main.cpp:225
+#: main.cpp:240
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -214,57 +214,57 @@ msgstr "%1 %2 (%3)"
 msgid "Disconnected Screen %1"
 msgstr "Отключённый экран %1"
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:171 shellcorona.cpp:173
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показать рабочий стол"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:173
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скрыть рабочий стол"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:188
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показать переключатель комнат"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Прекратить выполнение текущей комнаты"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Переключиться в предыдущую комнату"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:212
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Переключиться в следующую комнату"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Открыть %1-ю кнопку на панели задач"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:253
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Управление рабочими столами и панелями…"
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Перемещение фокуса ввода с клавиатуры между панелями"
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавить панель"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

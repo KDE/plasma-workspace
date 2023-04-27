@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2021-07-06 20:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -25,17 +25,17 @@ msgstr ""
 msgid "Logout canceled by '%1'"
 msgstr "लॉगआउट '%1' द्वारा रद्द किया गया"
 
-#: main.cpp:77
+#: main.cpp:74
 #, kde-format
 msgid "$HOME not set!"
 msgstr "$HOME सेट नहीं किया है"
 
-#: main.cpp:81 main.cpp:89
+#: main.cpp:78 main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
 msgstr "$HOME डिरेक्ट्री (%1) मौजूद नहीं है।"
 
-#: main.cpp:84
+#: main.cpp:81
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -43,37 +43,37 @@ msgid ""
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:88
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
 msgstr "$HOME डिरेक्ट्री (%1) पर कोई पठन अभिगम नहीं है।"
 
-#: main.cpp:95
+#: main.cpp:92
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
 msgstr "$HOME डिरेक्ट्री (%1) में डिस्क स्थान बचा नही है।"
 
-#: main.cpp:98
+#: main.cpp:95
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
 msgstr "$HOME डिरेक्ट्री (%2) में लिखना त्रुटि '%1' के साथ विफल हुआ।"
 
-#: main.cpp:111 main.cpp:146
+#: main.cpp:108 main.cpp:143
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' में लेखन अभिगम नहीं है।"
 
-#: main.cpp:113 main.cpp:148
+#: main.cpp:110 main.cpp:145
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' में पठन अभिगम नहीं है।"
 
-#: main.cpp:121 main.cpp:134
+#: main.cpp:118 main.cpp:131
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
 msgstr "अस्थायी डिरेक्ट्री (%1) में डिस्क स्थान बचा नही है।"
 
-#: main.cpp:124 main.cpp:137
+#: main.cpp:121 main.cpp:134
 #, kde-format
 msgid ""
 "Writing to the temp directory (%2) failed with\n"
@@ -82,7 +82,7 @@ msgstr ""
 "अस्थायी डिरेक्ट्री में लिखना (%2) विफल हुआ \n"
 "  त्रुटि '%1' के साथ"
 
-#: main.cpp:152
+#: main.cpp:149
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -91,7 +91,7 @@ msgstr ""
 "निम्न स्थापना समस्या का पता चला\n"
 "प्लाज़्मा शुरू करने की कोशिश करते समय:"
 
-#: main.cpp:155
+#: main.cpp:152
 #, kde-format
 msgid ""
 "\n"
@@ -102,12 +102,12 @@ msgstr ""
 "\n"
 "प्लाज़्मा प्रारंभ होने में असमर्थ है।\n"
 
-#: main.cpp:162
+#: main.cpp:159
 #, kde-format
 msgid "Plasma Workspace installation problem!"
 msgstr "प्लाज्मा कार्यक्षेत्र की स्थापना में समस्या!"
 
-#: main.cpp:196
+#: main.cpp:193
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -116,22 +116,22 @@ msgstr ""
 "विश्वसनीय सत्र प्रबंधक जो मानक X11R6 से वार्तालाप करता है \n"
 "सत्र प्रबंधक प्रोटोकॉल (XSMP)।"
 
-#: main.cpp:200
+#: main.cpp:197
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "यदि उपलब्ध हो तो सहेजा गया उपयोक्ता सत्र बहाल करें"
 
-#: main.cpp:203
+#: main.cpp:200
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "रिमोट कनेक्शन की भी अनुमति दें"
 
-#: main.cpp:206
+#: main.cpp:203
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "सत्र को तालाबंद मोड में प्रारंभ करता है"
 
-#: main.cpp:210
+#: main.cpp:207
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -140,38 +140,38 @@ msgstr ""
 "तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
 "स्क्रीन प्रदान करें।"
 
-#: server.cpp:884
+#: server.cpp:881
 #, kde-format
 msgid "Session Management"
 msgstr "सत्र प्रबंधन"
 
-#: server.cpp:889
+#: server.cpp:886
 #, kde-format
 msgid "Log Out"
 msgstr "लॉग-आउट"
 
-#: server.cpp:894
+#: server.cpp:891
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: server.cpp:899
+#: server.cpp:896
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: server.cpp:905
+#: server.cpp:902
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "पुष्टि किए बिना लॉग आउट करें"
 
-#: server.cpp:910
+#: server.cpp:907
 #, fuzzy, kde-format
 #| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "पुष्टि किए बिना रोक दें"
 
-#: server.cpp:915
+#: server.cpp:912
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "पुष्टि किए बिना पुनः प्रारंभ करें"

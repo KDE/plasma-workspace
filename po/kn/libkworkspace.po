@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2007-09-11 15:02+0530\n"
 "Last-Translator: Ramaprakasha <ramaprakash.b@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:770
 #, fuzzy, kde-format
 #| msgctxt "user: ..."
 #| msgid "%1: TTY login"
@@ -26,19 +26,19 @@ msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: TTY ಪ್ರವೇಶ (ಲಾಗಿನ್)"
 
-#: kdisplaymanager.cpp:779
+#: kdisplaymanager.cpp:775
 #, fuzzy, kde-format
 #| msgid "Unused"
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "ಬಳಸದ"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, kde-format
 msgid "X login on remote host"
 msgstr "ದೂರಸ್ಥ (ರಿಮೋಟ್) ಆತಿಥೇಯದಲ್ಲಿ X ಪ್ರವೇಶ (ಲಾಗಿನ್)"
 
-#: kdisplaymanager.cpp:780
+#: kdisplaymanager.cpp:776
 #, fuzzy, kde-format
 #| msgctxt "... host"
 #| msgid "X login on %1"
@@ -46,13 +46,13 @@ msgctxt "… host"
 msgid "X login on %1"
 msgstr "%1 ರಲ್ಲಿ X ಪ್ರವೇಶ (ಲಾಗಿನ್)"
 
-#: kdisplaymanager.cpp:782
+#: kdisplaymanager.cpp:778
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr ""
 
-#: kdisplaymanager.cpp:793
+#: kdisplaymanager.cpp:789
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

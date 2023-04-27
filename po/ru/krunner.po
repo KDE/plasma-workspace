@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2022-10-17 11:55+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -30,32 +30,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aspotashev@gmail.com, translation-team@basealt.ru"
 
-#: main.cpp:60 view.cpp:45
+#: main.cpp:79 view.cpp:45
 #, kde-format
 msgid "KRunner"
 msgstr "Диалог поиска и запуска"
 
-#: main.cpp:60
+#: main.cpp:79
 #, kde-format
 msgid "Run Command interface"
 msgstr "Интерфейс запуска команд"
 
-#: main.cpp:66
+#: main.cpp:85
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Использовать содержимое буфера обмена в качестве запроса KRunner."
 
-#: main.cpp:67
+#: main.cpp:86
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Запустить KRunner без показа окна программы."
 
-#: main.cpp:68
+#: main.cpp:87
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменить существующий запущенный процесс."
 
-#: main.cpp:73
+#: main.cpp:92
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Поисковый запрос. Не используется, если указан параметр «-c»."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -32,27 +32,27 @@ msgstr "raghu@raghukamath.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "माउस क्रिया प्लगइन विन्यस्त करें"
 
-#: main.cpp:91
+#: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
 msgstr "प्लाज़्मा शेल"
 
-#: main.cpp:103
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "क्यूएमएल जावास्क्रिप्ट डीबगर सक्षम करें"
 
-#: main.cpp:106
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "दुर्घटना के बाद प्लाज़्मा-शेल को स्वचालित रूप से पुनरारंभ न करें"
 
-#: main.cpp:109
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "दिए गए शेल प्लगइन को लोड करने के लिए बाध्य करें"
 
-#: main.cpp:114
+#: main.cpp:132
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -61,12 +61,12 @@ msgstr ""
 "प्लाज़्मा शेल को एक स्वतंत्र अनुप्रयोग के रूप में लोड करें, शेल-प्लगइन विकल्प निर्दिष्ट करने के की "
 "आवश्यकता है"
 
-#: main.cpp:116
+#: main.cpp:134
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "एक वर्तमान चलित अनुप्रयोग को प्रतिस्थापित करें"
 
-#: main.cpp:119
+#: main.cpp:137
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -75,22 +75,22 @@ msgstr ""
 "परीक्षण मोड को सक्षम बनाता है और परीक्षण वातावरण स्थापित करने के लिए जावास्क्रिप्ट "
 "फ़ाइल खाका निर्दिष्ट करता है।"
 
-#: main.cpp:120
+#: main.cpp:138
 #, kde-format
 msgid "file"
 msgstr "फ़ाइल"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "उपयोक्ता प्रतिक्रिया के लिए उपलब्ध विकल्पों की सूची दिखाता है"
 
-#: main.cpp:224
+#: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "प्लाज़्मा चालू होने में विफल हुआ"
 
-#: main.cpp:225
+#: main.cpp:240
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -199,57 +199,57 @@ msgstr "%3 पर %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "वियोजित स्क्रीन %1"
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:171 shellcorona.cpp:173
 #, kde-format
 msgid "Show Desktop"
 msgstr "डेस्कटॉप दिखाएँ"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:173
 #, kde-format
 msgid "Hide Desktop"
 msgstr "डेस्कटॉप चिपाएँ"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:188
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "गतिविधि परिवर्तक दिखाएं"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "वर्तमान गतिविधि बंद करें"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "पिछली गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:212
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "अगले गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "कार्य प्रबंधक प्रविष्टि %1 सक्रिय करें"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:253
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "डेस्कटॉप और पैनल प्रबंधित करें..."
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "पैनल के बीच कुंजीपटल फ़ोकस ले जाएँ"
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनल जोडें"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

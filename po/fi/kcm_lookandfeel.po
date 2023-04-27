@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-03-04 18:06+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lasse.liehu@gmail.com, translator@legisign.org"
 
-#: kcm.cpp:476
+#: kcm.cpp:472
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -37,7 +37,7 @@ msgstr ""
 "Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulisivat "
 "voimaan."
 
-#: kcm.cpp:477
+#: kcm.cpp:473
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Osoitinasetuksia muutettiin"

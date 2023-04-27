@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-21 02:18+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2023-02-28 23:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -32,27 +32,27 @@ msgstr "kde@peremen.name"
 msgid "Configure Mouse Actions Plugin"
 msgstr "마우스 동작 플러그인 설정"
 
-#: main.cpp:91
+#: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma 셸"
 
-#: main.cpp:103
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML 자바스크립트 디버거 사용"
 
-#: main.cpp:106
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "충돌 이후 plasma-shell 자동 재시작 안 함"
 
-#: main.cpp:109
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "지정한 셸 플러그인 강제로 불러오기"
 
-#: main.cpp:114
+#: main.cpp:132
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -60,12 +60,12 @@ msgid ""
 msgstr ""
 "plasmashell을 단독 프로그램으로 불러오며, shell-plugin 옵션을 지정해야 함"
 
-#: main.cpp:116
+#: main.cpp:134
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "존재하는 인스턴스를 대체"
 
-#: main.cpp:119
+#: main.cpp:137
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -73,22 +73,22 @@ msgid ""
 msgstr ""
 "테스트 모드를 활성화하고 레이아웃 JavaScript 파일을 테스트 환경으로 설정"
 
-#: main.cpp:120
+#: main.cpp:138
 #, kde-format
 msgid "file"
 msgstr "파일"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "사용자 피드백 옵션을 표시합니다"
 
-#: main.cpp:224
+#: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma를 시작할 수 없음"
 
-#: main.cpp:225
+#: main.cpp:240
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -197,57 +197,57 @@ msgstr "%3(으)로 연결된 %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "연결 해제된 화면 %1"
 
-#: shellcorona.cpp:175 shellcorona.cpp:177
+#: shellcorona.cpp:171 shellcorona.cpp:173
 #, kde-format
 msgid "Show Desktop"
 msgstr "바탕 화면 표시"
 
-#: shellcorona.cpp:177
+#: shellcorona.cpp:173
 #, kde-format
 msgid "Hide Desktop"
 msgstr "바탕 화면 숨기기"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:188
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "활동 전환기 표시"
 
-#: shellcorona.cpp:202
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "현재 활동 중단하기"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "이전 활동으로 전환"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:212
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "다음 활동으로 전환"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:227
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "활성 작업 관리자 항목 %1"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:253
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "바탕 화면과 패널 관리..."
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 초점 이동"
 
-#: shellcorona.cpp:1916
+#: shellcorona.cpp:1912
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:1952
+#: shellcorona.cpp:1948
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

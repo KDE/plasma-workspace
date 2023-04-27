@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-12 02:13+0000\n"
+"POT-Creation-Date: 2023-04-27 02:13+0000\n"
 "PO-Revision-Date: 2017-01-29 18:50+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Associated-UI-Catalogs: kcmcolors systemsettings.desktop\n"
 "X-Environment: kde\n"
 
-#: krdb.cpp:262
+#: krdb.cpp:258
 #, kde-format
 msgid ""
 "# created by KDE Plasma, %1\n"
