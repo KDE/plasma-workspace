@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:50+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -152,7 +152,7 @@ msgid "12-Hour"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:125
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:59
 #, kde-format
 msgid "Use Region Defaults"
 msgstr ""
@@ -243,23 +243,23 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "General:"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, fuzzy, kde-format
 #| msgid "Show week numbers in Calendar"
 msgid "Show week numbers"
 msgstr "הראה מספרי שבועות בלוח שנה"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "First day of week:"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:76
 #, fuzzy, kde-format
 #| msgid "Available Calendar Plugins"
 msgid "Available Plugins:"

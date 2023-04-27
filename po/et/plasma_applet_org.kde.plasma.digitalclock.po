@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:50+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2021-10-07 00:53+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -149,7 +149,7 @@ msgid "12-Hour"
 msgstr "12-tunnisena"
 
 #: package/contents/ui/configAppearance.qml:125
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:59
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Piirkonna vaikeväärtuse järgi"
@@ -243,22 +243,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "General:"
 msgstr "Üldine:"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "Show week numbers"
 msgstr "Nädalanumbrite näitamine"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "First day of week:"
 msgstr "Nädala esimene päev:"
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:76
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Saadaolevad pluginad:"

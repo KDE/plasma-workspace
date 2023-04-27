@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 04:58+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2022-10-13 19:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,53 +37,53 @@ msgstr "கடவுச்சொல்"
 msgid "Log In"
 msgstr "நுழை"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:300
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
 
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "தூங்கு"
 
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: ../sddm-theme/Main.qml:233
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "வேறு…"
 
-#: ../sddm-theme/Main.qml:448
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் உள்ளிடவும்"
 
-#: ../sddm-theme/Main.qml:482
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "பயனர்களை பட்டியலிடு"
 
-#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:575
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "மெய்நிகர் விசைப்பலகை"
 
-#: ../sddm-theme/Main.qml:595
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "நுழைவு தோல்வியடைந்தது"
@@ -156,37 +156,37 @@ msgstr "திறப்பதற்கான பட்டனுக்கு அ�
 msgid "Unlocking failed"
 msgstr "திறத்தல் தோல்வியடைந்தது"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:315
 #, kde-format
 msgid "Sleep"
 msgstr "தூங்கு"
 
-#: contents/lockscreen/LockScreenUi.qml:320 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "ஆழுறங்கு"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:327
 #, kde-format
 msgid "Switch User"
 msgstr "பயனரை மாற்று"
 
-#: contents/lockscreen/LockScreenUi.qml:522
+#: contents/lockscreen/LockScreenUi.qml:523
 #, kde-format
 msgid "Switch to This Session"
 msgstr "இந்த அமர்வுக்கு தாவு"
 
-#: contents/lockscreen/LockScreenUi.qml:530
+#: contents/lockscreen/LockScreenUi.qml:531
 #, kde-format
 msgid "Start New Session"
 msgstr "புதிய அமர்வை துவக்கு"
 
-#: contents/lockscreen/LockScreenUi.qml:543
+#: contents/lockscreen/LockScreenUi.qml:544
 #, kde-format
 msgid "Back"
 msgstr "பின்னே"
 
-#: contents/lockscreen/LockScreenUi.qml:589
+#: contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

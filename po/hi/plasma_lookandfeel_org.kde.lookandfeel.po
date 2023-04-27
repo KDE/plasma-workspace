@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-12 04:58+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -37,53 +37,53 @@ msgstr "कूटशब्द"
 msgid "Log In"
 msgstr "लॉग इन"
 
-#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:300
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "कैप्स लॉक सक्रिय है"
 
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "निद्रा"
 
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "पुनः प्रारंभ करें"
 
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "बन्द करें"
 
-#: ../sddm-theme/Main.qml:233
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "अन्य…"
 
-#: ../sddm-theme/Main.qml:448
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "उपयोक्ता नाम और कूटशब्द टाइप करें"
 
-#: ../sddm-theme/Main.qml:482
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "उपयोक्ता सूची दिखाएँ"
 
-#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:575
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "अप्रत्यक्ष कुंजीपटल"
 
-#: ../sddm-theme/Main.qml:595
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "लॉगइन असफल"
@@ -158,39 +158,39 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "ताला खोलने में विफल"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:315
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgid "Sleep"
 msgstr "निद्रा"
 
-#: contents/lockscreen/LockScreenUi.qml:320 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:321 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "सुप्तावस्था"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:327
 #, kde-format
 msgid "Switch User"
 msgstr "उपयोक्ता बदलें"
 
-#: contents/lockscreen/LockScreenUi.qml:522
+#: contents/lockscreen/LockScreenUi.qml:523
 #, kde-format
 msgid "Switch to This Session"
 msgstr "इस सत्र में बदलें"
 
-#: contents/lockscreen/LockScreenUi.qml:530
+#: contents/lockscreen/LockScreenUi.qml:531
 #, kde-format
 msgid "Start New Session"
 msgstr "नया सत्र प्रारंभ करें"
 
-#: contents/lockscreen/LockScreenUi.qml:543
+#: contents/lockscreen/LockScreenUi.qml:544
 #, kde-format
 msgid "Back"
 msgstr "पीछे"
 
-#: contents/lockscreen/LockScreenUi.qml:589
+#: contents/lockscreen/LockScreenUi.qml:590
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

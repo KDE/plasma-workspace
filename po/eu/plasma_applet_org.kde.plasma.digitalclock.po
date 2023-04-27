@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:50+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2022-12-17 10:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque\n"
@@ -151,7 +151,7 @@ msgid "12-Hour"
 msgstr "12 ordu"
 
 #: package/contents/ui/configAppearance.qml:125
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:59
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Erabili eskualdeko lehenespenak"
@@ -246,22 +246,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Aukeratu letra-tipo bat"
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "General:"
 msgstr "Orokorra:"
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "Show week numbers"
 msgstr "Erakutsi asteko zenbakiak"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "First day of week:"
 msgstr "Asteko lehen eguna:"
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:76
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Plugin erabilgarriak:"

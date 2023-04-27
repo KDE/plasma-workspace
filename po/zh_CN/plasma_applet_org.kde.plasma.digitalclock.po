@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:50+0000\n"
+"POT-Creation-Date: 2023-04-27 02:45+0000\n"
 "PO-Revision-Date: 2023-04-16 12:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -148,7 +148,7 @@ msgid "12-Hour"
 msgstr "12 小时制"
 
 #: package/contents/ui/configAppearance.qml:125
-#: package/contents/ui/configCalendar.qml:58
+#: package/contents/ui/configCalendar.qml:59
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "使用当前区域设置的默认值"
@@ -241,22 +241,22 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "选择字体"
 
-#: package/contents/ui/configCalendar.qml:44
+#: package/contents/ui/configCalendar.qml:45
 #, kde-format
 msgid "General:"
 msgstr "常规："
 
-#: package/contents/ui/configCalendar.qml:45
+#: package/contents/ui/configCalendar.qml:46
 #, kde-format
 msgid "Show week numbers"
 msgstr "显示周数"
 
-#: package/contents/ui/configCalendar.qml:50
+#: package/contents/ui/configCalendar.qml:51
 #, kde-format
 msgid "First day of week:"
 msgstr "星期起始日："
 
-#: package/contents/ui/configCalendar.qml:73
+#: package/contents/ui/configCalendar.qml:76
 #, kde-format
 msgid "Available Plugins:"
 msgstr "可用插件："
