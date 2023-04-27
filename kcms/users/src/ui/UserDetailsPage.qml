@@ -106,9 +106,12 @@ KCM.SimpleKCM {
                     text: i18n("Change avatar")
                     onTriggered: {
                         const component = Qt.createComponent("PicturesSheet.qml")
-                        component.incubateObject(usersDetailPage, {
+                        const obj = component.incubateObject(usersDetailPage, {
                             parent: usersDetailPage,
                         })
+                        if (obj == null) {
+                            console.log(component.errorString())
+                        }
                         component.destroy()
                     }
                 }
