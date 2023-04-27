@@ -37,6 +37,16 @@ Kirigami.OverlaySheet {
         {"name": i18nc("@item:intable", "Rich Hardwood"),    "color": "#6A250E", "dark": true}
     ]
 
+    component PicturesGridLayout: GridLayout {
+        rowSpacing: Kirigami.Units.smallSpacing
+        columnSpacing: Kirigami.Units.smallSpacing
+
+        Layout.fillWidth: true
+        Layout.alignment: Qt.AlignHCenter
+        Layout.leftMargin: Kirigami.Units.largeSpacing
+        Layout.rightMargin: Kirigami.Units.largeSpacing
+    }
+
     onVisibleChanged: {
         if (!visible) {
             destroy(Kirigami.Units.humanMoment);
@@ -66,17 +76,10 @@ Kirigami.OverlaySheet {
         ColumnLayout {
             id: cols
 
-            GridLayout {
+            PicturesGridLayout {
                 id: picturesColumn
 
-                rowSpacing: Kirigami.Units.smallSpacing
-                columnSpacing: Kirigami.Units.smallSpacing
                 columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6 + picturesColumn.columnSpacing))
-
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.rightMargin: Kirigami.Units.largeSpacing
 
                 Dialogs.FileDialog {
                     id: fileDialog
@@ -209,17 +212,10 @@ Kirigami.OverlaySheet {
         ColumnLayout {
             id: initialPictures
 
-            GridLayout {
+            PicturesGridLayout {
                 id: initialsColumn
 
-                rowSpacing: Kirigami.Units.smallSpacing
-                columnSpacing: Kirigami.Units.smallSpacing
                 columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
-
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.rightMargin: Kirigami.Units.largeSpacing
 
                 QQC2.Button {
                     Layout.preferredHeight: Kirigami.Units.gridUnit * 6
@@ -287,17 +283,10 @@ Kirigami.OverlaySheet {
         ColumnLayout {
             id: iconPictures
 
-            GridLayout {
+            PicturesGridLayout {
                 id: iconColumn
 
-                rowSpacing: Kirigami.Units.smallSpacing
-                columnSpacing: Kirigami.Units.smallSpacing
                 columns: initialsColumn.columns
-
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.rightMargin: Kirigami.Units.largeSpacing
 
                 QQC2.Button {
                     Layout.preferredHeight: Kirigami.Units.gridUnit * 6
