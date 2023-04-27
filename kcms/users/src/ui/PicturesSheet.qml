@@ -90,6 +90,28 @@ Kirigami.OverlaySheet {
         }
     }
 
+    component IconButton: PictureButton {
+        property alias color: colorRectangle.color
+        property alias iconColor: icon.color
+
+        Rectangle {
+            id: colorRectangle
+
+            color: "transparent"
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.smallSpacing
+
+            Kirigami.Icon {
+                id: icon
+                source: "user-identity"
+                width: Kirigami.Units.gridUnit * 4
+                height: Kirigami.Units.gridUnit * 4
+                anchors.centerIn: parent
+            }
+        }
+    }
+
+
     onVisibleChanged: {
         if (!visible) {
             destroy(Kirigami.Units.humanMoment);
@@ -176,15 +198,8 @@ Kirigami.OverlaySheet {
                     onClicked: stackSwitcher.forceCurrentIndex(initialPictures.QQC2.SwipeView.index)
                 }
 
-                PictureButton {
-                    contentItem: Kirigami.Icon {
-                        anchors.centerIn: parent
-                        width: Kirigami.Units.gridUnit * 4
-                        height: Kirigami.Units.gridUnit * 4
-                        color: "black"
-                        source: "user-identity"
-                    }
-
+                IconButton {
+                    iconColor: "black"
                     onClicked: stackSwitcher.forceCurrentIndex(iconPictures.QQC2.SwipeView.index)
                 }
 
@@ -285,27 +300,9 @@ Kirigami.OverlaySheet {
 
                 Repeater {
                     model: picturesSheet.colorPalette
-                    delegate: PictureButton {
-                        Accessible.name: modelData.name
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        QQC2.ToolTip.text: modelData.name
-                        QQC2.ToolTip.visible: hovered || activeFocus
-
-                        Rectangle {
-                            id: colourRectangle
-
-                            anchors.fill: parent
-                            anchors.margins: Kirigami.Units.smallSpacing
-                            color: modelData.color
-
-                            Kirigami.Icon {
-                                source: "user-identity"
-                                color: modelData.dark ? "white" : "black"
-                                width: Kirigami.Units.gridUnit * 4
-                                height: Kirigami.Units.gridUnit * 4
-                                anchors.centerIn: parent
-                            }
-                        }
+                    delegate: IconButton {
+                        color: modelData.color
+                        iconColor: modelData.dark ? "white" : "black"
 
                         onClicked: {
                             colourRectangle.grabToImage(function(result) {
