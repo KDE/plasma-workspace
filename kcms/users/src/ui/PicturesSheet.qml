@@ -47,6 +47,11 @@ Kirigami.OverlaySheet {
         Layout.rightMargin: Kirigami.Units.largeSpacing
     }
 
+    component PictureButton: QQC2.Button {
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
+        Layout.preferredWidth: Layout.preferredHeight
+    }
+
     onVisibleChanged: {
         if (!visible) {
             destroy(Kirigami.Units.humanMoment);
@@ -92,10 +97,8 @@ Kirigami.OverlaySheet {
                     }
                 }
 
-                QQC2.Button {
+                PictureButton {
                     id: openButton
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                    Layout.preferredWidth: Layout.preferredHeight
 
                     contentItem: Item {
                         ColumnLayout {
@@ -131,10 +134,7 @@ Kirigami.OverlaySheet {
                     onClicked: fileDialog.open()
                 }
 
-                QQC2.Button {
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                    Layout.preferredWidth: Layout.preferredHeight
-
+                PictureButton {
                     Kirigami.Heading {
                         anchors.fill: parent
                         anchors.margins: Kirigami.Units.smallSpacing
@@ -148,10 +148,7 @@ Kirigami.OverlaySheet {
                     onClicked: stackSwitcher.forceCurrentIndex(initialPictures.QQC2.SwipeView.index)
                 }
 
-                QQC2.Button {
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                    Layout.preferredWidth: Layout.preferredHeight
-
+                PictureButton {
                     contentItem: Kirigami.Icon {
                         anchors.centerIn: parent
                         width: Kirigami.Units.gridUnit * 4
@@ -166,10 +163,7 @@ Kirigami.OverlaySheet {
 
                 Repeater {
                     model: kcm.avatarFiles
-                    QQC2.Button {
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                        Layout.preferredWidth: Layout.preferredHeight
-
+                    PictureButton {
                         hoverEnabled: true
 
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -217,10 +211,7 @@ Kirigami.OverlaySheet {
 
                 columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
 
-                QQC2.Button {
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                    Layout.preferredWidth: Layout.preferredHeight
-
+                PictureButton {
                     ColumnLayout {
                         anchors.centerIn: parent
 
@@ -238,10 +229,7 @@ Kirigami.OverlaySheet {
 
                 Repeater {
                     model: picturesSheet.colorPalette
-                    delegate: QQC2.Button {
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                        Layout.preferredWidth: Layout.preferredHeight
-
+                    delegate: PictureButton {
                         hoverEnabled: true
 
                         Accessible.name: modelData.name
@@ -288,10 +276,7 @@ Kirigami.OverlaySheet {
 
                 columns: initialsColumn.columns
 
-                QQC2.Button {
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                    Layout.preferredWidth: Layout.preferredHeight
-
+                PictureButton {
                     ColumnLayout {
                         anchors.centerIn: parent
 
@@ -309,10 +294,7 @@ Kirigami.OverlaySheet {
 
                 Repeater {
                     model: picturesSheet.colorPalette
-                    delegate: QQC2.Button {
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-                        Layout.preferredWidth: Layout.preferredHeight
-
+                    delegate: PictureButton {
                         Accessible.name: modelData.name
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.text: modelData.name
