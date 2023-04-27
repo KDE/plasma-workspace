@@ -66,6 +66,30 @@ Kirigami.OverlaySheet {
         }
     }
 
+    component InitialsButton: PictureButton {
+        property alias color: colorRectangle.color
+        property alias headingColor: heading.color
+
+        Rectangle {
+            id: colorRectangle
+
+            color: "transparent"
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.smallSpacing
+
+            Kirigami.Heading {
+                id: heading
+                anchors.fill: parent
+                anchors.margins: Kirigami.Units.smallSpacing
+                font.pixelSize: Kirigami.Units.gridUnit * 4
+                fontSizeMode: Text.Fit
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: kcm.initializeString(user.displayPrimaryName)
+            }
+        }
+    }
+
     onVisibleChanged: {
         if (!visible) {
             destroy(Kirigami.Units.humanMoment);
@@ -148,17 +172,7 @@ Kirigami.OverlaySheet {
                     onClicked: fileDialog.open()
                 }
 
-                PictureButton {
-                    Kirigami.Heading {
-                        anchors.fill: parent
-                        anchors.margins: Kirigami.Units.smallSpacing
-                        font.pixelSize: Kirigami.Units.gridUnit * 4
-                        fontSizeMode: Text.Fit
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                        text: kcm.initializeString(user.displayPrimaryName)
-                    }
-
+                InitialsButton {
                     onClicked: stackSwitcher.forceCurrentIndex(initialPictures.QQC2.SwipeView.index)
                 }
 
@@ -231,28 +245,15 @@ Kirigami.OverlaySheet {
 
                 Repeater {
                     model: picturesSheet.colorPalette
-                    delegate: PictureButton {
+                    delegate: InitialsButton {
+                        color: modelData.color
+                        headingColor: modelData.dark ? "white" : "black"
                         hoverEnabled: true
 
                         Accessible.name: modelData.name
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.text: modelData.name
                         QQC2.ToolTip.visible: hovered || activeFocus
-
-                        Rectangle {
-                            id: colourRectangle
-
-                            anchors.fill: parent
-                            anchors.margins: Kirigami.Units.smallSpacing
-                            color: modelData.color
-
-                            Kirigami.Heading {
-                                anchors.centerIn: parent
-                                color: modelData.dark ? "white" : "black"
-                                font.pixelSize: Kirigami.Units.gridUnit * 4
-                                text: kcm.initializeString(user.displayPrimaryName)
-                            }
-                        }
 
                         onClicked: {
                             colourRectangle.grabToImage(function(result) {
