@@ -52,6 +52,20 @@ Kirigami.OverlaySheet {
         Layout.preferredWidth: Layout.preferredHeight
     }
 
+    component HomeButton: PictureButton {
+        ColumnLayout {
+            anchors.centerIn: parent
+
+            Kirigami.Icon {
+                width: Kirigami.Units.gridUnit * 4
+                height: Kirigami.Units.gridUnit * 4
+                source: "go-previous"
+
+                Layout.alignment: Qt.AlignHCenter
+            }
+        }
+    }
+
     onVisibleChanged: {
         if (!visible) {
             destroy(Kirigami.Units.humanMoment);
@@ -211,19 +225,7 @@ Kirigami.OverlaySheet {
 
                 columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
 
-                PictureButton {
-                    ColumnLayout {
-                        anchors.centerIn: parent
-
-                        Kirigami.Icon {
-                            width: Kirigami.Units.gridUnit * 4
-                            height: Kirigami.Units.gridUnit * 4
-                            source: "go-previous"
-
-                            Layout.alignment: Qt.AlignHCenter
-                        }
-                    }
-
+                HomeButton {
                     onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
                 }
 
@@ -276,19 +278,7 @@ Kirigami.OverlaySheet {
 
                 columns: initialsColumn.columns
 
-                PictureButton {
-                    ColumnLayout {
-                        anchors.centerIn: parent
-
-                        Kirigami.Icon {
-                            width: Kirigami.Units.gridUnit * 4
-                            height: Kirigami.Units.gridUnit * 4
-                            source: "go-previous"
-
-                            Layout.alignment: Qt.AlignHCenter
-                        }
-                    }
-
+                HomeButton {
                     onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
                 }
 
