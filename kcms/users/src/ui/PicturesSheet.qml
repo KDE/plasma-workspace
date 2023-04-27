@@ -39,6 +39,7 @@ Kirigami.OverlaySheet {
 
     component PicturesGridLayout: GridLayout {
         rowSpacing: Kirigami.Units.smallSpacing
+        columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
         columnSpacing: Kirigami.Units.smallSpacing
 
         Layout.fillWidth: true
@@ -64,6 +65,8 @@ Kirigami.OverlaySheet {
                 Layout.alignment: Qt.AlignHCenter
             }
         }
+
+        onClicked: stackSwitcher.pop()
     }
 
     component InitialsButton: PictureButton {
@@ -111,6 +114,169 @@ Kirigami.OverlaySheet {
         }
     }
 
+    component MainPage: ColumnLayout {
+        PicturesGridLayout {
+            PictureButton {
+                id: openButton
+
+                contentItem: Item {
+                    Dialogs.FileDialog {
+                        id: fileDialog
+                        title: i18nc("@title", "Choose a picture")
+                        onAccepted: {
+                            usersDetailPage.oldImage = usersDetailPage.user.face
+                            usersDetailPage.user.face = fileDialog.fileUrl
+                            usersDetailPage.overrideImage = true
+                            picturesSheet.close()
+                        }
+                    }
+
+                    ColumnLayout {
+                        // Centering rather than filling is desired to keep the
+                        // entire layout nice and tight when the text is short
+                        anchors.centerIn: parent
+                        spacing: 0 // the icon should bring its own
+
+                        Kirigami.Icon {
+                            id: openIcon
+
+                            implicitWidth: Kirigami.Units.iconSizes.huge
+                            implicitHeight: Kirigami.Units.iconSizes.huge
+                            source: "document-open"
+
+                            Layout.alignment: Qt.AlignHCenter
+                        }
+                        QQC2.Label {
+                            text: i18nc("@action:button", "Choose File…")
+
+                            Layout.fillWidth: true
+                            Layout.maximumWidth: Kirigami.Units.gridUnit * 5
+                            Layout.maximumHeight: openButton.availableHeight - openIcon.height
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignBottom
+                            fontSizeMode: Text.HorizontalFit
+                            wrapMode: Text.Wrap
+                            elide: Text.ElideRight
+                        }
+                    }
+                }
+
+                onClicked: fileDialog.open()
+            }
+
+            InitialsButton {
+                onClicked: stackSwitcher.push(initialsPage)
+            }
+
+            IconButton {
+                iconColor: "black"
+                onClicked: stackSwitcher.push(iconsPage)
+            }
+
+            Repeater {
+                model: kcm.avatarFiles
+                PictureButton {
+                    hoverEnabled: true
+
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.ToolTip.text: modelData
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    Accessible.name: modelData
+
+                    Image {
+                        id: imgDelegate
+                        asynchronous: true
+                        smooth: true
+                        mipmap: true
+                        sourceSize.width: Kirigami.Units.gridUnit * 5
+                        sourceSize.height: Kirigami.Units.gridUnit * 5
+                        source: "file:" + modelData
+
+                        Accessible.ignored: true
+                    }
+
+                    Kirigami.ShadowedTexture {
+                        radius: width / 2
+                        anchors.centerIn: parent
+                        width: Kirigami.Units.gridUnit * 5
+                        height: Kirigami.Units.gridUnit * 5
+
+                        source: imgDelegate
+                    }
+
+                    onClicked: {
+                        usersDetailPage.oldImage = usersDetailPage.user.face
+                        usersDetailPage.user.face = imgDelegate.source
+                        usersDetailPage.overrideImage = true
+                        picturesSheet.close()
+                    }
+                }
+            }
+        }
+    }
+
+    component InitialsPage: ColumnLayout {
+        PicturesGridLayout {
+            HomeButton {}
+
+            Repeater {
+                model: picturesSheet.colorPalette
+                delegate: InitialsButton {
+                    color: modelData.color
+                    headingColor: modelData.dark ? "white" : "black"
+                    hoverEnabled: true
+
+                    Accessible.name: modelData.name
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.ToolTip.text: modelData.name
+                    QQC2.ToolTip.visible: hovered || activeFocus
+
+                    onClicked: {
+                        colourRectangle.grabToImage(function(result) {
+                            const uri = kcm.plonkImageInTempfile(result.image)
+                            if (uri != "") {
+                                usersDetailPage.oldImage = usersDetailPage.user.face
+                                usersDetailPage.user.face = uri
+                                usersDetailPage.overrideImage = true
+                            }
+                            picturesSheet.close()
+                        })
+                    }
+                }
+            }
+        }
+    }
+
+    component IconsPage: ColumnLayout {
+        PicturesGridLayout {
+            HomeButton {}
+
+            Repeater {
+                model: picturesSheet.colorPalette
+                delegate: IconButton {
+                    color: modelData.color
+                    iconColor: modelData.dark ? "white" : "black"
+
+                    onClicked: {
+                        colourRectangle.grabToImage(function(result) {
+                            const uri = kcm.plonkImageInTempfile(result.image)
+                            if (uri != "") {
+                                usersDetailPage.oldImage = usersDetailPage.user.face
+                                usersDetailPage.user.face = uri
+                                usersDetailPage.overrideImage = true
+                            }
+                            picturesSheet.close()
+                        })
+                    }
+                }
+            }
+        }
+    }
+
+
+    readonly property MainPage mainPage: MainPage {}
+    readonly property InitialsPage initialsPage: InitialsPage {}
+    readonly property IconsPage iconsPage: IconsPage {}
 
     onVisibleChanged: {
         if (!visible) {
@@ -118,208 +284,17 @@ Kirigami.OverlaySheet {
         }
     }
 
-    contentItem: QQC2.SwipeView {
+    contentItem: QQC2.StackView {
         id: stackSwitcher
 
         implicitWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4
+        implicitHeight: currentItem.implicitHeight
 
         focus: true
-        interactive: false
+        initialItem: mainPage
 
         Keys.onEscapePressed: picturesSheet.close();
-
-        function forceCurrentIndex(index) {
-            // There is a peculiar bug in SwipeView with repeatedly switching index where it will eventually get
-            // confused between SwipeView and its Container base about what the index actually should be. We
-            // consequently end up on the wrong page. But only in right-to-left UI mode!
-            // Forcing complete index resets fixes this problem.
-            // https://bugs.kde.org/show_bug.cgi?id=439081
-            setCurrentIndex(-1)
-            setCurrentIndex(index)
-        }
-
-        ColumnLayout {
-            id: cols
-
-            PicturesGridLayout {
-                id: picturesColumn
-
-                columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6 + picturesColumn.columnSpacing))
-
-                PictureButton {
-                    id: openButton
-
-                    contentItem: Item {
-                        Dialogs.FileDialog {
-                            id: fileDialog
-                            title: i18nc("@title", "Choose a picture")
-                            onAccepted: {
-                                usersDetailPage.oldImage = usersDetailPage.user.face
-                                usersDetailPage.user.face = fileDialog.fileUrl
-                                usersDetailPage.overrideImage = true
-                                picturesSheet.close()
-                            }
-                        }
-
-                        ColumnLayout {
-                            // Centering rather than filling is desired to keep the
-                            // entire layout nice and tight when the text is short
-                            anchors.centerIn: parent
-                            spacing: 0 // the icon should bring its own
-
-                            Kirigami.Icon {
-                                id: openIcon
-
-                                implicitWidth: Kirigami.Units.iconSizes.huge
-                                implicitHeight: Kirigami.Units.iconSizes.huge
-                                source: "document-open"
-
-                                Layout.alignment: Qt.AlignHCenter
-                            }
-                            QQC2.Label {
-                                text: i18nc("@action:button", "Choose File…")
-
-                                Layout.fillWidth: true
-                                Layout.maximumWidth: Kirigami.Units.gridUnit * 5
-                                Layout.maximumHeight: openButton.availableHeight - openIcon.height
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignBottom
-                                fontSizeMode: Text.HorizontalFit
-                                wrapMode: Text.Wrap
-                                elide: Text.ElideRight
-                            }
-                        }
-                    }
-
-                    onClicked: fileDialog.open()
-                }
-
-                InitialsButton {
-                    onClicked: stackSwitcher.forceCurrentIndex(initialPictures.QQC2.SwipeView.index)
-                }
-
-                IconButton {
-                    iconColor: "black"
-                    onClicked: stackSwitcher.forceCurrentIndex(iconPictures.QQC2.SwipeView.index)
-                }
-
-
-                Repeater {
-                    model: kcm.avatarFiles
-                    PictureButton {
-                        hoverEnabled: true
-
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        QQC2.ToolTip.text: modelData
-                        QQC2.ToolTip.visible: hovered || activeFocus
-                        Accessible.name: modelData
-
-                        Image {
-                            id: imgDelegate
-                            asynchronous: true
-                            smooth: true
-                            mipmap: true
-                            sourceSize.width: Kirigami.Units.gridUnit * 5
-                            sourceSize.height: Kirigami.Units.gridUnit * 5
-                            source: "file:" + modelData
-
-                            Accessible.ignored: true
-                        }
-
-                        Kirigami.ShadowedTexture {
-                            radius: width / 2
-                            anchors.centerIn: parent
-                            width: Kirigami.Units.gridUnit * 5
-                            height: Kirigami.Units.gridUnit * 5
-
-                            source: imgDelegate
-                        }
-
-                        onClicked: {
-                            usersDetailPage.oldImage = usersDetailPage.user.face
-                            usersDetailPage.user.face = imgDelegate.source
-                            usersDetailPage.overrideImage = true
-                            picturesSheet.close()
-                        }
-                    }
-                }
-            }
-        }
-
-        ColumnLayout {
-            id: initialPictures
-
-            PicturesGridLayout {
-                id: initialsColumn
-
-                columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
-
-                HomeButton {
-                    onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
-                }
-
-                Repeater {
-                    model: picturesSheet.colorPalette
-                    delegate: InitialsButton {
-                        color: modelData.color
-                        headingColor: modelData.dark ? "white" : "black"
-                        hoverEnabled: true
-
-                        Accessible.name: modelData.name
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        QQC2.ToolTip.text: modelData.name
-                        QQC2.ToolTip.visible: hovered || activeFocus
-
-                        onClicked: {
-                            colourRectangle.grabToImage(function(result) {
-                                const uri = kcm.plonkImageInTempfile(result.image)
-                                if (uri != "") {
-                                    usersDetailPage.oldImage = usersDetailPage.user.face
-                                    usersDetailPage.user.face = uri
-                                    usersDetailPage.overrideImage = true
-                                }
-                                picturesSheet.close()
-                            })
-                        }
-                    }
-                }
-            }
-        }
-
-        ColumnLayout {
-            id: iconPictures
-
-            PicturesGridLayout {
-                id: iconColumn
-
-                columns: initialsColumn.columns
-
-                HomeButton {
-                    onClicked: stackSwitcher.forceCurrentIndex(cols.QQC2.SwipeView.index)
-                }
-
-                Repeater {
-                    model: picturesSheet.colorPalette
-                    delegate: IconButton {
-                        color: modelData.color
-                        iconColor: modelData.dark ? "white" : "black"
-
-                        onClicked: {
-                            colourRectangle.grabToImage(function(result) {
-                                const uri = kcm.plonkImageInTempfile(result.image)
-                                if (uri != "") {
-                                    usersDetailPage.oldImage = usersDetailPage.user.face
-                                    usersDetailPage.user.face = uri
-                                    usersDetailPage.overrideImage = true
-                                }
-                                picturesSheet.close()
-                            })
-                        }
-                    }
-                }
-            }
-        }
     }
 
-    Component.onCompleted: open();
+    Component.onCompleted: open()
 }
