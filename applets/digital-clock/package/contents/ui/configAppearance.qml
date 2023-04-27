@@ -277,7 +277,7 @@ ColumnLayout {
         title: i18nc("@title:window", "Choose a Font")
         modality: Qt.WindowModal
 
-        property font fontChosen: Qt.Font()
+        property font fontChosen: Qt.font()
 
         onAccepted: {
             fontChosen = selectedFont
