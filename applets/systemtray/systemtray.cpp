@@ -304,6 +304,10 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
         menu->winId();
         menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
         menu->popup(QPoint(x, y));
+        // Workaround for QTBUG-59044
+        if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
+            item->ungrabMouse();
+        }
     }
 }
 
