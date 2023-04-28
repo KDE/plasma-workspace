@@ -32,6 +32,8 @@ PlasmaExtras.ExpandableListItem {
     readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
     readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
     readonly property var supportedProtocols: model["Supported Protocols"]
+    readonly property bool supportsMTP: supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
+    readonly property bool supportsAFC: supportedProtocols && supportedProtocols.includes("afc")
 
     readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
@@ -130,12 +132,10 @@ PlasmaExtras.ExpandableListItem {
             operation = service.operationDescription('invokeAction');
             operation.predicate = "test-predicate-openinwindow.desktop";
 
-            const supportsMTP = supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
-            const supportsAFC = supportedProtocols && supportedProtocols.includes("afc");
             if (!hasStorageAccess && hasPortableMediaPlayer) {
-                if (supportsMTP) {
+                if (deviceItem.supportsMTP) {
                     operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
-                } else if (supportsAFC) {
+                } else if (deviceItem.supportsAFC) {
                     operation.predicate = "solid_afc.desktop" // this lives in kio-extras!
                 }
             }
@@ -275,8 +275,8 @@ PlasmaExtras.ExpandableListItem {
         text: i18n("Mount")
         icon.name: "media-mount"
 
-        // Only show for unmounted removable devices
-        enabled: deviceItem.isRemovable && !deviceItem.isMounted
+        // Only show for unmounted removable devices not in MTP mode
+        enabled: deviceItem.isRemovable && !deviceItem.isMounted && !deviceItem.supportsMTP
 
         onTriggered: {
             const service = sdSource.serviceForSource(udi);
