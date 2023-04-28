@@ -257,7 +257,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
     QStandardItem *row = new QStandardItem(pkg.metadata().name());
     row->setData(pkg.metadata().pluginId(), PluginNameRole);
     row->setData(pkg.metadata().description(), DescriptionRole);
-    row->setData(pkg.filePath("preview"), ScreenshotRole);
+    row->setData(QUrl::fromLocalFile(pkg.filePath("preview")), ScreenshotRole);
     row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
     row->setData(QVariant::fromValue(m_lnf->packageContents(pkg)), ContentsRole);
 
