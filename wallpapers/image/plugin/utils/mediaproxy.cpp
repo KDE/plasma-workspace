@@ -61,9 +61,14 @@ void MediaProxy::setSource(const QString &url)
 {
     // New desktop has empty url
     if (url.isEmpty()) {
-        useSingleImageDefaults();
+        if (!m_isDefaultSource) {
+            useSingleImageDefaults();
+            m_isDefaultSource = true;
+        }
         return;
     }
+
+    m_isDefaultSource = false;
 
     const QUrl sanitizedUrl = QUrl::fromUserInput(url);
     if (m_source == sanitizedUrl) {
