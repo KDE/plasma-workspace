@@ -27,8 +27,6 @@ KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const
     qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);
     qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightcolor", 1, 0, "NightColorMode", "Error: only enums");
 
-    worldMapFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/nightcolor/worldmap.png"), QStandardPaths::LocateFile);
-
     minDayTemp = nightColorSettings()->findItem("DayTemperature")->minValue().toInt();
     maxDayTemp = nightColorSettings()->findItem("DayTemperature")->maxValue().toInt();
     minNightTemp = nightColorSettings()->findItem("NightTemperature")->minValue().toInt();

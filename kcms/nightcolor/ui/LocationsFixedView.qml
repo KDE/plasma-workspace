@@ -135,7 +135,7 @@ Kirigami.FormLayout {
                 clip: true
                 Image {
                     id: mapImage
-                    source: kcm.worldMapFile
+                    source: "worldmap.png" // loaded using QRC
                     transform: Scale {
                         id: mapZoom
                         xScale: mapRect.currentScale

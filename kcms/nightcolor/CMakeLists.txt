@@ -17,6 +17,3 @@ target_link_libraries(kcm_nightcolor
     PW::LibColorCorrect
     Qt::DBus
 )
-
-install(FILES worldmap.png DESTINATION ${KDE_INSTALL_DATADIR}/plasma/nightcolor)
-

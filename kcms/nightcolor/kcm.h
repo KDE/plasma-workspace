@@ -18,7 +18,6 @@ class KCMNightColor : public KQuickManagedConfigModule
     Q_OBJECT
 
     Q_PROPERTY(NightColorSettings *nightColorSettings READ nightColorSettings CONSTANT)
-    Q_PROPERTY(QString worldMapFile MEMBER worldMapFile CONSTANT)
     Q_PROPERTY(int minDayTemp MEMBER minDayTemp CONSTANT)
     Q_PROPERTY(int maxDayTemp MEMBER maxDayTemp CONSTANT)
     Q_PROPERTY(int minNightTemp MEMBER minNightTemp CONSTANT)
@@ -32,7 +31,6 @@ public:
 
 private:
     NightColorData *const m_data;
-    QString worldMapFile;
     int minDayTemp;
     int maxDayTemp;
     int minNightTemp;
