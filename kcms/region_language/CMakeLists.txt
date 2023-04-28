@@ -77,7 +77,7 @@ target_link_libraries(kcm_regionandlang
     Qt::Core5Compat
 )
 if(UBUNTU_LOCALE)
-    target_link_libraries(kcm_regionandlang PK::packagekitqt${QT_MAJOR_VERSION})
+    target_link_libraries(kcm_regionandlang PK::packagekitqt6)
 endif()
 
 ########### unit tests ##############

@@ -20,20 +20,15 @@ target_link_libraries(kfontinst_bin
     KF6::XmlGui
     X11::X11
     kfontinst
+    Qt::GuiPrivate
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kfontinst_bin Qt::X11Extras)
-else()
-    target_link_libraries(kfontinst_bin Qt::GuiPrivate)
-endif()
 target_link_libraries(kfontprint_bin
     Qt::PrintSupport
     KF6::IconThemes
     kfontinstui
     kfontinst
 )
-target_link_libraries(kfontview_bin KF6::Parts KF6::XmlGui KF6::DBusAddons kfontinstui kfontinst )
-
+target_link_libraries(kfontview_bin KF6::Parts KF6::XmlGui KF6::DBusAddons kfontinstui kfontinst)
 
 ecm_qt_declare_logging_category(kfontview_bin
     HEADER kfontview_debug.h

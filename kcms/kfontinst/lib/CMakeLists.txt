@@ -14,20 +14,13 @@ target_link_libraries(kfontinst
     Qt::Gui
     XCB::IMAGE
 )
-if (QT_MAJOR_VERSION EQUAL "6")
-    target_link_libraries(kfontinst PRIVATE Qt::Core5Compat) # for QTextCodec
-endif()
+target_link_libraries(kfontinst PRIVATE Qt::Core5Compat) # for QTextCodec
 
 set_target_properties(kfontinst PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 
 generate_export_header(kfontinst)
 
 add_library(kfontinstui SHARED ${kfontinstui_LIB_SRCS})
-target_link_libraries(kfontinstui KF6::KIOCore KF6::KIOWidgets X11::X11 X11::Xft XCB::IMAGE kfontinst )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(kfontinstui Qt::X11Extras)
-else()
-    target_link_libraries(kfontinstui Qt::GuiPrivate)
-endif()
+target_link_libraries(kfontinstui KF6::KIOCore KF6::KIOWidgets X11::X11 X11::Xft XCB::IMAGE kfontinst Qt::GuiPrivate)
 set_target_properties(kfontinstui PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 install(TARGETS kfontinst kfontinstui ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

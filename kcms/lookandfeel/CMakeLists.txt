@@ -53,12 +53,7 @@ target_link_libraries(lookandfeelmanager
 )
 
 if(HAVE_X11)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(lookandfeelmanager Qt::X11Extras)
-    else()
-        target_link_libraries(lookandfeelmanager Qt::GuiPrivate)
-    endif()
-   target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes)
+   target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif()
 
 add_library(kcm_lookandfeel_objects OBJECT kcm.cpp)
@@ -80,6 +75,7 @@ install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 if(BUILD_TESTING)
+   find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
    add_subdirectory(autotests)
 endif()
 

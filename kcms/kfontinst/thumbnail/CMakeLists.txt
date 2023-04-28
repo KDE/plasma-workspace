@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(fontthumbnail SOURCES FontThumbnail.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
+kcoreaddons_add_plugin(fontthumbnail SOURCES FontThumbnail.cpp INSTALL_NAMESPACE "kf6/thumbcreator")
 
 ecm_qt_declare_logging_category(fontthumbnail
     HEADER debug.h

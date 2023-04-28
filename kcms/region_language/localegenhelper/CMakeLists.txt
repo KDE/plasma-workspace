@@ -17,7 +17,7 @@ qt_add_dbus_adaptor(localegen_Helper_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.lo
 add_executable(plasma-localegen-helper ${localegen_Helper_SRCS})
 target_link_libraries(plasma-localegen-helper
     Qt::DBus
-    PolkitQt${QT_MAJOR_VERSION}-1::Core
+    PolkitQt6-1::Core
     KF6::I18n
 )
 ecm_install_configured_files(INPUT org.kde.localegenhelper.service.in DESTINATION ${KDE_INSTALL_DBUSSYSTEMSERVICEDIR} @ONLY)
