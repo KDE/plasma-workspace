@@ -1,14 +1,14 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_notifications\")
 
-set(kcm_notifications_SRCS
+kcmutils_add_qml_kcm(kcm_notifications)
+target_sources(kcm_notifications PRIVATE
     kcm.cpp
     sourcesmodel.cpp
     filterproxymodel.cpp
     notificationsdata.cpp
 )
 
-kcmutils_add_qml_kcm(kcm_notifications SOURCES ${kcm_notifications_SRCS})
 target_link_libraries(kcm_notifications
     KF6::KCMUtils
     KF6::CoreAddons

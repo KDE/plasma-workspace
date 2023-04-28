@@ -73,10 +73,9 @@ target_link_libraries(kcm_regionandlang
     KF6::I18n
     KF6::KCMUtils
     KF6::KCMUtilsQuick
-    KF6::ItemModels)
-if (QT_MAJOR_VERSION EQUAL "6")
-    target_link_libraries(kcm_regionandlang Qt::Core5Compat) # for QTextCodec
-endif()
+    KF6::ItemModels
+    Qt::Core5Compat
+)
 if(UBUNTU_LOCALE)
     target_link_libraries(kcm_regionandlang PK::packagekitqt${QT_MAJOR_VERSION})
 endif()

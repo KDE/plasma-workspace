@@ -17,7 +17,8 @@ if(HAVE_X11)
     endif()
 endif()
 
-set(kcm_fonts_PART_SRCS
+kcmutils_add_qml_kcm(kcm_fonts)
+target_sources(kcm_fonts PRIVATE
     previewrenderengine.cpp
     previewimageprovider.cpp
     fonts.cpp
@@ -27,16 +28,13 @@ set(kcm_fonts_PART_SRCS
     ../kcms-common.cpp
 )
 
-kcmutils_generate_module_data(
-    kcm_fonts_PART_SRCS
+kcmutils_generate_module_data(kcm_fonts
     MODULE_DATA_HEADER fontsdata.h
     MODULE_DATA_CLASS_NAME FontsData
     SETTINGS_HEADERS fontssettings.h fontsaasettings.h
     SETTINGS_CLASSES FontsSettings FontsAASettings
 )
-
-kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
-kcmutils_add_qml_kcm(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS})
+kconfig_add_kcfg_files(kcm_fonts fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_fonts Qt::Quick kcm_fonts_static)
 

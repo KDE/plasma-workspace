@@ -1,7 +1,9 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_cursortheme\")
 
-set( libnoinst_SRCS
+kcmutils_add_qml_kcm(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS})
+
+target_sources(kcm_cursortheme PRIVATE
 xcursor/thememodel.cpp
 xcursor/themeapplicator.cpp
 xcursor/cursortheme.cpp
@@ -9,16 +11,12 @@ xcursor/xcursortheme.cpp
 xcursor/previewwidget.cpp
 xcursor/sortproxymodel.cpp
 ../kcms-common.cpp
+kcmcursortheme.cpp
 )
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )
 
-########### next target ###############
-
-set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
-
-kcmutils_generate_module_data(
-    kcm_cursortheme_PART_SRCS
+kcmutils_generate_module_data(kcm_cursortheme
     MODULE_DATA_HEADER cursorthemedata.h
     MODULE_DATA_CLASS_NAME CursorThemeData
     SETTINGS_HEADERS cursorthemesettings.h launchfeedbacksettings.h
@@ -26,9 +24,8 @@ kcmutils_generate_module_data(
 )
 
 
-kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS launchfeedbacksettings.kcfgc GENERATE_MOC)
-kcmutils_add_qml_kcm(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS})
+kconfig_add_kcfg_files(kcm_cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_cursortheme launchfeedbacksettings.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_cursortheme
     Qt::DBus
@@ -47,18 +44,13 @@ target_link_libraries(kcm_cursortheme
 )
 
 if (HAVE_X11)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(kcm_cursortheme Qt::X11Extras)
-    else()
-        target_link_libraries(kcm_cursortheme Qt::GuiPrivate)
-    endif()
-
-   target_link_libraries(kcm_cursortheme X11::Xcursor X11::Xfixes)
+   target_link_libraries(kcm_cursortheme X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif ()
 
-########### next target ###############
+# plasma-apply-cursortheme utility
 
-set(plasma-apply-cursortheme_SRCS
+add_executable(plasma-apply-cursortheme)
+target_sources(plasma-apply-cursortheme PRIVATE
     plasma-apply-cursortheme.cpp
 
     xcursor/cursortheme.cpp
@@ -68,10 +60,7 @@ set(plasma-apply-cursortheme_SRCS
     ../kcms-common.cpp
     ../krdb/krdb.cpp
 )
-
-kconfig_add_kcfg_files(plasma-apply-cursortheme_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
-add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
-
+kconfig_add_kcfg_files(plasma-apply-cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
 target_link_libraries(plasma-apply-cursortheme
     Qt::DBus
     KF6::DBusAddons
@@ -82,13 +71,7 @@ target_link_libraries(plasma-apply-cursortheme
 )
 
 if (HAVE_X11)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(plasma-apply-cursortheme Qt::X11Extras)
-    else()
-        target_link_libraries(plasma-apply-cursortheme Qt::GuiPrivate)
-    endif()
-
-   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes)
+   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif()
 
 install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
