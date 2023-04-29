@@ -1,17 +1,16 @@
-# KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_cursortheme\")
 
 kcmutils_add_qml_kcm(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS})
 
 target_sources(kcm_cursortheme PRIVATE
-xcursor/thememodel.cpp
-xcursor/themeapplicator.cpp
-xcursor/cursortheme.cpp
-xcursor/xcursortheme.cpp
-xcursor/previewwidget.cpp
-xcursor/sortproxymodel.cpp
-../kcms-common.cpp
-kcmcursortheme.cpp
+    xcursor/thememodel.cpp
+    xcursor/themeapplicator.cpp
+    xcursor/cursortheme.cpp
+    xcursor/xcursortheme.cpp
+    xcursor/previewwidget.cpp
+    xcursor/sortproxymodel.cpp
+    ../kcms-common.cpp
+    kcmcursortheme.cpp
 )
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )

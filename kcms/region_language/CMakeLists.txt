@@ -1,8 +1,6 @@
-#CMakeLists.txt
 # SPDX-License-Identifier: BSD-2-Clause
 # SPDX-FileCopyrightText: 2022 Han Young <hanyoung@protonmail.com>
 
-# KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_regionandlang\")
 ################## Set sources files #################
 set(kcm_regionandlang_example_SRCS

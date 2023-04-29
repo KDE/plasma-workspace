@@ -1,4 +1,3 @@
-# KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoptheme\")
 
 kcmutils_add_qml_kcm(kcm_desktoptheme SOURCES ${kcm_desktoptheme_SRCS})

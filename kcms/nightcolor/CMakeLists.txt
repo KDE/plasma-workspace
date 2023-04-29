@@ -1,4 +1,3 @@
-# KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_nightcolor\")
 
 kcmutils_add_qml_kcm(kcm_nightcolor SOURCES kcm.cpp enum.h)
