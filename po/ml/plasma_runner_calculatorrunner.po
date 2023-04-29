@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:52+0000\n"
+"POT-Creation-Date: 2023-04-29 02:20+0000\n"
 "PO-Revision-Date: 2021-03-08 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -28,12 +28,17 @@ msgstr ""
 ":q: സംഖ്യകളുടെയും +, -, /, *, !, ^ പോലെയുള്ള ഗണിതചിഹ്നങ്ങളുടെയും ഒപ്പം ചേർത്ത് എഴുതുമ്പോൾ :"
 "q: വിന്റെ മൂല്യം കണക്കാക്കുന്നു."
 
-#: calculatorrunner.cpp:39
+#: calculatorrunner.cpp:38
+#, kde-format
+msgid "Enter a common math function"
+msgstr ""
+
+#: calculatorrunner.cpp:40
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "ഓർമ്മച്ചെപ്പിലേക്ക് പകർത്തുക"
 
-#: calculatorrunner.cpp:133
+#: calculatorrunner.cpp:147
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

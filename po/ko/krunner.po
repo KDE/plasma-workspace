@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-04-29 02:20+0000\n"
 "PO-Revision-Date: 2023-02-28 23:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: main.cpp:79 view.cpp:45
+#: main.cpp:79 view.cpp:43
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"

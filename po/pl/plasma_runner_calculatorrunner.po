@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:52+0000\n"
+"POT-Creation-Date: 2023-04-29 02:20+0000\n"
 "PO-Revision-Date: 2021-01-16 10:58+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,17 @@ msgstr ""
 "Oblicza wartość :q: kiedy :q: składa się z liczb i symboli matematycznych "
 "takich jak +, -, /, *, ! oraz ^."
 
-#: calculatorrunner.cpp:39
+#: calculatorrunner.cpp:38
+#, kde-format
+msgid "Enter a common math function"
+msgstr ""
+
+#: calculatorrunner.cpp:40
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Skopiuj do schowka"
 
-#: calculatorrunner.cpp:133
+#: calculatorrunner.cpp:147
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:52+0000\n"
+"POT-Creation-Date: 2023-04-29 02:20+0000\n"
 "PO-Revision-Date: 2013-01-11 09:56+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -29,12 +29,17 @@ msgstr ""
 ":q: चे मूल्याची गणना करतो. :q:  हे संख्या व गणितीय प्रतीकांनी (+, -, /, * व ^) बनलेले "
 "असावे."
 
-#: calculatorrunner.cpp:39
+#: calculatorrunner.cpp:38
+#, kde-format
+msgid "Enter a common math function"
+msgstr ""
+
+#: calculatorrunner.cpp:40
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:133
+#: calculatorrunner.cpp:147
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

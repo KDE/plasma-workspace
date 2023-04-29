@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-20 00:52+0000\n"
+"POT-Creation-Date: 2023-04-29 02:20+0000\n"
 "PO-Revision-Date: 2021-07-01 18:56+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -29,12 +29,17 @@ msgstr ""
 ":q: के मूल्य की गणना करता है जब :q:  संख्याओं और गणितीय प्रतीकों जैसे +, -, /, *, ! और "
 "^। से बना हो"
 
-#: calculatorrunner.cpp:39
+#: calculatorrunner.cpp:38
+#, kde-format
+msgid "Enter a common math function"
+msgstr ""
+
+#: calculatorrunner.cpp:40
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "क्लिपबोर्ड पर नकल बनाएं"
 
-#: calculatorrunner.cpp:133
+#: calculatorrunner.cpp:147
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"
