@@ -89,18 +89,20 @@ PlasmaCore.ToolTipArea {
         onPositionChanged: if (inHiddenLayout) {
             root.hiddenLayout.currentIndex = index
         }
-        onClicked: abstractItem.clicked(mouse)
-        onPressed: {
+        onClicked: mouse => { abstractItem.clicked(mouse) }
+        onPressed: mouse => {
             if (inHiddenLayout) {
                 root.hiddenLayout.currentIndex = index
             }
             abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
         }
-        onPressAndHold: if (mouse.button === Qt.LeftButton) {
-            abstractItem.contextMenu(mouse)
+        onPressAndHold: mouse => { 
+            if (mouse.button === Qt.LeftButton) {
+                abstractItem.contextMenu(mouse)
+            }
         }
-        onWheel: {
+        onWheel: wheel => {
             abstractItem.wheel(wheel);
             //Don't accept the event in order to make the scrolling by mouse wheel working
             //for the parent scrollview this icon is in.
@@ -129,7 +131,7 @@ PlasmaCore.ToolTipArea {
                 }
             }
 
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 switch (event.key) {
                     case Qt.Key_Space:
                     case Qt.Key_Enter:

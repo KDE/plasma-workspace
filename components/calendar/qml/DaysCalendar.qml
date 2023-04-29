@@ -123,7 +123,7 @@ Item {
                 dayModel: repeater.model
 
                 Accessible.onPressAction: mouseArea.clicked(null);
-                Keys.onPressed: {
+                Keys.onPressed: event => {
                     if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
                         event.accepted = false;
                         return;
@@ -145,7 +145,7 @@ Item {
                 }
                 KeyNavigation.tab: daysCalendar.KeyNavigation.tab
 
-                Keys.onUpPressed: {
+                Keys.onUpPressed: event => {
                     if (index >= daysCalendar.columns) {
                         repeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     } else {
@@ -175,7 +175,7 @@ Item {
                     onClicked: {
                         daysCalendar.activated(index, model, delegate)
                     }
-                    onWheel: {
+                    onWheel: wheel => {
                         var delta = wheel.angleDelta.y || wheel.angleDelta.x
                         wheelDelta += delta
 

@@ -24,7 +24,7 @@ PlasmaCore.ToolTipArea {
     Accessible.description: i18n("Show all the items in the system tray in a popup")
     Accessible.role: Accessible.Button
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         switch (event.key) {
         case Qt.Key_Space:
         case Qt.Key_Enter:

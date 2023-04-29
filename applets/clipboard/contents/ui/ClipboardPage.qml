@@ -17,7 +17,7 @@ import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
 
 Menu {
     id: clipboardMenu
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         function forwardToFilter() {
             if (filter.enabled && event.text !== "" && !filter.activeFocus) {
                 clipboardMenu.view.currentIndex = -1
@@ -103,8 +103,8 @@ Menu {
                 focus: Plasmoid.expanded && !Kirigami.InputMethod.willShowOnActive
 
                 KeyNavigation.up: dialogItem.KeyNavigation.up
-                Keys.onUpPressed: clipboardMenu.arrowKeyPressed(event)
-                Keys.onDownPressed: clipboardMenu.arrowKeyPressed(event)
+                Keys.onUpPressed: event => { clipboardMenu.arrowKeyPressed(event) }
+                Keys.onDownPressed: event => { clipboardMenu.arrowKeyPressed(event) }
 
                 Connections {
                     target: main

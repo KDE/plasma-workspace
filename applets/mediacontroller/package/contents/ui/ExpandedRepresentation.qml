@@ -90,7 +90,7 @@ PlasmaExtras.Representation {
 
     Keys.onPressed: keyPressed = true
 
-    Keys.onReleased: {
+    Keys.onReleased: event => {
         keyPressed = false
 
         if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && event.modifiers & Qt.ControlModifier) {

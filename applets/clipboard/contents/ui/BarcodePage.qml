@@ -19,7 +19,7 @@ ColumnLayout {
 
     property alias text: barcodeItem.content
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key == Qt.Key_Escape) {
             stack.pop()
             event.accepted = true;

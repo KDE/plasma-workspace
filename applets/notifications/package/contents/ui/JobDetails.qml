@@ -72,7 +72,7 @@ GridLayout {
             MouseArea {
                 anchors.fill: parent
                 acceptedButtons: Qt.RightButton
-                onPressed: {
+                onPressed: mouse => {
                     // break binding so it doesn't update while the menu is opened
                     descriptionValueLabel.text = descriptionValueLabel.text;
                     descriptionValueMenu.open(mouse.x, mouse.y)

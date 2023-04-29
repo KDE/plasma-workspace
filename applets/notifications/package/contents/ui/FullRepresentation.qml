@@ -260,7 +260,7 @@ PlasmaExtras.Representation {
                     // TODO would be nice to stay inside the current group when deleting an item
                 }
             }
-            Keys.onEnterPressed: Keys.onReturnPressed(event)
+            Keys.onEnterPressed: event => { Keys.onReturnPressed(event) }
             Keys.onReturnPressed: {
                 // Trigger default action, if any
                 var idx = historyModel.index(currentIndex, 0);
@@ -281,7 +281,7 @@ PlasmaExtras.Representation {
             Keys.onLeftPressed: setGroupExpanded(currentIndex, LayoutMirroring.enabled)
             Keys.onRightPressed: setGroupExpanded(currentIndex, !LayoutMirroring.enabled)
 
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 switch (event.key) {
                 case Qt.Key_Home:
                     currentIndex = 0;

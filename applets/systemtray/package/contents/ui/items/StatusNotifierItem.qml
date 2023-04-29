@@ -59,7 +59,7 @@ AbstractItem {
         }
     }
 
-    onClicked: {
+    onClicked: mouse => {
         var pos = Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
         switch (mouse.button) {
         case Qt.LeftButton:
@@ -90,7 +90,7 @@ AbstractItem {
         });
     }
 
-    onWheel: {
+    onWheel: wheel => {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
             const service = model.Service;

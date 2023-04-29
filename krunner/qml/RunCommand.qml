@@ -153,7 +153,7 @@ ColumnLayout {
                     }
                 }
             }
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
 
                 if (event.modifiers & Qt.ControlModifier) {
@@ -258,7 +258,7 @@ ColumnLayout {
             queryString: root.query
             singleRunner: root.singleRunner
 
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 var ctrl = event.modifiers & Qt.ControlModifier;
                 if (ctrl && event.key === Qt.Key_J) {
                     incrementCurrentIndex()
@@ -347,7 +347,7 @@ ColumnLayout {
                     decrementCurrentIndex()
                 }
             }
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 var ctrl = event.modifiers & Qt.ControlModifier;
                 if (ctrl && event.key === Qt.Key_J) {
                     incrementCurrentIndex()

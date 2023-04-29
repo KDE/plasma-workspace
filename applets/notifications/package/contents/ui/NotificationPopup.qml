@@ -170,7 +170,7 @@ PlasmaCore.Dialog {
                 return buttons;
             }
 
-            onClicked: {
+            onClicked: mouse => {
                 // NOTE "mouse" can be null when faked by the SelectableLabel
                 if (mouse && mouse.button === Qt.MiddleButton) {
                     if (notificationItem.closable) {

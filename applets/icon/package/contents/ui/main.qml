@@ -29,7 +29,7 @@ MouseArea {
     width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
 
     activeFocusOnTab: true
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         switch (event.key) {
         case Qt.Key_Space:
         case Qt.Key_Enter:

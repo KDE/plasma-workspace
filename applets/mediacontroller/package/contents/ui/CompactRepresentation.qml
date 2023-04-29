@@ -79,7 +79,7 @@ MouseArea {
 
     property int wheelDelta: 0
 
-    onWheel: {
+    onWheel: wheel => {
         const service = mpris2Source.serviceForSource(mpris2Source.current)
         const operation = service.operationDescription("ChangeVolume")
         wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x)
@@ -97,7 +97,7 @@ MouseArea {
         }
     }
 
-    onClicked: {
+    onClicked: mouse => {
         switch (mouse.button) {
         case Qt.MiddleButton:
             root.togglePlaying()

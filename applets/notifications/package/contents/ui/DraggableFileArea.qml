@@ -29,12 +29,12 @@ MouseArea {
     cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
     acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-    onClicked: {
+    onClicked: mouse => {
         if (mouse.button === Qt.LeftButton) {
             area.activated();
         }
     }
-    onPressed: {
+    onPressed: mouse => {
         if (mouse.button === Qt.LeftButton) {
             _pressX = mouse.x;
             _pressY = mouse.y;

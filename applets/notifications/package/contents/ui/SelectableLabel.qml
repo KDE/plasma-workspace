@@ -74,7 +74,7 @@ PlasmaComponents3.ScrollView {
                 }
             }
 
-            onPressed: {
+            onPressed: mouse => {
                 contextMenu = contextMenuComponent.createObject(bodyText);
                 contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
 
@@ -86,7 +86,7 @@ PlasmaComponents3.ScrollView {
             }
 
             // Pass wheel events to ListView to make scrolling work in FullRepresentation.
-            onWheel: {
+            onWheel: wheel => {
                 if (bodyTextContainer.listViewParent
                     && ((wheel.angleDelta.y > 0 && !bodyTextContainer.listViewParent.atYBeginning)
                         || (wheel.angleDelta.y < 0 && !bodyTextContainer.listViewParent.atYEnd))) {

@@ -249,7 +249,7 @@ ColumnLayout {
 
             // Cannot do text !== "" because RichText adds some HTML tags even when empty
             visible: notificationItem.body !== ""
-            onClicked: notificationItem.bodyClicked(mouse)
+            onClicked: mouse => { notificationItem.bodyClicked(mouse) }
             onLinkActivated: Qt.openUrlExternally(link)
         }
 

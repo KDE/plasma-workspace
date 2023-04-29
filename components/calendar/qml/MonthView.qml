@@ -257,7 +257,7 @@ Item {
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
-        Keys.onLeftPressed: Keys.onUpPressed(event);
+        Keys.onLeftPressed: event => { Keys.onUpPressed(event) }
         Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
 
         onCurrentIndexChanged: if (currentIndex > 1) {
@@ -293,7 +293,7 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
                 onActivated: {
                     const rowNumber = Math.floor(index / columns);
@@ -326,7 +326,7 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
                 onActivated: {
                     calendarBackend.goToMonth(date.monthNumber);
@@ -359,7 +359,7 @@ Item {
 
                 KeyNavigation.left: swipeView.KeyNavigation.left
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
-                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+                Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
                 onActivated: {
                     calendarBackend.goToYear(date.yearNumber);

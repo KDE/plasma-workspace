@@ -252,7 +252,7 @@ Item {
         isHeldOnPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
 
-        onWheel: {
+        onWheel: wheel => {
             const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y || wheel.angleDelta.x);
 
             const maximumBrightness = batterymonitor.maximumScreenBrightness

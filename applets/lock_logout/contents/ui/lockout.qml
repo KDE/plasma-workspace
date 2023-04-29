@@ -92,7 +92,7 @@ Flow {
                     hoverEnabled: true
                     onReleased: clickHandler(modelData.operation, this)
                     activeFocusOnTab: true
-                    Keys.onPressed: {
+                    Keys.onPressed: event => {
                         switch (event.key) {
                         case Qt.Key_Space:
                         case Qt.Key_Enter:

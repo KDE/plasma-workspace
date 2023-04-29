@@ -35,7 +35,7 @@ AbstractItem {
         }
     }
 
-    onClicked: {
+    onClicked: mouse => {
         if (!applet) {
             return
         }
@@ -48,7 +48,7 @@ AbstractItem {
             plasmoidContainer.activated(null)
         }
     }
-    onPressed: {
+    onPressed: mouse => {
         // Only Plasmoids can show context menu on the mouse pressed event.
         // SNI has few problems, for example legacy applications that still use XEmbed require mouse to be released.
         if (mouse.button === Qt.RightButton) {
@@ -67,7 +67,7 @@ AbstractItem {
         Plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
                                                   plasmoidContainer.inHiddenLayout ? applet.height : 0);
     }
-    onWheel: {
+    onWheel: wheel => {
         if (!applet) {
             return
         }

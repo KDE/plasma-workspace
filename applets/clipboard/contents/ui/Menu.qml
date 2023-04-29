@@ -33,7 +33,7 @@ PlasmaComponents3.ScrollView {
 
     contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (menuListView.count !== 0) {
             switch (event.key) {
                 case Qt.Key_Home: {

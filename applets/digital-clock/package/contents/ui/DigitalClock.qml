@@ -443,7 +443,7 @@ MouseArea {
 
     onPressed: wasExpanded = Plasmoid.expanded
     onClicked: Plasmoid.expanded = !wasExpanded
-    onWheel: {
+    onWheel: wheel => {
         if (!Plasmoid.configuration.wheelChangesTimezone) {
             return;
         }

@@ -181,7 +181,7 @@ Kirigami.FormLayout {
 
                     WheelHandler {
                         acceptedModifiers: Qt.ControlModifier
-                        onWheel: {
+                        onWheel: event => {
                             let wheelPos = mapImage.mapFromItem(root, point.scenePosition);
                             var realX = wheelPos.x * mapZoom.xScale
                             var realY = wheelPos.y * mapZoom.yScale

@@ -19,7 +19,7 @@ ColumnLayout {
 
     property var header: Item {}
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         if (event.key === Qt.Key_Escape) {
             stack.pop()
             event.accepted = true;
@@ -68,7 +68,7 @@ ColumnLayout {
             textFormat: TextEdit.PlainText
 
             KeyNavigation.up: dialogItem.KeyNavigation.up
-            Keys.onPressed: {
+            Keys.onPressed: event => {
                 if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
                     saveAndExit();
                     event.accepted = true;

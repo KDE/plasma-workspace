@@ -32,7 +32,7 @@ MouseArea {
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
     readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
-    onWheel: {
+    onWheel: wheel => {
         // Don't propagate unhandled wheel events
         wheel.accepted = true;
     }
