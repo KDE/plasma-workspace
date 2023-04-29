@@ -9,7 +9,7 @@ import QtQuick 2.7
 import QtQuick.Window 2.2 // for Screen
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
-import QtQuick.Dialogs as QtDialogs
+import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.3 as KCM

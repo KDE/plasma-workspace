@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
-import QtQuick.Dialogs 1.2 as Dialogs
+import QtQuick.Dialogs 6.3 as Dialogs
 import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.workspace.dialogs 1.0
@@ -53,7 +53,7 @@ Kirigami.AbstractApplicationWindow {
                 }
             }
             delegate: Kirigami.BasicListItem {
-                icon: "kate"
+                icon.name: "kate"
                 label: display
                 highlighted: false
                 checkable: true
@@ -75,7 +75,7 @@ Kirigami.AbstractApplicationWindow {
         actions: [
             Kirigami.Action {
                 text: "Details"
-                iconName: "documentinfo"
+                icon.name: "documentinfo"
                 onTriggered: desktopPolkit.close()
             }
         ]
@@ -95,7 +95,7 @@ Kirigami.AbstractApplicationWindow {
         actions: [
             Kirigami.Action {
                 text: "Something Happens"
-                iconName: "documentinfo"
+                icon.name: "documentinfo"
                 onTriggered: xdgDialog.acceptable = true
             }
         ]
@@ -215,7 +215,7 @@ Kirigami.AbstractApplicationWindow {
         actions: [
             Kirigami.Action {
                 text: "Details"
-                iconName: "documentinfo"
+                icon.name: "documentinfo"
                 onTriggered: mobilePolkit.close()
             }
         ]

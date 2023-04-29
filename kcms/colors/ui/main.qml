@@ -7,7 +7,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs as QtDialogs
+import QtQuick.Dialogs 6.3 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Templates 2.3 as T
 import QtQml 2.15

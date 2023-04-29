@@ -7,7 +7,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Dialogs as QtDialogs
+import QtQuick.Dialogs 6.3 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons

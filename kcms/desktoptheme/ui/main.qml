@@ -9,7 +9,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs
+import QtQuick.Dialogs 6.3
 import QtQuick.Controls 2.3 as QtControls
 import QtQml 2.15
 

@@ -227,7 +227,7 @@ KCM.ScrollViewKCM {
                 clip: true
                 model: filterModel
                 delegate: Kirigami.BasicListItem {
-                    icon: model.flag
+                    icon.name: model.flag
                     text: model.display
                     subtitle: model.example ? model.example : ''
                     trailing: QQC2.Label {
