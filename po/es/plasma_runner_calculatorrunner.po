@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2016, 2017, 2020.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2016, 2017, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:20+0000\n"
-"PO-Revision-Date: 2020-12-13 21:57+0100\n"
+"PO-Revision-Date: 2023-04-30 03:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: calculatorrunner.cpp:33
@@ -31,7 +31,7 @@ msgstr ""
 #: calculatorrunner.cpp:38
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "Introduzca una operación matemática común"
 
 #: calculatorrunner.cpp:40
 #, kde-format

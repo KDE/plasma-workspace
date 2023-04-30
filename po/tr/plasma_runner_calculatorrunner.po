@@ -4,20 +4,21 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2009.
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:20+0000\n"
-"PO-Revision-Date: 2022-02-27 14:11+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2023-04-29 11:11+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: calculatorrunner.cpp:33
 #, kde-format
@@ -31,7 +32,7 @@ msgstr ""
 #: calculatorrunner.cpp:38
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "Yaygın kullanılan bir matematik işlevi gir"
 
 #: calculatorrunner.cpp:40
 #, kde-format
