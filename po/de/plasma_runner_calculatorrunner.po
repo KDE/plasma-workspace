@@ -1,6 +1,7 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #: calculatorrunner.cpp:33
 #, kde-format
