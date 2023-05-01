@@ -245,7 +245,6 @@ ColumnLayout {
     }
 
     PlasmaComponents3.ScrollView {
-        Layout.alignment: Qt.AlignTop
         visible: results.count > 0
         enabled: visible
         Layout.fillWidth: true
@@ -297,7 +296,6 @@ ColumnLayout {
     }
 
     PlasmaComponents3.ScrollView {
-        Layout.alignment: Qt.AlignTop
         Layout.fillWidth: true
         visible: root.query.length === 0 && listView.count > 0
         // don't accept keyboard input when not visible so the keys propagate to the other list
@@ -397,5 +395,10 @@ ColumnLayout {
             }
         }
 
+    }
+
+    // to align the layout to the top of any pending space in the view
+    Item {
+        Layout.fillHeight: true
     }
 }
