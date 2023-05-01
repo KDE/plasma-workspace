@@ -16,7 +16,7 @@
 #include <KRunner/RunnerManager>
 #include <KWayland/Client/plasmashell.h>
 
-#include <PlasmaQuick/Dialog>
+#include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
 
 namespace KWayland
@@ -30,7 +30,7 @@ class PlasmaShellSurface;
 
 class ViewPrivate;
 
-class View : public PlasmaQuick::Dialog
+class View : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
@@ -62,7 +62,6 @@ Q_SIGNALS:
     void helpEnabledChanged();
 
 protected:
-    bool event(QEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
     void showEvent(QShowEvent *event) override;
 

@@ -30,13 +30,10 @@
 #include "appadaptor.h"
 
 View::View(QWindow *)
-    : PlasmaQuick::Dialog()
+    : PlasmaQuick::PlasmaWindow()
     , m_offset(.5)
     , m_floating(false)
 {
-    setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-
     KCrash::initialize();
 
     // used only by screen readers
@@ -103,6 +100,10 @@ void View::objectIncubated()
     auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
     connect(mainItem, &QQuickItem::widthChanged, this, &View::resetScreenPos);
     setMainItem(mainItem);
+    setMainItemSize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()));
+    connect(mainItem, &QQuickItem::implicitHeightChanged, this, [mainItem, this]() {
+        setMainItemSize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()));
+    });
 }
 
 void View::slotFocusWindowChanged()
@@ -129,9 +130,11 @@ void View::setFreeFloating(bool floating)
 
     m_floating = floating;
     if (m_floating) {
-        setLocation(Plasma::Types::Floating);
+        KWindowEffects::slideWindow(this, KWindowEffects::NoEdge);
+        setBorders(Qt::Edges());
     } else {
-        setLocation(Plasma::Types::TopEdge);
+        KWindowEffects::slideWindow(this, KWindowEffects::TopEdge);
+        setBorders(Qt::LeftEdge | Qt::RightEdge | Qt::BottomEdge);
     }
 
     positionOnScreen();
@@ -143,20 +146,12 @@ void View::loadConfig()
     setPinned(m_stateData.readEntry("Pinned", false));
 }
 
-bool View::event(QEvent *event)
-{
-    // Bypass Dialog so we don't create a plasmashell surface
-    if (event->type() == QEvent::Expose || event->type() == QEvent::PlatformSurface) {
-        return QQuickWindow::event(event);
-    }
-    return Dialog::event(event);
-}
-
 void View::resizeEvent(QResizeEvent *event)
 {
     if (event->oldSize().width() != event->size().width()) {
         positionOnScreen();
     }
+    PlasmaWindow::resizeEvent(event);
 }
 
 void View::showEvent(QShowEvent *event)
@@ -217,17 +212,13 @@ void View::positionOnScreen()
             layerWindow->setMargins({0, r.height() / 3, 0, 0});
         } else {
             layerWindow->setMargins(QMargins());
-            // Workaround so Dialog gets the borders correct
-            auto geom = geometry();
-            geom.moveCenter({r.center().x(), 0});
-            setGeometry(geom);
         }
     } else {
         if (m_floating && !m_customPos.isNull()) {
             int x = qBound(r.left(), m_customPos.x(), r.right() - width());
             int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
             setPosition(x, y);
-            PlasmaQuick::Dialog::setVisible(true);
+            PlasmaQuick::PlasmaWindow::setVisible(true);
             return;
         }
 
@@ -251,14 +242,7 @@ void View::positionOnScreen()
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 
-    if (m_floating) {
-        // Turn the sliding effect off
-        setLocation(Plasma::Types::Floating);
-    } else {
-        setLocation(Plasma::Types::TopEdge);
-    }
-
-    PlasmaQuick::Dialog::setVisible(true);
+    PlasmaQuick::PlasmaWindow::setVisible(true);
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
     }
@@ -329,7 +313,7 @@ void View::setVisible(bool visible)
     if (visible && !m_floating) {
         positionOnScreen();
     } else {
-        PlasmaQuick::Dialog::setVisible(visible);
+        PlasmaQuick::PlasmaWindow::setVisible(visible);
     }
 }
 
