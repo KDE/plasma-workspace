@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-12-23 11:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -134,7 +134,7 @@ msgstr "Установка наборов значков..."
 msgid "Installing %1 theme…"
 msgstr "Установка набора значков %1..."
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -148,54 +148,54 @@ msgstr ""
 "учитывать эти размеры.<nl/><nl/> Если окажется,что объекты на экране слишком "
 "малы или слишком велики, используйте настройку глобального масштаба."
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Настроить глобальный масштаб…"
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Размер:"
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Удалить набор значков"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Восстановить набор значков"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Выбрать размеры значков"
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Установить из файла..."
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Загрузить наборы значков..."
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Настройка размера значков"
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Открытие темы"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Наборы значков (*.tar.gz *.tar.bz2)"

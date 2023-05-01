@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-01-22 15:58+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -126,7 +126,7 @@ msgstr "चिनहा प्रसंग इनस्टाल करत ह�
 msgid "Installing %1 theme…"
 msgstr "चिनहा प्रसंग इनस्टाल करत हे"
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,60 +136,60 @@ msgid ""
 "consider adjusting the global scale instead."
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "आकारः"
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "प्रसंग हटाव"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "प्रसंग हटाव"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install Theme File..."
 msgid "Install from File…"
 msgstr "प्रसंग फाइल इनस्टाल करव..."
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New Icons…"
 msgstr "नवा प्रसंग लाव..."
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "प्रसंग हटाव"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

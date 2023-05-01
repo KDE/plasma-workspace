@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-12-18 21:44+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -1191,143 +1191,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr ""
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "&Skema"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive Text"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Teksti jo aktiv"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "All Schemes"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Light Schemes"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Dark Schemes"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Window Text"
-msgid "Window Title"
-msgstr "Teksti i Dritares"
-
-#: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "Window Text"
-msgid "Window text"
-msgstr "Teksti i Dritares"
-
-#: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Active Text"
-msgid "Button"
-msgstr "Teksti Aktiv"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr ""
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr ""
-
-#: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Normal Text"
-msgid "Normal text"
-msgstr "Teksti Normal"
-
-#: package/contents/ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Active Text"
-msgid "Highlighted text"
-msgstr "Teksti Aktiv"
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Active Text"
-msgid "Disabled text"
-msgstr "Teksti Aktiv"
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Edit Color Scheme…"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Remove Color Scheme"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Restore Color Scheme"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Get New Color Schemes…"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:364
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Open Color Scheme"
-msgstr "&Skema"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1412,6 +1275,143 @@ msgstr ""
 #| msgid "&Scheme"
 msgid " * %1 (current color scheme)"
 msgstr "&Skema"
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "&Skema"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive Text"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Teksti jo aktiv"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "All Schemes"
+msgstr "&Skema"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Light Schemes"
+msgstr "&Skema"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Dark Schemes"
+msgstr "&Skema"
+
+#: ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Window Text"
+msgid "Window Title"
+msgstr "Teksti i Dritares"
+
+#: ui/main.qml:197
+#, fuzzy, kde-format
+#| msgid "Window Text"
+msgid "Window text"
+msgstr "Teksti i Dritares"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "Active Text"
+msgid "Button"
+msgstr "Teksti Aktiv"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr ""
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr ""
+
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Normal Text"
+msgid "Normal text"
+msgstr "Teksti Normal"
+
+#: ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Active Text"
+msgid "Highlighted text"
+msgstr "Teksti Aktiv"
+
+#: ui/main.qml:266
+#, fuzzy, kde-format
+#| msgid "Active Text"
+msgid "Disabled text"
+msgstr "Teksti Aktiv"
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Edit Color Scheme…"
+msgstr "&Skema"
+
+#: ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Remove Color Scheme"
+msgstr "&Skema"
+
+#: ui/main.qml:297
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Restore Color Scheme"
+msgstr "&Skema"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Get New Color Schemes…"
+msgstr "&Skema"
+
+#: ui/main.qml:364
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Open Color Scheme"
+msgstr "&Skema"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "&Scheme"

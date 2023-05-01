@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-01-17 16:26+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,27 +16,26 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 19.12.1\n"
 
-#: package/contents/ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr ""
 
-#: package/contents/ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: package/contents/ui/LocationsFixedView.qml:78
-#: package/contents/ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: package/contents/ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:222
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,21 +45,21 @@ msgid ""
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
 
-#: package/contents/ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:235
 #, fuzzy, kde-format
 #| msgid "Latitude:"
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "緯度:"
 
-#: package/contents/ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:261
 #, fuzzy, kde-format
 #| msgid "Longitude:"
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "経度:"
 
-#: package/contents/ui/main.qml:87
+#: ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "Night Color makes the colors on the screen warmer to reduce eye strain at "
@@ -70,42 +69,42 @@ msgstr ""
 "Night Color は指定された時間にディスプレイの色温度を下げることで目の負荷を軽"
 "減します。"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Activation time:"
 msgid "Switching times:"
 msgstr "アクティブ化する時間:"
 
-#: package/contents/ui/main.qml:100
+#: ui/main.qml:100
 #, kde-format
 msgid "Always off"
 msgstr ""
 
-#: package/contents/ui/main.qml:101
+#: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at current location"
 msgid "Sunset and sunrise at current location"
 msgstr "現在地の日の入りから日の出まで"
 
-#: package/contents/ui/main.qml:102
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at manual location"
 msgid "Sunset and sunrise at manual location"
 msgstr "手動で指定した地点の日の入りから日の出まで"
 
-#: package/contents/ui/main.qml:103
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Custom time"
 msgid "Custom times"
 msgstr "指定した時間"
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Always on"
 msgid "Always on night color"
 msgstr "常にオン"
 
-#: package/contents/ui/main.qml:156
+#: ui/main.qml:156
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -114,92 +113,92 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 
-#: package/contents/ui/main.qml:175
+#: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Day color temperature:"
 msgstr "Night Color の色温度:"
 
-#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#: ui/main.qml:218 ui/main.qml:277
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr ""
 
-#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#: ui/main.qml:222 ui/main.qml:281
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖かい"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: ui/main.qml:228 ui/main.qml:287
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: ui/main.qml:228 ui/main.qml:287
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "冷たい"
 
-#: package/contents/ui/main.qml:234
+#: ui/main.qml:234
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Night color temperature:"
 msgstr "Night Color の色温度:"
 
-#: package/contents/ui/main.qml:298
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Latitude: %1   Longitude: %2"
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "緯度: %1   経度: %2"
 
-#: package/contents/ui/main.qml:308
+#: ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
 msgstr ""
 
-#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#: ui/main.qml:321 ui/main.qml:344
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr ""
 
-#: package/contents/ui/main.qml:331
+#: ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
 msgstr ""
 
-#: package/contents/ui/main.qml:353
+#: ui/main.qml:353
 #, kde-format
 msgid "Transition duration:"
 msgstr "切り替えにかける時間:"
 
-#: package/contents/ui/main.qml:362
+#: ui/main.qml:362
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 分"
 msgstr[1] "%1 分"
 
-#: package/contents/ui/main.qml:375
+#: ui/main.qml:375
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr ""
 
-#: package/contents/ui/main.qml:393
+#: ui/main.qml:393
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr ""
 
-#: package/contents/ui/main.qml:413
+#: ui/main.qml:413
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr ""
 
-#: package/contents/ui/TimingsView.qml:32
+#: ui/TimingsView.qml:32
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing back at %1"
 msgid ""
@@ -207,7 +206,7 @@ msgid ""
 "by %2"
 msgstr "%1 に Night Color が終了しはじめます"
 
-#: package/contents/ui/TimingsView.qml:39
+#: ui/TimingsView.qml:39
 #, fuzzy, kde-format
 #| msgid "Night Color begins changing back at %1"
 msgid ""

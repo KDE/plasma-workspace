@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-09 18:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -78,115 +78,6 @@ msgstr "O tema foi instalado com sucesso."
 #, kde-format
 msgid "Timeout in seconds"
 msgstr "Tempo-limite em segundos"
-
-#: package/contents/ui/Delegate.qml:54
-#, kde-format
-msgid "Remove Theme"
-msgstr "Remover o Tema"
-
-#: package/contents/ui/Delegate.qml:61
-#, kde-format
-msgid "Restore Cursor Theme"
-msgstr "Repor o Tema de Cursores"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:16
-#, kde-format
-msgctxt "@title"
-msgid "Launch Feedback"
-msgstr "Reacção ao Lançamento"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:25
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Configure the animations played while an application is launching."
-msgstr "Configurar as animações reproduzidas enquanto lança uma aplicação."
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:46
-#, kde-format
-msgctxt "@label"
-msgid "Cursor feedback:"
-msgstr "Reacção do cursor:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:47
-#, kde-format
-msgctxt "@option:radio No cursor feedback when launching apps"
-msgid "None"
-msgstr "Nenhuma"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:56
-#, kde-format
-msgctxt "@option:radio"
-msgid "Static"
-msgstr "Estática"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:65
-#, kde-format
-msgctxt "@option:radio"
-msgid "Blinking"
-msgstr "Intermitente"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:74
-#, kde-format
-msgctxt "@option:radio"
-msgid "Bouncing"
-msgstr "Saltitante"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:89
-#, kde-format
-msgctxt "@label"
-msgid "Task Manager feedback:"
-msgstr "Reacção do gestor de tarefas:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:91
-#, kde-format
-msgctxt "@option:check"
-msgid "Enable animation"
-msgstr "Activar a animação"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:110
-#, kde-format
-msgctxt "@label"
-msgid "Stop animations after:"
-msgstr "Parar as animações ao fim de:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:124
-#: package/contents/ui/LaunchFeedbackDialog.qml:136
-#, kde-format
-msgid "%1 second"
-msgid_plural "%1 seconds"
-msgstr[0] "%1 segundo"
-msgstr[1] "%1 segundos"
-
-#: package/contents/ui/main.qml:84
-#, kde-format
-msgid "Size:"
-msgstr "Tamanho:"
-
-#: package/contents/ui/main.qml:134
-#, kde-format
-msgctxt "@action:button"
-msgid "&Configure Launch Feedback…"
-msgstr "&Configurar a Reacção do Lançamento…"
-
-#: package/contents/ui/main.qml:145
-#, kde-format
-msgid "&Install from File…"
-msgstr "&Instalar de um Ficheiro…"
-
-#: package/contents/ui/main.qml:151
-#, kde-format
-msgid "&Get New Cursors…"
-msgstr "&Obter Novos Cursores…"
-
-#: package/contents/ui/main.qml:168
-#, kde-format
-msgid "Open Theme"
-msgstr "Abrir um Tema"
-
-#: package/contents/ui/main.qml:170
-#, kde-format
-msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
-msgstr "Ficheiros de Temas de Cursores (*.tar.gz *.tar.bz2)"
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
@@ -269,6 +160,114 @@ msgstr "Tem os seguintes temas de cursores do rato no seu sistema:"
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema actual da sessão do Plasma)"
+
+#: ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Remover o Tema"
+
+#: ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Repor o Tema de Cursores"
+
+#: ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "Reacção ao Lançamento"
+
+#: ui/LaunchFeedbackDialog.qml:25
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "Configurar as animações reproduzidas enquanto lança uma aplicação."
+
+#: ui/LaunchFeedbackDialog.qml:46
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr "Reacção do cursor:"
+
+#: ui/LaunchFeedbackDialog.qml:47
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr "Nenhuma"
+
+#: ui/LaunchFeedbackDialog.qml:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "Estática"
+
+#: ui/LaunchFeedbackDialog.qml:65
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "Intermitente"
+
+#: ui/LaunchFeedbackDialog.qml:74
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "Saltitante"
+
+#: ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Reacção do gestor de tarefas:"
+
+#: ui/LaunchFeedbackDialog.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "Activar a animação"
+
+#: ui/LaunchFeedbackDialog.qml:110
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "Parar as animações ao fim de:"
+
+#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 segundo"
+msgstr[1] "%1 segundos"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Tamanho:"
+
+#: ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "&Configurar a Reacção do Lançamento…"
+
+#: ui/main.qml:145
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Instalar de um Ficheiro…"
+
+#: ui/main.qml:151
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Obter Novos Cursores…"
+
+#: ui/main.qml:168
+#, kde-format
+msgid "Open Theme"
+msgstr "Abrir um Tema"
+
+#: ui/main.qml:170
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Ficheiros de Temas de Cursores (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:56
 #, kde-format

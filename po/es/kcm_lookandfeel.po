@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-22 05:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -103,47 +103,47 @@ msgstr "Reiniciar la distribución del escritorio Plasma"
 msgid "Global look and feel"
 msgstr "Aspecto visual global"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "Borrar permanentemente"
 
-#: package/contents/ui/main.qml:63
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "¿Realmente desea borrar este tema de forma permanente?"
 
-#: package/contents/ui/main.qml:67
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "Borrar permanentemente"
 
-#: package/contents/ui/main.qml:72
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Contiene la distribución del escritorio"
 
-#: package/contents/ui/main.qml:103
+#: ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "Vista previa del tema"
 
-#: package/contents/ui/main.qml:111
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Eliminar tema"
 
-#: package/contents/ui/main.qml:127
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -151,48 +151,47 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "¿Aplicar %1?"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Escoja qué aplicar..."
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opciones..."
 
-#: package/contents/ui/main.qml:162
+#: ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "Aplicar"
 
-#: package/contents/ui/main.qml:174
+#: ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: package/contents/ui/main.qml:191
+#: ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Obtener nuevos temas globales..."
 
-#: package/contents/ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
 msgstr "Preferencias del diseño:"
 
-#: package/contents/ui/MoreOptions.qml:27
+#: ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
 msgstr "Diseño del escritorio"
 
-#: package/contents/ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Diseño de botones de la barra de título"
 
-#: package/contents/ui/MoreOptions.qml:46
-#: package/contents/ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -201,89 +200,89 @@ msgstr ""
 "La aplicación de un diseño de escritorio sustituye la configuración actual "
 "de los escritorios, paneles y elementos gráficos"
 
-#: package/contents/ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Preferencias del aspecto visual:"
 
-#: package/contents/ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "Colores"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "Estilo de las aplicaciones"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "Decoraciones de las ventanas"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "Iconos"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Estilo de Plasma"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "Cursores"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "Tipos de letra"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "Selector de tareas"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "Pantalla de bienvenida"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "Pantalla de bloqueo"
 
-#: package/contents/ui/SimpleOptions.qml:19
+#: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "Se aplicará lo siguiente por este tema global:"
 
-#: package/contents/ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "Preferencias del aspecto visual"
 
-#: package/contents/ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Preferencias del aspecto visual"
 
-#: package/contents/ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Diseño del escritorio y de las ventanas"
 
-#: package/contents/ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Diseño del escritorio y de las ventanas"
 
-#: package/contents/ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

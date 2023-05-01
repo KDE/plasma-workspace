@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-03-04 18:16+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -16,495 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "Vaihda salasana"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "Aseta salasana"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "Salasana"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "Vahvista salasana"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "Salasanat eivät täsmää"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "Vaihdetaanko lompakon salasana?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"Vaihdettuasi kirjautumissalasanan saat haluta asettaa sen myös lompakon "
-"salasanaksi."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "Mikä on lompakko?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"Lompakko (KWallet) on salasanahallinta, joka tallentaa langattomien "
-"verkkojen ja muiden salattujen resurssien salasanat. Se lukitaan omalla "
-"kirjautumissalasanasta eroavalla salasanalla. Jos salasanat ovat samat, "
-"lompakon lukitus voidaan kuitenkin avata automaattisesti kirjauduttaessa, "
-"eikä lompakon salasanaa tarvitse erikseen syöttää."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "Vaihda lompakon salasana"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "Älä vaihda"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "Luo käyttäjä"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "Nimi:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "Käyttäjätunnus:"
-
-# Tämä on käyttäjätilin tyyppi: standard vs. administrator
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "Tavallinen"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "Ylläpitäjä"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "Tilin tyyppi:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "Salasana:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "Vahvista salasana:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "Luo"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "Sormenjälkiasetukset"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Tyhjennä kaikki"
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "Lisää"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "Peru"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "Valmis"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Kirjataan sormenjälkeä"
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:124
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Paina toistuvasti oikeaa etusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:126
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "Paina toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:128
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Paina toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:130
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Paina toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:132
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Paina toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:134
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Paina toistuvasti vasenta etusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:136
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Paina toistuvasti vasenta keskisormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Paina toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:140
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Paina toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:142
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Paina toistuvasti vasenta peukaloa sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:146
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti oikeaa etusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:148
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:150
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:152
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:154
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:156
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti vasenta etusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:158
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti vasenta keskisormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:160
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:162
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
-
-# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
-#: package/contents/ui/FingerprintDialog.qml:164
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Pyyhkäise toistuvasti vasenta peukaloa sormenjälkitunnistimella."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Sormi on muistissa"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Valitse kirjattava sormi"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "Kirjaa sormi uudelleen"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, kde-format
-msgid "Delete fingerprint"
-msgstr "Poista sormenjälki"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "Sormenjälkiä ei ole lisätty"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "Hallitse käyttäjiä"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "Lisää uusi käyttäjä"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, kde-format
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "Vaihda tunnuskuva"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, kde-format
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "Ei mitään"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, kde-format
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "Urhea flamingo"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, kde-format
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "Pitaija"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "Bataatti"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, kde-format
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "Ambient Amber"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "Kimalteleva säde"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, kde-format
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "Sitruuna-limetti"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, kde-format
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "Vehreä lumo"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, kde-format
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "Lempeä niitty"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, kde-format
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "Vaisu sinivihreä"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, kde-format
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "Plasmansininen"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, kde-format
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "Ponpurppura"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, kde-format
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "Bajopurppura"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, kde-format
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "Poltettu hiili"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, kde-format
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "Paper Perfection"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, kde-format
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "Kahvionruskea"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, kde-format
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Valitse kuva"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "Valitse tiedosto…"
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "Vaihda tunnuskuva"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "Sähköpostiosoite:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "Poista tiedostot"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "Säilytä tiedostot"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "Poista käyttäjä…"
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "Sormenjälkitodennuksen asetukset…"
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"Sormenjälkiä voi käyttää salasanan sijasta näytön lukituksen avaamiseksi "
-"sekä pääkäyttäjäoikeuksien myöntämiseksi niitä vaativille sovelluksille ja "
-"komentoriviohjelmille.<nl/><nl/>Järjestelmään kirjautumista sormenjäljellä "
-"ei toistaiseksi tueta."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -553,6 +64,488 @@ msgstr "Laite irrotettiin."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Sattui tuntematon virhe."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Vaihda salasana"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Aseta salasana"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Salasana"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Vahvista salasana"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "Salasanat eivät täsmää"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Vaihdetaanko lompakon salasana?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Vaihdettuasi kirjautumissalasanan saat haluta asettaa sen myös lompakon "
+"salasanaksi."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Mikä on lompakko?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"Lompakko (KWallet) on salasanahallinta, joka tallentaa langattomien "
+"verkkojen ja muiden salattujen resurssien salasanat. Se lukitaan omalla "
+"kirjautumissalasanasta eroavalla salasanalla. Jos salasanat ovat samat, "
+"lompakon lukitus voidaan kuitenkin avata automaattisesti kirjauduttaessa, "
+"eikä lompakon salasanaa tarvitse erikseen syöttää."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Vaihda lompakon salasana"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Älä vaihda"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Luo käyttäjä"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Nimi:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+# Tämä on käyttäjätilin tyyppi: standard vs. administrator
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Tavallinen"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Ylläpitäjä"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Tilin tyyppi:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Salasana:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Vahvista salasana:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Luo"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Sormenjälkiasetukset"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "Tyhjennä kaikki"
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Lisää"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Peru"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Valmis"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Kirjataan sormenjälkeä"
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Paina toistuvasti oikeaa etusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "Paina toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Paina toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Paina toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Paina toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "Paina toistuvasti vasenta etusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Paina toistuvasti vasenta keskisormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "Paina toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Paina toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Paina toistuvasti vasenta peukaloa sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti oikeaa etusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti oikeaa keskisormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti oikeaa nimetöntä sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti oikeaa pikkusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti oikeaa peukaloa sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti vasenta etusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti vasenta keskisormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti vasenta nimetöntä sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti vasenta pikkusormea sormenjälkitunnistimella."
+
+# *** Väliaikainen, tämä pitäisi keskusteluttaa kehittäjien kanssa. Edellyttää että %1 ja %2 on käännetty juuri sopivasti jossakin.
+#: src/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Pyyhkäise toistuvasti vasenta peukaloa sormenjälkitunnistimella."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Sormi on muistissa"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Valitse kirjattava sormi"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Kirjaa sormi uudelleen"
+
+#: src/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Poista sormenjälki"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Sormenjälkiä ei ole lisätty"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Hallitse käyttäjiä"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Lisää uusi käyttäjä"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Vaihda tunnuskuva"
+
+#: src/ui/PicturesSheet.qml:21
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Ei mitään"
+
+#: src/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Urhea flamingo"
+
+#: src/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Pitaija"
+
+#: src/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Bataatti"
+
+#: src/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: src/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Kimalteleva säde"
+
+#: src/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Sitruuna-limetti"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Vehreä lumo"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Lempeä niitty"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Vaisu sinivihreä"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasmansininen"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Ponpurppura"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajopurppura"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Poltettu hiili"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Kahvionruskea"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: src/ui/PicturesSheet.qml:73
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Valitse kuva"
+
+#: src/ui/PicturesSheet.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Valitse tiedosto…"
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Vaihda tunnuskuva"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "Sähköpostiosoite:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Poista tiedostot"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Säilytä tiedostot"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Poista käyttäjä…"
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Sormenjälkitodennuksen asetukset…"
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Sormenjälkiä voi käyttää salasanan sijasta näytön lukituksen avaamiseksi "
+"sekä pääkäyttäjäoikeuksien myöntämiseksi niitä vaativille sovelluksille ja "
+"komentoriviohjelmille.<nl/><nl/>Järjestelmään kirjautumista sormenjäljellä "
+"ei toistaiseksi tueta."
 
 #: src/user.cpp:279
 #, kde-format

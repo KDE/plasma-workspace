@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-06-24 23:46+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Română <kde-i18n-ro@kde.org>\n"
@@ -23,13 +23,13 @@ msgid "Finds Plasma widgets whose name or description match :q:"
 msgstr ""
 "Găsește controale Plasma ale căror nume sau descriere se potrivesc cu :q:"
 
-#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:51
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "mobile applications"
 msgstr "aplicații mobile"
 
-#: windowedwidgetsrunner.cpp:32
+#: windowedwidgetsrunner.cpp:31
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-10-23 23:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: locationrunner.cpp:33
+#: locationrunner.cpp:32
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -30,22 +30,22 @@ msgstr ""
 "Busca directoris i fitxers locals, ubicacions de xarxa i llocs d'Internet on "
 "el seu camí coincidisquen amb :q:."
 
-#: locationrunner.cpp:59
+#: locationrunner.cpp:58
 #, kde-format
 msgid "Open %1"
 msgstr "Obri %1"
 
-#: locationrunner.cpp:78 locationrunner.cpp:82
+#: locationrunner.cpp:77 locationrunner.cpp:81
 #, kde-format
 msgid "Launch with %1"
 msgstr "Inicia amb %1"
 
-#: locationrunner.cpp:88
+#: locationrunner.cpp:87
 #, kde-format
 msgid "Go to %1"
 msgstr "Ves a %1"
 
-#: locationrunner.cpp:96
+#: locationrunner.cpp:95
 #, kde-format
 msgid "Send email to %1"
 msgstr "Envia un correu a %1"

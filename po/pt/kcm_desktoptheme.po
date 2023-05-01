@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -44,66 +44,6 @@ msgstr "Não foi possível instalar o tema."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Não foi possível remover o tema: %1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "Todos os Temas"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "Temas Claros"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "Temas Escuros"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "Compatíveis com o esquema de cores"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Segue o esquema de cores"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Editar o Tema…"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Remover o Tema"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "Repor o Tema"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "Instalar de um Ficheiro…"
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Obter Novos Estilos do Plasma…"
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Abrir um Tema"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Ficheiros de Temas (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -158,6 +98,66 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Tem os seguintes temas do Plasma no seu sistema:"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "Todos os Temas"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "Temas Claros"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "Temas Escuros"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Compatíveis com o esquema de cores"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Segue o esquema de cores"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Editar o Tema…"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Remover o Tema"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "Repor o Tema"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalar de um Ficheiro…"
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Obter Novos Estilos do Plasma…"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Abrir um Tema"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Ficheiros de Temas (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Este módulo permite-lhe escolher o estilo do Plasma."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2005-06-30 11:29+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -31,111 +31,6 @@ msgstr ""
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, fuzzy, kde-format
-#| msgid "Sho&w icons on buttons"
-msgid "Show icons:"
-msgstr "Vertoon ikoone op knoppies"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, fuzzy, kde-format
-#| msgid "Radio button"
-msgid "On buttons"
-msgstr "Radio knoppie"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, fuzzy, kde-format
-#| msgid "Text Only"
-msgid "Text only"
-msgstr "Teks Slegs"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Text Alongside Icons"
-msgid "Beside icons"
-msgstr "Teks Langs Ikoone"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Under Icons"
-msgid "Below icon"
-msgstr "Teks Onder Ikoone"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, fuzzy, kde-format
-#| msgid "Application Level"
-msgid "GNOME/GTK Application Style"
-msgstr "Aansoek Vlak"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview"
-msgid "Preview…"
-msgstr "Voorskou"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgid "Application Level"
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Aansoek Vlak"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
-
-#: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure Style…"
-msgstr "Stel op..."
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr ""
-
-#: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "Stel op..."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -219,6 +114,111 @@ msgstr ""
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr ""
+
+#: ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "Vertoon ikoone op knoppies"
+
+#: ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Radio knoppie"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Teks Slegs"
+
+#: ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "Teks Langs Ikoone"
+
+#: ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "Teks Onder Ikoone"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "Aansoek Vlak"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Voorskou"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Aansoek Vlak"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "Stel op..."
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Stel op..."
 
 #, fuzzy
 #~| msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 11:11+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-12-22 09:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -32,7 +32,7 @@ msgstr "اخرج;تسجيل خروج; خروج"
 msgid "Logs out, exiting the current desktop session"
 msgstr "يخرج، مُنهِيًا جلسة سطح المكتب الحالية"
 
-#: sessionrunner.cpp:33
+#: sessionrunner.cpp:29
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -40,12 +40,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "أطفئ;إيقاف التشغيل;إغلاق;إيقاف"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:32
 #, kde-format
 msgid "Turns off the computer"
 msgstr "يطفئ الحاسوب"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:35
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +53,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "أعد التشغيل;أعد الاقلاع"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:38
 #, kde-format
 msgid "Reboots the computer"
 msgstr "يعيد تشغيل الحاسوب"
 
-#: sessionrunner.cpp:54
+#: sessionrunner.cpp:42
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "اقفل;اقفل الشاشة;اقفال"
 
-#: sessionrunner.cpp:56
+#: sessionrunner.cpp:44
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "يقفل الجلسات الحالية ويبدأ حافظ الشاشة"
 
-#: sessionrunner.cpp:63
+#: sessionrunner.cpp:47
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +78,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "احفظ جلسة;احفظ"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:50
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "يحفظ الجلسة الحالية حتى يمكن استعادتها"
 
-#: sessionrunner.cpp:73
+#: sessionrunner.cpp:53
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,29 +91,29 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "بدل المستخدم;جلسة جديدة;غير المستخدم"
 
-#: sessionrunner.cpp:76
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "يبدأ جلسة جديدة كمستخدِم مختلف"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:59
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "جلسات"
 
-#: sessionrunner.cpp:84
+#: sessionrunner.cpp:60
 #, kde-format
 msgid "Lists all sessions"
 msgstr "يسرد كلّ الجلسات"
 
-#: sessionrunner.cpp:87
+#: sessionrunner.cpp:63
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "بدل"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:65
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -121,41 +121,41 @@ msgid ""
 msgstr ""
 "يبدّل إلى الجلسة النشطة للمستخدِم :q:، أو يسرد الجلسات النشطة إن لم يُوفَّر :q:"
 
-#: sessionrunner.cpp:111
+#: sessionrunner.cpp:86
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "اخرج"
 
-#: sessionrunner.cpp:121
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "أطفئ"
 
-#: sessionrunner.cpp:131
+#: sessionrunner.cpp:106
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: sessionrunner.cpp:141
+#: sessionrunner.cpp:116
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "اقفل"
 
-#: sessionrunner.cpp:151
+#: sessionrunner.cpp:126
 #, kde-format
 msgid "Save Session"
 msgstr "احفظ الجلسة"
 
-#: sessionrunner.cpp:194
+#: sessionrunner.cpp:169
 #, kde-format
 msgid "Switch User"
 msgstr "بدل المستخدم"
 
-#: sessionrunner.cpp:278
+#: sessionrunner.cpp:253
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -169,7 +169,7 @@ msgstr ""
 "p><ul><li>Ctrl+Alt+F{رقم الجلسة}</li><li>بحث بلازما (اكتب '%1')</"
 "li><li>بريمج سطح مكتب بلازما (مثل مطلق التطبيقات)</li></ul>"
 
-#: sessionrunner.cpp:287
+#: sessionrunner.cpp:262
 #, kde-format
 msgid "New Desktop Session"
 msgstr "جلسة سطح مكتب جديدة"

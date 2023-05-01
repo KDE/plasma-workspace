@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-12-20 19:19+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -32,115 +32,6 @@ msgstr "Felô òbczas ladowaniô òkna kònfigùracëji tegò sztéla."
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
-msgid "Show icons:"
-msgstr "Wëskrzëni &ikònë na knąpach:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, fuzzy, kde-format
-#| msgid "Radio button"
-msgid "On buttons"
-msgstr "Pòle wëbiérkù"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
-msgid "Main toolbar label:"
-msgstr "Tekst przédny listwë nôrzãdzów:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, fuzzy, kde-format
-#| msgid "Text Only"
-msgid "Text only"
-msgstr "Blós tekst"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
-msgid "Beside icons"
-msgstr "Tekst kòl ikònów"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
-msgid "Below icon"
-msgstr "Tekst pòd ikònama"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
-msgid "Secondary toolbar label:"
-msgstr "Drëdżi tekst listwë nôrządzów:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "GNOME/GTK Application Style"
-msgstr "&Aplikacëje"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview"
-msgid "Preview…"
-msgstr "Pòdzérk"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "&Aplikacëje"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
-
-#: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure Style…"
-msgstr "&Kònfigùrëjë..."
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr ""
-
-#: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "&Kònfigùrëjë..."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -227,6 +118,115 @@ msgstr "Tekst przédny listwë nôrzãdzów:"
 #| msgid "Secondary toolbar text:"
 msgid "Secondary toolbar label"
 msgstr "Drëdżi tekst listwë nôrządzów:"
+
+#: ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons:"
+msgstr "Wëskrzëni &ikònë na knąpach:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Pòle wëbiérkù"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Tekst przédny listwë nôrzãdzów:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Blós tekst"
+
+#: ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Tekst kòl ikònów"
+
+#: ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Tekst pòd ikònama"
+
+#: ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "Drëdżi tekst listwë nôrządzów:"
+
+#: ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Aplikacëje"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Pòdzérk"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "&Aplikacëje"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "&Kònfigùrëjë..."
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Kònfigùrëjë..."
 
 #, fuzzy
 #~| msgid ""

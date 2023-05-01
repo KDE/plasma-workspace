@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-10-08 10:00+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -35,106 +35,6 @@ msgstr "Selle stiili seadistustedialoogi avamisel tekkis viga."
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Valitud stiili '%1' rakendamine nurjus."
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr "Ikoonide näitamine:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr "Nuppudel"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr "Menüüs"
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr "Peamise tööriistariba tekst:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr "Puudub"
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr "Ainult tekst"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr "Ikooni kõrval"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr "Ikooni all"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr "Teisese tööriistariba tekst:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr "GNOME/GTK rakenduste stiil"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr "GTK teema:"
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview..."
-msgid "Preview…"
-msgstr "Eelvaatlus ..."
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, fuzzy, kde-format
-#| msgid "Install from File..."
-msgid "Install from File…"
-msgstr "Paigalda failist ..."
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgid "Get New GNOME/GTK Application Styles..."
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Hangi uusi GNOME/GTK rakenduste stiile ..."
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr "GTK teemaarhiivi valimine"
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK teemaarhiiv (*.tar.xz *.tar.gz *.tar.bz2)"
-
-#: package/contents/ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Style..."
-msgid "Configure Style…"
-msgstr "Seadista stiili ..."
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr "Ikoonide ja tööriistaribade seadistamine"
-
-#: package/contents/ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Configure GNOME/GTK Application Style..."
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "Seadista GNOME/GTK rakenduste stiili ..."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -213,6 +113,106 @@ msgstr "Peamise tööriistariba tekst"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Teisese tööriistariba tekst"
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Ikoonide näitamine:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Nuppudel"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "Menüüs"
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Peamise tööriistariba tekst:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Puudub"
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Ainult tekst"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Ikooni kõrval"
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Ikooni all"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Teisese tööriistariba tekst:"
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK rakenduste stiil"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK teema:"
+
+#: ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview..."
+msgid "Preview…"
+msgstr "Eelvaatlus ..."
+
+#: ui/GtkStylePage.qml:88
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Paigalda failist ..."
+
+#: ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Get New GNOME/GTK Application Styles..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Hangi uusi GNOME/GTK rakenduste stiile ..."
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK teemaarhiivi valimine"
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK teemaarhiiv (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Configure Style..."
+msgid "Configure Style…"
+msgstr "Seadista stiili ..."
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Ikoonide ja tööriistaribade seadistamine"
+
+#: ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Configure GNOME/GTK Application Style..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Seadista GNOME/GTK rakenduste stiili ..."
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

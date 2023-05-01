@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2006-01-10 20:21+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -33,101 +33,6 @@ msgstr "Šattai meattáhus vieččadettiin dán stiila heivehusláseža."
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, kde-format
-msgid "Preview…"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr ""
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr ""
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgid "Configure GNOME/GTK Application Style…"
 msgstr ""
 
 #: styleconfdialog.cpp:21
@@ -206,4 +111,99 @@ msgstr ""
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Configure Style…"
+msgstr ""
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
 msgstr ""

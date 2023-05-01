@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -1160,151 +1160,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "فوكۇس"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "پاسسىپ رەڭ"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
-msgid "All Schemes"
-msgstr "لايىھىنى يۈكلەش(&U)…"
-
-#: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Light Schemes"
-msgstr "لايىھە(&S)"
-
-#: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
-msgid "Dark Schemes"
-msgstr "لاھىيەنى ساقلاش…"
-
-#: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Window Text"
-msgid "Window Title"
-msgstr "كۆزنەك خېتى"
-
-#: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
-msgid "Window text"
-msgstr "كۆزنەك تېكىستى"
-
-#: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
-msgid "Button"
-msgstr "توپچا"
-
-#: package/contents/ui/main.qml:242
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "ئۇلانما"
-
-#: package/contents/ui/main.qml:244
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "كۆرۈلگەن"
-
-#: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
-msgid "Normal text"
-msgstr "نورمال تېكىست"
-
-#: package/contents/ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Visited Text"
-msgid "Highlighted text"
-msgstr "زىيارەت قىلىنغان تېكىست"
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
-msgid "Disabled text"
-msgstr "ئىناۋەتسىز قىلىنغان"
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
-msgid "Edit Color Scheme…"
-msgstr "لايىھىنى يۈكلەش(&U)…"
-
-#: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
-
-#: package/contents/ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "يېڭى لايىھە ئېلىش(&N)…"
-
-#: package/contents/ui/main.qml:364
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Open Color Scheme"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1389,6 +1244,151 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "پاسسىپ رەڭ"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "&Upload Scheme..."
+msgid "All Schemes"
+msgstr "لايىھىنى يۈكلەش(&U)…"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Light Schemes"
+msgstr "لايىھە(&S)"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Save Scheme..."
+msgid "Dark Schemes"
+msgstr "لاھىيەنى ساقلاش…"
+
+#: ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Window Text"
+msgid "Window Title"
+msgstr "كۆزنەك خېتى"
+
+#: ui/main.qml:197
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Window text"
+msgid "Window text"
+msgstr "كۆزنەك تېكىستى"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Button"
+msgid "Button"
+msgstr "توپچا"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "link"
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "ئۇلانما"
+
+#: ui/main.qml:244
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "visited"
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "كۆرۈلگەن"
+
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Normal text"
+msgid "Normal text"
+msgstr "نورمال تېكىست"
+
+#: ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Visited Text"
+msgid "Highlighted text"
+msgstr "زىيارەت قىلىنغان تېكىست"
+
+#: ui/main.qml:266
+#, fuzzy, kde-format
+#| msgctxt "@title:tab color transformations on disabled elements"
+#| msgid "Disabled"
+msgid "Disabled text"
+msgstr "ئىناۋەتسىز قىلىنغان"
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "&Upload Scheme..."
+msgid "Edit Color Scheme…"
+msgstr "لايىھىنى يۈكلەش(&U)…"
+
+#: ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Remove Color Scheme"
+msgstr "رەڭ لايىھىسىنى ساقلاش"
+
+#: ui/main.qml:297
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgid "Restore Color Scheme"
+msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Get &New Schemes..."
+msgid "Get New Color Schemes…"
+msgstr "يېڭى لايىھە ئېلىش(&N)…"
+
+#: ui/main.qml:364
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Open Color Scheme"
+msgstr "رەڭ لايىھىسىنى ساقلاش"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

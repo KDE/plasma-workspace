@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-04-23 11:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -34,101 +34,6 @@ msgstr "Bu biçemin yapılandırma iletişim kutusu yüklenemedi."
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Seçili '%1' biçemi uygulanamadı."
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr "Simgeleri göster:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr "Düğmelerde"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr "Menülerde"
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr "Ana araç çubuğu etiketi:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr "Yok"
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr "Yalnızca metin"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr "Simgenin yanında"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr "Simgelerin altında"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr "İkincil araç çubuğu etiketi:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr "GNOME/GTK Uygulama Biçemi"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr "GTK teması:"
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, kde-format
-msgid "Preview…"
-msgstr "Önizle…"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr "Dosyadan Kur…"
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Yeni GNOM/GTK Uygulama Biçemleri Al…"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr "GTK Tema Arşivi Seç"
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK Tema Arşivi (*.tar.xz *.tar.gz *.tar.bz2)"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Biçemi Yapılandır…"
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr "Simgeleri ve Araç Çubuklarını Yapılandır"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "GNOME/GTK Uygulama Biçemini Yapılandır…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -207,6 +112,101 @@ msgstr "Ana araç çubuğu etiketi"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "İkincil araç çubuğu etiketi"
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Simgeleri göster:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Düğmelerde"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "Menülerde"
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Ana araç çubuğu etiketi:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Yok"
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Yalnızca metin"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Simgenin yanında"
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Simgelerin altında"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "İkincil araç çubuğu etiketi:"
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK Uygulama Biçemi"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK teması:"
+
+#: ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Önizle…"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Dosyadan Kur…"
+
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Yeni GNOM/GTK Uygulama Biçemleri Al…"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK Tema Arşivi Seç"
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK Tema Arşivi (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Configure Style…"
+msgstr "Biçemi Yapılandır…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Simgeleri ve Araç Çubuklarını Yapılandır"
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "GNOME/GTK Uygulama Biçemini Yapılandır…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

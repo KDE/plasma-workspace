@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-01-05 18:10+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -55,74 +55,6 @@ msgstr ""
 msgid "Removing theme failed: %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Theme Item"
-msgid "All Themes"
-msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
-
-#: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Theme Item"
-msgid "Light Themes"
-msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr ""
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
-msgid "Follows color scheme"
-msgstr "ରଙ୍ଗ ଯୋଜନା"
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Theme Item"
-msgid "Edit Theme…"
-msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "ପ୍ରସଙ୍ଗକୁ କାଢ଼ିଦିଅନ୍ତୁ"
-
-#: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "ପ୍ରସଙ୍ଗକୁ କାଢ଼ିଦିଅନ୍ତୁ"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Theme..."
-msgid "Get New Plasma Styles…"
-msgstr "ନୂତନ ପ୍ରସଙ୍ଗ ଗ୍ରହଣ କରନ୍ତୁ..."
-
-#: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "Theme Item"
-msgid "Open Theme"
-msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr ""
-
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
 msgid ""
@@ -166,6 +98,74 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "All Themes"
+msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
+
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Light Themes"
+msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "ରଙ୍ଗ ଯୋଜନା"
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Edit Theme…"
+msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "ପ୍ରସଙ୍ଗକୁ କାଢ଼ିଦିଅନ୍ତୁ"
+
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "ପ୍ରସଙ୍ଗକୁ କାଢ଼ିଦିଅନ୍ତୁ"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Get New Plasma Styles…"
+msgstr "ନୂତନ ପ୍ରସଙ୍ଗ ଗ୍ରହଣ କରନ୍ତୁ..."
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Open Theme"
+msgstr "ପ୍ରସଙ୍ଗ ବସ୍ତୁ"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

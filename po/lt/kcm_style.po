@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-08-17 21:16+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -35,101 +35,6 @@ msgstr "Bandant įkelti konfigūravimo dialogą šiam stiliui, įvyko klaida."
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Nepavyko taikyti pasirinktą stilių \"%1\"."
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr "Rodyti piktogramas:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr "Ant mygtukų"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr "Meniu"
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr "Pagrindinės įrankių juostos etiketė:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr "Nėra"
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr "Tik tekstas"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr "Šalia piktogramų"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr "Po piktograma"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr "Antrinės įrankių juostos etiketė:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr "GNOME/GTK programų stilius"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr "GTK apipavidalinimas:"
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, kde-format
-msgid "Preview…"
-msgstr "Peržiūra…"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr "Įdiegti iš failo…"
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Gauti naujus GNOME/GTK programų stilius…"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr "Pasirinkti GTK apipavidalinimo archyvą"
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK apipavidalinimo archyvas (*.tar.xz *.tar.gz *.tar.bz2)"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "Konfigūruoti stilių…"
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr "Konfigūruoti piktogramas ir įrankių juostas"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "Konfigūruoti GNOME/GTK programų stilių…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -208,6 +113,101 @@ msgstr "Pagrindinės įrankių juostos etiketė"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "Antrinės įrankių juostos etiketė"
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Rodyti piktogramas:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Ant mygtukų"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "Meniu"
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Pagrindinės įrankių juostos etiketė:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Nėra"
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Tik tekstas"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Šalia piktogramų"
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Po piktograma"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Antrinės įrankių juostos etiketė:"
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK programų stilius"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK apipavidalinimas:"
+
+#: ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Peržiūra…"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Įdiegti iš failo…"
+
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Gauti naujus GNOME/GTK programų stilius…"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Pasirinkti GTK apipavidalinimo archyvą"
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK apipavidalinimo archyvas (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Configure Style…"
+msgstr "Konfigūruoti stilių…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Konfigūruoti piktogramas ir įrankių juostas"
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Konfigūruoti GNOME/GTK programų stilių…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

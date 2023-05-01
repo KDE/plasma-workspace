@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-09-02 07:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,7 +48,7 @@ msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "დისკზე"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
@@ -73,7 +73,7 @@ msgstr "სისტემის RAM-ში შეჩერება"
 msgid "Suspends the system to disk"
 msgstr "სისტემის დისკზე შეჩერება"
 
-#: PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
@@ -89,50 +89,50 @@ msgid ""
 msgstr ""
 "მაქსიმალურიდან გამოკლებული ეკრანის სიკაშკაშე. 50 ნიშნავს 50% სიკაშკაშეს"
 
-#: PowerDevilRunner.cpp:95
+#: PowerDevilRunner.cpp:93
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "სიკაშკაშის %1%-ზე დაყენება"
 
-#: PowerDevilRunner.cpp:104
+#: PowerDevilRunner.cpp:102
 #, kde-format
 msgid "Dim screen totally"
 msgstr "ეკრანის სრულად ჩაქრობა"
 
-#: PowerDevilRunner.cpp:112
+#: PowerDevilRunner.cpp:110
 #, kde-format
 msgid "Dim screen by half"
 msgstr "ეკრანის ნახევრად ჩაქრობა"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ძილი"
 
-#: PowerDevilRunner.cpp:143
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "RAM-ში შეჩერება"
 
-#: PowerDevilRunner.cpp:148
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "პროგრამული ძილი"
 
-#: PowerDevilRunner.cpp:149
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to disk"
 msgstr "დისკზე შეჩერება"
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "ეკრანის სიკაშკაშე "
 
-#: PowerDevilRunner.cpp:220
+#: PowerDevilRunner.cpp:218
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

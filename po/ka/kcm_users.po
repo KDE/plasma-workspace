@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-11 06:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,476 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "პაროლის შეცვლა"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "პაროლის დაყენება"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "პაროლი"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "პაროლის დადასტურება"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "პაროლები არ ემთხვევა"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "გნებავთ საფულის პაროლის შეცვლა?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"ახლა, როცა შეცვალეთ შესვლის პაროლი, შეიძლება ასევე გნებავდეთ შეცვალოთ პაროლი "
-"თქვენს ნაგულისხმებ KWallet-ზეც."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "რა არის საფულე?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"KWallet-ი წარმოადგენს პაროლების მმართველ პროგრამას, რომელიც ინახავს Wifi-ის "
-"და სხვა დაშიფრული რესურსების პაროლებს. მას თავისი პაროლი გააჩნია, მაგრამ თუ "
-"ეს პაროლი ემთხვევა მომხმარებლის პაროლს, საფულე თვითონ განიბლოკება."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "საფულის პაროლის შეცვლა"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "შეუცვლელად დატოვება"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "მომხმარებლის შექმნა"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "სახელი:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "მომხმარებელი:"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "სტანდარტული"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "ადმინისტრატორი"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "ანგარიშის ტიპი:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "პაროლი:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "პაროლის დადასტურება:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "შექმნა"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "ანაბეჭდების მორგება"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "ყველას გასუფთავება"
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "დამატება"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "გაუქმენა"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "დასრულებულია"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "ანაბეჭდის ჩაწერა"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "თითი ჩაწერილია"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "აირჩიეთ ჩასაწერი თითი"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "თითის თავიდან ჩაწერა"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, kde-format
-msgid "Delete fingerprint"
-msgstr "ანაბეჭდის წაშლა"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "ანაბეჭდები დამატებული არაა"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "მომხმარებლების მართვა"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "ახალი მომხმარებლის დამატება"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, kde-format
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "ავატარის შეცვლა"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, kde-format
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "არაფერია"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, kde-format
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "ენერგიული ფლამინგო"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, kde-format
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "დრაკონის ხილი"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "ტკბილი კარტოფილი"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, kde-format
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "გამჭვირვალე ქარვა"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "შუშხუნა სხივი"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, kde-format
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "ლიმონი-ლაიმი"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, kde-format
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "სიმწვანეშეპარული შარმი"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, kde-format
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "ხშირი ჭალა"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, kde-format
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "თბილი იხვინჯა"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, kde-format
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "ლურჯი პლაზმა"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, kde-format
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "იისფერი პომპონი"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, kde-format
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "იისფერი ბახო"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, kde-format
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "დამწვარი ნახშირი"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, kde-format
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "ფურცლის სრულყოფილება"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, kde-format
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "შავი ყავა"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, kde-format
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "პარკეტი"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "აირჩიეთ სურათი"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "აირჩიეთ ფაილი…"
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "აირჩიეთ ავატარი"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "ელფოსტის მისამართი:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "ფაილების წაშლა"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "ფაილების დატოვება"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "მომხმარებლის წაშლა…"
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "ანაბეჭდებით ავთენტიკაციის მორგება…"
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"თითის ანაბეჭდების გამოყენება პაროლის მაგიერ ეკრანის განბლოკვისას, "
-"აპლიკაციებისთვის ადმინისტრატორის უფლებების მინიჭებისას და ბრძანების "
-"სტრიქონიდან ავტორიზაციის მომთხოვნი აპლიკაციებისთვის შეგიძლიათ.<nl/><nl/"
-">სისტემაში თითის ანაბეჭდით შესვლა ჯერჯერობით მხარდაუჭერელია."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -535,6 +65,469 @@ msgstr "მოწყობილობა გათიშულია."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "უცნობი შეცდომა."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "პაროლის შეცვლა"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "პაროლის დაყენება"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "პაროლი"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "პაროლის დადასტურება"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "პაროლები არ ემთხვევა"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "გნებავთ საფულის პაროლის შეცვლა?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"ახლა, როცა შეცვალეთ შესვლის პაროლი, შეიძლება ასევე გნებავდეთ შეცვალოთ პაროლი "
+"თქვენს ნაგულისხმებ KWallet-ზეც."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "რა არის საფულე?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet-ი წარმოადგენს პაროლების მმართველ პროგრამას, რომელიც ინახავს Wifi-ის "
+"და სხვა დაშიფრული რესურსების პაროლებს. მას თავისი პაროლი გააჩნია, მაგრამ თუ "
+"ეს პაროლი ემთხვევა მომხმარებლის პაროლს, საფულე თვითონ განიბლოკება."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "საფულის პაროლის შეცვლა"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "შეუცვლელად დატოვება"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "მომხმარებლის შექმნა"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "სახელი:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "მომხმარებელი:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "სტანდარტული"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "ადმინისტრატორი"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "ანგარიშის ტიპი:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "პაროლის დადასტურება:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "შექმნა"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "ანაბეჭდების მორგება"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "ყველას გასუფთავება"
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "დამატება"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "გაუქმენა"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "დასრულებულია"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "ანაბეჭდის ჩაწერა"
+
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ მოათავსოთ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა შუა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა არათითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ნეკა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარჯვენა ცერა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა საჩვენებელი თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა შუა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა არათითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ნეკა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "გთხოვთ ბევრჯერ გადაუსვათ თქვენი მარცხენა ცერა თითი ანაბეჭდის სენსორზე."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "თითი ჩაწერილია"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "აირჩიეთ ჩასაწერი თითი"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "თითის თავიდან ჩაწერა"
+
+#: src/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "ანაბეჭდის წაშლა"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "ანაბეჭდები დამატებული არაა"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "მომხმარებლების მართვა"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "ახალი მომხმარებლის დამატება"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "ავატარის შეცვლა"
+
+#: src/ui/PicturesSheet.qml:21
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "არაფერია"
+
+#: src/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "ენერგიული ფლამინგო"
+
+#: src/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "დრაკონის ხილი"
+
+#: src/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "ტკბილი კარტოფილი"
+
+#: src/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "გამჭვირვალე ქარვა"
+
+#: src/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "შუშხუნა სხივი"
+
+#: src/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "ლიმონი-ლაიმი"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "სიმწვანეშეპარული შარმი"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "ხშირი ჭალა"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "თბილი იხვინჯა"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "ლურჯი პლაზმა"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "იისფერი პომპონი"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "იისფერი ბახო"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "დამწვარი ნახშირი"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "ფურცლის სრულყოფილება"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "შავი ყავა"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "პარკეტი"
+
+#: src/ui/PicturesSheet.qml:73
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "აირჩიეთ სურათი"
+
+#: src/ui/PicturesSheet.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "აირჩიეთ ფაილი…"
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "აირჩიეთ ავატარი"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "ელფოსტის მისამართი:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "ფაილების წაშლა"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "ფაილების დატოვება"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "მომხმარებლის წაშლა…"
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "ანაბეჭდებით ავთენტიკაციის მორგება…"
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"თითის ანაბეჭდების გამოყენება პაროლის მაგიერ ეკრანის განბლოკვისას, "
+"აპლიკაციებისთვის ადმინისტრატორის უფლებების მინიჭებისას და ბრძანების "
+"სტრიქონიდან ავტორიზაციის მომთხოვნი აპლიკაციებისთვის შეგიძლიათ.<nl/><nl/"
+">სისტემაში თითის ანაბეჭდით შესვლა ჯერჯერობით მხარდაუჭერელია."
 
 #: src/user.cpp:279
 #, kde-format

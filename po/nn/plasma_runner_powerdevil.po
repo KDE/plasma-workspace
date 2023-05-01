@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-02-13 14:54+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -50,7 +50,7 @@ msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "til disken"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
@@ -73,7 +73,7 @@ msgstr "Legg systemet i dvale til minnet"
 msgid "Suspends the system to disk"
 msgstr "Legg systemet i dvale til disken"
 
-#: PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
@@ -91,50 +91,50 @@ msgstr ""
 "verdien definert i søkjeteksten (eksempelvis vil verdien 50 gje 50 % av maks "
 "lysstyrke)"
 
-#: PowerDevilRunner.cpp:95
+#: PowerDevilRunner.cpp:93
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "Vel %1 % som lysstryke"
 
-#: PowerDevilRunner.cpp:104
+#: PowerDevilRunner.cpp:102
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Ton skjermen heilt ned"
 
-#: PowerDevilRunner.cpp:112
+#: PowerDevilRunner.cpp:110
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Ton skjermen halvvegs ned"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Kvilemodus"
 
-#: PowerDevilRunner.cpp:143
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Kvilemodus til minnet"
 
-#: PowerDevilRunner.cpp:148
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Dvalemodus"
 
-#: PowerDevilRunner.cpp:149
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Dvalemodus til disk"
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "lysstyrke på skjermen "
 
-#: PowerDevilRunner.cpp:220
+#: PowerDevilRunner.cpp:218
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

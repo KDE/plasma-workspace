@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-08-31 00:41+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: placesrunner.cpp:28 placesrunner.cpp:82
+#: placesrunner.cpp:28 placesrunner.cpp:81
 #, kde-format
 msgid "places"
 msgstr "locuri"
@@ -28,7 +28,7 @@ msgstr "locuri"
 msgid "Lists all file manager locations"
 msgstr "Enumeră toate amplasările gestionarului de fișiere"
 
-#: placesrunner.cpp:30
+#: placesrunner.cpp:29
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Găsește amplasări ale gestionarului de fișiere ce se potrivesc cu :q:"

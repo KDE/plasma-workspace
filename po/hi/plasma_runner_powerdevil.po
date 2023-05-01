@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-07-01 18:29+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -51,7 +51,7 @@ msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "डिस्क में"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
@@ -76,7 +76,7 @@ msgstr "सिस्टम को रैम में स्थगित कर�
 msgid "Suspends the system to disk"
 msgstr "सिस्टम को डिस्क में स्थगित करें"
 
-#: PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:64
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword, it should end with a space"
 #| msgid "screen brightness "
@@ -99,50 +99,50 @@ msgstr ""
 "स्क्रीन के चमकीलेपन विकल्पों को सूचीबद्ध करता है या इसे :q: द्वारा परिभाषित चमकीलेपन पर "
 "सेट करता है। जैसे स्क्रीन चमकीलापन ५० स्क्रीन को ५०% अधिकतम चमक तक कम कर देगी।"
 
-#: PowerDevilRunner.cpp:95
+#: PowerDevilRunner.cpp:93
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "चमकीलेपन को %1 पर सेट करें"
 
-#: PowerDevilRunner.cpp:104
+#: PowerDevilRunner.cpp:102
 #, kde-format
 msgid "Dim screen totally"
 msgstr "पूरी तरह से धुंधला स्क्रीन"
 
-#: PowerDevilRunner.cpp:112
+#: PowerDevilRunner.cpp:110
 #, kde-format
 msgid "Dim screen by half"
 msgstr "आधा धुंधला स्क्रीन"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "निद्रा"
 
-#: PowerDevilRunner.cpp:143
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "स्थगित को"
 
-#: PowerDevilRunner.cpp:148
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "सुप्तावस्था"
 
-#: PowerDevilRunner.cpp:149
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to disk"
 msgstr "डिस्क पर निलंबित"
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "स्क्रीन चमकीलापन "
 
-#: PowerDevilRunner.cpp:220
+#: PowerDevilRunner.cpp:218
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

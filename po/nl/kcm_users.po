@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-11 11:37+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -16,474 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "Wachtwoord wijzigen"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "Wachtwoord instellen"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "Wachtwoord"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "Wachtwoord bevestigen"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "Wachtwoorden moeten overeenkomen"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "Wachtwoord van portefeuille wijzigen?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"Nu u uw aanmeldwachtwoord hebt gewijzigd, wilt u misschien ook het "
-"wachtwoord van uw standaard KWallet wijzigen om het overeen te laten komen."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "Wat is KWallet?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"KWallet is een wachtwoordbeheerder die uw wachtwoorden voor draadloze "
-"netwerken en andere versleutelde hulpbronnen opslaat. Het wordt vergrendeld "
-"met zijn eigen wachtwoord wat verschilt van uw aanmeldwachtwoord. Als de "
-"twee wachtwoorden gelijk zijn, kan het automatisch ontgrendeld worden bij "
-"aanmelden zodat u het wachtwoord van KWallet niet zelf hoeft in te voeren."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "Wachtwoord van portefeuille wijzigen"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "Ongewijzigd laten"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "Gebruiker aanmaken"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "Naam:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "Gebruikersnaam:"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "Standaard"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "Systeembeheerder"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "Accounttype:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "Wachtwoord:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "Wachtwoord bevestigen:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "Aanmaken"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "Vingerafdrukken configureren"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Alles wissen"
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "Toevoegen"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "Annuleren"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "Gereed"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Vingerafdruk invoeren"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw rechter wijsvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw rechter middelvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw rechter ringvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw rechter pink op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw rechter duim op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw linker wijsvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw linker middelvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw linker ringvinger op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw linker pink op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Druk herhaaldelijk uw linker duim op de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw rechter wijsvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw rechter middelvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw rechter ringvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw rechter pink over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw rechter duim over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw linker wijsvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw linker middelvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw linker ringvinger over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw linker pink over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Veeg herhaaldelijk uw linker duim over de vingerprintsensor."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Vinger ingevoerd"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Een vinger kiezen om in te voeren"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "Vinger opnieuw invoeren"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, kde-format
-msgid "Delete fingerprint"
-msgstr "Vingerafdruk verwijderen"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "Geen vingerafdruk toegevoegd"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "Gebruikers beheren"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "Nieuwe gebruiker toevoegen"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, kde-format
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "Avatar vervangen"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, kde-format
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "Het is niets"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, kde-format
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "Feisty Flamingo"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, kde-format
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "Dragon's Fruit"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "Sweet Potato"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, kde-format
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "Ambient Amber"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "Sparkle Sunbeam"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, kde-format
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "Lemon-Lime"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, kde-format
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "Verdant Charm"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, kde-format
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "Mellow Meadow"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, kde-format
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "Tepid Teal"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, kde-format
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "Plasma Blue"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, kde-format
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "Pon Purple"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, kde-format
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "Bajo Purple"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, kde-format
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "Burnt Charcoal"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, kde-format
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "Paper Perfection"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, kde-format
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "Cafétera Brown"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, kde-format
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Een afbeelding kiezen"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "Bestand kiezen…"
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "Avatar vervangen"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "E-mailadres:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "Bestanden verwijderen"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "Bestanden bewaren"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "Gebruiker verwijderen…"
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "Authenticatie met vingerafdruk configureren"
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"Vingerafdrukken kunnen gebruikt worden in plaats van een wachtwoord bij "
-"ontgrendelen van het scherm en het leveren van beheersrechten aan "
-"toepassingen en opdrachtregelprogramma's die er om vragen.<nl/><nl/"
-">Aanmelden in het systeem met uw vingerafdruk wordt nog niet ondersteund."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -533,6 +65,467 @@ msgstr "De verbinding met het apparaat verbroken."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Er is een onbekende fout opgetreden."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Wachtwoord wijzigen"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Wachtwoord instellen"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Wachtwoord bevestigen"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "Wachtwoorden moeten overeenkomen"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Wachtwoord van portefeuille wijzigen?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Nu u uw aanmeldwachtwoord hebt gewijzigd, wilt u misschien ook het "
+"wachtwoord van uw standaard KWallet wijzigen om het overeen te laten komen."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Wat is KWallet?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet is een wachtwoordbeheerder die uw wachtwoorden voor draadloze "
+"netwerken en andere versleutelde hulpbronnen opslaat. Het wordt vergrendeld "
+"met zijn eigen wachtwoord wat verschilt van uw aanmeldwachtwoord. Als de "
+"twee wachtwoorden gelijk zijn, kan het automatisch ontgrendeld worden bij "
+"aanmelden zodat u het wachtwoord van KWallet niet zelf hoeft in te voeren."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Wachtwoord van portefeuille wijzigen"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Ongewijzigd laten"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Gebruiker aanmaken"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Naam:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Gebruikersnaam:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Standaard"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Systeembeheerder"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Accounttype:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Wachtwoord bevestigen:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Aanmaken"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Vingerafdrukken configureren"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "Alles wissen"
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Toevoegen"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Gereed"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Vingerafdruk invoeren"
+
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw rechter wijsvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw rechter middelvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw rechter ringvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw rechter pink op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw rechter duim op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw linker wijsvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw linker middelvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw linker ringvinger op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw linker pink op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Druk herhaaldelijk uw linker duim op de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw rechter wijsvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw rechter middelvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw rechter ringvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw rechter pink over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw rechter duim over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw linker wijsvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw linker middelvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw linker ringvinger over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw linker pink over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Veeg herhaaldelijk uw linker duim over de vingerprintsensor."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Vinger ingevoerd"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Een vinger kiezen om in te voeren"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Vinger opnieuw invoeren"
+
+#: src/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Vingerafdruk verwijderen"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Geen vingerafdruk toegevoegd"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Gebruikers beheren"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Nieuwe gebruiker toevoegen"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Avatar vervangen"
+
+#: src/ui/PicturesSheet.qml:21
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Het is niets"
+
+#: src/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: src/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Dragon's Fruit"
+
+#: src/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sweet Potato"
+
+#: src/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: src/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Sparkle Sunbeam"
+
+#: src/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lemon-Lime"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Charm"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mellow Meadow"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Tepid Teal"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Blue"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purple"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajo Purple"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Burnt Charcoal"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: src/ui/PicturesSheet.qml:73
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Een afbeelding kiezen"
+
+#: src/ui/PicturesSheet.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Bestand kiezen…"
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Avatar vervangen"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "E-mailadres:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Bestanden verwijderen"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Bestanden bewaren"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Gebruiker verwijderen…"
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Authenticatie met vingerafdruk configureren"
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Vingerafdrukken kunnen gebruikt worden in plaats van een wachtwoord bij "
+"ontgrendelen van het scherm en het leveren van beheersrechten aan "
+"toepassingen en opdrachtregelprogramma's die er om vragen.<nl/><nl/"
+">Aanmelden in het systeem met uw vingerafdruk wordt nog niet ondersteund."
 
 #: src/user.cpp:279
 #, kde-format

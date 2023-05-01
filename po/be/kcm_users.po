@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -20,497 +20,6 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plasma-workspace/kcm_users.po\n"
 "X-Crowdin-File-ID: 8794\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "Змяніць пароль"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "Прызначыць пароль"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "Пароль"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "Пацвердзіце пароль"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "Паролі мусяць супадаць"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "Змяніць пароль кашалька?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"Цяпер, калі вы змянілі свой пароль для ўваходу, вы таксама можаце змяніць "
-"пароль у KWallet, каб яны супадалі."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "Што такое KWallet?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"KWallet - гэта кіраўнік пароляў, які захоўвае вашыя паролі для бесправадных "
-"сетак і іншых зашыфраваных рэсурсаў. Ён абаронены ўласным паролем, які "
-"адрозніваецца ад вашага пароля для ўваходу ў сістэму. Калі два паролі "
-"супадаюць, ён можа быць аўтаматычна разблакаваны пры ўваходзе ў сістэму, "
-"таму вам не трэба будзе дадаткова ўводзіць пароль для KWallet."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "Змяніць пароль кашалька"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "Не змяняць"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "Стварыць карыстальніка"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "Імя:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "Імя карыстальніка:"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "Стандартны"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "Адміністратар"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "Тып акаўнта:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "Пароль:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "Пацвердзіце пароль:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "Стварыць"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "Наладжванне адбіткаў пальцаў"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Ачысціць усё"
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "Дадаць"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "Скасаваць"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "Завершана"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Рэгістраванне адбітка пальца"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце правым указальным пальцам на сканер адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце правым сярэднім пальцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце правым безназоўным пальцам на сканер адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Некалькі разоў націсніце правым мезенцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце правым вялікім пальцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце левым указальным пальцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце левым сярэднім пальцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце левым безназоўным пальцам на сканер адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Некалькі разоў націсніце левым мезенцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў націсніце леаым вялікім пальцам на сканер адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце правым указальным пальцам па сканеры адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце правым сярэднім пальцам па сканеры адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце правым безназоўным пальцам па сканеры адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Некалькі разоў правядзіце правым мезенцам па сканеры адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце правым вялікім пальцам па сканеры адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце левым указальным пальцам па сканеры адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце левым сярэднім пальцам па сканеры адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце левым безназоўным пальцам па сканеры адбіткаў "
-"пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Некалькі разоў правядзіце левым мезенцам па сканеры адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-"Некалькі разоў правядзіце левым вялікім пальцам па сканеры адбіткаў пальцаў."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Палец зарэгістраваны"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Абярыце палец для рэгістравання"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "Паўторнае рэгістраванне пальца"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, kde-format
-msgid "Delete fingerprint"
-msgstr "Выдаліць адбітак пальца"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "Не дададзена адбіткаў пальцаў"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "Кіраванне карыстальнікамі"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "Дадаць новага карыстальніка"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, kde-format
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "Змяніць аватар"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, kde-format
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "Нічога"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, kde-format
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "Feisty Flamingo"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, kde-format
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "Dragon's Fruit"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "Sweet Potato"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, kde-format
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "Ambient Amber"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, kde-format
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "Sparkle Sunbeam"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, kde-format
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "Lemon-Lime"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, kde-format
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "Verdant Charm"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, kde-format
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "Mellow Meadow"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, kde-format
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "Tepid Teal"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, kde-format
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "Plasma Blue"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, kde-format
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "Pon Purple"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, kde-format
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "Bajo Purple"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, kde-format
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "Burnt Charcoal"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, kde-format
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "Paper Perfection"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, kde-format
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "Cafétera Brown"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, kde-format
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, kde-format
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Абраць выяву"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "Абраць файл…"
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "Змяніць аватар"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "Адрас электроннай пошты:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "Выдаліць файлы"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "Пакінуць файлы"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "Выдалiць карыстальніка…"
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "Наладжванне аўтэнтыфікацыі з дапамогай адбітка пальца…"
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"Адбіткі пальцаў можна выкарыстоўваць замест пароля пры разблакаванні экрана "
-"і выдачы правоў адміністратара праграмам, якія іх запытваюць.<nl/><nl/"
-">Уваход у сістэму з дапамогай адбітка пальца пакуль не падтрымліваецца."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -560,6 +69,490 @@ msgstr "Прылада была адлучаная."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Адбылася невядомая памылка."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Змяніць пароль"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Прызначыць пароль"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Пароль"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Пацвердзіце пароль"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "Паролі мусяць супадаць"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Змяніць пароль кашалька?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Цяпер, калі вы змянілі свой пароль для ўваходу, вы таксама можаце змяніць "
+"пароль у KWallet, каб яны супадалі."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Што такое KWallet?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet - гэта кіраўнік пароляў, які захоўвае вашыя паролі для бесправадных "
+"сетак і іншых зашыфраваных рэсурсаў. Ён абаронены ўласным паролем, які "
+"адрозніваецца ад вашага пароля для ўваходу ў сістэму. Калі два паролі "
+"супадаюць, ён можа быць аўтаматычна разблакаваны пры ўваходзе ў сістэму, "
+"таму вам не трэба будзе дадаткова ўводзіць пароль для KWallet."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Змяніць пароль кашалька"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Не змяняць"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Стварыць карыстальніка"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Імя:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Імя карыстальніка:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Стандартны"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Адміністратар"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Тып акаўнта:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Пароль:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Пацвердзіце пароль:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Стварыць"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Наладжванне адбіткаў пальцаў"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "Ачысціць усё"
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Дадаць"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Завершана"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Рэгістраванне адбітка пальца"
+
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце правым указальным пальцам на сканер адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце правым сярэднім пальцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце правым безназоўным пальцам на сканер адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Некалькі разоў націсніце правым мезенцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце правым вялікім пальцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце левым указальным пальцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце левым сярэднім пальцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце левым безназоўным пальцам на сканер адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Некалькі разоў націсніце левым мезенцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў націсніце леаым вялікім пальцам на сканер адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце правым указальным пальцам па сканеры адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце правым сярэднім пальцам па сканеры адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце правым безназоўным пальцам па сканеры адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Некалькі разоў правядзіце правым мезенцам па сканеры адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце правым вялікім пальцам па сканеры адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце левым указальным пальцам па сканеры адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце левым сярэднім пальцам па сканеры адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце левым безназоўным пальцам па сканеры адбіткаў "
+"пальцаў."
+
+#: src/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Некалькі разоў правядзіце левым мезенцам па сканеры адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Некалькі разоў правядзіце левым вялікім пальцам па сканеры адбіткаў пальцаў."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Палец зарэгістраваны"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Абярыце палец для рэгістравання"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Паўторнае рэгістраванне пальца"
+
+#: src/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Выдаліць адбітак пальца"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Не дададзена адбіткаў пальцаў"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Кіраванне карыстальнікамі"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Дадаць новага карыстальніка"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Змяніць аватар"
+
+#: src/ui/PicturesSheet.qml:21
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Нічога"
+
+#: src/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: src/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Dragon's Fruit"
+
+#: src/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sweet Potato"
+
+#: src/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: src/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Sparkle Sunbeam"
+
+#: src/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lemon-Lime"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Charm"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mellow Meadow"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Tepid Teal"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Blue"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purple"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajo Purple"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Burnt Charcoal"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: src/ui/PicturesSheet.qml:73
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Абраць выяву"
+
+#: src/ui/PicturesSheet.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Абраць файл…"
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Змяніць аватар"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "Адрас электроннай пошты:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Выдаліць файлы"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Пакінуць файлы"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Выдалiць карыстальніка…"
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Наладжванне аўтэнтыфікацыі з дапамогай адбітка пальца…"
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Адбіткі пальцаў можна выкарыстоўваць замест пароля пры разблакаванні экрана "
+"і выдачы правоў адміністратара праграмам, якія іх запытваюць.<nl/><nl/"
+">Уваход у сістэму з дапамогай адбітка пальца пакуль не падтрымліваецца."
 
 #: src/user.cpp:279
 #, kde-format

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2011-07-07 23:11+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
@@ -52,74 +52,6 @@ msgstr ""
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
-
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Available themes"
-msgid "All Themes"
-msgstr "Pieejamās tēmas"
-
-#: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Theme"
-msgid "Light Themes"
-msgstr "Tēma"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr ""
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
-msgid "Follows color scheme"
-msgstr "Krāsu shēma"
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Theme"
-msgid "Edit Theme…"
-msgstr "Tēma"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Noņemt tēmu"
-
-#: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "Noņemt tēmu"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
-msgid "Get New Plasma Styles…"
-msgstr "Ielādēt jaunu tēmu..."
-
-#: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "Theme"
-msgid "Open Theme"
-msgstr "Tēma"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #: plasma-apply-desktoptheme.cpp:31
@@ -165,6 +97,74 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Pieejamās tēmas"
+
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Tēma"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Krāsu shēma"
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Tēma"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Noņemt tēmu"
+
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Noņemt tēmu"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "Ielādēt jaunu tēmu..."
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Open Theme"
+msgstr "Tēma"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

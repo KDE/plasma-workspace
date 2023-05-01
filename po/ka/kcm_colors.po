@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-03 16:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1142,128 +1142,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "ფოკუსი"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, kde-format
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "აქცენტის ფერი ფერის სქემიდან"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr "აქცენტის ფერი ფონის სურათიდან"
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, kde-format
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "აქცენტის ფერის ხელით მითითება"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "აქცენტის ფერის ხელით მითითება"
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-"ფერის სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმები თემა ჩაიტვირთება."
-
-#: package/contents/ui/main.qml:114
-#, kde-format
-msgid "All Schemes"
-msgstr "ყველა სქემა"
-
-#: package/contents/ui/main.qml:115
-#, kde-format
-msgid "Light Schemes"
-msgstr "ღია სქემები"
-
-#: package/contents/ui/main.qml:116
-#, kde-format
-msgid "Dark Schemes"
-msgstr "მუქი სქემები"
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "ფანჯრის სათაური"
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "ფანჯრის ტექსტი"
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "ღილაკი"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "ბმული"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "ნამყოფი"
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "ნორმალური ტექსტი"
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr "გამოკვეთილი ტექსტი"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr "გათიშული ტექსტი"
-
-#: package/contents/ui/main.qml:284
-#, kde-format
-msgid "Edit Color Scheme…"
-msgstr "ფერების სქემის ჩასწორება…"
-
-#: package/contents/ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "ფერების სქემის წაშლა"
-
-#: package/contents/ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "ფერების სქემის აღდგენა"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "ფაილიდან დაყენება…"
-
-#: package/contents/ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "ფერების ახალი სქემების გადმოწერა…"
-
-#: package/contents/ui/main.qml:364
-#, kde-format
-msgid "Open Color Scheme"
-msgstr "ფერების სქემის გახსნა"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr "ფერების სქემის ფაილები (*.colors)"
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1360,6 +1238,128 @@ msgstr "თქვენს სისტემაში გაქვთ შემ
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (მიმდინარე ფერის სქემა)"
+
+#: ui/AccentColorUI.qml:38
+#, kde-format
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "აქცენტის ფერი ფერის სქემიდან"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr "აქცენტის ფერი ფონის სურათიდან"
+
+#: ui/AccentColorUI.qml:40
+#, kde-format
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "აქცენტის ფერის ხელით მითითება"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "აქცენტის ფერის ხელით მითითება"
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+"ფერის სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმები თემა ჩაიტვირთება."
+
+#: ui/main.qml:114
+#, kde-format
+msgid "All Schemes"
+msgstr "ყველა სქემა"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Light Schemes"
+msgstr "ღია სქემები"
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Dark Schemes"
+msgstr "მუქი სქემები"
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr "ფანჯრის სათაური"
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr "ფანჯრის ტექსტი"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr "ღილაკი"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "ბმული"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "ნამყოფი"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr "ნორმალური ტექსტი"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr "გამოკვეთილი ტექსტი"
+
+#: ui/main.qml:266
+#, kde-format
+msgid "Disabled text"
+msgstr "გათიშული ტექსტი"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Edit Color Scheme…"
+msgstr "ფერების სქემის ჩასწორება…"
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "ფერების სქემის წაშლა"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "ფერების სქემის აღდგენა"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr "ფაილიდან დაყენება…"
+
+#: ui/main.qml:346
+#, kde-format
+msgid "Get New Color Schemes…"
+msgstr "ფერების ახალი სქემების გადმოწერა…"
+
+#: ui/main.qml:364
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "ფერების სქემის გახსნა"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr "ფერების სქემის ფაილები (*.colors)"
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "ეს მოდული ფერების სქემის არჩევის საშუალებას გაძლევთ."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-19 20:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -1150,127 +1150,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "Fokus"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, kde-format
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "Aksentfarge frå fargetema"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr "Kontrastfarge frå bakgrunnsbilete"
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, kde-format
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Tilpastta konstrastfarge"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Vel tilpassa kontrastfarge"
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "Fargeoppsettet «%1» er ikkje installert. Vel derfor standardtemaet."
-
-#: package/contents/ui/main.qml:114
-#, kde-format
-msgid "All Schemes"
-msgstr "Alle fargeoppsett"
-
-#: package/contents/ui/main.qml:115
-#, kde-format
-msgid "Light Schemes"
-msgstr "Lyse fargeoppsett"
-
-#: package/contents/ui/main.qml:116
-#, kde-format
-msgid "Dark Schemes"
-msgstr "Mørke fargeoppsett"
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "Vindaugstittel"
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "Vindaugstekst"
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "Knapp"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "lenkje"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "vitja"
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "Normal tekst"
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr "Utheva tekst"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr "Deaktivert tekst"
-
-#: package/contents/ui/main.qml:284
-#, kde-format
-msgid "Edit Color Scheme…"
-msgstr "Rediger fargeoppsett …"
-
-#: package/contents/ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "Fjern fargeoppsett"
-
-#: package/contents/ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Gjenopprett fargeoppsett"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "Installer frå fil …"
-
-#: package/contents/ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "Hent nye fargeoppsett …"
-
-#: package/contents/ui/main.qml:364
-#, kde-format
-msgid "Open Color Scheme"
-msgstr "Opna fargeoppsett"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr "Fargeoppsett-filer (*.colors)"
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1366,3 +1245,124 @@ msgstr "Du har desse temaa for fargeoppsetta tilgjengeleg:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (gjeldande fargeoppsett)"
+
+#: ui/AccentColorUI.qml:38
+#, kde-format
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Aksentfarge frå fargetema"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr "Kontrastfarge frå bakgrunnsbilete"
+
+#: ui/AccentColorUI.qml:40
+#, kde-format
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Tilpastta konstrastfarge"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "Vel tilpassa kontrastfarge"
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr "Fargeoppsettet «%1» er ikkje installert. Vel derfor standardtemaet."
+
+#: ui/main.qml:114
+#, kde-format
+msgid "All Schemes"
+msgstr "Alle fargeoppsett"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Light Schemes"
+msgstr "Lyse fargeoppsett"
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Dark Schemes"
+msgstr "Mørke fargeoppsett"
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr "Vindaugstittel"
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr "Vindaugstekst"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr "Knapp"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "lenkje"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "vitja"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr "Normal tekst"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr "Utheva tekst"
+
+#: ui/main.qml:266
+#, kde-format
+msgid "Disabled text"
+msgstr "Deaktivert tekst"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Edit Color Scheme…"
+msgstr "Rediger fargeoppsett …"
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "Fjern fargeoppsett"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "Gjenopprett fargeoppsett"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr "Installer frå fil …"
+
+#: ui/main.qml:346
+#, kde-format
+msgid "Get New Color Schemes…"
+msgstr "Hent nye fargeoppsett …"
+
+#: ui/main.qml:364
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "Opna fargeoppsett"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr "Fargeoppsett-filer (*.colors)"

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-02 20:37+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -1174,129 +1174,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "Donner le focus"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, kde-format
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "Accentuer une couleur à partir du thème de couleur"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr "Accentuer une couleur à partir du fond d'écran"
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, kde-format
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Couleur personnalisée d'accentuation"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Sélectionner une couleur personnalisée d'accentuation"
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-"Le modèle de couleurs « %1 » n'est pas installé. Le modèle par défaut a été "
-"sélectionné à la place."
-
-#: package/contents/ui/main.qml:114
-#, kde-format
-msgid "All Schemes"
-msgstr "Tous les modèles"
-
-#: package/contents/ui/main.qml:115
-#, kde-format
-msgid "Light Schemes"
-msgstr "Modèles clairs"
-
-#: package/contents/ui/main.qml:116
-#, kde-format
-msgid "Dark Schemes"
-msgstr "Modèles sombres"
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "Titre de la fenêtre"
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "Texte de fenêtre"
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "Bouton"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "lien"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "visité"
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "Texte standard"
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr "Texte en surbrillance"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr "Texte désactivé"
-
-#: package/contents/ui/main.qml:284
-#, kde-format
-msgid "Edit Color Scheme…"
-msgstr "Modifier le thème de couleurs..."
-
-#: package/contents/ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "Supprimer le modèle de couleurs"
-
-#: package/contents/ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Restaurer le modèle de couleurs"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "Installer à partir d'un fichier..."
-
-#: package/contents/ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "Obtenir de nouveaux thèmes de couleurs..."
-
-#: package/contents/ui/main.qml:364
-#, kde-format
-msgid "Open Color Scheme"
-msgstr "Ouvrir un modèle de couleurs"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr "Fichiers de modèle de couleurs (*.colors)"
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1401,6 +1278,129 @@ msgstr "Vous possédez les thèmes suivants de couleurs sur votre système :"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (Thème courant de couleurs)"
+
+#: ui/AccentColorUI.qml:38
+#, kde-format
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Accentuer une couleur à partir du thème de couleur"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr "Accentuer une couleur à partir du fond d'écran"
+
+#: ui/AccentColorUI.qml:40
+#, kde-format
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Couleur personnalisée d'accentuation"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "Sélectionner une couleur personnalisée d'accentuation"
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+"Le modèle de couleurs « %1 » n'est pas installé. Le modèle par défaut a été "
+"sélectionné à la place."
+
+#: ui/main.qml:114
+#, kde-format
+msgid "All Schemes"
+msgstr "Tous les modèles"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Light Schemes"
+msgstr "Modèles clairs"
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Dark Schemes"
+msgstr "Modèles sombres"
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr "Titre de la fenêtre"
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr "Texte de fenêtre"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr "Bouton"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "lien"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "visité"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr "Texte standard"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr "Texte en surbrillance"
+
+#: ui/main.qml:266
+#, kde-format
+msgid "Disabled text"
+msgstr "Texte désactivé"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Edit Color Scheme…"
+msgstr "Modifier le thème de couleurs..."
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "Supprimer le modèle de couleurs"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "Restaurer le modèle de couleurs"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr "Installer à partir d'un fichier..."
+
+#: ui/main.qml:346
+#, kde-format
+msgid "Get New Color Schemes…"
+msgstr "Obtenir de nouveaux thèmes de couleurs..."
+
+#: ui/main.qml:364
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "Ouvrir un modèle de couleurs"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr "Fichiers de modèle de couleurs (*.colors)"
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "Ce module vous permet de choisir le modèle de couleurs."

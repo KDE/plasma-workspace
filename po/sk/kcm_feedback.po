@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-11 21:19+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -24,12 +24,12 @@ msgstr ""
 "Používateľská odozva bola centrálne zakázaná. Prosím kontaktujte svoju "
 "distribúciu."
 
-#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
+#: ui/main.qml:45 ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: package/contents/ui/main.qml:52
+#: ui/main.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -48,17 +48,17 @@ msgstr ""
 "osobné informácie.<nl/><nl/>Môžete si prečítať o <link url='https://kde.org/"
 "privacypolicy-apps.php'>našich zásadách ochrany osobných údajov.</link>"
 
-#: package/contents/ui/main.qml:113
+#: ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Nasledujúce informácie budú odoslané:"
 
-#: package/contents/ui/main.qml:179
+#: ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr "Zobraziť odoslané dáta:"

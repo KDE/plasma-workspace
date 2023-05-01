@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-22 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -86,115 +86,6 @@ msgstr "Temaet er no installert."
 msgid "Timeout in seconds"
 msgstr "Tidsgrense (sekund)"
 
-#: package/contents/ui/Delegate.qml:54
-#, kde-format
-msgid "Remove Theme"
-msgstr "Fjern tema"
-
-#: package/contents/ui/Delegate.qml:61
-#, kde-format
-msgid "Restore Cursor Theme"
-msgstr "Tilbakestill peikartema"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:16
-#, kde-format
-msgctxt "@title"
-msgid "Launch Feedback"
-msgstr "Markering ved programstart"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:25
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Configure the animations played while an application is launching."
-msgstr "Set opp animasjonar viste når eit program vert starta."
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:46
-#, kde-format
-msgctxt "@label"
-msgid "Cursor feedback:"
-msgstr "Markering på musepeikar:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:47
-#, kde-format
-msgctxt "@option:radio No cursor feedback when launching apps"
-msgid "None"
-msgstr "Ingen"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:56
-#, kde-format
-msgctxt "@option:radio"
-msgid "Static"
-msgstr "Statisk"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:65
-#, kde-format
-msgctxt "@option:radio"
-msgid "Blinking"
-msgstr "Blinkande"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:74
-#, kde-format
-msgctxt "@option:radio"
-msgid "Bouncing"
-msgstr "Sprettande"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:89
-#, kde-format
-msgctxt "@label"
-msgid "Task Manager feedback:"
-msgstr "Markering på oppgåvehandsamar:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:91
-#, kde-format
-msgctxt "@option:check"
-msgid "Enable animation"
-msgstr "Bruk animasjonar"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:110
-#, kde-format
-msgctxt "@label"
-msgid "Stop animations after:"
-msgstr "Stopp animasjonar etter:"
-
-#: package/contents/ui/LaunchFeedbackDialog.qml:124
-#: package/contents/ui/LaunchFeedbackDialog.qml:136
-#, kde-format
-msgid "%1 second"
-msgid_plural "%1 seconds"
-msgstr[0] "%1 sekund"
-msgstr[1] "%1 sekund"
-
-#: package/contents/ui/main.qml:84
-#, kde-format
-msgid "Size:"
-msgstr "Storleik:"
-
-#: package/contents/ui/main.qml:134
-#, kde-format
-msgctxt "@action:button"
-msgid "&Configure Launch Feedback…"
-msgstr "Set opp programstart-markering …"
-
-#: package/contents/ui/main.qml:145
-#, kde-format
-msgid "&Install from File…"
-msgstr "&Installer frå fil …"
-
-#: package/contents/ui/main.qml:151
-#, kde-format
-msgid "&Get New Cursors…"
-msgstr "&Hent nye peikarar …"
-
-#: package/contents/ui/main.qml:168
-#, kde-format
-msgid "Open Theme"
-msgstr "Opna tema"
-
-#: package/contents/ui/main.qml:170
-#, kde-format
-msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
-msgstr "Peikartema-filer (*.tar.gz *.tar.bz2)"
-
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
@@ -269,6 +160,114 @@ msgstr "Du har desse peikartemaa tilgjengeleg:"
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(gjeldande tema for denne Plasma-økta)"
+
+#: ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Fjern tema"
+
+#: ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Tilbakestill peikartema"
+
+#: ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "Markering ved programstart"
+
+#: ui/LaunchFeedbackDialog.qml:25
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "Set opp animasjonar viste når eit program vert starta."
+
+#: ui/LaunchFeedbackDialog.qml:46
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr "Markering på musepeikar:"
+
+#: ui/LaunchFeedbackDialog.qml:47
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr "Ingen"
+
+#: ui/LaunchFeedbackDialog.qml:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "Statisk"
+
+#: ui/LaunchFeedbackDialog.qml:65
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "Blinkande"
+
+#: ui/LaunchFeedbackDialog.qml:74
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "Sprettande"
+
+#: ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Markering på oppgåvehandsamar:"
+
+#: ui/LaunchFeedbackDialog.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "Bruk animasjonar"
+
+#: ui/LaunchFeedbackDialog.qml:110
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "Stopp animasjonar etter:"
+
+#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekund"
+msgstr[1] "%1 sekund"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Storleik:"
+
+#: ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "Set opp programstart-markering …"
+
+#: ui/main.qml:145
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Installer frå fil …"
+
+#: ui/main.qml:151
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Hent nye peikarar …"
+
+#: ui/main.qml:168
+#, kde-format
+msgid "Open Theme"
+msgstr "Opna tema"
+
+#: ui/main.qml:170
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Peikartema-filer (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:56
 #, kde-format

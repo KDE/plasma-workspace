@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-09-02 07:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: locationrunner.cpp:33
+#: locationrunner.cpp:32
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -27,22 +27,22 @@ msgstr ""
 "ლოკალური საქაღალდეებში, ფაილებში, ქსელური მდებარეობებში და ინტერნეტში :q:-ის "
 "მოძებნა."
 
-#: locationrunner.cpp:59
+#: locationrunner.cpp:58
 #, kde-format
 msgid "Open %1"
 msgstr "%1-ის გახსნა"
 
-#: locationrunner.cpp:78 locationrunner.cpp:82
+#: locationrunner.cpp:77 locationrunner.cpp:81
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1-ით გაშვება"
 
-#: locationrunner.cpp:88
+#: locationrunner.cpp:87
 #, kde-format
 msgid "Go to %1"
 msgstr "%1-ზე გადასვლა"
 
-#: locationrunner.cpp:96
+#: locationrunner.cpp:95
 #, kde-format
 msgid "Send email to %1"
 msgstr "%1-სთვის ელფოსტის გაგზავნა"

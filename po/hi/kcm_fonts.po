@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-03-29 20:42+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -129,7 +129,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "पूरा"
 
-#: package/contents/ui/FontWidget.qml:33
+#: ui/FontWidget.qml:33
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
@@ -137,13 +137,13 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
+#: ui/main.qml:24
 #, fuzzy, kde-format
 #| msgid "&Adjust All Fonts…"
 msgid "Adjust Global Scale…"
 msgstr "सभी फ़ॉन्ट्स समंजित करें... (&A)"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -151,7 +151,7 @@ msgid ""
 msgstr ""
 "एंटी-अलियासिंग या डीपीआई जैसे कुछ बदलाव केवल नए शुरू किए गए अनुप्रयोगों को प्रभावित करेंगे।"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid ""
 #| "Very large fonts may produce odd-looking results. Consider adjusting the "
@@ -163,14 +163,14 @@ msgstr ""
 "बहुत बड़े फ़ॉन्ट अजीब दिखने वाले परिणाम दे सकते हैं। बहुत बड़े फ़ॉन्ट आकार का उपयोग करने के "
 "बजाय वैश्विक स्क्रीन अनुमाप को समायोजित करने पर विचार करें।"
 
-#: package/contents/ui/main.qml:70
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -179,82 +179,82 @@ msgstr ""
 "उपयोक्ता इंटरफ़ेस को अनुमापित करने का अनुशंसित तरीका वैश्विक स्क्रीन अनुमाप सुविधा का "
 "उपयोग करना है।"
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "सभी फ़ॉन्ट्स समंजित करें... (&A)"
 
-#: package/contents/ui/main.qml:117
+#: ui/main.qml:117
 #, kde-format
 msgid "General:"
 msgstr "साधारण :"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Select general font"
 msgstr "साधारण फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:129
+#: ui/main.qml:129
 #, kde-format
 msgid "Fixed width:"
 msgstr "स्थिर चौड़ाई :"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "Select fixed width font"
 msgstr "स्थिर चौड़ाई फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:141
+#: ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr "छोटा"
 
-#: package/contents/ui/main.qml:142
+#: ui/main.qml:142
 #, kde-format
 msgid "Select small font"
 msgstr "छोटा फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Toolbar:"
 msgstr "औज़ार पट्टी :"
 
-#: package/contents/ui/main.qml:154
+#: ui/main.qml:154
 #, kde-format
 msgid "Select toolbar font"
 msgstr "औज़ार पट्टी फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Menu:"
 msgstr "मेन्यू :"
 
-#: package/contents/ui/main.qml:166
+#: ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr "मेन्यू फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:176
+#: ui/main.qml:176
 #, kde-format
 msgid "Window title:"
 msgstr "विंडो शीर्षक :"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Select window title font"
 msgstr "विंडो शीर्षक फ़ॉन्ट चुनें"
 
-#: package/contents/ui/main.qml:192
+#: ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "एन्टी-अलियासिंग:"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Enable"
 msgstr "सक्षम करें"
 
-#: package/contents/ui/main.qml:201
+#: ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -269,28 +269,28 @@ msgstr ""
 "<emphasis>एंटी-अलियासिंग</emphasis> तकनीकों का उपयोग किया जाता है। आप आमतौर पर "
 "इस विकल्प को तब तक सक्षम रखना चाहेंगे जब तक कि इससे समस्या न हो।"
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "एंटी-अलियासिंग से बाहर करने की सीमा"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
+#: ui/main.qml:234 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "to"
 msgstr "को"
 
-#: package/contents/ui/main.qml:280
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "सब पिक्सल रेंडरिंग इस्तेमाल करें :"
 
-#: package/contents/ui/main.qml:322
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -311,13 +311,13 @@ msgstr ""
 "रैखिक क्रम होता है, कुछ में <emphasis>बीजीआर</emphasis> होता है और कुछ विदेशी ऑर्डरिंग "
 "इस सुविधा द्वारा समर्थित नहीं होते हैं।</para>यह सीआरटी मॉनिटर के साथ काम नहीं करता है।"
 
-#: package/contents/ui/main.qml:327
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "हिंटिंग :"
 
-#: package/contents/ui/main.qml:368
+#: ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -330,12 +330,12 @@ msgstr ""
 "प्रतिपादन गुणवत्ता को बढ़ाने के लिए किया जाता है। मजबूत हिंटिंग आम तौर पर तेज किनारों की "
 "ओर ले जाते हैं लेकिन छोटे अक्षरों की आकृती बड़े आकार में उनके आकृती से कम मिलते-जुलते होंगे।"
 
-#: package/contents/ui/main.qml:378
+#: ui/main.qml:378
 #, kde-format
 msgid "Force font DPI:"
 msgstr "फ़ॉन्ट डीपीआई बाध्य करें:"
 
-#: package/contents/ui/main.qml:420
+#: ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -353,7 +353,7 @@ msgstr ""
 "बदलने के लिए, <interface>प्रदर्शक और मॉनिटर </interface>पेज पर स्केलिंग स्लाइडर का "
 "उपयोग करें।</para>"
 
-#: package/contents/ui/main.qml:426
+#: ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"

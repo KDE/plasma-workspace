@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -16,493 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.12.2\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "कूटशब्द बदलें"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "कूटशब्द नियत करें"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "कूटशब्द"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "कूटशब्द की पुष्टि करें"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "कूटशब्दों का मेल खाना चाहिए"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "वॉलेट का कूटशब्द बदलें ?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"अब जब आपने अपना लॉगिन कूटशब्द बदल लिया है, तो आप इस से मिलान करने के लिए अपने "
-"पूर्वन्यस्त केवॉलेट पर पासवर्ड भी बदल सकते हैं।"
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "केवॉलेट क्या है ?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"केवॉलेट एक कूटशब्द प्रबंधक है जो वायरलेस संजाल और अन्य गूढलेखित संसाधनों के लिए आपके कूटशब्दों "
-"का संचय करता है। यह अपने स्वयं के कूटशब्द से तालाबंद होता है जो आपके लॉगिन कूटशब्द से भिन्न "
-"होता है। यदि दोनो कूटशब्द मेल खाते हैं, तो लॉगिन पर स्वचालित रूप से इसका ताला खोला जा "
-"सकता है, इसलिए आपको स्वयं केवॉलेट कूटशब्द दर्ज करने की आवश्यकता नहीं है।"
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "वॉलेट का कूटशब्द बदलें"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "अपरिवर्तित छोड़ दें"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "उपयोक्ता बनाएँ"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "नाम :"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "उपयोक्ता नाम :"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "मानक"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "प्रशासक"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "खाते का प्रकार :"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "कूटशब्द :"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "कूटशब्द की पुष्टि करें :"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "बनाएँ"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "अंगुलि छाप विन्यस्त करें"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "जोड़ें"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "रद्द करें"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "सम्पन्न"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "अंगुलि छाप का दाखिला लिया जा रहा है"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "उँगली का दाखिला लिया"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "दाखिल करने के लिए एक उँगली चुनें"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "उँगली का दाखिला पुनः करें"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
-msgid "Delete fingerprint"
-msgstr "अंगुलि छाप साफ करें"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "कोई अंगुलि छाप नहीं जोड़ा गया"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "उपयोक्ताओं का प्रबंधन"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "नया उपयोक्ता जोड़ें"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "अवतार बदलें"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "यह कुछ भी नहीं है"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "फीस्टी फ्लेमिंगो"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "ड्रेगन का फल"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "शकरकंद"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "एम्बिएंट एंबर"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "स्पार्कल सूर्यकिरण"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "लेमन-लैम"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "वर्दांत चार्म"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "मधुर घास का मैदान"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "टीपिड टील"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "प्लाज़्मा नीला"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "पोन बैंगनी"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "बाजो बैंगनी"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "जला कोयला"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "कागज पूर्णता"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "कैफेटेरा भूरा"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "धनी लकड़ी"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "एक छवि चुनें"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, fuzzy, kde-format
-#| msgid "Choose File…"
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "फ़ाइल चुनें…"
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "अवतार बदलें"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "ई-मेल पता :"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "फ़ाइलें मिटाएँ"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "फ़ाइलें रखें"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "उपयोक्ता मिटाएँ..."
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "अंगुलि छाप प्रमानीकरण विन्यस्त करें..."
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"अंगुलि छाप का उपयोग कूटशब्द के स्थान पर किया जा सकता है जब स्क्रीन का ताला खोला जाता "
-"है और अनुप्रयोग और अनुरोध करनेवाले कमांड-लाइन प्रोग्राम के लिए व्यवस्थापक अनुमतियां  प्रदान "
-"की जाती हैं। <nl/><nl/>अपने अंगुलि छाप के साथ तंत्र में लॉग इन करना अभी समर्थित नहीं है।"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -550,6 +63,486 @@ msgstr "उपकरण वियोजित दिया गया था।"
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "एक अज्ञात त्रुटि हुई।"
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "कूटशब्द बदलें"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "कूटशब्द नियत करें"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "कूटशब्द"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "कूटशब्द की पुष्टि करें"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "कूटशब्दों का मेल खाना चाहिए"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "वॉलेट का कूटशब्द बदलें ?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"अब जब आपने अपना लॉगिन कूटशब्द बदल लिया है, तो आप इस से मिलान करने के लिए अपने "
+"पूर्वन्यस्त केवॉलेट पर पासवर्ड भी बदल सकते हैं।"
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "केवॉलेट क्या है ?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"केवॉलेट एक कूटशब्द प्रबंधक है जो वायरलेस संजाल और अन्य गूढलेखित संसाधनों के लिए आपके कूटशब्दों "
+"का संचय करता है। यह अपने स्वयं के कूटशब्द से तालाबंद होता है जो आपके लॉगिन कूटशब्द से भिन्न "
+"होता है। यदि दोनो कूटशब्द मेल खाते हैं, तो लॉगिन पर स्वचालित रूप से इसका ताला खोला जा "
+"सकता है, इसलिए आपको स्वयं केवॉलेट कूटशब्द दर्ज करने की आवश्यकता नहीं है।"
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "वॉलेट का कूटशब्द बदलें"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "अपरिवर्तित छोड़ दें"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "उपयोक्ता बनाएँ"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "नाम :"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "उपयोक्ता नाम :"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "मानक"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "प्रशासक"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "खाते का प्रकार :"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "कूटशब्द :"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "कूटशब्द की पुष्टि करें :"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "बनाएँ"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "अंगुलि छाप विन्यस्त करें"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "जोड़ें"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "सम्पन्न"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "अंगुलि छाप का दाखिला लिया जा रहा है"
+
+#: src/ui/FingerprintDialog.qml:124
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:126
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:128
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:130
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:132
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:134
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:136
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:138
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:140
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:142
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:146
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:148
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:150
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:152
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:154
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:156
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:158
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:160
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:162
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:164
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "उँगली का दाखिला लिया"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "दाखिल करने के लिए एक उँगली चुनें"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "उँगली का दाखिला पुनः करें"
+
+#: src/ui/FingerprintDialog.qml:333
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "अंगुलि छाप साफ करें"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "कोई अंगुलि छाप नहीं जोड़ा गया"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "उपयोक्ताओं का प्रबंधन"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "नया उपयोक्ता जोड़ें"
+
+#: src/ui/PicturesSheet.qml:18
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "अवतार बदलें"
+
+#: src/ui/PicturesSheet.qml:21
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "यह कुछ भी नहीं है"
+
+#: src/ui/PicturesSheet.qml:22
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "फीस्टी फ्लेमिंगो"
+
+#: src/ui/PicturesSheet.qml:23
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "ड्रेगन का फल"
+
+#: src/ui/PicturesSheet.qml:24
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "शकरकंद"
+
+#: src/ui/PicturesSheet.qml:25
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "एम्बिएंट एंबर"
+
+#: src/ui/PicturesSheet.qml:26
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "स्पार्कल सूर्यकिरण"
+
+#: src/ui/PicturesSheet.qml:27
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "लेमन-लैम"
+
+#: src/ui/PicturesSheet.qml:28
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "वर्दांत चार्म"
+
+#: src/ui/PicturesSheet.qml:29
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "मधुर घास का मैदान"
+
+#: src/ui/PicturesSheet.qml:30
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "टीपिड टील"
+
+#: src/ui/PicturesSheet.qml:31
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "प्लाज़्मा नीला"
+
+#: src/ui/PicturesSheet.qml:32
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "पोन बैंगनी"
+
+#: src/ui/PicturesSheet.qml:33
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "बाजो बैंगनी"
+
+#: src/ui/PicturesSheet.qml:34
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "जला कोयला"
+
+#: src/ui/PicturesSheet.qml:35
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "कागज पूर्णता"
+
+#: src/ui/PicturesSheet.qml:36
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "कैफेटेरा भूरा"
+
+#: src/ui/PicturesSheet.qml:37
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "धनी लकड़ी"
+
+#: src/ui/PicturesSheet.qml:73
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "एक छवि चुनें"
+
+#: src/ui/PicturesSheet.qml:105
+#, fuzzy, kde-format
+#| msgid "Choose File…"
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "फ़ाइल चुनें…"
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "अवतार बदलें"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "ई-मेल पता :"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "फ़ाइलें मिटाएँ"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "फ़ाइलें रखें"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "उपयोक्ता मिटाएँ..."
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "अंगुलि छाप प्रमानीकरण विन्यस्त करें..."
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"अंगुलि छाप का उपयोग कूटशब्द के स्थान पर किया जा सकता है जब स्क्रीन का ताला खोला जाता "
+"है और अनुप्रयोग और अनुरोध करनेवाले कमांड-लाइन प्रोग्राम के लिए व्यवस्थापक अनुमतियां  प्रदान "
+"की जाती हैं। <nl/><nl/>अपने अंगुलि छाप के साथ तंत्र में लॉग इन करना अभी समर्थित नहीं है।"
 
 #: src/user.cpp:279
 #, kde-format

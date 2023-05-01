@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-07-10 17:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -49,7 +49,7 @@ msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "儲存到磁碟"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
@@ -72,7 +72,7 @@ msgstr "暫停並儲存到記憶體"
 msgid "Suspends the system to disk"
 msgstr "暫停並儲存到磁碟"
 
-#: PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
@@ -89,50 +89,50 @@ msgstr ""
 "列出螢幕亮度選項，或設定為搜尋關鍵字所定義的亮度，例如螢幕亮度 50 會將螢幕變"
 "暗至最高亮度的 50%"
 
-#: PowerDevilRunner.cpp:95
+#: PowerDevilRunner.cpp:93
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "設定亮度為 %1%"
 
-#: PowerDevilRunner.cpp:104
+#: PowerDevilRunner.cpp:102
 #, kde-format
 msgid "Dim screen totally"
 msgstr "將螢幕整個變暗"
 
-#: PowerDevilRunner.cpp:112
+#: PowerDevilRunner.cpp:110
 #, kde-format
 msgid "Dim screen by half"
 msgstr "將螢幕變暗一半"
 
-#: PowerDevilRunner.cpp:142
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "睡眠"
 
-#: PowerDevilRunner.cpp:143
+#: PowerDevilRunner.cpp:141
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "暫停並儲存到記憶體"
 
-#: PowerDevilRunner.cpp:148
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "休眠"
 
-#: PowerDevilRunner.cpp:149
+#: PowerDevilRunner.cpp:147
 #, kde-format
 msgid "Suspend to disk"
 msgstr "暫停並儲存到磁碟"
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "螢幕亮度 "
 
-#: PowerDevilRunner.cpp:220
+#: PowerDevilRunner.cpp:218
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

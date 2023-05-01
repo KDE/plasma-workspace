@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -116,7 +116,7 @@ msgstr "正在安装图标主题…"
 msgid "Installing %1 theme…"
 msgstr "正在安装 %1 主题…"
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -129,54 +129,54 @@ msgstr ""
 "处的设置。<nl/><nl/>如果您觉得屏幕显示的某些要素显得太大或者太小，可以尝试使"
 "用全局缩放。"
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "调整全局缩放…"
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "大小："
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "移除图标主题"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "还原图标主题"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "配置图标大小"
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "从文件安装…"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "获取新图标…"
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "配置图标大小"
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "打开主题"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "主题文件 (*.tar.gz *.tar.bz2)"

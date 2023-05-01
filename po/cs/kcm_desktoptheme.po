@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-06-02 16:11+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -49,66 +49,6 @@ msgstr "Instalace motivu selhala."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Odebrání motivu selhalo: %1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "Všechny motivy"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "Světlé motivy"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "Tmavé motivy"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "Kompatibilní s barevným schématem"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Následuje barevné schéma"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Upravit motiv…"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Odstranit motiv"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "Obnovit motiv"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "Instalovat ze souboru…"
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Získat nové styly Plasma…"
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Otevřít motiv"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Soubory motivů (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -162,3 +102,63 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Ve vašem systému jsou dostupné následující motivy Plasma:"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "Všechny motivy"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "Světlé motivy"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "Tmavé motivy"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kompatibilní s barevným schématem"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Následuje barevné schéma"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Upravit motiv…"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Odstranit motiv"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "Obnovit motiv"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalovat ze souboru…"
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Získat nové styly Plasma…"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Otevřít motiv"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Soubory motivů (*.zip *.tar.gz *.tar.bz2)"

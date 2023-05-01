@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-05-30 11:24+0800\n"
 "Last-Translator: Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv "
 "dot tw>\n"
@@ -23,13 +23,13 @@ msgstr ""
 msgid "Finds Plasma widgets whose name or description match :q:"
 msgstr "尋找名稱或描述符合 :q: 的 Plasma 元件"
 
-#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:51
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "mobile applications"
 msgstr "行動應用程式"
 
-#: windowedwidgetsrunner.cpp:32
+#: windowedwidgetsrunner.cpp:31
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
 msgstr "列出所有可以單獨應用程式方式執行的 Plasma 元件"

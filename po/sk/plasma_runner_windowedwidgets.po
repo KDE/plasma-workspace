@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_windowedwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-12-15 21:41+0100\n"
 "Last-Translator: Michal Sulek <misurel@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -21,13 +21,13 @@ msgstr ""
 msgid "Finds Plasma widgets whose name or description match :q:"
 msgstr "Nájde plasma widgety, ktorých názov alebo popis zodpovedá :q:"
 
-#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:51
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "mobile applications"
 msgstr "mobilne aplikacie"
 
-#: windowedwidgetsrunner.cpp:32
+#: windowedwidgetsrunner.cpp:31
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
 msgstr "zobrazí všetky widgety, ktoré môžu bežať ako samostatné aplikácie"

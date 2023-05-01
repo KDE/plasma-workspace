@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-04-12 03:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -134,7 +134,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "Completo"
 
-#: package/contents/ui/FontWidget.qml:33
+#: ui/FontWidget.qml:33
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
@@ -142,12 +142,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr "%1 %2pt"
 
-#: package/contents/ui/main.qml:24
+#: ui/main.qml:24
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Regola la scala globale…"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -156,7 +156,7 @@ msgstr ""
 "Alcune modifiche, come l'anti-aliasing o le impostazioni DPI, avranno "
 "effetto solo sui programmi avviati da questo momento in poi."
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -166,7 +166,7 @@ msgstr ""
 "utilizzare una dimensione del carattere molto grande, considera la "
 "possibilità di regolare la scala globale dello schermo."
 
-#: package/contents/ui/main.qml:70
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -176,7 +176,7 @@ msgstr ""
 "disposizione del testo in alcune applicazioni. Considera di utilizzare solo "
 "caratteri di dimensioni intere."
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -185,82 +185,82 @@ msgstr ""
 "Il modo consigliato per ridimensionare l'interfaccia utente è utilizzare la "
 "funzione di riscalatura globale dello schermo."
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "Sistem&a tutti i caratteri…"
 
-#: package/contents/ui/main.qml:117
+#: ui/main.qml:117
 #, kde-format
 msgid "General:"
 msgstr "Generale:"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Select general font"
 msgstr "Seleziona il carattere generale"
 
-#: package/contents/ui/main.qml:129
+#: ui/main.qml:129
 #, kde-format
 msgid "Fixed width:"
 msgstr "Larghezza fissa:"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Seleziona il carattere a larghezza fissa"
 
-#: package/contents/ui/main.qml:141
+#: ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr "Piccolo:"
 
-#: package/contents/ui/main.qml:142
+#: ui/main.qml:142
 #, kde-format
 msgid "Select small font"
 msgstr "Seleziona il carattere piccolo"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Toolbar:"
 msgstr "Barra degli strumenti:"
 
-#: package/contents/ui/main.qml:154
+#: ui/main.qml:154
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Seleziona il carattere della barra degli strumenti"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Menu:"
 msgstr "Menu:"
 
-#: package/contents/ui/main.qml:166
+#: ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr "Seleziona il carattere dei menu"
 
-#: package/contents/ui/main.qml:176
+#: ui/main.qml:176
 #, kde-format
 msgid "Window title:"
 msgstr "Titolo della finestra:"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Select window title font"
 msgstr "Seleziona il carattere del titolo della finestra"
 
-#: package/contents/ui/main.qml:192
+#: ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Anti-aliasing:"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Enable"
 msgstr "Abilita"
 
-#: package/contents/ui/main.qml:201
+#: ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -276,28 +276,28 @@ msgstr ""
 "utilizzate per ridurre questo effetto. In genere si desidera mantenere "
 "abilitata questa opzione a meno che non causi problemi."
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Escludi intervallo dall'anti-aliasing"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
+#: ui/main.qml:234 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 punti"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "to"
 msgstr "a"
 
-#: package/contents/ui/main.qml:280
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Resa sotto-pixel:"
 
-#: package/contents/ui/main.qml:322
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -320,13 +320,13 @@ msgstr ""
 "alcuni hanno <emphasis>BGR</emphasis> e alcuni ordinamenti esotici non sono "
 "supportati da questa funzione. </para> Questo non funziona con i monitor CRT."
 
-#: package/contents/ui/main.qml:327
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: package/contents/ui/main.qml:368
+#: ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -340,12 +340,12 @@ msgstr ""
 "ridotte. Un hinting più forte generalmente porta a bordi più nitidi, ma le "
 "lettere minuscole assomigliano meno alla loro forma a grandi dimensioni."
 
-#: package/contents/ui/main.qml:378
+#: ui/main.qml:378
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forza DPI dei caratteri:"
 
-#: package/contents/ui/main.qml:420
+#: ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -365,7 +365,7 @@ msgstr ""
 "tutto, usa il cursore di ridimensionamento nella pagina <interface>Schermo e "
 "video</interface>.</para>"
 
-#: package/contents/ui/main.qml:426
+#: ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr "Seleziona carattere"

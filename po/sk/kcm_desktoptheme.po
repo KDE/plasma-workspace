@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-09-15 18:47+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -48,66 +48,6 @@ msgstr "Inštalácia témy zlyhala."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Odstraňovanie témy zlyhalo: %1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "Všetky štýly"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "Svetlé štýly"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "Tmavé štýly"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "Kompatibilné z farebnou schémou"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Nasleduje farebnú schému"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Upraviť tému..."
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Odstrániť tému"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "Obnoviť tému"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "Nainštalovať zo súboru..."
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Získať nové štýly Plasma..."
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Otvoriť tému"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Súbory tém (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -161,6 +101,66 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Vo vašom systéme máte nasledujúce Plasma témy:"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "Všetky štýly"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "Svetlé štýly"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "Tmavé štýly"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kompatibilné z farebnou schémou"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Nasleduje farebnú schému"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Upraviť tému..."
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Odstrániť tému"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "Obnoviť tému"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "Nainštalovať zo súboru..."
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Získať nové štýly Plasma..."
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Otvoriť tému"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Súbory tém (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Tento modul vám umožní vybrať Plasma štýl."

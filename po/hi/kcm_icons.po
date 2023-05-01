@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-07-28 13:31+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -122,7 +122,7 @@ msgstr "प्रतीक प्रसंग संस्थापित कि
 msgid "Installing %1 theme…"
 msgstr "%1 प्रसंग संस्थापित किया जा रहा है..."
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,56 +132,56 @@ msgid ""
 "consider adjusting the global scale instead."
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "आकारः"
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "प्रतीक प्रसंग हटाएँ"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "प्रतीक प्रसंग बहाल करें"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "फाइल से संस्थापित करें..."
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "नए प्रतीक प्राप्त करें..."
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "प्रतीक आकार विन्यस्त करें"
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "प्रसंग खोलें"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"

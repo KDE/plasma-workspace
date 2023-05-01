@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-01 00:49+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2013-06-24 08:54+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: locationrunner.cpp:33
+#: locationrunner.cpp:32
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -30,22 +30,22 @@ msgstr ""
 "Najde krajevne mape in datoteke, omrežna mesta in internetne strani, ki se "
 "ujemajo s/z :q:."
 
-#: locationrunner.cpp:59
+#: locationrunner.cpp:58
 #, kde-format
 msgid "Open %1"
 msgstr "Odpri %1"
 
-#: locationrunner.cpp:78 locationrunner.cpp:82
+#: locationrunner.cpp:77 locationrunner.cpp:81
 #, kde-format
 msgid "Launch with %1"
 msgstr "Zaženi z %1"
 
-#: locationrunner.cpp:88
+#: locationrunner.cpp:87
 #, kde-format
 msgid "Go to %1"
 msgstr "Pojdi na %1"
 
-#: locationrunner.cpp:96
+#: locationrunner.cpp:95
 #, kde-format
 msgid "Send email to %1"
 msgstr "Pošlji e-pošto na %1"

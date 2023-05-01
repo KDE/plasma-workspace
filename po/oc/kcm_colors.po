@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -1163,139 +1163,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr ""
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Inactiu"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "All Schemes"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Light Schemes"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Dark Schemes"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr ""
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr ""
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr ""
-
-#: package/contents/ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "link"
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "ligam"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr ""
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr ""
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr ""
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Disabled"
-msgid "Disabled text"
-msgstr "Desactivat"
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Edit Color Scheme…"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Remove Color Scheme"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Restore Color Scheme"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Get New Color Schemes…"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:364
-#, fuzzy, kde-format
-#| msgid "&Save..."
-msgid "Open Color Scheme"
-msgstr "&Enregistrar..."
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1380,6 +1247,139 @@ msgstr ""
 #| msgid "&Save..."
 msgid " * %1 (current color scheme)"
 msgstr "&Enregistrar..."
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "&Enregistrar..."
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Inactiu"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "All Schemes"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Light Schemes"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Dark Schemes"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr ""
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr ""
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr ""
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "ligam"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr ""
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr ""
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr ""
+
+#: ui/main.qml:266
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgid "Disabled text"
+msgstr "Desactivat"
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Edit Color Scheme…"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Remove Color Scheme"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:297
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Restore Color Scheme"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Get New Color Schemes…"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:364
+#, fuzzy, kde-format
+#| msgid "&Save..."
+msgid "Open Color Scheme"
+msgstr "&Enregistrar..."
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "&Save..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-09-29 10:19+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -50,66 +50,6 @@ msgstr "Nem sikerült telepíteni a témát."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Nem sikerült eltávolítani a témát: %1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "Minden téma"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "Világos témák"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "Sötét témák"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "Színséma-kompatibilis"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "Követi a színsémát"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "Téma szerkesztése…"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Eltávolítás"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "Visszaállítás"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "Telepítés fájlból…"
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "Új Plasma stílusok letöltése…"
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Téma megnyitása"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Témafájlok (*.zip, *.tar.gz, *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -166,6 +106,66 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Az alábbi Plasma témák találhatók meg a rendszeren:"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "Minden téma"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "Világos témák"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "Sötét témák"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Színséma-kompatibilis"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Követi a színsémát"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Téma szerkesztése…"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Eltávolítás"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "Visszaállítás"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "Telepítés fájlból…"
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Új Plasma stílusok letöltése…"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Téma megnyitása"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Témafájlok (*.zip, *.tar.gz, *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "Ebben a modulban kiválaszthatja a Plasma stílusát."

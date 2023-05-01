@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-05-14 22:11+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Enviar um SIGTERM"
 msgid "Send SIGKILL"
 msgstr "Enviar um SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "matar"
@@ -50,17 +50,17 @@ msgstr "Terminar o %1"
 msgid "Process ID: %1"
 msgstr "ID do Processo: %1"
 
-#: killrunner_config.cpp:32
+#: killrunner_config.cpp:23
 #, kde-format
 msgid "CPU usage"
 msgstr "Carga do CPU"
 
-#: killrunner_config.cpp:33
+#: killrunner_config.cpp:24
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "carga do CPU invertida"
 
-#: killrunner_config.cpp:34
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "nothing"
 msgstr "nada"

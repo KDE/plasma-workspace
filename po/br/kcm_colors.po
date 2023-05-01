@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2004-09-19 17:18+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -1204,145 +1204,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr ""
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "Enporzh steuñv liv"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive window"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Prenestr marv"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "All Schemes"
-msgstr "Enporzh steuñv liv"
-
-#: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Light Schemes"
-msgstr "&Steuñv"
-
-#: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Dark Schemes"
-msgstr "Enrollañ ar steuñv liv"
-
-#: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Window Text"
-msgid "Window Title"
-msgstr "Skrid ar prenestr"
-
-#: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgid "Window text"
-msgid "Window text"
-msgstr "Skrid ar prenestr"
-
-#: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "  Button"
-msgid "Button"
-msgstr "  Nozel"
-
-#: package/contents/ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "link"
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "liamm"
-
-#: package/contents/ui/main.qml:244
-#, fuzzy, kde-format
-#| msgid "visited"
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "gweladennet"
-
-#: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Normal text"
-msgid "Normal text"
-msgstr "Skrid reizh"
-
-#: package/contents/ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Active Title Text"
-msgid "Highlighted text"
-msgstr "Skrid an titl bev"
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Disabled"
-msgid "Disabled text"
-msgstr "Marv"
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Edit Color Scheme…"
-msgstr "Enporzh steuñv liv"
-
-#: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
-msgstr "Enrollañ ar steuñv liv"
-
-#: package/contents/ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "Enporzh steuñv liv"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Get New Color Schemes…"
-msgstr "Enrollañ ar steuñv liv"
-
-#: package/contents/ui/main.qml:364
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Open Color Scheme"
-msgstr "Enrollañ ar steuñv liv"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1427,6 +1288,145 @@ msgstr ""
 #| msgid "Save Color Scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Enrollañ ar steuñv liv"
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Enporzh steuñv liv"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Prenestr marv"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgid "All Schemes"
+msgstr "Enporzh steuñv liv"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Light Schemes"
+msgstr "&Steuñv"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Dark Schemes"
+msgstr "Enrollañ ar steuñv liv"
+
+#: ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Window Text"
+msgid "Window Title"
+msgstr "Skrid ar prenestr"
+
+#: ui/main.qml:197
+#, fuzzy, kde-format
+#| msgid "Window text"
+msgid "Window text"
+msgstr "Skrid ar prenestr"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgid "  Button"
+msgid "Button"
+msgstr "  Nozel"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "liamm"
+
+#: ui/main.qml:244
+#, fuzzy, kde-format
+#| msgid "visited"
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "gweladennet"
+
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Normal text"
+msgid "Normal text"
+msgstr "Skrid reizh"
+
+#: ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgid "Highlighted text"
+msgstr "Skrid an titl bev"
+
+#: ui/main.qml:266
+#, fuzzy, kde-format
+#| msgid "Disabled"
+msgid "Disabled text"
+msgstr "Marv"
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgid "Edit Color Scheme…"
+msgstr "Enporzh steuñv liv"
+
+#: ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Remove Color Scheme"
+msgstr "Enrollañ ar steuñv liv"
+
+#: ui/main.qml:297
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgid "Restore Color Scheme"
+msgstr "Enporzh steuñv liv"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Get New Color Schemes…"
+msgstr "Enrollañ ar steuñv liv"
+
+#: ui/main.qml:364
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Open Color Scheme"
+msgstr "Enrollañ ar steuñv liv"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Save Color Scheme"

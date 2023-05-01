@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-10-24 13:31+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -128,7 +128,7 @@ msgstr "Installation de thèmes d'icônes..."
 msgid "Installing %1 theme…"
 msgstr "Installation du thème %1 en cours..."
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,54 +143,54 @@ msgstr ""
 "que les objets à l’écran sont généralement trop petits ou trop grands, "
 "pensez à ajuster l’échelle globale à la place."
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Ajuster l'échelle globale..."
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Taille :"
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Désinstaller un thème d'icônes"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restaurer le thème d'icônes"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Configurer les tailles d'icônes"
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Installer à partir d'un fichier..."
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Obtenir de nouvelles icônes..."
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Configurer les tailles d'icônes"
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Ouvrir un thème"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fichiers de thème (*.tar.gz *.tar.bz2)"

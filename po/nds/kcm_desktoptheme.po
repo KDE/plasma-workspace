@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2014-07-02 23:27+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -53,74 +53,6 @@ msgstr "Muster lett sik nich installeren."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr ""
-
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Available themes"
-msgid "All Themes"
-msgstr "Verföögbor Mustern"
-
-#: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Theme"
-msgid "Light Themes"
-msgstr "Muster"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr ""
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
-msgid "Follows color scheme"
-msgstr "Klöörschema"
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Theme"
-msgid "Edit Theme…"
-msgstr "Muster"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Muster wegdoon"
-
-#: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "Muster wegdoon"
-
-#: package/contents/ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Insta&ll from File"
-msgid "Install from File…"
-msgstr "Ut Datei insta&lleren"
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
-msgid "Get New Plasma Styles…"
-msgstr "Nieg Mustern halen..."
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Muster opmaken"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -166,6 +98,74 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Verföögbor Mustern"
+
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Muster"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Klöörschema"
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Muster"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Muster wegdoon"
+
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Muster wegdoon"
+
+#: ui/main.qml:173
+#, fuzzy, kde-format
+#| msgid "Insta&ll from File"
+msgid "Install from File…"
+msgstr "Ut Datei insta&lleren"
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "Nieg Mustern halen..."
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Muster opmaken"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

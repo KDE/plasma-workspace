@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-01-18 15:27+0530\n"
 "Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -50,72 +50,6 @@ msgstr ""
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
-
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Theme Name"
-msgid "All Themes"
-msgstr "प्रसंग नाम"
-
-#: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "Theme Name"
-msgid "Light Themes"
-msgstr "प्रसंग नाम"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr ""
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr ""
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Theme Name"
-msgid "Edit Theme…"
-msgstr "प्रसंग नाम"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "प्रसंग हटाबू"
-
-#: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "प्रसंग हटाबू"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Theme Name"
-msgid "Get New Plasma Styles…"
-msgstr "प्रसंग नाम"
-
-#: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid "Theme Name"
-msgid "Open Theme"
-msgstr "प्रसंग नाम"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #: plasma-apply-desktoptheme.cpp:31
@@ -161,6 +95,72 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "All Themes"
+msgstr "प्रसंग नाम"
+
+#: ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Light Themes"
+msgstr "प्रसंग नाम"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Edit Theme…"
+msgstr "प्रसंग नाम"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "प्रसंग हटाबू"
+
+#: ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "प्रसंग हटाबू"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Get New Plasma Styles…"
+msgstr "प्रसंग नाम"
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Open Theme"
+msgstr "प्रसंग नाम"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

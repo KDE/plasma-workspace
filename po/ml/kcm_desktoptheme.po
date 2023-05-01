@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2019-12-12 22:40+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -48,68 +48,6 @@ msgstr ""
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
-
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-msgid "All Themes"
-msgstr "പ്രമേയത്തിന്റെ ഇനം"
-
-#: package/contents/ui/main.qml:69
-#, fuzzy, kde-format
-msgid "Light Themes"
-msgstr "പ്രമേയത്തിന്റെ ഇനം"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr ""
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
-msgid "Follows color scheme"
-msgstr "നിറ പദ്ധതി"
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-msgid "Edit Theme…"
-msgstr "പ്രമേയത്തിന്റെ ഇനം"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
-
-#: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-msgid "Restore Theme"
-msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
-
-#: package/contents/ui/main.qml:192
-#, fuzzy, kde-format
-msgid "Open Theme"
-msgstr "പ്രമേയത്തിന്റെ ഇനം"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #: plasma-apply-desktoptheme.cpp:31
@@ -155,6 +93,68 @@ msgstr ""
 #: plasma-apply-desktoptheme.cpp:75
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+msgid "All Themes"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: ui/main.qml:69
+#, fuzzy, kde-format
+msgid "Light Themes"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "നിറ പദ്ധതി"
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+msgid "Edit Theme…"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#: ui/main.qml:131
+#, fuzzy, kde-format
+msgid "Restore Theme"
+msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#: ui/main.qml:192
+#, fuzzy, kde-format
+msgid "Open Theme"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

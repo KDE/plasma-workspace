@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-05-27 05:29+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 msgid "Finds Plasma widgets whose name or description match :q:"
 msgstr "Атауы не сипаттамасы :q: дегенге сәйкесті Plasma виджетін тауып беру"
 
-#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:51
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "mobile applications"
 msgstr "mobile applications"
 
-#: windowedwidgetsrunner.cpp:32
+#: windowedwidgetsrunner.cpp:31
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
 msgstr "бөлек қолданба ретінде жегуге болатын Plasma виджеттер тізімі"

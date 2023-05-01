@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-02-11 23:33+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -27,7 +27,7 @@ msgstr "ส่งสัญญาณ SIGTERM"
 msgid "Send SIGKILL"
 msgstr "ส่งสัญญาณ SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "ฆ่า"
@@ -47,17 +47,17 @@ msgstr "ยุติการทำงานของ %1"
 msgid "Process ID: %1"
 msgstr ""
 
-#: killrunner_config.cpp:32
+#: killrunner_config.cpp:23
 #, kde-format
 msgid "CPU usage"
 msgstr "การใช้ตัวประมวลผลกลาง"
 
-#: killrunner_config.cpp:33
+#: killrunner_config.cpp:24
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "กลับค่าการใช้ตัวประมวลผลกลาง"
 
-#: killrunner_config.cpp:34
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "nothing"
 msgstr "ไม่ทำอะไร"

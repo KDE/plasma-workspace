@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:17+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-01-11 21:28+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -39,57 +39,57 @@ msgstr "\"%1\" nie je súbor."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" nie je čitateľný."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Urobiť spustiteľným"
 
-#: package/contents/ui/main.qml:55
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr "Súbor '%1' musí byť spustiteľný, aby sa spustil pri odhlásení."
 
-#: package/contents/ui/main.qml:57
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "Súbor '%1' musí byť spustiteľný, aby sa spustil pri prihlásení."
 
-#: package/contents/ui/main.qml:95
+#: ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: package/contents/ui/main.qml:101
+#: ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: package/contents/ui/main.qml:112
+#: ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Skripty prihlásenia"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripty pred spustením"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Skripty odhlásenia"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Žiadne položky automatického spustenia zadané používateľom"
 
-#: package/contents/ui/main.qml:131
+#: ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -97,32 +97,32 @@ msgstr ""
 "Niektoré z nich pridáte kliknutím na tlačidlo <interface>Pridať…</interface> "
 "nižšie"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Vybrať skript prihlásenia"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Vybrať skript odhlásenia"
 
-#: package/contents/ui/main.qml:182
+#: ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Pridať…"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Pridať aplikáciu…"
 
-#: package/contents/ui/main.qml:203
+#: ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Pridať skript pri prihlásení…"
 
-#: package/contents/ui/main.qml:209
+#: ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Pridať skript pri odhlásení…"

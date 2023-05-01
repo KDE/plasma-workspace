@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:17+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-08-11 19:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -43,89 +43,89 @@ msgstr "\"%1\" ez da fitxategi bat."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" ezin da irakurri."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Egin exekutagarri"
 
-#: package/contents/ui/main.qml:55
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr "«%1» fitxategia exekutagarria izan behar da saio-ixtean ibiltzeko."
 
-#: package/contents/ui/main.qml:57
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "«%1» fitxategia exekutagarria izan behar da saio-hastean ibiltzeko."
 
-#: package/contents/ui/main.qml:95
+#: ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Propietateak"
 
-#: package/contents/ui/main.qml:101
+#: ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"
 
-#: package/contents/ui/main.qml:112
+#: ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Saio-hasteko gidoiak"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Abiatu aurreko gidoiak"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Saio-ixteko gidoiak"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Ez dago erabiltzaileak abio automatikorako zehaztutako elementurik"
 
-#: package/contents/ui/main.qml:131
+#: ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 "Egin klik beheko <interface>Gehitu...</interface> botoiari batzuk gehitzeko"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Hautatu saio-asteko gidoia"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Hautatu saio-ixteko gidoiak"
 
-#: package/contents/ui/main.qml:182
+#: ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Gehitu…"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Gehitu aplikazioa..."
 
-#: package/contents/ui/main.qml:203
+#: ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Gehitu saio-hasteko gidoia..."
 
-#: package/contents/ui/main.qml:209
+#: ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Gehitu saio-ixteko gidoia..."

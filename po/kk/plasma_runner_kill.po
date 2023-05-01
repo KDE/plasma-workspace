@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-03-14 06:23+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "SIGTERM сигналын жіберу"
 msgid "Send SIGKILL"
 msgstr "SIGKILL сигналын жіберу"
 
-#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "құрту"
@@ -47,17 +47,17 @@ msgstr "%1 дегенді доғару"
 msgid "Process ID: %1"
 msgstr ""
 
-#: killrunner_config.cpp:32
+#: killrunner_config.cpp:23
 #, kde-format
 msgid "CPU usage"
 msgstr "Процессорды пайдалану бойынша"
 
-#: killrunner_config.cpp:33
+#: killrunner_config.cpp:24
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "Процессорды пайдалану бойынша (кері)"
 
-#: killrunner_config.cpp:34
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "nothing"
 msgstr "реттелмеген"

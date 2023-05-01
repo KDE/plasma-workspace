@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-02-04 16:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,40 +28,44 @@ msgstr "Comută „nu deranja”"
 msgid "Configure Notifications"
 msgstr "Configurează notificările"
 
-#: package/contents/ui/ApplicationConfiguration.qml:63
+#: sourcesmodel.cpp:363
+#, kde-format
+msgid "Other Applications"
+msgstr "Alte aplicații"
+
+#: ui/ApplicationConfiguration.qml:63
 #, kde-format
 msgid "Show popups"
 msgstr "Arată indicii contextuale"
 
-#: package/contents/ui/ApplicationConfiguration.qml:77
+#: ui/ApplicationConfiguration.qml:77
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Arată în regimul „nu deranja”"
 
-#: package/contents/ui/ApplicationConfiguration.qml:90
-#: package/contents/ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Arată în istoric"
 
-#: package/contents/ui/ApplicationConfiguration.qml:101
+#: ui/ApplicationConfiguration.qml:101
 #, kde-format
 msgid "Show notification badges"
 msgstr "Arată ecusoane de notificare"
 
-#: package/contents/ui/ApplicationConfiguration.qml:119
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Configure Events…"
 msgstr "Configurează evenimente…"
 
-#: package/contents/ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:130
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
 msgstr "Această aplicație nu susține configurarea notificărilor per eveniment."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -72,31 +76,31 @@ msgstr ""
 "afișarea notificărilor. Asigurați-vă că e activat în tava de sistem sau ca "
 "control grafic separat."
 
-#: package/contents/ui/main.qml:52
+#: ui/main.qml:52
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Notificările sunt furnizate momentan de „%1 %2” în locul Plasma."
 
-#: package/contents/ui/main.qml:56
+#: ui/main.qml:56
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Notificările nu sunt furnizate momentan de Plasma."
 
-#: package/contents/ui/main.qml:63
+#: ui/main.qml:63
 #, fuzzy, kde-format
 #| msgid "Do Not Disturb mode:"
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Regimul „nu deranja”:"
 
-#: package/contents/ui/main.qml:68
+#: ui/main.qml:68
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
 msgstr ""
 
-#: package/contents/ui/main.qml:69
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb when screens are mirrored"
 #| msgid "Enable when screens are mirrored"
@@ -104,7 +108,7 @@ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Activează când ecranele sunt oglindite"
 
-#: package/contents/ui/main.qml:81
+#: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb while screen sharing"
 #| msgid "Enable while screen sharing"
@@ -112,63 +116,63 @@ msgctxt "Enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Activează în timpul partajării ecranului"
 
-#: package/contents/ui/main.qml:96
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Keyboard shortcut:"
 msgstr ""
 
-#: package/contents/ui/main.qml:103
+#: ui/main.qml:103
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr ""
 
-#: package/contents/ui/main.qml:108
+#: ui/main.qml:108
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Notificări critice:"
 
-#: package/contents/ui/main.qml:109
+#: ui/main.qml:109
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Arată în regimul „nu deranja”"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Normal notifications:"
 msgstr "Notificări normale:"
 
-#: package/contents/ui/main.qml:122
+#: ui/main.qml:122
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "Arată peste ferestrele în ecran complet"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Notificări cu prioritate joasă:"
 
-#: package/contents/ui/main.qml:135
+#: ui/main.qml:135
 #, kde-format
 msgid "Show popup"
 msgstr "Arată indiciu"
 
-#: package/contents/ui/main.qml:164
+#: ui/main.qml:164
 #, fuzzy, kde-format
 #| msgid "Popup:"
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Indiciu:"
 
-#: package/contents/ui/main.qml:170
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Applications:"
 msgctxt "@label"
 msgid "Location:"
 msgstr "Aplicații:"
 
-#: package/contents/ui/main.qml:171
+#: ui/main.qml:171
 #, fuzzy, kde-format
 #| msgctxt "Popup position near notification plasmoid"
 #| msgid "Show near notification icon"
@@ -176,12 +180,12 @@ msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Arată lângă pictograma de notificare"
 
-#: package/contents/ui/main.qml:208
+#: ui/main.qml:208
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "Alege poziție personalizată…"
 
-#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:233
+#: ui/main.qml:217 ui/main.qml:233
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -189,83 +193,83 @@ msgstr[0] "%1 secundă"
 msgstr[1] "%1 secunde"
 msgstr[2] "%1 de secunde"
 
-#: package/contents/ui/main.qml:222
+#: ui/main.qml:222
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Ascunde după:"
 
-#: package/contents/ui/main.qml:245
+#: ui/main.qml:245
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr ""
 
-#: package/contents/ui/main.qml:250
+#: ui/main.qml:250
 #, kde-format
 msgid "Application progress:"
 msgstr "Progres aplicație:"
 
-#: package/contents/ui/main.qml:251 package/contents/ui/main.qml:291
+#: ui/main.qml:251 ui/main.qml:291
 #, kde-format
 msgid "Show in task manager"
 msgstr "Arată în gestionarul de sarcini"
 
-#: package/contents/ui/main.qml:263
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Arată în notificări"
 
-#: package/contents/ui/main.qml:277
+#: ui/main.qml:277
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Ține indiciul deschis pe durata progresului"
 
-#: package/contents/ui/main.qml:290
+#: ui/main.qml:290
 #, kde-format
 msgid "Notification badges:"
 msgstr "Ecusoane de notificare:"
 
-#: package/contents/ui/main.qml:302
+#: ui/main.qml:302
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@title:group"
 msgid "Application-specific settings"
 msgstr "Configurări aplicație"
 
-#: package/contents/ui/main.qml:307
+#: ui/main.qml:307
 #, kde-format
 msgid "Configure…"
 msgstr "Configurează…"
 
-#: package/contents/ui/PopupPositionPage.qml:15
+#: ui/PopupPositionPage.qml:15
 #, kde-format
 msgid "Popup Position"
 msgstr "Poziție indiciu"
 
-#: package/contents/ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
 msgstr "Configurări aplicație"
 
-#: package/contents/ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:93
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: package/contents/ui/SourcesPage.qml:94
+#: ui/SourcesPage.qml:94
 #, kde-format
 msgid "System Services"
 msgstr "Servicii de sistem"
 
-#: package/contents/ui/SourcesPage.qml:132
+#: ui/SourcesPage.qml:132
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "Nicio aplicație sau eveniment nu se potrivește cu termenul căutat."
 
-#: package/contents/ui/SourcesPage.qml:152
+#: ui/SourcesPage.qml:152
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
@@ -273,11 +277,6 @@ msgid ""
 msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
 "comportamentul de notificare."
-
-#: sourcesmodel.cpp:363
-#, kde-format
-msgid "Other Applications"
-msgstr "Alte aplicații"
 
 #~ msgid "This module lets you manage application and system notifications."
 #~ msgstr ""

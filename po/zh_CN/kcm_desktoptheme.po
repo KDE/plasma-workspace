@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -47,66 +47,6 @@ msgstr "主题安装失败。"
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "移除主题失败：%1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "所有主题"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "浅色主题"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "深色主题"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "兼容配色方案"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "跟随配色方案"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "编辑主题…"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "删除主题"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "还原主题"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "从文件安装…"
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "获取新 Plasma 视觉风格…"
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "打开主题"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -156,6 +96,66 @@ msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "您的系统已安装以下 Plasma 主题："
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "所有主题"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "浅色主题"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "深色主题"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "兼容配色方案"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "跟随配色方案"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "编辑主题…"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "删除主题"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "还原主题"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "从文件安装…"
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "获取新 Plasma 视觉风格…"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "打开主题"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "您可以在此模块中选择 Plasma 视觉风格。"

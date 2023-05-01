@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-02 11:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1145,127 +1145,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "التركيز"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, kde-format
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "لون التمييز من تشكيلة الألوان"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr "لون التمييز من صورة الخلفية"
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, kde-format
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "لون التمييز مخصص"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "اختر لون التمييز:"
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "تشكيلة الألوان '%1' غير مثبتة. سيختار سمة الافتراضية  بدلا من ذلك."
-
-#: package/contents/ui/main.qml:114
-#, kde-format
-msgid "All Schemes"
-msgstr "جميع التشكيلات"
-
-#: package/contents/ui/main.qml:115
-#, kde-format
-msgid "Light Schemes"
-msgstr "تشكيلات فاتحة"
-
-#: package/contents/ui/main.qml:116
-#, kde-format
-msgid "Dark Schemes"
-msgstr "تشكيلات مظلمة"
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "عنوان النافذة"
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "نص النافذة"
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "الزر"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "الرابط"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "مُزار"
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "نص عادي"
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr "نص مميز"
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr "نص معطل"
-
-#: package/contents/ui/main.qml:284
-#, kde-format
-msgid "Edit Color Scheme…"
-msgstr "حرر التشكيلة الألوان..."
-
-#: package/contents/ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "أزل تشكيلة الألوان"
-
-#: package/contents/ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "استعد تشكيلة الألوان"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr "ثبت من ملف..."
-
-#: package/contents/ui/main.qml:346
-#, kde-format
-msgid "Get New Color Schemes…"
-msgstr "احصل على تشكيلات ألوان جديدة..."
-
-#: package/contents/ui/main.qml:364
-#, kde-format
-msgid "Open Color Scheme"
-msgstr "افتح تشكيلة الألوان"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr "ملفات تشكيلات الألوان (*.colors)"
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1357,6 +1236,127 @@ msgstr "لديك التشكيلات التالية على نظامك:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (تشكيلة الألوان الحالية)"
+
+#: ui/AccentColorUI.qml:38
+#, kde-format
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "لون التمييز من تشكيلة الألوان"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr "لون التمييز من صورة الخلفية"
+
+#: ui/AccentColorUI.qml:40
+#, kde-format
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "لون التمييز مخصص"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "اختر لون التمييز:"
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr "تشكيلة الألوان '%1' غير مثبتة. سيختار سمة الافتراضية  بدلا من ذلك."
+
+#: ui/main.qml:114
+#, kde-format
+msgid "All Schemes"
+msgstr "جميع التشكيلات"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Light Schemes"
+msgstr "تشكيلات فاتحة"
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Dark Schemes"
+msgstr "تشكيلات مظلمة"
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr "عنوان النافذة"
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr "نص النافذة"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr "الزر"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "الرابط"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "مُزار"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr "نص عادي"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr "نص مميز"
+
+#: ui/main.qml:266
+#, kde-format
+msgid "Disabled text"
+msgstr "نص معطل"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Edit Color Scheme…"
+msgstr "حرر التشكيلة الألوان..."
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "أزل تشكيلة الألوان"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "استعد تشكيلة الألوان"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr "ثبت من ملف..."
+
+#: ui/main.qml:346
+#, kde-format
+msgid "Get New Color Schemes…"
+msgstr "احصل على تشكيلات ألوان جديدة..."
+
+#: ui/main.qml:364
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "افتح تشكيلة الألوان"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr "ملفات تشكيلات الألوان (*.colors)"
 
 #~ msgid "This module lets you choose the color scheme."
 #~ msgstr "هذه الوحدة تجعلك تختار تشكيلة الألوان"

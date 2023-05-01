@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-08-09 14:46+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -49,66 +49,6 @@ msgstr "प्रसंग की संस्थापना असफल।"
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "प्रसंग की संस्थापना असफल : %1"
-
-#: package/contents/ui/main.qml:68
-#, kde-format
-msgid "All Themes"
-msgstr "सभी प्रसंग"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "हलके रंग के प्रसंग"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "गहरे रंग के प्रसंग"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr "रंग योजना अनुरूप"
-
-#: package/contents/ui/main.qml:99
-#, kde-format
-msgid "Follows color scheme"
-msgstr "रंग योजना को अनुसरण करता है"
-
-#: package/contents/ui/main.qml:117
-#, kde-format
-msgid "Edit Theme…"
-msgstr "प्रसंग संपादित करें"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "प्रसंग हटाएँ"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "प्रसंग पुरानी स्तिथी में लाऐं"
-
-#: package/contents/ui/main.qml:173
-#, kde-format
-msgid "Install from File…"
-msgstr "फाइल से संस्थापित करें..."
-
-#: package/contents/ui/main.qml:178
-#, kde-format
-msgid "Get New Plasma Styles…"
-msgstr "नइ प्लाज़्मा शैलियाँ प्राप्त करें..."
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "प्रसंग खोलें"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -159,6 +99,66 @@ msgstr "प्रसंग \"%1\" नहीं मिल सका। प्र�
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "आपके तंत्र पर निम्न प्लाज्मा थीम हैं:"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "सभी प्रसंग"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "हलके रंग के प्रसंग"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "गहरे रंग के प्रसंग"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "रंग योजना अनुरूप"
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr "रंग योजना को अनुसरण करता है"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr "प्रसंग संपादित करें"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "प्रसंग हटाएँ"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "प्रसंग पुरानी स्तिथी में लाऐं"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr "फाइल से संस्थापित करें..."
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "नइ प्लाज़्मा शैलियाँ प्राप्त करें..."
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "प्रसंग खोलें"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr "यह मॉड्यूल आपको प्लाज़्मा शैली चुनने देता है ।"

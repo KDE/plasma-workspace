@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-09-09 23:30-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -48,72 +48,6 @@ msgstr "Насбкунии мавзӯъ қатъ шуд."
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Тозакунии мавзӯи зерин қатъ шуд: %1"
-
-#: package/contents/ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Open Theme"
-msgid "All Themes"
-msgstr "Кушодани мавзӯъ"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "Light Themes"
-msgstr "Мавзӯъҳои равшан"
-
-#: package/contents/ui/main.qml:70
-#, kde-format
-msgid "Dark Themes"
-msgstr "Мавзӯъҳои торик"
-
-#: package/contents/ui/main.qml:71
-#, kde-format
-msgid "Color scheme compatible"
-msgstr ""
-
-#: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
-msgid "Follows color scheme"
-msgstr "Нақшаи рангин"
-
-#: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Edit Theme..."
-msgid "Edit Theme…"
-msgstr "Таҳрир кардани мавзӯъ…"
-
-#: package/contents/ui/main.qml:124
-#, kde-format
-msgid "Remove Theme"
-msgstr "Тоза кардани мавзӯъ"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Restore Theme"
-msgstr "Барқарор кардани мавзӯъ"
-
-#: package/contents/ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Install from File..."
-msgid "Install from File…"
-msgstr "Аз файл насб кардан..."
-
-#: package/contents/ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plasma Styles..."
-msgid "Get New Plasma Styles…"
-msgstr "Гирифтани услубҳои нави Плазма..."
-
-#: package/contents/ui/main.qml:192
-#, kde-format
-msgid "Open Theme"
-msgstr "Кушодани мавзӯъ"
-
-#: package/contents/ui/main.qml:194
-#, kde-format
-msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Файлҳои мавзӯъ (*.zip *.tar.gz *.tar.bz2)"
 
 #: plasma-apply-desktoptheme.cpp:31
 #, kde-format
@@ -159,6 +93,72 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
+
+#: ui/main.qml:68
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "All Themes"
+msgstr "Кушодани мавзӯъ"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr "Мавзӯъҳои равшан"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr "Мавзӯъҳои торик"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Нақшаи рангин"
+
+#: ui/main.qml:117
+#, fuzzy, kde-format
+#| msgid "Edit Theme..."
+msgid "Edit Theme…"
+msgstr "Таҳрир кардани мавзӯъ…"
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr "Тоза кардани мавзӯъ"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr "Барқарор кардани мавзӯъ"
+
+#: ui/main.qml:173
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Аз файл насб кардан..."
+
+#: ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Get New Plasma Styles..."
+msgid "Get New Plasma Styles…"
+msgstr "Гирифтани услубҳои нави Плазма..."
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr "Кушодани мавзӯъ"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Файлҳои мавзӯъ (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgid "This module lets you choose the Plasma style."
 #~ msgstr ""

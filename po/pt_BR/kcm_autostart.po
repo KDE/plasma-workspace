@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 02:17+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-07-14 10:38-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -40,61 +40,61 @@ msgstr "\"%1\" não é um arquivo."
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" não pode ser lido."
 
-#: package/contents/ui/main.qml:41
+#: ui/main.qml:41
 #, kde-format
 msgid "Make Executable"
 msgstr "Tornar executável"
 
-#: package/contents/ui/main.qml:55
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "O arquivo '%1' deve ser executável para poder ser executado ao encerrar "
 "sessão."
 
-#: package/contents/ui/main.qml:57
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "O arquivo '%1' deve ser executável para poder ser executado ao iniciar a "
 "sessão."
 
-#: package/contents/ui/main.qml:95
+#: ui/main.qml:95
 #, kde-format
 msgid "Properties"
 msgstr "Propriedades"
 
-#: package/contents/ui/main.qml:101
+#: ui/main.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Remover"
 
-#: package/contents/ui/main.qml:112
+#: ui/main.qml:112
 #, kde-format
 msgid "Applications"
 msgstr "Aplicativos"
 
-#: package/contents/ui/main.qml:115
+#: ui/main.qml:115
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts ao iniciar sessão"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts anteriores à inicialização"
 
-#: package/contents/ui/main.qml:121
+#: ui/main.qml:121
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts ao encerrar sessão"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Nenhum item especificado pelo usuário para iniciar automaticamente"
 
-#: package/contents/ui/main.qml:131
+#: ui/main.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
@@ -102,32 +102,32 @@ msgstr ""
 "Clique no botão <interface>Adicionar...</interface> abaixo para adicionar "
 "alguns"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Escolher script ao iniciar sessão"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Escolher script ao encerrar sessão"
 
-#: package/contents/ui/main.qml:182
+#: ui/main.qml:182
 #, kde-format
 msgid "Add…"
 msgstr "Adicionar…"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
 msgstr "Adicionar aplicativo..."
 
-#: package/contents/ui/main.qml:203
+#: ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
 msgstr "Adicionar script ao iniciar sessão..."
 
-#: package/contents/ui/main.qml:209
+#: ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
 msgstr "Adicionar script ao encerrar sessão..."

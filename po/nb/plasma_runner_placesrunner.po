@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2009-10-25 19:10+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: placesrunner.cpp:28 placesrunner.cpp:82
+#: placesrunner.cpp:28 placesrunner.cpp:81
 #, kde-format
 msgid "places"
 msgstr "steder"
@@ -29,7 +29,7 @@ msgstr "steder"
 msgid "Lists all file manager locations"
 msgstr "Lister alle filbehandlersteder"
 
-#: placesrunner.cpp:30
+#: placesrunner.cpp:29
 #, kde-format
 msgid "Finds file manager locations that match :q:"
 msgstr "Finner filbehandlersteder som passer med :q:"

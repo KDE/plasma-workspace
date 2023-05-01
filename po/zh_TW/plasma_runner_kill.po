@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-05-14 23:42+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -28,7 +28,7 @@ msgstr "送出 SIGTERM"
 msgid "Send SIGKILL"
 msgstr "送出 SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "結束"
@@ -48,17 +48,17 @@ msgstr "結束 %1"
 msgid "Process ID: %1"
 msgstr "處理序 ID：%1"
 
-#: killrunner_config.cpp:32
+#: killrunner_config.cpp:23
 #, kde-format
 msgid "CPU usage"
 msgstr "CPU 使用量"
 
-#: killrunner_config.cpp:33
+#: killrunner_config.cpp:24
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "倒轉 CPU 使用量"
 
-#: killrunner_config.cpp:34
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "nothing"
 msgstr "無"

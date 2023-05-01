@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-11-11 20:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -18,27 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.08.2\n"
 
-#: package/contents/ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "輕點地圖選取您的所在地。"
 
-#: package/contents/ui/LocationsFixedView.qml:40
+#: ui/LocationsFixedView.qml:40
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "點擊地圖選取您的所在地。"
 
-#: package/contents/ui/LocationsFixedView.qml:78
-#: package/contents/ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
 msgstr "放大"
 
-#: package/contents/ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:222
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -52,54 +51,54 @@ msgstr ""
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World "
 "location map</link> 修改"
 
-#: package/contents/ui/LocationsFixedView.qml:235
+#: ui/LocationsFixedView.qml:235
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "緯度："
 
-#: package/contents/ui/LocationsFixedView.qml:261
+#: ui/LocationsFixedView.qml:261
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "經度："
 
-#: package/contents/ui/main.qml:87
+#: ui/main.qml:87
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "藍光濾鏡讓螢幕顏色偏向暖色調。"
 
-#: package/contents/ui/main.qml:98
+#: ui/main.qml:98
 #, kde-format
 msgid "Switching times:"
 msgstr "切換時間："
 
-#: package/contents/ui/main.qml:100
+#: ui/main.qml:100
 #, kde-format
 msgid "Always off"
 msgstr "永遠關閉"
 
-#: package/contents/ui/main.qml:101
+#: ui/main.qml:101
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "目前所在地的日落及日出"
 
-#: package/contents/ui/main.qml:102
+#: ui/main.qml:102
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "手動指定所在地的日落及日出"
 
-#: package/contents/ui/main.qml:103
+#: ui/main.qml:103
 #, kde-format
 msgid "Custom times"
 msgstr "自訂時間"
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "Always on night color"
 msgstr "總是使用夜色"
 
-#: package/contents/ui/main.qml:156
+#: ui/main.qml:156
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -111,95 +110,95 @@ msgstr ""
 "mozilla.com'>Mozilla 定位服務 (Mozilla Location Service)</link> 來定期更新本"
 "裝置的所在地。"
 
-#: package/contents/ui/main.qml:175
+#: ui/main.qml:175
 #, kde-format
 msgid "Day color temperature:"
 msgstr "日色色溫："
 
-#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#: ui/main.qml:218 ui/main.qml:277
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#: ui/main.qml:222 ui/main.qml:281
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖色調"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: ui/main.qml:228 ui/main.qml:287
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷色調（無濾鏡）"
 
-#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#: ui/main.qml:228 ui/main.qml:287
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
 msgstr "冷色調"
 
-#: package/contents/ui/main.qml:234
+#: ui/main.qml:234
 #, kde-format
 msgid "Night color temperature:"
 msgstr "夜色色溫："
 
-#: package/contents/ui/main.qml:298
+#: ui/main.qml:298
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "緯度：%1°  經度：%2°"
 
-#: package/contents/ui/main.qml:308
+#: ui/main.qml:308
 #, kde-format
 msgid "Begin night color at:"
 msgstr "夜色開始時間："
 
-#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#: ui/main.qml:321 ui/main.qml:344
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "輸入格式：HH:MM"
 
-#: package/contents/ui/main.qml:331
+#: ui/main.qml:331
 #, kde-format
 msgid "Begin day color at:"
 msgstr "日色開始時間："
 
-#: package/contents/ui/main.qml:353
+#: ui/main.qml:353
 #, kde-format
 msgid "Transition duration:"
 msgstr "過渡時間："
 
-#: package/contents/ui/main.qml:362
+#: ui/main.qml:362
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1分鐘"
 
-#: package/contents/ui/main.qml:375
+#: ui/main.qml:375
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "輸入分鐘 - 最小值：1，最大值：600"
 
-#: package/contents/ui/main.qml:393
+#: ui/main.qml:393
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "錯誤：過渡時間重疊。"
 
-#: package/contents/ui/main.qml:413
+#: ui/main.qml:413
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "定位中…"
 
-#: package/contents/ui/TimingsView.qml:32
+#: ui/TimingsView.qml:32
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr "在 %1 開始逐漸變更至夜間色溫，到 %2 時完全變更"
 
-#: package/contents/ui/TimingsView.qml:39
+#: ui/TimingsView.qml:39
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

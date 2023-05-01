@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -127,7 +127,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "完全"
 
-#: package/contents/ui/FontWidget.qml:33
+#: ui/FontWidget.qml:33
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
@@ -135,19 +135,19 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
+#: ui/main.qml:24
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "调整全局缩放…"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr "某些更改只影响之后启动的程序，例如抗锯齿或 DPI 等选项。"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -156,7 +156,7 @@ msgstr ""
 "单独设置字体大小时，视觉效果可能不佳。您可以尝试通过调整全局屏幕缩放改变字体"
 "大小。"
 
-#: package/contents/ui/main.qml:70
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -165,89 +165,89 @@ msgstr ""
 "带小数点的非整数字体大小可能会在某些应用程序中造成文字排版问题。请考虑仅使用"
 "整数的字体大小。"
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr "要对用户界面进行缩放，推荐使用全局屏幕缩放功能。"
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "调整所有字体(&A)…"
 
-#: package/contents/ui/main.qml:117
+#: ui/main.qml:117
 #, kde-format
 msgid "General:"
 msgstr "常规："
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Select general font"
 msgstr "选择常规字体"
 
-#: package/contents/ui/main.qml:129
+#: ui/main.qml:129
 #, kde-format
 msgid "Fixed width:"
 msgstr "等宽："
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "Select fixed width font"
 msgstr "选择等宽字体"
 
-#: package/contents/ui/main.qml:141
+#: ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr "小号字："
 
-#: package/contents/ui/main.qml:142
+#: ui/main.qml:142
 #, kde-format
 msgid "Select small font"
 msgstr "选择小号字字体"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Toolbar:"
 msgstr "工具栏："
 
-#: package/contents/ui/main.qml:154
+#: ui/main.qml:154
 #, kde-format
 msgid "Select toolbar font"
 msgstr "选择工具栏字体"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Menu:"
 msgstr "菜单："
 
-#: package/contents/ui/main.qml:166
+#: ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr "选择菜单字体"
 
-#: package/contents/ui/main.qml:176
+#: ui/main.qml:176
 #, kde-format
 msgid "Window title:"
 msgstr "窗口标题："
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Select window title font"
 msgstr "选择窗口标题字体"
 
-#: package/contents/ui/main.qml:192
+#: ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "抗锯齿处理："
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Enable"
 msgstr "启用"
 
-#: package/contents/ui/main.qml:201
+#: ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -261,28 +261,28 @@ msgstr ""
 "抗锯齿处理可以减轻这种现象。除非该选项引起了问题，否则在一般情况下应该保持启"
 "用状态。"
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "不进行抗锯齿的大小范围"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
+#: ui/main.qml:234 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "to"
 msgstr "至"
 
-#: package/contents/ui/main.qml:280
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "次像素渲染方式："
 
-#: package/contents/ui/main.qml:322
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -301,13 +301,13 @@ msgstr ""
 "少数是按 BGR 顺序排列。此功能不支持一些非主流的排列顺序。</para>此功能对 CRT "
 "显示器无效。"
 
-#: package/contents/ui/main.qml:327
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "字体微调方式："
 
-#: package/contents/ui/main.qml:368
+#: ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -320,12 +320,12 @@ msgstr ""
 "字体的轮廓就越清晰，但形状的准确性也会变差，导致小字体和大字体的视觉效果存在"
 "差异。"
 
-#: package/contents/ui/main.qml:378
+#: ui/main.qml:378
 #, kde-format
 msgid "Force font DPI:"
 msgstr "强制字体 DPI："
 
-#: package/contents/ui/main.qml:420
+#: ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -342,7 +342,7 @@ msgstr ""
 "小。如果需要缩放所有内容，请使用<interface>显卡与显示器</interface>页面的缩放"
 "滑动条。</para>"
 
-#: package/contents/ui/main.qml:426
+#: ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"

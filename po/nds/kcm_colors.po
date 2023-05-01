@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2014-02-16 23:02+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1160,151 +1160,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "Fokus"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "Klöörschema importeren"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Klöör för nich aktiev Elementen"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
-msgid "All Schemes"
-msgstr "Schema &hoochladen..."
-
-#: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "&Scheme"
-msgid "Light Schemes"
-msgstr "&Schema"
-
-#: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
-msgid "Dark Schemes"
-msgstr "Schema sekern..."
-
-#: package/contents/ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Window Text"
-msgid "Window Title"
-msgstr "Finstertext"
-
-#: package/contents/ui/main.qml:197
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
-msgid "Window text"
-msgstr "Finstertext"
-
-#: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
-msgid "Button"
-msgstr "Knoop"
-
-#: package/contents/ui/main.qml:242
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "Link"
-
-#: package/contents/ui/main.qml:244
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "opropen"
-
-#: package/contents/ui/main.qml:251
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
-msgid "Normal text"
-msgstr "Normaal Text"
-
-#: package/contents/ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Visited Text"
-msgid "Highlighted text"
-msgstr "Opropen Link"
-
-#: package/contents/ui/main.qml:266
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
-msgid "Disabled text"
-msgstr "Utmaakt"
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
-msgid "Edit Color Scheme…"
-msgstr "Schema &hoochladen..."
-
-#: package/contents/ui/main.qml:290
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
-msgstr "Klöörschema sekern"
-
-#: package/contents/ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "Klöörschema importeren"
-
-#: package/contents/ui/main.qml:341
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get &New Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "&Nieg Schemas halen..."
-
-#: package/contents/ui/main.qml:364
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Open Color Scheme"
-msgstr "Klöörschema sekern"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1389,6 +1244,151 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Dat aktuelle Klöörschema sekern"
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Klöörschema importeren"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Klöör för nich aktiev Elementen"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "&Upload Scheme..."
+msgid "All Schemes"
+msgstr "Schema &hoochladen..."
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "&Scheme"
+msgid "Light Schemes"
+msgstr "&Schema"
+
+#: ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Save Scheme..."
+msgid "Dark Schemes"
+msgstr "Schema sekern..."
+
+#: ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Window Text"
+msgid "Window Title"
+msgstr "Finstertext"
+
+#: ui/main.qml:197
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Window text"
+msgid "Window text"
+msgstr "Finstertext"
+
+#: ui/main.qml:204
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Button"
+msgid "Button"
+msgstr "Knoop"
+
+#: ui/main.qml:242
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "link"
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "Link"
+
+#: ui/main.qml:244
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "visited"
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "opropen"
+
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Normal text"
+msgid "Normal text"
+msgstr "Normaal Text"
+
+#: ui/main.qml:259
+#, fuzzy, kde-format
+#| msgid "Visited Text"
+msgid "Highlighted text"
+msgstr "Opropen Link"
+
+#: ui/main.qml:266
+#, fuzzy, kde-format
+#| msgctxt "@title:tab color transformations on disabled elements"
+#| msgid "Disabled"
+msgid "Disabled text"
+msgstr "Utmaakt"
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "&Upload Scheme..."
+msgid "Edit Color Scheme…"
+msgstr "Schema &hoochladen..."
+
+#: ui/main.qml:290
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Remove Color Scheme"
+msgstr "Klöörschema sekern"
+
+#: ui/main.qml:297
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
+msgid "Restore Color Scheme"
+msgstr "Klöörschema importeren"
+
+#: ui/main.qml:341
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Get &New Schemes..."
+msgid "Get New Color Schemes…"
+msgstr "&Nieg Schemas halen..."
+
+#: ui/main.qml:364
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Open Color Scheme"
+msgstr "Klöörschema sekern"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

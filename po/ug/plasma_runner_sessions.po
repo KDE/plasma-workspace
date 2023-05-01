@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 11:11+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -31,7 +31,7 @@ msgstr "تىزىمدىن چىق"
 msgid "Logs out, exiting the current desktop session"
 msgstr "چىقىپ كېتىدۇ، ھازىرقى ئۈستەلئۈستى ئەڭگىمەسىنى ئاخىرلاشتۇرىدۇ"
 
-#: sessionrunner.cpp:33
+#: sessionrunner.cpp:29
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -41,12 +41,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "تاقا"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:32
 #, kde-format
 msgid "Turns off the computer"
 msgstr "كومپيۇتېرنىڭ توكىنى ئۈزىدۇ"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:35
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -56,12 +56,12 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "قايتا باشلا"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:38
 #, kde-format
 msgid "Reboots the computer"
 msgstr "كومپيۇتېرنى قايتا قوزغىتىدۇ"
 
-#: sessionrunner.cpp:54
+#: sessionrunner.cpp:42
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt ""
@@ -69,12 +69,12 @@ msgctxt ""
 msgid "lock;lock screen"
 msgstr "ئېكراننى قۇلۇپلايدۇ"
 
-#: sessionrunner.cpp:56
+#: sessionrunner.cpp:44
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "ھازىرقى ئەڭگىمەنى قۇلۇپلاپ، ئېكران قوغدىغۇچنى باشلايدۇ"
 
-#: sessionrunner.cpp:63
+#: sessionrunner.cpp:47
 #, fuzzy, kde-format
 #| msgid "new session"
 msgctxt ""
@@ -83,12 +83,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "يېڭى ئەڭگىمە"
 
-#: sessionrunner.cpp:66
+#: sessionrunner.cpp:50
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:73
+#: sessionrunner.cpp:53
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgctxt ""
@@ -97,12 +97,12 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "ئىشلەتكۈچى ئالماشتۇر"
 
-#: sessionrunner.cpp:76
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "باشقا بىر ئىشلەتكۈچى سۈپىتىدە يېڭىدىن ئەڭگىمە باشلايدۇ"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:59
 #, fuzzy, kde-format
 #| msgctxt "User sessions"
 #| msgid "sessions"
@@ -110,12 +110,12 @@ msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "ئەڭگىمەلەر"
 
-#: sessionrunner.cpp:84
+#: sessionrunner.cpp:60
 #, kde-format
 msgid "Lists all sessions"
 msgstr "بارلىق ئەڭگىمەلەرنى تىزىپ كۆرسىتىدۇ"
 
-#: sessionrunner.cpp:87
+#: sessionrunner.cpp:63
 #, fuzzy, kde-format
 #| msgctxt "switch user command"
 #| msgid "switch"
@@ -123,7 +123,7 @@ msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "ئالماشتۇر"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:65
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -132,13 +132,13 @@ msgstr ""
 "ئىشلەتكۈچى :q: ئۈچۈن ئاكتىپ ئەڭگىمەگە ئالمىشىدۇ ياكى :q: تەمىنلەنمىگەن بولسا "
 "ھەممە ئاكتىپ ئەڭگىمە تىزىمىنى كۆرسىتىدۇ"
 
-#: sessionrunner.cpp:111
+#: sessionrunner.cpp:86
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:121
+#: sessionrunner.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -146,7 +146,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "تاقا"
 
-#: sessionrunner.cpp:131
+#: sessionrunner.cpp:106
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -154,25 +154,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "قايتا باشلا"
 
-#: sessionrunner.cpp:141
+#: sessionrunner.cpp:116
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:151
+#: sessionrunner.cpp:126
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "يېڭى ئەڭگىمە"
 
-#: sessionrunner.cpp:194
+#: sessionrunner.cpp:169
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "ئىشلەتكۈچى ئالماشتۇر"
 
-#: sessionrunner.cpp:278
+#: sessionrunner.cpp:253
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -182,7 +182,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:287
+#: sessionrunner.cpp:262
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:20+0000\n"
-"PO-Revision-Date: 2021-08-13 19:50+0530\n"
+"PO-Revision-Date: 2023-04-30 21:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: calculatorrunner.cpp:33
 #, kde-format
@@ -29,7 +29,7 @@ msgstr ""
 #: calculatorrunner.cpp:38
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "வழக்கமான கணித சார்பை உள்ளிடு"
 
 #: calculatorrunner.cpp:40
 #, kde-format

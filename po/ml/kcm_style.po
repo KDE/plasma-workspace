@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -33,101 +33,6 @@ msgstr "ഈ രീതിയ്ക്കുള്ള ക്രമീകരണ ഡ
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "തിരഞ്ഞെടുത്ത രൂപഭംഗി '%1' പ്രയോഗിക്കുന്നതിൽ പരാജയപ്പെട്ടു."
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr "ചിഹ്നങ്ങൾ കാണിക്കുക:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr "ബട്ടണുകളിൽ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr "മെനുകളിൽ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr "പ്രധാന ഉപകരണപ്പട്ട ലേബൽ:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr "ഒന്നുമില്ല"
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr "വാചകം മാത്രം"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr "ചിഹ്നങ്ങൾക്ക് സമീപം"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr "ചിഹ്നങ്ങൾക്ക് താഴെ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr "GTK പ്രമേയം:"
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, kde-format
-msgid "Preview…"
-msgstr "കണ്ടുനോക്കുക…"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "പുതിയ ഗ്നോം/GTK അപ്ലിക്കേഷൻ രൂപഭംഗികൾ നേടുക…"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr "GTK പ്രമേയ ശേഖരം തിരഞ്ഞെടുക്കുക"
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK പ്രമേയ ശേഖരം (*.tar.xz *.tar.gz *.tar.bz2)"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "രൂപഭംഗി ക്രമീകരിക്കുക…"
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr "ചിഹ്നങ്ങളും ഉപകരണപ്പട്ടകളും ക്രമീകരിക്കുക"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി ക്രമീകരിക്കുക…"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -206,6 +111,101 @@ msgstr "പ്രധാന ഉപകരണപ്പട്ട ലേബൽ"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ"
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "ചിഹ്നങ്ങൾ കാണിക്കുക:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "ബട്ടണുകളിൽ"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "മെനുകളിൽ"
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "പ്രധാന ഉപകരണപ്പട്ട ലേബൽ:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "ഒന്നുമില്ല"
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "വാചകം മാത്രം"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "ചിഹ്നങ്ങൾക്ക് സമീപം"
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "ചിഹ്നങ്ങൾക്ക് താഴെ"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ:"
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK പ്രമേയം:"
+
+#: ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "കണ്ടുനോക്കുക…"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
+
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "പുതിയ ഗ്നോം/GTK അപ്ലിക്കേഷൻ രൂപഭംഗികൾ നേടുക…"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK പ്രമേയ ശേഖരം തിരഞ്ഞെടുക്കുക"
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK പ്രമേയ ശേഖരം (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Configure Style…"
+msgstr "രൂപഭംഗി ക്രമീകരിക്കുക…"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "ചിഹ്നങ്ങളും ഉപകരണപ്പട്ടകളും ക്രമീകരിക്കുക"
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി ക്രമീകരിക്കുക…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

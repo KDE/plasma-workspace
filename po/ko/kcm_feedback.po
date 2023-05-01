@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 02:19+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-02-20 22:24+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr "중앙에서 사용자 피드백을 비활성화했습니다. 배포판에 문의하십시오."
 
-#: package/contents/ui/main.qml:45 package/contents/ui/main.qml:78
+#: ui/main.qml:45 ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: package/contents/ui/main.qml:52
+#: ui/main.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,17 +46,17 @@ msgstr ""
 "><link url='https://kde.org/privacypolicy-apps.php'>여기에서 개인 정보 취급 "
 "방침</link>을 확인할 수 있습니다."
 
-#: package/contents/ui/main.qml:113
+#: ui/main.qml:113
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: package/contents/ui/main.qml:134
+#: ui/main.qml:134
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "다음 정보를 보냅니다:"
 
-#: package/contents/ui/main.qml:179
+#: ui/main.qml:179
 #, kde-format
 msgid "View sent data:"
 msgstr "전송된 데이터 표시:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-05-04 18:53+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -127,7 +127,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "Fullständig"
 
-#: package/contents/ui/FontWidget.qml:33
+#: ui/FontWidget.qml:33
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
@@ -135,13 +135,13 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
+#: ui/main.qml:24
 #, fuzzy, kde-format
 #| msgid "&Adjust All Fonts…"
 msgid "Adjust Global Scale…"
 msgstr "Justera &alla teckensnitt…"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -150,7 +150,7 @@ msgstr ""
 "Vissa ändringar såsom kantutjämning eller punkter/tum kommer endast att "
 "påverka nystartade program."
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid ""
 #| "Very large fonts may produce odd-looking results. Consider adjusting the "
@@ -163,7 +163,7 @@ msgstr ""
 "den globala skärmskalan istället för att använda mycket stora "
 "teckenstorlekar."
 
-#: package/contents/ui/main.qml:70
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -172,7 +172,7 @@ msgstr ""
 "Decimala teckenstorlekar kan orsaka layoutproblem för text i vissa program. "
 "Överväg att bara använda teckenstorlekar med heltal."
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -181,82 +181,82 @@ msgstr ""
 "Det rekommenderade sättet att skala användargränssnittet är att använda den "
 "globala skärmskalningsfunktionen."
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "Justera &alla teckensnitt…"
 
-#: package/contents/ui/main.qml:117
+#: ui/main.qml:117
 #, kde-format
 msgid "General:"
 msgstr "Allmänt:"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Select general font"
 msgstr "Välj allmänt teckensnitt"
 
-#: package/contents/ui/main.qml:129
+#: ui/main.qml:129
 #, kde-format
 msgid "Fixed width:"
 msgstr "Med fast breddsteg:"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Välj teckensnitt med fast breddsteg"
 
-#: package/contents/ui/main.qml:141
+#: ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr "Liten:"
 
-#: package/contents/ui/main.qml:142
+#: ui/main.qml:142
 #, kde-format
 msgid "Select small font"
 msgstr "Välj litet teckensnitt"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Toolbar:"
 msgstr "Verktygsrad:"
 
-#: package/contents/ui/main.qml:154
+#: ui/main.qml:154
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Välj teckensnitt för verktygsrad"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Menu:"
 msgstr "Meny:"
 
-#: package/contents/ui/main.qml:166
+#: ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr "Välj teckensnitt för meny"
 
-#: package/contents/ui/main.qml:176
+#: ui/main.qml:176
 #, kde-format
 msgid "Window title:"
 msgstr "Fönsterrubrik:"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Select window title font"
 msgstr "Välj teckensnitt för fönsterrubrik"
 
-#: package/contents/ui/main.qml:192
+#: ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Kantutjämning:"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Enable"
 msgstr "Aktivera"
 
-#: package/contents/ui/main.qml:201
+#: ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -272,28 +272,28 @@ msgstr ""
 "effekten. I allmänhet bör alternativet vara aktiverat om det inte orsakar "
 "problem."
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Undanta intervall från kantutjämning"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
+#: ui/main.qml:234 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 punkter"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "to"
 msgstr "till"
 
-#: package/contents/ui/main.qml:280
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Delbildpunktsåtergivning:"
 
-#: package/contents/ui/main.qml:322
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "emphasis> och andra exotiska ordningar som inte stöds av den här funktionen."
 "</para>Det fungerar inte på katodstråleskärmar."
 
-#: package/contents/ui/main.qml:327
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Antydan:"
 
-#: package/contents/ui/main.qml:368
+#: ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -336,12 +336,12 @@ msgstr ""
 "antydningar leder i allmänhet till skarpare kanter, men de små bokstäverna "
 "liknar mindre sina former vid stora storlekar."
 
-#: package/contents/ui/main.qml:378
+#: ui/main.qml:378
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Tvinga teckensnittens punkter per tum:"
 
-#: package/contents/ui/main.qml:420
+#: ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -359,7 +359,7 @@ msgstr ""
 "storlek på teckensnitten ovan. För att skala allting, använd skjutreglaget "
 "på sidan <interface>Bildskärm</interface>.</para>"
 
-#: package/contents/ui/main.qml:426
+#: ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr "Välj teckensnitt"

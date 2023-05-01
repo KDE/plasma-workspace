@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-10-31 12:00+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -129,7 +129,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "Đầy đủ"
 
-#: package/contents/ui/FontWidget.qml:33
+#: ui/FontWidget.qml:33
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
@@ -137,12 +137,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: package/contents/ui/main.qml:24
+#: ui/main.qml:24
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Chỉnh tỉ lệ toàn cục…"
 
-#: package/contents/ui/main.qml:35
+#: ui/main.qml:35
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -151,7 +151,7 @@ msgstr ""
 "Một số thay đổi như khử răng cưa hay DPI chỉ có hiệu lực ở các ứng dụng mới "
 "chạy."
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:49
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -160,7 +160,7 @@ msgstr ""
 "Các phông chữ rất lớn có thể tạo ra những kết quả trông kì cục. Hãy cân nhắc "
 "điều chỉnh tỉ lệ màn hình toàn cục thay vì dùng một cỡ phông chữ rất lớn."
 
-#: package/contents/ui/main.qml:70
+#: ui/main.qml:70
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -169,7 +169,7 @@ msgstr ""
 "Cỡ phông chữ số thập phân có thể gây ra các vấn đề về bố cục văn bản trong "
 "một số ứng dụng. Hãy cân nhắc sử dụng số nguyên."
 
-#: package/contents/ui/main.qml:92
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -178,82 +178,82 @@ msgstr ""
 "Cách nên làm để đổi cỡ giao diện người dùng là sử dụng tính năng đổi tỉ lệ "
 "màn hình toàn cục."
 
-#: package/contents/ui/main.qml:104
+#: ui/main.qml:104
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Chỉnh tất cả phông chữ…"
 
-#: package/contents/ui/main.qml:117
+#: ui/main.qml:117
 #, kde-format
 msgid "General:"
 msgstr "Chung:"
 
-#: package/contents/ui/main.qml:118
+#: ui/main.qml:118
 #, kde-format
 msgid "Select general font"
 msgstr "Chọn phông chữ chung"
 
-#: package/contents/ui/main.qml:129
+#: ui/main.qml:129
 #, kde-format
 msgid "Fixed width:"
 msgstr "Độ rộng cố định:"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:130
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Chọn phông chữ độ rộng cố định"
 
-#: package/contents/ui/main.qml:141
+#: ui/main.qml:141
 #, kde-format
 msgid "Small:"
 msgstr "Nhỏ:"
 
-#: package/contents/ui/main.qml:142
+#: ui/main.qml:142
 #, kde-format
 msgid "Select small font"
 msgstr "Chọn phông chữ nhỏ"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Toolbar:"
 msgstr "Thanh công cụ:"
 
-#: package/contents/ui/main.qml:154
+#: ui/main.qml:154
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Chọn phông chữ thanh công cụ"
 
-#: package/contents/ui/main.qml:165
+#: ui/main.qml:165
 #, kde-format
 msgid "Menu:"
 msgstr "Trình đơn:"
 
-#: package/contents/ui/main.qml:166
+#: ui/main.qml:166
 #, kde-format
 msgid "Select menu font"
 msgstr "Chọn phông chữ trình đơn"
 
-#: package/contents/ui/main.qml:176
+#: ui/main.qml:176
 #, kde-format
 msgid "Window title:"
 msgstr "Tiêu đề cửa sổ:"
 
-#: package/contents/ui/main.qml:177
+#: ui/main.qml:177
 #, kde-format
 msgid "Select window title font"
 msgstr "Chọn phông chữ tiêu đề cửa sổ"
 
-#: package/contents/ui/main.qml:192
+#: ui/main.qml:192
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Khử răng cưa:"
 
-#: package/contents/ui/main.qml:197
+#: ui/main.qml:197
 #, kde-format
 msgid "Enable"
 msgstr "Bật"
 
-#: package/contents/ui/main.qml:201
+#: ui/main.qml:201
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -269,28 +269,28 @@ msgstr ""
 "sử dụng để làm giảm hiệu ứng này. Nói chung bạn nên giữ lựa chọn này được "
 "bật, trừ khi nó gây vấn đề."
 
-#: package/contents/ui/main.qml:215
+#: ui/main.qml:215
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Loại trừ khoảng khỏi khử răng cưa"
 
-#: package/contents/ui/main.qml:234 package/contents/ui/main.qml:257
+#: ui/main.qml:234 ui/main.qml:257
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, kde-format
 msgid "to"
 msgstr "đến"
 
-#: package/contents/ui/main.qml:280
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Kết xuất hạ điểm ảnh:"
 
-#: package/contents/ui/main.qml:322
+#: ui/main.qml:322
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -313,13 +313,13 @@ msgstr ""
 "<emphasis>BGR</emphasis> và một vài thứ tự khác lạ thì không được tính năng "
 "này hỗ trợ.</para>Tính năng này không hoạt động với các màn hình CRT."
 
-#: package/contents/ui/main.qml:327
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Dẫn phông:"
 
-#: package/contents/ui/main.qml:368
+#: ui/main.qml:368
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -333,12 +333,12 @@ msgstr ""
 "phông càng nhiều thì càng tạo ra đường nét sắc sảo, nhưng các chữ cái nhỏ sẽ "
 "càng ít giữ được hình dạng như khi chúng ở kích thước lớn."
 
-#: package/contents/ui/main.qml:378
+#: ui/main.qml:378
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Ép DPI của phông chữ thành:"
 
-#: package/contents/ui/main.qml:420
+#: ui/main.qml:420
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 "phông chữ ở phía trên. Để đổi cỡ tất cả mọi thứ, hãy dùng thanh trượt đổi cỡ "
 "ở trang <interface>Hiển thị và màn hình</interface>.</para>"
 
-#: package/contents/ui/main.qml:426
+#: ui/main.qml:426
 #, kde-format
 msgid "Select Font"
 msgstr "Chọn phông chữ"

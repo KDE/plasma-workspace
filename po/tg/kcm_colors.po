@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2019-10-09 17:40+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -1118,132 +1118,6 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "марказонидан"
 
-#: package/contents/ui/AccentColorUI.qml:38
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
-msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
-msgstr "Барқарор кардани нақшаи ранг"
-
-#: package/contents/ui/AccentColorUI.qml:39
-#, kde-format
-msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
-
-#: package/contents/ui/AccentColorUI.qml:40
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
-msgstr "Цвет неактивных окон"
-
-#: package/contents/ui/AccentColorUI.qml:165
-#, kde-format
-msgid "Choose custom accent color"
-msgstr ""
-
-#: package/contents/ui/main.qml:89
-#, kde-format
-msgid ""
-"The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
-
-#: package/contents/ui/main.qml:114
-#, kde-format
-msgid "All Schemes"
-msgstr "Ҳамаи нақшаҳо"
-
-#: package/contents/ui/main.qml:115
-#, kde-format
-msgid "Light Schemes"
-msgstr ""
-
-#: package/contents/ui/main.qml:116
-#, kde-format
-msgid "Dark Schemes"
-msgstr ""
-
-#: package/contents/ui/main.qml:175
-#, kde-format
-msgid "Window Title"
-msgstr "Сарлавҳаи равзана"
-
-#: package/contents/ui/main.qml:197
-#, kde-format
-msgid "Window text"
-msgstr "Матни равзана"
-
-#: package/contents/ui/main.qml:204
-#, kde-format
-msgid "Button"
-msgstr "Тугма"
-
-#: package/contents/ui/main.qml:242
-#, kde-format
-msgctxt "Hyperlink"
-msgid "link"
-msgstr "пайванд"
-
-#: package/contents/ui/main.qml:244
-#, kde-format
-msgctxt "Visited hyperlink"
-msgid "visited"
-msgstr "кушода"
-
-#: package/contents/ui/main.qml:251
-#, kde-format
-msgid "Normal text"
-msgstr "Матни муқаррар"
-
-#: package/contents/ui/main.qml:259
-#, kde-format
-msgid "Highlighted text"
-msgstr ""
-
-#: package/contents/ui/main.qml:266
-#, kde-format
-msgid "Disabled text"
-msgstr ""
-
-#: package/contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "Open Color Scheme"
-msgid "Edit Color Scheme…"
-msgstr "Кушодани нақшаи ранг"
-
-#: package/contents/ui/main.qml:290
-#, kde-format
-msgid "Remove Color Scheme"
-msgstr "Тоза кардани нақшаи ранг"
-
-#: package/contents/ui/main.qml:297
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Барқарор кардани нақшаи ранг"
-
-#: package/contents/ui/main.qml:341
-#, fuzzy, kde-format
-#| msgid "Install from File..."
-msgid "Install from File…"
-msgstr "Аз файл насб кардан..."
-
-#: package/contents/ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Get New Color Schemes..."
-msgid "Get New Color Schemes…"
-msgstr "Гирифтани нақшаҳои нави рангҳо..."
-
-#: package/contents/ui/main.qml:364
-#, kde-format
-msgid "Open Color Scheme"
-msgstr "Кушодани нақшаи ранг"
-
-#: package/contents/ui/main.qml:366
-#, kde-format
-msgid "Color Scheme Files (*.colors)"
-msgstr ""
-
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
 msgid ""
@@ -1328,6 +1202,132 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Сохранить цветовую схему"
+
+#: ui/AccentColorUI.qml:38
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
+msgctxt "@item:inlistbox Accent color from color scheme"
+msgid "Accent Color From Color Scheme"
+msgstr "Барқарор кардани нақшаи ранг"
+
+#: ui/AccentColorUI.qml:39
+#, kde-format
+msgctxt "@item:inlistbox Accent color from wallpaper"
+msgid "Accent Color From Wallpaper"
+msgstr ""
+
+#: ui/AccentColorUI.qml:40
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgctxt "@item:inlistbox User-chosen custom accent color"
+msgid "Custom Accent Color"
+msgstr "Цвет неактивных окон"
+
+#: ui/AccentColorUI.qml:165
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: ui/main.qml:89
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: ui/main.qml:114
+#, kde-format
+msgid "All Schemes"
+msgstr "Ҳамаи нақшаҳо"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Light Schemes"
+msgstr ""
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Dark Schemes"
+msgstr ""
+
+#: ui/main.qml:175
+#, kde-format
+msgid "Window Title"
+msgstr "Сарлавҳаи равзана"
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Window text"
+msgstr "Матни равзана"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Button"
+msgstr "Тугма"
+
+#: ui/main.qml:242
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "пайванд"
+
+#: ui/main.qml:244
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "кушода"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Normal text"
+msgstr "Матни муқаррар"
+
+#: ui/main.qml:259
+#, kde-format
+msgid "Highlighted text"
+msgstr ""
+
+#: ui/main.qml:266
+#, kde-format
+msgid "Disabled text"
+msgstr ""
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "Open Color Scheme"
+msgid "Edit Color Scheme…"
+msgstr "Кушодани нақшаи ранг"
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "Тоза кардани нақшаи ранг"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "Барқарор кардани нақшаи ранг"
+
+#: ui/main.qml:341
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Аз файл насб кардан..."
+
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Get New Color Schemes..."
+msgid "Get New Color Schemes…"
+msgstr "Гирифтани нақшаҳои нави рангҳо..."
+
+#: ui/main.qml:364
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "Кушодани нақшаи ранг"
+
+#: ui/main.qml:366
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Save the current color scheme"

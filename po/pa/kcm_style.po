@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 03:28+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2021-06-08 22:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -31,101 +31,6 @@ msgstr "ਇਸ ਸਟਾਇਲ ਲਈ ਸੰਰਚਨਾ ਡਾਈਲਾਗ ਲ�
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr ""
-
-#: package/contents/ui/EffectSettingsPopup.qml:32
-#, kde-format
-msgid "Show icons:"
-msgstr "ਆਈਕਾਨ ਵੇਖਾਓ:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:33
-#, kde-format
-msgid "On buttons"
-msgstr "ਬਟਨਾਂ ਉੱਤੇ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:44
-#, kde-format
-msgid "In menus"
-msgstr "ਮੇਨੂ ਵਿੱਚ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:56
-#, kde-format
-msgid "Main toolbar label:"
-msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ:"
-
-#: package/contents/ui/EffectSettingsPopup.qml:58
-#, kde-format
-msgid "None"
-msgstr "ਕੋਈ ਨਹੀਂ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:59
-#, kde-format
-msgid "Text only"
-msgstr "ਸਿਰਫ਼ ਲਿਖਤ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:60
-#, kde-format
-msgid "Beside icons"
-msgstr "ਆਈਕਾਨਾਂ ਨਾਲ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:61
-#, kde-format
-msgid "Below icon"
-msgstr "ਆਈਕਾਨ ਹੇਠਾਂ"
-
-#: package/contents/ui/EffectSettingsPopup.qml:76
-#, kde-format
-msgid "Secondary toolbar label:"
-msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ:"
-
-#: package/contents/ui/GtkStylePage.qml:18
-#, kde-format
-msgid "GNOME/GTK Application Style"
-msgstr "GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
-
-#: package/contents/ui/GtkStylePage.qml:44
-#, kde-format
-msgid "GTK theme:"
-msgstr "GTK ਥੀਮ:"
-
-#: package/contents/ui/GtkStylePage.qml:69
-#, kde-format
-msgid "Preview…"
-msgstr "…ਝਲਕ"
-
-#: package/contents/ui/GtkStylePage.qml:88
-#, kde-format
-msgid "Install from File…"
-msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
-
-#: package/contents/ui/GtkStylePage.qml:93
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "…ਨਵੇਂ GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਲਵੋ"
-
-#: package/contents/ui/GtkStylePage.qml:109
-#, kde-format
-msgid "Select GTK Theme Archive"
-msgstr ""
-
-#: package/contents/ui/GtkStylePage.qml:111
-#, kde-format
-msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK ਥੀਮ ਅਕਾਇਵ (*.tar.xz *.tar.gz *.tar.bz2)"
-
-#: package/contents/ui/main.qml:82
-#, kde-format
-msgid "Configure Style…"
-msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
-
-#: package/contents/ui/main.qml:102
-#, kde-format
-msgid "Configure Icons and Toolbars"
-msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
-
-#: package/contents/ui/main.qml:118
-#, kde-format
-msgid "Configure GNOME/GTK Application Style…"
-msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -204,6 +109,101 @@ msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
+
+#: ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "ਆਈਕਾਨ ਵੇਖਾਓ:"
+
+#: ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "ਬਟਨਾਂ ਉੱਤੇ"
+
+#: ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "ਮੇਨੂ ਵਿੱਚ"
+
+#: ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ:"
+
+#: ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "ਕੋਈ ਨਹੀਂ"
+
+#: ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "ਸਿਰਫ਼ ਲਿਖਤ"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "ਆਈਕਾਨਾਂ ਨਾਲ"
+
+#: ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "ਆਈਕਾਨ ਹੇਠਾਂ"
+
+#: ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ:"
+
+#: ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
+
+#: ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK ਥੀਮ:"
+
+#: ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "…ਝਲਕ"
+
+#: ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "…ਨਵੇਂ GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਲਵੋ"
+
+#: ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK ਥੀਮ ਅਕਾਇਵ (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Configure Style…"
+msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "ਆਈਕਾਨ ਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
 #, fuzzy
 #~| msgid ""

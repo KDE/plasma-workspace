@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2023-03-27 18:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -102,47 +102,47 @@ msgstr "Plasma Masaüstü yerleşimini sıfırla"
 msgid "Global look and feel"
 msgstr "Genel görünüm ve his"
 
-#: package/contents/ui/main.qml:62
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr "Kalıcı Olarak Sil"
 
-#: package/contents/ui/main.qml:63
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr "Bu temayı kalıcı olarak silmek istediğinizden emin misiniz?"
 
-#: package/contents/ui/main.qml:67
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr "Kalıcı Olarak Sil"
 
-#: package/contents/ui/main.qml:72
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
-#: package/contents/ui/main.qml:89
+#: ui/main.qml:89
 #, kde-format
 msgid "Contains Desktop layout"
 msgstr "Masaüstü yerleşimi içerir"
 
-#: package/contents/ui/main.qml:103
+#: ui/main.qml:103
 #, kde-format
 msgid "Preview Theme"
 msgstr "Temayı Önizle"
 
-#: package/contents/ui/main.qml:111
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
 msgstr "Temayı Kaldır"
 
-#: package/contents/ui/main.qml:127
+#: ui/main.qml:127
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -150,48 +150,47 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 uygulansın mı?"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Neyin uygulanacağını seçin…"
 
-#: package/contents/ui/main.qml:145
+#: ui/main.qml:145
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Daha az seçenek göster…"
 
-#: package/contents/ui/main.qml:162
+#: ui/main.qml:162
 #, kde-format
 msgid "Apply"
 msgstr "Uygula"
 
-#: package/contents/ui/main.qml:174
+#: ui/main.qml:174
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
 
-#: package/contents/ui/main.qml:191
+#: ui/main.qml:191
 #, kde-format
 msgid "Get New Global Themes…"
 msgstr "Yeni Global Temalar Al…"
 
-#: package/contents/ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
 msgstr "Yerleşim ayarları:"
 
-#: package/contents/ui/MoreOptions.qml:27
+#: ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
 msgstr "Masaüstü yerleşimi"
 
-#: package/contents/ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Başlık Çubuğu Düğmeleri yerleşimi"
 
-#: package/contents/ui/MoreOptions.qml:46
-#: package/contents/ui/SimpleOptions.qml:59
+#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:59
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
@@ -200,89 +199,89 @@ msgstr ""
 "Bir masaüstü yerleşimi uygulamak; geçerli masaüstü, panel, rıhtım ve araç "
 "takımı yapılandırmanızı değiştirir"
 
-#: package/contents/ui/MoreOptions.qml:54
+#: ui/MoreOptions.qml:54
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Görünüş ayarları:"
 
-#: package/contents/ui/MoreOptions.qml:58
+#: ui/MoreOptions.qml:58
 #, kde-format
 msgid "Colors"
 msgstr "Renkler"
 
-#: package/contents/ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:59
 #, kde-format
 msgid "Application Style"
 msgstr "Uygulama Biçemi"
 
-#: package/contents/ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:60
 #, kde-format
 msgid "Window Decorations"
 msgstr "Pencere Dekorasyonları"
 
-#: package/contents/ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:61
 #, kde-format
 msgid "Icons"
 msgstr "Simgeler"
 
-#: package/contents/ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma Biçemi"
 
-#: package/contents/ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Cursors"
 msgstr "İmleçler"
 
-#: package/contents/ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Fonts"
 msgstr "Yazıtipleri"
 
-#: package/contents/ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Task Switcher"
 msgstr "Görev Değiştirici"
 
-#: package/contents/ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Splash Screen"
 msgstr "Açılış Ekranı"
 
-#: package/contents/ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Lock Screen"
 msgstr "Kilit Ekranı"
 
-#: package/contents/ui/SimpleOptions.qml:19
+#: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
 msgstr "Bu Global Tema ile aşağıdakiler uygulanacaktır:"
 
-#: package/contents/ui/SimpleOptions.qml:32
+#: ui/SimpleOptions.qml:32
 #, kde-format
 msgid "Appearance settings"
 msgstr "Görünüş ayarları"
 
-#: package/contents/ui/SimpleOptions.qml:39
+#: ui/SimpleOptions.qml:39
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Görünüş ayarları"
 
-#: package/contents/ui/SimpleOptions.qml:45
+#: ui/SimpleOptions.qml:45
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Masaüstü ve pencere yerleşimi"
 
-#: package/contents/ui/SimpleOptions.qml:52
+#: ui/SimpleOptions.qml:52
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Masaüstü ve pencere yerleşimi"
 
-#: package/contents/ui/SimpleOptions.qml:70
+#: ui/SimpleOptions.qml:70
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

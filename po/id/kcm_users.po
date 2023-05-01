@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -17,555 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "Ubah Sandi"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "Atur Sandi"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "Sandi"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "Komfirmasi sandi"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "Sandi harus cocok"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "Ubah Sandi Wallet?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"Sekarang kamu mengubah sandi login-mu, kamu mungkin juga ingin mengubah "
-"sandi pada KWallet default-mu untuk mencocokkannya."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "Apa sih KWallet?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"KWallet adalah pengelola sandi yang menyimpan sandimu untuk jaringan "
-"nirkabel dan sumber-daya terenkripsi lainnya. Yang dikunci dengan sandinya "
-"sendiri yang berbeda dengan sandi login-mu. Jika kedua sandi itu cocok, itu "
-"bisa dibuka kuncinya saat login secara otomatis sehingga kamu tidak perlu "
-"memasukan sendiri sandi KWallet."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "Ubah Sandi Wallet"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "Tak Usah Diubah"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "Buat Pengguna"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "Nama:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "Nama pengguna:"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "Standar"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "Administrator"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "Tipe akun:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "Sandi:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "Konfirmasi sandi:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "Buat"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "Konfigurasikan Sidik Jari"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "Tambah"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "Batal"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "Selesai"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Mendaftarkan Sidik Jari"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Jari Didaftarkan"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Cuplik sebuah jari untuk didaftarkan"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "Daftar ulang jari"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
-msgid "Delete fingerprint"
-msgstr "Hapus Sidik Jari"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "Tidak ada sidik jari yang ditambahkan"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "Kelola Pengguna"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "Tambahkan Pengguna Baru"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "Ubah Avatar"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "Tidak Ada Apa-apa"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "Feisty Flamingo"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "Dragon's Fruit"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "Sweet Potato"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "Ambient Amber"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "Sparkle Sunbeam"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "Lemon-Lime"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "Verdant Charm"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "Mellow Meadow"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "Tepid Teal"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "Plasma Blue"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "Pon Purple"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "Bajo Purple"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "Burnt Charcoal"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "Paper Perfection"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "Cafétera Brown"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Pilih gambar"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, fuzzy, kde-format
-#| msgid "Choose File…"
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "Pilih File..."
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "Ubah avatar"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "Alamat surel:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "Hapus file"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "Jaga file-file"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "Hapus Pengguna..."
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "Konfigurasikan Autentikasi Sidik Jari..."
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"Sidik jari bisa digunakan sebagai pengganti sandi saat membuka kunci layar "
-"dan menyediakan perizinan administrator terhadap program aplikasi dan baris-"
-"perintah yang memintanya.<nl/><nl/>Log masuk ke sistem dengan sidik jari "
-"belumlah didukung."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -615,6 +66,548 @@ msgstr "Perangkat terdiskoneksi."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Sebuah galat tak diketahui telah terjadi."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Ubah Sandi"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Atur Sandi"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Sandi"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Komfirmasi sandi"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "Sandi harus cocok"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Ubah Sandi Wallet?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Sekarang kamu mengubah sandi login-mu, kamu mungkin juga ingin mengubah "
+"sandi pada KWallet default-mu untuk mencocokkannya."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Apa sih KWallet?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet adalah pengelola sandi yang menyimpan sandimu untuk jaringan "
+"nirkabel dan sumber-daya terenkripsi lainnya. Yang dikunci dengan sandinya "
+"sendiri yang berbeda dengan sandi login-mu. Jika kedua sandi itu cocok, itu "
+"bisa dibuka kuncinya saat login secara otomatis sehingga kamu tidak perlu "
+"memasukan sendiri sandi KWallet."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Ubah Sandi Wallet"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Tak Usah Diubah"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Buat Pengguna"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Nama:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Nama pengguna:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Standar"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Administrator"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Tipe akun:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Sandi:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Konfirmasi sandi:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Buat"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Konfigurasikan Sidik Jari"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Tambah"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Batal"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Selesai"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Mendaftarkan Sidik Jari"
+
+#: src/ui/FingerprintDialog.qml:124
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:126
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:128
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:130
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:134
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:136
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:138
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:140
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:142
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:146
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:148
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:150
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:152
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:154
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:156
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:158
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:160
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:162
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Harap berulang kali %1 %2 Anda pada sensor sidik jari."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Jari Didaftarkan"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Cuplik sebuah jari untuk didaftarkan"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Daftar ulang jari"
+
+#: src/ui/FingerprintDialog.qml:333
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Hapus Sidik Jari"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Tidak ada sidik jari yang ditambahkan"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Kelola Pengguna"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Tambahkan Pengguna Baru"
+
+#: src/ui/PicturesSheet.qml:18
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Ubah Avatar"
+
+#: src/ui/PicturesSheet.qml:21
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Tidak Ada Apa-apa"
+
+#: src/ui/PicturesSheet.qml:22
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: src/ui/PicturesSheet.qml:23
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Dragon's Fruit"
+
+#: src/ui/PicturesSheet.qml:24
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sweet Potato"
+
+#: src/ui/PicturesSheet.qml:25
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: src/ui/PicturesSheet.qml:26
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Sparkle Sunbeam"
+
+#: src/ui/PicturesSheet.qml:27
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lemon-Lime"
+
+#: src/ui/PicturesSheet.qml:28
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Charm"
+
+#: src/ui/PicturesSheet.qml:29
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mellow Meadow"
+
+#: src/ui/PicturesSheet.qml:30
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Tepid Teal"
+
+#: src/ui/PicturesSheet.qml:31
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Blue"
+
+#: src/ui/PicturesSheet.qml:32
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purple"
+
+#: src/ui/PicturesSheet.qml:33
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajo Purple"
+
+#: src/ui/PicturesSheet.qml:34
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Burnt Charcoal"
+
+#: src/ui/PicturesSheet.qml:35
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: src/ui/PicturesSheet.qml:36
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: src/ui/PicturesSheet.qml:37
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: src/ui/PicturesSheet.qml:73
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Pilih gambar"
+
+#: src/ui/PicturesSheet.qml:105
+#, fuzzy, kde-format
+#| msgid "Choose File…"
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Pilih File..."
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Ubah avatar"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "Alamat surel:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Hapus file"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Jaga file-file"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Hapus Pengguna..."
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Konfigurasikan Autentikasi Sidik Jari..."
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Sidik jari bisa digunakan sebagai pengganti sandi saat membuka kunci layar "
+"dan menyediakan perizinan administrator terhadap program aplikasi dan baris-"
+"perintah yang memintanya.<nl/><nl/>Log masuk ke sistem dengan sidik jari "
+"belumlah didukung."
 
 #: src/user.cpp:279
 #, kde-format

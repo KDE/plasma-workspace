@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2010-02-02 11:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -28,7 +28,7 @@ msgstr "ផ្ញើ SIGTERM"
 msgid "Send SIGKILL"
 msgstr "ផ្ញើ SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "ពិឃាត"
@@ -48,17 +48,17 @@ msgstr "បញ្ចប់ %1"
 msgid "Process ID: %1"
 msgstr ""
 
-#: killrunner_config.cpp:32
+#: killrunner_config.cpp:23
 #, kde-format
 msgid "CPU usage"
 msgstr "ការ​ប្រើប្រាស់​ស៊ីភីយូ"
 
-#: killrunner_config.cpp:33
+#: killrunner_config.cpp:24
 #, kde-format
 msgid "inverted CPU usage"
 msgstr "ការ​ប្រើប្រាស់​ស៊ីភីយូ​ដែលបាន​ដាក់បញ្ច្រាស"
 
-#: killrunner_config.cpp:34
+#: killrunner_config.cpp:25
 #, kde-format
 msgid "nothing"
 msgstr "គ្មាន​អ្វីទាំងអស់"

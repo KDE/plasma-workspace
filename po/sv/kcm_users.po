@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 02:12+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2022-04-19 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -16,555 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
-
-#: package/contents/ui/ChangePassword.qml:28
-#: package/contents/ui/UserDetailsPage.qml:155
-#, kde-format
-msgid "Change Password"
-msgstr "Ändra lösenord"
-
-#: package/contents/ui/ChangePassword.qml:33
-#, kde-format
-msgid "Set Password"
-msgstr "Ange lösenord"
-
-#: package/contents/ui/ChangePassword.qml:56
-#, kde-format
-msgid "Password"
-msgstr "Lösenord"
-
-#: package/contents/ui/ChangePassword.qml:71
-#, kde-format
-msgid "Confirm password"
-msgstr "Bekräfta lösenord"
-
-#: package/contents/ui/ChangePassword.qml:90
-#: package/contents/ui/CreateUser.qml:68
-#, kde-format
-msgid "Passwords must match"
-msgstr "Lösenord måste stämma"
-
-#: package/contents/ui/ChangeWalletPassword.qml:16
-#, kde-format
-msgid "Change Wallet Password?"
-msgstr "Ändra plånbokens lösenord?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
-msgstr ""
-"Nu när du har ändrat ditt inloggningslösenord, kanske du också vill ändra "
-"lösenord för din vanliga plånbok så att de stämmer överens."
-
-#: package/contents/ui/ChangeWalletPassword.qml:30
-#, kde-format
-msgid "What is KWallet?"
-msgstr "Vad är plånboken?"
-
-#: package/contents/ui/ChangeWalletPassword.qml:40
-#, kde-format
-msgid ""
-"KWallet is a password manager that stores your passwords for wireless "
-"networks and other encrypted resources. It is locked with its own password "
-"which differs from your login password. If the two passwords match, it can "
-"be unlocked at login automatically so you don't have to enter the KWallet "
-"password yourself."
-msgstr ""
-"Plånboken är en lösenordshanterare som lagrar dina lösenord för trådlösa "
-"nätverk och andra krypterade resurser. Den är låst med sitt eget lösenord, "
-"vilket skiljer sig från ditt inloggningslösenord. Om de två lösenorden "
-"stämmer överens, kan den låsas upp automatiskt vid inloggning, så att du "
-"inte behöver skriva in plånbokens lösenord själv."
-
-#: package/contents/ui/ChangeWalletPassword.qml:56
-#, kde-format
-msgid "Change Wallet Password"
-msgstr "Ändra plånbokens lösenord"
-
-#: package/contents/ui/ChangeWalletPassword.qml:65
-#, kde-format
-msgid "Leave Unchanged"
-msgstr "Lämna orört"
-
-#: package/contents/ui/CreateUser.qml:15
-#, kde-format
-msgid "Create User"
-msgstr "Skapa användare"
-
-#: package/contents/ui/CreateUser.qml:33
-#: package/contents/ui/UserDetailsPage.qml:123
-#, kde-format
-msgid "Name:"
-msgstr "Namn:"
-
-#: package/contents/ui/CreateUser.qml:37
-#: package/contents/ui/UserDetailsPage.qml:130
-#, kde-format
-msgid "Username:"
-msgstr "Användarnamn:"
-
-#: package/contents/ui/CreateUser.qml:47
-#: package/contents/ui/UserDetailsPage.qml:138
-#, kde-format
-msgid "Standard"
-msgstr "Standard"
-
-#: package/contents/ui/CreateUser.qml:48
-#: package/contents/ui/UserDetailsPage.qml:139
-#, kde-format
-msgid "Administrator"
-msgstr "Administratör"
-
-#: package/contents/ui/CreateUser.qml:51
-#: package/contents/ui/UserDetailsPage.qml:142
-#, kde-format
-msgid "Account type:"
-msgstr "Kontotyp:"
-
-#: package/contents/ui/CreateUser.qml:56
-#, kde-format
-msgid "Password:"
-msgstr "Lösenord:"
-
-#: package/contents/ui/CreateUser.qml:61
-#, kde-format
-msgid "Confirm password:"
-msgstr "Bekräfta lösenord:"
-
-#: package/contents/ui/CreateUser.qml:78
-#, kde-format
-msgid "Create"
-msgstr "Skapa"
-
-#: package/contents/ui/FingerprintDialog.qml:57
-#, kde-format
-msgid "Configure Fingerprints"
-msgstr "Anpassa fingeravtryck"
-
-#: package/contents/ui/FingerprintDialog.qml:67
-#, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr ""
-
-#: package/contents/ui/FingerprintDialog.qml:74
-#, kde-format
-msgid "Add"
-msgstr "Lägg till"
-
-#: package/contents/ui/FingerprintDialog.qml:83
-#, kde-format
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: package/contents/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid "Done"
-msgstr "Klar"
-
-#: package/contents/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Registrerar fingeravtryck"
-
-#: package/contents/ui/FingerprintDialog.qml:124
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:126
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:128
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:130
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:134
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:136
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:138
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:140
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:142
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:146
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:148
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:150
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:152
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:154
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:160
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:162
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
-#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
-
-#: package/contents/ui/FingerprintDialog.qml:179
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Finger inregistrerat"
-
-#: package/contents/ui/FingerprintDialog.qml:209
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Välj ett finger att registrera"
-
-#: package/contents/ui/FingerprintDialog.qml:326
-#, kde-format
-msgid "Re-enroll finger"
-msgstr "Registrera finger igen"
-
-#: package/contents/ui/FingerprintDialog.qml:333
-#, fuzzy, kde-format
-#| msgid "Clear Fingerprints"
-msgid "Delete fingerprint"
-msgstr "Rensa fingeravtryck"
-
-#: package/contents/ui/FingerprintDialog.qml:342
-#, kde-format
-msgid "No fingerprints added"
-msgstr "inga fingeravtryck tillagda"
-
-#: package/contents/ui/main.qml:19
-#, kde-format
-msgid "Manage Users"
-msgstr "Hantera användare"
-
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Add New User"
-msgstr "Lägg till ny användare"
-
-#: package/contents/ui/PicturesSheet.qml:18
-#, fuzzy, kde-format
-#| msgid "Change Avatar"
-msgctxt "@title"
-msgid "Change Avatar"
-msgstr "Byt avatar"
-
-#: package/contents/ui/PicturesSheet.qml:21
-#, fuzzy, kde-format
-#| msgid "It's Nothing"
-msgctxt "@item:intable"
-msgid "It's Nothing"
-msgstr "Det är ingenting"
-
-#: package/contents/ui/PicturesSheet.qml:22
-#, fuzzy, kde-format
-#| msgid "Feisty Flamingo"
-msgctxt "@item:intable"
-msgid "Feisty Flamingo"
-msgstr "Frejdig flamingo"
-
-#: package/contents/ui/PicturesSheet.qml:23
-#, fuzzy, kde-format
-#| msgid "Dragon's Fruit"
-msgctxt "@item:intable"
-msgid "Dragon's Fruit"
-msgstr "Drakfrukt"
-
-#: package/contents/ui/PicturesSheet.qml:24
-#, fuzzy, kde-format
-#| msgid "Sweet Potato"
-msgctxt "@item:intable"
-msgid "Sweet Potato"
-msgstr "Sötpotatis"
-
-#: package/contents/ui/PicturesSheet.qml:25
-#, fuzzy, kde-format
-#| msgid "Ambient Amber"
-msgctxt "@item:intable"
-msgid "Ambient Amber"
-msgstr "Bärnstensstämning"
-
-#: package/contents/ui/PicturesSheet.qml:26
-#, fuzzy, kde-format
-#| msgid "Sparkle Sunbeam"
-msgctxt "@item:intable"
-msgid "Sparkle Sunbeam"
-msgstr "Glittrande solstråle"
-
-#: package/contents/ui/PicturesSheet.qml:27
-#, fuzzy, kde-format
-#| msgid "Lemon-Lime"
-msgctxt "@item:intable"
-msgid "Lemon-Lime"
-msgstr "Citron-lime"
-
-#: package/contents/ui/PicturesSheet.qml:28
-#, fuzzy, kde-format
-#| msgid "Verdant Charm"
-msgctxt "@item:intable"
-msgid "Verdant Charm"
-msgstr "Grönskande charm"
-
-#: package/contents/ui/PicturesSheet.qml:29
-#, fuzzy, kde-format
-#| msgid "Mellow Meadow"
-msgctxt "@item:intable"
-msgid "Mellow Meadow"
-msgstr "Mjuk äng"
-
-#: package/contents/ui/PicturesSheet.qml:30
-#, fuzzy, kde-format
-#| msgid "Tepid Teal"
-msgctxt "@item:intable"
-msgid "Tepid Teal"
-msgstr "Sval grönblå"
-
-#: package/contents/ui/PicturesSheet.qml:31
-#, fuzzy, kde-format
-#| msgid "Plasma Blue"
-msgctxt "@item:intable"
-msgid "Plasma Blue"
-msgstr "Plasmablå"
-
-#: package/contents/ui/PicturesSheet.qml:32
-#, fuzzy, kde-format
-#| msgid "Pon Purple"
-msgctxt "@item:intable"
-msgid "Pon Purple"
-msgstr "Purpur"
-
-#: package/contents/ui/PicturesSheet.qml:33
-#, fuzzy, kde-format
-#| msgid "Bajo Purple"
-msgctxt "@item:intable"
-msgid "Bajo Purple"
-msgstr "Basviolett"
-
-#: package/contents/ui/PicturesSheet.qml:34
-#, fuzzy, kde-format
-#| msgid "Burnt Charcoal"
-msgctxt "@item:intable"
-msgid "Burnt Charcoal"
-msgstr "Bränt träkol"
-
-#: package/contents/ui/PicturesSheet.qml:35
-#, fuzzy, kde-format
-#| msgid "Paper Perfection"
-msgctxt "@item:intable"
-msgid "Paper Perfection"
-msgstr "Pappersperfektion"
-
-#: package/contents/ui/PicturesSheet.qml:36
-#, fuzzy, kde-format
-#| msgid "Cafétera Brown"
-msgctxt "@item:intable"
-msgid "Cafétera Brown"
-msgstr "Kafébrun"
-
-#: package/contents/ui/PicturesSheet.qml:37
-#, fuzzy, kde-format
-#| msgid "Rich Hardwood"
-msgctxt "@item:intable"
-msgid "Rich Hardwood"
-msgstr "Rikt ädelträ"
-
-#: package/contents/ui/PicturesSheet.qml:73
-#, fuzzy, kde-format
-#| msgid "Choose a picture"
-msgctxt "@title"
-msgid "Choose a picture"
-msgstr "Välj en bild"
-
-#: package/contents/ui/PicturesSheet.qml:105
-#, fuzzy, kde-format
-#| msgid "Choose File…"
-msgctxt "@action:button"
-msgid "Choose File…"
-msgstr "Välj fil..."
-
-#: package/contents/ui/UserDetailsPage.qml:106
-#, kde-format
-msgid "Change avatar"
-msgstr "Byt avatar"
-
-#: package/contents/ui/UserDetailsPage.qml:151
-#, kde-format
-msgid "Email address:"
-msgstr "E-postadress:"
-
-#: package/contents/ui/UserDetailsPage.qml:175
-#, kde-format
-msgid "Delete files"
-msgstr "Ta bort filer"
-
-#: package/contents/ui/UserDetailsPage.qml:182
-#, kde-format
-msgid "Keep files"
-msgstr "Behåll filer"
-
-#: package/contents/ui/UserDetailsPage.qml:189
-#, kde-format
-msgid "Delete User…"
-msgstr "Ta bort användare..."
-
-#: package/contents/ui/UserDetailsPage.qml:200
-#, kde-format
-msgid "Configure Fingerprint Authentication…"
-msgstr "Anpassa behörighetskontroll med fingeravtryck…"
-
-#: package/contents/ui/UserDetailsPage.qml:214
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Fingerprints can be used in place of a password when unlocking the screen "
-"and providing administrator permissions to applications and command-line "
-"programs that request them.<nl/><nl/>Logging into the system with your "
-"fingerprint is not yet supported."
-msgstr ""
-"Fingeravtryck kan användas istället för ett lösenord när skärmen låses upp "
-"och för att ge administratörsrättigheter till applikationer och "
-"kommandoradsprogram som begär det.<nl/><nl/>Inloggning på systemet med "
-"fingeravtryck stöds inte ännu."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -614,6 +65,548 @@ msgstr "Enheten kopplades bort."
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Ett okänt fel har uppstått."
+
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#, kde-format
+msgid "Change Password"
+msgstr "Ändra lösenord"
+
+#: src/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Ange lösenord"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Lösenord"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Bekräfta lösenord"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#, kde-format
+msgid "Passwords must match"
+msgstr "Lösenord måste stämma"
+
+#: src/ui/ChangeWalletPassword.qml:16
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Ändra plånbokens lösenord?"
+
+#: src/ui/ChangeWalletPassword.qml:25
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Nu när du har ändrat ditt inloggningslösenord, kanske du också vill ändra "
+"lösenord för din vanliga plånbok så att de stämmer överens."
+
+#: src/ui/ChangeWalletPassword.qml:30
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Vad är plånboken?"
+
+#: src/ui/ChangeWalletPassword.qml:40
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"Plånboken är en lösenordshanterare som lagrar dina lösenord för trådlösa "
+"nätverk och andra krypterade resurser. Den är låst med sitt eget lösenord, "
+"vilket skiljer sig från ditt inloggningslösenord. Om de två lösenorden "
+"stämmer överens, kan den låsas upp automatiskt vid inloggning, så att du "
+"inte behöver skriva in plånbokens lösenord själv."
+
+#: src/ui/ChangeWalletPassword.qml:56
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Ändra plånbokens lösenord"
+
+#: src/ui/ChangeWalletPassword.qml:65
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Lämna orört"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Skapa användare"
+
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#, kde-format
+msgid "Name:"
+msgstr "Namn:"
+
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#, kde-format
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#, kde-format
+msgid "Standard"
+msgstr "Standard"
+
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Administrator"
+msgstr "Administratör"
+
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#, kde-format
+msgid "Account type:"
+msgstr "Kontotyp:"
+
+#: src/ui/CreateUser.qml:56
+#, kde-format
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Confirm password:"
+msgstr "Bekräfta lösenord:"
+
+#: src/ui/CreateUser.qml:78
+#, kde-format
+msgid "Create"
+msgstr "Skapa"
+
+#: src/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Anpassa fingeravtryck"
+
+#: src/ui/FingerprintDialog.qml:67
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Lägg till"
+
+#: src/ui/FingerprintDialog.qml:83
+#, kde-format
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/ui/FingerprintDialog.qml:91
+#, kde-format
+msgid "Done"
+msgstr "Klar"
+
+#: src/ui/FingerprintDialog.qml:115
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Registrerar fingeravtryck"
+
+#: src/ui/FingerprintDialog.qml:124
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:126
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:128
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:130
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:134
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:136
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:138
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:140
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:142
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:146
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:148
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:150
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:152
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:154
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:156
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:158
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:160
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:162
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+#| msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "%1 upprepade gånger med %2 på fingeravtrycksavkännaren."
+
+#: src/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Finger inregistrerat"
+
+#: src/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Välj ett finger att registrera"
+
+#: src/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Registrera finger igen"
+
+#: src/ui/FingerprintDialog.qml:333
+#, fuzzy, kde-format
+#| msgid "Clear Fingerprints"
+msgid "Delete fingerprint"
+msgstr "Rensa fingeravtryck"
+
+#: src/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "inga fingeravtryck tillagda"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Manage Users"
+msgstr "Hantera användare"
+
+#: src/ui/main.qml:125
+#, kde-format
+msgid "Add New User"
+msgstr "Lägg till ny användare"
+
+#: src/ui/PicturesSheet.qml:18
+#, fuzzy, kde-format
+#| msgid "Change Avatar"
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Byt avatar"
+
+#: src/ui/PicturesSheet.qml:21
+#, fuzzy, kde-format
+#| msgid "It's Nothing"
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Det är ingenting"
+
+#: src/ui/PicturesSheet.qml:22
+#, fuzzy, kde-format
+#| msgid "Feisty Flamingo"
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Frejdig flamingo"
+
+#: src/ui/PicturesSheet.qml:23
+#, fuzzy, kde-format
+#| msgid "Dragon's Fruit"
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Drakfrukt"
+
+#: src/ui/PicturesSheet.qml:24
+#, fuzzy, kde-format
+#| msgid "Sweet Potato"
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sötpotatis"
+
+#: src/ui/PicturesSheet.qml:25
+#, fuzzy, kde-format
+#| msgid "Ambient Amber"
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Bärnstensstämning"
+
+#: src/ui/PicturesSheet.qml:26
+#, fuzzy, kde-format
+#| msgid "Sparkle Sunbeam"
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Glittrande solstråle"
+
+#: src/ui/PicturesSheet.qml:27
+#, fuzzy, kde-format
+#| msgid "Lemon-Lime"
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Citron-lime"
+
+#: src/ui/PicturesSheet.qml:28
+#, fuzzy, kde-format
+#| msgid "Verdant Charm"
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Grönskande charm"
+
+#: src/ui/PicturesSheet.qml:29
+#, fuzzy, kde-format
+#| msgid "Mellow Meadow"
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mjuk äng"
+
+#: src/ui/PicturesSheet.qml:30
+#, fuzzy, kde-format
+#| msgid "Tepid Teal"
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Sval grönblå"
+
+#: src/ui/PicturesSheet.qml:31
+#, fuzzy, kde-format
+#| msgid "Plasma Blue"
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasmablå"
+
+#: src/ui/PicturesSheet.qml:32
+#, fuzzy, kde-format
+#| msgid "Pon Purple"
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Purpur"
+
+#: src/ui/PicturesSheet.qml:33
+#, fuzzy, kde-format
+#| msgid "Bajo Purple"
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Basviolett"
+
+#: src/ui/PicturesSheet.qml:34
+#, fuzzy, kde-format
+#| msgid "Burnt Charcoal"
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Bränt träkol"
+
+#: src/ui/PicturesSheet.qml:35
+#, fuzzy, kde-format
+#| msgid "Paper Perfection"
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Pappersperfektion"
+
+#: src/ui/PicturesSheet.qml:36
+#, fuzzy, kde-format
+#| msgid "Cafétera Brown"
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Kafébrun"
+
+#: src/ui/PicturesSheet.qml:37
+#, fuzzy, kde-format
+#| msgid "Rich Hardwood"
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rikt ädelträ"
+
+#: src/ui/PicturesSheet.qml:73
+#, fuzzy, kde-format
+#| msgid "Choose a picture"
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Välj en bild"
+
+#: src/ui/PicturesSheet.qml:105
+#, fuzzy, kde-format
+#| msgid "Choose File…"
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Välj fil..."
+
+#: src/ui/UserDetailsPage.qml:106
+#, kde-format
+msgid "Change avatar"
+msgstr "Byt avatar"
+
+#: src/ui/UserDetailsPage.qml:151
+#, kde-format
+msgid "Email address:"
+msgstr "E-postadress:"
+
+#: src/ui/UserDetailsPage.qml:175
+#, kde-format
+msgid "Delete files"
+msgstr "Ta bort filer"
+
+#: src/ui/UserDetailsPage.qml:182
+#, kde-format
+msgid "Keep files"
+msgstr "Behåll filer"
+
+#: src/ui/UserDetailsPage.qml:189
+#, kde-format
+msgid "Delete User…"
+msgstr "Ta bort användare..."
+
+#: src/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Anpassa behörighetskontroll med fingeravtryck…"
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Fingeravtryck kan användas istället för ett lösenord när skärmen låses upp "
+"och för att ge administratörsrättigheter till applikationer och "
+"kommandoradsprogram som begär det.<nl/><nl/>Inloggning på systemet med "
+"fingeravtryck stöds inte ännu."
 
 #: src/user.cpp:279
 #, kde-format

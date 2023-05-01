@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -122,7 +122,7 @@ msgstr "ചിഹ്ന പ്രമേയങ്ങള്‍ ചേര്‍ക�
 msgid "Installing %1 theme…"
 msgstr "%1 പ്രമേയം ചേര്‍ക്കുന്നു..."
 
-#: package/contents/ui/IconSizePopup.qml:34
+#: ui/IconSizePopup.qml:34
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,58 +132,58 @@ msgid ""
 "consider adjusting the global scale instead."
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:41
+#: ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr ""
 
-#: package/contents/ui/IconSizePopup.qml:117
+#: ui/IconSizePopup.qml:117
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"
 msgid "Size:"
 msgstr "വ്യാപ്തി:"
 
-#: package/contents/ui/main.qml:146
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
 
-#: package/contents/ui/main.qml:153
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
 
-#: package/contents/ui/main.qml:227
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/main.qml:244
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "പ്രമേയം ഫയലില്‍ നിന്നും ചേര്‍ക്കുക..."
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Get New Icons..."
 msgid "Get New Icons…"
 msgstr "പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."
 
-#: package/contents/ui/main.qml:271
+#: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Configure Icon Sizes"
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/main.qml:283
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "പ്രമേയം തുറക്കുക"
 
-#: package/contents/ui/main.qml:285
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
