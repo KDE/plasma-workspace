@@ -11,6 +11,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
 
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -20,8 +21,8 @@ Item {
     /**
      * Whether the album art image is available or in loading status
      */
-    readonly property bool hasImage: (root.albumArt && albumArt.empty)
-        || (albumArt.currentItem instanceof Image && (albumArt.currentItem.status === Image.Ready || albumArt.currentItem.status === Image.Loading))
+    readonly property bool hasImage: (pendingImage !== null && (pendingImage.status === Image.Ready || pendingImage.status === Image.Loading))
+        || (albumArt.currentItem instanceof Image && albumArt.currentItem.status === Image.Ready)
 
     readonly property bool animating: exitTransition.running || popExitTransition.running
 
@@ -35,17 +36,24 @@ Item {
      */
     readonly property alias albumArt: albumArt
 
+    property Image pendingImage: null
+
     onWidthChanged: geometryChangeTimer.restart();
     onHeightChanged: geometryChangeTimer.restart();
 
     function loadAlbumArt() {
+        if (pendingImage !== null) {
+            pendingImage.destroy();
+            pendingImage = null;
+        }
+
         if (!root.albumArt) {
             albumArt.clear(StackView.PopTransition);
             return;
         }
 
         const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
-        const pendingImage = albumArtComponent.createObject(albumArt, {
+        pendingImage = albumArtComponent.createObject(albumArt, {
             "source": root.albumArt,
             "sourceSize": Qt.size(container.width * Screen.devicePixelRatio, container.height * Screen.devicePixelRatio),
             "opacity": 0,
@@ -66,6 +74,7 @@ Item {
 
             albumArt.replace(pendingImage, {}, StackView.ReplaceTransition);
             pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+            pendingImage = null;
         }
 
         pendingImage.statusChanged.connect(replaceWhenLoaded);
@@ -183,15 +192,38 @@ Item {
             }
         }
 
+        Component {
+            id: busyComponent
+
+            Item {
+                PC3.BusyIndicator {
+                    id: busyIndicator
+                    anchors.centerIn: parent
+                    opacity: 0
+                }
+
+                NumberAnimation {
+                    duration: PlasmaCore.Units.longDuration
+                    easing.type: Easing.OutCubic
+                    property: "opacity"
+                    running: true
+                    target: busyIndicator
+                    to: 1
+                }
+            }
+
+        }
     }
 
     Loader {
         anchors.fill: parent
         visible: active
 
-        active: (inCompactRepresentation || Plasmoid.expanded) && !container.hasImage
+        readonly property bool isLoadingImage: pendingImage !== null && pendingImage.status === Image.Loading
+
+        active: (inCompactRepresentation || Plasmoid.expanded) && (!container.hasImage || isLoadingImage)
         asynchronous: true
-        sourceComponent: root.track ? fallbackIconItem : placeholderMessage
+        sourceComponent: root.track ? (isLoadingImage ? busyComponent : fallbackIconItem) : placeholderMessage
     }
 }
 
