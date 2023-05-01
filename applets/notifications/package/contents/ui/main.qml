@@ -74,12 +74,14 @@ Item {
 
             if (Globals.inhibited) {
                 var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
-                var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+                var inhibitedUntilTime = inhibitedUntil.getTime();
+                var inhibitedUntilValid = !isNaN(inhibitedUntilTime);
+                var dateNow = Date.now();
 
                 // Show until time if valid but not if too far in the future
                 // TODO check app inhibition, too
-                if (inhibitedUntilValid
-                        && inhibitedUntil.getTime() - Date.now() < 100 * 24 * 60 * 60 * 1000 /* 100 days*/) {
+                if (inhibitedUntilValid && inhibitedUntilTime - dateNow > 0
+                        && inhibitedUntilTime - dateNow < 100 * 24 * 60 * 60 * 1000 /* 100 days*/) {
                         lines.push(i18n("Do not disturb until %1; middle-click to exit now",
                                      KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
                 } else {
