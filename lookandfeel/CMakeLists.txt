@@ -14,4 +14,6 @@ if (INSTALL_SDDM_THEME)
     install(DIRECTORY org.kde.breeze/contents/components DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
 endif()
 
-add_subdirectory(autotests/lockscreen)
+if (BUILD_TESTING)
+    add_subdirectory(autotests/lockscreen)
+endif()
