@@ -92,6 +92,8 @@ if (${HAVE_ICU})
     target_compile_definitions(kickerplugin PRIVATE "-DHAVE_ICU")
 endif()
 
-add_subdirectory(plugin/autotests)
+if (BUILD_TESTING)
+    add_subdirectory(plugin/autotests)
+endif()
 
 install(TARGETS kickerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
