@@ -455,13 +455,16 @@ PlasmaExtras.Representation {
                                     width: PlasmaCore.Units.iconSizes.small
                                     visible: model.isInGroup
 
-                                    PlasmaCore.SvgItem {
-                                        elementId: "vertical-line"
-                                        svg: lineSvg
+                                    // Not using the Plasma theme's vertical line SVG because we want something thicker
+                                    // than a hairline, and thickening a thin line SVG does not necessarily look good
+                                    // with all Plasma themes.
+                                    Rectangle {
                                         anchors.horizontalCenter: parent.horizontalCenter
-                                        // Want a thicker than default bar
-                                        width: Math.min(groupLineContainer.width, naturalSize.width * PlasmaCore.Units.devicePixelRatio * 3)
+                                        width: PlasmaCore.Units.devicePixelRatio * 3
                                         height: parent.height
+                                        // TODO: use separator color here, once that color role is implemented
+                                        color: PlasmaCore.Theme.textColor
+                                        opacity: 0.2
                                     }
                                 }
 
