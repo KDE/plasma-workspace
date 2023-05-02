@@ -175,7 +175,7 @@ find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 find_package(WaylandProtocols 1.31)
 set_package_properties(WaylandProtocols PROPERTIES
-    TYPE OPTIONAL
+    TYPE REQUIRED
     PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
     URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
 )
