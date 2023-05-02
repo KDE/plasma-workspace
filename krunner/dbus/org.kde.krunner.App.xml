@@ -17,7 +17,5 @@
       <arg name="runnerName" type="s" direction="in"/>
       <arg name="term" type="s" direction="in"/>
     </method>
-    <method name="switchUser">
-    </method>
   </interface>
 </node>

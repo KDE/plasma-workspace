@@ -316,14 +316,6 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
     m_engine->rootObject()->setProperty("query", term);
 }
 
-void View::switchUser()
-{
-    QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QStringLiteral("org.kde.ksmserver"),
-                                                                           QStringLiteral("/KSMServer"),
-                                                                           QStringLiteral("org.kde.KSMServerInterface"),
-                                                                           QStringLiteral("openSwitchUserDialog")));
-}
-
 void View::displayConfiguration()
 {
     auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")});
