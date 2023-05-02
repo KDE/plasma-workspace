@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:55+0000\n"
+"POT-Creation-Date: 2023-05-02 02:53+0000\n"
 "PO-Revision-Date: 2022-12-31 16:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -116,59 +116,59 @@ msgstr "Until Monday"
 msgid "Until manually disabled"
 msgstr "Until manually disabled"
 
-#: package/contents/ui/FullRepresentation.qml:205
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automatically ends: %1"
 
-#: package/contents/ui/FullRepresentation.qml:217
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "While %1 is active (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "While %1 is active"
 
-#: package/contents/ui/FullRepresentation.qml:225
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Screens are mirrored"
 
-#: package/contents/ui/FullRepresentation.qml:435
+#: package/contents/ui/FullRepresentation.qml:438
 #, kde-format
 msgid "Close Group"
 msgstr "Close Group"
 
-#: package/contents/ui/FullRepresentation.qml:577
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgid "Show Fewer"
 msgstr "Show Fewer"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:582
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Show %1 More"
 
-#: package/contents/ui/FullRepresentation.qml:620
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "No unread notifications"
 
-#: package/contents/ui/FullRepresentation.qml:635
+#: package/contents/ui/FullRepresentation.qml:638
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Notification service not available"
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:640
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -305,27 +305,27 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 unread notification"
 msgstr[1] "%1 unread notifications"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Do not disturb until %1; middle-click to exit now"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Do not disturb mode active; middle-click to exit"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Middle-click to enter do not disturb mode"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Clear All Notifications"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configure Event Notifications and Actions…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:55+0000\n"
+"POT-Creation-Date: 2023-05-02 02:53+0000\n"
 "PO-Revision-Date: 2023-04-24 10:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -120,59 +120,59 @@ msgstr "Do ponedeljka"
 msgid "Until manually disabled"
 msgstr "Dokler je ročno onemogočeno"
 
-#: package/contents/ui/FullRepresentation.qml:205
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Samodejno konča: %1"
 
-#: package/contents/ui/FullRepresentation.qml:217
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Dokler je %1 dejaven (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Dokler je %1 dejaven"
 
-#: package/contents/ui/FullRepresentation.qml:225
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Zasloni so zrcalni"
 
-#: package/contents/ui/FullRepresentation.qml:435
+#: package/contents/ui/FullRepresentation.qml:438
 #, kde-format
 msgid "Close Group"
 msgstr "Zapri skupino"
 
-#: package/contents/ui/FullRepresentation.qml:577
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgid "Show Fewer"
 msgstr "Prikaži manj"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:582
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Prikazi %1 več"
 
-#: package/contents/ui/FullRepresentation.qml:620
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ni neprebranih obvestil"
 
-#: package/contents/ui/FullRepresentation.qml:635
+#: package/contents/ui/FullRepresentation.qml:638
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Storitev obveščanja ni na voljo"
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:640
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -327,27 +327,27 @@ msgstr[1] "%1 obvestili"
 msgstr[2] "%1 obvestila"
 msgstr[3] "%1 obvestil"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Ne moti do %1; srednji klik za takojšnji izhod"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Način ne moti je dejaven; srednji klik za izhod"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Srednji klik za vstop v način ne moti"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Počisti vsa obvestila"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Nastavi obvestila in dejanja za dogodke…"

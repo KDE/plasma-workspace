@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:55+0000\n"
+"POT-Creation-Date: 2023-05-02 02:53+0000\n"
 "PO-Revision-Date: 2021-09-27 11:11+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -117,60 +117,60 @@ msgstr "Hétfőig"
 msgid "Until manually disabled"
 msgstr "Kikapcsolásig"
 
-#: package/contents/ui/FullRepresentation.qml:205
+#: package/contents/ui/FullRepresentation.qml:208
 #, fuzzy, kde-format
 #| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automatikus elrejtés"
 
-#: package/contents/ui/FullRepresentation.qml:217
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Amíg a(z) %1 aktív (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Amíg a(z) %1 aktív"
 
-#: package/contents/ui/FullRepresentation.qml:225
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Amikor a képernyők tükrözöttek"
 
-#: package/contents/ui/FullRepresentation.qml:435
+#: package/contents/ui/FullRepresentation.qml:438
 #, kde-format
 msgid "Close Group"
 msgstr "Csoport bezárása"
 
-#: package/contents/ui/FullRepresentation.qml:577
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgid "Show Fewer"
 msgstr "Kevesebb megjelenítése"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:582
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "További %1 megjelenítése"
 
-#: package/contents/ui/FullRepresentation.qml:620
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Nincsenek új értesítések"
 
-#: package/contents/ui/FullRepresentation.qml:635
+#: package/contents/ui/FullRepresentation.qml:638
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Az értesítési szolgáltatás nem érhető el"
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:640
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -312,28 +312,28 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 új értesítés"
 msgstr[1] "%1 új értesítés"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Do not disturb until %1"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Ne zavarjanak eddig: %1"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Összes értesítés törlése"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Eseményértesítések és műveletek beállítása…"

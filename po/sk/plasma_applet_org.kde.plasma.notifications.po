@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:55+0000\n"
+"POT-Creation-Date: 2023-05-02 02:53+0000\n"
 "PO-Revision-Date: 2023-01-22 16:59+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -119,59 +119,59 @@ msgstr "Do pondelka"
 msgid "Until manually disabled"
 msgstr "Kým nebude ručne deaktivované"
 
-#: package/contents/ui/FullRepresentation.qml:205
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automaticky ukončí: %1"
 
-#: package/contents/ui/FullRepresentation.qml:217
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Pokiaľ je aplikácia %1 aktívna (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Pokiaľ je aplikácia %1 aktívna"
 
-#: package/contents/ui/FullRepresentation.qml:225
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Obrazovky sú zrkadlené"
 
-#: package/contents/ui/FullRepresentation.qml:435
+#: package/contents/ui/FullRepresentation.qml:438
 #, kde-format
 msgid "Close Group"
 msgstr "Zatvoriť skupinu"
 
-#: package/contents/ui/FullRepresentation.qml:577
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgid "Show Fewer"
 msgstr "Zobraziť menej"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:582
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Zobraziť ďalších %1"
 
-#: package/contents/ui/FullRepresentation.qml:620
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Žiadne neprečítané upozornenia"
 
-#: package/contents/ui/FullRepresentation.qml:635
+#: package/contents/ui/FullRepresentation.qml:638
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Služba upozornení nie je dostupná"
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:640
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -317,27 +317,27 @@ msgstr[0] "%1 neprečítané upozornenie"
 msgstr[1] "%1 neprečítané upozornenia"
 msgstr[2] "%1 neprečítaných upozornení"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Režim nevyrušovať do %1; kliknutím stredného tlačidla ho ukončíte"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Režim nerušiť je aktívny; stredným kliknutím ho ukončíte"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Kliknutím stredného tlačidla prejdete do režimu nerušiť"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Vymazať všetky oznámenia"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Nastaviť pripomienky a akcie udalostí..."
