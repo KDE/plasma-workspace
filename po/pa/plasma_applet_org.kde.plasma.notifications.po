@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:23+0000\n"
+"POT-Creation-Date: 2023-05-02 02:20+0000\n"
 "PO-Revision-Date: 2021-06-08 22:49-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -115,60 +115,60 @@ msgstr "ਸੋਮਵਾਰ ਤੱਕ"
 msgid "Until manually disabled"
 msgstr "ਜਦੋਂ ਤੱਕ ਖੁਦ ਅਸਮਰੱਥ ਨਹੀਂ ਕਰਦੇ"
 
-#: package/contents/ui/FullRepresentation.qml:204
+#: package/contents/ui/FullRepresentation.qml:207
 #, fuzzy, kde-format
 #| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "ਆਟੋਮੈਟਿਕ ਓਹਲੇ"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "ਜਦੋਂ %1 ਸਰਗਰਮ ਹੈ (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:221
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "ਜਦੋਂ %1 ਸਰਗਰਮ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:227
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "ਸਕਰੀਨਾਂ ਨੂੰ ਮਿਰੱਰ ਕੀਤਾ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:434
+#: package/contents/ui/FullRepresentation.qml:437
 #, kde-format
 msgid "Close Group"
 msgstr "ਗਰੁੱਪ ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "ਘੱਟ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 ਹੋਰ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:619
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "ਕੋਈ ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ ਹਨ"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:637
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -310,28 +310,28 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 ਨਾ-ਪੜ੍ਹਿਆ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 msgstr[1] "%1 ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Do not disturb until %1"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "%1 ਤੱਕ ਤੰਗ ਨਾ ਕਰੋ"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "…ਈਵੈਂਟ ਸੂਚਨਾਵਾਂ ਤੇ ਕਾਰਵਾਈ ਸੰਰਚਨਾ(&C)"

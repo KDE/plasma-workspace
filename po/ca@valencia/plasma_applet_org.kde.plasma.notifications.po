@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:23+0000\n"
+"POT-Creation-Date: 2023-05-02 02:20+0000\n"
 "PO-Revision-Date: 2022-10-16 10:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -119,59 +119,59 @@ msgstr "Fins dilluns"
 msgid "Until manually disabled"
 msgstr "Fins que es desactive manualment"
 
-#: package/contents/ui/FullRepresentation.qml:204
+#: package/contents/ui/FullRepresentation.qml:207
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Acaba automàticament: %1"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Mentre %1 estiga actiu (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:221
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Mentre %1 estiga actiu"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:227
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Les pantalles estan emmirallades"
 
-#: package/contents/ui/FullRepresentation.qml:434
+#: package/contents/ui/FullRepresentation.qml:437
 #, kde-format
 msgid "Close Group"
 msgstr "Tanca el grup"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "Mostra'n menys"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Mostra'n %1 més"
 
-#: package/contents/ui/FullRepresentation.qml:619
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "No hi ha notificacions sense llegir"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:637
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "El servei de notificació no està disponible"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -308,27 +308,27 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 notificació sense llegir"
 msgstr[1] "%1 notificacions sense llegir"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "No destorbar fins %1; clic del mig per a eixir ara"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Mode no destorbar actiu; clic del mig per a eixir"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Clic del mig per a passar al mode no destorbar"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Neteja totes les notificacions"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configura les notificacions d'esdeveniments i accions…"

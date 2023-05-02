@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-19 02:23+0000\n"
+"POT-Creation-Date: 2023-05-02 02:20+0000\n"
 "PO-Revision-Date: 2022-10-17 06:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -119,59 +119,59 @@ msgstr "Astelehenera arte"
 msgid "Until manually disabled"
 msgstr "Eskuz ezgaitu arte"
 
-#: package/contents/ui/FullRepresentation.qml:204
+#: package/contents/ui/FullRepresentation.qml:207
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automatikoki bukatzen da: %1"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "%1 aktibatuta dagoen bitartean (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:221
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "%1 aktibatuta dagoen bitartean"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:227
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Pantailak ispilatuta daude"
 
-#: package/contents/ui/FullRepresentation.qml:434
+#: package/contents/ui/FullRepresentation.qml:437
 #, kde-format
 msgid "Close Group"
 msgstr "Itxi taldea"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "Erakutsi gutxiago"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Erakutsi %1 gehiago"
 
-#: package/contents/ui/FullRepresentation.qml:619
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ez dago irakurri gabeko Jakinarazpenik"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:637
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Jakinarazpen zerbitzua ez dago erabilgarri"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -308,27 +308,27 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "Irakurri gabeko jakinarazpen %1"
 msgstr[1] "Irakurri gabeko %1 jakinarazpen"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Zaratarik ez %1(e)ra arte; erdiko-klik orain irteteko"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Zaratarik ez modua aktibatuta; erdiko-klik irteteko"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Erdiko-botoia «zaratarik ez» moduan sartzeko"
 
-#: package/contents/ui/main.qml:193
+#: package/contents/ui/main.qml:195
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Garbitu jakinarazpen guztiak"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:205
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfiguratu gertaeren jakinarazpenak eta ekintzak..."

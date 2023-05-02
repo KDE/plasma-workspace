@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-05-02 02:20+0000\n"
 "PO-Revision-Date: 2022-12-08 21:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.11.90\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
 msgid "No title"
 msgstr "தலைப்பில்லாத‍து"
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"

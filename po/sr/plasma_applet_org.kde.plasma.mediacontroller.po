@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-05-02 02:20+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "No media playing"
