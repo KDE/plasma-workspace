@@ -179,9 +179,6 @@ set_package_properties(WaylandProtocols PROPERTIES
     PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
     URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
 )
-if (WaylandProtocols_FOUND)
-    set(HAVE_WaylandProtocols true)
-endif()
 
 if(FONTCONFIG_FOUND)
   # kfontinst
@@ -347,7 +344,6 @@ configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-works
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
-configure_file(config-WaylandProtocols.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-WaylandProtocols.h )
 configure_file(config-KDECI_BUILD.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KDECI_BUILD.h )
 add_subdirectory(login-sessions)
 add_subdirectory(lookandfeel)

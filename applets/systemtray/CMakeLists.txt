@@ -52,20 +52,6 @@ set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON
 
 kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
 
-if (HAVE_WaylandProtocols)
-    target_link_libraries(systemtraymodel_static Qt::WaylandClient Wayland::Client)
-
-    if (QT_MAJOR_VERSION EQUAL "5")
-        ecm_add_qtwayland_client_protocol(org.kde.plasma.private.systemtray
-            PROTOCOL ${WaylandProtocols_DATADIR}/staging/fractional-scale/fractional-scale-v1.xml
-            BASENAME fractional-scale-v1
-        )
-    else()
-        qt6_generate_wayland_protocol_client_sources(org.kde.plasma.private.systemtray FILES
-            ${WaylandProtocols_DATADIR}/staging/fractional-scale/fractional-scale-v1.xml)
-    endif()
-endif()
-
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
 
 add_subdirectory(container)
