@@ -407,8 +407,10 @@ KCM.SimpleKCM {
                 && kcm.nightColorSettings.active
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.fillWidth: true
+            implicitHeight: Math.max(loadingPlaceholder.implicitHeight, timings.implicitHeight)
 
             Kirigami.LoadingPlaceholder {
+                id: loadingPlaceholder
                 visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
                 text: i18nc("@info:placeholder", "Locating…")
                 anchors.centerIn: parent
