@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kholidays_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2021-05-26 09:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: HolidaysConfig.qml:90
+#: HolidaysConfig.qml:89
 #, kde-format
 msgid "Region"
 msgstr "Регіон"
 
-#: HolidaysConfig.qml:94
+#: HolidaysConfig.qml:93
 #, kde-format
 msgid "Name"
 msgstr "Назва"
 
-#: HolidaysConfig.qml:98
+#: HolidaysConfig.qml:97
 #, kde-format
 msgid "Description"
 msgstr "Опис"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2022-09-12 07:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -186,7 +186,7 @@ msgstr "შეიყვანეთ წუთები - მინ 1, მაქ�
 msgid "Error: Transition time overlaps."
 msgstr "შეცდომა: გადასვლის დროის გადაფარვა."
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

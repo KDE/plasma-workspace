@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2016-09-19 17:00+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: HolidaysConfig.qml:90
+#: HolidaysConfig.qml:89
 #, kde-format
 msgid "Region"
 msgstr "Περιοχή"
 
-#: HolidaysConfig.qml:94
+#: HolidaysConfig.qml:93
 #, kde-format
 msgid "Name"
 msgstr "Όνομα"
 
-#: HolidaysConfig.qml:98
+#: HolidaysConfig.qml:97
 #, kde-format
 msgid "Description"
 msgstr "Περιγραφή"

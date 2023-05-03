@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2021-07-01 18:38+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.04.2\n"
 
-#: HolidaysConfig.qml:90
+#: HolidaysConfig.qml:89
 #, kde-format
 msgid "Region"
 msgstr "क्षेत्र"
 
-#: HolidaysConfig.qml:94
+#: HolidaysConfig.qml:93
 #, kde-format
 msgid "Name"
 msgstr "नाम"
 
-#: HolidaysConfig.qml:98
+#: HolidaysConfig.qml:97
 #, kde-format
 msgid "Description"
 msgstr "वर्णन"

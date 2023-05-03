@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2022-10-16 11:47+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -136,12 +136,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Ajustar a Escala Global…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -150,7 +150,7 @@ msgstr ""
 "Algumas alterações, como o 'anti-aliasing' ou a resolução em PPP, só irão "
 "afectar as aplicações acabadas de iniciar."
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -160,7 +160,7 @@ msgstr ""
 "em ajustar a escala global do ecrã em vez de usar um tamanho de letra muito "
 "grande."
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -169,7 +169,7 @@ msgstr ""
 "Os tamanhos de letra decimais poderão causar alguns problemas de formatação "
 "em algumas aplicações; pense em usar tamanhos inteiros."
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -178,82 +178,82 @@ msgstr ""
 "A forma recomendada de ajustar a escala da interface é usar a funcionalidade "
 "de ajuste de escala do ecrã global."
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Ajustar Todos os Tipos de Letra…"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "Geral:"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "Seleccionar o tipo de letra geral"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "Tamanho fixo:"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Seleccionar o tipo de letra monoespaçado"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "Pequeno:"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "Seleccionar o tipo de letra pequeno"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "Barra de Ferramentas:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Seleccionar o tipo de letra da barra de ferramentas"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "Menu:"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "Seleccionar o tipo de letra do menu"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "Título da janela:"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "Seleccionar o tipo de letra do título da janela"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Suavização:"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "Activar"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -269,28 +269,28 @@ msgstr ""
 "<emphasis>suavização</emphasis> para reduzir esse efeito. Geralmente irá "
 "querer manter esta opção activa, a menos que cause problemas."
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Intervalo de exclusão da suavização"
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr "até"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Desenho dos sub-pixels:"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -314,13 +314,13 @@ msgstr ""
 "suportadas por esta funcionalidade.</para>Isto não funciona com monitores "
 "CRT."
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Sugestão:"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -335,12 +335,12 @@ msgstr ""
 "origem a arestas mais nítidas mas as letras pequenas ficarão menos parecidas "
 "com a sua forma original com tamanhos grandes."
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forçar os PPP do texto:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 "ajustar a escala de tudo, use a barra deslizante de escala na página do "
 "<interface>Ecrã e Monitor</interface>.</para>"
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccione o Tipo de Letra"

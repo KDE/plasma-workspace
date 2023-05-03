@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2021-06-15 23:46+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -19,17 +19,17 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: HolidaysConfig.qml:90
+#: HolidaysConfig.qml:89
 #, kde-format
 msgid "Region"
 msgstr "Regionas"
 
-#: HolidaysConfig.qml:94
+#: HolidaysConfig.qml:93
 #, kde-format
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: HolidaysConfig.qml:98
+#: HolidaysConfig.qml:97
 #, kde-format
 msgid "Description"
 msgstr "Aprašas"

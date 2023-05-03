@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -141,12 +141,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Падладжванне глабальнага маштабавання…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -155,7 +155,7 @@ msgstr ""
 "Змена некаторых параметраў, такія як згладжванне або DPI, паўплывае толькі "
 "на нанова запушчаныя праграмы."
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -164,7 +164,7 @@ msgstr ""
 "Пры выкарыстанні вялікіх шрыфтоў могуць могуць быць нечаканыя наступствы. "
 "Замест гэтага лепш падладзіць глабальнае маштабаванне."
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -174,7 +174,7 @@ msgstr ""
 "размяшчэннем тэксту ў некаторых праграмах. Лепш выкарыстоўваць толькі цэлыя "
 "памеры шрыфтоў."
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -183,82 +183,82 @@ msgstr ""
 "Рэкамендаваны спосаб маштабавання інтэрфейсу карыстальніка - выкарыстанне "
 "глабальнай функцыі маштабавання экрана."
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Падладжванне ўсіх шрыфтоў…"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "Асноўны:"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "Абраць асноўны шрыфт"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "Монашырынны:"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Абраць монашырынны шрыфт"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "Малы:"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "Абраць малы шрыфт"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "Панэль інструментаў:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Абраць шрыфт панэляў інструментаў"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "Меню:"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "Абраць шрыфт меню"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "Загаловак акна:"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "Абраць шрыфт загалоўкаў акон"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Згладжванне:"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "Уключыць"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -273,28 +273,28 @@ msgstr ""
 "не выкарыстоўваць <emphasis>згладжванне</emphasis>. Лепш пакінуць гэты "
 "параметр уключаным, калі ён не выклікае праблем."
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Выключыць дыяпазон са згладжвання"
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 пікс"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr "у"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Субпіксельны рэндэрынг:"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "<emphasis>BGR</emphasis>, а некаторыя рэдкія парадкі не падтрымліваюцца "
 "гэтай функцыяй.</para>Гэта не працуе на маніторах CRT."
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Хінтынг:"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -336,12 +336,12 @@ msgstr ""
 "шрыфтоў. Чым большае значэнне, тым большая рэзкасць абрысаў літар, але "
 "маленькія літары будуць менш нагадваць сваю форму пры вялікіх памерах."
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Прымусовае значэнне DPI шрыфту:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 "элементаў, скарыстайцеся паўзунком маштабавання на старонцы "
 "<interface>Дысплэй і манітор</interface>.</para>"
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "Абраць шрыфт"

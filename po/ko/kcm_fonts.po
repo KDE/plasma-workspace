@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2023-04-22 00:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -136,12 +136,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr "%1 %2pt"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "전역 크기 조정…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -149,7 +149,7 @@ msgid ""
 msgstr ""
 "앤티에일리어싱 및 DPI 같은 일부 설정은 새로 시작한 프로그램에만 적용됩니다."
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -158,7 +158,7 @@ msgstr ""
 "매우 큰 글꼴을 지정하면 결과가 보기 좋지 않을 수도 있습니다. 글꼴 크기를 확대"
 "하기보다는 전역 크기 조정 배율을 조정하십시오."
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -167,7 +167,7 @@ msgstr ""
 "소수점 단위 글꼴 크기는 일부 프로그램에서 레이아웃 문제를 발생시킬 수 있습니"
 "다. 정수 크기만을 사용하기를 권장합니다."
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -175,82 +175,82 @@ msgid ""
 msgstr ""
 "추천하는 사용자 인터페이스의 크기 조절 방법은 전역 화면 크기 조정 기능입니다."
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "모든 글꼴 설정(&A)…"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "일반:"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "일반 글꼴 선택"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "고정폭:"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "고정폭 글꼴 선택"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "작음:"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "작은 글꼴 선택"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "도구 모음:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "도구 모음 글꼴 선택"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "메뉴:"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "메뉴 글꼴 선택"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "창 제목:"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "창 제목 글꼴 선택"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "앤티에일리어싱:"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "사용함"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -265,28 +265,28 @@ msgstr ""
 "에일리어싱</emphasis>을 통해서 좀 더 부드럽게 표시할 수 있습니다. 문제가 생기"
 "지 않는 한 이 옵션을 활성화하기를 추천합니다."
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "앤티에일리어싱 제외 범위"
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1pt"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr " 부터 "
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "서브픽셀 렌더링:"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -308,13 +308,13 @@ msgstr ""
 "되어 있을 수도 있으며, 기타 비선형 서브픽셀 구조는 지원하지 않습니다.</para>"
 "이 기능은 CRT 모니터에서는 작동하지 않습니다."
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "힌팅:"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -328,12 +328,12 @@ msgstr ""
 "만 작은 글꼴 크기의 글자가 큰 글꼴 크기의 글자와 더 다르게 보일 수도 있습니"
 "다."
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "글꼴 DPI 강제 지정:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -351,7 +351,7 @@ msgstr ""
 "든 것의 크기를 변경하려면 <interface>디스플레이와 모니터</interface> 페이지"
 "의 크기 조절 슬라이더를 사용하십시오.</para>"
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "글꼴 선택"

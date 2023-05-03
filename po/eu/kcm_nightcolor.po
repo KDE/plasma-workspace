@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2022-09-10 14:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -189,7 +189,7 @@ msgstr "Sarrera minututan - txikiena 1, handiena 600"
 msgid "Error: Transition time overlaps."
 msgstr "Errorea: Iragaite denbora gainezartzen da."
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

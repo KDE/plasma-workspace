@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2022-12-26 04:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -144,19 +144,19 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "調整全域縮放…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr "有一些像是防鋸齒或 DPI 設定上的變更，只會對於新啟動的程式有作用。"
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -165,7 +165,7 @@ msgstr ""
 "超大字型可能會使外觀看來很奇怪。請考慮調整全域螢幕縮放比例，而非使用超大字"
 "型。"
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -174,89 +174,89 @@ msgstr ""
 "有小數點的字型大小可能會造成某些應用程式的文字編排出問題。請考慮使用整數字型"
 "大小。"
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr "建議的縮放使用者介面方式是使用全域螢幕縮放功能。"
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "調整所有字型...(&A)"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "一般："
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "選擇一般字型"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "等寬字型："
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "選擇等寬字型"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "小型字："
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "選擇小字用字型"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "工具列："
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "選擇工具列字型"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "選單："
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "選擇選單字型"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "視窗標題："
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "選擇視窗標題字型"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "防鋸齒："
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -270,28 +270,28 @@ msgstr ""
 "字體看起來就像是由方格組成。<emphasis>防鋸齒</emphasis>功能可以減輕此效應，一"
 "般建議開啟此功能，除非它產生其他問題。"
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "不對以下範圍進行防鋸齒"
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr "至"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "子像素繪製："
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -311,13 +311,13 @@ msgstr ""
 "會使用<emphasis>BGR</emphasis>，而其他更少見的排列方式本功能則不支援。</para>"
 "本功能不支援 CRT 螢幕。"
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "字型微調（Hinting）："
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -330,12 +330,12 @@ msgstr ""
 "字體時），較強的微調通常會讓字體筆畫邊緣更加鮮明，但小號字體的形狀將與大號字"
 "體明顯不同。"
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "強制指定字型 DPI："
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -351,7 +351,7 @@ msgstr ""
 "para><para>若要使文字變大，請修改上方的字型大小。若要改變所有東西的大小，請在"
 "<interface>顯示與螢幕</interface>頁面中調整縮放比例。</para>"
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "選擇字型"

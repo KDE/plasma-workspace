@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2023-04-09 13:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -134,12 +134,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr "%1 %2pt"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "முழுதளாவிய அளவீட்டு விகித‍த்தை மாற்று…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -148,7 +148,7 @@ msgstr ""
 "Anti-aliasing மற்றும் DPI போன்ற மாற்றங்கள், புதிதாக திறக்கப்படும் செயலிகளுக்கு மட்டும் "
 "பொருந்தும்."
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -157,7 +157,7 @@ msgstr ""
 "மிகப்பெரிய எழுத்துருக்கள் அசிங்கமாக தெரியலாம். பதிலாக, காட்சிக்கருவிக்கான அளவீட்டு விகித‍"
 "த்தை மாற்றி பாருங்கள்."
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -166,7 +166,7 @@ msgstr ""
 "பின்னமாயுள்ள எழுத்துரு அளவு, சில செயலிகளில் பிரச்சனைகளை உண்டாக்கலாம். முழு எண்ணாயுள்ள "
 "எழுத்துருவை பயன்படுத்துவது நல்லது."
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -175,82 +175,82 @@ msgstr ""
 "இடைமுகப்பின் அளவை மாற்ற பரிந்துரைக்கப்படும் வழி, காட்சிக்கருவிக்கான அளவீட்டு விகித‍த்தை "
 "மாற்றுவதாகும்."
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&அனைத்து எழுத்துருக்களையும் திருத்து…"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானது:"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "பொதுவான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "சம‍அகலம்:"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "சம‍அகல எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "சிறியது:"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "சிறிய எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "கருவிப்பட்டை:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "கருவிப்பட்டைக்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "பட்டி:"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "பட்டிகளுக்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "சாளர தலைப்பு:"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "சாளரத் தலைப்பிற்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, fuzzy, kde-format
 msgid "Anti-Aliasing:"
 msgstr "எழுத்துருக்களுக்கும் குறும்படங்களுக்கும் மெருக்கு (Anti-Aliasing) உபயோகிக்கவும்"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "இயக்கு"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -261,28 +261,28 @@ msgid ""
 "problems."
 msgstr ""
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr "–"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, fuzzy, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "குறும்பட உதவியை பயன்படுத்து"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -296,14 +296,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "ஹின்டிங் பாணி"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -313,12 +313,12 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "எழுத்துருக்கான DPI-யை கட்டாயப்படுத்து:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -330,7 +330,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "எழுத்துருவை தேர்வு செய்தல்"

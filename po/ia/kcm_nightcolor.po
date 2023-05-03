@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2023-01-25 16:08+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr "Minutas de entrata -min. 1, max. 600"
 msgid "Error: Transition time overlaps."
 msgstr "Error: tempore de transition imbrica"
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

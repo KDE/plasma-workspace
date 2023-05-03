@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2023-02-02 14:46+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -144,12 +144,12 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Aðlaga heildarkvarða…"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -158,7 +158,7 @@ msgstr ""
 "Sumar breytingar eins og afstöllun eða upplausn taka aðeins gildi í "
 "nýopnuðum forritum."
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -167,7 +167,7 @@ msgstr ""
 "Það kemur ekki alltaf vel út að nota mjög stórt letur. Prófaðu að breyta "
 "skjáupplausninni í staðinn fyrir að nota mjög stórt letur."
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -176,7 +176,7 @@ msgstr ""
 "Leturstærðir með aukastöfum getur valdið umbrotsvandamálum í sumum forritum. "
 "Notaðu frekar leturstærðir í heilum tölum."
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -185,82 +185,82 @@ msgstr ""
 "Mælt er með því að nota skjáupplausnarstillinguna til að breyta upplausn "
 "notandaviðmótsins."
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Aðlaga allar leturgerðir..."
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "General:"
 msgstr "Almennt:"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, kde-format
 msgid "Select general font"
 msgstr "Veldu almennt letur"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgid "Fixed width:"
 msgstr "Jafnbreitt:"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Veldu jafnbreitt letur"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Small:"
 msgstr "Smátt:"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, kde-format
 msgid "Select small font"
 msgstr "Veldu smátt letur"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, kde-format
 msgid "Toolbar:"
 msgstr "Verkfærastika:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Veldu letur fyrir verkfærastiku"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, kde-format
 msgid "Menu:"
 msgstr "Valmynd:"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr "Veldu letur fyrir valmynd"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window title:"
 msgstr "Gluggatitill:"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, kde-format
 msgid "Select window title font"
 msgstr "Veldu letur fyrir gluggatitil"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Afstöllun:"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, kde-format
 msgid "Enable"
 msgstr "Virkja"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -276,28 +276,28 @@ msgstr ""
 "þessum áhrifum. Þú ættir að hafa þennan valkost virkan nema hann valdi "
 "einhverjum vandræðum."
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Útiloka svið frá afstöllun"
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "to"
 msgstr "til"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Leturskerping:"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -319,13 +319,13 @@ msgstr ""
 "<emphasis>BGR</emphasis> og einnig til eru framandlegri útfærslur sem eru "
 "ekki studdar hér.</para> Þetta virkar ekki á hefðbundnum túbuskjám."
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hnikun:"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -339,12 +339,12 @@ msgstr ""
 "hnikun leiðir almennt til skarpari brúna en smærra letur verður ólíkara "
 "frábrugnara stærri útgáfum letursins."
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Þvinga DPI-skölun leturs:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -363,7 +363,7 @@ msgstr ""
 "skaltu nota kvörðunarsleðann á síðunni <interface>Skjáir og birting</"
 "interface>.</para>"
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr "Veldu letur"

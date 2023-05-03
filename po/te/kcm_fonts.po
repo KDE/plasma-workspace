@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-03 02:20+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -152,13 +152,13 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr ""
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "Adjust Global Scale…"
 msgstr "(&j) అన్ని ఫాంట్లను సర్దుము..."
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Some changes such as anti-aliasing will only affect newly started "
@@ -169,118 +169,118 @@ msgid ""
 msgstr ""
 "<p>యాంటీ-ఎలియాసింగ్ వంటి కొన్ని మార్పులు కొత్తగా ప్రారంభించిన అనువర్తనములను మాత్రమే ప్రాభావితం చేస్తాయి.</p>"
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
 
-#: ui/main.qml:92
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
 
-#: ui/main.qml:104
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "&Adjust All Fonts…"
 msgstr "(&j) అన్ని ఫాంట్లను సర్దుము..."
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "సాధారణ"
 
-#: ui/main.qml:118
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "Select general font"
 msgstr "సాధారణ"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Fixed width:"
 msgstr "నిర్ధిష్ట వెడల్పు"
 
-#: ui/main.qml:130
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Select fixed width font"
 msgstr "నిర్ధిష్ట వెడల్పు"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Small"
 msgid "Small:"
 msgstr "చిన్న"
 
-#: ui/main.qml:142
+#: ui/main.qml:141
 #, fuzzy, kde-format
 #| msgid "Small"
 msgid "Select small font"
 msgstr "చిన్న"
 
-#: ui/main.qml:153
+#: ui/main.qml:152
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Toolbar:"
 msgstr "పనిముట్టుపట్టీ"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Select toolbar font"
 msgstr "పనిముట్టుపట్టీ"
 
-#: ui/main.qml:165
+#: ui/main.qml:164
 #, fuzzy, kde-format
 #| msgid "Menu"
 msgid "Menu:"
 msgstr "మెనూ"
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, kde-format
 msgid "Select menu font"
 msgstr ""
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Window title:"
 msgstr "విండో శీర్షిక"
 
-#: ui/main.qml:177
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Select window title font"
 msgstr "విండో శీర్షిక"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "Use a&nti-aliasing:"
 msgid "Anti-Aliasing:"
 msgstr "(&n) యాంటీ-యెలియాసింగ్ వుపయోగించుము:"
 
-#: ui/main.qml:197
+#: ui/main.qml:196
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "Enabled"
 msgid "Enable"
 msgstr "చేతనమైన"
 
-#: ui/main.qml:201
+#: ui/main.qml:200
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -291,30 +291,30 @@ msgid ""
 "problems."
 msgstr ""
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:234 ui/main.qml:257
+#: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
 msgstr ""
 
-#: ui/main.qml:249
+#: ui/main.qml:248
 #, fuzzy, kde-format
 #| msgid " to "
 msgid "to"
 msgstr " to "
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, fuzzy, kde-format
 #| msgid "&Use sub-pixel rendering:"
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "(&U) వుప-పిగ్జెల్ రెండరింగ్‌ను వుపయోగించుము:"
 
-#: ui/main.qml:322
+#: ui/main.qml:321
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -328,14 +328,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:327
+#: ui/main.qml:326
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "హింటింగ్ శైలి: "
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -345,13 +345,13 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:378
+#: ui/main.qml:377
 #, fuzzy, kde-format
 #| msgid "Force fonts DPI:"
 msgid "Force font DPI:"
 msgstr "ఫాంట్ల DPIను పెంచుము:"
 
-#: ui/main.qml:420
+#: ui/main.qml:419
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -363,7 +363,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:426
+#: ui/main.qml:425
 #, kde-format
 msgid "Select Font"
 msgstr ""
