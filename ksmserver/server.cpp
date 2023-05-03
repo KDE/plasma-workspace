@@ -183,11 +183,8 @@ void KSMInteractDoneProc(SmsConn /* smsConn */, SmPointer managerData, Bool canc
 
 void KSMSaveYourselfRequestProc(SmsConn smsConn, SmPointer /* managerData */, int saveType, Bool shutdown, int interactStyle, Bool fast, Bool global)
 {
-    if (shutdown) {
-        the_server->shutdown(fast ? KWorkSpace::ShutdownConfirmNo : KWorkSpace::ShutdownConfirmDefault,
-                             KWorkSpace::ShutdownTypeDefault,
-                             KWorkSpace::ShutdownModeDefault);
-    } else if (!global) {
+    Q_UNUSED(shutdown);
+    if (!global) {
         SmsSaveYourself(smsConn, saveType, false, interactStyle, fast);
         SmsSaveComplete(smsConn);
     }
@@ -1002,11 +999,4 @@ void KSMServer::tryRestoreNext()
 void KSMServer::startupDone()
 {
     state = Idle;
-}
-
-void KSMServer::openSwitchUserDialog()
-{
-    // this method exists only for compatibility. Users should ideally call this directly
-    OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
-    iface.SwitchUser();
 }

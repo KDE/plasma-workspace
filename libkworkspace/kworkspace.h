@@ -84,43 +84,6 @@ enum ShutdownMode {
 };
 
 /**
- * Asks the session manager to shut the session down.
- *
- * Using @p confirm == ShutdownConfirmYes or @p sdtype != ShutdownTypeDefault or
- * @p sdmode != ShutdownModeDefault causes the use of ksmserver's DCOP
- * interface. The remaining two combinations use the standard XSMP and
- * will work with any session manager compliant with it.
- *
- * @param confirm Whether to ask the user if he really wants to log out.
- * ShutdownConfirm
- * @param sdtype The action to take after logging out. ShutdownType
- * @param sdmode If/When the action should be taken. ShutdownMode
- * @deprecated
- */
-KWORKSPACE_EXPORT void
-requestShutDown(ShutdownConfirm confirm = ShutdownConfirmDefault, ShutdownType sdtype = ShutdownTypeDefault, ShutdownMode sdmode = ShutdownModeDefault);
-
-/**
- * Used to check whether a requestShutDown call with the same arguments
- * has any chance of succeeding.
- *
- * For example, if KDE's own session manager cannot be contacted, we can't
- * demand that the computer be shutdown, or force a confirmation dialog.
- *
- * Even if we can access the KDE session manager, the system or user
- * configuration may prevent the user from requesting a shutdown or
- * reboot.
- * @deprecated
- */
-KWORKSPACE_EXPORT bool
-canShutDown(ShutdownConfirm confirm = ShutdownConfirmDefault, ShutdownType sdtype = ShutdownTypeDefault, ShutdownMode sdmode = ShutdownModeDefault);
-
-/**
- * Used to check whether a shutdown is currently in progress
- */
-KWORKSPACE_EXPORT bool isShuttingDown();
-
-/**
  * Propagates the network address of the session manager in the
  * SESSION_MANAGER environment variable so that child processes can
  * pick it up.

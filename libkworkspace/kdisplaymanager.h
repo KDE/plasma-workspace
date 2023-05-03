@@ -27,9 +27,6 @@ public:
     KDisplayManager();
     ~KDisplayManager();
 
-    bool canShutdown();
-    void shutdown(KWorkSpace::ShutdownType shutdownType, KWorkSpace::ShutdownMode shutdownMode, const QString &bootOption = QString());
-
     bool isSwitchable();
     int numReserve();
     void startReserve();

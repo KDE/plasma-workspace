@@ -36,40 +36,6 @@
 
 namespace KWorkSpace
 {
-void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode sdmode)
-{
-    org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    ksmserver.logout((int)confirm, (int)sdtype, (int)sdmode);
-}
-
-bool canShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode sdmode)
-{
-#if HAVE_X11
-    if (confirm == ShutdownConfirmYes || sdtype != ShutdownTypeDefault || sdmode != ShutdownModeDefault) {
-        org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-        QDBusReply<bool> reply = ksmserver.canShutdown();
-        if (!reply.isValid()) {
-            return false;
-        }
-        return reply;
-    }
-
-    return true;
-#else
-    return false;
-#endif
-}
-
-bool isShuttingDown()
-{
-    org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    QDBusReply<bool> reply = ksmserver.isShuttingDown();
-    if (!reply.isValid()) {
-        return false;
-    }
-    return reply;
-}
-
 static QTime smModificationTime;
 void propagateSessionManager()
 {

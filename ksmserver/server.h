@@ -97,7 +97,6 @@ public:
     void restoreSession();
     void setRestoreSession(const QString &sessionName);
     void startDefaultSession();
-    void shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode);
 
 Q_SIGNALS:
     void logoutFinished(bool sessionClosed);
@@ -154,8 +153,6 @@ private:
     // public dcop interface
 
 public Q_SLOTS: // public dcop interface
-    void logout(int, int, int);
-    bool canShutdown();
     bool isShuttingDown() const;
     QString currentSession();
     void saveCurrentSession();
@@ -164,7 +161,6 @@ public Q_SLOTS: // public dcop interface
     void saveSubSession(const QString &name, QStringList saveAndClose, QStringList saveOnly = QStringList());
     void restoreSubSession(const QString &name);
 
-    void openSwitchUserDialog();
     bool closeSession();
 
 Q_SIGNALS:

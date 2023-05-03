@@ -486,84 +486,6 @@ static QList<QDBusObjectPath> getSessionsForSeat(const QDBusObjectPath &path)
     return QList<QDBusObjectPath>();
 }
 
-#ifndef KDM_NO_SHUTDOWN
-bool KDisplayManager::canShutdown()
-{
-    if (DMType == NewGDM || DMType == NoDM || DMType == LightDM) {
-        QDBusReply<QString> canPowerOff = SystemdManager().call(QStringLiteral("CanPowerOff"));
-        if (canPowerOff.isValid())
-            return canPowerOff.value() != QLatin1String("no");
-        QDBusReply<bool> canStop = CKManager().call(QStringLiteral("CanStop"));
-        if (canStop.isValid())
-            return canStop.value();
-        return false;
-    }
-
-    if (DMType == OldKDM)
-        return strstr(ctl, ",maysd") != nullptr;
-
-    QByteArray re;
-
-    if (DMType == OldGDM)
-        return exec("QUERY_LOGOUT_ACTION\n", re) && re.indexOf("HALT") >= 0;
-
-    return exec("caps\n", re) && re.indexOf("\tshutdown") >= 0;
-}
-
-void KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
-                               KWorkSpace::ShutdownMode shutdownMode, /* NOT Default */
-                               const QString &bootOption)
-{
-    if (shutdownType == KWorkSpace::ShutdownTypeNone || shutdownType == KWorkSpace::ShutdownTypeLogout)
-        return;
-
-    bool cap_ask;
-    if (DMType == NewKDM) {
-        QByteArray re;
-        cap_ask = exec("caps\n", re) && re.indexOf("\tshutdown ask") >= 0;
-    } else {
-        if (!bootOption.isEmpty())
-            return;
-
-        if (DMType == NewGDM || DMType == NoDM || DMType == LightDM) {
-            // systemd supports only 2 modes:
-            // * interactive = true: brings up a PolicyKit prompt if other sessions are active
-            // * interactive = false: rejects the shutdown if other sessions are active
-            // There are no schedule or force modes.
-            // We try to map our 4 shutdown modes in the sanest way.
-            bool interactive = (shutdownMode == KWorkSpace::ShutdownModeInteractive || shutdownMode == KWorkSpace::ShutdownModeForceNow);
-            QDBusReply<QString> check =
-                SystemdManager().call(QLatin1String(shutdownType == KWorkSpace::ShutdownTypeReboot ? "Reboot" : "PowerOff"), interactive);
-            if (!check.isValid()) {
-                // FIXME: entirely ignoring shutdownMode
-                CKManager().call(QLatin1String(shutdownType == KWorkSpace::ShutdownTypeReboot ? "Restart" : "Stop"));
-                // if even CKManager call fails, there is nothing more to be done
-            }
-            return;
-        }
-
-        cap_ask = false;
-    }
-    if (!cap_ask && shutdownMode == KWorkSpace::ShutdownModeInteractive)
-        shutdownMode = KWorkSpace::ShutdownModeForceNow;
-
-    QByteArray cmd;
-    if (DMType == OldGDM) {
-        cmd.append(shutdownMode == KWorkSpace::ShutdownModeForceNow ? "SET_LOGOUT_ACTION " : "SET_SAFE_LOGOUT_ACTION ");
-        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ? "REBOOT\n" : "HALT\n");
-    } else {
-        cmd.append("shutdown\t");
-        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ? "reboot\t" : "halt\t");
-        if (!bootOption.isEmpty())
-            cmd.append("=").append(bootOption.toLocal8Bit()).append("\t");
-        cmd.append(shutdownMode == KWorkSpace::ShutdownModeInteractive    ? "ask\n"
-                       : shutdownMode == KWorkSpace::ShutdownModeForceNow ? "forcenow\n"
-                       : shutdownMode == KWorkSpace::ShutdownModeTryNow   ? "trynow\n"
-                                                                          : "schedule\n");
-    }
-    exec(cmd.data());
-}
-
 bool KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
 {
     if (DMType != NewKDM)
@@ -591,7 +513,6 @@ bool KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
 
     return true;
 }
-#endif // KDM_NO_SHUTDOWN
 
 bool KDisplayManager::isSwitchable()
 {
