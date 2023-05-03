@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-03 02:55+0000\n"
 "PO-Revision-Date: 2020-01-30 20:22+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -195,7 +195,7 @@ msgstr "Inputminutter - min. 1, maks. 600"
 msgid "Error: Transition time overlaps."
 msgstr "Fejl: Overgangstidspunkt overlapper."
 
-#: package/contents/ui/main.qml:413
+#: package/contents/ui/main.qml:415
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"

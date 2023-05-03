@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-03 02:55+0000\n"
 "PO-Revision-Date: 2022-09-10 11:25+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -192,7 +192,7 @@ msgstr "Entrada en minuts - mín. 1, màx. 600"
 msgid "Error: Transition time overlaps."
 msgstr "S'ha produït un error: Les hores de transició se sobreposen."
 
-#: package/contents/ui/main.qml:413
+#: package/contents/ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

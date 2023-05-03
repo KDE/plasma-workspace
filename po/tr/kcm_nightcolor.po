@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-03 02:55+0000\n"
 "PO-Revision-Date: 2023-03-28 14:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -187,7 +187,7 @@ msgstr "Dakikalar gir - en az 1, en fazla 600"
 msgid "Error: Transition time overlaps."
 msgstr "Hata: Geçiş zamanı örtüşüyor."
 
-#: package/contents/ui/main.qml:413
+#: package/contents/ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

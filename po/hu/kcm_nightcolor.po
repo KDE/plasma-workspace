@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-03 02:55+0000\n"
 "PO-Revision-Date: 2022-01-24 13:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -197,7 +197,7 @@ msgstr "Minimum 1, maximum 600 perc"
 msgid "Error: Transition time overlaps."
 msgstr "Hiba: az átmeneti idők átfedésben vannak."
 
-#: package/contents/ui/main.qml:413
+#: package/contents/ui/main.qml:415
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"
