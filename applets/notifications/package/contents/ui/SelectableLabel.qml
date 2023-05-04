@@ -42,6 +42,8 @@ PlasmaComponents3.ScrollView {
         bottomPadding: 0
 
         background: null
+        color: PlasmaCore.Theme.textColor
+
         // Selectable only when we are in desktop mode
         selectByMouse: !Kirigami.Settings.tabletMode
 
