@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-05-03 02:55+0000\n"
 "PO-Revision-Date: 2022-10-15 12:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -49,10 +49,10 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
-"Tilpassa utgåve av <link url='https://commons.wikimedia.org/wiki/"
-"File:World_location_map_(equirectangular_180).svg'>World location map</link> "
-"av TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+"Tilpassa utgåve av <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> av "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "I minutt, frå 1 til 600."
 msgid "Error: Transition time overlaps."
 msgstr "Feil: Overgangstidene overlappar."
 
-#: package/contents/ui/main.qml:413
+#: package/contents/ui/main.qml:415
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
