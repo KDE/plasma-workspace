@@ -73,7 +73,9 @@ void Mpris2Engine::serviceOwnerChanged(const QString &serviceName, const QString
 
     if (!newOwner.isEmpty()) {
         qCDebug(MPRIS2) << "MPRIS service" << serviceName << "just came online";
-        addMediaPlayer(serviceName, sourceName);
+        QTimer::singleShot(100, this, [this, serviceName, sourceName] {
+            addMediaPlayer(serviceName, sourceName);
+        });
     }
 }
 
