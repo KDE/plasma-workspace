@@ -883,6 +883,3 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr ""
-
-#~ msgid "Edit Contents"
-#~ msgstr "čuohpusgirjioalu"

@@ -2211,9 +2211,3 @@ msgstr ""
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr ""
-
-#~ msgid "Craig Drummond"
-#~ msgstr "Craig Drummond"
-
-#~ msgid "Developer and maintainer"
-#~ msgstr "Ovdanáhtti ja máŧodoalli"
