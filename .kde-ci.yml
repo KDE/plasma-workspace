@@ -64,6 +64,8 @@ Dependencies:
     'libraries/kuserfeedback': '@stable'
     'graphics/libkexiv2': '@latest-kf6'
     'third-party/appstream': '@latest'
+    'third-party/wayland': '@latest'
+    'third-party/wayland-protocols': '@latest'
 
 - 'on': ['Linux']
   'require':
