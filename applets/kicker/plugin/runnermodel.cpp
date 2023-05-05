@@ -159,6 +159,13 @@ QStringList RunnerModel::runners() const
 
 void RunnerModel::setRunners(const QStringList &runners)
 {
+    if (runners == m_runners) {
+        return;
+    }
+
+    m_runners = runners;
+    Q_EMIT runnersChanged();
+
     // Update the existing models only, if we have intialized the models
     if (!m_models.isEmpty()) {
         if (m_mergeResults) {
@@ -171,8 +178,6 @@ void RunnerModel::setRunners(const QStringList &runners)
             initializeModels();
         }
     }
-    m_runners = runners;
-    Q_EMIT runnersChanged();
 }
 
 QString RunnerModel::query() const
