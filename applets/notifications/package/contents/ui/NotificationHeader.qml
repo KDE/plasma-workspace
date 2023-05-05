@@ -14,7 +14,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
-import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons 1.0 as KCoreAddons
 
 import org.kde.quickcharts 1.0 as Charts
 
