@@ -14,7 +14,6 @@ add_subdirectory(services)
 add_subdirectory(recentdocuments)
 add_subdirectory(shell)
 add_subdirectory(webshortcuts)
-add_subdirectory(windowedwidgets)
 
 if(AppStreamQt_FOUND)
     add_subdirectory(appstream)
