@@ -1,0 +1,264 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"PO-Revision-Date: 2023-05-01 23:53+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:303
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+
+#: kcmcursortheme.cpp:377
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:388
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr ""
+
+#: kcmcursortheme.cpp:419
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr ""
+
+#: kcmcursortheme.cpp:426
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:435
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+
+#: kcmcursortheme.cpp:439
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "¿Quies sobrescribir l'estilu?"
+
+#: kcmcursortheme.cpp:463
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:42
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:63
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:69
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:90
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:101
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:103
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:113
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:121
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:126
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr ""
+
+#: ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:25
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:46
+#, kde-format
+msgctxt "@label"
+msgid "Cursor feedback:"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:47
+#, kde-format
+msgctxt "@option:radio No cursor feedback when launching apps"
+msgid "None"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:65
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:74
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:91
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:110
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr ""
+
+#: ui/main.qml:145
+#, kde-format
+msgid "&Install from File…"
+msgstr ""
+
+#: ui/main.qml:151
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr ""
+
+#: ui/main.qml:168
+#, kde-format
+msgid "Open Theme"
+msgstr ""
+
+#: ui/main.qml:170
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:56
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""

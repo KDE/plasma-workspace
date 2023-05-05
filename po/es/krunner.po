@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-09-15 18:02+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -106,12 +106,12 @@ msgstr "Fijar la búsqueda"
 msgid "Keep Open"
 msgstr "Mantener abierta"
 
-#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
 msgstr "Consultas recientes"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Remove"
 msgstr "Eliminar"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-09-23 10:35+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -105,12 +105,12 @@ msgstr "Przypnij wyszukiwanie"
 msgid "Keep Open"
 msgstr "Pozostaw otwartym"
 
-#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
 msgstr "Ostatnie zapytania"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"

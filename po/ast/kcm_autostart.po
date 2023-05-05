@@ -1,0 +1,124 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"PO-Revision-Date: 2023-05-03 23:50+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: autostartmodel.cpp:320
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "«%1» nun ye una URL absoluta."
+
+#: autostartmodel.cpp:323
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"«%1» nun esiste."
+
+#: autostartmodel.cpp:326
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "«%1» nun ye un ficheru."
+
+#: autostartmodel.cpp:329
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "«%1» nun ye de llectura."
+
+#: ui/main.qml:41
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: ui/main.qml:55
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: ui/main.qml:57
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: ui/main.qml:95
+#, kde-format
+msgid "Properties"
+msgstr "Propiedaes"
+
+#: ui/main.qml:101
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
+msgid "Applications"
+msgstr "Aplicaciones"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: ui/main.qml:118
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgid "Logout Scripts"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: ui/main.qml:131
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: ui/main.qml:145
+#, kde-format
+msgid "Choose Login Script"
+msgstr ""
+
+#: ui/main.qml:165
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: ui/main.qml:197
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: ui/main.qml:203
+#, kde-format
+msgid "Add Login Script…"
+msgstr ""
+
+#: ui/main.qml:209
+#, kde-format
+msgid "Add Logout Script…"
+msgstr ""

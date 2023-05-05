@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -106,12 +106,12 @@ msgstr "固定搜索"
 msgid "Keep Open"
 msgstr "保持打开"
 
-#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
 msgstr "最近查询"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Remove"
 msgstr "移除"

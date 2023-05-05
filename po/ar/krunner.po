@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-09-19 18:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -106,12 +106,12 @@ msgstr "ثبّت البحث"
 msgid "Keep Open"
 msgstr "أبقه مفتوحاً"
 
-#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
 msgstr "الاستعلامات الأخيرة"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Remove"
 msgstr "أزل"

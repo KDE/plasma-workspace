@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-05-05 02:15+0000\n"
 "PO-Revision-Date: 2022-09-15 10:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -109,12 +109,12 @@ msgstr "Fixa la cerca"
 msgid "Keep Open"
 msgstr "Mantén obert"
 
-#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
 msgstr "Consultes recents"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"

@@ -1,0 +1,262 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"PO-Revision-Date: 2023-05-01 23:55+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr ""
+
+#: kcm.cpp:192
+#, kde-format
+msgid "Configure Notifications"
+msgstr ""
+
+#: sourcesmodel.cpp:363
+#, kde-format
+msgid "Other Applications"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:63
+#, kde-format
+msgid "Show popups"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:77
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
+#, kde-format
+msgid "Show in history"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:101
+#, kde-format
+msgid "Show notification badges"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Configure Events…"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:130
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis."
+msgstr ""
+
+#: ui/main.qml:41
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr ""
+
+#: ui/main.qml:56
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable:"
+msgstr ""
+
+#: ui/main.qml:69
+#, kde-format
+msgctxt "Enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
+msgstr ""
+
+#: ui/main.qml:81
+#, kde-format
+msgctxt "Enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
+msgstr ""
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Keyboard shortcut:"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr ""
+
+#: ui/main.qml:108
+#, kde-format
+msgid "Critical notifications:"
+msgstr ""
+
+#: ui/main.qml:109
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgid "Normal notifications:"
+msgstr ""
+
+#: ui/main.qml:122
+#, kde-format
+msgid "Show over full screen windows"
+msgstr ""
+
+#: ui/main.qml:134
+#, kde-format
+msgid "Low priority notifications:"
+msgstr ""
+
+#: ui/main.qml:135
+#, kde-format
+msgid "Show popup"
+msgstr ""
+
+#: ui/main.qml:164
+#, kde-format
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
+msgstr ""
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@label"
+msgid "Location:"
+msgstr "Llugar:"
+
+#: ui/main.qml:171
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Near notification icon"
+msgstr ""
+
+#: ui/main.qml:208
+#, kde-format
+msgid "Choose Custom Position…"
+msgstr ""
+
+#: ui/main.qml:217 ui/main.qml:233
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:222
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr ""
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr ""
+
+#: ui/main.qml:250
+#, kde-format
+msgid "Application progress:"
+msgstr ""
+
+#: ui/main.qml:251 ui/main.qml:291
+#, kde-format
+msgid "Show in task manager"
+msgstr ""
+
+#: ui/main.qml:263
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr ""
+
+#: ui/main.qml:277
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr ""
+
+#: ui/main.qml:290
+#, kde-format
+msgid "Notification badges:"
+msgstr ""
+
+#: ui/main.qml:302
+#, kde-format
+msgctxt "@title:group"
+msgid "Application-specific settings"
+msgstr ""
+
+#: ui/main.qml:307
+#, kde-format
+msgid "Configure…"
+msgstr ""
+
+#: ui/PopupPositionPage.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr ""
+
+#: ui/SourcesPage.qml:19
+#, kde-format
+msgid "Application Settings"
+msgstr ""
+
+#: ui/SourcesPage.qml:93
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: ui/SourcesPage.qml:94
+#, kde-format
+msgid "System Services"
+msgstr ""
+
+#: ui/SourcesPage.qml:132
+#, kde-format
+msgid "No application or event matches your search term."
+msgstr ""
+
+#: ui/SourcesPage.qml:152
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior."
+msgstr ""

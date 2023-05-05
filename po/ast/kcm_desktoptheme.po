@@ -1,0 +1,154 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Enol P. <enolp@softastur.org>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"PO-Revision-Date: 2023-05-01 23:53+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr ""
+
+#: kcm.cpp:110
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:121
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:146
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:149 kcm.cpp:155
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:257
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgid "All Themes"
+msgstr "Tolos estilos"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Light Themes"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:99
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Edit Theme…"
+msgstr ""
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Remove Theme"
+msgstr ""
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Restore Theme"
+msgstr ""
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:178
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr ""
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Open Theme"
+msgstr ""
+
+#: ui/main.qml:194
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
