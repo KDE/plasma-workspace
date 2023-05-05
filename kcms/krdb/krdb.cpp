@@ -321,7 +321,26 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
 
 // -----------------------------------------------------------------------------
 
-void runRdb(uint flags)
+int xftDpi()
+{
+    KConfig cfg(QStringLiteral("kcmfonts"));
+    KConfigGroup fontsCfg(&cfg, "General");
+
+    int defaultDpi = 0;
+    const bool isWayland = KWindowSystem::isPlatformWayland();
+
+    if (isWayland) {
+        KConfig cfg(QStringLiteral("kwinrc"));
+        KConfigGroup xwaylandGroup = cfg.group("Xwayland");
+        qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
+        defaultDpi = scale * 96;
+    }
+
+    QString fontDpiKey = isWayland ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
+    return fontsCfg.readEntry(fontDpiKey, defaultDpi);
+}
+
+void runRdb(unsigned int flags)
 {
     // Obtain the application palette that is about to be set.
     bool exportQtColors = flags & KRdbExportQtColors;
@@ -398,22 +417,8 @@ void runRdb(uint flags)
         if (!subPixel.isEmpty())
             contents += "Xft.rgba: " + subPixel + '\n';
 
-        KConfig _cfgfonts(QStringLiteral("kcmfonts"));
-        KConfigGroup cfgfonts(&_cfgfonts, "General");
-
-        int dpi;
-
-        // even though this sets up the X rdb, we want to use the value the
-        // user has set to use when under wayland - as X apps will be scaled by the compositor
-        if (KWindowSystem::isPlatformWayland()) {
-            dpi = cfgfonts.readEntry("forceFontDPIWayland", 0);
-            if (dpi == 0) { // with wayland we want xwayland to run at 96 dpi (unless set otherwise) as we have wayland scaling on top
-                dpi = 96;
-            }
-        } else {
-            dpi = cfgfonts.readEntry("forceFontDPI", 0);
-        }
-        if (dpi != 0)
+        int dpi = xftDpi();
+        if (dpi > 0)
             contents += "Xft.dpi: " + QString::number(dpi) + '\n';
         else {
             KProcess queryProc;

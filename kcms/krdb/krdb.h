@@ -16,4 +16,6 @@ enum KRdbAction {
     KRdbExportGtkTheme = 0x0010, // Export KDE's widget style to Gtk if possible
 };
 
-void KRDB_EXPORT runRdb(uint flags);
+void KRDB_EXPORT runRdb(unsigned int flags);
+
+int KRDB_EXPORT xftDpi();

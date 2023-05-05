@@ -6,6 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "krdb.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <KWindowSystem>
@@ -17,18 +18,7 @@ Q_DECL_EXPORT void kcminit()
     KConfig cfg(QStringLiteral("kcmfonts"));
     KConfigGroup fontsCfg(&cfg, "General");
 
-    int defaultDpi = 0;
-    const bool isWayland = KWindowSystem::isPlatformWayland();
-
-    if (isWayland) {
-        KConfig cfg(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup = cfg.group("Xwayland");
-        qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
-        defaultDpi = scale * 96;
-    }
-
-    QString fontDpiKey = isWayland ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
-    const int dpi = fontsCfg.readEntry(fontDpiKey, defaultDpi);
+    const int dpi = xftDpi();
     if (dpi <= 0) {
         return;
     }
