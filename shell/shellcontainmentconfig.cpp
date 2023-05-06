@@ -73,11 +73,13 @@ int ScreenPoolModel::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> ScreenPoolModel::roleNames() const
 {
-    QHash<int, QByteArray> roles({{ScreenIdRole, QByteArrayLiteral("screenId")},
-                                  {ScreenNameRole, QByteArrayLiteral("screenName")},
-                                  {ContainmentsRole, QByteArrayLiteral("containments")},
-                                  {EnabledRole, QByteArrayLiteral("isEnabled")},
-                                  {PrimaryRole, QByteArrayLiteral("isPrimary")}});
+    QHash<int, QByteArray> roles({
+        {ScreenIdRole, QByteArrayLiteral("screenId")},
+        {ScreenNameRole, QByteArrayLiteral("screenName")},
+        {ContainmentsRole, QByteArrayLiteral("containments")},
+        {EnabledRole, QByteArrayLiteral("isEnabled")},
+        {PrimaryRole, QByteArrayLiteral("isPrimary")},
+    });
     return roles;
 }
 
@@ -249,19 +251,20 @@ int ShellContainmentModel::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> ShellContainmentModel::roleNames() const
 {
-    QHash<int, QByteArray> roles({{ContainmentIdRole, QByteArrayLiteral("containmentId")},
-                                  {NameRole, QByteArrayLiteral("name")},
-                                  {ScreenRole, QByteArrayLiteral("screen")},
-                                  {EdgeRole, QByteArrayLiteral("edge")},
-                                  {EdgePositionRole, QByteArrayLiteral("edgePosition")},
-                                  {PanelCountAtRightRole, QByteArrayLiteral("panelCountAtRight")},
-                                  {PanelCountAtTopRole, QByteArrayLiteral("panelCountAtTop")},
-                                  {PanelCountAtLeftRole, QByteArrayLiteral("panelCountAtLeft")},
-                                  {PanelCountAtBottomRole, QByteArrayLiteral("panelCountAtBottom")},
-                                  {ActivityRole, QByteArrayLiteral("activity")},
-                                  {IsActiveRole, QByteArrayLiteral("active")},
-                                  {ImageSourceRole, QByteArrayLiteral("imageSource")},
-                                  {DestroyedRole, QByteArrayLiteral("isDestroyed")}});
+    QHash<int, QByteArray> roles({
+        {ContainmentIdRole, QByteArrayLiteral("containmentId")},
+        {ScreenRole, QByteArrayLiteral("screen")},
+        {EdgeRole, QByteArrayLiteral("edge")},
+        {EdgePositionRole, QByteArrayLiteral("edgePosition")},
+        {PanelCountAtRightRole, QByteArrayLiteral("panelCountAtRight")},
+        {PanelCountAtTopRole, QByteArrayLiteral("panelCountAtTop")},
+        {PanelCountAtLeftRole, QByteArrayLiteral("panelCountAtLeft")},
+        {PanelCountAtBottomRole, QByteArrayLiteral("panelCountAtBottom")},
+        {ActivityRole, QByteArrayLiteral("activity")},
+        {IsActiveRole, QByteArrayLiteral("active")},
+        {ImageSourceRole, QByteArrayLiteral("imageSource")},
+        {DestroyedRole, QByteArrayLiteral("isDestroyed")},
+    });
     return roles;
 }
 
