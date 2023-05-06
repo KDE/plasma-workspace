@@ -65,7 +65,6 @@ class ShellContainmentModel : public QAbstractListModel
 public:
     enum ShellContainmentModelRoles {
         ContainmentIdRole = Qt::UserRole + 1,
-        NameRole,
         ScreenRole,
         EdgeRole,
         EdgePositionRole,
@@ -101,7 +100,6 @@ public Q_SLOTS:
 
 private:
     static QString plasmaLocationToString(const Plasma::Types::Location location);
-    static QString containmentTypeToString(const Plasma::Types::ContainmentType containmentType);
 
     Plasma::Containment *containmentById(unsigned int id);
     QString containmentPreview(Plasma::Containment *containment);
@@ -111,7 +109,6 @@ private:
     ShellCorona *m_corona;
     struct Data {
         unsigned int id;
-        QString name;
         int screen;
         Plasma::Types::Location edge;
         QString activity;

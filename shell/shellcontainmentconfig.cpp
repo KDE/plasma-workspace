@@ -204,12 +204,8 @@ QVariant ShellContainmentModel::data(const QModelIndex &index, int role) const
     }
     const Data &d = m_containments.at(index.row());
     switch (role) {
-    case Qt::DisplayRole:
-        return d.name;
     case ContainmentIdRole:
         return d.id;
-    case NameRole:
-        return d.name;
     case ScreenRole:
         return d.screen;
     case EdgeRole:
@@ -357,7 +353,6 @@ void ShellContainmentModel::load()
         m_corona->grabContainmentPreview(const_cast<Plasma::Containment *>(cont));
         Data d;
         d.id = cont->id();
-        d.name = cont->title() + " (" + ShellContainmentModel::containmentTypeToString(cont->containmentType()) + ")";
         d.screen = cont->lastScreen();
         d.edge = cont->location();
         d.activity = cont->activity();
@@ -412,25 +407,6 @@ QString ShellContainmentModel::plasmaLocationToString(Plasma::Types::Location lo
         return QStringLiteral("right");
     default:
         return QString("unknown");
-    }
-}
-
-QString ShellContainmentModel::containmentTypeToString(Plasma::Types::ContainmentType containmentType)
-{
-    switch (containmentType) {
-    case Plasma::Types::DesktopContainment: /**< A desktop containment */
-        return QStringLiteral("Desktop");
-    case Plasma::Types::PanelContainment: /**< A desktop panel */
-        return QStringLiteral("Panel");
-    case Plasma::Types::CustomContainment: /**< A containment that is neither a desktop nor a panel
-                            but something application specific */
-        return QStringLiteral("Custom");
-    case Plasma::Types::CustomPanelContainment: /**< A customized desktop panel */
-        return QStringLiteral("Custom Desktop");
-    case Plasma::Types::CustomEmbeddedContainment: /**< A customized containment embedded in another applet */
-        return QStringLiteral("Embedded");
-    default:
-        return QStringLiteral("Unknown");
     }
 }
 
