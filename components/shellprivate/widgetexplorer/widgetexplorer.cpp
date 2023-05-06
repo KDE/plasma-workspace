@@ -238,7 +238,7 @@ void WidgetExplorerPrivate::initRunningApplets()
 
     const QList<Containment *> containments = c->containments();
     for (Containment *containment : containments) {
-        if (containment->containmentType() == Plasma::Types::DesktopContainment && containment->activity() != activitiesConsumer->currentActivity()) {
+        if (containment->containmentType() == Plasma::Containment::Desktop && containment->activity() != activitiesConsumer->currentActivity()) {
             continue;
         }
         if (containment->screen() != -1) {

@@ -228,7 +228,7 @@ bool ScriptEngine::isPanel(const Plasma::Containment *c)
         return false;
     }
 
-    return c->containmentType() == Plasma::Types::PanelContainment || c->containmentType() == Plasma::Types::CustomPanelContainment;
+    return c->containmentType() == Plasma::Containment::Panel || c->containmentType() == Plasma::Containment::CustomPanel;
 }
 
 Plasma::Corona *ScriptEngine::corona() const

@@ -762,9 +762,8 @@ void ShellCorona::load()
         // also, make sure we don't have a view already.
         // this will be true for first startup as the view has already been created at the new Panel JS call
         std::copy_if(containments.constBegin(), containments.constEnd(), std::back_inserter(m_waitingPanels), [this](Plasma::Containment *containment) {
-            return (
-                (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)
-                && !m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment));
+            return ((containment->containmentType() == Plasma::Containment::Panel || containment->containmentType() == Plasma::Containment::CustomPanel)
+                    && !m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment));
         });
     }
 
@@ -1715,7 +1714,7 @@ void ShellCorona::checkActivities()
     // Killing the unassigned containments
     const auto conts = containments();
     for (Plasma::Containment *cont : conts) {
-        if ((cont->containmentType() == Plasma::Types::DesktopContainment || cont->containmentType() == Plasma::Types::CustomContainment)
+        if ((cont->containmentType() == Plasma::Containment::Desktop || cont->containmentType() == Plasma::Containment::Custom)
             && !existingActivities.contains(cont->activity()) && m_activityController->currentActivity() != cont->activity()) {
             cont->destroy();
         }
@@ -2047,7 +2046,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
 {
     for (auto *containment : containmentsForScreen(oldScreen)) {
-        if (containment->containmentType() != Plasma::Types::PanelContainment && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+        if (containment->containmentType() != Plasma::Containment::Panel && containment->containmentType() != Plasma::Containment::CustomPanel) {
             setScreenForContainment(containment, newScreen);
         }
     }
@@ -2063,7 +2062,7 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
 
     m_pendingScreenChanges[containment] = newScreenId;
 
-    if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
+    if (containment->containmentType() == Plasma::Containment::Panel || containment->containmentType() == Plasma::Containment::CustomPanel) {
         // Panel Case
         containment->reactToScreenChange();
         auto *panelView = m_panelViews.value(containment);
@@ -2183,7 +2182,7 @@ void ShellCorona::grabContainmentPreview(Plasma::Containment *containment)
 {
     QQuickWindow *viewToGrab = nullptr;
 
-    if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
+    if (containment->containmentType() == Plasma::Containment::Panel || containment->containmentType() == Plasma::Containment::CustomPanel) {
         // Panel Containment
         auto it = m_panelViews.constBegin();
         while (it != m_panelViews.constEnd()) {
@@ -2440,8 +2439,7 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
 
     for (auto *cont : containments()) {
         if ((screenId < 0 || cont->screen() == screenId)
-            && (cont->containmentType() == Plasma::Types::ContainmentType::PanelContainment
-                || cont->containmentType() == Plasma::Types::ContainmentType::CustomPanelContainment)) {
+            && (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel)) {
             const auto applets = cont->applets();
             for (auto applet : applets) {
                 if (activateLauncher(applet)) {
@@ -2455,7 +2453,7 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
     }
 
     for (auto *cont : containments()) {
-        if ((screenId < 0 || cont->screen() == screenId) && cont->containmentType() == Plasma::Types::ContainmentType::DesktopContainment) {
+        if ((screenId < 0 || cont->screen() == screenId) && cont->containmentType() == Plasma::Containment::Desktop) {
             const auto applets = cont->applets();
             for (auto applet : applets) {
                 if (activateLauncher(applet)) {

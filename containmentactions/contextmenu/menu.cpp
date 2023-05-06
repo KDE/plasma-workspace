@@ -51,7 +51,7 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     // clang-format off
     // because it really wants to mangle this nice aligned list
-    if (c->containmentType() == Plasma::Types::PanelContainment || c->containmentType() == Plasma::Types::CustomPanelContainment) {
+    if (c->containmentType() == Plasma::Containment::Panel || c->containmentType() == Plasma::Containment::CustomPanel) {
         m_actionOrder << QStringLiteral("add widgets")
                       << QStringLiteral("_context")
                       << QStringLiteral("configure")
@@ -158,7 +158,7 @@ QList<QAction *> ContextMenu::contextualActions()
         } else if (QAction *a = action(name)) {
             // Bug 364292: show "Remove this Panel" option only when panelcontroller is opened
             if (name != QLatin1String("remove") || c->isUserConfiguring()
-                || (c->containmentType() != Plasma::Types::PanelContainment && c->containmentType() != Plasma::Types::CustomPanelContainment
+                || (c->containmentType() != Plasma::Containment::Panel && c->containmentType() != Plasma::Containment::CustomPanel
                     && c->corona()->immutability() != Plasma::Types::Mutable)) {
                 actions << a;
             }

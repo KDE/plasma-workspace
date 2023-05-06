@@ -309,7 +309,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
     }
 
     // If it's a panel, only move that one
-    if (cont->containmentType() == Plasma::Types::PanelContainment || cont->containmentType() == Plasma::Types::CustomPanelContainment) {
+    if (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel) {
         m_corona->setScreenForContainment(cont, newScreen);
     } else {
         // If it's a desktop, for now move all desktops for all activities
@@ -341,7 +341,7 @@ void ShellContainmentModel::load()
             continue;
         }
         // Only allow current activity for now (panels always go in)
-        if (cont->containmentType() != Plasma::Types::PanelContainment && cont->containmentType() != Plasma::Types::CustomPanelContainment
+        if (cont->containmentType() != Plasma::Containment::Panel && cont->containmentType() != Plasma::Containment::CustomPanel
             && cont->activity() != m_activityConsumer->currentActivity()) {
             continue;
         }

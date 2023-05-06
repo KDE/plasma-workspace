@@ -78,7 +78,7 @@ void StandaloneAppCorona::load()
 
     bool found = false;
     for (auto c : containments()) {
-        if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
+        if (c->containmentType() == Plasma::Containment::Desktop || c->containmentType() == Plasma::Containment::Custom) {
             found = true;
             break;
         }
@@ -92,7 +92,7 @@ void StandaloneAppCorona::load()
 
     for (auto c : containments()) {
         qDebug() << "containment found";
-        if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
+        if (c->containmentType() == Plasma::Containment::Desktop || c->containmentType() == Plasma::Containment::Custom) {
             QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
             if (removeAction) {
                 removeAction->deleteLater();
@@ -133,7 +133,7 @@ Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QSt
 {
     for (Plasma::Containment *cont : containments()) {
         if (cont->activity() == activity
-            && (cont->containmentType() == Plasma::Types::DesktopContainment || cont->containmentType() == Plasma::Types::CustomContainment)) {
+            && (cont->containmentType() == Plasma::Containment::Desktop || cont->containmentType() == Plasma::Containment::Custom)) {
             return cont;
         }
     }
@@ -221,7 +221,7 @@ Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
 int StandaloneAppCorona::screenForContainment(const Plasma::Containment *containment) const
 {
     // this simple corona doesn't have multiscreen support
-    if (containment->containmentType() != Plasma::Types::PanelContainment && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+    if (containment->containmentType() != Plasma::Containment::Panel && containment->containmentType() != Plasma::Containment::CustomPanel) {
         if (containment->activity() != m_activityConsumer->currentActivity()) {
             return -1;
         }

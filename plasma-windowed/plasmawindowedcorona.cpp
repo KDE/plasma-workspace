@@ -134,7 +134,7 @@ void PlasmaWindowedCorona::load()
 
     bool found = false;
     for (auto c : containments()) {
-        if (c->containmentType() == Plasma::Types::DesktopContainment) {
+        if (c->containmentType() == Plasma::Containment::Desktop) {
             found = true;
             break;
         }
@@ -147,7 +147,7 @@ void PlasmaWindowedCorona::load()
     }
 
     for (auto c : containments()) {
-        if (c->containmentType() == Plasma::Types::DesktopContainment) {
+        if (c->containmentType() == Plasma::Containment::Desktop) {
             m_containment = c;
             m_containment->setFormFactor(Plasma::Types::Application);
             QAction *removeAction = c->actions()->action(QStringLiteral("remove"));

@@ -30,7 +30,7 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
     , m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
-    m_baseCfg = KConfigGroup(&m_baseCfg, QString::number(m_containment->containmentType()));
+    m_baseCfg = KConfigGroup(&m_baseCfg, QString::number((int)m_containment->containmentType()));
 
     QHash<QString, Plasma::ContainmentActions *> actions = containment->containmentActions();
 

@@ -187,7 +187,7 @@ void ShellTest::cleanup()
 
     // Cleanup all the containments that were created
     for (auto *c : m_corona->containments()) {
-        if (c->containmentType() == Plasma::Types::PanelContainment || c->screen() != 0) {
+        if (c->containmentType() == Plasma::Containment::Panel || c->screen() != 0) {
             c->destroy();
         }
     }
@@ -221,7 +221,6 @@ void ShellTest::testPanelInsertion()
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
-    panelCont->setContainmentType(Plasma::Types::PanelContainment);
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     QVERIFY(m_corona->m_panelViews.contains(panelCont));
     QCOMPARE(panelCont->screen(), 0);
@@ -308,7 +307,6 @@ void ShellTest::testScreenRemoval()
 
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
-    panelCont->setContainmentType(Plasma::Types::PanelContainment);
     m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenForId(2));
     QCOMPARE(panelCont->screen(), 2);
     QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), m_corona->m_screenPool->screenForId(2));
@@ -383,7 +381,6 @@ void ShellTest::testScreenRemovalRecyclingViews()
     // Create a panel on screen 1
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
-    panelCont->setContainmentType(Plasma::Types::PanelContainment);
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     auto panelView = m_corona->m_panelViews[panelCont];
     panelView->setScreenToFollow(m_corona->m_screenPool->screenForId(1));
@@ -495,7 +492,6 @@ void ShellTest::testReorderScreens()
         QScreen *s = screens[i];
         auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
         // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
-        panelCont->setContainmentType(Plasma::Types::PanelContainment);
         QVERIFY(m_corona->m_panelViews.contains(panelCont));
         QCOMPARE(panelCont->screen(), 0);
         m_corona->m_panelViews[panelCont]->setScreenToFollow(s);

@@ -287,7 +287,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (cont && cont->isContainment() && cont->containmentType() == Plasma::Types::DesktopContainment) {
+    if (cont && cont->isContainment() && cont->containmentType() == Plasma::Containment::Desktop) {
         m_configView = new ContainmentConfigView(cont);
         // if we changed containment with the config open, relaunch the config dialog but for the new containment
         // third arg is used to disconnect when the config closes
