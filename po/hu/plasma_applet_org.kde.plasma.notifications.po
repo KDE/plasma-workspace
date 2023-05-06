@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:53+0000\n"
+"POT-Creation-Date: 2023-05-06 02:58+0000\n"
 "PO-Revision-Date: 2021-09-27 11:11+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -147,30 +147,30 @@ msgstr "Amikor a képernyők tükrözöttek"
 msgid "Close Group"
 msgstr "Csoport bezárása"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:583
 #, kde-format
 msgid "Show Fewer"
 msgstr "Kevesebb megjelenítése"
 
-#: package/contents/ui/FullRepresentation.qml:582
+#: package/contents/ui/FullRepresentation.qml:585
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "További %1 megjelenítése"
 
-#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/FullRepresentation.qml:626
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Nincsenek új értesítések"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:641
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Az értesítési szolgáltatás nem érhető el"
 
-#: package/contents/ui/FullRepresentation.qml:640
+#: package/contents/ui/FullRepresentation.qml:643
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

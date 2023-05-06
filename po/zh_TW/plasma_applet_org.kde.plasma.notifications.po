@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:53+0000\n"
+"POT-Creation-Date: 2023-05-06 02:58+0000\n"
 "PO-Revision-Date: 2023-02-09 01:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -149,30 +149,30 @@ msgstr "已經鏡像螢幕"
 msgid "Close Group"
 msgstr "關閉群組"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:583
 #, kde-format
 msgid "Show Fewer"
 msgstr "顯示較少通知"
 
-#: package/contents/ui/FullRepresentation.qml:582
+#: package/contents/ui/FullRepresentation.qml:585
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "顯示更多 %1 則訊息"
 
-#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/FullRepresentation.qml:626
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "沒有未讀通知"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:641
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "無法使用通知服務"
 
-#: package/contents/ui/FullRepresentation.qml:640
+#: package/contents/ui/FullRepresentation.qml:643
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

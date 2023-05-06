@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:53+0000\n"
+"POT-Creation-Date: 2023-05-06 02:58+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -148,30 +148,30 @@ msgstr ""
 msgid "Close Group"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:583
 #, kde-format
 msgid "Show Fewer"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:582
+#: package/contents/ui/FullRepresentation.qml:585
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/FullRepresentation.qml:626
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:641
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:640
+#: package/contents/ui/FullRepresentation.qml:643
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

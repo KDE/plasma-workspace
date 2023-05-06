@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:53+0000\n"
+"POT-Creation-Date: 2023-05-06 02:58+0000\n"
 "PO-Revision-Date: 2022-10-31 11:54+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -145,30 +145,30 @@ msgstr "Màn hình đang được phản chiếu"
 msgid "Close Group"
 msgstr "Đóng nhóm"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:583
 #, kde-format
 msgid "Show Fewer"
 msgstr "Hiện ít hơn"
 
-#: package/contents/ui/FullRepresentation.qml:582
+#: package/contents/ui/FullRepresentation.qml:585
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Hiện thêm %1"
 
-#: package/contents/ui/FullRepresentation.qml:623
+#: package/contents/ui/FullRepresentation.qml:626
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Không có thông báo nào chưa đọc"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:641
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Dịch vụ thông báo không khả dụng"
 
-#: package/contents/ui/FullRepresentation.qml:640
+#: package/contents/ui/FullRepresentation.qml:643
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
