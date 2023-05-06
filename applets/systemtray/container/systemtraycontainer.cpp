@@ -88,7 +88,7 @@ void SystemTrayContainer::ensureSystrayExists()
         Q_EMIT internalSystrayChanged();
     }
 
-    actions()->addAction("configure", m_innerContainment->actions()->action("configure"));
+    addAction("configure", m_innerContainment->action(Plasma::Applet::Configure));
     connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this, [this](Plasma::Applet *applet) {
         Q_EMIT containment()->configureRequested(applet);
     });
@@ -99,7 +99,7 @@ void SystemTrayContainer::ensureSystrayExists()
     }
 
     // replace internal remove action with ours
-    m_innerContainment->actions()->addAction("remove", actions()->action("remove"));
+    m_innerContainment->addAction("remove", action(Plasma::Applet::Remove));
 
     // Sync the display hints
     m_innerContainment->setContainmentDisplayHints(containmentDisplayHints() | Plasma::Types::ContainmentDrawsPlasmoidHeading

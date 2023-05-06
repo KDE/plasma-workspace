@@ -93,7 +93,7 @@ void StandaloneAppCorona::load()
     for (auto c : containments()) {
         qDebug() << "containment found";
         if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
-            QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
+            QAction *removeAction = c->action(Plasma::Applet::Remove);
             if (removeAction) {
                 removeAction->deleteLater();
             }
@@ -177,7 +177,7 @@ void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
 
     connect(c, &Plasma::Containment::showAddWidgetsInterface, this, &StandaloneAppCorona::toggleWidgetExplorer);
 
-    QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
+    QAction *removeAction = c->action(Plasma::Applet::Remove);
     if (removeAction) {
         removeAction->deleteLater();
     }

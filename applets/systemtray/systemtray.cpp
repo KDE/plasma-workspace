@@ -149,8 +149,8 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         }
     }
 
-    if (applet->actions()->action(QStringLiteral("configure"))) {
-        desktopMenu->addAction(applet->actions()->action(QStringLiteral("configure")));
+    if (applet->action(Plasma::Applet::Configure)) {
+        desktopMenu->addAction(applet->action(Plasma::Applet::Configure));
     }
 
     if (desktopMenu->isEmpty()) {

@@ -153,7 +153,7 @@ void ScreenPoolModel::remove(int screenId)
     auto conts = m_corona->containmentsForScreen(screenId);
     for (auto *cont : std::as_const(conts)) {
         // Don't call destroy directly, so we can have the undo action notification
-        auto *destroyAction = cont->actions()->action("remove");
+        auto *destroyAction = cont->action(Plasma::Applet::Remove);
         if (destroyAction) {
             destroyAction->trigger();
         }
@@ -280,7 +280,7 @@ void ShellContainmentModel::remove(int contId)
     if (cont) {
         disconnect(cont, nullptr, this, nullptr);
         // Don't call destroy directly, so we can have the undo action notification
-        auto *destroyAction = cont->actions()->action("remove");
+        auto *destroyAction = cont->action(Plasma::Applet::Remove);
         if (destroyAction) {
             destroyAction->trigger();
         }

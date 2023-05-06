@@ -256,7 +256,7 @@ void Containment::remove()
 void Containment::showConfigurationInterface()
 {
     if (d->containment) {
-        QAction *configAction = d->containment->actions()->action(QStringLiteral("configure"));
+        QAction *configAction = d->containment->action(Plasma::Applet::Configure);
         if (configAction && configAction->isEnabled()) {
             configAction->trigger();
         }

@@ -89,7 +89,7 @@ void PanelConfigView::updateBlurBehindAndContrast()
 
 void PanelConfigView::showAddWidgetDialog()
 {
-    QAction *addWidgetAction = m_containment->actions()->action(QStringLiteral("add widgets"));
+    QAction *addWidgetAction = m_containment->action(QStringLiteral("add widgets"));
     if (addWidgetAction) {
         addWidgetAction->trigger();
     }

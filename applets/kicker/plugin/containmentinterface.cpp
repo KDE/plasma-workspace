@@ -203,7 +203,7 @@ bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
 void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
 {
     if (containment && containment->immutability() != Plasma::Types::Mutable) {
-        containment->actions()->action(QStringLiteral("lock widgets"))->trigger();
+        containment->action(QStringLiteral("lock widgets"))->trigger();
     }
 }
 

@@ -150,7 +150,7 @@ void PlasmaWindowedCorona::load()
         if (c->containmentType() == Plasma::Types::DesktopContainment) {
             m_containment = c;
             m_containment->setFormFactor(Plasma::Types::Application);
-            QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
+            QAction *removeAction = c->action(Plasma::Containment::Remove);
             if (removeAction) {
                 removeAction->deleteLater();
             }

@@ -180,7 +180,7 @@ QAction *ContextMenu::action(const QString &name)
         return m_separator3;
     } else if (name == QLatin1String("_add panel")) {
         if (c->corona() && c->corona()->immutability() == Plasma::Types::Mutable) {
-            return c->corona()->actions()->action(QStringLiteral("add panel"));
+            return c->corona()->action(QStringLiteral("add panel"));
         }
     } else if (name == QLatin1String("_run_command")) {
         if (KAuthorized::authorizeAction(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("run_command"))) {
@@ -204,7 +204,7 @@ QAction *ContextMenu::action(const QString &name)
         }
     } else if (name == QLatin1String("edit mode")) {
         if (c->corona()) {
-            return c->corona()->actions()->action(QStringLiteral("edit mode"));
+            return c->corona()->action(QStringLiteral("edit mode"));
         }
     } else if (name == QLatin1String("manage activities")) {
         if (c->corona()) {
@@ -214,11 +214,11 @@ QAction *ContextMenu::action(const QString &name)
                 return nullptr;
             }
 
-            return c->corona()->actions()->action(QStringLiteral("manage activities"));
+            return c->corona()->action(QStringLiteral("manage activities"));
         }
     } else {
         // FIXME: remove action: make removal of current activity possible
-        return c->actions()->action(name);
+        return c->action(name);
     }
     return nullptr;
 }
