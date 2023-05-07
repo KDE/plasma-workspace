@@ -71,7 +71,6 @@ Kirigami.OverlaySheet {
                 Dialogs.FileDialog {
                     id: fileDialog
                     title: i18nc("@title", "Choose a picture")
-                    folder: shortcuts.pictures
                     onAccepted: {
                         usersDetailPage.oldImage = usersDetailPage.user.face
                         usersDetailPage.user.face = fileDialog.fileUrl
