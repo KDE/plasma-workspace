@@ -67,6 +67,11 @@ Dependencies:
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
 
+RuntimeDependencies:
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'plasma/milou' : '@same'
+
 - 'on': ['Linux']
   'require':
     'frameworks/networkmanager-qt': '@latest-kf6'
