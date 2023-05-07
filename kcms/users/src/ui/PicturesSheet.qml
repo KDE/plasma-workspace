@@ -150,6 +150,7 @@ Kirigami.OverlaySheet {
                     onClicked: stackSwitcher.currentIndex = 2
                 }
 
+
                 Repeater {
                     model: kcm.avatarFiles
                     QQC2.Button {
@@ -165,13 +166,12 @@ Kirigami.OverlaySheet {
 
                         Image {
                             id: imgDelegate
-                            visible: false
                             asynchronous: true
                             smooth: true
                             mipmap: true
                             sourceSize.width: Kirigami.Units.gridUnit * 5
                             sourceSize.height: Kirigami.Units.gridUnit * 5
-                            source: modelData
+                            source: "file:" + modelData
 
                             Accessible.ignored: true
                         }
