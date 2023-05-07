@@ -108,6 +108,7 @@ KCM.SimpleKCM {
                         const component = Qt.createComponent("PicturesSheet.qml")
                         const obj = component.incubateObject(usersDetailPage, {
                             parent: usersDetailPage,
+                            usersDetailPage: usersDetailPage
                         })
                         if (obj == null) {
                             console.log(component.errorString())

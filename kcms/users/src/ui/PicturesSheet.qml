@@ -16,6 +16,7 @@ Kirigami.OverlaySheet {
     id: picturesSheet
 
     title: i18nc("@title", "Change Avatar")
+    required property Kirigami.Page usersDetailPage
 
     readonly property var colorPalette: [
         {"name": i18nc("@item:intable", "It's Nothing"),     "color": "transparent", "dark": false},
