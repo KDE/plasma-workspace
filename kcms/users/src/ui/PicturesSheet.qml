@@ -100,21 +100,21 @@ Kirigami.OverlaySheet {
 
                 columns: Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6 + picturesColumn.columnSpacing))
 
-                Dialogs.FileDialog {
-                    id: fileDialog
-                    title: i18nc("@title", "Choose a picture")
-                    onAccepted: {
-                        usersDetailPage.oldImage = usersDetailPage.user.face
-                        usersDetailPage.user.face = fileDialog.fileUrl
-                        usersDetailPage.overrideImage = true
-                        picturesSheet.close()
-                    }
-                }
-
                 PictureButton {
                     id: openButton
 
                     contentItem: Item {
+                        Dialogs.FileDialog {
+                            id: fileDialog
+                            title: i18nc("@title", "Choose a picture")
+                            onAccepted: {
+                                usersDetailPage.oldImage = usersDetailPage.user.face
+                                usersDetailPage.user.face = fileDialog.fileUrl
+                                usersDetailPage.overrideImage = true
+                                picturesSheet.close()
+                            }
+                        }
+
                         ColumnLayout {
                             // Centering rather than filling is desired to keep the
                             // entire layout nice and tight when the text is short
