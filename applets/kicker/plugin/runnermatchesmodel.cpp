@@ -172,12 +172,10 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 
 bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row < 0 || row >= rowCount()) {
+    const KRunner::QueryMatch match = getQueryMatch(index(row, 0));
+    if (!match.isValid()) {
         return false;
     }
-
-    KRunner::QueryMatch match = runnerManager()->matches().at(row);
-
     if (!match.isEnabled()) {
         return false;
     }
