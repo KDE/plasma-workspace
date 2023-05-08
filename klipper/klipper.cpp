@@ -95,7 +95,8 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     : QObject(parent)
     , m_overflowCounter(0)
     , m_quitAction(nullptr)
-    , m_locklevel(0)
+    , m_selectionLocklevel(0)
+    , m_clipboardLocklevel(0)
     , m_config(config)
     , m_pendingContentsCheck(false)
     , m_mode(mode)
@@ -298,7 +299,8 @@ void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
-    Ignore lock(m_locklevel);
+    Ignore selectionLock(m_selectionLocklevel);
+    Ignore clipboardLock(m_clipboardLocklevel);
     updateTimestamp();
     HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
     setClipboard(*item, Clipboard | Selection);
@@ -610,7 +612,7 @@ void Klipper::setURLGrabberEnabled(bool enable)
 
 void Klipper::slotHistoryTopChanged()
 {
-    if (m_locklevel) {
+    if (m_selectionLocklevel || m_clipboardLocklevel) {
         return;
     }
 
@@ -625,18 +627,19 @@ void Klipper::slotHistoryTopChanged()
 
 void Klipper::slotClearClipboard()
 {
-    Ignore lock(m_locklevel);
+    Ignore selectionLock(m_selectionLocklevel);
+    Ignore clipboardLock(m_clipboardLocklevel);
 
     m_clip->clear(QClipboard::Selection);
     m_clip->clear(QClipboard::Clipboard);
 }
 
-HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
+HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData, bool selectionMode)
 {
-    if (m_locklevel) {
+    if (selectionMode && m_selectionLocklevel || !selectionMode && m_clipboardLocklevel) {
         return HistoryItemPtr();
     }
-    Ignore lock(m_locklevel);
+    Ignore lock(selectionMode ? m_selectionLocklevel : m_clipboardLocklevel);
 
     if (!(history()->empty())) {
         if (m_bIgnoreImages && history()->first()->type() == HistoryItemType::Image) {
@@ -659,7 +662,7 @@ HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
 
 void Klipper::newClipData(QClipboard::Mode mode)
 {
-    if (m_locklevel) {
+    if ((mode == QClipboard::Clipboard && m_clipboardLocklevel) || (mode == QClipboard::Selection && m_selectionLocklevel)) {
         return;
     }
 
@@ -792,7 +795,7 @@ void Klipper::checkClipData(bool selectionMode)
     } else // unknown, ignore
         return;
 
-    HistoryItemPtr item = applyClipChanges(data);
+    HistoryItemPtr item = applyClipChanges(data, selectionMode);
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) {
@@ -817,7 +820,7 @@ void Klipper::checkClipData(bool selectionMode)
 
 void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason)
 {
-    Ignore lock(m_locklevel);
+    Ignore lock(mode == Selection ? m_selectionLocklevel : m_clipboardLocklevel);
 
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
