@@ -100,9 +100,9 @@ void View::objectIncubated()
     auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
     connect(mainItem, &QQuickItem::widthChanged, this, &View::resetScreenPos);
     setMainItem(mainItem);
-    setMainItemSize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()));
+    resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(margins()));
     connect(mainItem, &QQuickItem::implicitHeightChanged, this, [mainItem, this]() {
-        setMainItemSize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()));
+        resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(margins()));
     });
 }
 
@@ -124,10 +124,6 @@ bool View::freeFloating() const
 
 void View::setFreeFloating(bool floating)
 {
-    if (m_floating == floating) {
-        return;
-    }
-
     m_floating = floating;
     if (m_floating) {
         KWindowEffects::slideWindow(this, KWindowEffects::NoEdge);
