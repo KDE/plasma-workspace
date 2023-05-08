@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-25 04:10+0000\n"
+"POT-Creation-Date: 2023-05-08 02:42+0000\n"
 "PO-Revision-Date: 2023-03-08 17:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -427,13 +427,13 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Bohaté tvrdé drevo"
 
-#: package/contents/ui/PicturesSheet.qml:72
+#: package/contents/ui/PicturesSheet.qml:82
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Vybrať obrázok"
 
-#: package/contents/ui/PicturesSheet.qml:104
+#: package/contents/ui/PicturesSheet.qml:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
