@@ -146,7 +146,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    QSharedPointer<HistoryItem> applyClipChanges(const QMimeData *data);
+    QSharedPointer<HistoryItem> applyClipChanges(const QMimeData *data, bool selectionMode);
 
     void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
@@ -222,7 +222,8 @@ private:
      * Don't manupulate this object directly... use the Ignore struct
      * instead
      */
-    int m_locklevel;
+    int m_selectionLocklevel;
+    int m_clipboardLocklevel;
 
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
