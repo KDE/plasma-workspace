@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2021-11-04 00:34+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr "Annulla"
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: contents/ui/UrlItemDelegate.qml:99
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

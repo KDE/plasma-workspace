@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2021-11-02 17:10+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr "İmtina"
 msgid "No matches"
 msgstr "Oxşarları yoxdur"
 
-#: contents/ui/UrlItemDelegate.qml:99
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

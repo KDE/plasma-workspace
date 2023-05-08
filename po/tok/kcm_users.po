@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -473,14 +473,14 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:73
+#: src/ui/PicturesSheet.qml:83
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "o pana e sitelen"
 
-#: src/ui/PicturesSheet.qml:105
+#: src/ui/PicturesSheet.qml:114
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@action:button"

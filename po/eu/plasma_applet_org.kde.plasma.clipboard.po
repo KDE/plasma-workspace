@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2022-08-18 13:13+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -132,7 +132,7 @@ msgstr "Utzi"
 msgid "No matches"
 msgstr "Ez dago bat datorrenik"
 
-#: contents/ui/UrlItemDelegate.qml:99
+#: contents/ui/UrlItemDelegate.qml:106
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

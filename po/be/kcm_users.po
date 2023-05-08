@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -499,13 +499,13 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
-#: src/ui/PicturesSheet.qml:73
+#: src/ui/PicturesSheet.qml:83
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Абраць выяву"
 
-#: src/ui/PicturesSheet.qml:105
+#: src/ui/PicturesSheet.qml:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -487,14 +487,14 @@ msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "धनी लकड़ी"
 
-#: src/ui/PicturesSheet.qml:73
+#: src/ui/PicturesSheet.qml:83
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "एक छवि चुनें"
 
-#: src/ui/PicturesSheet.qml:105
+#: src/ui/PicturesSheet.qml:114
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
