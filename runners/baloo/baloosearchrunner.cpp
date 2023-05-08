@@ -133,11 +133,12 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
         match.text = url.fileName();
         match.iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
         match.relevance = relevance;
-        match.type =
-            url.fileName().compare(searchTerm, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(searchTerm, Qt::CaseInsensitive) == 0
-            ? KRunner::QueryMatch::ExactMatch
-            : url.fileName().contains(searchTerm, Qt::CaseInsensitive) ? KRunner::QueryMatch::PossibleMatch
-                                                                       : KRunner::QueryMatch::CompletionMatch;
+        const QString baseName = QFileInfo(url.fileName()).completeBaseName();
+        bool isExactMatch = url.fileName().compare(searchTerm, Qt::CaseInsensitive) == 0 || baseName.compare(searchTerm, Qt::CaseInsensitive) == 0;
+        bool isPossibleMatch = url.fileName().contains(searchTerm, Qt::CaseInsensitive);
+        match.type = isExactMatch ? KRunner::QueryMatch::ExactMatch
+            : isPossibleMatch     ? KRunner::QueryMatch::PossibleMatch
+                                  : KRunner::QueryMatch::CompletionMatch;
         QVariantMap properties;
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
