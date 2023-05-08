@@ -21,12 +21,13 @@
 #include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KLocalizedString>
-#include <KNotifyConfigWidget>
 #include <KPluginFactory>
 
 #include <algorithm>
 
+#include "kcm_notifications_debug.h"
 #include "notificationsdata.h"
+#include "soundthemeconfig.h"
 
 #include <libnotificationmanager/badgesettings.h>
 #include <libnotificationmanager/behaviorsettings.h>
@@ -34,19 +35,24 @@
 #include <libnotificationmanager/jobsettings.h>
 #include <libnotificationmanager/notificationsettings.h>
 
+#include <canberra.h>
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>(); registerPlugin<NotificationsData>();)
 
 KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickManagedConfigModule(parent, data)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
+    , m_eventsModel(new EventsProxyModel(this))
     , m_data(new NotificationsData(this))
     , m_toggleDoNotDisturbAction(new QAction(this))
+    , m_soundThemeConfig(new SoundThemeConfig(this))
 {
     const char uri[] = "org.kde.private.kcms.notifications";
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel", QStringLiteral("Cannot create instances of SourcesModel"));
 
     qmlRegisterAnonymousType<FilterProxyModel>("FilterProxyModel", 1);
+    qmlRegisterAnonymousType<EventsProxyModel>("EventsProxyModel", 1);
     qmlRegisterAnonymousType<QKeySequence>("QKeySequence", 1);
     qmlRegisterAnonymousType<NotificationManager::DoNotDisturbSettings>("DoNotDisturbSettings", 1);
     qmlRegisterAnonymousType<NotificationManager::NotificationSettings>("NotificationSettings", 1);
@@ -56,6 +62,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     qmlProtectModule(uri, 1);
 
     m_filteredModel->setSourceModel(m_sourcesModel);
+    m_eventsModel->setSourceModel(m_sourcesModel);
 
     // for KGlobalAccel...
     // keep in sync with globalshortcuts.cpp in notification plasmoid!
@@ -88,6 +95,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     setInitialEventId(parser.value(eventIdOption));
 
     connect(this, &KCMNotifications::toggleDoNotDisturbShortcutChanged, this, &KCMNotifications::settingsChanged);
+    connect(m_sourcesModel, &QAbstractItemModel::dataChanged, this, &KCMNotifications::settingsChanged);
     connect(this, &KCMNotifications::defaultsIndicatorsVisibleChanged, this, &KCMNotifications::onDefaultsIndicatorsVisibleChanged);
 }
 
@@ -103,6 +111,11 @@ SourcesModel *KCMNotifications::sourcesModel() const
 FilterProxyModel *KCMNotifications::filteredModel() const
 {
     return m_filteredModel;
+}
+
+EventsProxyModel *KCMNotifications::eventsModel() const
+{
+    return m_eventsModel;
 }
 
 NotificationManager::DoNotDisturbSettings *KCMNotifications::dndSettings() const
@@ -180,48 +193,6 @@ void KCMNotifications::setInitialEventId(const QString &eventId)
     }
 }
 
-void KCMNotifications::configureEvents(const QString &notifyRcName, const QString &eventId, QQuickItem *ctx)
-{
-    // We're not using KNotifyConfigWidget::configure here as we want to handle the
-    // saving ourself (so we Apply with all other KCM settings) but there's no way
-    // to access the config object :(
-    // We also need access to the QDialog so we can set the KCM as transient parent.
-
-    QDialog *dialog = new QDialog(nullptr);
-    dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->setWindowTitle(i18n("Configure Notifications"));
-
-    if (ctx && ctx->window()) {
-        dialog->winId(); // so it creates windowHandle
-        dialog->windowHandle()->setTransientParent(QQuickRenderControl::renderWindowFor(ctx->window()));
-        dialog->setModal(true);
-    }
-
-    KNotifyConfigWidget *w = new KNotifyConfigWidget(dialog);
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel);
-    buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
-
-    QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(w);
-    layout->addWidget(buttonBox);
-    dialog->setLayout(layout);
-
-    // TODO we should only save settings when clicking Apply in the main UI
-    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, w, &KNotifyConfigWidget::save);
-    connect(buttonBox->button(QDialogButtonBox::Ok), &QPushButton::clicked, w, &KNotifyConfigWidget::save);
-    connect(w, &KNotifyConfigWidget::changed, buttonBox->button(QDialogButtonBox::Apply), &QPushButton::setEnabled);
-
-    connect(buttonBox, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-
-    w->setApplication(notifyRcName);
-    w->selectEvent(eventId);
-
-    dialog->show();
-}
-
 NotificationManager::BehaviorSettings *KCMNotifications::behaviorSettings(const QModelIndex &index)
 {
     if (!index.isValid()) {
@@ -265,6 +236,7 @@ void KCMNotifications::load()
         }
     }
 
+    m_sourcesModel->loadEvents();
     m_data->loadBehaviorSettings();
 
     const QKeySequence toggleDoNotDisturbShortcut =
@@ -287,6 +259,7 @@ void KCMNotifications::save()
 {
     KQuickManagedConfigModule::save();
     m_data->saveBehaviorSettings();
+    m_sourcesModel->saveEvents();
 
     if (m_toggleDoNotDisturbShortcutDirty) {
         // KeySequenceItem will already have checked whether the shortcut is available
@@ -298,6 +271,7 @@ void KCMNotifications::defaults()
 {
     KQuickManagedConfigModule::defaults();
     m_data->defaultsBehaviorSettings();
+    m_sourcesModel->setEventDefaults();
 
     setToggleDoNotDisturbShortcut(QKeySequence());
 }
@@ -320,7 +294,7 @@ void KCMNotifications::updateModelIsDefaultStatus(const QModelIndex &index)
 
 bool KCMNotifications::isSaveNeeded() const
 {
-    return m_toggleDoNotDisturbShortcutDirty || m_data->isSaveNeededBehaviorSettings();
+    return m_toggleDoNotDisturbShortcutDirty || m_data->isSaveNeededBehaviorSettings() || m_sourcesModel->isEventSaveNeeded();
 }
 
 bool KCMNotifications::isDefaults() const
@@ -347,6 +321,70 @@ void KCMNotifications::createConnections(NotificationManager::BehaviorSettings *
     connect(settings, &NotificationManager::BehaviorSettings::ShowBadgesChanged, this, [this, index] {
         updateModelIsDefaultStatus(index);
     });
+}
+
+QUrl KCMNotifications::soundsLocation()
+{
+    const QString soundsPath = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sounds"), QStandardPaths::LocateDirectory).last();
+    return QUrl::fromLocalFile(soundsPath);
+}
+
+void KCMNotifications::playSound(const QString &soundName)
+{
+    // Legacy implementation. Fallback lookup for a full path within the `$XDG_DATA_LOCATION/sounds` dirs
+    QUrl fallbackUrl;
+    const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &dataLocation : dataLocations) {
+        fallbackUrl = QUrl::fromUserInput(soundName, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
+        if (fallbackUrl.isLocalFile() && QFileInfo::exists(fallbackUrl.toLocalFile())) {
+            break;
+        } else if (!fallbackUrl.isLocalFile() && fallbackUrl.isValid()) {
+            break;
+        }
+        fallbackUrl.clear();
+    }
+
+    if (!m_canberraContext) {
+        int ret = ca_context_create(&m_canberraContext);
+        if (ret != CA_SUCCESS) {
+            qCWarning(KCM_NOTIFICATIONS) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
+            m_canberraContext = nullptr;
+            return;
+        }
+
+        // clang-format off
+        ret = ca_context_change_props(m_canberraContext,
+                                      CA_PROP_APPLICATION_NAME, qUtf8Printable(metaData().name()),
+                                      CA_PROP_APPLICATION_ID, qUtf8Printable(metaData().pluginId()),
+                                      CA_PROP_APPLICATION_ICON_NAME, qUtf8Printable(metaData().iconName()),
+                                      nullptr);
+        // clang-format on
+        if (ret != CA_SUCCESS) {
+            qCWarning(KCM_NOTIFICATIONS) << "Failed to set application properties on canberra context for audio notification:" << ca_strerror(ret);
+        }
+    }
+
+    ca_proplist *props = nullptr;
+    ca_proplist_create(&props);
+
+    ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, m_soundThemeConfig->soundTheme().toLatin1().constData());
+    if (!fallbackUrl.isEmpty()) {
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(fallbackUrl.toLocalFile()).constData());
+    }
+
+    // We'll also want this cached for a time. volatile makes sure the cache is
+    // dropped after some time or when the cache is under pressure.
+    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
+
+    int ret = ca_context_play_full(m_canberraContext, 0, props, nullptr, nullptr);
+
+    ca_proplist_destroy(props);
+
+    if (ret != CA_SUCCESS) {
+        qCWarning(KCM_NOTIFICATIONS) << "Failed to play sound" << soundName << "with canberra:" << ca_strerror(ret);
+        return;
+    }
 }
 
 #include "kcm.moc"

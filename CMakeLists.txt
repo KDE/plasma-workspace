@@ -104,6 +104,11 @@ set_package_properties(Phonon4Qt6 PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
 
+find_package(Canberra)
+set_package_properties(Canberra PROPERTIES
+    PURPOSE "Needed to preview notification sounds"
+    TYPE REQUIRED)
+
 find_package(Breeze ${PROJECT_VERSION} CONFIG)
 set_package_properties(Breeze PROPERTIES
                        TYPE OPTIONAL

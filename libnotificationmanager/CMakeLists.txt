@@ -50,6 +50,7 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/notificationsettings.kc
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/behaviorsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/eventsettings.kcfgc GENERATE_MOC)
 
 # DBus
 # Notifications

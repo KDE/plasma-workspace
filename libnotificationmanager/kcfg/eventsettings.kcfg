@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com> -->
+<!-- SPDX-License-Identifier: BSD-2-Clause -->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile arg="true">
+        <parameter name="eventId" />
+    </kcfgfile>
+    <group name="Event/$(eventId)">
+        <!-- Identification -->
+        <entry key="Name" name="name" type="String" />
+        <entry key="Comment" name="comment" type="String" />
+        <entry key="IconName" name="iconName" type="String" />
+        <!-- Context -->
+        <entry key="Context" name="context" type="String" />
+        <entry key="Urgency" name="urgency" type="String" />
+        <!-- Execution (user configurable) -->
+        <entry key="Action" name="action" type="String" />
+        <entry key="Sound" name="sound" type="String" />
+    </group>
+</kcfg>

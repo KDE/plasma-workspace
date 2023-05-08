@@ -1,0 +1,9 @@
+; SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
+; SPDX-License-Identifier: BSD-2-Clause
+File=eventsettings.kcfg
+NameSpace=NotificationManager
+ClassName=EventSettings
+Visibility=NOTIFICATIONMANAGER_EXPORT
+IncludeFiles=\"notificationmanager_export.h\"
+Mutators=action,sound
+ParentInConstructor=true

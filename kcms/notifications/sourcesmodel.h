@@ -11,25 +11,23 @@
 #include <QString>
 #include <QVector>
 
-struct EventData {
-    QString name;
-    QString comment;
-    QString iconName;
-    QString eventId;
-    QStringList actions;
-};
+#include <KService>
 
-// FIXME add constructors for KService and KConfigGroup
+#include "eventsettings.h"
+
+// FIXME add constructors for KConfigGroup
 struct SourceData {
+    static SourceData fromService(KService::Ptr service);
+
     QString name;
     QString comment;
     QString iconName;
-    bool isDefault;
+    bool isDefault = true;
 
     QString notifyRcName;
     QString desktopEntry;
 
-    QVector<EventData> events;
+    QVector<NotificationManager::EventSettings *> events;
 
     QString display() const
     {
@@ -51,8 +49,12 @@ public:
         DesktopEntryRole,
         IsDefaultRole,
 
-        EventIdRole,
+        CommentRole,
+        ShowIconsRole,
         ActionsRole,
+        SoundRole,
+        DefaultActionsRole,
+        DefaultSoundRole,
     };
     Q_ENUM(Roles)
 
@@ -79,6 +81,13 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void load();
+
+    void loadEvents();
+    void saveEvents();
+
+    bool isEventSaveNeeded() const;
+    bool isEventDefaults() const;
+    void setEventDefaults();
 
 private:
     QVector<SourceData> m_data;
