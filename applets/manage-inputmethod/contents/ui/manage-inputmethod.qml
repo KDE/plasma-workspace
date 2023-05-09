@@ -66,7 +66,7 @@ Item {
     }
 
     function action_settings() {
-        KCMShell.openSystemSettings("kcm_virtualkeyboard");
+        KCMLauncher.openSystemSettings("kcm_virtualkeyboard");
     }
 
     states: [

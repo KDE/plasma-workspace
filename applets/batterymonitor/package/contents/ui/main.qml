@@ -11,7 +11,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.coreaddons 1.0 as KCoreAddons
-import org.kde.kquickcontrolsaddons 2.1 // For KCMShell
+import org.kde.kcmutils // KCMLauncher
+import org.kde.config // KAuthorized
 import org.kde.notification 1.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
@@ -59,8 +60,8 @@ Item {
     readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
     readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
     readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
-    readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
-    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
+    readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
+    readonly property bool kcmEnergyInformationAuthorized: KAuthorized.authorizeControlModule("kcm_energyinfo")
     readonly property bool isSomehowInPerformanceMode: actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
     readonly property bool isSomehowinPowerSaveMode: actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
     readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && activeProfileHolds.length > 0
@@ -100,11 +101,11 @@ Item {
     readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
 
     function action_configure() {
-        KCMShell.openSystemSettings("kcm_powerdevilprofilesconfig");
+        KCMLauncher.openSystemSettings("kcm_powerdevilprofilesconfig");
     }
 
     function action_energyinformationkcm() {
-        KCMShell.openInfoCenter("kcm_energyinfo");
+        KCMLauncher.openInfoCenter("kcm_energyinfo");
     }
 
     function action_showPercentage() {

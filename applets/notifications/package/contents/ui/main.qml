@@ -12,7 +12,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 
 import org.kde.coreaddons 1.0 as KCoreAddons
-import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kcmutils as KCMUtils
+import org.kde.config as KConfig
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -184,7 +185,7 @@ Item {
     }
 
     function action_configure() {
-        KQCAddons.KCMShell.openSystemSettings("kcm_notifications");
+        KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
     }
 
     Component.onCompleted: {
@@ -203,6 +204,6 @@ Item {
         // and Networks applets
         Plasmoid.removeAction("configure");
         Plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
-        Plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
+        Plasmoid.action("configure").visible = KConfig.KAuthorized.authorizeControlModules("kcm_notifications");
     }
 }

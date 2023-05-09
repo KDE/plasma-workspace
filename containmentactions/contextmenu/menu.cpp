@@ -15,7 +15,7 @@
 #include <KActivities/Consumer>
 #include <KAuthorized>
 #include <KGlobalAccel>
-#include <KIO/CommandLauncherJob>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KService>
 #include <KTerminalLauncherJob>
@@ -261,25 +261,12 @@ void ContextMenu::startLogout()
     }
 }
 
-// FIXME: this function contains some code copied from KCMShell::openSystemSettings()
-// which is not publicly available to C++ code right now. Eventually we should
-// move that code into KIO so it's accessible to everyone, and then call that
-// function instead of this one
 void ContextMenu::configureDisplays()
 {
-    const QString systemSettings = QStringLiteral("systemsettings");
-    const QString kscreenKCM = QStringLiteral("kcm_kscreen");
-
-    KIO::CommandLauncherJob *job = nullptr;
-
-    // Open in System Settings if it's available
-    if (KService::serviceByDesktopName(systemSettings)) {
-        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"), {kscreenKCM});
-        job->setDesktopName(systemSettings);
-    } else {
-        job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {kscreenKCM});
+    if (auto service = KService::serviceByDesktopName(QStringLiteral("kcm_kscreen"))) {
+        auto job = new KIO::ApplicationLauncherJob(service);
+        job->start();
     }
-    job->start();
 }
 
 QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)

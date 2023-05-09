@@ -12,7 +12,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // PC3 Tabbar only has top and bottom tab positions, not left and right
 
 import org.kde.activities 0.1 as Activities
-import org.kde.kquickcontrolsaddons 2.1 // For KCMShell
+import org.kde.kcmutils // KCMLauncher
+import org.kde.config // KAuthorized
 
 Item {
     Layout.minimumWidth: tabBar.implicitWidth
@@ -21,7 +22,7 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     function action_activitieskcm() {
-        KCMShell.openSystemSettings("kcm_activities");
+        KCMLauncher.openSystemSettings("kcm_activities");
     }
 
     PlasmaComponents.TabBar {
@@ -95,7 +96,7 @@ Item {
     Component.onCompleted: {
         Plasmoid.removeAction("configure");
 
-        if (KCMShell.authorize("kcm_activities.desktop").length > 0) {
+        if (KAuthorized.authorizeControlModule("kcm_activities")) {
             Plasmoid.setAction("activitieskcm", i18nc("@action:inmenu", "&Configure Activities…"), "configure");
         }
     }

@@ -10,10 +10,12 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
+
+import org.kde.kcmutils // KCMLauncher
+import org.kde.config // KAuthorized
 
 Item {
     id: root
@@ -137,11 +139,11 @@ Item {
     }
 
     function action_clockkcm() {
-        KCMShell.openSystemSettings("kcm_clock");
+        KCMLauncher.openSystemSettings("kcm_clock");
     }
 
     function action_formatskcm() {
-        KCMShell.openSystemSettings("kcm_regionandlang");
+        KCMLauncher.openSystemSettings("kcm_regionandlang");
     }
 
     Component.onCompleted: {
@@ -149,10 +151,10 @@ Item {
         ClipboardMenu.setupMenu(Plasmoid.action("clipboard"));
 
         root.initTimezones();
-        if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
+        if (KAuthorized.authorize("kcm_clock")) {
             Plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
-        if (KCMShell.authorize("kcm_regionandlang.desktop").length > 0) {
+        if (KAuthorized.authorizeControlModule("kcm_regionandlang")) {
             Plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
     }

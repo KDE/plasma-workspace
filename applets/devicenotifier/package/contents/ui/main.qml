@@ -14,12 +14,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
+import org.kde.kcmutils // For KCMLauncher
+import org.kde.config // KAuthorized
 
 Item {
     id: devicenotifier
 
-    readonly property bool openAutomounterKcmAuthorized: KCMShell.authorize("device_automounter_kcm.desktop").length > 0
+    readonly property bool openAutomounterKcmAuthorized: KAuthorized.authorizeControlModule("device_automounter_kcm")
 
     property string devicesType: {
         if (Plasmoid.configuration.allDevices) {
@@ -277,7 +278,7 @@ Item {
     }
 
     function action_configure() {
-        KCMShell.openSystemSettings("kcm_device_automounter")
+        KCMLauncher.openSystemSettings("kcm_device_automounter")
     }
 
     function action_showRemovableDevices() {

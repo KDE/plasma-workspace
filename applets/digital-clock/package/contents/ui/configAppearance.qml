@@ -14,7 +14,8 @@ import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
-import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
+import org.kde.kcmutils // For KCMLauncher
+import org.kde.config // For KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
@@ -134,10 +135,10 @@ ColumnLayout {
             }
 
             QQC2.Button {
-                visible: KCMShell.authorize("kcm_regionandlang.desktop").length > 0
+                visible: KAuthorized.authorizeControlModule("kcm_regionandlang")
                 text: i18n("Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
-                onClicked: KCMShell.openSystemSettings("kcm_regionandlang")
+                onClicked: KCMLauncher.openSystemSettings("kcm_regionandlang")
             }
         }
 

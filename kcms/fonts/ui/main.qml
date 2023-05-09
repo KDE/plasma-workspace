@@ -10,19 +10,19 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 6.3 as QtDialogs
-import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.6 as KCM
+import org.kde.kcmutils 1.6 as KCM
+import org.kde.config // KAuthorized
 
 KCM.SimpleKCM {
     id: root
 
     Kirigami.Action {
         id: kscreenAction
-        visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
+        visible: KAuthorized.authorizeControlModule("kcm_kscreen")
         text: i18n("Adjust Global Scale…")
         icon.name: "preferences-desktop-display"
-        onTriggered: KCMShell.open("kcm_kscreen")
+        onTriggered: KCM.KCMLauncher.open("kcm_kscreen")
     }
 
     ColumnLayout {

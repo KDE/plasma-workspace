@@ -14,6 +14,9 @@ import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
+import org.kde.kcmutils // KCMLauncher
+import org.kde.config // KAuthorized
+
 ColumnLayout {
     id: timeZonesPage
 
@@ -112,10 +115,10 @@ ColumnLayout {
 
                 trailing: RowLayout {
                     QQC2.Button {
-                        visible: model.isLocalTimeZone && KCMShell.authorize("kcm_clock.desktop").length > 0
+                        visible: model.isLocalTimeZone && KAuthorized.authorizeControlModule("kcm_clock.desktop")
                         text: i18n("Switch Systemwide Time Zone…")
                         icon.name: "preferences-system-time"
-                        onClicked: KCMShell.openSystemSettings("kcm_clock")
+                        onClicked: KCMLauncher.openSystemSettings("kcm_clock")
                     }
                     QQC2.Button {
                         visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
