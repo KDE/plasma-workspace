@@ -11,7 +11,7 @@ import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.6 as Kirigami
 import org.kde.userfeedback 1.0 as UserFeedback
 import org.kde.userfeedback.kcm 1.0
-import org.kde.kcm 1.3
+import org.kde.kcmutils
 import org.kde.kcmutils 1.0 as KCMUtils
 
 SimpleKCM {

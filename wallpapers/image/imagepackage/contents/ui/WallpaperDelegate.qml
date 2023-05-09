@@ -13,7 +13,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcmutils as KCM
 
 KCM.GridDelegate {
     id: wallpaperDelegate

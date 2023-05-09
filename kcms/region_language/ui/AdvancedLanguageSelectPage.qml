@@ -10,7 +10,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.15 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcmutils as KCM
 import kcmregionandlang 1.0
 
 KCM.ScrollViewKCM {

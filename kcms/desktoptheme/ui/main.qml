@@ -16,7 +16,7 @@ import QtQml 2.15
 
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.81 as NewStuff
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 

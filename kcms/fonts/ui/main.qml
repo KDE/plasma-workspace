@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcmutils 1.6 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.config // KAuthorized
 
 KCM.SimpleKCM {

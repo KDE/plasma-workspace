@@ -11,7 +11,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
 import org.kde.newstuff 1.91 as NewStuff
-import org.kde.kcm 1.5 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 

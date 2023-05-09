@@ -10,7 +10,7 @@ import QtQuick.Controls 2.3 as QtControls
 import QtQml 2.15
 
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcmutils as KCM
 
 import org.kde.private.kcms.notifications 1.0 as Private
 

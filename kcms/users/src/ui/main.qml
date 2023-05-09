@@ -9,7 +9,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.13 as Kirigami
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
 

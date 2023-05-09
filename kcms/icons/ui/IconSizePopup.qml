@@ -8,9 +8,8 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.config // KAuthorized
-import org.kde.kcmutils // KCMLauncher
 
 ColumnLayout {
 
@@ -41,7 +40,7 @@ ColumnLayout {
         visible: KAuthorized.authorizeControlModule("kcm_kscreen")
         text: i18n("Adjust Global Scale…")
         icon.name: "preferences-desktop-display"
-        onClicked: KCMLauncher.open("kcm_kscreen");
+        onClicked: KCM.KCMLauncher.open("kcm_kscreen");
     }
 
     Kirigami.Separator {

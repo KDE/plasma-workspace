@@ -8,7 +8,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.private.kcms.style 1.0 as Private
 
 QtControls.Popup {

@@ -9,7 +9,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15 // for Screen
 
-import org.kde.kcm 1.5 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
