@@ -35,6 +35,11 @@ endif()
 add_library(taskmanager ${taskmanager_LIB_SRCS})
 add_library(PW::LibTaskManager ALIAS taskmanager)
 
+
+qt6_generate_wayland_protocol_client_sources(taskmanager
+    FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
+)
+
 generate_export_header(taskmanager)
 
 target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/taskmanager>")
@@ -47,6 +52,7 @@ target_link_libraries(taskmanager
         KF6::ItemModels
     PRIVATE
         Qt::DBus
+        Qt::WaylandClient
         KF6::Activities
         KF6::ConfigCore
         KF6::I18n
