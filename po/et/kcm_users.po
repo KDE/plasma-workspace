@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2020-10-25 18:48+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Parooli muutmine"
@@ -134,27 +134,27 @@ msgstr ""
 msgid "Create User"
 msgstr "Kasutaja loomine"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "Nimi:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "Kasutajanimi:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "Tavaline"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "Administraator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "Konto tüüp:"
@@ -364,132 +364,132 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Avatari muutmine"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, fuzzy, kde-format
 #| msgid "Feisty Flamingo"
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Vapper flamingo"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, fuzzy, kde-format
 #| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Draakonivili"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, fuzzy, kde-format
 #| msgid "Sweet Potato"
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Maguskartul"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, fuzzy, kde-format
 #| msgid "Ambient Amber"
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Mahe oranž"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, fuzzy, kde-format
 #| msgid "Sparkle Sunbeam"
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Sädelev päikesekiir"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, fuzzy, kde-format
 #| msgid "Lemon-Lime"
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Toores sidrun"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, fuzzy, kde-format
 #| msgid "Verdant Charm"
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Haljendav võlu"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, fuzzy, kde-format
 #| msgid "Mellow Meadow"
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Rahulik luht"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, fuzzy, kde-format
 #| msgid "Tepid Teal"
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Helesinine meri"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, fuzzy, kde-format
 #| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma sinine"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, fuzzy, kde-format
 #| msgid "Pon Purple"
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Kahvatu lilla"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, fuzzy, kde-format
 #| msgid "Bajo Purple"
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Kahvatu indigo"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, fuzzy, kde-format
 #| msgid "Burnt Charcoal"
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Põlenud süsi"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, fuzzy, kde-format
 #| msgid "Paper Perfection"
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Helesinine"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, fuzzy, kde-format
 #| msgid "Cafétera Brown"
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Helepruun"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, fuzzy, kde-format
 #| msgid "Rich Hardwood"
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Sügavpruun"
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Pildi valimine"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, fuzzy, kde-format
 #| msgid "Choose File..."
 msgctxt "@action:button"
@@ -502,33 +502,33 @@ msgstr "Vali fail ..."
 msgid "Change avatar"
 msgstr "Avatari muutmine"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "E-posti aadress:"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "Kustuta failid"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "Jäta failid alles"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, fuzzy, kde-format
 #| msgid "Delete User..."
 msgid "Delete User…"
 msgstr "Kustuta kasutaja ..."
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

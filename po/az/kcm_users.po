@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-02-19 15:50+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -65,7 +65,7 @@ msgstr "Bu cihazla bağlantı kəsildi."
 msgid "An unknown error has occurred."
 msgstr "Bilinməyən xəta baş verdi."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Şifrəni dəyiş"
@@ -140,27 +140,27 @@ msgstr "Dəyişimi Tərk Etmək"
 msgid "Create User"
 msgstr "İstifadəçi yaratmaq"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "Ad:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "İstifadəçi adı:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "Hesab növü:"
@@ -382,115 +382,115 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Avatarı dəyiş"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Heç nə"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Cəsur flaminqo"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Əjdaha meyvəsi"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Şirin kartof"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Parlayan yantar"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Parlaq günəş şüası"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Limon-Laym"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Cazibədar yaşıllıq"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Yumuşaq çəmən"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "İlıq dəniz mavisi"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Mavi plasma"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Bənövşəyi ponpon"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bənövşəyi bajo"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Yanmış kömür"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Kağız mükəmməlliyi"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Braun kafesi"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Bir şəkil seç"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
@@ -501,32 +501,32 @@ msgstr "Fayl seç..."
 msgid "Change avatar"
 msgstr "Avatarı dəyişmək"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "E-poçt ünvanı:"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "Faylları Silmək"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "Faylları saxlamaq"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete User…"
 msgstr "İstifadəçini silmək..."
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Barmaq izi ilə kimlik doğrulamasını tənzimləyin..."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

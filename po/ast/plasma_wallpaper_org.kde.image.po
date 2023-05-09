@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-05 02:19+0000\n"
-"PO-Revision-Date: 2023-05-03 21:30+0200\n"
+"PO-Revision-Date: 2023-05-06 22:00+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -216,27 +216,27 @@ msgstr ""
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 hora"
+msgstr[1] "%1 hores"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minutu"
+msgstr[1] "%1 minutos"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segundu"
+msgstr[1] "%1 segundos"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Carpetes"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format

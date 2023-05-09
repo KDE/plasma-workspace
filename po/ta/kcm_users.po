@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-01-12 19:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "சாதனம் கழற்றப்பட்டது."
 msgid "An unknown error has occurred."
 msgstr "தெரியாத சிக்கல் நேர்ந்துள்ளது."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "கடவுச்சொல்லை மாற்று"
@@ -132,27 +132,27 @@ msgstr "மாற்றாமல் விடு"
 msgid "Create User"
 msgstr "பயனரை உருவாக்கு"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "உண்மையான பெயர்:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "கணக்குப்பெயர்:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "சாதாரணமானது"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "நிர்வாகி"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "கணக்கின் வகை:"
@@ -360,115 +360,115 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "சின்னத்தை மாற்றுவது"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "படத்தை தேர்ந்தெடுப்பது"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
@@ -479,32 +479,32 @@ msgstr "கோப்பை தேர்ந்தெடு…"
 msgid "Change avatar"
 msgstr "சின்னத்தை மாற்று"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "மின்னஞ்சல் முகவரி:"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "கோப்புகளை நீக்கு"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "கோப்புகளை வைத்திரு"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete User…"
 msgstr "பயனரை நீக்கு…"
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "கைரேகை உறுதிப்பாட்டை அமை..."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

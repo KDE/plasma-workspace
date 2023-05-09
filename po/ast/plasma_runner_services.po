@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-23 00:48+0000\n"
-"PO-Revision-Date: 2023-05-03 22:38+0200\n"
+"PO-Revision-Date: 2023-05-07 16:38+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -23,7 +23,7 @@ msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
 "(eg. browser)"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: servicerunner.cpp:413
 #, kde-format

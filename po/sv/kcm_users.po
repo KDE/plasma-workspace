@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-04-19 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Enheten kopplades bort."
 msgid "An unknown error has occurred."
 msgstr "Ett okänt fel har uppstått."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Ändra lösenord"
@@ -141,27 +141,27 @@ msgstr "Lämna orört"
 msgid "Create User"
 msgstr "Skapa användare"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "Namn:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "Användarnamn:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "Administratör"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "Kontotyp:"
@@ -431,133 +431,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Byt avatar"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, fuzzy, kde-format
 #| msgid "It's Nothing"
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Det är ingenting"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, fuzzy, kde-format
 #| msgid "Feisty Flamingo"
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Frejdig flamingo"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, fuzzy, kde-format
 #| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Drakfrukt"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, fuzzy, kde-format
 #| msgid "Sweet Potato"
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Sötpotatis"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, fuzzy, kde-format
 #| msgid "Ambient Amber"
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Bärnstensstämning"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, fuzzy, kde-format
 #| msgid "Sparkle Sunbeam"
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Glittrande solstråle"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, fuzzy, kde-format
 #| msgid "Lemon-Lime"
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Citron-lime"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, fuzzy, kde-format
 #| msgid "Verdant Charm"
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Grönskande charm"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, fuzzy, kde-format
 #| msgid "Mellow Meadow"
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Mjuk äng"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, fuzzy, kde-format
 #| msgid "Tepid Teal"
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Sval grönblå"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, fuzzy, kde-format
 #| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasmablå"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, fuzzy, kde-format
 #| msgid "Pon Purple"
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Purpur"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, fuzzy, kde-format
 #| msgid "Bajo Purple"
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Basviolett"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, fuzzy, kde-format
 #| msgid "Burnt Charcoal"
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Bränt träkol"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, fuzzy, kde-format
 #| msgid "Paper Perfection"
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Pappersperfektion"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, fuzzy, kde-format
 #| msgid "Cafétera Brown"
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Kafébrun"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, fuzzy, kde-format
 #| msgid "Rich Hardwood"
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rikt ädelträ"
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Välj en bild"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
@@ -569,32 +569,32 @@ msgstr "Välj fil..."
 msgid "Change avatar"
 msgstr "Byt avatar"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "E-postadress:"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "Ta bort filer"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "Behåll filer"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete User…"
 msgstr "Ta bort användare..."
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Anpassa behörighetskontroll med fingeravtryck…"
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

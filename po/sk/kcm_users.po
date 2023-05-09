@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2023-04-17 18:41+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -66,7 +66,7 @@ msgstr "Zariadenie bolo odpojené."
 msgid "An unknown error has occurred."
 msgstr "Vyskytla sa neznáma chyba."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Zmeniť heslo"
@@ -140,27 +140,27 @@ msgstr "Nechať nezmenené"
 msgid "Create User"
 msgstr "Vytvoriť používatelia"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "Meno:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "Užívateľské meno:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "Štandardné"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "Administrátor"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "Typ účtu:"
@@ -368,115 +368,115 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Zmeniť avatar"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Nič to nie je"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Výbojný plameniak"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Pitaja"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Sladký zemiak"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Jantárová"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Ligotavý slnečný lúč"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Limonáda"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Zelené čaro"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Mäkká Lúka"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Vlažná sivozelená"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasmová modrá"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Pon fialová"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bajo fialová"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Spálené uhlie"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Dokonalosť papiera"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Kávová hnedá"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Bohaté tvrdé drevo"
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Vybrať obrázok"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
@@ -487,32 +487,32 @@ msgstr "Vybrať súbor..."
 msgid "Change avatar"
 msgstr "Zmeniť avatar"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "E-mailová adresa:"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "Vymazať súbory"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "Ponechať súbory"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete User…"
 msgstr "Vymazať používateľa..."
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Konfigurovať overenie totožnosti odtlačkom prsta…"
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

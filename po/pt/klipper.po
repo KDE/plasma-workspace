@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -494,67 +494,67 @@ msgstr "Ícone:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu de Contexto das Acções Automáticas"
 
-#: klipper.cpp:171
+#: klipper.cpp:172
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Limpar o Histórico da Área de Transferência"
 
-#: klipper.cpp:178
+#: klipper.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar o Klipper…"
 
-#: klipper.cpp:184
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Sair"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar Manualmente a Acção na Área de Transferência Actual"
 
-#: klipper.cpp:196
+#: klipper.cpp:197
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&strar o Código de Barras…"
 
-#: klipper.cpp:205
+#: klipper.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item do Histórico Seguinte"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item do Histórico Anterior"
 
-#: klipper.cpp:217
+#: klipper.cpp:218
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Mostrar os Itens na Posição do Rato"
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Ferramenta da Área de Transferência"
 
-#: klipper.cpp:523
+#: klipper.cpp:525
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -565,58 +565,58 @@ msgstr ""
 "<interface>Acções</interface> na janela de configuração do elemento da Área "
 "de Transferência"
 
-#: klipper.cpp:562
+#: klipper.cpp:564
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 "Dever-se-á o Klipper iniciar automaticamente quando o utilizador se liga?"
 
-#: klipper.cpp:563
+#: klipper.cpp:565
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Iniciar Automaticamente o Klipper?"
 
-#: klipper.cpp:564
+#: klipper.cpp:566
 #, kde-format
 msgid "Start"
 msgstr "Iniciar"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-format
 msgid "Do Not Start"
 msgstr "Não Iniciar"
 
-#: klipper.cpp:935
+#: klipper.cpp:938
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de Barras Móvel"
 
-#: klipper.cpp:982
+#: klipper.cpp:985
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
 
-#: klipper.cpp:983
+#: klipper.cpp:986
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpar o Histórico da Área de Transferência"
 
-#: klipper.cpp:999 klipper.cpp:1008
+#: klipper.cpp:1002 klipper.cpp:1011
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:1025
+#: klipper.cpp:1028
 #, kde-format
 msgid "up"
 msgstr "cima"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1035
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1042
 #, kde-format
 msgid "down"
 msgstr "baixo"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-10-17 13:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -502,67 +502,67 @@ msgstr "Піктограма:"
 msgid "%1x%2 %3bpp"
 msgstr "%1⨯%2 %3біт/т."
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Контекстне меню автоматичних дій"
 
-#: klipper.cpp:171
+#: klipper.cpp:172
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Сп&орожнити журнал кишені"
 
-#: klipper.cpp:178
+#: klipper.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Налаштувати Klipper…"
 
-#: klipper.cpp:184
+#: klipper.cpp:185
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "Ви&йти"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Викликати дію над поточною кишенею вручну"
 
-#: klipper.cpp:196
+#: klipper.cpp:197
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "П&оказати штрихкод…"
 
-#: klipper.cpp:205
+#: klipper.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Наступний запис журналу"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Попередній запис журналу"
 
-#: klipper.cpp:217
+#: klipper.cpp:218
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Показувати записи на позиції вказівника"
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 – утиліта буфера даних"
 
-#: klipper.cpp:523
+#: klipper.cpp:525
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -572,58 +572,58 @@ msgstr ""
 "Ви можете увімкнути дії з адресами пізніше за допомогою сторінки "
 "<interface>Дії</interface> вікна налаштувань аплету буфера обміну даними"
 
-#: klipper.cpp:562
+#: klipper.cpp:564
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Чи запускати Klipper автоматично під час вашого входу в систему?"
 
-#: klipper.cpp:563
+#: klipper.cpp:565
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Запускати Klipper автоматично?"
 
-#: klipper.cpp:564
+#: klipper.cpp:566
 #, kde-format
 msgid "Start"
 msgstr "Запускати"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-format
 msgid "Do Not Start"
 msgstr "Не запускати"
 
-#: klipper.cpp:935
+#: klipper.cpp:938
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мобільний штрихкод"
 
-#: klipper.cpp:982
+#: klipper.cpp:985
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: klipper.cpp:983
+#: klipper.cpp:986
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: klipper.cpp:999 klipper.cpp:1008
+#: klipper.cpp:1002 klipper.cpp:1011
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера даних"
 
-#: klipper.cpp:1025
+#: klipper.cpp:1028
 #, kde-format
 msgid "up"
 msgstr "вгору"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1035
 #, kde-format
 msgid "current"
 msgstr "поточний"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1042
 #, kde-format
 msgid "down"
 msgstr "вниз"

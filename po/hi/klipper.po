@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-03-29 21:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -470,28 +470,28 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3बीपीपी"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "Automatic action popup time:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित कार्रवाई पॉपअप समय :"
 
-#: klipper.cpp:171
+#: klipper.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करें (&l)"
 
-#: klipper.cpp:178
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper…"
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "क्लिपर विन्यस्त करें... (&C)"
 
-#: klipper.cpp:184
+#: klipper.cpp:185
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Quit Klipper"
 #| msgid "&Quit"
@@ -499,49 +499,49 @@ msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "बाहर जाएँ (&Q)"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "मौज़ूदा क्लिपबोर्ड पर क्रिया हाथों से इन्वोक करें"
 
-#: klipper.cpp:196
+#: klipper.cpp:197
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "बारकोड दिखाएँ… (&S)"
 
-#: klipper.cpp:205
+#: klipper.cpp:206
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अगली इतिहास वस्तु"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पिछली इतिहास वस्तु"
 
-#: klipper.cpp:217
+#: klipper.cpp:218
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "माउस संकेतक स्थान पर क्लिपर खोलें"
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "क्लिपर- क्लिपबोर्ड औज़ार"
 
-#: klipper.cpp:523
+#: klipper.cpp:525
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -551,59 +551,59 @@ msgstr ""
 "आप बाद में क्लिपबोर्ड एप्लेट की कॉन्फ़िगरेशन विंडो के <interface>क्रियाएँ</interface> पृष्ठ "
 "में यूआरएल क्रियाओं को सक्षम कर सकते हैं"
 
-#: klipper.cpp:562
+#: klipper.cpp:564
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "जब आप लॉग इन करते हैं तो क्या क्लीपर स्वचलित प्रारंभ हो जाना चाहिए ?"
 
-#: klipper.cpp:563
+#: klipper.cpp:565
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "क्लिपर स्वचलित प्रारंभ करें?"
 
-#: klipper.cpp:564
+#: klipper.cpp:566
 #, kde-format
 msgid "Start"
 msgstr "प्रारंभ करें"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-format
 msgid "Do Not Start"
 msgstr "प्रारंभ न करें"
 
-#: klipper.cpp:935
+#: klipper.cpp:938
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाइल बारकोड"
 
-#: klipper.cpp:982
+#: klipper.cpp:985
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "वास्तव में संपूर्ण क्लिपबोर्ड इतिहास हटाएं ?"
 
-#: klipper.cpp:983
+#: klipper.cpp:986
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करें (&l)"
 
-#: klipper.cpp:999 klipper.cpp:1008
+#: klipper.cpp:1002 klipper.cpp:1011
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:1025
+#: klipper.cpp:1028
 #, kde-format
 msgid "up"
 msgstr "ऊपर"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1035
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1042
 #, kde-format
 msgid "down"
 msgstr "नीचे"

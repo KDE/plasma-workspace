@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-03 02:20+0000\n"
-"PO-Revision-Date: 2023-05-01 23:54+0200\n"
+"PO-Revision-Date: 2023-05-06 00:07+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -262,7 +262,7 @@ msgstr ""
 #: ui/main.qml:233 ui/main.qml:256
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:248
 #, kde-format

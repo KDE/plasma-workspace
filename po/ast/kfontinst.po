@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 02:13+0000\n"
-"PO-Revision-Date: 2023-05-03 23:47+0200\n"
+"PO-Revision-Date: 2023-05-05 23:07+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -548,7 +548,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
 #, kde-format
 msgid "<h3>Error</h3>"
-msgstr ""
+msgstr "<h3>Error</h3>"
 
 #: kcmfontinst/JobRunner.cpp:694
 #, kde-format
@@ -591,12 +591,12 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:727
 #, kde-format
 msgid "<i>%1</i> already exists."
-msgstr ""
+msgstr "<i>%1</i> xá esiste."
 
 #: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "<i>%1</i> does not exist."
-msgstr ""
+msgstr "<i>%1</i> nun esiste."
 
 #: kcmfontinst/JobRunner.cpp:714
 #, kde-format
@@ -1141,13 +1141,13 @@ msgstr "AaBbCcDdEeFfGgHhḤḥIiJjKkLlḶḷMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz0123
 #: lib/FcEngine.cpp:1018
 #, kde-format
 msgid "No characters found."
-msgstr ""
+msgstr "Nun s'atopó nengún caráuter."
 
 #: lib/FcEngine.cpp:1056
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr ""
+msgstr "La neña cuerre feliz xunto al ḷḷagu ya'l horru"
 
 #: lib/FcEngine.cpp:1061
 #, kde-format
@@ -1176,8 +1176,8 @@ msgstr ""
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 [1 píxel]"
+msgstr[1] "%2 [1 píxeles]"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"
@@ -1465,17 +1465,17 @@ msgstr ""
 #: viewpart/CharTip.cpp:153
 #, kde-format
 msgid "UCS-4"
-msgstr ""
+msgstr "UCS-4"
 
 #: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UTF-16"
-msgstr ""
+msgstr "UTF-16"
 
 #: viewpart/CharTip.cpp:167
 #, kde-format
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: viewpart/CharTip.cpp:184
 #, kde-format
@@ -1749,7 +1749,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:68
 msgid "Phonetic Extensions"
-msgstr ""
+msgstr "Estensiones fonétiques"
 
 #: viewpart/UnicodeBlocks.h:69
 msgid "Phonetic Extensions Supplement"
@@ -1789,15 +1789,15 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:78
 msgid "Number Forms"
-msgstr ""
+msgstr "Formes numbériques"
 
 #: viewpart/UnicodeBlocks.h:79
 msgid "Arrows"
-msgstr ""
+msgstr "Fleches"
 
 #: viewpart/UnicodeBlocks.h:80
 msgid "Mathematical Operators"
-msgstr ""
+msgstr "Operadores matemáticos"
 
 #: viewpart/UnicodeBlocks.h:81
 msgid "Miscellaneous Technical"
@@ -1825,7 +1825,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:87
 msgid "Geometric Shapes"
-msgstr ""
+msgstr "Formes xeométriques"
 
 #: viewpart/UnicodeBlocks.h:88
 msgid "Miscellaneous Symbols"
@@ -1845,7 +1845,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:92
 msgid "Braille Patterns"
-msgstr ""
+msgstr "Patrones de Braille"
 
 #: viewpart/UnicodeBlocks.h:93
 msgid "Supplemental Arrows-B"
@@ -1917,7 +1917,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
 msgid "Bopomofo"
-msgstr ""
+msgstr "Bopomofo"
 
 #: viewpart/UnicodeBlocks.h:111
 msgid "Hangul Compatibility Jamo"
@@ -2001,7 +2001,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:131
 msgid "Private Use Area"
-msgstr ""
+msgstr "Área d'usu privada"
 
 #: viewpart/UnicodeBlocks.h:132
 msgid "CJK Compatibility Ideographs"
@@ -2021,7 +2021,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:136
 msgid "Vertical Forms"
-msgstr ""
+msgstr "Formes verticales"
 
 #: viewpart/UnicodeBlocks.h:137
 msgid "Combining Half Marks"
@@ -2057,11 +2057,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:145
 msgid "Aegean Numbers"
-msgstr ""
+msgstr "Númberos exeos"
 
 #: viewpart/UnicodeBlocks.h:146
 msgid "Ancient Greek Numbers"
-msgstr ""
+msgstr "Númberos griegos antiguos"
 
 #: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
 msgid "Old Italic"
@@ -2093,7 +2093,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:154
 msgid "Cypriot Syllabary"
-msgstr ""
+msgstr "Silabariu xipriota"
 
 #: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
 msgid "Phoenician"
@@ -2109,15 +2109,15 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:158
 msgid "Cuneiform Numbers and Punctuation"
-msgstr ""
+msgstr "Númberos ya símbolos de puntuación cueniformes"
 
 #: viewpart/UnicodeBlocks.h:159
 msgid "Byzantine Musical Symbols"
-msgstr ""
+msgstr "Símbolos musicales bizantinos"
 
 #: viewpart/UnicodeBlocks.h:160
 msgid "Musical Symbols"
-msgstr ""
+msgstr "Símbolos musicales"
 
 #: viewpart/UnicodeBlocks.h:161
 msgid "Ancient Greek Musical Notation"
@@ -2133,7 +2133,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:164
 msgid "Mathematical Alphanumeric Symbols"
-msgstr ""
+msgstr "Símbolos alfanumbéricos matemáticos"
 
 #: viewpart/UnicodeBlocks.h:165
 msgid "CJK Unified Ideographs Extension B"
@@ -2161,7 +2161,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:20
 msgid "Braille"
-msgstr ""
+msgstr "Braille"
 
 #: viewpart/UnicodeScripts.h:23
 msgid "Canadian Aboriginal"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2023-05-03 22:37+0200\n"
+"PO-Revision-Date: 2023-05-09 00:48+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: soliddeviceengine.cpp:117
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: soliddeviceengine.cpp:118
 msgid "Icon"
@@ -115,15 +115,15 @@ msgstr ""
 
 #: soliddeviceengine.cpp:172
 msgid "Ieee1394"
-msgstr ""
+msgstr "IEEE1394"
 
 #: soliddeviceengine.cpp:173
 msgid "Scsi"
-msgstr ""
+msgstr "SCSI"
 
 #: soliddeviceengine.cpp:173
 msgid "Sata"
-msgstr ""
+msgstr "SATA"
 
 #: soliddeviceengine.cpp:173
 msgid "Platform"
@@ -189,67 +189,67 @@ msgstr ""
 
 #: soliddeviceengine.cpp:209
 msgid "CD-R"
-msgstr ""
+msgstr "CD-R"
 
 #: soliddeviceengine.cpp:212
 msgid "CD-RW"
-msgstr ""
+msgstr "CD-RW"
 
 #: soliddeviceengine.cpp:215
 msgid "DVD"
-msgstr ""
+msgstr "DVD"
 
 #: soliddeviceengine.cpp:218
 msgid "DVD-R"
-msgstr ""
+msgstr "DVD-R"
 
 #: soliddeviceengine.cpp:221
 msgid "DVD-RW"
-msgstr ""
+msgstr "DVD-RW"
 
 #: soliddeviceengine.cpp:224
 msgid "DVD-RAM"
-msgstr ""
+msgstr "DVD-RAM"
 
 #: soliddeviceengine.cpp:227
 msgid "DVD+R"
-msgstr ""
+msgstr "DVD+R"
 
 #: soliddeviceengine.cpp:230
 msgid "DVD+RW"
-msgstr ""
+msgstr "DVD+RW"
 
 #: soliddeviceengine.cpp:233
 msgid "DVD+DL"
-msgstr ""
+msgstr "DVD+DL"
 
 #: soliddeviceengine.cpp:236
 msgid "DVD+DLRW"
-msgstr ""
+msgstr "DVD+DLRW"
 
 #: soliddeviceengine.cpp:239
 msgid "BD"
-msgstr ""
+msgstr "BD"
 
 #: soliddeviceengine.cpp:242
 msgid "BD-R"
-msgstr ""
+msgstr "BD-R"
 
 #: soliddeviceengine.cpp:245
 msgid "BD-RE"
-msgstr ""
+msgstr "BD-RE"
 
 #: soliddeviceengine.cpp:248
 msgid "HDDVD"
-msgstr ""
+msgstr "HDDVD"
 
 #: soliddeviceengine.cpp:251
 msgid "HDDVD-R"
-msgstr ""
+msgstr "HDDVD-R"
 
 #: soliddeviceengine.cpp:254
 msgid "HDDVD-RW"
-msgstr ""
+msgstr "HDDVD-RW"
 
 #: soliddeviceengine.cpp:256
 msgid "Supported Media"
@@ -324,7 +324,7 @@ msgstr ""
 
 #: soliddeviceengine.cpp:289
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: soliddeviceengine.cpp:298
 msgid "Encrypted Container"
@@ -452,11 +452,11 @@ msgstr ""
 
 #: soliddeviceengine.cpp:349
 msgid "Capacity"
-msgstr ""
+msgstr "Capacidá"
 
 #: soliddeviceengine.cpp:357
 msgid "Camera"
-msgstr ""
+msgstr "Cámara"
 
 #: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
 msgid "Supported Protocols"
@@ -468,11 +468,11 @@ msgstr ""
 
 #: soliddeviceengine.cpp:371
 msgid "Portable Media Player"
-msgstr ""
+msgstr "Reproductor multimedia portátil"
 
 #: soliddeviceengine.cpp:385
 msgid "Battery"
-msgstr ""
+msgstr "Batería"
 
 #: soliddeviceengine.cpp:388
 msgid "Unknown Battery"
@@ -488,15 +488,15 @@ msgstr ""
 
 #: soliddeviceengine.cpp:389
 msgid "Primary Battery"
-msgstr ""
+msgstr "Batería primaria"
 
 #: soliddeviceengine.cpp:389
 msgid "Mouse Battery"
-msgstr ""
+msgstr "Batería del mur"
 
 #: soliddeviceengine.cpp:390
 msgid "Keyboard Battery"
-msgstr ""
+msgstr "Batería del tecláu"
 
 #: soliddeviceengine.cpp:390
 msgid "Keyboard Mouse Battery"
@@ -504,11 +504,11 @@ msgstr ""
 
 #: soliddeviceengine.cpp:391
 msgid "Camera Battery"
-msgstr ""
+msgstr "Batería de la cámara"
 
 #: soliddeviceengine.cpp:391
 msgid "Phone Battery"
-msgstr ""
+msgstr "Batería del teléfonu"
 
 #: soliddeviceengine.cpp:391
 msgid "Monitor Battery"
@@ -594,7 +594,7 @@ msgstr ""
 
 #: soliddeviceengine.cpp:580
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatura"
 
 #: soliddeviceengine.cpp:581
 msgid "Temperature Unit"
@@ -602,4 +602,4 @@ msgstr ""
 
 #: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
 msgid "In Use"
-msgstr ""
+msgstr "N'usu"

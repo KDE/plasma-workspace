@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "उपकरण वियोजित दिया गया था।"
 msgid "An unknown error has occurred."
 msgstr "एक अज्ञात त्रुटि हुई।"
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:155
+#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "कूटशब्द बदलें"
@@ -138,27 +138,27 @@ msgstr "अपरिवर्तित छोड़ दें"
 msgid "Create User"
 msgstr "उपयोक्ता बनाएँ"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:123
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:127
 #, kde-format
 msgid "Name:"
 msgstr "नाम :"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:130
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:134
 #, kde-format
 msgid "Username:"
 msgstr "उपयोक्ता नाम :"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:138
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:142
 #, kde-format
 msgid "Standard"
 msgstr "मानक"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Administrator"
 msgstr "प्रशासक"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:142
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "खाते का प्रकार :"
@@ -368,133 +368,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "अवतार बदलें"
 
-#: src/ui/PicturesSheet.qml:21
+#: src/ui/PicturesSheet.qml:22
 #, fuzzy, kde-format
 #| msgid "It's Nothing"
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "यह कुछ भी नहीं है"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:23
 #, fuzzy, kde-format
 #| msgid "Feisty Flamingo"
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "फीस्टी फ्लेमिंगो"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:24
 #, fuzzy, kde-format
 #| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "ड्रेगन का फल"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:25
 #, fuzzy, kde-format
 #| msgid "Sweet Potato"
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "शकरकंद"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:26
 #, fuzzy, kde-format
 #| msgid "Ambient Amber"
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "एम्बिएंट एंबर"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:27
 #, fuzzy, kde-format
 #| msgid "Sparkle Sunbeam"
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "स्पार्कल सूर्यकिरण"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:28
 #, fuzzy, kde-format
 #| msgid "Lemon-Lime"
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "लेमन-लैम"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:29
 #, fuzzy, kde-format
 #| msgid "Verdant Charm"
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "वर्दांत चार्म"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:30
 #, fuzzy, kde-format
 #| msgid "Mellow Meadow"
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "मधुर घास का मैदान"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:31
 #, fuzzy, kde-format
 #| msgid "Tepid Teal"
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "टीपिड टील"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:32
 #, fuzzy, kde-format
 #| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "प्लाज़्मा नीला"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:33
 #, fuzzy, kde-format
 #| msgid "Pon Purple"
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "पोन बैंगनी"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:34
 #, fuzzy, kde-format
 #| msgid "Bajo Purple"
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "बाजो बैंगनी"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:35
 #, fuzzy, kde-format
 #| msgid "Burnt Charcoal"
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "जला कोयला"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:36
 #, fuzzy, kde-format
 #| msgid "Paper Perfection"
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "कागज पूर्णता"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:37
 #, fuzzy, kde-format
 #| msgid "Cafétera Brown"
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "कैफेटेरा भूरा"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:38
 #, fuzzy, kde-format
 #| msgid "Rich Hardwood"
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "धनी लकड़ी"
 
-#: src/ui/PicturesSheet.qml:83
+#: src/ui/PicturesSheet.qml:126
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "एक छवि चुनें"
 
-#: src/ui/PicturesSheet.qml:114
+#: src/ui/PicturesSheet.qml:151
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
@@ -506,32 +506,32 @@ msgstr "फ़ाइल चुनें…"
 msgid "Change avatar"
 msgstr "अवतार बदलें"
 
-#: src/ui/UserDetailsPage.qml:151
+#: src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Email address:"
 msgstr "ई-मेल पता :"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Delete files"
 msgstr "फ़ाइलें मिटाएँ"
 
-#: src/ui/UserDetailsPage.qml:182
+#: src/ui/UserDetailsPage.qml:186
 #, kde-format
 msgid "Keep files"
 msgstr "फ़ाइलें रखें"
 
-#: src/ui/UserDetailsPage.qml:189
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Delete User…"
 msgstr "उपयोक्ता मिटाएँ..."
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "अंगुलि छाप प्रमानीकरण विन्यस्त करें..."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:218
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

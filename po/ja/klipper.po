@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-09 02:11+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -478,76 +478,76 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "アクションメニューのタイムアウト:"
 
-#: klipper.cpp:171
+#: klipper.cpp:172
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: klipper.cpp:178
+#: klipper.cpp:179
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper を設定(&C)..."
 
-#: klipper.cpp:184
+#: klipper.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Quit"
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "終了(&Q)"
 
-#: klipper.cpp:189
+#: klipper.cpp:190
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "現在のクリップボードに対するアクションを手動で呼び出す"
 
-#: klipper.cpp:196
+#: klipper.cpp:197
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "バーコードを表示する(&S)..."
 
-#: klipper.cpp:205
+#: klipper.cpp:206
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "履歴の次のアイテム"
 
-#: klipper.cpp:210
+#: klipper.cpp:211
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "履歴の前のアイテム"
 
-#: klipper.cpp:217
+#: klipper.cpp:218
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:228
+#: klipper.cpp:229
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "Klipper - クリップボードツール"
 
-#: klipper.cpp:523
+#: klipper.cpp:525
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -555,59 +555,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:562
+#: klipper.cpp:564
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "ログイン時に Klipper を自動的に開始しますか？"
 
-#: klipper.cpp:563
+#: klipper.cpp:565
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Klipper を自動的に開始しますか？"
 
-#: klipper.cpp:564
+#: klipper.cpp:566
 #, kde-format
 msgid "Start"
 msgstr "開始する"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-format
 msgid "Do Not Start"
 msgstr "開始しない"
 
-#: klipper.cpp:935
+#: klipper.cpp:938
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "モバイルバーコード"
 
-#: klipper.cpp:982
+#: klipper.cpp:985
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: klipper.cpp:983
+#: klipper.cpp:986
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: klipper.cpp:999 klipper.cpp:1008
+#: klipper.cpp:1002 klipper.cpp:1011
 #, kde-format
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:1025
+#: klipper.cpp:1028
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:1032
+#: klipper.cpp:1035
 #, kde-format
 msgid "current"
 msgstr "現在"
 
-#: klipper.cpp:1039
+#: klipper.cpp:1042
 #, kde-format
 msgid "down"
 msgstr "下"

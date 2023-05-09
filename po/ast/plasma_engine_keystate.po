@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2023-05-03 22:37+0200\n"
+"PO-Revision-Date: 2023-05-05 22:44+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: keystate.cpp:15
 msgid "Shift"
-msgstr ""
+msgstr "Mayús"
 
 #: keystate.cpp:16
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: keystate.cpp:17
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: keystate.cpp:18
 msgid "Meta"
@@ -47,27 +47,27 @@ msgstr ""
 
 #: keystate.cpp:22
 msgid "Num Lock"
-msgstr ""
+msgstr "Bloq Num"
 
 #: keystate.cpp:23
 msgid "Caps Lock"
-msgstr ""
+msgstr "Bloq Mayús"
 
 #: keystate.cpp:24
 msgid "Scroll Lock"
-msgstr ""
+msgstr "Bloq Despl"
 
 #: keystate.cpp:26
 msgid "Left Button"
-msgstr ""
+msgstr "Botón esquierdu del mur"
 
 #: keystate.cpp:27
 msgid "Right Button"
-msgstr ""
+msgstr "Botón derechu del mur"
 
 #: keystate.cpp:28
 msgid "Middle Button"
-msgstr ""
+msgstr "Botón central del mur"
 
 #: keystate.cpp:29
 msgid "First X Button"

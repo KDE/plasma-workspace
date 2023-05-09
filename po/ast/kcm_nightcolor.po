@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-03 02:20+0000\n"
-"PO-Revision-Date: 2023-05-01 23:54+0200\n"
+"PO-Revision-Date: 2023-05-04 23:12+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -111,7 +111,7 @@ msgstr ""
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr ""
+msgstr "%1K"
 
 #: ui/main.qml:222 ui/main.qml:281
 #, kde-format

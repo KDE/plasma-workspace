@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-01 02:34+0000\n"
-"PO-Revision-Date: 2023-05-03 23:50+0200\n"
+"PO-Revision-Date: 2023-05-04 23:07+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -25,7 +25,7 @@ msgstr "«%1» nun ye una URL absoluta."
 #: autostartmodel.cpp:323
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr "\"«%1» nun esiste."
+msgstr "«%1» nun esiste."
 
 #: autostartmodel.cpp:326
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "Propiedaes"
 #: ui/main.qml:101
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Quitar"
 
 #: ui/main.qml:112
 #, kde-format
@@ -106,19 +106,19 @@ msgstr ""
 #: ui/main.qml:182
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Amestar…"
 
 #: ui/main.qml:197
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "Una aplicación…"
 
 #: ui/main.qml:203
 #, kde-format
 msgid "Add Login Script…"
-msgstr ""
+msgstr "Un script al aniciar la sesión…"
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Add Logout Script…"
-msgstr ""
+msgstr "Un script al zarrar la sesión…"

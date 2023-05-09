@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-11 02:55+0000\n"
-"PO-Revision-Date: 2023-05-03 22:35+0200\n"
+"PO-Revision-Date: 2023-05-09 01:18+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -104,22 +104,22 @@ msgstr ""
 #: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
 #, kde-format
 msgid "Battery and Brightness"
-msgstr ""
+msgstr "Batería ya brillu"
 
 #: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Brightness"
-msgstr ""
+msgstr "Brillu"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Batería"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Power Management"
-msgstr ""
+msgstr "Xestión d'enerxía"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
@@ -177,8 +177,8 @@ msgstr ""
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Una aplicación solicitó activar el mou Rindimientu"
+msgstr[1] "%1 aplicaciones solicitaron activar el mou Rindimientu"
 
 #: package/contents/ui/main.qml:197
 #, kde-format
@@ -230,12 +230,12 @@ msgstr ""
 #: package/contents/ui/PopupDialog.qml:117
 #, kde-format
 msgid "Display Brightness"
-msgstr ""
+msgstr "Brillu de la pantalla"
 
 #: package/contents/ui/PopupDialog.qml:146
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr ""
+msgstr "Brillu del tecláu"
 
 #: package/contents/ui/PowerManagementItem.qml:38
 #, kde-format
@@ -284,7 +284,7 @@ msgstr ""
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/PowerManagementItem.qml:118
 #, kde-format
@@ -307,17 +307,17 @@ msgstr ""
 #: package/contents/ui/PowerProfileItem.qml:34
 #, kde-format
 msgid "Power Save"
-msgstr ""
+msgstr "Aforru d'enerxía"
 
 #: package/contents/ui/PowerProfileItem.qml:38
 #, kde-format
 msgid "Balanced"
-msgstr ""
+msgstr "Equilibriu"
 
 #: package/contents/ui/PowerProfileItem.qml:42
 #, kde-format
 msgid "Performance"
-msgstr ""
+msgstr "Rindimientu"
 
 #: package/contents/ui/PowerProfileItem.qml:59
 #, kde-format
@@ -372,4 +372,4 @@ msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
 "activating performance mode"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
