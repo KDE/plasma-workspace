@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:48+0000\n"
+"POT-Creation-Date: 2023-05-09 02:54+0000\n"
 "PO-Revision-Date: 2022-11-11 22:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -496,73 +496,73 @@ msgstr "Kuvake:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3 bpp"
 
-#: klipper.cpp:156
+#: klipper.cpp:157
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automaattinen toimintoponnahdusvalikko"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "T&yhjennä leikepöydän historia"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Klipperin asetukset…"
 
-#: klipper.cpp:208
+#: klipper.cpp:209
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Lopeta"
 
-#: klipper.cpp:213
+#: klipper.cpp:214
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Valitse toiminto nykyiselle leikepöydän sisällölle"
 
-#: klipper.cpp:221
+#: klipper.cpp:222
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Muokkaa &sisältöä…"
 
-#: klipper.cpp:229
+#: klipper.cpp:230
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Näytä &viivakoodi…"
 
-#: klipper.cpp:238
+#: klipper.cpp:239
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Seuraava historiatietue"
 
-#: klipper.cpp:243
+#: klipper.cpp:244
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Edellinen historiatietue"
 
-#: klipper.cpp:250
+#: klipper.cpp:251
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Avaa kohteet hiiriosoittimen kohdalle"
 
-#: klipper.cpp:261
+#: klipper.cpp:262
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 – Leikepöytätyökalu"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -572,62 +572,62 @@ msgstr ""
 "Verkko-osoitetoiminnot voi ottaa käyttöön myöhemmin leikepöytäsovelman "
 "asetusikkunan <interface>Toiminnot</interface>-sivulla"
 
-#: klipper.cpp:604
+#: klipper.cpp:606
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Käynnistetäänkö Klipper automaattisesti sisäänkirjauduttaessa?"
 
-#: klipper.cpp:605
+#: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Käynnistä Klipper automaattisesti?"
 
-#: klipper.cpp:606
+#: klipper.cpp:608
 #, kde-format
 msgid "Start"
 msgstr "Käynnistä"
 
-#: klipper.cpp:607
+#: klipper.cpp:609
 #, kde-format
 msgid "Do Not Start"
 msgstr "Älä käynnistä"
 
-#: klipper.cpp:954
+#: klipper.cpp:957
 #, kde-format
 msgid "Edit Contents"
 msgstr "Leikepöydän sisältö"
 
-#: klipper.cpp:1021
+#: klipper.cpp:1024
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Kuviokoodi mobiilikäyttöön"
 
-#: klipper.cpp:1068
+#: klipper.cpp:1071
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Haluatko varmasti tyhjentää ja poistaa leikepöydän koko historian?"
 
-#: klipper.cpp:1069
+#: klipper.cpp:1072
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tyhjennä leikepöydän historia"
 
-#: klipper.cpp:1085 klipper.cpp:1094
+#: klipper.cpp:1088 klipper.cpp:1097
 #, kde-format
 msgid "Clipboard history"
 msgstr "Leikepöydän historia"
 
-#: klipper.cpp:1111
+#: klipper.cpp:1114
 #, kde-format
 msgid "up"
 msgstr "ylemmäs"
 
-#: klipper.cpp:1118
+#: klipper.cpp:1121
 #, kde-format
 msgid "current"
 msgstr "nykyinen"
 
-#: klipper.cpp:1125
+#: klipper.cpp:1128
 #, kde-format
 msgid "down"
 msgstr "alemmas"

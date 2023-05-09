@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:48+0000\n"
+"POT-Creation-Date: 2023-05-09 02:54+0000\n"
 "PO-Revision-Date: 2023-01-03 22:03+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>Language-"
 "Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -439,73 +439,73 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:156
+#: klipper.cpp:157
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Aŭtomata Ŝprucmenuo por Agoj"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Forviŝi poŝohistorion"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Agordi Klipper…"
 
-#: klipper.cpp:208
+#: klipper.cpp:209
 #, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "&Ĉesi"
 
-#: klipper.cpp:213
+#: klipper.cpp:214
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Mane Lanĉi Agon je Aktuala Poŝenhavo"
 
-#: klipper.cpp:221
+#: klipper.cpp:222
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Redakti &Enhavon…"
 
-#: klipper.cpp:229
+#: klipper.cpp:230
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:238
+#: klipper.cpp:239
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Sekva Historiero"
 
-#: klipper.cpp:243
+#: klipper.cpp:244
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Antaŭa Historiero"
 
-#: klipper.cpp:250
+#: klipper.cpp:251
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Montri Erojn ĉe Muspozicio"
 
-#: klipper.cpp:261
+#: klipper.cpp:262
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "%1 - Ilo por la poŝo"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -513,62 +513,62 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:604
+#: klipper.cpp:606
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Ĉu Klipper lanĉiĝu aŭtomate ĉe la lanĉo de KDE?"
 
-#: klipper.cpp:605
+#: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Ĉu aŭtomate lanĉi Klipper?"
 
-#: klipper.cpp:606
+#: klipper.cpp:608
 #, kde-format
 msgid "Start"
 msgstr "Lanĉi"
 
-#: klipper.cpp:607
+#: klipper.cpp:609
 #, kde-format
 msgid "Do Not Start"
 msgstr "Ne lanĉi"
 
-#: klipper.cpp:954
+#: klipper.cpp:957
 #, kde-format
 msgid "Edit Contents"
 msgstr "Modifi enhavon"
 
-#: klipper.cpp:1021
+#: klipper.cpp:1024
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:1068
+#: klipper.cpp:1071
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ĉu vi vere volas viŝi kaj forigi la kompletan poŝohistorion?"
 
-#: klipper.cpp:1069
+#: klipper.cpp:1072
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Forviŝi Poŝohistorion"
 
-#: klipper.cpp:1085 klipper.cpp:1094
+#: klipper.cpp:1088 klipper.cpp:1097
 #, kde-format
 msgid "Clipboard history"
 msgstr "Poŝa historio"
 
-#: klipper.cpp:1111
+#: klipper.cpp:1114
 #, kde-format
 msgid "up"
 msgstr "supra"
 
-#: klipper.cpp:1118
+#: klipper.cpp:1121
 #, kde-format
 msgid "current"
 msgstr "aktuala"
 
-#: klipper.cpp:1125
+#: klipper.cpp:1128
 #, kde-format
 msgid "down"
 msgstr "malsupra"

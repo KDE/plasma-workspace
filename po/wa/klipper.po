@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 02:48+0000\n"
+"POT-Creation-Date: 2023-05-09 02:54+0000\n"
 "PO-Revision-Date: 2012-11-14 22:26+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -468,28 +468,28 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:156
+#: klipper.cpp:157
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Tårdjaedje po les aspitants faitindjes :"
 
-#: klipper.cpp:195
+#: klipper.cpp:196
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Netyî l' istwere do presse-papî"
 
-#: klipper.cpp:202
+#: klipper.cpp:203
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "A&pontyî Klipper..."
 
-#: klipper.cpp:208
+#: klipper.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Quit Klipper"
 #| msgid "&Quit"
@@ -497,56 +497,56 @@ msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
 msgstr "C&witer"
 
-#: klipper.cpp:213
+#: klipper.cpp:214
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Dimander al mwin li faitindje sol presse-papî do moumint"
 
-#: klipper.cpp:221
+#: klipper.cpp:222
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Candjî l' contnou"
 
-#: klipper.cpp:229
+#: klipper.cpp:230
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&strer côde bår..."
 
-#: klipper.cpp:238
+#: klipper.cpp:239
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Cayet shuvant e l' istwere"
 
-#: klipper.cpp:243
+#: klipper.cpp:244
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Cayet di dvant e l' istwere"
 
-#: klipper.cpp:250
+#: klipper.cpp:251
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
 msgstr "Drovi Klipper a l' eplaeçmint del sori"
 
-#: klipper.cpp:261
+#: klipper.cpp:262
 #, fuzzy, kde-format
 #| msgid "Klipper - Clipboard Tool"
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
 msgstr "Klipper - Usteye presse-papî"
 
-#: klipper.cpp:565
+#: klipper.cpp:567
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -554,64 +554,64 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:604
+#: klipper.cpp:606
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Est çki Klipper si doet enonder otomaticmint cwand vos vs elodjîz ?"
 
-#: klipper.cpp:605
+#: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Enonder otomaticmint Klipper ?"
 
-#: klipper.cpp:606
+#: klipper.cpp:608
 #, kde-format
 msgid "Start"
 msgstr "Enonder"
 
-#: klipper.cpp:607
+#: klipper.cpp:609
 #, kde-format
 msgid "Do Not Start"
 msgstr "Èn nén enonder"
 
-#: klipper.cpp:954
+#: klipper.cpp:957
 #, kde-format
 msgid "Edit Contents"
 msgstr "Candjî l' contnou"
 
-#: klipper.cpp:1021
+#: klipper.cpp:1024
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Axhlåve côde bår"
 
-#: klipper.cpp:1068
+#: klipper.cpp:1071
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Disfacer podbon tote l' istwere do presse-papî ?"
 
-#: klipper.cpp:1069
+#: klipper.cpp:1072
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&Netyî l' istwere do presse-papî"
 
-#: klipper.cpp:1085 klipper.cpp:1094
+#: klipper.cpp:1088 klipper.cpp:1097
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istwere do presse-papî"
 
-#: klipper.cpp:1111
+#: klipper.cpp:1114
 #, kde-format
 msgid "up"
 msgstr "pus hôt"
 
-#: klipper.cpp:1118
+#: klipper.cpp:1121
 #, kde-format
 msgid "current"
 msgstr "do moumint"
 
-#: klipper.cpp:1125
+#: klipper.cpp:1128
 #, kde-format
 msgid "down"
 msgstr "pus bas"
