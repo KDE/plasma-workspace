@@ -34,7 +34,7 @@ void MaskMouseArea::updateMask()
     }
 
     auto result = parentItem()->grabToImage();
-    connect(result.data(), &QQuickItemGrabResult::ready, this, [=] {
+    connect(result.data(), &QQuickItemGrabResult::ready, this, [=, this] {
         d->maskImage = result->image();
     });
 }

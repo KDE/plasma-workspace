@@ -267,7 +267,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             // add app dir requires an app name, though this is completely unused in this context
             m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
 
-            connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=] {
+            connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
                 m_customIconLoader->reconfigure(appName, QStringList(path));
                 m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
             });

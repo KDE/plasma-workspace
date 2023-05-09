@@ -121,7 +121,7 @@ bool JobsModelPrivate::init()
     QDBusConnectionInterface *dbusIface = QDBusConnection::sessionBus().interface();
 
     if (!master) {
-        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, [=](const QString &serviceName) {
+        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, [=, this](const QString &serviceName) {
             // Close all running jobs as we're defunct now
             if (serviceName == jobViewServerService || serviceName == kuiserverService) {
                 qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";

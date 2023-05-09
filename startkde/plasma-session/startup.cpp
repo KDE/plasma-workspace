@@ -308,7 +308,7 @@ void AutoStartAppsJob::start()
 {
     qCDebug(PLASMA_SESSION);
 
-    QTimer::singleShot(0, this, [=]() {
+    QTimer::singleShot(0, this, [this]() {
         do {
             QString serviceName = m_autoStart.startService();
             if (serviceName.isEmpty()) {

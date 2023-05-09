@@ -143,7 +143,7 @@ void SwitchWindow::makeMenu()
             allDesktops << action;
         }
 
-        connect(action, &QAction::triggered, [=]() {
+        connect(action, &QAction::triggered, [=, this]() {
             switchTo(action);
         });
     }

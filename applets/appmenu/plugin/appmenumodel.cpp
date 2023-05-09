@@ -46,7 +46,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel,
             &TaskManager::TasksModel::dataChanged,
-            [=](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
+            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
                 Q_UNUSED(topLeft)
                 Q_UNUSED(bottomRight)
                 if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)
@@ -94,7 +94,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
         connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, [=]() {
             searchBar->setText(QString());
         });
-        connect(searchBar, &QLineEdit::textChanged, [=]() mutable {
+        connect(searchBar, &QLineEdit::textChanged, [=, this]() mutable {
             insertSearchActionsIntoMenu(searchBar->text());
         });
         connect(searchBar, &QLineEdit::returnPressed, [this]() mutable {
@@ -294,7 +294,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
     m_importer = new KDBusMenuImporter(serviceName, menuObjectPath, this);
     QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
-    connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=](QMenu *menu) {
+    connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
 
         m_menu = m_importer->menu();
         if (m_menu.isNull() || menu != m_menu) {

@@ -406,7 +406,7 @@ void StatusNotifierModel::addSource(const QString &source)
     item.source = source;
 
     StatusNotifierItemSource *sni = m_sniHost->itemForService(source);
-    connect(sni, &StatusNotifierItemSource::dataUpdated, this, [=]() {
+    connect(sni, &StatusNotifierItemSource::dataUpdated, this, [=, this]() {
         dataUpdated(source);
     });
     item.service = sni->createService();

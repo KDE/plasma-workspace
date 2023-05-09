@@ -92,7 +92,7 @@ void SystemModel::populate()
     m_entries.clear();
     m_invalidEntries.clear();
 
-    auto addIfValid = [=](const SystemEntry::Action action) {
+    auto addIfValid = [=, this](const SystemEntry::Action action) {
         SystemEntry *entry = new SystemEntry(this, action);
         QObject::connect(entry, &SystemEntry::sessionManagementStateChanged, this, &SystemModel::sessionManagementStateChanged);
 

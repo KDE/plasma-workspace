@@ -104,7 +104,7 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
             QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
 
             QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
-            connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
+            connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this]() {
                 watcher->deleteLater();
                 QDBusReply<QDBusVariant> reply = *watcher;
                 QStringList registeredItems = reply.value().variant().toStringList();

@@ -46,7 +46,7 @@ private:
         const QString source = sourceName(job);
         setData(source, targetFieldName, ((job)->*getter)());
         // and then listen for changes
-        connect(job, changeSignal, this, [=] {
+        connect(job, changeSignal, this, [=, this] {
             setData(source, targetFieldName, ((job)->*getter)());
         });
     }

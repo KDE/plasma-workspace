@@ -96,7 +96,7 @@ void IconApplet::populate()
     setBusy(true); // unset in populateFromDesktopFile where we'll end up in if all goes well
 
     auto *statJob = KIO::stat(m_url, KIO::HideProgressInfo);
-    connect(statJob, &KIO::StatJob::finished, this, [=] {
+    connect(statJob, &KIO::StatJob::finished, this, [=, this] {
         QString desiredDesktopFileName = m_url.fileName();
 
         // in doubt, just encode the entire URL, e.g. https://www.kde.org/ has no filename

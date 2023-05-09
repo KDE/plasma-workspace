@@ -39,7 +39,7 @@ ServerPrivate::ServerPrivate(QObject *parent)
 
     m_notificationWatchers->setConnection(QDBusConnection::sessionBus());
     m_notificationWatchers->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_notificationWatchers, &QDBusServiceWatcher::serviceUnregistered, [=](const QString &service) {
+    connect(m_notificationWatchers, &QDBusServiceWatcher::serviceUnregistered, [this](const QString &service) {
         m_notificationWatchers->removeWatchedService(service);
     });
 }

@@ -158,10 +158,10 @@ void KuiserverEngine::registerJob(Job *job)
 
     for (auto fields : s_descriptionFields) {
         updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
-        connect(job, fields.labelSignal, this, [=] {
+        connect(job, fields.labelSignal, this, [=, this] {
             updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
         });
-        connect(job, fields.valueSignal, this, [=] {
+        connect(job, fields.valueSignal, this, [=, this] {
             updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
         });
     }
@@ -181,10 +181,10 @@ void KuiserverEngine::registerJob(Job *job)
 
     for (auto fields : s_unitsFields) {
         updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
-        connect(job, fields.processedSignal, this, [=] {
+        connect(job, fields.processedSignal, this, [=, this] {
             updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
         });
-        connect(job, fields.totalSignal, this, [=] {
+        connect(job, fields.totalSignal, this, [=, this] {
             updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
         });
     }
