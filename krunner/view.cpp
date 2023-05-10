@@ -30,11 +30,14 @@
 #include "appadaptor.h"
 #include "x11windowscreenrelativepositioner.h"
 
+KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
+
 View::View(QWindow *)
     : PlasmaQuick::PlasmaWindow()
     , m_floating(false)
 {
     KCrash::initialize();
+    qmlRegisterUncreatableType<View>("org.kde.krunner.private.view", 1, 0, "HistoryBehavior", QStringLiteral("Only for enums"));
 
     if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner = new X11WindowScreenRelativePositioner(this);
@@ -49,8 +52,7 @@ View::View(QWindow *)
                                             QStandardPaths::GenericDataLocation)
                       ->group("General");
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
-    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        Q_UNUSED(names);
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
         if (group.name() == QLatin1String("General")) {
             loadConfig();
         } else if (group.name() == QLatin1String("Plugins")) {
@@ -131,6 +133,7 @@ void View::loadConfig()
     setFreeFloating(m_config.readEntry("FreeFloating", false));
     setRetainPriorSearch(m_config.readEntry("RetainPriorSearch", true));
     setPinned(m_stateData.readEntry("Pinned", false));
+    setHistoryBehavior(m_config.readEntry("historyBehavior", m_historyBehavior));
 }
 
 void View::showEvent(QShowEvent *event)

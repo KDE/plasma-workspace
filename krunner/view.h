@@ -39,10 +39,18 @@ class View : public PlasmaQuick::PlasmaWindow
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
+    Q_PROPERTY(HistoryBehavior historyBehavior READ historyBehavior NOTIFY historyBehaviorChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
     ~View() override;
+
+    enum HistoryBehavior {
+        Disabled,
+        ImmediateCompletion,
+        CompletionSuggestion,
+    };
+    Q_ENUM(HistoryBehavior)
 
     void positionOnScreen();
 
@@ -58,6 +66,16 @@ public:
         const KConfigGroup grp = KSharedConfig::openConfig()->group("Plugins");
         return metaData.isEnabled(grp);
     }
+    HistoryBehavior historyBehavior()
+    {
+        return m_historyBehavior;
+    }
+    void setHistoryBehavior(HistoryBehavior behavior)
+    {
+        m_historyBehavior = behavior;
+        Q_EMIT historyBehaviorChanged();
+    }
+    Q_SIGNAL void historyBehaviorChanged();
 
     Q_SIGNAL void retainPriorSearchChanged();
     bool retainPriorSearch() const
@@ -104,4 +122,5 @@ private:
     QStringList m_history;
     KRunner::RunnerManager *m_manager = nullptr;
     X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
+    HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
 };

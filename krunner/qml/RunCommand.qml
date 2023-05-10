@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 
@@ -15,6 +16,7 @@ import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
+import org.kde.krunner.private.view
 
 ColumnLayout {
     id: root
@@ -93,6 +95,24 @@ ColumnLayout {
             placeholderText: results.singleRunnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
                                                          "Search '%1'…", results.singleRunnerName)
                                                 : i18nc("Textfield placeholder text", "Search…")
+            rightPadding: 0
+            background.z: -2 // The fadedTextCompletion has -1, so it appears over the background
+
+            QQC2.Label {
+                id: fadedTextCompletion
+                leftPadding: parent.leftPadding
+                topPadding: parent.topPadding
+                rightPadding: parent.rightPadding
+                bottomPadding: parent.bottomPadding
+                width: parent.width
+                height: parent.height
+                opacity: 0.5
+                text: ""
+                renderType: parent.renderType
+                color: parent.color
+                focus: false
+                z: -1
+            }
 
             PlasmaComponents3.BusyIndicator {
                 anchors {
@@ -147,7 +167,11 @@ ColumnLayout {
 
             onTextChanged: {
                 root.query = queryField.text
-                if (allowCompletion && length > 0 && runnerManager.historyEnabled) {
+                if (!allowCompletion) {
+                    fadedTextCompletion.text = ""
+                } else if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                    fadedTextCompletion.text = runnerManager.getHistorySuggestion(text)
+                } else if (length > 0 && runnerWindow.historyBehavior === HistoryBehavior.ImmediateCompletion) {
                     var oldText = text
                     var suggestedText = runnerManager.getHistorySuggestion(text);
                     if (suggestedText.length > 0) {
@@ -173,6 +197,9 @@ ColumnLayout {
                     results.currentIndex = results.count - 1
                     event.accepted = true;
                     focusCurrentListView()
+                }
+                if (event.key === Qt.Key_Right && runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                    queryField.text = fadedTextCompletion.text
                 }
             }
             Keys.onUpPressed: move_up()
@@ -221,6 +248,7 @@ ColumnLayout {
                 }
             }
         }
+
         PlasmaComponents3.ToolButton {
             visible: runnerWindow.helpEnabled
             checkable: true
