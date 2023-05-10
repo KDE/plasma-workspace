@@ -51,6 +51,7 @@ target_link_libraries(taskmanager
         Qt::Quick
         KF6::ItemModels
     PRIVATE
+        Qt::Concurrent
         Qt::DBus
         Qt::WaylandClient
         KF6::Activities

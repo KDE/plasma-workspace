@@ -5,17 +5,17 @@
 */
 
 #include "waylandtasksmodel.h"
+#include "libtaskmanager_debug.h"
 #include "tasktools.h"
 #include "virtualdesktopinfo.h"
 
 #include <KDirWatch>
 #include <KSharedConfig>
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmawindowmanagement.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
+#include <qwayland-plasma-window-management.h>
+
+#include <QFuture>
 #include <QGuiApplication>
 #include <QMimeData>
 #include <QQuickItem>
@@ -23,36 +23,332 @@
 #include <QSet>
 #include <QUrl>
 #include <QUuid>
+#include <QWaylandClientExtension>
 #include <QWindow>
+#include <QtConcurrent>
+#include <qpa/qplatformwindow_p.h>
+
+#include <fcntl.h>
+#include <sys/poll.h>
+#include <unistd.h>
 
 namespace TaskManager
 {
+
+class PlasmaWindow : public QObject, public QtWayland::org_kde_plasma_window
+{
+    Q_OBJECT
+public:
+    PlasmaWindow(const QString &uuid, ::org_kde_plasma_window *id)
+        : org_kde_plasma_window(id)
+        , uuid(uuid)
+    {
+    }
+    ~PlasmaWindow()
+    {
+        destroy();
+    }
+    using state = QtWayland::org_kde_plasma_window_management::state;
+    const QString uuid;
+    QString title;
+    QString appId;
+    QIcon icon;
+    QFlags<state> windowState;
+    QList<QString> virtualDesktops;
+    QRect geometry;
+    QString applicationMenuService;
+    QString applicationMenuObjectPath;
+    QList<QString> activities;
+    quint32 pid;
+    QString resourceName;
+Q_SIGNALS:
+    void unmapped();
+    void titleChanged();
+    void appIdChanged();
+    void iconChanged();
+    void activeChanged();
+    void minimizedChanged();
+    void maximizedChanged();
+    void fullscreenChanged();
+    void keepAboveChanged();
+    void keepBelowChanged();
+    void onAllDesktopsChanged();
+    void demandsAttentionChanged();
+    void closeableChanged();
+    void minimizeableChanged();
+    void maximizeableChanged();
+    void fullscreenableChanged();
+    void skiptaskbarChanged();
+    void shadeableChanged();
+    void shadedChanged();
+    void movableChanged();
+    void resizableChanged();
+    void virtualDesktopChangeableChanged();
+    void skipSwitcherChanged();
+    void virtualDesktopEntered();
+    void virtualDesktopLeft();
+    void geometryChanged();
+    void skipTaskbarChanged();
+    void applicationMenuChanged();
+    void activitiesChanged();
+    void initialStateDone();
+
+protected:
+    void org_kde_plasma_window_unmapped() override
+    {
+        Q_EMIT unmapped();
+    }
+    void org_kde_plasma_window_title_changed(const QString &title) override
+    {
+        this->title = title;
+        Q_EMIT titleChanged();
+    }
+    void org_kde_plasma_window_app_id_changed(const QString &app_id) override
+    {
+        appId = app_id;
+        Q_EMIT appIdChanged();
+    }
+    void org_kde_plasma_window_icon_changed() override
+    {
+        int pipeFds[2];
+        if (pipe2(pipeFds, O_CLOEXEC) != 0) {
+            qCWarning(TASKMANAGER_DEBUG) << "failed creating pipe";
+            return;
+        }
+        get_icon(pipeFds[1]);
+        ::close(pipeFds[1]);
+        auto readIcon = [uuid = uuid](int fd) {
+            pollfd pollFd;
+            pollFd.fd = fd;
+            pollFd.events = POLLIN;
+            QByteArray data;
+            while (true) {
+                int ready = poll(&pollFd, 1, 1000);
+                if (ready < 0 && errno != EINTR) {
+                    qCWarning(TASKMANAGER_DEBUG) << "polling for icon of window" << uuid << "failed";
+                    return QIcon();
+                } else if (ready == 0) {
+                    qCWarning(TASKMANAGER_DEBUG) << "time out polling for icon of window" << uuid;
+                    return QIcon();
+                } else {
+                    char buffer[4096];
+                    int n = read(fd, buffer, sizeof(buffer));
+                    if (n < 0) {
+                        qCWarning(TASKMANAGER_DEBUG) << "error reading icon of window" << uuid;
+                        return QIcon();
+                    } else if (n > 0) {
+                        data.append(buffer, n);
+                    } else {
+                        QIcon icon;
+                        QDataStream ds(data);
+                        ds >> icon;
+                        return icon;
+                    }
+                }
+            }
+        };
+        QFuture<QIcon> future = QtConcurrent::run(readIcon, pipeFds[0]);
+        auto watcher = new QFutureWatcher<QIcon>();
+        watcher->setFuture(future);
+        connect(watcher, &QFutureWatcher<QIcon>::finished, this, [this, watcher] {
+            icon = watcher->future().result();
+            Q_EMIT iconChanged();
+        });
+        connect(watcher, &QFutureWatcher<QIcon>::finished, watcher, &QObject::deleteLater);
+    }
+    void org_kde_plasma_window_themed_icon_name_changed(const QString &name) override
+    {
+        icon = QIcon::fromTheme(name);
+        Q_EMIT iconChanged();
+    }
+    void org_kde_plasma_window_state_changed(uint32_t flags) override
+    {
+        auto diff = windowState ^ flags;
+        if (diff & state::state_active) {
+            windowState.setFlag(state::state_active, flags & state::state_active);
+            Q_EMIT activeChanged();
+        }
+        if (diff & state::state_minimized) {
+            windowState.setFlag(state::state_minimized, flags & state::state_minimized);
+            Q_EMIT minimizedChanged();
+        }
+        if (diff & state::state_maximized) {
+            windowState.setFlag(state::state_maximized, flags & state::state_maximized);
+            Q_EMIT maximizedChanged();
+        }
+        if (diff & state::state_fullscreen) {
+            windowState.setFlag(state::state_fullscreen, flags & state::state_fullscreen);
+            Q_EMIT fullscreenChanged();
+        }
+        if (diff & state::state_keep_above) {
+            windowState.setFlag(state::state_keep_above, flags & state::state_keep_above);
+            Q_EMIT keepAboveChanged();
+        }
+        if (diff & state::state_keep_below) {
+            windowState.setFlag(state::state_keep_below, flags & state::state_keep_below);
+            Q_EMIT keepBelowChanged();
+        }
+        if (diff & state::state_on_all_desktops) {
+            windowState.setFlag(state::state_on_all_desktops, flags & state::state_on_all_desktops);
+            Q_EMIT onAllDesktopsChanged();
+        }
+        if (diff & state::state_demands_attention) {
+            windowState.setFlag(state::state_demands_attention, flags & state::state_demands_attention);
+            Q_EMIT demandsAttentionChanged();
+        }
+        if (diff & state::state_closeable) {
+            windowState.setFlag(state::state_closeable, flags & state::state_closeable);
+            Q_EMIT closeableChanged();
+        }
+        if (diff & state::state_minimizable) {
+            windowState.setFlag(state::state_minimizable, flags & state::state_minimizable);
+            Q_EMIT minimizeableChanged();
+        }
+        if (diff & state::state_maximizable) {
+            windowState.setFlag(state::state_maximizable, flags & state::state_maximizable);
+            Q_EMIT maximizeableChanged();
+        }
+        if (diff & state::state_fullscreenable) {
+            windowState.setFlag(state::state_fullscreenable, flags & state::state_fullscreenable);
+            Q_EMIT fullscreenableChanged();
+        }
+        if (diff & state::state_skiptaskbar) {
+            windowState.setFlag(state::state_skiptaskbar, flags & state::state_skiptaskbar);
+            Q_EMIT skipTaskbarChanged();
+        }
+        if (diff & state::state_shadeable) {
+            windowState.setFlag(state::state_shadeable, flags & state::state_shadeable);
+            Q_EMIT shadeableChanged();
+        }
+        if (diff & state::state_shaded) {
+            windowState.setFlag(state::state_shaded, flags & state::state_shaded);
+            Q_EMIT shadedChanged();
+        }
+        if (diff & state::state_movable) {
+            windowState.setFlag(state::state_movable, flags & state::state_movable);
+            Q_EMIT movableChanged();
+        }
+        if (diff & state::state_resizable) {
+            windowState.setFlag(state::state_resizable, flags & state::state_resizable);
+            Q_EMIT resizableChanged();
+        }
+        if (diff & state::state_virtual_desktop_changeable) {
+            windowState.setFlag(state::state_virtual_desktop_changeable, flags & state::state_virtual_desktop_changeable);
+            Q_EMIT virtualDesktopChangeableChanged();
+        }
+        if (diff & state::state_skipswitcher) {
+            windowState.setFlag(state::state_skipswitcher, flags & state::state_skipswitcher);
+            Q_EMIT skipSwitcherChanged();
+        }
+    }
+    void org_kde_plasma_window_virtual_desktop_entered(const QString &id) override
+    {
+        virtualDesktops.push_back(id);
+        Q_EMIT virtualDesktopEntered();
+    }
+
+    void org_kde_plasma_window_virtual_desktop_left(const QString &id) override
+    {
+        virtualDesktops.removeAll(id);
+        Q_EMIT virtualDesktopLeft();
+    }
+    void org_kde_plasma_window_geometry(int32_t x, int32_t y, uint32_t width, uint32_t height) override
+    {
+        geometry = QRect(x, y, width, height);
+        Q_EMIT geometryChanged();
+    }
+    void org_kde_plasma_window_application_menu(const QString &service_name, const QString &object_path) override
+
+    {
+        applicationMenuService = service_name;
+        applicationMenuObjectPath = object_path;
+        Q_EMIT applicationMenuChanged();
+    }
+    void org_kde_plasma_window_activity_entered(const QString &id) override
+    {
+        activities.push_back(id);
+        Q_EMIT activitiesChanged();
+    }
+    void org_kde_plasma_window_activity_left(const QString &id) override
+    {
+        activities.removeAll(id);
+        Q_EMIT activitiesChanged();
+    }
+    void org_kde_plasma_window_pid_changed(uint32_t pid) override
+    {
+        this->pid = pid;
+    }
+    void org_kde_plasma_window_resource_name_changed(const QString &resource_name) override
+    {
+        resourceName = resource_name;
+    }
+    void org_kde_plasma_window_initial_state() override
+    {
+        Q_EMIT initialStateDone();
+    }
+};
+
+class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
+{
+    Q_OBJECT
+public:
+    static constexpr int version = 16;
+    PlasmaWindowManagement()
+        : QWaylandClientExtensionTemplate(version)
+    {
+        connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
+            if (!isActive()) {
+                wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+            }
+        });
+    }
+    ~PlasmaWindowManagement()
+    {
+        if (isActive()) {
+            wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+        }
+    }
+    void org_kde_plasma_window_management_window_with_uuid(uint32_t id, const QString &uuid) override
+    {
+        Q_UNUSED(id)
+        Q_EMIT windowCreated(new PlasmaWindow(uuid, get_window_by_uuid(uuid)));
+    }
+    void org_kde_plasma_window_management_stacking_order_uuid_changed(const QString &uuids) override
+    {
+        Q_EMIT stackingOrderChanged(uuids);
+    }
+Q_SIGNALS:
+    void windowCreated(PlasmaWindow *window);
+    void stackingOrderChanged(const QString &uuids);
+};
 class Q_DECL_HIDDEN WaylandTasksModel::Private
 {
 public:
     Private(WaylandTasksModel *q);
-    QList<KWayland::Client::PlasmaWindow *> windows;
-    QHash<KWayland::Client::PlasmaWindow *, AppData> appDataCache;
-    QHash<KWayland::Client::PlasmaWindow *, QTime> lastActivated;
-    KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
+    QHash<PlasmaWindow *, AppData> appDataCache;
+    QHash<PlasmaWindow *, QTime> lastActivated;
+    std::vector<std::unique_ptr<PlasmaWindow>> windows;
+    std::unique_ptr<PlasmaWindowManagement> windowManagement;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
     VirtualDesktopInfo *virtualDesktopInfo = nullptr;
     static QUuid uuid;
+    QList<QString> stackingOrder;
 
     void init();
     void initWayland();
-    void addWindow(KWayland::Client::PlasmaWindow *window);
+    auto findWindow(PlasmaWindow *window) const;
+    void addWindow(PlasmaWindow *window);
 
-    AppData appData(KWayland::Client::PlasmaWindow *window);
+    AppData appData(PlasmaWindow *window);
 
-    QIcon icon(KWayland::Client::PlasmaWindow *window);
+    QIcon icon(PlasmaWindow *window);
 
     static QString mimeType();
     static QString groupMimeType();
 
-    void dataChanged(KWayland::Client::PlasmaWindow *window, int role);
-    void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
+    void dataChanged(PlasmaWindow *window, int role);
+    void dataChanged(PlasmaWindow *window, const QVector<int> &roles);
 
 private:
     WaylandTasksModel *q;
@@ -68,7 +364,7 @@ WaylandTasksModel::Private::Private(WaylandTasksModel *q)
 void WaylandTasksModel::Private::init()
 {
     auto clearCacheAndRefresh = [this] {
-        if (!windows.count()) {
+        if (windows.empty()) {
             return;
         }
 
@@ -76,7 +372,7 @@ void WaylandTasksModel::Private::init()
 
         // Emit changes of all roles satisfied from app data cache.
         Q_EMIT q->dataChanged(q->index(0, 0),
-                              q->index(windows.count() - 1, 0),
+                              q->index(windows.size() - 1, 0),
                               QVector<int>{Qt::DecorationRole,
                                            AbstractTasksModel::AppId,
                                            AbstractTasksModel::AppName,
@@ -114,87 +410,78 @@ void WaylandTasksModel::Private::initWayland()
         return;
     }
 
-    KWayland::Client::ConnectionThread *connection = KWayland::Client::ConnectionThread::fromApplication(q);
+    windowManagement = std::make_unique<PlasmaWindowManagement>();
 
-    if (!connection) {
-        return;
-    }
-
-    KWayland::Client::Registry *registry = new KWayland::Client::Registry(q);
-    registry->create(connection);
-
-    QObject::connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, q, [this, registry](quint32 name, quint32 version) {
-        windowManagement = registry->createPlasmaWindowManagement(name, version, q);
-
-        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::interfaceAboutToBeReleased, q, [this] {
-            q->beginResetModel();
-            windows.clear();
-            q->endResetModel();
-        });
-
-        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::windowCreated, q, [this](KWayland::Client::PlasmaWindow *window) {
-            addWindow(window);
-        });
-
-        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::stackingOrderUuidsChanged, q, [this]() {
-            for (const auto window : qAsConst(windows)) {
-                this->dataChanged(window, StackingOrder);
-            }
-        });
-
-        const auto windows = windowManagement->windows();
-        for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
-            addWindow(*it);
-        }
+    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::activeChanged, q, [this] {
+        q->beginResetModel();
+        windows.clear();
+        q->endResetModel();
     });
 
-    registry->setup();
+    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::windowCreated, q, [this](PlasmaWindow *window) {
+        connect(window, &PlasmaWindow::initialStateDone, q, [this, window] {
+            addWindow(window);
+        });
+    });
+
+    QObject::connect(windowManagement.get(), &PlasmaWindowManagement::stackingOrderChanged, q, [this](const QString &order) {
+        for (const auto &window : qAsConst(windows)) {
+            stackingOrder = order.split(';');
+            this->dataChanged(window.get(), StackingOrder);
+        }
+    });
 }
 
-void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *window)
+auto WaylandTasksModel::Private::findWindow(PlasmaWindow *window) const
 {
-    if (windows.indexOf(window) != -1) {
+    return std::find_if(windows.begin(), windows.end(), [window](const std::unique_ptr<PlasmaWindow> &candidate) {
+        return candidate.get() == window;
+    });
+}
+
+void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
+{
+    if (findWindow(window) != windows.end()) {
         return;
     }
 
-    const int count = windows.count();
+    const int count = windows.size();
 
     q->beginInsertRows(QModelIndex(), count, count);
 
-    windows.append(window);
+    windows.emplace_back(window);
 
     q->endInsertRows();
 
     auto removeWindow = [window, this] {
-        const int row = windows.indexOf(window);
-        if (row != -1) {
+        auto it = findWindow(window);
+        if (it != windows.end()) {
+            const int row = it - windows.begin();
             q->beginRemoveRows(QModelIndex(), row, row);
-            windows.removeAt(row);
+            windows.erase(it);
             appDataCache.remove(window);
             lastActivated.remove(window);
             q->endRemoveRows();
         }
     };
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::unmapped, q, removeWindow);
-    QObject::connect(window, &QObject::destroyed, q, removeWindow);
+    QObject::connect(window, &PlasmaWindow::unmapped, q, removeWindow);
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::titleChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::titleChanged, q, [window, this] {
         this->dataChanged(window, Qt::DisplayRole);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::iconChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::iconChanged, q, [window, this] {
         // The icon in the AppData struct might come from PlasmaWindow if it wasn't
         // filled in by windowUrlFromMetadata+appDataFromUrl.
         // TODO: Don't evict the cache unnecessarily if this isn't the case. As icons
         // are currently very static on Wayland, this eviction is unlikely to happen
         // frequently as of now.
         appDataCache.remove(window);
-
         this->dataChanged(window, Qt::DecorationRole);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::appIdChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::appIdChanged, q, [window, this] {
         // The AppData struct in the cache is derived from this and needs
         // to be evicted in favor of a fresh struct based on the changed
         // window metadata.
@@ -206,112 +493,106 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
             QVector<int>{Qt::DecorationRole, AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q, [window, this] {
-        if (window->isActive()) {
+    QObject::connect(window, &PlasmaWindow::activeChanged, q, [window, this] {
+        if (window->windowState & PlasmaWindow::state::state_active) {
             lastActivated[window] = QTime::currentTime();
         }
         this->dataChanged(window, IsActive);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::closeableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::closeableChanged, q, [window, this] {
         this->dataChanged(window, IsClosable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::movableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::movableChanged, q, [window, this] {
         this->dataChanged(window, IsMovable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::resizableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::resizableChanged, q, [window, this] {
         this->dataChanged(window, IsResizable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::fullscreenableChanged, q, [window, this] {
         this->dataChanged(window, IsFullScreenable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::fullscreenChanged, q, [window, this] {
         this->dataChanged(window, IsFullScreen);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizeableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::maximizeableChanged, q, [window, this] {
         this->dataChanged(window, IsMaximizable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizedChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::maximizedChanged, q, [window, this] {
         this->dataChanged(window, IsMaximized);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizeableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::minimizeableChanged, q, [window, this] {
         this->dataChanged(window, IsMinimizable);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizedChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::minimizedChanged, q, [window, this] {
         this->dataChanged(window, IsMinimized);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepAboveChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::keepAboveChanged, q, [window, this] {
         this->dataChanged(window, IsKeepAbove);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepBelowChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::keepBelowChanged, q, [window, this] {
         this->dataChanged(window, IsKeepBelow);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::shadeableChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::shadeableChanged, q, [window, this] {
         this->dataChanged(window, IsShadeable);
     });
 
-    // FIXME
-    //     QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChangeableChanged, q,
-    //         // TODO: This is marked deprecated in KWayland, but (IMHO) shouldn't be.
-    //         [window, this] { this->dataChanged(window, IsVirtualDesktopsChangeable); }
-    //     );
+    QObject::connect(window, &PlasmaWindow::virtualDesktopChangeableChanged, q, [window, this] {
+        this->dataChanged(window, IsVirtualDesktopsChangeable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopEntered, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::virtualDesktopEntered, q, [window, this] {
         this->dataChanged(window, VirtualDesktops);
 
         // If the count has changed from 0, the window may no longer be on all virtual
         // desktops.
-        if (window->plasmaVirtualDesktops().count() > 0) {
+        if (window->virtualDesktops.count() > 0) {
             this->dataChanged(window, IsOnAllVirtualDesktops);
         }
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopLeft, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::virtualDesktopLeft, q, [window, this] {
         this->dataChanged(window, VirtualDesktops);
 
         // If the count has changed to 0, the window is now on all virtual desktops.
-        if (window->plasmaVirtualDesktops().count() == 0) {
+        if (window->virtualDesktops.count() == 0) {
             this->dataChanged(window, IsOnAllVirtualDesktops);
         }
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::geometryChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::geometryChanged, q, [window, this] {
         this->dataChanged(window, QVector<int>{Geometry, ScreenGeometry});
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::demandsAttentionChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::demandsAttentionChanged, q, [window, this] {
         this->dataChanged(window, IsDemandingAttention);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::skipTaskbarChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::skipTaskbarChanged, q, [window, this] {
         this->dataChanged(window, SkipTaskbar);
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::applicationMenuChanged, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::applicationMenuChanged, q, [window, this] {
         this->dataChanged(window, QVector<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
     });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaActivityEntered, q, [window, this] {
-        this->dataChanged(window, Activities);
-    });
-
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaActivityLeft, q, [window, this] {
+    QObject::connect(window, &PlasmaWindow::activitiesChanged, q, [window, this] {
         this->dataChanged(window, Activities);
     });
 }
 
-AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
+AppData WaylandTasksModel::Private::appData(PlasmaWindow *window)
 {
     const auto &it = appDataCache.constFind(window);
 
@@ -319,14 +600,14 @@ AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *wind
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig, window->resourceName()));
+    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, rulesConfig, window->resourceName));
 
     appDataCache.insert(window, data);
 
     return data;
 }
 
-QIcon WaylandTasksModel::Private::icon(KWayland::Client::PlasmaWindow *window)
+QIcon WaylandTasksModel::Private::icon(PlasmaWindow *window)
 {
     const AppData &app = appData(window);
 
@@ -334,9 +615,9 @@ QIcon WaylandTasksModel::Private::icon(KWayland::Client::PlasmaWindow *window)
         return app.icon;
     }
 
-    appDataCache[window].icon = window->icon();
+    appDataCache[window].icon = window->icon;
 
-    return window->icon();
+    return window->icon;
 }
 
 QString WaylandTasksModel::Private::mimeType()
@@ -353,15 +634,17 @@ QString WaylandTasksModel::Private::groupMimeType()
     return QStringLiteral("windowsystem/multiple-winids+") + uuid.toString();
 }
 
-void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
+void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, int role)
 {
-    QModelIndex idx = q->index(windows.indexOf(window));
+    auto it = findWindow(window);
+    QModelIndex idx = q->index(it - windows.begin());
     Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
 }
 
-void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
+void WaylandTasksModel::Private::dataChanged(PlasmaWindow *window, const QVector<int> &roles)
 {
-    QModelIndex idx = q->index(windows.indexOf(window));
+    auto it = findWindow(window);
+    QModelIndex idx = q->index(it - windows.begin());
     Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
@@ -376,21 +659,21 @@ WaylandTasksModel::~WaylandTasksModel() = default;
 
 QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->windows.count()) {
+    if (!index.isValid() || index.row() >= d->windows.size()) {
         return QVariant();
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    PlasmaWindow *window = d->windows.at(index.row()).get();
 
     if (role == Qt::DisplayRole) {
-        return window->title();
+        return window->title;
     } else if (role == Qt::DecorationRole) {
         return d->icon(window);
     } else if (role == AppId) {
         const QString &id = d->appData(window).id;
 
         if (id.isEmpty()) {
-            return window->appId();
+            return window->appId;
         } else {
             return id;
         }
@@ -401,72 +684,71 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         return d->appData(window).url;
     } else if (role == WinIdList) {
-        return QVariantList{window->uuid()};
+        return QVariantList{window->uuid};
     } else if (role == MimeType) {
         return d->mimeType();
     } else if (role == MimeData) {
-        return window->uuid();
+        return window->uuid;
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
-        return window->isActive();
+        return window->windowState.testFlag(PlasmaWindow::state::state_active);
     } else if (role == IsClosable) {
-        return window->isCloseable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_closeable);
     } else if (role == IsMovable) {
-        return window->isMovable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_movable);
     } else if (role == IsResizable) {
-        return window->isResizable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_resizable);
     } else if (role == IsMaximizable) {
-        return window->isMaximizeable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_maximizable);
     } else if (role == IsMaximized) {
-        return window->isMaximized();
+        return window->windowState.testFlag(PlasmaWindow::state::state_maximized);
     } else if (role == IsMinimizable) {
-        return window->isMinimizeable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_minimizable);
     } else if (role == IsMinimized || role == IsHidden) {
-        return window->isMinimized();
+        return window->windowState.testFlag(PlasmaWindow::state::state_minimized);
     } else if (role == IsKeepAbove) {
-        return window->isKeepAbove();
+        return window->windowState.testFlag(PlasmaWindow::state::state_keep_above);
     } else if (role == IsKeepBelow) {
-        return window->isKeepBelow();
+        return window->windowState.testFlag(PlasmaWindow::state::state_keep_below);
     } else if (role == IsFullScreenable) {
-        return window->isFullscreenable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_fullscreenable);
     } else if (role == IsFullScreen) {
-        return window->isFullscreen();
+        return window->windowState.testFlag(PlasmaWindow::state::state_fullscreen);
     } else if (role == IsShadeable) {
-        return window->isShadeable();
+        return window->windowState.testFlag(PlasmaWindow::state::state_shadeable);
     } else if (role == IsShaded) {
-        return window->isShaded();
+        return window->windowState.testFlag(PlasmaWindow::state::state_shaded);
     } else if (role == IsVirtualDesktopsChangeable) {
-        // FIXME Currently not implemented in KWayland.
-        return true;
+        window->windowState.testFlag(PlasmaWindow::state::state_maximized);
     } else if (role == VirtualDesktops) {
-        return window->plasmaVirtualDesktops();
+        return window->virtualDesktops;
     } else if (role == IsOnAllVirtualDesktops) {
-        return window->plasmaVirtualDesktops().isEmpty();
+        return window->virtualDesktops.isEmpty();
     } else if (role == Geometry) {
-        return window->geometry();
+        return window->geometry;
     } else if (role == ScreenGeometry) {
-        return screenGeometry(window->geometry().center());
+        return screenGeometry(window->geometry.center());
     } else if (role == Activities) {
-        return window->plasmaActivities();
+        return window->activities;
     } else if (role == IsDemandingAttention) {
-        return window->isDemandingAttention();
+        return window->windowState.testFlag(PlasmaWindow::state::state_demands_attention);
     } else if (role == SkipTaskbar) {
-        return window->skipTaskbar() || d->appData(window).skipTaskbar;
+        return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->appData(window).skipTaskbar;
     } else if (role == SkipPager) {
         // FIXME Implement.
     } else if (role == AppPid) {
-        return window->pid();
+        return window->pid;
     } else if (role == StackingOrder) {
-        return d->windowManagement->stackingOrderUuids().indexOf(window->uuid());
+        return d->stackingOrder.indexOf(window->uuid);
     } else if (role == LastActivated) {
         if (d->lastActivated.contains(window)) {
             return d->lastActivated.value(window);
         }
     } else if (role == ApplicationMenuObjectPath) {
-        return window->applicationMenuObjectPath();
+        return window->applicationMenuObjectPath;
     } else if (role == ApplicationMenuServiceName) {
-        return window->applicationMenuServiceName();
+        return window->applicationMenuService;
     } else if (role == CanLaunchNewInstance) {
         return canLauchNewInstance(d->appData(window));
     }
@@ -476,12 +758,12 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
 
 int WaylandTasksModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : d->windows.count();
+    return parent.isValid() ? 0 : d->windows.size();
 }
 
 QModelIndex WaylandTasksModel::index(int row, int column, const QModelIndex &parent) const
 {
-    return hasIndex(row, column, parent) ? createIndex(row, column, d->windows.at(row)) : QModelIndex();
+    return hasIndex(row, column, parent) ? createIndex(row, column, d->windows.at(row).get()) : QModelIndex();
 }
 
 void WaylandTasksModel::requestActivate(const QModelIndex &index)
@@ -492,7 +774,7 @@ void WaylandTasksModel::requestActivate(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestActivate();
+    d->windows.at(index.row())->set_state(PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
 }
 
 void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
@@ -501,7 +783,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row())));
+    runApp(d->appData(d->windows.at(index.row()).get()));
 }
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
@@ -510,7 +792,7 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row())), urls);
+    runApp(d->appData(d->windows.at(index.row()).get()), urls);
 }
 
 void WaylandTasksModel::requestClose(const QModelIndex &index)
@@ -519,7 +801,7 @@ void WaylandTasksModel::requestClose(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestClose();
+    d->windows.at(index.row())->close();
 }
 
 void WaylandTasksModel::requestMove(const QModelIndex &index)
@@ -528,10 +810,10 @@ void WaylandTasksModel::requestMove(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
 
-    window->requestActivate();
-    window->requestMove();
+    window->set_state(PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
+    window->request_move();
 }
 
 void WaylandTasksModel::requestResize(const QModelIndex &index)
@@ -540,10 +822,10 @@ void WaylandTasksModel::requestResize(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
 
-    window->requestActivate();
-    window->requestResize();
+    window->set_state(PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
+    window->request_resize();
 }
 
 void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
@@ -552,7 +834,13 @@ void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestToggleMinimized();
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_minimized) {
+        window->set_state(PlasmaWindow::state::state_minimized, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_minimized, PlasmaWindow::state::state_minimized);
+    }
 }
 
 void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
@@ -561,10 +849,13 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
 
-    window->requestActivate();
-    window->requestToggleMaximized();
+    if (window->windowState & PlasmaWindow::state::state_maximized) {
+        window->set_state(PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active, PlasmaWindow::state::state_active);
+    } else {
+        window->set_state(PlasmaWindow::state::state_maximized, PlasmaWindow::state::state_maximized | PlasmaWindow::state::state_active);
+    }
 }
 
 void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
@@ -573,7 +864,13 @@ void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestToggleKeepAbove();
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_keep_above) {
+        window->set_state(PlasmaWindow::state::state_keep_above, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_keep_above, PlasmaWindow::state::state_keep_above);
+    }
 }
 
 void WaylandTasksModel::requestToggleKeepBelow(const QModelIndex &index)
@@ -581,8 +878,13 @@ void WaylandTasksModel::requestToggleKeepBelow(const QModelIndex &index)
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
+    auto &window = d->windows.at(index.row());
 
-    d->windows.at(index.row())->requestToggleKeepBelow();
+    if (window->windowState & PlasmaWindow::state::state_keep_below) {
+        window->set_state(PlasmaWindow::state::state_keep_below, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_keep_below, PlasmaWindow::state::state_keep_below);
+    }
 }
 
 void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
@@ -591,7 +893,13 @@ void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestToggleFullscreen();
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_fullscreen) {
+        window->set_state(PlasmaWindow::state::state_fullscreen, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_fullscreen, PlasmaWindow::state::state_fullscreen);
+    }
 }
 
 void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
@@ -600,7 +908,13 @@ void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestToggleShaded();
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_shaded) {
+        window->set_state(PlasmaWindow::state::state_shaded, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_shaded, PlasmaWindow::state::state_shaded);
+    };
 }
 
 void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
@@ -613,15 +927,15 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
 
     if (desktops.isEmpty()) {
-        const QStringList virtualDesktops = window->plasmaVirtualDesktops();
+        const QStringList virtualDesktops = window->virtualDesktops;
         for (const QString &desktop : virtualDesktops) {
-            window->requestLeaveVirtualDesktop(desktop);
+            window->request_leave_virtual_desktop(desktop);
         }
     } else {
-        const QStringList &now = window->plasmaVirtualDesktops();
+        const QStringList &now = window->virtualDesktops;
         QStringList next;
 
         for (const QVariant &desktop : desktops) {
@@ -631,14 +945,14 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
                 next << desktopId;
 
                 if (!now.contains(desktopId)) {
-                    window->requestEnterVirtualDesktop(desktopId);
+                    window->request_enter_virtual_desktop(desktopId);
                 }
             }
         }
 
         for (const QString &desktop : now) {
             if (!next.contains(desktop)) {
-                window->requestLeaveVirtualDesktop(desktop);
+                window->request_leave_virtual_desktop(desktop);
             }
         }
     }
@@ -650,7 +964,7 @@ void WaylandTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
         return;
     }
 
-    d->windows.at(index.row())->requestEnterNewVirtualDesktop();
+    d->windows.at(index.row())->request_enter_new_virtual_desktop();
 }
 
 void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
@@ -659,19 +973,19 @@ void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStrin
         return;
     }
 
-    auto *const window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
     const auto newActivities = QSet(activities.begin(), activities.end());
-    const auto plasmaActivities = window->plasmaActivities();
-    const auto oldActivities = QSet(plasmaActivities.begin(), plasmaActivities.end());
+    const auto plasmaActivities = window->activities;
+    const auto oldActivities = QSet(activities.begin(), activities.end());
 
     const auto activitiesToAdd = newActivities - oldActivities;
     for (const auto &activity : activitiesToAdd) {
-        window->requestEnterActivity(activity);
+        window->request_enter_activity(activity);
     }
 
     const auto activitiesToRemove = oldActivities - newActivities;
     for (const auto &activity : activitiesToRemove) {
-        window->requestLeaveActivity(activity);
+        window->request_leave_activity(activity);
     }
 }
 
@@ -703,19 +1017,18 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
         return;
     }
 
-    using namespace KWayland::Client;
-    Surface *surface = Surface::fromWindow(itemWindow);
+    auto waylandWindow = itemWindow->nativeInterface<QNativeInterface::Private::QWaylandWindow>();
 
-    if (!surface) {
+    if (!waylandWindow || !waylandWindow->surface()) {
         return;
     }
 
     QRect rect(item->x(), item->y(), item->width(), item->height());
     rect.moveTopLeft(item->parentItem()->mapToScene(rect.topLeft()).toPoint());
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    auto &window = d->windows.at(index.row());
 
-    window->setMinimizedGeometry(surface, rect);
+    window->set_minimized_geometry(waylandWindow->surface(), rect.x(), rect.y(), rect.width(), rect.height());
 }
 
 QUuid WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
@@ -769,3 +1082,5 @@ QList<QUuid> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bo
 }
 
 }
+
+#include "waylandtasksmodel.moc"
