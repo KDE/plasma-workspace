@@ -240,12 +240,6 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
     m_engine->rootObject()->setProperty("query", term);
 }
 
-void View::displayConfiguration()
-{
-    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")});
-    job->start();
-}
-
 bool View::pinned() const
 {
     return m_pinned;

@@ -84,7 +84,6 @@ public Q_SLOTS:
     void displayWithClipboardContents();
     void query(const QString &term);
     void querySingleRunner(const QString &runnerName, const QString &term);
-    void displayConfiguration();
 
 protected Q_SLOTS:
     void loadConfig();
