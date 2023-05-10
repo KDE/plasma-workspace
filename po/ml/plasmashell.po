@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -187,18 +187,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "സ്ക്രീനിലെ കീബോര്ഡ് ഓഫാക്കി"
 
-#: shellcontainmentconfig.cpp:104
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:108
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:134
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr ""
@@ -248,12 +248,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:1912
+#: shellcorona.cpp:1911
 #, kde-format
 msgid "Add Panel"
 msgstr "പാളി ചേർക്കുക"
 
-#: shellcorona.cpp:1948
+#: shellcorona.cpp:1947
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

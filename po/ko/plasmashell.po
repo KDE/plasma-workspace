@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-02-28 23:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -181,18 +181,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "가상 키보드 꺼짐"
 
-#: shellcontainmentconfig.cpp:104
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "%1의 내장 화면"
 
-#: shellcontainmentconfig.cpp:108
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3(으)로 연결된 %1 %2"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:134
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "연결 해제된 화면 %1"
@@ -242,12 +242,12 @@ msgstr "바탕 화면과 패널 관리..."
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 초점 이동"
 
-#: shellcorona.cpp:1912
+#: shellcorona.cpp:1911
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:1948
+#: shellcorona.cpp:1947
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

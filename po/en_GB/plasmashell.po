@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2022-12-31 16:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -183,18 +183,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "On-Screen Keyboard Deactivated"
 
-#: shellcontainmentconfig.cpp:104
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Internal Screen on %1"
 
-#: shellcontainmentconfig.cpp:108
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 on %3"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:134
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Disconnected Screen %1"
@@ -244,12 +244,12 @@ msgstr "Manage Desktops And Panels..."
 msgid "Move keyboard focus between panels"
 msgstr "Move keyboard focus between panels"
 
-#: shellcorona.cpp:1912
+#: shellcorona.cpp:1911
 #, kde-format
 msgid "Add Panel"
 msgstr "Add Panel"
 
-#: shellcorona.cpp:1948
+#: shellcorona.cpp:1947
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

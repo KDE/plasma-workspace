@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -183,18 +183,18 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "स्क्रीन पर कुंजीपटल निष्क्रिय"
 
-#: shellcontainmentconfig.cpp:104
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "%1 पर आंतरिक स्क्रीन"
 
-#: shellcontainmentconfig.cpp:108
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3 पर %1 %2"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:134
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "वियोजित स्क्रीन %1"
@@ -244,12 +244,12 @@ msgstr "डेस्कटॉप और पैनल प्रबंधित �
 msgid "Move keyboard focus between panels"
 msgstr "पैनल के बीच कुंजीपटल फ़ोकस ले जाएँ"
 
-#: shellcorona.cpp:1912
+#: shellcorona.cpp:1911
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनल जोडें"
 
-#: shellcorona.cpp:1948
+#: shellcorona.cpp:1947
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

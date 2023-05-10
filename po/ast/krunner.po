@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 02:15+0000\n"
-"PO-Revision-Date: 2023-05-01 23:58+0200\n"
+"PO-Revision-Date: 2023-05-09 22:45+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -30,7 +30,7 @@ msgstr "alministradores@softastur.org"
 #: main.cpp:79 view.cpp:43
 #, kde-format
 msgid "KRunner"
-msgstr ""
+msgstr "KRunner"
 
 #: main.cpp:79
 #, kde-format
@@ -107,7 +107,7 @@ msgstr ""
 #: qml/RunCommand.qml:318 qml/RunCommand.qml:323
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "Consultes de recién"
 
 #: qml/RunCommand.qml:321
 #, kde-format

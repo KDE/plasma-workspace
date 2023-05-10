@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2023-05-03 22:37+0200\n"
+"PO-Revision-Date: 2023-05-09 21:12+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -25,38 +25,38 @@ msgstr ""
 #: ksolidnotify.cpp:149
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Xá se pue estrayer con seguranza un preséu"
 
 #: ksolidnotify.cpp:150
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Esti preséu xá se pue estrayer con seguranza."
 
 #: ksolidnotify.cpp:157
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "Nun tienes permisu pa montar esti preséu."
 
 #: ksolidnotify.cpp:160
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "Nun tienes permisu pa estrayer esti preséu."
 
 #: ksolidnotify.cpp:163
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "Nun tienes permisu pa espulsar esti preséu."
 
 #: ksolidnotify.cpp:170
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Nun se pudo montar esit preséu darréu que ta ocupáu."
 
 #: ksolidnotify.cpp:200
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
+msgstr "Hai unu o más ficheros d'esti preséu que tán abiertos nuna aplicación."
 
 #: ksolidnotify.cpp:202
 #, kde-format
@@ -64,26 +64,29 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"Hai unu o más ficheros d'esti preséu que tán abiertos na aplicación «%2»."
 msgstr[1] ""
+"Hai unu o más ficheros d'esti preséu que tán abiertos nes aplicaciones "
+"siguientes: %2."
 
 #: ksolidnotify.cpp:205
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: ksolidnotify.cpp:222
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "Nun se pudo montar esti preséu."
 
 #: ksolidnotify.cpp:225
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr ""
+msgstr "Nun se pudo estrayer esti preséu."
 
 #: ksolidnotify.cpp:228
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "Nun se pudo espulsar esti discu."

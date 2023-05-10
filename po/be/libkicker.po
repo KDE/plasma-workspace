@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 02:40+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -198,7 +198,7 @@ msgstr "Праграмы, якія часта выкарыстоўваюцца"
 msgid "Power / Session"
 msgstr "Сілкаванне / сеанс"
 
-#: plugin/runnermodel.cpp:217
+#: plugin/runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "Вынікі пошуку"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 02:24+0000\n"
-"PO-Revision-Date: 2023-05-03 22:35+0200\n"
+"PO-Revision-Date: 2023-05-09 21:17+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -29,7 +29,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr ""
+msgstr "Accediendo…"
 
 #: package/contents/ui/DeviceItem.qml:192
 #, kde-format
@@ -37,73 +37,73 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr ""
+msgstr "Estrayendo…"
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "¡Nun lu estrayas entá! Hai ficheros en tresferencia…"
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "Abrir nel xestor de ficheros"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "Montar ya abrir"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "Espulsar"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "Estrayer con seguranza"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "Montar"
 
 #: package/contents/ui/FullRepresentation.qml:42
 #: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
-msgstr ""
+msgstr "Estrayer too"
 
 #: package/contents/ui/FullRepresentation.qml:43
 #, kde-format
 msgid "Click to safely remove all devices"
-msgstr ""
+msgstr "Calca pa estrayer con seguranza tolos preseos"
 
 #: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No removable devices attached"
-msgstr ""
+msgstr "Nun s'espató nengun preséu estrayible"
 
 #: package/contents/ui/FullRepresentation.qml:187
 #, kde-format
 msgid "No disks available"
-msgstr ""
+msgstr "Nun hai nengún discu disponible"
 
 #: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
-msgstr ""
+msgstr "El preséu más recién"
 
 #: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
-msgstr ""
+msgstr "Nun hai nengún preséu disponible"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
-msgstr ""
+msgstr "Preseos estrayibles"
 
 #: package/contents/ui/main.qml:252
 #, kde-format
@@ -113,15 +113,15 @@ msgstr ""
 #: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
-msgstr ""
+msgstr "Tolos preseos"
 
 #: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr ""
+msgstr "Amosar el ventanu al espatar un preséu nuevu"
 
 #: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr ""
+msgstr "Configurar los preseos estrayibles…"
