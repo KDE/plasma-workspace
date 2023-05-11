@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-11 02:55+0000\n"
-"PO-Revision-Date: 2023-04-07 20:05+0100\n"
+"PO-Revision-Date: 2023-05-10 20:16+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -33,8 +33,8 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"La sano de ĉi tiu kuirilaro estas je nur %1% kaj ĝi devus esti "
-"anstataŭigita. Kontaktu la fabrikiston."
+"La sano de ĉi tiu baterio estas je nur %1% kaj ĝi devus esti anstataŭigita. "
+"Kontaktu la fabrikiston."
 
 #: package/contents/ui/BatteryItem.qml:186
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "Baterio ĉe %1%"
 #: package/contents/ui/main.qml:169
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr "La nutrado ne estas sufiĉe potenca por ŝargi la kuirilaron"
+msgstr "La nutrado ne estas sufiĉe potenca por ŝargi la baterion"
 
 #: package/contents/ui/main.qml:173
 #, kde-format
