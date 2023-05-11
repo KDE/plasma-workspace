@@ -292,7 +292,7 @@ void DaysModel::onAlternateDateReady(const QHash<QDate, QDate> &data)
     for (int i = 0; i < d->data->count(); i++) {
         const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
-        if (data.count(currentDate) == 0) {
+        if (!data.contains(currentDate)) {
             continue;
         }
         // Add an alternate date
@@ -308,7 +308,7 @@ void DaysModel::onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEvent
     for (int i = 0; i < d->data->count(); i++) {
         const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
-        if (data.count(currentDate) == 0) {
+        if (!data.contains(currentDate)) {
             continue;
         }
         // Add/Overwrite a sub-label based on priority
