@@ -126,6 +126,7 @@ PlasmaCore.ColorScope {
         width: parent.width
         height: parent.height
         hoverEnabled: true
+        cursorShape: uiVisible ? Qt.ArrowCursor : Qt.BlankCursor
         drag.filterChildren: true
         onPressed: uiVisible = true;
         onPositionChanged: uiVisible = true;
