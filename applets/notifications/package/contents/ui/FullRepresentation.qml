@@ -203,7 +203,7 @@ PlasmaExtras.Representation {
                     if (!isNaN(inhibitedUntilTime) && inhibitedUntilTime - dateNow > 0 &&
                         inhibitedUntilTime - dateNow < 100 * 24 * 60 * 60 * 1000 /* 1 year*/) {
                         const endTime = KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat);
-                        const lowercaseEndTime =  endTime[0] + endTime.slice(1);
+                        const lowercaseEndTime = endTime[0] + endTime.slice(1);
                         sections.push(i18nc("Do not disturb until date", "Automatically ends: %1", lowercaseEndTime));
                     }
 
@@ -229,7 +229,7 @@ PlasmaExtras.Representation {
 
                     return sections.join(" · ");
                 }
-                visible:  text !== ""
+                visible: text !== ""
             }
         }
     }
@@ -361,14 +361,14 @@ PlasmaExtras.Representation {
                 NumberAnimation {
                     id: traslAnim
                     target: transl
-                    properties: "y";
+                    properties: "y"
                     to: 0
-                    duration:  PlasmaCore.Units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
-                opacity: 0;
+                opacity: 0
                 ListView.onAdd: appearAnim.restart();
                 Component.onCompleted: {
-                    Qt.callLater(()=>{
+                    Qt.callLater(() => {
                         if (!appearAnim.running) {
                             opacity = 1;
                         }
@@ -379,13 +379,13 @@ PlasmaExtras.Representation {
                 SequentialAnimation {
                     id: appearAnim
                     PropertyAnimation { target: delegate; property: "opacity"; to: 0 }
-                    PauseAnimation { duration:  PlasmaCore.Units.longDuration}
+                    PauseAnimation { duration: PlasmaCore.Units.longDuration}
                     NumberAnimation {
                         target: delegate
                         property: "opacity"
                         from: 0
                         to: 1
-                        duration:  PlasmaCore.Units.longDuration
+                        duration: PlasmaCore.Units.longDuration
                     }
                 }
 
