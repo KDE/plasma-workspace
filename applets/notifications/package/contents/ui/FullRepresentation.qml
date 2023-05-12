@@ -407,12 +407,6 @@ PlasmaExtras.Representation {
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
                 onDismissRequested: {
-                    // Setting the animation target explicitly before removing the notification:
-                    // Using ViewTransition.item.x to get the x position in the animation
-                    // causes random crash in attached property access (cf. Bug 414066)
-                    if (x < 0) {
-                        removeXAnimation.to = -delegate.width;
-                    }
                     removeAnimation.start();
 
                     historyModel.close(historyModel.index(index, 0));
