@@ -46,7 +46,7 @@ msgstr "رسالة"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
-msgstr "أي ٤"
+msgstr "أي 4"
 
 #: exampleutility.cpp:64
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "الشارع الرئيس"
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr "المنزل ١٢"
+msgstr "المنزل 12"
 
 #: exampleutility.cpp:71
 #, kde-format
@@ -94,13 +94,13 @@ msgstr " "
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr "الغرفة ٣"
+msgstr "الغرفة 3"
 
 #: exampleutility.cpp:73
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr "الطابق ٢"
+msgstr "الطابق 2"
 
 #: exampleutility.cpp:75
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "وسط المدينة"
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr "١٢٣"
+msgstr "123"
 
 #: exampleutility.cpp:77
 #, kde-format

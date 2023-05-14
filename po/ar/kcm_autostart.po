@@ -5,7 +5,7 @@
 # محمد ابراهيم الحرقان <malham1@hotmail.com>, 2008.
 # zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٥.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"

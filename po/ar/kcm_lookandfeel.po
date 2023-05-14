@@ -55,7 +55,7 @@ msgstr "أداة سطر الأوامر لتطبيق حزم السمات الشا
 #: lnftool.cpp:37
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr "حقوق الطبع ٢٠١٧، ماركو مارتن"
+msgstr "حقوق الطبع 2017، ماركو مارتن"
 
 #: lnftool.cpp:38
 #, kde-format

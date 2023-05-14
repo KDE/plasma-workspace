@@ -884,7 +884,7 @@ msgstr "قوة التظليل:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "تظليل الإطارات وتأثيرات الإضاءة (\"٣د\") "
+msgstr "تظليل الإطارات وتأثيرات الإضاءة (\"3د\") "
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72

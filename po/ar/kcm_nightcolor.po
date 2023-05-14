@@ -184,7 +184,7 @@ msgstr[5] "%1 دقيقة"
 #: package/contents/ui/main.qml:375
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr "الإدخال دقائق أقل شيء ١ و أكثر شيء ٦٠٠"
+msgstr "الإدخال دقائق أقل شيء 1 و أكثر شيء 600"
 
 #: package/contents/ui/main.qml:393
 #, kde-format
