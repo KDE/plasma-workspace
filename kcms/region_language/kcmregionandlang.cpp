@@ -209,17 +209,6 @@ void KCMRegionAndLang::reboot()
     QDBusConnection::sessionBus().asyncCall(method);
 }
 
-bool KCMRegionAndLang::isGlibc()
-{
-#ifdef OS_UBUNTU
-    return true;
-#elif GLIBC_LOCALE
-    return true;
-#else
-    return false;
-#endif
-}
-
 bool KCMRegionAndLang::enabled() const
 {
     return m_enabled;

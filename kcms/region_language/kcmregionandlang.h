@@ -35,7 +35,6 @@ public:
 
     OptionsModel *optionsModel() const;
     bool enabled() const;
-    static bool isGlibc();
     std::optional<QString> toGlibcLocale(const QString &lang);
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting);
     Q_INVOKABLE void reboot();
