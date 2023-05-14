@@ -497,10 +497,10 @@ void XWindowTasksModelTest::test_modelDataFromDesktopFile()
     std::vector<std::string> lines;
     lines.emplace_back("Name=DummyWindow");
     lines.emplace_back("GenericName=DummyGenericName");
-    lines.emplace_back(QStringLiteral("Exec=%1").arg(QString::fromUtf8(TaskManagerTest::samplewidgetwindowExecutablePath)).toStdString());
+    lines.emplace_back(std::string("Exec=") + TaskManagerTest::samplewidgetwindowExecutablePath);
     lines.emplace_back("Terminal=false");
     lines.emplace_back("Type=Application");
-    lines.emplace_back(QStringLiteral("Icon=%1").arg(QFINDTESTDATA("data/windows/none.png")).toStdString());
+    lines.emplace_back(std::string("Icon=") + QFINDTESTDATA("data/windows/none.png").toStdString());
 
     // Test generic name, icon and launcher url
     QString desktopFilePath;
