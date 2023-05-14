@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-14 02:27+0000\n"
 "PO-Revision-Date: 2023-02-07 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -42,7 +42,7 @@ msgstr "密碼"
 msgid "Log In"
 msgstr "登入"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:302
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "大寫鎖定已開啟"
@@ -82,7 +82,7 @@ msgstr "請在「使用者名稱」和「密碼」框中輸入"
 msgid "List Users"
 msgstr "列出使用者"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:577
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -161,37 +161,37 @@ msgstr "在解除鎖定畫面中顯示"
 msgid "Unlocking failed"
 msgstr "解除鎖定失敗"
 
-#: contents/lockscreen/LockScreenUi.qml:316
+#: contents/lockscreen/LockScreenUi.qml:317
 #, kde-format
 msgid "Sleep"
 msgstr "睡眠"
 
-#: contents/lockscreen/LockScreenUi.qml:322 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:323 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "休眠"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:329
 #, kde-format
 msgid "Switch User"
 msgstr "切換使用者"
 
-#: contents/lockscreen/LockScreenUi.qml:524
+#: contents/lockscreen/LockScreenUi.qml:525
 #, kde-format
 msgid "Switch to This Session"
 msgstr "切換至此工作階段"
 
-#: contents/lockscreen/LockScreenUi.qml:532
+#: contents/lockscreen/LockScreenUi.qml:533
 #, kde-format
 msgid "Start New Session"
 msgstr "開始新的作業階段"
 
-#: contents/lockscreen/LockScreenUi.qml:545
+#: contents/lockscreen/LockScreenUi.qml:546
 #, kde-format
 msgid "Back"
 msgstr "返回"
 
-#: contents/lockscreen/LockScreenUi.qml:591
+#: contents/lockscreen/LockScreenUi.qml:592
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

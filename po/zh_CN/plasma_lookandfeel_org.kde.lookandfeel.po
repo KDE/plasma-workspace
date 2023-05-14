@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-14 02:27+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,7 +38,7 @@ msgstr "密码"
 msgid "Log In"
 msgstr "登录"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:302
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "大写锁定已开启"
@@ -78,7 +78,7 @@ msgstr "输入用户名和密码"
 msgid "List Users"
 msgstr "列出用户"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:577
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
@@ -157,37 +157,37 @@ msgstr "显示在解锁提示下方"
 msgid "Unlocking failed"
 msgstr "解锁失败"
 
-#: contents/lockscreen/LockScreenUi.qml:316
+#: contents/lockscreen/LockScreenUi.qml:317
 #, kde-format
 msgid "Sleep"
 msgstr "睡眠"
 
-#: contents/lockscreen/LockScreenUi.qml:322 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:323 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "休眠"
 
-#: contents/lockscreen/LockScreenUi.qml:328
+#: contents/lockscreen/LockScreenUi.qml:329
 #, kde-format
 msgid "Switch User"
 msgstr "切换用户"
 
-#: contents/lockscreen/LockScreenUi.qml:524
+#: contents/lockscreen/LockScreenUi.qml:525
 #, kde-format
 msgid "Switch to This Session"
 msgstr "切换到此会话"
 
-#: contents/lockscreen/LockScreenUi.qml:532
+#: contents/lockscreen/LockScreenUi.qml:533
 #, kde-format
 msgid "Start New Session"
 msgstr "启动新会话"
 
-#: contents/lockscreen/LockScreenUi.qml:545
+#: contents/lockscreen/LockScreenUi.qml:546
 #, kde-format
 msgid "Back"
 msgstr "后退"
 
-#: contents/lockscreen/LockScreenUi.qml:591
+#: contents/lockscreen/LockScreenUi.qml:592
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

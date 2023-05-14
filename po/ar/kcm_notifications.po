@@ -179,7 +179,7 @@ msgstr "اختر موضع مخصص..."
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "٠ ثانية"
+msgstr[0] "0 ثانية"
 msgstr[1] "ثانية واحدة"
 msgstr[2] "ثانيتين"
 msgstr[3] "%1 ثواني"
