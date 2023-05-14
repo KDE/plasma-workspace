@@ -36,7 +36,7 @@ AbstractItem {
         active: taskIcon.containsMouse
     }
 
-    onActivated: {
+    onActivated: pos => {
         const service = model.Service;
         const operation = service.operationDescription("Activate");
         operation.x = pos.x; //mouseX
