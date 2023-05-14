@@ -14,6 +14,7 @@
 #include "debug.h"
 
 #include <KStartupInfo>
+#include <KWaylandExtras>
 #include <KWindowSystem>
 #include <QDebug>
 
@@ -70,10 +71,10 @@ void Server::invokeAction(uint notificationId,
                           QWindow *window)
 {
     if (KWindowSystem::isPlatformWayland()) {
-        const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
+        const quint32 launchedSerial = KWaylandExtras::lastInputSerial(window);
         auto conn = std::make_shared<QMetaObject::Connection>();
-        *conn = connect(KWindowSystem::self(),
-                        &KWindowSystem::xdgActivationTokenArrived,
+        *conn = connect(KWaylandExtras::self(),
+                        &KWaylandExtras::xdgActivationTokenArrived,
                         this,
                         [this, actionName, notificationId, launchedSerial, conn, behavior](quint32 serial, const QString &token) {
                             if (serial == launchedSerial) {
@@ -86,7 +87,7 @@ void Server::invokeAction(uint notificationId,
                                 }
                             }
                         });
-        KWindowSystem::requestXdgActivationToken(window, launchedSerial, xdgActivationAppId);
+        KWaylandExtras::requestXdgActivationToken(window, launchedSerial, xdgActivationAppId);
     } else {
         KStartupInfoId startupId;
         startupId.initId();

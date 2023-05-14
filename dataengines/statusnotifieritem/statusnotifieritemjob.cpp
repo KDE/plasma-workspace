@@ -6,7 +6,7 @@
 */
 
 #include "statusnotifieritemjob.h"
-#include <KWindowSystem>
+#include <KWaylandExtras>
 
 StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(source->objectName(), operation, parameters, parent)
@@ -29,14 +29,14 @@ void StatusNotifierItemJob::start()
     }
 
     QWindow *window = nullptr;
-    const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
-    connect(KWindowSystem::self(), &KWindowSystem::xdgActivationTokenArrived, this, [this, launchedSerial](quint32 serial, const QString &token) {
+    const quint32 launchedSerial = KWaylandExtras::lastInputSerial(window);
+    connect(KWaylandExtras::self(), &KWaylandExtras::xdgActivationTokenArrived, this, [this, launchedSerial](quint32 serial, const QString &token) {
         if (serial == launchedSerial) {
             m_source->provideXdgActivationToken(token);
             performJob();
         }
     });
-    KWindowSystem::requestXdgActivationToken(window, launchedSerial, {});
+    KWaylandExtras::requestXdgActivationToken(window, launchedSerial, {});
 }
 
 void StatusNotifierItemJob::performJob()
