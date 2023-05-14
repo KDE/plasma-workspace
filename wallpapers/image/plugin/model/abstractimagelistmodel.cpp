@@ -46,11 +46,6 @@ QHash<int, QByteArray> AbstractImageListModel::roleNames() const
     };
 }
 
-int AbstractImageListModel::count() const
-{
-    return rowCount();
-}
-
 void AbstractImageListModel::reload()
 {
     if (m_loading || m_customPaths.empty()) {

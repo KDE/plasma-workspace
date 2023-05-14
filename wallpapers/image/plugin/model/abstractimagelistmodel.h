@@ -24,14 +24,13 @@ class AbstractImageListModel : public QAbstractListModel, public ImageRoles
 {
     Q_OBJECT
 
-    Q_PROPERTY(int count READ count NOTIFY countChanged)
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
 public:
     explicit AbstractImageListModel(const QSize &targetSize, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
-    int count() const;
     virtual int indexOf(const QString &path) const = 0;
 
     virtual void load(const QStringList &customPaths = {}) = 0;
