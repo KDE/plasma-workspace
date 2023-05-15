@@ -33,7 +33,6 @@
 #include <KShell>
 #include <KStandardAction>
 #include <KTextEdit>
-#include <KTextEditor/ConfigInterface>
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
@@ -134,12 +133,8 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
         KTextEditor::View *view = result->createView(widget);
         view->setContextMenu(view->defaultContextMenu());
-
-        KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface *>(view);
-        if (config) {
-            config->setConfigValue(QStringLiteral("line-numbers"), true);
-            config->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
-        }
+        view->setConfigValue(QStringLiteral("line-numbers"), true);
+        view->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
 
         editorLayout->addWidget(view);
         connect(result, &KTextEditor::Document::textChanged, this, &InteractiveConsole::scriptTextChanged);
