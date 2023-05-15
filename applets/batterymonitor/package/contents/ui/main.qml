@@ -268,6 +268,8 @@ Item {
                 const change = Math.round(brightnessError);
                 brightnessError -= change;
                 newBrightness = batterymonitor.screenBrightness + change;
+            } else if (wheel.modifiers & Qt.ShiftModifier) {
+                newBrightness = Math.round((Math.round(batterymonitor.screenBrightness * 100 / maximumBrightness) + delta/120) / 100 * maximumBrightness)
             } else {
                 // Discrete/wheel scrolling
                 newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize;
