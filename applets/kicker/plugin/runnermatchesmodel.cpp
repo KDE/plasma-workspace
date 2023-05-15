@@ -19,10 +19,14 @@
 #include <KNotificationJobUiDelegate>
 #include <KRunner/RunnerManager>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <Plasma/Plasma>
 
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optional<QString> &name, QObject *parent)
-    : KRunner::ResultsModel(parent)
+    : KRunner::ResultsModel(KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group("Plugins"),
+                            KSharedConfig::openStateConfig()->group("KickerRunnerManager"),
+                            parent)
     , m_runnerId(runnerId)
 {
     connect(this, &RunnerMatchesModel::rowsInserted, this, &RunnerMatchesModel::countChanged);
