@@ -119,6 +119,7 @@ KCM.ScrollViewKCM {
     view: ListView {
         model: kcm.optionsModel
         delegate: Kirigami.BasicListItem {
+            alternatingBackground: true
             highlighted: false
             hoverEnabled: false
             down: false
@@ -227,6 +228,7 @@ KCM.ScrollViewKCM {
                 clip: true
                 model: filterModel
                 delegate: Kirigami.BasicListItem {
+                    alternatingBackground: true
                     icon.name: model.flag
                     text: model.display
                     subtitle: model.example ? model.example : ''
