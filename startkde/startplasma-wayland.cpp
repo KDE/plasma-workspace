@@ -20,14 +20,6 @@ int main(int argc, char **argv)
     setupCursor(true);
     signal(SIGTERM, sigtermHandler);
 
-    {
-        KConfig fonts(QStringLiteral("kcmfonts"));
-        KConfigGroup group = fonts.group("General");
-        auto dpiSetting = group.readEntry("forceFontDPIWayland", 96);
-        auto dpi = dpiSetting == 0 ? 96 : dpiSetting;
-        qputenv("QT_WAYLAND_FORCE_DPI", QByteArray::number(dpi));
-    }
-
     // Let clients try to reconnect to kwin after a restart
     qputenv("QT_WAYLAND_RECONNECT", "1");
 

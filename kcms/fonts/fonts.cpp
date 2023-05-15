@@ -111,22 +111,27 @@ void KFonts::load()
 
 void KFonts::save()
 {
-    auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
-    auto dpiWaylandItem = fontsAASettings()->findItem("forceFontDPIWayland");
-    auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
-    Q_ASSERT(dpiItem && dpiWaylandItem && antiAliasingItem);
-    if (dpiItem->isSaveNeeded() || dpiWaylandItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
-        Q_EMIT aliasingChangeApplied();
-    }
+#if HAVE_X11
+    bool forceFontDPIChanged = false;
 
-    auto forceFontDPIChanged = dpiItem->isSaveNeeded();
+    if (KWindowSystem::isPlatformX11) {
+        auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
+        auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
+        Q_ASSERT(dpiItem && antiAliasingItem);
+        if (dpiItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
+            emit aliasingChangeApplied();
+        }
+
+        forceFontDPIChanged = dpiItem->isSaveNeeded();
+    }
+#endif
 
     KQuickManagedConfigModule::save();
 
 #if HAVE_X11
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && !KWindowSystem::isPlatformWayland()) {
+    if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && KWindowSystem::isPlatformX11()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start("xrdb",

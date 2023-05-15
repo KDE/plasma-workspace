@@ -370,6 +370,9 @@ KCM.SimpleKCM {
 
             RowLayout {
                 Layout.preferredWidth: formLayout.maxImplicitWidth
+                // We don't want people messing with the font DPI on Wayland;
+                // they should always be using the global scaling system instead
+                visible: Qt.platform.pluginName === "xcb"
 
                 QtControls.CheckBox {
                     id: dpiCheckBox
@@ -380,13 +383,6 @@ KCM.SimpleKCM {
                         dpiTwiddledMessage.visible = checked
                     }
 
-                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
-                    // so only one SettingStateBinding will be activated at a time.
-                    KCM.SettingStateBinding {
-                        configObject: kcm.fontsAASettings
-                        settingName: "forceFontDPIWayland"
-                        extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
-                    }
                     KCM.SettingStateBinding {
                         configObject: kcm.fontsAASettings
                         settingName: "forceFontDPI"
@@ -402,13 +398,6 @@ KCM.SimpleKCM {
                     to: 999
                     from: 1
 
-                    // dpiSpinBox will set forceFontDPI or forceFontDPIWayland,
-                    // so only one SettingStateBinding will be activated at a time.
-                    KCM.SettingStateBinding {
-                        configObject: kcm.fontsAASettings
-                        settingName: "forceFontDPIWayland"
-                        extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
-                    }
                     KCM.SettingStateBinding {
                         configObject: kcm.fontsAASettings
                         settingName: "forceFontDPI"

@@ -324,20 +324,19 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
 int xftDpi()
 {
     KConfig cfg(QStringLiteral("kcmfonts"));
-    KConfigGroup fontsCfg(&cfg, "General");
+    int dpi = 0;
 
-    int defaultDpi = 0;
-    const bool isWayland = KWindowSystem::isPlatformWayland();
-
-    if (isWayland) {
+    if (KWindowSystem::isPlatformWayland()) {
         KConfig cfg(QStringLiteral("kwinrc"));
         KConfigGroup xwaylandGroup = cfg.group("Xwayland");
         qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
-        defaultDpi = scale * 96;
+        dpi = scale * 96;
+    } else {
+        KConfigGroup fontsCfg(&cfg, "General");
+        dpi = fontsCfg.readEntry(QStringLiteral("forceFontDPI"), 96);
     }
 
-    QString fontDpiKey = isWayland ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
-    return fontsCfg.readEntry(fontDpiKey, defaultDpi);
+    return dpi;
 }
 
 void runRdb(unsigned int flags)
