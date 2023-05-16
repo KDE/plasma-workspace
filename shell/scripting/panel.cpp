@@ -277,10 +277,6 @@ QString Panel::hiding() const
         return "none";
     case PanelView::AutoHide:
         return "autohide";
-    case PanelView::LetWindowsCover:
-        return "windowscover";
-    case PanelView::WindowsGoBelow:
-        return "windowsbelow";
     }
     return "none";
 }
@@ -290,10 +286,6 @@ void Panel::setHiding(const QString &mode)
     PanelView::VisibilityMode visibilityMode = PanelView::NormalPanel;
     if (mode.compare("autohide", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::AutoHide;
-    } else if (mode.compare("windowscover", Qt::CaseInsensitive) == 0) {
-        visibilityMode = PanelView::LetWindowsCover;
-    } else if (mode.compare("windowsbelow", Qt::CaseInsensitive) == 0) {
-        visibilityMode = PanelView::WindowsGoBelow;
     }
 
     if (panel()) {

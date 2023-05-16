@@ -445,12 +445,6 @@ void PanelView::visibilityModeToWayland()
     case AutoHide:
         behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::AutoHide;
         break;
-    case LetWindowsCover:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsCanCover;
-        break;
-    case WindowsGoBelow:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow;
-        break;
     default:
         Q_UNREACHABLE();
         return;
@@ -812,17 +806,11 @@ void PanelView::setAutoHideEnabled(bool enabled)
             break;
         }
 
-        int hideType = 0;
-        if (m_visibilityMode == LetWindowsCover) {
-            hideType = 1;
-        }
-        value |= hideType << 8;
-
         xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
         KWindowEffects::slideWindow(this, slideLocation, -1);
     }
 #endif
-    if (m_shellSurface && (m_visibilityMode == PanelView::AutoHide || m_visibilityMode == PanelView::LetWindowsCover)) {
+    if (m_shellSurface && m_visibilityMode == PanelView::AutoHide) {
         if (enabled) {
             m_shellSurface->requestHideAutoHidingPanel();
         } else {
@@ -1463,7 +1451,7 @@ void PanelView::setupWaylandIntegration()
 
 bool PanelView::edgeActivated() const
 {
-    return m_visibilityMode == PanelView::AutoHide || m_visibilityMode == LetWindowsCover;
+    return m_visibilityMode == PanelView::AutoHide;
 }
 
 void PanelView::updateEnabledBorders()

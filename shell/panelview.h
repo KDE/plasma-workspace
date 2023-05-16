@@ -122,8 +122,6 @@ public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
         AutoHide, /**the panel will be shownn only if the mouse cursor is on screen edges */
-        LetWindowsCover, /** always visible, windows will go over the panel, no area reserved */
-        WindowsGoBelow, /** always visible, windows will go under the panel, no area reserved */
     };
     Q_ENUM(VisibilityMode)
 
