@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2023-03-19 09:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -107,7 +107,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "不存在"
 
-#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
+#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:353
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "電池與亮度"
@@ -206,27 +206,27 @@ msgstr "系統目前使用省電模式"
 msgid "Scroll to adjust screen brightness"
 msgstr "捲動來調整螢幕亮度"
 
-#: package/contents/ui/main.qml:312
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "電池小程式已開啟系統睡眠模式"
 
-#: package/contents/ui/main.qml:364
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "使用%1模式失敗"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "顯示能源資訊(&S)…"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "尚未充飽時在圖示上顯示電池百分比"
 
-#: package/contents/ui/main.qml:384
+#: package/contents/ui/main.qml:386
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "設定省電模式(&C)…"

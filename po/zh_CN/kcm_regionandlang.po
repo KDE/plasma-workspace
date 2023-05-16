@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -296,7 +296,7 @@ msgstr "未知"
 msgid "Default for System"
 msgstr "系统默认"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:85 ui/main.qml:239
+#: localelistmodel.cpp:34 localelistmodel.cpp:85 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "默认"
@@ -506,50 +506,50 @@ msgid ""
 "safe to turn off the computer."
 msgstr "已经安装所需的区域配置和语言支持文件。您现在可以安全地关闭计算机。"
 
-#: ui/main.qml:139
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "修改…"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Numbers"
 msgstr "数字"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Time"
 msgstr "时间"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgid "Currency"
 msgstr "货币"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Measurements"
 msgstr "度量衡"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Paper Size"
 msgstr "纸张大小"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "地址"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "姓名"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

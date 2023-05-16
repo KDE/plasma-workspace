@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-06 02:09+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2021-09-27 20:47+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -140,35 +140,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Skærmene er spejlede"
 
-#: package/contents/ui/FullRepresentation.qml:437
+#: package/contents/ui/FullRepresentation.qml:431
 #, kde-format
 msgid "Close Group"
 msgstr "Luk gruppe"
 
-#: package/contents/ui/FullRepresentation.qml:582
+#: package/contents/ui/FullRepresentation.qml:576
 #, kde-format
 msgid "Show Fewer"
 msgstr "Vis færre"
 
-#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Vis %1 flere"
 
-#: package/contents/ui/FullRepresentation.qml:625
+#: package/contents/ui/FullRepresentation.qml:619
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ingen ulæste bekendtgørelser"
 
-#: package/contents/ui/FullRepresentation.qml:640
+#: package/contents/ui/FullRepresentation.qml:634
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Bekendtgørelsestjenesten er ikke tilgængelig"
 
-#: package/contents/ui/FullRepresentation.qml:642
+#: package/contents/ui/FullRepresentation.qml:636
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

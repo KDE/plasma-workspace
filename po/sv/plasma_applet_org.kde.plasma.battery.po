@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2022-02-19 10:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Inte monterat"
 
-#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
+#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:353
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "Batteri och ljusstyrka"
@@ -208,28 +208,28 @@ msgstr ""
 msgid "Scroll to adjust screen brightness"
 msgstr ""
 
-#: package/contents/ui/main.qml:312
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Batteriminiprogrammet har aktiverat systemövergripande inhibering"
 
-#: package/contents/ui/main.qml:364
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Misslyckades aktivera %1"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Vi&sa information om energi…"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Visa batteriets procentvärde på ikon"
 
-#: package/contents/ui/main.qml:384
+#: package/contents/ui/main.qml:386
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "Anpassa strömspar&hantering…"

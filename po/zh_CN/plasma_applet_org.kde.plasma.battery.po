@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-11 02:55+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -102,7 +102,7 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "不存在"
 
-#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:351
+#: package/contents/ui/main.qml:120 package/contents/ui/main.qml:353
 #, kde-format
 msgid "Battery and Brightness"
 msgstr "电池和亮度"
@@ -201,27 +201,27 @@ msgstr "系统处于省电模式"
 msgid "Scroll to adjust screen brightness"
 msgstr "滚动滑轮以调整屏幕亮度"
 
-#: package/contents/ui/main.qml:312
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "电池小程序已启用阻止系统全局休眠"
 
-#: package/contents/ui/main.qml:364
+#: package/contents/ui/main.qml:366
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "激活 %1 模式失败"
 
-#: package/contents/ui/main.qml:376
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "显示电量信息(&S)…"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "电池未充满时在图标上显示电量百分比"
 
-#: package/contents/ui/main.qml:384
+#: package/contents/ui/main.qml:386
 #, kde-format
 msgid "&Configure Energy Saving…"
 msgstr "配置节能设置(&C)…"

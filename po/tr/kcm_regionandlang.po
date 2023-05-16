@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-05-16 02:15+0000\n"
 "PO-Revision-Date: 2023-03-16 12:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -298,7 +298,7 @@ msgstr "Bilinmeyen"
 msgid "Default for System"
 msgstr "Sistem için Öntanımlı"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:85 ui/main.qml:239
+#: localelistmodel.cpp:34 localelistmodel.cpp:85 ui/main.qml:241
 #, kde-format
 msgid "Default"
 msgstr "Öntanımlı"
@@ -514,50 +514,50 @@ msgstr ""
 "Gerekli yerel ayar ve dil destek dosyaları kuruldu. Bilgisayarınızı şimdi "
 "kapatabilirsiniz."
 
-#: ui/main.qml:139
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Değiştir…"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Numbers"
 msgstr "Sayılar"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgid "Time"
 msgstr "Zaman"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgid "Currency"
 msgstr "Para Birimi"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Measurements"
 msgstr "Ölçü Birimleri"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
 msgid "Paper Size"
 msgstr "Kağıt Boyutu"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adres"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Ad"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
