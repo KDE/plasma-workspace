@@ -373,6 +373,7 @@ PlasmaExtras.Representation {
                                 text: modelData.title
                                 verticalAlignment: Text.AlignVCenter
                                 maximumLineCount: 2
+                                wrapMode: Text.Wrap
                             }
                         }
                     }
