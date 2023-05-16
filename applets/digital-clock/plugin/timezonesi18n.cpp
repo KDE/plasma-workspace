@@ -21,7 +21,7 @@ QString TimezonesI18n::i18nCity(const QString &city)
     if (!m_isInitialized) {
         init();
     }
-    return m_i18nCities.value(city);
+    return m_i18nCities.value(city, city);
 }
 
 QString TimezonesI18n::i18nContinents(const QString &continent)
@@ -29,7 +29,7 @@ QString TimezonesI18n::i18nContinents(const QString &continent)
     if (!m_isInitialized) {
         init();
     }
-    return m_i18nContinents.value(continent);
+    return m_i18nContinents.value(continent, continent);
 }
 
 QString TimezonesI18n::i18nCountry(QLocale::Country country)
@@ -37,7 +37,15 @@ QString TimezonesI18n::i18nCountry(QLocale::Country country)
     if (!m_isInitialized) {
         init();
     }
-    return m_i18nCountries.value(country);
+
+    QString countryName = m_i18nCountries.value(country);
+
+    if (countryName.isEmpty()) {
+        countryName = QLocale::countryToString(country);
+        m_i18nCountries.insert(country, countryName);
+    }
+
+    return countryName;
 }
 
 void TimezonesI18n::init()
