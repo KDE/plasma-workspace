@@ -156,11 +156,11 @@ QString Panel::alignment() const
 // NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 void Panel::setAlignment(const QString &alignment)
 {
-    int a = Qt::AlignLeft;
-    if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
+    int a = Qt::AlignCenter;
+    if (alignment.compare("left", Qt::CaseInsensitive) == 0) {
+        a = Qt::AlignLeft;
+    } else if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
         a = Qt::AlignRight;
-    } else if (alignment.compare("center", Qt::CaseInsensitive) == 0) {
-        a = Qt::AlignCenter;
     }
 
     // Always prefer the view, if available

@@ -57,7 +57,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_minDrawingHeight(0)
     , m_initCompleted(false)
     , m_floating(false)
-    , m_alignment(Qt::AlignLeft)
+    , m_alignment(Qt::AlignCenter)
     , m_corona(corona)
     , m_visibilityMode(NormalPanel)
     , m_opacityMode(Adaptive)
