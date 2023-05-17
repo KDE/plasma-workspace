@@ -8,17 +8,17 @@
 #include "libtaskmanager_debug.h"
 
 #include <KLocalizedString>
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmavirtualdesktop.h>
-#include <KWayland/Client/registry.h>
 #include <KWindowSystem>
 #include <KX11Extras>
+
+#include <qwayland-org-kde-plasma-virtual-desktop.h>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDebug>
+#include <QWaylandClientExtension>
 
 #include <config-X11.h>
 
@@ -235,6 +235,80 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
 }
 #endif // HAVE_X11
 
+class PlasmaVirtualDesktop : public QObject, public QtWayland::org_kde_plasma_virtual_desktop
+{
+    Q_OBJECT
+public:
+    PlasmaVirtualDesktop(::org_kde_plasma_virtual_desktop *object, const QString &id)
+        : org_kde_plasma_virtual_desktop(object)
+        , id(id)
+    {
+    }
+    ~PlasmaVirtualDesktop()
+    {
+        wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+    }
+    const QString id;
+    QString name;
+Q_SIGNALS:
+    void done();
+    void activated();
+
+protected:
+    void org_kde_plasma_virtual_desktop_name(const QString &name) override
+    {
+        this->name = name;
+    }
+    void org_kde_plasma_virtual_desktop_done() override
+    {
+        Q_EMIT done();
+    }
+    void org_kde_plasma_virtual_desktop_activated() override
+    {
+        Q_EMIT activated();
+    }
+};
+
+class PlasmaVirtualDesktopManagement : public QWaylandClientExtensionTemplate<PlasmaVirtualDesktopManagement>,
+                                       public QtWayland::org_kde_plasma_virtual_desktop_management
+{
+    Q_OBJECT
+public:
+    PlasmaVirtualDesktopManagement()
+        : QWaylandClientExtensionTemplate(2)
+    {
+        connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
+            if (!isActive()) {
+                wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+            }
+        });
+    }
+    ~PlasmaVirtualDesktopManagement()
+    {
+        if (isActive()) {
+            wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+        }
+    }
+Q_SIGNALS:
+    void desktopCreated(const QString &id, quint32 position);
+    void desktopRemoved(const QString &id);
+    void rowsChanged(const quint32 rows);
+
+protected:
+    void org_kde_plasma_virtual_desktop_management_desktop_created(const QString &desktop_id, uint32_t position) override
+    {
+        Q_EMIT desktopCreated(desktop_id, position);
+    }
+    void org_kde_plasma_virtual_desktop_management_desktop_removed(const QString &desktop_id) override
+    {
+        Q_EMIT desktopRemoved(desktop_id);
+    }
+    void org_kde_plasma_virtual_desktop_management_rows(uint32_t rows) override
+    {
+        Q_EMIT rowsChanged(rows);
+    }
+};
+
 class Q_DECL_HIDDEN VirtualDesktopInfo::WaylandPrivate : public VirtualDesktopInfo::Private
 {
     Q_OBJECT
@@ -242,8 +316,11 @@ public:
     WaylandPrivate();
 
     QVariant currentVirtualDesktop;
-    QStringList virtualDesktops;
-    KWayland::Client::PlasmaVirtualDesktopManagement *virtualDesktopManagement = nullptr;
+    std::vector<std::unique_ptr<PlasmaVirtualDesktop>> virtualDesktops;
+    std::unique_ptr<PlasmaVirtualDesktopManagement> virtualDesktopManagement;
+    quint32 rows;
+
+    auto findDesktop(const QString &id) const;
 
     void init() override;
     void addDesktop(const QString &id, quint32 position);
@@ -264,80 +341,80 @@ VirtualDesktopInfo::WaylandPrivate::WaylandPrivate()
     init();
 }
 
+auto VirtualDesktopInfo::WaylandPrivate::findDesktop(const QString &id) const
+{
+    return std::find_if(virtualDesktops.begin(), virtualDesktops.end(), [&id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+        return desktop->id == id;
+    });
+}
+
 void VirtualDesktopInfo::WaylandPrivate::init()
 {
     if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
 
-    KWayland::Client::ConnectionThread *connection = KWayland::Client::ConnectionThread::fromApplication(this);
+    virtualDesktopManagement = std::make_unique<PlasmaVirtualDesktopManagement>();
 
-    if (!connection) {
-        return;
-    }
-
-    KWayland::Client::Registry *registry = new KWayland::Client::Registry(this);
-    registry->create(connection);
-
-    QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced, [this, registry](quint32 name, quint32 version) {
-        virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
-
-        QObject::connect(virtualDesktopManagement,
-                         &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated,
-                         this,
-                         [this](const QString &id, quint32 position) {
-                             addDesktop(id, position);
-                         });
-
-        QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, this, [this](const QString &id) {
-            virtualDesktops.removeOne(id);
-
+    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::activeChanged, this, [this] {
+        if (!virtualDesktopManagement->isActive()) {
+            rows = 0;
+            virtualDesktops.clear();
+            currentVirtualDesktop.clear();
+            Q_EMIT currentDesktopChanged();
             Q_EMIT numberOfDesktopsChanged();
+            Q_EMIT navigationWrappingAroundChanged();
             Q_EMIT desktopIdsChanged();
             Q_EMIT desktopNamesChanged();
-
-            if (currentVirtualDesktop == id) {
-                currentVirtualDesktop.clear();
-                Q_EMIT currentDesktopChanged();
-            }
-        });
-
-        QObject::connect(virtualDesktopManagement,
-                         &KWayland::Client::PlasmaVirtualDesktopManagement::rowsChanged,
-                         this,
-                         &VirtualDesktopInfo::WaylandPrivate::desktopLayoutRowsChanged);
+            Q_EMIT desktopLayoutRowsChanged();
+        }
     });
 
-    registry->setup();
+    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::desktopCreated, this, &WaylandPrivate::addDesktop);
+
+    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::desktopRemoved, this, [this](const QString &id) {
+        std::erase_if(virtualDesktops, [id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+            return desktop->id == id;
+        });
+
+        Q_EMIT numberOfDesktopsChanged();
+        Q_EMIT desktopIdsChanged();
+        Q_EMIT desktopNamesChanged();
+
+        if (currentVirtualDesktop == id) {
+            currentVirtualDesktop.clear();
+            Q_EMIT currentDesktopChanged();
+        }
+    });
+
+    connect(virtualDesktopManagement.get(), &PlasmaVirtualDesktopManagement::rowsChanged, this, [this](quint32 rows) {
+        this->rows = rows;
+        Q_EMIT desktopLayoutRowsChanged();
+    });
 }
 
 void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 position)
 {
-    if (virtualDesktops.indexOf(id) != -1) {
+    if (findDesktop(id) != virtualDesktops.end()) {
         return;
     }
 
-    virtualDesktops.insert(position, id);
+    auto desktop = std::make_unique<PlasmaVirtualDesktop>(virtualDesktopManagement->get_virtual_desktop(id), id);
+
+    connect(desktop.get(), &PlasmaVirtualDesktop::activated, this, [id, this]() {
+        currentVirtualDesktop = id;
+        Q_EMIT currentDesktopChanged();
+    });
+
+    connect(desktop.get(), &PlasmaVirtualDesktop::done, this, [this]() {
+        Q_EMIT desktopNamesChanged();
+    });
+
+    virtualDesktops.insert(std::next(virtualDesktops.begin(), position), std::move(desktop));
 
     Q_EMIT numberOfDesktopsChanged();
     Q_EMIT desktopIdsChanged();
     Q_EMIT desktopNamesChanged();
-
-    const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
-
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, this, [desktop, this]() {
-        currentVirtualDesktop = desktop->id();
-        Q_EMIT currentDesktopChanged();
-    });
-
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, this, [this]() {
-        Q_EMIT desktopNamesChanged();
-    });
-
-    if (desktop->isActive()) {
-        currentVirtualDesktop = id;
-        Q_EMIT currentDesktopChanged();
-    }
 }
 
 QVariant VirtualDesktopInfo::WaylandPrivate::currentDesktop() const
@@ -347,86 +424,81 @@ QVariant VirtualDesktopInfo::WaylandPrivate::currentDesktop() const
 
 int VirtualDesktopInfo::WaylandPrivate::numberOfDesktops() const
 {
-    return virtualDesktops.count();
+    return virtualDesktops.size();
 }
 
 quint32 VirtualDesktopInfo::WaylandPrivate::position(const QVariant &desktop) const
 {
-    return virtualDesktops.indexOf(desktop.toString());
+    return std::distance(virtualDesktops.begin(), findDesktop(desktop.toString()));
 }
 
 QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
 {
     QVariantList ids;
+    ids.reserve(virtualDesktops.size());
 
-    foreach (const QString &id, virtualDesktops) {
-        ids << id;
-    }
-
+    std::transform(virtualDesktops.cbegin(), virtualDesktops.cend(), std::back_inserter(ids), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+        return desktop->id;
+    });
     return ids;
 }
 
 QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 {
-    if (!virtualDesktopManagement) {
+    if (!virtualDesktopManagement->isActive()) {
         return QStringList();
     }
     QStringList names;
+    names.reserve(virtualDesktops.size());
 
-    foreach (const QString &id, virtualDesktops) {
-        const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
-
-        if (desktop) {
-            names << desktop->name();
-        }
-    }
-
+    std::transform(virtualDesktops.cbegin(), virtualDesktops.cend(), std::back_inserter(names), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+        return desktop->name;
+    });
     return names;
 }
 
 int VirtualDesktopInfo::WaylandPrivate::desktopLayoutRows() const
 {
-    if (!virtualDesktopManagement) {
+    if (!virtualDesktopManagement->isActive()) {
         return 0;
     }
 
-    return virtualDesktopManagement->rows();
+    return rows;
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop)
 {
-    if (!virtualDesktopManagement) {
+    if (!virtualDesktopManagement->isActive()) {
         return;
     }
-    KWayland::Client::PlasmaVirtualDesktop *desktopObj = virtualDesktopManagement->getVirtualDesktop(desktop.toString());
 
-    if (desktopObj) {
-        desktopObj->requestActivate();
+    if (auto it = findDesktop(desktop.toString()); it != virtualDesktops.end()) {
+        (*it)->request_activate();
     }
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestCreateDesktop(quint32 position)
 {
-    if (!virtualDesktopManagement) {
+    if (!virtualDesktopManagement->isActive()) {
         return;
     }
-    virtualDesktopManagement->requestCreateVirtualDesktop(i18n("New Desktop"), position);
+    virtualDesktopManagement->request_create_virtual_desktop(i18n("New Desktop"), position);
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
 {
-    if (!virtualDesktopManagement) {
+    if (!virtualDesktopManagement->isActive()) {
         return;
     }
-    if (virtualDesktops.count() == 1) {
-        return;
-    }
-
-    if (position > ((quint32)virtualDesktops.count() - 1)) {
+    if (virtualDesktops.size() == 1) {
         return;
     }
 
-    virtualDesktopManagement->requestRemoveVirtualDesktop(virtualDesktops.at(position));
+    if (position > (virtualDesktops.size() - 1)) {
+        return;
+    }
+
+    virtualDesktopManagement->request_remove_virtual_desktop(virtualDesktops.at(position)->id);
 }
 
 VirtualDesktopInfo::Private *VirtualDesktopInfo::d = nullptr;

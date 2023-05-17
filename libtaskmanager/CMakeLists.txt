@@ -37,6 +37,7 @@ add_library(PW::LibTaskManager ALIAS taskmanager)
 
 
 qt6_generate_wayland_protocol_client_sources(taskmanager
+    FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/org-kde-plasma-virtual-desktop.xml
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
 )
 
@@ -60,7 +61,6 @@ target_link_libraries(taskmanager
         KF6::KIOCore
         KF6::KIOGui
         KF6::JobWidgets
-        KF6::WaylandClient
         KF6::WindowSystem
 )
 
