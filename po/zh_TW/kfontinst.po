@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-17 02:05+0000\n"
 "PO-Revision-Date: 2023-02-18 00:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -39,14 +39,14 @@ msgstr ""
 "j_h_liau@yahoo.com.tw, franklin@goodhorse.idv.tw, s8321414@gmail.com, "
 "brli@chakralinux.org"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:926
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr "您希望安裝此字型為個人使用還是系統字型？"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:929
 #, kde-format
 msgid "Where to Install"
 msgstr "要安裝到何處"
@@ -344,13 +344,13 @@ msgid "Delete"
 msgstr "刪除"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable"
 msgstr "開啟"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable"
 msgstr "關閉"
@@ -647,87 +647,87 @@ msgstr "認證失敗。<br/><i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "處理時發生未預期的錯誤：<i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:193
+#: kcmfontinst/KCmFontInst.cpp:192
 #, kde-format
 msgid "Create New Group…"
 msgstr "建立新群組"
 
-#: kcmfontinst/KCmFontInst.cpp:195
+#: kcmfontinst/KCmFontInst.cpp:194
 #, kde-format
 msgid "Remove Group…"
 msgstr "移除群組"
 
-#: kcmfontinst/KCmFontInst.cpp:197
+#: kcmfontinst/KCmFontInst.cpp:196
 #, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "啟用群組中的字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:199
+#: kcmfontinst/KCmFontInst.cpp:198
 #, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "停用群組中的字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:224
+#: kcmfontinst/KCmFontInst.cpp:223
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "這個會顯示所選取字型的預覽。"
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, kde-format
 msgid "Find Duplicates…"
 msgstr "搜尋重複項目…"
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
 msgstr "掃描重複的字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "Install from File…"
 msgstr "從檔案安裝…"
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr "從本機檔案安裝字型"
 
-#: kcmfontinst/KCmFontInst.cpp:243
+#: kcmfontinst/KCmFontInst.cpp:242
 #, kde-format
 msgid "Get New Fonts…"
 msgstr "取得新字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:244
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Download new fonts"
 msgstr "下載新字型"
 
-#: kcmfontinst/KCmFontInst.cpp:246
+#: kcmfontinst/KCmFontInst.cpp:245
 #, kde-format
 msgid "Delete Selected Fonts…"
 msgstr "刪除選取的字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:304
+#: kcmfontinst/KCmFontInst.cpp:303
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "改變預覽文字..."
 
-#: kcmfontinst/KCmFontInst.cpp:406
+#: kcmfontinst/KCmFontInst.cpp:405
 #, kde-format
 msgid "Add Fonts"
 msgstr "加入字型"
 
-#: kcmfontinst/KCmFontInst.cpp:532
+#: kcmfontinst/KCmFontInst.cpp:531
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "儲存要列印的字型清單時失敗。"
 
-#: kcmfontinst/KCmFontInst.cpp:554
+#: kcmfontinst/KCmFontInst.cpp:553
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "開啟字型印表機時失敗。"
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:560
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -736,58 +736,58 @@ msgstr ""
 "這裡沒有可供列印的字型。\n"
 "您只能列印非點陣與已開啟的字型。"
 
-#: kcmfontinst/KCmFontInst.cpp:563
+#: kcmfontinst/KCmFontInst.cpp:562
 #, kde-format
 msgid "Cannot Print"
 msgstr "不能列印"
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "您並沒有選擇任何要刪除的東西。"
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "沒有要刪除的東西"
 
-#: kcmfontinst/KCmFontInst.cpp:593
+#: kcmfontinst/KCmFontInst.cpp:592
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>您真的想要刪除</p> <p><b>%1</b> 嗎？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:596
+#: kcmfontinst/KCmFontInst.cpp:595
 #, kde-format
 msgid "Delete Font"
 msgstr "刪除字型"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:602
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "您真的想要刪除這 %1 個項目嗎？"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Delete Fonts"
 msgstr "刪除字型"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:609
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "刪除字型中..."
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "您並沒有選擇任何要移動的東西。"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Nothing to Move"
 msgstr "沒有要移動的東西"
 
-#: kcmfontinst/KCmFontInst.cpp:635
+#: kcmfontinst/KCmFontInst.cpp:634
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -796,17 +796,17 @@ msgstr ""
 "<p>您真的想要將</p><p>'<b>%1</b>'</p><p>從 <i>%2</i> 移動到 <i>%3</i> 嗎？</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:640
+#: kcmfontinst/KCmFontInst.cpp:639
 #, kde-format
 msgid "Move Font"
 msgstr "移動字型"
 
-#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:640 kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move"
 msgstr "移動"
 
-#: kcmfontinst/KCmFontInst.cpp:646
+#: kcmfontinst/KCmFontInst.cpp:645
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -814,73 +814,73 @@ msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>您真的想要將這 %1 個字型從 <i>%2</i> 移動到 <i>%3</i> 嗎？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Move Fonts"
 msgstr "移動字型"
 
-#: kcmfontinst/KCmFontInst.cpp:657
+#: kcmfontinst/KCmFontInst.cpp:656
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "移動字型中..."
 
-#: kcmfontinst/KCmFontInst.cpp:671
+#: kcmfontinst/KCmFontInst.cpp:670
 #, kde-format
 msgid "Export Group"
 msgstr "匯出群組"
 
-#: kcmfontinst/KCmFontInst.cpp:697
+#: kcmfontinst/KCmFontInst.cpp:696
 #, kde-format
 msgid "No files?"
 msgstr "沒有檔案？"
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:699
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "開啟 %1 以寫入時失敗"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "Create New Group"
 msgstr "建立新群組"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "Name of new group:"
 msgstr "新群組名稱："
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "New Group"
 msgstr "新群組"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Preview Text"
 msgstr "預覽文字"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Please enter new text:"
 msgstr "請輸入新的文字："
 
-#: kcmfontinst/KCmFontInst.cpp:800
+#: kcmfontinst/KCmFontInst.cpp:799
 #, kde-format
 msgid "Scanning font list…"
 msgstr "掃描字型清單…"
 
-#: kcmfontinst/KCmFontInst.cpp:859
+#: kcmfontinst/KCmFontInst.cpp:858
 #, kde-format
 msgid "No fonts"
 msgstr "沒有字型"
 
-#: kcmfontinst/KCmFontInst.cpp:864
+#: kcmfontinst/KCmFontInst.cpp:863
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "%1 個字型"
 
-#: kcmfontinst/KCmFontInst.cpp:873
+#: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -893,7 +893,7 @@ msgstr ""
 "td><td>%3</td></tr><tr><td align=\"right\">總計：</td><td>%4</td></tr></"
 "table>"
 
-#: kcmfontinst/KCmFontInst.cpp:883
+#: kcmfontinst/KCmFontInst.cpp:882
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -904,98 +904,98 @@ msgstr ""
 "\"right\">已關閉：</td><td>%2</td></tr><tr><td align=\"right\">總計：</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:960
+#: kcmfontinst/KCmFontInst.cpp:959
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "尋找任何相關的檔案…"
 
-#: kcmfontinst/KCmFontInst.cpp:964
+#: kcmfontinst/KCmFontInst.cpp:963
 #, kde-format
 msgid "Scanning Files…"
 msgstr "掃描檔案中…"
 
-#: kcmfontinst/KCmFontInst.cpp:965
+#: kcmfontinst/KCmFontInst.cpp:964
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "尋找額外要安裝的檔案…"
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "尋找與 %1 相關的檔案"
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "正在安裝字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "您並沒有選擇任何要開啟的東西。"
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "您並沒有選擇任何要關閉的東西。"
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "沒有要開啟的東西"
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "沒有要關閉的東西"
 
-#: kcmfontinst/KCmFontInst.cpp:1091
+#: kcmfontinst/KCmFontInst.cpp:1090
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<qt>您真的想要開啟 <b>'%1'</b> 嗎？</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<qt>您真的想要關閉 <b>'%1'</b> 嗎？</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1095
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<qt>您真的想要開啟 <b>%2</b> 群組中的 <b>'%1'</b> 嗎？</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1099
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<qt>您真的想要關閉 <b>%2</b> 群組中的 <b>'%1'</b> 嗎？</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1103
 #, kde-format
 msgid "Enable Font"
 msgstr "開啟字型"
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Disable Font"
 msgstr "關閉字型"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "您真的想要開啟這 %1 個字型嗎？"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "您真的想要關閉這 %1 個字型嗎？"
 
-#: kcmfontinst/KCmFontInst.cpp:1116
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1005,7 +1005,7 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>您真的想要開啟群組 <b>%2</b> 中的這 %1 個字型嗎？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1015,22 +1015,22 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>您真的想要關閉群組 <b>%2</b> 中的這 %1 個字型嗎？</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable Fonts"
 msgstr "開啟字型"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable Fonts"
 msgstr "關閉字型"
 
-#: kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1134
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "正在啟用字型…"
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1136
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "正在停用字型中…"

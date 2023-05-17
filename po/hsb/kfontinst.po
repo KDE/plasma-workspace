@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-17 02:05+0000\n"
 "PO-Revision-Date: 2008-11-16 18:23+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "edi.werner@gmx.de"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:926
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -36,7 +36,7 @@ msgstr ""
 "Chceće pisma jenož za Was instalować abo tak, zo steja wšitkim wužiwarjam k "
 "dispoziciji?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:929
 #, kde-format
 msgid "Where to Install"
 msgstr "Hdźe instalować"
@@ -355,13 +355,13 @@ msgid "Delete"
 msgstr "Pismo wušmórnyć"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable"
 msgstr "Spřistupnić"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable"
 msgstr "Znjepřistupnić"
@@ -669,95 +669,95 @@ msgstr "Awtentifikacija zwrěšćena."
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:193
+#: kcmfontinst/KCmFontInst.cpp:192
 #, fuzzy, kde-format
 #| msgid "Create a new group"
 msgid "Create New Group…"
 msgstr "Nowu skupinu stworić"
 
-#: kcmfontinst/KCmFontInst.cpp:195
+#: kcmfontinst/KCmFontInst.cpp:194
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgid "Remove Group…"
 msgstr "Skupinu wumaznyć"
 
-#: kcmfontinst/KCmFontInst.cpp:197
+#: kcmfontinst/KCmFontInst.cpp:196
 #, fuzzy, kde-format
 msgid "Enable Fonts in Group…"
 msgstr "Jedne pismo"
 
-#: kcmfontinst/KCmFontInst.cpp:199
+#: kcmfontinst/KCmFontInst.cpp:198
 #, fuzzy, kde-format
 msgid "Disable Fonts in Group…"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:224
+#: kcmfontinst/KCmFontInst.cpp:223
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Pokazuje přehladku wubraneho pisma."
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, fuzzy, kde-format
 #| msgid "Scan For Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "Za dubletami mjez pismami pytać..."
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, fuzzy, kde-format
 #| msgid "Scan For Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Za dubletami mjez pismami pytać..."
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "Instalować..."
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:243
+#: kcmfontinst/KCmFontInst.cpp:242
 #, fuzzy, kde-format
 #| msgid "Delete Fonts"
 msgid "Get New Fonts…"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:244
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:246
+#: kcmfontinst/KCmFontInst.cpp:245
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "Wšitke wubrane pisma wumaznyć"
 
-#: kcmfontinst/KCmFontInst.cpp:304
+#: kcmfontinst/KCmFontInst.cpp:303
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Tekst za přehladku změnić..."
 
-#: kcmfontinst/KCmFontInst.cpp:406
+#: kcmfontinst/KCmFontInst.cpp:405
 #, kde-format
 msgid "Add Fonts"
 msgstr "Pisma dodać"
 
-#: kcmfontinst/KCmFontInst.cpp:532
+#: kcmfontinst/KCmFontInst.cpp:531
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Njemóžach lisćinu pismow za ćišć zawěsćić."
 
-#: kcmfontinst/KCmFontInst.cpp:554
+#: kcmfontinst/KCmFontInst.cpp:553
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Njemóžach ćišćak za pisma startować."
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:560
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -766,32 +766,32 @@ msgstr ""
 "Žane ćišćomne pisma.\n"
 "Móžeće jenož spřistupnjene pisma ćišćeć, kiž njebazuja na bitmapach."
 
-#: kcmfontinst/KCmFontInst.cpp:563
+#: kcmfontinst/KCmFontInst.cpp:562
 #, kde-format
 msgid "Cannot Print"
 msgstr "Njemóžu ćišćeć"
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Njeje so ničo wuzwoliło, štož ma so wumaznyć."
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Ničo k wumaznjenju"
 
-#: kcmfontinst/KCmFontInst.cpp:593
+#: kcmfontinst/KCmFontInst.cpp:592
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Chceće woprawdźe</p><p> <b>'%1'</b> wumaznyć?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:596
+#: kcmfontinst/KCmFontInst.cpp:595
 #, kde-format
 msgid "Delete Font"
 msgstr "Pismo wumaznyć"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:602
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
@@ -800,29 +800,29 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:609
 #, fuzzy, kde-format
 msgid "Deleting font(s)…"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, fuzzy, kde-format
 #| msgid "You did not select anything to delete."
 msgid "You did not select anything to move."
 msgstr "Njeje so ničo wuzwoliło, štož měło so wušmórnyć."
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, fuzzy, kde-format
 #| msgid "Nothing to Delete"
 msgid "Nothing to Move"
 msgstr "Ničo k wušmórnjenju"
 
-#: kcmfontinst/KCmFontInst.cpp:635
+#: kcmfontinst/KCmFontInst.cpp:634
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -831,17 +831,17 @@ msgstr ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:640
+#: kcmfontinst/KCmFontInst.cpp:639
 #, fuzzy, kde-format
 msgid "Move Font"
 msgstr "Jedne pismo"
 
-#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:640 kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:646
+#: kcmfontinst/KCmFontInst.cpp:645
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -860,70 +860,70 @@ msgstr[3] ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:651
 #, fuzzy, kde-format
 msgid "Move Fonts"
 msgstr "Pisma přidać"
 
-#: kcmfontinst/KCmFontInst.cpp:657
+#: kcmfontinst/KCmFontInst.cpp:656
 #, fuzzy, kde-format
 msgid "Moving font(s)…"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:671
+#: kcmfontinst/KCmFontInst.cpp:670
 #, kde-format
 msgid "Export Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:697
+#: kcmfontinst/KCmFontInst.cpp:696
 #, kde-format
 msgid "No files?"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:699
 #, fuzzy, kde-format
 #| msgid "Failed to locate font printer."
 msgid "Failed to open %1 for writing"
 msgstr "Njenamakam ćišćak za pisma."
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "Create New Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, fuzzy, kde-format
 #| msgid "Create a new group"
 msgid "Name of new group:"
 msgstr "Nowu skupinu stworić"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "New Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, fuzzy, kde-format
 msgid "Preview Text"
 msgstr "Znamjo za předhladku"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, fuzzy, kde-format
 #| msgid "Please enter new string:"
 msgid "Please enter new text:"
 msgstr "Prošu zapodajće nowe znamjo:"
 
-#: kcmfontinst/KCmFontInst.cpp:800
+#: kcmfontinst/KCmFontInst.cpp:799
 #, kde-format
 msgid "Scanning font list…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:859
+#: kcmfontinst/KCmFontInst.cpp:858
 #, kde-format
 msgid "No fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:864
+#: kcmfontinst/KCmFontInst.cpp:863
 #, fuzzy, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
@@ -932,7 +932,7 @@ msgstr[1] "%1 pismow"
 msgstr[2] ""
 msgstr[3] ""
 
-#: kcmfontinst/KCmFontInst.cpp:873
+#: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -941,7 +941,7 @@ msgid ""
 "tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:883
+#: kcmfontinst/KCmFontInst.cpp:882
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -949,90 +949,90 @@ msgid ""
 "td><td>%3</td></tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:960
+#: kcmfontinst/KCmFontInst.cpp:959
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:964
+#: kcmfontinst/KCmFontInst.cpp:963
 #, kde-format
 msgid "Scanning Files…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:965
+#: kcmfontinst/KCmFontInst.cpp:964
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, fuzzy, kde-format
 msgid "Installing font(s)…"
 msgstr "Instalować..."
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, fuzzy, kde-format
 msgid "You did not select anything to enable."
 msgstr "Njeje so ničo wuzwoliło, štož měło so wušmórnyć."
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, fuzzy, kde-format
 msgid "You did not select anything to disable."
 msgstr "Njeje so ničo wuzwoliło, štož měło so wušmórnyć."
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, fuzzy, kde-format
 msgid "Nothing to Enable"
 msgstr "Ničo k wušmórnjenju"
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, fuzzy, kde-format
 msgid "Nothing to Disable"
 msgstr "Ničo k wušmórnjenju"
 
-#: kcmfontinst/KCmFontInst.cpp:1091
+#: kcmfontinst/KCmFontInst.cpp:1090
 #, fuzzy, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, fuzzy, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1095
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1099
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1103
 #, fuzzy, kde-format
 msgid "Enable Font"
 msgstr "Jedne pismo"
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1104
 #, fuzzy, kde-format
 msgid "Disable Font"
 msgstr "Pismo wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, fuzzy, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
@@ -1049,7 +1049,7 @@ msgstr[3] ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1112
 #, fuzzy, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
@@ -1066,7 +1066,7 @@ msgstr[3] ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1116
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1087,7 +1087,7 @@ msgstr[3] ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1108,22 +1108,22 @@ msgstr[3] ""
 "<qt>Chceće \n"
 " <b>'%1'</b>woprawdźe wušmórnyć?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, fuzzy, kde-format
 msgid "Enable Fonts"
 msgstr "Jedne pismo"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1128
 #, fuzzy, kde-format
 msgid "Disable Fonts"
 msgstr "Pisma wušmórnyć"
 
-#: kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1134
 #, fuzzy, kde-format
 msgid "Enabling font(s)…"
 msgstr "Instalować..."
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1136
 #, fuzzy, kde-format
 msgid "Disabling font(s)…"
 msgstr "Instalować..."

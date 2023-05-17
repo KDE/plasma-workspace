@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:13+0000\n"
+"POT-Creation-Date: 2023-05-17 02:05+0000\n"
 "PO-Revision-Date: 2016-09-16 14:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -35,7 +35,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sng@hellug.gr,manolis@koppermind.homelinux.org"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:927
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:926
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -44,7 +44,7 @@ msgstr ""
 "Επιθυμείτε την εγκατάσταση της(των) γραμματοσειράς(ών) για προσωπική χρήση, "
 "ή για όλο το σύστημα (διαθέσιμη σε όλους τους χρήστες);"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:930
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:929
 #, kde-format
 msgid "Where to Install"
 msgstr "Που θα γίνει η εγκατάσταση"
@@ -357,13 +357,13 @@ msgid "Delete"
 msgstr "Διαγραφή"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
 #: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1105 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1104 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable"
 msgstr "Απενεργοποίηση"
@@ -682,97 +682,97 @@ msgstr "Η ταυτοποίηση απέτυχε.<br><i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Απρόβλεπτο σφάλμα κατά την επεξεργασία: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:193
+#: kcmfontinst/KCmFontInst.cpp:192
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Create New Group…"
 msgstr "Δημιουργία νέας ομάδας"
 
-#: kcmfontinst/KCmFontInst.cpp:195
+#: kcmfontinst/KCmFontInst.cpp:194
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgid "Remove Group…"
 msgstr "Αφαίρεση ομάδας"
 
-#: kcmfontinst/KCmFontInst.cpp:197
+#: kcmfontinst/KCmFontInst.cpp:196
 #, fuzzy, kde-format
 #| msgid "Enable Fonts"
 msgid "Enable Fonts in Group…"
 msgstr "Ενεργοποίηση γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:199
+#: kcmfontinst/KCmFontInst.cpp:198
 #, fuzzy, kde-format
 #| msgid "Disable Fonts"
 msgid "Disable Fonts in Group…"
 msgstr "Απενεργοποίηση γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:224
+#: kcmfontinst/KCmFontInst.cpp:223
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Αυτό εμφανίζει μια προεπισκόπηση της επιλεγμένης γραμματοσειράς."
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "Σάρωση για διπλές γραμματοσειρές..."
 
-#: kcmfontinst/KCmFontInst.cpp:240
+#: kcmfontinst/KCmFontInst.cpp:239
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Σάρωση για διπλές γραμματοσειρές..."
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "Εγκατάσταση..."
 
-#: kcmfontinst/KCmFontInst.cpp:242
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:243
+#: kcmfontinst/KCmFontInst.cpp:242
 #, fuzzy, kde-format
 #| msgid "Get New Fonts..."
 msgid "Get New Fonts…"
 msgstr "Λήψη νέων γραμματοσειρών..."
 
-#: kcmfontinst/KCmFontInst.cpp:244
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:246
+#: kcmfontinst/KCmFontInst.cpp:245
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "Διαγραφή όλων των επιλεγμένων γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:304
+#: kcmfontinst/KCmFontInst.cpp:303
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Αλλαγή κειμένου προεπισκόπησης..."
 
-#: kcmfontinst/KCmFontInst.cpp:406
+#: kcmfontinst/KCmFontInst.cpp:405
 #, kde-format
 msgid "Add Fonts"
 msgstr "Προσθήκη γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:532
+#: kcmfontinst/KCmFontInst.cpp:531
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Αποτυχία αποθήκευσης λίστας γραμματοσειρών προς εκτύπωση."
 
-#: kcmfontinst/KCmFontInst.cpp:554
+#: kcmfontinst/KCmFontInst.cpp:553
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Αποτυχία εκκίνησης εκτύπωσης γραμματοσειρών."
 
-#: kcmfontinst/KCmFontInst.cpp:561
+#: kcmfontinst/KCmFontInst.cpp:560
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -781,60 +781,60 @@ msgstr ""
 "Δεν υπάρχουν γραμματοσειρές που μπορούν να εκτυπωθούν.\n"
 "Μπορείτε να εκτυπώσετε μόνο μη-bitmap γραμματοσειρές."
 
-#: kcmfontinst/KCmFontInst.cpp:563
+#: kcmfontinst/KCmFontInst.cpp:562
 #, kde-format
 msgid "Cannot Print"
 msgstr "Αδυναμία εκτύπωσης"
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Δεν επιλέξατε κάτι για διαγραφή."
 
-#: kcmfontinst/KCmFontInst.cpp:578
+#: kcmfontinst/KCmFontInst.cpp:577
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Τίποτα για διαγραφή"
 
-#: kcmfontinst/KCmFontInst.cpp:593
+#: kcmfontinst/KCmFontInst.cpp:592
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Επιθυμείτε πραγματικά τη διαγραφή της</p><p>'<b>%1</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:596
+#: kcmfontinst/KCmFontInst.cpp:595
 #, kde-format
 msgid "Delete Font"
 msgstr "Διαγραφή γραμματοσειράς"
 
-#: kcmfontinst/KCmFontInst.cpp:603
+#: kcmfontinst/KCmFontInst.cpp:602
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Επιθυμείτε πραγματικά τη διαγραφή αυτής της γραμματοσειράς;"
 msgstr[1] "Επιθυμείτε πραγματικά τη διαγραφή αυτών των %1 γραμματοσειρών;"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Διαγραφή γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:610
+#: kcmfontinst/KCmFontInst.cpp:609
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "Διαγραφή γραμματοσειρών..."
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Δεν επιλέξατε κάτι για μετακίνηση."
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Τίποτα για μετακίνηση"
 
-#: kcmfontinst/KCmFontInst.cpp:635
+#: kcmfontinst/KCmFontInst.cpp:634
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -843,17 +843,17 @@ msgstr ""
 "<p>Επιθυμείτε πραγματικά τη μετακίνηση του </p><p>'<b>%1</b>'</p><p>από <i>"
 "%2</i> σε <i>%3</i>;</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:640
+#: kcmfontinst/KCmFontInst.cpp:639
 #, kde-format
 msgid "Move Font"
 msgstr "Μετακίνηση γραμματοσειράς"
 
-#: kcmfontinst/KCmFontInst.cpp:641 kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:640 kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Move"
 msgstr "Μετακίνηση"
 
-#: kcmfontinst/KCmFontInst.cpp:646
+#: kcmfontinst/KCmFontInst.cpp:645
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -866,77 +866,77 @@ msgstr[1] ""
 "<p>Επιθυμείτε πραγματικά τη μετακίνηση αυτών των %1 γραμματοσειρών από <i>"
 "%2</i> σε <i>%3</i>;</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
 msgid "Move Fonts"
 msgstr "Μετακίνηση γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:657
+#: kcmfontinst/KCmFontInst.cpp:656
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "Μετακίνηση γραμματοσειράς(ών)..."
 
-#: kcmfontinst/KCmFontInst.cpp:671
+#: kcmfontinst/KCmFontInst.cpp:670
 #, kde-format
 msgid "Export Group"
 msgstr "Εξαγωγή ομάδας"
 
-#: kcmfontinst/KCmFontInst.cpp:697
+#: kcmfontinst/KCmFontInst.cpp:696
 #, kde-format
 msgid "No files?"
 msgstr "Χωρίς αρχεία;"
 
-#: kcmfontinst/KCmFontInst.cpp:700
+#: kcmfontinst/KCmFontInst.cpp:699
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "Αποτυχία ανοίγματος του %1 για εγγραφή"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "Create New Group"
 msgstr "Δημιουργία νέας ομάδας"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "Δημιουργία νέας ομάδας"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "New Group"
 msgstr "Νέα ομάδα"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Preview Text"
 msgstr "Κείμενο προεπισκόπησης"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Παρακαλώ εισάγετε νέο κείμενο:"
 
-#: kcmfontinst/KCmFontInst.cpp:800
+#: kcmfontinst/KCmFontInst.cpp:799
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "Σάρωση λίστας γραμματοσειρών..."
 
-#: kcmfontinst/KCmFontInst.cpp:859
+#: kcmfontinst/KCmFontInst.cpp:858
 #, kde-format
 msgid "No fonts"
 msgstr "Καμία γραμματοσειρά"
 
-#: kcmfontinst/KCmFontInst.cpp:864
+#: kcmfontinst/KCmFontInst.cpp:863
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "Μία γραμματοσειρά"
 msgstr[1] "%1 γραμματοσειρές"
 
-#: kcmfontinst/KCmFontInst.cpp:873
+#: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -949,7 +949,7 @@ msgstr ""
 "\">Μερικώς ενεργοποιημένα:</td><td>%3</td></tr><tr><td align=\"right"
 "\">Σύνολο:</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:883
+#: kcmfontinst/KCmFontInst.cpp:882
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -960,66 +960,66 @@ msgstr ""
 "align=\"right\">Απενεργοποιημένα:</td><td>%2</td></tr><tr><td align=\"right"
 "\">Σύνολο:</td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:960
+#: kcmfontinst/KCmFontInst.cpp:959
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "Αναζήτηση συσχετιζόμενων αρχείων..."
 
-#: kcmfontinst/KCmFontInst.cpp:964
+#: kcmfontinst/KCmFontInst.cpp:963
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "Σάρωση αρχείων..."
 
-#: kcmfontinst/KCmFontInst.cpp:965
+#: kcmfontinst/KCmFontInst.cpp:964
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "Αναζήτηση πρόσθετων αρχείων για εγκατάσταση..."
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Αναζήτηση συσχετιζόμενων αρχείων με την %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "Εγκατάσταση γραμματοσειρών..."
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Δεν επιλέξατε κάτι για ενεργοποίηση."
 
-#: kcmfontinst/KCmFontInst.cpp:1073
+#: kcmfontinst/KCmFontInst.cpp:1072
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Δεν επιλέξατε κάτι για απενεργοποίηση."
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Τίποτα για ενεργοποίηση"
 
-#: kcmfontinst/KCmFontInst.cpp:1074
+#: kcmfontinst/KCmFontInst.cpp:1073
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Τίποτα για απενεργοποίηση"
 
-#: kcmfontinst/KCmFontInst.cpp:1091
+#: kcmfontinst/KCmFontInst.cpp:1090
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Σίγουρα θέλετε να ενεργοποιήσετε το</p><p>'<b>%1</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Σίγουρα θέλετε να απενεργοποιήσετε το</p><p>'<b>%1</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1095
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1028,7 +1028,7 @@ msgstr ""
 "<p>Σίγουρα θέλετε να ενεργοποιήσετε το</p><p>'<b>%1</b>', της ομάδας '<b>%2</"
 "b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1099
+#: kcmfontinst/KCmFontInst.cpp:1098
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1037,31 +1037,31 @@ msgstr ""
 "<p>Σίγουρα θέλετε να απενεργοποιήσετε το</p><p>'<b>%1</b>', της ομάδας '<b>"
 "%2</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1104
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1103
 #, kde-format
 msgid "Enable Font"
 msgstr "Ενεργοποίηση γραμματοσειράς"
 
-#: kcmfontinst/KCmFontInst.cpp:1103 kcmfontinst/KCmFontInst.cpp:1105
+#: kcmfontinst/KCmFontInst.cpp:1102 kcmfontinst/KCmFontInst.cpp:1104
 #, kde-format
 msgid "Disable Font"
 msgstr "Απενεργοποίηση γραμματοσειράς"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Σίγουρα θέλετε να ενεργοποιήσετε αυτή τη γραμματοσειρά;"
 msgstr[1] "Σίγουρα θέλετε να ενεργοποιήσετε αυτές τις %1 γραμματοσειρές;"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "Σίγουρα θέλετε να απενεργοποιήσετε αυτή τη γραμματοσειρά;"
 msgstr[1] "Σίγουρα θέλετε να απενεργοποιήσετε αυτές τις %1 γραμματοσειρές;"
 
-#: kcmfontinst/KCmFontInst.cpp:1116
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1076,7 +1076,7 @@ msgstr[1] ""
 "<p>Σίγουρα επιθυμείτε να ενεργοποιήσετε αυτές τις %1 γραμματοσειρές της "
 "ομάδας '<b>%2</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1091,23 +1091,23 @@ msgstr[1] ""
 "<p>Σίγουρα θέλετε να απενεργοποιήσετε αυτές τις %1 γραμματοσειρές της ομάδας "
 "'<b>%2</b>';</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1128
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Ενεργοποίηση γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Απενεργοποίηση γραμματοσειρών"
 
-#: kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1134
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "Ενεργοποίηση γραμματοσειρών..."
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1136
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"

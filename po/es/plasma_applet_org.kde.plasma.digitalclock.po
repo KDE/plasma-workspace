@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-30 03:37+0000\n"
+"POT-Creation-Date: 2023-05-17 02:05+0000\n"
 "PO-Revision-Date: 2023-01-26 11:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Calendar"
 msgstr "Calendario"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:431
+#: package/contents/ui/CalendarView.qml:432
 #, kde-format
 msgid "Time Zones"
 msgstr "Zonas horarias"
@@ -52,23 +52,23 @@ msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Añadir un nuevo evento"
 
-#: package/contents/ui/CalendarView.qml:390
+#: package/contents/ui/CalendarView.qml:391
 #, kde-format
 msgid "No events for today"
 msgstr "No hay eventos para hoy"
 
-#: package/contents/ui/CalendarView.qml:391
+#: package/contents/ui/CalendarView.qml:392
 #, kde-format
 msgid "No events for this day"
 msgstr "No hay eventos para este día"
 
-#: package/contents/ui/CalendarView.qml:440
+#: package/contents/ui/CalendarView.qml:441
 #, kde-format
 msgid "Switch…"
 msgstr "Cambiar..."
 
-#: package/contents/ui/CalendarView.qml:441
-#: package/contents/ui/CalendarView.qml:444
+#: package/contents/ui/CalendarView.qml:442
+#: package/contents/ui/CalendarView.qml:445
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Cambiar a otra zona horaria"
