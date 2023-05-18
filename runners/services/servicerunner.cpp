@@ -293,6 +293,10 @@ private:
 
     void matchCategories()
     {
+        // Do not match categories for short queries, BUG: 469769
+        if (weightedTermLength < 5) {
+            return;
+        }
         const auto categoriesFilter = [this](const KService::Ptr &service) {
             return contains(service->categories(), queryList);
         };
