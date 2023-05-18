@@ -1,6 +1,6 @@
 # translation of plasma_applet_org.kde.plasma.battery.pot to esperanto
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-workspace package.
 # Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>, 2007, 2008.
 # Cindy McKee <cfmckee@gmail.com>, 2007, 2008, 2009.
 # Markus Sunela <markus.sunela@tut.fi>, 2009.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-16 02:15+0000\n"
-"PO-Revision-Date: 2023-05-10 20:16+0100\n"
+"PO-Revision-Date: 2023-05-17 07:19+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -50,7 +50,7 @@ msgstr "Restanta tempo:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr "Taksante..."
+msgstr "Taksante…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -183,8 +183,8 @@ msgstr "Aŭtomata dormo kaj ekranŝlosado estas malŝaltitaj"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Unu aplikaĵo petis aktivigon de Rendimenta reĝimo"
+msgstr[1] "%1 aplikaĵoj petis aktivigon de Rendimenta reĝimo"
 
 #: package/contents/ui/main.qml:197
 #, kde-format
@@ -195,13 +195,13 @@ msgstr "Sistemo estas en Efikeca reĝimo"
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Unu aplikaĵo petis aktivigon de Potencoŝpara reĝimo"
+msgstr[1] "%1 aplikaĵoj petis aktivigon de Potencoŝpara reĝimo"
 
 #: package/contents/ui/main.qml:205
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr "Sistemo estas en Power Save reĝimo"
+msgstr "Sistemo estas en Power-Save reĝimo"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Rulumu por alĝustigi ekranbrilecon"
 #: package/contents/ui/main.qml:314
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr "La bateriapleto enŝaltis tutsisteman malebligon"
+msgstr "La bateri-apleto enŝaltis tutsisteman malebligon"
 
 #: package/contents/ui/main.qml:366
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "&Montri Energiinformon…"
 #: package/contents/ui/main.qml:380
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Montri Baterian Procenton sur Piktogramo Kiam Ne Plene Ŝargita"
+msgstr "Montri Baterian Procenton sur Piktogramo Kiam Ne Plene Ŝarĝita"
 
 #: package/contents/ui/main.qml:386
 #, kde-format
@@ -263,8 +263,8 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 aplikaĵo aktuale estas blokanta dormon kaj ekranŝlosadon:"
+msgstr[1] "%1 aplikaĵoj aktuale estas blokantaj dormon kaj ekranŝlosadon:"
 
 #: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
@@ -376,8 +376,8 @@ msgstr "Rendimento povas esti reduktita."
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Unu aplikaĵo petis aktivigon de %2:"
+msgstr[1] "%1 aplikaĵoj petis aktivigon de %2:"
 
 #: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format
