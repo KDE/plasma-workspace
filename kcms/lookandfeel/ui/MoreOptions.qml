@@ -57,7 +57,8 @@ ColumnLayout {
                 model: [
                     { text: i18n("Colors"), flag: Private.LookandFeelManager.Colors },
                     { text: i18n("Application Style"), flag: Private.LookandFeelManager.WidgetStyle },
-                    { text: i18n("Window Decorations"), flag: Private.LookandFeelManager.WindowDecoration },
+                    { text: i18n("Window Decoration Style"), flag: Private.LookandFeelManager.WindowDecoration },
+                    { text: i18n("Window Decoration Size"), flag: Private.LookandFeelManager.BorderSize },
                     { text: i18n("Icons"), flag: Private.LookandFeelManager.Icons },
                     { text: i18n("Plasma Style"), flag: Private.LookandFeelManager.PlasmaTheme },
                     { text: i18n("Cursors"), flag: Private.LookandFeelManager.Cursors },

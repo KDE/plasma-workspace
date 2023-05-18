@@ -44,7 +44,8 @@ public:
         SplashScreen = 1 << 8,
         LockScreen = 1 << 9,
         Wallpaper = 1 << 10,
-        AppearanceSettings = (1 << 11) - 1, // All the contents within Appearance
+        BorderSize = 1 << 11,
+        AppearanceSettings = (1 << 12) - 1, // All the contents within Appearance
         // Layout
         DesktopLayout = 1 << 16,
         TitlebarLayout = 1 << 17,
@@ -55,7 +56,7 @@ public:
         RunCommand = 1 << 24,
         LogOutScript = 1 << 25,
         // General Flag combinations
-        KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout,
+        KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout | BorderSize,
         AllSettings = (1 << 26) - 1,
     };
     Q_DECLARE_FLAGS(Contents, ContentFlags)
@@ -88,6 +89,7 @@ public:
     void setWindowSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme, bool noPlugin);
     void setTitlebarLayout(const QString &leftbtns, const QString &rightbtns);
+    void setBorderSize(const QString &size);
     void setBorderlessMaximized(const QString &value);
     void setWindowPlacement(const QString &value);
     void setShellPackage(const QString &name);

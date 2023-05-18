@@ -104,6 +104,7 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
 
         contents.setFlag(WindowSwitcher, configProvides(conf, "kwinrc/WindowSwitcher", "LayoutName"));
         contents.setFlag(WindowDecoration, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"library", "NoPlugin"}));
+        contents.setFlag(BorderSize, configProvides(conf, "kwinrc/org.kde.kdecoration2", "BorderSize"));
 
         contents.setFlag(Fonts,
                          configProvides(conf, "kdeglobals/WM", {"font", "fixed", "smallestReadableFont", "toolBarFont", "menuFont"})
@@ -196,6 +197,15 @@ void LookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QStrin
 
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("org.kde.kdecoration2"), QStringLiteral("ButtonsOnLeft"), leftbtns, KConfig::Notify);
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("org.kde.kdecoration2"), QStringLiteral("ButtonsOnRight"), rightbtns, KConfig::Notify);
+}
+
+void LookAndFeelManager::setBorderSize(const QString &size)
+{
+    if (size.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("org.kde.kdecoration2"), QStringLiteral("BorderSize"), size, KConfig::Notify);
 }
 
 void LookAndFeelManager::setBorderlessMaximized(const QString &value)
@@ -559,6 +569,12 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
                 Q_EMIT fontsChanged();
                 m_fontsChanged = false;
             }
+        }
+
+        if (itemsToApply.testFlag(BorderSize)) {
+            group = KConfigGroup(conf, "kwinrc");
+            group = KConfigGroup(&group, "org.kde.kdecoration2");
+            setBorderSize(group.readEntry("BorderSize", QString()));
         }
 
         if (itemsToApply.testFlag(SplashScreen)) {
