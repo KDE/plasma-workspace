@@ -79,6 +79,7 @@ RowLayout {
         verticalAlignment: Text.AlignVCenter
         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Percentage value", "%1%", progressBar.value)
         visible: showingProgress
+        wrapMode: Text.NoWrap
         // Display a subtle visual indication that the volume might be
         // dangerously high
         // ------------------------------------------------
