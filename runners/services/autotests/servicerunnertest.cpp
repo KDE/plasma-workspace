@@ -193,6 +193,12 @@ void ServiceRunnerTest::testCategories()
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
+
+    // Query too short to match any category
+    context.setQuery(QStringLiteral("Dumm"));
+    runner.match(context);
+    matches = context.matches();
+    QVERIFY(matches.isEmpty());
 }
 
 void ServiceRunnerTest::testJumpListActions()
