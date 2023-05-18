@@ -73,10 +73,10 @@ public:
 
     void match(KRunner::RunnerContext &context)
     {
-        term = context.query();
+        query = context.query();
         // Splitting the query term to match using subsequences
-        queryList = term.split(QLatin1Char(' '));
-        weightedTermLength = weightedLength(term);
+        queryList = query.split(QLatin1Char(' '));
+        weightedTermLength = weightedLength(query);
 
         matchNameKeywordAndGenericName();
         matchCategories();
@@ -248,12 +248,12 @@ private:
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
             // chances are the user doesn't want that app.
             if (weightedTermLength < 3) {
-                if (name.startsWith(term, Qt::CaseInsensitive) || exec.startsWith(term, Qt::CaseInsensitive)) {
+                if (name.startsWith(query, Qt::CaseInsensitive) || exec.startsWith(query, Qt::CaseInsensitive)) {
                     relevance = 0.9;
                 } else {
                     continue;
                 }
-            } else if (name.compare(term, Qt::CaseInsensitive) == 0) {
+            } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
                 match.setType(KRunner::QueryMatch::ExactMatch);
             } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
@@ -310,7 +310,7 @@ private:
             qreal relevance = 0.4;
             const QStringList categories = service->categories();
             if (std::any_of(categories.begin(), categories.end(), [this](const QString &category) {
-                    return category.compare(term, Qt::CaseInsensitive) == 0;
+                    return category.compare(query, Qt::CaseInsensitive) == 0;
                 })) {
                 relevance = 0.6;
             } else if (service->categories().contains(QLatin1String("X-KDE-More")) || !service->showInCurrentDesktop()) {
@@ -352,7 +352,7 @@ private:
                 }
                 seen(action);
 
-                const int matchIndex = action.text().indexOf(term, 0, Qt::CaseInsensitive);
+                const int matchIndex = action.text().indexOf(query, 0, Qt::CaseInsensitive);
                 if (matchIndex < 0) {
                     continue;
                 }
@@ -372,14 +372,14 @@ private:
                 QUrl url(service->storageId());
                 url.setScheme(QStringLiteral("applications"));
 
-                QUrlQuery query;
-                query.addQueryItem(QStringLiteral("action"), action.name());
-                url.setQuery(query);
+                QUrlQuery urlQuery;
+                urlQuery.addQueryItem(QStringLiteral("action"), action.name());
+                url.setQuery(urlQuery);
 
                 match.setData(url);
 
                 qreal relevance = 0.5;
-                if (action.text().compare(term, Qt::CaseInsensitive) == 0) {
+                if (action.text().compare(query, Qt::CaseInsensitive) == 0) {
                     relevance = 0.65;
                     match.setType(KRunner::QueryMatch::HelperMatch); // Give it a higer match type to ensure it is shown, BUG: 455436
                 } else if (matchIndex == 0) {
@@ -399,7 +399,6 @@ private:
 
     QList<KRunner::QueryMatch> matches;
     QString query;
-    QString term;
     QStringList queryList;
     int weightedTermLength = -1;
 };
