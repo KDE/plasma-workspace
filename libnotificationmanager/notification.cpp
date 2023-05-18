@@ -313,7 +313,7 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
         // Check whether the application actually has notifications we can configure
         KConfig config(notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
         config.addConfigSources(
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/") + notifyRcName + QStringLiteral(".notifyrc")));
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6/") + notifyRcName + QStringLiteral(".notifyrc")));
 
         KConfigGroup globalGroup(&config, "Global");
 

@@ -227,8 +227,8 @@ void SourcesModel::load()
     QStringList desktopEntries;
 
     // old code did KGlobal::dirs()->findAllResources("data", QStringLiteral("*/*.notifyrc")) but in KF5
-    // only notifyrc files in knotifications5/ folder are supported
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
+    // only notifyrc files in knotifications6/ folder are supported
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.notifyrc"));
         for (const QString &file : fileNames) {
@@ -239,7 +239,7 @@ void SourcesModel::load()
             notifyRcFiles.append(file);
 
             KConfig config(file, KConfig::NoGlobals);
-            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/") + file));
+            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6/") + file));
 
             KConfigGroup globalGroup(&config, QLatin1String("Global"));
 
