@@ -200,9 +200,9 @@ InteractiveConsole::~InteractiveConsole()
 
 void InteractiveConsole::setMode(const QString &mode)
 {
-    if (mode.toLower() == QLatin1String("desktop")) {
+    if (mode.compare(QLatin1String("desktop"), Qt::CaseInsensitive) == 0) {
         m_plasmaAction->trigger();
-    } else if (mode.toLower() == QLatin1String("windowmanager")) {
+    } else if (mode.compare(QLatin1String("windowmanager"), Qt::CaseInsensitive) == 0) {
         m_kwinAction->trigger();
     }
 }

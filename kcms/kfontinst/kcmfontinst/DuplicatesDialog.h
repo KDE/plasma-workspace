@@ -48,7 +48,7 @@ public:
 
         bool operator==(const TFile &f) const
         {
-            return useLower || f.useLower ? name.toLower() == f.name.toLower() : name == f.name;
+            return (useLower || f.useLower) ? (name.compare(f.name, Qt::CaseInsensitive) == 0) : (name == f.name);
         }
 
         QString name;

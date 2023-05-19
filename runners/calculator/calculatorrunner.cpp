@@ -69,7 +69,7 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
         return;
     }
 
-    if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
+    if (cmd.compare(QLatin1String("universe"), Qt::CaseInsensitive) == 0 || cmd.compare(QLatin1String("life"), Qt::CaseInsensitive) == 0) {
         KRunner::QueryMatch match(this);
         match.setType(KRunner::QueryMatch::PossibleMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));

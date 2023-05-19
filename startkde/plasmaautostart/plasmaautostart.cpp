@@ -122,7 +122,7 @@ bool PlasmaAutostart::isStartConditionMet(QStringView condition)
     KConfig config(list[0].toString(), KConfig::NoGlobals);
     KConfigGroup cg(&config, list[1].toString());
 
-    const bool defaultValue = (list[3].toString().toLower() == QLatin1String("true"));
+    const bool defaultValue = (list[3].toString().compare(QLatin1String("true"), Qt::CaseInsensitive) == 0);
     return cg.readEntry(list[2].toString(), defaultValue);
 }
 
