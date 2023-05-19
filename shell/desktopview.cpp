@@ -46,6 +46,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         m_layerWindow->setExclusiveZone(-1);
         m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
         m_layerWindow->setScope(QStringLiteral("desktop"));
+        m_layerWindow->setCloseOnDismissed(false);
     } else {
         KWindowSystem::setType(winId(), NET::Desktop);
         KWindowSystem::setState(winId(), NET::KeepBelow);
@@ -202,8 +203,6 @@ bool DesktopView::event(QEvent *e)
 {
     if (e->type() == QEvent::FocusOut) {
         m_krunnerText.clear();
-    } else if (e->type() == QEvent::Close) {
-        return true;
     }
 
     return PlasmaQuick::ContainmentView::event(e);
