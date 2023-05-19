@@ -16,10 +16,10 @@ class ConfigOverlay : public QQuickItem
     Q_OBJECT
     Q_PROPERTY(bool open READ open WRITE setOpen NOTIFY openChanged)
     Q_PROPERTY(ItemContainer *itemContainer READ itemContainer NOTIFY itemContainerChanged)
-    Q_PROPERTY(qreal leftAvailableSpace READ leftAvailableSpace NOTIFY leftAvailableSpaceChanged);
-    Q_PROPERTY(qreal topAvailableSpace READ topAvailableSpace NOTIFY topAvailableSpaceChanged);
-    Q_PROPERTY(qreal rightAvailableSpace READ rightAvailableSpace NOTIFY rightAvailableSpaceChanged);
-    Q_PROPERTY(qreal bottomAvailableSpace READ bottomAvailableSpace NOTIFY bottomAvailableSpaceChanged);
+    Q_PROPERTY(qreal leftAvailableSpace READ leftAvailableSpace NOTIFY leftAvailableSpaceChanged)
+    Q_PROPERTY(qreal topAvailableSpace READ topAvailableSpace NOTIFY topAvailableSpaceChanged)
+    Q_PROPERTY(qreal rightAvailableSpace READ rightAvailableSpace NOTIFY rightAvailableSpaceChanged)
+    Q_PROPERTY(qreal bottomAvailableSpace READ bottomAvailableSpace NOTIFY bottomAvailableSpaceChanged)
     Q_PROPERTY(bool touchInteraction READ touchInteraction NOTIFY touchInteractionChanged)
 
 public:

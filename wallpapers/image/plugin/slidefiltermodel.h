@@ -18,7 +18,7 @@ class SlideFilterModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged);
+    Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged)
 
 public:
     explicit SlideFilterModel(QObject *parent);

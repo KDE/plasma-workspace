@@ -59,14 +59,14 @@ class AppletsLayout : public QQuickItem
 
     Q_PROPERTY(QQmlComponent *appletContainerComponent READ appletContainerComponent WRITE setAppletContainerComponent NOTIFY appletContainerComponentChanged)
 
-    Q_PROPERTY(ItemContainer *placeHolder READ placeHolder WRITE setPlaceHolder NOTIFY placeHolderChanged);
+    Q_PROPERTY(ItemContainer *placeHolder READ placeHolder WRITE setPlaceHolder NOTIFY placeHolderChanged)
 
     /**
      * if the applets layout contains some kind of main MouseArea,
      * MouseEventListener or Flickable, we want to filter its events to make the
      * long mouse press work
      */
-    Q_PROPERTY(QQuickItem *eventManagerToFilter READ eventManagerToFilter WRITE setEventManagerToFilter NOTIFY eventManagerToFilterChanged);
+    Q_PROPERTY(QQuickItem *eventManagerToFilter READ eventManagerToFilter WRITE setEventManagerToFilter NOTIFY eventManagerToFilterChanged)
 
     Q_PROPERTY(AppletsLayout::EditModeCondition editModeCondition READ editModeCondition WRITE setEditModeCondition NOTIFY editModeConditionChanged)
     Q_PROPERTY(bool editMode READ editMode WRITE setEditMode NOTIFY editModeChanged)
