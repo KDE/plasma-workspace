@@ -80,4 +80,5 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     qDebug() << data.size();
 
     Q_EMIT dataReady(data);
+    Q_EMIT subLabelReady(m_lastSubLabelData);
 }
