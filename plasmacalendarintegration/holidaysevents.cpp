@@ -62,7 +62,7 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
                 data.insert(d, eventData);
             }
 
-            if (!holiday.name().isEmpty()) {
+            if (!subLabelData.contains(holiday.observedStartDate()) && !holiday.name().isEmpty()) {
                 CalendarEvents::CalendarEventsPlugin::SubLabel sublabel;
                 sublabel.dayLabel = holiday.name();
                 sublabel.label = holiday.name();
