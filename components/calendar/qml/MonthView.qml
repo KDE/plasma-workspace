@@ -183,6 +183,13 @@ Item {
         swipeView.currentIndex = 2;
     }
 
+    Connections {
+        target: eventPluginsManager
+        function onPluginsChanged() {
+            root.todayAuxilliaryText = "";
+        }
+    }
+
     Calendar {
         id: calendarBackend
 
