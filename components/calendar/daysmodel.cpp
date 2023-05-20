@@ -308,13 +308,35 @@ void DaysModel::onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEvent
     for (int i = 0; i < d->data->count(); i++) {
         const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
-        if (!data.contains(currentDate)) {
+        auto newValueIt = data.find(currentDate);
+        if (newValueIt == data.end()) {
             continue;
         }
         // Add/Overwrite a sub-label based on priority
-        if (const auto &value = data.value(currentDate);
-            !d->subLabelsData.count(currentDate) || (d->subLabelsData.count(currentDate) && value.priority > d->subLabelsData.value(currentDate).priority)) {
-            d->subLabelsData.insert(currentDate, value);
+        auto oldValueIt = d->subLabelsData.find(currentDate);
+        auto newValue = newValueIt.value();
+        if (oldValueIt == d->subLabelsData.end()) {
+            // Just insert the new value
+            d->subLabelsData.insert(currentDate, newValue);
+
+        } else if (newValue.priority > oldValueIt->priority) {
+            // Sanitize labels: if the new value doesn't have dayLabel or label, keep the existing label.
+            if (newValue.dayLabel.isEmpty()) {
+                newValue.dayLabel = oldValueIt->dayLabel;
+            }
+            if (newValue.label.isEmpty()) {
+                newValue.label = oldValueIt->label;
+            }
+            d->subLabelsData.insert(currentDate, newValue);
+
+        } else if (newValue.priority <= oldValueIt->priority) {
+            // Fill the two empty labels
+            if (oldValueIt->dayLabel.isEmpty()) {
+                oldValueIt->dayLabel = newValue.dayLabel;
+            }
+            if (oldValueIt->label.isEmpty()) {
+                oldValueIt->label = newValue.label;
+            }
         }
     }
 
