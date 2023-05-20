@@ -48,6 +48,10 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     for (KHolidays::HolidayRegion *region : qAsConst(m_regions)) {
         const KHolidays::Holiday::List holidays = region->rawHolidays(startDate, endDate);
 
+        const QString languageCode = region->languageCode();
+        const bool isSpaceFriendlyLanguage =
+            (languageCode.startsWith(QLatin1String("zh")) || languageCode.startsWith(QLatin1String("ja")) || languageCode.startsWith(QLatin1String("ko")));
+
         for (const KHolidays::Holiday &holiday : holidays) {
             CalendarEvents::EventData eventData;
             eventData.setStartDateTime(holiday.observedStartDate().startOfDay());
@@ -60,6 +64,10 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
             // make sure to add events spanning multiple days to all of them
             for (QDate d = holiday.observedStartDate(); d <= holiday.observedEndDate(); d = d.addDays(1)) {
                 data.insert(d, eventData);
+            }
+
+            if (!isSpaceFriendlyLanguage) {
+                continue;
             }
 
             if (!subLabelData.contains(holiday.observedStartDate()) && !holiday.name().isEmpty()) {
