@@ -8,12 +8,14 @@
 
 #include "widgetexplorer.h"
 
+#include <QDebug>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlExpression>
 #include <QQmlProperty>
 
 #include <KAuthorized>
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <KNSWidgets/Dialog>
 #include <KX11Extras>
@@ -104,6 +106,42 @@ public:
 
 QPointer<KNSWidgets::Dialog> WidgetExplorerPrivate::newStuffDialog;
 
+QString readTranslatedCategory(const KPluginMetaData &data)
+{
+    static const QList<KLazyLocalizedString> possibleTranslatslations{
+        kli18nc("applet category", "Accessibility"),
+        kli18nc("applet category", "Application Launchers"),
+        kli18nc("applet category", "Astronomy"),
+        kli18nc("applet category", "Date and Time"),
+        kli18nc("applet category", "Development Tools"),
+        kli18nc("applet category", "Education"),
+        kli18nc("applet category", "Environment and Weather"),
+        kli18nc("applet category", "Examples"),
+        kli18nc("applet category", "File System"),
+        kli18nc("applet category", "Fun and Games"),
+        kli18nc("applet category", "Graphics"),
+        kli18nc("applet category", "Language"),
+        kli18nc("applet category", "Mapping"),
+        kli18nc("applet category", "Miscellaneous"),
+        kli18nc("applet category", "Multimedia"),
+        kli18nc("applet category", "Online Services"),
+        kli18nc("applet category", "Productivity"),
+        kli18nc("applet category", "System Information"),
+        kli18nc("applet category", "Utilities"),
+        kli18nc("applet category", "Windows and Tasks"),
+        kli18nc("applet category", "Clipboard"),
+        kli18nc("applet category", "Tasks"),
+    };
+    const auto it = std::find_if(possibleTranslatslations.begin(), possibleTranslatslations.end(), [&data](const KLazyLocalizedString &str) {
+        return data.category() == str.untranslatedText();
+    });
+    if (it == possibleTranslatslations.cend()) {
+        qDebug() << data.category() << "from" << data.fileName() << "is not a known category that can be translated ";
+        return data.category();
+    }
+    return it->toString();
+}
+
 void WidgetExplorerPrivate::initFilters()
 {
     filterModel.clear();
@@ -137,19 +175,18 @@ void WidgetExplorerPrivate::initFilters()
             // we don't want to show the hidden category
             continue;
         }
-        const QString c = plugin.category();
-        if (cats.contains(c)) {
+        const QString translatedCategory = readTranslatedCategory(plugin);
+        if (cats.contains(translatedCategory)) {
             continue;
         }
-        cats.insert(c);
+        cats.insert(translatedCategory);
 
-        const QString lowerCaseCat = c.toLower();
+        const QString lowerCaseCat = translatedCategory.toLower();
         if (!existingCategories.contains(lowerCaseCat)) {
             continue;
         }
 
-        filterModel.addFilter(i18nd("plasmashellprivateplugin", c.toLocal8Bit()),
-                              KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
+        filterModel.addFilter(translatedCategory, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
     }
 }
 
