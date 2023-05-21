@@ -79,7 +79,7 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
 
 bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
-    Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+    constexpr Qt::CaseSensitivity cs = Qt::CaseInsensitive;
 
     switch (m_SortingMode) {
     case SortingMode::Random:
