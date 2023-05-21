@@ -2,6 +2,7 @@
 Exec=gmenudbusmenuproxy
 Name=GMenuDBusMenuProxy
 Name[ar]=وكيل قائمة D-Bus لـ GMenu.
+Name[ast]=GMenuDBusMenuProxy
 Name[az]=GMenuDBusMenuProxy
 Name[be]=GMenuDBusMenuProxy
 Name[bg]=GMenuDBusMenuProxy

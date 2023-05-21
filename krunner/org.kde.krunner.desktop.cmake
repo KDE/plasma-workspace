@@ -2,6 +2,7 @@
 Exec=@CMAKE_INSTALL_PREFIX@/bin/krunner
 Name=KRunner
 Name[ar]=مشغّل.ك
+Name[ast]=KRunner
 Name[az]=KRunner
 Name[be]=KRunner
 Name[bg]=KRunner

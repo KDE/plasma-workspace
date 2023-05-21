@@ -4,6 +4,7 @@ TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
 DesktopNames=KDE
 Name=Plasma (Wayland)
 Name[ar]=بلازما (ويلاند)
+Name[ast]=Plasma (Wayland)
 Name[az]=Plasma (Wayland)
 Name[be]=Plasma (Wayland)
 Name[bg]=Plasma (Wayland)

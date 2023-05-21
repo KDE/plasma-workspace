@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KFontView
 Name[ar]=عارض الخط ك
+Name[ast]=KFontView
 Name[az]=KFontView
 Name[be]=KFontView
 Name[bg]=KFontView
@@ -51,6 +52,7 @@ Type=Application
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;font/collection;
 GenericName=Font Viewer
 GenericName[ar]=عارض الخط
+GenericName[ast]=Visor de fontes
 GenericName[az]=Şriftə baxış vasitəsi
 GenericName[be]=Сродак прагляду шрыфту
 GenericName[bg]=Преглед на шрифтове
