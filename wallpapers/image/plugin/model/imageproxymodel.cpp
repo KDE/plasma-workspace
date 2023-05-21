@@ -68,9 +68,7 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
 
 QHash<int, QByteArray> ImageProxyModel::roleNames() const
 {
-    const auto models = sourceModels();
-
-    if (!models.empty()) {
+    if (const auto models = sourceModels(); !models.empty()) {
         return models.at(0)->roleNames();
     }
 
@@ -86,9 +84,7 @@ int ImageProxyModel::indexOf(const QString &packagePath) const
 {
     int idx = -1;
 
-    const auto models = sourceModels();
-
-    for (const auto &m : models) {
+    for (const auto models{sourceModels()}; auto m : models) {
         idx = static_cast<const AbstractImageListModel *>(m)->indexOf(packagePath);
 
         if (idx >= 0) {
@@ -106,9 +102,7 @@ bool ImageProxyModel::loading() const
 
 void ImageProxyModel::reload()
 {
-    const auto models = sourceModels();
-
-    for (const auto &m : models) {
+    for (const auto models{sourceModels()}; auto m : models) {
         static_cast<AbstractImageListModel *>(m)->reload();
     }
 

@@ -62,10 +62,9 @@ bool SlideModel::setData(const QModelIndex &index, const QVariant &value, int ro
 int SlideModel::indexOf(const QString &packagePath) const
 {
     int idx = -1;
-    const auto models = sourceModels();
 
-    for (const auto &m : models) {
-        idx = static_cast<const ImageProxyModel *>(m)->indexOf(packagePath);
+    for (const auto models{sourceModels()}; auto m : models) {
+        idx = static_cast<ImageProxyModel *>(m)->indexOf(packagePath);
 
         if (idx >= 0) {
             return mapFromSource(m->index(idx, 0)).row();
