@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-16 02:15+0000\n"
-"PO-Revision-Date: 2023-05-03 22:36+0200\n"
+"PO-Revision-Date: 2023-05-14 17:35+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -46,7 +46,7 @@ msgstr ""
 #: filemenu.cpp:193
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Propiedaes"
 
 #: globalshortcuts.cpp:23
 #, kde-format
@@ -177,13 +177,13 @@ msgstr ""
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: package/contents/ui/JobDetails.qml:106
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
-msgstr ""
+msgstr "%2 de %1"
 
 #: package/contents/ui/JobDetails.qml:110
 #, kde-format
@@ -234,13 +234,13 @@ msgstr[1] ""
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #: package/contents/ui/JobItem.qml:163
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:177
 #, kde-format

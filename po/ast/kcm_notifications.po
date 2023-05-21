@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-01 02:34+0000\n"
-"PO-Revision-Date: 2023-05-01 23:55+0200\n"
+"PO-Revision-Date: 2023-05-14 18:23+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -30,7 +30,7 @@ msgstr ""
 #: sourcesmodel.cpp:363
 #, kde-format
 msgid "Other Applications"
-msgstr ""
+msgstr "Otres aplicaciones"
 
 #: ui/ApplicationConfiguration.qml:63
 #, kde-format
@@ -55,7 +55,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Configure Events…"
-msgstr ""
+msgstr "Configurar los eventos…"
 
 #: ui/ApplicationConfiguration.qml:130
 #, kde-format
@@ -237,7 +237,7 @@ msgstr ""
 #: ui/SourcesPage.qml:19
 #, kde-format
 msgid "Application Settings"
-msgstr ""
+msgstr "Configuración de les aplicaciones"
 
 #: ui/SourcesPage.qml:93
 #, kde-format

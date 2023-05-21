@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 02:11+0000\n"
-"PO-Revision-Date: 2023-05-05 22:25+0200\n"
+"PO-Revision-Date: 2023-05-13 23:37+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
 #, kde-format
@@ -52,7 +52,7 @@ msgstr ""
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
-msgstr ""
+msgstr "Nun queda espaciu nesti preséu, desanicia otres buelgues pa siguir."
 
 #: src/fingerprintmodel.cpp:351
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "Prodúxose un error desconocíu."
 #: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
-msgstr ""
+msgstr "Camudar la contraseña"
 
 #: src/ui/ChangePassword.qml:33
 #, kde-format
@@ -87,7 +87,7 @@ msgstr ""
 #: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
-msgstr ""
+msgstr "Les contraseñes han concasar"
 
 #: src/ui/ChangeWalletPassword.qml:16
 #, kde-format
@@ -160,7 +160,7 @@ msgstr ""
 #: src/ui/CreateUser.qml:56
 #, kde-format
 msgid "Password:"
-msgstr ""
+msgstr "Contraseña:"
 
 #: src/ui/CreateUser.qml:61
 #, kde-format
