@@ -211,8 +211,17 @@ ColumnLayout {
                     event.accepted = true;
                     focusCurrentListView()
                 }
-                if (event.key === Qt.Key_Right && runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion && event.key === Qt.Key_Right) {
                     queryField.text = fadedTextCompletion.text
+                }
+            }
+            Keys.onTabPressed: (e) => {
+                if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                    if (queryField.text !== fadedTextCompletion.text) {
+                        queryField.text = fadedTextCompletion.text
+                    } else {
+                        e.accepted = false
+                    }
                 }
             }
             Keys.onUpPressed: move_up()
