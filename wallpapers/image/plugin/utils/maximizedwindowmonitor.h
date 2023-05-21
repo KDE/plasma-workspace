@@ -9,10 +9,9 @@
 #include <memory>
 
 #include <QObject>
+#include <QRect>
 
 #include "tasksmodel.h"
-
-class QRect;
 
 /**
  * This class monitors if there is any maximized or fullscreen window.
@@ -38,7 +37,8 @@ protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 private:
-    class Private;
+    std::shared_ptr<TaskManager::ActivityInfo> m_activityInfo;
+    std::shared_ptr<TaskManager::VirtualDesktopInfo> m_virtualDesktopInfo;
 
-    std::unique_ptr<Private> d;
+    QRect m_geometry;
 };

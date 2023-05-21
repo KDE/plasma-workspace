@@ -7,68 +7,32 @@
 #include "maximizedwindowmonitor.h"
 
 #include <QGuiApplication>
-#include <QScreen>
 
 #include "abstracttasksmodel.h" // For enums
 #include "activityinfo.h"
 #include "virtualdesktopinfo.h"
 
-#include "debug.h"
-
-class MaximizedWindowMonitor::Private
-{
-public:
-    explicit Private(MaximizedWindowMonitor *q);
-
-    void init();
-
-private:
-    Q_DISABLE_COPY(Private);
-
-    MaximizedWindowMonitor *q = nullptr;
-
-    bool m_ready = false;
-
-    TaskManager::ActivityInfo *m_activityInfo = nullptr;
-    TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo = nullptr;
-
-    QRect m_geometry;
-
-    friend class MaximizedWindowMonitor;
-};
-
-MaximizedWindowMonitor::Private::Private(MaximizedWindowMonitor *q)
-    : q(q)
-    , m_activityInfo(new TaskManager::ActivityInfo(q))
-    , m_virtualDesktopInfo(new TaskManager::VirtualDesktopInfo(q))
-{
-}
-
-void MaximizedWindowMonitor::Private::init()
-{
-    q->setSortMode(SortMode::SortActivity);
-    q->setGroupMode(GroupMode::GroupDisabled);
-
-    auto currentActivity = std::bind(&TaskManager::ActivityInfo::currentActivity, m_activityInfo);
-    auto setCurrentActivity = std::bind(&TaskManager::TasksModel::setActivity, q, currentActivity);
-    setCurrentActivity();
-    q->connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged, q, setCurrentActivity);
-
-    auto currentDesktop = std::bind(&TaskManager::VirtualDesktopInfo::currentDesktop, m_virtualDesktopInfo);
-    auto setCurrentDesktop = std::bind(&TaskManager::TasksModel::setVirtualDesktop, q, currentDesktop);
-    setCurrentDesktop();
-    q->connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, q, setCurrentDesktop);
-
-    q->setFilterMinimized(true);
-    q->setFilterByActivity(true);
-    q->setFilterByVirtualDesktop(true);
-}
-
 MaximizedWindowMonitor::MaximizedWindowMonitor(QObject *parent)
     : TaskManager::TasksModel(parent)
-    , d(std::make_unique<Private>(this))
+    , m_activityInfo(activityInfo())
+    , m_virtualDesktopInfo(virtualDesktopInfo())
 {
-    d->init();
+    setSortMode(SortMode::SortActivity);
+    setGroupMode(GroupMode::GroupDisabled);
+
+    auto currentActivity = std::bind(&TaskManager::ActivityInfo::currentActivity, m_activityInfo);
+    auto setCurrentActivity = std::bind(&TaskManager::TasksModel::setActivity, this, currentActivity);
+    setCurrentActivity();
+    connect(m_activityInfo.get(), &TaskManager::ActivityInfo::currentActivityChanged, this, setCurrentActivity);
+
+    auto currentDesktop = std::bind(&TaskManager::VirtualDesktopInfo::currentDesktop, m_virtualDesktopInfo);
+    auto setCurrentDesktop = std::bind(&TaskManager::TasksModel::setVirtualDesktop, this, currentDesktop);
+    setCurrentDesktop();
+    connect(m_virtualDesktopInfo.get(), &TaskManager::VirtualDesktopInfo::currentDesktopChanged, this, setCurrentDesktop);
+
+    setFilterMinimized(true);
+    setFilterByActivity(true);
+    setFilterByVirtualDesktop(true);
 }
 
 MaximizedWindowMonitor::~MaximizedWindowMonitor()
@@ -77,16 +41,16 @@ MaximizedWindowMonitor::~MaximizedWindowMonitor()
 
 QRect MaximizedWindowMonitor::targetRect() const
 {
-    return d->m_geometry;
+    return m_geometry;
 }
 
 void MaximizedWindowMonitor::setTargetRect(const QRect &rect)
 {
-    if (d->m_geometry == rect) {
+    if (m_geometry == rect) {
         return;
     }
 
-    d->m_geometry = rect;
+    m_geometry = rect;
     Q_EMIT targetRectChanged();
 
     invalidateFilter();
@@ -104,7 +68,7 @@ bool MaximizedWindowMonitor::filterAcceptsRow(int sourceRow, const QModelIndex &
     const QRect windowGeometry = sourceIndex.data(TaskManager::AbstractTasksModel::Geometry).toRect();
 
     // Use intersects so the geometry doesn't need be multiplied by devicePixelRatio
-    if (!d->m_geometry.intersects(windowGeometry)) {
+    if (!m_geometry.intersects(windowGeometry)) {
         return false;
     }
 
