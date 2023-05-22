@@ -57,13 +57,13 @@ Q_SIGNALS:
 
 protected:
     friend class SelectedLanguageModel;
-    static QString languageCodeToName(const QString &languageCode);
-    bool isSupportedLanguage(const QString &language) const;
+    static QString getLocaleName(const QLocale &locale);
+    bool isSupportedLocale(const QLocale &locale) const;
 
 private:
     QString exampleHelper(const std::function<QString(const QLocale &)> &func) const;
     RegionAndLangSettings *m_settings{nullptr};
-    QList<QString> m_availableLanguages;
+    QList<QLocale> m_availableLanguages;
     SelectedLanguageModel *m_selectedLanguageModel;
     int m_index = -1;
     bool m_isPreviewExample = false;
@@ -101,7 +101,7 @@ private:
     QString envLanguage() const;
     void saveLanguages();
     RegionAndLangSettings *m_settings = nullptr;
-    QList<QString> m_selectedLanguages;
+    QList<QLocale> m_selectedLanguages;
     bool m_hasImplicitLang = false;
     QString m_unsupportedLanguage;
     KCMRegionAndLang *m_kcm = nullptr;

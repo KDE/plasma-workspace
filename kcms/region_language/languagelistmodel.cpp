@@ -19,21 +19,25 @@ LanguageListModel::LanguageListModel(QObject *parent)
 {
     connect(this, &LanguageListModel::isPreviewExampleChanged, this, &LanguageListModel::exampleChanged);
     connect(m_selectedLanguageModel, &SelectedLanguageModel::exampleChanged, this, &LanguageListModel::exampleChanged);
-    /* explicitly set pt to pt_PT as a workaround for GNU Gettext and CLDR treat the default dialect of 'pt' differently
-     *
-     * see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2478
-     * and https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
-     * for more info on the matter
-     */
-    auto availableLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
-    if (availableLanguages.contains(QStringLiteral("pt"))) {
-        availableLanguages.remove(QStringLiteral("pt"));
-        availableLanguages.insert(QStringLiteral("pt_PT"));
+
+    const auto availableLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
+    for (const QString &availableLanguage : availableLanguages) {
+        /* explicitly set pt to pt_PT as a workaround for GNU Gettext and CLDR treat the default dialect of 'pt' differently
+         *
+         * see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2478
+         * and https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
+         * for more info on the matter
+         */
+        if (availableLanguage.contains(QStringLiteral("pt"))) {
+            m_availableLanguages.emplace_back("pt_PT");
+        } else {
+            m_availableLanguages.emplace_back(availableLanguage);
+        }
     }
 
-    m_availableLanguages = availableLanguages.values();
-    m_availableLanguages.sort();
-    m_availableLanguages.push_front(QStringLiteral("C"));
+    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(), [](const QLocale &a, const QLocale &b) {
+        return a.name() > b.name();
+    });
 }
 
 int LanguageListModel::rowCount(const QModelIndex &parent) const
@@ -50,9 +54,9 @@ QVariant LanguageListModel::data(const QModelIndex &index, int role) const
     }
     switch (role) {
     case NativeName:
-        return languageCodeToName(m_availableLanguages.at(row));
+        return getLocaleName(m_availableLanguages.at(row));
     case LanguageCode:
-        return m_availableLanguages.at(row);
+        return m_availableLanguages.at(row).name();
     case Flag: {
         QString flagCode;
         const QStringList split = QLocale(m_availableLanguages.at(row)).name().split(QLatin1Char('_'));
@@ -71,31 +75,30 @@ QHash<int, QByteArray> LanguageListModel::roleNames() const
     return {{NativeName, QByteArrayLiteral("nativeName")}, {LanguageCode, QByteArrayLiteral("languageCode")}, {Flag, QByteArrayLiteral("flag")}};
 }
 
-QString LanguageListModel::languageCodeToName(const QString &languageCode)
+QString LanguageListModel::getLocaleName(const QLocale &locale)
 {
-    const QLocale locale(languageCode);
     const QString languageName = locale.nativeLanguageName();
 
     if (languageName.isEmpty()) {
-        return languageCode;
+        return locale.name();
     }
 
-    if (languageCode.contains(QLatin1Char('@'))) {
-        return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, languageCode);
+    if (locale.name().contains(QLatin1Char('@'))) {
+        return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, locale.name());
     }
 
     // KDE languageCode got translated by QLocale to a locale code we also have on
     // the list. Currently this only happens with pt that gets translated to pt_BR.
-    if (languageCode == QStringLiteral("pt_BR")) {
+    if (locale.name() == QStringLiteral("pt_BR")) {
         return i18nc("%1 is português in system locale name, Brazil is to distinguish European português and Brazilian português", "%1 (Brazil)", languageName);
     }
 
     return languageName;
 }
 
-bool LanguageListModel::isSupportedLanguage(const QString &language) const
+bool LanguageListModel::isSupportedLocale(const QLocale &locale) const
 {
-    return m_availableLanguages.contains(language);
+    return m_availableLanguages.contains(locale);
 }
 
 int LanguageListModel::currentIndex() const
@@ -205,35 +208,17 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
     m_kcm = kcm;
 
     beginResetModel();
-    if (m_settings->language().isEmpty() && m_settings->isDefaultSetting(SettingType::Lang)) {
-        // no language but have lang
-        m_selectedLanguages = {m_settings->lang()};
-        m_selectedLanguages.first().remove(QStringLiteral(".UTF-8"));
-    } else if (!m_settings->language().isEmpty()) {
-        // have language, ignore lang
-        m_selectedLanguages = m_settings->language().split(QLatin1Char(':'));
-    } else {
-        // have nothing, figure out from env
-        QString lang = envLang();
-        QString language = envLanguage();
-        if (!language.isEmpty()) {
-            QStringList langlist = language.split(QLatin1Char(':'));
-            for (QString &lang : langlist) {
-                lang = lang.split(QLatin1Char('.'))[0];
-            }
-            m_selectedLanguages = langlist;
-        } else if (!lang.isEmpty()) {
-            lang.remove(QStringLiteral(".UTF-8"));
-            m_selectedLanguages = {lang};
-        }
-        m_hasImplicitLang = true;
-        Q_EMIT hasImplicitLangChanged();
+
+    const QStringList languages = m_settings->language().split(':');
+    for (const QString &language : languages) {
+        m_selectedLanguages.push_back(QLocale(language));
     }
+
     endResetModel();
 
     // check for invalid lang
-    if (!m_selectedLanguages.empty() && !m_parent->isSupportedLanguage(m_selectedLanguages.front())) {
-        m_unsupportedLanguage = m_selectedLanguages.front();
+    if (!m_selectedLanguages.empty() && !m_parent->isSupportedLocale(m_selectedLanguages.front())) {
+        m_unsupportedLanguage = m_selectedLanguages.front().name();
         Q_EMIT unsupportedLanguageChanged();
     } else if (!m_unsupportedLanguage.isEmpty()) {
         m_unsupportedLanguage.clear();
@@ -264,13 +249,13 @@ QVariant SelectedLanguageModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    return LanguageListModel::languageCodeToName(m_selectedLanguages.at(row));
+    return LanguageListModel::getLocaleName(m_selectedLanguages.at(row));
 }
 
 bool SelectedLanguageModel::shouldWarnMultipleLang() const
 {
     if (m_selectedLanguages.size() >= 2) {
-        if (m_selectedLanguages.front().startsWith(QLatin1String("en_"))) {
+        if (m_selectedLanguages.front().name().startsWith(QLatin1String("en_"))) {
             return true;
         }
     }
@@ -311,7 +296,9 @@ void SelectedLanguageModel::remove(int index)
 
 void SelectedLanguageModel::addLanguage(const QString &lang)
 {
-    if (lang.isEmpty() || m_selectedLanguages.indexOf(lang) != -1) {
+    QLocale locale(lang);
+
+    if (lang.isEmpty() || m_selectedLanguages.indexOf(locale)) {
         return;
     }
 
@@ -322,7 +309,7 @@ void SelectedLanguageModel::addLanguage(const QString &lang)
         m_hasImplicitLang = false;
         Q_EMIT hasImplicitLangChanged();
     }
-    m_selectedLanguages.push_back(lang);
+    m_selectedLanguages.push_back(locale);
     endResetModel();
     saveLanguages();
     Q_EMIT shouldWarnMultipleLangChanged();
@@ -335,14 +322,15 @@ void SelectedLanguageModel::replaceLanguage(int index, const QString &lang)
         return;
     }
 
-    int existLangIndex = m_selectedLanguages.indexOf(lang);
+    QLocale locale(lang);
+    int existLangIndex = m_selectedLanguages.indexOf(locale);
     // return if no change, but allow change implicit lang to explicit
     if (existLangIndex == index && !m_hasImplicitLang) {
         return;
     }
 
     beginResetModel();
-    m_selectedLanguages[index] = lang;
+    m_selectedLanguages[index] = locale;
     if (!m_hasImplicitLang) {
         // delete duplicate lang
         if (existLangIndex != -1) {
@@ -369,8 +357,8 @@ void SelectedLanguageModel::saveLanguages()
         m_settings->config()->group(QStringLiteral("Formats")).deleteEntry("lang");
         m_settings->config()->group(QStringLiteral("Translations")).deleteEntry("language");
     } else {
-        if (!m_parent->isSupportedLanguage(m_selectedLanguages.front())) {
-            m_unsupportedLanguage = m_selectedLanguages.front();
+        if (!m_parent->isSupportedLocale(m_selectedLanguages.front())) {
+            m_unsupportedLanguage = m_selectedLanguages.front().name();
             Q_EMIT unsupportedLanguageChanged();
         } else {
             if (!m_unsupportedLanguage.isEmpty()) {
@@ -378,14 +366,14 @@ void SelectedLanguageModel::saveLanguages()
                 Q_EMIT unsupportedLanguageChanged();
             }
 
-            auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
+            auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front().name());
             if (glibcLang.has_value()) {
                 m_settings->setLang(glibcLang.value());
             }
         }
         QString languages;
         for (auto i = m_selectedLanguages.cbegin(); i != m_selectedLanguages.cend(); i++) {
-            languages.push_back(*i);
+            languages.push_back(i->name());
             // no ':' at end
             if (i + 1 != m_selectedLanguages.cend()) {
                 languages.push_back(QLatin1Char(':'));
