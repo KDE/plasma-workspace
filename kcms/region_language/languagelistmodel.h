@@ -97,8 +97,6 @@ Q_SIGNALS:
     void unsupportedLanguageChanged();
 
 private:
-    QString envLang() const;
-    QString envLanguage() const;
     void saveLanguages();
     RegionAndLangSettings *m_settings = nullptr;
     QList<QString> m_selectedLanguages;

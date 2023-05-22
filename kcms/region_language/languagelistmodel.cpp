@@ -205,30 +205,19 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
     m_kcm = kcm;
 
     beginResetModel();
-    if (m_settings->language().isEmpty() && m_settings->isDefaultSetting(SettingType::Lang)) {
+    if (m_settings->language().isEmpty()) {
         // no language but have lang
         m_selectedLanguages = {m_settings->lang()};
-        m_selectedLanguages.first().remove(QStringLiteral(".UTF-8"));
-    } else if (!m_settings->language().isEmpty()) {
+    } else {
         // have language, ignore lang
         m_selectedLanguages = m_settings->language().split(QLatin1Char(':'));
-    } else {
-        // have nothing, figure out from env
-        QString lang = envLang();
-        QString language = envLanguage();
-        if (!language.isEmpty()) {
-            QStringList langlist = language.split(QLatin1Char(':'));
-            for (QString &lang : langlist) {
-                lang = lang.split(QLatin1Char('.'))[0];
-            }
-            m_selectedLanguages = langlist;
-        } else if (!lang.isEmpty()) {
-            lang.remove(QStringLiteral(".UTF-8"));
-            m_selectedLanguages = {lang};
-        }
+    }
+
+    if (m_settings->isDefaultSetting(SettingType::Lang)) {
         m_hasImplicitLang = true;
         Q_EMIT hasImplicitLangChanged();
     }
+
     endResetModel();
 
     // check for invalid lang
@@ -403,14 +392,4 @@ bool SelectedLanguageModel::hasImplicitLang() const
 const QString &SelectedLanguageModel::unsupportedLanguage() const
 {
     return m_unsupportedLanguage;
-}
-
-QString SelectedLanguageModel::envLang() const
-{
-    return qEnvironmentVariable("LANG");
-}
-
-QString SelectedLanguageModel::envLanguage() const
-{
-    return qEnvironmentVariable("LANGUAGE");
 }
