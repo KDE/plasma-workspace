@@ -44,6 +44,10 @@
    </group>
    <group name="Translations">
     <entry key="LANGUAGE" name="language" type="String">
+        <code>
+            QString language = QString::fromLocal8Bit(qgetenv("LANGUAGE"));
+        </code>
+        <default code="true">language</default>
     </entry>
   </group>
 </kcfg>
