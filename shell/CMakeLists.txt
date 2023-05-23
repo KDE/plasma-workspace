@@ -53,7 +53,7 @@ set (plasma_shell_SRCS
     ${scripting_SRC}
 )
 
-if (TARGET KUserFeedbackCore)
+if (TARGET KUserFeedbackCoreQt6)
     set(plasma_shell_SRCS
         ${plasma_shell_SRCS}
         userfeedback.cpp
@@ -110,8 +110,8 @@ target_link_libraries(plasmashell
 if (QT_MAJOR_VERSION STREQUAL "6")
     target_link_libraries(plasmashell KF6::ConfigQml)
 endif()
-if (TARGET KUserFeedbackCore)
-    target_link_libraries(plasmashell KUserFeedbackCore)
+if (TARGET KUserFeedbackCoreQt6)
+    target_link_libraries(plasmashell KUserFeedbackCoreQt6)
     target_compile_definitions(plasmashell PRIVATE -DWITH_KUSERFEEDBACKCORE)
 endif()
 
