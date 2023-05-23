@@ -61,10 +61,8 @@ Feedback::~Feedback() = default;
 
 void Feedback::programFinished(int exitCode)
 {
-    auto mo = KUserFeedback::Provider::staticMetaObject;
-    const int modeEnumIdx = mo.indexOfEnumerator("TelemetryMode");
-    Q_ASSERT(modeEnumIdx >= 0);
-    const auto modeEnum = mo.enumerator(modeEnumIdx);
+    const auto modeEnum = QMetaEnum::fromType<KUserFeedback::Provider::TelemetryMode>();
+    Q_ASSERT(modeEnum.isValid());
 
     QProcess *p = qobject_cast<QProcess *>(sender());
     const QString program = p->program();
