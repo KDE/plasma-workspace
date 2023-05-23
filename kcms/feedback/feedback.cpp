@@ -71,7 +71,7 @@ void Feedback::programFinished(int exitCode)
 
     QTextStream stream(p);
     for (QString line; stream.readLineInto(&line);) {
-        int sepIdx = line.indexOf(QLatin1String(": "));
+        auto sepIdx = line.indexOf(QLatin1String(": "));
         if (sepIdx < 0) {
             break;
         }
