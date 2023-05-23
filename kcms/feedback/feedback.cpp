@@ -95,8 +95,10 @@ void Feedback::programFinished(int exitCode)
         }
     }
     std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {
-        const QJsonObject objL(valueL.toObject()), objR(valueR.toObject());
-        const auto modeL = objL["mode"].toInt(), modeR = objR["mode"].toInt();
+        const QJsonObject objL(valueL.toObject());
+        const QJsonObject objR(valueR.toObject());
+        const auto modeL = objL["mode"].toInt();
+        const auto modeR = objR["mode"].toInt();
         return modeL < modeR || (modeL == modeR && objL["description"].toString() < objR["description"].toString());
     });
     Q_EMIT feedbackSourcesChanged();
