@@ -47,7 +47,7 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
     for (const auto &exec : s_programs.keys()) {
-        QProcess *p = new QProcess(this);
+        auto p = new QProcess(this);
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
@@ -63,7 +63,7 @@ void Feedback::programFinished(int exitCode)
     const auto modeEnum = QMetaEnum::fromType<KUserFeedback::Provider::TelemetryMode>();
     Q_ASSERT(modeEnum.isValid());
 
-    QProcess *p = qobject_cast<QProcess *>(sender());
+    auto p = qobject_cast<QProcess *>(sender());
     const QString program = p->program();
 
     if (exitCode) {
