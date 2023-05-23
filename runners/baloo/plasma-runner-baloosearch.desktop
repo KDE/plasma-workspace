@@ -79,6 +79,7 @@ Comment[ta]=கோப்புகளை பெயரின் மற்றும
 Comment[tr]=Dosyaları ada ve içeriğe göre arar
 Comment[uk]=Виконує пошук файлів за назвою і вмістом
 Comment[x-test]=xxSearches for files by name and contentxx
+Comment[zh_CN]=按名称和内容搜索文件
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=baloo
