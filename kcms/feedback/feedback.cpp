@@ -56,8 +56,6 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
     }
 }
 
-Feedback::~Feedback() = default;
-
 void Feedback::programFinished(int exitCode)
 {
     const auto modeEnum = QMetaEnum::fromType<KUserFeedback::Provider::TelemetryMode>();
