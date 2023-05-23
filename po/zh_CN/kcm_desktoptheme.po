@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-01 02:34+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_desktoptheme.pot\n"
-"X-Crowdin-File-ID: 4201\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_desktoptheme.pot\n"
+"X-Crowdin-File-ID: 43157\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -130,7 +130,7 @@ msgstr "编辑主题…"
 #: ui/main.qml:124
 #, kde-format
 msgid "Remove Theme"
-msgstr "删除主题"
+msgstr "移除主题"
 
 #: ui/main.qml:131
 #, kde-format
@@ -150,12 +150,9 @@ msgstr "获取新 Plasma 视觉风格…"
 #: ui/main.qml:192
 #, kde-format
 msgid "Open Theme"
-msgstr "打开主题"
+msgstr "打开 Plasma 主题包"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "您可以在此模块中选择 Plasma 视觉风格。"
+msgstr "Plasma 主题包文件 (*.zip *.tar.gz *.tar.bz2)"

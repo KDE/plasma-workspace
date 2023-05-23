@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-17 02:05+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_applet_org.kde."
 "plasma.digitalclock.pot\n"
-"X-Crowdin-File-ID: 4282\n"
+"X-Crowdin-File-ID: 43039\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -281,8 +281,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
-"提示：如果您经常旅行，可以将您的主时区重复添加一次到此列表中。它只会在系统全"
-"局时区被改为其他时区时显示。"
+"提示：如果您经常旅行，可在此列表中额外添加一个您的主时区。它将只在系统全局时"
+"区发生了变化时显示。"
 
 #: package/contents/ui/configTimeZones.qml:103
 #, kde-format
@@ -324,8 +324,8 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"添加更多时区后，时钟小程序的悬停信息和下拉面板将显示所有时区的时间。您还可以"
-"让时钟小程序改为显示其中一个时区的时间。"
+"添加多个时区后，时钟小程序的悬停信息和下拉面板将显示所有时区的时间。您还可以"
+"让时钟小程序显示其中一个时区的时间。"
 
 #: package/contents/ui/configTimeZones.qml:157
 #, kde-format

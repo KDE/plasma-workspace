@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-29 02:20+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/"
 "plasma_runner_calculatorrunner.pot\n"
-"X-Crowdin-File-ID: 4271\n"
+"X-Crowdin-File-ID: 43635\n"
 
 #: calculatorrunner.cpp:33
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "计算 :q: 的值，:q: 由数字和诸如 +、-、/、*、! 和 ^ 等�
 #: calculatorrunner.cpp:38
 #, kde-format
 msgid "Enter a common math function"
-msgstr ""
+msgstr "输入一个常见的数学函数"
 
 #: calculatorrunner.cpp:40
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-01 02:34+0000\n"
-"PO-Revision-Date: 2023-02-24 12:44\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,13 +14,13 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_style.pot\n"
-"X-Crowdin-File-ID: 11833\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_style.pot\n"
+"X-Crowdin-File-ID: 43787\n"
 
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr "%1 不是有效的 GTK 主题归档。"
+msgstr "%1 并非有效的 GTK 应用程序风格包。"
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "单选按钮"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -128,32 +128,32 @@ msgstr "菜单图标"
 #: ui/EffectSettingsPopup.qml:56
 #, kde-format
 msgid "Main toolbar label:"
-msgstr "主工具栏项文字："
+msgstr "主工具栏文字标签："
 
 #: ui/EffectSettingsPopup.qml:58
 #, kde-format
 msgid "None"
-msgstr "无文字"
+msgstr "不显示"
 
 #: ui/EffectSettingsPopup.qml:59
 #, kde-format
 msgid "Text only"
-msgstr "只显示文字"
+msgstr "仅显示文字"
 
 #: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Beside icons"
-msgstr "文字在图标旁"
+msgstr "显示在图标一侧"
 
 #: ui/EffectSettingsPopup.qml:61
 #, kde-format
 msgid "Below icon"
-msgstr "文字在图标下"
+msgstr "显示在图标下方"
 
 #: ui/EffectSettingsPopup.qml:76
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr "副工具栏项文字："
+msgstr "副工具栏文字标签："
 
 #: ui/GtkStylePage.qml:18
 #, kde-format
@@ -183,12 +183,12 @@ msgstr "获取新 GNOME/GTK 应用程序风格…"
 #: ui/GtkStylePage.qml:109
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr "选择 GTK 主题存档"
+msgstr "选择 GTK 应用程序风格包"
 
 #: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "GTK 主题存档 (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK 应用程序风格包 (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:82
 #, kde-format
@@ -204,8 +204,3 @@ msgstr "配置图标和工具栏"
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "配置 GNOME/GTK 应用程序风格…"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr "您可以在此模块中调整用户界面元素的视觉风格。"

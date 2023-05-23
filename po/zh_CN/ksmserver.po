@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 02:13+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/ksmserver.pot\n"
-"X-Crowdin-File-ID: 4302\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/ksmserver.pot\n"
+"X-Crowdin-File-ID: 43305\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -39,6 +39,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"没有 $HOME 目录的写入权限 (%1)。如果这是有意为之，\n"
+"请在环境变量中设置 <envar>KDE_HOME_READONLY=1</envar>。"
 
 #: main.cpp:88
 #, kde-format
@@ -146,12 +148,12 @@ msgstr "注销"
 #: server.cpp:891
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "关机"
 
 #: server.cpp:896
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "重启"
 
 #: server.cpp:902
 #, kde-format
@@ -159,8 +161,7 @@ msgid "Log Out Without Confirmation"
 msgstr "注销而无需确认"
 
 #: server.cpp:907
-#, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
+#, kde-format
 msgid "Shut Down Without Confirmation"
 msgstr "关机而无需确认"
 
@@ -168,6 +169,3 @@ msgstr "关机而无需确认"
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "重启而无需确认"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "没有 $HOME 目录的写入权限 (%1)。"
