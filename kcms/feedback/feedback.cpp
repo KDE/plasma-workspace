@@ -46,14 +46,13 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
 {
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
-    QVector<QProcess *> processes;
     for (const auto &exec : s_programs.keys()) {
         QProcess *p = new QProcess(this);
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
         connect(p, &QProcess::finished, this, &Feedback::programFinished);
-        processes << p;
+        // deleted by finished slot
     }
 }
 
