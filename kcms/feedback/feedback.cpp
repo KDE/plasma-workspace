@@ -80,7 +80,7 @@ void Feedback::programFinished(int exitCode)
         }
 
         const QString mode = line.left(sepIdx);
-        bool ok;
+        bool ok = false;
         const int modeValue = modeEnum.keyToValue(qPrintable(mode), &ok);
         if (!ok) {
             qCWarning(KCM_FEEDBACK_DEBUG) << "error:" << mode << "is not a valid mode";
