@@ -92,10 +92,9 @@ void Feedback::programFinished(int exitCode)
     }
     p->deleteLater();
     m_feedbackSources = {};
-    for (auto it = m_uses.constBegin(), itEnd = m_uses.constEnd(); it != itEnd; ++it) {
-        const auto modeUses = *it;
-        for (auto itMode = modeUses.constBegin(), itModeEnd = modeUses.constEnd(); itMode != itModeEnd; ++itMode) {
-            m_feedbackSources << QJsonObject({{"mode", it.key()}, {"icons", *itMode}, {"description", itMode.key()}});
+    for (const auto &[mode, modeUses] : m_uses.asKeyValueRange()) {
+        for (const auto &[description, icon] : modeUses.asKeyValueRange()) {
+            m_feedbackSources << QJsonObject({{"mode", mode}, {"icons", icon}, {"description", description}});
         }
     }
     std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {
@@ -120,13 +119,13 @@ FeedbackSettings *Feedback::feedbackSettings() const
 QJsonArray Feedback::audits() const
 {
     QJsonArray ret;
-    for (auto it = s_programs.constBegin(); it != s_programs.constEnd(); ++it) {
+    for (const auto &[program, info] : s_programs.asKeyValueRange()) {
         QString feedbackLocation =
-            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
+            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + info.kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
 
         if (QFileInfo::exists(feedbackLocation)) {
             ret += QJsonObject{
-                {"program", it.key()},
+                {"program", program},
                 {"audits", feedbackLocation},
             };
         }
