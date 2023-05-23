@@ -46,9 +46,9 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
 {
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
-    for (const auto &exec : s_programs.keys()) {
+    for (const auto &[program, _] : s_programs.asKeyValueRange()) {
         auto p = new QProcess(this);
-        p->setProgram(exec);
+        p->setProgram(program);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
         connect(p, &QProcess::finished, this, &Feedback::programFinished);
