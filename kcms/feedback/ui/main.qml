@@ -178,7 +178,7 @@ SimpleKCM {
                     horizontalAlignment: Text.AlignLeft
                     Kirigami.FormData.label: model.index === 0 ? i18n("View sent data:") : ""
                     text: modelData.program
-                    onClicked: Qt.openUrlExternally(modelData.audits)
+                    onClicked: Qt.openUrlExternally("file://" + modelData.audits)
                 }
             }
         }
