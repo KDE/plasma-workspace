@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-12-20 11:30-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -27,14 +27,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Forçar DPI das fontes no Wayland"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "Forçar DPI das fontes no X11"
@@ -342,12 +336,12 @@ msgstr ""
 "pequenos. Sugestões mais fortes geralmente levam a bordas mais nítidas, mas "
 "as letras pequenas se parecem menos com sua forma em tamanhos grandes."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forçar DPI das fontes:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -365,10 +359,13 @@ msgstr ""
 "altere o tamanho das fontes acima. Para escalar tudo, use o controle "
 "deslizante de escala na página <interface>Tela e monitor</interface>.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Selecionar fonte"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Forçar DPI das fontes no Wayland"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "Este módulo permite que você configure as fontes do sistema."

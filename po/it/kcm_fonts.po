@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-04-12 03:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -23,14 +23,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Forza DPI dei caratteri Wayland"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "Forza DPI dei caratteri su X11"
@@ -340,12 +334,12 @@ msgstr ""
 "ridotte. Un hinting più forte generalmente porta a bordi più nitidi, ma le "
 "lettere minuscole assomigliano meno alla loro forma a grandi dimensioni."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forza DPI dei caratteri:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -365,10 +359,13 @@ msgstr ""
 "tutto, usa il cursore di ridimensionamento nella pagina <interface>Schermo e "
 "video</interface>.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Seleziona carattere"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Forza DPI dei caratteri Wayland"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "Questo modulo ti permette di configurare i caratteri di sistema."

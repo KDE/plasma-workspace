@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2009-01-06 14:24+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -20,14 +20,8 @@ msgstr ""
 "X-Poedit-Language: Kurdish\n"
 "X-Poedit-SourceCharset: utf8\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr ""
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr ""
@@ -337,12 +331,12 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr ""
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -354,7 +348,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr ""

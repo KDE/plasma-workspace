@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-04-12 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,14 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Wayland-ზე ფონტის DPI-ის ძალით დაყენება"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "X11-ზე ფონტის DPI-ის ძალით დაყენება"
@@ -331,12 +325,12 @@ msgstr ""
 "ჩაშენებული. უფრო ძლიერი ჰინტინგი ძირითადად წამახულ წიბოებს გამოხატავს, "
 "მაგრამ პატარა ასოები მათ უფრო დიდ ვარიანტებს ნაკლებად წააგვანან."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "ფონტის DPI-ის ძალით დაყენება:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -355,10 +349,13 @@ msgstr ""
 "ზემოთ. ყველაფრის მასშტაბირებისთვის გამოიყენეთ ჩოჩია<interface>ეკრანისა და "
 "ჩვენების </interface> გვერდზე.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "აირჩიეთ ფონტი"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Wayland-ზე ფონტის DPI-ის ძალით დაყენება"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "ეს მოდული საშუალებას გაძლევთ მოირგოთ სისტემური ფონტები."

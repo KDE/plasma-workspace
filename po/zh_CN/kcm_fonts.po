@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,14 +17,8 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_fonts.pot\n"
 "X-Crowdin-File-ID: 43597\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "强制 Wayland 字体 DPI"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "强制 X11 字体 DPI"
@@ -320,12 +314,12 @@ msgstr ""
 "字体的轮廓就越清晰，但形状的准确性也会变差，导致小字体和大字体的视觉效果存在"
 "差异。"
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "强制字体 DPI："
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -342,7 +336,10 @@ msgstr ""
 "小。如果需要缩放所有内容，请使用<interface>显卡与显示器</interface>页面的缩放"
 "滑动条。</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "强制 Wayland 字体 DPI"

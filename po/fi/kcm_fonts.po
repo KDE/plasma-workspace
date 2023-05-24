@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-11-11 22:17+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,14 +29,8 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:21+0000\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Pakota fontin DPI (Wayland)"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "Pakota fontin DPI X11:ssä"
@@ -339,12 +333,12 @@ msgstr ""
 "vihjeistys johtaa yleensä terävämpiin reunoihin, mutta pienet kirjaimet "
 "muistuttavat muodoltaan vähemmän suurikokoisia vastineitaan."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Pakota fontin DPI:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -360,10 +354,13 @@ msgstr ""
 "muuttaminen voi aiheuttaa ongelmia: kuvakkeet tai kuvat eivät esimerkiksi "
 "skaalaudu odotetusti.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Valitse fontti"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Pakota fontin DPI (Wayland)"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "Tässä voit asettaa järjestelmän fontit."

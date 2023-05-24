@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2021-06-08 22:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -18,14 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "ਫੋਂਟ DPI ਵੇਲੈਂਡ ਲਈ ਮਜ਼ਬੂਰ"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, fuzzy, kde-format
 #| msgid "Force font DPI X11"
 msgid "Force font DPI on X11"
@@ -310,12 +304,12 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "ਫੋਂਟ DPI ਲਈ ਮਜ਼ਬੂਰ:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -327,10 +321,13 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "ਫੋਂਟ ਚੁਣੋ"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "ਫੋਂਟ DPI ਵੇਲੈਂਡ ਲਈ ਮਜ਼ਬੂਰ"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "ਇਹ ਮੋਡਿਊਲ ਤੁਹਾਨੂੰ ਸਿਸਟਮ ਫ਼ੋਂਟ ਸੰਰਚਨਾ ਕਰਨ ਲਈ ਹੈ।"

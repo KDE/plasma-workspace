@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-04-12 21:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,14 +17,8 @@ msgstr ""
 "X-Generator: Lokalize 23.03.90\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Fortia DPI de font Wayland"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "Fortia DPI de font sur X11"
@@ -333,12 +327,12 @@ msgstr ""
 "plus acuminate ma le parve litteras resimilira minus lor forma a proximitate "
 "con le grandores grande. "
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Fortia DPI de font:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -356,10 +350,13 @@ msgstr ""
 "grandor de fontes supra. Per scalar toto, usa le glissator de scalar sur le "
 "pagina de <interface>Monstrator & Monitor</interface>.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Selectiona le Font"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Fortia DPI de font Wayland"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "Iste modulo te permitte configurar le fontes de systema."

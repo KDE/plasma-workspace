@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 02:15+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-10-28 00:38+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tpr@d5k.net, mikko.piippo@helsinki.fi, translator@legisign.org"
 
-#: main.cpp:79 view.cpp:43
+#: main.cpp:79 view.cpp:40
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"

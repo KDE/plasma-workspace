@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2020-10-25 19:45+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -22,14 +22,8 @@ msgstr ""
 "X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Fontidele DPI määramine Waylandi puhul"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, fuzzy, kde-format
 #| msgid "Force font DPI X11"
 msgid "Force font DPI on X11"
@@ -340,12 +334,12 @@ msgstr ""
 "Tugevama varjundamisega saab üldjuhul teravamad servad, aga suuremate "
 "kirjasuuruste puhul ka oma õigest kujust mõnevõrra hälbivad väikesed tähed."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Fontide määratud DPI:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -357,10 +351,13 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Fondi valimine"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Fontidele DPI määramine Waylandi puhul"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "See moodul võimaldab seadistada süsteemi fonte."

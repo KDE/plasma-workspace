@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-12-26 04:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -26,14 +26,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "強制指定字型 DPI (Wayland)"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "強制指定字型 DPI (X11)"
@@ -330,12 +324,12 @@ msgstr ""
 "字體時），較強的微調通常會讓字體筆畫邊緣更加鮮明，但小號字體的形狀將與大號字"
 "體明顯不同。"
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "強制指定字型 DPI："
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -351,10 +345,13 @@ msgstr ""
 "para><para>若要使文字變大，請修改上方的字型大小。若要改變所有東西的大小，請在"
 "<interface>顯示與螢幕</interface>頁面中調整縮放比例。</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "選擇字型"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "強制指定字型 DPI (Wayland)"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "此模組能讓您設定系統字型。"

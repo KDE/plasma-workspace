@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2022-03-29 20:42+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -19,14 +19,8 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "फ़ॉन्ट्स डीपीआई बाध्य करें:"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "फ़ॉन्ट्स डीपीआई एक्स ११ पर बाध्य करें:"
@@ -330,12 +324,12 @@ msgstr ""
 "प्रतिपादन गुणवत्ता को बढ़ाने के लिए किया जाता है। मजबूत हिंटिंग आम तौर पर तेज किनारों की "
 "ओर ले जाते हैं लेकिन छोटे अक्षरों की आकृती बड़े आकार में उनके आकृती से कम मिलते-जुलते होंगे।"
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "फ़ॉन्ट डीपीआई बाध्य करें:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -353,10 +347,13 @@ msgstr ""
 "बदलने के लिए, <interface>प्रदर्शक और मॉनिटर </interface>पेज पर स्केलिंग स्लाइडर का "
 "उपयोग करें।</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "फ़ॉन्ट्स डीपीआई बाध्य करें:"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "यह मॉड्यूल आपको सिस्टम फोंट को विन्यस्त करने देता है ।"

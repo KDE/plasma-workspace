@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1650806 $
+# Version: $Revision: 1652367 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 02:20+0000\n"
+"POT-Creation-Date: 2023-05-24 02:08+0000\n"
 "PO-Revision-Date: 2023-04-10 11:11+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -24,14 +24,8 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Wymuś DPI czcionek na Waylandzie"
-
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
+#: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
 msgstr "Wymuś DPI czcionek na X11"
@@ -339,12 +333,12 @@ msgstr ""
 "litery będą mniej przypominać swój kształt względem tego z większych "
 "rozmiarów."
 
-#: ui/main.qml:377
+#: ui/main.qml:380
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Wymuś DPI czcionek:"
 
-#: ui/main.qml:419
+#: ui/main.qml:408
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -363,10 +357,13 @@ msgstr ""
 "wszystko, użyj suwaka skalowania na stronie <interface>Wyświetlanie i "
 "monitor</interface>.</para>"
 
-#: ui/main.qml:425
+#: ui/main.qml:414
 #, kde-format
 msgid "Select Font"
 msgstr "Wybierz czcionkę"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Wymuś DPI czcionek na Waylandzie"
 
 #~ msgid "This module lets you configure the system fonts."
 #~ msgstr "Ten moduł umożliwia określenie czcionek systemowych."
