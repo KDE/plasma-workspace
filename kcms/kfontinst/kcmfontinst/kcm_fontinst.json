@@ -134,5 +134,6 @@
     "X-KDE-Keywords[vi]": "font,fonts,phông chữ,installer,trình cài đặt,truetype,type1,bitmap,bản đồ bit",
     "X-KDE-Keywords[x-test]": "xxfontxx,xxfontsxx,xxinstallerxx,xxtruetypexx,xxtype1xx,xxbitmapxx",
     "X-KDE-Keywords[zh_CN]": "font,fonts,installer,truetype,type1,bitmap,字体,字体族,安装器,安装程序,点阵",
-    "X-KDE-System-Settings-Parent-Category": "appearance"
+    "X-KDE-System-Settings-Parent-Category": "appearance",
+    "X-KDE-Weight": 51
 }
