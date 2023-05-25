@@ -184,7 +184,7 @@ If it is turned off, the selection may still be saved in the clipboard history (
 
     layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
 
-    m_settingsSaved = false;
+    m_havePrevAlwaysImageTextConfig = false;
 }
 
 void GeneralWidget::updateWidgets()
@@ -200,6 +200,15 @@ void GeneralWidget::updateWidgets()
     }
 }
 
+void GeneralWidget::initWidgetStates()
+{
+    Q_ASSERT(!m_havePrevAlwaysImageTextConfig);
+    // During dialog setup, disable / change some widgets according to current settings to achieve the same
+    // internal consistency as settings changes made by the user after opening the dialog.
+    slotWidgetModified();
+    m_havePrevAlwaysImageTextConfig = false;
+}
+
 void GeneralWidget::slotWidgetModified()
 {
     // A setting widget has been changed.  Update the state of
@@ -210,15 +219,15 @@ void GeneralWidget::slotWidgetModified()
         m_alwaysTextRb->setEnabled(true);
         m_copiedTextRb->setEnabled(true);
 
-        if (m_settingsSaved) {
+        if (m_havePrevAlwaysImageTextConfig) {
             m_alwaysTextRb->setChecked(m_prevAlwaysText);
             m_alwaysImageRb->setChecked(m_prevAlwaysImage);
-            m_settingsSaved = false;
+            m_havePrevAlwaysImageTextConfig = false;
         }
     } else {
         m_prevAlwaysText = m_alwaysTextRb->isChecked();
         m_prevAlwaysImage = m_alwaysImageRb->isChecked();
-        m_settingsSaved = true;
+        m_havePrevAlwaysImageTextConfig = true;
 
         if (m_alwaysImageRb->isChecked()) {
             m_copiedImageRb->setChecked(true);
@@ -602,6 +611,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
+    m_generalPage->initWidgetStates();
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();

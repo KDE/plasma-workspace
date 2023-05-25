@@ -33,6 +33,7 @@ public:
     ~GeneralWidget() override = default;
 
     void updateWidgets();
+    void initWidgetStates();
 
 Q_SIGNALS:
     void widgetChanged();
@@ -53,7 +54,7 @@ private:
 
     KPluralHandlingSpinBox *m_historySizeSb;
 
-    bool m_settingsSaved;
+    bool m_havePrevAlwaysImageTextConfig;
     bool m_prevAlwaysImage;
     bool m_prevAlwaysText;
 };
