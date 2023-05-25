@@ -117,9 +117,11 @@ ColumnLayout {
 
         PlasmaComponents3.Label {
             anchors.fill: parent
+            leftPadding: PlasmaCore.Units.gridUnit * 2
+            rightPadding: PlasmaCore.Units.gridUnit * 2
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("The QR code is too large to be displayed")
+            text: i18n("There is not enough space to display the QR code. Try resizing this applet.")
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
         }
