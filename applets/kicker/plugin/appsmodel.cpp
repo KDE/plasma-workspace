@@ -191,6 +191,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     }
 
     AbstractEntry *entry = m_entryList.at(row);
+    const QString hiddenConfigEntryName = QStringLiteral("hiddenApplications");
 
     if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::RunnableType) {
         QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
@@ -199,19 +200,19 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
-            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(hiddenConfigEntryName)) {
+            QStringList hiddenApps = appletConfig->value(hiddenConfigEntryName).toStringList();
 
             KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
 
             if (!hiddenApps.contains(service->menuId())) {
                 hiddenApps << service->menuId();
 
-                appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
+                appletConfig->insert(hiddenConfigEntryName, hiddenApps);
                 QMetaObject::invokeMethod(appletConfig,
                                           "valueChanged",
                                           Qt::DirectConnection,
-                                          Q_ARG(QString, QStringLiteral("hiddenApplications")),
+                                          Q_ARG(QString, hiddenConfigEntryName),
                                           Q_ARG(QVariant, hiddenApps));
 
                 refresh();
@@ -228,19 +229,15 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
-            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(hiddenConfigEntryName)) {
+            QStringList hiddenApps = appletConfig->value(hiddenConfigEntryName).toStringList();
 
             for (const QString &app : std::as_const(m_hiddenEntries)) {
                 hiddenApps.removeOne(app);
             }
 
-            appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
-            QMetaObject::invokeMethod(appletConfig,
-                                      "valueChanged",
-                                      Qt::DirectConnection,
-                                      Q_ARG(QString, QStringLiteral("hiddenApplications")),
-                                      Q_ARG(QVariant, hiddenApps));
+            appletConfig->insert(hiddenConfigEntryName, hiddenApps);
+            QMetaObject::invokeMethod(appletConfig, "valueChanged", Qt::DirectConnection, Q_ARG(QString, hiddenConfigEntryName), Q_ARG(QVariant, hiddenApps));
 
             m_hiddenEntries.clear();
 
@@ -257,26 +254,22 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (entry->type() == AbstractEntry::GroupType && appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
+        if (entry->type() == AbstractEntry::GroupType && appletConfig && appletConfig->contains(hiddenConfigEntryName)) {
             const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
             if (!appsModel) {
                 return false;
             }
 
-            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
+            QStringList hiddenApps = appletConfig->value(hiddenConfigEntryName).toStringList();
 
             const QStringList hiddenEntries = appsModel->hiddenEntries();
             for (const QString &app : hiddenEntries) {
                 hiddenApps.removeOne(app);
             }
 
-            appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
-            QMetaObject::invokeMethod(appletConfig,
-                                      "valueChanged",
-                                      Qt::DirectConnection,
-                                      Q_ARG(QString, QStringLiteral("hiddenApplications")),
-                                      Q_ARG(QVariant, hiddenApps));
+            appletConfig->insert(hiddenConfigEntryName, hiddenApps);
+            QMetaObject::invokeMethod(appletConfig, "valueChanged", Qt::DirectConnection, Q_ARG(QString, hiddenConfigEntryName), Q_ARG(QVariant, hiddenApps));
 
             refresh();
 

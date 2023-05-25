@@ -16,19 +16,13 @@
 #include "utils/maximizedwindowmonitor.h"
 #include "utils/mediaproxy.h"
 
-const auto pluginName = QByteArrayLiteral("org.kde.plasma.wallpapers.image");
-
-void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *)
 {
-    Q_ASSERT(uri == pluginName);
-
     engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
 }
 
 void ImagePlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == pluginName);
-
     qRegisterMetaType<KFileItem>(); // For image preview
     qRegisterMetaType<MediaMetadata>(); // For image preview
 
@@ -39,7 +33,8 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
 
-    qmlRegisterUncreatableMetaObject(Provider::staticMetaObject, uri, 2, 0, "Provider", QStringLiteral("error: only enums"));
-    qmlRegisterUncreatableMetaObject(BackgroundType::staticMetaObject, uri, 2, 0, "BackgroundType", QStringLiteral("error: only enums"));
-    qmlRegisterUncreatableMetaObject(SortingMode::staticMetaObject, uri, 2, 0, "SortingMode", QStringLiteral("error: only enums"));
+    const QString reason = QStringLiteral("error: only enums");
+    qmlRegisterUncreatableMetaObject(Provider::staticMetaObject, uri, 2, 0, "Provider", reason);
+    qmlRegisterUncreatableMetaObject(BackgroundType::staticMetaObject, uri, 2, 0, "BackgroundType", reason);
+    qmlRegisterUncreatableMetaObject(SortingMode::staticMetaObject, uri, 2, 0, "SortingMode", reason);
 }

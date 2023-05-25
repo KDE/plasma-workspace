@@ -25,6 +25,11 @@
 
 #include "debug.h"
 
+namespace
+{
+static const QString s_wallpaperPackageName = QStringLiteral("Wallpaper/Images");
+}
+
 MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
@@ -57,7 +62,7 @@ void MediaProxy::componentComplete()
     // Follow system color scheme
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
 
-    auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+    auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
     package.setPath(m_source.toLocalFile());
 
     updateModelImage(package);
@@ -97,7 +102,7 @@ void MediaProxy::setSource(const QString &url)
 
     KPackage::Package package;
     if (m_providerType == Provider::Type::Package) {
-        package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
         package.setPath(m_source.toLocalFile());
     }
 
@@ -125,7 +130,7 @@ void MediaProxy::setTargetSize(const QSize &size)
     Q_EMIT targetSizeChanged(size);
 
     if (m_providerType == Provider::Type::Package) {
-        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
         package.setPath(m_source.toLocalFile());
 
         determineBackgroundType(package); // In case file format changes after size changes
@@ -153,7 +158,7 @@ void MediaProxy::openModelImage()
     }
 
     case Provider::Type::Package: {
-        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
         package.setPath(m_source.toLocalFile());
 
         url = findPreferredImageInPackage(package);
@@ -184,7 +189,7 @@ void MediaProxy::useSingleImageDefaults()
     KConfigGroup lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage.filePath("defaults")), "Wallpaper");
 
     const QString image = lnfDefaultsConfig.readEntry("Image", "");
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
 
     if (!image.isEmpty()) {
         package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image, QStandardPaths::LocateDirectory));
@@ -249,7 +254,7 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     m_isDarkColorScheme = dark;
 
     if (m_providerType == Provider::Type::Package) {
-        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        auto package = KPackage::PackageLoader::self()->loadPackage(s_wallpaperPackageName);
         package.setPath(m_source.toLocalFile());
         updateModelImageWithoutSignal(package);
     }

@@ -65,13 +65,14 @@ void IconApplet::configChanged()
 
 void IconApplet::populate()
 {
-    m_url = config().readEntry(QStringLiteral("url"), QUrl());
+    const QString entryName = QStringLiteral("url");
+    m_url = config().readEntry(entryName, QUrl());
 
     if (!m_url.isValid()) {
         // the old applet that used a QML plugin and stored its url
         // in plasmoid.configuration.url had its entries stored in [Configuration][General]
         // so we look here as well to provide an upgrade path
-        m_url = config().group("General").readEntry(QStringLiteral("url"), QUrl());
+        m_url = config().group("General").readEntry(entryName, QUrl());
     }
 
     // our backing desktop file already exists? just read all the things from it
