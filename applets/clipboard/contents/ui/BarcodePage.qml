@@ -38,17 +38,14 @@ ColumnLayout {
 
             Component {
                 id: menuItemComponent
-                PlasmaExtras.MenuItem { }
+                PlasmaComponents3.MenuItem { }
             }
 
-            PlasmaExtras.Menu {
+            PlasmaComponents3.Menu {
                 id: menu
-                visualParent: configureButton
-                placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
-                onStatusChanged: {
-                    if (status == PlasmaExtras.DialogStatus.Closed) {
-                        configureButton.checked = false;
-                    }
+
+                onClosed: {
+                    configureButton.checked = false;
                 }
 
                 Component.onCompleted: {
@@ -63,6 +60,7 @@ ColumnLayout {
                         let menuItem = menuItemComponent.createObject(menu, {
                             text: item.text,
                             checkable: true,
+                            autoExclusive: true,
                             checked: Qt.binding(() => {
                                 return barcodeItem.barcodeType === item.type;
                             })
@@ -71,7 +69,7 @@ ColumnLayout {
                             barcodeItem.barcodeType = item.type;
                             Plasmoid.configuration.barcodeType = item.type;
                         });
-                        menu.addMenuItem(menuItem);
+                        menu.addItem(menuItem);
                     });
                 }
             }
@@ -83,7 +81,7 @@ ColumnLayout {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: i18n("Change the QR code type")
 
-                onClicked: menu.openRelative()
+                onClicked: menu.popup()
 
                 PlasmaComponents3.ToolTip {
                     text: parent.text
