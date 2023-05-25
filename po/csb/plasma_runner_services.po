@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:48+0000\n"
+"POT-Creation-Date: 2023-05-25 02:02+0000\n"
 "PO-Revision-Date: 2009-06-13 21:38+0200\n"
 "Last-Translator: Michôł Òstrowsczi <michol@linuxcsb.org>\n"
 "Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: servicerunner.cpp:368
+#: servicerunner.cpp:372
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -26,7 +26,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr ""
 
-#: servicerunner.cpp:413
+#: servicerunner.cpp:416
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "SZëkô za aplikacëjama, chtërnëch miono abò òpisënk szlachùje za :q:"

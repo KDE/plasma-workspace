@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:48+0000\n"
+"POT-Creation-Date: 2023-05-25 02:02+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_services.po\n"
 "X-Crowdin-File-ID: 8878\n"
 
-#: servicerunner.cpp:368
+#: servicerunner.cpp:372
 #, kde-format
 msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
@@ -29,7 +29,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: servicerunner.cpp:413
+#: servicerunner.cpp:416
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "Пошук праграм, чые назвы або апісанні адпавядаюць :q:"
