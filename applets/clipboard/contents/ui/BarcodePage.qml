@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -104,6 +104,32 @@ ColumnLayout {
             barcodeType: Plasmoid.configuration.barcodeType
             // Cannot set visible to false as we need it to re-render when changing its size
             opacity: valid ? 1 : 0
+
+            Drag.dragType: Drag.Automatic
+            Drag.supportedActions: Qt.CopyAction
+
+            HoverHandler {
+                enabled: barcodeItem.valid
+                cursorShape: Qt.OpenHandCursor
+            }
+
+            DragHandler {
+                id: dragHandler
+                enabled: barcodeItem.valid
+
+                onActiveChanged: {
+                    if (active) {
+                        barcodeItem.grabToImage((result) => {
+                            barcodeItem.Drag.mimeData = {
+                                "image/png": result.image,
+                            };
+                            barcodeItem.Drag.active = dragHandler.active;
+                        });
+                    } else {
+                        barcodeItem.Drag.active = false;
+                    }
+                }
+            }
         }
 
         PlasmaComponents3.Label {
