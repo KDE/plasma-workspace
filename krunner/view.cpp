@@ -28,13 +28,17 @@
 #include <LayerShellQt/Window>
 
 #include "appadaptor.h"
+#include "x11windowscreenrelativepositioner.h"
 
 View::View(QWindow *)
     : PlasmaQuick::PlasmaWindow()
-    , m_offset(.5)
     , m_floating(false)
 {
     KCrash::initialize();
+
+    if (KWindowSystem::isPlatformX11()) {
+        m_x11Positioner = new X11WindowScreenRelativePositioner(this);
+    }
 
     // used only by screen readers
     setTitle(i18n("KRunner"));
@@ -74,20 +78,7 @@ View::View(QWindow *)
         }
     };
 
-    auto screenAdded = [this](const QScreen *screen) {
-        connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
-        screenGeometryChanged();
-    };
-
-    const auto screens = QGuiApplication::screens();
-    for (QScreen *s : screens) {
-        screenAdded(s);
-    }
-    connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
-
-    connect(KX11Extras::self(), &KX11Extras::workAreaChanged, this, &View::resetScreenPos);
-
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
 
@@ -98,7 +89,6 @@ View::~View()
 void View::objectIncubated()
 {
     auto mainItem = qobject_cast<QQuickItem *>(m_engine->rootObject());
-    connect(mainItem, &QQuickItem::widthChanged, this, &View::resetScreenPos);
     setMainItem(mainItem);
     resize(QSize(mainItem->implicitWidth(), mainItem->implicitHeight()).grownBy(margins()));
     connect(mainItem, &QQuickItem::implicitHeightChanged, this, [mainItem, this]() {
@@ -142,42 +132,16 @@ void View::loadConfig()
     setPinned(m_stateData.readEntry("Pinned", false));
 }
 
-void View::resizeEvent(QResizeEvent *event)
-{
-    if (event->oldSize().width() != event->size().width()) {
-        positionOnScreen();
-    }
-    PlasmaWindow::resizeEvent(event);
-}
-
 void View::showEvent(QShowEvent *event)
 {
     KX11Extras::setOnAllDesktops(winId(), true);
     QQuickWindow::showEvent(event);
-    positionOnScreen();
     requestActivate();
-}
-
-void View::screenGeometryChanged()
-{
-    if (isVisible()) {
-        positionOnScreen();
-    }
-}
-
-void View::resetScreenPos()
-{
-    if (isVisible() && !m_floating) {
-        positionOnScreen();
-    }
+    KX11Extras::forceActiveWindow(winId());
 }
 
 void View::positionOnScreen()
 {
-    if (!m_requestedVisible) {
-        return;
-    }
-
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
     auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
@@ -198,49 +162,28 @@ void View::positionOnScreen()
     setScreen(shownOnScreen);
     const QRect r = shownOnScreen->availableGeometry();
 
+    QMargins margins;
+    if (m_floating) {
+        margins = QMargins({0, r.height() / 3, 0, 0});
+    }
+
     if (KWindowSystem::isPlatformWayland()) {
         auto layerWindow = LayerShellQt::Window::get(this);
         layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
         layerWindow->setLayer(LayerShellQt::Window::LayerTop);
         layerWindow->setScope(QStringLiteral("krunner"));
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        if (m_floating) {
-            layerWindow->setMargins({0, r.height() / 3, 0, 0});
-        } else {
-            layerWindow->setMargins(QMargins());
-        }
-    } else {
-        if (m_floating && !m_customPos.isNull()) {
-            int x = qBound(r.left(), m_customPos.x(), r.right() - width());
-            int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
-            setPosition(x, y);
-            PlasmaQuick::PlasmaWindow::setVisible(true);
-            return;
-        }
-
-        const int w = width();
-        int x = r.left() + (r.width() * m_offset) - (w / 2);
-
-        int y = r.top();
-        if (m_floating) {
-            y += r.height() / 3;
-        }
-        x = qBound(r.left(), x, r.right() - width());
-        y = qBound(r.top(), y, r.bottom() - height());
-
-        setPosition(x, y);
-
+        layerWindow->setMargins(margins);
+    }
+    if (KWindowSystem::isPlatformX11()) {
+        m_x11Positioner->setAnchors(Qt::TopEdge);
+        m_x11Positioner->setMargins(margins);
         if (m_floating) {
             KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
         } else {
             KX11Extras::setOnAllDesktops(winId(), true);
         }
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
-    }
-
-    PlasmaQuick::PlasmaWindow::setVisible(true);
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
     }
 }
 
@@ -300,17 +243,6 @@ void View::displayConfiguration()
 {
     auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")});
     job->start();
-}
-
-void View::setVisible(bool visible)
-{
-    m_requestedVisible = visible;
-
-    if (visible && !m_floating) {
-        positionOnScreen();
-    } else {
-        PlasmaQuick::PlasmaWindow::setVisible(visible);
-    }
 }
 
 bool View::pinned() const

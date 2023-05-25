@@ -28,6 +28,7 @@ class PlasmaShellSurface;
 }
 }
 
+class X11WindowScreenRelativePositioner;
 class ViewPrivate;
 
 class View : public PlasmaQuick::PlasmaWindow
@@ -62,11 +63,9 @@ Q_SIGNALS:
     void helpEnabledChanged();
 
 protected:
-    void resizeEvent(QResizeEvent *event) override;
     void showEvent(QShowEvent *event) override;
 
 public Q_SLOTS:
-    void setVisible(bool visible);
     void display();
     void toggleDisplay();
     void displaySingleRunner(const QString &runnerName);
@@ -76,8 +75,6 @@ public Q_SLOTS:
     void displayConfiguration();
 
 protected Q_SLOTS:
-    void screenGeometryChanged();
-    void resetScreenPos();
     void loadConfig();
     void objectIncubated();
     void slotFocusWindowChanged();
@@ -89,11 +86,10 @@ private:
     KConfigGroup m_config;
     KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;
-    qreal m_offset;
     bool m_floating : 1;
-    bool m_requestedVisible = false;
     bool m_pinned = false;
     bool m_requestedClipboardSelection = false;
     QStringList m_history;
     KRunner::RunnerManager *m_manager = nullptr;
+    X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
 };
