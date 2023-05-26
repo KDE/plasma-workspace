@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2019-07-31 12:34+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -19,23 +19,23 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: iconapplet.cpp:92
+#: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Nepavyko sukurti piktogramų valdiklių aplanko \"%1\""
 
-#: iconapplet.cpp:138
+#: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Nepavyko nukopijuoti piktogramų valdiklio darbalaukio failo \"%1\" į \"%2\""
 
-#: iconapplet.cpp:385
+#: iconapplet.cpp:386
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:567
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 savybės"

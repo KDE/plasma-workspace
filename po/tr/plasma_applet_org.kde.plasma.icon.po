@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2017-04-24 17:11+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: iconapplet.cpp:92
+#: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Simge araç takımları klasörü '%1' oluşturulamadı"
 
-#: iconapplet.cpp:138
+#: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Simge araç takımı masaüstü dosyası '%1', '%2' konumuna kopyalanamadı"
 
-#: iconapplet.cpp:385
+#: iconapplet.cpp:386
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "İçeren Klasörü Aç"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:567
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 Özellikleri"

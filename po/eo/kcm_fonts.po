@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-24 02:08+0000\n"
-"PO-Revision-Date: 2023-04-07 20:05+0100\n"
+"PO-Revision-Date: 2023-05-25 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -131,7 +131,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:23
 #, kde-format
@@ -153,7 +153,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Tre grandaj tiparoj povas produkti strangajn rezultojn. Anstataŭ uzi tre "
-"grandan tiparon, konsideru ĝustigi la tutmondan ekranskalon."
+"grandan tiparon, konsideru ĝustigi la ĉiean ekranskalon."
 
 #: ui/main.qml:69
 #, kde-format
@@ -170,7 +170,7 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
-"La rekomendita maniero por skali la uzantinterfacon estas uzi la tutmondan "
+"La rekomendita maniero por skali la uzantinterfacon estas uzi la ĉiean "
 "ekranan skalan funkcion."
 
 #: ui/main.qml:103
@@ -356,6 +356,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Elekti Tiparon"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Devigi tiparan DPI Wayland"

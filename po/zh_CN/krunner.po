@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,7 +29,7 @@ msgstr ""
 "kde-china@kde.org, EasternLi@kde.org, fusionfuture@kde.org, i@guoyunhe.me, "
 "tysontan@tysontan.com"
 
-#: main.cpp:79 view.cpp:40
+#: main.cpp:79 view.cpp:44
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"

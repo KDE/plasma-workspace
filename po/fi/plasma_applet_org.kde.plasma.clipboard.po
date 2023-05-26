@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2021-11-29 22:09+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -64,10 +64,11 @@ msgstr "Vaihda QR-koodin tyyppiä"
 msgid "Creating QR code failed"
 msgstr "QR-koodin luonti epäonnistui"
 
-#: contents/ui/BarcodePage.qml:122
+#: contents/ui/BarcodePage.qml:124
 #, kde-format
-msgid "The QR code is too large to be displayed"
-msgstr "QR-koodi on näytettäväksi liian suuri"
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
 
 #: contents/ui/clipboard.qml:28
 #, kde-format
@@ -132,6 +133,9 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
+
+#~ msgid "The QR code is too large to be displayed"
+#~ msgstr "QR-koodi on näytettäväksi liian suuri"
 
 #~ msgid "Clear history"
 #~ msgstr "Tyhjennä historia"

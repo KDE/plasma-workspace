@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2022-08-18 13:13+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -70,10 +70,11 @@ msgstr "Aldatu QR kode mota"
 msgid "Creating QR code failed"
 msgstr "QR kode sorrerak huts egin du"
 
-#: contents/ui/BarcodePage.qml:122
+#: contents/ui/BarcodePage.qml:124
 #, kde-format
-msgid "The QR code is too large to be displayed"
-msgstr "QR kodea azaltzeko handiegia da"
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
 
 #: contents/ui/clipboard.qml:28
 #, kde-format
@@ -138,6 +139,9 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
+
+#~ msgid "The QR code is too large to be displayed"
+#~ msgstr "QR kodea azaltzeko handiegia da"
 
 #~ msgid "Clear history"
 #~ msgstr "Garbitu historia"

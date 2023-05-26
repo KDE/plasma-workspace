@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2021-11-14 17:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -63,10 +63,11 @@ msgstr "QR 코드 종류 변경"
 msgid "Creating QR code failed"
 msgstr "QR 코드 생성 실패"
 
-#: contents/ui/BarcodePage.qml:122
+#: contents/ui/BarcodePage.qml:124
 #, kde-format
-msgid "The QR code is too large to be displayed"
-msgstr "QR 코드를 표시하기에 너무 큼"
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
 
 #: contents/ui/clipboard.qml:28
 #, kde-format
@@ -131,6 +132,9 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
+
+#~ msgid "The QR code is too large to be displayed"
+#~ msgstr "QR 코드를 표시하기에 너무 큼"
 
 #~ msgid "Clear history"
 #~ msgstr "기록 삭제"

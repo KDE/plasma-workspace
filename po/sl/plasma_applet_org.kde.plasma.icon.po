@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2017-04-01 15:35+0100\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: iconapplet.cpp:92
+#: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Ni bilo mogoče ustvariti mape »%1« gradnika z ikono"
 
-#: iconapplet.cpp:138
+#: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Ni bilo mogoče kopirati namizne datoteke gradnika z ikono iz »%1« v »%2«"
 
-#: iconapplet.cpp:385
+#: iconapplet.cpp:386
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Odpri vsebujočo mapo"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:567
 #, kde-format
 msgid "Properties for %1"
 msgstr "Lastnosti za %1"

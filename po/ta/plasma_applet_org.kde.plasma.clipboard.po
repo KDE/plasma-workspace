@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-08 02:08+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2021-12-16 21:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -63,10 +63,11 @@ msgstr "QR குறியீட்டின் வகையை மாற்ற�
 msgid "Creating QR code failed"
 msgstr "QR குறியீட்டை உருவாக்குதல் தோல்வியடைந்தது"
 
-#: contents/ui/BarcodePage.qml:122
+#: contents/ui/BarcodePage.qml:124
 #, kde-format
-msgid "The QR code is too large to be displayed"
-msgstr "QR குறியீடு காட்ட முடியாத அளவிற்கு பெரிதாக உள்ளது"
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
 
 #: contents/ui/clipboard.qml:28
 #, kde-format
@@ -131,6 +132,9 @@ msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"
+
+#~ msgid "The QR code is too large to be displayed"
+#~ msgstr "QR குறியீடு காட்ட முடியாத அளவிற்கு பெரிதாக உள்ளது"
 
 #~ msgid "Clear history"
 #~ msgstr "வரலாற்றை காலியாக்கு"

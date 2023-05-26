@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2022-06-28 09:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: iconapplet.cpp:92
+#: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Създаването на папка с приставки за икони \"%1\" е неуспешно"
 
-#: iconapplet.cpp:138
+#: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Копирането на работния файл на приставка за икони от \"%1\" в \"%2\" е "
 "неуспешно"
 
-#: iconapplet.cpp:385
+#: iconapplet.cpp:386
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Отваряне на съдържащата папка"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:567
 #, kde-format
 msgid "Properties for %1"
 msgstr "Свойства за %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:01+0000\n"
+"POT-Creation-Date: 2023-05-26 01:59+0000\n"
 "PO-Revision-Date: 2017-07-29 11:08+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -16,24 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: iconapplet.cpp:92
+#: iconapplet.cpp:93
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Non se puido crear o cartafol de trebellos de iconas «%1»."
 
-#: iconapplet.cpp:138
+#: iconapplet.cpp:139
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Non se puido copiar o ficheiro de escritorio de trebello de icona de «%1» a "
 "«%2»."
 
-#: iconapplet.cpp:385
+#: iconapplet.cpp:386
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir o cartafol contedor…"
 
-#: iconapplet.cpp:566
+#: iconapplet.cpp:567
 #, kde-format
 msgid "Properties for %1"
 msgstr "Propiedades de %1"
