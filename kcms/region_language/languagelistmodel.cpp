@@ -95,7 +95,19 @@ QString LanguageListModel::languageCodeToName(const QString &languageCode)
 
 bool LanguageListModel::isSupportedLanguage(const QString &language) const
 {
-    return m_availableLanguages.contains(language);
+    // If the available language list contains the full language string outright, e.g. en_US
+    if (m_availableLanguages.contains(language)) {
+        return true;
+    }
+
+    // If the language string passed has a territory attached (like fr_FR) then chop it off,
+    // and try searching for just the language.
+    if (language.contains('_')) {
+        const QString languageName{language.left(language.indexOf('_'))};
+        return m_availableLanguages.contains(languageName);
+    }
+
+    return false;
 }
 
 int LanguageListModel::currentIndex() const
