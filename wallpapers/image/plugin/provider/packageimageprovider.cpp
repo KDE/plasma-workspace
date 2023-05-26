@@ -12,6 +12,8 @@
 
 #include <KPackage/PackageLoader>
 
+#include <Plasma/Svg>
+
 #include "finder/packagefinder.h"
 
 class AsyncPackageImageResponseRunnable : public QObject, public QRunnable
@@ -86,10 +88,16 @@ void AsyncPackageImageResponseRunnable::run()
         }
     }
 
-    QImage image(path);
-
-    if (!image.isNull() && m_requestedSize.isValid()) {
-        image = image.scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QImageReader imageReader(path);
+    QImage image;
+    if (imageReader.format() == "svg" || imageReader.format() == "svgz") {
+        Plasma::Svg svgRender;
+        svgRender.setImagePath(path);
+        image = svgRender.image(m_requestedSize.isValid() ? svgRender.size().scaled(m_requestedSize, Qt::KeepAspectRatioByExpanding) : svgRender.size());
+    } else if (imageReader.read(&image)) {
+        if (m_requestedSize.isValid()) {
+            image = image.scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        }
     }
 
     Q_EMIT done(image);
