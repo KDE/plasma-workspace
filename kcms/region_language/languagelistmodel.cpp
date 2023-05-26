@@ -213,7 +213,7 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
         m_selectedLanguages = m_settings->language().split(QLatin1Char(':'));
     }
 
-    if (m_settings->isDefaultSetting(SettingType::Lang)) {
+    if (m_settings->isDefaultSetting(SettingType::Lang) && m_settings->isDefaultSetting(SettingType::Language)) {
         m_hasImplicitLang = true;
         Q_EMIT hasImplicitLangChanged();
     }

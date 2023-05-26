@@ -16,6 +16,8 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
     switch (setting) {
     case SettingType::Lang:
         return lang() == defaultLangValue();
+    case SettingType::Language:
+        return language() == defaultLanguageValue();
     case SettingType::Numeric:
         return numeric() == defaultNumericValue();
     case SettingType::Time:
@@ -73,6 +75,7 @@ QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
     case SettingType::PhoneNumbers:
         return phoneNumbers();
     case SettingType::Lang:
+    case SettingType::Language:
         Q_UNREACHABLE();
     }
 

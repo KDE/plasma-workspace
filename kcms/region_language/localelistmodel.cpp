@@ -92,6 +92,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
     case Example: {
         switch (m_configType) {
         case Lang:
+        case Language:
             return {};
         case Numeric:
             return Utility::numericExample(data.locale);
