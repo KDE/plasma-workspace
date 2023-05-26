@@ -14,18 +14,13 @@ HolidaysEventsPlugin::HolidaysEventsPlugin(QObject *parent)
 {
     KSharedConfig::Ptr m_config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
     const KConfigGroup regionsConfig = m_config->group("General");
-    QStringList regionCodes = regionsConfig.readEntry("selectedRegions", QStringList());
-    regionCodes.removeDuplicates();
+    updateSettings(regionsConfig);
 
-    // If the config does not have any region stored
-    // add the default one
-    if (regionCodes.isEmpty()) {
-        regionCodes << KHolidays::HolidayRegion::defaultRegionCode();
-    }
-
-    for (const QString &region : qAsConst(regionCodes)) {
-        m_regions << new KHolidays::HolidayRegion(region);
-    }
+    m_configWatcher = KConfigWatcher::create(m_config);
+    connect(m_configWatcher.get(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &config) {
+        updateSettings(config);
+        loadEventsForDateRange(m_lastStartDate, m_lastEndDate);
+    });
 }
 
 HolidaysEventsPlugin::~HolidaysEventsPlugin()
@@ -35,7 +30,7 @@ HolidaysEventsPlugin::~HolidaysEventsPlugin()
 
 void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate &endDate)
 {
-    if (m_lastStartDate == startDate && m_lastEndDate == endDate) {
+    if (!m_lastData.empty() && m_lastStartDate == startDate && m_lastEndDate == endDate) {
         Q_EMIT dataReady(m_lastData);
         return;
     }
@@ -66,7 +61,32 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     m_lastEndDate = endDate;
     m_lastData = data;
 
-    qDebug() << data.size();
-
     Q_EMIT dataReady(data);
+}
+
+void HolidaysEventsPlugin::updateSettings(const KConfigGroup &regionsConfig)
+{
+    QStringList regionCodes = regionsConfig.readEntry("selectedRegions", QStringList());
+    regionCodes.removeDuplicates();
+
+    // If the config does not have any region stored
+    // add the default one
+    if (regionCodes.empty()) {
+        regionCodes << KHolidays::HolidayRegion::defaultRegionCode();
+    }
+
+    qDeleteAll(m_regions);
+    m_regions.clear();
+
+    m_regions.reserve(regionCodes.size());
+    for (const QString &region : std::as_const(regionCodes)) {
+        m_regions << new KHolidays::HolidayRegion(region);
+    }
+
+    if (!m_lastData.empty()) {
+        for (const CalendarEvents::EventData &data : std::as_const(m_lastData)) {
+            Q_EMIT eventRemoved(data.uid());
+        }
+        m_lastData.clear();
+    }
 }

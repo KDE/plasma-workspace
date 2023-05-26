@@ -9,6 +9,7 @@
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <QObject>
 
+#include <KConfigWatcher>
 #include <KHolidays/HolidayRegion>
 #include <KSharedConfig>
 
@@ -25,9 +26,12 @@ public:
     void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;
 
 private:
+    void updateSettings(const KConfigGroup &regionsConfig);
+
     QDate m_lastStartDate;
     QDate m_lastEndDate;
     QList<KHolidays::HolidayRegion *> m_regions;
     QMultiHash<QDate, CalendarEvents::EventData> m_lastData;
     KSharedConfig::Ptr m_config;
+    KConfigWatcher::Ptr m_configWatcher;
 };

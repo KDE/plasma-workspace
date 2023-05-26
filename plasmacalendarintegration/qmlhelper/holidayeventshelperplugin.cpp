@@ -33,7 +33,7 @@ public:
 
     Q_INVOKABLE void saveConfig()
     {
-        m_configGroup.writeEntry("selectedRegions", m_regions);
+        m_configGroup.writeEntry("selectedRegions", m_regions, KConfig::Notify);
         m_configGroup.sync();
     }
 
