@@ -129,6 +129,7 @@ void View::setFreeFloating(bool floating)
 void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
+    setRetainPriorSearch(m_config.readEntry("RetainPriorSearch", true));
     setPinned(m_stateData.readEntry("Pinned", false));
 }
 

@@ -19,6 +19,7 @@ ColumnLayout {
     property string query
     property string singleRunner
     property bool showHistory: false
+    property string priorSearch: ""
     property alias runnerManager: results.runnerManager
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -34,16 +35,16 @@ ColumnLayout {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
-                if (runnerManager.retainPriorSearch) {
+                if (runnerWindow.retainPriorSearch) {
                     // If we manually specified a query(D-Bus invocation) we don't want to retain the prior search
                     if (!query) {
-                        queryField.text = runnerManager.priorSearch
+                        queryField.text = priorSearch
                         queryField.select(root.query.length, 0)
                     }
                 }
             } else {
-                if (runnerManager.retainPriorSearch) {
-                    runnerManager.priorSearch = root.query
+                if (runnerWindow.retainPriorSearch) {
+                    priorSearch = root.query
                 }
                 root.singleRunner = ""
                 root.query = ""

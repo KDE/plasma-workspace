@@ -38,6 +38,7 @@ class View : public PlasmaQuick::PlasmaWindow
 
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
+    Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -56,6 +57,17 @@ public:
         const static auto metaData = KPluginMetaData(QStringLiteral("kf6/krunner/helprunner"));
         const KConfigGroup grp = KSharedConfig::openConfig()->group("Plugins");
         return metaData.isEnabled(grp);
+    }
+
+    Q_SIGNAL void retainPriorSearchChanged();
+    bool retainPriorSearch() const
+    {
+        return m_retainPriorSearch;
+    }
+    void setRetainPriorSearch(bool retain)
+    {
+        m_retainPriorSearch = retain;
+        Q_EMIT retainPriorSearchChanged();
     }
 
 Q_SIGNALS:
@@ -86,8 +98,9 @@ private:
     KConfigGroup m_config;
     KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;
-    bool m_floating : 1;
+    bool m_floating = false;
     bool m_pinned = false;
+    bool m_retainPriorSearch = false;
     bool m_requestedClipboardSelection = false;
     QStringList m_history;
     KRunner::RunnerManager *m_manager = nullptr;
