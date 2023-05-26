@@ -213,6 +213,11 @@ void SelectedLanguageModel::setRegionAndLangSettings(RegionAndLangSettings *sett
         m_selectedLanguages = m_settings->language().split(QLatin1Char(':'));
     }
 
+    // Chop off the UTF-8 codepoint
+    for (auto &language : m_selectedLanguages) {
+        language.remove(QStringLiteral(".UTF-8"));
+    }
+
     if (m_settings->isDefaultSetting(SettingType::Lang) && m_settings->isDefaultSetting(SettingType::Language)) {
         m_hasImplicitLang = true;
         Q_EMIT hasImplicitLangChanged();
