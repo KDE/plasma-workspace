@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-27 02:04+0000\n"
 "PO-Revision-Date: 2023-02-28 23:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -98,12 +98,12 @@ msgstr ""
 "텍스트가 아닌 항목(그림 등)을 선택했을 때 클립보드 기록에 저장할지 여부입니"
 "다."
 
-#: configdialog.cpp:250
+#: configdialog.cpp:259
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "동작 팝업 메뉴 표시:"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -118,35 +118,35 @@ msgstr ""
 "성화했거나, 제외된 창에서 표시되지 않았다면, <shortcut>%1</shortcut> 단축키"
 "를 눌러서 표시할 수 있습니다."
 
-#: configdialog.cpp:269
+#: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "창 제외..."
 
-#: configdialog.cpp:283
+#: configdialog.cpp:292
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] "초"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "없음"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:302
 #, kde-format
 msgid "Options:"
 msgstr "옵션:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:329
 #, kde-format
 msgid "Exclude Windows"
 msgstr "창 제외"
 
-#: configdialog.cpp:350
+#: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -157,34 +157,34 @@ msgstr ""
 "<interface>일치 패턴</interface>과 클립보드 내용이 일치한다면 Klipper 팝업 메"
 "뉴에 <interface>명령</interface>이 표시되며 실행할 수 있습니다."
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "패턴과 명령 일치"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "설명"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
 msgstr "동작 추가..."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
 msgstr "동작 편집..."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:383
 #, kde-format
 msgid "Delete Action"
 msgstr "동작 삭제"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,7 +194,7 @@ msgstr ""
 "이 동작은 팝업 메뉴에 표시되며 <interface>동작 설정</interface> 페이지에서 설"
 "정할 수 있습니다."
 
-#: configdialog.cpp:565
+#: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -204,56 +204,56 @@ msgstr ""
 "선택한 동작 <resource>%1</resource>와(과)<nl/>그 모든 명령을 삭제하시겠습니"
 "까?"
 
-#: configdialog.cpp:566
+#: configdialog.cpp:575
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "동작 삭제 확인"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "일반"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgid "General Configuration"
 msgstr "일반 설정"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "동작 메뉴"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgid "Action Menu"
 msgstr "동작 메뉴"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "동작 설정"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgid "Actions Configuration"
 msgstr "동작 설정"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "단축키 설정"
 
-#: configdialog.cpp:680
+#: configdialog.cpp:690
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -270,7 +270,7 @@ msgstr ""
 "사용하는 중에 동작 메뉴가 의도하지 않게 표시되었다면 이 목록에 추가하십시오. "
 "<link>입력할 이름을 찾는 방법</link>."
 
-#: configdialog.cpp:693
+#: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

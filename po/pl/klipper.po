@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1651291 $
+# Version: $Revision: 1652501 $
 # Norbert Popiołek <norbert@kde.com.pl>
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-27 02:04+0000\n"
 "PO-Revision-Date: 2022-12-03 09:51+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -111,12 +111,12 @@ msgid ""
 msgstr ""
 "Określa czy nie-tekst (np. obraz) może być zapisany w historii schowka."
 
-#: configdialog.cpp:250
+#: configdialog.cpp:259
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Pokaż menu wysuwne działań:"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -131,12 +131,12 @@ msgstr ""
 "wyłączone lub nie zostanie pokazane dla wykluczonych okien, to można je "
 "pokazać przy użyciu skrótu klawiszowego <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:269
+#: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Wyklucz okna..."
 
-#: configdialog.cpp:283
+#: configdialog.cpp:292
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -145,23 +145,23 @@ msgstr[0] " sekunda"
 msgstr[1] " sekundy"
 msgstr[2] " sekund"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Brak"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:302
 #, kde-format
 msgid "Options:"
 msgstr "Ustawienia:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:329
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Wyklucz okna"
 
-#: configdialog.cpp:350
+#: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -173,34 +173,34 @@ msgstr ""
 "<interface>polecenia</interface> pojawią się w menu wysuwnym Klippera i "
 "będzie można je wywołać."
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Wzorzec i polecenia"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Opis"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
 msgstr "Dodaj działanie..."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
 msgstr "Dostosuj działanie..."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:383
 #, kde-format
 msgid "Delete Action"
 msgstr "Usuń działanie"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -210,7 +210,7 @@ msgstr ""
 "Działania te pojawią się w menu wysuwnym, które można ustawić na stronie "
 "<interface>Menu działań</interface>."
 
-#: configdialog.cpp:565
+#: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,56 +220,56 @@ msgstr ""
 "Czy usunąć zaznaczone działanie <resource>%1</resource><nl/>i wszystkie jego "
 "polecenia?"
 
-#: configdialog.cpp:566
+#: configdialog.cpp:575
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potwierdź usunięcie działania"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Ogólne"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgid "General Configuration"
 msgstr "Ustawienia ogólne"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu działań"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu działań"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Ustawienia działań"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Ustawienia działań"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Skróty"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Ustawienia skrótów"
 
-#: configdialog.cpp:680
+#: configdialog.cpp:690
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -287,7 +287,7 @@ msgstr ""
 "działań pojawi się nieoczekiwanie przy używaniu danej aplikacji, to dodaj ją "
 "do tego wykazu.<link>Jak znaleźć nazwę do wpisania tutaj</link>."
 
-#: configdialog.cpp:693
+#: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

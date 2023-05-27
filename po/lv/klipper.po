@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-27 02:04+0000\n"
 "PO-Revision-Date: 2019-12-07 14:16+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -103,13 +103,13 @@ msgid ""
 "history."
 msgstr ""
 
-#: configdialog.cpp:250
+#: configdialog.cpp:259
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "Noildze darbību izlecošajiem logiem:"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -120,12 +120,12 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:269
+#: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
 msgstr ""
 
-#: configdialog.cpp:283
+#: configdialog.cpp:292
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -136,25 +136,25 @@ msgstr[0] " sekunde"
 msgstr[1] " sekundes"
 msgstr[2] " sekunžu"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:293
+#: configdialog.cpp:302
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Darbības"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:329
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:350
+#: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -163,35 +163,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Apraksts"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
 msgstr "Pievienot darbību..."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
 msgstr "Rediģēt darbību..."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:383
 #, kde-format
 msgid "Delete Action"
 msgstr "Dzēst darbību"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -199,7 +199,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:565
+#: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,24 +207,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:566
+#: configdialog.cpp:575
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Dzēst darbību"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Pamata"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgid "General Configuration"
 msgstr "Pamata konfigurācija"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -232,37 +232,37 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Darbības"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Darbības"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Darbību konfigurācija"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Darbību konfigurācija"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Īsceļi"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Īsceļu konfigurācija"
 
-#: configdialog.cpp:680
+#: configdialog.cpp:690
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -274,7 +274,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:693
+#: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

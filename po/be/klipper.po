@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-27 02:04+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -108,12 +108,12 @@ msgstr ""
 "Захаванне нетэкставых абраных элементаў (напрыклад, выяў) у гісторыі буфера "
 "абмену."
 
-#: configdialog.cpp:250
+#: configdialog.cpp:259
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Паказ выплыўнога меню дзеянняў:"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -129,12 +129,12 @@ msgstr ""
 "выключаным акном, то меню можна вывесці з дапамогай спалучэння клавіш "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:269
+#: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Выключыць вокны..."
 
-#: configdialog.cpp:283
+#: configdialog.cpp:292
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -144,23 +144,23 @@ msgstr[1] " секунды"
 msgstr[2] " секунд"
 msgstr[3] " секунды"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Няма"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:302
 #, kde-format
 msgid "Options:"
 msgstr "Параметры:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:329
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Выключыць вокны"
 
-#: configdialog.cpp:350
+#: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -172,34 +172,34 @@ msgstr ""
 "абмену, то гэтыя <interface>загады</interface> з'яўляюцца ў выплыўным меню "
 "Klipper."
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Шаблон супадзення і загады"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Апісанне"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
 msgstr "Дадаць дзеянне..."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
 msgstr "Рэдагаваць дзеянне..."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:383
 #, kde-format
 msgid "Delete Action"
 msgstr "Выдаліць дзеянне"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 "Гэтыя дзеянні, якія паказваюцца ў выплыўным меню, можна наладзіць на "
 "старонцы <interface>Меню дзеянняў</interface>."
 
-#: configdialog.cpp:565
+#: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,56 +217,56 @@ msgid ""
 "commands?"
 msgstr "Выдаліць абранае дзеянне <resource>%1</resource><nl/>і ўсе яго загады?"
 
-#: configdialog.cpp:566
+#: configdialog.cpp:575
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Пацвердзіць выдаленне дзеяння"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Асноўныя"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgid "General Configuration"
 msgstr "Асноўная канфігурацыя"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Меню дзеянняў"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgid "Action Menu"
 msgstr "Меню дзеянняў"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Канфігурацыя дзеянняў"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Канфігурацыя дзеянняў"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Спалучэнні клавіш"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Канфігурацыя спалучэнняў клавіш"
 
-#: configdialog.cpp:680
+#: configdialog.cpp:690
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -284,7 +284,7 @@ msgstr ""
 "меню з'яўлялася ў нейкай праграме, дадайце яе ў гэты спіс. <link>Як знайсці "
 "назву</link>."
 
-#: configdialog.cpp:693
+#: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

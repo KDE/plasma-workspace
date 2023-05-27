@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-05-27 02:04+0000\n"
 "PO-Revision-Date: 2023-03-10 11:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -102,12 +102,12 @@ msgid ""
 "history."
 msgstr "Zda je netextový výběr (např. obrázky) uložen v historii schránky."
 
-#: configdialog.cpp:250
+#: configdialog.cpp:259
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Zobrazit vyskakovací nabídku činností:"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -118,12 +118,12 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:269
+#: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Výjimka pro okna..."
 
-#: configdialog.cpp:283
+#: configdialog.cpp:292
 #, kde-format
 msgctxt "Unit of time"
 msgid " second"
@@ -133,23 +133,23 @@ msgstr[1] " sekundy"
 msgstr[2] " sekund"
 
 # žádné parametry funkce v inspektoru funkcí
-#: configdialog.cpp:284
+#: configdialog.cpp:293
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Žádný"
 
-#: configdialog.cpp:293
+#: configdialog.cpp:302
 #, kde-format
 msgid "Options:"
 msgstr "Volby:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:329
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Výjimka pro okna"
 
-#: configdialog.cpp:350
+#: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -161,34 +161,34 @@ msgstr ""
 "<interface>příkazy</interface> budou zobrazeny v nabídce Klipperu a bude "
 "možné je spustit."
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Vzor porovnání a příkazy"
 
-#: configdialog.cpp:359
+#: configdialog.cpp:368
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Popis"
 
-#: configdialog.cpp:365
+#: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
 msgstr "Přidat činnost..."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
 msgstr "Upravit činnost..."
 
-#: configdialog.cpp:374
+#: configdialog.cpp:383
 #, kde-format
 msgid "Delete Action"
 msgstr "Smazat činnost"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -198,7 +198,7 @@ msgstr ""
 "Tyto činnosti budou zobrazeny ve vyskakovací nabídce, kterou lze nastavit na "
 "straně <interface>Nabídka činností</interface>."
 
-#: configdialog.cpp:565
+#: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -206,56 +206,56 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:566
+#: configdialog.cpp:575
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potvrdit smazání činnosti "
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Obecné"
 
-#: configdialog.cpp:595
+#: configdialog.cpp:604
 #, kde-format
 msgid "General Configuration"
 msgstr "Obecná nastavení"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Nabídka činností"
 
-#: configdialog.cpp:596
+#: configdialog.cpp:605
 #, kde-format
 msgid "Action Menu"
 msgstr "Nabídka činností"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Nastavení činností"
 
-#: configdialog.cpp:597
+#: configdialog.cpp:606
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Nastavení činností"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:609
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Nastavení klávesových zkratek"
 
-#: configdialog.cpp:680
+#: configdialog.cpp:690
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -273,7 +273,7 @@ msgstr ""
 "činnosti během používání konkrétní aplikace, přidejte ji do tohoto seznamu. "
 "<link>Jak zjistit, jaký název zadat</link>."
 
-#: configdialog.cpp:693
+#: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

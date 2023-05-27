@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# giovanni <g.sora@tiscali.it>, 2017, 2020, 2021.
+# giovanni <g.sora@tiscali.it>, 2017, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-26 01:59+0000\n"
-"PO-Revision-Date: 2021-12-21 21:58+0100\n"
+"PO-Revision-Date: 2023-05-26 21:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: contents/ui/BarcodePage.qml:35
 #, kde-format
@@ -68,6 +68,8 @@ msgstr "Il falleva a crear codice QR"
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Il non ha assatis spatio per monstrar le codice QR. Tu essaya redimensionar "
+"iste applet."
 
 #: contents/ui/clipboard.qml:28
 #, kde-format

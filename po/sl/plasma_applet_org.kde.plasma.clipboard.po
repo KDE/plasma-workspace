@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-26 01:59+0000\n"
-"PO-Revision-Date: 2021-11-01 20:40+0100\n"
+"PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 20.12.2\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: contents/ui/BarcodePage.qml:35
 #, kde-format
@@ -71,6 +71,8 @@ msgstr "Ustvarjanje kode QR ni uspelo"
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Ni dovolj prostora za prikaz kode QR. Poskusite spremeniti velikost "
+"programčka."
 
 #: contents/ui/clipboard.qml:28
 #, kde-format
