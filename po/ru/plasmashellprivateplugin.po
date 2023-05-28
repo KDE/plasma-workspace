@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-05-28 02:53+0000\n"
 "PO-Revision-Date: 2023-01-28 22:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -201,17 +201,138 @@ msgstr "Не удалось установить пакет %1."
 msgid "Installation Failure"
 msgstr "Ошибка установки"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#, fuzzy
+#| msgid "Visibility"
+msgctxt "applet category"
+msgid "Accessibility"
+msgstr "Видимость"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+msgctxt "applet category"
+msgid "Application Launchers"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+msgctxt "applet category"
+msgid "Astronomy"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+msgctxt "applet category"
+msgid "Date and Time"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+msgctxt "applet category"
+msgid "Development Tools"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+msgctxt "applet category"
+msgid "Education"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+msgctxt "applet category"
+msgid "Environment and Weather"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+msgctxt "applet category"
+msgid "Examples"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+msgctxt "applet category"
+msgid "File System"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "applet category"
+msgid "Fun and Games"
+msgstr "Николай Шафоростов, Альберт Валиев, Александр Яворский"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+msgctxt "applet category"
+msgid "Graphics"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+msgctxt "applet category"
+msgid "Language"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+msgctxt "applet category"
+msgid "Mapping"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+msgctxt "applet category"
+msgid "Miscellaneous"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+msgctxt "applet category"
+msgid "Multimedia"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+msgctxt "applet category"
+msgid "Online Services"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#, fuzzy
+#| msgid "Add Activity"
+msgctxt "applet category"
+msgid "Productivity"
+msgstr "Добавить комнату"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+msgctxt "applet category"
+msgid "System Information"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#, fuzzy
+#| msgid "Activities"
+msgctxt "applet category"
+msgid "Utilities"
+msgstr "Комнаты"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#, fuzzy
+#| msgid "Windows can cover"
+msgctxt "applet category"
+msgid "Windows and Tasks"
+msgstr "Допускать перекрытие окнами"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+msgctxt "applet category"
+msgid "Clipboard"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+msgctxt "applet category"
+msgid "Tasks"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "Все виджеты"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "Запущенные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -220,17 +341,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Возможно удалить"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
 msgstr "Категории:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Загрузить виджеты Plasma..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
@@ -284,9 +405,6 @@ msgstr "Установить виджет из файла..."
 
 #~ msgid "Get New Templates..."
 #~ msgstr "Загрузить новые шаблоны..."
-
-#~ msgid "Activities"
-#~ msgstr "Комнаты"
 
 #~ msgid "Hide Dashboard"
 #~ msgstr "Скрыть панель"
@@ -349,17 +467,11 @@ msgstr "Установить виджет из файла..."
 #~ msgid "Right"
 #~ msgstr "Справа"
 
-#~ msgid "Visibility"
-#~ msgstr "Видимость"
-
 #~ msgid "Always visible"
 #~ msgstr "Показывать всегда"
 
 #~ msgid "Auto-hide"
 #~ msgstr "Автоматически скрывать"
-
-#~ msgid "Windows can cover"
-#~ msgstr "Допускать перекрытие окнами"
 
 #~ msgid "Windows go below"
 #~ msgstr "Панель перекрывает окна"
@@ -511,9 +623,6 @@ msgstr "Установить виджет из файла..."
 
 #~ msgid "Plasma Workspace"
 #~ msgstr "Рабочее пространство Plasma"
-
-#~ msgid "Add Activity"
-#~ msgstr "Добавить комнату"
 
 #~ msgid "widgetById requires an id"
 #~ msgstr "widgetById требует идентификатор"

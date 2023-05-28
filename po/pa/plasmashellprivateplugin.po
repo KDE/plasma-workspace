@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 01:00+0000\n"
+"POT-Creation-Date: 2023-05-28 02:53+0000\n"
 "PO-Revision-Date: 2020-10-10 23:11-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -184,17 +184,130 @@ msgstr ""
 msgid "Installation Failure"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+msgctxt "applet category"
+msgid "Accessibility"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+msgctxt "applet category"
+msgid "Application Launchers"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+msgctxt "applet category"
+msgid "Astronomy"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+msgctxt "applet category"
+msgid "Date and Time"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+msgctxt "applet category"
+msgid "Development Tools"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+msgctxt "applet category"
+msgid "Education"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+msgctxt "applet category"
+msgid "Environment and Weather"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+msgctxt "applet category"
+msgid "Examples"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+msgctxt "applet category"
+msgid "File System"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "applet category"
+msgid "Fun and Games"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+msgctxt "applet category"
+msgid "Graphics"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+msgctxt "applet category"
+msgid "Language"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+msgctxt "applet category"
+msgid "Mapping"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+msgctxt "applet category"
+msgid "Miscellaneous"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+msgctxt "applet category"
+msgid "Multimedia"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+msgctxt "applet category"
+msgid "Online Services"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+msgctxt "applet category"
+msgid "Productivity"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+msgctxt "applet category"
+msgid "System Information"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+msgctxt "applet category"
+msgid "Utilities"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+msgctxt "applet category"
+msgid "Windows and Tasks"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+msgctxt "applet category"
+msgid "Clipboard"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+msgctxt "applet category"
+msgid "Tasks"
+msgstr ""
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "ਸਭ ਵਿਦਜੈਟ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੇ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -203,17 +316,17 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr ""
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
 msgstr "ਕੈਟਾਗਰੀ:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:197
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:206
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr ""
