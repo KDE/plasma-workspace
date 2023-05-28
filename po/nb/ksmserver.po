@@ -159,7 +159,6 @@ msgstr "Logg ut uten bekreftelse"
 
 #: server.cpp:907
 #, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Stopp datamaskinen uten bekreftelse"
 

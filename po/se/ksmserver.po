@@ -155,7 +155,6 @@ msgstr "Nannenkeahtes olggosčáliheapmi"
 
 #: server.cpp:907
 #, fuzzy, kde-format
-#| msgid "Halt Without Confirmation"
 msgid "Shut Down Without Confirmation"
 msgstr "Bisset dihtora nannenkeahttá"
 
