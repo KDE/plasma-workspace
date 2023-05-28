@@ -88,9 +88,14 @@ ColumnLayout {
 
             anchors.fill: parent
             usesPlasmaTheme: false
-            active: jobDragArea.containsMouse
+            active: jobDragArea.hovered
             opacity: busyIndicator.running ? 0.6 : 1
             source: !fileInfo.error ? fileInfo.iconName : ""
+
+            Drag.dragType: Drag.Automatic
+            Drag.mimeData: {
+                "text/uri-list": jobItem.url ?? ""
+            }
 
             Behavior on opacity {
                 NumberAnimation {
@@ -103,18 +108,15 @@ ColumnLayout {
                 id: jobDragArea
                 anchors.fill: parent
 
-                hoverEnabled: true
                 dragParent: jobDragIcon
-                dragUrl: jobItem.url || ""
-                dragPixmap: jobDragIcon.source
 
                 onActivated: jobItem.openUrl(jobItem.url)
-                onContextMenuRequested: {
+                onContextMenuRequested: (pos) => {
                     // avoid menu button glowing if we didn't actually press it
                     otherFileActionsButton.checked = false;
 
                     otherFileActionsMenu.visualParent = this;
-                    otherFileActionsMenu.open(x, y);
+                    otherFileActionsMenu.open(pos.x, pos.y);
                 }
             }
         }

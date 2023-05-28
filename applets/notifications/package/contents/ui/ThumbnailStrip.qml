@@ -18,7 +18,7 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 
 import "global"
 
-DraggableFileArea {
+Item {
     id: thumbnailArea
 
     // The protocol supports multiple URLs but so far it's only used to show
@@ -28,9 +28,7 @@ DraggableFileArea {
     property var urls
 
     readonly property alias menuOpen: fileMenu.visible
-
-    property int _pressX: -1
-    property int _pressY: -1
+    readonly property alias dragging: dragArea.dragging
 
     property int leftPadding: 0
     property int rightPadding: 0
@@ -42,23 +40,9 @@ DraggableFileArea {
     signal openUrl(string url)
     signal fileActionInvoked(QtObject action)
 
-    dragParent: previewPixmap
-    dragUrl: thumbnailer.url
-    dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
-    dragPixmapSize: previewIcon.height
-
     implicitHeight: Math.max(thumbnailActionRow.implicitHeight + 2 * thumbnailActionRow.anchors.topMargin,
                              Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
                     + topPadding + bottomPadding
-
-    onActivated: thumbnailArea.openUrl(thumbnailer.url)
-    onContextMenuRequested: {
-        // avoid menu button glowing if we didn't actually press it
-        menuButton.checked = false;
-
-        fileMenu.visualParent = this;
-        fileMenu.open(x, y);
-    }
 
     Notifications.FileMenu {
         id: fileMenu
@@ -93,7 +77,24 @@ DraggableFileArea {
         }
     }
 
-    Item {
+    DraggableFileArea {
+        id: dragArea
+        anchors.fill: parent
+        dragParent: previewIcon
+        dragPixmapSize: previewIcon.height
+
+        onActivated: thumbnailArea.openUrl(thumbnailer.url)
+        onContextMenuRequested: (pos) => {
+            // avoid menu button glowing if we didn't actually press it
+            menuButton.checked = false;
+
+            fileMenu.visualParent = this;
+            fileMenu.open(pos.x, pos.y);
+        }
+    }
+
+    KQCAddons.QPixmapItem {
+        id: previewPixmap
         anchors {
             fill: parent
             leftMargin: thumbnailArea.leftPadding
@@ -101,22 +102,23 @@ DraggableFileArea {
             topMargin: thumbnailArea.topPadding
             bottomMargin: thumbnailArea.bottomPadding
         }
-
-        KQCAddons.QPixmapItem {
-            id: previewPixmap
-            anchors.fill: parent
-            pixmap: thumbnailer.pixmap
-            smooth: true
-            fillMode: Image.PreserveAspectFit
-        }
+        pixmap: thumbnailer.pixmap
+        smooth: true
+        fillMode: Image.PreserveAspectFit
 
         PlasmaCore.IconItem {
             id: previewIcon
             anchors.centerIn: parent
             width: height
             height: PlasmaCore.Units.roundToIconSize(parent.height)
+            active: dragArea.hovered
             usesPlasmaTheme: false
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
+
+            Drag.dragType: Drag.Automatic
+            Drag.mimeData: {
+                "text/uri-list": thumbnailer.url,
+            }
         }
 
         PlasmaComponents3.BusyIndicator {

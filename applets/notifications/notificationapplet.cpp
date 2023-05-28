@@ -19,7 +19,6 @@
 #include <PlasmaQuick/AppletQuickItem>
 #include <PlasmaQuick/Dialog>
 
-#include "draghelper.h"
 #include "fileinfo.h"
 #include "filemenu.h"
 #include "globalshortcuts.h"
@@ -49,9 +48,6 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
         const char uri[] = "org.kde.plasma.private.notifications";
-        qmlRegisterSingletonType<DragHelper>(uri, 2, 0, "DragHelper", [](QQmlEngine *, QJSEngine *) -> QObject * {
-            return new DragHelper();
-        });
         qmlRegisterType<FileInfo>(uri, 2, 0, "FileInfo");
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");

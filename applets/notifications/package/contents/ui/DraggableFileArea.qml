@@ -4,60 +4,63 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.8
+import QtQuick
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.private.notifications 2.0 as Notifications
 
-MouseArea {
+Item {
     id: area
 
     signal activated
-    signal contextMenuRequested(int x, int y)
+    signal contextMenuRequested(var pos)
 
-    property Item dragParent
-    property url dragUrl
-    property var dragPixmap
+    required property Item dragParent
     property int dragPixmapSize: PlasmaCore.Units.iconSizes.large
 
-    readonly property bool dragging: Notifications.DragHelper.dragActive
+    readonly property alias dragging: dragHandler.active
+    readonly property alias hovered: hoverHandler.hovered
 
-    property int _pressX: -1
-    property int _pressY: -1
+    HoverHandler {
+        id: hoverHandler
+        cursorShape: tapHandler.pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
+    }
 
-    preventStealing: true
-    cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
-    acceptedButtons: Qt.LeftButton | Qt.RightButton
+    TapHandler {
+        id: tapHandler
+        acceptedButtons: Qt.LeftButton
 
-    onClicked: mouse => {
-        if (mouse.button === Qt.LeftButton) {
+        onTapped: {
             area.activated();
         }
     }
-    onPressed: mouse => {
-        if (mouse.button === Qt.LeftButton) {
-            _pressX = mouse.x;
-            _pressY = mouse.y;
-        } else if (mouse.button === Qt.RightButton) {
-            area.contextMenuRequested(mouse.x, mouse.y);
+
+    TapHandler {
+        id: menuTapHandler
+        acceptedButtons: Qt.LeftButton
+        acceptedDevices: PointerDevice.TouchScreen | PointerDevice.Stylus
+        onLongPressed: area.contextMenuRequested(point.position)
+    }
+
+    TapHandler {
+        acceptedButtons: Qt.RightButton
+        gesturePolicy: TapHandler.WithinBounds
+
+        onPressedChanged: if (pressed) {
+            menuTapHandler.longPressed()
         }
     }
-    onPositionChanged: {
-        if (_pressX !== -1 && _pressY !== -1 && Notifications.DragHelper.isDrag(_pressX, _pressY, mouse.x, mouse.y)) {
-            Notifications.DragHelper.dragPixmapSize = area.dragPixmapSize;
-            Notifications.DragHelper.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
-            _pressX = -1;
-            _pressY = -1;
-        }
-    }
-    onReleased: {
-        _pressX = -1;
-        _pressY = -1;
-    }
-    onContainsMouseChanged: {
-        if (!containsMouse) {
-            _pressX = -1;
-            _pressY = -1;
+
+    DragHandler {
+        id: dragHandler
+
+        onActiveChanged: if (active) {
+            area.dragParent.grabToImage(result => {
+                area.dragParent.Drag.imageSource = result.url;
+                area.dragParent.Drag.active = dragHandler.active;
+            }, Qt.size(area.dragPixmapSize, area.dragPixmapSize));
+        } else {
+            area.dragParent.Drag.imageSource = "";
+            area.dragParent.Drag.active = false;
         }
     }
 }
