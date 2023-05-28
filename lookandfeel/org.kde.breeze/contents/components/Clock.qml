@@ -22,7 +22,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignHCenter
     }
     PlasmaComponents3.Label {
-        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Locale.LongFormat)
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 24
