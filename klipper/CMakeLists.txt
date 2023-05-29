@@ -49,6 +49,7 @@ target_link_libraries(libklipper_common_static
     KF6::XmlGui
     KF6::WaylandClient
     KF6::IconThemes
+    KF6::IconWidgets
     ${ZLIB_LIBRARY})
 
 if (HAVE_X11)
