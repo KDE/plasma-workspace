@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 01:59+0000\n"
+"POT-Creation-Date: 2023-05-29 02:05+0000\n"
 "PO-Revision-Date: 2023-05-27 04:29+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -22,48 +22,48 @@ msgstr ""
 msgid "Return to Clipboard"
 msgstr "Volver al portapapeles"
 
-#: contents/ui/BarcodePage.qml:56
+#: contents/ui/BarcodePage.qml:53
 #, kde-format
 msgid "QR Code"
 msgstr "Código QR"
 
-#: contents/ui/BarcodePage.qml:57
+#: contents/ui/BarcodePage.qml:54
 #, kde-format
 msgid "Data Matrix"
 msgstr "Matriz de datos"
 
-#: contents/ui/BarcodePage.qml:58
+#: contents/ui/BarcodePage.qml:55
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:59
+#: contents/ui/BarcodePage.qml:56
 #, kde-format
 msgid "Code 39"
 msgstr "Código 39"
 
-#: contents/ui/BarcodePage.qml:60
+#: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "Code 93"
 msgstr "Código 93"
 
-#: contents/ui/BarcodePage.qml:61
+#: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Code 128"
 msgstr "Código 128"
 
-#: contents/ui/BarcodePage.qml:84
+#: contents/ui/BarcodePage.qml:82
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Cambiar el tipo del código QR"
 
-#: contents/ui/BarcodePage.qml:113
+#: contents/ui/BarcodePage.qml:137
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "La creación del código QR ha fallado"
 
-#: contents/ui/BarcodePage.qml:124
+#: contents/ui/BarcodePage.qml:148
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."

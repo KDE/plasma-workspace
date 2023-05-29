@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-01 02:34+0000\n"
-"PO-Revision-Date: 2023-04-25 19:44+0100\n"
+"PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -75,7 +75,7 @@ msgstr "Radiobutono"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -207,10 +207,3 @@ msgstr "Agordi Piktogramojn kaj Ilbretojn"
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "Agordi GNOME/GTK Aplikaĵstilon…"
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Tiu modulo permesas ŝanĝi la aperon de la grafikaj elementoj kiel "
-#~ "fenestraĵostilo kaj efektoj."
