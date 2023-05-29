@@ -27,15 +27,10 @@ class KillRunner : public KRunner::AbstractRunner
 
 public:
     KillRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~KillRunner() override;
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
     void reloadConfiguration() override;
-
-private Q_SLOTS:
-    void prep();
-    void cleanup();
 
 private:
     /** The trigger word */
@@ -58,4 +53,7 @@ private:
 
     /** Reuse value */
     bool m_hasTrigger;
+
+    // If the process list needs to be refreshed when matching
+    bool m_needsRefresh;
 };

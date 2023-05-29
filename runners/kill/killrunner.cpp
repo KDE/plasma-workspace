@@ -23,7 +23,7 @@ K_PLUGIN_CLASS_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
 KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
-    , m_processes(nullptr)
+    , m_processes(new KSysGuard::Processes(QString(), this))
 {
     auto *sigterm = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM"), this);
     sigterm->setData(15);
@@ -31,15 +31,10 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
     sigkill->setData(9);
     m_actionList = {sigterm, sigkill};
 
-    connect(this, &KRunner::AbstractRunner::prepare, this, &KillRunner::prep);
-    connect(this, &KRunner::AbstractRunner::teardown, this, &KillRunner::cleanup);
-
-    m_delayedCleanupTimer.setInterval(50);
-    m_delayedCleanupTimer.setSingleShot(true);
-    connect(&m_delayedCleanupTimer, &QTimer::timeout, this, &KillRunner::cleanup);
+    connect(this, &KRunner::AbstractRunner::prepare, m_processes, [this]() {
+        m_needsRefresh = true;
+    });
 }
-
-KillRunner::~KillRunner() = default;
 
 void KillRunner::reloadConfiguration()
 {
@@ -63,43 +58,17 @@ void KillRunner::reloadConfiguration()
     }
 }
 
-void KillRunner::prep()
-{
-    m_delayedCleanupTimer.stop();
-}
-
-void KillRunner::cleanup()
-{
-    if (!m_processes) {
-        return;
-    }
-
-    if (m_prepLock.tryLockForWrite()) {
-        delete m_processes;
-        m_processes = nullptr;
-
-        m_prepLock.unlock();
-    } else {
-        m_delayedCleanupTimer.stop();
-    }
-}
-
 void KillRunner::match(KRunner::RunnerContext &context)
 {
-    QString term = context.query();
-    m_prepLock.lockForRead();
-    if (!m_processes) {
-        m_prepLock.unlock();
-        m_prepLock.lockForWrite();
-        if (!m_processes) {
-            suspendMatching(true);
-            m_processes = new KSysGuard::Processes();
-            m_processes->updateAllProcesses();
-            suspendMatching(false);
+    // Only refresh the matches when we are matching. If we were to call it in the prepare slot, we would waste resources
+    // because very likely the runner will not be used during the current match session
+    if (m_needsRefresh) {
+        m_processes->updateAllProcesses();
+        if (!context.isValid()) {
+            return;
         }
     }
-    m_prepLock.unlock();
-
+    QString term = context.query();
     term = term.right(term.length() - m_triggerWord.length());
 
     QList<KRunner::QueryMatch> matches;
@@ -141,10 +110,8 @@ void KillRunner::match(KRunner::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void KillRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void KillRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context)
-
     const quint64 pid = match.data().toUInt();
 
     int signal;
