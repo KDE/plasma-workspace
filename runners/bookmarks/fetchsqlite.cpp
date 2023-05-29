@@ -10,12 +10,10 @@
 #include "bookmarksrunner_defs.h"
 #include <QDebug>
 #include <QFile>
-#include <QMutexLocker>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <sstream>
-#include <thread>
 
 FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent)
     : QObject(parent)
@@ -45,33 +43,25 @@ void FetchSqlite::teardown()
 
 static QSqlDatabase openDbConnection(const QString &databaseFile)
 {
-    // create a thread unique connection name based on the DB filename and thread id
-    auto connection = databaseFile + "-";
-    std::stringstream s;
-    s << std::this_thread::get_id();
-    connection += QString::fromStdString(s.str());
-
     // Try to reuse the previous connection
-    auto db = QSqlDatabase::database(connection);
+    auto db = QSqlDatabase::database(databaseFile);
     if (db.isValid()) {
-        qCDebug(RUNNER_BOOKMARKS) << "Reusing connection" << connection;
+        qCDebug(RUNNER_BOOKMARKS) << "Reusing connection" << databaseFile;
         return db;
     }
 
     // Otherwise, create, configure and open a new one
-    db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connection);
+    db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), databaseFile);
     db.setHostName(QStringLiteral("localhost"));
     db.setDatabaseName(databaseFile);
     db.open();
-    qCDebug(RUNNER_BOOKMARKS) << "Opened connection" << connection;
+    qCDebug(RUNNER_BOOKMARKS) << "Opened connection" << databaseFile;
 
     return db;
 }
 
 QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant> bindObjects)
 {
-    QMutexLocker lock(&m_mutex);
-
     auto db = openDbConnection(m_databaseFile);
     if (!db.isValid()) {
         return QList<QVariantMap>();
@@ -107,8 +97,6 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
 
 QStringList FetchSqlite::tables(QSql::TableType type)
 {
-    QMutexLocker lock(&m_mutex);
-
     auto db = openDbConnection(m_databaseFile);
     return db.tables(type);
 }

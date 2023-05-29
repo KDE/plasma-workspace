@@ -7,14 +7,11 @@
 
 #pragma once
 #include <QList>
+#include <QObject>
 #include <QSqlDatabase>
-#include <QVariantMap>
-
 #include <QString>
 #include <QVariant>
-
-#include <QMutex>
-#include <QObject>
+#include <QVariantMap>
 
 class FetchSqlite : public QObject
 {
@@ -30,5 +27,4 @@ public:
 
 private:
     QString const m_databaseFile;
-    QMutex m_mutex;
 };
