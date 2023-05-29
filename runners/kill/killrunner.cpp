@@ -25,8 +25,6 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_processes(nullptr)
 {
-    setObjectName(QStringLiteral("Kill Runner"));
-
     auto *sigterm = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM"), this);
     sigterm->setData(15);
     auto *sigkill = new QAction(QIcon::fromTheme(QStringLiteral("process-stop")), i18n("Send SIGKILL"), this);

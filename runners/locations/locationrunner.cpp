@@ -27,8 +27,6 @@ K_PLUGIN_CLASS_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    // set the name shown after the result in krunner window
-    setObjectName(QStringLiteral("Locations"));
     addSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:."));
 }
 

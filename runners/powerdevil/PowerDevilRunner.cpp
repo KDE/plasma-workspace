@@ -27,7 +27,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     : KRunner::AbstractRunner(parent, metaData)
     , m_session(new SessionManagement(this))
 {
-    setObjectName(QStringLiteral("PowerDevil"));
     setMinLetterCount(3);
     const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
     m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};

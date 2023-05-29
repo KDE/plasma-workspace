@@ -31,8 +31,6 @@ K_PLUGIN_CLASS_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    setObjectName(QStringLiteral("Recent Documents"));
-
     addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this)};

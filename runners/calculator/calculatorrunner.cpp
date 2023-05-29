@@ -27,8 +27,6 @@ static QMutex s_initMutex;
 CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    setObjectName(QStringLiteral("Calculator"));
-
     QString description = i18n(
         "Calculates the value of :q: when :q: is made up of numbers and "
         "mathematical symbols such as +, -, /, *, ! and ^.");

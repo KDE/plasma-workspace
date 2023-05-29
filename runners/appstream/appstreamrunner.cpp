@@ -27,7 +27,6 @@ K_PLUGIN_CLASS_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    setObjectName(QStringLiteral("Installation Suggestions"));
     addSyntax(":q:", i18n("Looks for non-installed components according to :q:"));
     setMinLetterCount(3);
 }

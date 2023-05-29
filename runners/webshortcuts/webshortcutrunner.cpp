@@ -24,7 +24,6 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     , m_match(this)
     , m_filterBeforeRun(false)
 {
-    setObjectName(QStringLiteral("Web Shortcut"));
     m_match.setType(KRunner::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 

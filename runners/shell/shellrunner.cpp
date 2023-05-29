@@ -25,7 +25,6 @@ K_PLUGIN_CLASS_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    setObjectName(QStringLiteral("Command"));
     // If the runner is not authorized we can suspend it
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(KAuthorized::SHELL_ACCESS);
     suspendMatching(!enabled);
