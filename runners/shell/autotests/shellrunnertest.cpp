@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2021 Alexander Lohnau <alexander.lonau@gmx.de>
 */
 
+#include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QTest>
@@ -10,12 +11,10 @@
 #include <KPluginMetaData>
 #include <KRunner/AbstractRunnerTest>
 #include <KShell>
-#include <QSignalSpy>
-#include <QStandardPaths>
 
 #include <clocale>
 
-class ShellRunnerTest : public AbstractRunnerTest
+class ShellRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
 

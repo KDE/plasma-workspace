@@ -9,7 +9,7 @@
 #include <QTest>
 #include <libqalculate/includes.h>
 
-class CalculatorRunnerTest : public AbstractRunnerTest
+class CalculatorRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
 

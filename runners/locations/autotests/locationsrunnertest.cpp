@@ -11,7 +11,7 @@
 #include <QMimeData>
 #include <QTest>
 
-class LocationsRunnerTest : public AbstractRunnerTest
+class LocationsRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
 private:
