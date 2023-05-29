@@ -68,9 +68,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
 {
     // Give the other runners a bit of time to produce results
     QEventLoop loop;
-    QTimer::singleShot(200, &loop, [&loop]() {
-        loop.quit();
-    });
+    QTimer::singleShot(200, &loop, &QEventLoop::quit);
     loop.exec();
     if (!context.isValid()) {
         return;
@@ -143,7 +141,6 @@ void InstallerRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
 {
-    QMutexLocker locker(&m_appstreamMutex);
     static bool warnedOnce = false;
     static bool opened = m_db.load();
     if (!opened) {

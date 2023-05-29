@@ -8,7 +8,6 @@
 
 #include <AppStreamQt/pool.h>
 #include <KRunner/AbstractRunner>
-#include <QMutex>
 
 class InstallerRunner : public KRunner::AbstractRunner
 {
@@ -23,7 +22,5 @@ public:
 
 private:
     QList<AppStream::Component> findComponentsByString(const QString &query);
-
     AppStream::Pool m_db;
-    QMutex m_appstreamMutex;
 };
