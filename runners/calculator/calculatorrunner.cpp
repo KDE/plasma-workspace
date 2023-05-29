@@ -14,15 +14,12 @@
 
 #include <QDebug>
 #include <QIcon>
-#include <QMutex>
 #include <QRegularExpression>
 
 #include <KLocalizedString>
 #include <krunner/querymatch.h>
 
 K_PLUGIN_CLASS_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
-
-static QMutex s_initMutex;
 
 CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
@@ -100,11 +97,8 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
     } else if (cmd.endsWith(QLatin1Char('='))) {
         cmd.chop(1);
     } else if (auto match = functionName.match(cmd); match.hasMatch()) { // BUG: 467418
-        {
-            QMutexLocker lock(&s_initMutex);
-            if (!m_engine) {
-                m_engine = std::make_unique<QalculateEngine>();
-            }
+        if (!m_engine) {
+            m_engine = std::make_unique<QalculateEngine>();
         }
         const QString functionName = match.captured(1);
         if (!m_engine->isKnownFunction(functionName)) {
@@ -154,7 +148,6 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
 QString CalculatorRunner::calculate(const QString &term, bool *isApproximate, int base, const QString &customBase)
 {
     {
-        QMutexLocker lock(&s_initMutex);
         if (!m_engine) {
             m_engine = std::make_unique<QalculateEngine>();
         }
