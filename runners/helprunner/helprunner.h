@@ -6,6 +6,7 @@
 #pragma once
 
 #include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 #include <KRunner/RunnerManager>
 
 #include <KPluginMetaData>
@@ -24,5 +25,5 @@ public:
 
 private:
     RunnerManager *m_manager;
-    QList<QAction *> m_actionList;
+    const Actions m_actionList;
 };

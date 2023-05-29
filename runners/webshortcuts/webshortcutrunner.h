@@ -7,6 +7,7 @@
 #pragma once
 
 #include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 #include <KServiceAction>
 
 class WebshortcutRunner : public KRunner::AbstractRunner
@@ -19,11 +20,9 @@ public:
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
 
-private Q_SLOTS:
-    void loadSyntaxes();
-    void configurePrivateBrowsingActions();
-
 private:
+    Q_SLOT void loadSyntaxes();
+    void configurePrivateBrowsingActions();
     KRunner::QueryMatch m_match;
     bool m_filterBeforeRun;
 
@@ -37,4 +36,5 @@ private:
 
     KRunner::RunnerContext m_lastUsedContext;
     QString m_defaultKey;
+    KRunner::Action m_action;
 };

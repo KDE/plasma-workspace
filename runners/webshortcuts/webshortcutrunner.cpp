@@ -16,8 +16,8 @@
 #include <KShell>
 #include <KSycoca>
 #include <KUriFilter>
-#include <QAction>
 #include <QDBusConnection>
+#include <QIcon>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
@@ -85,8 +85,8 @@ void WebshortcutRunner::loadSyntaxes()
 
 void WebshortcutRunner::configurePrivateBrowsingActions()
 {
-    qDeleteAll(m_match.actions());
     m_match.setActions({});
+
     const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group("General").readEntry("BrowserApplication");
     KService::Ptr service;
     if (!browserFile.isEmpty()) {
@@ -104,9 +104,9 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
         bool containsIncognito = action.text().contains(QLatin1String("incognito"), Qt::CaseInsensitive);
         if (containsPrivate || containsIncognito) {
             m_privateAction = action;
-            const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
+            const QString text = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
             const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
-            m_match.setActions({new QAction(icon, actionText, this)});
+            m_match.setActions({KRunner::Action(action.exec(), icon.name(), text)});
             return;
         }
     }

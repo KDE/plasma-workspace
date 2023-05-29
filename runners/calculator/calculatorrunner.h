@@ -8,12 +8,12 @@
 
 #pragma once
 
-#include <QAction>
 #include <QMimeData>
 
 class QalculateEngine;
 
-#include <krunner/abstractrunner.h>
+#include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 
 /**
  * This class evaluates the basic expressions given in the interface.
@@ -38,5 +38,5 @@ private:
     void userFriendlySubstitutions(QString &cmd);
 
     std::unique_ptr<QalculateEngine> m_engine;
-    QList<QAction *> m_actions;
+    const KRunner::Actions m_actions;
 };

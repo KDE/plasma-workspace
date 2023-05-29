@@ -24,13 +24,13 @@ K_PLUGIN_CLASS_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
 ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
+    , m_actionList{KRunner::Action(QStringLiteral("run-in-terminal"), QStringLiteral("utilities-terminal"), i18n("Run in Terminal Window"))}
 {
     // If the runner is not authorized we can suspend it
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(KAuthorized::SHELL_ACCESS);
     suspendMatching(!enabled);
 
     addSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax"));
-    m_actionList = {new QAction(QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"), this)};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
 

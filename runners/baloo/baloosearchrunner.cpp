@@ -8,7 +8,6 @@
 #include "baloosearchrunner.h"
 
 #include <KLocalizedString>
-#include <QAction>
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDir>

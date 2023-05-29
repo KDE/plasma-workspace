@@ -25,10 +25,8 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_processes(new KSysGuard::Processes(QString(), this))
 {
-    auto *sigterm = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM"), this);
-    sigterm->setData(15);
-    auto *sigkill = new QAction(QIcon::fromTheme(QStringLiteral("process-stop")), i18n("Send SIGKILL"), this);
-    sigkill->setData(9);
+    KRunner::Action sigterm(QString::number(15), QStringLiteral("application-exit"), i18n("Send SIGTERM"));
+    KRunner::Action sigkill(QString::number(9), QStringLiteral("process-stop"), i18n("Send SIGKILL"));
     m_actionList = {sigterm, sigkill};
 
     connect(this, &KRunner::AbstractRunner::prepare, m_processes, [this]() {
@@ -116,7 +114,7 @@ void KillRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::
 
     int signal;
     if (match.selectedAction()) {
-        signal = match.selectedAction()->data().toInt();
+        signal = match.selectedAction().id().toInt();
     } else {
         signal = 9; // default: SIGKILL
     }

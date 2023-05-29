@@ -6,10 +6,8 @@
 
 #pragma once
 
-#include <krunner/abstractrunner.h>
-
-#include <QAction>
-#include <QIcon>
+#include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 
 class RecentDocuments : public KRunner::AbstractRunner
 {
@@ -22,5 +20,5 @@ public:
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
 
 private:
-    QList<QAction *> m_actions;
+    const KRunner::Actions m_actions;
 };

@@ -23,6 +23,7 @@ K_PLUGIN_CLASS_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
 
 CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
+    , m_actions({KRunner::Action(QStringLiteral("copy"), QStringLiteral("edit-copy"), i18n("Copy to Clipboard"))})
 {
     QString description = i18n(
         "Calculates the value of :q: when :q: is made up of numbers and "
@@ -32,7 +33,6 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     addSyntax(QStringLiteral(":q:="), description);
     addSyntax(QStringLiteral("sqrt(4)"), i18n("Enter a common math function"));
 
-    m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), this)};
     setMinLetterCount(2);
 }
 

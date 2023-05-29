@@ -7,6 +7,7 @@
 #pragma once
 
 #include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 #include <QIcon>
 #include <optional>
 
@@ -26,6 +27,6 @@ public:
 
 private:
     std::optional<QString> parseShellCommand(const QString &query, QStringList &envs);
-    QList<QAction *> m_actionList;
+    const KRunner::Actions m_actionList;
     QIcon m_matchIcon;
 };

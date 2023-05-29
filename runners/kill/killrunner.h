@@ -11,9 +11,9 @@
 #include <QTimer>
 
 #include <KRunner/AbstractRunner>
+#include <KRunner/Action>
 
 #include "config_keys.h"
-class QAction;
 
 namespace KSysGuard
 {
@@ -48,8 +48,7 @@ private:
     /** timer for retrying the cleanup due to lock contention */
     QTimer m_delayedCleanupTimer;
 
-    /** Reuse actions */
-    QList<QAction *> m_actionList;
+    KRunner::Actions m_actionList;
 
     /** Reuse value */
     bool m_hasTrigger;
