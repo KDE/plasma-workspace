@@ -15,7 +15,6 @@ class WebshortcutRunner : public KRunner::AbstractRunner
 
 public:
     WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~WebshortcutRunner() override;
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;

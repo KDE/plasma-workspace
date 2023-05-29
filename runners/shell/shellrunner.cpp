@@ -34,10 +34,6 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData)
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
 
-ShellRunner::~ShellRunner()
-{
-}
-
 void ShellRunner::match(KRunner::RunnerContext &context)
 {
     QStringList envs;

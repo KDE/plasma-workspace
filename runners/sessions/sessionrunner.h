@@ -21,7 +21,6 @@ class SessionRunner : public KRunner::AbstractRunner
 
 public:
     SessionRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~SessionRunner() override;
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;

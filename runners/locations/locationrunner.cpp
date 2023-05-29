@@ -30,10 +30,6 @@ LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaDat
     addSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:."));
 }
 
-LocationsRunner::~LocationsRunner()
-{
-}
-
 void LocationsRunner::match(KRunner::RunnerContext &context)
 {
     QString term = context.query();

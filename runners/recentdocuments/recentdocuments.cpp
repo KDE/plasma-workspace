@@ -37,10 +37,6 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
     setMinLetterCount(3);
 }
 
-RecentDocuments::~RecentDocuments()
-{
-}
-
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     if (!context.isValid()) {

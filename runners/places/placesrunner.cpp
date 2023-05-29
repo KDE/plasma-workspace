@@ -40,10 +40,6 @@ PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
     });
 }
 
-PlacesRunner::~PlacesRunner()
-{
-}
-
 void PlacesRunner::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();

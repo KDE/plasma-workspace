@@ -67,10 +67,6 @@ void PowerDevilRunner::updateSyntaxes()
                    "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
 }
 
-PowerDevilRunner::~PowerDevilRunner()
-{
-}
-
 void PowerDevilRunner::updateStatus()
 {
     updateSyntaxes();

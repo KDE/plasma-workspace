@@ -49,10 +49,6 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     });
 }
 
-WebshortcutRunner::~WebshortcutRunner()
-{
-}
-
 void WebshortcutRunner::loadSyntaxes()
 {
     KUriFilterData filterData(QStringLiteral(":q"));

@@ -52,10 +52,6 @@ SearchRunner::SearchRunner(QObject *parent)
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.runners.baloo"));
 }
 
-SearchRunner::~SearchRunner()
-{
-}
-
 RemoteActions SearchRunner::Actions()
 {
     Baloo::IndexerConfig config;

@@ -15,7 +15,6 @@ class PlacesRunner : public KRunner::AbstractRunner
 
 public:
     PlacesRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~PlacesRunner() override;
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;

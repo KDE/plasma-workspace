@@ -64,10 +64,6 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     setMinLetterCount(3);
 }
 
-SessionRunner::~SessionRunner()
-{
-}
-
 static inline bool anyKeywordMatches(const QStringList &keywords, const QString &term)
 {
     return std::any_of(keywords.cbegin(), keywords.cend(), [&term](const QString &keyword) {

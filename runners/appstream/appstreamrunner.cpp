@@ -31,10 +31,6 @@ InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaDat
     setMinLetterCount(3);
 }
 
-InstallerRunner::~InstallerRunner()
-{
-}
-
 static QIcon componentIcon(const AppStream::Component &comp)
 {
     QIcon ret;

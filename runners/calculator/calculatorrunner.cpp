@@ -36,9 +36,7 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     setMinLetterCount(2);
 }
 
-CalculatorRunner::~CalculatorRunner()
-{
-}
+CalculatorRunner::~CalculatorRunner() = default;
 
 void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
 {

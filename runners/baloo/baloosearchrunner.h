@@ -20,7 +20,6 @@ class SearchRunner : public QObject, protected QDBusContext
 
 public:
     explicit SearchRunner(QObject *parent = nullptr);
-    ~SearchRunner() override;
 
     RemoteActions Actions();
     RemoteMatches Match(const QString &searchTerm);

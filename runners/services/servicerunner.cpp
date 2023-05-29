@@ -432,8 +432,6 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     processActivitiesResults(ResultSet(m_kactivitiesQuery));
 }
 
-ServiceRunner::~ServiceRunner() = default;
-
 void ServiceRunner::processActivitiesResults(const ResultSet &results)
 {
     const static QLatin1String globalActivity(":global");

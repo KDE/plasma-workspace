@@ -28,7 +28,6 @@ class ServiceRunner : public KRunner::AbstractRunner
 
 public:
     ServiceRunner(QObject *parent, const KPluginMetaData &metaData);
-    ~ServiceRunner() override;
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;

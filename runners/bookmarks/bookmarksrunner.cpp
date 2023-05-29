@@ -38,8 +38,6 @@ BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaDat
     setMinLetterCount(3);
 }
 
-BookmarksRunner::~BookmarksRunner() = default;
-
 void BookmarksRunner::prep()
 {
     auto browser = m_browserFactory->find(findBrowserName(), this);
