@@ -6,26 +6,8 @@
 
 #pragma once
 
-#include <kfileplacesmodel.h>
-#include <krunner/abstractrunner.h>
-
-class PlacesRunner;
-
-class PlacesRunnerHelper : public QObject
-{
-    Q_OBJECT
-
-public:
-    explicit PlacesRunnerHelper(PlacesRunner *runner);
-
-public Q_SLOTS:
-    void match(KRunner::RunnerContext *context);
-    void openDevice(const QString &udi);
-
-private:
-    KFilePlacesModel m_places;
-    QString m_pendingUdi;
-};
+#include <KFilePlacesModel>
+#include <KRunner/AbstractRunner>
 
 class PlacesRunner : public KRunner::AbstractRunner
 {
@@ -38,9 +20,8 @@ public:
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
 
-Q_SIGNALS:
-    void doMatch(KRunner::RunnerContext *context);
-
 private:
-    PlacesRunnerHelper *m_helper;
+    void openDevice(const QString &udi);
+    KFilePlacesModel m_places;
+    QString m_pendingUdi;
 };

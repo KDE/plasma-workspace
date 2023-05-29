@@ -7,7 +7,6 @@
 #include "placesrunner.h"
 
 #include <QCoreApplication>
-#include <QThread>
 #include <QTimer>
 
 #include <QDebug>
@@ -23,40 +22,12 @@ K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
 PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
+    , m_places(this)
 {
-    setObjectName(QStringLiteral("Places"));
     addSyntax(i18n("places"), i18n("Lists all file manager locations"));
     addSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:"));
 
-    // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
-    // otherwise crashes ensue
-    m_helper = new PlacesRunnerHelper(this);
     setMinLetterCount(3);
-}
-
-PlacesRunner::~PlacesRunner()
-{
-}
-
-void PlacesRunner::match(KRunner::RunnerContext &context)
-{
-    if (QThread::currentThread() == QCoreApplication::instance()->thread()) {
-        // from the main thread
-        // qDebug() << "calling";
-        m_helper->match(&context);
-    } else {
-        // from the non-gui thread
-        // qDebug() << "emitting";
-        Q_EMIT doMatch(&context);
-    }
-    // m_helper->match(c);
-}
-
-PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
-    : QObject(runner)
-{
-    Q_ASSERT(QThread::currentThread() == QCoreApplication::instance()->thread());
-    connect(runner, &PlacesRunner::doMatch, this, &PlacesRunnerHelper::match, Qt::BlockingQueuedConnection);
 
     connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
         if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
@@ -69,13 +40,12 @@ PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
     });
 }
 
-void PlacesRunnerHelper::match(KRunner::RunnerContext *c)
+PlacesRunner::~PlacesRunner()
 {
-    KRunner::RunnerContext &context = *c;
-    if (!context.isValid()) {
-        return;
-    }
+}
 
+void PlacesRunner::match(KRunner::RunnerContext &context)
+{
     const QString term = context.query();
     QList<KRunner::QueryMatch> matches;
     const bool all = term.compare(i18n("places"), Qt::CaseInsensitive) == 0;
@@ -103,7 +73,7 @@ void PlacesRunnerHelper::match(KRunner::RunnerContext *c)
             // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
             // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
             const QString groupName = m_places.data(current_index, KFilePlacesModel::GroupRole).toString();
-            if (!groupName.isEmpty() && static_cast<PlacesRunner *>(parent())->name() != groupName) {
+            if (!groupName.isEmpty() && name() != groupName) {
                 match.setSubtext(groupName);
             }
 
@@ -126,7 +96,7 @@ void PlacesRunnerHelper::match(KRunner::RunnerContext *c)
     context.addMatches(matches);
 }
 
-void PlacesRunnerHelper::openDevice(const QString &udi)
+void PlacesRunner::openDevice(const QString &udi)
 {
     m_pendingUdi.clear();
 
@@ -140,9 +110,8 @@ void PlacesRunnerHelper::openDevice(const QString &udi)
     }
 }
 
-void PlacesRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action)
+void PlacesRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &action)
 {
-    Q_UNUSED(context);
     // I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want
     // things to go wrong.
     if (action.data().type() == QVariant::Url) {
@@ -151,7 +120,7 @@ void PlacesRunner::run(const KRunner::RunnerContext &context, const KRunner::Que
         job->setRunExecutables(false);
         job->start();
     } else if (action.data().canConvert<QString>()) {
-        m_helper->openDevice(action.data().toString());
+        openDevice(action.data().toString());
     }
 }
 
