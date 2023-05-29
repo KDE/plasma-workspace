@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:06+0000\n"
+"POT-Creation-Date: 2023-05-29 02:35+0000\n"
 "PO-Revision-Date: 2023-03-31 10:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
 msgid "No title"
 msgstr "Без названия"
 
-#: package/contents/ui/AlbumArtStackView.qml:181
+#: package/contents/ui/AlbumArtStackView.qml:190
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
