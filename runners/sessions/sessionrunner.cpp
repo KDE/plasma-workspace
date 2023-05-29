@@ -18,7 +18,6 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Sessions"));
-    setPriority(LowPriority);
 
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);

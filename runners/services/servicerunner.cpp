@@ -420,8 +420,6 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     , m_kactivitiesWatcher(m_kactivitiesQuery)
 {
     setObjectName(QStringLiteral("Application"));
-    setPriority(AbstractRunner::HighestPriority);
-
     addSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:"));
     connect(&m_kactivitiesWatcher, &ResultWatcher::resultLinked, [this](const QString &resource) {
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));

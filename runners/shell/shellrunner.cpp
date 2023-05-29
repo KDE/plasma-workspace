@@ -26,8 +26,6 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
     setObjectName(QStringLiteral("Command"));
-    // The results from the services runner are preferred, consequently we set a low priority
-    setPriority(AbstractRunner::LowestPriority);
     // If the runner is not authorized we can suspend it
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(KAuthorized::SHELL_ACCESS);
     suspendMatching(!enabled);
