@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -188,7 +188,6 @@ msgstr "マークしたファイルを削除"
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "%1 個の重複フォントが見つかりました。"
-msgstr[1] "%1 個の重複フォントが見つかりました。"
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -255,7 +254,6 @@ msgstr "削除マークを付ける"
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "%1 個のフォントをすべてフォントビューアで開きますか？"
-msgstr[1] "%1 個のフォントをすべてフォントビューアで開きますか？"
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
@@ -863,8 +861,7 @@ msgstr "フォントを削除"
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "本当にこのフォントを削除しますか？"
-msgstr[1] "本当にこれら %1 個のフォントを削除しますか？"
+msgstr[0] "本当にこれら %1 個のフォントを削除しますか？"
 
 #: kcmfontinst/KCmFontInst.cpp:634
 #, kde-format
@@ -913,7 +910,6 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
-msgstr[1] "<p>本当に以下を移動しますか？</p><p><b>%1</b></p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -982,8 +978,7 @@ msgstr "フォントがありません"
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] "1 フォント"
-msgstr[1] "%1 フォント"
+msgstr[0] "%1 フォント"
 
 #: kcmfontinst/KCmFontInst.cpp:902
 #, fuzzy, kde-format
@@ -1103,15 +1098,13 @@ msgstr "フォントを無効化"
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "本当にこのフォントを有効化しますか？"
-msgstr[1] "本当にこれら %1 個のフォントを有効化しますか？"
+msgstr[0] "本当にこれら %1 個のフォントを有効化しますか？"
 
 #: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "本当にこのフォントを無効化しますか？"
-msgstr[1] "本当にこれら %1 個のフォントを無効化しますか？"
+msgstr[0] "本当にこれら %1 個のフォントを無効化しますか？"
 
 #: kcmfontinst/KCmFontInst.cpp:1145
 #, kde-format
@@ -1121,8 +1114,7 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
-msgstr[0] "<p>本当にグループ “%2” のこのフォントを有効化しますか？</p>"
-msgstr[1] "<p>本当にグループ “%2” の %1 個のフォントを有効化しますか？</p>"
+msgstr[0] "<p>本当にグループ “%2” の %1 個のフォントを有効化しますか？</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
@@ -1132,8 +1124,7 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
-msgstr[0] "<p>本当にグループ “%2” のこのフォントを無効化しますか？</p>"
-msgstr[1] "<p>本当にグループ “%2” の %1 個のフォントを無効化しますか？</p>"
+msgstr[0] "<p>本当にグループ “%2” の %1 個のフォントを無効化しますか？</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
@@ -1337,8 +1328,7 @@ msgstr "エラー: フォントの名前が分かりません。"
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
-msgstr[0] "%2 [1 ピクセル]"
-msgstr[1] "%2 [%1 ピクセル]"
+msgstr[0] "%2 [%1 ピクセル]"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"

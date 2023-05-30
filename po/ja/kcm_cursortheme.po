@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -164,7 +164,6 @@ msgstr "アニメーションを停止:"
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 秒後"
-msgstr[1] "%1 秒後"
 
 #: package/contents/ui/main.qml:20
 #, kde-format

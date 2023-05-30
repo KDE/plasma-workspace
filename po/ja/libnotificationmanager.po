@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.12.2\n"
@@ -29,7 +29,6 @@ msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
 msgstr[0] "%1 個中 %2 個のファイルを %3 へ"
-msgstr[1] "%1 個中 %2 個のファイルを %3 へ"
 
 #: job_p.cpp:186 job_p.cpp:216 job_p.cpp:232
 #, kde-format
@@ -37,7 +36,6 @@ msgctxt "Copying n files to location"
 msgid "%1 file to %2"
 msgid_plural "%1 files to %2"
 msgstr[0] "%1 個のファイルを %2 へ"
-msgstr[1] "%1 個のファイルを %2 へ"
 
 #: job_p.cpp:193
 #, kde-format
@@ -45,7 +43,6 @@ msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%1 個中 %2 個のファイル"
-msgstr[1] "%1 個中 %2 個のファイル"
 
 #: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236
 #, kde-format
@@ -53,7 +50,6 @@ msgctxt "Copying n files"
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 個のファイル"
-msgstr[1] "%1 個のファイル"
 
 #: job_p.cpp:201
 #, kde-format
@@ -61,7 +57,6 @@ msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%1 個中 %2 個のアイテム"
-msgstr[1] "%1 個中 %2 個のアイテム"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
@@ -69,7 +64,6 @@ msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 個のアイテム"
-msgstr[1] "%1 個のアイテム"
 
 #: job_p.cpp:211
 #, kde-format
@@ -82,8 +76,7 @@ msgstr "%1 を %2 へ"
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
-msgstr[0] "%1 個のファイルを %2 へ"
-msgstr[1] "%1 個のアイテムを %2 へ"
+msgstr[0] "%1 個のアイテムを %2 へ"
 
 #: job_p.cpp:234
 #, kde-format

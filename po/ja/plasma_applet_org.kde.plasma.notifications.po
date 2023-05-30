@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.12.2\n"
@@ -192,7 +192,6 @@ msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%1 ファイル中 %2 ファイル"
-msgstr[1] "%1 ファイル中 %2 ファイル"
 
 #: package/contents/ui/JobDetails.qml:113
 #, kde-format
@@ -200,7 +199,6 @@ msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "%1 フォルダ中 %2 フォルダ"
-msgstr[1] "%1 フォルダ中 %2 フォルダ"
 
 #: package/contents/ui/JobDetails.qml:116
 #, kde-format
@@ -208,28 +206,24 @@ msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%1 アイテム中 %2"
-msgstr[1] "%1 アイテム中 %2"
 
 #: package/contents/ui/JobDetails.qml:124
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 ファイル"
-msgstr[1] "%1 ファイル"
 
 #: package/contents/ui/JobDetails.qml:126
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 フォルダ"
-msgstr[1] "%1 フォルダ"
 
 #: package/contents/ui/JobDetails.qml:128
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 アイテム"
-msgstr[1] "%1 アイテム"
 
 #: package/contents/ui/JobDetails.qml:145
 #, kde-format
@@ -283,7 +277,6 @@ msgstr "開く"
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 個の実行中のジョブ"
-msgstr[1] "%1 個の実行中のジョブ"
 
 #: package/contents/ui/main.qml:54
 #, kde-format
@@ -296,14 +289,12 @@ msgstr "%1 (%2%)"
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 個の実行中のジョブ (%2%)"
-msgstr[1] "%1 個の実行中のジョブ (%2%)"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "未読の通知 %1 件"
-msgstr[1] "未読の通知 %1 件"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -342,7 +333,6 @@ msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
 msgstr[0] "%1 分前"
-msgstr[1] "%1 分前"
 
 #: package/contents/ui/NotificationHeader.qml:161
 #, kde-format
@@ -350,7 +340,6 @@ msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
 msgstr[0] "残り %1 秒"
-msgstr[1] "残り %1 秒"
 
 #: package/contents/ui/NotificationHeader.qml:165
 #, kde-format
@@ -358,7 +347,6 @@ msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
 msgstr[0] "残り %1 分"
-msgstr[1] "残り %1 分"
 
 #: package/contents/ui/NotificationHeader.qml:170
 #, kde-format
@@ -366,7 +354,6 @@ msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
 msgstr[0] "残り %1 時間"
-msgstr[1] "残り %1 時間"
 
 #: package/contents/ui/NotificationHeader.qml:190
 #, kde-format

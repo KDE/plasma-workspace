@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:53+0000\n"
-"PO-Revision-Date: 2023-01-25 15:15+0100\n"
+"PO-Revision-Date: 2023-05-29 15:18+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -187,115 +187,112 @@ msgstr "Fallimento de Installation"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilitate"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Lanceatores de application"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Data e Tempore"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Instrumentos de disveloppamento"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Education"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Ambiente e Tempore"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Exemplos"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Systema de file"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Giovanni Sora"
+msgstr "Divertimento e Jocos"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Graphiches"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Linguage"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Mappar"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Miscellanea"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Servicios in linea"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Productivitate"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Information de Systema"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitates"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Fenestras e Cargas"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Area de transferentia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Cargas"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
