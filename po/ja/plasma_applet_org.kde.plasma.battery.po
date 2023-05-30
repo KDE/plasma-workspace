@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.12.2\n"
@@ -186,8 +186,7 @@ msgstr "自動でのスリープと画面ロックは無効化されました"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "1 つのアプリケーションが パフォーマンスモードの有効化を要求しました"
-msgstr[1] ""
+msgstr[0] ""
 "%1 つのアプリケーションが パフォーマンスモードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:197
@@ -199,8 +198,7 @@ msgstr "パフォーマンスモードがオンになっています"
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "1 つのアプリケーションが省電力モードの有効化を要求しました"
-msgstr[1] "%1 つのアプリケーションが省電力モードの有効化を要求しました"
+msgstr[0] "%1 つのアプリケーションが省電力モードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:205
 #, kde-format
@@ -267,8 +265,7 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "現在 %1 つのアプリケーションがスリープと画面ロックを妨げています:"
-msgstr[1] ""
+msgstr[0] ""
 "現在 %1 つのアプリケーションがスリープと画面ロックをブロックしています:"
 
 #: package/contents/ui/PowerManagementItem.qml:106
@@ -383,8 +380,7 @@ msgstr "パフォーマンスが低下するかもしれません。"
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
-msgstr[0] "1 つのアプリケーションが %2 の有効化を要求しました:"
-msgstr[1] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
+msgstr[0] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
 
 #: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format

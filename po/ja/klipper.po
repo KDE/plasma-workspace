@@ -21,7 +21,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 1.1\n"
@@ -62,7 +62,6 @@ msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " エントリ"
-msgstr[1] " エントリ"
 
 #: configdialog.cpp:131 configdialog.cpp:169
 #, fuzzy, kde-format
@@ -136,7 +135,6 @@ msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " 秒"
-msgstr[1] " 秒"
 
 #: configdialog.cpp:293
 #, kde-format

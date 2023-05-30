@@ -5,8 +5,8 @@
 # Joëlle Cornavin <jcornavin@laposte.net>, 2010.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 #
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
