@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
+
+[Global]
+IconName=love
+Name=Request for Donation
+Comment=Shows a yearly request to donate to KDE
+[Context/Application]
+Name=Application
+
+[Event/ShowDonationMessage]
+Name=Request for Donation
+Comment=Shows a yearly request to donate to KDE
+Action=Popup
+Urgency=Low

@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Shows a yearly request to donate to KDE",
+        "Name": "Donation Request"
+    },
+    "X-KDE-Kded-autoload": true
+}
