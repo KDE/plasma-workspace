@@ -1,20 +1,20 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2016, 2018, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:53+0000\n"
-"PO-Revision-Date: 2023-02-01 22:11+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2023-05-30 18:42+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -187,65 +187,62 @@ msgstr "Installationsfehler"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Zugangshilfen"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Anwendungsstarter"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomie"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Datum und Zeit"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Entwicklungswerkzeuge"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Bildung"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Umwelt und Wetter"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Dateisystem"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Deutsches KDE-Übersetzerteam"
+msgstr "Spaß und Spiele"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafik"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
@@ -255,47 +252,47 @@ msgstr ""
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Verschiedenes"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Online-Dienste"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivität"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Systeminformation"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Dienstprogramme"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Fenster und Prozesse"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Zwischenablage"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Prozesse"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format

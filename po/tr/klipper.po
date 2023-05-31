@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2023-03-29 16:15+0300\n"
+"PO-Revision-Date: 2023-05-30 23:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -603,7 +603,7 @@ msgstr "Taşınabilir Barkod"
 #: klipper.cpp:1071
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Tüm pano geçmişini gerçekten temizleyip silmek istiyor musunuz?"
+msgstr "Tüm pano geçmişini temizleyip silmeyi gerçekten istiyor musunuz?"
 
 #: klipper.cpp:1072
 #, kde-format
@@ -907,7 +907,7 @@ msgstr "Andrew Stanley-Jones"
 #: main.cpp:36
 #, kde-format
 msgid "Original Author"
-msgstr "Asıl Yazar"
+msgstr "Özgün Yazar"
 
 #: main.cpp:38
 #, kde-format
