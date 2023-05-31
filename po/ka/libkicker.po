@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
 "PO-Revision-Date: 2022-09-02 06:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -114,8 +114,8 @@ msgid "Computer"
 msgstr "კომპიუტერი"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:30
+#: plugin/kastatsfavoritesmodel.cpp:544 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"
 msgstr "რჩეულები"

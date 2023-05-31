@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
 "PO-Revision-Date: 2021-07-19 19:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -117,8 +117,8 @@ msgid "Computer"
 msgstr "Ordenagailua"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:30
+#: plugin/kastatsfavoritesmodel.cpp:544 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:31
 #, kde-format
 msgid "Favorites"
 msgstr "Gogokoak"

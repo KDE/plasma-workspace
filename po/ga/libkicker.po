@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-05-31 03:09+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -114,8 +114,8 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:542 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:30
+#: plugin/kastatsfavoritesmodel.cpp:544 plugin/rootmodel.cpp:392
+#: plugin/simplefavoritesmodel.cpp:31
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Áiteanna Is Ansa Liom"
