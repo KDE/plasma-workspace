@@ -82,6 +82,20 @@ KCM.GridViewKCM {
         }
     }
 
+    actions: [
+        NewStuff.Action {
+            configFile: "lookandfeel.knsrc"
+            text: i18n("Get New…")
+            onEntryEvent: function (entry, event) {
+                if (event == NewStuff.Entry.StatusChangedEvent) {
+                    kcm.knsEntryChanged(entry);
+                } else if (event == NewStuff.Entry.AdoptedEvent) {
+                    kcm.reloadConfig();
+                }
+            }
+        }
+    ]
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -180,24 +194,6 @@ KCM.GridViewKCM {
                 }
             }
         }
-    }
-
-    footer: Kirigami.ActionToolBar {
-        flat: false
-        alignment: Qt.AlignRight
-        actions: [
-            NewStuff.Action {
-                configFile: "lookandfeel.knsrc"
-                text: i18n("Get New Global Themes…")
-                onEntryEvent: function (entry, event) {
-                    if (event == NewStuff.Entry.StatusChangedEvent) {
-                        kcm.knsEntryChanged(entry);
-                    } else if (event == NewStuff.Entry.AdoptedEvent) {
-                        kcm.reloadConfig();
-                    }
-                }
-            }
-        ]
     }
 
     Window {

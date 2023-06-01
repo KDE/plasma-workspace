@@ -48,6 +48,86 @@ KCM.GridViewKCM {
         onDropped: kcm.installThemeFromFile(drop.urls[0])
     }
 
+    actions: [
+        Kirigami.Action {
+            displayComponent: RowLayout {
+                QtControls.Label {
+                    text: i18nc("@label Size of the cursor", "Size:")
+                }
+                QtControls.ComboBox {
+                    id: sizeCombo
+
+                    model: kcm.sizesModel
+                    textRole: "display"
+                    currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
+                    onActivated: {
+                        kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                        kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                    }
+
+                    KCM.SettingStateBinding {
+                    configObject: kcm.cursorThemeSettings
+                        settingName: "cursorSize"
+                        extraEnabledConditions: kcm.canResize
+                    }
+
+                    delegate: QtControls.ItemDelegate {
+                        id: sizeComboDelegate
+
+                        readonly property int size: parseInt(model.display)
+
+                        width: parent.width
+                        highlighted: ListView.isCurrentItem
+                        text: model.display
+
+                        contentItem: RowLayout {
+                            Kirigami.Icon {
+                                source: model.decoration
+                                smooth: true
+                                Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
+                                Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
+                                visible: valid && sizeComboDelegate.size > 0
+                            }
+
+                            QtControls.Label {
+                                Layout.fillWidth: true
+                                color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                                text: model[sizeCombo.textRole]
+                                elide: Text.ElideRight
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button", "&Configure Launch Feedback…")
+            icon.name: "preferences-desktop-launch-feedback"
+            onTriggered: {
+                const component = Qt.createComponent("LaunchFeedbackDialog.qml");
+                component.incubateObject(root, {
+                    "parent": root,
+                });
+                component.destroy();
+            }
+        },
+        Kirigami.Action {
+            text: i18n("&Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+            enabled: kcm.canInstall
+        },
+        NewStuff.Action {
+            text: i18n("&Get New…")
+            configFile: "xcursor.knsrc"
+            onEntryEvent: function (entry, event) {
+                if (event == NewStuff.Entry.StatusChangedEvent) {
+                    kcm.ghnsEntryChanged(entry);
+                }
+            }
+        }
+    ]
+
     footer: ColumnLayout {
         id: footerLayout
 
@@ -74,89 +154,6 @@ KCM.GridViewKCM {
                     infoLabel.text = message;
                     infoLabel.visible = true;
                 }
-            }
-        }
-
-        RowLayout {
-            id: row1
-
-            QtControls.Label {
-                text: i18n("Size:")
-            }
-            QtControls.ComboBox {
-                id: sizeCombo
-                model: kcm.sizesModel
-                textRole: "display"
-                currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
-                onActivated: {
-                    kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                    kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.cursorThemeSettings
-                    settingName: "cursorSize"
-                    extraEnabledConditions: kcm.canResize
-                }
-
-                delegate: QtControls.ItemDelegate {
-                    id: sizeComboDelegate
-
-                    readonly property int size: parseInt(model.display)
-
-                    width: parent.width
-                    highlighted: ListView.isCurrentItem
-                    text: model.display
-
-                    contentItem: RowLayout {
-                        Kirigami.Icon {
-                            source: model.decoration
-                            smooth: true
-                            Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
-                            Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
-                            visible: valid && sizeComboDelegate.size > 0
-                        }
-
-                        QtControls.Label {
-                            Layout.fillWidth: true
-                            color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                            text: model[sizeCombo.textRole]
-                            elide: Text.ElideRight
-                        }
-                    }
-                }
-            }
-            Kirigami.ActionToolBar {
-                flat: false
-                alignment: Qt.AlignRight
-                actions: [
-                    Kirigami.Action {
-                        text: i18nc("@action:button", "&Configure Launch Feedback…")
-                        icon.name: "preferences-desktop-launch-feedback"
-                        onTriggered: {
-                            const component = Qt.createComponent("LaunchFeedbackDialog.qml");
-                            component.incubateObject(root, {
-                                "parent": root,
-                            });
-                            component.destroy();
-                        }
-                    },
-                    Kirigami.Action {
-                        text: i18n("&Install from File…")
-                        icon.name: "document-import"
-                        onTriggered: fileDialogLoader.active = true
-                        enabled: kcm.canInstall
-                    },
-                    NewStuff.Action {
-                        text: i18n("&Get New Cursors…")
-                        configFile: "xcursor.knsrc"
-                        onEntryEvent: function (entry, event) {
-                            if (event == NewStuff.Entry.StatusChangedEvent) {
-                                kcm.ghnsEntryChanged(entry);
-                            }
-                        }
-                    }
-                ]
             }
         }
     }

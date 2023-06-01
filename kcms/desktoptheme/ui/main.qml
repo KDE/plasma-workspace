@@ -92,6 +92,21 @@ KCM.GridViewKCM {
         }
     }
 
+    actions: [
+        Kirigami.Action {
+            text: i18n("Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+        },
+        NewStuff.Action {
+            text: i18n("Get New…")
+            configFile: "plasma-themes.knsrc"
+            onEntryEvent: function (entry, event) {
+                kcm.load();
+            }
+        }
+    ]
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -164,25 +179,6 @@ KCM.GridViewKCM {
                     infoLabel.visible = true;
                 }
             }
-        }
-
-        Kirigami.ActionToolBar {
-            flat: false
-            alignment: Qt.AlignRight
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Install from File…")
-                    icon.name: "document-import"
-                    onTriggered: fileDialogLoader.active = true
-                },
-                NewStuff.Action {
-                    text: i18n("Get New Plasma Styles…")
-                    configFile: "plasma-themes.knsrc"
-                    onEntryEvent: function (entry, event) {
-                        kcm.load();
-                    }
-                }
-            ]
         }
     }
 

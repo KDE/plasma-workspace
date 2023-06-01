@@ -137,6 +137,25 @@ KCM.GridViewKCM {
         }
     }
 
+    actions: [
+        Kirigami.Action {
+            text: i18n("Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+        },
+        NewStuff.Action {
+            text: i18n("Get New…")
+            configFile: "colorschemes.knsrc"
+            onEntryEvent: function (entry, event) {
+                if (event == NewStuff.Entry.StatusChangedEvent) {
+                    kcm.knsEntryChanged(entry)
+                } else if (event == NewStuff.Entry.AdoptedEvent) {
+                    kcm.loadSelectedColorScheme()
+                }
+            }
+        }
+    ]
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -331,29 +350,6 @@ KCM.GridViewKCM {
                     notInstalledWarning.visible = false;
                 }
             }
-        }
-
-        Kirigami.ActionToolBar {
-            flat: false
-            alignment: Qt.AlignRight
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Install from File…")
-                    icon.name: "document-import"
-                    onTriggered: fileDialogLoader.active = true
-                },
-                NewStuff.Action {
-                    text: i18n("Get New Color Schemes…")
-                    configFile: "colorschemes.knsrc"
-                    onEntryEvent: function (entry, event) {
-                        if (event == NewStuff.Entry.StatusChangedEvent) {
-                            kcm.knsEntryChanged(entry)
-                        } else if (event == NewStuff.Entry.AdoptedEvent) {
-                            kcm.loadSelectedColorScheme()
-                        }
-                    }
-                }
-            ]
         }
     }
 

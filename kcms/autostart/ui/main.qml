@@ -61,6 +61,37 @@ KCM.ScrollViewKCM {
 
     }
 
+    actions: [
+        Kirigami.Action {
+            icon.name: "list-add"
+            text: i18nc("@action:button", "Add…")
+
+            checkable: true
+            checked: menu.opened
+            onTriggered: if (menu.opened) {
+                menu.close();
+            } else {
+                menu.open();
+            }
+
+            Kirigami.Action {
+                text: i18n("Add Application…")
+                icon.name: "list-add"
+                onTriggered: kcm.model.showApplicationDialog(root)
+            }
+            Kirigami.Action {
+                text: i18n("Add Login Script…")
+                icon.name: "list-add"
+                onTriggered: loginFileDialogLoader.active = true
+            }
+            Kirigami.Action {
+                text: i18n("Add Logout Script…")
+                icon.name: "list-add"
+                onTriggered: logoutFileDialogLoader.active = true
+            }
+        }
+    ]
+
     view: ListView {
         id: listView
         clip: true
@@ -172,45 +203,6 @@ KCM.ScrollViewKCM {
                 onRejected: logoutFileDialogLoader.active = false
 
                 Component.onCompleted: open()
-            }
-        }
-
-        Button {
-            id: menuButton
-
-            icon.name: "list-add"
-            text: i18n("Add…")
-
-            checkable: true
-            checked: menu.opened
-            onClicked: menu.opened? menu.close() : menu.open()
-        }
-
-        Menu {
-            id: menu
-            x: menuButton.x
-            y: -height
-
-            modal: true
-            dim: false
-
-            MenuItem {
-                text: i18n("Add Application…")
-                icon.name: "list-add"
-
-                onClicked: kcm.model.showApplicationDialog(root)
-            }
-            MenuItem {
-                text: i18n("Add Login Script…")
-                icon.name: "list-add"
-
-                onClicked: loginFileDialogLoader.active = true
-            }
-            MenuItem {
-                text: i18n("Add Logout Script…")
-                icon.name: "list-add"
-
-                onClicked: logoutFileDialogLoader.active = true
             }
         }
     }

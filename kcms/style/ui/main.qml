@@ -52,6 +52,26 @@ KCM.GridViewKCM {
         }
     }
 
+    actions: [
+        Kirigami.Action {
+            id: effectSettingsButton
+            text: i18n("Configure Icons and Toolbars")
+            icon.name: "configure-toolbars" // proper icon?
+            checkable: true
+            checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
+            onTriggered: {
+                effectSettingsPopupLoader.active = true;
+                effectSettingsPopupLoader.item.open();
+            }
+        },
+        Kirigami.Action {
+            visible: kcm.gtkConfigKdedModuleLoaded
+            text: i18n("Configure GNOME/GTK Application Style…")
+            icon.name: "configure"
+            onTriggered: root.openGtkStyleSettings()
+        }
+    ]
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -90,37 +110,6 @@ KCM.GridViewKCM {
         }
         onDoubleClicked: {
             kcm.save();
-        }
-    }
-
-    footer: ColumnLayout {
-        RowLayout {
-            Layout.alignment: Qt.AlignLeft
-
-            QtControls.ToolButton {
-                id: effectSettingsButton
-                text: i18n("Configure Icons and Toolbars")
-                icon.name: "configure-toolbars" // proper icon?
-                flat: false
-                checkable: true
-                checked: Boolean(effectSettingsPopupLoader.item?.opened)
-                onClicked: {
-                    effectSettingsPopupLoader.active = true;
-                    effectSettingsPopupLoader.item.open();
-                }
-            }
-            Kirigami.ActionToolBar {
-                flat: false
-                alignment: Qt.AlignRight
-                actions: [
-                    Kirigami.Action {
-                        visible: kcm.gtkConfigKdedModuleLoaded
-                        text: i18n("Configure GNOME/GTK Application Style…")
-                        icon.name: "configure"
-                        onTriggered: root.openGtkStyleSettings()
-                    }
-                ]
-            }
         }
     }
 

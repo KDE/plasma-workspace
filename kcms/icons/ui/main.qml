@@ -39,6 +39,26 @@ KCM.GridViewKCM {
         onDropped: kcm.installThemeFromFile(drop.urls[0])
     }
 
+    actions: [
+        Kirigami.Action {
+            enabled: root.view.enabled
+            text: i18n("Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+        },
+        NewStuff.Action {
+            text: i18n("Get New…")
+            configFile: "icons.knsrc"
+            onEntryEvent: function (entry, event) {
+                if (event == NewStuff.Entry.StatusChangedEvent) {
+                    kcm.ghnsEntriesChanged();
+                } else if (event == NewStuff.Entry.AdoptedEvent) {
+                    kcm.reloadConfig();
+                }
+            }
+        }
+    ]
+
     view.delegate: KCM.GridDelegate {
         id: delegate
 
@@ -233,30 +253,6 @@ KCM.GridViewKCM {
                 onClicked: {
                     iconSizeSheet.visible = true;
                 }
-            }
-
-            Kirigami.ActionToolBar {
-                flat: false
-                alignment: Qt.AlignRight
-                actions: [
-                    Kirigami.Action {
-                        enabled: root.view.enabled
-                        text: i18n("Install from File…")
-                        icon.name: "document-import"
-                        onTriggered: fileDialogLoader.active = true
-                    },
-                    NewStuff.Action {
-                        text: i18n("Get New Icons…")
-                        configFile: "icons.knsrc"
-                        onEntryEvent: function (entry, event) {
-                            if (event == NewStuff.Entry.StatusChangedEvent) {
-                                kcm.ghnsEntriesChanged();
-                            } else if (event == NewStuff.Entry.AdoptedEvent) {
-                                kcm.reloadConfig();
-                            }
-                        }
-                    }
-                ]
             }
         }
     }
