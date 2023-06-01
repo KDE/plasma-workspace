@@ -81,7 +81,7 @@ msgstr "Suspén el sistema al disc"
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
-msgstr "lluminositat de la pantalla <percent value>"
+msgstr "brillantor de la pantalla <percent value>"
 
 #: PowerDevilRunner.cpp:67
 #, no-c-format, kde-format
@@ -90,14 +90,14 @@ msgid ""
 "search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
 "brightness"
 msgstr ""
-"Llista les opcions de lluminositat de la pantalla o les establix a la "
-"lluminositat definida pel terme de busca; p. ex. lluminositat de la pantalla "
-"50 reduirà la pantalla al 50% de la lluminositat màxima"
+"Llista les opcions de brillantor de la pantalla o les establix a la "
+"brillantor definida pel terme de busca; p. ex. brillantor de la pantalla 50 "
+"reduirà la pantalla al 50% de la brillantor màxima"
 
 #: PowerDevilRunner.cpp:93
 #, kde-format
 msgid "Set Brightness to %1%"
-msgstr "Establix la lluminositat a %1%"
+msgstr "Establix la brillantor a %1%"
 
 #: PowerDevilRunner.cpp:102
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "Suspén al disc"
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
-msgstr "lluminositat de la pantalla "
+msgstr "brillantor de la pantalla "
 
 #: PowerDevilRunner.cpp:218
 #, kde-format

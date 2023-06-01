@@ -112,12 +112,12 @@ msgstr "No hi és"
 #: package/contents/ui/main.qml:120 package/contents/ui/main.qml:353
 #, kde-format
 msgid "Battery and Brightness"
-msgstr "Bateria i lluminositat"
+msgstr "Bateria i brillantor"
 
 #: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Brightness"
-msgstr "Lluminositat"
+msgstr "Brillantor"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "El sistema està en mode d'estalvi d'energia"
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Desplaceu per a ajustar la lluminositat de la pantalla"
+msgstr "Desplaceu per a ajustar la brillantor de la pantalla"
 
 #: package/contents/ui/main.qml:314
 #, kde-format
@@ -243,12 +243,12 @@ msgstr "&Configura l'estalvi d'energia…"
 #: package/contents/ui/PopupDialog.qml:117
 #, kde-format
 msgid "Display Brightness"
-msgstr "Lluminositat de la pantalla"
+msgstr "Brillantor de la pantalla"
 
 #: package/contents/ui/PopupDialog.qml:146
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr "Lluminositat del teclat"
+msgstr "Brillantor del teclat"
 
 #: package/contents/ui/PowerManagementItem.qml:38
 #, kde-format
