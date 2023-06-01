@@ -41,6 +41,14 @@ KCM.GridViewKCM {
 
     actions: [
         Kirigami.Action {
+            id: iconSizesButton
+            text: i18n("Configure Icon Sizes")
+            icon.name: "transform-scale" // proper icon?
+            checkable: true
+            checked: iconSizeSheet.visible
+            onTriggered: iconSizeSheet.visible = true;
+        },
+        Kirigami.Action {
             enabled: root.view.enabled
             text: i18n("Install from File…")
             icon.name: "document-import"
@@ -233,25 +241,6 @@ KCM.GridViewKCM {
                 function onHideProgress() {
                     progressBusy.running = false;
                     progressRow.visible = false;
-                }
-            }
-        }
-
-        RowLayout {
-            Layout.fillWidth: true
-            // Using a non-flat toolbutton here, so it matches the items in the actiontoolbar
-            // (a Button is just ever so slightly smaller than a ToolButton, and it would look
-            // kind of silly if the buttons aren't the same size)
-            QtControls.ToolButton {
-                id: iconSizesButton
-                text: i18n("Configure Icon Sizes")
-                icon.name: "transform-scale" // proper icon?
-                display: QtControls.ToolButton.TextBesideIcon
-                flat: false
-                checkable: true
-                checked: iconSizeSheet.visible
-                onClicked: {
-                    iconSizeSheet.visible = true;
                 }
             }
         }
