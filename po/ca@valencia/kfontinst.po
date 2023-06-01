@@ -1285,7 +1285,7 @@ msgstr "No s'ha trobat cap caràcter."
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr "Jove xef, porte ací per beure whisky amb quinze glaçons d'hidrogen"
+msgstr "Jove xef, porte ací per a beure whisky amb quinze glaçons d'hidrogen"
 
 #: lib/FcEngine.cpp:1065
 #, kde-format
