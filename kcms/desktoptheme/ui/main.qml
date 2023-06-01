@@ -7,6 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
+import QtCore
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 6.3
@@ -190,7 +191,7 @@ KCM.GridViewKCM {
         active: false
         sourceComponent: FileDialog {
             title: i18n("Open Theme")
-            currentFolder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {

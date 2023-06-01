@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+import QtCore
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 6.3 as QtDialogs
@@ -107,7 +108,7 @@ Kirigami.Page {
         active: false
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Select GTK Theme Archive")
-            folder: shortcuts.home
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18n("GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
