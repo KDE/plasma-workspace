@@ -19,6 +19,7 @@ target_link_libraries(krunner_services_static
     KF6::Runner
     KF6::Service
     KF6::Activities
+    KF6::ActivitiesStats
 )
 
 kcoreaddons_add_plugin(krunner_services SOURCES plugin.cpp INSTALL_NAMESPACE "kf6/krunner")

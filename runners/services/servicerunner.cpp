@@ -21,6 +21,9 @@
 #include <QUrlQuery>
 
 #include <KActivities/ResourceInstance>
+#include <KActivities/Stats/Query>
+#include <KActivities/Stats/ResultSet>
+#include <KActivities/Stats/Terms>
 #include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
@@ -65,9 +68,10 @@ inline bool contains(const QStringList &results, const QStringList &queryList)
 class ServiceFinder
 {
 public:
-    ServiceFinder(ServiceRunner *runner, const QList<KService::Ptr> &list)
+    ServiceFinder(ServiceRunner *runner, const QList<KService::Ptr> &list, const QString &currentActivity)
         : m_runner(runner)
         , m_services(list)
+        , m_currentActivity(currentActivity)
     {
     }
 
@@ -287,6 +291,12 @@ private:
             qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
             match.setRelevance(relevance);
 
+            if (const auto foundIt = m_runner->m_favourites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favourites.cend()) {
+                if (foundIt->isGlobal || foundIt->linkedActivities.contains(m_currentActivity)) {
+                    match.setRelevance(match.relevance() + 0.3);
+                }
+            }
+
             matches << match;
         }
     }
@@ -400,6 +410,7 @@ private:
     ServiceRunner *m_runner;
     QSet<QString> m_seen;
     const QList<KService::Ptr> m_services;
+    const QString m_currentActivity;
 
     QList<KRunner::QueryMatch> matches;
     QString query;
@@ -409,28 +420,56 @@ private:
 
 ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
+    , m_kactivitiesQuery(Terms::LinkedResources | Terms::Agent{QStringLiteral("org.kde.plasma.favorites.applications")} | Terms::Type::any()
+                         | Terms::Activity::any() | Terms::Limit::all())
+    , m_kactivitiesWatcher(m_kactivitiesQuery)
 {
     setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:"));
+    connect(&m_kactivitiesWatcher, &ResultWatcher::resultLinked, [this](const QString &resource) {
+        processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
+    });
+
+    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
+        m_favourites.remove(resource);
+        // In case it was only unlinked from one activity
+        processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
+    });
+    processActivitiesResults(ResultSet(m_kactivitiesQuery));
 }
 
 ServiceRunner::~ServiceRunner() = default;
 
+void ServiceRunner::processActivitiesResults(const ResultSet &results)
+{
+    const static QLatin1String globalActivity(":global");
+    const static QLatin1String applicationScheme("applications");
+    for (const ResultSet::Result &result : results) {
+        if (result.url().scheme() == applicationScheme) {
+            m_favourites.insert(result.url().path().remove(QLatin1String(".desktop")),
+                                ActivityFavourite{
+                                    result.linkedActivities(),
+                                    result.linkedActivities().contains(globalActivity),
+                                });
+        }
+    }
+}
+
 void ServiceRunner::match(KRunner::RunnerContext &context)
 {
     KSycoca::disableAutoRebuild();
-    ServiceFinder finder(this, KApplicationTrader::query([](const KService::Ptr &) {
+    ServiceFinder finder(this,
+                         KApplicationTrader::query([](const KService::Ptr &) {
                              return true;
-                         }));
+                         }),
+                         m_activitiesConsuer.currentActivity());
     finder.match(context);
 }
 
-void ServiceRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void ServiceRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context)
-
     const QUrl dataUrl = match.data().toUrl();
 
     KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
