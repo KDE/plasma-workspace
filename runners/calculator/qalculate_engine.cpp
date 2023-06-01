@@ -17,10 +17,41 @@
 #include <QClipboard>
 #include <QDebug>
 #include <QFile>
+#include <QMutex>
 
 #include <KIO/Job>
 #include <KLocalizedString>
 #include <KProtocolManager>
+
+constexpr int evaluationTimeout = 10000;
+
+// Synchronization lock that ensures that
+// a) only one evaluation is running at a time
+// b) abortion and preemption of evaluation is synchronized
+class QalculateLock
+{
+public:
+    QalculateLock()
+    {
+        QMutexLocker ctrlLocker(&s_ctrlLock);
+        CALCULATOR->abort();
+        s_evalLock.lock();
+        CALCULATOR->startControl(evaluationTimeout);
+    }
+
+    ~QalculateLock()
+    {
+        CALCULATOR->stopControl();
+        s_evalLock.unlock();
+    }
+
+private:
+    static QMutex s_ctrlLock;
+    static QMutex s_evalLock;
+};
+
+QMutex QalculateLock::s_ctrlLock;
+QMutex QalculateLock::s_evalLock;
 
 QAtomicInt QalculateEngine::s_counter;
 
@@ -114,7 +145,8 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     QByteArray ba = input.replace(QChar(0xA3), "GBP").replace(QChar(0xA5), "JPY").replace('$', "USD").replace(QChar(0x20AC), "EUR").toLocal8Bit();
     const char *ctext = ba.data();
 
-    CALCULATOR->terminateThreads();
+    QalculateLock qalculateLock;
+
     EvaluationOptions eo;
 
     eo.auto_post_conversion = POST_CONVERSION_BEST;
@@ -150,12 +182,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     }
 #endif
 
-    constexpr int timeout = 10000;
-    MathStructure result;
-    if (!CALCULATOR->calculate(&result, ctext, timeout, eo)) {
-        // BUG 468084: stop libqalculate thread if timeout is reached
-        return {};
-    }
+    MathStructure result = CALCULATOR->calculate(ctext, eo);
 
     PrintOptions po;
     po.base = base;
@@ -173,7 +200,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 
     result.format(po);
 
-    m_lastResult = QString::fromStdString(CALCULATOR->print(result, timeout, po));
+    m_lastResult = QString::fromStdString(result.print(po));
 
     if (isApproximate) {
         *isApproximate = result.isApproximate();
