@@ -1611,10 +1611,9 @@ void ShellCorona::toggleDashboard()
 
 void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)
 {
+    Q_ASSERT(!m_accentColorFromWallpaperEnabled);
+    Q_ASSERT(!m_fakeColorRequestConn);
     msg.setDelayedReply(true);
-
-    m_accentColorFromWallpaperEnabled = true;
-    Q_EMIT accentColorFromWallpaperEnabledChanged();
 
     m_fakeColorRequestConn = connect(this, &ShellCorona::colorChanged, this, [this, msg] {
         disconnect(m_fakeColorRequestConn);
@@ -1626,6 +1625,9 @@ void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)
         const QDBusMessage reply = msg.createReply(color);
         QDBusConnection::sessionBus().send(reply);
     });
+
+    m_accentColorFromWallpaperEnabled = true;
+    Q_EMIT accentColorFromWallpaperEnabledChanged();
 }
 
 QRgb ShellCorona::color() const

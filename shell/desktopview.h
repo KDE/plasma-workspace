@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <optional>
+
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
 #include <QPointer>
@@ -40,7 +42,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(bool usedInAccentColor READ usedInAccentColor NOTIFY usedInAccentColorChanged)
 
-    Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
+    Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor RESET resetAccentColor NOTIFY accentColorChanged)
 
 public:
     enum WindowType {
@@ -73,6 +75,7 @@ public:
 
     QColor accentColor() const;
     void setAccentColor(const QColor &);
+    void resetAccentColor();
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
@@ -113,7 +116,7 @@ private:
     void setAccentColorFromWallpaper(const QColor &accentColor);
     bool handleKRunnerTextInput(QKeyEvent *e);
 
-    QColor m_accentColor;
+    std::optional<QColor> m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_screenToFollow;
     WindowType m_windowType;
