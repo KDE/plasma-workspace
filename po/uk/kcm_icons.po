@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2022-10-22 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -150,43 +150,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Розмір:"
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Вилучення теми піктограм"
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Відновити тему піктограм"
 
-#: ui/main.qml:227
+#: ui/main.qml:228
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Налаштувати розміри піктограм"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "Install from File…"
 msgstr "Встановити з файла…"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Отримати нові піктограми…"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Налаштувати розміри піктограм"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Open Theme"
 msgstr "Відкриття теми"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "файли тем (*.tar.gz *.tar.bz2)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2011-02-15 21:31+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -1330,115 +1330,115 @@ msgstr "Tetingkap Tidak Aktif"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "All Schemes"
 msgstr "Import Skema..."
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "&Skema"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Dark Schemes"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Teks Tetingkap"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "Teks Tetingkap"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "Button"
 msgid "Button"
 msgstr "Butang"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "pautan"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "Teks Telah Dilawati"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, fuzzy, kde-format
 #| msgid "Normal Text"
 msgid "Normal text"
 msgstr "Teks Normal"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Teks Telah Dilawati"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Dimatikan"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Import Skema..."
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Import Skema Warna"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Get New Color Schemes…"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

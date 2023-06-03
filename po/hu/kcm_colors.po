@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2022-02-18 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1267,7 +1267,7 @@ msgstr "Egyéni kiemelőszín kiválasztása"
 msgid "Choose custom accent color"
 msgstr "Egyéni kiemelőszín kiválasztása"
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1275,94 +1275,94 @@ msgstr ""
 "A(z) „%1” színséma nincs telepítve. Az alapértelmezett téma kerül "
 "kiválasztásra."
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "Minden színséma"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "Világos színsémák"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Sötét színsémák"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "Ablakcím"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "Ablakszöveg"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "Gomb"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "hivatkozás"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "látogatott"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "Normál szöveg"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "Kiemelt szöveg"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "Letiltott szöveg"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Színséma szerkesztése…"
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Színséma eltávolítása"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Színséma visszaállítása"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "Telepítés fájlból…"
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Új színsémák letöltése…"
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Színséma megnyitása"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Színsémafájlok (*.colors)"

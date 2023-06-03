@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -98,71 +98,71 @@ msgid "You have the following Plasma themes on your system:"
 msgstr ""
 
 # >> @title:window
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "All Themes"
 msgstr "Отварање теме"
 
 # >> @title:window
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "Light Themes"
 msgstr "Отварање теме"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr ""
 
 # >> @title:window
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "Edit Theme…"
 msgstr "Отварање теме"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "Уклони тему"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "Уклони тему"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Инсталирај из фајла..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New Plasma Styles…"
 msgstr "Добави нове теме..."
 
 # >> @title:window
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "Отварање теме"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "фајлови тема (*.zip *.tar.gz *.tar.bz2)"

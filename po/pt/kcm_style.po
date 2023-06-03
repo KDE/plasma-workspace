@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-08-24 02:00+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -153,37 +153,37 @@ msgstr "Sob os ícones"
 msgid "Secondary toolbar label:"
 msgstr "Texto da barra secundária:"
 
-#: ui/GtkStylePage.qml:18
+#: ui/GtkStylePage.qml:19
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "Estilo de Aplicações do GNOME/GTK"
 
-#: ui/GtkStylePage.qml:44
+#: ui/GtkStylePage.qml:45
 #, kde-format
 msgid "GTK theme:"
 msgstr "Tema do GTK:"
 
-#: ui/GtkStylePage.qml:69
+#: ui/GtkStylePage.qml:70
 #, kde-format
 msgid "Preview…"
 msgstr "Antevisão…"
 
-#: ui/GtkStylePage.qml:88
+#: ui/GtkStylePage.qml:89
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalar de um Ficheiro…"
 
-#: ui/GtkStylePage.qml:93
+#: ui/GtkStylePage.qml:94
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Obter Novos Estilos de Aplicações do GNOME/GTK…"
 
-#: ui/GtkStylePage.qml:109
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Seleccionar o Pacote de Temas do GTK"
 
-#: ui/GtkStylePage.qml:111
+#: ui/GtkStylePage.qml:112
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Pacote de Temas do GTK (*.tar.xz *.tar.gz *.tar.bz2)"

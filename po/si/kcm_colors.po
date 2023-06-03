@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2009-12-16 23:07+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -1274,51 +1274,51 @@ msgstr "අක්‍රීය වර්ණ"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "All Schemes"
 msgstr "තේමාවක් ආනයනය කරන්..."
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "තේමාව (&S)"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "තේමාව සුරකින්න..."
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "කවුලු පෙළ"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "කවුළුවේ පෙළ"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "බොත්තම "
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1326,7 +1326,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "ඈඳුතුව"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1334,61 +1334,61 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ප්‍රවේශිත"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "සාමාන්‍ය පෙළ"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "ප්‍රවේශිත පෙළ"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "අක්‍රීයයි"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "තේමාවක් ආනයනය කරන්..."
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "වර්‍ණ තේමාව සුරකින්න"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "වර්‍ණ තේමාව ආයාත කරන්න"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "නව තේමා ලබාගන්න... (&N)"
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "වර්‍ණ තේමාව සුරකින්න"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

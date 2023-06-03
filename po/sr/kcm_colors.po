@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1313,51 +1313,51 @@ msgstr "Боје|/|$[својства дат 'Бојама']"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Upload Scheme"
 msgid "All Schemes"
 msgstr "Отпреми шему"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Upload Scheme"
 msgid "Dark Schemes"
 msgstr "Отпреми шему"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window Title"
 msgstr "Текст прозора"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Текст прозора"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "дугме"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1365,7 +1365,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "веза"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1373,64 +1373,64 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посећено"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Обичан текст"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "текст посећеног"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Искључено"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Get &New Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Добави &нову шему"
 
 # >> @title:window
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Уписивање шеме боја"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Увези шему боја"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, fuzzy, kde-format
 #| msgid "&Install from File"
 msgid "Install from File…"
 msgstr "&Инсталирај из фајла"
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Get &New Scheme"
 msgid "Get New Color Schemes…"
 msgstr "Добави &нову шему"
 
 # >> @title:window
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Уписивање шеме боја"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

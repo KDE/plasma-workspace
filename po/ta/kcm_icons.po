@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2022-10-25 19:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -145,43 +145,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "அளவு:"
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை நீக்கு"
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை மீட்டெடு"
 
-#: ui/main.qml:227
+#: ui/main.qml:228
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "சின்னங்களின் அளவுகளை அமை"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Get New Icons…"
 msgstr "புதிய சின்னங்களை பெறு…"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "சின்னங்களின் அளவுகளை அமைப்பது"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Open Theme"
 msgstr "திட்டத்தை திற"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.tar.gz *.tar.bz2)"

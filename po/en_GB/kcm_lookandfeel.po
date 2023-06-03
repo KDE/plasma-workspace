@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-27 21:38+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -213,41 +213,48 @@ msgid "Application Style"
 msgstr "Application Style"
 
 #: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Window Decorations"
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Style"
 msgstr "Window Decorations"
 
 #: ui/MoreOptions.qml:61
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Size"
+msgstr "Window Decorations"
+
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Icons"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma Style"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Cursors"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Fonts"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Task Switcher"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Splash Screen"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Lock Screen"

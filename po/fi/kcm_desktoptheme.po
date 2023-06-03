@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-06-07 16:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -106,65 +106,65 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Järjestelmään on asennettu seuraavat Plasma-teemat:"
 
 # Asetusten Plasma-tyylin valinnan pudotusvalikko, josta voi valita kaikki, tummat, vaaleat tai väriteemaan mukautuvat tyylit
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "All Themes"
 msgstr "Kaikki teemat"
 
 # Asetusten Plasma-tyylin valinnan pudotusvalikko, josta voi valita kaikki, tummat, vaaleat tai väriteemaan mukautuvat tyylit
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
 msgstr "Vaaleat teemat"
 
 # Asetusten Plasma-tyylin valinnan pudotusvalikko, josta voi valita kaikki, tummat, vaaleat tai väriteemaan mukautuvat tyylit
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr "Tummat teemat"
 
 # Asetusten Plasma-tyylin valinnan pudotusvalikko, josta voi valita kaikki, tummat, vaaleat tai väriteemaan mukautuvat tyylit
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Väriteemaan mukautuvat"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Noudattaa väriteemaa"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Muokkaa teemaa…"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "Poista teema"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, kde-format
 msgid "Restore Theme"
 msgstr "Palauta teema"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
 msgstr "Asenna tiedostosta…"
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Hae uusia Plasma-tyylejä…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Teematiedostot (*.zip *.tar.gz *.tar.bz2)"

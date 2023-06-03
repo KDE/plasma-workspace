@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 01:59+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-01-24 22:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -58,59 +58,59 @@ msgstr "Var olan bir örneği değiştir"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Çalıştırılacak sorgu, yalnızca -c sağlanmadığında kullanılır"
 
-#: qml/RunCommand.qml:75
+#: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure"
 msgstr "Yapılandır"
 
-#: qml/RunCommand.qml:76
+#: qml/RunCommand.qml:77
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "K Çalıştır Davranışını Yapılandır"
 
-#: qml/RunCommand.qml:79
+#: qml/RunCommand.qml:80
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "K Çalıştır'ı Yapılandır…"
 
-#: qml/RunCommand.qml:91
+#: qml/RunCommand.qml:92
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' Ara…"
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Ara…"
 
-#: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
+#: qml/RunCommand.qml:229 qml/RunCommand.qml:230 qml/RunCommand.qml:232
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Kullanım Yardımı Göster"
 
-#: qml/RunCommand.qml:239
+#: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin"
 msgstr "İğnele"
 
-#: qml/RunCommand.qml:240
+#: qml/RunCommand.qml:241
 #, kde-format
 msgid "Pin Search"
 msgstr "Aramayı İğnele"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:243
 #, kde-format
 msgid "Keep Open"
 msgstr "Açık Tut"
 
-#: qml/RunCommand.qml:318 qml/RunCommand.qml:323
+#: qml/RunCommand.qml:319 qml/RunCommand.qml:324
 #, kde-format
 msgid "Recent Queries"
 msgstr "Son Sorgular"
 
-#: qml/RunCommand.qml:321
+#: qml/RunCommand.qml:322
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"

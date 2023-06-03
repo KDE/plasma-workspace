@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2008-06-08 22:32+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -1303,113 +1303,113 @@ msgstr "Aktiv boʻlmagan oyna"
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "All Schemes"
 msgstr "Rang qolipini import qilish"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "Qoli&p"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Dark Schemes"
 msgstr "Rang qolipini saqlash"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Oynadagi matn"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "Oynadagi matn"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "  Button"
 msgid "Button"
 msgstr "  Tugma"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "bogʻ"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr ""
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, fuzzy, kde-format
 #| msgid "Selected text"
 msgid "Highlighted text"
 msgstr "Belgilangan matn"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled text"
 msgstr "Aktiv boʻlmagan sarlavha tugmasi"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Rang qolipini import qilish"
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Rang qolipini saqlash"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Rang qolipini import qilish"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Get New Color Schemes…"
 msgstr "Rang qolipini saqlash"
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Rang qolipini saqlash"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

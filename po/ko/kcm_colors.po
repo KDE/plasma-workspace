@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-28 23:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1250,100 +1250,100 @@ msgstr "사용자 정의 강조 색상"
 msgid "Choose custom accent color"
 msgstr "사용자 정의 강조 색상 선택"
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "색 구성표 '%1'이(가) 설치되어 있지 않습니다. 기본 테마를 사용합니다."
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "모든 색 구성표"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "밝은 색 구성표"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "어두운 색 구성표"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "창 제목"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "창 텍스트"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "단추"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "링크"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "방문함"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "일반 텍스트"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "방문한 링크 텍스트"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "비활성화된 텍스트"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "색 구성표 편집…"
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "색 구성표 삭제"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "색 구성표 복원"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "파일에서 설치…"
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "새 색 구성표 가져오기…"
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "색 구성표 열기"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "색 구성표 파일 (*.colors)"

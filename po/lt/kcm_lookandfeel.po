@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-04 19:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -216,41 +216,48 @@ msgid "Application Style"
 msgstr "Programų stilius"
 
 #: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Window Decorations"
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Style"
 msgstr "Langų dekoracijos"
 
 #: ui/MoreOptions.qml:61
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Size"
+msgstr "Langų dekoracijos"
+
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Piktogramos"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma stilius"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Žymekliai"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Šriftai"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Užduočių perjungiklis"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Prisistatymo langas"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Ekrano užraktas"

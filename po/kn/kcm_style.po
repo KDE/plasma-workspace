@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2008-12-29 16:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -169,39 +169,39 @@ msgstr "ಚಿಹ್ನೆಗಳ ಕೆಳಗಡೆ ಪಠ್ಯ"
 msgid "Secondary toolbar label:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:18
+#: ui/GtkStylePage.qml:19
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr ""
 
-#: ui/GtkStylePage.qml:44
+#: ui/GtkStylePage.qml:45
 #, kde-format
 msgid "GTK theme:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:69
+#: ui/GtkStylePage.qml:70
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Preview…"
 msgstr "ಮುನ್ನೋಟ"
 
-#: ui/GtkStylePage.qml:88
+#: ui/GtkStylePage.qml:89
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/GtkStylePage.qml:93
+#: ui/GtkStylePage.qml:94
 #, fuzzy, kde-format
 #| msgid "Con&figure..."
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "ಸಂರಚಿಸು(&f)..."
 
-#: ui/GtkStylePage.qml:109
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: ui/GtkStylePage.qml:111
+#: ui/GtkStylePage.qml:112
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-02 11:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1260,100 +1260,100 @@ msgstr "لون التمييز مخصص"
 msgid "Choose custom accent color"
 msgstr "اختر لون التمييز:"
 
-#: ui/main.qml:89
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "تشكيلة الألوان '%1' غير مثبتة. سيختار سمة الافتراضية  بدلا من ذلك."
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "All Schemes"
 msgstr "جميع التشكيلات"
 
-#: ui/main.qml:115
+#: ui/main.qml:116
 #, kde-format
 msgid "Light Schemes"
 msgstr "تشكيلات فاتحة"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgid "Dark Schemes"
 msgstr "تشكيلات مظلمة"
 
-#: ui/main.qml:175
+#: ui/main.qml:176
 #, kde-format
 msgid "Window Title"
 msgstr "عنوان النافذة"
 
-#: ui/main.qml:197
+#: ui/main.qml:198
 #, kde-format
 msgid "Window text"
 msgstr "نص النافذة"
 
-#: ui/main.qml:204
+#: ui/main.qml:205
 #, kde-format
 msgid "Button"
 msgstr "الزر"
 
-#: ui/main.qml:242
+#: ui/main.qml:243
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "الرابط"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "مُزار"
 
-#: ui/main.qml:251
+#: ui/main.qml:252
 #, kde-format
 msgid "Normal text"
 msgstr "نص عادي"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgid "Highlighted text"
 msgstr "نص مميز"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Disabled text"
 msgstr "نص معطل"
 
-#: ui/main.qml:284
+#: ui/main.qml:285
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "حرر التشكيلة الألوان..."
 
-#: ui/main.qml:290
+#: ui/main.qml:291
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "أزل تشكيلة الألوان"
 
-#: ui/main.qml:297
+#: ui/main.qml:298
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "استعد تشكيلة الألوان"
 
-#: ui/main.qml:341
+#: ui/main.qml:342
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: ui/main.qml:346
+#: ui/main.qml:347
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "احصل على تشكيلات ألوان جديدة..."
 
-#: ui/main.qml:364
+#: ui/main.qml:365
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "افتح تشكيلة الألوان"
 
-#: ui/main.qml:366
+#: ui/main.qml:367
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "ملفات تشكيلات الألوان (*.colors)"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-07-18 20:57+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,62 +105,62 @@ msgstr ""
 msgid "You have the following Plasma themes on your system:"
 msgstr "Zure sisteman ondoko Plasma-gaiak dituzu:"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "All Themes"
 msgstr "Gai guztiak"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
 msgstr "Gai argiak"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr "Gai ilunak"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Kolore-antolaerarekin bateragarriak"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Kolore-antolaera jarraitzen dutenak"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Editatu gaia..."
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "Kendu gaia"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, kde-format
 msgid "Restore Theme"
 msgstr "Lehengoratu gaia"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalatu fitxategitik..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Lortu Plasmaren estilo berriak..."
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "Ireki gaia"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Gai fitxategiak (*.zip *.tar.gz *.tar.bz2)"

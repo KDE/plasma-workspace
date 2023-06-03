@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-07-10 20:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -102,62 +102,62 @@ msgstr ""
 msgid "You have the following Plasma themes on your system:"
 msgstr "உங்கள் கணினியில் கீழ்காணும் தோற்றத்திட்டங்கள் உள்ளன:"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "All Themes"
 msgstr "அனைத்து தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
 msgstr "வெளிர்ந்த தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr "கருமையான தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "நிறத்திட்டத்தை பொறுத்தது"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr "நிறத்திட்டத்தை பின்பற்றும்"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, kde-format
 msgid "Edit Theme…"
 msgstr "தோற்றத்திட்டத்தை திருத்து…"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "தோற்றத்திட்டத்தை நீக்கு"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, kde-format
 msgid "Restore Theme"
 msgstr "தோற்றத்திட்டத்தை மீட்டமை"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "புதிய பிளாஸ்மா தோற்றத்திட்டங்களை பெறு…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "தோற்றத்திட்டத்தை திற"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.zip *.tar.gz *.tar.bz2)"

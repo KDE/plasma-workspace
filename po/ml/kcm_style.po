@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -157,37 +157,37 @@ msgstr "ചിഹ്നങ്ങൾക്ക് താഴെ"
 msgid "Secondary toolbar label:"
 msgstr "ദ്വിതീയ ഉപകരണപ്പട്ട ലേബൽ:"
 
-#: ui/GtkStylePage.qml:18
+#: ui/GtkStylePage.qml:19
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "ഗ്നോം/GTK ആപ്ലിക്കേഷൻ രൂപഭംഗി"
 
-#: ui/GtkStylePage.qml:44
+#: ui/GtkStylePage.qml:45
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK പ്രമേയം:"
 
-#: ui/GtkStylePage.qml:69
+#: ui/GtkStylePage.qml:70
 #, kde-format
 msgid "Preview…"
 msgstr "കണ്ടുനോക്കുക…"
 
-#: ui/GtkStylePage.qml:88
+#: ui/GtkStylePage.qml:89
 #, kde-format
 msgid "Install from File…"
 msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
 
-#: ui/GtkStylePage.qml:93
+#: ui/GtkStylePage.qml:94
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "പുതിയ ഗ്നോം/GTK അപ്ലിക്കേഷൻ രൂപഭംഗികൾ നേടുക…"
 
-#: ui/GtkStylePage.qml:109
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "GTK പ്രമേയ ശേഖരം തിരഞ്ഞെടുക്കുക"
 
-#: ui/GtkStylePage.qml:111
+#: ui/GtkStylePage.qml:112
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK പ്രമേയ ശേഖരം (*.tar.xz *.tar.gz *.tar.bz2)"

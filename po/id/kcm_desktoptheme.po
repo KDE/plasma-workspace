@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2022-03-03 12:14+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -105,62 +105,62 @@ msgstr ""
 msgid "You have the following Plasma themes on your system:"
 msgstr "Anda memiliki tema Plasma pada sistem Anda sebagai berikut:"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "All Themes"
 msgstr "Semua Tema"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
 msgstr "Tema Terang"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr "Tema Gelap"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Skema warna yang kompatibel"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Mengikuti skema warna"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Edit Tema..."
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "Hapus Tema"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, kde-format
 msgid "Restore Theme"
 msgstr "Kembalikan Tema"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal dari File..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Get New Plasma Styles…"
 msgstr "Dapatkan Gaya Plasma Baru..."
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "Buka Tema"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "File Tema (*.zip *.tar.gz *.tar.bz2)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-01-22 05:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -216,41 +216,48 @@ msgid "Application Style"
 msgstr "Estilo de las aplicaciones"
 
 #: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Window Decorations"
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Style"
 msgstr "Decoraciones de las ventanas"
 
 #: ui/MoreOptions.qml:61
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Size"
+msgstr "Decoraciones de las ventanas"
+
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Iconos"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Estilo de Plasma"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Cursores"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Tipos de letra"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Selector de tareas"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Pantalla de bienvenida"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Pantalla de bloqueo"

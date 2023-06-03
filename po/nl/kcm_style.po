@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-04-23 14:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -156,37 +156,37 @@ msgstr "Onder pictogram"
 msgid "Secondary toolbar label:"
 msgstr "Label van secondaire werkbalk:"
 
-#: ui/GtkStylePage.qml:18
+#: ui/GtkStylePage.qml:19
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "Stijl van GNOME/GTK-toepassingen"
 
-#: ui/GtkStylePage.qml:44
+#: ui/GtkStylePage.qml:45
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK-thema:"
 
-#: ui/GtkStylePage.qml:69
+#: ui/GtkStylePage.qml:70
 #, kde-format
 msgid "Preview…"
 msgstr "Voorbeeld…"
 
-#: ui/GtkStylePage.qml:88
+#: ui/GtkStylePage.qml:89
 #, kde-format
 msgid "Install from File…"
 msgstr "Uit bestand installeren…"
 
-#: ui/GtkStylePage.qml:93
+#: ui/GtkStylePage.qml:94
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Stijlen van GNOME/GTK-toepassingen ophalen…"
 
-#: ui/GtkStylePage.qml:109
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "GTK-thema-archief selecteren"
 
-#: ui/GtkStylePage.qml:111
+#: ui/GtkStylePage.qml:112
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-thema-archief (*.tar.xz *.tar.gz *.tar.bz2)"

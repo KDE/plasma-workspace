@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2021-09-15 18:46+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -161,37 +161,37 @@ msgstr "Pod ikonou"
 msgid "Secondary toolbar label:"
 msgstr "Popisok sekundárneho panelu:"
 
-#: ui/GtkStylePage.qml:18
+#: ui/GtkStylePage.qml:19
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "GNOME/GTK Štýl aplikácií"
 
-#: ui/GtkStylePage.qml:44
+#: ui/GtkStylePage.qml:45
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK téma:"
 
-#: ui/GtkStylePage.qml:69
+#: ui/GtkStylePage.qml:70
 #, kde-format
 msgid "Preview…"
 msgstr "Náhľad..."
 
-#: ui/GtkStylePage.qml:88
+#: ui/GtkStylePage.qml:89
 #, kde-format
 msgid "Install from File…"
 msgstr "Nainštalovať zo súboru..."
 
-#: ui/GtkStylePage.qml:93
+#: ui/GtkStylePage.qml:94
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Získať nové štýly pre aplikácie GNOME/GTK..."
 
-#: ui/GtkStylePage.qml:109
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Vybrať archív s GTK témou"
 
-#: ui/GtkStylePage.qml:111
+#: ui/GtkStylePage.qml:112
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Archív GTK témy (*.tar.xz *.tar.gz *.tar.bz2)"

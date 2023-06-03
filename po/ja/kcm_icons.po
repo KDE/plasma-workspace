@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-23 18:19+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -151,43 +151,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "サイズ:"
 
-#: ui/main.qml:146
+#: ui/main.qml:147
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "アイコンテーマを削除"
 
-#: ui/main.qml:153
+#: ui/main.qml:154
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "アイコンテーマを復元"
 
-#: ui/main.qml:227
+#: ui/main.qml:228
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "アイコンサイズを設定"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "Install from File…"
 msgstr "ファイルからインストール..."
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgid "Get New Icons…"
 msgstr "新しいアイコンを取得..."
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "アイコンサイズを設定"
 
-#: ui/main.qml:283
+#: ui/main.qml:284
 #, kde-format
 msgid "Open Theme"
 msgstr "テーマを開く"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "テーマファイル (*.tar.gz *.tar.bz2)"

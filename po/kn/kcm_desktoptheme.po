@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2009-01-03 18:12+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -97,70 +97,70 @@ msgstr ""
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgid "Theme Item"
 msgid "All Themes"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, fuzzy, kde-format
 #| msgid "Theme Item"
 msgid "Light Themes"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr ""
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "ವರ್ಣ ಸ್ಕೀಮ್"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Theme Item"
 msgid "Edit Theme…"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
 msgid "Get New Plasma Styles…"
 msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಪಡೆದುಕೊ..."
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "Theme Item"
 msgid "Open Theme"
 msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-01-22 10:56+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -219,41 +219,48 @@ msgid "Application Style"
 msgstr "Estil de l'aplicació"
 
 #: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Window Decorations"
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Style"
 msgstr "Decoració de les finestres"
 
 #: ui/MoreOptions.qml:61
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Size"
+msgstr "Decoració de les finestres"
+
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Icones"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Estil del Plasma"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Cursors"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Tipus de lletra"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Commutador de tasques"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Pantalla de presentació"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Bloqueig de la pantalla"

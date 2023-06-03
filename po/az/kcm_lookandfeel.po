@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2023-02-19 14:45+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -214,41 +214,48 @@ msgid "Application Style"
 msgstr "Tətbiq üslubu"
 
 #: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Window Decorations"
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Style"
 msgstr "Pəncərə dekorasiyası"
 
 #: ui/MoreOptions.qml:61
+#, fuzzy, kde-format
+#| msgid "Window Decorations"
+msgid "Window Decoration Size"
+msgstr "Pəncərə dekorasiyası"
+
+#: ui/MoreOptions.qml:62
 #, kde-format
 msgid "Icons"
 msgstr "Nişanlar"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:63
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma üslubu"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:64
 #, kde-format
 msgid "Cursors"
 msgstr "Kursorlar"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:65
 #, kde-format
 msgid "Fonts"
 msgstr "Şriftlər"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Task Switcher"
 msgstr "Tapşırıq dəyişdirici"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Splash Screen"
 msgstr "Açılış ekranı"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:68
 #, kde-format
 msgid "Lock Screen"
 msgstr "Kilid ekranı"

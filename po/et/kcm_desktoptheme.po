@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-03 02:04+0000\n"
 "PO-Revision-Date: 2020-09-26 10:15+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -95,65 +95,65 @@ msgstr ""
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "All Themes"
 msgstr "Kõik teemad"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
 msgstr "Heledad teemad"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
 msgstr "Tumedad teemad"
 
-#: ui/main.qml:71
+#: ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Värviskeemiga ühilduv"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Värviskeemi alus"
 
-#: ui/main.qml:117
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Edit Theme..."
 msgid "Edit Theme…"
 msgstr "Muuda teemat ..."
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Remove Theme"
 msgstr "Eemalda teema"
 
-#: ui/main.qml:131
+#: ui/main.qml:132
 #, kde-format
 msgid "Restore Theme"
 msgstr "Taasta teema"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Paigalda failist ..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Get New Plasma Styles..."
 msgid "Get New Plasma Styles…"
 msgstr "Hangi uusi Plasma stiile ..."
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Open Theme"
 msgstr "Teema avamine"
 
-#: ui/main.qml:194
+#: ui/main.qml:195
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Teemafailid (*.zip *.tar.gz *.tar.bz2)"
