@@ -85,8 +85,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     connect(static_cast<ShellCorona *>(corona), &ShellCorona::accentColorFromWallpaperEnabledChanged, this, &DesktopView::usedInAccentColorChanged);
     connect(this, &DesktopView::usedInAccentColorChanged, this, [this] {
         if (!usedInAccentColor()) {
-            m_accentColor = Qt::transparent;
-            Q_EMIT accentColorChanged(m_accentColor);
+            resetAccentColor();
         }
     });
     connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
@@ -163,7 +162,7 @@ bool DesktopView::usedInAccentColor() const
 
 QColor DesktopView::accentColor() const
 {
-    return m_accentColor;
+    return m_accentColor.value_or(QColor(Qt::transparent));
 }
 
 void DesktopView::setAccentColor(const QColor &accentColor)
@@ -173,12 +172,22 @@ void DesktopView::setAccentColor(const QColor &accentColor)
     }
 
     m_accentColor = accentColor;
-    Q_EMIT accentColorChanged(m_accentColor);
+    Q_EMIT accentColorChanged(accentColor);
     if (usedInAccentColor()) {
-        Q_EMIT static_cast<ShellCorona *>(corona())->colorChanged(m_accentColor);
+        Q_EMIT static_cast<ShellCorona *>(corona())->colorChanged(accentColor);
     }
 
-    setAccentColorFromWallpaper(m_accentColor);
+    setAccentColorFromWallpaper(accentColor);
+}
+
+void DesktopView::resetAccentColor()
+{
+    if (!m_accentColor.has_value()) {
+        return;
+    }
+
+    m_accentColor.reset();
+    Q_EMIT accentColorChanged(Qt::transparent);
 }
 
 QVariantMap DesktopView::candidateContainmentsGraphicItems() const
