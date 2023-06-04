@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-01-22 12:46+0200\n"
+"PO-Revision-Date: 2023-06-03 09:06+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -216,16 +216,14 @@ msgid "Application Style"
 msgstr "Стиль вікон програм"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "Обрамлення вікон"
+msgstr "Стиль обрамлення вікон"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Обрамлення вікон"
+msgstr "Розмір обрамлення вікон"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

@@ -138,10 +138,10 @@ msgid ""
 "consider adjusting the global scale instead."
 msgstr ""
 "Vous pouvez configurer ici, les tailles par défaut des différents types "
-"d’icônes pour la totalité du système. Veuillez noter que toutes les "
+"d'icônes pour la totalité du système. Veuillez noter que toutes les "
 "applications ne respecteront pas ces paramètres. <nl/><nl/>Si vous trouvez "
-"que les objets à l’écran sont généralement trop petits ou trop grands, "
-"pensez à ajuster l’échelle globale à la place."
+"que les objets à l'écran sont généralement trop petits ou trop grands, "
+"pensez à ajuster l'échelle globale à la place."
 
 #: ui/IconSizePopup.qml:41
 #, kde-format

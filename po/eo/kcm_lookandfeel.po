@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"PO-Revision-Date: 2023-06-03 14:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -213,16 +213,14 @@ msgid "Application Style"
 msgstr "Aplika Stilo"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "Fenestraj Dekoracioj"
+msgstr "Stilo de Fenestraj Dekoracioj"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Fenestraj Dekoracioj"
+msgstr "Grandeco de Fenestraj Dekoracioj"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

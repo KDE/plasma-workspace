@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-17 02:05+0000\n"
 "PO-Revision-Date: 2023-01-26 19:05+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -290,7 +290,7 @@ msgid ""
 "something else."
 msgstr ""
 "Astuce : si vous voyagez fréquemment, ajoutez une autre entrée à votre "
-"fuseau horaire de votre emplacement à cette liste. Elle n’apparaîtra que "
+"fuseau horaire de votre emplacement à cette liste. Elle n'apparaîtra que "
 "lors d'un changement de fuseau horaire applicable à l'ensemble du système "
 "vers un autre fuseau."
 
@@ -402,7 +402,7 @@ msgstr "Définir le format de l'heure…"
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "La date d'aujourd’hui est %1"
+msgstr "La date d'aujourd'hui est %1"
 
 #: package/contents/ui/Tooltip.qml:126
 #, kde-format

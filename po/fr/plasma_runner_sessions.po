@@ -172,11 +172,11 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 "<p>Vous êtes sur le point de démarrer une nouvelle session de bureau. </"
-"p><p>Un écran de connexion s’affichera et la session courante sera masquée. "
+"p><p>Un écran de connexion s'affichera et la session courante sera masquée. "
 "</p><p>Vous pouvez basculer entre les sessions de bureau en utilisant :</"
 "p><ul><li>Le raccourci « CTRL » + « ALT »+ « F » {numéro de session}</"
 "li><li>Recherche de Plasma (Saisir « %1 )</li><li>Composants graphique de "
-"Plasma (tel que le lanceur d’application)</li></ul>"
+"Plasma (tel que le lanceur d'application)</li></ul>"
 
 #: sessionrunner.cpp:262
 #, kde-format
