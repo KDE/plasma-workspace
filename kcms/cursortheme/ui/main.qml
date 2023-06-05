@@ -50,51 +50,47 @@ KCM.GridViewKCM {
 
     actions: [
         Kirigami.Action {
-            displayComponent: RowLayout {
-                QtControls.Label {
-                    text: i18nc("@label Size of the cursor", "Size:")
+            displayComponent: QtControls.ComboBox {
+                id: sizeCombo
+
+                model: kcm.sizesModel
+                textRole: "display"
+                displayText: i18n("Size: %1", currentText)
+                currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
+                onActivated: {
+                    kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                    kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                 }
-                QtControls.ComboBox {
-                    id: sizeCombo
+                flat: true
 
-                    model: kcm.sizesModel
-                    textRole: "display"
-                    currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
-                    onActivated: {
-                        kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                        kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                    }
+                KCM.SettingStateBinding {
+                configObject: kcm.cursorThemeSettings
+                    settingName: "cursorSize"
+                    extraEnabledConditions: kcm.canResize
+                }
 
-                    KCM.SettingStateBinding {
-                    configObject: kcm.cursorThemeSettings
-                        settingName: "cursorSize"
-                        extraEnabledConditions: kcm.canResize
-                    }
+                delegate: QtControls.ItemDelegate {
+                    id: sizeComboDelegate
 
-                    delegate: QtControls.ItemDelegate {
-                        id: sizeComboDelegate
+                    readonly property int size: parseInt(model.display)
 
-                        readonly property int size: parseInt(model.display)
+                    width: parent.width
+                    highlighted: ListView.isCurrentItem
 
-                        width: parent.width
-                        highlighted: ListView.isCurrentItem
-                        text: model.display
+                    contentItem: RowLayout {
+                        Kirigami.Icon {
+                            source: model.decoration
+                            smooth: true
+                            Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
+                            Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
+                            visible: valid && sizeComboDelegate.size > 0
+                        }
 
-                        contentItem: RowLayout {
-                            Kirigami.Icon {
-                                source: model.decoration
-                                smooth: true
-                                Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
-                                Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
-                                visible: valid && sizeComboDelegate.size > 0
-                            }
-
-                            QtControls.Label {
-                                Layout.fillWidth: true
-                                color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                                text: model[sizeCombo.textRole]
-                                elide: Text.ElideRight
-                            }
+                        QtControls.Label {
+                            Layout.fillWidth: true
+                            color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                            text: i18n("Size: %1", model[sizeCombo.textRole])
+                            elide: Text.ElideRight
                         }
                     }
                 }
