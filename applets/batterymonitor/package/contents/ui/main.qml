@@ -175,7 +175,7 @@ Item {
             const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
             if (pmSource.data["Battery"]["State"] === "FullyCharged") {
                 // Don't add anything
-            } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
+            } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data.Battery.State === "Charging") {
                 parts.push(i18nc("time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
             } else {
                 parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
