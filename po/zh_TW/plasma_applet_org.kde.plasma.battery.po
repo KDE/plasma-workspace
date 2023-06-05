@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-03-19 09:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -231,12 +231,12 @@ msgstr "尚未充飽時在圖示上顯示電池百分比"
 msgid "&Configure Energy Saving…"
 msgstr "設定省電模式(&C)…"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, kde-format
 msgid "Display Brightness"
 msgstr "顯示亮度"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "鍵盤亮度"

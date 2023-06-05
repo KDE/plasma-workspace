@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-10-16 10:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -143,35 +143,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Les pantalles estan emmirallades"
 
-#: package/contents/ui/FullRepresentation.qml:431
+#: package/contents/ui/FullRepresentation.qml:433
 #, kde-format
 msgid "Close Group"
 msgstr "Tanca el grup"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "Mostra'n menys"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Mostra'n %1 més"
 
-#: package/contents/ui/FullRepresentation.qml:619
+#: package/contents/ui/FullRepresentation.qml:621
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "No hi ha notificacions sense llegir"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:636
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "El servei de notificació no està disponible"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:638
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

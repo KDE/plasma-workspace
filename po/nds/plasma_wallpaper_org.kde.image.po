@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2014-08-11 12:41+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -88,7 +88,7 @@ msgid "Add Image…"
 msgstr ""
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, fuzzy, kde-format
 #| msgid "Download Wallpapers"
 msgid "Get New Wallpapers…"
@@ -251,23 +251,23 @@ msgstr[1] "Sekunnen"
 msgid "Folders"
 msgstr "Achtergrundbild wegmaken"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "Achtergrundbild wegmaken"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
 msgid "Open Folder"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "Add Folder…"

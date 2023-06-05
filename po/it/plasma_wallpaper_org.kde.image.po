@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-02-24 19:01+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -84,7 +84,7 @@ msgid "Add Image…"
 msgstr "Aggiungi immagine..."
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
 msgstr "Ottieni nuovi sfondi..."
@@ -252,22 +252,22 @@ msgstr[1] "%1 secondi"
 msgid "Folders"
 msgstr "Cartelle"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, kde-format
 msgid "Remove Folder"
 msgstr "Rimuovi cartella"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
 msgid "Open Folder"
 msgstr "Apri cartella"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Non ci sono posizioni di sfondi configurate"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, kde-format
 msgid "Add Folder…"
 msgstr "Aggiungi cartella…"

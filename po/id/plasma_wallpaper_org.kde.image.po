@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-06-14 15:18+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -86,7 +86,7 @@ msgid "Add Image…"
 msgstr "Tambahkan Citra..."
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
 msgstr "Dapatkan Wallpaper Baru..."
@@ -251,22 +251,22 @@ msgstr[1] "%1 detik"
 msgid "Folders"
 msgstr "Folder"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, kde-format
 msgid "Remove Folder"
 msgstr "Hapus Folder"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
 msgid "Open Folder"
 msgstr "Buka Folder"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Tidak ada lokasi wallpaper yang dikonfigurasi"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, kde-format
 msgid "Add Folder…"
 msgstr "Tambahkan Folder..."

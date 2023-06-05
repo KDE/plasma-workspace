@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-02-23 19:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -88,7 +88,7 @@ msgid "Add Image…"
 msgstr "Gehitu irudia..."
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, kde-format
 msgid "Get New Wallpapers…"
 msgstr "Lortu horma-paper berriak..."
@@ -252,22 +252,22 @@ msgstr[1] "%1 segundo"
 msgid "Folders"
 msgstr "Karpetak"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, kde-format
 msgid "Remove Folder"
 msgstr "Kendu karpeta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
 msgid "Open Folder"
 msgstr "Ireki karpeta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Ez da horma-paperen kokalekurik konfiguratu"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, kde-format
 msgid "Add Folder…"
 msgstr "Gehitu karpeta..."

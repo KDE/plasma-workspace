@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-29 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -79,7 +79,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Vsebina odložišča"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
@@ -114,19 +114,19 @@ msgstr "Uredi vsebino"
 msgid "Remove from history"
 msgstr "Odstrani iz zgodovine"
 
-#: contents/ui/EditPage.qml:86
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Shrani"
 
-#: contents/ui/EditPage.qml:94
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: contents/ui/Menu.qml:126
+#: contents/ui/Menu.qml:123
 #, kde-format
 msgid "No matches"
 msgstr "Ni zadetkov"

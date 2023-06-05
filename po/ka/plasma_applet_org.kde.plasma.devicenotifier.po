@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-09-02 06:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -81,12 +81,12 @@ msgstr "ყველას გამოერთება"
 msgid "Click to safely remove all devices"
 msgstr "მოწყობილობების უსაფრთხოდ გამოსაძრობად აქ დააწკაპუნეთ"
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, kde-format
 msgid "No removable devices attached"
 msgstr "მოხსნადი მოწყობილობები შეერთებული არაა"
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, kde-format
 msgid "No disks available"
 msgstr "დისკები მიუწვდომელია"

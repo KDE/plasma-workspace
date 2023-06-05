@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-29 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "剪贴板内容"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
@@ -110,19 +110,19 @@ msgstr "编辑内容"
 msgid "Remove from history"
 msgstr "移除这条历史记录"
 
-#: contents/ui/EditPage.qml:86
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
 
-#: contents/ui/EditPage.qml:94
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/Menu.qml:126
+#: contents/ui/Menu.qml:123
 #, kde-format
 msgid "No matches"
 msgstr "无匹配条目"

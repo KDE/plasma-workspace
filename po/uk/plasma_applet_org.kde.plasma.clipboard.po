@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-29 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-05-26 09:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Вміст буфера даних"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер даних порожній"
@@ -113,19 +113,19 @@ msgstr "Редагувати вміст"
 msgid "Remove from history"
 msgstr "Вилучити із журналу"
 
-#: contents/ui/EditPage.qml:86
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Зберегти"
 
-#: contents/ui/EditPage.qml:94
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: contents/ui/Menu.qml:126
+#: contents/ui/Menu.qml:123
 #, kde-format
 msgid "No matches"
 msgstr "Немає відповідників"

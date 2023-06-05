@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-29 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-05-26 19:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Tonduja Enhavo"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:126
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tondujo estas malplena"
@@ -113,19 +113,19 @@ msgstr "Redakti enhavojn"
 msgid "Remove from history"
 msgstr "Forigi el historio"
 
-#: contents/ui/EditPage.qml:86
+#: contents/ui/EditPage.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Konservi"
 
-#: contents/ui/EditPage.qml:94
+#: contents/ui/EditPage.qml:91
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: contents/ui/Menu.qml:126
+#: contents/ui/Menu.qml:123
 #, kde-format
 msgid "No matches"
 msgstr "Neniuj alumetoj"

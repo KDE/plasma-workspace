@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-02-19 14:52+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -229,12 +229,12 @@ msgstr "Tam dolmadıqda batareyanın faizi nişanda göstərilsin"
 msgid "&Configure Energy Saving…"
 msgstr "&Enerjiyə qənaət rejimini tənzimləyin..."
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, kde-format
 msgid "Display Brightness"
 msgstr "Ekran parlaqlığı"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "Klaviatura işıqlanması"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2007-10-27 05:50+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -80,13 +80,13 @@ msgstr ""
 msgid "Click to safely remove all devices"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "No removable devices attached"
 msgstr "Configure New Device Notifier"
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, kde-format
 msgid "No disks available"
 msgstr ""

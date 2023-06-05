@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2021-03-18 08:08+0100\n"
 "Last-Translator: Jacob Dybvald Ludvigsen <jacob.ludvigsen@protonmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -55,43 +55,43 @@ msgstr "Styring av maskinvare"
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:84
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Oppføring"
 
-#: package/contents/ui/ConfigEntries.qml:94
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgid "Visibility"
 msgstr "Synlighet"
 
-#: package/contents/ui/ConfigEntries.qml:100
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Tastatur-snarvei"
 
-#: package/contents/ui/ConfigEntries.qml:246
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Vis når relevant"
 
-#: package/contents/ui/ConfigEntries.qml:247
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Always shown"
 msgstr "Vis alltid"
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always hidden"
 msgstr "Alltid skjult"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Disabled"
 msgstr "Slått av"
 
-#: package/contents/ui/ConfigEntries.qml:314
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "Vis alltid alle oppføringene"

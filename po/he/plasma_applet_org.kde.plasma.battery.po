@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2017-05-22 05:35-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -250,12 +250,12 @@ msgstr "הצג אחוזים"
 msgid "&Configure Energy Saving…"
 msgstr "הגדר צריכת חשמל..."
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, kde-format
 msgid "Display Brightness"
 msgstr "בהירות מסך"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "בהירות מקלדת"

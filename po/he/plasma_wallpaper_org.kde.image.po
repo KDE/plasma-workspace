@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -89,7 +89,7 @@ msgid "Add Image…"
 msgstr ""
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Get New Wallpapers…"
@@ -249,23 +249,23 @@ msgstr[1] "שניות"
 msgid "Folders"
 msgstr "הסר תמונת רקע"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "הסר תמונת רקע"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, kde-format
 msgid "Open Folder"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "Add Folder…"

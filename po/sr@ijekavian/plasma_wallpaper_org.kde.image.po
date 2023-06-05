@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 02:19+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -93,7 +93,7 @@ msgid "Add Image…"
 msgstr "Додај слику..."
 
 #: imagepackage/contents/ui/config.qml:213
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:254
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgid "Get New Wallpapers…"
@@ -262,24 +262,24 @@ msgstr[3] "секунди"
 msgid "Folders"
 msgstr "Додај фасциклу..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:217
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "Уклони тапет"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:222
 #, fuzzy, kde-format
 #| msgid "Open Containing Folder"
 msgid "Open Folder"
 msgstr "Отвори обухватајућу фасциклу"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:232
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:247
 #, fuzzy, kde-format
 #| msgid "Add Folder..."
 msgid "Add Folder…"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Calendar"
 msgstr "Календар"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:429
 #, kde-format
 msgid "Time Zones"
 msgstr "Временске зоне"
@@ -51,24 +51,24 @@ msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:391
+#: package/contents/ui/CalendarView.qml:388
 #, kde-format
 msgid "No events for today"
 msgstr "Нема догађаја за данас."
 
-#: package/contents/ui/CalendarView.qml:392
+#: package/contents/ui/CalendarView.qml:389
 #, kde-format
 msgid "No events for this day"
 msgstr "Нема догађаја за овај дан."
 
-#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:438
 #, kde-format
 msgid "Switch…"
 msgstr ""
 
 # >> @option:check
+#: package/contents/ui/CalendarView.qml:439
 #: package/contents/ui/CalendarView.qml:442
-#: package/contents/ui/CalendarView.qml:445
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "Switch to another timezone"
@@ -298,12 +298,12 @@ msgid ""
 "something else."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:100
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -312,60 +312,60 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:116
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:125
 #, fuzzy, kde-format
 #| msgid "Your system time zone"
 msgid "Remove this time zone"
 msgstr "Временска зона система"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, fuzzy, kde-format
 #| msgid "Search Time Zones"
 msgid "Systemwide Time Zone"
 msgstr "Потражи временске зоне"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Additional Time Zones"
 msgstr "Временске зоне"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:147
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:154
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Add Time Zones…"
 msgstr "Временске зоне"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:164
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Add More Timezones"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:208
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. 'Local' was enabled "
@@ -377,12 +377,12 @@ msgstr ""
 "Бар једна временска зона мора бити активна. Аутоматски је активирана "
 "„локална“."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:243
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "%1, %2"
 msgstr ""

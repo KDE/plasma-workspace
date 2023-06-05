@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -55,43 +55,43 @@ msgstr "Aparataro Kontrolo"
 msgid "Miscellaneous"
 msgstr "Diversaj"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:84
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Eniro"
 
-#: package/contents/ui/ConfigEntries.qml:94
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgid "Visibility"
 msgstr "Videbleco"
 
-#: package/contents/ui/ConfigEntries.qml:100
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klava ŝparvojo"
 
-#: package/contents/ui/ConfigEntries.qml:246
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Montrite kiam koncernas"
 
-#: package/contents/ui/ConfigEntries.qml:247
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Always shown"
 msgstr "Ĉiam montrata"
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always hidden"
 msgstr "Ĉiam kaŝita"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Disabled"
 msgstr "Malebligita"
 
-#: package/contents/ui/ConfigEntries.qml:314
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "Ĉiam montri ĉiujn enskribojn"

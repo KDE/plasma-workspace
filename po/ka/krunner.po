@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-09-17 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -106,12 +106,12 @@ msgstr "ძებნის მიმაგრება"
 msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
-#: qml/RunCommand.qml:319 qml/RunCommand.qml:324
+#: qml/RunCommand.qml:315 qml/RunCommand.qml:320
 #, kde-format
 msgid "Recent Queries"
 msgstr "ახლახანს გაგზავნილი მოთხოვნები"
 
-#: qml/RunCommand.qml:322
+#: qml/RunCommand.qml:318
 #, kde-format
 msgid "Remove"
 msgstr "ზონის ამოღება"

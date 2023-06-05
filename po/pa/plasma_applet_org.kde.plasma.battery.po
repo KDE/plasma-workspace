@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-06-14 21:00-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -238,12 +238,12 @@ msgstr "ਆਈਕਾਨ ਉੱਤੇ ਬੈਟਰੀ ਫ਼ੀਸਦੀ ਵੇਖ�
 msgid "&Configure Energy Saving…"
 msgstr "…ਪਾਵਰ ਬੱਚਤ ਸੰਰਚਨਾ(&C)"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, kde-format
 msgid "Display Brightness"
 msgstr "ਸਕਰੀਨ ਚਮਕ"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "ਕੀਬੋਰਡ ਚਮਕ"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-01-27 19:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Calendar"
 msgstr "Календар"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:429
 #, kde-format
 msgid "Time Zones"
 msgstr "Времеви зони"
@@ -50,23 +50,23 @@ msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Добавяне на ново събитие"
 
-#: package/contents/ui/CalendarView.qml:391
+#: package/contents/ui/CalendarView.qml:388
 #, kde-format
 msgid "No events for today"
 msgstr "Няма събития за днес"
 
-#: package/contents/ui/CalendarView.qml:392
+#: package/contents/ui/CalendarView.qml:389
 #, kde-format
 msgid "No events for this day"
 msgstr "Няма събития за този ден"
 
-#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:438
 #, kde-format
 msgid "Switch…"
 msgstr "Превключване…"
 
+#: package/contents/ui/CalendarView.qml:439
 #: package/contents/ui/CalendarView.qml:442
-#: package/contents/ui/CalendarView.qml:445
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Превключване към друга часова зона"
@@ -286,12 +286,12 @@ msgstr ""
 "зона към този списък. Той ще се появи само когато промените общосистемната "
 "часова зона на друга."
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:100
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Часовникът използва понастоящем тази часова зона"
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,27 +300,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Скрит, докато това е местната часова зона на града"
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:116
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Превключване на системната часова зона…"
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:125
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Премахване на часова зона"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Системна часова зона"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Допълнителни часови зони"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:147
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,19 +329,19 @@ msgstr ""
 "Добавете още часови зони, за да се показват всички от тях в изскачащия "
 "прозорец на аплета, или използвайте една от тях за самия часовник"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:154
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Добавяне на часови зони…"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:164
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Превключване на показаната часова зона чрез превъртане над аплета на "
 "часовника"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -350,12 +350,12 @@ msgstr ""
 "Използването на тази функция не води до промяна на часовата зона в цялата "
 "система. Когато пътувате, вместо това превключете часовата зона на системата."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Добавяне на още часови зони"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -364,12 +364,12 @@ msgstr ""
 "Трябва да бъде активирана поне една часова зона. Местната ви часова зона "
 "беше активирана автоматично."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:243
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

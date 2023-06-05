@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2009-12-14 23:28+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -255,13 +255,13 @@ msgstr ""
 msgid "&Configure Energy Saving…"
 msgstr "Wicy..."
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, fuzzy, kde-format
 #| msgid "Screen Brightness"
 msgid "Display Brightness"
 msgstr "Jasnota ekranu"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, fuzzy, kde-format
 #| msgid "Screen Brightness"
 msgid "Keyboard Brightness"

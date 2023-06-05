@@ -1,20 +1,20 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2018, 2020, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2018, 2020, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-02-02 00:15+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2023-06-04 21:08+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -215,16 +215,14 @@ msgid "Application Style"
 msgstr "Anwendungs-Stil"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "Fensterdekoration"
+msgstr "Stil der Fensterdekoration"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Fensterdekoration"
+msgstr "Größe der Fensterdekoration"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 02:24+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2021-07-06 19:31+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -84,12 +84,12 @@ msgstr "सभी को निकालें"
 msgid "Click to safely remove all devices"
 msgstr "सभी उपकरणों को सुरक्षित रूप से निकालने के लिए क्लिक करें"
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, kde-format
 msgid "No removable devices attached"
 msgstr "कोई हटाने योग्य उपकरण संलग्न नहीं हैं"
 
-#: package/contents/ui/FullRepresentation.qml:187
+#: package/contents/ui/FullRepresentation.qml:184
 #, kde-format
 msgid "No disks available"
 msgstr "कोई डिस्क उपलब्ध नहीं"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 23:30+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-01-11 21:30+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -52,43 +52,43 @@ msgstr "Ovládanie hardvéru"
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-#: package/contents/ui/ConfigEntries.qml:89
+#: package/contents/ui/ConfigEntries.qml:84
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Položka"
 
-#: package/contents/ui/ConfigEntries.qml:94
+#: package/contents/ui/ConfigEntries.qml:89
 #, kde-format
 msgid "Visibility"
 msgstr "Viditeľnosť"
 
-#: package/contents/ui/ConfigEntries.qml:100
+#: package/contents/ui/ConfigEntries.qml:95
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klávesová skratka"
 
-#: package/contents/ui/ConfigEntries.qml:246
+#: package/contents/ui/ConfigEntries.qml:241
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Zobraziť, keď je to relevantné"
 
-#: package/contents/ui/ConfigEntries.qml:247
+#: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Always shown"
 msgstr "Vždy zobraziť"
 
-#: package/contents/ui/ConfigEntries.qml:248
+#: package/contents/ui/ConfigEntries.qml:243
 #, kde-format
 msgid "Always hidden"
 msgstr "Vždy skryť"
 
-#: package/contents/ui/ConfigEntries.qml:249
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Disabled"
 msgstr "Zakázané"
 
-#: package/contents/ui/ConfigEntries.qml:314
+#: package/contents/ui/ConfigEntries.qml:309
 #, kde-format
 msgid "Always show all entries"
 msgstr "Vždy zobraziť všetky položky"

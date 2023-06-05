@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2023-01-26 12:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -30,7 +30,7 @@ msgid "Calendar"
 msgstr "التّقويم"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:432
+#: package/contents/ui/CalendarView.qml:429
 #, kde-format
 msgid "Time Zones"
 msgstr "المناطق الزّمنيّة"
@@ -52,23 +52,23 @@ msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "أضف حدث جديد"
 
-#: package/contents/ui/CalendarView.qml:391
+#: package/contents/ui/CalendarView.qml:388
 #, kde-format
 msgid "No events for today"
 msgstr "لا أحداث اليوم"
 
-#: package/contents/ui/CalendarView.qml:392
+#: package/contents/ui/CalendarView.qml:389
 #, kde-format
 msgid "No events for this day"
 msgstr "لا أحداث هذا اليوم"
 
-#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:438
 #, kde-format
 msgid "Switch…"
 msgstr "بدل…"
 
+#: package/contents/ui/CalendarView.qml:439
 #: package/contents/ui/CalendarView.qml:442
-#: package/contents/ui/CalendarView.qml:445
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "أظهر منطقة زمنيّة أخرى"
@@ -286,12 +286,12 @@ msgstr ""
 "هذه القائمة. لن تظهر إلا عند تغيير المنطقة الزمنية على مستوى النظام إلى شيء "
 "آخر."
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:100
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "تستخدم الساعة حاليًا هذه المنطقة الزمنية"
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,27 +300,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "مخفي عندما يكون هذا هو المنطقة الزمنية المحلية للمدينة"
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:116
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "بدل المنطقة الزّمنيّة لكل النظام..."
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:125
 #, kde-format
 msgid "Remove this time zone"
 msgstr "أزل هذه المنطقة الزمنية"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "المنطقة الزّمنيّة لكل النظام"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:134
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "مناطق زّمنيّة إضافية"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:147
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,17 +329,17 @@ msgstr ""
 "أضف المزيد من المناطق الزمنية لعرضها جميعًا في النافذة المنبثقة للتطبيق ، أو "
 "استخدم واحدة منها للساعة نفسها"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:154
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "أضف المناطق الزّمنيّة..."
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:164
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "بدل المنطقة الزمنية المعروضة عن طريق التمرير فوق بريمج الساعة"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:171
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -348,12 +348,12 @@ msgstr ""
 "استخدام هذه الميزة لن يغير المنطقة الزمنية لكل النظام. عندما تسافر، بدّل "
 "المنطقة الزمنية لكامل النظام بدلاً من ذلك."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Add More Timezones"
 msgstr "أضف المزيد من المناطق الزمنية"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +361,12 @@ msgid ""
 msgstr ""
 "يجب تفعيل منطقة زمنيّة واحدة على الأقل. فُعّلت منطقتك الزمنية المحلية آليًّا."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:243
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1، %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "%1, %2"
 msgstr "%1، %2"

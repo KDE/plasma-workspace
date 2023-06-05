@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2022-12-10 11:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -141,35 +141,35 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Ekrany są lustrzanie odbite"
 
-#: package/contents/ui/FullRepresentation.qml:431
+#: package/contents/ui/FullRepresentation.qml:433
 #, kde-format
 msgid "Close Group"
 msgstr "Zamknij grupę"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "Wyświetl mniej"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Wyświetl %1 więcej"
 
-#: package/contents/ui/FullRepresentation.qml:619
+#: package/contents/ui/FullRepresentation.qml:621
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
 msgstr "Brak nieprzeczytanych powiadomień"
 
-#: package/contents/ui/FullRepresentation.qml:634
+#: package/contents/ui/FullRepresentation.qml:636
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Usługa powiadomień jest niedostępna"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:638
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

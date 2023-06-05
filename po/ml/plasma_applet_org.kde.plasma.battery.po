@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-05 02:00+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -235,12 +235,12 @@ msgstr "ചിഹ്നത്തിൽ ബാറ്ററി ശതമാനം 
 msgid "&Configure Energy Saving…"
 msgstr "ഊർജ്ജ സംരക്ഷണം ക്രമീകരിക്കുക… (&C)"
 
-#: package/contents/ui/PopupDialog.qml:117
+#: package/contents/ui/PopupDialog.qml:114
 #, fuzzy, kde-format
 msgid "Display Brightness"
 msgstr "തിരശ്ശീലയുടെ വെളിച്ചം"
 
-#: package/contents/ui/PopupDialog.qml:146
+#: package/contents/ui/PopupDialog.qml:143
 #, kde-format
 msgid "Keyboard Brightness"
 msgstr "കീബോർഡ് തെളിച്ചം"
