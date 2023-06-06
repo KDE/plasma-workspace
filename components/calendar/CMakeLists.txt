@@ -9,10 +9,10 @@ target_sources(calendarplugin PRIVATE
 )
 
 target_link_libraries(calendarplugin
-    Qt${QT_MAJOR_VERSION}::Core
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::Gui
+    Qt6::Core
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::Gui
     KF6::I18n
     KF6::CalendarEvents
     KF6::CoreAddons

@@ -4,7 +4,7 @@ project(plasma-workspace)
 set(PROJECT_VERSION "5.27.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-set(QT_MIN_VERSION "6.4.0")
+set(QT_MIN_VERSION "6.5.0")
 set(KF6_MIN_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
@@ -38,7 +38,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
@@ -96,8 +96,8 @@ set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for
                        PURPOSE "Needed to for holidays plugin for Plasma Calendar."
                       )
 
-find_package(Phonon4Qt${QT_MAJOR_VERSION} 4.6.60 REQUIRED NO_MODULE)
-set_package_properties(Phonon4Qt${QT_MAJOR_VERSION} PROPERTIES
+find_package(Phonon4Qt6 4.6.60 REQUIRED NO_MODULE)
+set_package_properties(Phonon4Qt6 PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
 
@@ -170,13 +170,13 @@ if(QT_MAJOR_VERSION EQUAL "5")
 else()
   find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
-find_package(Qt${QT_MAJOR_VERSION}WaylandClient COMPONENTS Private)
+find_package(Qt6WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
 if(FONTCONFIG_FOUND)
   # kfontinst
-  find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
+  find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
 endif()
 
 find_package(AppStreamQt 1.0) # 1.0 will be the first release to support Qt6
@@ -235,13 +235,13 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(UBUNTU_LOCALE FALSE)
     option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt6 required" ${SYSTEM_UBUNTU_BASED})
     if(UBUNTU_PACKAGEKIT)
-        find_package(PackageKitQt${QT_MAJOR_VERSION})
-        set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
+        find_package(PackageKitQt6)
+        set_package_properties(PackageKitQt6
                 PROPERTIES DESCRIPTION "Software Manager integration"
                 TYPE OPTIONAL
                 PURPOSE "Used to install additional language packages on demand"
                 )
-        set(UBUNTU_LOCALE ${PackageKitQt${QT_MAJOR_VERSION}_FOUND})
+        set(UBUNTU_LOCALE ${PackageKitQt6_FOUND})
     endif()
 
     set(GLIBC_LOCALE_GEN_DEFAULT ON)
@@ -271,8 +271,8 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
     ################## Find libraries ###################
     if(REGION_LANG_GENERATE_LOCALE)
-        find_package(PolkitQt${QT_MAJOR_VERSION}-1)
-        set_package_properties(PolkitQt${QT_MAJOR_VERSION}-1
+        find_package(PolkitQt6-1)
+        set_package_properties(PolkitQt6-1
                 PROPERTIES DESCRIPTION "DBus interface wrapper for Polkit"
                 PURPOSE "Communicate with localegen helper in region & lang kcm"
                 TYPE REQUIRED
