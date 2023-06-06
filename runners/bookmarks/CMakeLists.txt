@@ -12,6 +12,8 @@ ecm_qt_declare_logging_category(krunner_bookmarks_common
     IDENTIFIER RUNNER_BOOKMARKS
     CATEGORY_NAME org.kde.plasma.runner.bookmarks
     DEFAULT_SEVERITY Warning
+    DESCRIPTION "krunner bookmarks"
+    EXPORT PLASMAWORKSPACE
 )
 
 target_sources(krunner_bookmarks_common PRIVATE

@@ -4,6 +4,8 @@ ecm_qt_declare_logging_category(ion_dwd_SRCS
     IDENTIFIER IONENGINE_dwd
     CATEGORY_NAME kde.dataengine.ion.dwd
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion dwd"
+    EXPORT PLASMAWORKSPACE
 )
 add_library(ion_dwd MODULE ${ion_dwd_SRCS})
 target_link_libraries(ion_dwd

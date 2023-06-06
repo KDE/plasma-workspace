@@ -11,4 +11,6 @@ ecm_qt_declare_logging_category(kcm_autostart
     HEADER kcm_autostart_debug.h
     IDENTIFIER KCM_AUTOSTART_DEBUG
     CATEGORY_NAME org.kde.plasma.kcm_autostart
+    DESCRIPTION "kcm autostart"
+    EXPORT PLASMAWORKSPACE
 )

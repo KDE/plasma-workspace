@@ -4,6 +4,8 @@ ecm_qt_declare_logging_category(ion_wettercom_SRCS
     IDENTIFIER IONENGINE_WETTERCOM
     CATEGORY_NAME kde.dataengine.ion.wettercom
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion wettercom"
+    EXPORT PLASMAWORKSPACE
 )
 add_library(ion_wettercom MODULE ${ion_wettercom_SRCS})
 target_link_libraries(ion_wettercom

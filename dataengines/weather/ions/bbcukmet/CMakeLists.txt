@@ -4,6 +4,8 @@ ecm_qt_declare_logging_category(ion_bbcukmet_SRCS
     IDENTIFIER IONENGINE_BBCUKMET
     CATEGORY_NAME kde.dataengine.ion.bbcukmet
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion bbcukmet"
+    EXPORT PLASMAWORKSPACE
 )
 add_library(ion_bbcukmet MODULE ${ion_bbcukmet_SRCS})
 target_link_libraries (ion_bbcukmet

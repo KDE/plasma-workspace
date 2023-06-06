@@ -9,7 +9,10 @@ set(trianglemousefilterplugin_SRCS
 ecm_qt_declare_logging_category(trianglemousefilterplugin_SRCS HEADER debug.h
     IDENTIFIER TRIANGLE_MOUSE_FILTER
     CATEGORY_NAME kde.trianglemousefilter
-    DEFAULT_SEVERITY Info)
+    DEFAULT_SEVERITY Info
+    DESCRIPTION "triangle mouse filter"
+    EXPORT PLASMAWORKSPACE
+)
 
 add_library(trianglemousefilterplugin SHARED ${trianglemousefilterplugin_SRCS})
 

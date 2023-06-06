@@ -44,7 +44,10 @@ endif()
 ecm_qt_declare_logging_category(appmenu
     HEADER appmenu_debug.h
     IDENTIFIER APPMENU_DEBUG
-    CATEGORY_NAME org.kde.plasma.appmenu)
+    CATEGORY_NAME org.kde.plasma.appmenu
+    DESCRIPTION "appmenu"
+    EXPORT PLASMAWORKSPACE
+)
 
 ########### install files ###############
 

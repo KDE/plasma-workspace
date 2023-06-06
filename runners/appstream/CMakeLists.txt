@@ -8,5 +8,8 @@ ecm_qt_declare_logging_category(krunner_appstream
     HEADER debug.h
     IDENTIFIER RUNNER_APPSTREAM
     CATEGORY_NAME org.kde.plasma.runner.appstream
-    DEFAULT_SEVERITY Warning)
+    DEFAULT_SEVERITY Warning
+    DESCRIPTION "krunner appstream"
+    EXPORT PLASMAWORKSPACE
+)
 target_link_libraries(krunner_appstream PUBLIC Qt::Gui KF6::Runner KF6::I18n KF6::Service AppStreamQt)

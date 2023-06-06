@@ -20,6 +20,8 @@ ecm_qt_declare_logging_category(kcm_feedback
     HEADER kcm_feedback_debug.h
     IDENTIFIER KCM_FEEDBACK_DEBUG
     CATEGORY_NAME org.kde.plasma.kcm_feedback
+    DESCRIPTION "kcm feedback"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(FILES feedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

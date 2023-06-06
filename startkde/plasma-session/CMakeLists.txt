@@ -8,7 +8,10 @@ set(plasma_session_SRCS
     signalhandler.cpp
 )
 
-ecm_qt_declare_logging_category(plasma_session_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.session)
+ecm_qt_declare_logging_category(plasma_session_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.session
+    DESCRIPTION "plasma session"
+    EXPORT PLASMAWORKSPACE
+)
 
 qt_add_dbus_adaptor( plasma_session_SRCS org.kde.Startup.xml startup.h Startup)
 

@@ -15,4 +15,6 @@ ecm_qt_declare_logging_category(plasma_containmentactions_paste
     HEADER containmentactions_paste_debug.h
     IDENTIFIER CONTAINMENTACTIONS_PASTE_DEBUG
     CATEGORY_NAME org.kde.plasma.containmentactions_paste
+    DESCRIPTION "containment actions paste"
+    EXPORT PLASMAWORKSPACE
 )

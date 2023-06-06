@@ -24,7 +24,10 @@ set(image_SRCS
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
                                            IDENTIFIER IMAGEWALLPAPER
                                            CATEGORY_NAME kde.wallpapers.image
-                                           DEFAULT_SEVERITY Info)
+                                           DEFAULT_SEVERITY Info
+                                           DESCRIPTION "plasma wallpapers image"
+                                           EXPORT PLASMAWORKSPACE
+                                       )
 
 add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
 

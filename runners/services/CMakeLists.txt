@@ -9,7 +9,10 @@ ecm_qt_declare_logging_category(krunner_services_static
     HEADER debug.h
     IDENTIFIER RUNNER_SERVICES
     CATEGORY_NAME org.kde.plasma.runner.services
-    DEFAULT_SEVERITY Warning)
+    DEFAULT_SEVERITY Warning
+    DESCRIPTION "krunner services"
+    EXPORT PLASMAWORKSPACE
+)
 
 target_link_libraries(krunner_services_static
     KF6::CoreAddons

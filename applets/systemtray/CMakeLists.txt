@@ -31,7 +31,10 @@ qt_add_dbus_interface(systemtray_SRCS ${statusnotifieritem_xml} statusnotifierit
 ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
                                             IDENTIFIER SYSTEM_TRAY
                                             CATEGORY_NAME kde.systemtray
-                                            DEFAULT_SEVERITY Info)
+                                            DEFAULT_SEVERITY Info
+                                            DESCRIPTION "plasma applet systemtray"
+                                            EXPORT PLASMAWORKSPACE
+                                        )
 add_library(systemtraymodel_static STATIC ${systemtray_SRCS})
 target_link_libraries(systemtraymodel_static
     Qt::Gui

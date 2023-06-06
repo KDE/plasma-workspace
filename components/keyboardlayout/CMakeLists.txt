@@ -8,7 +8,10 @@ set(keyboardlayoutplugin_SRCS
 ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h
     IDENTIFIER KEYBOARD_LAYOUT
     CATEGORY_NAME kde.keyboardlayout
-    DEFAULT_SEVERITY Info)
+    DEFAULT_SEVERITY Info
+    DESCRIPTION "keyboard layout plugins"
+    EXPORT PLASMAWORKSPACE
+)
 
 set_source_files_properties(org.kde.KeyboardLayouts.xml
         PROPERTIES INCLUDE layoutnames.h)

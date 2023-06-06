@@ -76,6 +76,8 @@ ecm_qt_declare_logging_category(kworkspace
     HEADER libkworkspace_debug.h
     IDENTIFIER LIBKWORKSPACE_DEBUG
     CATEGORY_NAME org.kde.plasma.libkworkspace
+    DESCRIPTION "lib kworkspace debug"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

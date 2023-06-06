@@ -34,6 +34,8 @@ ecm_qt_declare_logging_category(kfontview_bin
     HEADER kfontview_debug.h
     IDENTIFIER KFONTVIEW_DEBUG
     CATEGORY_NAME org.kde.plasma.kfontview
+    DESCRIPTION "kcm kfontview"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(TARGETS kfontinst_bin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

@@ -16,6 +16,8 @@ ecm_qt_declare_logging_category(weather_SRCS
     IDENTIFIER WEATHER
     CATEGORY_NAME kde.dataengine.weather
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine weather engine"
+    EXPORT PLASMAWORKSPACE
 )
 
 kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)

@@ -23,12 +23,17 @@ qt_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCoro
 ecm_qt_declare_logging_category(plasmashell HEADER debug.h
                                                IDENTIFIER PLASMASHELL
                                                CATEGORY_NAME kde.plasmashell
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "plasmashell"
+                                               EXPORT PLASMAWORKSPACE)
 
 ecm_qt_declare_logging_category(plasmashell HEADER screenpool-debug.h
                                                IDENTIFIER SCREENPOOL
                                                CATEGORY_NAME kde.plasmashell.screenpool
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "plasmashell screenpool"
+                                               EXPORT PLASMAWORKSPACE
+                                           )
 set (plasma_shell_SRCS
     alternativeshelper.cpp
     autohidescreenedge.cpp

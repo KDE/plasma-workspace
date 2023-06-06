@@ -2,7 +2,10 @@ set(LOGOUT_GREETER_SRCS main.cpp greeter.cpp shutdowndlg.cpp)
 ecm_qt_declare_logging_category(LOGOUT_GREETER_SRCS HEADER debug.h
                                 IDENTIFIER LOGOUT_GREETER
                                 CATEGORY_NAME kde.logout_greeter
-                                DEFAULT_SEVERITY Info)
+                                DEFAULT_SEVERITY Info
+                                DESCRIPTION "logout greeter debug"
+                                EXPORT PLASMAWORKSPACE
+                            )
 
 
 qt_add_dbus_adaptor( LOGOUT_GREETER_SRCS ../ksmserver/org.kde.LogoutPrompt.xml greeter.h Greeter)

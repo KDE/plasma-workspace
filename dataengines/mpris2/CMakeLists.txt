@@ -19,7 +19,10 @@ set(mpris2_engine_SRCS
 ecm_qt_declare_logging_category(mpris2_engine_SRCS HEADER debug.h
                                                IDENTIFIER MPRIS2
                                                CATEGORY_NAME kde.dataengine.mpris
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "DataEngine mpris2"
+                                               EXPORT PLASMAWORKSPACE
+                                           )
 
 set_source_files_properties(
    org.freedesktop.DBus.Properties.xml

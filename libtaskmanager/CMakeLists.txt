@@ -75,6 +75,8 @@ ecm_qt_declare_logging_category(taskmanager
     HEADER libtaskmanager_debug.h
     IDENTIFIER TASKMANAGER_DEBUG
     CATEGORY_NAME org.kde.plasma.libtaskmanager
+    DESCRIPTION "libtaskmanager debug"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

@@ -46,7 +46,10 @@ set(kickerplugin_SRCS
 ecm_qt_declare_logging_category(kickerplugin_SRCS
     HEADER debug.h
     IDENTIFIER KICKER_DEBUG
-    CATEGORY_NAME org.kde.plasma.kicker)
+    CATEGORY_NAME org.kde.plasma.kicker
+    DESCRIPTION "kicker debug"
+    EXPORT PLASMAWORKSPACE
+    )
 
 qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml krunner_interface)
 qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml ksmserver_interface)

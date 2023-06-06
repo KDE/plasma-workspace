@@ -30,7 +30,10 @@ qt_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifieritem_xml} s
 ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
                                                IDENTIFIER DATAENGINE_SNI
                                                CATEGORY_NAME kde.dataengine.sni
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "DataEngine statusnotifieritem"
+                                               EXPORT PLASMAWORKSPACE
+                                           )
 
 kcoreaddons_add_plugin(plasma_engine_statusnotifieritem SOURCES ${statusnotifieritem_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 target_link_libraries(plasma_engine_statusnotifieritem

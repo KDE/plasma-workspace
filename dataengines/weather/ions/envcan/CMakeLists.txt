@@ -4,6 +4,8 @@ ecm_qt_declare_logging_category(ion_envcan_SRCS
     IDENTIFIER IONENGINE_ENVCAN
     CATEGORY_NAME kde.dataengine.ion.envcan
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion envcan"
+    EXPORT PLASMAWORKSPACE
 )
 add_library(ion_envcan MODULE ${ion_envcan_SRCS})
 target_link_libraries (ion_envcan

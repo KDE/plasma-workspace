@@ -12,7 +12,10 @@ set(time_engine_SRCS
 ecm_qt_declare_logging_category(time_engine_SRCS HEADER debug.h
                                                IDENTIFIER DATAENGINE_TIME
                                                CATEGORY_NAME kde.dataengine.time
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "DataEngine time"
+                                               EXPORT PLASMAWORKSPACE
+                                           )
 
 kcoreaddons_add_plugin(plasma_engine_time SOURCES ${time_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 

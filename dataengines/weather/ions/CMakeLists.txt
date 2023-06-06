@@ -5,6 +5,8 @@ ecm_qt_declare_logging_category(ionlib_SRCS
     IDENTIFIER IONENGINE
     CATEGORY_NAME kde.dataengine.ion
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion lib"
+    EXPORT PLASMAWORKSPACE
 )
 
 add_library (weather_ion SHARED ${ionlib_SRCS})

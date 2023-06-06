@@ -4,6 +4,8 @@ ecm_qt_declare_logging_category(ion_noaa_SRCS
     IDENTIFIER IONENGINE_NOAA
     CATEGORY_NAME kde.dataengine.ion.noaa
     DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine ion noaa"
+    EXPORT PLASMAWORKSPACE
 )
 add_library(ion_noaa MODULE ${ion_noaa_SRCS})
 target_link_libraries (ion_noaa

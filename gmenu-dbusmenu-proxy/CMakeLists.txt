@@ -27,7 +27,10 @@ qt_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbu
 ecm_qt_declare_logging_category(GMENU_DBUSMENU_PROXY_SRCS HEADER debug.h
                                                IDENTIFIER DBUSMENUPROXY
                                                CATEGORY_NAME kde.dbusmenuproxy
-                                               DEFAULT_SEVERITY Info)
+                                               DEFAULT_SEVERITY Info
+                                               DESCRIPTION "Gmenu dbusmenu proxy"
+                                               EXPORT PLASMAWORKSPACE
+                                           )
 
 add_executable(gmenudbusmenuproxy ${GMENU_DBUSMENU_PROXY_SRCS})
 

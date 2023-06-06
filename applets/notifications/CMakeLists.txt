@@ -38,6 +38,9 @@ target_link_libraries(org.kde.plasma.notifications
 ecm_qt_declare_logging_category(org.kde.plasma.notifications
     HEADER notifications_debug.h
     IDENTIFIER PLASMA_APPLET_NOTIFICATIONS_DEBUG
-    CATEGORY_NAME org.kde.plasma.notifications)
+    CATEGORY_NAME org.kde.plasma.notifications
+    DESCRIPTION "plasma applet notification"
+    EXPORT PLASMAWORKSPACE
+)
 
 plasma_install_package(package org.kde.plasma.notifications)

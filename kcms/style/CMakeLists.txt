@@ -34,6 +34,8 @@ ecm_qt_declare_logging_category(kcm_style
     HEADER kcm_style_debug.h
     IDENTIFIER KCM_STYLE_DEBUG
     CATEGORY_NAME org.kde.plasma.kcm_style
+    DESCRIPTION "kcm style"
+    EXPORT PLASMAWORKSPACE
 )
 
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")

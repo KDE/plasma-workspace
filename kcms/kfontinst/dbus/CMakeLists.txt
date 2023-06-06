@@ -19,6 +19,8 @@ ecm_qt_declare_logging_category(fontinst_bin
     HEADER kfontinst_debug.h
     IDENTIFIER KFONTINST_DEBUG
     CATEGORY_NAME org.kde.plasma.kfontinst
+    DESCRIPTION "kcm kfontinst"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(TARGETS fontinst_bin DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )

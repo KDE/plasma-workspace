@@ -2,7 +2,10 @@ set(kio_fonts_PART_SRCS FontInstInterface.cpp KioFonts.cpp ${libkfontinstdbusifa
 ecm_qt_declare_logging_category(kio_fonts_PART_SRCS
     HEADER debug.h
     IDENTIFIER KCM_KFONTINST_KIO
-    CATEGORY_NAME org.kde.kcm_kfontinst.kio)
+    CATEGORY_NAME org.kde.kcm_kfontinst.kio
+    DESCRIPTION "kcm kfontinst kio"
+    EXPORT PLASMAWORKSPACE
+)
 # qt_add_dbus_interface(kio_fonts_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 kcoreaddons_add_plugin(kio_fonts SOURCES ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} INSTALL_NAMESPACE "kf6/kio")
 target_link_libraries(kio_fonts Qt::DBus Qt::Xml KF6::Archive KF6::KIOCore KF6::KIOWidgets kfontinst Qt::GuiPrivate)

@@ -1,5 +1,0 @@
-org.kde.kf6.ksmserver ksmserver (ksmserver) IDENTIFIER [KSMSERVER]
-org.kde.plasma.runner.services Plasma Runner Services DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_SERVICES]
-org.kde.plasma.runner.appstream Plasma Runner Appstream DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_APPSTREAM]
-org.kde.plasma.runner.bookmarks Plasma Runner Bookmarks DEFAULT_SEVERITY [WARNING] IDENTIFIER [RUNNER_BOOKMARKS]
-org.kde.plasma.dataengine.geolocation Plasma Data engine Geolocation DEFAULT_SEVERITY [WARNING] IDENTIFIER [DATAENGINE_GEOLOCATION]

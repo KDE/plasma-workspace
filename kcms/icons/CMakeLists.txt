@@ -33,6 +33,8 @@ ecm_qt_declare_logging_category(plasma-changeicons
     HEADER plasma_changeicons_debug.h
     IDENTIFIER PLASMA_CHANGEICONS_DEBUG
     CATEGORY_NAME org.kde.plasma.changeicons
+    DESCRIPTION "kcm icons"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(FILES iconssettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

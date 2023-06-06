@@ -5,7 +5,10 @@ set(plasma_waitforname_SRCS
     main.cpp
    )
 
-ecm_qt_declare_logging_category(plasma_waitforname_SRCS HEADER debug_p.h IDENTIFIER LOG_PLASMA CATEGORY_NAME org.kde.knotifications)
+ecm_qt_declare_logging_category(plasma_waitforname_SRCS HEADER debug_p.h IDENTIFIER LOG_PLASMA CATEGORY_NAME org.kde.knotifications
+    DESCRIPTION "plasma waitforname"
+    EXPORT PLASMAWORKSPACE
+)
 
 add_executable(plasma_waitforname ${plasma_waitforname_SRCS})
 ecm_mark_nongui_executable(plasma_waitforname)

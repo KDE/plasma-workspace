@@ -25,6 +25,8 @@ ecm_qt_declare_logging_category(containmentlayoutmanagerplugin
     HEADER containmentlayoutmanager_debug.h
     IDENTIFIER CONTAINMENTLAYOUTMANAGER_DEBUG
     CATEGORY_NAME org.kde.plasma.containmentlayoutmanager
+    DESCRIPTION "plasma container layout manager"
+    EXPORT PLASMAWORKSPACE
 )
 
 install(TARGETS containmentlayoutmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/containmentlayoutmanager)

@@ -3,7 +3,10 @@ set(plasma_shutdown_SRCS
     shutdown.cpp
 )
 
-ecm_qt_declare_logging_category(plasma_shutdown_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.shutdown)
+ecm_qt_declare_logging_category(plasma_shutdown_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.shutdown
+    DESCRIPTION "plasma shutdown"
+    EXPORT PLASMAWORKSPACE
+)
 
 qt_add_dbus_adaptor(plasma_shutdown_SRCS org.kde.Shutdown.xml shutdown.h Shutdown)
 qt_add_dbus_interface(plasma_shutdown_SRCS org.kde.Shutdown.xml shutdown_interface)

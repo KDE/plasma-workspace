@@ -17,4 +17,6 @@ ecm_qt_declare_logging_category(soliduiserver
     HEADER soliduiserver_debug.h
     IDENTIFIER SOLIDUISERVER_DEBUG
     CATEGORY_NAME org.kde.plasma.soliduiserver
+    DESCRIPTION "soliduiserver"
+    EXPORT PLASMAWORKSPACE
 )
