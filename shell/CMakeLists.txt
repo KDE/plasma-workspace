@@ -141,10 +141,6 @@ install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERF
 
 ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
-install(FILES
-   scripting/plasma-layouttemplate.desktop
-   DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR})
-
 add_subdirectory(packageplugins)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
