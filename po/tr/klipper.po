@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2023-05-30 23:08+0300\n"
+"PO-Revision-Date: 2023-06-06 05:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 "Bir <interface>eşleşme dizgisi</interface> pano içeriğiyle eşleşirse onun "
 "<interface>komutları</interface> Klipper açılır menüsünde belirir ve "
-"çalıştırılabilir."
+"yürütülebilir."
 
 #: configdialog.cpp:368
 #, kde-format
@@ -345,7 +345,7 @@ msgid ""
 msgstr ""
 "<interface>Eşleşme dizgisi</interface> pano içeriğiyle eşleştiğinde bir "
 "eylem gerçekleşir. Bu gerçekleştiğinde, <interface>komutlar</interface> "
-"Klipper açılır menüsünde belirir; biri seçilirse komut çalıştırılır."
+"Klipper açılır menüsünde belirir; biri seçilirse komut yürütülür."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -477,7 +477,7 @@ msgstr "Panoya iliştir"
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr "Çalıştırılan komutun standart çıktısına ne olacağı."
+msgstr "Yürütülen komutun standart çıktısına ne olacağı."
 
 #: editcommanddialog.cpp:115
 #, kde-format

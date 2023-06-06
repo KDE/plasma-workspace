@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 04:26+0000\n"
-"PO-Revision-Date: 2023-05-17 11:47+0300\n"
+"PO-Revision-Date: 2023-06-06 05:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "%1 (Brezilya)"
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr "`check-language-support` çalıştırılabilir dosyası bulunamıyor"
+msgstr "`check-language-support` yürütülebiliri bulunamıyor"
 
 #: localegeneratorubuntu.cpp:52
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "`/etc/locale.gen` dosyası açılamıyor"
 #: localegenhelper/localegenhelper.cpp:146
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr "`locale-gen` çalıştırılabilir dosyası bulunamıyor"
+msgstr "`locale-gen` yürütülebiliri bulunamıyor"
 
 #: localegenhelper/localegenhelper.cpp:159
 #, kde-format
