@@ -442,7 +442,7 @@ QtObject {
         engine: "time"
         connectedSources: ["Local"]
         interval: 60000 // 1 min
-        intervalAlignment: PlasmaCore.Types.AlignToMinute
+        intervalAlignment: P5Support.Types.AlignToMinute
         onDataChanged: {
             checkInhibition();
             globals.timeChanged();
