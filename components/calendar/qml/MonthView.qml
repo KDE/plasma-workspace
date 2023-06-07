@@ -302,7 +302,7 @@ Item {
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
                 Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
-                onActivated: {
+                onActivated: (index, date) => {
                     const rowNumber = Math.floor(index / columns);
                     week = 1 + calendarBackend.weeksModel[rowNumber];
                     root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
@@ -335,7 +335,7 @@ Item {
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
                 Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
-                onActivated: {
+                onActivated: (index, date) => {
                     calendarBackend.goToMonth(date.monthNumber);
                     swipeView.currentIndex = 0;
                 }
@@ -368,7 +368,7 @@ Item {
                 KeyNavigation.tab: swipeView.KeyNavigation.tab
                 Keys.onUpPressed: event => { mainDaysCalendar.handleUpPress(event) }
 
-                onActivated: {
+                onActivated: (index, date) => {
                     calendarBackend.goToYear(date.yearNumber);
                     swipeView.currentIndex = 1;
                 }
