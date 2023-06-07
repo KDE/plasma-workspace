@@ -378,7 +378,7 @@ ColumnLayout {
         Loader {
             id: replyLoader
             width: parent.width
-            height: active ? item.implicitHeight : 0
+            height: active && item ? item.implicitHeight : 0
             // When there is only one action and it is a reply action, show text field right away
             active: notificationItem.replying || (notificationItem.hasReplyAction && (notificationItem.actionNames || []).length === 0)
             visible: active
