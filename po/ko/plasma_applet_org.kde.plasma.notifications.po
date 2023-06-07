@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-03-01 00:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -157,13 +157,13 @@ msgid "Show %1 More"
 msgstr "%1개 더 보기"
 
 #: package/contents/ui/FullRepresentation.qml:621
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "읽지 않은 알림 없음"
 
 #: package/contents/ui/FullRepresentation.qml:636
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "알림 서비스를 사용할 수 없음"
@@ -272,51 +272,51 @@ msgstr "옵션 더 보기…"
 msgid "Open"
 msgstr "열기"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "실행 중인 작업 %1개"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1(%2%)"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "실행 중인 작업 %1개(%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "읽지 않은 알림 %1개"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "%1까지 방해 금지 모드 설정됨. 지금 종료하려면 가운데 단추로 클릭"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "방해 금지 모드 설정됨. 종료하려면 가운데 단추로 클릭"
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "가운데 단추로 클릭하여 방해 금지 모드를 활성화"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "모든 알림 지우기"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "이벤트 알림 및 동작 설정(&C)…"

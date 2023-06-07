@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-04-04 17:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -159,13 +159,13 @@ msgid "Show %1 More"
 msgstr "Arată încă %1"
 
 #: package/contents/ui/FullRepresentation.qml:621
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Nicio notificare necitită"
 
 #: package/contents/ui/FullRepresentation.qml:636
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Serviciul de notificare nu e disponibil"
@@ -286,7 +286,7 @@ msgstr "Opțiuni suplimentare…"
 msgid "Open"
 msgstr "Deschide"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -294,13 +294,13 @@ msgstr[0] "%1 sarcină rulând"
 msgstr[1] "%1 sarcini rulând"
 msgstr[2] "%1 de sarcini rulând"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
@@ -308,7 +308,7 @@ msgstr[0] "%1 sarcină rulând (%2%)"
 msgstr[1] "%1 sarcini rulând (%2%)"
 msgstr[2] "%1 de sarcini rulând (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -316,28 +316,28 @@ msgstr[0] "%1 notificare necitită"
 msgstr[1] "%1 notificări necitite"
 msgstr[2] "%1 de notificări necitite"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Do not disturb until %1"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Nu deranja până la %1"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Curăță toate notificările"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configurează notificări și acțiuni pentru evenimente…"

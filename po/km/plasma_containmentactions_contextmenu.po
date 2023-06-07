@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-17 03:28+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2010-01-29 14:38+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -49,28 +49,28 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:290
+#: menu.cpp:277
 #, fuzzy, kde-format
 #| msgid "Configure Contextual Menu Plugin"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ជំនួយ​ម៉ឺនុយ​បរិបទ"
 
-#: menu.cpp:300
+#: menu.cpp:287
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[សកម្មភាព​ផ្សេងៗ]"
 
-#: menu.cpp:303
+#: menu.cpp:290
 #, fuzzy, kde-format
 #| msgid "Wallpaper Actions"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "សកម្មភាព​ផ្ទាំង​រូបភាព"
 
-#: menu.cpp:307
+#: menu.cpp:294
 #, fuzzy, kde-format
 #| msgid "[Separator]"
 msgctxt "plasma_containmentactions_contextmenu"

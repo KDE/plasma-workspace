@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-12-29 19:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -28,181 +28,181 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:429
+#: package/contents/ui/CalendarView.qml:431
 #, kde-format
 msgid "Time Zones"
 msgstr "Fuse orare"
 
-#: package/contents/ui/CalendarView.qml:137
+#: package/contents/ui/CalendarView.qml:139
 #, kde-format
 msgid "Events"
 msgstr "Evenimente"
 
-#: package/contents/ui/CalendarView.qml:145
+#: package/contents/ui/CalendarView.qml:147
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Adaugă…"
 
-#: package/contents/ui/CalendarView.qml:149
+#: package/contents/ui/CalendarView.qml:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Adaugă eveniment nou"
 
-#: package/contents/ui/CalendarView.qml:388
+#: package/contents/ui/CalendarView.qml:390
 #, kde-format
 msgid "No events for today"
 msgstr "Niciun eveniment pe azi"
 
-#: package/contents/ui/CalendarView.qml:389
+#: package/contents/ui/CalendarView.qml:391
 #, kde-format
 msgid "No events for this day"
 msgstr "Niciun eveniment pe ziua de azi"
 
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch…"
 msgstr "Schimbă…"
 
-#: package/contents/ui/CalendarView.qml:439
-#: package/contents/ui/CalendarView.qml:442
+#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:444
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Treci la alt fus orar"
 
-#: package/contents/ui/configAppearance.qml:50
+#: package/contents/ui/configAppearance.qml:51
 #, kde-format
 msgid "Information:"
 msgstr "Informații:"
 
-#: package/contents/ui/configAppearance.qml:54
+#: package/contents/ui/configAppearance.qml:55
 #, kde-format
 msgid "Show date"
 msgstr "Arată data"
 
-#: package/contents/ui/configAppearance.qml:62
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Adaptive location"
 msgstr "Amplasare adaptivă"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:64
 #, kde-format
 msgid "Always beside time"
 msgstr "Întotdeauna lângă oră"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:65
 #, kde-format
 msgid "Always below time"
 msgstr "Întotdeauna sub oră"
 
-#: package/contents/ui/configAppearance.qml:72
+#: package/contents/ui/configAppearance.qml:73
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "Arată secundele"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:76
-#: package/contents/ui/configAppearance.qml:96
+#: package/contents/ui/configAppearance.qml:77
+#: package/contents/ui/configAppearance.qml:97
 #, kde-format
 msgid "Always"
 msgstr "Întotdeauna"
 
-#: package/contents/ui/configAppearance.qml:86
+#: package/contents/ui/configAppearance.qml:87
 #, kde-format
 msgid "Show time zone:"
 msgstr "Arată fusul orar:"
 
-#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:92
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Doar când e diferit de fusul orar local"
 
-#: package/contents/ui/configAppearance.qml:105
+#: package/contents/ui/configAppearance.qml:106
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Arată fusul orar ca:"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:111
 #, kde-format
 msgid "Code"
 msgstr "Cod"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "City"
 msgstr "Oraș"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:113
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Diferență față de ora UTC"
 
-#: package/contents/ui/configAppearance.qml:124
+#: package/contents/ui/configAppearance.qml:125
 #, kde-format
 msgid "Time display:"
 msgstr "Afișare oră:"
 
-#: package/contents/ui/configAppearance.qml:129
+#: package/contents/ui/configAppearance.qml:130
 #, kde-format
 msgid "12-Hour"
 msgstr "12 ore"
 
-#: package/contents/ui/configAppearance.qml:130
+#: package/contents/ui/configAppearance.qml:131
 #: package/contents/ui/configCalendar.qml:52
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Folosește valoarea implicită a regiunii"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:132
 #, kde-format
 msgid "24-Hour"
 msgstr "24 de ore"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:139
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Modifică configurări regionale…"
 
-#: package/contents/ui/configAppearance.qml:149
+#: package/contents/ui/configAppearance.qml:150
 #, kde-format
 msgid "Date format:"
 msgstr "Format dată:"
 
-#: package/contents/ui/configAppearance.qml:157
+#: package/contents/ui/configAppearance.qml:158
 #, kde-format
 msgid "Long Date"
 msgstr "Dată lungă"
 
-#: package/contents/ui/configAppearance.qml:162
+#: package/contents/ui/configAppearance.qml:163
 #, kde-format
 msgid "Short Date"
 msgstr "Dată scurtă"
 
-#: package/contents/ui/configAppearance.qml:167
+#: package/contents/ui/configAppearance.qml:168
 #, kde-format
 msgid "ISO Date"
 msgstr "Dată ISO"
 
-#: package/contents/ui/configAppearance.qml:172
+#: package/contents/ui/configAppearance.qml:173
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Personalizat"
 
-#: package/contents/ui/configAppearance.qml:200
+#: package/contents/ui/configAppearance.qml:201
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -211,19 +211,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentația formatului orei</a>"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:225
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Afișare text:"
 
-#: package/contents/ui/configAppearance.qml:226
+#: package/contents/ui/configAppearance.qml:227
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automat"
 
-#: package/contents/ui/configAppearance.qml:230
+#: package/contents/ui/configAppearance.qml:231
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -232,25 +232,25 @@ msgstr ""
 "Textul va urma fontul de sistem și se va extinde pentru a umple spațiul "
 "disponibil."
 
-#: package/contents/ui/configAppearance.qml:239
+#: package/contents/ui/configAppearance.qml:240
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Alege stil…"
 
-#: package/contents/ui/configAppearance.qml:262
+#: package/contents/ui/configAppearance.qml:263
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:273
+#: package/contents/ui/configAppearance.qml:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -276,7 +276,7 @@ msgstr "Prima zi a săptămânii:"
 msgid "Available Plugins:"
 msgstr "Extensii disponibile:"
 
-#: package/contents/ui/configTimeZones.qml:37
+#: package/contents/ui/configTimeZones.qml:40
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add another entry for your home time zone to "
@@ -287,12 +287,12 @@ msgstr ""
 "pentru fusul orar de acasă. Aceasta va apărea doar când schimbați fusul orar "
 "al sistemului."
 
-#: package/contents/ui/configTimeZones.qml:100
+#: package/contents/ui/configTimeZones.qml:103
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Ceasul folosește acest fus orar în prezent"
 
-#: package/contents/ui/configTimeZones.qml:102
+#: package/contents/ui/configTimeZones.qml:105
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -301,27 +301,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Ascuns cât acesta e orașul fusului orar local"
 
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:119
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Schimbă fusul orar al sistemului…"
 
-#: package/contents/ui/configTimeZones.qml:125
+#: package/contents/ui/configTimeZones.qml:128
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Elimină acest fus orar"
 
-#: package/contents/ui/configTimeZones.qml:134
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Fusul orar al sistemului"
 
-#: package/contents/ui/configTimeZones.qml:134
+#: package/contents/ui/configTimeZones.qml:137
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fuse orare suplimentare"
 
-#: package/contents/ui/configTimeZones.qml:147
+#: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -330,17 +330,17 @@ msgstr ""
 "Adăugați mai multe fuse orare pentru afișarea tuturor în fereastra "
 "miniaplicației, sau folosiți unul din ele pentru ceas"
 
-#: package/contents/ui/configTimeZones.qml:154
+#: package/contents/ui/configTimeZones.qml:157
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Adaugă fuse orare…"
 
-#: package/contents/ui/configTimeZones.qml:164
+#: package/contents/ui/configTimeZones.qml:167
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Schimbă fusul orar afișat prin derularea peste miniaplicația ceasului"
 
-#: package/contents/ui/configTimeZones.qml:171
+#: package/contents/ui/configTimeZones.qml:174
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -349,12 +349,12 @@ msgstr ""
 "Folosirea acestei funcționalități nu schimbă fusul orar al sistemului. Când "
 "călătoriți, schimbați fusul orar al sistemului."
 
-#: package/contents/ui/configTimeZones.qml:197
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Adaugă mai multe fuse orare"
 
-#: package/contents/ui/configTimeZones.qml:208
+#: package/contents/ui/configTimeZones.qml:211
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -363,27 +363,27 @@ msgstr ""
 "Cel puțin un fus orar trebuie să fie activ. Fusul orar local a fost activat "
 "automat."
 
-#: package/contents/ui/configTimeZones.qml:243
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:245
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:150
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copiază în clipboard"
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Ajustează data și ora…"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Stabilește formatul orei…"

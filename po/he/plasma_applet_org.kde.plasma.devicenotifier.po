@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -82,7 +82,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:42
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -105,41 +105,41 @@ msgstr "התקנים קבועים"
 msgid "No disks available"
 msgstr "אין התקנים זמינים"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ההתקן ההכי חדש"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "No Devices Available"
 msgstr "אין התקנים זמינים"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "התקנים הניתנים להסרה"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:253
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "התקנים קבועים"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "כל ההתקנים"
 
-#: package/contents/ui/main.qml:266
+#: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "Open popup when new device is plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "הראה חלון קופץ שהתקן חדש מחובר"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:276
 #, fuzzy, kde-format
 #| msgctxt "Open auto mounter kcm"
 #| msgid "Configure Removable Devices"

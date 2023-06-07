@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,12 +18,12 @@ msgstr ""
 "plasma.activitybar.pot\n"
 "X-Crowdin-File-ID: 42883\n"
 
-#: contents/ui/main.qml:70
+#: contents/ui/main.qml:71
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "切换到活动：%1"
 
-#: contents/ui/main.qml:99
+#: contents/ui/main.qml:100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

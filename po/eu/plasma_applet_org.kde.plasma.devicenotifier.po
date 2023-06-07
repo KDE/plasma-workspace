@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-08-12 13:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -76,7 +76,7 @@ msgid "Mount"
 msgstr "Muntatu"
 
 #: package/contents/ui/FullRepresentation.qml:42
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "Kendu guztiak"
@@ -96,37 +96,37 @@ msgstr "Ez dago konektatuta gailu eramangarririk"
 msgid "No disks available"
 msgstr "Ez dago disko erabilgarririk"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Konektatutako azken gailua"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "No Devices Available"
 msgstr "Ez dago gailu eskuragarririk"
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, kde-format
 msgid "Removable Devices"
 msgstr "Gailu aldagarriak"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:253
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Gailu ez-aldagarriak"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "All Devices"
 msgstr "Gailu guztiak"
 
-#: package/contents/ui/main.qml:266
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:276
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

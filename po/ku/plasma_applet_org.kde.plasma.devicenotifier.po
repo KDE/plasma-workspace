@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2008-12-25 02:34+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -72,7 +72,7 @@ msgid "Mount"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:42
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -96,41 +96,41 @@ msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
 msgid "No disks available"
 msgstr "Tu cîhaz nehatiye girêdan"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Most Recent Device"
 msgstr "Demê dawî hatiye girêdan bi cîhaza: %1"
 
-#: package/contents/ui/main.qml:48
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:246
+#: package/contents/ui/main.qml:247
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Removable Devices"
 msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:253
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgid "Non Removable Devices"
 msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:259
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:266
+#: package/contents/ui/main.qml:267
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "Tu cîhaz nehatiye girêdan"
 
-#: package/contents/ui/main.qml:275
+#: package/contents/ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Configure New Device Notifier"
 msgctxt "Open auto mounter kcm"

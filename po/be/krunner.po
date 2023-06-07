@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -63,59 +63,59 @@ msgstr ""
 "Запыт для запуску, выкарыстоўваецца толькі ў тым выпадку, калі не пададзена "
 "\"-c\""
 
-#: qml/RunCommand.qml:76
+#: qml/RunCommand.qml:77
 #, kde-format
 msgid "Configure"
 msgstr "Наладжванне"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Наладжванне паводзін KRunner"
 
-#: qml/RunCommand.qml:80
+#: qml/RunCommand.qml:81
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Наладжванне KRunner…"
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Пошук \"%1\"…"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Пошук…"
 
-#: qml/RunCommand.qml:229 qml/RunCommand.qml:230 qml/RunCommand.qml:232
+#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Паказаць даведку па выкарыстанні"
 
-#: qml/RunCommand.qml:240
+#: qml/RunCommand.qml:241
 #, kde-format
 msgid "Pin"
 msgstr "Замацаваць"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin Search"
 msgstr "Замацаваць пошук"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:244
 #, kde-format
 msgid "Keep Open"
 msgstr "Не закрываць"
 
-#: qml/RunCommand.qml:315 qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
 #, kde-format
 msgid "Recent Queries"
 msgstr "Нядаўнія запыты"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Remove"
 msgstr "Выдаліць"

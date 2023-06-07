@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-17 03:28+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2009-11-09 23:06+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -48,28 +48,28 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:290
+#: menu.cpp:277
 #, fuzzy, kde-format
 #| msgid "Configure Contextual Menu Plugin"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "අන්තර්ගතික මෙනු ප්ලගින සකසන්න"
 
-#: menu.cpp:300
+#: menu.cpp:287
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[වෙනත් ක්‍රියා]"
 
-#: menu.cpp:303
+#: menu.cpp:290
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "[වෙනත් ක්‍රියා]"
 
-#: menu.cpp:307
+#: menu.cpp:294
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

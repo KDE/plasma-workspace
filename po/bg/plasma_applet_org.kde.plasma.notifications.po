@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-10-16 13:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -156,13 +156,13 @@ msgid "Show %1 More"
 msgstr "Показване на още %1"
 
 #: package/contents/ui/FullRepresentation.qml:621
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Няма непрочетени известия"
 
 #: package/contents/ui/FullRepresentation.qml:636
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Услугата за уведомяване не е налична"
@@ -277,56 +277,56 @@ msgstr "Повече опции…"
 msgid "Open"
 msgstr "Отваряне"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 изпълняваща се задача"
 msgstr[1] "%1 изпълняващи се задачи"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 изпълняваща се задача (%2%)"
 msgstr[1] "%1 изпълняващи се задачи  (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 непрочетено известие"
 msgstr[1] "%1 непрочетени известия"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Не безпокойте до %1; за изход сега, натиснете среден бутон на мишката"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 "Режим Не безпокойте е активен ; за изход сега, натиснете среден бутон на "
 "мишката"
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Среден бутон на мишката за влизане в режим Не безпокойте"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Изчистване на всички известия"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Конфигуриране на известия за събития и действия…"

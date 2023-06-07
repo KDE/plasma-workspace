@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-17 03:28+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2013-01-11 01:36+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -48,28 +48,28 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Display Settings…"
 msgstr ""
 
-#: menu.cpp:290
+#: menu.cpp:277
 #, fuzzy, kde-format
 #| msgid "Configure Contextual Menu Plugin"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "پیکربنذی وصله‌ی منوی راست کلیک"
 
-#: menu.cpp:300
+#: menu.cpp:287
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[کنشهای دیگر‌]"
 
-#: menu.cpp:303
+#: menu.cpp:290
 #, fuzzy, kde-format
 #| msgid "Wallpaper Actions"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "کنشهای کاغذ دیواری"
 
-#: menu.cpp:307
+#: menu.cpp:294
 #, fuzzy, kde-format
 #| msgid "[Separator]"
 msgctxt "plasma_containmentactions_contextmenu"

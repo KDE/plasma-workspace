@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1652367 $
+# Version: $Revision: 1653345 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-24 02:08+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-04-10 11:11+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -128,7 +128,7 @@ msgctxt "full hinting"
 msgid "Full"
 msgstr "Pełny"
 
-#: ui/FontWidget.qml:33
+#: ui/FontWidget.qml:32
 #, kde-format
 msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "

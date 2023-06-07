@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-01-22 17:03+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -160,13 +160,13 @@ msgid "Show %1 More"
 msgstr "Zobraziť ďalších %1"
 
 #: package/contents/ui/FullRepresentation.qml:621
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Žiadne neprečítané upozornenia"
 
 #: package/contents/ui/FullRepresentation.qml:636
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Služba upozornení nie je dostupná"
@@ -287,7 +287,7 @@ msgstr "Viac možností..."
 msgid "Open"
 msgstr "Otvoriť"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -295,13 +295,13 @@ msgstr[0] "%1 spustená úloha"
 msgstr[1] "%1 spustené úlohy"
 msgstr[2] "%1 spustených úloh"
 
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
@@ -309,7 +309,7 @@ msgstr[0] "%1 spustená úloha (%2%)"
 msgstr[1] "%1 spustené úlohy (%2%)"
 msgstr[2] "%1 spustených úloh (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -317,27 +317,27 @@ msgstr[0] "%1 neprečítané upozornenie"
 msgstr[1] "%1 neprečítané upozornenia"
 msgstr[2] "%1 neprečítaných upozornení"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Režim nevyrušovať do %1; kliknutím stredného tlačidla ho ukončíte"
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Režim nerušiť je aktívny; stredným kliknutím ho ukončíte"
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Kliknutím stredného tlačidla prejdete do režimu nerušiť"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Vymazať všetky oznámenia"
 
-#: package/contents/ui/main.qml:205
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Nastaviť pripomienky a akcie udalostí..."

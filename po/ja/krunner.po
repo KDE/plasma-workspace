@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2023-04-07 23:36-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -70,59 +70,59 @@ msgstr ""
 msgid "The query to run, only used if -c is not provided"
 msgstr ""
 
-#: qml/RunCommand.qml:76
+#: qml/RunCommand.qml:77
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner の挙動を設定"
 
-#: qml/RunCommand.qml:80
+#: qml/RunCommand.qml:81
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner を設定..."
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' を検索中..."
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "検索..."
 
-#: qml/RunCommand.qml:229 qml/RunCommand.qml:230 qml/RunCommand.qml:232
+#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
 #, kde-format
 msgid "Show Usage Help"
 msgstr "使用方法のヘルプを表示"
 
-#: qml/RunCommand.qml:240
+#: qml/RunCommand.qml:241
 #, kde-format
 msgid "Pin"
 msgstr "ピン留め"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin Search"
 msgstr "検索をピン留め"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:244
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: qml/RunCommand.qml:315 qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
 #, kde-format
 msgid "Recent Queries"
 msgstr "最近のクエリ"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Remove"
 msgstr "削除"

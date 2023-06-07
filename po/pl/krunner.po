@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-09-23 10:35+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -58,59 +58,59 @@ msgstr "Zastąp istniejące wystąpienie"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Zapytanie do wykonania, używane tylko wtedy, gdy nie podano -c"
 
-#: qml/RunCommand.qml:76
+#: qml/RunCommand.qml:77
 #, kde-format
 msgid "Configure"
 msgstr "Ustawienia"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Ustawienia zachowania KRunnera"
 
-#: qml/RunCommand.qml:80
+#: qml/RunCommand.qml:81
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Ustawienia KRunnera..."
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Poszukaj '%1'…"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Poszukaj..."
 
-#: qml/RunCommand.qml:229 qml/RunCommand.qml:230 qml/RunCommand.qml:232
+#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Wyjaśnij obsługę"
 
-#: qml/RunCommand.qml:240
+#: qml/RunCommand.qml:241
 #, kde-format
 msgid "Pin"
 msgstr "Pin"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin Search"
 msgstr "Przypnij wyszukiwanie"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:244
 #, kde-format
 msgid "Keep Open"
 msgstr "Pozostaw otwartym"
 
-#: qml/RunCommand.qml:315 qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
 #, kde-format
 msgid "Recent Queries"
 msgstr "Ostatnie zapytania"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-07 02:19+0000\n"
 "PO-Revision-Date: 2022-12-29 17:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -57,59 +57,59 @@ msgstr "Înlocuiește o instanță existentă"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Interogarea de rulat, folosită numai dacă -c nu e furnizat"
 
-#: qml/RunCommand.qml:76
+#: qml/RunCommand.qml:77
 #, kde-format
 msgid "Configure"
 msgstr "Configurează"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Configurează comportamentul KRunner"
 
-#: qml/RunCommand.qml:80
+#: qml/RunCommand.qml:81
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Configurează KRunner…"
 
-#: qml/RunCommand.qml:92
+#: qml/RunCommand.qml:93
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Caută „%1”…"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Caută…"
 
-#: qml/RunCommand.qml:229 qml/RunCommand.qml:230 qml/RunCommand.qml:232
+#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Arată ajutorul despre utilizare"
 
-#: qml/RunCommand.qml:240
+#: qml/RunCommand.qml:241
 #, kde-format
 msgid "Pin"
 msgstr "Fixează"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin Search"
 msgstr "Fixează căutarea"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:244
 #, kde-format
 msgid "Keep Open"
 msgstr "Ține deschis"
 
-#: qml/RunCommand.qml:315 qml/RunCommand.qml:320
+#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
 #, kde-format
 msgid "Recent Queries"
 msgstr "Interogări recente"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"
