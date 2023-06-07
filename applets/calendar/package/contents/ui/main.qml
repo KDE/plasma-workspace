@@ -39,7 +39,7 @@ Item {
         engine: "time"
         connectedSources: ["Local"]
         interval: 60000
-        intervalAlignment: PlasmaCore.Types.AlignToMinute
+        intervalAlignment: P5Support.Types.AlignToMinute
     }
 
     Plasmoid.compactRepresentation: MouseArea {
