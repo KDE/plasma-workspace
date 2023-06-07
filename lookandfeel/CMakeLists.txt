@@ -8,10 +8,22 @@ if (INSTALL_SDDM_THEME)
 # Install the login theme into the SDDM directory
 # Longer term we need to look at making SDDM load from look and feel somehow.. and allow copying at runtime
     #NOTE this trailing slash is important to rename the directory
-    install(DIRECTORY sddm-theme/ DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE PATTERN "components" EXCLUDE PATTERN "dummydata" EXCLUDE
-    PATTERN "theme.conf.cmake" EXCLUDE)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze)
-    install(DIRECTORY org.kde.breeze/contents/components DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
+    install(DIRECTORY sddm-theme/
+        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
+        PATTERN "README.txt" EXCLUDE
+        PATTERN "components" EXCLUDE
+        PATTERN "dummydata" EXCLUDE
+        PATTERN "theme.conf.cmake" EXCLUDE
+    )
+
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf
+        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
+    )
+
+    install(DIRECTORY org.kde.breeze/contents/components
+        DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze
+        PATTERN "README.txt" EXCLUDE
+    )
 endif()
 
 if (BUILD_TESTING)
