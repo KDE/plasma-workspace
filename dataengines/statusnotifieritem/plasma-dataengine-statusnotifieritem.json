@@ -86,7 +86,7 @@
         "Description[sl]": "Pogon za podatke o stanju programov, ki temelji na protokolu obvestilnika o stanju.",
         "Description[sv]": "Gränssnitt för statusinformation om program baserat på protokollet för statusunderrättelser.",
         "Description[ta]": "செயலிகளின் நிலை குறித்த விவரங்களை Status Notifier (SNI) நெறிமுறை மூலம் வழங்கும்.",
-        "Description[tr]": "Uygulamaların durum bilgisi için motor, Durum Bildiricisi protokolü temelli.",
+        "Description[tr]": "Uygulamaların durum bilgisi için işletke, Durum Bildiricisi protokolü temelli.",
         "Description[uk]": "Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.",
         "Description[vi]": "Dụng cụ cấp thông tin về trạng thái ứng dụng, dựa trên giao thức \"Trình thông báo trạng thái\".",
         "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
