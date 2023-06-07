@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 02:53+0000\n"
-"PO-Revision-Date: 2023-01-30 14:39+0100\n"
+"PO-Revision-Date: 2023-05-31 11:40+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -189,115 +189,112 @@ msgstr "Chyba instalace"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Zpřístupnění"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Spouštěče aplikací"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomie"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Datum a čas"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Vývojové nástroje"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Výuka"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Prostředí a počasí"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Příklady"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Souborový systém"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Vít Pelčák"
+msgstr "Zábava a hry"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafika"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Mapování"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Různé"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimédia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Služby online"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivita"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Systémové informace"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Nástroje"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Okna a úlohy"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Schránka"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Úlohy"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
