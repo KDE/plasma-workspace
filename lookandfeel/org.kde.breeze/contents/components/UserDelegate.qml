@@ -78,7 +78,7 @@ Item {
         PlasmaCore.IconItem {
             id: faceIcon
             source: iconSource
-            visible: (face.status == Image.Error || face.status == Image.Null)
+            visible: face.status === Image.Error || face.status === Image.Null
             anchors.fill: parent
             colorGroup: PlasmaCore.ColorScope.colorGroup
         }
@@ -153,7 +153,7 @@ Item {
         // Make it bigger than other fonts to match the scale of the avatar better
         font.pointSize: wrapper.fontSize + 4
 
-        width: constrainText ? parent.width : implicitWidth
+        width: constrainText ? parent.width : undefined
         text: wrapper.name
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
