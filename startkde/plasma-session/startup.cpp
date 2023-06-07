@@ -19,7 +19,6 @@
 #include <unistd.h>
 
 #include "kcminit_interface.h"
-#include "kded_interface.h"
 #include "ksmserver_interface.h"
 
 #include <KCompositeJob>
@@ -183,7 +182,7 @@ Startup::Startup(QObject *parent)
 
     const QVector<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
-        new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), {}),
+        new StartServiceJob(QStringLiteral("kded6"), {}, QStringLiteral("org.kde.kded6"), {}),
         x11WindowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
@@ -271,10 +270,13 @@ KDEDInitJob::KDEDInitJob()
 void KDEDInitJob::start()
 {
     qCDebug(PLASMA_SESSION());
-    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
-    auto pending = kded.loadSecondPhase();
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
+                                                  QStringLiteral("/kded"),
+                                                  QStringLiteral("org.kde.kded6"),
+                                                  QStringLiteral("loadSecondPhase"));
+    auto reply = QDBusConnection::sessionBus().asyncCall(message);
 
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
         emitResult();
     });
