@@ -43,10 +43,10 @@ Control {
     bottomPadding: 0
 
     anchors.fill: parent
-    contentItem: Plasmoid.nativeInterface.faceController.compactRepresentation
+    contentItem: Plasmoid.faceController.compactRepresentation
 
     Binding {
-        target: Plasmoid.nativeInterface.faceController.compactRepresentation
+        target: Plasmoid.faceController.compactRepresentation
         property: "formFactor"
         value: {
             switch (Plasmoid.formFactor) {
@@ -64,6 +64,6 @@ Control {
     MouseArea {
         parent: chartFace
         anchors.fill: parent
-        onClicked: Plasmoid.expanded = !Plasmoid.expanded
+        onClicked: root.expanded = !root.expanded
     }
 }

@@ -70,9 +70,9 @@ PlasmaComponents3.ScrollView {
         currentIndex: -1
 
         Connections {
-            target: plasmoid
+            target: main
             function onExpandedChanged() {
-                if (plasmoid.expanded) {
+                if (main.expanded) {
                     menuListView.currentIndex = -1
                     menuListView.positionViewAtBeginning()
                 }

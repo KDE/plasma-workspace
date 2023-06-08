@@ -31,7 +31,7 @@ import org.kde.kcmutils // KCMUtils
 PlasmaExtras.Representation {
     id: calendar
 
-    readonly property var appletInterface: Plasmoid.self
+    readonly property var appletInterface: root
 
     PlasmaCore.ColorScope.inherit: false
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
@@ -56,7 +56,7 @@ PlasmaExtras.Representation {
     Keys.onDownPressed: monthView.Keys.onDownPressed(event);
 
     Connections {
-        target: Plasmoid.self
+        target: root
 
         function onExpandedChanged() {
             // clear all the selections when the plasmoid is showing/hiding
@@ -221,13 +221,6 @@ PlasmaExtras.Representation {
                         holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
                     }
                 }
-            }
-
-            Binding {
-                target: Plasmoid.self
-                property: "hideOnWindowDeactivate"
-                value: !Plasmoid.configuration.pin
-                restoreMode: Binding.RestoreBinding
             }
 
             TextMetrics {
@@ -602,7 +595,7 @@ PlasmaExtras.Representation {
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
 
             showDigitalClockHeader: true
-            digitalClock: Plasmoid.self
+            digitalClock: Plasmoid
             eventButton: addEventButton
 
             KeyNavigation.left: KeyNavigation.tab

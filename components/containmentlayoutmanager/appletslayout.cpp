@@ -107,39 +107,41 @@ AppletsLayout::~AppletsLayout()
 {
 }
 
-PlasmaQuick::AppletQuickItem *AppletsLayout::containment() const
+Plasma::Containment *AppletsLayout::containment() const
 {
-    return m_containmentItem;
+    return m_containment;
 }
 
-void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem)
+void AppletsLayout::setContainment(Plasma::Containment *containment)
 {
-    // Forbid changing containmentItem at runtime
-    if (m_containmentItem || containmentItem == m_containmentItem || !containmentItem->applet() || !containmentItem->applet()->isContainment()) {
+    // Forbid changing containment at runtime
+    if (m_containment || !containment->isContainment()) {
         qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: cannot change the containment to AppletsLayout";
         return;
     }
 
-    // Can't assign containments that aren't parents
-    QQuickItem *candidate = parentItem();
-    while (candidate) {
-        if (candidate == m_containmentItem) {
-            break;
-        }
-        candidate = candidate->parentItem();
-    }
-    if (candidate != m_containmentItem) {
+    m_containment = containment;
+
+    connect(m_containment, &Plasma::Containment::appletAdded, this, &AppletsLayout::appletAdded);
+    connect(m_containment, &Plasma::Containment::appletRemoved, this, &AppletsLayout::appletRemoved);
+
+    Q_EMIT containmentChanged();
+}
+
+PlasmaQuick::AppletQuickItem *AppletsLayout::containmentItem() const
+{
+    return m_containmentItem;
+}
+
+void AppletsLayout::setContainmentItem(PlasmaQuick::AppletQuickItem *containmentItem)
+{
+    if (containmentItem == m_containmentItem) {
         return;
     }
 
     m_containmentItem = containmentItem;
-    m_containment = static_cast<Plasma::Containment *>(m_containmentItem->applet());
 
-    connect(m_containmentItem, SIGNAL(appletAdded(QObject *, int, int)), this, SLOT(appletAdded(QObject *, int, int)));
-
-    connect(m_containmentItem, SIGNAL(appletRemoved(QObject *)), this, SLOT(appletRemoved(QObject *)));
-
-    Q_EMIT containmentChanged();
+    Q_EMIT containmentItemChanged();
 }
 
 QString AppletsLayout::configKey() const
@@ -513,7 +515,7 @@ void AppletsLayout::updatePolish()
 
 void AppletsLayout::componentComplete()
 {
-    if (!m_containment || !m_containmentItem) {
+    if (!m_containment) {
         QQuickItem::componentComplete();
         return;
     }
@@ -527,12 +529,10 @@ void AppletsLayout::componentComplete()
         }
     }
 
-    const QList<QObject *> appletObjects = m_containmentItem->property("applets").value<QList<QObject *>>();
+    for (auto *applet : m_containment->applets()) {
+        PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
 
-    for (auto *obj : appletObjects) {
-        PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(obj);
-
-        if (!obj) {
+        if (!appletItem) {
             continue;
         }
 
@@ -681,39 +681,40 @@ void AppletsLayout::mouseUngrabEvent()
     m_pressAndHoldTimer->stop();
 }
 
-void AppletsLayout::appletAdded(QObject *applet, int x, int y)
+void AppletsLayout::appletAdded(Plasma::Applet *applet)
 {
-    PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(applet);
+    PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
 
     // maybe even an assert?
     if (!appletItem) {
         return;
     }
 
+    QPointF pos(appletItem->x(), appletItem->y());
+
     if (m_acceptsAppletCallback.isCallable()) {
         QQmlEngine *engine = QQmlEngine::contextForObject(this)->engine();
         Q_ASSERT(engine);
         QJSValueList args;
-        args << engine->newQObject(applet) << QJSValue(x) << QJSValue(y);
+        args << engine->newQObject(applet) << QJSValue(pos.x()) << QJSValue(pos.y());
 
         if (!m_acceptsAppletCallback.call(args).toBool()) {
-            Q_EMIT appletRefused(applet, x, y);
+            Q_EMIT appletRefused(applet, pos.x(), pos.y());
             return;
         }
     }
 
     AppletContainer *container = createContainerForApplet(appletItem);
-    container->setPosition(QPointF(x, y));
+    container->setPosition(pos);
     container->setVisible(true);
 
     m_layoutManager->positionItemAndAssign(container);
 }
 
-void AppletsLayout::appletRemoved(QObject *applet)
+void AppletsLayout::appletRemoved(Plasma::Applet *applet)
 {
-    PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(applet);
+    PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
 
-    // maybe even an assert?
     if (!appletItem) {
         return;
     }

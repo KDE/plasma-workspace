@@ -9,17 +9,17 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // PC3 Tabbar only has top and bottom tab positions, not left and right
+import org.kde.plasma.components 3.0 as PlasmaComponents // FIXME: PC3 Tabbar only has top and bottom tab positions, not left and right
 
 import org.kde.activities 0.1 as Activities
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 
-Item {
+PlasmoidItem {
     Layout.minimumWidth: tabBar.implicitWidth
     Layout.minimumHeight: tabBar.implicitHeight
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    preferredRepresentation: fullRepresentation
 
     function action_activitieskcm() {
         KCMLauncher.openSystemSettings("kcm_activities");
@@ -30,16 +30,15 @@ Item {
 
         anchors.fill: parent
 
-        tabPosition: {
+        position: {
+            //TODO: custom background drawing
             switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
-                return Qt.LeftEdge;
             case PlasmaCore.Types.RightEdge:
-                return Qt.RightEdge;
             case PlasmaCore.Types.TopEdge:
-                return Qt.TopEdge;
+                return PlasmaComponents.TabBar.Header;
             default:
-                return Qt.BottomEdge;
+                return PlasmaComponents.TabBar.Footer;
             }
         }
 

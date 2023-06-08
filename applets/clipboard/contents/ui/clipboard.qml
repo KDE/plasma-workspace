@@ -14,7 +14,7 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+PlasmoidItem {
     id: main
 
     property bool isClipboardEmpty: clipboardSource.data["clipboard"]["empty"]
@@ -22,12 +22,12 @@ Item {
 
     signal clearSearchField
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 5
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 5
+    switchWidth: PlasmaCore.Units.gridUnit * 5
+    switchHeight: PlasmaCore.Units.gridUnit * 5
     Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
-    Plasmoid.toolTipMainText: i18n("Clipboard Contents")
-    Plasmoid.toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
-    Plasmoid.toolTipTextFormat: Text.PlainText
+    toolTipMainText: i18n("Clipboard Contents")
+    toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
+    toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper"
 
     function action_configure() {
@@ -43,8 +43,8 @@ Item {
         if (isClipboardEmpty) {
             // We need to hide the applet before changing its status to passive
             // because only the active applet can hide itself
-            if (Plasmoid.hideOnWindowDeactivate)
-                Plasmoid.expanded = false;
+            if (main.hideOnWindowDeactivate)
+                main.expanded = false;
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         } else {
             Plasmoid.status = PlasmaCore.Types.ActiveStatus
@@ -84,7 +84,7 @@ Item {
         }
     }
 
-    Plasmoid.fullRepresentation: PlasmaExtras.Representation {
+    fullRepresentation: PlasmaExtras.Representation {
         id: dialogItem
         Layout.minimumWidth: PlasmaCore.Units.gridUnit * 24
         Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
@@ -97,7 +97,7 @@ Item {
         header: stack.currentItem.header
 
         property alias listMargins: listItemSvg.margins
-        readonly property var appletInterface: Plasmoid.self
+        readonly property var appletInterface: main
 
         PlasmaCore.FrameSvgItem {
             id : listItemSvg
@@ -111,7 +111,8 @@ Item {
         QQC2.StackView {
             id: stack
             anchors.fill: parent
-            initialItem: ClipboardPage {}
+            initialItem: ClipboardPage {
+            }
         }
     }
 }

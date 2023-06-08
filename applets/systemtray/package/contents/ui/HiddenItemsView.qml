@@ -65,7 +65,7 @@ PlasmaComponents3.ScrollView {
         }
 
         model: PlasmaCore.SortFilterModel {
-            sourceModel: Plasmoid.nativeInterface.systemTrayModel
+            sourceModel: Plasmoid.systemTrayModel
             filterRole: "effectiveStatus"
             filterCallback: (source_row, value) => value === PlasmaCore.Types.PassiveStatus
         }

@@ -23,9 +23,9 @@ QQC2.Control {
     function saveConfig() {
         contentItem.saveConfig();
     }
-    
-    contentItem: Plasmoid.nativeInterface.faceController.faceConfigUi
-    
+
+    contentItem: Plasmoid.faceController.faceConfigUi
+
     Connections {
         target: contentItem
         function onConfigurationChanged() {

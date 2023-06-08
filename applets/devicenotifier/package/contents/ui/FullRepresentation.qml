@@ -20,7 +20,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 PlasmaExtras.Representation {
     id: fullRep
-    readonly property var appletInterface: Plasmoid.self
+    readonly property var appletInterface: devicenotifier
     property bool spontaneousOpen: false
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 18
@@ -59,7 +59,7 @@ PlasmaExtras.Representation {
         connectedSources: "UserActivity"
         property int polls: 0
         //poll only on plasmoid expanded
-        interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && Plasmoid.expanded ? 3000 : 0
+        interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && devicenotifier.expanded ? 3000 : 0
         onIntervalChanged: polls = 0;
         onDataChanged: {
             //only do when polling
@@ -68,7 +68,7 @@ PlasmaExtras.Representation {
             }
 
             if (userActivitySource.data["UserActivity"]["IdleTime"] < interval) {
-                Plasmoid.expanded = false;
+                devicenotifier.expanded = false;
                 spontaneousOpen = false;
             }
         }
@@ -111,9 +111,9 @@ PlasmaExtras.Representation {
     }
 
     Connections {
-        target: Plasmoid.self
+        target: devicenotifier
         function onExpandedChanged() {
-            if (!Plasmoid.expanded) {
+            if (!devicenotifier.expanded) {
                 statusSource.clearMessage();
             }
         }

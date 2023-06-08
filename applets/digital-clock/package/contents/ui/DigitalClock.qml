@@ -78,7 +78,7 @@ MouseArea {
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
     Connections {
-        target: Plasmoid.self
+        target: Plasmoid
         function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = (Plasmoid.configuration.showSeconds === 2);
             ClipboardMenu.currentDate = main.getCurrentTime();
@@ -441,8 +441,8 @@ MouseArea {
         }
     ]
 
-    onPressed: wasExpanded = Plasmoid.expanded
-    onClicked: Plasmoid.expanded = !wasExpanded
+    onPressed: wasExpanded = root.expanded
+    onClicked: root.expanded = !wasExpanded
     onWheel: wheel => {
         if (!Plasmoid.configuration.wheelChangesTimezone) {
             return;

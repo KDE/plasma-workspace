@@ -17,6 +17,7 @@ import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
 
 Menu {
     id: clipboardMenu
+
     Keys.onPressed: event => {
         function forwardToFilter() {
             if (filter.enabled && event.text !== "" && !filter.activeFocus) {
@@ -42,8 +43,8 @@ Menu {
                     var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
                     if (uuid) {
                         clipboardSource.service(uuid, "select")
-                        if (Plasmoid.hideOnWindowDeactivate) {
-                            Plasmoid.expanded = false;
+                        if (main.hideOnWindowDeactivate) {
+                            main.expanded = false;
                         }
                     }
                 }
@@ -100,7 +101,7 @@ Menu {
                 // This uses expanded to ensure the binding gets reevaluated
                 // when the plasmoid is shown again and that way ensure we are
                 // always in the correct state on show.
-                focus: Plasmoid.expanded && !Kirigami.InputMethod.willShowOnActive
+                focus: main.expanded && !Kirigami.InputMethod.willShowOnActive
 
                 KeyNavigation.up: dialogItem.KeyNavigation.up
                 Keys.onUpPressed: event => { clipboardMenu.arrowKeyPressed(event) }

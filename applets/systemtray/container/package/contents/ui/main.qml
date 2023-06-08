@@ -10,34 +10,34 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 //SystemTray is a Containment. To have it presented as a widget in Plasma we need thin wrapping applet
-Item {
+PlasmoidItem {
     id: root
+
+    property ContainmentItem internalSystray
 
     Layout.minimumWidth: internalSystray ? internalSystray.Layout.minimumWidth : 0
     Layout.minimumHeight: internalSystray ? internalSystray.Layout.minimumHeight : 0
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.status: internalSystray ? internalSystray.status : PlasmaCore.Types.UnknownStatus
+    preferredRepresentation: fullRepresentation
+    Plasmoid.status: internalSystray ? internalSystray.plasmoid.status : PlasmaCore.Types.UnknownStatus
 
     //synchronize state between SystemTray and wrapping Applet
-    Plasmoid.onExpandedChanged: {
+    onExpandedChanged: {
         if (internalSystray) {
-            internalSystray.expanded = Plasmoid.expanded
+            internalSystray.expanded = root.expanded
         }
     }
     Connections {
         target: internalSystray
         function onExpandedChanged() {
-            Plasmoid.expanded = internalSystray.expanded
+            root.expanded = internalSystray.expanded
         }
     }
 
-    property Item internalSystray
-
     Component.onCompleted: {
-        root.internalSystray = Plasmoid.nativeInterface.internalSystray;
+        root.internalSystray = Plasmoid.internalSystray;
 
         if (root.internalSystray == null) {
             return;
@@ -47,9 +47,9 @@ Item {
     }
 
     Connections {
-        target: Plasmoid.nativeInterface
+        target: Plasmoid
         function onInternalSystrayChanged() {
-            root.internalSystray = Plasmoid.nativeInterface.internalSystray;
+            root.internalSystray = Plasmoid.internalSystray;
             root.internalSystray.parent = root;
             root.internalSystray.anchors.fill = root;
         }

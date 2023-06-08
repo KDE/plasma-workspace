@@ -67,7 +67,7 @@ ColumnLayout {
             clip: true
 
             model: KSortFilterProxyModel {
-                sourceModel: Plasmoid.nativeInterface.configSystemTrayModel
+                sourceModel: Plasmoid.configSystemTrayModel
                 filterString: filterField.text
                 filterCaseSensitivity: Qt.CaseInsensitive
             }

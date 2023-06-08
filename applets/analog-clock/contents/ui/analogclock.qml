@@ -16,7 +16,7 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 
-Item {
+PlasmoidItem {
     id: analogclock
 
     width: PlasmaCore.Units.gridUnit * 15
@@ -33,10 +33,10 @@ Item {
     property int tzOffset
 
     Plasmoid.backgroundHints: "NoBackground";
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
+    preferredRepresentation: compactRepresentation
 
-    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
-    Plasmoid.toolTipSubText: `${currentTime}\n${currentDate}`
+    toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
+    toolTipSubText: `${currentTime}\n${currentDate}`
 
 
     function dateTimeChanged() {
@@ -51,7 +51,7 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
-        interval: showSecondsHand || Plasmoid.compactRepresentationItem.containsMouse ? 1000 : 30000
+        interval: showSecondsHand || (analogclock.compactRepresentationItem && analogclock.compactRepresentationItem.containsMouse) ? 1000 : 30000
         onDataChanged: {
             var date = new Date(data["Local"]["DateTime"]);
             hours = date.getHours();
@@ -63,7 +63,7 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: MouseArea {
+    compactRepresentation: MouseArea {
         id: representation
 
         Layout.minimumWidth: Plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
@@ -78,8 +78,8 @@ Item {
         Accessible.description: i18nc("@info:tooltip", "Current time is %1; Current date is %2", analogclock.currentTime, analogclock.currentDate)
         Accessible.role: Accessible.Button
 
-        onPressed: wasExpanded = Plasmoid.expanded
-        onClicked: Plasmoid.expanded = !wasExpanded
+        onPressed: wasExpanded = analogclock.expanded
+        onClicked: analogclock.expanded = !wasExpanded
 
         PlasmaCore.Svg {
             id: clockSvg
@@ -231,13 +231,13 @@ Item {
         }
     }
 
-    Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
+    fullRepresentation: PlasmaCalendar.MonthView {
         Layout.minimumWidth: PlasmaCore.Units.gridUnit * 22
         Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
         Layout.minimumHeight: PlasmaCore.Units.gridUnit * 22
         Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
-        readonly property var appletInterface: Plasmoid.self
+        readonly property var appletInterface: analogclock
 
         today: dataSource.data["Local"]["DateTime"]
     }

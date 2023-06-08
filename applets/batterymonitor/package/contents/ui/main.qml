@@ -20,7 +20,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import "logic.js" as Logic
 
-Item {
+PlasmoidItem {
     id: batterymonitor
 
     property QtObject pmSource: P5Support.DataSource {
@@ -116,8 +116,8 @@ Item {
         }
     }
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
+    switchWidth: PlasmaCore.Units.gridUnit * 10
+    switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
                                      hasBrightness ? i18n("Brightness") :
                                      hasBatteries ? i18n("Battery") : i18n("Power Management"))
@@ -141,7 +141,7 @@ Item {
         return PlasmaCore.Types.PassiveStatus;
     }
 
-    Plasmoid.toolTipMainText: {
+    toolTipMainText: {
         if (!hasBatteries) {
             return Plasmoid.title
         } else if (isSomehowFullyCharged) {
@@ -162,7 +162,7 @@ Item {
         return i18n("Battery at %1%", percent);
     }
 
-    Plasmoid.toolTipSubText: {
+    toolTipSubText: {
         const parts = [];
 
         // Add special text for the "plugged in but still discharging" case
@@ -224,7 +224,7 @@ Item {
         const operation = service.operationDescription("setBrightness");
         operation.brightness = screenBrightness;
         // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = Plasmoid.expanded;
+        operation.silent = batterymonitor.expanded;
         updateScreenBrightnessJob = service.startOperationCall(operation);
         updateScreenBrightnessJob.finished.connect(job => {
             Logic.updateBrightness(batterymonitor, pmSource);
@@ -239,14 +239,14 @@ Item {
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
         // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = Plasmoid.expanded;
+        operation.silent = batterymonitor.expanded;
         updateKeyboardBrightnessJob = service.startOperationCall(operation);
         updateKeyboardBrightnessJob.finished.connect(job => {
             Logic.updateBrightness(batterymonitor, pmSource);
         });
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {
+    compactRepresentation: CompactRepresentation {
         hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
         isHeldOnPerformanceMode: batterymonitor.isHeldOnPerformanceMode
@@ -279,10 +279,10 @@ Item {
         }
     }
 
-    Plasmoid.fullRepresentation: PopupDialog {
+    fullRepresentation: PopupDialog {
         id: dialogItem
 
-        readonly property var appletInterface: Plasmoid.self
+        readonly property var appletInterface: batterymonitor
 
         Layout.minimumWidth: PlasmaCore.Units.gridUnit * 10
         Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80

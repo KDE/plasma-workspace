@@ -15,22 +15,23 @@ PlasmaCore.ToolTipArea {
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    mainText: Plasmoid.toolTipMainText
-    subText: Plasmoid.toolTipSubText
-    location: if (Plasmoid.parent && Plasmoid.parent.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
+    mainText: plasmoidItem ? plasmoidItem.toolTipMainText : ""
+    subText: plasmoidItem ? plasmoidItem.toolTipSubText : ""
+    location: if (plasmoidItem && plasmoidItem.parent && plasmoidItem.parent.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
         return PlasmaCore.Types.RightEdge;
     } else {
         return Plasmoid.location;
     }
-    active: !Plasmoid.expanded
-    textFormat: Plasmoid.toolTipTextFormat
-    mainItem: Plasmoid.toolTipItem
+    active: plasmoidItem ? !plasmoidItem.expanded : 0
+    textFormat: plasmoidItem ? plasmoidItem.toolTipTextFormat : 0
+    mainItem: plasmoidItem && plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
 
     property Item fullRepresentation
     property Item compactRepresentation
+    property PlasmoidItem plasmoidItem
 
     Connections {
-        target: Plasmoid.self
+        target: Plasmoid
         function onContextualActionsAboutToShow() {
             appletRoot.hideImmediately()
         }

@@ -26,7 +26,7 @@ AbstractButton {
     //
     // In practice, this never works, at least on X11: when menuIsOpen the
     // hover event would not be delivered. Instead we rely on
-    // plasmoid.nativeInterface.requestActivateIndex signal to filter
+    // plasmoid.requestActivateIndex signal to filter
     // QEvent::MouseMove events and tell us when to change the index.
     onHoveredChanged: if (hovered && menuIsOpen) { activated(); }
 

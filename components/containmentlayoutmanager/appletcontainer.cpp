@@ -11,14 +11,16 @@
 #include <QQmlEngine>
 
 #include <Plasma/Applet>
+#include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
+#include <plasmaquick/appletquickitem.h>
 
 AppletContainer::AppletContainer(QQuickItem *parent)
     : ItemContainer(parent)
 {
     connect(this, &AppletContainer::contentItemChanged, this, [this]() {
         if (m_appletItem) {
-            disconnect(m_appletItem->applet(), &Plasma::Applet::busyChanged, this, nullptr);
+            disconnect(m_appletItem->applet(), nullptr, this, nullptr);
         }
         m_appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(contentItem());
 

@@ -317,8 +317,8 @@ void GridLayoutManager::adjustToItemSizeHints(ItemContainer *item)
 
 QRect GridLayoutManager::cellBasedGeometry(const QRectF &geom) const
 {
-    return QRect(round(qBound(0.0, geom.x(), layout()->width() - geom.width()) / cellSize().width()),
-                 round(qBound(0.0, geom.y(), layout()->height() - geom.height()) / cellSize().height()),
+    return QRect(round(qBound(0.0, geom.x(), qMax(0.0, layout()->width() - geom.width())) / cellSize().width()),
+                 round(qBound(0.0, geom.y(), qMax(0.0, layout()->height() - geom.height())) / cellSize().height()),
                  round((qreal)geom.width() / cellSize().width()),
                  round((qreal)geom.height() / cellSize().height()));
 }

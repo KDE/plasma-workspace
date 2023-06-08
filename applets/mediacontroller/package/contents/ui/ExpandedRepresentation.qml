@@ -22,8 +22,8 @@ import Qt5Compat.GraphicalEffects
 PlasmaExtras.Representation {
     id: expandedRepresentation
 
-    Layout.minimumWidth: Plasmoid.switchWidth
-    Layout.minimumHeight: Plasmoid.switchHeight
+    Layout.minimumWidth: switchWidth
+    Layout.minimumHeight: switchHeight
     Layout.preferredWidth: PlasmaCore.Units.gridUnit * 20
     Layout.preferredHeight: PlasmaCore.Units.gridUnit * 20
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 40
@@ -38,7 +38,7 @@ PlasmaExtras.Representation {
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
     readonly property bool canSeek: (mpris2Source.currentData && mpris2Source.currentData.CanSeek) || false
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
-    readonly property var appletInterface: Plasmoid.self
+    readonly property var appletInterface: root
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
     readonly property int durationFormattingOptions: length >= 60*60*1000*1000 ? 0 : KCoreAddons.FormatTypes.FoldHours
@@ -56,9 +56,9 @@ PlasmaExtras.Representation {
     }
 
     Connections {
-        target: Plasmoid.self
+        target: root
         function onExpandedChanged() {
-            if (Plasmoid.expanded) {
+            if (root.expanded) {
                 retrievePosition();
             }
         }
@@ -235,7 +235,7 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: Plasmoid.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem.paintedWidth > 0
+                when: root.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
                     scaleFactor: Math.max(parent.width / shaderEffectSource.sourceItem.currentItem.paintedWidth, parent.height / shaderEffectSource.sourceItem.currentItem.paintedHeight)
@@ -271,7 +271,7 @@ PlasmaExtras.Representation {
                 Layout.preferredWidth: 50
 
                 Connections {
-                    enabled: Plasmoid.expanded
+                    enabled: root.expanded
                     target: root
 
                     function onAlbumArtChanged() {
@@ -280,11 +280,11 @@ PlasmaExtras.Representation {
                 }
 
                 Connections {
-                    target: Plasmoid.self
+                    target: root
 
                     function onExpandedChanged() {
                         // NOTE: Don't use strict equality
-                        if (!Plasmoid.expanded
+                        if (!root.expanded
                         || (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source == root.albumArt)) {
                             return;
                         }
@@ -493,7 +493,7 @@ PlasmaExtras.Representation {
                         id: seekTimer
                         interval: 1000 / expandedRepresentation.rate
                         repeat: true
-                        running: root.isPlaying && Plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
+                        running: root.isPlaying && root.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
                         onTriggered: {
                             // some players don't continuously update the seek slider position via mpris
                             // add one second; value in microseconds

@@ -70,15 +70,18 @@ Item {
                 leftPadding: systemTrayState.activeApplet ? 0 : PlasmaCore.Units.smallSpacing * 2
 
                 level: 1
-                text: systemTrayState.activeApplet ? systemTrayState.activeApplet.title : i18n("Status and Notifications")
+                text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
             }
 
             Repeater {
                 id: primaryActionButtons
 
                 model: {
+                    if (actionsButton.applet === null) {
+                        return [];
+                    }
                     const primaryActions = [];
-                    actionsButton.applet.contextualActions.forEach(action => {
+                    actionsButton.applet.plasmoid.contextualActions.forEach(action => {
                         if (action.priority == Plasmoid.HighPriorityAction) {
                             primaryActions.push(action);
                         }
@@ -124,7 +127,7 @@ Item {
                 id: actionsButton
                 visible: visibleActions > 0
                 checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.DialogStatus.Closed : singleAction && singleAction.checked
-                property QtObject applet: systemTrayState.activeApplet || plasmoid
+                property QtObject applet: systemTrayState.activeApplet || root
                 property int visibleActions: menuItemFactory.count
                 property QtObject singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
 
@@ -177,13 +180,16 @@ Item {
                     id: menuItemFactory
                     model: {
                         configMenu.clearMenuItems();
+                        if (!actionsButton.applet) {
+                            return [];
+                        }
                         let actions = [];
-                        for (let i in actionsButton.applet.contextualActions) {
-                            const action = actionsButton.applet.contextualActions[i];
+                        for (let i in actionsButton.applet.plasmoid.contextualActions) {
+                            const action = actionsButton.applet.plasmoid.contextualActions[i];
                             if (action.visible
                                     && action.priority > Plasmoid.LowPriorityAction
                                     && !primaryActionButtons.model.includes(action)
-                                    && action !== actionsButton.applet.action("configure")) {
+                                    && action !== actionsButton.applet.plasmoid.action("configure")) {
                                 actions.push(action);
                             }
                         }
@@ -201,10 +207,10 @@ Item {
             PlasmaComponents.ToolButton {
                 id: configureButton
                 icon.name: "configure"
-                visible: actionsButton.applet && actionsButton.applet.action("configure")
+                visible: actionsButton.applet && actionsButton.applet.plasmoid.action("configure")
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: actionsButton.applet.action("configure") ? actionsButton.applet.action("configure").text : ""
+                text: actionsButton.applet.plasmoid.action("configure") ? actionsButton.applet.plasmoid.action("configure").text : ""
 
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.left: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.left
@@ -213,7 +219,7 @@ Item {
                 PlasmaComponents.ToolTip {
                     text: parent.visible ? parent.text : ""
                 }
-                onClicked: actionsButton.applet.action("configure").trigger();
+                onClicked: actionsButton.applet.plasmoid.action("configure").trigger();
             }
 
             PlasmaComponents.ToolButton {

@@ -39,8 +39,8 @@ PlasmaComponents.ItemDelegate {
 
     onClicked: {
         menuItem.itemSelected(UuidRole);
-        if (Plasmoid.hideOnWindowDeactivate) {
-            Plasmoid.expanded = false;
+        if (main.hideOnWindowDeactivate) {
+            main.expanded = false;
         } else {
             forceActiveFocus(); // Or activeFocus will always be false after clicking buttons in the heading
         }

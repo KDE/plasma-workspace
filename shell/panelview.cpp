@@ -233,7 +233,7 @@ void PanelView::setOffset(int offset)
     positionPanel();
     Q_EMIT offsetChanged();
     m_corona->requestApplicationConfigSync();
-    Q_EMIT m_corona->availableScreenRegionChanged();
+    Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 }
 
 int PanelView::thickness() const
@@ -815,7 +815,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         setPosition(pos);
 
         m_strutsTimer.start(STRUTSTIMERDELAY);
-        Q_EMIT m_corona->availableScreenRegionChanged();
+        Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);

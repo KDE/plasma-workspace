@@ -30,7 +30,9 @@ StrutManager::StrutManager(ShellCorona *plasmashellCorona)
         m_availableScreenRegions.remove(service);
         m_serviceWatcher->removeWatchedService(service);
 
-        Q_EMIT m_plasmashellCorona->availableScreenRectChanged();
+        for (int i = 0; i < m_plasmashellCorona->numScreens(); ++i) {
+            Q_EMIT m_plasmashellCorona->availableScreenRectChanged(i);
+        }
     });
 }
 
@@ -70,7 +72,7 @@ void StrutManager::setAvailableScreenRect(const QString &service, const QString 
         return;
     }
     m_availableScreenRects[service][id] = rect;
-    Q_EMIT m_plasmashellCorona->availableScreenRectChanged();
+    Q_EMIT m_plasmashellCorona->availableScreenRectChanged(id);
 }
 
 void StrutManager::setAvailableScreenRegion(const QString &service, const QString &screenName, const QList<QRect> &rects)
@@ -85,7 +87,7 @@ void StrutManager::setAvailableScreenRegion(const QString &service, const QStrin
         return;
     }
     m_availableScreenRegions[service][id] = region;
-    Q_EMIT m_plasmashellCorona->availableScreenRegionChanged();
+    Q_EMIT m_plasmashellCorona->availableScreenRegionChanged(id);
 }
 
 bool StrutManager::addWatchedService(const QString &service)

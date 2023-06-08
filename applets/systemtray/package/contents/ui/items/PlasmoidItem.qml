@@ -16,9 +16,9 @@ AbstractItem {
     id: plasmoidContainer
 
     property Item applet: model.applet || null
-    text: applet ? applet.title : ""
+    text: applet ? applet.plasmoid.title : ""
 
-    itemId: applet ? applet.pluginName : ""
+    itemId: applet ? applet.plasmoid.pluginName : ""
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
@@ -31,7 +31,7 @@ AbstractItem {
     // do anything with onActivated.
     onActivated: {
         if (applet) {
-            applet.nativeInterface.activated()
+            applet.plasmoid.activated()
         }
     }
 
@@ -42,6 +42,7 @@ AbstractItem {
         //forward click event to the applet
         var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
+
         if (mouseArea && mouse.button !== Qt.RightButton) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
@@ -58,13 +59,13 @@ AbstractItem {
             const mouseArea = findMouseArea(appletItem)
             if (mouseArea) {
                 // HACK QML only sees the "mouseArea.pressed" property, not the signal.
-                Plasmoid.nativeInterface.emitPressed(mouseArea, mouse);
+                Plasmoid.emitPressed(mouseArea, mouse);
             }
         }
     }
     onContextMenu: if (applet) {
         effectivePressed = false;
-        Plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
+        Plasmoid.showPlasmoidMenu(applet, 0,
                                                   plasmoidContainer.inHiddenLayout ? applet.height : 0);
     }
     onWheel: wheel => {
@@ -137,12 +138,18 @@ AbstractItem {
     }
 
     Connections {
-        target: plasmoidContainer.applet
+        target: plasmoidContainer.applet.plasmoid
 
         //activation using global keyboard shortcut
         function onActivated() {
             plasmoidContainer.effectivePressed = true;
             Qt.callLater(() => {plasmoidContainer.effectivePressed = false});
+        }
+    }
+    Connections {
+        target: plasmoidContainer.applet
+        function onFullRepresentationItemChanged(fullRepresentationItem) {
+            preloadFullRepresentationItem(fullRepresentationItem)
         }
 
         function onExpandedChanged(expanded) {
@@ -151,16 +158,12 @@ AbstractItem {
                 effectivePressed = false;
             }
         }
-
-        function onFullRepresentationItemChanged(fullRepresentationItem) {
-            preloadFullRepresentationItem(fullRepresentationItem)
-        }
     }
 
     PlasmaComponents3.BusyIndicator {
         anchors.fill: parent
         z: 999
-        running: plasmoidContainer.applet && plasmoidContainer.applet.busy
+        running: plasmoidContainer.applet && plasmoidContainer.applet.plasmoid.busy
     }
 
     Binding {

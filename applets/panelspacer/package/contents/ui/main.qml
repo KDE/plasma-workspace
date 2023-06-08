@@ -10,7 +10,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.10 as Kirigami
 
-Item {
+PlasmoidItem {
     id: root
 
     property bool horizontal: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
@@ -18,8 +18,8 @@ Item {
     Layout.fillWidth: Plasmoid.configuration.expanding
     Layout.fillHeight: Plasmoid.configuration.expanding
 
-    Layout.minimumWidth: Plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
-    Layout.minimumHeight: Plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumWidth: Plasmoid.containment.corona.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumHeight: Plasmoid.containment.corona.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
     Layout.preferredWidth: horizontal
         ? (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
         : 0
@@ -27,7 +27,7 @@ Item {
         ? 0
         : (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    preferredRepresentation: fullRepresentation
 
     function action_expanding() {
         Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
@@ -77,7 +77,7 @@ Item {
             }
         }
         sizeHints[0] *= 2; sizeHints[sizeHints.length - 1] *= 2
-        let containment = Plasmoid.nativeInterface.containment
+        let containment = Plasmoid.containment
         let opt = (root.horizontal ? containment.width : containment.height) / expandingSpacers - sizeHints[thisSpacerIndex] / 2 - sizeHints[thisSpacerIndex + 1] / 2
         return Math.max(opt, 0)
     }
@@ -85,15 +85,15 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: PlasmaCore.Theme.highlightColor
-        opacity: Plasmoid.nativeInterface.containment.editMode ? 1 : 0
-        visible: Plasmoid.nativeInterface.containment.editMode || animator.running
+        opacity: Plasmoid.containment.corona.editMode ? 1 : 0
+        visible: Plasmoid.containment.corona.editMode || animator.running
 
         Behavior on opacity {
             NumberAnimation {
                 id: animator
                 duration: PlasmaCore.Units.longDuration
                 // easing.type is updated after animation starts
-                easing.type: Plasmoid.nativeInterface.containment.editMode ? Easing.InCubic : Easing.OutCubic
+                easing.type: Plasmoid.containment.corona.editMode ? Easing.InCubic : Easing.OutCubic
             }
         }
     }

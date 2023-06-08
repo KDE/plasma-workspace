@@ -62,7 +62,7 @@ Item {
         view.implicitCellWidth: {
             let screenWidth = 0;
             if (typeof Plasmoid !== "undefined") {
-                screenWidth = Plasmoid.width;
+                screenWidth = Plasmoid.screenGeometry.width;
             } else {
                 screenWidth = Screen.width;
             }
@@ -72,7 +72,7 @@ Item {
         view.implicitCellHeight: {
             let screenHeight = 0;
             if (typeof Plasmoid !== "undefined") {
-                screenHeight = Plasmoid.height;
+                screenHeight = Plasmoid.screenGeometry.height;
             } else {
                 screenHeight = Screen.height;
             }

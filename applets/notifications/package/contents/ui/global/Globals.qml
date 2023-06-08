@@ -60,8 +60,9 @@ QtObject {
         notificationSettings.save();
     }
 
-    // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
+    // Some parts of the code rely on plasmoid and since we're in a singleton here
     // this is named "plasmoid"
+    property var plasmoidItem: null
     property var plasmoid: null
 
     // HACK When a plasmoid is destroyed, QML sets its value to "null" in the Array
@@ -69,13 +70,13 @@ QtObject {
     onPlasmoidChanged: {
         if (!plasmoid) {
             // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
-            plasmoids.splice(0, 1); // remove first
+            plasmoidItems.splice(0, 1); // remove first
             ratePlasmoids();
         }
     }
 
     // all notification plasmoids
-    property var plasmoids: []
+    property var plasmoidItems: []
 
     property int popupLocation: {
         // if we are on mobile, we can ignore the settings totally and just
@@ -83,6 +84,7 @@ QtObject {
         if (Kirigami.Settings.isMobile) {
             return Qt.AlignTop | Qt.AlignHCenter;
         }
+
         switch (notificationSettings.popupPosition) {
         // Auto-determine location based on plasmoid location
         case NotificationManager.Settings.CloseToWidget:
@@ -129,11 +131,12 @@ QtObject {
             return Qt.rect(0, 0, -1, -1);
         }
 
+        const containment = plasmoid.containment;
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-        let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
-                           plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
-                           plasmoid.availableScreenRect.width,
-                           plasmoid.availableScreenRect.height);
+        let rect = Qt.rect(containment.screenGeometry.x + containment.availableScreenRect.x,
+                           containment.screenGeometry.y + containment.availableScreenRect.y,
+                           containment.availableScreenRect.width,
+                           containment.availableScreenRect.height);
 
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
@@ -152,18 +155,18 @@ QtObject {
     onScreenRectChanged: repositionTimer.start()
 
     readonly property Item visualParent: {
-        if (!plasmoid) {
+        if (!plasmoidItem) {
             return null;
         }
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-        return (plasmoid.nativeInterface && plasmoid.nativeInterface.systemTrayRepresentation)
-            || plasmoid.compactRepresentationItem
-            || plasmoid.fullRepresentationItem;
+        return (plasmoid && plasmoid.systemTrayRepresentation)
+            || plasmoidItem.compactRepresentationItem
+            || plasmoidItem.fullRepresentationItem;
     }
     onVisualParentChanged: positionPopups()
 
     property QtObject obstructingDialog: null
-    readonly property QtObject focusDialog: plasmoid.nativeInterface ? plasmoid.nativeInterface.focussedPlasmaDialog : null
+    readonly property QtObject focusDialog: plasmoid ? plasmoid.focussedPlasmaDialog : null
     onFocusDialogChanged: {
         if (focusDialog && !(focusDialog instanceof NotificationPopup)) {
             // keep around the last focusDialog so notifications don't jump around if there is an open but unfocused (eg pinned) Plasma dialog
@@ -192,17 +195,18 @@ QtObject {
 
     function adopt(plasmoid) {
         // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
-        globals.plasmoids.push(plasmoid);
+        globals.plasmoidItems.push(plasmoid);
         ratePlasmoids();
     }
 
     // Sorts plasmoids based on a heuristic to find a suitable plasmoid to follow when placing popups
     function ratePlasmoids() {
-        var plasmoidScore = function(plasmoid) {
-            if (!plasmoid) {
+        var plasmoidScore = function(plasmoidItem) {
+            if (!plasmoidItem || plasmoidItem.plasmoid) {
                 return 0;
             }
 
+            const plasmoid = plasmoidItem.plasmoid;
             var score = 0;
 
             // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
@@ -216,20 +220,20 @@ QtObject {
             }
 
             // Prefer iconified plasmoids
-            if (!plasmoid.expanded) {
+            if (!plasmoidItem.expanded) {
                 ++score;
             }
 
             // Prefer plasmoids on primary screen
-            if (plasmoid.nativeInterface && plasmoid.nativeInterface.isPrimaryScreen(plasmoid.screenGeometry)) {
+            if (plasmoid && plasmoid.containment.screen === 0) {
                 ++score;
             }
 
             return score;
         }
 
-        var newPlasmoids = plasmoids;
-        newPlasmoids.sort(function (a, b) {
+        var newPlasmoidItems = plasmoidItems;
+        newPlasmoidItems.sort(function (a, b) {
             var scoreA = plasmoidScore(a);
             var scoreB = plasmoidScore(b);
             // Sort descending by score
@@ -241,8 +245,9 @@ QtObject {
                 return 0;
             }
         });
-        globals.plasmoids = newPlasmoids;
-        globals.plasmoid = newPlasmoids[0];
+        globals.plasmoidItems = newPlasmoidItems;
+        globals.plasmoidItem = newPlasmoidItems[0];
+        globals.plasmoid = globals.plasmoidItem.plasmoid;
     }
 
     function checkInhibition() {
@@ -293,6 +298,9 @@ QtObject {
 
         const screenRect = globals.screenRect;
         if (screenRect.width <= 0 || screenRect.height <= 0) {
+            return;
+        }
+        if (!globals.visualParent) {
             return;
         }
 
@@ -405,7 +413,7 @@ QtObject {
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         sortOrder: Qt.AscendingOrder
         groupMode: NotificationManager.Notifications.GroupDisabled
-        window: visualParent.Window.window
+        window: visualParent ? visualParent.Window.window : null
         urgencies: {
             var urgencies = 0;
 
@@ -597,7 +605,7 @@ QtObject {
             }
             onForceActiveFocusRequested: {
                 // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                plasmoid.nativeInterface.forceActivateWindow(popup);
+                plasmoid.forceActivateWindow(popup);
             }
 
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))

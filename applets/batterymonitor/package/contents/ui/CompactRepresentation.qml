@@ -31,11 +31,11 @@ MouseArea {
     property bool wasExpanded
 
     Accessible.name: Plasmoid.title
-    Accessible.description: `${Plasmoid.toolTipMainText}; ${Plasmoid.toolTipSubText}`
+    Accessible.description: `${toolTipMainText}; ${toolTipSubText}`
     Accessible.role: Accessible.Button
 
-    onPressed: wasExpanded = Plasmoid.expanded
-    onClicked: Plasmoid.expanded = !wasExpanded
+    onPressed: wasExpanded = batterymonitor.expanded
+    onClicked: batterymonitor.expanded = !wasExpanded
 
     // "No Batteries" case
     PlasmaCore.IconItem {

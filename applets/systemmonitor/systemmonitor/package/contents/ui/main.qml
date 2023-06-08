@@ -18,37 +18,37 @@ import org.kde.ksysguard.faces 1.0 as Faces
 
 import org.kde.quickcharts 1.0 as Charts
 
-Item {
+PlasmoidItem {
+    id: root
     Plasmoid.backgroundHints: PlasmaCore.Types.DefaultBackground | PlasmaCore.Types.ConfigurableBackground
 
-    Plasmoid.switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
+    switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : PlasmaCore.Units.gridUnit * 8)
-    Plasmoid.switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
+        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : PlasmaCore.Units.gridUnit * 8)
+    switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : PlasmaCore.Units.gridUnit * 12)
+        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : PlasmaCore.Units.gridUnit * 12)
 
-    Plasmoid.preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? Plasmoid.fullRepresentation : null
+    preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? fullRepresentation : null
 
-    Plasmoid.title: Plasmoid.nativeInterface.faceController.title || i18n("System Monitor")
-    Plasmoid.toolTipSubText: ""
+    Plasmoid.title: Plasmoid.faceController.title || i18n("System Monitor")
+    toolTipSubText: ""
 
-    Plasmoid.compactRepresentation: CompactRepresentation {
+    compactRepresentation: CompactRepresentation {
     }
-    Plasmoid.fullRepresentation: FullRepresentation {
+    fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: Plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.totalSensors.length == 0
+    Plasmoid.configurationRequired: Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
 
     MouseArea {
-        parent: plasmoid
-        anchors.fill: plasmoid
+        anchors.fill: parent
         acceptedButtons: Qt.MiddleButton
         onClicked: action_openSystemMonitor()
     }
 
     function action_openSystemMonitor() {
-        Plasmoid.nativeInterface.openSystemMonitor()
+        Plasmoid.openSystemMonitor()
     }
 
     Component.onCompleted: {

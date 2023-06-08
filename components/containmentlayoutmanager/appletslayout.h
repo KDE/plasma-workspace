@@ -15,6 +15,7 @@ class QTimer;
 
 namespace Plasma
 {
+class Applet;
 class Containment;
 }
 
@@ -41,7 +42,9 @@ class AppletsLayout : public QQuickItem
 
     Q_PROPERTY(bool relayoutLock READ relayoutLock WRITE setRelayoutLock NOTIFY relayoutLockChanged)
 
-    Q_PROPERTY(PlasmaQuick::AppletQuickItem *containment READ containment WRITE setContainment NOTIFY containmentChanged)
+    Q_PROPERTY(Plasma::Containment *containment READ containment WRITE setContainment NOTIFY containmentChanged)
+
+    Q_PROPERTY(PlasmaQuick::AppletQuickItem *containmentItem READ containmentItem WRITE setContainmentItem NOTIFY containmentItemChanged)
 
     Q_PROPERTY(QJSValue acceptsAppletCallback READ acceptsAppletCallback WRITE setAcceptsAppletCallback NOTIFY acceptsAppletCallbackChanged)
 
@@ -108,8 +111,11 @@ public:
     bool relayoutLock() const;
     void setRelayoutLock(bool lock);
 
-    PlasmaQuick::AppletQuickItem *containment() const;
-    void setContainment(PlasmaQuick::AppletQuickItem *containment);
+    Plasma::Containment *containment() const;
+    void setContainment(Plasma::Containment *containment);
+
+    PlasmaQuick::AppletQuickItem *containmentItem() const;
+    void setContainmentItem(PlasmaQuick::AppletQuickItem *containment);
 
     QJSValue acceptsAppletCallback() const;
     void setAcceptsAppletCallback(const QJSValue &callback);
@@ -181,6 +187,7 @@ Q_SIGNALS:
     void eventManagerToFilterChanged();
     void editModeConditionChanged();
     void editModeChanged();
+    void containmentItemChanged();
 
 protected:
     bool childMouseEventFilter(QQuickItem *item, QEvent *event) override;
@@ -195,8 +202,8 @@ protected:
     void mouseUngrabEvent() override;
 
 private Q_SLOTS:
-    void appletAdded(QObject *applet, int x, int y);
-    void appletRemoved(QObject *applet);
+    void appletAdded(Plasma::Applet *applet);
+    void appletRemoved(Plasma::Applet *applet);
 
 private:
     AppletContainer *createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem);
@@ -207,9 +214,9 @@ private:
     QTimer *m_layoutChangeTimer;
     LayoutChanges m_layoutChanges = NoChange;
 
-    PlasmaQuick::AppletQuickItem *m_containmentItem = nullptr;
     Plasma::Containment *m_containment = nullptr;
     QQmlComponent *m_appletContainerComponent = nullptr;
+    QPointer<PlasmaQuick::AppletQuickItem> m_containmentItem;
 
     AbstractLayoutManager *m_layoutManager = nullptr;
 

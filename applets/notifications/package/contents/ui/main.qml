@@ -21,8 +21,8 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 
 import "global"
 
-Item {
-    id: root 
+PlasmoidItem {
+    id: root
 
     readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
@@ -44,7 +44,7 @@ Item {
 
     Plasmoid.status: effectiveStatus
 
-    Plasmoid.toolTipSubText: {
+    toolTipSubText: {
         var lines = [];
 
         if (jobAggregator.count > 0) {
@@ -99,20 +99,20 @@ Item {
         return lines.join("\n");
     }
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
+    switchWidth: PlasmaCore.Units.gridUnit * 14
     // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
     // The CompactRepresentation size is limited to not have the notification icon grow gigantic
     // but it should still switch over to full rep once there's enough width (disregarding the limited height)
-    Plasmoid.switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
+    switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
 
-    Plasmoid.onExpandedChanged: {
-        if (!Plasmoid.expanded) {
+    onExpandedChanged: {
+        if (!expanded) {
             historyModel.lastRead = undefined; // reset to now
             historyModel.collapseAllGroups();
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {
+    compactRepresentation: CompactRepresentation {
         activeCount: Globals.popupNotificationsModel.activeNotificationsCount
         unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
 
@@ -122,7 +122,7 @@ Item {
         inhibited: Globals.inhibited || !NotificationManager.Server.valid
     }
 
-    Plasmoid.fullRepresentation: FullRepresentation {
+    fullRepresentation: FullRepresentation {
 
     }
 
@@ -172,8 +172,8 @@ Item {
     }
 
     function closePlasmoid() {
-        if (Plasmoid.hideOnWindowDeactivate) {
-            Plasmoid.expanded = false;
+        if (root.hideOnWindowDeactivate) {
+            root.expanded = false;
         }
     }
 
@@ -189,9 +189,9 @@ Item {
     }
 
     Component.onCompleted: {
-        // Use Plasmoid.self because Plasmoid will become an object in QML after it's deleted, while
-        // Plasmoid.self will become null.
-        Globals.adopt(Plasmoid.self);
+        // Use Plasmoid because Plasmoid will become an object in QML after it's deleted, while
+        // Plasmoid will become null.
+        Globals.adopt(root);
 
         Plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
         var clearAction = Plasmoid.action("clearHistory");

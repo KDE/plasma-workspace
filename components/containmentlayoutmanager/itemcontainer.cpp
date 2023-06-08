@@ -664,8 +664,9 @@ void ItemContainer::setContentItem(QQuickItem *item)
 
     m_contentItem = item;
     item->setParentItem(this);
-    m_contentItem->setPosition(QPointF(m_leftPadding, m_topPadding));
 
+    item->setVisible(true);
+    m_contentItem->setPosition(QPointF(m_leftPadding, m_topPadding));
     m_contentItem->setSize(QSizeF(width() - m_leftPadding - m_rightPadding, height() - m_topPadding - m_bottomPadding));
 
     Q_EMIT contentItemChanged();

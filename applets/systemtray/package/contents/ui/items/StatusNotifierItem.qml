@@ -53,14 +53,15 @@ AbstractItem {
 
     onContextMenu: mouse => {
         if (mouse === null) {
-            openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, taskIcon.width / 2, taskIcon.height / 2));
+            openContextMenu(Plasmoid.popupPosition(taskIcon, taskIcon.width / 2, taskIcon.height / 2));
         } else {
-            openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y));
+            openContextMenu(Plasmoid.popupPosition(taskIcon, mouse.x, mouse.y));
         }
     }
 
     onClicked: mouse => {
-        var pos = Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
+        var pos = Plasmoid.popupPosition(taskIcon, mouse.x, mouse.y);
+
         switch (mouse.button) {
         case Qt.LeftButton:
             taskIcon.activated(pos)
@@ -86,7 +87,7 @@ AbstractItem {
 
         const job = service.startOperationCall(operation);
         job.finished.connect(() => {
-            Plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
+            Plasmoid.showStatusNotifierContextMenu(job, taskIcon);
         });
     }
 

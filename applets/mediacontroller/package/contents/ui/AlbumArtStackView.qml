@@ -221,7 +221,7 @@ Item {
 
         readonly property bool isLoadingImage: pendingImage !== null && pendingImage.status === Image.Loading
 
-        active: (inCompactRepresentation || Plasmoid.expanded) && (!container.hasImage || isLoadingImage)
+        active: (inCompactRepresentation || root.expanded) && (!container.hasImage || isLoadingImage)
         asynchronous: true
         sourceComponent: root.track ? (isLoadingImage ? busyComponent : fallbackIconItem) : placeholderMessage
     }

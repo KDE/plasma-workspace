@@ -37,11 +37,20 @@ QtObject {
         }
 
         const oldApplet = activeApplet
-        activeApplet = applet
+        if (applet && !applet.preferredRepresentation) {
+            applet.expanded = true;
+        }
+        if (!applet || !applet.preferredRepresentation) {
+            activeApplet = applet;
+        }
+
         if (oldApplet && oldApplet !== applet) {
             oldApplet.expanded = false
         }
-        expanded = true
+
+        if (applet && !applet.preferredRepresentation) {
+            expanded = true
+        }
     }
 
     onExpandedChanged: {
@@ -56,30 +65,33 @@ QtObject {
             }
         }
         acceptExpandedChange = false
-        Plasmoid.expanded = expanded
+        root.expanded = expanded
     }
 
     //listen on SystemTray AppletInterface signals
     property Connections plasmoidConnections: Connections {
-        target: Plasmoid.self
+        target: Plasmoid
         //emitted when activation is requested, for example by using a global keyboard shortcut
         function onActivated() {
             acceptExpandedChange = true
         }
+    }
+
+    property Connections rootConnections: Connections {
         function onExpandedChanged() {
             if (acceptExpandedChange) {
-                expanded = Plasmoid.expanded
+                expanded = root.expanded
             } else {
-                Plasmoid.expanded = expanded
+                root.expanded = expanded
             }
         }
     }
 
     property Connections activeAppletConnections: Connections {
-        target: activeApplet
+        target: activeApplet && activeApplet
 
         function onExpandedChanged() {
-            if (!activeApplet.expanded) {
+            if (activeApplet && !activeApplet.expanded) {
                 expanded = false
             }
         }

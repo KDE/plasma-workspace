@@ -24,9 +24,9 @@ ContainmentLayoutManager.AppletContainer {
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
     Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: (applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
-        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
+    Kirigami.Theme.colorSet: (applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
+        && !(applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+        && !(applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
             ? Kirigami.Theme.Complementary
             : Kirigami.Theme.Window
 
@@ -98,9 +98,9 @@ ContainmentLayoutManager.AppletContainer {
             if (!appletContainer.applet) {
                 return "";
             }
-            if (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) {
+            if (appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) {
                 return "widgets/translucentbackground";
-            } else if (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) {
+            } else if (appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) {
                 return "widgets/background";
             } else {
                 return "";
@@ -111,7 +111,7 @@ ContainmentLayoutManager.AppletContainer {
             // bind to api and hints automatically, refresh non-observable prefix manually
             blurEnabled = Qt.binding(() =>
                    GraphicsInfo.api !== GraphicsInfo.Software
-                && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+                && (appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
                 && hasElementPrefix("blurred")
             );
         }
@@ -151,7 +151,7 @@ ContainmentLayoutManager.AppletContainer {
             color: Qt.rgba(0, 0, 0, 0.5)
             opacity: 1
 
-            source: appletContainer.applet && appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground
+            source: appletContainer.applet && appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground
                 ? appletContainer.applet : null
             visible: source !== null
         }
@@ -164,7 +164,11 @@ ContainmentLayoutManager.AppletContainer {
             id: mask
 
             readonly property rect appletContainerScreenRect: {
-                const scene = appletContainer.Window.window;
+                const win = appletContainer.Window.window;
+                let sceneSize = Qt.size(appletContainer.width, appletContainer.height)
+                if (win) {
+                    sceneSize = Qt.size(win.width, win.height)
+                }
                 const position = appletContainer.Kirigami.ScenePosition;
                 return clipRect(
                     boundsForTransformedRect(
@@ -175,7 +179,7 @@ ContainmentLayoutManager.AppletContainer {
                             appletContainer.height),
                         appletContainer.rotation,
                         appletContainer.scale),
-                    Qt.size(scene.width, scene.height));
+                    sceneSize);
             }
 
             /** Apply geometry transformations, and return a bounding rectangle for a resulting shape. */
@@ -214,7 +218,7 @@ ContainmentLayoutManager.AppletContainer {
                 );
             }
 
-            parent: appletContainer.Plasmoid.self
+            parent: appletContainer.layout.containmentItem
             x: appletContainerScreenRect.x
             y: appletContainerScreenRect.y
             width: appletContainerScreenRect.width
@@ -254,7 +258,7 @@ ContainmentLayoutManager.AppletContainer {
                     width: mask.appletContainerScreenRect.width
                     height: mask.appletContainerScreenRect.height
                     sourceRect: mask.appletContainerScreenRect
-                    sourceItem: appletContainer.Plasmoid.wallpaper
+                    sourceItem: appletContainer.layout.containmentItem.wallpaper
                 }
             }
         }
@@ -269,7 +273,7 @@ ContainmentLayoutManager.AppletContainer {
         anchors.centerIn: parent
         text: i18n("Configure…")
         icon.name: "configure"
-        visible: applet.configurationRequired
-        onClicked: applet.action("configure").trigger();
+        visible: applet.plasmoid.configurationRequired
+        onClicked: applet.plasmoid.action("configure").trigger();
     }
 }

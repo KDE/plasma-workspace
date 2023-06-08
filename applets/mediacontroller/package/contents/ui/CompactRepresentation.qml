@@ -109,7 +109,7 @@ MouseArea {
             root.action_next()
             break
         default:
-            Plasmoid.expanded = !Plasmoid.expanded
+            root.expanded = !root.expanded
         }
     }
 

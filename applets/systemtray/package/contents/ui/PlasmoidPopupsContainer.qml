@@ -34,7 +34,8 @@ StackView {
     onActiveAppletChanged: {
         mainStack.appletHasHeading = false
         mainStack.appletHasFooter = false
-        if (activeApplet != null) {
+
+        if (activeApplet != null && activeApplet.fullRepresentationItem && !activeApplet.preferredRepresentation) {
             //reset any potential anchor
             activeApplet.fullRepresentationItem.anchors.left = undefined;
             activeApplet.fullRepresentationItem.anchors.top = undefined;
@@ -76,13 +77,13 @@ StackView {
     }
 
     onCurrentItemChanged: {
-        if (currentItem !== null && Plasmoid.expanded) {
+        if (currentItem !== null && root.expanded) {
             currentItem.forceActiveFocus();
         }
     }
 
     Connections {
-        target: Plasmoid.self
+        target: Plasmoid
         function onAppletRemoved(applet) {
             if (applet === systemTrayState.activeApplet) {
                 mainStack.clear();

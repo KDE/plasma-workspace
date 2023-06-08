@@ -32,7 +32,7 @@ public:
     AppletContainer(QQuickItem *parent = nullptr);
     ~AppletContainer();
 
-    PlasmaQuick::AppletQuickItem *applet();
+    PlasmaQuick::AppletQuickItem *applet(); // TODO: appletItem()?
 
     QQmlComponent *busyIndicatorComponent() const;
     void setBusyIndicatorComponent(QQmlComponent *comp);

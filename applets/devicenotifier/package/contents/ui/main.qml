@@ -17,7 +17,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
 
-Item {
+PlasmoidItem {
     id: devicenotifier
 
     readonly property bool openAutomounterKcmAuthorized: KAuthorized.authorizeControlModule("device_automounter_kcm")
@@ -43,11 +43,11 @@ Item {
     // causing our "No devices" heading to overlap with the remaining device
     property bool isMessageHighlightAnimatorRunning: false
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
+    switchWidth: PlasmaCore.Units.gridUnit * 10
+    switchHeight: PlasmaCore.Units.gridUnit * 10
 
-    Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
-    Plasmoid.toolTipSubText: {
+    toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
+    toolTipSubText: {
         if (filterModel.count > 0) {
             var data = filterModel.get(0)
             if (data && data.Description) {
@@ -84,7 +84,7 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: PlasmaCore.IconItem {
+    compactRepresentation: PlasmaCore.IconItem {
         source: devicenotifier.popupIcon
         width: PlasmaCore.Units.iconSizes.medium;
         height: PlasmaCore.Units.iconSizes.medium;
@@ -95,12 +95,12 @@ Item {
             activeFocusOnTab: true
             hoverEnabled: true
             Accessible.name: Plasmoid.title
-            Accessible.description: `${Plasmoid.toolTipMainText}: ${Plasmoid.toolTipSubText}`
+            Accessible.description: `${toolTipMainText}: ${toolTipSubText}`
             Accessible.role: Accessible.Button
-            onClicked: Plasmoid.expanded = !Plasmoid.expanded
+            onClicked: devicenotifier.expanded = !devicenotifier.expanded
         }
     }
-    Plasmoid.fullRepresentation: FullRepresentation {}
+    fullRepresentation: FullRepresentation {}
 
     P5Support.DataSource {
         id: sdSource
@@ -212,8 +212,8 @@ Item {
                 lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier"
 
                 if (sdSource.isViableDevice(lastUdi)) {
-                    Plasmoid.expanded = true
-                    Plasmoid.fullRepresentationItem.spontaneousOpen = true;
+                    devicenotifier.expanded = true
+                    fullRepresentationItem.spontaneousOpen = true;
                 }
             }
         }
@@ -241,7 +241,7 @@ Item {
         Plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
             return devicenotifier.mountedRemovables > 0;
         });
- 
+
         Plasmoid.setActionSeparator("sep0");
 
         Plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
@@ -303,8 +303,8 @@ Item {
         Plasmoid.configuration.popupOnNewDevice = !Plasmoid.configuration.popupOnNewDevice;
     }
 
-    Plasmoid.onExpandedChanged: {
-        popupEventSlot(Plasmoid.expanded);
+    onExpandedChanged: {
+        popupEventSlot(devicenotifier.expanded);
     }
 
     function popupEventSlot(popped) {
@@ -344,8 +344,8 @@ Item {
             // the text "popupOnNewDevice=false" to their
             // plasma-org.kde.plasma.desktop-appletsrc file.
             if (Plasmoid.configuration.popupOnNewDevice) { // Bug 351592
-                Plasmoid.expanded = true;
-                Plasmoid.fullRepresentationItem.spontaneousOpen = true;
+                devicenotifier.expanded = true;
+                fullRepresentationItem.spontaneousOpen = true;
             }
         }
     }

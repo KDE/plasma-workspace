@@ -15,12 +15,13 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.workspace.calendar 2.0
 
-Item {
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 12
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 12
+PlasmoidItem {
+    id: root
+    switchWidth: PlasmaCore.Units.gridUnit * 12
+    switchHeight: PlasmaCore.Units.gridUnit * 12
 
-    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
-    Plasmoid.toolTipSubText: {
+    toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
+    toolTipSubText: {
         // this logic is taken from digital-clock:
         // remove "dddd" from the locale format string
         // /all/ locales in LongFormat have "dddd" either
@@ -42,8 +43,8 @@ Item {
         intervalAlignment: P5Support.Types.AlignToMinute
     }
 
-    Plasmoid.compactRepresentation: MouseArea {
-        onClicked: Plasmoid.expanded = !Plasmoid.expanded
+    compactRepresentation: MouseArea {
+        onClicked: root.expanded = !root.expanded
 
         PlasmaCore.IconItem {
             anchors.fill: parent
@@ -91,7 +92,7 @@ Item {
                     var format = Plasmoid.configuration.compactDisplay
 
                     if (format === "w") {
-                        return Plasmoid.nativeInterface.weekNumber(d)
+                        return Plasmoid.weekNumber(d)
                     }
 
                     return Qt.formatDate(d, format)
@@ -100,12 +101,12 @@ Item {
         }
     }
 
-    Plasmoid.fullRepresentation: Item {
+    fullRepresentation: Item {
 
         // sizing taken from digital clock
         readonly property int _minimumWidth: calendar.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
         readonly property int _minimumHeight: PlasmaCore.Units.gridUnit * 14
-        readonly property var appletInterface: Plasmoid.self
+        readonly property var appletInterface: root
 
         Layout.minimumWidth: _minimumWidth
         Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80

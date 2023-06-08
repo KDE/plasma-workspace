@@ -23,7 +23,7 @@ PlasmaExtras.Representation {
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
-    readonly property var appletInterface: Plasmoid.self
+    readonly property var appletInterface: root
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
@@ -39,9 +39,9 @@ PlasmaExtras.Representation {
     Keys.onDownPressed: dndCheck.forceActiveFocus(Qt.TabFocusReason);
 
     Connections {
-        target: Plasmoid.self
+        target: root
         function onExpandedChanged() {
-            if (Plasmoid.expanded) {
+            if (root.expanded) {
                 list.positionViewAtBeginning();
                 list.currentIndex = -1;
             }
@@ -244,7 +244,7 @@ PlasmaExtras.Representation {
             id: list
             width: scrollView.availableWidth
             focus: true
-            model: Plasmoid.expanded ? historyModel : null
+            model: root.expanded ? historyModel : null
             currentIndex: -1
 
             topMargin: PlasmaCore.Units.smallSpacing * 2

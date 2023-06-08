@@ -96,7 +96,7 @@ PlasmaExtras.ExpandableListItem {
         id: updateStorageSpaceTimer
         interval: 5000
         repeat: true
-        running: isMounted && Plasmoid.expanded
+        running: isMounted && devicenotifier.expanded
         triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
         onTriggered: {
             const service = sdSource.serviceForSource(udi);

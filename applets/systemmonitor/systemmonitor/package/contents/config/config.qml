@@ -12,9 +12,9 @@ ConfigModel {
          source: "config/ConfigAppearance.qml"
     }
     ConfigCategory {
-         name: i18n("%1 Details", Plasmoid.nativeInterface.faceController.name)
-         icon: Plasmoid.nativeInterface.faceController.icon
-         visible: Plasmoid.nativeInterface.faceController.faceConfigUi !== null
+         name: i18n("%1 Details", Plasmoid.faceController.name)
+         icon: Plasmoid.faceController.icon
+         visible: Plasmoid.faceController.faceConfigUi !== null
          source: "config/FaceDetails.qml"
     }
     ConfigCategory {

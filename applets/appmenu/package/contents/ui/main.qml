@@ -19,42 +19,42 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
 import org.kde.kirigami 2.5 as Kirigami
 
-Item {
+PlasmoidItem {
     id: root
 
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool view: Plasmoid.configuration.compactView
 
     onViewChanged: {
-        Plasmoid.nativeInterface.view = view;
+        Plasmoid.view = view;
     }
 
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
-    Plasmoid.preferredRepresentation: Plasmoid.configuration.compactView ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
+    preferredRepresentation: Plasmoid.configuration.compactView ? compactRepresentation : fullRepresentation
 
-    Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {
+    compactRepresentation: PlasmaComponents3.ToolButton {
         readonly property int fakeIndex: 0
         Layout.fillWidth: false
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
         enabled: appMenuModel.menuAvailable
-        checkable: appMenuModel.menuAvailable && Plasmoid.nativeInterface.currentIndex === fakeIndex
+        checkable: appMenuModel.menuAvailable && Plasmoid.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: Plasmoid.title
-        Accessible.description: Plasmoid.toolTipSubText
+        Accessible.description: toolTipSubText
 
-        onClicked: Plasmoid.nativeInterface.trigger(this, 0);
+        onClicked: Plasmoid.trigger(this, 0);
     }
 
-    Plasmoid.fullRepresentation: GridLayout {
+    fullRepresentation: GridLayout {
         id: buttonGrid
 
         Plasmoid.status: {
-            if (appMenuModel.menuAvailable && Plasmoid.nativeInterface.currentIndex > -1 && buttonRepeater.count > 0) {
+            if (appMenuModel.menuAvailable && Plasmoid.currentIndex > -1 && buttonRepeater.count > 0) {
                 return PlasmaCore.Types.NeedsAttentionStatus;
             } else {
                 //when we're not enabled set to active to show the configure button
@@ -70,14 +70,14 @@ Item {
         columnSpacing: 0
 
         Binding {
-            target: plasmoid.nativeInterface
+            target: plasmoid
             property: "buttonGrid"
             value: buttonGrid
             restoreMode: Binding.RestoreNone
         }
 
         Connections {
-            target: Plasmoid.nativeInterface
+            target: Plasmoid
             function onRequestActivateIndex(index: int) {
                 const button = buttonRepeater.itemAt(index);
                 if (button) {
@@ -87,7 +87,7 @@ Item {
         }
 
         Connections {
-            target: Plasmoid.self
+            target: Plasmoid
             function onActivated() {
                 const button = buttonRepeater.itemAt(0);
                 if (button) {
@@ -124,11 +124,11 @@ Item {
                 // TODO: Alt and other modifiers might be unavailable on Wayland
                 Kirigami.MnemonicData.active: keystateSource.data.Alt !== undefined && keystateSource.data.Alt.Pressed
 
-                down: pressed || Plasmoid.nativeInterface.currentIndex === index
+                down: pressed || Plasmoid.currentIndex === index
                 visible: text !== "" && model.activeActions.visible
 
-                menuIsOpen: Plasmoid.nativeInterface.currentIndex !== -1
-                onActivated: Plasmoid.nativeInterface.trigger(this, index)
+                menuIsOpen: Plasmoid.currentIndex !== -1
+                onActivated: Plasmoid.trigger(this, index)
             }
         }
         Item {
@@ -141,11 +141,11 @@ Item {
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
-        containmentStatus: Plasmoid.nativeInterface.containment.status
+        containmentStatus: Plasmoid.containment.status
         screenGeometry: Plasmoid.screenGeometry
-        onRequestActivateIndex: Plasmoid.nativeInterface.requestActivateIndex(index)
+        onRequestActivateIndex: Plasmoid.requestActivateIndex(index)
         Component.onCompleted: {
-            Plasmoid.nativeInterface.model = appMenuModel;
+            Plasmoid.model = appMenuModel;
         }
     }
 }

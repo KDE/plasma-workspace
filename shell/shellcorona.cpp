@@ -1308,8 +1308,8 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
     Q_ASSERT(m_desktopViewForScreen.count() == screens.count());
     for (int i = 0; i < screens.count(); ++i) {
         Q_EMIT screenGeometryChanged(i);
+        Q_EMIT availableScreenRectChanged(i);
     }
-    Q_EMIT availableScreenRectChanged();
 
     CHECK_SCREEN_INVARIANTS
 }
@@ -1338,7 +1338,7 @@ void ShellCorona::addOutput(QScreen *screen)
         const int id = m_screenPool->idForScreen(view->screen());
         if (id >= 0 && !m_screenReorderInProgress) {
             Q_EMIT screenGeometryChanged(id);
-            Q_EMIT availableScreenRectChanged();
+            Q_EMIT availableScreenRectChanged(id);
         }
     });
 
@@ -1368,7 +1368,7 @@ void ShellCorona::addOutput(QScreen *screen)
     }
 
     if (!m_screenReorderInProgress) {
-        Q_EMIT availableScreenRectChanged();
+        Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
     }
     Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
 #ifndef NDEBUG
@@ -1460,39 +1460,39 @@ void ShellCorona::createWaitingPanels()
         if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
-        auto rectNotify = [this]() {
-            if (!m_screenReorderInProgress) {
-                Q_EMIT availableScreenRectChanged();
+        auto rectNotify = [this, panel]() {
+            if (!m_screenReorderInProgress && panel->containment()) {
+                Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
         };
+
+        m_panelViews[cont] = panel;
+        panel->setContainment(cont);
+        cont->reactToScreenChange();
+
+        rectNotify();
+
+        connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
 
         connect(panel, &QWindow::visibleChanged, this, rectNotify);
         connect(panel, &QWindow::screenChanged, this, rectNotify);
         connect(panel, &PanelView::locationChanged, this, rectNotify);
         connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
         connect(panel, &PanelView::thicknessChanged, this, rectNotify);
-
-        m_panelViews[cont] = panel;
-        panel->setContainment(cont);
-        cont->reactToScreenChange();
-
-        connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
     }
     m_waitingPanels = stillWaitingPanels;
-
-    if (!m_screenReorderInProgress) {
-        Q_EMIT availableScreenRectChanged();
-    }
 }
 
-void ShellCorona::panelContainmentDestroyed(QObject *cont)
+void ShellCorona::panelContainmentDestroyed(QObject *obj)
 {
-    auto view = m_panelViews.take(static_cast<Plasma::Containment *>(cont));
+    auto *cont = static_cast<Plasma::Containment *>(obj);
+    int screen = cont->screen();
+    auto view = m_panelViews.take(cont);
     delete view;
     // don't make things relayout when the application is quitting
     // NOTE: qApp->closingDown() is still false here
     if (!m_closingDown && !m_screenReorderInProgress) {
-        Q_EMIT availableScreenRectChanged();
+        Q_EMIT availableScreenRectChanged(screen);
     }
 }
 
@@ -1870,7 +1870,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     // Save now as we now have a screen, so lastScreen will not be -1
     newContainment->save(newCg);
     requestConfigSync();
-    Q_EMIT availableScreenRectChanged();
+    Q_EMIT availableScreenRectChanged(screen);
 
     return newContainment;
 }

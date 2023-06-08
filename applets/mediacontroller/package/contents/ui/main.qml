@@ -14,7 +14,7 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.mediacontroller 1.0
 
-Item {
+PlasmoidItem {
     id: root
 
     property var currentMetadata: mpris2Source.currentData ? mpris2Source.currentData.Metadata : undefined
@@ -77,12 +77,12 @@ Item {
 
     readonly property int volumePercentStep: config.volumeStep
 
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
+    switchWidth: PlasmaCore.Units.gridUnit * 14
+    switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.icon: "media-playback-playing"
-    Plasmoid.toolTipMainText: i18n("No media playing")
-    Plasmoid.toolTipSubText: identity
-    Plasmoid.toolTipTextFormat: Text.PlainText
+    toolTipMainText: i18n("No media playing")
+    toolTipSubText: identity
+    toolTipTextFormat: Text.PlainText
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
     function populateContextualActions() {
@@ -150,8 +150,8 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: ExpandedRepresentation {}
+    compactRepresentation: CompactRepresentation {}
+    fullRepresentation: ExpandedRepresentation {}
 
     P5Support.DataSource {
         id: mpris2Source
@@ -287,8 +287,11 @@ Item {
             when: !root.noPlayer && mpris2Source.currentData.PlaybackStatus === "Playing"
 
             PropertyChanges {
-                target: Plasmoid.self
+                target: Plasmoid
                 icon: "media-playback-playing"
+            }
+            PropertyChanges {
+                target: root
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("@info:tooltip %1 is a musical artist and %2 is an app name", "by %1 (%2)\nMiddle-click to pause\nScroll to adjust volume", artist, identity) : i18nc("@info:tooltip %1 is an app name", "%1\nMiddle-click to pause\nScroll to adjust volume", identity)
             }
@@ -298,8 +301,11 @@ Item {
             when: !root.noPlayer && mpris2Source.currentData.PlaybackStatus === "Paused"
 
             PropertyChanges {
-                target: Plasmoid.self
+                target: Plasmoid
                 icon: "media-playback-paused"
+            }
+            PropertyChanges {
+                target: root
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("@info:tooltip %1 is a musical artist and %2 is an app name", "by %1 (paused, %2)\nMiddle-click to play\nScroll to adjust volume", artist, identity) : i18nc("@info:tooltip %1 is an app name", "Paused (%1)\nMiddle-click to play\nScroll to adjust volume", identity)
             }

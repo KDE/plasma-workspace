@@ -122,7 +122,7 @@ PlasmaCore.ToolTipArea {
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
             Accessible.role: Accessible.Button
-            Accessible.onPressAction: abstractItem.activated(Plasmoid.nativeInterface.popupPosition(iconContainer, iconContainer.width/2, iconContainer.height/2));
+            Accessible.onPressAction: abstractItem.activated(Plasmoid.popupPosition(iconContainer, iconContainer.width/2, iconContainer.height/2));
 
             Behavior on scale {
                 ScaleAnimator {

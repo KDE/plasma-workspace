@@ -16,7 +16,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
-MouseArea {
+PlasmoidItem {
     id: root
 
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
@@ -25,156 +25,163 @@ MouseArea {
         .includes(Plasmoid.formFactor)
     property bool containsAcceptableDrag: false
 
+    preferredRepresentation: fullRepresentation
     height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
     width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
-
-    activeFocusOnTab: true
-    Keys.onPressed: event => {
-        switch (event.key) {
-        case Qt.Key_Space:
-        case Qt.Key_Enter:
-        case Qt.Key_Return:
-        case Qt.Key_Select:
-            Plasmoid.nativeInterface.run()
-            break;
-        }
-    }
-    Accessible.name: Plasmoid.title
-    Accessible.description: toolTip.subText
-    Accessible.role: Accessible.Button
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
     Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
-    hoverEnabled: true
-    enabled: Plasmoid.nativeInterface.valid
+    enabled: Plasmoid.valid
 
-    onClicked: Plasmoid.nativeInterface.run()
+    Plasmoid.icon: Plasmoid.iconName
+    Plasmoid.title: Plasmoid.name
 
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.icon: Plasmoid.nativeInterface.iconName
-    Plasmoid.title: Plasmoid.nativeInterface.name
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Plasmoid.onActivated: Plasmoid.nativeInterface.run()
+    Plasmoid.onActivated: Plasmoid.run()
 
     Plasmoid.onContextualActionsAboutToShow: updateActions()
 
-    Component.onCompleted: updateActions()
-
     function updateActions() {
-        Plasmoid.clearActions();
         Plasmoid.removeAction("configure");
 
-        if (Plasmoid.nativeInterface.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+        if (Plasmoid.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             Plasmoid.setAction("configure", i18n("Properties"), "document-properties");
         }
     }
 
     function action_configure() {
-        Plasmoid.nativeInterface.configure();
+        Plasmoid.configure();
     }
 
-    Connections {
-        target: Plasmoid.self
-        function onExternalData(mimetype, data) {
-            Plasmoid.nativeInterface.url = data;
-        }
+    onExternalData: (mimetype, data) => {
+        root.Plasmoid.url = data;
     }
 
-    Connections {
-        target: Plasmoid.nativeInterface
-        function onValidChanged() {
-            updateActions();
-        }
-    }
-
-    DragDrop.DropArea {
-        id: dropArea
+    MouseArea {
+        id: mouseArea
         anchors.fill: parent
-        preventStealing: true
-        onDragEnter: {
-            const acceptable = Plasmoid.nativeInterface.isAcceptableDrag(event);
-            root.containsAcceptableDrag = acceptable;
+        activeFocusOnTab: true
 
-            if (!acceptable) {
-                event.ignore();
+        Keys.onPressed: {
+            switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.run()
+                break;
             }
         }
-        onDragLeave: root.containsAcceptableDrag = false
-        onDrop: {
-            if (root.containsAcceptableDrag) {
-                Plasmoid.nativeInterface.processDrop(event);
-            } else {
-                event.ignore();
-            }
+        Accessible.name: Plasmoid.title
+        Accessible.description: toolTip.subText
+        Accessible.role: Accessible.Button
 
-            root.containsAcceptableDrag = false;
-        }
-    }
+        Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
-    PlasmaCore.IconItem {
-        id: icon
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: parent.top
-            bottom: constrained ? parent.bottom : text.top
-        }
-        source: Plasmoid.icon
-        enabled: root.enabled
-        active: root.containsMouse || root.containsAcceptableDrag
-        usesPlasmaTheme: false
-        opacity: Plasmoid.busy ? 0.6 : 1
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: PlasmaCore.Units.shortDuration
-                easing.type: Easing.OutCubic
+        hoverEnabled: true
+        enabled: Plasmoid.valid
+
+        onClicked: Plasmoid.run()
+
+        Component.onCompleted: updateActions()
+
+        Connections {
+            target: Plasmoid
+            function onValidChanged() {
+                updateActions();
             }
         }
-    }
 
-    DropShadow {
-        id: textShadow
+        DragDrop.DropArea {
+            id: dropArea
+            anchors.fill: parent
+            preventStealing: true
+            onDragEnter: {
+                const acceptable = Plasmoid.isAcceptableDrag(event);
+                containsAcceptableDrag = acceptable;
 
-        anchors.fill: text
+                if (!acceptable) {
+                    event.ignore();
+                }
+            }
+            onDragLeave: containsAcceptableDrag = false
+            onDrop: {
+                if (containsAcceptableDrag) {
+                    Plasmoid.processDrop(event);
+                } else {
+                    event.ignore();
+                }
 
-        visible: !constrained
-
-        horizontalOffset: 1
-        verticalOffset: 1
-
-        radius: 4
-        samples: 9
-        spread: 0.35
-
-        color: "black"
-
-        source: constrained ? null : text
-    }
-
-    PlasmaComponents3.Label {
-        id: text
-        text: Plasmoid.title
-        anchors {
-            left: parent.left
-            bottom: parent.bottom
-            right: parent.right
+                containsAcceptableDrag = false;
+            }
         }
-        horizontalAlignment: Text.AlignHCenter
-        visible: false // rendered by DropShadow
-        maximumLineCount: 2
-        color: "white"
-        elide: Text.ElideRight
-        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        textFormat: Text.PlainText
-    }
 
-    PlasmaCore.ToolTipArea {
-        id: toolTip
-        anchors.fill: parent
-        mainText: Plasmoid.title
-        subText: Plasmoid.nativeInterface.genericName !== mainText ? Plasmoid.nativeInterface.genericName : ""
-        textFormat: Text.PlainText
+        PlasmaCore.IconItem {
+            id: icon
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+                bottom: constrained ? parent.bottom : text.top
+            }
+            source: Plasmoid.icon
+            enabled: mouseArea.enabled
+            active: mouseArea.containsMouse || containsAcceptableDrag
+            usesPlasmaTheme: false
+            opacity: Plasmoid.busy ? 0.6 : 1
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: PlasmaCore.Units.shortDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+        }
+
+        DropShadow {
+            id: textShadow
+
+            anchors.fill: text
+
+            visible: !constrained
+
+            horizontalOffset: 1
+            verticalOffset: 1
+
+            radius: 4
+            samples: 9
+            spread: 0.35
+
+            color: "black"
+
+            source: constrained ? null : text
+        }
+
+        PlasmaComponents3.Label {
+            id: text
+            text: Plasmoid.title
+            anchors {
+                left: parent.left
+                bottom: parent.bottom
+                right: parent.right
+            }
+            horizontalAlignment: Text.AlignHCenter
+            visible: false // rendered by DropShadow
+            maximumLineCount: 2
+            color: "white"
+            elide: Text.ElideRight
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            textFormat: Text.PlainText
+        }
+
+        PlasmaCore.ToolTipArea {
+            id: toolTip
+            anchors.fill: parent
+            mainText: Plasmoid.title
+            subText: Plasmoid.genericName !== mainText ? Plasmoid.genericName : ""
+            textFormat: Text.PlainText
+        }
     }
 }

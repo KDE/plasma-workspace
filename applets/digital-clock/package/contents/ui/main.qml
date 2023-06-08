@@ -17,7 +17,7 @@ import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 
-Item {
+PlasmoidItem {
     id: root
 
     width: PlasmaCore.Units.gridUnit * 10
@@ -46,7 +46,6 @@ Item {
     }
 
     function timeForZone(zone, showSecondsForZone) {
-        const compactRepresentationItem = Plasmoid.compactRepresentationItem;
         if (!compactRepresentationItem) {
             return "";
         }
@@ -81,8 +80,8 @@ Item {
         }
     }
 
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: DigitalClock {
+    preferredRepresentation: compactRepresentation
+    compactRepresentation: DigitalClock {
         activeFocusOnTab: true
         hoverEnabled: true
 
@@ -90,9 +89,9 @@ Item {
         Accessible.description: tooltipLoader.item.Accessible.description
         Accessible.role: Accessible.Button
     }
-    Plasmoid.fullRepresentation: CalendarView { }
+    fullRepresentation: CalendarView { }
 
-    Plasmoid.toolTipItem: Loader {
+    toolTipItem: Loader {
         id: tooltipLoader
 
         Layout.minimumWidth: item ? item.implicitWidth : 0
@@ -111,6 +110,13 @@ Item {
         function onSelectedTimeZonesChanged() { root.initTimezones(); }
     }
 
+    Binding {
+        target: root
+        property: "hideOnWindowDeactivate"
+        value: !Plasmoid.configuration.pin
+        restoreMode: Binding.RestoreBinding
+    }
+
     P5Support.DataSource {
         id: dataSource
         engine: "time"
@@ -119,8 +125,8 @@ Item {
         intervalAlignment: {
             if (Plasmoid.configuration.showSeconds === 2
                 || (Plasmoid.configuration.showSeconds === 1
-                    && Plasmoid.compactRepresentationItem
-                    && Plasmoid.compactRepresentationItem.containsMouse)) {
+                    && compactRepresentationItem
+                    && compactRepresentationItem.containsMouse)) {
                 return P5Support.Types.NoAlignment;
             } else {
                 return P5Support.Types.AlignToMinute;

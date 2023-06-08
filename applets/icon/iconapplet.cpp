@@ -319,7 +319,7 @@ bool IconApplet::isValid() const
 
 QList<QAction *> IconApplet::contextualActions()
 {
-    QList<QAction *> actions;
+    QList<QAction *> actions = Applet::contextualActions();
     if (m_localPath.isEmpty()) {
         return actions;
     }
