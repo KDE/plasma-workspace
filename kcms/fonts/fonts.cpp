@@ -114,7 +114,7 @@ void KFonts::save()
 #if HAVE_X11
     bool forceFontDPIChanged = false;
 
-    if (KWindowSystem::isPlatformX11) {
+    if (KWindowSystem::isPlatformX11()) {
         auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
         auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
         Q_ASSERT(dpiItem && antiAliasingItem);
