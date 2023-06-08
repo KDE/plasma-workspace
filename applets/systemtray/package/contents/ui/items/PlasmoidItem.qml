@@ -22,7 +22,7 @@ AbstractItem {
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
-    textFormat: applet ? applet.toolTipTextFormat : ""
+    textFormat: applet ? applet.toolTipTextFormat : 0 /* Text.AutoText, the default value */
     active: systemTrayState.activeApplet !== applet
 
     // FIXME: Use an input type agnostic way to activate whatever the primary
