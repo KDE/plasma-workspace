@@ -38,7 +38,7 @@ Item {
     Plasmoid.fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: Plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.totalSensor.length == 0
+    Plasmoid.configurationRequired: Plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.totalSensors.length == 0
 
     MouseArea {
         parent: plasmoid
