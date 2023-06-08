@@ -61,7 +61,7 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
     const QKeySequence &shortcut = m_applet->globalShortcut();
     m_applet->setGlobalShortcut(QKeySequence()); // need to unmap the old one first
 
-    const QPoint newPos = appletItem->mapToItem(contItem, QPointF(0, 0)).toPoint();
+    const auto newPos = appletItem->mapToItem(contItem, appletItem->boundingRect());
 
     Plasma::Applet *newApplet = nullptr;
     QMetaObject::invokeMethod(contItem,
@@ -69,7 +69,7 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
                               Q_RETURN_ARG(Plasma::Applet *, newApplet),
                               Q_ARG(QString, plugin),
                               Q_ARG(QVariantList, QVariantList()),
-                              Q_ARG(QPoint, newPos));
+                              Q_ARG(QRectF, newPos));
 
     if (newApplet) {
         newApplet->setGlobalShortcut(shortcut);
