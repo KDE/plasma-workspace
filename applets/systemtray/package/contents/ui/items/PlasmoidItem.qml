@@ -123,7 +123,7 @@ AbstractItem {
 
     Connections {
         enabled: !!applet
-        target: findMouseArea(applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem)
+        target: applet ? findMouseArea(applet.compactRepresentationItem || applet.fullRepresentationItem || applet) : null
 
         function onContainsPressChanged() {
             plasmoidContainer.effectivePressed = target.containsPress;
@@ -138,7 +138,7 @@ AbstractItem {
     }
 
     Connections {
-        target: plasmoidContainer.applet.plasmoid
+        target: plasmoidContainer?.applet.plasmoid ?? null
 
         //activation using global keyboard shortcut
         function onActivated() {
