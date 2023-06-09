@@ -32,7 +32,7 @@ Item {
      */
     Accessible.name: i18nc("@info:tooltip %1 is a localized long date", "Today is %1", tooltipSubtext.text)
     Accessible.description: {
-        let description = [];
+        let description = tooltipSubLabelText.visible ? [tooltipSubLabelText.text] : [];
         for (let i = 0; i < timezoneRepeater.count; i += 2) {
             description.push(`${timezoneRepeater.itemAt(i).text}: ${timezoneRepeater.itemAt(i + 1).text}`);
         }
@@ -79,6 +79,15 @@ Item {
             }
             opacity: 0.6
             visible: !clocks.visible
+        }
+
+        PlasmaComponents3.Label {
+            id: tooltipSubLabelText
+            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
+            Layout.maximumWidth: preferredTextWidth
+            text: root.fullRepresentationItem ? root.fullRepresentationItem.monthView.todayAuxilliaryText : ""
+            opacity: 0.6
+            visible: !clocks.visible && text.length > 0
         }
 
         GridLayout {
