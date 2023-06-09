@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-01-22 16:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -104,7 +104,7 @@ msgstr "Закрыть проигрыватель"
 msgid "Choose player automatically"
 msgstr "Выбирать проигрыватель автоматически"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "Приостановить: нажатие средней кнопки мыши\n"
 "Изменить громкость: прокручивание колёсика мыши"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 "Приостановить: нажатие средней кнопки мыши\n"
 "Изменить громкость: прокручивание колёсика мыши"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -140,7 +140,7 @@ msgstr ""
 "Продолжить: нажатие средней кнопки мыши\n"
 "Изменить громкость: прокручивание колёсика мыши"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

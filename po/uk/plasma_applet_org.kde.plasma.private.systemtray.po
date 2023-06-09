@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-07-25 08:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -163,12 +163,12 @@ msgstr "Назад"
 msgid "Status and Notifications"
 msgstr "Стан і сповіщення"
 
-#: package/contents/ui/ExpandedRepresentation.qml:136
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Додаткові дії"
 
-#: package/contents/ui/ExpandedRepresentation.qml:227
+#: package/contents/ui/ExpandedRepresentation.qml:233
 #, kde-format
 msgid "Keep Open"
 msgstr "Тримати відкритим"

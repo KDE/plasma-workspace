@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-28 02:18+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-01-28 22:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -145,7 +145,7 @@ msgstr "Следующее десятилетие"
 msgid "Keep Open"
 msgstr "Держать открытым"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
 #, kde-format
 msgid "Configure…"
 msgstr "Настроить…"

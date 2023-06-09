@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Choose player automatically"
 msgstr ""
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -109,7 +109,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -118,7 +118,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -127,7 +127,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

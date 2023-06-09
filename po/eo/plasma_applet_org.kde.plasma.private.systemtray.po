@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -163,12 +163,12 @@ msgstr "Reiri"
 msgid "Status and Notifications"
 msgstr "Statuso kaj Sciigoj"
 
-#: package/contents/ui/ExpandedRepresentation.qml:136
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Pli da agoj"
 
-#: package/contents/ui/ExpandedRepresentation.qml:227
+#: package/contents/ui/ExpandedRepresentation.qml:233
 #, kde-format
 msgid "Keep Open"
 msgstr "Teni Malfermita"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-10-17 18:53+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: contents/ui/manage-inputmethod.qml:64
+#: contents/ui/manage-inputmethod.qml:63
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Grunnstilla sýndarlyklaborð..."
 
-#: contents/ui/manage-inputmethod.qml:79
+#: contents/ui/manage-inputmethod.qml:82
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Sýndarlyklaborð: ekki tiltækt"
 
-#: contents/ui/manage-inputmethod.qml:90
+#: contents/ui/manage-inputmethod.qml:96
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Sýndarlyklaborð: óvirkt"
 
-#: contents/ui/manage-inputmethod.qml:104
+#: contents/ui/manage-inputmethod.qml:113
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Sýna sýndarlyklaborð"
 
-#: contents/ui/manage-inputmethod.qml:115
+#: contents/ui/manage-inputmethod.qml:129
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Sýndarlyklaborð: sýnilegt"
 
-#: contents/ui/manage-inputmethod.qml:128
+#: contents/ui/manage-inputmethod.qml:144
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Sýndarlyklaborð: virkjað"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-03-16 20:42+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "Hætta"
 msgid "Choose player automatically"
 msgstr "Velja spilara sjálfvirkt"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -114,7 +114,7 @@ msgstr ""
 "Miðjusmelltu til að setja á pásu\n"
 "Flettu til að stilla hljóðstyrkinn"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 "Miðjusmelltu til að setja á pásu\n"
 "Flettu til að stilla hljóðstyrkinn"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -138,7 +138,7 @@ msgstr ""
 "Miðjusmelltu til að spila\n"
 "Flettu til að stilla hljóðstyrkinn"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

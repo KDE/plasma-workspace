@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-10-23 16:30+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -162,12 +162,12 @@ msgstr "Mundur"
 msgid "Status and Notifications"
 msgstr "Status dan Notifikasi"
 
-#: package/contents/ui/ExpandedRepresentation.qml:136
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Aksi selebihnya"
 
-#: package/contents/ui/ExpandedRepresentation.qml:227
+#: package/contents/ui/ExpandedRepresentation.qml:233
 #, kde-format
 msgid "Keep Open"
 msgstr "Tetap Buka"

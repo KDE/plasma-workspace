@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-04-07 23:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/ui/manage-inputmethod.qml:64
+#: contents/ui/manage-inputmethod.qml:63
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Agordi Virtualajn Klavarojn..."
 
-#: contents/ui/manage-inputmethod.qml:79
+#: contents/ui/manage-inputmethod.qml:82
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Virtuala Klavaro: nedisponebla"
 
-#: contents/ui/manage-inputmethod.qml:90
+#: contents/ui/manage-inputmethod.qml:96
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Virtuala Klavaro: malebligita"
 
-#: contents/ui/manage-inputmethod.qml:104
+#: contents/ui/manage-inputmethod.qml:113
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Montri Virtualan Klavaron"
 
-#: contents/ui/manage-inputmethod.qml:115
+#: contents/ui/manage-inputmethod.qml:129
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Virtuala Klavaro: videbla"
 
-#: contents/ui/manage-inputmethod.qml:128
+#: contents/ui/manage-inputmethod.qml:144
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Virtuala Klavaro: ebligita"

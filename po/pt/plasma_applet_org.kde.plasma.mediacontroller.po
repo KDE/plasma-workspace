@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-12-12 18:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -96,7 +96,7 @@ msgstr "Sair"
 msgid "Choose player automatically"
 msgstr "Escolher automaticamente o leitor"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 "Botão do meio para pausar\n"
 "Deslocar para ajustar o volume"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -120,7 +120,7 @@ msgstr ""
 "Botão do meio para pausar\n"
 "Deslocar para ajustar o volume"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 "Botão do meio para reproduzir\n"
 "Deslocar para ajustar o volume"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

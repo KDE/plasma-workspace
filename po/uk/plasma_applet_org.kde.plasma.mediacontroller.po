@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-12-07 07:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -104,7 +104,7 @@ msgstr "Вийти"
 msgid "Choose player automatically"
 msgstr "Вибрати програвач автоматично"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "Клацніть середньою, щоб призупинити\n"
 "Прокрутіть, щоб скоригувати гучність"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 "Клацніть середньою, щоб призупинити\n"
 "Прокрутіть, щоб скоригувати гучність"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -140,7 +140,7 @@ msgstr ""
 "Клацніть середньою, щоб відтворити\n"
 "Прокрутіть, щоб скоригувати гучність"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

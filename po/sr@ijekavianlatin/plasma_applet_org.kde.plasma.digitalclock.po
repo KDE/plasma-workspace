@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,7 +29,7 @@ msgid "Calendar"
 msgstr "Kalendar"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:431
+#: package/contents/ui/CalendarView.qml:424
 #, kde-format
 msgid "Time Zones"
 msgstr "Vremenske zone"
@@ -51,24 +51,24 @@ msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:390
+#: package/contents/ui/CalendarView.qml:383
 #, kde-format
 msgid "No events for today"
 msgstr "Nema događaja za danas."
 
-#: package/contents/ui/CalendarView.qml:391
+#: package/contents/ui/CalendarView.qml:384
 #, kde-format
 msgid "No events for this day"
 msgstr "Nema događaja za ovaj dan."
 
-#: package/contents/ui/CalendarView.qml:440
+#: package/contents/ui/CalendarView.qml:433
 #, kde-format
 msgid "Switch…"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/CalendarView.qml:441
-#: package/contents/ui/CalendarView.qml:444
+#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:437
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "Switch to another timezone"
@@ -387,18 +387,18 @@ msgstr ""
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:150
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:161
 #, fuzzy, kde-format
 #| msgid "Adjust Date and Time..."
 msgid "Adjust Date and Time…"
 msgstr "Podesi datum i vreme..."
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:164
 #, fuzzy, kde-format
 #| msgid "Set Time Format..."
 msgid "Set Time Format…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2022-07-26 19:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -160,12 +160,12 @@ msgstr "பின்னே செல்"
 msgid "Status and Notifications"
 msgstr "நிலைகாட்டிகளும் அறிவிப்புகளும்"
 
-#: package/contents/ui/ExpandedRepresentation.qml:136
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "மேலும் செயல்கள்"
 
-#: package/contents/ui/ExpandedRepresentation.qml:227
+#: package/contents/ui/ExpandedRepresentation.qml:233
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -165,12 +165,12 @@ msgstr "Назад"
 msgid "Status and Notifications"
 msgstr "Стан і апавяшчэнні"
 
-#: package/contents/ui/ExpandedRepresentation.qml:136
+#: package/contents/ui/ExpandedRepresentation.qml:139
 #, kde-format
 msgid "More actions"
 msgstr "Яшчэ дзеянні"
 
-#: package/contents/ui/ExpandedRepresentation.qml:227
+#: package/contents/ui/ExpandedRepresentation.qml:233
 #, kde-format
 msgid "Keep Open"
 msgstr "Не закрываць"

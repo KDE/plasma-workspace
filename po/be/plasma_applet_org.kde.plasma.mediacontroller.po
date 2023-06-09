@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -106,7 +106,7 @@ msgstr "Выхад"
 msgid "Choose player automatically"
 msgstr "Аўтаматычны выбар прайгравальніка"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -118,7 +118,7 @@ msgstr ""
 "Пстрыкніце сярэдняй кнопкай мышы, каб прыпыніць\n"
 "Пракруціце, каб падладзіць гучнасць"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -130,7 +130,7 @@ msgstr ""
 "Пстрыкніце сярэдняй кнопкай мышы, каб прыпыніць\n"
 "Пракруціце, каб падладзіць гучнасць"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "Пстрыкніце сярэдняй кнопкай мышы, каб прайграць\n"
 "Пракруціце, каб падладзіць гучнасць"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

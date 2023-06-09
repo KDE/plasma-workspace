@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-02 02:20+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2017-06-12 16:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "Έξοδος"
 msgid "Choose player automatically"
 msgstr "Αυτόματη επιλογή αναπαραγωγέα"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -114,7 +114,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "από τον/την %1 (σε παύση)"
 
-#: package/contents/ui/main.qml:293
+#: package/contents/ui/main.qml:296
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -123,7 +123,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr ""
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
@@ -134,7 +134,7 @@ msgid ""
 "Scroll to adjust volume"
 msgstr "από τον/την %1 (σε παύση)"
 
-#: package/contents/ui/main.qml:304
+#: package/contents/ui/main.qml:310
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"

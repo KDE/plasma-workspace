@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-26 01:59+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -39,7 +39,7 @@ msgstr "ഇതടങ്ങിയിരിക്കുന്ന അറ തുറ�
 msgid "Properties for %1"
 msgstr "%1 ന്റെ ഗുണഗണങ്ങൾ"
 
-#: package/contents/ui/main.qml:70
+#: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങൾ"

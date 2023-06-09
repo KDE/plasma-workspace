@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"POT-Creation-Date: 2023-06-09 02:14+0000\n"
 "PO-Revision-Date: 2023-02-28 23:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/manage-inputmethod.qml:64
+#: contents/ui/manage-inputmethod.qml:63
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "가상 키보드 설정..."
 
-#: contents/ui/manage-inputmethod.qml:79
+#: contents/ui/manage-inputmethod.qml:82
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "가상 키보드: 사용할 수 없음"
 
-#: contents/ui/manage-inputmethod.qml:90
+#: contents/ui/manage-inputmethod.qml:96
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "가상 키보드: 비활성"
 
-#: contents/ui/manage-inputmethod.qml:104
+#: contents/ui/manage-inputmethod.qml:113
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "가상 키보드 표시"
 
-#: contents/ui/manage-inputmethod.qml:115
+#: contents/ui/manage-inputmethod.qml:129
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "가상 키보드: 표시됨"
 
-#: contents/ui/manage-inputmethod.qml:128
+#: contents/ui/manage-inputmethod.qml:144
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "가상 키보드: 활성"
