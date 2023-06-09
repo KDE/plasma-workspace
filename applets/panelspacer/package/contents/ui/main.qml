@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root
@@ -18,8 +18,8 @@ PlasmoidItem {
     Layout.fillWidth: Plasmoid.configuration.expanding
     Layout.fillHeight: Plasmoid.configuration.expanding
 
-    Layout.minimumWidth: Plasmoid.containment.corona.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
-    Layout.minimumHeight: Plasmoid.containment.corona.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumWidth: Plasmoid.containment.corona?.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumHeight: Plasmoid.containment.corona?.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
     Layout.preferredWidth: horizontal
         ? (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
         : 0
@@ -35,7 +35,7 @@ PlasmoidItem {
 
     // Search the actual gridLayout of the panel
     property GridLayout panelLayout: {
-        var candidate = root.parent;
+        let candidate = root.parent;
         while (candidate) {
             if (candidate instanceof GridLayout) {
                 return candidate;
@@ -47,7 +47,7 @@ PlasmoidItem {
 
     Component.onCompleted: {
         Plasmoid.setAction("expanding", i18n("Set flexible size"));
-        var action = Plasmoid.action("expanding");
+        const action = Plasmoid.action("expanding");
         action.checkable = true;
         action.checked = Qt.binding(function() {return Plasmoid.configuration.expanding});
 
@@ -61,7 +61,7 @@ PlasmoidItem {
         let sizeHints = [0];
         // Children order is guaranteed to be the same as the visual order of items in the layout
         for (var i in panelLayout.children) {
-            var child = panelLayout.children[i];
+            const child = panelLayout.children[i];
             if (!child.visible) continue;
 
             if (child.applet && child.applet.pluginName === 'org.kde.plasma.panelspacer' && child.applet.configuration.expanding) {
@@ -85,15 +85,15 @@ PlasmoidItem {
     Rectangle {
         anchors.fill: parent
         color: PlasmaCore.Theme.highlightColor
-        opacity: Plasmoid.containment.corona.editMode ? 1 : 0
-        visible: Plasmoid.containment.corona.editMode || animator.running
+        opacity: Plasmoid.containment.corona?.editMode ? 1 : 0
+        visible: Plasmoid.containment.corona?.editMode || animator.running
 
         Behavior on opacity {
             NumberAnimation {
                 id: animator
                 duration: PlasmaCore.Units.longDuration
                 // easing.type is updated after animation starts
-                easing.type: Plasmoid.containment.corona.editMode ? Easing.InCubic : Easing.OutCubic
+                easing.type: Plasmoid.containment.corona?.editMode ? Easing.InCubic : Easing.OutCubic
             }
         }
     }
