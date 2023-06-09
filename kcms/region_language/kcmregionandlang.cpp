@@ -30,8 +30,8 @@ using namespace KCM_RegionAndLang;
 
 K_PLUGIN_CLASS_WITH_JSON(KCMRegionAndLang, "kcm_regionandlang.json")
 
-KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
+    : KQuickManagedConfigModule(parent, data)
     , m_settings(new RegionAndLangSettings(this))
     , m_optionsModel(new OptionsModel(this))
     , m_generator(LocaleGenerator::getGenerator())

@@ -49,8 +49,8 @@
 #include <X11/extensions/Xfixes.h>
 #endif
 
-KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
+    : KQuickManagedConfigModule(parent, data)
     , m_lnf(new LookAndFeelManager(this))
     , m_themeContents(LookAndFeelManager::Empty)
     , m_selectedContents(LookAndFeelManager::AppearanceSettings)

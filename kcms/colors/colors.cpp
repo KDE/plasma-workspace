@@ -46,8 +46,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
-KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data)
+    : KQuickManagedConfigModule(parent, data)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new ColorsData(this))

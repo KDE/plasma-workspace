@@ -23,7 +23,7 @@ class KCMNightColor : public KQuickManagedConfigModule
     Q_PROPERTY(int minNightTemp MEMBER minNightTemp CONSTANT)
     Q_PROPERTY(int maxNightTemp MEMBER maxNightTemp CONSTANT)
 public:
-    KCMNightColor(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    KCMNightColor(QObject *parent, const KPluginMetaData &data);
     ~KCMNightColor() override = default;
 
     NightColorSettings *nightColorSettings() const;

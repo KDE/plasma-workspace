@@ -42,7 +42,7 @@ class KCMDesktopTheme : public KQuickManagedConfigModule
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
-    KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    KCMDesktopTheme(QObject *parent, const KPluginMetaData &data);
     ~KCMDesktopTheme() override;
 
     DesktopThemeSettings *desktopThemeSettings() const;

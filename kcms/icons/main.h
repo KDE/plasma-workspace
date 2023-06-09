@@ -41,7 +41,7 @@ class IconModule : public KQuickManagedConfigModule
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
 
 public:
-    IconModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    IconModule(QObject *parent, const KPluginMetaData &data);
     ~IconModule() override;
 
     enum Roles {

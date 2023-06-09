@@ -39,8 +39,8 @@ inline auto asyncCall(OrgFreedesktopAccountsInterface *ptr, const QString &metho
     return QDBusConnection::systemBus().asyncCall(mc);
 }
 
-KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickConfigModule(parent, data, args)
+KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
+    : KQuickConfigModule(parent, data)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
                                                           QStringLiteral("/org/freedesktop/Accounts"),
                                                           QDBusConnection::systemBus(),

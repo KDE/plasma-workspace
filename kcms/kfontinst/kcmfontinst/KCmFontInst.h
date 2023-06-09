@@ -38,7 +38,7 @@ class CKCmFontInst : public KCModule
     Q_OBJECT
 
 public:
-    explicit CKCmFontInst(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    explicit CKCmFontInst(QObject *parent, const KPluginMetaData &data);
     ~CKCmFontInst() override;
 
 public Q_SLOTS:

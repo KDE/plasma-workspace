@@ -11,8 +11,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(Autostart, "kcm_autostart.json")
 
-Autostart::Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickConfigModule(parent, data, args)
+Autostart::Autostart(QObject *parent, const KPluginMetaData &data)
+    : KQuickConfigModule(parent, data)
     , m_model(new AutostartModel(this))
 {
     setButtons(Help);

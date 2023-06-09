@@ -17,7 +17,7 @@ class Autostart : public KQuickConfigModule
     Q_PROPERTY(AutostartModel *model READ model CONSTANT)
 
 public:
-    explicit Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    explicit Autostart(QObject *parent, const KPluginMetaData &data);
     ~Autostart() override;
 
     void load() override;

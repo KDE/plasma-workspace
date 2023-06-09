@@ -28,7 +28,7 @@ class KCMRegionAndLang : public KQuickManagedConfigModule
     Q_PROPERTY(bool enabled READ enabled NOTIFY enabledChanged)
 
 public:
-    explicit KCMRegionAndLang(QObject *parent, const KPluginMetaData &data, const QVariantList &list = QVariantList());
+    explicit KCMRegionAndLang(QObject *parent, const KPluginMetaData &data);
     void save() override;
 
     RegionAndLangSettings *settings() const;

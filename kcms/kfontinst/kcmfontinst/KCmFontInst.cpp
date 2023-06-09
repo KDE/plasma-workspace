@@ -150,8 +150,8 @@ private:
 
 int CPushButton::theirHeight = 0;
 
-CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KCModule(parent, data, args)
+CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
     , m_preview(nullptr)
     , m_config(KFI_UI_CFG_FILE)
     , m_job(nullptr)

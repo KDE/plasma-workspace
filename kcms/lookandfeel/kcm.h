@@ -50,7 +50,7 @@ public:
     };
     Q_ENUM(Roles)
 
-    KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    KCMLookandFeel(QObject *parent, const KPluginMetaData &data);
     ~KCMLookandFeel() override;
 
     LookAndFeelSettings *lookAndFeelSettings() const;

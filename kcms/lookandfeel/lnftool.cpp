@@ -93,7 +93,7 @@ int main(int argc, char **argv)
             }
         }
 
-        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData(), QVariantList());
+        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData());
         kcm->load();
         kcm->lookAndFeelSettings()->setLookAndFeelPackage(requestedTheme);
         // By default do not modify the layout, unless explicitely specified

@@ -36,8 +36,8 @@ Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>(); registerPlugin<DesktopThemeData>();)
 
-KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data)
+    : KQuickManagedConfigModule(parent, data)
     , m_data(new DesktopThemeData(this))
     , m_model(new ThemesModel(this))
     , m_filteredModel(new FilterProxyModel(this))

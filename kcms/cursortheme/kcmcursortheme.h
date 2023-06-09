@@ -43,7 +43,7 @@ class CursorThemeConfig : public KQuickManagedConfigModule
     Q_PROPERTY(int preferredSize READ preferredSize WRITE setPreferredSize NOTIFY preferredSizeChanged)
 
 public:
-    CursorThemeConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &);
+    CursorThemeConfig(QObject *parent, const KPluginMetaData &data);
     ~CursorThemeConfig() override;
 
     void load() override;

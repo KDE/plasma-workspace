@@ -20,8 +20,8 @@ namespace ColorCorrect
 {
 K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<KCMNightColor>(); registerPlugin<NightColorData>();)
 
-KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, data, args)
+KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data)
+    : KQuickManagedConfigModule(parent, data)
     , m_data(new NightColorData(this))
 {
     qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);

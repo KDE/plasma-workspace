@@ -46,7 +46,7 @@ class KCMColors : public KQuickManagedConfigModule
     Q_PROPERTY(bool accentColorFromWallpaper READ accentColorFromWallpaper WRITE setAccentColorFromWallpaper NOTIFY accentColorFromWallpaperChanged)
 
 public:
-    KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    KCMColors(QObject *parent, const KPluginMetaData &data);
     ~KCMColors() override;
 
     enum SchemeFilter {

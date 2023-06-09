@@ -43,8 +43,8 @@ K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFont
 
 /**** KFonts ****/
 
-KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
