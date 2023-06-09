@@ -632,6 +632,7 @@ void PanelView::resizePanel()
     QSize targetSize;
     QSize targetMinSize;
     QSize targetMaxSize;
+    bool minFirst = false;
 
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
@@ -640,6 +641,7 @@ void PanelView::resizePanel()
         targetMinSize = QSize(totalThickness(), minSize);
         targetMaxSize = QSize(totalThickness(), maxSize);
         targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
+        minFirst = maximumSize().height() < minSize;
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
         int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
@@ -647,12 +649,24 @@ void PanelView::resizePanel()
         targetMinSize = QSize(minSize, totalThickness());
         targetMaxSize = QSize(maxSize, totalThickness());
         targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
+        minFirst = maximumSize().width() < minSize;
     }
-    if (minimumSize() != targetMinSize) {
-        setMinimumSize(targetMinSize);
-    }
-    if (maximumSize() != targetMaxSize) {
-        setMaximumSize(targetMaxSize);
+
+    // Make sure we don't hit Q_ASSERT(!(max < min)) in qBound
+    if (minFirst) {
+        if (minimumSize() != targetMinSize) {
+            setMinimumSize(targetMinSize);
+        }
+        if (maximumSize() != targetMaxSize) {
+            setMaximumSize(targetMaxSize);
+        }
+    } else {
+        if (maximumSize() != targetMaxSize) {
+            setMaximumSize(targetMaxSize);
+        }
+        if (minimumSize() != targetMinSize) {
+            setMinimumSize(targetMinSize);
+        }
     }
     if (size() != targetSize) {
         resize(targetSize);
