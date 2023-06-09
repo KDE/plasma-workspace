@@ -40,22 +40,22 @@ AbstractItem {
             return
         }
         //forward click event to the applet
-        var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+        var appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
 
         if (mouseArea && mouse.button !== Qt.RightButton) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
-            plasmoidContainer.activated(null)
+            activated(null)
         }
     }
     onPressed: mouse => {
         // Only Plasmoids can show context menu on the mouse pressed event.
         // SNI has few problems, for example legacy applications that still use XEmbed require mouse to be released.
         if (mouse.button === Qt.RightButton) {
-            plasmoidContainer.contextMenu(mouse);
+            contextMenu(mouse);
         } else {
-            const appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+            const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
             const mouseArea = findMouseArea(appletItem)
             if (mouseArea) {
                 // HACK QML only sees the "mouseArea.pressed" property, not the signal.
@@ -65,15 +65,14 @@ AbstractItem {
     }
     onContextMenu: if (applet) {
         effectivePressed = false;
-        Plasmoid.showPlasmoidMenu(applet, 0,
-                                                  plasmoidContainer.inHiddenLayout ? applet.height : 0);
+        Plasmoid.showPlasmoidMenu(applet, 0, inHiddenLayout ? applet.height : 0);
     }
     onWheel: wheel => {
         if (!applet) {
             return
         }
         //forward wheel event to the applet
-        var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+        var appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
         if (mouseArea) {
             mouseArea.wheel(wheel)
@@ -81,7 +80,7 @@ AbstractItem {
     }
 
     //some heuristics to find MouseArea
-    function findMouseArea(item) {
+    function findMouseArea(item: Item): MouseArea {
         if (!item) {
             return null
         }
@@ -89,6 +88,7 @@ AbstractItem {
         if (item instanceof MouseArea) {
             return item
         }
+
         for (var i = 0; i < item.children.length; i++) {
             const child = item.children[i]
             if (child instanceof MouseArea && child.enabled) {
@@ -113,7 +113,7 @@ AbstractItem {
 
     onAppletChanged: {
         if (applet) {
-            applet.parent = plasmoidContainer.iconContainer
+            applet.parent = iconContainer
             applet.anchors.fill = applet.parent
             applet.visible = true
 
@@ -122,8 +122,12 @@ AbstractItem {
     }
 
     Connections {
-        enabled: !!applet
-        target: applet ? findMouseArea(applet.compactRepresentationItem || applet.fullRepresentationItem || applet) : null
+        enabled: plasmoidContainer.applet !== null
+        target: findMouseArea(
+            plasmoidContainer.applet?.compactRepresentationItem ??
+            plasmoidContainer.applet?.fullRepresentationItem ??
+            plasmoidContainer.applet
+        )
 
         function onContainsPressChanged() {
             plasmoidContainer.effectivePressed = target.containsPress;
@@ -138,16 +142,20 @@ AbstractItem {
     }
 
     Connections {
-        target: plasmoidContainer?.applet.plasmoid ?? null
+        target: plasmoidContainer.applet?.plasmoid ?? null
 
         //activation using global keyboard shortcut
         function onActivated() {
             plasmoidContainer.effectivePressed = true;
-            Qt.callLater(() => {plasmoidContainer.effectivePressed = false});
+            Qt.callLater(() => {
+                plasmoidContainer.effectivePressed = false;
+            });
         }
     }
+
     Connections {
         target: plasmoidContainer.applet
+
         function onFullRepresentationItemChanged(fullRepresentationItem) {
             preloadFullRepresentationItem(fullRepresentationItem)
         }
@@ -163,14 +171,14 @@ AbstractItem {
     PlasmaComponents3.BusyIndicator {
         anchors.fill: parent
         z: 999
-        running: plasmoidContainer.applet && plasmoidContainer.applet.plasmoid.busy
+        running: plasmoidContainer.applet?.plasmoid.busy ?? false
     }
 
     Binding {
         property: "hideOnWindowDeactivate"
         value: !Plasmoid.configuration.pin
         target: plasmoidContainer.applet
-        when: null !== plasmoidContainer.applet
+        when: plasmoidContainer.applet !== null
         restoreMode: Binding.RestoreBinding
     }
 }
