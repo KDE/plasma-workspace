@@ -18,11 +18,7 @@ target_link_libraries(plasma_engine_mouse
 )
 
 if (HAVE_X11)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(plasma_engine_mouse Qt::X11Extras)
-    else()
-        target_link_libraries(plasma_engine_mouse Qt::GuiPrivate)
-    endif()
+    target_link_libraries(plasma_engine_mouse Qt::GuiPrivate)
 
     target_link_libraries(plasma_engine_mouse X11::X11 X11::Xfixes)
 endif ()

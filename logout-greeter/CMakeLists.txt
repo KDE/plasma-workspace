@@ -23,11 +23,7 @@ target_link_libraries(ksmserver-logout-greeter
     X11::X11
     LayerShellQt::Interface
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(ksmserver-logout-greeter Qt::X11Extras)
-else()
-    target_link_libraries(ksmserver-logout-greeter Qt::GuiPrivate)
-endif()
+target_link_libraries(ksmserver-logout-greeter Qt::GuiPrivate)
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 kdbusaddons_generate_dbus_service_file(ksmserver-logout-greeter org.kde.LogoutPrompt ${KDE_INSTALL_FULL_LIBEXECDIR})
 

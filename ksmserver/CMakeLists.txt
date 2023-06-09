@@ -57,11 +57,7 @@ target_link_libraries(ksmserver
     X11::SM
     X11::ICE
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(ksmserver Qt::X11Extras)
-else()
-    target_link_libraries(ksmserver Qt::GuiPrivate)
-endif()
+target_link_libraries(ksmserver Qt::GuiPrivate)
 
 install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

@@ -68,17 +68,10 @@ endif()
 kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
 
 add_executable(plasmashell)
-if (QT_MAJOR_VERSION EQUAL "5")
-    ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-        BASENAME kde-output-order-v1
-    )
-else()
-    qt6_generate_wayland_protocol_client_sources(plasmashell FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
-    )
-endif()
+qt6_generate_wayland_protocol_client_sources(plasmashell FILES
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+)
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
@@ -125,11 +118,7 @@ target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERS
 
 if(HAVE_X11)
   target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
-  if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(plasmashell Qt::X11Extras)
-  else()
-    target_link_libraries(plasmashell Qt::GuiPrivate)
-  endif()
+  target_link_libraries(plasmashell Qt::GuiPrivate)
 endif()
 
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)

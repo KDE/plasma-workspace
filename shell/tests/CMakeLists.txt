@@ -8,15 +8,8 @@ set(screenpoolmanualtest_SRCS
     ../outputorderwatcher.cpp
     )
 add_executable(screenpoolmanualtest)
-if (QT_MAJOR_VERSION EQUAL "5")
-    ecm_add_qtwayland_client_protocol(screenpoolmanualtest_SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-        BASENAME kde-output-order-v1
-    )
-else()
-    qt6_generate_wayland_protocol_client_sources(screenpoolmanualtest FILES
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml)
-endif()
+qt6_generate_wayland_protocol_client_sources(screenpoolmanualtest FILES
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml)
 
 target_sources(screenpoolmanualtest PRIVATE ${screenpoolmanualtest_SRCS})
 target_link_libraries(screenpoolmanualtest
@@ -32,11 +25,7 @@ target_link_libraries(screenpoolmanualtest
                         )
 if(HAVE_X11)
     target_link_libraries(screenpoolmanualtest XCB::XCB XCB::RANDR)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(screenpoolmanualtest Qt::X11Extras)
-    else()
-        target_link_libraries(screenpoolmanualtest Qt::GuiPrivate)
-    endif()
+    target_link_libraries(screenpoolmanualtest Qt::GuiPrivate)
 endif()
 if(QT_QTOPENGL_FOUND)
     target_link_libraries(screenpoolmanualtest Qt::OpenGL)

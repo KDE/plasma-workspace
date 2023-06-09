@@ -44,11 +44,7 @@ target_link_libraries(gmenudbusmenuproxy
     KF6::WindowSystem
     XCB::XCB
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(gmenudbusmenuproxy Qt::X11Extras)
-else()
-    target_link_libraries(gmenudbusmenuproxy Qt::GuiPrivate)
-endif()
+target_link_libraries(gmenudbusmenuproxy Qt::GuiPrivate)
 
 install(TARGETS gmenudbusmenuproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES gmenudbusmenuproxy.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})

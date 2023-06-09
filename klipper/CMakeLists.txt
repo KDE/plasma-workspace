@@ -54,11 +54,7 @@ target_link_libraries(libklipper_common_static
 
 if (HAVE_X11)
     target_link_libraries(libklipper_common_static XCB::XCB)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(libklipper_common_static Qt::X11Extras)
-    else()
-        target_link_libraries(libklipper_common_static Qt::GuiPrivate)
-    endif()
+    target_link_libraries(libklipper_common_static Qt::GuiPrivate)
 endif()
 
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})

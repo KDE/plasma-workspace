@@ -58,11 +58,7 @@ target_link_libraries(taskmanager
 
 if (HAVE_X11)
     target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(taskmanager PRIVATE Qt::X11Extras)
-    else()
-        target_link_libraries(taskmanager PRIVATE Qt::GuiPrivate)
-    endif()
+    target_link_libraries(taskmanager PRIVATE Qt::GuiPrivate)
 endif()
 
 set_target_properties(taskmanager PROPERTIES

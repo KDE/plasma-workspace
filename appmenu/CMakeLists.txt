@@ -28,17 +28,9 @@ target_link_libraries(appmenu
     PkgConfig::XKBCommon
     dbusmenuqt
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(appmenu Qt::XkbCommonSupportPrivate)
-endif()
-
 if (HAVE_X11)
     target_link_libraries(appmenu XCB::XCB)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(appmenu Qt::X11Extras)
-    else()
-        target_link_libraries(appmenu Qt::GuiPrivate)
-    endif()
+    target_link_libraries(appmenu Qt::GuiPrivate)
 endif()
 
 ecm_qt_declare_logging_category(appmenu
