@@ -63,13 +63,7 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
 
     const QPoint newPos = appletItem->mapToItem(contItem, QPointF(0, 0)).toPoint();
 
-    Plasma::Applet *newApplet = nullptr;
-    QMetaObject::invokeMethod(contItem,
-                              "createApplet",
-                              Q_RETURN_ARG(Plasma::Applet *, newApplet),
-                              Q_ARG(QString, plugin),
-                              Q_ARG(QVariantList, QVariantList()),
-                              Q_ARG(QPoint, newPos));
+    Plasma::Applet *newApplet = cont->createApplet(plugin, {}, QRectF(newPos, QSizeF()));
 
     if (newApplet) {
         newApplet->setGlobalShortcut(shortcut);
