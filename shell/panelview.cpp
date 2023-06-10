@@ -1019,12 +1019,12 @@ bool PanelView::event(QEvent *e)
 
     case QEvent::DragEnter: {
         QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
-        if (!containmentContainsPosition(de->pos()) && !m_fakeEventPending) {
-            QDragEnterEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
+            QDragEnterEvent de2(positionAdjustedForContainment(de->position()).toPoint(),
                                 de->possibleActions(),
                                 de->mimeData(),
-                                de->mouseButtons(),
-                                de->keyboardModifiers());
+                                de->buttons(),
+                                de->modifiers());
 
             m_fakeEventPending = true;
             QCoreApplication::sendEvent(this, &de2);
@@ -1038,12 +1038,8 @@ bool PanelView::event(QEvent *e)
         break;
     case QEvent::DragMove: {
         QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
-        if (!containmentContainsPosition(de->pos()) && !m_fakeEventPending) {
-            QDragMoveEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
-                               de->possibleActions(),
-                               de->mimeData(),
-                               de->mouseButtons(),
-                               de->keyboardModifiers());
+        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
+            QDragMoveEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
 
             m_fakeEventPending = true;
             QCoreApplication::sendEvent(this, &de2);
@@ -1054,12 +1050,8 @@ bool PanelView::event(QEvent *e)
     }
     case QEvent::Drop: {
         QDropEvent *de = static_cast<QDropEvent *>(e);
-        if (!containmentContainsPosition(de->pos()) && !m_fakeEventPending) {
-            QDropEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
-                           de->possibleActions(),
-                           de->mimeData(),
-                           de->mouseButtons(),
-                           de->keyboardModifiers());
+        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
+            QDropEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
 
             m_fakeEventPending = true;
             QCoreApplication::sendEvent(this, &de2);
