@@ -95,10 +95,10 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
             QMouseEvent *me = static_cast<QMouseEvent *>(event);
-            for (auto it = m_dialogs.constBegin(); it != m_dialogs.constEnd(); ++it) {
-                if ((*it)->geometry().contains(me->globalPos())) {
-                    return false;
-                }
+            if (std::any_of(m_dialogs.cbegin(), m_dialogs.cend(), [me](KSMShutdownDlg *dialog) {
+                    return dialog->geometry().contains(me->globalPosition().toPoint());
+                })) {
+                return false;
             }
             // click outside, close
             rejected();
