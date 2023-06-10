@@ -212,10 +212,12 @@ void PowerDevilRunner::addSyntaxForKeyword(const QList<RunnerKeyword> &keywords,
 
 int PowerDevilRunner::matchesScreenBrightnessKeywords(const QString &query) const
 {
-    const static QStringList expressions = {QStringLiteral("screen brightness "),
-                                            i18nc("Note this is a KRunner keyword, it should end with a space", "screen brightness "),
-                                            QStringLiteral("dim screen "),
-                                            i18nc("Note this is a KRunner keyword, it should end with a space", "dim screen ")};
+    const static QStringList expressions = {
+        QStringLiteral("screen brightness "),
+        i18nc("Note this is a KRunner keyword, it should end with a space", "screen brightness "),
+        QStringLiteral("dim screen "),
+        i18nc("Note this is a KRunner keyword, it should end with a space", "dim screen "),
+    };
 
     for (const QString &expression : expressions) {
         if (query.startsWith(expression)) {
