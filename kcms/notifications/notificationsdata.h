@@ -24,7 +24,7 @@ class NotificationsData : public KCModuleData
     Q_OBJECT
 
 public:
-    explicit NotificationsData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit NotificationsData(QObject *parent);
 
     bool isDefaults() const override;
 

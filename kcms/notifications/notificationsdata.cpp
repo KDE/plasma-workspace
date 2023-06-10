@@ -12,8 +12,8 @@
 #include <libnotificationmanager/jobsettings.h>
 #include <libnotificationmanager/notificationsettings.h>
 
-NotificationsData::NotificationsData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+NotificationsData::NotificationsData(QObject *parent)
+    : KCModuleData(parent)
     , m_dndSettings(new NotificationManager::DoNotDisturbSettings(this))
     , m_notificationSettings(new NotificationManager::NotificationSettings(this))
     , m_jobSettings(new NotificationManager::JobSettings(this))
