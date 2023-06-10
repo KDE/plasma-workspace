@@ -975,11 +975,11 @@ bool PanelView::event(QEvent *e)
         // first, don't mess with position if the cursor is actually outside the view:
         // somebody is doing a click and drag that must not break when the cursor i outside
         if (geometry().contains(QCursor::pos(screenToFollow()))) {
-            if (!containmentContainsPosition(me->windowPos()) && !m_fakeEventPending) {
+            if (!containmentContainsPosition(me->scenePosition()) && !m_fakeEventPending) {
                 QMouseEvent me2(me->type(),
-                                positionAdjustedForContainment(me->windowPos()),
-                                positionAdjustedForContainment(me->windowPos()),
-                                positionAdjustedForContainment(me->windowPos()) + position(),
+                                positionAdjustedForContainment(me->scenePosition()),
+                                positionAdjustedForContainment(me->scenePosition()),
+                                positionAdjustedForContainment(me->scenePosition()) + position(),
                                 me->button(),
                                 me->buttons(),
                                 me->modifiers());
