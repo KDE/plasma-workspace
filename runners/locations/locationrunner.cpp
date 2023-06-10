@@ -96,10 +96,8 @@ void LocationsRunner::match(KRunner::RunnerContext &context)
     }
 }
 
-void LocationsRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void LocationsRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context)
-
     auto *job = new KIO::OpenUrlJob(match.data().toUrl());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setRunExecutables(false);

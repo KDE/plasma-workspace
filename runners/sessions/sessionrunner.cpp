@@ -210,9 +210,8 @@ void SessionRunner::match(KRunner::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void SessionRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context);
     if (match.data().type() == QVariant::Int) {
         switch (match.data().toInt()) {
         case LogoutAction:

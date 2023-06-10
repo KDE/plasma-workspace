@@ -82,9 +82,8 @@ QString BookmarksRunner::findBrowserName()
     return exec;
 }
 
-void BookmarksRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action)
+void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &action)
 {
-    Q_UNUSED(context);
     const QString term = action.data().toString();
     QUrl url = QUrl(term);
 

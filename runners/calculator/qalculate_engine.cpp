@@ -209,10 +209,8 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     return m_lastResult;
 }
 
-void QalculateEngine::copyToClipboard(bool flag)
+void QalculateEngine::copyToClipboard()
 {
-    Q_UNUSED(flag);
-
     QApplication::clipboard()->setText(m_lastResult);
 }
 

@@ -153,10 +153,8 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<KRunner::QueryMatch> &ma
     matches.append(match);
 }
 
-void PowerDevilRunner::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context)
-
     QDBusInterface iface(QStringLiteral("org.kde.Solid.PowerManagement"),
                          QStringLiteral("/org/kde/Solid/PowerManagement"),
                          QStringLiteral("org.kde.Solid.PowerManagement"));

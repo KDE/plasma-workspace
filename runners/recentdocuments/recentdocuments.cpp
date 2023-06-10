@@ -103,10 +103,8 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
     }
 }
 
-void RecentDocuments::run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)
+void RecentDocuments::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    Q_UNUSED(context)
-
     const QUrl url = match.data().toUrl();
 
     if (match.selectedAction()) {
