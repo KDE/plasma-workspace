@@ -430,6 +430,16 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
     processActivitiesResults(ResultSet(m_kactivitiesQuery));
+
+    // Load services once per match session. Reloading them for every character is not worth it
+    connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
+        m_services = KApplicationTrader::query([](const KService::Ptr &) {
+            return true;
+        });
+    });
+    connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
+        m_services.clear();
+    });
 }
 
 void ServiceRunner::processActivitiesResults(const ResultSet &results)
@@ -449,12 +459,7 @@ void ServiceRunner::processActivitiesResults(const ResultSet &results)
 
 void ServiceRunner::match(KRunner::RunnerContext &context)
 {
-    KSycoca::disableAutoRebuild();
-    ServiceFinder finder(this,
-                         KApplicationTrader::query([](const KService::Ptr &) {
-                             return true;
-                         }),
-                         m_activitiesConsuer.currentActivity());
+    ServiceFinder finder(this, m_services, m_activitiesConsuer.currentActivity());
     finder.match(context);
 }
 
@@ -489,3 +494,7 @@ void ServiceRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
     job->setUiDelegate(delegate);
     job->start();
 }
+
+K_PLUGIN_CLASS_WITH_JSON(ServiceRunner, "plasma-runner-services.json")
+
+#include "servicerunner.moc"

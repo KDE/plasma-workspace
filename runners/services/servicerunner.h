@@ -46,4 +46,5 @@ private:
     const Query m_kactivitiesQuery;
     const ResultWatcher m_kactivitiesWatcher;
     const KActivities::Consumer m_activitiesConsuer;
+    QList<KService::Ptr> m_services;
 };

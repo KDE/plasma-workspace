@@ -13,16 +13,15 @@
 #include <QTest>
 #include <QThread>
 
+#include <KRunner/AbstractRunnerTest>
 #include <KSycoca>
-
-#include "../servicerunner.h"
 
 #include <clocale>
 #include <optional>
 #include <sys/types.h>
 #include <unistd.h>
 
-class ServiceRunnerTest : public QObject
+class ServiceRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
 private Q_SLOTS:
@@ -63,6 +62,9 @@ void ServiceRunnerTest::initTestCase()
     QVERIFY(setenv("XDG_CURRENT_DESKTOP", "KDE", 1) == 0);
     // NOTE: noDisplay also includes X-KDE-OnlyShowOnQtPlatforms which is a bit harder to fake
     //       and not currently under testing anyway.
+
+    // Init the KRunner test properties
+    initProperties();
 }
 
 void ServiceRunnerTest::cleanupTestCase()
@@ -71,12 +73,9 @@ void ServiceRunnerTest::cleanupTestCase()
 
 void ServiceRunnerTest::testExcutableExactMatch()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-    context.setQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
+    launchQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
 
-    runner.match(context);
-    auto matches = context.matches();
+    auto matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
     }));
@@ -85,15 +84,11 @@ void ServiceRunnerTest::testExcutableExactMatch()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-    context.setQuery(QStringLiteral("kons"));
-
-    runner.match(context);
+    launchQuery(QStringLiteral("kons"));
 
     bool konsoleFound = false;
     bool yakuakeFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
@@ -120,17 +115,14 @@ void ServiceRunnerTest::testSystemSettings()
     // first it will be added to the seen cache, however disqualification of already seen items
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-    context.setQuery(QStringLiteral("settings"));
-
-    runner.match(context);
+    manager->matchSessionComplete();
+    launchQuery(QStringLiteral("settings"));
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
-        qDebug() << "matched" << match.text();
+        qDebug() << "matched" << match;
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
             systemSettingsFound = true;
         }
@@ -144,15 +136,11 @@ void ServiceRunnerTest::testSystemSettings()
 
 void ServiceRunnerTest::testSystemSettings2()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-    context.setQuery(QStringLiteral("sy"));
-
-    runner.match(context);
+    launchQuery(QStringLiteral("sy"));
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
@@ -168,61 +156,48 @@ void ServiceRunnerTest::testSystemSettings2()
 
 void ServiceRunnerTest::testCategories()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-
-    context.setQuery(QStringLiteral("System"));
-    runner.match(context);
-    auto matches = context.matches();
+    launchQuery(QStringLiteral("System"));
+    auto matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
     }));
 
     // Multiple categories, this should still match, but now as relevant
-    context.setQuery(QStringLiteral("System KDE TerminalEmulator"));
-    runner.match(context);
-    matches = context.matches();
+    launchQuery(QStringLiteral("System KDE TerminalEmulator"));
+    matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.44;
     }));
 
     // Multiple categories but at least one doesn't match
-    context.setQuery(QStringLiteral("System KDE Office"));
-    runner.match(context);
-    matches = context.matches();
+    launchQuery(QStringLiteral("System KDE Office"));
+    matches = manager->matches();
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
 
     // Query too short to match any category
-    context.setQuery(QStringLiteral("Dumm"));
-    runner.match(context);
-    matches = context.matches();
+    launchQuery(QStringLiteral("Dumm"));
+    matches = manager->matches();
     QVERIFY(matches.isEmpty());
 }
 
 void ServiceRunnerTest::testJumpListActions()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-
-    context.setQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
-    runner.match(context);
-    auto matches = context.matches();
+    launchQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
+    auto matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.65;
     }));
 
-    context.setQuery(QStringLiteral("new window"));
-    runner.match(context);
-    matches = context.matches();
+    launchQuery(QStringLiteral("new window"));
+    matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.5;
     }));
 
-    context.setQuery(QStringLiteral("new windows"));
-    runner.match(context);
-    matches = context.matches();
+    launchQuery(QStringLiteral("new windows"));
+    matches = manager->matches();
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest");
     }));
@@ -242,35 +217,16 @@ void ServiceRunnerTest::testINotifyUsage()
     };
 
     const uint originalCount = inotifyCount();
-
     // We'll run this in a new thread so KDirWatch would be led to create a new thread-local watch instance.
     // The expectation here is that this KDW instance is not persistently claiming an inotify instance.
-    bool inotifyCountCool = false;
-    auto thread = QThread::create([&] {
-        ServiceRunner runner(nullptr, KPluginMetaData());
-        KRunner::RunnerContext context;
-        context.setQuery(QStringLiteral("settings"));
-
-        runner.match(context);
-
-        QCOMPARE(inotifyCount(), originalCount);
-        inotifyCountCool = true;
-    });
-    thread->start();
-    thread->wait();
-    thread->deleteLater();
-
-    QVERIFY(inotifyCountCool);
+    launchQuery(QStringLiteral("settings"));
+    QCOMPARE(inotifyCount(), originalCount);
 }
 
 void ServiceRunnerTest::testSpecialArgs()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-
-    context.setQuery(QStringLiteral("kpat"));
-    runner.match(context);
-    auto matches = context.matches();
+    launchQuery(QStringLiteral("kpat"));
+    auto matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Should have no -qwindowtitle at the end. Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
@@ -279,12 +235,8 @@ void ServiceRunnerTest::testSpecialArgs()
 
 void ServiceRunnerTest::testEnv()
 {
-    ServiceRunner runner(this, KPluginMetaData());
-    KRunner::RunnerContext context;
-
-    context.setQuery(QStringLiteral("audacity"));
-    runner.match(context);
-    auto matches = context.matches();
+    launchQuery(QStringLiteral("audacity"));
+    auto matches = manager->matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
