@@ -73,7 +73,7 @@ void MaskMouseArea::mousePressEvent(QMouseEvent *event)
 
 void MaskMouseArea::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (!contains(event->localPos())) {
+    if (!contains(event->position())) {
         return;
     }
 
