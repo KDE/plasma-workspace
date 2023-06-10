@@ -193,7 +193,7 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
         }
     }
 
-    menu.exec(ev->globalPos());
+    menu.exec(ev->globalPosition().toPoint());
     ev->setAccepted(true);
 }
 
