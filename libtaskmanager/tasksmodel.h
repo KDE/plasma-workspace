@@ -226,7 +226,7 @@ public:
      * if this returns @c true.
      *
      * @see setFilterByScreen
-     * @see setScreen
+     * @see setScreenGeometry
      * @returns @c true if tasks should be filtered by screen.
      **/
     bool filterByScreen() const;
@@ -238,7 +238,7 @@ public:
      * if this is set to @c true.
      *
      * @see filterByScreen
-     * @see setScreen
+     * @see setScreenGeometry
      * @param filter Whether tasks should be filtered by screen.
      **/
     void setFilterByScreen(bool filter);
@@ -251,7 +251,7 @@ public:
      *
      * @see setFilterByActivity
      * @see setActivity
-     * @returns @ctrue if tasks should be filtered by activity.
+     * @returns @c true if tasks should be filtered by activity.
      **/
     bool filterByActivity() const;
 
@@ -259,7 +259,7 @@ public:
      * Set whether tasks should be filtered by activity. Defaults to
      * @c false.
      *
-     * Filtering by virtual desktop only happens if an activity id is set,
+     * Filtering by activity only happens if an activity id is set,
      * even if this is set to @c true.
      *
      * @see filterByActivity
