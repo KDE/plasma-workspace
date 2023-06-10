@@ -1125,7 +1125,7 @@ void PanelView::updateMask()
         QQuickItem *rootObject = this->rootObject();
         if (rootObject) {
             const QVariant maskProperty = rootObject->property("panelMask");
-            if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
+            if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
                 mask = maskProperty.value<QRegion>();
                 mask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
             }
@@ -1358,7 +1358,7 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         }
 
         const QVariant maskProperty = rootObject->property("panelMask");
-        if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
+        if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
             connect(rootObject, SIGNAL(panelMaskChanged()), this, SLOT(updateMask()));
             updateMask();
         }
