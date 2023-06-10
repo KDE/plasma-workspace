@@ -125,7 +125,7 @@ void ResizeHandle::mousePressEvent(QMouseEvent *event)
     if (!itemContainer) {
         return;
     }
-    m_mouseDownPosition = event->windowPos();
+    m_mouseDownPosition = event->scenePosition();
     m_mouseDownGeometry = QRectF(itemContainer->x(), itemContainer->y(), itemContainer->width(), itemContainer->height());
     setResizeBlocked(false, false);
     setPressed(true);
@@ -146,7 +146,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
     }
 
     layout->releaseSpace(itemContainer);
-    const QPointF difference = m_mouseDownPosition - event->windowPos();
+    const QPointF difference = m_mouseDownPosition - event->scenePosition();
 
     QSizeF minimumSize = QSize(layout->minimumItemWidth(), layout->minimumItemHeight());
     if (itemContainer->layoutAttached()) {

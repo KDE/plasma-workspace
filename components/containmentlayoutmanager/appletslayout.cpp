@@ -637,7 +637,7 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
     }
 
     m_mouseDownWasEditMode = m_editMode;
-    m_mouseDownPosition = event->windowPos();
+    m_mouseDownPosition = event->scenePosition();
 }
 
 void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
@@ -646,7 +646,7 @@ void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if (!m_editMode && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+    if (!m_editMode && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
         m_pressAndHoldTimer->stop();
     }
 }
@@ -660,7 +660,7 @@ void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
         // touch events, as we want a different behavior between desktop
         // and tablet mode
         && (event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)
-        && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
+        && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
         setEditMode(false);
     }
 

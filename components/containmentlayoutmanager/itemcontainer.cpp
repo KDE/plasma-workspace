@@ -466,8 +466,8 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         } else if (m_editModeCondition == AfterPressAndHold) {
             m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
         }
-        m_lastMousePosition = me->windowPos();
-        m_mouseDownPosition = me->windowPos();
+        m_lastMousePosition = me->scenePosition();
+        m_mouseDownPosition = me->scenePosition();
 
         if (m_editMode && !wasEditMode) {
             event->accept();
@@ -477,7 +477,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
     } else if (event->type() == QEvent::MouseMove) {
         QMouseEvent *me = static_cast<QMouseEvent *>(event);
 
-        if (!m_editMode && QPointF(me->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+        if (!m_editMode && QPointF(me->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
             m_editModeTimer->stop();
         } else if (m_editMode) {
             event->accept();
@@ -525,8 +525,8 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
     }
 
-    m_lastMousePosition = event->windowPos();
-    m_mouseDownPosition = event->windowPos();
+    m_lastMousePosition = event->scenePosition();
+    m_mouseDownPosition = event->scenePosition();
     event->accept();
 }
 
@@ -562,7 +562,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if (!m_editMode && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+    if (!m_editMode && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
         if (m_editModeCondition == AfterPress) {
             setEditMode(true);
         } else {
@@ -581,7 +581,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         Q_EMIT dragActiveChanged();
 
     } else {
-        setPosition(QPointF(x() + event->windowPos().x() - m_lastMousePosition.x(), y() + event->windowPos().y() - m_lastMousePosition.y()));
+        setPosition(QPointF(x() + event->scenePosition().x() - m_lastMousePosition.x(), y() + event->scenePosition().y() - m_lastMousePosition.y()));
 
         if (m_layout) {
             m_layout->showPlaceHolderForItem(this);
@@ -589,7 +589,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
 
         Q_EMIT userDrag(QPointF(x(), y()), event->pos());
     }
-    m_lastMousePosition = event->windowPos();
+    m_lastMousePosition = event->scenePosition();
     event->accept();
 }
 
