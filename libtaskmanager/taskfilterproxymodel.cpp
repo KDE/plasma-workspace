@@ -9,6 +9,14 @@
 
 #include "launchertasksmodel_p.h"
 
+#include "config-X11.h"
+#if HAVE_X11
+#include <QGuiApplication>
+#include <QScreen>
+
+#include <KWindowSystem>
+#endif
+
 namespace TaskManager
 {
 class Q_DECL_HIDDEN TaskFilterProxyModel::Private
@@ -20,11 +28,13 @@ public:
 
     QVariant virtualDesktop;
     QRect screenGeometry;
+    QRect regionGeometry;
     QString activity;
 
     bool filterByVirtualDesktop = false;
     bool filterByScreen = false;
     bool filterByActivity = false;
+    RegionFilterMode::Mode filterByRegion = RegionFilterMode::Mode::Disabled;
     bool filterMinimized = false;
     bool filterNotMinimized = false;
     bool filterNotMaximized = false;
@@ -92,6 +102,25 @@ void TaskFilterProxyModel::setScreenGeometry(const QRect &geometry)
     }
 }
 
+QRect TaskFilterProxyModel::regionGeometry() const
+{
+    return d->regionGeometry;
+}
+
+void TaskFilterProxyModel::setRegionGeometry(const QRect &geometry)
+{
+    if (d->regionGeometry == geometry) {
+        return;
+    }
+    d->regionGeometry = geometry;
+
+    if (d->filterByRegion != RegionFilterMode::Mode::Disabled) {
+        invalidateFilter();
+    }
+
+    Q_EMIT regionGeometryChanged();
+}
+
 QString TaskFilterProxyModel::activity() const
 {
     return d->activity;
@@ -156,6 +185,22 @@ void TaskFilterProxyModel::setFilterByActivity(bool filter)
 
         Q_EMIT filterByActivityChanged();
     }
+}
+
+RegionFilterMode::Mode TaskFilterProxyModel::filterByRegion() const
+{
+    return d->filterByRegion;
+}
+
+void TaskFilterProxyModel::setFilterByRegion(RegionFilterMode::Mode mode)
+{
+    if (d->filterByRegion == mode) {
+        return;
+    }
+
+    d->filterByRegion = mode;
+    invalidateFilter();
+    Q_EMIT filterByActivityChanged();
 }
 
 bool TaskFilterProxyModel::filterMinimized() const
@@ -312,6 +357,47 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 
         if (screenGeometry.isValid() && screenGeometry != d->screenGeometry) {
             return false;
+        }
+    }
+
+    // Filter by region
+    if (d->filterByRegion != RegionFilterMode::Mode::Disabled && d->regionGeometry.isValid()) {
+        QRect windowGeometry = sourceIdx.data(AbstractTasksModel::Geometry).toRect();
+
+        if (windowGeometry.isValid()) {
+#if HAVE_X11
+            static const bool isX11 = KWindowSystem::isPlatformX11();
+            if (isX11) {
+                const double devicePixelRatio = qGuiApp->primaryScreen()->devicePixelRatio();
+                const QRect screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
+                const QPoint screenTopLeft = screenGeometry.topLeft();
+                const QPoint windowTopLeft =
+                    screenTopLeft + QPoint(windowGeometry.x() - screenTopLeft.x(), windowGeometry.y() - screenTopLeft.y()) / devicePixelRatio;
+                windowGeometry = QRect(windowTopLeft, windowGeometry.size() / devicePixelRatio);
+            }
+#endif
+            switch (d->filterByRegion) {
+            case RegionFilterMode::Mode::Inside: {
+                if (!d->regionGeometry.contains(windowGeometry)) {
+                    return false;
+                }
+                break;
+            }
+            case RegionFilterMode::Mode::Intersect: {
+                if (!d->regionGeometry.intersects(windowGeometry)) {
+                    return false;
+                }
+                break;
+            }
+            case RegionFilterMode::Mode::Outside: {
+                if (d->regionGeometry.contains(windowGeometry)) {
+                    return false;
+                }
+                break;
+            }
+            default:
+                break;
+            }
         }
     }
 

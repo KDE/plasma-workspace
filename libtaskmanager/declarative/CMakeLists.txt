@@ -1,6 +1,9 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-add_library(taskmanagerplugin SHARED taskmanagerplugin.cpp)
+add_library(taskmanagerplugin SHARED
+    taskmanagerplugin.cpp
+    ../regionfiltermode.h
+)
 
 target_link_libraries(taskmanagerplugin taskmanager)
 

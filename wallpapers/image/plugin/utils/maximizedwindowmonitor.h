@@ -21,17 +21,9 @@ class MaximizedWindowMonitor : public TaskManager::TasksModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QRect targetRect READ targetRect WRITE setTargetRect NOTIFY targetRectChanged)
-
 public:
     explicit MaximizedWindowMonitor(QObject *parent = nullptr);
     ~MaximizedWindowMonitor();
-
-    QRect targetRect() const;
-    void setTargetRect(const QRect &rect);
-
-Q_SIGNALS:
-    void targetRectChanged();
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -39,6 +31,4 @@ protected:
 private:
     std::shared_ptr<TaskManager::ActivityInfo> m_activityInfo;
     std::shared_ptr<TaskManager::VirtualDesktopInfo> m_virtualDesktopInfo;
-
-    QRect m_geometry;
 };

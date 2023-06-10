@@ -38,6 +38,9 @@ void TaskManagerPlugin::registerTypes(const char *uri)
 #endif
     qmlRegisterType<ScreencastingRequest>(uri, 0, 1, "ScreencastingRequest");
     qmlRegisterUncreatableType<Screencasting>(uri, 0, 1, "Screencasting", "Use ScreencastingItem");
+
+    const QString reason = QStringLiteral("error: only enums");
+    qmlRegisterUncreatableMetaObject(RegionFilterMode::staticMetaObject, uri, 0, 1, "RegionFilterMode", reason);
 }
 
 }

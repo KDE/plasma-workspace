@@ -33,27 +33,11 @@ MaximizedWindowMonitor::MaximizedWindowMonitor(QObject *parent)
     setFilterMinimized(true);
     setFilterByActivity(true);
     setFilterByVirtualDesktop(true);
+    setFilterByRegion(RegionFilterMode::Mode::Intersect);
 }
 
 MaximizedWindowMonitor::~MaximizedWindowMonitor()
 {
-}
-
-QRect MaximizedWindowMonitor::targetRect() const
-{
-    return m_geometry;
-}
-
-void MaximizedWindowMonitor::setTargetRect(const QRect &rect)
-{
-    if (m_geometry == rect) {
-        return;
-    }
-
-    m_geometry = rect;
-    Q_EMIT targetRectChanged();
-
-    invalidateFilter();
 }
 
 bool MaximizedWindowMonitor::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
@@ -61,14 +45,6 @@ bool MaximizedWindowMonitor::filterAcceptsRow(int sourceRow, const QModelIndex &
     const QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0);
 
     if (!TaskManager::TasksModel::filterAcceptsRow(sourceRow, sourceParent)) {
-        return false;
-    }
-
-    // Filter windows on the screen where the wallpaper plugin is on
-    const QRect windowGeometry = sourceIndex.data(TaskManager::AbstractTasksModel::Geometry).toRect();
-
-    // Use intersects so the geometry doesn't need be multiplied by devicePixelRatio
-    if (!m_geometry.intersects(windowGeometry)) {
         return false;
     }
 

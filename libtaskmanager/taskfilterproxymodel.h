@@ -12,6 +12,7 @@
 #include <memory>
 
 #include "abstracttasksproxymodeliface.h"
+#include "regionfiltermode.h"
 
 #include "taskmanager_export.h"
 
@@ -33,11 +34,13 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
 
     Q_PROPERTY(QVariant virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
+    Q_PROPERTY(QRect regionGeometry READ regionGeometry WRITE setRegionGeometry NOTIFY regionGeometryChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
+    Q_PROPERTY(RegionFilterMode::Mode filterByRegion READ filterByRegion WRITE setFilterByRegion NOTIFY filterByRegionChanged)
     Q_PROPERTY(bool filterMinimized READ filterMinimized WRITE setFilterMinimized NOTIFY filterMinimizedChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
     Q_PROPERTY(bool filterNotMaximized READ filterNotMaximized WRITE setFilterNotMaximized NOTIFY filterNotMaximizedChanged)
@@ -93,6 +96,27 @@ public:
      * @param geometry A screen geometry.
      **/
     void setScreenGeometry(const QRect &geometry);
+
+    /**
+     * The geometry of the region used in filtering by region. Defaults
+     * to a null QRect.
+     *
+     * @see setRegionGeometry
+     * @since 6.0
+     * @returns the geometry of the region used in filtering.
+     **/
+    QRect regionGeometry() const;
+
+    /**
+     * Set the geometry of the screen to use in filtering by region.
+     *
+     * If set to an invalid QRect, filtering by region is disabled.
+     *
+     * @see regionGeometry
+     * @since 6.0
+     * @param geometry A region geometry.
+     **/
+    void setRegionGeometry(const QRect &geometry);
 
     /**
      * The id of the activity used in filtering by activity. Usually
@@ -184,6 +208,35 @@ public:
      * @param filter Whether tasks should be filtered by activity.
      **/
     void setFilterByActivity(bool filter);
+
+    /**
+     * Whether tasks should be filtered by region. Defaults to @c RegionFilterMode::Disabled.
+     *
+     * Filtering by region only happens if a region is set, even
+     * if the filter is enabled.
+     *
+     * @see RegionFilterMode
+     * @see setFilterByRegion
+     * @see setRegionGeometry
+     * @since 6.0
+     * @returns Region filter mode.
+     **/
+    RegionFilterMode::Mode filterByRegion() const;
+
+    /**
+     * Set whether tasks should be filtered by region. Defaults to
+     * @c RegionFilterMode::Disabled.
+     *
+     * Filtering by region only happens if a region is set,
+     * even if the filter is enabled.
+     *
+     * @see RegionFilterMode
+     * @see filterByRegion
+     * @see setRegionGeometry
+     * @since 6.0
+     * @param mode Region filter mode.
+     **/
+    void setFilterByRegion(RegionFilterMode::Mode mode);
 
     /**
      * Whether minimized tasks should be filtered out. Defaults to
@@ -323,10 +376,12 @@ public:
 Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;
+    void regionGeometryChanged();
     void activityChanged() const;
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
+    void filterByRegionChanged();
     void filterMinimizedChanged();
     void filterNotMinimizedChanged() const;
     void filterNotMaximizedChanged() const;

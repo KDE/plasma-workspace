@@ -21,7 +21,7 @@ BaseMediaComponent {
 
     PlasmaWallpaper.MaximizedWindowMonitor {
         id: activeWindowMonitor
-        targetRect: animatedImageComponent.desktopRect
+        regionGeometry: animatedImageComponent.desktopRect
     }
 
     AnimatedImage {

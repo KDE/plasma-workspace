@@ -12,6 +12,7 @@ set(taskmanager_LIB_SRCS
     flattentaskgroupsproxymodel.cpp
     launchertasksmodel.cpp
     startuptasksmodel.cpp
+    regionfiltermode.h
     taskfilterproxymodel.cpp
     taskgroupingproxymodel.cpp
     tasksmodel.cpp
@@ -86,6 +87,7 @@ install(FILES
     concatenatetasksproxymodel.h
     flattentaskgroupsproxymodel.h
     launchertasksmodel.h
+    regionfiltermode.h
     startuptasksmodel.h
     taskfilterproxymodel.h
     taskgroupingproxymodel.h

@@ -267,10 +267,12 @@ void TasksModel::Private::initModels()
     filterProxyModel->setSourceModel(concatProxyModel);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::virtualDesktopChanged, q, &TasksModel::virtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::screenGeometryChanged, q, &TasksModel::screenGeometryChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::regionGeometryChanged, q, &TasksModel::regionGeometryChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::activityChanged, q, &TasksModel::activityChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByVirtualDesktopChanged, q, &TasksModel::filterByVirtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByScreenChanged, q, &TasksModel::filterByScreenChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByActivityChanged, q, &TasksModel::filterByActivityChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByRegionChanged, q, &TasksModel::filterByRegionChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterMinimizedChanged, q, &TasksModel::filterMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMinimizedChanged, q, &TasksModel::filterNotMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMaximizedChanged, q, &TasksModel::filterNotMaximizedChanged);
@@ -1098,6 +1100,16 @@ void TasksModel::setScreenGeometry(const QRect &geometry)
     d->filterProxyModel->setScreenGeometry(geometry);
 }
 
+QRect TasksModel::regionGeometry() const
+{
+    return d->filterProxyModel->regionGeometry();
+}
+
+void TasksModel::setRegionGeometry(const QRect &geometry)
+{
+    d->filterProxyModel->setRegionGeometry(geometry);
+}
+
 QString TasksModel::activity() const
 {
     return d->filterProxyModel->activity();
@@ -1136,6 +1148,16 @@ bool TasksModel::filterByActivity() const
 void TasksModel::setFilterByActivity(bool filter)
 {
     d->filterProxyModel->setFilterByActivity(filter);
+}
+
+RegionFilterMode::Mode TasksModel::filterByRegion() const
+{
+    return d->filterProxyModel->filterByRegion();
+}
+
+void TasksModel::setFilterByRegion(RegionFilterMode::Mode mode)
+{
+    d->filterProxyModel->setFilterByRegion(mode);
 }
 
 bool TasksModel::filterMinimized() const
