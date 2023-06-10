@@ -7,15 +7,17 @@
 #include "suncalc.h"
 #include "colorcorrectconstants.h"
 
+#include <cmath>
+#include <numbers>
+
 #include <QDateTime>
-#include <qmath.h>
 
 namespace ColorCorrect
 {
-static const double TWILIGHT_NAUT = -12.0;
-static const double TWILIGHT_CIVIL = -6.0;
-static const double SUN_RISE_SET = -0.833;
-static const double SUN_HIGH = 2.0;
+inline constexpr double TWILIGHT_NAUT = -12.0;
+inline constexpr double TWILIGHT_CIVIL = -6.0;
+inline constexpr double SUN_RISE_SET = -0.833;
+inline constexpr double SUN_HIGH = 2.0;
 
 QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
 {
@@ -23,8 +25,8 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     // accuracy: +/- 5min
 
     // positioning
-    const double rad = M_PI / 180.;
-    const double earthObliquity = 23.4397; // epsilon
+    constexpr double rad = std::numbers::pi / 180.;
+    constexpr double earthObliquity = 23.4397; // epsilon
 
     const double lat = latitude; // phi
     const double lng = -longitude; // lw
@@ -32,27 +34,27 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     // times
     QDate prompt = QDate::currentDate();
     const double juPrompt = prompt.toJulianDay(); // J
-    const double ju2000 = 2451545.; // J2000
+    constexpr double ju2000 = 2451545.; // J2000
 
     // geometry
     auto mod360 = [](double number) -> double {
         return std::fmod(number, 360.);
     };
 
-    auto sin = [&rad](double angle) -> double {
+    auto sin = [](double angle) -> double {
         return std::sin(angle * rad);
     };
-    auto cos = [&rad](double angle) -> double {
+    auto cos = [](double angle) -> double {
         return std::cos(angle * rad);
     };
-    auto asin = [&rad](double val) -> double {
+    auto asin = [](double val) -> double {
         return std::asin(val) / rad;
     };
-    auto acos = [&rad](double val) -> double {
+    auto acos = [](double val) -> double {
         return std::acos(val) / rad;
     };
 
-    auto anomaly = [&](const double date) -> double { // M
+    auto anomaly = [&mod360](const double date) -> double { // M
         return mod360(357.5291 + 0.98560028 * (date - ju2000));
     };
 
