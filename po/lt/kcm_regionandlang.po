@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-16 02:15+0000\n"
+"POT-Creation-Date: 2023-06-10 02:09+0000\n"
 "PO-Revision-Date: 2023-02-16 01:01+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -308,14 +308,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr ""
 
-#: localelistmodel.cpp:163
+#: localelistmodel.cpp:164
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr ""
 
-#: localelistmodel.cpp:166
+#: localelistmodel.cpp:167
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
@@ -376,13 +376,13 @@ msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr ""
 
-#: optionsmodel.cpp:114 optionsmodel.cpp:295
+#: optionsmodel.cpp:114 optionsmodel.cpp:304
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr ""
 
-#: optionsmodel.cpp:297
+#: optionsmodel.cpp:306
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
