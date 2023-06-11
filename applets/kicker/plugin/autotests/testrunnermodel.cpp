@@ -12,14 +12,43 @@
 #include <QAbstractItemModelTester>
 #include <QtTest>
 
+#include <KSycoca>
+
+static const QString s_keyword = QStringLiteral("audacity");
+
 class TestRunnerModel : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase();
+    void cleanupTestCase();
+
     void testQuery();
     void testDeleteWhenEmpty();
     void testMergeResults();
 };
+
+void TestRunnerModel::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
+
+    QFileInfo desktopFile(QFINDTESTDATA("../../../../runners/services/autotests/fixtures/audacity.desktop"));
+    QVERIFY(desktopFile.exists());
+    const QString appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
+    QDir(appsPath).removeRecursively();
+    QVERIFY(QDir().mkpath(appsPath));
+    QVERIFY(QFile::copy(desktopFile.absoluteFilePath(), appsPath + QDir::separator() + desktopFile.fileName()));
+
+    QSignalSpy databaseChangedSpy(KSycoca::self(), &KSycoca::databaseChanged);
+    KSycoca::self()->ensureCacheValid();
+    databaseChangedSpy.wait(2500);
+}
+
+void TestRunnerModel::cleanupTestCase()
+{
+    const QString appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
+    QDir(appsPath).removeRecursively();
+}
 
 void TestRunnerModel::testQuery()
 {
@@ -29,7 +58,7 @@ void TestRunnerModel::testQuery()
     QSignalSpy queryFinishedSpy(model.get(), &RunnerModel::queryFinished);
 
     // Searching for a really basic string should at least show some results.
-    model->setQuery(QStringLiteral("a"));
+    model->setQuery(s_keyword);
 
     queryFinishedSpy.wait();
     QVERIFY(model->count() > 0);
@@ -67,7 +96,7 @@ void TestRunnerModel::testDeleteWhenEmpty()
     QSignalSpy countChangedSpy(model.get(), &RunnerModel::countChanged);
 
     // Searching for a really basic string should at least show some results.
-    model->setQuery(QStringLiteral("a"));
+    model->setQuery(s_keyword);
     QTRY_VERIFY(model->count() > 0);
     QCOMPARE(countChangedSpy.count(), 1);
     QCOMPARE(model->count(), model->rowCount());
@@ -80,7 +109,7 @@ void TestRunnerModel::testDeleteWhenEmpty()
     QCOMPARE(model->count(), model->rowCount());
 
     // Repeat the query so the model has some results.
-    model->setQuery(QStringLiteral("a"));
+    model->setQuery(s_keyword);
     QTRY_VERIFY(model->count() > 0);
     QCOMPARE(countChangedSpy.count(), 3);
     QCOMPARE(model->count(), model->rowCount());
@@ -100,7 +129,7 @@ void TestRunnerModel::testMergeResults()
     QSignalSpy countChangedSpy(model.get(), &RunnerModel::countChanged);
 
     // A basic query should return some results.
-    model->setQuery(QStringLiteral("a"));
+    model->setQuery(s_keyword);
     QTRY_VERIFY(model->count() > 0);
     QCOMPARE(countChangedSpy.count(), 1);
     QCOMPARE(model->count(), model->rowCount());
