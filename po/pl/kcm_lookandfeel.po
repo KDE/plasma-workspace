@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-02-04 08:34+0100\n"
+"PO-Revision-Date: 2023-06-10 09:20+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -213,16 +213,14 @@ msgid "Application Style"
 msgstr "Wygląd programów"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "Wygląd okien"
+msgstr "Wygląd ozdób okiennych"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Wygląd okien"
+msgstr "Rozmiar ozdób okiennych"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

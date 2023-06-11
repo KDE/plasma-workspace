@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-09 02:14+0000\n"
-"PO-Revision-Date: 2023-01-14 16:02+0100\n"
+"PO-Revision-Date: 2023-05-29 01:50+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -187,115 +187,112 @@ msgstr "Installazione non riuscita"
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilità"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Avviatori di applicazioni"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Data e ora"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Strumenti di sviluppo"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Istruzione"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Ambiente e meteo"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Esempi"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Filesystem"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Luigi Toscano"
+msgstr "Divertimento e giochi"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafica"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Lingua"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Mappe"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Varie"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Servizi in rete"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produttività"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Informazioni di sistema"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Accessori"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Finestre e attività"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Appunti"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:133
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Attività"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:149
 #, kde-format
