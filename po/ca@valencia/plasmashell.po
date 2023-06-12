@@ -292,6 +292,3 @@ msgstr "Nombre de quadros"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els quadros"
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"

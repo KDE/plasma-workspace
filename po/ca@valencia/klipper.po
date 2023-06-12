@@ -973,10 +973,3 @@ msgstr "Desactiva este emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Edita el contingut…"
-
-#~ msgid "Edit Contents"
-#~ msgstr "Edita el contingut"

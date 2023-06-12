@@ -315,6 +315,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "S'ha produït un error en intentar obrir el fitxer de configuració "
 "«kscreenlockerrc»."
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Fitxer de fons de pantalla recomanat"

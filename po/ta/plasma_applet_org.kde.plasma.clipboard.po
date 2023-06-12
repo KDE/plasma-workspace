@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-05 02:00+0000\n"
-"PO-Revision-Date: 2021-12-16 21:55+0530\n"
+"PO-Revision-Date: 2023-06-11 17:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: contents/ui/BarcodePage.qml:35
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "QR குறியீட்டை உருவாக்குதல் �
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "QR குறியை காட்ட போதிய இடம் இல்லை. இச்சாளரத்தை பெரிதாக்கி பாருங்கள்."
 
 #: contents/ui/clipboard.qml:28
 #, kde-format

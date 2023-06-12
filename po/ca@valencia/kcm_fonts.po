@@ -363,6 +363,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccioneu el tipus de lletra"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Força els ppp dels tipus de lletra a Wayland"
