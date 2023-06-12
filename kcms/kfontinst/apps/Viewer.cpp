@@ -28,9 +28,7 @@ namespace KFI
 {
 CViewer::CViewer()
 {
-    const auto result =
-        KPluginFactory::instantiatePlugin<KParts::ReadOnlyPart>(KPluginMetaData(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts/kfontviewpart")),
-                                                                this);
+    const auto result = KPluginFactory::instantiatePlugin<KParts::ReadOnlyPart>(KPluginMetaData(QStringLiteral("kf6/parts/kfontviewpart")), this);
 
     if (!result) {
         qCWarning(KFONTVIEW_DEBUG) << "Error loading kfontviewpart:" << result.errorString;

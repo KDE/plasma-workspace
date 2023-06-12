@@ -119,9 +119,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     editorLayout->addWidget(toolBar);
 
     auto tryLoadingKatePart = [=, this]() -> KTextEditor::Document * {
-        const auto loadResult =
-            KPluginFactory::instantiatePlugin<KTextEditor::Document>(KPluginMetaData(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts/katepart")),
-                                                                     this);
+        const auto loadResult = KPluginFactory::instantiatePlugin<KTextEditor::Document>(KPluginMetaData(QStringLiteral("kf6/parts/katepart")), this);
         if (!loadResult) {
             qWarning() << "Error loading katepart plugin:" << loadResult.errorString;
             return nullptr;

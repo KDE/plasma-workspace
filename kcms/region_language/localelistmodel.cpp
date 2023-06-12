@@ -59,8 +59,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         if (split.size() > 1) {
             countryCode = split[1].toLower();
         }
-        auto flagIconPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                   QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/locale/countries/%1/flag.png").arg(countryCode));
+        auto flagIconPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf6/locale/countries/%1/flag.png").arg(countryCode));
         return flagIconPath;
     }
     case DisplayName: {
