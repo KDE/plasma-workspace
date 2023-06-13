@@ -273,6 +273,7 @@ ColumnLayout {
         id: fontDialog
         title: i18nc("@title:window", "Choose a Font")
         modality: Qt.WindowModal
+        parentWindow: appearancePage.Window.window
 
         property font fontChosen: Qt.font()
 
