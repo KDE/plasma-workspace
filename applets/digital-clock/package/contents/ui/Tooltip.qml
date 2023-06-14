@@ -50,7 +50,7 @@ Item {
 
         spacing: 0
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             id: tooltipMaintext
 
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)

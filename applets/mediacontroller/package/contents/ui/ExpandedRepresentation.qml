@@ -16,7 +16,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.coreaddons 1.0 as KCoreAddons
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import Qt5Compat.GraphicalEffects
 
 PlasmaExtras.Representation {
@@ -300,11 +300,6 @@ PlasmaExtras.Representation {
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
 
-                /*
-                    * We use Kirigami.Heading instead of PlasmaExtras.Heading
-                    * to prevent a binding loop caused by the PC2 Label component
-                    * used by PlasmaExtras.Heading
-                    */
                 Kirigami.Heading { // Song Title
                     id: songTitle
                     level: 1

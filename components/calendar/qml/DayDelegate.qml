@@ -152,7 +152,7 @@ PlasmaComponents3.AbstractButton {
         PlasmaComponents3.ToolTip.text: model.subLabel || ""
         PlasmaComponents3.ToolTip.visible: !!model.subLabel && (Kirigami.Settings.isMobile ? dayStyle.pressed : dayStyle.hovered)
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             id: label
             anchors {
                 left: parent.left
