@@ -11,6 +11,7 @@ import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
@@ -173,7 +174,7 @@ ColumnLayout {
             }
             visible: summaryLabel.text !== ""
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: summaryLabel
                 Layout.fillWidth: true
                 Layout.preferredHeight: implicitHeight
@@ -184,7 +185,7 @@ ColumnLayout {
                 elide: Text.ElideRight
                 level: 4
                 // Give it a bit more visual prominence than the app name in the header
-                type: PlasmaExtras.Heading.Type.Primary
+                type: Kirigami.Heading.Type.Primary
                 text: {
                     if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
                         if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {

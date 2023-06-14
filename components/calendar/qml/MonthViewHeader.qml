@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 // NOTE : This header is designed to be usable by both the generic calendar component and the digital clock applet
 // which requires a little different layout to accomodate for configure and pin buttons because it may be in panel
@@ -59,7 +60,7 @@ Item {
             spacing: 0
             Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 id: heading
                 // Needed for Appium testing
                 objectName: "monthHeader"

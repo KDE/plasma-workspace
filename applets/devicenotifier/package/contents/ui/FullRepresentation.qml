@@ -17,6 +17,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaExtras.Representation {
     id: fullRep
@@ -162,7 +163,7 @@ PlasmaExtras.Representation {
                 delegate: Item {
                     height: Math.floor(childrenRect.height)
                     width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
-                    PlasmaExtras.Heading {
+                    Kirigami.Heading {
                         level: 3
                         opacity: 0.6
                         text: section

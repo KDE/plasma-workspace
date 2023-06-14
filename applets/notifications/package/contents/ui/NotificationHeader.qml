@@ -10,7 +10,7 @@ import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -79,7 +79,7 @@ RowLayout {
         visible: valid
     }
 
-    PlasmaExtras.Heading {
+    Kirigami.Heading {
         id: applicationNameLabel
         Layout.fillWidth: true
         level: 5
@@ -95,7 +95,7 @@ RowLayout {
         Layout.fillWidth: true
     }
 
-    PlasmaExtras.Heading {
+    Kirigami.Heading {
         id: ageLabel
 
         // the "n minutes ago" text, for jobs we show remaining time instead

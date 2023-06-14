@@ -19,6 +19,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMUtils
+import org.kde.kirigami 2.20 as Kirigami
 
 // Top-level layout containing:
 // - Leading column with world clock and agenda view
@@ -99,7 +100,7 @@ PlasmaExtras.Representation {
             contentItem: ColumnLayout {
                 spacing: 0
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     Layout.alignment: Qt.AlignTop
                     // Match calendar title
                     Layout.leftMargin: calendar.paddings
@@ -127,7 +128,7 @@ PlasmaExtras.Representation {
                     Layout.bottomMargin: Math.round(PlasmaCore.Units.smallSpacing * 1.5)
 
                     // Heading text
-                    PlasmaExtras.Heading {
+                    Kirigami.Heading {
                         visible: agenda.visible
 
                         Layout.fillWidth: true
@@ -416,7 +417,7 @@ PlasmaExtras.Representation {
             contentItem: RowLayout {
                 spacing: PlasmaCore.Units.smallSpacing
 
-                PlasmaExtras.Heading {
+                Kirigami.Heading {
                     Layout.fillWidth: true
 
                     level: 2
