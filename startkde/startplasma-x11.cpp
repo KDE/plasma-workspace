@@ -63,7 +63,6 @@ int main(int argc, char **argv)
     out << "startkde: Starting up...\n";
 
     setupPlasmaEnvironment();
-    setupX11();
 
     qunsetenv("QT_NO_XDG_DESKTOP_PORTAL");
     auto oldSystemdEnvironment = getSystemdEnvironment();
