@@ -26,7 +26,7 @@ RowLayout {
     // false for displaying the value as normal text
     property bool showingProgress: false
 
-    spacing: PlasmaCore.Units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing * 2
 
     Layout.preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), PlasmaCore.Units.gridUnit * 15)
     Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
@@ -38,7 +38,8 @@ RowLayout {
     height: Layout.preferredHeight
 
     PlasmaCore.IconItem {
-        Layout.leftMargin: PlasmaCore.Units.smallSpacing
+        id: iconItem
+        Layout.leftMargin: PlasmaCore.Units.smallSpacing // Left end spacing
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
         Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
         Layout.alignment: Qt.AlignVCenter
@@ -48,6 +49,7 @@ RowLayout {
 
     PlasmaComponents3.ProgressBar {
         id: progressBar
+        Layout.leftMargin: iconItem.visible ?  0 : PlasmaCore.Units.smallSpacing // Left end spacing
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignVCenter
         // So it never exceeds the minimum popup size
@@ -70,9 +72,9 @@ RowLayout {
     // Numerical display of progress bar value
     PlasmaExtra.Heading {
         id: percentageLabel
+        Layout.rightMargin: PlasmaCore.Units.smallSpacing // Right end spacing
         Layout.fillHeight: true
         Layout.preferredWidth: widestLabelSize.width
-        Layout.rightMargin: PlasmaCore.Units.smallSpacing
         Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
@@ -99,7 +101,8 @@ RowLayout {
         id: label
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.rightMargin: PlasmaCore.Units.smallSpacing
+        Layout.leftMargin: iconItem.visible ?  0 : PlasmaCore.Units.smallSpacing // Left end spacing
+        Layout.rightMargin: PlasmaCore.Units.smallSpacing                        // Right end spacing
         Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
