@@ -132,7 +132,7 @@ void KCMDesktopTheme::installTheme(const QString &path)
 {
     qCDebug(KCM_DESKTOP_THEME) << "Installing ... " << path;
 
-    const QString program = QStringLiteral("kpackagetool5");
+    const QString program = QStringLiteral("kpackagetool6");
     const QStringList arguments = {QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
 
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1Char(' '));

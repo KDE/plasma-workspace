@@ -12,7 +12,7 @@ function _plasma_list_packages() {
   # (@) array Expansion Flags are needed because we need to operate on each element separately.
   packages=( ${(f)"$(
     _call_program plasma-list-packages \
-      kpackagetool5 --type "$type" --list --global
+      kpackagetool6 --type "$type" --list --global
     )"} )
   # First line is an output header, it contains path where plugins are probed.
   global_dir="${${${packages[1]}##* in }%/}"
