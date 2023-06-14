@@ -158,12 +158,7 @@ private:
         url.setScheme(QStringLiteral("applications"));
         match.setData(url);
 
-        QString path = service->entryPath();
-        if (!QDir::isAbsolutePath(path)) {
-            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices6/") + path);
-        }
-
-        match.setUrls({QUrl::fromLocalFile(path)});
+        match.setUrls({QUrl::fromLocalFile(service->entryPath())});
 
         QString exec = service->exec();
 
