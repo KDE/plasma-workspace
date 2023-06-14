@@ -163,5 +163,5 @@ void NotificationsModel::configure(const QString &desktopEntry, const QString &n
         args.append(eventId);
     }
 
-    QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
+    QProcess::startDetached(QStringLiteral("kcmshell6"), {QStringLiteral("notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
 }

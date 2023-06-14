@@ -32,7 +32,7 @@ SoftwareRendererNotifier::SoftwareRendererNotifier(QObject *parent)
     setStandardActionsEnabled(false);
 
     connect(this, &KStatusNotifierItem::activateRequested, this, []() {
-        QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("qtquicksettings")});
+        QProcess::startDetached(QStringLiteral("kcmshell6"), {QStringLiteral("qtquicksettings")});
     });
 
     auto menu = new QMenu; // ownership is transferred in setContextMenu
