@@ -48,7 +48,7 @@ void TaskToolsTest::initTestCase()
     // Make sure we start with a clean dir
     QVERIFY(QDir(dataDir).removeRecursively());
     QVERIFY(QDir(dataDir).mkpath(QLatin1String("applications")));
-    QVERIFY(QDir(dataDir).mkpath(QLatin1String("kservices5")));
+    QVERIFY(QDir(dataDir).mkpath(QLatin1String("kservices6")));
 
     // Add our applications
     QFile::copy(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop"), dataDir + QLatin1String("/applications/org.kde.dolphin.desktop"));
@@ -64,7 +64,7 @@ void TaskToolsTest::initTestCase()
     QFile::copy(QFINDTESTDATA("data/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"),
                 dataDir + QLatin1String("/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"));
 
-    QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices5/kcm_kdeconnect.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
     QFile::remove(KSycoca::absoluteFilePath());
     KSycoca::self()->ensureCacheValid();
@@ -177,8 +177,8 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
                                   << QUrl("applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop");
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices5/kcm_kdeconnect") << QString()
-                                    << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices5/kcm_kdeconnect.desktop"));
+    QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices6/kcm_kdeconnect") << QString()
+                                    << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
     // TODO test mapping rules
 }

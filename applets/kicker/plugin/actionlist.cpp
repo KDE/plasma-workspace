@@ -508,7 +508,7 @@ QString resolvedServiceEntryPath(const KService::Ptr &service)
 {
     QString path = service->entryPath();
     if (!QDir::isAbsolutePath(path)) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kservices5/") + path);
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kservices6/") + path);
     }
     return path;
 }
