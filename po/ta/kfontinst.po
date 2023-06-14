@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2022-02-27 16:28+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -117,37 +117,37 @@ msgstr "அச்சிடுதற்கான மின்னெழுத்�
 msgid "Remove file containing list of fonts to print"
 msgstr "அச்சிடுதற்கான மின்னெழுத்துக்களின் பட்டியலைக் கொண்ட கோப்பினை நீக்கு"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, kde-format
 msgid "Open an existing font file"
 msgstr "ஏற்கனவேயுள்ள எழுத்துரு கோப்பை திற"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, kde-format
 msgid "Print font preview"
 msgstr "எழுத்துருவின் முன்தோற்றத்தை அச்சிடு"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "காட்டுவதற்கான மின்னெழுத்தை தேர்ந்தெடுங்கள்"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "திறப்பதற்கான முகவரி"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "மின்னெழுத்து தோற்றங்காட்டி"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "எளிமையான மின்னெழுத்து தோற்றங்காட்டி"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(c) க்ரைக் டிரம்மாண்ட், 2004-2007"

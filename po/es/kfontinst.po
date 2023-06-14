@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2021-10-14 01:05+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -120,37 +120,37 @@ msgstr "Archivo que contiene la lista de tipos de letra a imprimir"
 msgid "Remove file containing list of fonts to print"
 msgstr "Eliminar archivos que contengan listas de tipos de letra a imprimir"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, kde-format
 msgid "Open an existing font file"
 msgstr "Abrir un archivo de tipo de letra existente"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, kde-format
 msgid "Print font preview"
 msgstr "Mostrar una vista previa del tipo de letra"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "Seleccione el tipo de letra que desea ver"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "URL a abrir"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "Visor de tipos de letra"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Visor simple de tipos de letra"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(c) Craig Drummond, 2004-2007"

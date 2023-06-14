@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -111,40 +111,40 @@ msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അ�
 msgid "Remove file containing list of fonts to print"
 msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍ നീക്കം ചെയ്യുക"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 #| msgid "Open font in font viewer?"
 #| msgid_plural "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "അക്ഷരസഞ്ചയം അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ മാതൃകകള്‍ പ്രിന്റ് ചെയ്യുക"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "കാണുന്നതിനായി അക്ഷരസഞ്ചയം തെരഞ്ഞെടുക്കുക"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "തുറക്കുവാനുള്ള യുആര്‍എല്‍"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "അക്ഷരസഞ്ചയദര്‍ശിനി"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "അക്ഷരസഞ്ചയം കാണുന്നതിനുള്ള ലളിതമായ പ്രയോഗം"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2004-2007"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -119,7 +119,7 @@ msgid "Remove file containing list of fonts to print"
 msgstr "Ukloni datoteku sa spiskom fontova za štampanje"
 
 # >! Needs plural call, regardless whether used for n=1 or not.
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 #| msgid "Open font in font viewer?"
 #| msgid_plural "Open all %1 fonts in font viewer?"
@@ -127,33 +127,33 @@ msgid "Open an existing font file"
 msgstr "Otvoriti %1 font u prikazivaču?"
 
 # >> @title:window
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "Štampanje uzoraka fonta"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "Izaberite font za prikaz"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "URL za otvaranje"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "Prikazivač fontova"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Jednostavan prikazivač fontova"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "© 2004-2007, Krejg Dramond"

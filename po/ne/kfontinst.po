@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2007-11-06 12:23+0545\n"
 "Last-Translator: Shiva Pokharel <shiva@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -119,39 +119,39 @@ msgstr "मुद्रण गर्न फन्टको फाइल सम�
 msgid "Remove file containing list of fonts to print"
 msgstr "मुद्रण गर्न फन्टको फाइल समाविष्ट भएको सूची हटाउनुहोस्"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 #| msgid "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "फन्ट दृश्यकर्तामा सबै %1 फन्टहरू खोल्नुहुन्छ ?"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "फन्ट नमूना मुद्रण गर्नुहोस्"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "हेर्नका लागि फन्ट चयन गर्नुहोस्"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "खोलिने यूआरएल"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "फन्ट दृश्यकर्ता"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "साधारण फन्ट दृश्यकर्ता"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

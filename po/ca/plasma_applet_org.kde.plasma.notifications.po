@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2022-10-16 10:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Obre amb %1"
 msgid "Open with…"
 msgstr "Obre amb…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:269
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obre la carpeta contenidora"
@@ -240,43 +240,43 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:163
+#: package/contents/ui/JobItem.qml:165
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:177
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pausa"
 
-#: package/contents/ui/JobItem.qml:187
+#: package/contents/ui/JobItem.qml:189
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: package/contents/ui/JobItem.qml:198
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "Oculta els detalls"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "Mostra els detalls"
 
-#: package/contents/ui/JobItem.qml:231
-#: package/contents/ui/ThumbnailStrip.qml:169
+#: package/contents/ui/JobItem.qml:233
+#: package/contents/ui/ThumbnailStrip.qml:171
 #, kde-format
 msgid "More Options…"
 msgstr "Més opcions…"
 
-#: package/contents/ui/JobItem.qml:259
+#: package/contents/ui/JobItem.qml:261
 #, kde-format
 msgid "Open"
 msgstr "Obre"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2021-10-13 08:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -116,37 +116,37 @@ msgstr "Файл, що містить список шрифтів для дру�
 msgid "Remove file containing list of fonts to print"
 msgstr "Вилучити файл, що містить список шрифтів для друку"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, kde-format
 msgid "Open an existing font file"
 msgstr "Відкрити наявний файл шрифту"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, kde-format
 msgid "Print font preview"
 msgstr "Надрукувати зразок шрифту"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "Виберіть шрифт для перегляду"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "Відкрити URL"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "Переглядач шрифтів"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Простий переглядач шрифтів"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "© Craig Drummond, 2004-2007"

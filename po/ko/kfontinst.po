@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -112,37 +112,37 @@ msgstr "인쇄할 글꼴 목록이 있는 파일"
 msgid "Remove file containing list of fonts to print"
 msgstr "인쇄할 글꼴 목록이 있는 파일 삭제"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, kde-format
 msgid "Open an existing font file"
 msgstr "기존 글꼴 파일 열기"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, kde-format
 msgid "Print font preview"
 msgstr "글꼴 미리 보기 인쇄"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "보려는 글꼴을 선택하십시오"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "열 URL"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "글꼴 뷰어"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "간단한 글꼴 뷰어"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(c) Craig Drummond, 2004-2007"

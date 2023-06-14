@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2007-07-31 19:19+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -112,39 +112,39 @@ msgstr "پرونده شامل فهرست قلمهای برای چاپ"
 msgid "Remove file containing list of fonts to print"
 msgstr "حذف پرونده شامل فهرست قلمهای برای چاپ"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 #| msgid "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "همه %1 قلم در مشاهده‌گر قلم باز شود؟"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "چاپ نمونه‌های قلم"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "برگزیدن قلم برای نما"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "نشانی وب برای باز کردن"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "مشاهده‌گر قلم"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "مشاهده‌گر قلم ساده"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(ح) Craig Drummond‏، ۲۰۰۴-۲۰۰۷"

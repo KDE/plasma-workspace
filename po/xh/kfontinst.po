@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2002-10-25 11:59SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -106,37 +106,37 @@ msgstr ""
 msgid "Remove file containing list of fonts to print"
 msgstr ""
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 msgid "Open an existing font file"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 msgid "Print font preview"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr ""
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr ""
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, fuzzy, kde-format
 msgid "Font Viewer"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, fuzzy, kde-format
 msgid "Simple font viewer"
 msgstr "KFontViewPart"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr ""

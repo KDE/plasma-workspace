@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -29,7 +29,7 @@ msgstr "%1 ഉപയോഗിച്ച് തുറക്കുക"
 msgid "Open with…"
 msgstr "ഇതിലൂടെ തുറക്കു…"
 
-#: filemenu.cpp:115 package/contents/ui/JobItem.qml:267
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:269
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ഇതുള്ള അറ തുറക്കുക"
@@ -238,7 +238,7 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:163
+#: package/contents/ui/JobItem.qml:165
 #, fuzzy, kde-format
 #| msgctxt "Row description, e.g. Source"
 #| msgid "%1:"
@@ -246,37 +246,37 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:177
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "താൽക്കാലികമായി നിർത്തുക"
 
-#: package/contents/ui/JobItem.qml:187
+#: package/contents/ui/JobItem.qml:189
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: package/contents/ui/JobItem.qml:198
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "A button tooltip; hides item details"
 msgid "Hide Details"
 msgstr "വിശദാംശങ്ങൾ മറയ്ക്കുക"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
 msgstr "വിശദാംശങ്ങൾ കാണിക്കുക"
 
-#: package/contents/ui/JobItem.qml:231
-#: package/contents/ui/ThumbnailStrip.qml:169
+#: package/contents/ui/JobItem.qml:233
+#: package/contents/ui/ThumbnailStrip.qml:171
 #, kde-format
 msgid "More Options…"
 msgstr "കൂടുതൽ സാധ്യതകൾ…"
 
-#: package/contents/ui/JobItem.qml:259
+#: package/contents/ui/JobItem.qml:261
 #, kde-format
 msgid "Open"
 msgstr "തുറക്കുക"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-17 02:05+0000\n"
+"POT-Creation-Date: 2023-06-14 02:07+0000\n"
 "PO-Revision-Date: 2012-06-13 15:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -110,39 +110,39 @@ msgstr "ឯកសារ​ដែល​មាន​បញ្ជី​ពុម្
 msgid "Remove file containing list of fonts to print"
 msgstr "យក​ចេញ​ឯកសារ​ដែល​ផ្ទុក​បញ្ជី​ពុម្ព​អក្សរ​សម្រាប់​បោះពុម្ព"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:46
 #, fuzzy, kde-format
 #| msgid "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "បើក​ពុម្ព​អក្សរ %1 ទាំងអស់​នៅ​ក្នុង​កម្មវិធី​មើល​ពុម្ព​អក្សរ​ឬ?"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:47
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "បោះពុម្ព​គំរូ​ពុម្ពអក្សរ"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:64
 #, kde-format
 msgid "Select Font to View"
 msgstr "ជ្រើស​ពុម្ព​អក្សរ​ដែល​ត្រូវ​មើល"
 
-#: apps/Viewer.cpp:109
+#: apps/Viewer.cpp:107
 #, kde-format
 msgid "URL to open"
 msgstr "URL ដែល​ត្រូវ​បើក"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:149
 #, kde-format
 msgid "Font Viewer"
 msgstr "កម្មវិធី​មើល​ពុម្ព​អក្សរ​"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:151
 #, kde-format
 msgid "Simple font viewer"
 msgstr "កម្មវិធី​មើល​ពុម្ព​អក្សរ​ធម្មតា​"
 
-#: apps/Viewer.cpp:155
+#: apps/Viewer.cpp:153
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០៤-២០០៧ ដោយ Craig Drummond"
