@@ -467,6 +467,9 @@ void runRdb(unsigned int flags)
 #endif
     proc.execute();
 
+    // Needed for applications that don't set their own cursor.
+    QProcess::execute(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
+
     applyGtkStyles(1);
     applyGtkStyles(2);
 

@@ -30,7 +30,6 @@ void cleanupPlasmaEnvironment(const std::optional<QProcessEnvironment> &oldSyste
 bool syncDBusEnvironment();
 void setupFontDpi();
 QProcess *setupKSplash();
-void setupX11();
 
 bool startPlasmaSession(bool wayland);
 

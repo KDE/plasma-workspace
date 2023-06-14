@@ -389,19 +389,6 @@ void setupPlasmaEnvironment()
     }
 }
 
-void setupX11()
-{
-    //     Set a left cursor instead of the standard X11 "X" cursor, since I've heard
-    //     from some users that they're confused and don't know what to do. This is
-    //     especially necessary on slow machines, where starting KDE takes one or two
-    //     minutes until anything appears on the screen.
-    //
-    //     If the user has overwritten fonts, the cursor font may be different now
-    //     so don't move this up.
-
-    runSync(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
-}
-
 void cleanupPlasmaEnvironment(const std::optional<QProcessEnvironment> &oldSystemdEnvironment)
 {
     qunsetenv("KDE_FULL_SESSION");
