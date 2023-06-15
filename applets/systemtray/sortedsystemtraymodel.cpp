@@ -50,12 +50,12 @@ bool SortedSystemTrayModel::lessThanConfigurationPage(const QModelIndex &left, c
 
 bool SortedSystemTrayModel::lessThanSystemTray(const QModelIndex &left, const QModelIndex &right) const
 {
-    QVariant itemIdLeft = sourceModel()->data(left, static_cast<int>(BaseModel::BaseRole::ItemId));
-    QVariant itemIdRight = sourceModel()->data(right, static_cast<int>(BaseModel::BaseRole::ItemId));
-    if (itemIdRight.toString() == QLatin1String("org.kde.plasma.notifications")) {
+    const QVariant itemIdLeft = sourceModel()->data(left, static_cast<int>(BaseModel::BaseRole::ItemId));
+    const QVariant itemIdRight = sourceModel()->data(right, static_cast<int>(BaseModel::BaseRole::ItemId));
+    if (itemIdRight.view<QStringView>() == QLatin1String("org.kde.plasma.notifications")) {
         // return false when at least right is "org.kde.plasma.notifications"
         return false;
-    } else if (itemIdLeft.toString() == QLatin1String("org.kde.plasma.notifications")) {
+    } else if (itemIdLeft.view<QStringView>() == QLatin1String("org.kde.plasma.notifications")) {
         // return true when only left is "org.kde.plasma.notifications"
         return true;
     }
