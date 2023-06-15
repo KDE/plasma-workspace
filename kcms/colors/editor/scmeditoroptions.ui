@@ -33,16 +33,16 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="tintColors">
+    <widget class="QCheckBox" name="accentTitlebar">
      <property name="text">
-      <string>Tint all colors with accent color</string>
+      <string>Make window titlebars a&amp;ccent-colored</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="accentTitlebar">
+    <widget class="QCheckBox" name="tintColors">
      <property name="text">
-      <string>Make window titlebars a&amp;ccent-colored</string>
+      <string>Tint all colors with accent color</string>
      </property>
     </widget>
    </item>
