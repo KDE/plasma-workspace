@@ -39,6 +39,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     , m_panelView(panelView)
 {
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
+    engine()->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
 
     setScreen(panelView->screen());
 
