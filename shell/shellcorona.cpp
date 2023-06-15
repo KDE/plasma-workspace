@@ -1334,7 +1334,7 @@ void ShellCorona::addOutput(QScreen *screen)
     if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
         connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
     }
-    connect(view, &DesktopView::geometryChanged, this, [=]() {
+    connect(view, &DesktopView::geometryChanged, this, [this, view]() {
         const int id = m_screenPool->idForScreen(view->screen());
         if (id >= 0 && !m_screenReorderInProgress) {
             Q_EMIT screenGeometryChanged(id);

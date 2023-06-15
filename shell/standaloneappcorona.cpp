@@ -99,7 +99,7 @@ void StandaloneAppCorona::load()
             }
             m_view->setContainment(c);
             m_view->show();
-            connect(m_view, &QWindow::visibleChanged, [=](bool visible) {
+            connect(m_view, &QWindow::visibleChanged, [this](bool visible) {
                 if (!visible) {
                     deleteLater();
                 }

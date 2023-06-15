@@ -46,7 +46,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(panelView, &QWindow::screenChanged, &m_screenSyncTimer, QOverload<>::of(&QTimer::start));
     m_screenSyncTimer.setSingleShot(true);
     m_screenSyncTimer.setInterval(150ms);
-    connect(&m_screenSyncTimer, &QTimer::timeout, [=]() {
+    connect(&m_screenSyncTimer, &QTimer::timeout, [this, panelView]() {
         setScreen(panelView->screen());
         KX11Extras::setType(winId(), NET::Dock);
         KWindowSystem::setState(winId(), NET::KeepAbove);
