@@ -15,7 +15,7 @@ CPreviewSelectAction::CPreviewSelectAction(QObject *parent, Mode mode)
 {
     setMode(mode);
 
-    connect(this, SIGNAL(triggered(int)), SLOT(selected(int)));
+    connect(this, &KSelectAction::indexTriggered, this, &CPreviewSelectAction::selected);
 }
 
 void CPreviewSelectAction::setStd()

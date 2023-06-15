@@ -328,7 +328,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     connect(m_fontListView, SIGNAL(print()), SLOT(print()));
     connect(m_fontListView, &CFontListView::enable, this, &CKCmFontInst::enableFonts);
     connect(m_fontListView, &CFontListView::disable, this, &CKCmFontInst::disableFonts);
-    connect(m_fontListView, SIGNAL(fontsDropped(QSet<QUrl>)), SLOT(addFonts(QSet<QUrl>)));
+    connect(m_fontListView, &CFontListView::fontsDropped, this, qOverload<const QSet<QUrl> &>(&CKCmFontInst::addFonts));
     connect(m_fontListView, &CFontListView::itemsSelected, this, &CKCmFontInst::fontsSelected);
     connect(m_fontListView, &CFontListView::refresh, this, &CKCmFontInst::setStatusBar);
     connect(m_groupListView, &CGroupListView::unclassifiedChanged, m_fontListView, &CFontListView::refreshFilter);
@@ -336,7 +336,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     connect(m_deleteGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::removeGroup);
     connect(m_enableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::enableGroup);
     connect(m_disableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::disableGroup);
-    connect(m_addFontControl, SIGNAL(clicked()), SLOT(addFonts()));
+    connect(m_addFontControl, &QAbstractButton::clicked, this, qOverload<>(&CKCmFontInst::addFonts));
     connect(m_getNewFontsControl, &KNSWidgets::Button::dialogFinished, this, &CKCmFontInst::downloadFonts);
     connect(m_deleteFontControl, &QAbstractButton::clicked, this, &CKCmFontInst::deleteFonts);
     connect(m_scanDuplicateFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::duplicateFonts);
