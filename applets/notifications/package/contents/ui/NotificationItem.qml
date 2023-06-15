@@ -79,13 +79,12 @@ ColumnLayout {
     property alias remainingTime: notificationHeading.remainingTime
 
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
-                                     || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
-                                     || (jobLoader.item && jobLoader.item.menuOpen)
+                                     || thumbnailStripLoader.item?.menuOpen
+                                     || jobLoader.item?.menuOpen
 
-    readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging)
-                                        || (jobLoader.item && jobLoader.item.dragging)
+    readonly property bool dragging: thumbnailStripLoader.item?.dragging || jobLoader.item?.dragging
     property bool replying: false
-    readonly property bool hasPendingReply: replyLoader.item && replyLoader.item.text !== ""
+    readonly property bool hasPendingReply: replyLoader.item?.text !== ""
     readonly property alias headerHeight: headingElement.height
     property int extraSpaceForCriticalNotificationLine: 0
 
@@ -320,7 +319,7 @@ ColumnLayout {
         Flow { // it's a Flow so it can wrap if too long
             id: actionFlow
             // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
-            parent: thumbnailStripLoader.item ? thumbnailStripLoader.item.actionContainer : actionContainer
+            parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
             width: parent.width
             spacing: PlasmaCore.Units.smallSpacing
             layoutDirection: Qt.RightToLeft
