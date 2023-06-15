@@ -54,7 +54,7 @@ Kirigami.AbstractApplicationWindow {
      *
      * Useful to be able to set it as dialogButtonBox will be null as the object gets built
      */
-    property var standardButtons: contentDialog.item ? contentDialog.item.dialogButtonBox.standardButtons : undefined
+    property var standardButtons: contentDialog.item?.dialogButtonBox.standardButtons
 
     /**
      * Controls whether the accept button is enabled
