@@ -119,8 +119,7 @@ PlasmaComponents3.AbstractButton {
     Loader {
         active: model.eventCount !== undefined && model.eventCount > 0
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: subDayLabel.item ? subDayLabel.item.implicitHeight
-            : PlasmaCore.Units.smallSpacing
+        anchors.bottomMargin: subDayLabel.item?.implicitHeight ?? Kirigami.Units.smallSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         sourceComponent: Row {
             spacing: PlasmaCore.Units.smallSpacing
