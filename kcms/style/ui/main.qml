@@ -103,7 +103,7 @@ KCM.GridViewKCM {
                 icon.name: "configure-toolbars" // proper icon?
                 flat: false
                 checkable: true
-                checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
+                checked: effectSettingsPopupLoader.item?.opened
                 onClicked: {
                     effectSettingsPopupLoader.active = true;
                     effectSettingsPopupLoader.item.open();
