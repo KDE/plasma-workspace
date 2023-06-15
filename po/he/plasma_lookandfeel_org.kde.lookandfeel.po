@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-14 02:27+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2017-05-23 09:09-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -282,12 +282,12 @@ msgstr "אישור"
 msgid "Cancel"
 msgstr "בטל"
 
-#: contents/osd/OsdItem.qml:66
+#: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
 msgstr ""
 
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:82
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "Percentage value"

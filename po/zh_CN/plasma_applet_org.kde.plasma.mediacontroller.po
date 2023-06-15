@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2023-05-22 13:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,52 +29,52 @@ msgstr "无标题"
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: package/contents/ui/ExpandedRepresentation.qml:413
-#: package/contents/ui/ExpandedRepresentation.qml:534
+#: package/contents/ui/ExpandedRepresentation.qml:408
+#: package/contents/ui/ExpandedRepresentation.qml:529
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:563
+#: package/contents/ui/ExpandedRepresentation.qml:558
 #, kde-format
 msgid "Shuffle"
 msgstr "随机播放"
 
-#: package/contents/ui/ExpandedRepresentation.qml:589
+#: package/contents/ui/ExpandedRepresentation.qml:584
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "上一首"
 
-#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/ExpandedRepresentation.qml:606
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "暂停"
 
-#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/ExpandedRepresentation.qml:606
 #: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "播放"
 
-#: package/contents/ui/ExpandedRepresentation.qml:629
+#: package/contents/ui/ExpandedRepresentation.qml:624
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "下一首"
 
-#: package/contents/ui/ExpandedRepresentation.qml:652
+#: package/contents/ui/ExpandedRepresentation.qml:647
 #, kde-format
 msgid "Repeat Track"
 msgstr "重复曲目"
 
-#: package/contents/ui/ExpandedRepresentation.qml:652
+#: package/contents/ui/ExpandedRepresentation.qml:647
 #, kde-format
 msgid "Repeat"
 msgstr "重复"

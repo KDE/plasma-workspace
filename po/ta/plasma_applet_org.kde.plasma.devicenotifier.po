@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2022-02-27 16:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -69,23 +69,23 @@ msgstr "பத்திரமாக நீக்கு"
 msgid "Mount"
 msgstr "ஏற்று"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "அனைத்தையும் நீக்கு"
 
-#: package/contents/ui/FullRepresentation.qml:43
+#: package/contents/ui/FullRepresentation.qml:44
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "அனைத்து சாதனங்களையும் பத்திரமாக நீக்க க்ளிக் செய்யவும்"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No removable devices attached"
 msgstr "கழற்றக்கூடிய சாதனங்கள் ஏதுமில்லை"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No disks available"
 msgstr "வட்டுகள் ஏதுமில்லை"

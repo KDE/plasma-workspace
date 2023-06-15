@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2021-09-27 20:41+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -154,23 +154,23 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Aktiveres automatisk i tablet-tilstand"
 
-#: package/contents/ui/ExpandedRepresentation.qml:61
+#: package/contents/ui/ExpandedRepresentation.qml:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:73
+#: package/contents/ui/ExpandedRepresentation.qml:74
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Status og bekendtgørelser"
 
-#: package/contents/ui/ExpandedRepresentation.qml:139
+#: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Flere handlinger"
 
-#: package/contents/ui/ExpandedRepresentation.qml:233
+#: package/contents/ui/ExpandedRepresentation.qml:234
 #, kde-format
 msgid "Keep Open"
 msgstr "Hold åbent"

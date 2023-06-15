@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2023-05-09 21:17+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -69,23 +69,23 @@ msgstr "Estrayer con seguranza"
 msgid "Mount"
 msgstr "Montar"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "Estrayer too"
 
-#: package/contents/ui/FullRepresentation.qml:43
+#: package/contents/ui/FullRepresentation.qml:44
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Calca pa estrayer con seguranza tolos preseos"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Nun s'espató nengun preséu estrayible"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No disks available"
 msgstr "Nun hai nengún discu disponible"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-14 02:27+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2019-11-26 23:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -287,12 +287,12 @@ msgstr "Aceptar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/osd/OsdItem.qml:66
+#: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
 msgstr ""
 
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:82
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "Percentage value"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2022-01-24 20:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -72,23 +72,23 @@ msgstr "Wysuń bezpiecznie"
 msgid "Mount"
 msgstr "Podepnij"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "Wysuń wszystkie"
 
-#: package/contents/ui/FullRepresentation.qml:43
+#: package/contents/ui/FullRepresentation.qml:44
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Naciśnij, aby bezpiecznie wysunąć wszystkie urządzenia."
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Nie podpięto żadnych urządzeń wymiennych"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No disks available"
 msgstr "Brak dysku"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2022-03-13 09:54+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -70,23 +70,23 @@ msgstr "Sicher entfernen"
 msgid "Mount"
 msgstr "Einhängen"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "Alle entfernen"
 
-#: package/contents/ui/FullRepresentation.qml:43
+#: package/contents/ui/FullRepresentation.qml:44
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Klicken Sie, um alle Gerät sicher zu trennen."
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Keine Wechselmedien angeschlossen"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No disks available"
 msgstr "Es sind keine Festplatte verfügbar"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2023-02-23 18:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -70,23 +70,23 @@ msgstr "安全に取り外し"
 msgid "Mount"
 msgstr "マウント"
 
-#: package/contents/ui/FullRepresentation.qml:42
+#: package/contents/ui/FullRepresentation.qml:43
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Remove All"
 msgstr "すべて取り外し"
 
-#: package/contents/ui/FullRepresentation.qml:43
+#: package/contents/ui/FullRepresentation.qml:44
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "クリックしてすべてのデバイスを安全に取り外す"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No removable devices attached"
 msgstr "リムーバブルデバイスが挿入されていません"
 
-#: package/contents/ui/FullRepresentation.qml:184
+#: package/contents/ui/FullRepresentation.qml:185
 #, kde-format
 msgid "No disks available"
 msgstr "ディスクがありません"

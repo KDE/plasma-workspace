@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-14 02:07+0000\n"
-"PO-Revision-Date: 2023-01-12 10:40+0100\n"
+"PO-Revision-Date: 2023-06-14 14:55+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -38,7 +38,7 @@ msgstr "Nastavit modul činností myši"
 #: main.cpp:109
 #, kde-format
 msgid "Plasma Shell"
-msgstr "Shell Plasmy"
+msgstr "Shell Plasma"
 
 #: main.cpp:121
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Seznam dostupných voleb pro uživatelskou zpětnou vazbu"
 #: main.cpp:239
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "Start Plasmy selhal"
+msgstr "Start Plasma selhal"
 
 #: main.cpp:240
 #, kde-format

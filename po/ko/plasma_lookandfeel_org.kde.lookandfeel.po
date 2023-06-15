@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-14 02:27+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2023-02-28 23:51+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -274,12 +274,12 @@ msgstr "확인"
 msgid "Cancel"
 msgstr "취소"
 
-#: contents/osd/OsdItem.qml:66
+#: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
 msgstr "100%"
 
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:82
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

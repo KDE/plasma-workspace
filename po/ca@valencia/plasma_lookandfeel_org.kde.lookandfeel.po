@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-14 02:27+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2022-10-09 11:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -285,12 +285,12 @@ msgstr "D'acord"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: contents/osd/OsdItem.qml:66
+#: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
 msgstr "100%"
 
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:82
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

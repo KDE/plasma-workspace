@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2023-03-22 00:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -31,52 +31,52 @@ msgstr "Tidak ada judul"
 msgid "No media playing"
 msgstr "Tidak ada media yang diputar"
 
-#: package/contents/ui/ExpandedRepresentation.qml:413
-#: package/contents/ui/ExpandedRepresentation.qml:534
+#: package/contents/ui/ExpandedRepresentation.qml:408
+#: package/contents/ui/ExpandedRepresentation.qml:529
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:563
+#: package/contents/ui/ExpandedRepresentation.qml:558
 #, kde-format
 msgid "Shuffle"
 msgstr "Acak"
 
-#: package/contents/ui/ExpandedRepresentation.qml:589
+#: package/contents/ui/ExpandedRepresentation.qml:584
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Trek Sebelumnya"
 
-#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/ExpandedRepresentation.qml:606
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Jeda"
 
-#: package/contents/ui/ExpandedRepresentation.qml:611
+#: package/contents/ui/ExpandedRepresentation.qml:606
 #: package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Putar"
 
-#: package/contents/ui/ExpandedRepresentation.qml:629
+#: package/contents/ui/ExpandedRepresentation.qml:624
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Trek Selanjutnya"
 
-#: package/contents/ui/ExpandedRepresentation.qml:652
+#: package/contents/ui/ExpandedRepresentation.qml:647
 #, kde-format
 msgid "Repeat Track"
 msgstr "Ulangi Trek"
 
-#: package/contents/ui/ExpandedRepresentation.qml:652
+#: package/contents/ui/ExpandedRepresentation.qml:647
 #, kde-format
 msgid "Repeat"
 msgstr "Ulangi"

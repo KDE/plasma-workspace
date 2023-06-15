@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-14 02:27+0000\n"
+"POT-Creation-Date: 2023-06-15 02:13+0000\n"
 "PO-Revision-Date: 2021-06-08 22:51-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -283,12 +283,12 @@ msgstr "ਠੀਕ ਹੈ"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: contents/osd/OsdItem.qml:66
+#: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
 msgstr "100%"
 
-#: contents/osd/OsdItem.qml:80
+#: contents/osd/OsdItem.qml:82
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

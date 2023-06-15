@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:04+0000\n"
-"PO-Revision-Date: 2023-03-10 11:39+0100\n"
+"PO-Revision-Date: 2023-06-14 14:53+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -328,7 +328,7 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
-"Činnost je k dispozici kduž <interface>vzor porovnání</interface> odpovídá "
+"Činnost je k dispozici když <interface>vzor porovnání</interface> odpovídá "
 "obsahu schránky. Když k tomu dojde, činnosti  <interface>příkazů</interface> "
 "budou zobrazeny ve vyskakovací nabídce Klipper. Pokud kteroukoliv vyberete, "
 "příkaz bude proveden."
@@ -515,7 +515,7 @@ msgstr "Ručně vyvolat činnost nad současným obsahem schránky"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "Zobrazit čárový &kódZobrazit čárový k"
+msgstr "Zobrazit čárový &kód..."
 
 #: klipper.cpp:206
 #, kde-format
