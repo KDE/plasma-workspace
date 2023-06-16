@@ -43,8 +43,7 @@ install(TARGETS kfontprint_bin DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
 install(TARGETS kfontview_bin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install(FILES kfontviewui.rc DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kfontview )
 install(PROGRAMS org.kde.kfontview.desktop DESTINATION ${KDE_INSTALL_APPDIR} )
-install(FILES installfont.desktop DESTINATION
-${KDE_INSTALL_KSERVICESDIR}/ServiceMenus )
+install(FILES installfont.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kio/servicemenus)
 
 ecm_install_icons( ICONS
                    16-apps-kfontview.png
