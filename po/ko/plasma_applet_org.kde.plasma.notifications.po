@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-16 02:04+0000\n"
 "PO-Revision-Date: 2023-03-01 00:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -376,35 +376,35 @@ msgstr "최소화"
 msgid "Close"
 msgstr "닫기"
 
-#: package/contents/ui/NotificationItem.qml:193
+#: package/contents/ui/NotificationItem.qml:192
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1(일시 정지됨)"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1(실패함)"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Failed"
 msgstr "작업 실패함"
 
-#: package/contents/ui/NotificationItem.qml:204
+#: package/contents/ui/NotificationItem.qml:203
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1(완료됨)"
 
-#: package/contents/ui/NotificationItem.qml:206
+#: package/contents/ui/NotificationItem.qml:205
 #, kde-format
 msgid "Job Finished"
 msgstr "작업 완료됨"
 
-#: package/contents/ui/NotificationItem.qml:354
+#: package/contents/ui/NotificationItem.qml:353
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

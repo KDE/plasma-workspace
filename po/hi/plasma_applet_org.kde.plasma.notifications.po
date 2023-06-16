@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-16 02:04+0000\n"
 "PO-Revision-Date: 2021-09-07 10:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -395,35 +395,35 @@ msgstr "न्यूनतम"
 msgid "Close"
 msgstr "बंद करें"
 
-#: package/contents/ui/NotificationItem.qml:193
+#: package/contents/ui/NotificationItem.qml:192
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (ठहरा हुआ)"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (असफल)"
 
-#: package/contents/ui/NotificationItem.qml:200
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Failed"
 msgstr "कार्य असफल"
 
-#: package/contents/ui/NotificationItem.qml:204
+#: package/contents/ui/NotificationItem.qml:203
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (संपूर्ण)"
 
-#: package/contents/ui/NotificationItem.qml:206
+#: package/contents/ui/NotificationItem.qml:205
 #, kde-format
 msgid "Job Finished"
 msgstr "कार्य संपूर्ण"
 
-#: package/contents/ui/NotificationItem.qml:354
+#: package/contents/ui/NotificationItem.qml:353
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
