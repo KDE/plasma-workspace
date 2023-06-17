@@ -7,7 +7,6 @@
 import QtQml
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -15,15 +14,15 @@ import org.kde.kirigami 2.20 as Kirigami
 Item {
     id: tooltipContentItem
 
-    property int preferredTextWidth: PlasmaCore.Units.gridUnit * 20
+    property int preferredTextWidth: Kirigami.Units.gridUnit * 20
 
-    implicitWidth: mainLayout.implicitWidth + PlasmaCore.Units.gridUnit
-    implicitHeight: mainLayout.implicitHeight + PlasmaCore.Units.gridUnit
+    implicitWidth: mainLayout.implicitWidth + Kirigami.Units.gridUnit
+    implicitHeight: mainLayout.implicitHeight + Kirigami.Units.gridUnit
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
-    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
-    PlasmaCore.ColorScope.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+    Kirigami.Theme.inherit: false
 
     /**
      * These accessible properties are used in the compact representation,
@@ -44,7 +43,7 @@ Item {
         anchors {
             left: parent.left
             top: parent.top
-            margins: PlasmaCore.Units.smallSpacing * 2
+            margins: Kirigami.Units.smallSpacing * 2
         }
 
         spacing: 0

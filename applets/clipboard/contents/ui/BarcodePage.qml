@@ -6,7 +6,7 @@
 
 import QtQuick
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
@@ -93,7 +93,7 @@ ColumnLayout {
     Item {
         Layout.fillWidth: parent
         Layout.fillHeight: parent
-        Layout.topMargin: PlasmaCore.Units.smallSpacing
+        Layout.topMargin: Kirigami.Units.smallSpacing
 
         Prison.Barcode {
             id: barcodeItem
@@ -141,8 +141,8 @@ ColumnLayout {
 
         PlasmaComponents3.Label {
             anchors.fill: parent
-            leftPadding: PlasmaCore.Units.gridUnit * 2
-            rightPadding: PlasmaCore.Units.gridUnit * 2
+            leftPadding: Kirigami.Units.gridUnit * 2
+            rightPadding: Kirigami.Units.gridUnit * 2
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: i18n("There is not enough space to display the QR code. Try resizing this applet.")

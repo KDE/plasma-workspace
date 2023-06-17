@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 PlasmaExtras.Representation {
@@ -51,7 +52,7 @@ PlasmaExtras.Representation {
     KeyNavigation.down: pmSwitch.pmCheckBox
 
     header: PlasmaExtras.PlasmoidHeading {
-        leftPadding: PlasmaCore.Units.smallSpacing
+        leftPadding: Kirigami.Units.smallSpacing
         contentItem: PowerManagementItem {
             id: pmSwitch
 
@@ -82,7 +83,7 @@ PlasmaExtras.Representation {
         Column {
             id: batteryList
 
-            spacing: PlasmaCore.Units.smallSpacing * 2
+            spacing: Kirigami.Units.smallSpacing * 2
 
             readonly property Item firstHeaderItem: {
                 if (brightnessSlider.visible) {

@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as QQC2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.coreaddons 1.0 as KCoreAddons
 
@@ -19,7 +20,7 @@ import org.kde.plasma.private.sessions 2.0
 
 PlasmaCore.ColorScope {
     id: root
-    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    colorGroup: Kirigami.Theme.ComplementaryColorGroup
     height: screenGeometry.height
     width: screenGeometry.width
 
@@ -104,8 +105,8 @@ PlasmaCore.ColorScope {
         onClicked: root.cancelRequested()
     }
     UserDelegate {
-        width: PlasmaCore.Units.gridUnit * 8
-        height: PlasmaCore.Units.gridUnit * 9
+        width: Kirigami.Units.gridUnit * 8
+        height: Kirigami.Units.gridUnit * 9
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter
@@ -119,17 +120,17 @@ PlasmaCore.ColorScope {
     ColumnLayout {
         anchors {
             top: parent.verticalCenter
-            topMargin: PlasmaCore.Units.gridUnit * 2
+            topMargin: Kirigami.Units.gridUnit * 2
             horizontalCenter: parent.horizontalCenter
         }
-        spacing: PlasmaCore.Units.largeSpacing
+        spacing: Kirigami.Units.gridUnit
 
-        height: Math.max(implicitHeight, PlasmaCore.Units.gridUnit * 10)
-        width: Math.max(implicitWidth, PlasmaCore.Units.gridUnit * 16)
+        height: Math.max(implicitHeight, Kirigami.Units.gridUnit * 10)
+        width: Math.max(implicitWidth, Kirigami.Units.gridUnit * 16)
 
         PlasmaComponents.Label {
-            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
-            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
@@ -143,8 +144,8 @@ PlasmaCore.ColorScope {
         }
 
         PlasmaComponents.Label {
-            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
-            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
@@ -155,7 +156,7 @@ PlasmaCore.ColorScope {
         }
 
         RowLayout {
-            spacing: PlasmaCore.Units.largeSpacing * 2
+            spacing: Kirigami.Units.gridUnit * 2
             Layout.alignment: Qt.AlignHCenter
             LogoutButton {
                 id: suspendButton
@@ -208,13 +209,13 @@ PlasmaCore.ColorScope {
         }
 
         PlasmaComponents.Label {
-            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: countDownTimer.running ? 1 : 0
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -233,15 +234,15 @@ PlasmaCore.ColorScope {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
-                implicitWidth: PlasmaCore.Units.gridUnit * 6
-                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+                implicitWidth: Kirigami.Units.gridUnit * 6
+                font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }
             PlasmaComponents.Button {
-                implicitWidth: PlasmaCore.Units.gridUnit * 6
-                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+                implicitWidth: Kirigami.Units.gridUnit * 6
+                font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
             }

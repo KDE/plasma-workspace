@@ -7,7 +7,7 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 PlasmaComponents3.Label {
@@ -15,7 +15,7 @@ PlasmaComponents3.Label {
     verticalAlignment: Text.AlignVCenter
 
     text: {
-        var highlightFontTag = "<font color='" + PlasmaCore.Theme.highlightColor + "'>%1</font>"
+        var highlightFontTag = "<font color='" + Kirigami.Theme.highlightColor + "'>%1</font>"
 
         var text = DisplayRole.slice(0, 100)
 

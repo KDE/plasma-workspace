@@ -8,7 +8,7 @@ import QtQuick 2.2
 
 import QtQuick.Layouts 1.1
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -22,7 +22,7 @@ SessionManagementScreen {
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
-    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + PlasmaCore.Units.smallSpacing
+    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + Kirigami.Units.smallSpacing
     /*
      * Login has been requested with the following username and password
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
@@ -55,7 +55,7 @@ SessionManagementScreen {
 
         PlasmaExtras.PasswordField {
             id: passwordBox
-            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
             Layout.fillWidth: true
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")

@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -29,7 +30,7 @@ Item {
         NumberAnimation {
             target: wallpaperFader
             property: "factor"
-            duration: PlasmaCore.Units.veryLongDuration * 2
+            duration: Kirigami.Units.veryLongDuration * 2
             easing.type: Easing.InOutQuad
         }
     }
@@ -143,7 +144,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: PlasmaCore.Units.veryLongDuration
+                duration: Kirigami.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         },
@@ -153,7 +154,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: PlasmaCore.Units.veryLongDuration
+                duration: Kirigami.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         }

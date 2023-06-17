@@ -57,8 +57,8 @@ RowLayout {
         ageLabel.agoText = ageLabel.generateAgoText();
     }
 
-    spacing: PlasmaCore.Units.smallSpacing
-    Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, PlasmaCore.Units.iconSizes.small)
+    spacing: Kirigami.Units.smallSpacing
+    Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, Kirigami.Units.iconSizes.small)
 
     Component.onCompleted: updateAgoText()
 
@@ -72,8 +72,8 @@ RowLayout {
 
     PlasmaCore.IconItem {
         id: applicationIconItem
-        Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-        Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+        Layout.preferredHeight: Kirigami.Units.iconSizes.small
         source: notificationHeading.applicationIconSource
         usesPlasmaTheme: false
         visible: valid
@@ -234,19 +234,19 @@ RowLayout {
         Charts.PieChart {
             id: chart
             anchors.fill: parent.contentItem
-            anchors.margins: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
+            anchors.margins: Math.max(Math.floor(1), 1)
 
             opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
             Behavior on opacity {
-                NumberAnimation { duration: PlasmaCore.Units.longDuration }
+                NumberAnimation { duration: Kirigami.Units.longDuration }
             }
 
             range { from: 0; to: notificationHeading.timeout; automatic: false }
 
             valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
-            colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
+            colorSource: Charts.SingleValueSource { value: Kirigami.Theme.highlightColor }
 
-            thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
+            thickness: Math.max(Math.floor(1), 1) * 5
 
             transform: Scale { origin.x: chart.width / 2; xScale: -1 }
         }

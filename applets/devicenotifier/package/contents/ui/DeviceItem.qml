@@ -13,7 +13,7 @@ import QtQuick.Controls 2.12 as QQC2
 import QtQml.Models 2.14
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0
@@ -202,10 +202,10 @@ PlasmaExtras.ExpandableListItem {
     subtitleColor: {
         if (freeSpaceKnown) {
             if (freeSpace / totalSpace <= 0.05) {
-                return PlasmaCore.Theme.negativeTextColor
+                return Kirigami.Theme.negativeTextColor
             }
         }
-        return PlasmaCore.Theme.textColor
+        return Kirigami.Theme.textColor
     }
 
     defaultActionButtonAction: QQC2.Action {

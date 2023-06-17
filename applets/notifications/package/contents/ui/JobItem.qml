@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.notificationmanager 1.0 as NotificationManager
@@ -99,7 +100,7 @@ ColumnLayout {
 
             Behavior on opacity {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -140,7 +141,7 @@ ColumnLayout {
     RowLayout {
         id: progressRow
         Layout.fillWidth: true
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
 
         PlasmaComponents3.ProgressBar {
             id: progressBar
@@ -163,7 +164,7 @@ ColumnLayout {
             // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
             // BUG: 451807
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", jobItem.percentage || "0")
-            Layout.leftMargin: PlasmaCore.Units.smallSpacing
+            Layout.leftMargin: Kirigami.Units.smallSpacing
         }
 
         RowLayout {
@@ -218,7 +219,7 @@ ColumnLayout {
     Row {
         id: jobActionsRow
         Layout.fillWidth: true
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
         // We want the actions to be right-aligned but Row also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft

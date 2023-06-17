@@ -7,8 +7,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -75,6 +75,6 @@ AbstractButton {
     contentItem: PC3.Label {
         text: controlRoot.Kirigami.MnemonicData.richTextLabel
         textFormat: Text.StyledText
-        color: controlRoot.menuState === MenuDelegate.State.Rest ? PlasmaCore.Theme.textColor : PlasmaCore.Theme.highlightedTextColor
+        color: controlRoot.menuState === MenuDelegate.State.Rest ? Kirigami.Theme.textColor : Kirigami.Theme.highlightedTextColor
     }
 }

@@ -9,6 +9,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Item {
@@ -28,16 +29,16 @@ Item {
     property var vtNumber
     property bool constrainText: true
     property alias nameFontSize: usernameDelegate.font.pointSize
-    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
+    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 2
     signal clicked()
 
-    property real faceSize: PlasmaCore.Units.gridUnit * 7
+    property real faceSize: Kirigami.Units.gridUnit * 7
 
     opacity: isCurrent ? 1.0 : 0.5
 
     Behavior on opacity {
         OpacityAnimator {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
         }
     }
 
@@ -60,10 +61,10 @@ Item {
         Behavior on width {
             PropertyAnimation {
                 from: faceSize
-                duration: PlasmaCore.Units.longDuration;
+                duration: Kirigami.Units.longDuration;
             }
         }
-        width: isCurrent ? faceSize : faceSize - PlasmaCore.Units.largeSpacing
+        width: isCurrent ? faceSize : faceSize - Kirigami.Units.gridUnit
         height: width
 
         //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
@@ -80,7 +81,7 @@ Item {
             source: iconSource
             visible: face.status === Image.Error || face.status === Image.Null
             anchors.fill: parent
-            colorGroup: PlasmaCore.ColorScope.colorGroup
+            colorGroup: Kirigami.Theme.colorSet
         }
     }
 
@@ -147,7 +148,7 @@ Item {
         id: usernameDelegate
 
         anchors.top: imageSource.bottom
-        anchors.topMargin: PlasmaCore.Units.gridUnit
+        anchors.topMargin: Kirigami.Units.gridUnit
         anchors.horizontalCenter: parent.horizontalCenter
 
         // Make it bigger than other fonts to match the scale of the avatar better

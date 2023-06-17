@@ -7,7 +7,7 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 
 PlasmaComponents.ToolButton {
@@ -34,8 +34,8 @@ PlasmaComponents.ToolButton {
     signal sessionChanged()
 
     PlasmaComponents.Menu {
-        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
-        PlasmaCore.ColorScope.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        Kirigami.Theme.inherit: false
 
         id: menu
         Instantiator {

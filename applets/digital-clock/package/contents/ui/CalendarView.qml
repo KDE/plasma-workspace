@@ -35,18 +35,18 @@ PlasmaExtras.Representation {
 
     readonly property var appletInterface: root
 
-    PlasmaCore.ColorScope.inherit: false
-    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
-    Layout.minimumWidth: (calendar.showAgenda || calendar.showClocks) ? PlasmaCore.Units.gridUnit * 45 : PlasmaCore.Units.gridUnit * 22
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+    Layout.minimumWidth: (calendar.showAgenda || calendar.showClocks) ? Kirigami.Units.gridUnit * 45 : Kirigami.Units.gridUnit * 22
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
 
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 25
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 25
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     collapseMarginsHint: true
 
-    readonly property int paddings: PlasmaCore.Units.smallSpacing * 2
+    readonly property int paddings: Kirigami.Units.smallSpacing * 2
     readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
@@ -118,15 +118,15 @@ PlasmaExtras.Representation {
                     Layout.rightMargin: calendar.paddings
                     Layout.fillWidth: true
 
-                    font.pixelSize: PlasmaCore.Theme.smallestFont.pixelSize
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     text: monthView.currentDateAuxilliaryText
                 }
 
                 RowLayout {
-                    spacing: PlasmaCore.Units.smallSpacing
+                    spacing: Kirigami.Units.smallSpacing
 
                     Layout.alignment: Qt.AlignBottom
-                    Layout.bottomMargin: Math.round(PlasmaCore.Units.smallSpacing * 1.5)
+                    Layout.bottomMargin: Math.round(Kirigami.Units.smallSpacing * 1.5)
 
                     // Heading text
                     Kirigami.Heading {
@@ -147,7 +147,7 @@ PlasmaExtras.Representation {
 
                         visible: agenda.visible && ApplicationIntegration.calendarInstalled
                         text: i18nc("@action:button Add event", "Add…")
-                        Layout.rightMargin: PlasmaCore.Units.smallSpacing
+                        Layout.rightMargin: Kirigami.Units.smallSpacing
                         icon.name: "list-add"
 
                         Accessible.description: i18nc("@info:tooltip", "Add a new event")
@@ -168,7 +168,7 @@ PlasmaExtras.Representation {
 
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.minimumHeight: PlasmaCore.Units.gridUnit * 4
+            Layout.minimumHeight: Kirigami.Units.gridUnit * 4
 
             function formatDateWithoutYear(date) {
                 // Unfortunatelly Qt overrides ECMA's Date.toLocaleDateString(),
@@ -232,7 +232,7 @@ PlasmaExtras.Representation {
                 readonly property string timeString: Qt.formatTime(new Date(2000, 12, 12, 12, 12, 12, 12))
                 readonly property string dateString: agenda.formatDateWithoutYear(new Date(2000, 12, 12, 12, 12, 12))
 
-                font: PlasmaCore.Theme.defaultFont
+                font: Kirigami.Theme.defaultFont
                 text: timeString.length > dateString.length ? timeString : dateString
             }
 
@@ -306,7 +306,7 @@ PlasmaExtras.Representation {
                             columns: 3
                             rows: 2
                             rowSpacing: 0
-                            columnSpacing: 2 * PlasmaCore.Units.smallSpacing
+                            columnSpacing: 2 * Kirigami.Units.smallSpacing
 
                             Rectangle {
                                 id: eventColor
@@ -317,7 +317,7 @@ PlasmaExtras.Representation {
                                 Layout.fillHeight: true
 
                                 color: modelData.eventColor
-                                width: 5 * PlasmaCore.Units.devicePixelRatio
+                                width: 5 * 1
                                 visible: modelData.eventColor !== ""
                             }
 
@@ -377,7 +377,7 @@ PlasmaExtras.Representation {
 
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: holidaysView
-                width: holidaysView.width - (PlasmaCore.Units.gridUnit * 8)
+                width: holidaysView.width - (Kirigami.Units.gridUnit * 8)
 
                 visible: holidaysList.count == 0
 
@@ -408,15 +408,15 @@ PlasmaExtras.Representation {
 
             // Normally gets some positive/negative values from base component.
             topInset: 0
-            topPadding: PlasmaCore.Units.smallSpacing
+            topPadding: Kirigami.Units.smallSpacing
 
             leftInset: 0
             rightInset: 0
-            leftPadding: mirrored ? PlasmaCore.Units.smallSpacing : calendar.paddings
-            rightPadding: mirrored ? calendar.paddings : PlasmaCore.Units.smallSpacing
+            leftPadding: mirrored ? Kirigami.Units.smallSpacing : calendar.paddings
+            rightPadding: mirrored ? calendar.paddings : Kirigami.Units.smallSpacing
 
             contentItem: RowLayout {
-                spacing: PlasmaCore.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 Kirigami.Heading {
                     Layout.fillWidth: true
@@ -456,8 +456,8 @@ PlasmaExtras.Representation {
 
             Layout.fillWidth: true
             Layout.fillHeight: !agenda.visible
-            Layout.minimumHeight: visible ? PlasmaCore.Units.gridUnit * 7 : 0
-            Layout.maximumHeight: agenda.visible ? PlasmaCore.Units.gridUnit * 10 : -1
+            Layout.minimumHeight: visible ? Kirigami.Units.gridUnit * 7 : 0
+            Layout.maximumHeight: agenda.visible ? Kirigami.Units.gridUnit * 10 : -1
 
             ListView {
                 id: clocksList
@@ -582,9 +582,9 @@ PlasmaExtras.Representation {
             id: monthView
 
             anchors {
-                leftMargin: PlasmaCore.Units.smallSpacing
-                rightMargin: PlasmaCore.Units.smallSpacing
-                bottomMargin: PlasmaCore.Units.smallSpacing
+                leftMargin: Kirigami.Units.smallSpacing
+                rightMargin: Kirigami.Units.smallSpacing
+                bottomMargin: Kirigami.Units.smallSpacing
             }
 
             borderOpacity: 0.25

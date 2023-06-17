@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.13
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kirigami 2.13 as Kirigami
 

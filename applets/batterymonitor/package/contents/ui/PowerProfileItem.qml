@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmaComponents3.ItemDelegate {
     id: root
@@ -64,13 +65,13 @@ PlasmaComponents3.ItemDelegate {
     Keys.forwardTo: [slider]
 
     contentItem: RowLayout {
-        spacing: PlasmaCore.Units.gridUnit
+        spacing: Kirigami.Units.gridUnit
 
         PlasmaCore.IconItem {
             source: "speedometer"
             Layout.alignment: Qt.AlignTop
-            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
         }
 
         ColumnLayout {
@@ -80,7 +81,7 @@ PlasmaComponents3.ItemDelegate {
 
             RowLayout {
                 Layout.fillWidth: true
-                spacing: PlasmaCore.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 PlasmaComponents3.Label {
                     Layout.fillWidth: true
@@ -118,7 +119,7 @@ PlasmaComponents3.ItemDelegate {
                 Rectangle {
                     z: -1
                     visible: root.inhibited
-                    color: PlasmaCore.Theme.backgroundColor
+                    color: Kirigami.Theme.backgroundColor
                     anchors {
                         top: parent.background.top
                         left: parent.horizontalCenter
@@ -132,8 +133,8 @@ PlasmaComponents3.ItemDelegate {
 
             RowLayout {
                 spacing: 0
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
 
                 KSvg.Svg {
@@ -142,8 +143,8 @@ PlasmaComponents3.ItemDelegate {
                 }
 
                 KSvg.SvgItem {
-                    Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                     svg: svg
                     elementId: "profile-powersave"
 
@@ -162,8 +163,8 @@ PlasmaComponents3.ItemDelegate {
                 }
 
                 KSvg.SvgItem {
-                    Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                     svg: svg
                     elementId: "profile-performance"
 
@@ -236,7 +237,7 @@ PlasmaComponents3.ItemDelegate {
                 InhibitionHint {
                     Layout.fillWidth: true
 
-                    x: PlasmaCore.Units.smallSpacing
+                    x: Kirigami.Units.smallSpacing
                     iconSource: modelData.Icon
                     text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
                                 "%1: %2", modelData.Name, modelData.Reason)
@@ -245,7 +246,7 @@ PlasmaComponents3.ItemDelegate {
 
             Item {
                 Layout.fillWidth: true
-                Layout.preferredHeight: PlasmaCore.Units.smallSpacing
+                Layout.preferredHeight: Kirigami.Units.smallSpacing
 
                 visible: repeater.visibleChildren > 0
                     || inhibitionReasonHint.visible

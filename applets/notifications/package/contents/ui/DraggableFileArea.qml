@@ -6,7 +6,7 @@
 
 import QtQuick
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: area
@@ -15,7 +15,7 @@ Item {
     signal contextMenuRequested(var pos)
 
     required property Item dragParent
-    property int dragPixmapSize: PlasmaCore.Units.iconSizes.large
+    property int dragPixmapSize: Kirigami.Units.iconSizes.large
 
     readonly property alias dragging: dragHandler.active
     readonly property alias hovered: hoverHandler.hovered

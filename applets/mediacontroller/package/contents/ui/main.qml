@@ -10,6 +10,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.private.mediacontroller 1.0
 
@@ -76,8 +77,8 @@ PlasmoidItem {
 
     readonly property int volumePercentStep: config.volumeStep
 
-    switchWidth: PlasmaCore.Units.gridUnit * 14
-    switchHeight: PlasmaCore.Units.gridUnit * 10
+    switchWidth: Kirigami.Units.gridUnit * 14
+    switchHeight: Kirigami.Units.gridUnit * 10
     Plasmoid.icon: "media-playback-playing"
     toolTipMainText: i18n("No media playing")
     toolTipSubText: identity

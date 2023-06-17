@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 
@@ -24,8 +25,8 @@ MouseArea {
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
+    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton
 
@@ -50,13 +51,13 @@ MouseArea {
     KSvg.Svg {
         id: notificationSvg
         imagePath: "icons/notification"
-        colorGroup: PlasmaCore.ColorScope.colorGroup
+        colorGroup: Kirigami.Theme.colorSet
     }
 
     KSvg.SvgItem {
         id: notificationIcon
         anchors.centerIn: parent
-        width: PlasmaCore.Units.roundToIconSize(Math.min(parent.width, parent.height))
+        width: Kirigami.Units.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: notificationSvg
         visible: opacity > 0
@@ -73,9 +74,9 @@ MouseArea {
             range { from: 0; to: 100; automatic: false }
 
             valueSources: Charts.SingleValueSource { value: compactRoot.jobsPercentage }
-            colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
+            colorSource: Charts.SingleValueSource { value: Kirigami.Theme.highlightColor }
 
-            thickness: PlasmaCore.Units.devicePixelRatio * 5
+            thickness: 1 * 5
         }
 
         PlasmaComponents3.Label {
@@ -86,7 +87,7 @@ MouseArea {
             fontSizeMode: Text.Fit
             font.pointSize: 1024
             font.pixelSize: -1
-            minimumPointSize: 5//PlasmaCore.Theme.smallestFont.pointSize
+            minimumPointSize: 5//Kirigami.Theme.smallFont.pointSize
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: compactRoot.unreadCount || ""
@@ -161,7 +162,7 @@ MouseArea {
             NumberAnimation {
                 targets: [notificationIcon, dndIcon]
                 properties: "opacity,scale"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         },
@@ -173,19 +174,19 @@ MouseArea {
                     target: notificationIcon
                     to: 30
                     easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
                 RotationAnimation {
                     target: notificationIcon
                     to: -30
                     easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.longDuration * 2 // twice the swing distance, keep speed uniform
+                    duration: Kirigami.Units.longDuration * 2 // twice the swing distance, keep speed uniform
                 }
                 RotationAnimation {
                     target: notificationIcon
                     to: 0
                     easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
             }
         }

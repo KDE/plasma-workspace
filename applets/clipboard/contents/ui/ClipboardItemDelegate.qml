@@ -10,20 +10,20 @@ import QtQuick.Layouts 1.1
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 
 PlasmaComponents.ItemDelegate {
     id: menuItem
 
     property bool supportsBarcodes
-    property int maximumNumberOfPreviews: Math.floor(width / (PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing))
+    property int maximumNumberOfPreviews: Math.floor(width / (Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing))
     readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
     // Consider tall to be > about 1.5x the default height for purposes of top-aligning
     // the buttons to preserve Fitts' Law when deleting multiple items in a row,
     // or else the top-alignment doesn't look deliberate enough and people will think
     // it's a bug
-    readonly property bool isTall: height > Math.round(PlasmaCore.Units.gridUnit * 2.5)
+    readonly property bool isTall: height > Math.round(Kirigami.Units.gridUnit * 2.5)
 
     signal itemSelected(string uuid)
     signal remove(string uuid)
@@ -32,7 +32,7 @@ PlasmaComponents.ItemDelegate {
     signal triggerAction(string uuid)
 
     // the 1.6 comes from ToolButton's default height
-    height: Math.max(label.height, Math.round(PlasmaCore.Units.gridUnit * 1.6)) + 2 * PlasmaCore.Units.smallSpacing
+    height: Math.max(label.height, Math.round(Kirigami.Units.gridUnit * 1.6)) + 2 * Kirigami.Units.smallSpacing
 
     enabled: true
 
@@ -94,9 +94,9 @@ PlasmaComponents.ItemDelegate {
         visible: !menuItem.ListView.isCurrentItem
         anchors {
             left: parent.left
-            leftMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.left
+            leftMargin: Kirigami.Units.gridUnit / 2 - listMargins.left
             right: parent.right
-            rightMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.right
+            rightMargin: Kirigami.Units.gridUnit / 2 - listMargins.right
             verticalCenter: parent.verticalCenter
         }
 
@@ -113,7 +113,7 @@ PlasmaComponents.ItemDelegate {
             right: label.right
             verticalCenter: parent.verticalCenter
             // This is here because you can't assign to it in AnchorChanges below
-            topMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.top
+            topMargin: Kirigami.Units.gridUnit / 2 - listMargins.top
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem

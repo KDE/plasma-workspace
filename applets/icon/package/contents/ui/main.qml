@@ -14,6 +14,7 @@ import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
 PlasmoidItem {
@@ -26,11 +27,11 @@ PlasmoidItem {
     property bool containsAcceptableDrag: false
 
     preferredRepresentation: fullRepresentation
-    height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
-    width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
+    height: Math.round(Kirigami.Units.iconSizes.desktop + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
+    width: Math.round(Kirigami.Units.iconSizes.desktop * 1.5)
 
-    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
+    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
 
     enabled: Plasmoid.valid
 
@@ -78,8 +79,8 @@ PlasmoidItem {
         Accessible.description: toolTip.subText
         Accessible.role: Accessible.Button
 
-        Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
+        Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
 
         hoverEnabled: true
         enabled: Plasmoid.valid
@@ -134,7 +135,7 @@ PlasmoidItem {
             opacity: Plasmoid.busy ? 0.6 : 1
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: Kirigami.Units.shortDuration
                     easing.type: Easing.OutCubic
                 }
             }

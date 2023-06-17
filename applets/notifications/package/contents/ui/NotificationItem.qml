@@ -100,7 +100,7 @@ ColumnLayout {
     signal resumeJobClicked
     signal killJobClicked
 
-    spacing: PlasmaCore.Units.smallSpacing
+    spacing: Kirigami.Units.smallSpacing
 
     // Header
     Item {
@@ -112,8 +112,8 @@ ColumnLayout {
         Layout.topMargin: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Math.max(0, (summaryLabelTextMetrics.height - Layout.preferredHeight) / 2) : 0
         Layout.bottomMargin: notificationItem.inGroup ? 0 : -parent.spacing
 
-        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
-        PlasmaCore.ColorScope.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.HeaderColorGroup
+        Kirigami.Theme.inherit: false
 
         PlasmaExtras.PlasmoidHeading {
             topInset: 0
@@ -133,8 +133,8 @@ ColumnLayout {
                 rightMargin: notificationItem.headingRightPadding
             }
 
-            PlasmaCore.ColorScope.colorGroup: parent.PlasmaCore.ColorScope.colorGroup
-            PlasmaCore.ColorScope.inherit: false
+            Kirigami.Theme.colorSet: parent.Kirigami.Theme.colorSet
+            Kirigami.Theme.inherit: false
 
             inGroup: notificationItem.inGroup
             inHistory: notificationItem.inHistory
@@ -243,7 +243,7 @@ ColumnLayout {
             // HACK RichText does not allow to specify link color and since LineEdit
             // does not support StyledText, we have to inject some CSS to force the color,
             // cf. QTBUG-81463 and to some extent QTBUG-80354
-            text: "<style>a { color: " + PlasmaCore.Theme.linkColor + "; }</style>" + notificationItem.body
+            text: "<style>a { color: " + Kirigami.Theme.linkColor + "; }</style>" + notificationItem.body
 
             // Cannot do text !== "" because RichText adds some HTML tags even when empty
             visible: notificationItem.body !== ""
@@ -265,8 +265,8 @@ ColumnLayout {
             PlasmaCore.IconItem {
                 id: iconItem
 
-                width: PlasmaCore.Units.iconSizes.large
-                height: PlasmaCore.Units.iconSizes.large
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
                 anchors.verticalCenter: parent.verticalCenter
 
                 // don't show two identical icons
@@ -319,13 +319,13 @@ ColumnLayout {
             // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
             parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
             width: parent.width
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: Kirigami.Units.smallSpacing
             layoutDirection: Qt.RightToLeft
             enabled: !replyLoader.active
             opacity: replyLoader.active ? 0 : 1
             Behavior on opacity {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -384,13 +384,13 @@ ColumnLayout {
             x: active ? 0 : parent.width
             Behavior on x {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
             Behavior on opacity {
                 NumberAnimation {
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }

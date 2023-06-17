@@ -10,6 +10,7 @@ import QtQuick.Window 2.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 

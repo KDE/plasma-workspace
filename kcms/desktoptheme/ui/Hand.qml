@@ -8,8 +8,8 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 
 KSvg.SvgItem {
     id: handRoot
@@ -58,7 +58,7 @@ KSvg.SvgItem {
         Behavior on angle {
             RotationAnimation {
                 id: anim
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 direction: RotationAnimation.Clockwise
                 easing.type: Easing.OutElastic
                 easing.overshoot: 0.5

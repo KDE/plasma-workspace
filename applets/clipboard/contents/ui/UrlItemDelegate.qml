@@ -7,13 +7,13 @@
 
 import QtQuick 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 Item {
     id: previewItem
-    height: PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
+    height: Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2
 
     Drag.active: dragHandler.active
     Drag.dragType: Drag.Automatic
@@ -25,11 +25,11 @@ Item {
     ListView {
         id: previewList
         model: DisplayRole.split(" ", maximumNumberOfPreviews)
-        property int itemWidth: PlasmaCore.Units.gridUnit * 4
-        property int itemHeight: PlasmaCore.Units.gridUnit * 4
+        property int itemWidth: Kirigami.Units.gridUnit * 4
+        property int itemHeight: Kirigami.Units.gridUnit * 4
         interactive: false
 
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
         orientation: Qt.Horizontal
         width: (itemWidth + spacing) * model.length
         anchors {
@@ -70,9 +70,9 @@ Item {
             }
             Rectangle {
                 id: overlay
-                color: PlasmaCore.Theme.textColor
+                color: Kirigami.Theme.textColor
                 opacity: 0.6
-                height: PlasmaCore.Units.gridUnit
+                height: Kirigami.Units.gridUnit
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -80,15 +80,15 @@ Item {
                 }
             }
             PlasmaComponents3.Label {
-                font: PlasmaCore.Theme.smallestFont
-                color: PlasmaCore.Theme.backgroundColor
+                font: Kirigami.Theme.smallFont
+                color: Kirigami.Theme.backgroundColor
                 maximumLineCount: 1
                 anchors {
                     verticalCenter: overlay.verticalCenter
                     left: overlay.left
                     right: overlay.right
-                    leftMargin: PlasmaCore.Units.smallSpacing
-                    rightMargin: PlasmaCore.Units.smallSpacing
+                    leftMargin: Kirigami.Units.smallSpacing
+                    rightMargin: Kirigami.Units.smallSpacing
                 }
                 elide: Text.ElideRight
                 horizontalAlignment: Text.AlignHCenter
@@ -108,11 +108,11 @@ Item {
             left: previewList.right
             right: parent.right
             bottom: parent.bottom
-            margins: PlasmaCore.Units.smallSpacing
+            margins: Kirigami.Units.smallSpacing
 
         }
         verticalAlignment: Text.AlignBottom
         horizontalAlignment: Text.AlignCenter
-        font: PlasmaCore.Theme.smallestFont
+        font: Kirigami.Theme.smallFont
     }
 }

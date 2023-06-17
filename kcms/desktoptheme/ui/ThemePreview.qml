@@ -6,7 +6,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.ksvg 1.0 as KSvg
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 Item {

@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -25,12 +26,12 @@ PlasmaExtras.Representation {
     readonly property int dndEveningHour: 20
     readonly property var appletInterface: root
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
-    Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
-    Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
-    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
-    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+    Layout.minimumWidth: Kirigami.Units.gridUnit * 12
+    Layout.minimumHeight: Kirigami.Units.gridUnit * 12
+    Layout.preferredWidth: Kirigami.Units.gridUnit * 18
+    Layout.preferredHeight: Kirigami.Units.gridUnit * 24
+    Layout.maximumWidth: Kirigami.Units.gridUnit * 80
+    Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
     Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
@@ -57,7 +58,7 @@ PlasmaExtras.Representation {
         ColumnLayout {
             anchors {
                 fill: parent
-                leftMargin: PlasmaCore.Units.smallSpacing
+                leftMargin: Kirigami.Units.smallSpacing
             }
             id: header
             spacing: 0
@@ -180,8 +181,8 @@ PlasmaExtras.Representation {
             }
 
             PlasmaExtras.DescriptiveLabel {
-                Layout.leftMargin: dndCheck.mirrored ? 0 : dndCheck.indicator.width + 2 * dndCheck.spacing + PlasmaCore.Units.iconSizes.smallMedium
-                Layout.rightMargin: dndCheck.mirrored ? dndCheck.indicator.width + 2 * dndCheck.spacing + PlasmaCore.Units.iconSizes.smallMedium : 0
+                Layout.leftMargin: dndCheck.mirrored ? 0 : dndCheck.indicator.width + 2 * dndCheck.spacing + Kirigami.Units.iconSizes.smallMedium
+                Layout.rightMargin: dndCheck.mirrored ? dndCheck.indicator.width + 2 * dndCheck.spacing + Kirigami.Units.iconSizes.smallMedium : 0
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 textFormat: Text.PlainText
@@ -247,9 +248,9 @@ PlasmaExtras.Representation {
             model: root.expanded ? historyModel : null
             currentIndex: -1
 
-            topMargin: PlasmaCore.Units.smallSpacing * 2
-            bottomMargin: PlasmaCore.Units.smallSpacing * 2
-            spacing: PlasmaCore.Units.smallSpacing
+            topMargin: Kirigami.Units.smallSpacing * 2
+            bottomMargin: Kirigami.Units.smallSpacing * 2
+            spacing: Kirigami.Units.smallSpacing
 
             KeyNavigation.up: dndCheck
 
@@ -360,7 +361,7 @@ PlasmaExtras.Representation {
                     target: transl
                     properties: "y"
                     to: 0
-                    duration: PlasmaCore.Units.longDuration
+                    duration: Kirigami.Units.longDuration
                 }
                 opacity: 0
                 ListView.onAdd: appearAnim.restart();
@@ -376,13 +377,13 @@ PlasmaExtras.Representation {
                 SequentialAnimation {
                     id: appearAnim
                     PropertyAnimation { target: delegate; property: "opacity"; to: 0 }
-                    PauseAnimation { duration: PlasmaCore.Units.longDuration}
+                    PauseAnimation { duration: Kirigami.Units.longDuration}
                     NumberAnimation {
                         target: delegate
                         property: "opacity"
                         from: 0
                         to: 1
-                        duration: PlasmaCore.Units.longDuration
+                        duration: Kirigami.Units.longDuration
                     }
                 }
 
@@ -390,12 +391,12 @@ PlasmaExtras.Representation {
                     id: removeAnimation
                     PropertyAction { target: delegate; property: "ListView.delayRemove"; value: true }
                     ParallelAnimation {
-                        NumberAnimation { target: delegate; property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
+                        NumberAnimation { target: delegate; property: "opacity"; to: 0; duration: Kirigami.Units.longDuration }
                         NumberAnimation {
                             target: transl
                             property: "x"
-                            to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
-                            duration: PlasmaCore.Units.longDuration
+                            to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.smallSpacing * 4 : 0)
+                            duration: Kirigami.Units.longDuration
                         }
                     }
                     PropertyAction { target: delegate; property: "ListView.delayRemove"; value: false }
@@ -413,9 +414,9 @@ PlasmaExtras.Representation {
                     id: delegateLoader
                     anchors {
                         left: parent.left
-                        leftMargin: PlasmaCore.Units.smallSpacing * 2
+                        leftMargin: Kirigami.Units.smallSpacing * 2
                         right: parent.right
-                        rightMargin: PlasmaCore.Units.smallSpacing * 2
+                        rightMargin: Kirigami.Units.smallSpacing * 2
                     }
                     sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
@@ -440,14 +441,14 @@ PlasmaExtras.Representation {
                     Component {
                         id: notificationDelegate
                         ColumnLayout {
-                            spacing: PlasmaCore.Units.smallSpacing
+                            spacing: Kirigami.Units.smallSpacing
 
                             RowLayout {
                                 Item {
                                     id: groupLineContainer
                                     Layout.fillHeight: true
-                                    Layout.topMargin: PlasmaCore.Units.smallSpacing
-                                    width: PlasmaCore.Units.iconSizes.small
+                                    Layout.topMargin: Kirigami.Units.smallSpacing
+                                    width: Kirigami.Units.iconSizes.small
                                     visible: model.isInGroup
 
                                     // Not using the Plasma theme's vertical line SVG because we want something thicker
@@ -455,10 +456,10 @@ PlasmaExtras.Representation {
                                     // with all Plasma themes.
                                     Rectangle {
                                         anchors.horizontalCenter: parent.horizontalCenter
-                                        width: PlasmaCore.Units.devicePixelRatio * 3
+                                        width: 1 * 3
                                         height: parent.height
                                         // TODO: use separator color here, once that color role is implemented
-                                        color: PlasmaCore.Theme.textColor
+                                        color: Kirigami.Theme.textColor
                                         opacity: 0.2
                                     }
                                 }
@@ -585,7 +586,7 @@ PlasmaExtras.Representation {
 
                             KSvg.SvgItem {
                                 Layout.fillWidth: true
-                                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+                                Layout.bottomMargin: Kirigami.Units.smallSpacing
                                 elementId: "horizontal-line"
                                 svg: lineSvg
 
@@ -601,7 +602,7 @@ PlasmaExtras.Representation {
 
             Loader {
                 anchors.centerIn: parent
-                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                width: parent.width - (Kirigami.Units.gridUnit * 4)
 
                 active: list.count === 0
                 visible: active

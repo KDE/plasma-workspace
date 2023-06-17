@@ -7,8 +7,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 
-import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.FormLayout {
     anchors.left: parent.left

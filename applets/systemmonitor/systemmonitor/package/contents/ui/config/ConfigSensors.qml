@@ -12,9 +12,6 @@ import QtQuick.Controls 2.2 as QQC2
 import QtQml.Models 2.12
 
 import org.kde.kquickcontrols 2.0
-
-
-
 import org.kde.plasma.plasmoid 2.0
 
 QQC2.Control {

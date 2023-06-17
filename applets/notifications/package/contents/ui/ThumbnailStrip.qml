@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
@@ -109,7 +110,7 @@ Item {
             id: previewIcon
             anchors.centerIn: parent
             width: height
-            height: PlasmaCore.Units.roundToIconSize(parent.height)
+            height: Kirigami.Units.roundedIconSize(parent.height)
             active: dragArea.hovered
             usesPlasmaTheme: false
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
@@ -132,9 +133,9 @@ Item {
                 top: parent.top
                 left: parent.left
                 right: parent.right
-                margins: PlasmaCore.Units.smallSpacing
+                margins: Kirigami.Units.smallSpacing
             }
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: Kirigami.Units.smallSpacing
 
             Item {
                 id: thumbnailActionContainer

@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.12
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
@@ -22,10 +23,10 @@ PlasmoidItem {
 
     switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : PlasmaCore.Units.gridUnit * 8)
+        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : Kirigami.Units.gridUnit * 8)
     switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : PlasmaCore.Units.gridUnit * 12)
+        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : Kirigami.Units.gridUnit * 12)
 
     preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? fullRepresentation : null
 

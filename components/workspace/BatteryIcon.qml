@@ -8,6 +8,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     property bool hasBattery
@@ -18,7 +19,7 @@ Item {
     KSvg.Svg {
         id: svg
         imagePath: "icons/battery"
-        colorGroup: PlasmaCore.ColorScope.colorGroup
+        colorGroup: Kirigami.Theme.colorSet
         onRepaintNeeded: { // needed to detect the hint item go away when theme changes
             batterySvg.visible = Qt.binding(() => !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery))
         }
@@ -27,7 +28,7 @@ Item {
     KSvg.SvgItem {
         id: batterySvg
         anchors.centerIn: parent
-        width: PlasmaCore.Units.roundToIconSize(Math.min(parent.width, parent.height))
+        width: Kirigami.Units.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: svg
         elementId: "Battery"

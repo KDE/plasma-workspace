@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
 
 KSvg.FrameSvgItem {
@@ -136,7 +137,7 @@ KSvg.FrameSvgItem {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
@@ -144,7 +145,7 @@ KSvg.FrameSvgItem {
         id: xAnim
         enabled: animationEnabled
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -152,7 +153,7 @@ KSvg.FrameSvgItem {
         id: yAnim
         enabled: animationEnabled
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -160,7 +161,7 @@ KSvg.FrameSvgItem {
         id: widthAnim
         enabled: animationEnabled
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -168,7 +169,7 @@ KSvg.FrameSvgItem {
         id: heightAnim
         enabled: animationEnabled
         NumberAnimation {
-            duration: PlasmaCore.Units.longDuration
+            duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }

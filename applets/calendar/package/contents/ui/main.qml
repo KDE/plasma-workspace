@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.12
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -17,8 +18,8 @@ import org.kde.plasma.workspace.calendar 2.0
 
 PlasmoidItem {
     id: root
-    switchWidth: PlasmaCore.Units.gridUnit * 12
-    switchHeight: PlasmaCore.Units.gridUnit * 12
+    switchWidth: Kirigami.Units.gridUnit * 12
+    switchHeight: Kirigami.Units.gridUnit * 12
 
     toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
     toolTipSubText: {
@@ -32,8 +33,8 @@ PlasmoidItem {
         return Qt.formatDate(dataSource.data.Local.DateTime, format)
     }
 
-    Layout.minimumWidth: PlasmaCore.Units.iconSizes.large
-    Layout.minimumHeight: PlasmaCore.Units.iconSizes.large
+    Layout.minimumWidth: Kirigami.Units.iconSizes.large
+    Layout.minimumHeight: Kirigami.Units.iconSizes.large
 
     P5Support.DataSource {
         id: dataSource
@@ -70,7 +71,7 @@ PlasmoidItem {
                     var d = new Date(dataSource.data.Local.DateTime);
                     return Qt.formatDate(d, "MMM");
                 }
-                visible: parent.width > PlasmaCore.Units.gridUnit * 3
+                visible: parent.width > Kirigami.Units.gridUnit * 3
             }
 
             PlasmaComponents3.Label {
@@ -105,13 +106,13 @@ PlasmoidItem {
 
         // sizing taken from digital clock
         readonly property int _minimumWidth: calendar.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
-        readonly property int _minimumHeight: PlasmaCore.Units.gridUnit * 14
+        readonly property int _minimumHeight: Kirigami.Units.gridUnit * 14
         readonly property var appletInterface: root
 
         Layout.minimumWidth: _minimumWidth
-        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+        Layout.maximumWidth: Kirigami.Units.gridUnit * 80
         Layout.minimumHeight: _minimumHeight
-        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+        Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
         MonthView {
             id: calendar

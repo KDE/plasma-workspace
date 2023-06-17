@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
 import org.kde.plasma.plasma5support 2.0 as P5Support
@@ -27,7 +28,7 @@ PlasmaCore.ColorScope {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     property bool hadPrompt: false;
 
-    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    colorGroup: Kirigami.Theme.ComplementaryColorGroup
 
     Connections {
         target: authenticator
@@ -188,7 +189,7 @@ PlasmaCore.ColorScope {
             }
         }
 
-        Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.veryLongDuration * 2 }
+        Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: Kirigami.Units.veryLongDuration * 2 }
 
         states: [
             State {
@@ -207,8 +208,8 @@ PlasmaCore.ColorScope {
             from: ""
             to: "onOtherSession"
 
-            PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad}
-            PropertyAnimation { properties: "opacity"; duration: PlasmaCore.Units.longDuration}
+            PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: Kirigami.Units.longDuration; easing.type: Easing.InQuad}
+            PropertyAnimation { properties: "opacity"; duration: Kirigami.Units.longDuration}
 
             onRunningChanged: {
                 // after the animation has finished switch session: since we only animate the transition TO state "onOtherSession"
@@ -239,7 +240,7 @@ PlasmaCore.ColorScope {
             color : "black" // shadows should always be black
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: PlasmaCore.Units.veryLongDuration * 2
+                    duration: Kirigami.Units.veryLongDuration * 2
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -272,7 +273,7 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
             }
-            height: lockScreenRoot.height + PlasmaCore.Units.gridUnit * 3
+            height: lockScreenRoot.height + Kirigami.Units.gridUnit * 3
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
             // this isn't implicit, otherwise items still get processed for the scenegraph
@@ -345,7 +346,7 @@ PlasmaCore.ColorScope {
                 ]
 
                 Loader {
-                    Layout.topMargin: PlasmaCore.Units.smallSpacing // some distance to the password field
+                    Layout.topMargin: Kirigami.Units.smallSpacing // some distance to the password field
                     Layout.fillWidth: true
                     Layout.preferredHeight: item ? item.implicitHeight : 0
                     active: config.showMediaControls
@@ -433,13 +434,13 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                         }
@@ -453,18 +454,18 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                             OpacityAnimator {
                                 target: inputPanel
-                                duration: PlasmaCore.Units.longDuration
+                                duration: Kirigami.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                         }
@@ -517,11 +518,11 @@ PlasmaCore.ColorScope {
 
                 ColumnLayout {
                     Layout.fillWidth: true
-                    spacing: PlasmaCore.Units.largeSpacing
+                    spacing: Kirigami.Units.gridUnit
 
                     PlasmaComponents3.Button {
                         Layout.fillWidth: true
-                        font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+                        font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch to This Session")
                         onClicked: initSwitchSession()
                         visible: sessionsModel.count > 0
@@ -529,7 +530,7 @@ PlasmaCore.ColorScope {
 
                     PlasmaComponents3.Button {
                         Layout.fillWidth: true
-                        font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+                        font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
                         onClicked: {
                             mainStack.pop({immediate:true})
@@ -560,7 +561,7 @@ PlasmaCore.ColorScope {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 bottom: parent.bottom
-                bottomMargin: PlasmaCore.Units.largeSpacing
+                bottomMargin: Kirigami.Units.gridUnit
             }
         }
 
@@ -570,7 +571,7 @@ PlasmaCore.ColorScope {
                 bottom: parent.bottom
                 left: parent.left
                 right: parent.right
-                margins: PlasmaCore.Units.smallSpacing
+                margins: Kirigami.Units.smallSpacing
             }
 
             PlasmaComponents3.ToolButton {

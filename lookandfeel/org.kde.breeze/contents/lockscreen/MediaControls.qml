@@ -8,15 +8,15 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasma5support 2.0 as P5Support
 
 Item {
     visible: mpris2Source.hasPlayer
-    implicitHeight: PlasmaCore.Units.gridUnit * 3
-    implicitWidth: PlasmaCore.Units.gridUnit * 16
+    implicitHeight: Kirigami.Units.gridUnit * 3
+    implicitWidth: Kirigami.Units.gridUnit * 16
 
     RowLayout {
         id: controlsRow
@@ -93,7 +93,7 @@ Item {
         }
 
         Item { // spacer
-            width: PlasmaCore.Units.smallSpacing
+            width: Kirigami.Units.smallSpacing
             height: 1
         }
 
@@ -111,7 +111,7 @@ Item {
                             ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No title")
                             : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing"))
                 textFormat: Text.PlainText
-                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
+                font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
                 maximumLineCount: 1
             }
 
@@ -122,7 +122,7 @@ Item {
                 // if no artist is given, show player name instead
                 text: mpris2Source.artists.length > 0 ? mpris2Source.artists.join(", ") : (mpris2Source.albumArtists.length > 0 ? mpris2Source.albumArtists.join(", ") : mpris2Source.identity)
                 textFormat: Text.PlainText
-                font.pointSize: PlasmaCore.Theme.smallestFont.pointSize + 1
+                font.pointSize: Kirigami.Theme.smallFont.pointSize + 1
                 maximumLineCount: 1
             }
         }
@@ -130,7 +130,7 @@ Item {
         PlasmaComponents3.ToolButton {
             focusPolicy: Qt.TabFocus
             enabled: mpris2Source.canGoBack
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
+            Layout.preferredHeight: Kirigami.Units.gridUnit*2
             Layout.preferredWidth: Layout.preferredHeight
             icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             onClicked: {
@@ -156,7 +156,7 @@ Item {
         PlasmaComponents3.ToolButton {
             focusPolicy: Qt.TabFocus
             enabled: mpris2Source.canGoNext
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
+            Layout.preferredHeight: Kirigami.Units.gridUnit*2
             Layout.preferredWidth: Layout.preferredHeight
             icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             onClicked: {
