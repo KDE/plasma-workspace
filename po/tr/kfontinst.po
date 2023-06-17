@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-14 02:07+0000\n"
-"PO-Revision-Date: 2023-05-24 01:28+0300\n"
+"PO-Revision-Date: 2023-06-16 12:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2096,7 +2096,7 @@ msgstr "Arapça Sunum Biçimleri-A"
 
 #: viewpart/UnicodeBlocks.h:135
 msgid "Variation Selectors"
-msgstr "Dönüşüm Seçiciler"
+msgstr "Varyasyon Seçiciler"
 
 #: viewpart/UnicodeBlocks.h:136
 msgid "Vertical Forms"
@@ -2228,7 +2228,7 @@ msgstr "Etiketler"
 
 #: viewpart/UnicodeBlocks.h:168
 msgid "Variation Selectors Supplement"
-msgstr "Dönüşüm Seçici Ekleri"
+msgstr "Varyasyon Seçicisi Ekleri"
 
 #: viewpart/UnicodeBlocks.h:169
 msgid "Supplementary Private Use Area-A"

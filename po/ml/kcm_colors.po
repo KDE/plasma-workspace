@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-17 02:07+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -855,18 +855,18 @@ msgstr "നിഷ്ക്രിയമായ തിരഞ്ഞെടുപ്�
 msgid "Shade sorted column &in lists"
 msgstr "പട്ടികകളില്‍ ക്രമീകരിച്ചിരിക്കുന്ന നിരകള്‍ എടുത്ത്കാണിക്കുക (&i)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:45
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgid "Tint all colors with accent color"
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52

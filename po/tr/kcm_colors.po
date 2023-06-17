@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-05-15 22:30+0300\n"
+"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"PO-Revision-Date: 2023-06-16 11:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -99,7 +99,7 @@ msgstr "Vurgu renginin duvar kağıdından uygulanıp uygulanmayacağı"
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr "K Renk Şeması Düzenleyici"
+msgstr "K Renk Şeması Düzenleyicisi"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -865,17 +865,17 @@ msgstr "Etkin olmay&an seçimler için farklı renkler kullan"
 msgid "Shade sorted column &in lists"
 msgstr "Listelerdeki &sıralı sütunları gölgele"
 
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, kde-format
-msgid "Tint all colors with accent color"
-msgstr "Tüm renkleri vurgu rengiyle renklendir"
-
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
+#: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
 msgstr "Pencere başlık çubuklarını &vurgu rengiyle renklendir"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "Tüm renkleri vurgu rengiyle renklendir"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52

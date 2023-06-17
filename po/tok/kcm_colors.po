@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-17 02:07+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -849,16 +849,16 @@ msgstr ""
 msgid "Shade sorted column &in lists"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
 #, kde-format
-msgid "Tint all colors with accent color"
+msgid "Make window titlebars a&ccent-colored"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
-msgid "Make window titlebars a&ccent-colored"
+msgid "Tint all colors with accent color"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
