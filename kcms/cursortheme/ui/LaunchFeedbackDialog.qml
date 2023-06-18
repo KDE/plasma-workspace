@@ -15,7 +15,7 @@ Kirigami.OverlaySheet {
 
     title: i18nc("@title", "Launch Feedback")
 
-    contentItem: ColumnLayout {
+    ColumnLayout {
         Layout.preferredWidth: Kirigami.Units.gridUnit * 20
         Layout.maximumWidth: Kirigami.Units.gridUnit * 30
         spacing: Kirigami.Units.largeSpacing
