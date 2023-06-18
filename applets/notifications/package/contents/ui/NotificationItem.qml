@@ -79,10 +79,9 @@ ColumnLayout {
     property alias remainingTime: notificationHeading.remainingTime
 
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
-                                     || thumbnailStripLoader.item?.menuOpen
-                                     || jobLoader.item?.menuOpen
+                                     || Boolean(thumbnailStripLoader.item?.menuOpen || jobLoader.item?.menuOpen)
 
-    readonly property bool dragging: thumbnailStripLoader.item?.dragging || jobLoader.item?.dragging
+    readonly property bool dragging: Boolean(thumbnailStripLoader.item?.dragging || jobLoader.item?.dragging)
     property bool replying: false
     readonly property bool hasPendingReply: replyLoader.item?.text !== ""
     readonly property alias headerHeight: headingElement.height
