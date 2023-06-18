@@ -46,8 +46,8 @@ Kirigami.OverlaySheet {
         this.open();
     }
 
-    onVisibleChanged: {
-        if (visible && fingerprintModel.currentlyEnrolling) {
+    onOpened: {
+        if (fingerprintModel.currentlyEnrolling) {
             fingerprintModel.stopEnrolling();
         }
     }
