@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2023-03-25 18:03+0100\n"
+"PO-Revision-Date: 2023-06-17 09:14+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -987,7 +987,7 @@ msgstr "Contido do portapapeis"
 #: urlgrabber.cpp:200
 #, kde-format
 msgid "Disable This Popup"
-msgstr "Desactivar esta xanela emerxente"
+msgstr "Desactivar este diálogo emerxente"
 
 #: urlgrabber.cpp:206
 #, kde-format

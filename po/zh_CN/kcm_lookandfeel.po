@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-22 14:03\n"
+"PO-Revision-Date: 2023-06-17 04:13\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -99,7 +99,7 @@ msgstr "全局外观"
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "This module lets you choose the global look and feel."
-msgstr "此模块让您选择全局观感。"
+msgstr "您可以使用此模块选择全局界面外观。"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
