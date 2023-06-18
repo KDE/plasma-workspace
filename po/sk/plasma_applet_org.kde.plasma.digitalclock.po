@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-04-17 19:12+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -351,12 +351,12 @@ msgstr ""
 "Použitím tejto funkcie sa nezmení systémové časové pásmo. Keď cestujete, "
 "prepnite namiesto toho systémové časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:202
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Pridať ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -365,12 +365,12 @@ msgstr ""
 "Aspoň jedno časové pásmo musí byť povolené. Vaše miestne časové pásmo bolo "
 "povolené automaticky."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:250
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

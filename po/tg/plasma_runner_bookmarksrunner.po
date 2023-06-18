@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2019-09-26 17:54+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:34
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Хатчӯбҳои намоишгари сомонаро мувофиқи :q: ҷустуҷӯ мекунад."
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "хатчӯбҳо"
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Рӯйхати ҳамаи хатчӯбҳои намоишгари сомонаро ниҳон медиҳад"
 
-#: bookmarksrunner.cpp:59
+#: bookmarksrunner.cpp:58
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

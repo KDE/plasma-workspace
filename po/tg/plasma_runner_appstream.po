@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2019-09-18 11:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: appstreamrunner.cpp:34
+#: appstreamrunner.cpp:30
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Унсурҳои насбнашударо мувофиқи :q: ҷустуҷӯ мекунад."
 
-#: appstreamrunner.cpp:133
+#: appstreamrunner.cpp:129
 #, fuzzy, kde-format
 #| msgid "Get %1..."
 msgid "Get %1…"

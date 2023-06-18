@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-runner-kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2022-03-12 15:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,32 +19,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "SIGTERM gönder"
 
-#: killrunner.cpp:32
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "SIGKILL gönder"
 
-#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "öldür"
 
-#: killrunner.cpp:57
+#: killrunner.cpp:55
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "Adları sorguyla eşleşen uygulamaları sonlandır."
 
-#: killrunner.cpp:120
+#: killrunner.cpp:118
 #, kde-format
 msgid "Terminate %1"
 msgstr "%1 uygulamasını sonlandır"
 
-#: killrunner.cpp:121
+#: killrunner.cpp:119
 #, kde-format
 msgid "Process ID: %1"
 msgstr "Süreç kimliği: %1"

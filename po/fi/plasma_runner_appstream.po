@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-06-04 23:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: appstreamrunner.cpp:34
+#: appstreamrunner.cpp:30
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Etsi asentamattomia osia hakusanalla :q:"
 
-#: appstreamrunner.cpp:133
+#: appstreamrunner.cpp:129
 #, kde-format
 msgid "Get %1…"
 msgstr "Hae: %1…"

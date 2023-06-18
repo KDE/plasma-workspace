@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-11-11 23:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -26,17 +26,17 @@ msgstr ""
 ":q:이(가) +, -, /, *, !, ^과 같은 연산자와 숫자로 이루어져 있을 때, 그 값을 "
 "계산합니다."
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

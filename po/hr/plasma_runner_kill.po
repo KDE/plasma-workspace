@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2009-11-03 10:43+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -20,32 +20,32 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Pošalji SIGTERM"
 
-#: killrunner.cpp:32
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Pošalji SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "uništi"
 
-#: killrunner.cpp:57
+#: killrunner.cpp:55
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "Prekini pokrenute aplikacije čije ime odgovara upitu."
 
-#: killrunner.cpp:120
+#: killrunner.cpp:118
 #, kde-format
 msgid "Terminate %1"
 msgstr "Prekini %1"
 
-#: killrunner.cpp:121
+#: killrunner.cpp:119
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""

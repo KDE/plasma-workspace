@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2008-12-24 17:14+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
 "2;\n"
 
-#: locationrunner.cpp:32
+#: locationrunner.cpp:30
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
 "paths matching :q:."
 msgstr ""
 
-#: locationrunner.cpp:58
+#: locationrunner.cpp:56
 #, kde-format
 msgid "Open %1"
 msgstr "Отвори %1"
 
-#: locationrunner.cpp:77 locationrunner.cpp:81
+#: locationrunner.cpp:75 locationrunner.cpp:79
 #, kde-format
 msgid "Launch with %1"
 msgstr "Стартувај со %1"
 
-#: locationrunner.cpp:87
+#: locationrunner.cpp:85
 #, kde-format
 msgid "Go to %1"
 msgstr "Оди на %1"
 
-#: locationrunner.cpp:95
+#: locationrunner.cpp:93
 #, kde-format
 msgid "Send email to %1"
 msgstr ""

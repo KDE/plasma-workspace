@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2018-07-16 08:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -22,14 +22,14 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr ""
 ":q:(r)ekin bat datozen izenak dituzten eta berriki erabili diren dokumentuak "
 "bilatzen ditu."
 
-#: recentdocuments.cpp:38
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ireki hau barnean duen karpeta"

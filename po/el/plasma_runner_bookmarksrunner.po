@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-03-10 14:30+0200\n"
 "Last-Translator: Petros Vidalis <p_vidalis@hotmail.com>\n"
 "Language-Team: Ελληνικά <i18ngr@lists.hellug.gr>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:34
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Εύρεση σελιδοδεικτών περιηγητή ιστού που ταιριάζουν με το :q:."
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "σελιδοδείκτες"
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Λίστα όλων των σελιδοδεικτών των περιηγητών ιστού"
 
-#: bookmarksrunner.cpp:59
+#: bookmarksrunner.cpp:58
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

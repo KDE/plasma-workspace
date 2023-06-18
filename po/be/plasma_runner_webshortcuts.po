@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-08 13:47\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,27 +21,27 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_webshortcuts.po\n"
 "X-Crowdin-File-ID: 8577\n"
 
-#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Пошук %2 у %1"
 
-#: webshortcutrunner.cpp:72
+#: webshortcutrunner.cpp:71
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Адкрывае \"%1\" у вэб-браўзеры з запытам :q:."
 
-#: webshortcutrunner.cpp:77
+#: webshortcutrunner.cpp:76
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Пошук з дапамогай сінтаксісу DuckDuckGo"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in private window"
 msgstr "Пошук у прыватным акне"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Пошук у акне інкогніта"

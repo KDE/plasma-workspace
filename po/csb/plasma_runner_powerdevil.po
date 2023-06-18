@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2009-12-13 00:37+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -19,43 +19,43 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "ùspióny"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "w pamiãcë"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "ùspióny"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "zahibernetowóny"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "na cwiardim diskù"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:41 PowerDevilRunner.cpp:43 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "scemni ekran"
 
-#: PowerDevilRunner.cpp:53
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -64,17 +64,17 @@ msgstr ""
 "Lëstëje òptacëje zawiészeniô systemë (np. ùspiénié, hibernacëjô) ë pòzwôlô "
 "na jich aktiwacëjã"
 
-#: PowerDevilRunner.cpp:57
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Ùspi systemã w pamiãcë RAM"
 
-#: PowerDevilRunner.cpp:61
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Ùspi systemã na cwiardim diskù"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:63
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -83,7 +83,7 @@ msgctxt ""
 msgid "screen brightness <percent value>"
 msgstr "widnosc ekranu"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:66
 #, fuzzy, no-c-format, kde-format
 #| msgid ""
 #| "Lists screen brightness options or sets it to the brightness defined by :"
@@ -97,23 +97,23 @@ msgstr ""
 "Lëstëje òptacëje widnoscë abò nastawiô widnosc zdefiniowóną przez :q:. Np. "
 "widnosc ekrana 50 scemni ekran do 50% maksymalny widnoscë"
 
-#: PowerDevilRunner.cpp:93
+#: PowerDevilRunner.cpp:92
 #, fuzzy, kde-format
 #| msgid "Set Brightness to %1"
 msgid "Set Brightness to %1%"
 msgstr "Nastôwi widnosc na %1"
 
-#: PowerDevilRunner.cpp:102
+#: PowerDevilRunner.cpp:101
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Scemni maksymalno ekran"
 
-#: PowerDevilRunner.cpp:110
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Scemni ò pòłowã ekran"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:139
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "sleep"
@@ -121,12 +121,12 @@ msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ùspióny"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Ùspi w pamiãcë RAM"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:145
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "hibernate"
@@ -134,13 +134,13 @@ msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "zahibernetowóny"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:146
 #, fuzzy, kde-format
 #| msgid "Suspend to Disk"
 msgid "Suspend to disk"
 msgstr "Ùspi na cwiardim diskù"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "screen brightness"
@@ -148,7 +148,7 @@ msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "widnosc ekranu"
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, fuzzy, kde-format
 #| msgctxt "Note this is a KRunner keyword"
 #| msgid "dim screen"

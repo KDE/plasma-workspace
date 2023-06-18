@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-01-29 16:21+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -22,23 +22,23 @@ msgstr ""
 "\n"
 "\n"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:34
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "वेब ब्राउजर पुस्तकचिह्न मिलानकेँ ताकू :q:."
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr ""
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr ""
 
-#: bookmarksrunner.cpp:59
+#: bookmarksrunner.cpp:58
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

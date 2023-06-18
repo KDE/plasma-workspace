@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-09-24 16:03+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -27,7 +27,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr ""
 
-#: servicerunner.cpp:425
+#: servicerunner.cpp:422
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2020-07-30 22:19+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "Busca les ordres que coincidixen amb :q:, utilitzant la sintaxi normal de "
 "l'intèrpret"
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr "Executa en una finestra de terminal"
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "Executa %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2020-09-06 16:46+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -19,33 +19,33 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "Trimite SIGTERM"
 
-#: killrunner.cpp:32
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "Trimite SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "omoară"
 
-#: killrunner.cpp:57
+#: killrunner.cpp:55
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr ""
 "Termină aplicațiile rulând al căror denumire se potrivește interogării."
 
-#: killrunner.cpp:120
+#: killrunner.cpp:118
 #, kde-format
 msgid "Terminate %1"
 msgstr "Termină %1"
 
-#: killrunner.cpp:121
+#: killrunner.cpp:119
 #, kde-format
 msgid "Process ID: %1"
 msgstr "ID proces: %1"

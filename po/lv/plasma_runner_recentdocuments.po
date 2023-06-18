@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2011-05-30 11:52+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "Meklē nesen izmantotajos dokumentos, kuru nosaukums atbilst :q:."
 
-#: recentdocuments.cpp:38
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""

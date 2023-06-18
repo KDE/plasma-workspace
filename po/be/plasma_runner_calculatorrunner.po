@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_calculatorrunner.po\n"
 "X-Crowdin-File-ID: 8868\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -30,17 +30,17 @@ msgstr ""
 "Вылічэнне значэнне :q:, калі :q: складаецца з лічбаў і матэматычных "
 "сімвалаў, такіх як +, -, /, *, ! і ^."
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Скапіяваць у буфер абмену"
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

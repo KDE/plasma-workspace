@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2013-01-30 22:39+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 
-#: locationrunner.cpp:32
+#: locationrunner.cpp:30
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -29,22 +29,22 @@ msgstr ""
 "Găsește dosare și fișiere locale, locuri din rețea și saituri Internet cu "
 "căile ce se potrivesc :q:."
 
-#: locationrunner.cpp:58
+#: locationrunner.cpp:56
 #, kde-format
 msgid "Open %1"
 msgstr "Deschide %1"
 
-#: locationrunner.cpp:77 locationrunner.cpp:81
+#: locationrunner.cpp:75 locationrunner.cpp:79
 #, kde-format
 msgid "Launch with %1"
 msgstr "Lansează cu %1"
 
-#: locationrunner.cpp:87
+#: locationrunner.cpp:85
 #, kde-format
 msgid "Go to %1"
 msgstr "Mergi la %1"
 
-#: locationrunner.cpp:95
+#: locationrunner.cpp:93
 #, kde-format
 msgid "Send email to %1"
 msgstr "Trimite scrisoare către %1"

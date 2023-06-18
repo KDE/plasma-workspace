@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-07-01 18:32+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Generator: Lokalize 21.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "सामान्य शेल सिंटैक्स का उपयोग करते हुए :q: से मेल खाने वाले समादेश ढूंढता है"
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr "टर्मिनल विंडो में चलाएँ"
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "चलाएँ %1"

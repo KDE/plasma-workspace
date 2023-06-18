@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2020-10-24 10:30+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#: bookmarksrunner.cpp:35
+#: bookmarksrunner.cpp:34
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Tìm dấu nhớ của trình duyệt web khớp với :q:."
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "dấu nhớ"
 
-#: bookmarksrunner.cpp:36
+#: bookmarksrunner.cpp:35
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Liệt kê tất cả các dấu nhớ của trình duyệt web"
 
-#: bookmarksrunner.cpp:59
+#: bookmarksrunner.cpp:58
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

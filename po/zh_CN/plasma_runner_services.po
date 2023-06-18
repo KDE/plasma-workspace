@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
-"PO-Revision-Date: 2023-05-22 13:57\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -26,7 +26,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: servicerunner.cpp:425
+#: servicerunner.cpp:422
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "查找名称或描述匹配 :q: 的应用程序"

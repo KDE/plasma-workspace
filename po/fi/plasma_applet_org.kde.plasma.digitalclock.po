@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-03-04 18:20+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -347,12 +347,12 @@ msgstr ""
 "Huomaa, ettei tämä muuta järjestelmän aikavyöhykettä. Matkustaessasi vaihda "
 "mieluummin se."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:202
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Lisää aikavyöhykkeitä"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +361,12 @@ msgstr ""
 "Vähintään yksi aikavyöhyke vaaditaan. Paikallinen aikavyöhyke valittiin "
 "automaattisesti."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:250
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2020-08-31 23:43+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 "Găsește comenzile ce se potrivesc cu :q:, utilizând sintaxa obișnuită a "
 "consolei"
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr "Execută în fereastră de terminal"
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "Lansează %1"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-09 01:04+0000\n"
-"PO-Revision-Date: 2023-05-22 13:57\n"
+"PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -61,7 +61,7 @@ msgstr "文档"
 #: baloosearchrunner.cpp:94
 #, kde-format
 msgid "Archives"
-msgstr "压缩包"
+msgstr "压缩文件"
 
 #: baloosearchrunner.cpp:95
 #, kde-format

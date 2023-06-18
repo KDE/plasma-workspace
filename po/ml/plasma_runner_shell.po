@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "സാധാരണ ഷെൽ വാക്യഘടന ഉപയോഗിച്ച് :q: മായി പൊരുത്തപ്പെടുന്ന കമാൻഡുകൾ കണ്ടെത്തുന്നു"
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr "ടെര്‍മിനലില്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "%1 പ്രവര്‍ത്തിപ്പിക്കുക"

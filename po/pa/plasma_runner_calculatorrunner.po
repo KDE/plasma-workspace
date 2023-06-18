@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-01-01 11:00-0800\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
 "symbols such as +, -, /, *, ! and ^."
 msgstr ""
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ"
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

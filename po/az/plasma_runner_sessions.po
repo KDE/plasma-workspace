@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-19 15:54+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: sessionrunner.cpp:23
+#: sessionrunner.cpp:20
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -25,12 +25,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "çıxış;sesiyadan çıxış"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:23
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Cari istifadəçinin sesiyasından çıxır"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:26
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -38,12 +38,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "söndürmək;söndür"
 
-#: sessionrunner.cpp:32
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Kompyuteri söndürmək"
 
-#: sessionrunner.cpp:35
+#: sessionrunner.cpp:32
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -51,24 +51,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "yenidən başlatmaq;təkrar aç"
 
-#: sessionrunner.cpp:38
+#: sessionrunner.cpp:35
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Kompyuteri yenidən başladır"
 
-#: sessionrunner.cpp:42
+#: sessionrunner.cpp:39
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "kilid;ekranı kilidləmək"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Cari sesiyanı kilidləyir və ekran qoruyucusunu işə salır"
 
-#: sessionrunner.cpp:47
+#: sessionrunner.cpp:44
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -76,12 +76,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "saxla:sesiyanı saxla"
 
-#: sessionrunner.cpp:50
+#: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Sesiyanı bərpa etməyək üçün cari sesiyanı saxlayır"
 
-#: sessionrunner.cpp:53
+#: sessionrunner.cpp:50
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -89,29 +89,29 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "istifadəçini dəyişmək;yeni sesiya"
 
-#: sessionrunner.cpp:56
+#: sessionrunner.cpp:53
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "Yeni sesiyanı digər istifadəçi ilə başladır"
 
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:56
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "sesiyalar"
 
-#: sessionrunner.cpp:60
+#: sessionrunner.cpp:57
 #, kde-format
 msgid "Lists all sessions"
 msgstr "bütün sesiyaların siyahısı"
 
-#: sessionrunner.cpp:63
+#: sessionrunner.cpp:60
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "dəyişdir"
 
-#: sessionrunner.cpp:65
+#: sessionrunner.cpp:62
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -120,41 +120,41 @@ msgstr ""
 ":q: istifadəçisi sesiyasına keçirir, və ya əgər :q: göatərilməyibsə bütün "
 "istifadəçiləri göstərir"
 
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Sİstemdən çıx"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:93
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Söndür"
 
-#: sessionrunner.cpp:106
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Yenidən başlat"
 
-#: sessionrunner.cpp:116
+#: sessionrunner.cpp:113
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Kilidlə"
 
-#: sessionrunner.cpp:126
+#: sessionrunner.cpp:123
 #, kde-format
 msgid "Save Session"
 msgstr "Sesiyanı saxla"
 
-#: sessionrunner.cpp:169
+#: sessionrunner.cpp:166
 #, kde-format
 msgid "Switch User"
 msgstr "istifadəçini dəyiş"
 
-#: sessionrunner.cpp:253
+#: sessionrunner.cpp:249
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -169,7 +169,7 @@ msgstr ""
 "nömrəsi}<li></li>Plasma axtarışı (növ \"%1\")<li></li>Plasma vidjet (tətbiq "
 "başladıcısı kimi)<li></li>"
 
-#: sessionrunner.cpp:262
+#: sessionrunner.cpp:258
 #, kde-format
 msgid "New Desktop Session"
 msgstr "Yeni iş masası sesiyası"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,43 +21,43 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_powerdevil.po\n"
 "X-Crowdin-File-ID: 8874\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "suspend"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "to ram"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "sleep"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "hibernate"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "to disk"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:41 PowerDevilRunner.cpp:43 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "dim screen"
 
-#: PowerDevilRunner.cpp:53
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -66,24 +66,24 @@ msgstr ""
 "Вывад параметраў прыпынення сістэмы (прыпыненне, рэжым сну) і магчымасць іх "
 "актывацыі"
 
-#: PowerDevilRunner.cpp:57
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Прыпыненне з кэшаваннем у аператыўную памяць"
 
-#: PowerDevilRunner.cpp:61
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Прыпыненне з кэшаваннем на цвёрды дыск"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:63
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "screen brightness <percent value>"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:66
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -93,50 +93,50 @@ msgstr ""
 "Вывад параметраў яркасці экрана або вызначэнне яркасці; напрыклад, пры "
 "\"screen brightness 50\" экран зацямніцца да 50% максімальнай яркасці"
 
-#: PowerDevilRunner.cpp:93
+#: PowerDevilRunner.cpp:92
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "Вызначыць яркасць %1%"
 
-#: PowerDevilRunner.cpp:102
+#: PowerDevilRunner.cpp:101
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Поўнае зацямненне экрана"
 
-#: PowerDevilRunner.cpp:110
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Зацямненне экрана напалову"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:139
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Прыпыніць у RAM"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Прыпыніць з кэшаваннем у аператыўную памяць"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:145
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Перавесці ў рэжым сну"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Прыпыніць з кэшаваннем на цвёрды дыск"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:214
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "screen brightness "
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

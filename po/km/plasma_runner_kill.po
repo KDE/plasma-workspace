@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-02-02 11:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "ផ្ញើ SIGTERM"
 
-#: killrunner.cpp:32
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "ផ្ញើ SIGKILL"
 
-#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "ពិឃាត"
 
-#: killrunner.cpp:57
+#: killrunner.cpp:55
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "បញ្ចប់​កម្មវិធីកំពុងរត់ ដែល​ឈ្មោះ​របស់​វា​ដូច​គ្នា​នឹង​សំណួរ ។"
 
-#: killrunner.cpp:120
+#: killrunner.cpp:118
 #, kde-format
 msgid "Terminate %1"
 msgstr "បញ្ចប់ %1"
 
-#: killrunner.cpp:121
+#: killrunner.cpp:119
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""

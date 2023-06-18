@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_shellrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2019-09-16 19:15+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr ""
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, kde-format
 msgid "Run in Terminal Window"
 msgstr ""
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "Иҷро кардани %1"

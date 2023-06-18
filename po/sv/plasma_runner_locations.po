@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2013-01-22 20:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: locationrunner.cpp:32
+#: locationrunner.cpp:30
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -27,22 +27,22 @@ msgstr ""
 "Hittar lokala kataloger och filer, nätverksplatser och Internetplatser med "
 "sökvägar som motsvarar :q:."
 
-#: locationrunner.cpp:58
+#: locationrunner.cpp:56
 #, kde-format
 msgid "Open %1"
 msgstr "Öppna %1"
 
-#: locationrunner.cpp:77 locationrunner.cpp:81
+#: locationrunner.cpp:75 locationrunner.cpp:79
 #, kde-format
 msgid "Launch with %1"
 msgstr "Starta med %1"
 
-#: locationrunner.cpp:87
+#: locationrunner.cpp:85
 #, kde-format
 msgid "Go to %1"
 msgstr "Gå till %1"
 
-#: locationrunner.cpp:95
+#: locationrunner.cpp:93
 #, kde-format
 msgid "Send email to %1"
 msgstr "Skicka e-post till %1"

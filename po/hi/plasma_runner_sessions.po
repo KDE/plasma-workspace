@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-28 21:56+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: sessionrunner.cpp:23
+#: sessionrunner.cpp:20
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -27,12 +27,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "लॉगआउट;लॉग-आउट"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:23
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "लॉग आउट करता है, वर्तमान डेस्कटॉप सत्र से बाहर निकल रहा है"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:26
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -40,12 +40,12 @@ msgctxt ""
 msgid "shutdown;shut down"
 msgstr "बन्द करें;शट डाउन"
 
-#: sessionrunner.cpp:32
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Turns off the computer"
 msgstr "कम्प्यूटर को बन्द करता है"
 
-#: sessionrunner.cpp:35
+#: sessionrunner.cpp:32
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +53,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "पुनः प्रारंभ करें;रिबूट"
 
-#: sessionrunner.cpp:38
+#: sessionrunner.cpp:35
 #, kde-format
 msgid "Reboots the computer"
 msgstr "कम्प्यूटर फिर से प्रारंभ करता है"
 
-#: sessionrunner.cpp:42
+#: sessionrunner.cpp:39
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "तालाबंद;स्क्रीन तालाबंद करें"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "वर्तमान सत्रों को लॉक करता है और स्क्रीन सेवर प्रारंभ करता है"
 
-#: sessionrunner.cpp:47
+#: sessionrunner.cpp:44
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +78,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "सहेजें; सत्र सहेजें"
 
-#: sessionrunner.cpp:50
+#: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:53
+#: sessionrunner.cpp:50
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,29 +91,29 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "उपयोक्ता बदलें;नया सत्र"
 
-#: sessionrunner.cpp:56
+#: sessionrunner.cpp:53
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "एक अलग उपयोक्ता के रूप में एक नया सत्र शुरू करता है।"
 
-#: sessionrunner.cpp:59
+#: sessionrunner.cpp:56
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "सत्र"
 
-#: sessionrunner.cpp:60
+#: sessionrunner.cpp:57
 #, kde-format
 msgid "Lists all sessions"
 msgstr "सभी सत्रों को सूची दिखाता है"
 
-#: sessionrunner.cpp:63
+#: sessionrunner.cpp:60
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "बदलें"
 
-#: sessionrunner.cpp:65
+#: sessionrunner.cpp:62
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -122,41 +122,41 @@ msgstr ""
 "उपयोक्ता :q: के लिए सक्रिय सत्र में बदलता है, या यदि :q: प्रदान नहीं किया जाता है तो "
 "सभी सक्रिय सत्रों को सूचीबद्ध करता है।"
 
-#: sessionrunner.cpp:86
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "लॉग आउट"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:93
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "बन्द करें"
 
-#: sessionrunner.cpp:106
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "पुनः प्रारंभ करें"
 
-#: sessionrunner.cpp:116
+#: sessionrunner.cpp:113
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "तालाबंद"
 
-#: sessionrunner.cpp:126
+#: sessionrunner.cpp:123
 #, kde-format
 msgid "Save Session"
 msgstr "सत्र सहेजें"
 
-#: sessionrunner.cpp:169
+#: sessionrunner.cpp:166
 #, kde-format
 msgid "Switch User"
 msgstr "उपयोक्ता बदलें"
 
-#: sessionrunner.cpp:253
+#: sessionrunner.cpp:249
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -166,7 +166,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:262
+#: sessionrunner.cpp:258
 #, kde-format
 msgid "New Desktop Session"
 msgstr "नया डेस्कटॉप सत्र"

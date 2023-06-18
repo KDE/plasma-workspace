@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-23 12:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -348,12 +348,12 @@ msgstr ""
 "は変わりません。旅行の際は、代わりにシステム全体のタイムゾーンを切り替えてく"
 "ださい。"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:202
 #, kde-format
 msgid "Add More Timezones"
 msgstr "タイムゾーンを追加"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -362,12 +362,12 @@ msgstr ""
 "少なくとも一つのタイムゾーンを有効にする必要があります。ローカルタイムゾーン"
 "が自動的に有効にされました。"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:250
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

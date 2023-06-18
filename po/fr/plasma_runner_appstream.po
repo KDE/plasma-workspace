@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_appstream\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-05-27 14:45+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: appstreamrunner.cpp:34
+#: appstreamrunner.cpp:30
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Recherche des composants non installés en se basant sur :q:"
 
-#: appstreamrunner.cpp:133
+#: appstreamrunner.cpp:129
 #, kde-format
 msgid "Get %1…"
 msgstr "Obtenir %1..."

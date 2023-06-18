@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-12-27 11:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -21,43 +21,43 @@ msgstr ""
 "X-Generator: Lokalize 21.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "onderbreken"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "naar RAM"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "slaapstand naar RAM"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "slaapstand naar schijf"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "naar schijf"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:41 PowerDevilRunner.cpp:43 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "scherm dimmen"
 
-#: PowerDevilRunner.cpp:53
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -66,24 +66,24 @@ msgstr ""
 "Toont systeemonderbrekingsopties (bijv. slaapstand naar RAM en naar schijf) "
 "en staat toe deze te activeren"
 
-#: PowerDevilRunner.cpp:57
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "Slaapstand naar RAM"
 
-#: PowerDevilRunner.cpp:61
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "Slaapstand naar schijf"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:63
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "schermhelderheid <waarde in procenten>"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:66
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -94,50 +94,50 @@ msgstr ""
 "door de zoekterm; bijv. schermhelderheid 50 dimt het scherm tot 50% van de "
 "maximum helderheid"
 
-#: PowerDevilRunner.cpp:93
+#: PowerDevilRunner.cpp:92
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "Helderheid instellen op %1%"
 
-#: PowerDevilRunner.cpp:102
+#: PowerDevilRunner.cpp:101
 #, kde-format
 msgid "Dim screen totally"
 msgstr "Scherm geheel dimmen"
 
-#: PowerDevilRunner.cpp:110
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen by half"
 msgstr "Scherm tot de helft dimmen"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:139
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Slapen"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Slaapstand naar RAM"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:145
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Winterslaap"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Onderbreken naar schijf"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:214
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "schermhelderheid "
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

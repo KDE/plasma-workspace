@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-03 02:04+0000\n"
-"PO-Revision-Date: 2023-05-22 13:57\n"
+"PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -207,16 +207,14 @@ msgid "Application Style"
 msgstr "应用程序视觉风格"
 
 #: ui/MoreOptions.qml:60
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "窗口装饰元素"
+msgstr "窗口装饰风格"
 
 #: ui/MoreOptions.qml:61
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "窗口装饰元素"
+msgstr "窗口装饰大小"
 
 #: ui/MoreOptions.qml:62
 #, kde-format

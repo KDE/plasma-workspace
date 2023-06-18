@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-09 01:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -346,24 +346,24 @@ msgid ""
 "travel, switch the systemwide time zone instead."
 msgstr "使用這個功能不會改變系統時區。旅行時，請切換系統時區。"
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:202
 #, kde-format
 msgid "Add More Timezones"
 msgstr "新增更多時區"
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
 "automatically."
 msgstr "必須至少啟用一個時區。已經自動啟用您的本地時區。"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1，%2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:250
 #, kde-format
 msgid "%1, %2"
 msgstr "%1，%2"

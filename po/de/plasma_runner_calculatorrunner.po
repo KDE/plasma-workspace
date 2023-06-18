@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-04-29 12:10+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.07.70\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, kde-format
 msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
@@ -26,17 +26,17 @@ msgstr ""
 "Errechnet das Ergebnis von :q:, sofern sich :q: aus Zahlen und "
 "mathematischen Operatoren wie +, -, /, *,! und ^ zusammensetzt."
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr "Geben Sie eine normale mathematische Funktion ein"
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "In die Zwischenablage kopieren"
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

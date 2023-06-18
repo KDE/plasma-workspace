@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-01-29 12:44+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: killrunner.cpp:30
+#: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGTERM"
 msgstr "SIGTERM ಅನ್ನು ಕಳುಹಿಸು"
 
-#: killrunner.cpp:32
+#: killrunner.cpp:30
 #, kde-format
 msgid "Send SIGKILL"
 msgstr "SIGKILL ಅನ್ನು ಕಳುಹಿಸು"
 
-#: killrunner.cpp:51 killrunner_config.cpp:40 killrunner_config.cpp:62
+#: killrunner.cpp:49 killrunner_config.cpp:40 killrunner_config.cpp:62
 #, kde-format
 msgid "kill"
 msgstr "ಅಂತ್ಯಗೊಳಿಸು"
 
-#: killrunner.cpp:57
+#: killrunner.cpp:55
 #, kde-format
 msgid "Terminate running applications whose names match the query."
 msgstr "ಮನವಿ ಮಾಡಿದುದಕ್ಕೆ ತಾಳೆಯಾಗುವ ಹಾಗೂ ಚಾಲನೆಯಲ್ಲಿರುವ ಅನ್ವಯಗಳನ್ನು ಅಂತ್ಯಗೊಳಿಸು."
 
-#: killrunner.cpp:120
+#: killrunner.cpp:118
 #, kde-format
 msgid "Terminate %1"
 msgstr "%1 ಅನ್ನು  ಅಂತ್ಯಗೊಳಿಸು"
 
-#: killrunner.cpp:121
+#: killrunner.cpp:119
 #, kde-format
 msgid "Process ID: %1"
 msgstr ""

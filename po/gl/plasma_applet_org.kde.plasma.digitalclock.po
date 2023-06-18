@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2019-11-26 22:58+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -358,12 +358,12 @@ msgid ""
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:202
 #, kde-format
 msgid "Add More Timezones"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:211
+#: package/contents/ui/configTimeZones.qml:213
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. 'Local' was enabled "
@@ -375,12 +375,12 @@ msgstr ""
 "Ten que activar polo menos un fuso horario. O fuso horario «Local» activouse "
 "automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:250
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

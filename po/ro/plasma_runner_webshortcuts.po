@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2022-02-17 11:49+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -22,27 +22,27 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Caută %1 pentru %2"
 
-#: webshortcutrunner.cpp:72
+#: webshortcutrunner.cpp:71
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "Deschide „%1” într-o fereastră de navigator cu interogarea :q:."
 
-#: webshortcutrunner.cpp:77
+#: webshortcutrunner.cpp:76
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "Caută folosind sintaxa „DuckDuckGo bang”"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in private window"
 msgstr "Caută în fereastră privată"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in incognito window"
 msgstr "Caută în fereastră incognito"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-01 00:48+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-02-28 21:52+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: webshortcutrunner.cpp:44 webshortcutrunner.cpp:148 webshortcutrunner.cpp:165
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "%2 के लिए  %1 में ढूंढें"
 
-#: webshortcutrunner.cpp:72
+#: webshortcutrunner.cpp:71
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
 msgstr "वेब ब्राउज़र में \"%1\" को क्वेरी :q: के साथ खोलता है।"
 
-#: webshortcutrunner.cpp:77
+#: webshortcutrunner.cpp:76
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
 msgstr "डकडकगो बैंग सिंटैक्स का उपयोग करके खोजें"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in private window"
 msgstr "निजी विंडो में खोजें"
 
-#: webshortcutrunner.cpp:112
+#: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in incognito window"
 msgstr "गुप्त विंडो में खोजें"

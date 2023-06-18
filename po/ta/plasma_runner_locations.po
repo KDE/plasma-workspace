@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_locationsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-06-01 21:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 21.04.1\n"
 
-#: locationrunner.cpp:32
+#: locationrunner.cpp:30
 #, kde-format
 msgid ""
 "Finds local directories and files, network locations and Internet sites with "
@@ -29,22 +29,22 @@ msgstr ""
 ":q: என்பதற்கு பொருந்தும் உள்ளமை கோப்புகள் மற்றும் அடைவுகள், பிணைய இடங்கள், மற்றும் "
 "இணையதளங்களை கண்டுபிடிக்கும்."
 
-#: locationrunner.cpp:58
+#: locationrunner.cpp:56
 #, kde-format
 msgid "Open %1"
 msgstr "%1 -ஐ திற"
 
-#: locationrunner.cpp:77 locationrunner.cpp:81
+#: locationrunner.cpp:75 locationrunner.cpp:79
 #, kde-format
 msgid "Launch with %1"
 msgstr "%1 -ஆல் இயக்கு"
 
-#: locationrunner.cpp:87
+#: locationrunner.cpp:85
 #, kde-format
 msgid "Go to %1"
 msgstr "%1 -க்கு செல்"
 
-#: locationrunner.cpp:95
+#: locationrunner.cpp:93
 #, kde-format
 msgid "Send email to %1"
 msgstr "%1 -க்கு அஞ்சல் அனுப்பு"

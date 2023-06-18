@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-01-29 12:33+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, fuzzy, kde-format
 #| msgid ""
 #| "Calculates the value of :q: when :q: is made up of numbers and "
@@ -30,17 +30,17 @@ msgstr ""
 "ಒಂದೊಮ್ಮೆ :q: ಸಂಖ್ಯೆಗಳನ್ನು ಹಾಗೂ +, -, /, * ಮತ್ತು ^ ನಂತಹ ಗಣಿತದ ಚಿಹ್ನೆಗಳನ್ನು  "
 "ಹೊಂದಿದ್ದರೆ, :q: ನ  ಬೆಲೆಯನ್ನು  ಹುಡುಕುತ್ತದೆ."
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

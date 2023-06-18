@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-01-29 00:39+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -176,61 +176,61 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:25
+#: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:46
+#: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:56
+#: ui/LaunchFeedbackDialog.qml:58
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:65
+#: ui/LaunchFeedbackDialog.qml:67
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:74
+#: ui/LaunchFeedbackDialog.qml:76
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:89
+#: ui/LaunchFeedbackDialog.qml:91
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:91
+#: ui/LaunchFeedbackDialog.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:110
+#: ui/LaunchFeedbackDialog.qml:112
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:124 ui/LaunchFeedbackDialog.qml:136
+#: ui/LaunchFeedbackDialog.qml:126 ui/LaunchFeedbackDialog.qml:138
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

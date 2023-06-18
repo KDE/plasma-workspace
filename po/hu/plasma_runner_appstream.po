@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2021-07-04 12:20+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: appstreamrunner.cpp:34
+#: appstreamrunner.cpp:30
 #, kde-format
 msgid "Looks for non-installed components according to :q:"
 msgstr "Nem telepített komponensek keresése a(z) :q: szerint"
 
-#: appstreamrunner.cpp:133
+#: appstreamrunner.cpp:129
 #, kde-format
 msgid "Get %1…"
 msgstr "A(z) %1 letöltése…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-16 02:04+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2011-01-09 11:22+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -416,7 +416,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: package/contents/ui/NotificationItem.qml:192
+#: package/contents/ui/NotificationItem.qml:191
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the name of the job, can be things like Copying, deleting, moving"
@@ -425,33 +425,33 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [Djoké]"
 
-#: package/contents/ui/NotificationItem.qml:197
+#: package/contents/ui/NotificationItem.qml:196
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 [Fini]"
 
-#: package/contents/ui/NotificationItem.qml:199
+#: package/contents/ui/NotificationItem.qml:198
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Failed"
 msgstr "%1 [Fini]"
 
-#: package/contents/ui/NotificationItem.qml:203
+#: package/contents/ui/NotificationItem.qml:202
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 [Fini]"
 
-#: package/contents/ui/NotificationItem.qml:205
+#: package/contents/ui/NotificationItem.qml:204
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Finished"
 msgstr "%1 [Fini]"
 
-#: package/contents/ui/NotificationItem.qml:353
+#: package/contents/ui/NotificationItem.qml:352
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

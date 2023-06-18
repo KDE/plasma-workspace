@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2010-01-29 13:24+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -26,7 +26,7 @@ msgctxt ""
 msgid "%1 - %2"
 msgstr ""
 
-#: servicerunner.cpp:425
+#: servicerunner.cpp:422
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr ":q:ಗೆ ತಾಳೆಯಾಗುವ ಹೆಸರು ಅಥವಾ ವಿವರಣೆಯನ್ನು ಹೊಂದಿರುವ ಅನ್ವಯಗಳನ್ನು ಹುಡುಕುತ್ತದೆ"

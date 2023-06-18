@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2022-09-02 07:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: PowerDevilRunner.cpp:32
+#: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "suspend"
 msgstr "შეჩერება"
 
-#: PowerDevilRunner.cpp:34
+#: PowerDevilRunner.cpp:33
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to ram"
 msgstr "მეხსიერებაში"
 
-#: PowerDevilRunner.cpp:36
+#: PowerDevilRunner.cpp:35
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "sleep"
 msgstr "დაძინება"
 
-#: PowerDevilRunner.cpp:38
+#: PowerDevilRunner.cpp:37
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
 msgstr "პროგრამული ძილი"
 
-#: PowerDevilRunner.cpp:40
+#: PowerDevilRunner.cpp:39
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "to disk"
 msgstr "დისკზე"
 
-#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:65
+#: PowerDevilRunner.cpp:41 PowerDevilRunner.cpp:43 PowerDevilRunner.cpp:64
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "dim screen"
 msgstr "ეკრანის ჩაქრობა"
 
-#: PowerDevilRunner.cpp:53
+#: PowerDevilRunner.cpp:52
 #, kde-format
 msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
@@ -63,24 +63,24 @@ msgstr ""
 "გაჩვენებთ სისტემის დროებით შეჩერების ვარიანტებს (მაგ: ძილი, პროგრამული ძილი) "
 "და საშუალებას გაძლევთ, გაააქტიუროთ ისინი"
 
-#: PowerDevilRunner.cpp:57
+#: PowerDevilRunner.cpp:56
 #, kde-format
 msgid "Suspends the system to RAM"
 msgstr "სისტემის RAM-ში შეჩერება"
 
-#: PowerDevilRunner.cpp:61
+#: PowerDevilRunner.cpp:60
 #, kde-format
 msgid "Suspends the system to disk"
 msgstr "სისტემის დისკზე შეჩერება"
 
-#: PowerDevilRunner.cpp:64
+#: PowerDevilRunner.cpp:63
 #, kde-format
 msgctxt ""
 "Note this is a KRunner keyword, <> is a placeholder and should be at the end"
 msgid "screen brightness <percent value>"
 msgstr "ეკრანის სიკაშკაშე <percent value>"
 
-#: PowerDevilRunner.cpp:67
+#: PowerDevilRunner.cpp:66
 #, no-c-format, kde-format
 msgid ""
 "Lists screen brightness options or sets it to the brightness defined by the "
@@ -89,50 +89,50 @@ msgid ""
 msgstr ""
 "მაქსიმალურიდან გამოკლებული ეკრანის სიკაშკაშე. 50 ნიშნავს 50% სიკაშკაშეს"
 
-#: PowerDevilRunner.cpp:93
+#: PowerDevilRunner.cpp:92
 #, kde-format
 msgid "Set Brightness to %1%"
 msgstr "სიკაშკაშის %1%-ზე დაყენება"
 
-#: PowerDevilRunner.cpp:102
+#: PowerDevilRunner.cpp:101
 #, kde-format
 msgid "Dim screen totally"
 msgstr "ეკრანის სრულად ჩაქრობა"
 
-#: PowerDevilRunner.cpp:110
+#: PowerDevilRunner.cpp:109
 #, kde-format
 msgid "Dim screen by half"
 msgstr "ეკრანის ნახევრად ჩაქრობა"
 
-#: PowerDevilRunner.cpp:140
+#: PowerDevilRunner.cpp:139
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ძილი"
 
-#: PowerDevilRunner.cpp:141
+#: PowerDevilRunner.cpp:140
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "RAM-ში შეჩერება"
 
-#: PowerDevilRunner.cpp:146
+#: PowerDevilRunner.cpp:145
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "პროგრამული ძილი"
 
-#: PowerDevilRunner.cpp:147
+#: PowerDevilRunner.cpp:146
 #, kde-format
 msgid "Suspend to disk"
 msgstr "დისკზე შეჩერება"
 
-#: PowerDevilRunner.cpp:216
+#: PowerDevilRunner.cpp:214
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "screen brightness "
 msgstr "ეკრანის სიკაშკაშე "
 
-#: PowerDevilRunner.cpp:218
+#: PowerDevilRunner.cpp:216
 #, kde-format
 msgctxt "Note this is a KRunner keyword, it should end with a space"
 msgid "dim screen "

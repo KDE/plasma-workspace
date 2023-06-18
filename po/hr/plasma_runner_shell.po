@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2009-08-18 11:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -19,18 +19,18 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: shellrunner.cpp:35
+#: shellrunner.cpp:32
 #, kde-format
 msgid "Finds commands that match :q:, using common shell syntax"
 msgstr "Traži naredbe koje se slažu s :q:, koristeći ustaljenu shell sintaksu"
 
-#: shellrunner.cpp:36
+#: shellrunner.cpp:33
 #, fuzzy, kde-format
 #| msgid "Run in &terminal window"
 msgid "Run in Terminal Window"
 msgstr "Pokreni u prozoru &terminala"
 
-#: shellrunner.cpp:54
+#: shellrunner.cpp:51
 #, kde-format
 msgid "Run %1"
 msgstr "Pokreni %1"

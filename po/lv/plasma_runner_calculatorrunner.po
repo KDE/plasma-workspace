@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-29 02:20+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2011-07-07 22:49+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: calculatorrunner.cpp:33
+#: calculatorrunner.cpp:31
 #, fuzzy, kde-format
 #| msgid ""
 #| "Calculates the value of :q: when :q: is made up of numbers and "
@@ -31,17 +31,17 @@ msgstr ""
 "Aprēķina :q: vērtību, ja tas sastāv no skaitļiem un matemātiskajiem "
 "simboliem, piemēram, +, - , / , * un ^."
 
-#: calculatorrunner.cpp:38
+#: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
 msgstr ""
 
-#: calculatorrunner.cpp:40
+#: calculatorrunner.cpp:38
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: calculatorrunner.cpp:147
+#: calculatorrunner.cpp:145
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
-"PO-Revision-Date: 2023-05-22 13:57\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -18,12 +18,12 @@ msgstr ""
 "plasma_runner_recentdocuments.pot\n"
 "X-Crowdin-File-ID: 43563\n"
 
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "查找名称匹配 :q: 的最近使用的文档。"
 
-#: recentdocuments.cpp:38
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "打开所在文件夹"

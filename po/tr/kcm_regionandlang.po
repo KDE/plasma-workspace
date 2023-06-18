@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2023-06-06 05:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -458,13 +458,13 @@ msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Yapılandırılmış Dil Yok"
 
-#: ui/AdvancedLanguageSelectPage.qml:147 ui/AdvancedLanguageSelectPage.qml:167
+#: ui/AdvancedLanguageSelectPage.qml:147 ui/AdvancedLanguageSelectPage.qml:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Diller Ekle"
 
-#: ui/AdvancedLanguageSelectPage.qml:176
+#: ui/AdvancedLanguageSelectPage.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

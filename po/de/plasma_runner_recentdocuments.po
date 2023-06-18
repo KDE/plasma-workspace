@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"POT-Creation-Date: 2023-06-18 03:27+0000\n"
 "PO-Revision-Date: 2016-06-30 16:29+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -14,12 +14,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: recentdocuments.cpp:36
+#: recentdocuments.cpp:34
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "Sucht nach kürzlich verwendeten Dokumenten, deren Name auf :q: passt."
 
-#: recentdocuments.cpp:38
+#: recentdocuments.cpp:36
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
