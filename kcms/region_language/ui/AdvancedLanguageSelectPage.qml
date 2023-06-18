@@ -140,7 +140,7 @@ KCM.ScrollViewKCM {
                 }
             }
         }
-    }    
+    }
 
     Kirigami.OverlaySheet {
         id: addLanguagesSheet
@@ -154,6 +154,10 @@ KCM.ScrollViewKCM {
 
         title: titleText
 
+        onClosed: {
+            titleText = i18nc("@title:window", "Add Languages");
+        }
+
         ListView {
             id: availableLanguagesList
             implicitWidth: 18 * Kirigami.Units.gridUnit
@@ -161,11 +165,6 @@ KCM.ScrollViewKCM {
             delegate: addLanguageItemComponent
             cacheBuffer: Math.max(0, contentHeight)
             reuseItems: true
-        }
-        onVisibleChanged: {
-            if (!visible) {
-                titleText = i18nc("@title:window", "Add Languages");
-            }
         }
     }
     footer: ColumnLayout {
