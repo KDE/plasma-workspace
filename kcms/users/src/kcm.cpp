@@ -147,7 +147,7 @@ QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
 
     if (!s_cache.contains(url)) {
         QFile at(url.toLocalFile());
-        if (!at.open(QFile::ReadOnly)) {
+        if (url.toLocalFile().isEmpty() || !at.open(QFile::ReadOnly)) {
             return QUrl();
         }
         s_cache[url] = QString::fromUtf8(at.readAll());
