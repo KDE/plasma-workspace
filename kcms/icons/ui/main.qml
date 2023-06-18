@@ -266,7 +266,7 @@ KCM.GridViewKCM {
         id: iconSizeSheet
         parent: root.parent
 
-        onVisibleChanged: content.opened();
+        onOpened: content.opened();
 
         header: Kirigami.Heading {
             text: i18nc("@title:window", "Configure Icon Sizes")
