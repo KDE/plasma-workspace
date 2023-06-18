@@ -279,10 +279,8 @@ Kirigami.OverlaySheet {
     readonly property InitialsPage initialsPage: InitialsPage {}
     readonly property IconsPage iconsPage: IconsPage {}
 
-    onVisibleChanged: {
-        if (!visible) {
-            destroy(Kirigami.Units.humanMoment);
-        }
+    onClosed: {
+        destroy();
     }
 
     QQC2.StackView {
