@@ -285,7 +285,7 @@ Kirigami.OverlaySheet {
         }
     }
 
-    contentItem: QQC2.StackView {
+    QQC2.StackView {
         id: stackSwitcher
 
         implicitWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4

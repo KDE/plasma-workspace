@@ -96,7 +96,7 @@ Kirigami.OverlaySheet {
         ]
     }
 
-    contentItem: Item {
+    Item {
         id: rootPanel
         implicitWidth: Kirigami.Units.gridUnit * 12
         Layout.maximumWidth: Kirigami.Units.gridUnit * 24
