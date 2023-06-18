@@ -15,6 +15,8 @@ Kirigami.OverlaySheet {
 
     title: i18nc("@title", "Launch Feedback")
 
+    onClosed: destroy()
+
     ColumnLayout {
         Layout.preferredWidth: Kirigami.Units.gridUnit * 20
         Layout.maximumWidth: Kirigami.Units.gridUnit * 30
@@ -137,10 +139,6 @@ Kirigami.OverlaySheet {
                 }
             }
         }
-    }
-
-    onVisibleChanged: if (!visible) {
-        destroy(Kirigami.Units.humanMoment);
     }
 
     Component.onCompleted: open();
