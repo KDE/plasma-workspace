@@ -1,6 +1,6 @@
 # Traducerea kcmfonts.po în Română
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008-2014, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008-2014, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"

@@ -1,20 +1,20 @@
 # translation of plasma_engine_weather.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Marce Villarino <mvillarino@kde-espana.es>, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Miguel Branco <mgl.branco@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-09 00:47+0000\n"
-"PO-Revision-Date: 2019-08-24 17:02+0200\n"
+"PO-Revision-Date: 2023-06-18 15:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "forte choiva"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain shower"
-msgstr "forte augaceiro"
+msgstr "forte ballón"
 
 #: bbcukmet_i18n.dat:19
 #, kde-format
@@ -681,7 +681,7 @@ msgstr "Anubrado"
 #, kde-format
 msgctxt "weather condition"
 msgid "Decreasing Cloud"
-msgstr "Nubosidade diminuíndo"
+msgstr "Nubes diminuíndo"
 
 #: envcan_i18n.dat:6
 #, kde-format
@@ -741,13 +741,13 @@ msgstr "Bancos de néboas"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing drizzle"
-msgstr "Chuviscada conxelante"
+msgstr "Chuviscada xélida"
 
 #: envcan_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing rain"
-msgstr "Chuvia conxelada"
+msgstr "Chuvia xélida"
 
 #: envcan_i18n.dat:17 noaa_i18n.dat:40
 #, kde-format
@@ -789,7 +789,7 @@ msgstr "Orballo lixeiro"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Hail"
-msgstr "Saraiba forte"
+msgstr "Sarabia forte"
 
 #: envcan_i18n.dat:24
 #, kde-format
@@ -831,7 +831,7 @@ msgstr "Neve intensa"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Pellets"
-msgstr "Grauple forte"
+msgstr "Neve granulada forte"
 
 #: envcan_i18n.dat:31
 #, kde-format
@@ -849,7 +849,7 @@ msgstr "Trono"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm with Hail"
-msgstr "Treboadas fortes con saraiba"
+msgstr "Treboadas fortes con sarabia"
 
 #: envcan_i18n.dat:34
 #, kde-format
@@ -873,7 +873,7 @@ msgstr "Bolas de xeo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Increasing Cloud"
-msgstr "Nubosidade en aumento"
+msgstr "Nubes en aumento"
 
 #: envcan_i18n.dat:38 noaa_i18n.dat:106
 #, kde-format
@@ -885,13 +885,13 @@ msgstr "Orballo lixeiro"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle"
-msgstr "Chuviscada conxelante débil"
+msgstr "Chuviscada xélida débil"
 
 #: envcan_i18n.dat:40 noaa_i18n.dat:115
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain"
-msgstr "Choiva conxelada débil"
+msgstr "Choiva xélida débil"
 
 #: envcan_i18n.dat:41 noaa_i18n.dat:121
 #, kde-format
@@ -915,7 +915,7 @@ msgstr "Puvisada"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Pellets"
-msgstr "Graupel lixeiro"
+msgstr "Neve granulada lixeira"
 
 #: envcan_i18n.dat:45
 #, kde-format
@@ -1017,7 +1017,7 @@ msgstr "Néboa recente"
 #, kde-format
 msgctxt "weather condition"
 msgid "Recent Freezing Precipitation"
-msgstr "Precipitación de xeada recente"
+msgstr "Precipitación xélida recente"
 
 #: envcan_i18n.dat:62
 #, kde-format
@@ -1143,7 +1143,7 @@ msgstr "Sol"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Hail"
-msgstr "Tronada son sarabia"
+msgstr "Tronada con sarabia"
 
 #: envcan_i18n.dat:83
 #, kde-format
@@ -1293,7 +1293,7 @@ msgstr "Posibilidade de orballo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of drizzle mixed with freezing drizzle"
-msgstr "Posibilidade de chuviscada con chuvisca conxelante"
+msgstr "Posibilidade de chuviscada con chuvisca xélida"
 
 #: envcan_i18n.dat:108
 #, kde-format
@@ -1347,31 +1347,31 @@ msgstr "Posibilidade de folerpadas ou tormentas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing drizzle"
-msgstr "Posibilidade de chuvisca conxelante"
+msgstr "Posibilidade de chuvisca xélida"
 
 #: envcan_i18n.dat:117
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain"
-msgstr "Posibilidade de choiva conxelada"
+msgstr "Posibilidade de choiva xélida"
 
 #: envcan_i18n.dat:118
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain mixed with snow"
-msgstr "Posibilidade de choiva conxelada mesturada con neve"
+msgstr "Posibilidade de choiva xélida mesturada con neve"
 
 #: envcan_i18n.dat:119
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or rain"
-msgstr "Posibilidade de choiva conxelada o u choiva"
+msgstr "Posibilidade de choiva xélida o u choiva"
 
 #: envcan_i18n.dat:120
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain or snow"
-msgstr "Posibilidade de choiva conxelada o ou neve"
+msgstr "Posibilidade de choiva xélida o ou neve"
 
 #: envcan_i18n.dat:121
 #, kde-format
@@ -1389,7 +1389,7 @@ msgstr "Posibilidade de puvisada e xistra"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow mixed with freezing drizzle"
-msgstr "Posibilidade de puvisada con chuviscada conxelante"
+msgstr "Posibilidade de puvisada con chuviscada xélida"
 
 #: envcan_i18n.dat:124
 #, kde-format
@@ -1407,7 +1407,7 @@ msgstr "Posibilidade de puvisada con auga"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of light snow or freezing rain"
-msgstr "Posibilidade de puvisada ou choiva conxelada"
+msgstr "Posibilidade de puvisada ou choiva xélida"
 
 #: envcan_i18n.dat:127
 #, kde-format
@@ -1455,7 +1455,7 @@ msgstr "Posibilidades de choiva ou chuviscada"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of rain or freezing rain"
-msgstr "Posibilidade de choiva ou choiva conxelada"
+msgstr "Posibilidade de choiva ou choiva xélida"
 
 #: envcan_i18n.dat:135
 #, kde-format
@@ -1539,13 +1539,13 @@ msgstr "Posibilidade de neve e tormentas de neve"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing drizzle"
-msgstr "Posibilidade de neve con chuviscada conxelante"
+msgstr "Posibilidade de neve con chuviscada xélida"
 
 #: envcan_i18n.dat:149
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow mixed with freezing rain"
-msgstr "Posibilidade de neve mesturada con choiva conxelada"
+msgstr "Posibilidade de neve mesturada con choiva xélida"
 
 #: envcan_i18n.dat:150
 #, kde-format
@@ -1671,7 +1671,7 @@ msgstr "Chuviscada"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle mixed with freezing drizzle"
-msgstr "Chuviscada con chuvisca conxelante"
+msgstr "Chuviscada con chuvisca xélida"
 
 #: envcan_i18n.dat:171
 #, kde-format
@@ -1683,7 +1683,7 @@ msgstr "Chuviscada con xeada con choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle or freezing drizzle"
-msgstr "Chuviscada ou chuvisca conxelante"
+msgstr "Chuviscada ou chuvisca xélida"
 
 #: envcan_i18n.dat:173
 #, kde-format
@@ -1761,49 +1761,49 @@ msgstr "Petadas de néboa"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing drizzle"
-msgstr "Chuvisca conxelante"
+msgstr "Chuvisca xélida"
 
 #: envcan_i18n.dat:186
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain"
-msgstr "Choiva conxelada"
+msgstr "Choiva xélida"
 
 #: envcan_i18n.dat:187
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with ice pellets"
-msgstr "Choiva conxelada mesturada con bolas de xeo"
+msgstr "Choiva xélida mesturada con bolas de xeo"
 
 #: envcan_i18n.dat:188
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with rain"
-msgstr "Choiva conxelada mesturada con choiva"
+msgstr "Choiva xélida mesturada con choiva"
 
 #: envcan_i18n.dat:189
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain mixed with snow"
-msgstr "Choiva conxelada mesturada con neve"
+msgstr "Choiva xélida mesturada con neve"
 
 #: envcan_i18n.dat:190
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or ice pellets"
-msgstr "Choiva conxelada ou bolas de xeo"
+msgstr "Choiva xélida ou bolas de xeo"
 
 #: envcan_i18n.dat:191
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or rain"
-msgstr "Choiva conxelada ou choiva"
+msgstr "Choiva xélida ou choiva"
 
 #: envcan_i18n.dat:192
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or snow"
-msgstr "Choiva conxelada ou neve"
+msgstr "Choiva xélida ou neve"
 
 #: envcan_i18n.dat:193
 #, kde-format
@@ -1833,7 +1833,7 @@ msgstr "Bolas de xeo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr "Bolas de xeo mesturadas con choiva conxelada"
+msgstr "Bolas de xeo mesturadas con choiva xélida"
 
 #: envcan_i18n.dat:198
 #, kde-format
@@ -1845,7 +1845,7 @@ msgstr "Bolas de xeo mesturadas con neve"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr "Bolas de xeo ou choiva conxelada"
+msgstr "Bolas de xeo ou choiva xélida"
 
 #: envcan_i18n.dat:200
 #, kde-format
@@ -1857,7 +1857,7 @@ msgstr "Bolas de xeo ou neve"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Increasing cloudiness"
-msgstr "Nubosidade crecente"
+msgstr "Nebulosidade crecente"
 
 #: envcan_i18n.dat:202
 #, kde-format
@@ -1893,13 +1893,13 @@ msgstr "Puvisada de cebrisca"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing drizzle"
-msgstr "Puvisada con chuvisca conxelante"
+msgstr "Puvisada con chuvisca xélida"
 
 #: envcan_i18n.dat:208
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow mixed with freezing rain"
-msgstr "Puvisada mesturada con chuviscada conxelada"
+msgstr "Puvisada mesturada con chuviscada xélida"
 
 #: envcan_i18n.dat:209
 #, kde-format
@@ -1917,13 +1917,13 @@ msgstr "Puvisada mesturada con choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing drizzle"
-msgstr "Folerpada lixeira ou chuviscada conxelante"
+msgstr "Folerpada lixeira ou chuviscada xélida"
 
 #: envcan_i18n.dat:212
 #, kde-format
 msgctxt "weather forecast"
 msgid "Light snow or freezing rain"
-msgstr "Puvisada con choiva conxelada"
+msgstr "Puvisada con choiva xélida"
 
 #: envcan_i18n.dat:213
 #, kde-format
@@ -1977,7 +1977,7 @@ msgstr "Períodos de orballo con xeada"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle mixed with freezing drizzle"
-msgstr "Períodos de chuviscada mesturados con chuviscada conxelante"
+msgstr "Períodos de chuviscada mesturados con chuviscada xélida"
 
 #: envcan_i18n.dat:222
 #, kde-format
@@ -1989,7 +1989,7 @@ msgstr "Períodos de chuviscada mesturada con choivas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of drizzle or freezing drizzle"
-msgstr "Períodos de chuvisca con chuvisca conxelante"
+msgstr "Períodos de chuvisca con chuvisca xélida"
 
 #: envcan_i18n.dat:224
 #, kde-format
@@ -2001,61 +2001,61 @@ msgstr "Períodos de chuviscada ou choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle"
-msgstr "Períodos de chuvisca conxelante"
+msgstr "Períodos de chuvisca xélida"
 
 #: envcan_i18n.dat:226
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or drizzle"
-msgstr "Períodos de chuvisca conxelante ou chuvisca"
+msgstr "Períodos de chuvisca xélida ou chuvisca"
 
 #: envcan_i18n.dat:227
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing drizzle or rain"
-msgstr "Períodos de chuviscada conxelante ou choiva"
+msgstr "Períodos de chuviscada xélida ou choiva"
 
 #: envcan_i18n.dat:228
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain"
-msgstr "Períodos de choiva conxelada"
+msgstr "Períodos de choiva xélida"
 
 #: envcan_i18n.dat:229
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with ice pellets"
-msgstr "Períodos de choiva conxelada mesturados con bolas de xeo"
+msgstr "Períodos de choiva xélida mesturados con bolas de xeo"
 
 #: envcan_i18n.dat:230
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with rain"
-msgstr "Períodos de choiva conxelada mesturada con choiva"
+msgstr "Períodos de choiva xélida mesturada con choiva"
 
 #: envcan_i18n.dat:231
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain mixed with snow"
-msgstr "Períodos de choiva conxelada mesturados con neve"
+msgstr "Períodos de choiva xélida mesturados con neve"
 
 #: envcan_i18n.dat:232
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or ice pellets"
-msgstr "Períodos de choiva conxelada ou bolas de xeo"
+msgstr "Períodos de choiva xélida ou bolas de xeo"
 
 #: envcan_i18n.dat:233
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or rain"
-msgstr "Períodos de choiva conxelada ou choiva"
+msgstr "Períodos de choiva xélida ou choiva"
 
 #: envcan_i18n.dat:234
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of freezing rain or snow"
-msgstr "Períodos de choiva conxelada ou neve"
+msgstr "Períodos de choiva xélida ou neve"
 
 #: envcan_i18n.dat:235
 #, kde-format
@@ -2067,7 +2067,7 @@ msgstr "Períodos de bolas de xeo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr "Períodos de bolas de xeo mesturadas con choiva conxelada"
+msgstr "Períodos de bolas de xeo mesturadas con choiva xélida"
 
 #: envcan_i18n.dat:237
 #, kde-format
@@ -2079,7 +2079,7 @@ msgstr "Períodos de bolas de xeo mesturadas con neve"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr "Períodos de bolas de xeo mesturadas con choiva conxelada"
+msgstr "Períodos de bolas de xeo mesturadas con choiva xélida"
 
 #: envcan_i18n.dat:239
 #, kde-format
@@ -2115,13 +2115,13 @@ msgstr "Períodos de puvisada e xistra"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing drizzle"
-msgstr "Períodos de puvisada con chuviscada conxelante"
+msgstr "Períodos de puvisada con chuviscada xélida"
 
 #: envcan_i18n.dat:245
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow mixed with freezing rain"
-msgstr "Períodos de puvisada mesturados con choiva conxelada"
+msgstr "Períodos de puvisada mesturados con choiva xélida"
 
 #: envcan_i18n.dat:246
 #, kde-format
@@ -2139,13 +2139,13 @@ msgstr "Períodos de puvisada mesturada con choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing drizzle"
-msgstr "Períodos de puvisada con chuviscada conxelante"
+msgstr "Períodos de puvisada con chuviscada xélida"
 
 #: envcan_i18n.dat:249
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of light snow or freezing rain"
-msgstr "Períodos de puvisada con choiva conxelada"
+msgstr "Períodos de puvisada con choiva xélida"
 
 #: envcan_i18n.dat:250
 #, kde-format
@@ -2187,7 +2187,7 @@ msgstr "Períodos de choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain mixed with freezing rain"
-msgstr "Períodos de choiva mesturada con choiva conxelada"
+msgstr "Períodos de choiva mesturada con choiva xélida"
 
 #: envcan_i18n.dat:257
 #, kde-format
@@ -2205,7 +2205,7 @@ msgstr "Períodos de choiva ou chuviscada"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or freezing rain"
-msgstr "Períodos de choiva ou choiva conxelada"
+msgstr "Períodos de choiva ou choiva xélida"
 
 #: envcan_i18n.dat:260
 #, kde-format
@@ -2253,13 +2253,13 @@ msgstr "Períodos de nevaradas e xistra"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing drizzle"
-msgstr "Períodos de nevarada mesturados con chuviscada conxelante"
+msgstr "Períodos de nevarada mesturados con chuviscada xélida"
 
 #: envcan_i18n.dat:268
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow mixed with freezing rain"
-msgstr "Períodos de neve mesturados con choiva conxelada"
+msgstr "Períodos de neve mesturados con choiva xélida"
 
 #: envcan_i18n.dat:269
 #, kde-format
@@ -2277,13 +2277,13 @@ msgstr "Períodos de nevaradas mesturadas con choivas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing drizzle"
-msgstr "Períodos de nevaradas ou chuviscada conxelante"
+msgstr "Períodos de nevaradas ou chuviscada xélida"
 
 #: envcan_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of snow or freezing rain"
-msgstr "Períodos de neve mesturados con choiva conxelada"
+msgstr "Períodos de neve mesturados con choiva xélida"
 
 #: envcan_i18n.dat:273
 #, kde-format
@@ -2331,7 +2331,7 @@ msgstr "Choiva por veces forte"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy mixed with freezing rain"
-msgstr "Choiva por veces forte mesturada con choiva conxelada"
+msgstr "Choiva por veces forte mesturada con choiva xélida"
 
 #: envcan_i18n.dat:281
 #, kde-format
@@ -2349,7 +2349,7 @@ msgstr "Choiva por veces forte ou chuviscadas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or freezing rain"
-msgstr "Choiva por veces forte ou choiva conxelada"
+msgstr "Choiva por veces forte ou choiva xélida"
 
 #: envcan_i18n.dat:284
 #, kde-format
@@ -2373,7 +2373,7 @@ msgstr "Choivas por veces fortes ou tronadas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain mixed with freezing rain"
-msgstr "Choiva mesturada con choiva conxelada"
+msgstr "Choiva mesturada con choiva xélida"
 
 #: envcan_i18n.dat:288
 #, kde-format
@@ -2391,7 +2391,7 @@ msgstr "Choiva ou chuviscadas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or freezing rain"
-msgstr "Choiva ou choiva conxelada"
+msgstr "Choiva ou choiva xélida"
 
 #: envcan_i18n.dat:291
 #, kde-format
@@ -2499,7 +2499,7 @@ msgstr "Neve e xistra"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy"
-msgstr "Nevaras por veces fortes"
+msgstr "Neve forte por veces"
 
 #: envcan_i18n.dat:309
 #, kde-format
@@ -2517,13 +2517,13 @@ msgstr "Nevaradas por veces fortes e máis xistra"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing drizzle"
-msgstr "Neve por veces forte mesturada con chuviscada conxelante"
+msgstr "Neve por veces forte mesturada con chuviscada xélida"
 
 #: envcan_i18n.dat:312
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy mixed with freezing rain"
-msgstr "Nevaradas por veces fortes mesturadas con choiva conxelada"
+msgstr "Nevaradas por veces fortes mesturadas con choiva xélida"
 
 #: envcan_i18n.dat:313
 #, kde-format
@@ -2541,7 +2541,7 @@ msgstr "Nevaradas por veces fortes e mesturadas con choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow at times heavy or freezing rain"
-msgstr "Nevaradas por veces fortes ou choiva conxelada"
+msgstr "Nevaradas por veces fortes ou choiva xélida"
 
 #: envcan_i18n.dat:316
 #, kde-format
@@ -2559,13 +2559,13 @@ msgstr "Nevaradas por veces fortes ou choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing drizzle"
-msgstr "Neve mesturada con chuviscada conxelante"
+msgstr "Neve mesturada con chuviscada xélida"
 
 #: envcan_i18n.dat:319
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow mixed with freezing rain"
-msgstr "Neve mesturada con choiva conxelada"
+msgstr "Neve mesturada con choiva xélida"
 
 #: envcan_i18n.dat:320
 #, kde-format
@@ -2583,13 +2583,13 @@ msgstr "Nevaradas mesturadas con choiva"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing drizzle"
-msgstr "Neve ou chuvisca conxelada"
+msgstr "Neve ou chuvisca xélida"
 
 #: envcan_i18n.dat:323
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow or freezing rain"
-msgstr "Neve ou choiva conxelada"
+msgstr "Neve ou choiva xélida"
 
 #: envcan_i18n.dat:324
 #, kde-format
@@ -2780,7 +2780,7 @@ msgstr "Datos de BBC Weather"
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "Fonte: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
 #: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
@@ -2866,13 +2866,13 @@ msgstr "orballo forte"
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing drizzle"
-msgstr "chuviscada conxelante"
+msgstr "chuviscada xélida"
 
 #: ions/wetter.com/ion_wettercom.cpp:173
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy freezing drizzle"
-msgstr "chuviscada conxelante forte"
+msgstr "chuviscada xélida forte"
 
 #: ions/wetter.com/ion_wettercom.cpp:174
 #, kde-format
@@ -2890,13 +2890,13 @@ msgstr "choiva moderada"
 #, kde-format
 msgctxt "weather condition"
 msgid "light freezing rain"
-msgstr "choiva conxelada débil"
+msgstr "choiva xélida débil"
 
 #: ions/wetter.com/ion_wettercom.cpp:180
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing rain"
-msgstr "chuvia conxelada"
+msgstr "chuvia xélida"
 
 #: ions/wetter.com/ion_wettercom.cpp:181
 #, kde-format
@@ -3134,61 +3134,61 @@ msgstr "Néboa/bruma"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle"
-msgstr "Chuviscada conxelante"
+msgstr "Chuviscada xélida"
 
 #: noaa_i18n.dat:31
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle in Vicinity"
-msgstr "Chuviscada conxelante próxima"
+msgstr "Chuviscada xélida próxima"
 
 #: noaa_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Rain"
-msgstr "Choiva de chuvisca conxelante"
+msgstr "Choiva de chuvisca xélida"
 
 #: noaa_i18n.dat:33
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Snow"
-msgstr "Nevarada de chuvisca conxelante"
+msgstr "Nevarada de chuvisca xélida"
 
 #: noaa_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog"
-msgstr "Néboa con xeo"
+msgstr "Néboa xélida"
 
 #: noaa_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog in Vicinity"
-msgstr "Néboa con xeo próxima"
+msgstr "Néboa xélida próxima"
 
 #: noaa_i18n.dat:36
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain"
-msgstr "Choiva conxelada"
+msgstr "Choiva xélida"
 
 #: noaa_i18n.dat:37
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain in Vicinity"
-msgstr "Choiva conxelada próxima"
+msgstr "Choiva xélida próxima"
 
 #: noaa_i18n.dat:38
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Rain"
-msgstr "Choivas de choiva conxelada"
+msgstr "Choivas de choiva xélida"
 
 #: noaa_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Snow"
-msgstr "Nevaradas de choiva conxelada"
+msgstr "Nevaradas de choiva xélida"
 
 #: noaa_i18n.dat:41
 #, kde-format
@@ -3236,43 +3236,43 @@ msgstr "Forte tormenta de po"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle"
-msgstr "Chuviscada conxelante forte"
+msgstr "Chuviscada xélida forte"
 
 #: noaa_i18n.dat:53
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Rain"
-msgstr "Choiva forte de chuvisca conxelante"
+msgstr "Choiva forte de chuvisca xélida"
 
 #: noaa_i18n.dat:54
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Snow"
-msgstr "Nevarada forte de chuvisca conxelante"
+msgstr "Nevarada forte de chuvisca xélida"
 
 #: noaa_i18n.dat:55
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Fog"
-msgstr "Forte néboa conxelante"
+msgstr "Forte néboa xélida"
 
 #: noaa_i18n.dat:56
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain"
-msgstr "Choivas conxeladas fortes"
+msgstr "Choivas xélidas fortes"
 
 #: noaa_i18n.dat:57
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Rain"
-msgstr "Fortes choivas de choiva conxelada"
+msgstr "Fortes choivas de choiva xélida"
 
 #: noaa_i18n.dat:58
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Snow"
-msgstr "Fortes nevaradas de choiva conxelada"
+msgstr "Fortes nevaradas de choiva xélida"
 
 #: noaa_i18n.dat:59
 #, kde-format
@@ -3308,13 +3308,13 @@ msgstr "Forte bruma ou néboa mexona"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Drizzle"
-msgstr "Forte choiva de chuvisca conxelante"
+msgstr "Forte choiva de chuvisca xélida"
 
 #: noaa_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Rain"
-msgstr "Fortes choivas de choiva conxelada"
+msgstr "Fortes choivas de choiva xélida"
 
 #: noaa_i18n.dat:67
 #, kde-format
@@ -3380,7 +3380,7 @@ msgstr "Fortes nevaradas intermitentes con néboa ou bruma"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy small Hail/Snow Pellets"
-msgstr "Forte sarabiada miúda ou graupel"
+msgstr "Forte sarabiada miúda ou neve granulada"
 
 #: noaa_i18n.dat:79
 #, kde-format
@@ -3404,13 +3404,13 @@ msgstr "Forte néboa ou bruma con neve"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Drizzle"
-msgstr "Nevarada forte de chuviscada conxelante"
+msgstr "Nevarada forte de chuviscada xélida"
 
 #: noaa_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Rain"
-msgstr "Fortes nevaradas de choiva conxelada"
+msgstr "Fortes nevaradas de choiva xélida"
 
 #: noaa_i18n.dat:84
 #, kde-format
@@ -3506,7 +3506,7 @@ msgstr "Forte choiva de tronada con bruma seca"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Forte choiva de tronada con sarabia miúda ou graupel"
+msgstr "Forte choiva de tronada con sarabia miúda ou neve granulada"
 
 #: noaa_i18n.dat:100
 #, kde-format
@@ -3560,31 +3560,31 @@ msgstr "Nevarada con chuvisca débil"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Rain"
-msgstr "Choiva débil de chuvisca conxelante"
+msgstr "Choiva débil de chuvisca xélida"
 
 #: noaa_i18n.dat:113
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Snow"
-msgstr "Nevarada débil de chuvisca conxelante"
+msgstr "Nevarada débil de chuvisca xélida"
 
 #: noaa_i18n.dat:114
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Fog"
-msgstr "Néboa conxelante débil"
+msgstr "Néboa xélida débil"
 
 #: noaa_i18n.dat:116
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Rain"
-msgstr "Choivas débiles de choiva conxelada"
+msgstr "Choivas débiles de choiva xélida"
 
 #: noaa_i18n.dat:117
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Snow"
-msgstr "Nevaradas débiles de choiva conxelada"
+msgstr "Nevaradas débiles de choiva xélida"
 
 #: noaa_i18n.dat:118
 #, kde-format
@@ -3626,13 +3626,13 @@ msgstr "Néboa ou choiva débil"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Drizzle"
-msgstr "Choiva débil e chuvisca conxelante"
+msgstr "Choiva débil e chuvisca xélida"
 
 #: noaa_i18n.dat:126
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Rain"
-msgstr "Choivas débiles de choiva conxelada"
+msgstr "Choivas débiles de choiva xélida"
 
 #: noaa_i18n.dat:127
 #, kde-format
@@ -3692,7 +3692,7 @@ msgstr "Treboadas débiles con néboa ou bruma"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Small Hail/Snow Pellets"
-msgstr "Sarabiada débil e miúda ou graupel"
+msgstr "Sarabiada débil e miúda ou neve granulada"
 
 #: noaa_i18n.dat:138
 #, kde-format
@@ -3728,13 +3728,13 @@ msgstr "Néboa ou bruma de puvisada"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Drizzle"
-msgstr "Puvisada de chuvisca conxelante"
+msgstr "Puvisada de chuvisca xélida"
 
 #: noaa_i18n.dat:144
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Rain"
-msgstr "Puvisada con choiva conxelada"
+msgstr "Puvisada con choiva xélida"
 
 #: noaa_i18n.dat:145
 #, kde-format
@@ -3824,7 +3824,7 @@ msgstr "Orballo de tronada con bruma seca"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Choiva de tronada débil con sarabiado débil ou graupel"
+msgstr "Choiva de tronada débil con sarabiado débil ou neve granulada"
 
 #: noaa_i18n.dat:160
 #, kde-format
@@ -3926,7 +3926,7 @@ msgstr "Parcialmente anubrado con bruma seca"
 #, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr "Zonas de néboa conxelante"
+msgstr "Zonas de néboa xélida"
 
 #: noaa_i18n.dat:179
 #, kde-format
@@ -3956,13 +3956,13 @@ msgstr "Choiva de néboa ou bruma"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Drizzle"
-msgstr "Choiva de chuvisca conxelante"
+msgstr "Choiva de chuvisca xélida"
 
 #: noaa_i18n.dat:184
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Rain"
-msgstr "Choivas de choiva conxelada"
+msgstr "Choivas de choiva xélida"
 
 #: noaa_i18n.dat:185
 #, kde-format
@@ -4094,7 +4094,7 @@ msgstr "Treboadas de neve con néboa ou bruma"
 #, kde-format
 msgctxt "weather condition"
 msgid "Small Hail/Snow Pellets"
-msgstr "Sarabiados ou graupel"
+msgstr "Sarabiados ou neve granulada"
 
 #: noaa_i18n.dat:210
 #, kde-format
@@ -4124,13 +4124,13 @@ msgstr "Néboa ou bruma e neve"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Drizzle"
-msgstr "Nevarada de chuvisca conxelante"
+msgstr "Nevarada de chuvisca xélida"
 
 #: noaa_i18n.dat:215
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Rain"
-msgstr "Nevarada de choiva conxelada"
+msgstr "Nevarada de choiva xélida"
 
 #: noaa_i18n.dat:217
 #, kde-format
@@ -4370,7 +4370,7 @@ msgstr "Choiva de tormenta con sarabia e néboa ou brétema"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Choiva con sarabia miúda ou graupel"
+msgstr "Choiva con sarabia miúda ou neve granulada"
 
 #: noaa_i18n.dat:258
 #, kde-format
@@ -4388,7 +4388,7 @@ msgstr "Treboadas de tronada con sarabiado próximo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Small Hail/Snow Pellets"
-msgstr "Tronada con sarabiado miúdo ou graupel"
+msgstr "Tronada con sarabiado miúdo ou neve granulada"
 
 #: noaa_i18n.dat:261
 #, kde-format
@@ -4430,7 +4430,7 @@ msgstr "Trompa de auga"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Spray"
-msgstr "Choiva conxelada"
+msgstr "Choiva xélida"
 
 #: noaa_i18n.dat:269
 #, kde-format
@@ -4514,25 +4514,25 @@ msgstr "Choiva ou bólas de xeo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "Lixeira posibilidade de choiva ou choiva conxelada"
+msgstr "Lixeira posibilidade de choiva ou choiva xélida"
 
 #: noaa_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Freezing Rain"
-msgstr "Posibilidade de choiva ou choiva conxelada"
+msgstr "Posibilidade de choiva ou choiva xélida"
 
 #: noaa_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain Likely"
-msgstr "Posíbel choiva ou choiva conxelada"
+msgstr "Posíbel choiva ou choiva xélida"
 
 #: noaa_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain"
-msgstr "Choivas ou choiva conxelada"
+msgstr "Choivas ou choiva xélida"
 
 #: noaa_i18n.dat:287
 #, kde-format
@@ -4550,49 +4550,49 @@ msgstr "Precipitacións sólidas"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "Lixeira posibilidade de chuviscas conxelantes"
+msgstr "Lixeira posibilidade de chuviscas xélidas"
 
 #: noaa_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Drizzle"
-msgstr "Posibilidades de chuviscas conxelantes"
+msgstr "Posibilidades de chuviscas xélidas"
 
 #: noaa_i18n.dat:291
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle Likely"
-msgstr "Chuviscadas conxelantes moi probábeis"
+msgstr "Chuviscadas xélidas moi probábeis"
 
 #: noaa_i18n.dat:292
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle"
-msgstr "Chuviscada conxelante"
+msgstr "Chuviscada xélida"
 
 #: noaa_i18n.dat:293
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "Lixeira posibilidade de choiva conxelada"
+msgstr "Lixeira posibilidade de choiva xélida"
 
 #: noaa_i18n.dat:294
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Freezing Rain"
-msgstr "Choivas de choiva conxelada moi probábeis"
+msgstr "Choivas de choiva xélida moi probábeis"
 
 #: noaa_i18n.dat:295
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain Likely"
-msgstr "Choivas de choiva conxelada moi probábeis"
+msgstr "Choivas de choiva xélida moi probábeis"
 
 #: noaa_i18n.dat:296
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain"
-msgstr "Choiva conxelada"
+msgstr "Choiva xélida"
 
 #: noaa_i18n.dat:297
 #, kde-format
@@ -4760,7 +4760,7 @@ msgstr "Bólas de xeo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Fog"
-msgstr "Néboa con xeo"
+msgstr "Néboa xélida"
 
 #: noaa_i18n.dat:330
 #, kde-format
@@ -4856,7 +4856,7 @@ msgstr "Nubes en aumento"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Cloudy"
-msgstr "Nubosidade aumentando"
+msgstr "Nubes aumentando"
 
 #: noaa_i18n.dat:351
 #, kde-format
@@ -4874,7 +4874,7 @@ msgstr "Despexando ao final do día"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Decreasing Clouds"
-msgstr "Nubosidade diminuíndo"
+msgstr "Nubes diminuíndo"
 
 #: noaa_i18n.dat:354
 #, kde-format

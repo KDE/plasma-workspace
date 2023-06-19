@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Xosé <xosecalvo@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2019-10-19 21:47+0200\n"
+"PO-Revision-Date: 2023-06-18 14:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: killrunner.cpp:30
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Terminar %1"
 #: killrunner.cpp:121
 #, kde-format
 msgid "Process ID: %1"
-msgstr ""
+msgstr "Identificador do proceso: %1"
 
 #: killrunner_config.cpp:32
 #, kde-format
@@ -74,13 +74,13 @@ msgstr "Matar a configuración das aplicacións"
 #: killrunner_config.ui:39
 #, kde-format
 msgid "&Use trigger word"
-msgstr "&Utilizar a palabra disparadora"
+msgstr "&Utilizar a palabra detonante."
 
 #. i18n: ectx: property (text), widget (QLabel, label_trigger)
 #: killrunner_config.ui:51
 #, kde-format
 msgid "&Trigger word:"
-msgstr "&Palabra disparadora:"
+msgstr "&Palabra detonante:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_sorting)
 #: killrunner_config.ui:72

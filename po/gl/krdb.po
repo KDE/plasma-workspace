@@ -5,14 +5,14 @@
 # Marce Villarino <mvillarino@users.sourceforge.net>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2019-10-19 21:59+0200\n"
+"PO-Revision-Date: 2023-06-18 13:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: krdb.cpp:260
 #, kde-format
@@ -28,6 +28,8 @@ msgid ""
 "# created by KDE Plasma, %1\n"
 "#\n"
 msgstr ""
+"# Creado por KDE Plasma, %1\n"
+"#\n"
 
 #~ msgid ""
 #~ "# created by KDE Plasma, %1\n"

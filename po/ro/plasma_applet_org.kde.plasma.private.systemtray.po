@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2022-06-01 18:44+0100\n"
+"PO-Revision-Date: 2023-04-10 19:51+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -154,7 +154,7 @@ msgstr "Stabilește automat la Mare în regim tactil"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Mergi înapoi"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format

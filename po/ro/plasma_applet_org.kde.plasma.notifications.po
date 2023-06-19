@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2010, 2012, 2013, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2010, 2012, 2013, 2020, 2021, 2022, 2023.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-06 02:58+0000\n"
-"PO-Revision-Date: 2022-04-04 17:02+0100\n"
+"PO-Revision-Date: 2023-04-10 19:52+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -118,11 +118,10 @@ msgid "Until manually disabled"
 msgstr "Până la dezactivare manuală"
 
 #: package/contents/ui/FullRepresentation.qml:208
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Ascunde automat"
+msgstr "Se oprește automat: %1"
 
 #: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
@@ -317,20 +316,19 @@ msgstr[1] "%1 notificări necitite"
 msgstr[2] "%1 de notificări necitite"
 
 #: package/contents/ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Do not disturb until %1"
+#, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Nu deranja până la %1"
+msgstr "Nu deranja până la %1. Clic mijlociu pentru a ieși acum"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Regimul fără deranj e activ. Clic mijlociu pentru a ieși"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Clic mijlociu pentru a intra în regimul fără deranj"
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -346,7 +344,7 @@ msgstr "&Configurează notificări și acțiuni pentru evenimente…"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "Chiar acum"
 
 #: package/contents/ui/NotificationHeader.qml:127
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-22 00:47+0000\n"
-"PO-Revision-Date: 2019-10-19 21:51+0200\n"
+"PO-Revision-Date: 2023-06-18 16:11+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -30,23 +30,23 @@ msgstr "Usar un único botón para o menú de aplicación"
 #: package/contents/ui/configGeneral.qml:28
 #, kde-format
 msgid "Show full application menu"
-msgstr "Mostrar o menú de aplicación completo"
+msgstr "Amosar o menú de aplicación completo"
 
 #: package/contents/ui/MenuDelegate.qml:62
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "Abrir un menú."
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: plugin/appmenumodel.cpp:91
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Buscar…"
 
 #~ msgid "application-menu"
 #~ msgstr "application-menu"
