@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <Phonon/AbstractMediaStream>
+#include <phonon/AbstractMediaStream>
 
 class QUrl;
 
