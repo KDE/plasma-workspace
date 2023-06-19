@@ -12,6 +12,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.workspace.calendar 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -44,7 +45,7 @@ Item {
     // Take the calendar height, subtract the inner spacings and divide by number of rows (root.weeks + one row for day names)
     readonly property int cellHeight:  Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * root.borderWidth) / calendarGrid.rows)
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: calendarSvg
         imagePath: "widgets/calendar"
     }

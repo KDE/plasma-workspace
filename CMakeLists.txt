@@ -40,7 +40,7 @@ include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
-                    Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime
+                    Auth Plasma Plasma5Support Runner Notifications NotifyConfig NewStuff Wallet IdleTime Svg
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons ActivitiesStats Activities KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor

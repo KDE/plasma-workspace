@@ -6,6 +6,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.private.kcms.desktoptheme 1.0 as Private
 
@@ -18,7 +19,7 @@ Item {
         anchors.fill: parent
         clip: true
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: background
             // Normalize margins around background.
             // Some themes like "Air" have huge transparent margins which would result in too small container area.
@@ -49,30 +50,6 @@ Item {
             rightMargin: background.generalMargin
         }
 
-        // Icons
-        ColumnLayout {
-            id: icons
-            Layout.fillHeight: true
-
-            PlasmaCore.IconItem {
-                id: computerIcon
-                Layout.fillHeight: true
-                source: "computer"
-            }
-
-            PlasmaCore.IconItem {
-                id: applicationsIcon
-                Layout.fillHeight: true
-                source: "applications-other"
-            }
-
-            PlasmaCore.IconItem {
-                id: logoutIcon
-                Layout.fillHeight: true
-                source: "system-log-out"
-            }
-        }
-
         // Analog clock
         Item {
             id: clock
@@ -89,7 +66,7 @@ Item {
             readonly property double verticalShadowOffset:
                 Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
-            PlasmaCore.Svg {
+            KSvg.Svg {
                 id: clockSvg
                 imagePath: "widgets/clock"
                 function estimateHorizontalHandShadowOffset() {
@@ -122,7 +99,7 @@ Item {
                 }
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: face
                 anchors.centerIn: parent
                 width: Math.min(parent.width, parent.height)
@@ -145,7 +122,7 @@ Item {
                 svgScale: clock.svgScale
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: center
                 width: naturalSize.width * clock.svgScale
                 height: naturalSize.height * clock.svgScale
@@ -155,7 +132,7 @@ Item {
                 z: 1000
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 anchors.fill: face
                 svg: clockSvg
                 elementId: "Glass"

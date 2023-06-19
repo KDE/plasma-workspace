@@ -16,8 +16,9 @@
 #include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 
-#include <Plasma/Svg>
-#include <Plasma/Theme>
+#include <KSvg/FrameSvg>
+#include <KSvg/ImageSet>
+#include <KSvg/Svg>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -164,15 +165,19 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
         return;
     }
 
-    Plasma::Theme *theme = m_themes[themeName];
-    if (!theme) {
-        theme = new Plasma::Theme(themeName, this);
-        m_themes[themeName] = theme;
+    KSvg::ImageSet *imageSet = m_themes[themeName];
+    if (!imageSet) {
+        imageSet = new KSvg::ImageSet(themeName, QStringLiteral("plasma/desktoptheme"), this);
+        m_themes[themeName] = imageSet;
     }
 
-    Q_FOREACH (Plasma::Svg *svg, item->findChildren<Plasma::Svg *>()) {
-        svg->setTheme(theme);
+    Q_FOREACH (KSvg::Svg *svg, item->findChildren<KSvg::Svg *>()) {
+        auto *frame = qobject_cast<KSvg::FrameSvg *>(svg);
         svg->setUsingRenderingCache(false);
+        if (frame) {
+            frame->setCacheAllRenderedFrames(false);
+        }
+        svg->setImageSet(imageSet);
     }
 }
 
@@ -196,7 +201,7 @@ void KCMDesktopTheme::save()
     QDBusConnection::sessionBus().call(msg);
 
     KQuickManagedConfigModule::save();
-    Plasma::Theme().setThemeName(desktopThemeSettings()->name());
+    KSvg::ImageSet().setImageSetName(desktopThemeSettings()->name());
     processPendingDeletions();
 }
 

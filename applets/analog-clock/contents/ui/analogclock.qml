@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasma5support 2.0 as P5Support
 
@@ -81,7 +82,7 @@ PlasmoidItem {
         onPressed: wasExpanded = analogclock.expanded
         onClicked: analogclock.expanded = !wasExpanded
 
-        PlasmaCore.Svg {
+        KSvg.Svg {
             id: clockSvg
 
             property double naturalHorizontalHandShadowOffset: estimateHorizontalHandShadowOffset()
@@ -132,7 +133,7 @@ PlasmoidItem {
             readonly property double verticalShadowOffset:
                 Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: face
                 anchors.centerIn: parent
                 width: Math.min(parent.width, parent.height)
@@ -189,7 +190,7 @@ PlasmoidItem {
                 svgScale: clock.svgScale
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: center
                 anchors.centerIn: clock
                 width: naturalSize.width * clock.svgScale
@@ -199,7 +200,7 @@ PlasmoidItem {
                 z: 1000
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 anchors.fill: face
                 width: naturalSize.width * clock.svgScale
                 height: naturalSize.height * clock.svgScale
@@ -208,7 +209,7 @@ PlasmoidItem {
             }
         }
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: timezoneBg
 
             anchors {

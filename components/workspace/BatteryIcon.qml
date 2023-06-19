@@ -7,6 +7,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 
 Item {
     property bool hasBattery
@@ -14,7 +15,7 @@ Item {
     property bool pluggedIn
     property string batteryType
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: svg
         imagePath: "icons/battery"
         colorGroup: PlasmaCore.ColorScope.colorGroup
@@ -23,7 +24,7 @@ Item {
         }
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: batterySvg
         anchors.centerIn: parent
         width: PlasmaCore.Units.roundToIconSize(Math.min(parent.width, parent.height))
@@ -33,7 +34,7 @@ Item {
         visible: !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery)
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: fillSvg
         anchors.fill: batterySvg
         svg: svg
@@ -88,7 +89,7 @@ Item {
         }
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         anchors.fill: batterySvg
         svg: svg
         elementId: "AcAdapter"

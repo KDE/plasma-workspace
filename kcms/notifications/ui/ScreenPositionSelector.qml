@@ -10,6 +10,7 @@ import QtQuick.Window 2.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -36,12 +37,12 @@ Item {
         }
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: monitorSvg
         imagePath: "widgets/monitor"
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: topleftPart
         anchors {
             left: parent.left
@@ -53,7 +54,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: topPart
         anchors {
             top: parent.top
@@ -65,7 +66,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: toprightPart
         anchors {
             right: parent.right
@@ -77,7 +78,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: leftPart
         anchors {
             left: parent.left
@@ -89,7 +90,7 @@ Item {
         width: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: rightPart
         anchors {
             right: parent.right
@@ -101,7 +102,7 @@ Item {
         width: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: bottomleftPart
         anchors {
             left: parent.left
@@ -113,7 +114,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: bottomPart
         anchors {
             bottom: basePart.top
@@ -125,7 +126,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: bottomrightPart
         anchors {
             right: parent.right
@@ -137,7 +138,7 @@ Item {
         height: baseUnit
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: basePart
         anchors {
             bottom: parent.bottom

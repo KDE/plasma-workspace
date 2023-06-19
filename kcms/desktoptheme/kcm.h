@@ -17,9 +17,9 @@
 
 class QTemporaryFile;
 
-namespace Plasma
+namespace KSvg
 {
-class Theme;
+class ImageSet;
 }
 
 namespace KIO
@@ -81,7 +81,7 @@ private:
 
     ThemesModel *m_model;
     FilterProxyModel *m_filteredModel;
-    QHash<QString, Plasma::Theme *> m_themes;
+    QHash<QString, KSvg::ImageSet *> m_themes;
     bool m_haveThemeExplorerInstalled;
 
     std::unique_ptr<QTemporaryFile> m_tempInstallFile;

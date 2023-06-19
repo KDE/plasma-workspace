@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.15 as QQC2 // For StackView
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -99,7 +100,7 @@ PlasmoidItem {
         property alias listMargins: listItemSvg.margins
         readonly property var appletInterface: main
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id : listItemSvg
             imagePath: "widgets/listitem"
             prefix: "normal"

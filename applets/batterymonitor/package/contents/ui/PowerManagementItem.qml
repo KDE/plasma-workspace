@@ -12,6 +12,7 @@ import org.kde.kquickcontrolsaddons 2.1
 import org.kde.kwindowsystem 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 
 ColumnLayout {
     id: root
@@ -46,13 +47,13 @@ ColumnLayout {
     }
 
     // Separator line
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         Layout.fillWidth: true
 
         visible: inhibitionReasonsLayout.visible
 
         elementId: "horizontal-line"
-        svg: PlasmaCore.Svg {
+        svg: KSvg.Svg {
             imagePath: "widgets/line"
         }
     }

@@ -13,6 +13,7 @@ import QtQml 2.15
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -387,14 +388,14 @@ PlasmaExtras.Representation {
         }
 
         // Horizontal separator line between events and time zones
-        PlasmaCore.SvgItem {
+        KSvg.SvgItem {
             visible: worldClocks.visible && agenda.visible
 
             Layout.fillWidth: true
             Layout.preferredHeight: naturalSize.height
 
             elementId: "horizontal-line"
-            svg: PlasmaCore.Svg {
+            svg: KSvg.Svg {
                 imagePath: "widgets/line"
             }
         }
@@ -538,7 +539,7 @@ PlasmaExtras.Representation {
 
     // Vertical separator line between columns
     // =======================================
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: mainSeparator
 
         anchors {
@@ -554,7 +555,7 @@ PlasmaExtras.Representation {
         visible: calendar.showAgenda || calendar.showClocks
 
         elementId: "vertical-line"
-        svg: PlasmaCore.Svg {
+        svg: KSvg.Svg {
             imagePath: "widgets/line"
         }
     }

@@ -13,6 +13,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 import org.kde.kirigami 2.11 as Kirigami
@@ -86,7 +87,7 @@ ContainmentLayoutManager.AppletContainer {
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
-    background: PlasmaCore.FrameSvgItem {
+    background: KSvg.FrameSvgItem {
         id: background
 
         property bool blurEnabled: false
@@ -233,7 +234,7 @@ ContainmentLayoutManager.AppletContainer {
 
                 clip: true
 
-                PlasmaCore.FrameSvgItem {
+                KSvg.FrameSvgItem {
                     imagePath: "widgets/background"
                     prefix: "blurred-mask"
 

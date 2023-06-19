@@ -7,11 +7,12 @@
 import QtQuick 2.12
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 
 ContainmentLayoutManager.ItemContainer {
     enabled: false
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         anchors.fill:parent
         imagePath: "widgets/viewitem"
         prefix: "hover"

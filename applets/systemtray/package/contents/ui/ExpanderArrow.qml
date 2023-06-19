@@ -9,6 +9,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 
 PlasmaCore.ToolTipArea {
     id: tooltip
@@ -50,12 +51,12 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: arrowSvg
         imagePath: "widgets/arrows"
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: arrow
 
         anchors.centerIn: parent
@@ -89,7 +90,7 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         anchors.centerIn: parent
         width: arrow.width
         height: arrow.height

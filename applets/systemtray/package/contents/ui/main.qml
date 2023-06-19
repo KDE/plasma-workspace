@@ -9,6 +9,7 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.15
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
 import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
@@ -261,7 +262,7 @@ ContainmentItem {
                 }
 
                 // Draws a line between the applet dialog and the panel
-                PlasmaCore.SvgItem {
+                KSvg.SvgItem {
                     // Only draw for popups of panel applets, not desktop applets
                     visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
                         .includes(Plasmoid.location)
@@ -279,7 +280,7 @@ ContainmentItem {
                     width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? PlasmaCore.Units.devicePixelRatio : undefined
                     z: 999 /* Draw the line on top of the applet */
                     elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
-                    svg: PlasmaCore.Svg {
+                    svg: KSvg.Svg {
                         imagePath: "widgets/line"
                     }
                 }

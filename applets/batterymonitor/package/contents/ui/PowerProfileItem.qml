@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 
 PlasmaComponents3.ItemDelegate {
     id: root
@@ -135,12 +136,12 @@ PlasmaComponents3.ItemDelegate {
                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
                 Layout.fillWidth: true
 
-                PlasmaCore.Svg {
+                KSvg.Svg {
                     id: svg
                     imagePath: "icons/battery"
                 }
 
-                PlasmaCore.SvgItem {
+                KSvg.SvgItem {
                     Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
                     Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
                     svg: svg
@@ -160,7 +161,7 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                 }
 
-                PlasmaCore.SvgItem {
+                KSvg.SvgItem {
                     Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
                     Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
                     svg: svg

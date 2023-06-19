@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 
 MouseArea {
@@ -68,7 +69,7 @@ MouseArea {
 
                 // "Held on a Power Profile mode while plugged in" use case; show the
                 // icon of the active mode so the user can notice this at a glance
-                PlasmaCore.SvgItem {
+                KSvg.SvgItem {
                     id: powerProfileModeIcon
 
                     anchors.centerIn: parent
@@ -76,7 +77,7 @@ MouseArea {
                     width: height
 
                     visible: batteryContainer.pluggedIn && (root.isHeldOnPowerSaveMode || root.isHeldOnPerformanceMode)
-                    svg: PlasmaCore.Svg { imagePath: "icons/battery" }
+                    svg: KSvg.Svg { imagePath: "icons/battery" }
                     elementId: root.isHeldOnPerformanceMode ? "profile-performance" : "profile-powersave"
                 }
 

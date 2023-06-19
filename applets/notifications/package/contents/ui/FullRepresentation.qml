@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.12 as Kirigami
@@ -48,7 +49,7 @@ PlasmaExtras.Representation {
         }
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: lineSvg
         imagePath: "widgets/line"
     }
@@ -319,7 +320,7 @@ PlasmaExtras.Representation {
             highlightMoveDuration: 0
             highlightResizeDuration: 0
             // Not using PlasmaExtras.Highlight as this is only for indicating keyboard focus
-            highlight: PlasmaCore.FrameSvgItem {
+            highlight: KSvg.FrameSvgItem {
                 imagePath: "widgets/listitem"
                 prefix: "pressed"
             }
@@ -583,7 +584,7 @@ PlasmaExtras.Representation {
                                 onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
                             }
 
-                            PlasmaCore.SvgItem {
+                            KSvg.SvgItem {
                                 Layout.fillWidth: true
                                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
                                 elementId: "horizontal-line"

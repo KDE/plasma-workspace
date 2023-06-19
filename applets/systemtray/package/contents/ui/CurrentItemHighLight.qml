@@ -7,9 +7,10 @@
 import QtQuick 2.15
 
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
 
-PlasmaCore.FrameSvgItem {
+KSvg.FrameSvgItem {
     id: currentItemHighLight
 
     property int location

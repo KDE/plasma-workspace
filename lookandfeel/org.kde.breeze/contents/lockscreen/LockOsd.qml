@@ -6,9 +6,10 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import "../osd"
 
-PlasmaCore.FrameSvgItem {
+KSvg.FrameSvgItem {
     id: osd
 
     property alias timeout: osdItem.timeout

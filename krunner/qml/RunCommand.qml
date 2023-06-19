@@ -11,6 +11,7 @@ import QtQuick.Window 2.1
 import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMLauncher
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
@@ -191,7 +192,7 @@ ColumnLayout {
                 runnerWindow.visible = false
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 anchors {
                     right: parent.right
                     rightMargin: 6 // from PlasmaStyle TextFieldStyle
@@ -200,7 +201,7 @@ ColumnLayout {
                 // match clear button
                 width: Math.max(parent.height * 0.8, PlasmaCore.Units.iconSizes.small)
                 height: width
-                svg: PlasmaCore.Svg {
+                svg: KSvg.Svg {
                     imagePath: "widgets/arrows"
                     colorGroup: PlasmaCore.Theme.ButtonColorGroup
                 }
