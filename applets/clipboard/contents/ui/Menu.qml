@@ -93,11 +93,11 @@ PlasmaComponents3.ScrollView {
 
             supportsBarcodes: menu.supportsBarcodes
 
-            onItemSelected: menu.itemSelected(uuid)
-            onRemove: menu.remove(uuid)
-            onEdit: menu.edit(uuid)
-            onBarcode: menu.barcode(text)
-            onTriggerAction: menu.triggerAction(uuid)
+            onItemSelected: uuid => menu.itemSelected(uuid)
+            onRemove: uuid => menu.remove(uuid)
+            onEdit: uuid => menu.edit(uuid)
+            onBarcode: text => menu.barcode(text)
+            onTriggerAction: uuid => menu.triggerAction(uuid)
 
             Binding {
                 target: menuListView; when: hovered

@@ -149,20 +149,20 @@ Menu {
         }
         return true;
     }
-    onItemSelected: clipboardSource.service(uuid, "select")
-    onRemove: clipboardSource.service(uuid, "remove")
-    onEdit: {
+    onItemSelected: uuid => clipboardSource.service(uuid, "select")
+    onRemove: uuid => clipboardSource.service(uuid, "remove")
+    onEdit: uuid => {
         stack.push(Qt.resolvedUrl("EditPage.qml"), {
             text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
             uuid: uuid
         });
     }
-    onBarcode: {
+    onBarcode: text => {
         stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
             text: text
         });
     }
-    onTriggerAction: clipboardSource.service(uuid, "action")
+    onTriggerAction: uuid => clipboardSource.service(uuid, "action")
 
     Component.onCompleted: {
         // Intercept up/down key to prevent ListView from accepting the key event.
