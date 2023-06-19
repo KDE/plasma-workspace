@@ -1,23 +1,25 @@
 # translation of krunner_webshortcutsrunner.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # mvillarino <mvillarino@users.sourceforge.net>, 2008.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2011.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-18 03:27+0000\n"
-"PO-Revision-Date: 2011-01-10 19:02+0100\n"
-"Last-Translator: Marce Villarino <mvillarino@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"PO-Revision-Date: 2023-06-18 17:31+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: webshortcutrunner.cpp:43 webshortcutrunner.cpp:147 webshortcutrunner.cpp:164
 #, kde-format
@@ -32,14 +34,14 @@ msgstr "Abre «%1» nun navegador web coa consulta :q:."
 #: webshortcutrunner.cpp:76
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Buscar usando a sintaxe «bang» de DuckDuckGo"
 
 #: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "Buscar nunha xanela privada"
 
 #: webshortcutrunner.cpp:111
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "Buscar nunha xanela de incógnito"

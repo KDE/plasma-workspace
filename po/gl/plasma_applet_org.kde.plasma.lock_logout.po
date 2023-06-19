@@ -1,26 +1,27 @@
 # translation of plasma_applet_lockout.po to galician
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Marce Villarino <mvillarino@kde-espana.es>, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2013, 2015.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2019-03-15 18:10+0100\n"
+"PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -32,22 +33,22 @@ msgstr "Xeral"
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr "Mostrar as accións:"
+msgstr "Amosar as accións:"
 
 #: contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Logout"
-msgstr ""
+msgstr "Saír"
 
 #: contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Apagar"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Reiniciar"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
@@ -88,33 +89,32 @@ msgstr "Comezar unha sesión paralela cun usuario distinto."
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr ""
+msgstr "Apagar…"
 
 #: contents/ui/data.js:19
-#, fuzzy, kde-format
-#| msgid "Log out, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Saír, apagar ou reiniciar o computador."
+msgstr "Apagar o computador"
 
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr ""
+msgstr "Reiniciar…"
 
 #: contents/ui/data.js:26
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Reiniciar o computador"
 
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr ""
+msgstr "Saír…"
 
 #: contents/ui/data.js:33
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Rematar a sesión"
 
 #: contents/ui/data.js:40
 #, kde-format

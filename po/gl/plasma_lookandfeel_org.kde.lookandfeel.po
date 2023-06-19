@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 02:13+0000\n"
-"PO-Revision-Date: 2019-11-26 23:03+0100\n"
+"PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -63,12 +63,10 @@ msgid "Shut Down"
 msgstr "Apagar"
 
 #: ../sddm-theme/Main.qml:235
-#, fuzzy, kde-format
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other..."
+#, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr "Outro…"
+msgstr "Máis…"
 
 #: ../sddm-theme/Main.qml:450
 #, kde-format
@@ -131,8 +129,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock:"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
 msgstr "Reloxo:"
@@ -141,11 +138,10 @@ msgstr "Reloxo:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Manter visíbel cando desapareza o diálogo de desbloquear."
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Controis de reprodución:"
@@ -154,7 +150,7 @@ msgstr "Controis de reprodución:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Amosar baixo o diálogo de desbloquear."
 
 #: contents/lockscreen/LockScreenUi.qml:38
 #, kde-format
@@ -162,9 +158,7 @@ msgid "Unlocking failed"
 msgstr "Fallou o desbloqueo"
 
 #: contents/lockscreen/LockScreenUi.qml:317
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgid "Sleep"
 msgstr "Durmir"
 
@@ -208,7 +202,7 @@ msgstr "Desbloquear"
 #: contents/lockscreen/MediaControls.qml:111
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Sen título"
 
 #: contents/lockscreen/MediaControls.qml:112
 #, kde-format
@@ -290,11 +284,10 @@ msgstr "Cancelar"
 #: contents/osd/OsdItem.qml:68
 #, kde-format
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: contents/osd/OsdItem.qml:82
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
