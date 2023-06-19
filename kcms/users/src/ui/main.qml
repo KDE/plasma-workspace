@@ -91,7 +91,7 @@ KCM.ScrollViewKCM {
 
             onClicked: {
                 userList.currentIndex = index;
-                kcm.pop(0);
+                kcm.pop();
                 kcm.push("UserDetailsPage.qml", { user });
             }
 
@@ -125,7 +125,7 @@ KCM.ScrollViewKCM {
             text: i18n("Add New User")
 
             onClicked: {
-                kcm.pop(0);
+                kcm.pop();
                 kcm.push("CreateUser.qml");
                 userList.currentIndex = -1;
             }
