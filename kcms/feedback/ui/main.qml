@@ -131,7 +131,7 @@ SimpleKCM {
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 22
                 wrapMode: Text.WordWrap
 
-                text: i18n("The following information will be sent:")
+                text: i18n("The following information about Plasma will be sent:")
                 visible: statisticsModeSlider.value != 0 // This is "disabled"
             }
             ColumnLayout {
