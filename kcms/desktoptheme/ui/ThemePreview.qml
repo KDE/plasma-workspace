@@ -13,6 +13,7 @@ import org.kde.private.kcms.desktoptheme 1.0 as Private
 Item {
     id: root
     property string themeName
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
     Item {
         id: backgroundMask
