@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-06-01 18:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -52,7 +52,7 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Altele"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
@@ -60,7 +60,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, fuzzy, kde-format
 #| msgctxt "Agenda listview section title"
 #| msgid "Events"
@@ -134,7 +134,7 @@ msgstr ""
 msgid "Keep Open"
 msgstr ""
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr ""

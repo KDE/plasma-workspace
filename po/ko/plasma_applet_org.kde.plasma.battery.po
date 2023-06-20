@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-02-28 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -71,7 +71,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:103
+#: package/contents/ui/CompactRepresentation.qml:104
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -238,13 +238,13 @@ msgstr "화면 밝기"
 msgid "Keyboard Brightness"
 msgstr "키보드 밝기"
 
-#: package/contents/ui/PowerManagementItem.qml:38
+#: package/contents/ui/PowerManagementItem.qml:39
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "절전 모드 진입과 화면 잠금 수동으로 차단"
 
-#: package/contents/ui/PowerManagementItem.qml:71
+#: package/contents/ui/PowerManagementItem.qml:72
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -254,79 +254,79 @@ msgstr ""
 "노트북에 외부 모니터가 연결되었을 때 덮개를 닫아도 절전 모드로 들어가지 않도"
 "록 설정되어 있습니다."
 
-#: package/contents/ui/PowerManagementItem.qml:84
+#: package/contents/ui/PowerManagementItem.qml:85
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "프로그램 %1개에서 절전 모드 진입과 화면 잠금을 차단함:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1에서 절전 모드 진입과 화면 잠금을 차단함(%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1에서 절전 모드 진입과 화면 잠금을 차단함(알 수 없는 이유)"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "프로그램에서 절전 모드 진입과 화면 잠금을 차단함(%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr "프로그램에서 절전 모드 진입과 화면 잠금을 차단함(알 수 없는 이유)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: 알 수 없는 오류"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "알 수 없는 프로그램: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "알 수 없는 프로그램: 알 수 없는 오류"
 
-#: package/contents/ui/PowerProfileItem.qml:34
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "절전"
 
-#: package/contents/ui/PowerProfileItem.qml:38
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "균형 조정"
 
-#: package/contents/ui/PowerProfileItem.qml:42
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "성능"
 
-#: package/contents/ui/PowerProfileItem.qml:59
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "전원 프로필"
 
-#: package/contents/ui/PowerProfileItem.qml:191
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -335,18 +335,18 @@ msgstr ""
 "컴퓨터가 무릎 위에 놓여 있어서 발열을 줄일 수 있도록 성능 모드가 비활성화되었"
 "습니다."
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "컴퓨터가 너무 뜨거워서 성능 모드를 사용할 수 없습니다."
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "성능 모드를 사용할 수 없습니다."
 
-#: package/contents/ui/PowerProfileItem.qml:208
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -355,23 +355,23 @@ msgstr ""
 "컴퓨터가 무릎 위에 놓여 있어서 발열을 줄일 수 있도록 성능이 저하될 수 있습니"
 "다."
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "컴퓨터가 너무 뜨거워서 성능이 저하될 수 있습니다."
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "성능이 저하될 수 있습니다."
 
-#: package/contents/ui/PowerProfileItem.qml:223
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "프로그램 %1개에서 %2을(를) 활성화하기를 요청함:"
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

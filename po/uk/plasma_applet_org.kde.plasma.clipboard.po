@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-05-26 09:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -73,22 +73,22 @@ msgid ""
 msgstr ""
 "Недостатньо місця для показу QR-коду. Спробуйте змінити розміри цього аплету."
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Вміст буфера даних"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер даних порожній"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Налаштувати буфер обміну…"
 
-#: contents/ui/clipboard.qml:59
+#: contents/ui/clipboard.qml:60
 #, kde-format
 msgid "Clear History"
 msgstr "Спорожнити журнал"

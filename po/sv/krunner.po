@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-09-24 15:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -57,59 +57,59 @@ msgstr "Ersätt en befintlig instans"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Frågan att besvara, bara använd om -c inte anges"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure"
 msgstr "Anpassa"
 
-#: qml/RunCommand.qml:78
+#: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Anpassa beteende för Kör program"
 
-#: qml/RunCommand.qml:81
+#: qml/RunCommand.qml:82
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Anpassa Kör program..."
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Sök '%1'…"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Sök…"
 
-#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
+#: qml/RunCommand.qml:231 qml/RunCommand.qml:232 qml/RunCommand.qml:234
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Visa användningshjälp"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin"
 msgstr "Fäst upp"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:243
 #, kde-format
 msgid "Pin Search"
 msgstr "Fäst upp sökning"
 
-#: qml/RunCommand.qml:244
+#: qml/RunCommand.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Behåll öppen"
 
-#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
+#: qml/RunCommand.qml:317 qml/RunCommand.qml:322
 #, kde-format
 msgid "Recent Queries"
 msgstr "Senaste frågor"
 
-#: qml/RunCommand.qml:319
+#: qml/RunCommand.qml:320
 #, kde-format
 msgid "Remove"
 msgstr "Ta bort"

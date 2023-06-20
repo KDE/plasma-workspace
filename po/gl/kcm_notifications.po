@@ -35,22 +35,22 @@ msgstr "Outras aplicacións"
 #: ui/ApplicationConfiguration.qml:63
 #, kde-format
 msgid "Show popups"
-msgstr "Mostrar as mensaxes emerxentes"
+msgstr "Amosar as mensaxes emerxentes"
 
 #: ui/ApplicationConfiguration.qml:77
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr "Mostrar no modo de non molestar"
+msgstr "Amosar no modo de non molestar"
 
 #: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
-msgstr "Mostrar no historial"
+msgstr "Amosar no historial"
 
 #: ui/ApplicationConfiguration.qml:101
 #, kde-format
 msgid "Show notification badges"
-msgstr "Mostrar os emblemas de notificacións"
+msgstr "Amosar os emblemas de notificacións"
 
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
@@ -71,7 +71,7 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"Non se puido atopar un trebello de «Notificacións», necesario para mostrar "
+"Non se puido atopar un trebello de «Notificacións», necesario para amosar "
 "notificacións. Asegúrese de que está activado ben na área de notificacións "
 "ou nun trebello independente."
 
@@ -130,7 +130,7 @@ msgstr "Notificacións críticas:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr "Mostrar no modo de non molestar"
+msgstr "Amosar no modo de non molestar"
 
 #: ui/main.qml:121
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Notificacións normais:"
 #: ui/main.qml:122
 #, kde-format
 msgid "Show over full screen windows"
-msgstr "Mostrar sobre as xanelas a pantalla completa"
+msgstr "Amosar sobre as xanelas a pantalla completa"
 
 #: ui/main.qml:134
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "Notificacións de prioridade baixa:"
 #: ui/main.qml:135
 #, kde-format
 msgid "Show popup"
-msgstr "Mostrar a mensaxe emerxente"
+msgstr "Amosar a mensaxe emerxente"
 
 #: ui/main.qml:164
 #, kde-format
@@ -202,13 +202,13 @@ msgstr "Progreso da aplicación:"
 #: ui/main.qml:251 ui/main.qml:291
 #, kde-format
 msgid "Show in task manager"
-msgstr "Mostrar no xestor de tarefas"
+msgstr "Amosar no xestor de tarefas"
 
 #: ui/main.qml:263
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr "Mostrar nas notificacións"
+msgstr "Amosar nas notificacións"
 
 #: ui/main.qml:277
 #, kde-format

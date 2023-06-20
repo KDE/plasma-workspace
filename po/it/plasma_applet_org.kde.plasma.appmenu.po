@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-07-26 18:26+0200\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Usa un pulsante singolo per il menu dell'applicazione"
 msgid "Show full application menu"
 msgstr "Mostra il menu dell'applicazione completo"
 
-#: package/contents/ui/MenuDelegate.qml:62
+#: package/contents/ui/MenuDelegate.qml:63
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"

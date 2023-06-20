@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-06-11 17:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -51,14 +51,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "மற்றவை"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 நிகழ்வு"
 msgstr[1] "%1 நிகழ்வுகள்"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "No events"
 msgstr "நிகழ்வுகள் இல்லை"
@@ -130,7 +130,7 @@ msgstr "அடுத்த பத்தாண்டு"
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr "அமை..."

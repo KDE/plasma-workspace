@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-01-30 14:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -80,94 +80,94 @@ msgstr "Kopírovat"
 msgid "Select All"
 msgstr "Vybrat vše"
 
-#: package/contents/ui/FullRepresentation.qml:72
+#: package/contents/ui/FullRepresentation.qml:73
 #, kde-format
 msgid "Do not disturb"
 msgstr "Nerušit"
 
-#: package/contents/ui/FullRepresentation.qml:114
+#: package/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "For 1 hour"
 msgstr "Na 1 hodinu"
 
-#: package/contents/ui/FullRepresentation.qml:119
+#: package/contents/ui/FullRepresentation.qml:120
 #, kde-format
 msgid "For 4 hours"
 msgstr "Na 4 hodiny"
 
-#: package/contents/ui/FullRepresentation.qml:128
+#: package/contents/ui/FullRepresentation.qml:129
 #, kde-format
 msgid "Until this evening"
 msgstr "Do večera"
 
-#: package/contents/ui/FullRepresentation.qml:138
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Do zítřejšího rána"
 
-#: package/contents/ui/FullRepresentation.qml:150
+#: package/contents/ui/FullRepresentation.qml:151
 #, kde-format
 msgid "Until Monday"
 msgstr "Do pondělí"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Dokud není ručně zakázáno"
 
-#: package/contents/ui/FullRepresentation.qml:207
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automaticky ukončit: %1"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Dokud je %1 aktivní (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:221
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Dokud je %1 aktivní"
 
-#: package/contents/ui/FullRepresentation.qml:227
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Obrazovky jsou zrcadleny"
 
-#: package/contents/ui/FullRepresentation.qml:433
+#: package/contents/ui/FullRepresentation.qml:434
 #, kde-format
 msgid "Close Group"
 msgstr "Zavřít skupinu"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "Zobrazit méně"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Zobrazit další %1"
 
-#: package/contents/ui/FullRepresentation.qml:621
+#: package/contents/ui/FullRepresentation.qml:622
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Žádné nepřečtené upozornění"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:637
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Služba pro oznamování není dostupná"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

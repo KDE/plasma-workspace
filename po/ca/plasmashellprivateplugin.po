@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-05-28 09:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -55,14 +55,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Altres"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 esdeveniment"
 msgstr[1] "%1 esdeveniments"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "No events"
 msgstr "Cap esdeveniment"
@@ -134,7 +134,7 @@ msgstr "Dècada següent"
 msgid "Keep Open"
 msgstr "Mantén obert"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr "Configura…"

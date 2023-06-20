@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-12-08 21:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -70,7 +70,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:103
+#: package/contents/ui/CompactRepresentation.qml:104
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -239,13 +239,13 @@ msgstr "காட்சிக் கருவி பிரகாசம்"
 msgid "Keyboard Brightness"
 msgstr "விசைப்பலகை பிரகாசம்"
 
-#: package/contents/ui/PowerManagementItem.qml:38
+#: package/contents/ui/PowerManagementItem.qml:39
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "தானாக தூங்காதே மற்றும் திரைபூட்டாதே"
 
-#: package/contents/ui/PowerManagementItem.qml:71
+#: package/contents/ui/PowerManagementItem.qml:72
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -255,24 +255,24 @@ msgstr ""
 "மூடியை மூடும்போது, ஒரு வெளி காட்சிக் கருவி இணைக்கப்பட்டிருந்தால், தூங்காதவாறு உங்கள் "
 "கணினி அமைக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/PowerManagementItem.qml:84
+#: package/contents/ui/PowerManagementItem.qml:85
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "%1 செயலி தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது:"
 msgstr[1] "%1 செயலிகள் தூக்கம் மற்றும் திரை பூட்டுதலை தடுக்கின்றன:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (தெரியாத காரணம்)"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, fuzzy, kde-format
 #| msgid "%1 application is currently blocking sleep and screen locking:"
 #| msgid_plural ""
@@ -280,7 +280,7 @@ msgstr "%1 தூக்கம் மற்றும் திரை பூட்
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "%1 செயலி தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது:"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, fuzzy, kde-format
 #| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgid ""
@@ -288,25 +288,25 @@ msgid ""
 "reason)"
 msgstr "%1 தூக்கம் மற்றும் திரை பூட்டலை தடுக்கிறது (தெரியாத காரணம்)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: தெரியாத காரணம்"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr ""
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, fuzzy, kde-format
 #| msgctxt "Application name: reason for preventing sleep and screen locking"
 #| msgid "%1: unknown reason"
@@ -314,27 +314,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "%1: தெரியாத காரணம்"
 
-#: package/contents/ui/PowerProfileItem.qml:34
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "ஆற்றல் சேமிப்பு"
 
-#: package/contents/ui/PowerProfileItem.qml:38
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "சமநிலை"
 
-#: package/contents/ui/PowerProfileItem.qml:42
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "அதிவேகம்"
 
-#: package/contents/ui/PowerProfileItem.qml:59
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "ஆற்றல் பயன்முறை"
 
-#: package/contents/ui/PowerProfileItem.qml:191
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -343,18 +343,18 @@ msgstr ""
 "கணினி உங்கள் மடியில் இருப்பதுபோல் உள்ளதால், வெப்ப உற்பத்தியை குறைக்க அதிவேக பயன்முறை "
 "முடக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "கணினி மிக சூடாக உள்ளதால் அதிவேக பயன்முறையை பயன்படுத்த முடியாது."
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "அதிவேக பயன்முறையை பயன்படுத்த முடியாது."
 
-#: package/contents/ui/PowerProfileItem.qml:208
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -363,24 +363,24 @@ msgstr ""
 "கணினி உங்கள் மடியில் இருப்பதுபோல் உள்ளதால், வெப்ப உற்பத்தியை குறைக்க கணினியின் செயல்திறன் "
 "குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "கணினி மிக சூடாக உள்ளதால் கணினியின் செயல்திறன் குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "கணினியின் செயல்திறன் குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:223
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "ஒரு செயலி %2 இயக்குமாறு கோரியுள்ளது:"
 msgstr[1] "%1 செயலிகள் %2 இயக்குமாறு கோரியுள்ளன:"
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

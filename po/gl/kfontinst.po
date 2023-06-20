@@ -545,7 +545,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:208
 #, kde-format
 msgid "Do not show this message again"
-msgstr "Non mostrar esta mensaxe de novo"
+msgstr "Non amosar esta mensaxe de novo"
 
 #: kcmfontinst/JobRunner.cpp:318
 #, kde-format
@@ -1579,7 +1579,7 @@ msgstr "Entidade decimal de XML"
 #: viewpart/FontViewPart.cpp:85
 #, kde-format
 msgid "Show Face:"
-msgstr "Mostrar a cara:"
+msgstr "Amosar a cara:"
 
 #: viewpart/FontViewPart.cpp:88
 #, fuzzy, kde-format

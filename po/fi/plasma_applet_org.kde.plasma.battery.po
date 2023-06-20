@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-03-04 18:19+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -79,7 +79,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/CompactRepresentation.qml:103
+#: package/contents/ui/CompactRepresentation.qml:104
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -252,13 +252,13 @@ msgstr "Näytön kirkkaus"
 msgid "Keyboard Brightness"
 msgstr "Näppäimistön kirkkaus"
 
-#: package/contents/ui/PowerManagementItem.qml:38
+#: package/contents/ui/PowerManagementItem.qml:39
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "Estä valmiustila ja näytön lukitus"
 
-#: package/contents/ui/PowerManagementItem.qml:71
+#: package/contents/ui/PowerManagementItem.qml:72
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -268,29 +268,29 @@ msgstr ""
 "Kannettava on asetettu pysymään hereillä kannen sulkeuduttua, kun ulkoinen "
 "näyttö on kytketty."
 
-#: package/contents/ui/PowerManagementItem.qml:84
+#: package/contents/ui/PowerManagementItem.qml:85
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "Valmiustilan ja näytön lukituksen estää %1 sovellus:"
 msgstr[1] "Valmiustilan ja näytön lukituksen estää %1 sovellusta:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 estää lukituksen ja valmiustilan (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 estää lukituksen ja valmiustilan (tuntemattomasta syystä)"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "Sovellus estää valmiustilan ja näytön lukitsemisen (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -298,51 +298,51 @@ msgid ""
 msgstr ""
 "Sovellus estää valmiustilan ja näytön lukitsemisen (tuntemattomasta syystä)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: tuntematon syy"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Tuntematon sovellus: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "Tuntematon sovellus: tuntematon syy"
 
-#: package/contents/ui/PowerProfileItem.qml:34
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "Virransäästö"
 
-#: package/contents/ui/PowerProfileItem.qml:38
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "Tasapainoinen"
 
-#: package/contents/ui/PowerProfileItem.qml:42
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "Suorituskyky"
 
-#: package/contents/ui/PowerProfileItem.qml:59
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "Virranhallintaprofiili"
 
-#: package/contents/ui/PowerProfileItem.qml:191
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -351,19 +351,19 @@ msgstr ""
 "Suorituskykytila on poistettu käytöstä lämmöntuoton vähentämiseksi, koska "
 "tietokoneen on havaittu olevan sylissäsi."
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr ""
 "Suorituskykytila ei ole käytettävissä, koska tietokone käy liian kuumana."
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Suorituskykytila ei ole käytettävissä."
 
-#: package/contents/ui/PowerProfileItem.qml:208
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -372,25 +372,25 @@ msgstr ""
 "Suorituskyky saatetaan heikentää lämmöntuoton vähentämiseksi, koska "
 "tietokoneen on havaittu olevan sylissäsi."
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Suorituskyky saattaa heikentyä, koska tietokone käy liian kuumana."
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Suorituskyky saattaa heikentyä."
 
 # Käännös on väännetty mutkalle, jotta %2:n sijaksi saadaan nominatiivi
-#: package/contents/ui/PowerProfileItem.qml:223
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "Yksi sovellus on pyytänyt, että %2 aktivoidaan:"
 msgstr[1] "%1 sovellusta on pyytänyt, että %2 aktivoimaan:"
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

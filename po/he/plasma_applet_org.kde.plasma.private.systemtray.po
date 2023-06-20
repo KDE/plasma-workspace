@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2017-05-22 05:25-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -173,22 +173,22 @@ msgstr ""
 msgid "Keep Open"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:23
+#: package/contents/ui/ExpanderArrow.qml:24
 #, kde-format
 msgid "Expand System Tray"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:24
+#: package/contents/ui/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:37
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Close popup"
 msgstr "סגור חלון קופץ"
 
-#: package/contents/ui/ExpanderArrow.qml:37
+#: package/contents/ui/ExpanderArrow.qml:38
 #, kde-format
 msgid "Show hidden icons"
 msgstr "הראה סמלים מוסתרים"

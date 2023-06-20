@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2009-01-05 18:10+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -28,29 +28,29 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "ନୂତନ ପ୍ରସଙ୍ଗ ଗ୍ରହଣ କରନ୍ତୁ..."
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to create a temporary file."
 msgstr "ପ୍ରସଙ୍ଗ ସଂରକ୍ଷଣ କରିବାରେ ଅସମର୍ଥ।"
 
-#: kcm.cpp:121
+#: kcm.cpp:122
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to download the theme: %1"
 msgstr "ପ୍ରସଙ୍ଗ ସଂରକ୍ଷଣ କରିବାରେ ଅସମର୍ଥ।"
 
-#: kcm.cpp:146
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: kcm.cpp:149 kcm.cpp:155
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr ""
 
-#: kcm.cpp:257
+#: kcm.cpp:262
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr ""

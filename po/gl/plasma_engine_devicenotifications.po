@@ -26,12 +26,12 @@ msgstr "Estado do dispositivo"
 #: ksolidnotify.cpp:149
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr "Un dispositivo pode retirarse con seguranza."
+msgstr "Un dispositivo pode retirarse con seguridade."
 
 #: ksolidnotify.cpp:150
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr "O dispositivo pode retirarse con seguranza."
+msgstr "O dispositivo pode retirarse con seguridade."
 
 #: ksolidnotify.cpp:157
 #, kde-format

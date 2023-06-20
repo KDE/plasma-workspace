@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-05-29 12:00+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -58,14 +58,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Autre"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "Évènement %1"
 msgstr[1] "%1 évènements"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "No events"
 msgstr "Aucun évènement"
@@ -137,7 +137,7 @@ msgstr "Décennie suivante"
 msgid "Keep Open"
 msgstr "Conserver ouvert"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr "Configurer..."

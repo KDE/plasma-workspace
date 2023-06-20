@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-02-23 18:22+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -77,7 +77,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:103
+#: package/contents/ui/CompactRepresentation.qml:104
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -245,13 +245,13 @@ msgstr "ディスプレイの明るさ"
 msgid "Keyboard Brightness"
 msgstr "キーボードの輝度"
 
-#: package/contents/ui/PowerManagementItem.qml:38
+#: package/contents/ui/PowerManagementItem.qml:39
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "スリープと画面ロックを妨げる"
 
-#: package/contents/ui/PowerManagementItem.qml:71
+#: package/contents/ui/PowerManagementItem.qml:72
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -261,29 +261,29 @@ msgstr ""
 "このラップトップは外部モニタが接続されている間は画面を閉じてもスリープしない"
 "ように設定されています。"
 
-#: package/contents/ui/PowerManagementItem.qml:84
+#: package/contents/ui/PowerManagementItem.qml:85
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] ""
 "現在 %1 つのアプリケーションがスリープと画面ロックをブロックしています:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "現在 %1 がスリープと画面ロックを妨げています (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "現在 %1 がスリープと画面ロックを妨げています (未知の理由)"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "現在 1 つのアプリケーションがスリープと画面ロックを妨げています (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -291,51 +291,51 @@ msgid ""
 msgstr ""
 "現在 1 つのアプリケーションがスリープと画面ロックを妨げています (未知の理由)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: 未知の理由"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "未知のアプリケーション: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "未知のアプリケーション: 未知の理由"
 
-#: package/contents/ui/PowerProfileItem.qml:34
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "省電力"
 
-#: package/contents/ui/PowerProfileItem.qml:38
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "バランス"
 
-#: package/contents/ui/PowerProfileItem.qml:42
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "パフォーマンス"
 
-#: package/contents/ui/PowerProfileItem.qml:59
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "電源プロファイル"
 
-#: package/contents/ui/PowerProfileItem.qml:191
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -344,19 +344,19 @@ msgstr ""
 "コンピュータがあなたの膝を感知したため、熱の発生を抑えるためにパフォーマンス"
 "モードが無効化されました。"
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr ""
 "コンピュータの温度が高すぎるため、パフォーマンスモードは利用できません。"
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "パフォーマンスモードは利用できません。"
 
-#: package/contents/ui/PowerProfileItem.qml:208
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -365,24 +365,24 @@ msgstr ""
 "コンピュータがあなたの膝を感知したため、パフォーマンスが低下するかもしれませ"
 "ん。"
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
 "コンピュータの温度が高すぎるため、パフォーマンスが低下するかもしれません。"
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "パフォーマンスが低下するかもしれません。"
 
-#: package/contents/ui/PowerProfileItem.qml:223
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "%1 つのアプリケーションが %2 のアクティベートを要求しました:"
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

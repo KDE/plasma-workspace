@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2014-09-04 11:50+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -71,22 +71,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Innhold i utklippstavla"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Utklippstavla er tom"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr ""
 
-#: contents/ui/clipboard.qml:59
+#: contents/ui/clipboard.qml:60
 #, kde-format
 msgid "Clear History"
 msgstr ""

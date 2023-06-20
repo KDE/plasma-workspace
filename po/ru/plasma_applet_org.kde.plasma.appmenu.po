@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-08-13 15:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -38,7 +38,7 @@ msgstr "Использовать одну кнопку для меню прил�
 msgid "Show full application menu"
 msgstr "Показывать полную строку меню приложения"
 
-#: package/contents/ui/MenuDelegate.qml:62
+#: package/contents/ui/MenuDelegate.qml:63
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"

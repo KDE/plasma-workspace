@@ -21,19 +21,19 @@ msgstr ""
 #: config.ui:16
 #, kde-format
 msgid "Display all windows in one list"
-msgstr "Mostrar todas as xanelas nunha lista"
+msgstr "Amosar todas as xanelas nunha lista"
 
 #. i18n: ectx: property (text), widget (QRadioButton, subButton)
 #: config.ui:23
 #, kde-format
 msgid "Display a submenu for each desktop"
-msgstr "Mostrar un submenú para cada escritorio"
+msgstr "Amosar un submenú para cada escritorio"
 
 #. i18n: ectx: property (text), widget (QRadioButton, curButton)
 #: config.ui:30
 #, kde-format
 msgid "Display only the current desktop's windows"
-msgstr "Mostrar só as xanelas do escritorio actual"
+msgstr "Amosar só as xanelas do escritorio actual"
 
 #: switch.cpp:75
 #, kde-format

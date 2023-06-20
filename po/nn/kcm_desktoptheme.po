@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-01-15 18:11+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -28,28 +28,28 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Namn på gjeldande Plasma-stil"
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Klarte ikkje laga mellombels fil."
 
-#: kcm.cpp:121
+#: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Klarte ikkje lasta ned tema: %1"
 
-#: kcm.cpp:146
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Temaet er no installert."
 
-#: kcm.cpp:149 kcm.cpp:155
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Klarte ikkje installera temaet."
 
 # Er «%1» ein feilkode eller eit temanamn?
-#: kcm.cpp:257
+#: kcm.cpp:262
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Feil ved fjerning av tema: %1"

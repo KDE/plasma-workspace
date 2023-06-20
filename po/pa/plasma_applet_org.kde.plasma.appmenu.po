@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2021-06-08 22:41-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -32,7 +32,7 @@ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ ਲਈ ਇਕੱਲਾ ਬਟਨ �
 msgid "Show full application menu"
 msgstr "ਪੂਰਾ ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ ਵੇਖਾਓ"
 
-#: package/contents/ui/MenuDelegate.qml:62
+#: package/contents/ui/MenuDelegate.qml:63
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"

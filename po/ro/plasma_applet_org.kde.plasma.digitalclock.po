@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-12-29 19:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -28,45 +28,45 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:425
+#: package/contents/ui/CalendarView.qml:426
 #, kde-format
 msgid "Time Zones"
 msgstr "Fuse orare"
 
-#: package/contents/ui/CalendarView.qml:140
+#: package/contents/ui/CalendarView.qml:141
 #, kde-format
 msgid "Events"
 msgstr "Evenimente"
 
-#: package/contents/ui/CalendarView.qml:148
+#: package/contents/ui/CalendarView.qml:149
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Adaugă…"
 
-#: package/contents/ui/CalendarView.qml:152
+#: package/contents/ui/CalendarView.qml:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Adaugă eveniment nou"
 
-#: package/contents/ui/CalendarView.qml:384
+#: package/contents/ui/CalendarView.qml:385
 #, kde-format
 msgid "No events for today"
 msgstr "Niciun eveniment pe azi"
 
-#: package/contents/ui/CalendarView.qml:385
+#: package/contents/ui/CalendarView.qml:386
 #, kde-format
 msgid "No events for this day"
 msgstr "Niciun eveniment pe ziua de azi"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:435
 #, kde-format
 msgid "Switch…"
 msgstr "Schimbă…"
 
-#: package/contents/ui/CalendarView.qml:435
-#: package/contents/ui/CalendarView.qml:438
+#: package/contents/ui/CalendarView.qml:436
+#: package/contents/ui/CalendarView.qml:439
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Treci la alt fus orar"

@@ -143,7 +143,7 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
-"Mostrar un botón de «Aplicar» que garda os cambios sen preguntar (a "
+"Amosar un botón de «Aplicar» que garda os cambios sen preguntar (a "
 "diferencia do botón «Gardar como»)"
 
 #: editor/kcolorschemeeditor.cpp:37

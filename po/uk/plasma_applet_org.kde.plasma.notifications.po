@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-10-16 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -83,94 +83,94 @@ msgstr "Копіювати"
 msgid "Select All"
 msgstr "Позначити все"
 
-#: package/contents/ui/FullRepresentation.qml:72
+#: package/contents/ui/FullRepresentation.qml:73
 #, kde-format
 msgid "Do not disturb"
 msgstr "Не турбувати"
 
-#: package/contents/ui/FullRepresentation.qml:114
+#: package/contents/ui/FullRepresentation.qml:115
 #, kde-format
 msgid "For 1 hour"
 msgstr "Протягом години"
 
-#: package/contents/ui/FullRepresentation.qml:119
+#: package/contents/ui/FullRepresentation.qml:120
 #, kde-format
 msgid "For 4 hours"
 msgstr "Протягом 4 годин"
 
-#: package/contents/ui/FullRepresentation.qml:128
+#: package/contents/ui/FullRepresentation.qml:129
 #, kde-format
 msgid "Until this evening"
 msgstr "До цього вечора"
 
-#: package/contents/ui/FullRepresentation.qml:138
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "До завтрашнього ранку"
 
-#: package/contents/ui/FullRepresentation.qml:150
+#: package/contents/ui/FullRepresentation.qml:151
 #, kde-format
 msgid "Until Monday"
 msgstr "До понеділка"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "Until manually disabled"
 msgstr "До вимикання вручну"
 
-#: package/contents/ui/FullRepresentation.qml:207
+#: package/contents/ui/FullRepresentation.qml:208
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Автоматично завершується: %1"
 
-#: package/contents/ui/FullRepresentation.qml:219
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Доки є активним %1 (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:221
+#: package/contents/ui/FullRepresentation.qml:222
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Доки є активним %1"
 
-#: package/contents/ui/FullRepresentation.qml:227
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Екрани віддзеркалено"
 
-#: package/contents/ui/FullRepresentation.qml:433
+#: package/contents/ui/FullRepresentation.qml:434
 #, kde-format
 msgid "Close Group"
 msgstr "Закрити групу"
 
-#: package/contents/ui/FullRepresentation.qml:578
+#: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgid "Show Fewer"
 msgstr "Показувати менше"
 
-#: package/contents/ui/FullRepresentation.qml:580
+#: package/contents/ui/FullRepresentation.qml:581
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Показати ще %1"
 
-#: package/contents/ui/FullRepresentation.qml:621
+#: package/contents/ui/FullRepresentation.qml:622
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Непрочитаних сповіщень немає"
 
-#: package/contents/ui/FullRepresentation.qml:636
+#: package/contents/ui/FullRepresentation.qml:637
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Немає доступу до служби сповіщень"
 
-#: package/contents/ui/FullRepresentation.qml:638
+#: package/contents/ui/FullRepresentation.qml:639
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

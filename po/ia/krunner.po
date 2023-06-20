@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-01-25 16:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,59 +57,59 @@ msgstr "Reimplacia un instantia existente"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Le requesta de executar, solmente usate si -c non es fornite"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
 
-#: qml/RunCommand.qml:78
+#: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Configura le Comportamento de KRunner"
 
-#: qml/RunCommand.qml:81
+#: qml/RunCommand.qml:82
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Configura KRunner..."
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Cerca '%1'…"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Cerca…"
 
-#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
+#: qml/RunCommand.qml:231 qml/RunCommand.qml:232 qml/RunCommand.qml:234
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Monstra adjuta de uso"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin"
 msgstr "Pin"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:243
 #, kde-format
 msgid "Pin Search"
 msgstr "Attacha cerca"
 
-#: qml/RunCommand.qml:244
+#: qml/RunCommand.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Manteni aperite"
 
-#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
+#: qml/RunCommand.qml:317 qml/RunCommand.qml:322
 #, kde-format
 msgid "Recent Queries"
 msgstr "Requestas recente"
 
-#: qml/RunCommand.qml:319
+#: qml/RunCommand.qml:320
 #, kde-format
 msgid "Remove"
 msgstr "Remove"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -54,14 +54,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Alia"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 evento"
 msgstr[1] "%1 eventoj"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "No events"
 msgstr "Neniuj eventoj"
@@ -133,7 +133,7 @@ msgstr "Venontan Jardekon"
 msgid "Keep Open"
 msgstr "Teni Malfermita"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr "Agordi…"

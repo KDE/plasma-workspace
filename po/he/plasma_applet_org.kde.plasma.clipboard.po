@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -73,23 +73,23 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "תוכן לוח העתקה"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח העתקה ריק"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "הגדר לוח העתקה..."
 
-#: contents/ui/clipboard.qml:59
+#: contents/ui/clipboard.qml:60
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"

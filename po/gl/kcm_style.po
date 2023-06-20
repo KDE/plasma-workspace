@@ -133,7 +133,7 @@ msgstr "Etiqueta da barra de ferramentas secundaria:"
 #: ui/EffectSettingsPopup.qml:32
 #, kde-format
 msgid "Show icons:"
-msgstr "Mostrar as iconas:"
+msgstr "Amosar as iconas:"
 
 #: ui/EffectSettingsPopup.qml:33
 #, kde-format

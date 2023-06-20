@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2023-02-09 11:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -55,7 +55,7 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Іншы"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
@@ -64,7 +64,7 @@ msgstr[1] "%1 падзеі"
 msgstr[2] "%1 падзей"
 msgstr[3] "%1 падзеі"
 
-#: calendar/qml/DayDelegate.qml:43
+#: calendar/qml/DayDelegate.qml:44
 #, kde-format
 msgid "No events"
 msgstr "Няма падзей"
@@ -136,7 +136,7 @@ msgstr "Наступнае дзесяцігоддзе"
 msgid "Keep Open"
 msgstr "Не закрываць"
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:274
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:275
 #, kde-format
 msgid "Configure…"
 msgstr "Наладжванне…"

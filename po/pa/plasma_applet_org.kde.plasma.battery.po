@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-06-14 21:00-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -77,7 +77,7 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/CompactRepresentation.qml:103
+#: package/contents/ui/CompactRepresentation.qml:104
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
@@ -248,13 +248,13 @@ msgstr "ਸਕਰੀਨ ਚਮਕ"
 msgid "Keyboard Brightness"
 msgstr "ਕੀਬੋਰਡ ਚਮਕ"
 
-#: package/contents/ui/PowerManagementItem.qml:38
+#: package/contents/ui/PowerManagementItem.qml:39
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
 msgstr "ਸਲੀਪ ਕਰਨ ਤੇ ਸਕਰੀਨ ਲਾਕ ਕਰਨ ਨੂੰ ਖੁਦ ਰੋਕੋ"
 
-#: package/contents/ui/PowerManagementItem.qml:71
+#: package/contents/ui/PowerManagementItem.qml:72
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -264,24 +264,24 @@ msgstr ""
 "ਤੁਹਾਡੇ ਲੈਪਟਾਪ ਕਵਰ ਬੰਦ ਕਰਨ ਦੌਰਾਨ ਸਲੀਪ ਕਰਨ ਲਈ ਸੰਰਚਿਤ ਨਹੀਂ ਕੀਤੀ ਹੈ, ਜਦੋਂ ਕਿ ਬਾਹਰੀ ਮਾਨੀਟਰ "
 "ਕਨੈਕਟ ਕੀਤਾ ਹੋਵੇ।"
 
-#: package/contents/ui/PowerManagementItem.qml:84
+#: package/contents/ui/PowerManagementItem.qml:85
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] "ਇਸ ਵੇਲੇ %1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ:"
 msgstr[1] "ਇਸ ਵੇਲੇ %1 ਐਪਲੀਕੇਸ਼ਨਾਂ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀਆਂ ਹਨ:"
 
-#: package/contents/ui/PowerManagementItem.qml:106
+#: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:108
+#: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ (ਅਣਪਛਾਤਾ ਕਾਰਨ)"
 
-#: package/contents/ui/PowerManagementItem.qml:110
+#: package/contents/ui/PowerManagementItem.qml:111
 #, fuzzy, kde-format
 #| msgid "%1 application is currently blocking sleep and screen locking:"
 #| msgid_plural ""
@@ -289,7 +289,7 @@ msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰ�
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "ਇਸ ਵੇਲੇ %1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ:"
 
-#: package/contents/ui/PowerManagementItem.qml:112
+#: package/contents/ui/PowerManagementItem.qml:113
 #, fuzzy, kde-format
 #| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgid ""
@@ -297,25 +297,25 @@ msgid ""
 "reason)"
 msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ (ਅਣਪਛਾਤਾ ਕਾਰਨ)"
 
-#: package/contents/ui/PowerManagementItem.qml:116
+#: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:118
+#: package/contents/ui/PowerManagementItem.qml:119
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: ਅਣਪਛਾਤਾ ਕਾਰਨ"
 
-#: package/contents/ui/PowerManagementItem.qml:120
+#: package/contents/ui/PowerManagementItem.qml:121
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr ""
 
-#: package/contents/ui/PowerManagementItem.qml:122
+#: package/contents/ui/PowerManagementItem.qml:123
 #, fuzzy, kde-format
 #| msgctxt "Application name: reason for preventing sleep and screen locking"
 #| msgid "%1: unknown reason"
@@ -323,27 +323,27 @@ msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "%1: ਅਣਪਛਾਤਾ ਕਾਰਨ"
 
-#: package/contents/ui/PowerProfileItem.qml:34
+#: package/contents/ui/PowerProfileItem.qml:35
 #, kde-format
 msgid "Power Save"
 msgstr "ਪਾਵਰ ਬੱਚਤ"
 
-#: package/contents/ui/PowerProfileItem.qml:38
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Balanced"
 msgstr "ਸੰਤੁਲਿਤ"
 
-#: package/contents/ui/PowerProfileItem.qml:42
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Performance"
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ"
 
-#: package/contents/ui/PowerProfileItem.qml:59
+#: package/contents/ui/PowerProfileItem.qml:60
 #, kde-format
 msgid "Power Profile"
 msgstr "ਪਾਵਰ ਪਰੋਫਾਈਲ"
 
-#: package/contents/ui/PowerProfileItem.qml:191
+#: package/contents/ui/PowerProfileItem.qml:192
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -352,18 +352,18 @@ msgstr ""
 "ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ "
 "ਹੈ ਕਿ ਇਹ ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:193
+#: package/contents/ui/PowerProfileItem.qml:194
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "ਕੰਪਿਊਟਰ ਬਹੁਤ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:195
+#: package/contents/ui/PowerProfileItem.qml:196
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:208
+#: package/contents/ui/PowerProfileItem.qml:209
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -372,24 +372,24 @@ msgstr ""
 "ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਘਟਾਈ ਜਾ ਸਕਦੀ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ ਹੈ ਕਿ ਇਹ "
 "ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:210
+#: package/contents/ui/PowerProfileItem.qml:211
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "ਕੰਪਿਊਟਰ ਦੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:212
+#: package/contents/ui/PowerProfileItem.qml:213
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
 
-#: package/contents/ui/PowerProfileItem.qml:223
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "

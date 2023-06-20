@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2021-07-10 20:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -23,27 +23,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "தற்போதைய பிளாஸ்மா தோற்றத்திட்டத்தின் பெயர்"
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை."
 
-#: kcm.cpp:121
+#: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "தோற்றத்திட்டத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: kcm.cpp:146
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "தோற்றத்திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
 
-#: kcm.cpp:149 kcm.cpp:155
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr "தோற்றத்திட்ட நிறுவல் தோல்வியடைந்தது."
 
-#: kcm.cpp:257
+#: kcm.cpp:262
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "தோற்றத்திட்ட நீக்கம் தோல்வியடைந்தது: %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 02:19+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2022-09-15 13:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -57,59 +57,59 @@ msgstr "Een bestaand exemplaar vervangen"
 msgid "The query to run, only used if -c is not provided"
 msgstr "De uit te voeren zoektekst, alleen gebruikt als -c niet is geleverd"
 
-#: qml/RunCommand.qml:77
+#: qml/RunCommand.qml:78
 #, kde-format
 msgid "Configure"
 msgstr "Configureren"
 
-#: qml/RunCommand.qml:78
+#: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Gedrag van KRunner configureren"
 
-#: qml/RunCommand.qml:81
+#: qml/RunCommand.qml:82
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner configureren…"
 
-#: qml/RunCommand.qml:93
+#: qml/RunCommand.qml:94
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Zoeken '%1'…"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:95
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Zoeken…"
 
-#: qml/RunCommand.qml:230 qml/RunCommand.qml:231 qml/RunCommand.qml:233
+#: qml/RunCommand.qml:231 qml/RunCommand.qml:232 qml/RunCommand.qml:234
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Gebruik van Help tonen"
 
-#: qml/RunCommand.qml:241
+#: qml/RunCommand.qml:242
 #, kde-format
 msgid "Pin"
 msgstr "Pin"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:243
 #, kde-format
 msgid "Pin Search"
 msgstr "Pin zoeken"
 
-#: qml/RunCommand.qml:244
+#: qml/RunCommand.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Open houden"
 
-#: qml/RunCommand.qml:316 qml/RunCommand.qml:321
+#: qml/RunCommand.qml:317 qml/RunCommand.qml:322
 #, kde-format
 msgid "Recent Queries"
 msgstr "Recente queries"
 
-#: qml/RunCommand.qml:319
+#: qml/RunCommand.qml:320
 #, kde-format
 msgid "Remove"
 msgstr "Verwijderen"

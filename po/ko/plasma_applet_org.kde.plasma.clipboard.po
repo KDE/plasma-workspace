@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-05 02:00+0000\n"
+"POT-Creation-Date: 2023-06-20 02:59+0000\n"
 "PO-Revision-Date: 2021-11-14 17:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -69,22 +69,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:28
+#: contents/ui/clipboard.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "클립보드 내용"
 
-#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"
 
-#: contents/ui/clipboard.qml:57
+#: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "클립보드 설정…"
 
-#: contents/ui/clipboard.qml:59
+#: contents/ui/clipboard.qml:60
 #, kde-format
 msgid "Clear History"
 msgstr "과거 기록 비우기"
