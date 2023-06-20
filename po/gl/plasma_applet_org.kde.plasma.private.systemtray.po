@@ -95,7 +95,7 @@ msgstr "Activado"
 #: package/contents/ui/ConfigEntries.qml:314
 #, kde-format
 msgid "Always show all entries"
-msgstr "Mostrar sempre todas as entradas."
+msgstr "Amosar sempre todas as entradas."
 
 #: package/contents/ui/ConfigGeneral.qml:23
 #, fuzzy, kde-format
@@ -194,7 +194,7 @@ msgstr "Pechar a xanela emerxente"
 #: package/contents/ui/ExpanderArrow.qml:37
 #, kde-format
 msgid "Show hidden icons"
-msgstr "Mostrar as iconas agochadas"
+msgstr "Amosar as iconas agochadas"
 
 #, fuzzy
 #~| msgid " (Automatic load)"

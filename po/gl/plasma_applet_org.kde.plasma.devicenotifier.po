@@ -124,7 +124,7 @@ msgstr "Todos os dispositivos"
 #: package/contents/ui/main.qml:265
 #, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr "Mostrar un diálogo emerxente ao conectar dispositivos novos."
+msgstr "Amosar un diálogo emerxente ao conectar dispositivos novos."
 
 #: package/contents/ui/main.qml:274
 #, kde-format

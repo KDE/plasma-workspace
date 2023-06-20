@@ -30,7 +30,7 @@ msgstr "Versión do calendario:"
 #: package/contents/ui/configGeneral.qml:26
 #, kde-format
 msgid "Show week numbers"
-msgstr "Mostrar os números das semanas"
+msgstr "Amosar os números das semanas"
 
 #: package/contents/ui/configGeneral.qml:36
 #, kde-format
@@ -42,13 +42,13 @@ msgstr "Versión compacta:"
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
-msgstr "Mostrar o día do mes"
+msgstr "Amosar o día do mes"
 
 #: package/contents/ui/configGeneral.qml:44
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"
-msgstr "Mostrar o número de semana"
+msgstr "Amosar o número de semana"
 
 #~ msgid "Working Day"
 #~ msgstr "Día laboral"

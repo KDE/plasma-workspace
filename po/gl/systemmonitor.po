@@ -31,7 +31,7 @@ msgstr "adrian@chaves.io"
 #: kdedksysguard.cpp:40
 #, kde-format
 msgid "Show System Activity"
-msgstr "Mostrar a actividade do sistema"
+msgstr "Amosar a actividade do sistema"
 
 #: main.cpp:23
 #, kde-format

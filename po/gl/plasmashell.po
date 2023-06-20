@@ -208,7 +208,7 @@ msgstr ""
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
 msgid "Show Desktop"
-msgstr "Mostrar o escritorio"
+msgstr "Amosar o escritorio"
 
 #: shellcorona.cpp:178
 #, kde-format
@@ -284,7 +284,7 @@ msgstr "A renderización podería ter un baixo rendemento."
 #: softwarerendernotifier.cpp:39
 #, kde-format
 msgid "Never show again"
-msgstr "Non mostrar de novo"
+msgstr "Non amosar de novo"
 
 #: userfeedback.cpp:36
 #, kde-format

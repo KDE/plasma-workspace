@@ -46,7 +46,7 @@ msgstr "Usar o contido do portapapeis como consulta para KRunner"
 #: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr "Iniciar KRunner en segundo plano, non mostralo."
+msgstr "Iniciar KRunner en segundo plano, non amosalo."
 
 #: main.cpp:64
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Buscar…"
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
 msgid "Show Usage Help"
-msgstr "Mostrar a axuda de uso"
+msgstr "Amosar a axuda de uso"
 
 #: qml/RunCommand.qml:239
 #, kde-format

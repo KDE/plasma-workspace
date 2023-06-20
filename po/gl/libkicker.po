@@ -96,17 +96,17 @@ msgstr "Aplicativos"
 #: plugin/appsmodel.cpp:151
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "Mostrar os aplicativos deste submenú"
+msgstr "Amosar os aplicativos deste submenú"
 
 #: plugin/appsmodel.cpp:160
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "Mostrar os aplicativos de «%1»"
+msgstr "Amosar os aplicativos de «%1»"
 
 #: plugin/computermodel.cpp:92
 #, kde-format
 msgid "Show KRunner"
-msgstr "Mostrar KRunner"
+msgstr "Amosar KRunner"
 
 #: plugin/computermodel.cpp:96
 #, kde-format

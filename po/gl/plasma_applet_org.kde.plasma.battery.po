@@ -229,8 +229,7 @@ msgstr "Mo&strar información da enerxía…"
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
-"Mostrar a porcentaxe de batería sobre a icona cando a carga non estea "
-"completa"
+"Amosar a porcentaxe de batería sobre a icona cando a carga non estea completa"
 
 #: package/contents/ui/main.qml:384
 #, kde-format

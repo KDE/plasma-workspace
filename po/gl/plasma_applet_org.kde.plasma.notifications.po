@@ -150,13 +150,13 @@ msgstr "Pechar o grupo"
 #: package/contents/ui/FullRepresentation.qml:583
 #, kde-format
 msgid "Show Fewer"
-msgstr "Mostrar menos"
+msgstr "Amosar menos"
 
 #: package/contents/ui/FullRepresentation.qml:585
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr "Mostrar %1 máis"
+msgstr "Amosar %1 máis"
 
 #: package/contents/ui/FullRepresentation.qml:626
 #: package/contents/ui/main.qml:92
@@ -267,7 +267,7 @@ msgstr "Agochar os detalles"
 #, kde-format
 msgctxt "A button tooltip; expands the item to show details"
 msgid "Show Details"
-msgstr "Mostrar os detalles"
+msgstr "Amosar os detalles"
 
 #: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:169
