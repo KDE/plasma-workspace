@@ -11,7 +11,6 @@ import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Templates 2.3 as T
 
 import org.kde.kirigami 2.8 as Kirigami
-import org.kde.kcmutils as KCM
 
 Item {
     id: accentColorUI

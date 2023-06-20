@@ -16,7 +16,6 @@ import QtQml 2.15
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcmutils as KCM
-import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.private.kcms.colors 1.0 as Private
 
 KCM.GridViewKCM {

@@ -10,9 +10,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 6.3 as QtDialogs
 import QtQuick.Controls 2.10 as QtControls
 import org.kde.kirigami 2.10 as Kirigami
-import org.kde.private.kcms.style 1.0 as Private
 import org.kde.newstuff 1.91 as NewStuff
-import org.kde.kcmutils as KCM
 
 Kirigami.Page {
     id: gtkStylePage

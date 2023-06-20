@@ -11,7 +11,6 @@ import QtQuick.Layouts 1.15
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.kcmutils // KCMLauncher

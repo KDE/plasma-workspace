@@ -8,7 +8,6 @@
 */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0

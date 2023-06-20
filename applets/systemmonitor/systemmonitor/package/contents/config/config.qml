@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import org.kde.ksysguard.sensors 1.0 as Sensors
-import org.kde.ksysguard.faces 1.0 as Faces
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0

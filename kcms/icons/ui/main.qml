@@ -15,7 +15,6 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcmutils as KCM
 
-import org.kde.private.kcms.icons 1.0 as Private
 
 KCM.GridViewKCM {
     id: root

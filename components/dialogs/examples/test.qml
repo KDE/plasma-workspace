@@ -8,7 +8,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
-import QtQuick.Dialogs 6.3 as Dialogs
 import Qt5Compat.GraphicalEffects
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.workspace.dialogs 1.0
