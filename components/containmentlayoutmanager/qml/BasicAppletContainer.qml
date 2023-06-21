@@ -25,13 +25,6 @@ ContainmentLayoutManager.AppletContainer {
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
     Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: (applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
-        && !(applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-        && !(applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
-            ? Kirigami.Theme.Complementary
-            : Kirigami.Theme.Window
-
-    Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.colorSet === Kirigami.Theme.Complementary
         ? Kirigami.Theme.ComplementaryColorGroup
         : Kirigami.Theme.Window
