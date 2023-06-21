@@ -6,7 +6,6 @@
 
 import QtQuick 2.10
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigami 2.11 as Kirigami
 
 MouseArea {
     id: delegate

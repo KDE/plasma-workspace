@@ -8,7 +8,6 @@ import QtQuick 2.12
 
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager 
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigami 2.14 as Kirigami
 
 ContainmentLayoutManager.ResizeHandle {
     id: handle

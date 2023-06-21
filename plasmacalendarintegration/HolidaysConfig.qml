@@ -14,7 +14,6 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kholidays 1.0 as KHolidays
 import org.kde.holidayeventshelperplugin 1.0
-import org.kde.kirigami 2.15 as Kirigami
 
 ColumnLayout {
     id: holidaysConfig

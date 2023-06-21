@@ -13,8 +13,6 @@ import QtQuick.Window 2.12
 import Qt5Compat.GraphicalEffects
 import QtQml 2.15
 
-import org.kde.kirigami 2.8 as Kirigami
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.plasmoid 2.0
