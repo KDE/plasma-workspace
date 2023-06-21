@@ -110,7 +110,7 @@ Item {
             id: previewIcon
             anchors.centerIn: parent
             width: height
-            height: Kirigami.Units.roundedIconSize(parent.height)
+            height: Kirigami.Units.iconSizes.sizeForLabels(parent.height)
             active: dragArea.hovered
             usesPlasmaTheme: false
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""

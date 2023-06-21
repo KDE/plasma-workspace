@@ -26,7 +26,7 @@ MouseArea {
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.gridUnit)
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton
 
@@ -57,7 +57,7 @@ MouseArea {
     KSvg.SvgItem {
         id: notificationIcon
         anchors.centerIn: parent
-        width: Kirigami.Units.roundedIconSize(Math.min(parent.width, parent.height))
+        width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: notificationSvg
         visible: opacity > 0

@@ -537,7 +537,7 @@ PlasmaExtras.Representation {
                 id: playerControls
 
                 property bool enabled: root.canControl
-                property int controlsSize: Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height * 3
+                property int controlsSize: Kirigami.Units.gridUnit * 3
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.bottomMargin: Kirigami.Units.smallSpacing

@@ -27,11 +27,11 @@ PlasmoidItem {
     property bool containsAcceptableDrag: false
 
     preferredRepresentation: fullRepresentation
-    height: Math.round(Kirigami.Units.iconSizes.desktop + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
+    height: Math.round(Kirigami.Units.iconSizes.desktop + 2 * Kirigami.Units.gridUnit)
     width: Math.round(Kirigami.Units.iconSizes.desktop * 1.5)
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.gridUnit)
 
     enabled: Plasmoid.valid
 
@@ -80,7 +80,7 @@ PlasmoidItem {
         Accessible.role: Accessible.Button
 
         Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.mSize(Kirigami.Theme.defaultFont).height)
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.gridUnit)
 
         hoverEnabled: true
         enabled: Plasmoid.valid

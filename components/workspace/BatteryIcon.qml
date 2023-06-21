@@ -28,7 +28,7 @@ Item {
     KSvg.SvgItem {
         id: batterySvg
         anchors.centerIn: parent
-        width: Kirigami.Units.roundedIconSize(Math.min(parent.width, parent.height))
+        width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: svg
         elementId: "Battery"
