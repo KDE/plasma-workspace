@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-09 08:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -41,53 +41,53 @@ msgstr "Pasahitza"
 msgid "Log In"
 msgstr "Hasi saioa"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Blok Maius aktibatua dago"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Egin lo"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Berrabiarazi"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Itzali"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Bestelakoa..."
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Tekleatu erabiltzaile-izena eta pasahitza"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "Zerrendatu erabiltzaileak"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Alegiazko teklatua"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Saio-hastea huts egin du"

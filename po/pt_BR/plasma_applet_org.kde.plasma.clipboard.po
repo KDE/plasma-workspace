@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-07-14 09:52-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -71,22 +71,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da área de transferência"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está vazia"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a área de transferência..."
 
-#: contents/ui/clipboard.qml:60
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar histórico"
@@ -111,19 +111,19 @@ msgstr "Editar conteúdo"
 msgid "Remove from history"
 msgstr "Remover do histórico"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salvar"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/Menu.qml:123
+#: contents/ui/Menu.qml:122
 #, kde-format
 msgid "No matches"
 msgstr "Nenhuma ocorrência"

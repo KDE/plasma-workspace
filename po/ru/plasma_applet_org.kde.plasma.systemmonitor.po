@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-05-29 14:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,28 +19,28 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.04.1\n"
 
-#: package/contents/config/config.qml:10
+#: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
 msgstr "Внешний вид"
 
 # %1 = "Bar Chart", "Pie Chart" или аналогичный вид графика из libksysguard._desktop_.po --aspotashev
-#: package/contents/config/config.qml:15
+#: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
 msgstr "Подробности %1"
 
-#: package/contents/config/config.qml:21
+#: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
 msgstr "Подробные сведения о датчике"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgid "System Monitor"
 msgstr "Системный монитор"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

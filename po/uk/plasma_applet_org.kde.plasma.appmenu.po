@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-07-26 09:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Вигляд"
 
-#: package/contents/ui/configGeneral.qml:22
+#: package/contents/ui/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Використовувати одну кнопку для меню програми"
 
-#: package/contents/ui/configGeneral.qml:28
+#: package/contents/ui/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Показувати меню програми повністю"

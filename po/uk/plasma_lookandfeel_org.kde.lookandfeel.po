@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-09 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,53 +40,53 @@ msgstr "Пароль"
 msgid "Log In"
 msgstr "Увійти"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Увімкнено Caps Lock"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Призупинити"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Перезапустити"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Вимкнути"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Інше…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Введіть ім'я користувача і пароль"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "Список користувачів"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Віртуальна клавіатура"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Невдала спроба увійти"

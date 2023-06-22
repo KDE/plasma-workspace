@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-09 18:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -161,12 +161,12 @@ msgstr "Tem os seguintes temas de cursores do rato no seu sistema:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema actual da sessão do Plasma)"
 
-#: ui/Delegate.qml:54
+#: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
 msgstr "Remover o Tema"
 
-#: ui/Delegate.qml:61
+#: ui/Delegate.qml:59
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Repor o Tema de Cursores"

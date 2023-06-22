@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-08-19 15:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -22,12 +22,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Aparência"
 
-#: package/contents/ui/configGeneral.qml:22
+#: package/contents/ui/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Usar botão simples para o menu de aplicativos"
 
-#: package/contents/ui/configGeneral.qml:28
+#: package/contents/ui/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Mostrar menu de aplicativos completo"

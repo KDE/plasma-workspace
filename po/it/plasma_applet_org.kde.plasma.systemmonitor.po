@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-05-29 14:43+0200\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.04.0\n"
 
-#: package/contents/config/config.qml:10
+#: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
 msgstr "Aspetto"
 
-#: package/contents/config/config.qml:15
+#: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
 msgstr "Dettagli di %1"
 
-#: package/contents/config/config.qml:21
+#: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
 msgstr "Dettagli del sensore"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgid "System Monitor"
 msgstr "Monitor di sistema"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

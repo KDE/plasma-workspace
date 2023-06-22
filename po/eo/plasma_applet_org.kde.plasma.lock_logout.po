@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-02 18:17+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -24,44 +24,44 @@ msgstr ""
 msgid "General"
 msgstr "Ĝenerala"
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Montri agojn:"
 
-#: contents/ui/ConfigGeneral.qml:37
+#: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Logout"
 msgstr "Elsaluti"
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:42
 #, kde-format
 msgid "Shutdown"
 msgstr "Malŝalti"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Reboot"
 msgstr "Restartigi"
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Ŝlosi"
 
-#: contents/ui/ConfigGeneral.qml:58
+#: contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgid "Switch User"
 msgstr "Ŝalti Uzanton"
 
-#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Pasivumigi"
 
-#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"

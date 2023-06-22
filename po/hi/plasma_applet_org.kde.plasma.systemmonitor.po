@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-07-01 18:58+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.04.2\n"
 
-#: package/contents/config/config.qml:10
+#: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
 msgstr "दिखावट"
 
-#: package/contents/config/config.qml:15
+#: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
 msgstr "%1 विवरण"
 
-#: package/contents/config/config.qml:21
+#: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
 msgstr "सेंसरों का विवरण"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgid "System Monitor"
 msgstr "तंत्र परिवीक्षक"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-06-17 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -64,27 +64,27 @@ msgstr "设备已断开连接。"
 msgid "An unknown error has occurred."
 msgstr "发生未知错误。"
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "修改密码"
 
-#: src/ui/ChangePassword.qml:33
+#: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
 msgstr "设置密码"
 
-#: src/ui/ChangePassword.qml:56
+#: src/ui/ChangePassword.qml:55
 #, kde-format
 msgid "Password"
 msgstr "密码"
 
-#: src/ui/ChangePassword.qml:71
+#: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
 msgstr "确认密码"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "两次输入的密码必须一致。"

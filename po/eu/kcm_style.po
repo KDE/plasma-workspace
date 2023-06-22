@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-04-23 07:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -165,37 +165,37 @@ msgstr "Ikonoen azpian"
 msgid "Secondary toolbar label:"
 msgstr "Bigarren mailako tresna-barrako etiketa:"
 
-#: ui/GtkStylePage.qml:19
+#: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "GNOME/GTK aplikazio-estiloa"
 
-#: ui/GtkStylePage.qml:45
+#: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK gaia:"
 
-#: ui/GtkStylePage.qml:70
+#: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
 msgstr "Aurrez ikusi..."
 
-#: ui/GtkStylePage.qml:89
+#: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalatu fitxategitik..."
 
-#: ui/GtkStylePage.qml:94
+#: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Lortu GNOME/GTK aplikazio-estilo berriak..."
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Aukeratu GTK gai artxiboa"
 
-#: ui/GtkStylePage.qml:112
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK gai artxiboa (*.tar.xz *.tar.gz *.tar.bz2)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-08-21 10:59+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -157,37 +157,37 @@ msgstr "प्रतीकों के नीचे"
 msgid "Secondary toolbar label:"
 msgstr "द्वितीयक टूलबार लेबल :"
 
-#: ui/GtkStylePage.qml:19
+#: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "गनोम/जीटीके अनुप्रयोग शैलियाँ"
 
-#: ui/GtkStylePage.qml:45
+#: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
 msgstr "जीटीके प्रसंग :"
 
-#: ui/GtkStylePage.qml:70
+#: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
 msgstr "पूर्वावलोकन…"
 
-#: ui/GtkStylePage.qml:89
+#: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
 msgstr "फाइल से संस्थापित करें..."
 
-#: ui/GtkStylePage.qml:94
+#: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "नए गनोम/जीटीके अनुप्रयोग शैलियाँ प्राप्त करें…"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "जीटीके प्रसंग संग्रह चुनें"
 
-#: ui/GtkStylePage.qml:112
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "जीटीके प्रसंग संग्रह चुनें (*.tar.xz *.tar.gz *.tar.bz2)"

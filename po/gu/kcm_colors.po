@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2010-06-24 14:20+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -1254,76 +1254,76 @@ msgstr ""
 msgid " * %1 (current color scheme)"
 msgstr "હાલની રંગ પધ્ધતિ સંગ્રહ કરો"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:37
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "રંગ પધ્ધતિ આયાત કરો"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr ""
 
-#: ui/AccentColorUI.qml:40
+#: ui/AccentColorUI.qml:39
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "અસક્રિય રંગ"
 
-#: ui/AccentColorUI.qml:165
+#: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "All Schemes"
 msgstr "યોજનાને અપલોડ કરો (&U)..."
 
-#: ui/main.qml:116
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "પધ્ધતિ (&S)"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "પધ્ધતિ સંગ્રહ કરો..."
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "વિન્ડો લખાણ"
 
-#: ui/main.qml:198
+#: ui/main.qml:197
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "વિન્ડો લખાણ"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "બટન"
 
-#: ui/main.qml:243
+#: ui/main.qml:242
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1331,7 +1331,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "કડી"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1339,62 +1339,62 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "મુલાકાત લીધેલ"
 
-#: ui/main.qml:252
+#: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "સામાન્ય લખાણ"
 
-#: ui/main.qml:260
+#: ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "મુલાકાત લીધેલ લખાણ"
 
-#: ui/main.qml:267
+#: ui/main.qml:266
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "અસક્રિય"
 
-#: ui/main.qml:285
+#: ui/main.qml:284
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "યોજનાને અપલોડ કરો (&U)..."
 
-#: ui/main.qml:291
+#: ui/main.qml:290
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "રંગ પધ્ધતિ સંગ્રહ કરો"
 
-#: ui/main.qml:298
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "રંગ પધ્ધતિ આયાત કરો"
 
-#: ui/main.qml:342
+#: ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, fuzzy, kde-format
 #| msgid "Get &New Schemes..."
 msgid "Get New Color Schemes…"
 msgstr "નવાં પધ્ધતિઓ મેળવો (&N)..."
 
-#: ui/main.qml:365
+#: ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "રંગ પધ્ધતિ સંગ્રહ કરો"
 
-#: ui/main.qml:367
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

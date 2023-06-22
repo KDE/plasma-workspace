@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-01-19 10:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -76,7 +76,7 @@ msgid "Mount"
 msgstr "Munta"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "Extrau-los tots"
@@ -96,37 +96,37 @@ msgstr "No hi ha cap dispositiu extraïble connectat"
 msgid "No disks available"
 msgstr "No hi ha cap disc disponible"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Dispositiu més recent"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "No hi ha disponible cap dispositiu"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositius extraïbles"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositius no extraïbles"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "Tots els dispositius"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostra un missatge emergent quan es connecte un dispositiu nou"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

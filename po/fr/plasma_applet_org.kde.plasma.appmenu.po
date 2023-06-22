@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-07-27 09:14+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Apparence"
 
-#: package/contents/ui/configGeneral.qml:22
+#: package/contents/ui/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Un bouton seul pour le menu de l'application"
 
-#: package/contents/ui/configGeneral.qml:28
+#: package/contents/ui/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Afficher le menu complet de l'application"

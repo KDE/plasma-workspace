@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -163,12 +163,12 @@ msgstr "У вашай сістэме ёсць наступныя тэмы кур
 msgid "(Current theme for this Plasma session)"
 msgstr "(Бягучая тэма для гэтага сеанса Plasma)"
 
-#: ui/Delegate.qml:54
+#: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
 msgstr "Выдаліць тэму"
 
-#: ui/Delegate.qml:61
+#: ui/Delegate.qml:59
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Аднавіць тэму курсора"

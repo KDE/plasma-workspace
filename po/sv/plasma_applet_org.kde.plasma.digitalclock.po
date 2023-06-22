@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-08-03 09:27+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -71,138 +71,138 @@ msgstr "Byt…"
 msgid "Switch to another timezone"
 msgstr "Byt till en annan tidszon"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:50
 #, kde-format
 msgid "Information:"
 msgstr "Information:"
 
-#: package/contents/ui/configAppearance.qml:55
+#: package/contents/ui/configAppearance.qml:54
 #, kde-format
 msgid "Show date"
 msgstr "Visa datum"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Adaptive location"
 msgstr "Adaptiv plats"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Always beside time"
 msgstr "Alltid vid sidan om tid"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:64
 #, kde-format
 msgid "Always below time"
 msgstr "Alltid under tid"
 
-#: package/contents/ui/configAppearance.qml:73
+#: package/contents/ui/configAppearance.qml:72
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "Visa sekunder"
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:77
-#: package/contents/ui/configAppearance.qml:97
+#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:96
 #, kde-format
 msgid "Always"
 msgstr "Alltid"
 
-#: package/contents/ui/configAppearance.qml:87
+#: package/contents/ui/configAppearance.qml:86
 #, kde-format
 msgid "Show time zone:"
 msgstr "Visa tidszon:"
 
-#: package/contents/ui/configAppearance.qml:92
+#: package/contents/ui/configAppearance.qml:91
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Bara om annan än lokal tidszon"
 
-#: package/contents/ui/configAppearance.qml:106
+#: package/contents/ui/configAppearance.qml:105
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Visa tidszon som:"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Code"
 msgstr "Kod"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:111
 #, kde-format
 msgid "City"
 msgstr "Stad"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Skillnad från UTC-tid"
 
-#: package/contents/ui/configAppearance.qml:125
+#: package/contents/ui/configAppearance.qml:124
 #, kde-format
 msgid "Time display:"
 msgstr "Tidsvisning:"
 
-#: package/contents/ui/configAppearance.qml:130
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "12-Hour"
 msgstr "12-timmars"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:130
 #: package/contents/ui/configCalendar.qml:52
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Använd landsinställning"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "24-Hour"
 msgstr "24-timmars"
 
-#: package/contents/ui/configAppearance.qml:139
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Ändra landsinställningar…"
 
-#: package/contents/ui/configAppearance.qml:150
+#: package/contents/ui/configAppearance.qml:149
 #, kde-format
 msgid "Date format:"
 msgstr "Datumformat:"
 
-#: package/contents/ui/configAppearance.qml:158
+#: package/contents/ui/configAppearance.qml:157
 #, kde-format
 msgid "Long Date"
 msgstr "Långt datum"
 
-#: package/contents/ui/configAppearance.qml:163
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Kort datum"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:167
 #, kde-format
 msgid "ISO Date"
 msgstr "ISO-datum"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:172
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Egen"
 
-#: package/contents/ui/configAppearance.qml:201
+#: package/contents/ui/configAppearance.qml:200
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -211,19 +211,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentation om tidsformat</a>"
 
-#: package/contents/ui/configAppearance.qml:225
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Textvisning:"
 
-#: package/contents/ui/configAppearance.qml:227
+#: package/contents/ui/configAppearance.qml:226
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatisk"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -232,25 +232,25 @@ msgstr ""
 "Texten följer systemteckensnittet och expanderas för att fylla tillgängligt "
 "utrymme."
 
-#: package/contents/ui/configAppearance.qml:240
+#: package/contents/ui/configAppearance.qml:239
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manuell"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Välj stil…"
 
-#: package/contents/ui/configAppearance.qml:263
+#: package/contents/ui/configAppearance.qml:262
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 punkter %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -276,7 +276,7 @@ msgstr "Första veckodagen:"
 msgid "Available Plugins:"
 msgstr "Tillgängliga insticksprogram:"
 
-#: package/contents/ui/configTimeZones.qml:40
+#: package/contents/ui/configTimeZones.qml:39
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add another entry for your home time zone to "
@@ -284,12 +284,12 @@ msgid ""
 "something else."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Klockan använder för närvarande den här tidszonen"
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:104
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -298,29 +298,29 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:118
 #, fuzzy, kde-format
 #| msgid "Switch Local Time Zone…"
 msgid "Switch Systemwide Time Zone…"
 msgstr "Byt lokal tidszon…"
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Ta bort tidszonen"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, fuzzy, kde-format
 #| msgid "System's Local Time Zone"
 msgid "Systemwide Time Zone"
 msgstr "Systemets lokala tidszon"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Ytterligare tidszoner"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,17 +329,17 @@ msgstr ""
 "Lägg till fler tidszoner för att visa alla i miniprogrammets meddelanderuta, "
 "eller använd en av dem för själva klockan"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Lägg till tidszoner…"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:166
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Byt visad tidszon genom att rulla över miniprogrammet"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:173
 #, fuzzy, kde-format
 #| msgid ""
 #| "Note that using a different time zone for the clock does not change the "
@@ -353,12 +353,12 @@ msgstr ""
 "systemomfattande lokala tidszonen. När du reser, ändra istället den lokala "
 "tidszonen."
 
-#: package/contents/ui/configTimeZones.qml:202
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Lägg till fler tidszoner"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -367,27 +367,27 @@ msgstr ""
 "Åtminstone en tidszon måste vara aktiverad. Din lokala tidszon har "
 "aktiverats automatiskt."
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:247
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:250
+#: package/contents/ui/configTimeZones.qml:249
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopiera till klippbordet"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Justera datum och tid…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Ställ in tidsformat…"

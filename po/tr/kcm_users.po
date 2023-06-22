@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-06-16 12:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -65,27 +65,27 @@ msgstr "Aygıtın bağlantısı kesildi."
 msgid "An unknown error has occurred."
 msgstr "Bilinmeyen bir hata oluştu."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Parolayı Değiştir"
 
-#: src/ui/ChangePassword.qml:33
+#: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
 msgstr "Parolayı Ayarla"
 
-#: src/ui/ChangePassword.qml:56
+#: src/ui/ChangePassword.qml:55
 #, kde-format
 msgid "Password"
 msgstr "Parola"
 
-#: src/ui/ChangePassword.qml:71
+#: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
 msgstr "Parolayı onayla"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Parolalar uyuşmalı"

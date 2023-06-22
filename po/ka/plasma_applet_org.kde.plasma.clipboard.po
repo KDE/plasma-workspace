@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-05-29 06:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -71,22 +71,22 @@ msgid ""
 msgstr ""
 "QR კოდის საჩვენებლად ადგილი საკმარისი არაა. სცადეთ აპლეტის ზომა შეცვალოთ."
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ბუფერის შემცველობა"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "ბუფერის მორგება…"
 
-#: contents/ui/clipboard.qml:60
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გაწმენდა"
@@ -111,19 +111,19 @@ msgstr "შემცველობის ჩასწორება"
 msgid "Remove from history"
 msgstr "ისტორიიდან წაშლა"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "შენახვა"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "გაუქმენა"
 
-#: contents/ui/Menu.qml:123
+#: contents/ui/Menu.qml:122
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -38,55 +38,55 @@ msgstr "Κωδικός πρόσβασης"
 msgid "Log In"
 msgstr "Αποσύνδεση"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Το Caps Lock είναι ενεργό"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, fuzzy, kde-format
 #| msgid "Shut down"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr ""
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:483
 #, fuzzy, kde-format
 #| msgid "Switch User"
 msgid "List Users"
 msgstr "Εναλλαγή χρήστη"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Εικονικό πληκτρολόγιο"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Αποτυχία σύνδεσης"

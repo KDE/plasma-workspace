@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-04-15 00:03+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -169,12 +169,12 @@ msgstr "Sie haben die folgenden Mauszeiger-Designs auf Ihrem System:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuelles Design dieser Plasma-Sitzung)"
 
-#: ui/Delegate.qml:54
+#: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
 msgstr "Design entfernen"
 
-#: ui/Delegate.qml:61
+#: ui/Delegate.qml:59
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Mauszeiger-Design wiederherstellen"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-11-20 16:40+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -85,22 +85,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Содержимое буфера обмена"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Настроить буфер обмена..."
 
-#: contents/ui/clipboard.qml:60
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
@@ -125,19 +125,19 @@ msgstr "Изменить содержимое..."
 msgid "Remove from history"
 msgstr "Удалить из журнала"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Сохранить"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/ui/Menu.qml:123
+#: contents/ui/Menu.qml:122
 #, kde-format
 msgid "No matches"
 msgstr "<нет совпадений>"

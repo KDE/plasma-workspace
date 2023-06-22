@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-02-27 16:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -70,7 +70,7 @@ msgid "Mount"
 msgstr "ஏற்று"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "அனைத்தையும் நீக்கு"
@@ -90,37 +90,37 @@ msgstr "கழற்றக்கூடிய சாதனங்கள் ஏத�
 msgid "No disks available"
 msgstr "வட்டுகள் ஏதுமில்லை"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "மிக சமீபமான சாதனம்"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "எந்த சாதனமும் இல்லை"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "கழற்றக்கூடிய சாதனங்கள்"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "கழற்ற முடியாத சாதனங்கள்"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "அனைத்து சாதனங்கள்"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "புதிய சாதனம் செருகப்படும்போது தெரித்தெழும் பட்டியை காட்டு"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

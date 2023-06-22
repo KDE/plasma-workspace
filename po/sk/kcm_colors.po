@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-04-17 18:59+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -1249,30 +1249,30 @@ msgstr "Vo vašom systéme máte nasledujúce farebné schémy:"
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (aktuálna farebná schéma)"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:37
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "Zvýrazňovacia farba z farebnej schémy"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr "Zvýrazňovacia farba z tapety"
 
-#: ui/AccentColorUI.qml:40
+#: ui/AccentColorUI.qml:39
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Vlastná zvýrazňovacia farba"
 
-#: ui/AccentColorUI.qml:165
+#: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Použiť vlastnú zvýrazňovaciu farbu:"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1280,94 +1280,94 @@ msgstr ""
 "Farebná schéma '%1' nie je nainštalovaná. Vyberám namiesto toho predvolenú "
 "tému."
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "Všetky farebné schémy"
 
-#: ui/main.qml:116
+#: ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "Svetlé farebné schémy"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Tmavé farebné schémy"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "Titulok okna"
 
-#: ui/main.qml:198
+#: ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "Text okna"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "Tlačidlo"
 
-#: ui/main.qml:243
+#: ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "odkaz"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "navštívený"
 
-#: ui/main.qml:252
+#: ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "Normálny text"
 
-#: ui/main.qml:260
+#: ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "Zvýraznený text"
 
-#: ui/main.qml:267
+#: ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "Zakázaný text"
 
-#: ui/main.qml:285
+#: ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Upraviť farebnú schému..."
 
-#: ui/main.qml:291
+#: ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Vymazať farebnú schému"
 
-#: ui/main.qml:298
+#: ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Obnoviť farebnú schému"
 
-#: ui/main.qml:342
+#: ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "Nainštalovať zo súboru..."
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "Získať nové farebné schémy..."
 
-#: ui/main.qml:365
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Otvoriť farebnú schému"
 
-#: ui/main.qml:367
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Súbory farebných schém (*.colors)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -1237,125 +1237,125 @@ msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇന�
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:37
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr ""
 
-#: ui/AccentColorUI.qml:40
+#: ui/AccentColorUI.qml:39
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
 
-#: ui/AccentColorUI.qml:165
+#: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "നിറക്കൂട്ടു് '%1' ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. പകരം തനത് തീം തിരഞ്ഞെടുക്കുന്നു."
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "എല്ലാ സ്കീമുകളും"
 
-#: ui/main.qml:116
+#: ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "ലൈറ്റ് സ്കീമുകൾ"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "ഇരുണ്ട സ്കീമുകൾ"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "വിൻഡോ ശീർഷകം"
 
-#: ui/main.qml:198
+#: ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "ജാലകത്തിനുള്ള പദാവലി"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "ബട്ടണ്‍"
 
-#: ui/main.qml:243
+#: ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "കണ്ണി"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "സന്ദര്‍ശിച്ചതു്"
 
-#: ui/main.qml:252
+#: ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "സാധാരണ പദാവലി"
 
-#: ui/main.qml:260
+#: ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "സന്ദര്‍ശിച്ച പദാവലി"
 
-#: ui/main.qml:267
+#: ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "അപ്രാപ്തമാക്കിയ പദാവലി"
 
-#: ui/main.qml:285
+#: ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "നിറക്കൂട്ടു് ചിട്ടപെടുത്തുക…"
 
-#: ui/main.qml:291
+#: ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "നിറക്കൂട്ടു് നീക്കം ചെയ്യുക"
 
-#: ui/main.qml:298
+#: ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
-#: ui/main.qml:342
+#: ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "പുതിയ നിറക്കൂട്ടുകള്‍ ലഭ്യമാക്കുക…"
 
-#: ui/main.qml:365
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "നിറക്കൂട്ടു് തുറക്കുക"
 
-#: ui/main.qml:367
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "നിറക്കൂട്ടു് ഫയലുകൾ (*.colors)"

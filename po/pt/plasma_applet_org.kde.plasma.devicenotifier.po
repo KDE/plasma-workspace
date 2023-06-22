@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-03-26 21:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -65,7 +65,7 @@ msgid "Mount"
 msgstr "Montar"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "Remover Tudo"
@@ -85,37 +85,37 @@ msgstr "Não estão ligados dispositivos removíveis"
 msgid "No disks available"
 msgstr "Não estão disponíveis discos"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Dispositivo Mais Recente"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "Sem Dispositivos Disponíveis"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositivos Removíveis"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositivos Não-Removíveis"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "Todos os Dispositivos"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostrar uma mensagem quando for ligado um novo dispositivo"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

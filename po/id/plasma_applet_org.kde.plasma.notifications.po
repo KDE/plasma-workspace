@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-03-03 09:54+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -69,127 +69,127 @@ msgctxt "OSD popup, keep short"
 msgid "Notifications On"
 msgstr "Notifikasi Nyala"
 
-#: package/contents/ui/EditContextMenu.qml:33
+#: package/contents/ui/EditContextMenu.qml:32
 #, kde-format
 msgid "Copy Link Address"
 msgstr "Salin Alamat Tautan"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/EditContextMenu.qml:43
 #, kde-format
 msgid "Copy"
 msgstr "Salin"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/EditContextMenu.qml:60
 #, kde-format
 msgid "Select All"
 msgstr "Pilih Semua"
 
-#: package/contents/ui/FullRepresentation.qml:73
+#: package/contents/ui/FullRepresentation.qml:72
 #, kde-format
 msgid "Do not disturb"
 msgstr "Jangan ganggu"
 
-#: package/contents/ui/FullRepresentation.qml:115
+#: package/contents/ui/FullRepresentation.qml:114
 #, kde-format
 msgid "For 1 hour"
 msgstr "Untuk 1 jam"
 
-#: package/contents/ui/FullRepresentation.qml:120
+#: package/contents/ui/FullRepresentation.qml:119
 #, kde-format
 msgid "For 4 hours"
 msgstr "Untuk 4 jam"
 
-#: package/contents/ui/FullRepresentation.qml:129
+#: package/contents/ui/FullRepresentation.qml:128
 #, kde-format
 msgid "Until this evening"
 msgstr "Sampai malam ini"
 
-#: package/contents/ui/FullRepresentation.qml:139
+#: package/contents/ui/FullRepresentation.qml:138
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Sampai esok pagi"
 
-#: package/contents/ui/FullRepresentation.qml:151
+#: package/contents/ui/FullRepresentation.qml:150
 #, kde-format
 msgid "Until Monday"
 msgstr "Sampai Senin"
 
-#: package/contents/ui/FullRepresentation.qml:158
+#: package/contents/ui/FullRepresentation.qml:157
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Sampai dinonfungsikan secara manual"
 
-#: package/contents/ui/FullRepresentation.qml:208
+#: package/contents/ui/FullRepresentation.qml:207
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Secara otomatis berakhir: %1"
 
-#: package/contents/ui/FullRepresentation.qml:220
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Selagi %1 sedang aktif (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:222
+#: package/contents/ui/FullRepresentation.qml:221
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Selagi %1 sedang aktif"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:227
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Layar sedang dicerminkan"
 
-#: package/contents/ui/FullRepresentation.qml:434
+#: package/contents/ui/FullRepresentation.qml:433
 #, kde-format
 msgid "Close Group"
 msgstr "Tutup Grup"
 
-#: package/contents/ui/FullRepresentation.qml:579
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "Tampilkan Lebih Sedikit"
 
-#: package/contents/ui/FullRepresentation.qml:581
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Tampilkan %1 Lagi"
 
-#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/FullRepresentation.qml:621
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgid "No unread notifications"
 msgstr "Tidak ada notifikasi yang belum dibaca."
 
-#: package/contents/ui/FullRepresentation.qml:637
+#: package/contents/ui/FullRepresentation.qml:636
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgid "Notification service not available"
 msgstr "Layanan notifikasi tidak tersedia"
 
-#: package/contents/ui/FullRepresentation.qml:639
+#: package/contents/ui/FullRepresentation.qml:638
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Notifikasi saat ini disediakan oleh '%1 %2'"
 
-#: package/contents/ui/JobDetails.qml:35
+#: package/contents/ui/JobDetails.qml:34
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/JobDetails.qml:106
+#: package/contents/ui/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 dari %1"
 
-#: package/contents/ui/JobDetails.qml:110
+#: package/contents/ui/JobDetails.qml:109
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -197,7 +197,7 @@ msgid_plural "%2 of %1 files"
 msgstr[0] "%2 dari %1 file"
 msgstr[1] "%2 dari %1 file"
 
-#: package/contents/ui/JobDetails.qml:113
+#: package/contents/ui/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -205,7 +205,7 @@ msgid_plural "%2 of %1 folders"
 msgstr[0] "%2 dari %1 folder"
 msgstr[1] "%2 dari %1 folder"
 
-#: package/contents/ui/JobDetails.qml:116
+#: package/contents/ui/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -213,28 +213,28 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%2 dari %1 item"
 msgstr[1] "%2 dari %1 item"
 
-#: package/contents/ui/JobDetails.qml:124
+#: package/contents/ui/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 file"
 msgstr[1] "%1 file"
 
-#: package/contents/ui/JobDetails.qml:126
+#: package/contents/ui/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 folder"
 msgstr[1] "%1 folder"
 
-#: package/contents/ui/JobDetails.qml:128
+#: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 item"
 msgstr[1] "%1 item"
 
-#: package/contents/ui/JobDetails.qml:145
+#: package/contents/ui/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -271,7 +271,7 @@ msgid "Show Details"
 msgstr "Tampilkan Perincian"
 
 #: package/contents/ui/JobItem.qml:233
-#: package/contents/ui/ThumbnailStrip.qml:171
+#: package/contents/ui/ThumbnailStrip.qml:170
 #, kde-format
 msgid "More Options…"
 msgstr "Opsi Selebihnya..."
@@ -393,35 +393,35 @@ msgstr "Minimalkan"
 msgid "Close"
 msgstr "Tutup"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:190
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [Dijeda]"
 
-#: package/contents/ui/NotificationItem.qml:196
+#: package/contents/ui/NotificationItem.qml:195
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Gagal)"
 
-#: package/contents/ui/NotificationItem.qml:198
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgid "Job Failed"
 msgstr "Tugas Gagal"
 
-#: package/contents/ui/NotificationItem.qml:202
+#: package/contents/ui/NotificationItem.qml:201
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Selesai)"
 
-#: package/contents/ui/NotificationItem.qml:204
+#: package/contents/ui/NotificationItem.qml:203
 #, kde-format
 msgid "Job Finished"
 msgstr "Pekerjaan Selesai"
 
-#: package/contents/ui/NotificationItem.qml:352
+#: package/contents/ui/NotificationItem.qml:351
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

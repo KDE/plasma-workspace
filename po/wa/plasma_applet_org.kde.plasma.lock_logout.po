@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2011-01-05 18:58+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "General"
 msgstr "Djenerå"
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:35
 #, fuzzy, kde-format
 #| msgid "Show lock button"
 msgctxt ""
@@ -31,38 +31,38 @@ msgctxt ""
 msgid "Show actions:"
 msgstr "Mostrer boton d' aclawaedje"
 
-#: contents/ui/ConfigGeneral.qml:37
+#: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Logout"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:42
 #, kde-format
 msgid "Shutdown"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:48
+#: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Eclawer"
 
-#: contents/ui/ConfigGeneral.qml:58
+#: contents/ui/ConfigGeneral.qml:57
 #, fuzzy, kde-format
 #| msgid "Switch user"
 msgid "Switch User"
 msgstr "Discandjî d' uzeu"
 
-#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "Fordoirmi"
 
-#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
 #, fuzzy, kde-format
 #| msgid "Sleep"
 msgctxt "Suspend to RAM"

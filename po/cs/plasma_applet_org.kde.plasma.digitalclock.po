@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-02-17 14:12+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -74,137 +74,137 @@ msgstr "Přepnout…"
 msgid "Switch to another timezone"
 msgstr "Přepnout na jiné časové pásmo"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:50
 #, kde-format
 msgid "Information:"
 msgstr "Informace:"
 
-#: package/contents/ui/configAppearance.qml:55
+#: package/contents/ui/configAppearance.qml:54
 #, kde-format
 msgid "Show date"
 msgstr "Zobrazit datum"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Adaptive location"
 msgstr "Adaptivní místo"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Always beside time"
 msgstr "Vždy vedle času"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:64
 #, kde-format
 msgid "Always below time"
 msgstr "Vždy pod časem"
 
-#: package/contents/ui/configAppearance.qml:73
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgid "Show seconds:"
 msgstr "Zobrazit sekundy:"
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr "Nikdy"
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr "Pouze v nástrojovém tipu"
 
-#: package/contents/ui/configAppearance.qml:77
-#: package/contents/ui/configAppearance.qml:97
+#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:96
 #, kde-format
 msgid "Always"
 msgstr "Vždy"
 
-#: package/contents/ui/configAppearance.qml:87
+#: package/contents/ui/configAppearance.qml:86
 #, kde-format
 msgid "Show time zone:"
 msgstr "Zobrazit časové pásmo:"
 
-#: package/contents/ui/configAppearance.qml:92
+#: package/contents/ui/configAppearance.qml:91
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Pouze pokud je odlišné od současného časového pásma"
 
-#: package/contents/ui/configAppearance.qml:106
+#: package/contents/ui/configAppearance.qml:105
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Zobrazovat časové pásmo jako:"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Code"
 msgstr "Kód"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:111
 #, kde-format
 msgid "City"
 msgstr "Město"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Posun od času UTC"
 
-#: package/contents/ui/configAppearance.qml:125
+#: package/contents/ui/configAppearance.qml:124
 #, kde-format
 msgid "Time display:"
 msgstr "Zobrazení času:"
 
-#: package/contents/ui/configAppearance.qml:130
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "12-Hour"
 msgstr "12 hodin"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:130
 #: package/contents/ui/configCalendar.qml:52
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Použít místní výchozí hodnoty"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "24-Hour"
 msgstr "24 hodin"
 
-#: package/contents/ui/configAppearance.qml:139
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Změnit lokální nastavení…"
 
-#: package/contents/ui/configAppearance.qml:150
+#: package/contents/ui/configAppearance.qml:149
 #, kde-format
 msgid "Date format:"
 msgstr "Formát data:"
 
-#: package/contents/ui/configAppearance.qml:158
+#: package/contents/ui/configAppearance.qml:157
 #, kde-format
 msgid "Long Date"
 msgstr "Dlouhé datum"
 
-#: package/contents/ui/configAppearance.qml:163
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Zkrácené datum"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:167
 #, kde-format
 msgid "ISO Date"
 msgstr "Datum podle ISO"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:172
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Vlastní"
 
-#: package/contents/ui/configAppearance.qml:201
+#: package/contents/ui/configAppearance.qml:200
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -213,19 +213,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentace formátu času</a>"
 
-#: package/contents/ui/configAppearance.qml:225
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Zobrazení textu:"
 
-#: package/contents/ui/configAppearance.qml:227
+#: package/contents/ui/configAppearance.qml:226
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automaticky"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -234,25 +234,25 @@ msgstr ""
 "Text bude používat systémové písmo a roztáhne se tak, aby využil veškeré "
 "dostupné místo."
 
-#: package/contents/ui/configAppearance.qml:240
+#: package/contents/ui/configAppearance.qml:239
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Ručně"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Zvolte styl..."
 
-#: package/contents/ui/configAppearance.qml:263
+#: package/contents/ui/configAppearance.qml:262
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -278,7 +278,7 @@ msgstr "První den v týdnu:"
 msgid "Available Plugins:"
 msgstr "Dostupné moduly:"
 
-#: package/contents/ui/configTimeZones.qml:40
+#: package/contents/ui/configTimeZones.qml:39
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add another entry for your home time zone to "
@@ -288,12 +288,12 @@ msgstr ""
 "Tip: Pokud pravidelně cestujete, přidejte sem další položku pro vaše časové "
 "pásmo. Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Hodiny momentálně používají toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:104
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -302,27 +302,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Skryté pokud je toto místní čas ve vašem městě"
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:118
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Přepnout systémové časové pásmo…"
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Odstranit toto časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Systémové časové pásmo"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Dodatečná časová pásma"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -331,17 +331,17 @@ msgstr ""
 "Přidat časová pásma pro jejich zobrazení ve vyskakovací části appletu nebo "
 "jejich použití přímo jako hodiny"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Přidat časová pásma…"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:166
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Přepnout zobrazené časové pásmo rolováním přes applet hodin"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:173
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -350,12 +350,12 @@ msgstr ""
 "Použití této funkce nezmění časové pásmo napříč systémem. Pokud cestujete, "
 "přepněte raději na místní časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:202
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Přidat další časová pásma..."
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -364,27 +364,27 @@ msgstr ""
 "Je třeba povolit alespoň jedno časové pásmo. Vaše místní časové pásmo bylo "
 "automaticky povoleno."
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:247
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:250
+#: package/contents/ui/configTimeZones.qml:249
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Upravit datum a čas…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Nastavit formát času…"

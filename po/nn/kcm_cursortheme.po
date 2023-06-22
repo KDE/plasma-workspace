@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-02-22 21:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -161,12 +161,12 @@ msgstr "Du har desse peikartemaa tilgjengeleg:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(gjeldande tema for denne Plasma-økta)"
 
-#: ui/Delegate.qml:54
+#: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
 msgstr "Fjern tema"
 
-#: ui/Delegate.qml:61
+#: ui/Delegate.qml:59
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Tilbakestill peikartema"

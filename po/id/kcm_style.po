@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-08-19 20:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -157,37 +157,37 @@ msgstr "Bawah ikon"
 msgid "Secondary toolbar label:"
 msgstr "Label bilah-alat sekunder:"
 
-#: ui/GtkStylePage.qml:19
+#: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "Gaya Aplikasi GNOME/GTK"
 
-#: ui/GtkStylePage.qml:45
+#: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
 msgstr "Tema GTK:"
 
-#: ui/GtkStylePage.qml:70
+#: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
 msgstr "Pratinjau..."
 
-#: ui/GtkStylePage.qml:89
+#: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal dari File..."
 
-#: ui/GtkStylePage.qml:94
+#: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Dapatkan Gaya Aplikasi GNOME/GTK Baru..."
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Pilih Arsip Tema GTK"
 
-#: ui/GtkStylePage.qml:112
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arsip Tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"

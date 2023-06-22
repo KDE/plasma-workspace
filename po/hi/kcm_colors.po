@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-17 02:07+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-02-17 22:54+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -1234,125 +1234,125 @@ msgstr "आपके सिस्टम पर निम्नलिखित �
 msgid " * %1 (current color scheme)"
 msgstr " * %1(मौज़ूदा रंग योजना)"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:37
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "रंग योजना पुनर्स्थापित करें"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:38
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr ""
 
-#: ui/AccentColorUI.qml:40
+#: ui/AccentColorUI.qml:39
 #, fuzzy, kde-format
 #| msgid "Choose custom accent color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "तदनुकूल प्रभावी रंग चुनें"
 
-#: ui/AccentColorUI.qml:165
+#: ui/AccentColorUI.qml:164
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "तदनुकूल प्रभावी रंग चुनें"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "रंग योजना '%1' संस्थापित नहीं है। इसके बजाय पूर्वन्यस्त थीम का चयन करना।"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "All Schemes"
 msgstr "सभी योजनाएं"
 
-#: ui/main.qml:116
+#: ui/main.qml:115
 #, kde-format
 msgid "Light Schemes"
 msgstr "हल्के रंग की योजनाएं"
 
-#: ui/main.qml:117
+#: ui/main.qml:116
 #, kde-format
 msgid "Dark Schemes"
 msgstr "गहरे रंग की योजनाएं"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgid "Window Title"
 msgstr "विंडो शीर्षक"
 
-#: ui/main.qml:198
+#: ui/main.qml:197
 #, kde-format
 msgid "Window text"
 msgstr "विंडो पाठ"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgid "Button"
 msgstr "बटन"
 
-#: ui/main.qml:243
+#: ui/main.qml:242
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "कडी"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "देखा गया"
 
-#: ui/main.qml:252
+#: ui/main.qml:251
 #, kde-format
 msgid "Normal text"
 msgstr "सामान्य पाठ"
 
-#: ui/main.qml:260
+#: ui/main.qml:259
 #, kde-format
 msgid "Highlighted text"
 msgstr "चिह्नांकित पाठ"
 
-#: ui/main.qml:267
+#: ui/main.qml:266
 #, kde-format
 msgid "Disabled text"
 msgstr "अक्षम पाठ"
 
-#: ui/main.qml:285
+#: ui/main.qml:284
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "रंग योजना संपादित करें..."
 
-#: ui/main.qml:291
+#: ui/main.qml:290
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "रंग योजना हटाएँ"
 
-#: ui/main.qml:298
+#: ui/main.qml:297
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "रंग योजना पुनर्स्थापित करें"
 
-#: ui/main.qml:342
+#: ui/main.qml:341
 #, kde-format
 msgid "Install from File…"
 msgstr "फाइल से संस्थापित करें..."
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, kde-format
 msgid "Get New Color Schemes…"
 msgstr "नई रंग योजनाएँ प्राप्त करें..."
 
-#: ui/main.qml:365
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "रंग योजना खोलें"
 
-#: ui/main.qml:367
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रंग योजनाओं की फ़ाइलें (*.colors)"

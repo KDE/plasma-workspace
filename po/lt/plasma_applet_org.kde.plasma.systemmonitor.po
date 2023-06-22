@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-09 02:14+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-06-16 00:30+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0\n"
 
-#: package/contents/config/config.qml:10
+#: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
 msgstr "Išvaizda"
 
-#: package/contents/config/config.qml:15
+#: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
 msgstr "Išsamiau apie %1"
 
-#: package/contents/config/config.qml:21
+#: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
 msgstr "Išsamiau apie jutiklius"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:32
 #, kde-format
 msgid "System Monitor"
 msgstr "Sistemos prižiūryklė"
 
-#: package/contents/ui/main.qml:55
+#: package/contents/ui/main.qml:53
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"

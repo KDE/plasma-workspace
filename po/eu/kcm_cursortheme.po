@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-18 03:27+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-03 08:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -166,12 +166,12 @@ msgstr "Zure sisteman saguaren ondoko kurtsore-gaiak dituzu:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Plasma saio honetarako uneko gaia)"
 
-#: ui/Delegate.qml:54
+#: ui/Delegate.qml:52
 #, kde-format
 msgid "Remove Theme"
 msgstr "Kendu gaia"
 
-#: ui/Delegate.qml:61
+#: ui/Delegate.qml:59
 #, kde-format
 msgid "Restore Cursor Theme"
 msgstr "Lehengoratu kurtsore-gaia"

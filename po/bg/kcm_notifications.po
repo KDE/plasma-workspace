@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-07 18:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,32 +32,32 @@ msgstr "Конфигуриране на известия"
 msgid "Other Applications"
 msgstr "Други програми"
 
-#: ui/ApplicationConfiguration.qml:63
+#: ui/ApplicationConfiguration.qml:62
 #, kde-format
 msgid "Show popups"
 msgstr "Показване на изскачащи прозорци"
 
-#: ui/ApplicationConfiguration.qml:77
+#: ui/ApplicationConfiguration.qml:76
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Показване в режим \"не безпокойте\""
 
-#: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Показване в историята"
 
-#: ui/ApplicationConfiguration.qml:101
+#: ui/ApplicationConfiguration.qml:100
 #, kde-format
 msgid "Show notification badges"
 msgstr "Показване на значки на известия"
 
-#: ui/ApplicationConfiguration.qml:119
+#: ui/ApplicationConfiguration.qml:118
 #, kde-format
 msgid "Configure Events…"
 msgstr "Конфигуриране на събития…"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -233,33 +233,33 @@ msgstr "Специфични за приложението настройки"
 msgid "Configure…"
 msgstr "Конфигуриране…"
 
-#: ui/PopupPositionPage.qml:15
+#: ui/PopupPositionPage.qml:14
 #, kde-format
 msgid "Popup Position"
 msgstr "Изскачаща позиция"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:18
 #, kde-format
 msgid "Application Settings"
 msgstr "Настройки на приложението"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:92
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: ui/SourcesPage.qml:94
+#: ui/SourcesPage.qml:93
 #, kde-format
 msgid "System Services"
 msgstr "Системни услуги"
 
-#: ui/SourcesPage.qml:132
+#: ui/SourcesPage.qml:131
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr ""
 "Нито едно приложение или събитие не съответства на думата ви за търсене."
 
-#: ui/SourcesPage.qml:152
+#: ui/SourcesPage.qml:151
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

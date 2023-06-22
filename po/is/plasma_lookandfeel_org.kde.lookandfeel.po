@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-03-16 20:42+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "Lykilorð"
 msgid "Log In"
 msgstr "Skrá inn"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Kveikt er á hástafalás (CapsLock)"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Svæfa"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Endurræsa"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Slökkva á tölvunni"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Annað…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Sláðu inn notandanafn og lykilorð"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "Telja upp notendur"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Sýndarlyklaborð"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "Innskráning mistókst"

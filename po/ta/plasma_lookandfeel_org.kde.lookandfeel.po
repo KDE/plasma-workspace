@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-13 19:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,53 +37,53 @@ msgstr "கடவுச்சொல்"
 msgid "Log In"
 msgstr "நுழை"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:303
+#: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "தூங்கு"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:234
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "வேறு…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:449
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் உள்ளிடவும்"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:483
 #, kde-format
 msgid "List Users"
 msgstr "பயனர்களை பட்டியலிடு"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:578
+#: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:578
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "மெய்நிகர் விசைப்பலகை"
 
-#: ../sddm-theme/Main.qml:597
+#: ../sddm-theme/Main.qml:596
 #, kde-format
 msgid "Login Failed"
 msgstr "நுழைவு தோல்வியடைந்தது"

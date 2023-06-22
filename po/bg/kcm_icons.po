@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-22 06:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -146,43 +146,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Размер:"
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Премахване на темата на икони"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Възстановяване на темата на икони"
 
-#: ui/main.qml:228
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Конфигуриране на размери на икони"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Инсталиране от файл…"
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Изтегляне на нови икони…"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Конфигуриране на размери на икони"
 
-#: ui/main.qml:284
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Отваряне на тема"
 
-#: ui/main.qml:286
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема (*.tar.gz *.tar.bz2)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-09-05 15:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -73,7 +73,7 @@ msgid "Mount"
 msgstr "Ühenda"
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "Eemalda kõik"
@@ -93,37 +93,37 @@ msgstr "Eemaldatavad seadmed puuduvad"
 msgid "No disks available"
 msgstr "Kettad puuduvad"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Viimati ühendatud seade"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "Seadmed puuduvad"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "Eemaldatavad seadmed"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Mitte-eemaldatavad seadmed"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "Kõik seadmed"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Hüpikdialoogi näitamine uue seadme ühendamisel"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

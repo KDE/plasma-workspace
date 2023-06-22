@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2019-09-26 13:50+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -22,12 +22,12 @@ msgstr ""
 msgid "Appearance"
 msgstr "Намуди зоҳирӣ"
 
-#: package/contents/ui/configGeneral.qml:22
+#: package/contents/ui/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Истифодаи тугмаи ягона барои феҳристи барнома"
 
-#: package/contents/ui/configGeneral.qml:28
+#: package/contents/ui/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Намоиш додани феҳристи пурраи барнома"

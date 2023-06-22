@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-04-14 18:25+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -33,32 +33,32 @@ msgstr "Nastaviť upozornenia"
 msgid "Other Applications"
 msgstr "Ostatné aplikácie"
 
-#: ui/ApplicationConfiguration.qml:63
+#: ui/ApplicationConfiguration.qml:62
 #, kde-format
 msgid "Show popups"
 msgstr "Zobrazovať vyskakovacie okná"
 
-#: ui/ApplicationConfiguration.qml:77
+#: ui/ApplicationConfiguration.qml:76
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Zobrazovať v režime Nevyrušovať"
 
-#: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Zobrazovať v histórií"
 
-#: ui/ApplicationConfiguration.qml:101
+#: ui/ApplicationConfiguration.qml:100
 #, kde-format
 msgid "Show notification badges"
 msgstr "Zobrazovať odznaky"
 
-#: ui/ApplicationConfiguration.qml:119
+#: ui/ApplicationConfiguration.qml:118
 #, kde-format
 msgid "Configure Events…"
 msgstr "Nastaviť udalosti..."
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -234,32 +234,32 @@ msgstr "Špecifické nastavenia aplikácií"
 msgid "Configure…"
 msgstr "Nastaviť..."
 
-#: ui/PopupPositionPage.qml:15
+#: ui/PopupPositionPage.qml:14
 #, kde-format
 msgid "Popup Position"
 msgstr "Poloha vyskakovacieho okna"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:18
 #, kde-format
 msgid "Application Settings"
 msgstr "Nastavenia aplikácií"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:92
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ui/SourcesPage.qml:94
+#: ui/SourcesPage.qml:93
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: ui/SourcesPage.qml:132
+#: ui/SourcesPage.qml:131
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "Žiadna aplikácia alebo udalosť nezodpovedá hľadanému výrazu."
 
-#: ui/SourcesPage.qml:152
+#: ui/SourcesPage.qml:151
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

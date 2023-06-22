@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-03-16 20:35+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -151,43 +151,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Stærð:"
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Fjarlægja táknaþema"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Endurheimta táknaþema"
 
-#: ui/main.qml:228
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Stilla stærð tákna"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Setja inn úr skrá…"
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Sækja ný tákn..."
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Stilla stærðir tákna"
 
-#: ui/main.qml:284
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Opna þema"
 
-#: ui/main.qml:286
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Þemaskrár (*.tar.gz *.tar.bz2)"

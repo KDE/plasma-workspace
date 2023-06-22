@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-22 13:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -152,43 +152,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "Boyut:"
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Simge Temasını Kaldır"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Simge Temasını Geri Yükle"
 
-#: ui/main.qml:228
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Simge Boyutlarını Yapılandır"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "Dosyadan Kur…"
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "Yeni Simgeler Al…"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Simge Boyutlarını Yapılandır"
 
-#: ui/main.qml:284
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "Temayı Aç"
 
-#: ui/main.qml:286
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tema Dosyaları (*.tar.gz *.tar.bz2)"

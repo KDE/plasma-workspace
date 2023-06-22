@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-04-23 10:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -164,37 +164,37 @@ msgstr "Sota la icona"
 msgid "Secondary toolbar label:"
 msgstr "Etiqueta de la barra d'eines secundària:"
 
-#: ui/GtkStylePage.qml:19
+#: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
 msgstr "Estil de les aplicacions GNOME/GTK"
 
-#: ui/GtkStylePage.qml:45
+#: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
 msgstr "Tema GTK:"
 
-#: ui/GtkStylePage.qml:70
+#: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
 msgstr "Vista prèvia…"
 
-#: ui/GtkStylePage.qml:89
+#: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal·la des d'un fitxer…"
 
-#: ui/GtkStylePage.qml:94
+#: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "Obtén estils nous de les aplicacions GNOME/GTK…"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Selecció d'arxiu de tema GTK"
 
-#: ui/GtkStylePage.qml:112
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arxiu de tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"

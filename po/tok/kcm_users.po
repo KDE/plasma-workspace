@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -68,27 +68,27 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "o ante e nimi len"
 
-#: src/ui/ChangePassword.qml:33
+#: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
 msgstr "o ante e nimi len"
 
-#: src/ui/ChangePassword.qml:56
+#: src/ui/ChangePassword.qml:55
 #, kde-format
 msgid "Password"
 msgstr "nimi len"
 
-#: src/ui/ChangePassword.qml:71
+#: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
 msgstr "o sitelen sin e nimi len"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "nimi len li wile sama"

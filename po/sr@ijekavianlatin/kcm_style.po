@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -178,42 +178,42 @@ msgstr "tekst ispod ikonica"
 msgid "Secondary toolbar label:"
 msgstr "Lokacija &teksta drugih traka:"
 
-#: ui/GtkStylePage.qml:19
+#: ui/GtkStylePage.qml:17
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "&Applications"
 msgid "GNOME/GTK Application Style"
 msgstr "&Programi"
 
-#: ui/GtkStylePage.qml:45
+#: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:70
+#: ui/GtkStylePage.qml:68
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Preview…"
 msgstr "Pregled"
 
-#: ui/GtkStylePage.qml:89
+#: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/GtkStylePage.qml:94
+#: ui/GtkStylePage.qml:92
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "&Applications"
 msgid "Get New GNOME/GTK Application Styles…"
 msgstr "&Programi"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: ui/GtkStylePage.qml:112
+#: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-03-10 13:39+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -65,27 +65,27 @@ msgstr "Zařízení bylo odpojeno."
 msgid "An unknown error has occurred."
 msgstr "Došlo k neznámé chybě."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Změnit heslo"
 
-#: src/ui/ChangePassword.qml:33
+#: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
 msgstr "Nastavit heslo"
 
-#: src/ui/ChangePassword.qml:56
+#: src/ui/ChangePassword.qml:55
 #, kde-format
 msgid "Password"
 msgstr "Heslo"
 
-#: src/ui/ChangePassword.qml:71
+#: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
 msgstr "Potvrdit heslo"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Hesla musí být stejná"

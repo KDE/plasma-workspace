@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -73,22 +73,22 @@ msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ഓർമ്മച്ചെപ്പ് ഉള്ളടക്കങ്ങൾ"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ഓർമ്മച്ചെപ്പ് ശൂന്യമാണ്"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "ഓർമ്മച്ചെപ്പ് ക്രമീകരിക്കുക…"
 
-#: contents/ui/clipboard.qml:60
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "ചരിത്രം മായ്ക്കുക"
@@ -114,19 +114,19 @@ msgstr "ഉള്ളടക്കങ്ങൾ എഡിറ്റുചെയ്�
 msgid "Remove from history"
 msgstr "ചരിത്രത്തിൽ നിന്ന് നീക്കംചെയ്യുക"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/Menu.qml:123
+#: contents/ui/Menu.qml:122
 #, kde-format
 msgid "No matches"
 msgstr "പൊരുത്തങ്ങളൊന്നുമില്ല"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -71,138 +71,138 @@ msgstr "Chuyển…"
 msgid "Switch to another timezone"
 msgstr "Chuyển sang một múi giờ khác"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:50
 #, kde-format
 msgid "Information:"
 msgstr "Thông tin:"
 
-#: package/contents/ui/configAppearance.qml:55
+#: package/contents/ui/configAppearance.qml:54
 #, kde-format
 msgid "Show date"
 msgstr "Hiện ngày"
 
-#: package/contents/ui/configAppearance.qml:63
+#: package/contents/ui/configAppearance.qml:62
 #, kde-format
 msgid "Adaptive location"
 msgstr "Vị trí thích ứng"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Always beside time"
 msgstr "Luôn ở cạnh thời gian"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:64
 #, kde-format
 msgid "Always below time"
 msgstr "Luôn ở dưới thời gian"
 
-#: package/contents/ui/configAppearance.qml:73
+#: package/contents/ui/configAppearance.qml:72
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "Hiện giây"
 
-#: package/contents/ui/configAppearance.qml:75
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:77
-#: package/contents/ui/configAppearance.qml:97
+#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:96
 #, kde-format
 msgid "Always"
 msgstr "Luôn luôn"
 
-#: package/contents/ui/configAppearance.qml:87
+#: package/contents/ui/configAppearance.qml:86
 #, kde-format
 msgid "Show time zone:"
 msgstr "Hiện múi giờ:"
 
-#: package/contents/ui/configAppearance.qml:92
+#: package/contents/ui/configAppearance.qml:91
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Chỉ khi nào khác với múi giờ địa phương"
 
-#: package/contents/ui/configAppearance.qml:106
+#: package/contents/ui/configAppearance.qml:105
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Cách hiện múi giờ:"
 
-#: package/contents/ui/configAppearance.qml:111
+#: package/contents/ui/configAppearance.qml:110
 #, kde-format
 msgid "Code"
 msgstr "Mã"
 
-#: package/contents/ui/configAppearance.qml:112
+#: package/contents/ui/configAppearance.qml:111
 #, kde-format
 msgid "City"
 msgstr "Thành phố"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Chênh lệch so với giờ UTC"
 
-#: package/contents/ui/configAppearance.qml:125
+#: package/contents/ui/configAppearance.qml:124
 #, kde-format
 msgid "Time display:"
 msgstr "Hiển thị giờ:"
 
-#: package/contents/ui/configAppearance.qml:130
+#: package/contents/ui/configAppearance.qml:129
 #, kde-format
 msgid "12-Hour"
 msgstr "12 tiếng"
 
-#: package/contents/ui/configAppearance.qml:131
+#: package/contents/ui/configAppearance.qml:130
 #: package/contents/ui/configCalendar.qml:52
 #, kde-format
 msgid "Use Region Defaults"
 msgstr "Dùng thiết lập mặc định của vùng"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "24-Hour"
 msgstr "24 tiếng"
 
-#: package/contents/ui/configAppearance.qml:139
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgid "Change Regional Settings…"
 msgstr "Thay đổi thiết lập vùng…"
 
-#: package/contents/ui/configAppearance.qml:150
+#: package/contents/ui/configAppearance.qml:149
 #, kde-format
 msgid "Date format:"
 msgstr "Định dạng ngày:"
 
-#: package/contents/ui/configAppearance.qml:158
+#: package/contents/ui/configAppearance.qml:157
 #, kde-format
 msgid "Long Date"
 msgstr "Dạng dài"
 
-#: package/contents/ui/configAppearance.qml:163
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgid "Short Date"
 msgstr "Dạng ngắn"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:167
 #, kde-format
 msgid "ISO Date"
 msgstr "Dạng ISO"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:172
 #, kde-format
 msgctxt "custom date format"
 msgid "Custom"
 msgstr "Dạng riêng"
 
-#: package/contents/ui/configAppearance.qml:201
+#: package/contents/ui/configAppearance.qml:200
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -211,19 +211,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Tài liệu về định dạng thời gian</a>"
 
-#: package/contents/ui/configAppearance.qml:225
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Hiển thị chữ:"
 
-#: package/contents/ui/configAppearance.qml:227
+#: package/contents/ui/configAppearance.qml:226
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Tự động"
 
-#: package/contents/ui/configAppearance.qml:231
+#: package/contents/ui/configAppearance.qml:230
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -231,25 +231,25 @@ msgid ""
 msgstr ""
 "Văn bản sẽ sử dụng phông chữ hệ thống và giãn rộng ra để lấp đầy chỗ trống."
 
-#: package/contents/ui/configAppearance.qml:240
+#: package/contents/ui/configAppearance.qml:239
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Thủ công"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Chọn kiểu cách…"
 
-#: package/contents/ui/configAppearance.qml:263
+#: package/contents/ui/configAppearance.qml:262
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:274
+#: package/contents/ui/configAppearance.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -275,7 +275,7 @@ msgstr "Ngày đầu tuần:"
 msgid "Available Plugins:"
 msgstr "Phần cài cắm khả dụng:"
 
-#: package/contents/ui/configTimeZones.qml:40
+#: package/contents/ui/configTimeZones.qml:39
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add another entry for your home time zone to "
@@ -286,12 +286,12 @@ msgstr ""
 "này. Nó sẽ chỉ hiện ra khi bạn thay đổi múi giờ toàn hệ thống thành một múi "
 "giờ khác."
 
-#: package/contents/ui/configTimeZones.qml:103
+#: package/contents/ui/configTimeZones.qml:102
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Đồng hồ hiện đang dùng múi giờ này"
 
-#: package/contents/ui/configTimeZones.qml:105
+#: package/contents/ui/configTimeZones.qml:104
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,27 +300,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Ẩn trong khi đây là thành phố của múi giờ địa phương"
 
-#: package/contents/ui/configTimeZones.qml:119
+#: package/contents/ui/configTimeZones.qml:118
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Chuyển múi giờ toàn hệ thống…"
 
-#: package/contents/ui/configTimeZones.qml:128
+#: package/contents/ui/configTimeZones.qml:127
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Bỏ múi giờ này"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Múi giờ toàn hệ thống"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:136
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Múi giờ bổ sung"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:149
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -329,18 +329,18 @@ msgstr ""
 "Thêm các múi giờ khác để hiển thị tất cả ở ô bật lên của tiểu ứng dụng, hoặc "
 "dùng một trong số chúng cho cái đồng hồ"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Thêm múi giờ…"
 
-#: package/contents/ui/configTimeZones.qml:167
+#: package/contents/ui/configTimeZones.qml:166
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Chuyển múi giờ hiển thị bằng cách cuộn chuột ở trên tiểu ứng dụng đồng hồ"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:173
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -349,12 +349,12 @@ msgstr ""
 "Việc dùng tính năng này sẽ không thay đổi múi giờ toàn hệ thống. Khi bạn đi "
 "đến nơi khác, hãy thay đổi múi giờ toàn hệ thống."
 
-#: package/contents/ui/configTimeZones.qml:202
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Thêm các múi giờ khác"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -363,27 +363,27 @@ msgstr ""
 "Ít nhất một múi giờ cần được bật. Múi giờ địa phương của bạn được bật tự "
 "động."
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:247
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:250
+#: package/contents/ui/configTimeZones.qml:249
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Chép vào bảng nháp"
 
-#: package/contents/ui/main.qml:161
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Điều chỉnh ngày và giờ…"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Đặt định dạng thời gian…"

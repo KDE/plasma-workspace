@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2016-10-18 10:15+0200\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: package/contents/ui/BatteryItem.qml:106
+#: package/contents/ui/BatteryItem.qml:105
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:167
+#: package/contents/ui/BatteryItem.qml:166
 #, fuzzy, kde-format
 #| msgid ""
 #| "The capacity of this battery is %1%. This means it is broken and needs a "
@@ -41,29 +41,29 @@ msgstr ""
 "nepieciešams nomainīt. Sazinieties ar savu aparatūras ražotāju, lai saņemtu "
 "vairāk informācijas par to."
 
-#: package/contents/ui/BatteryItem.qml:186
+#: package/contents/ui/BatteryItem.qml:185
 #, kde-format
 msgid "Time To Full:"
 msgstr "Laiks līdz pilnai:"
 
-#: package/contents/ui/BatteryItem.qml:187
+#: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Remaining Time:"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:192
+#: package/contents/ui/BatteryItem.qml:191
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:204
+#: package/contents/ui/BatteryItem.qml:203
 #, fuzzy, kde-format
 #| msgid "Battery:"
 msgid "Battery Health:"
 msgstr "Baterija:"
 
-#: package/contents/ui/BatteryItem.qml:210
+#: package/contents/ui/BatteryItem.qml:209
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is battery percentage"
 #| msgid "%1%"
@@ -71,7 +71,7 @@ msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:224
+#: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-10-22 19:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -152,43 +152,43 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "الحجم:"
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "أزل سِمة الأيقونات"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "استعد سمة الأيقونات"
 
-#: ui/main.qml:228
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "اضبط حجم الأيقونات"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, kde-format
 msgid "Get New Icons…"
 msgstr "أحصل على أيقونات جديدة..."
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "اضبط حجم الأيقونات"
 
-#: ui/main.qml:284
+#: ui/main.qml:283
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: ui/main.qml:286
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات السمة (*.tar.gz *.tar.bz2)"

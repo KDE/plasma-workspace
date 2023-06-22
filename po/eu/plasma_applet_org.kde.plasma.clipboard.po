@@ -1,17 +1,16 @@
 # Translation for plasma_applet_org.kde.plasma.clipboard.po to Euskara/Basque (eu).
-# Copyright (C) 2017, The Free Software Foundation.
-# Copyright (C) 2018-2021, This file is copyright:
+# Copyright (C) 2017-2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
-"PO-Revision-Date: 2022-08-18 13:13+0200\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"PO-Revision-Date: 2023-06-21 17:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: contents/ui/BarcodePage.qml:35
 #, kde-format
@@ -75,23 +74,25 @@ msgstr "QR kode sorrerak huts egin du"
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Ez dago QR kodea erakusteko adina lekurik. Saiatu pluginaren neurria "
+"egokitzen."
 
-#: contents/ui/clipboard.qml:29
+#: contents/ui/clipboard.qml:28
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Arbelaren edukia"
 
-#: contents/ui/clipboard.qml:30 contents/ui/Menu.qml:123
+#: contents/ui/clipboard.qml:29 contents/ui/Menu.qml:122
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Arbela hutsik dago"
 
-#: contents/ui/clipboard.qml:58
+#: contents/ui/clipboard.qml:57
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Konfiguratu arbela..."
 
-#: contents/ui/clipboard.qml:60
+#: contents/ui/clipboard.qml:59
 #, kde-format
 msgid "Clear History"
 msgstr "Garbitu historia"
@@ -116,19 +117,19 @@ msgstr "Editatu edukia"
 msgid "Remove from history"
 msgstr "Kendu historiatik"
 
-#: contents/ui/EditPage.qml:83
+#: contents/ui/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Gorde"
 
-#: contents/ui/EditPage.qml:91
+#: contents/ui/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: contents/ui/Menu.qml:123
+#: contents/ui/Menu.qml:122
 #, kde-format
 msgid "No matches"
 msgstr "Ez dago bat datorrenik"

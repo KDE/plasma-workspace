@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 02:11+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -66,27 +66,27 @@ msgstr "Thiết bị đã bị ngắt kết nối."
 msgid "An unknown error has occurred."
 msgstr "Đã xảy ra một lỗi không rõ."
 
-#: src/ui/ChangePassword.qml:28 src/ui/UserDetailsPage.qml:159
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Change Password"
 msgstr "Đổi mật khẩu"
 
-#: src/ui/ChangePassword.qml:33
+#: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
 msgstr "Đặt mật khẩu"
 
-#: src/ui/ChangePassword.qml:56
+#: src/ui/ChangePassword.qml:55
 #, kde-format
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: src/ui/ChangePassword.qml:71
+#: src/ui/ChangePassword.qml:70
 #, kde-format
 msgid "Confirm password"
 msgstr "Xác nhận mật khẩu"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Mật khẩu phải khớp"

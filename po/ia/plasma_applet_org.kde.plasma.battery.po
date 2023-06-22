@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-02-23 15:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/BatteryItem.qml:106
+#: package/contents/ui/BatteryItem.qml:105
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:167
+#: package/contents/ui/BatteryItem.qml:166
 #, kde-format
 msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
@@ -32,34 +32,34 @@ msgstr ""
 "Le sanitate de iste  batteria es solmente al %1% e debera esser  "
 "reimplaciate. Continge le constructor."
 
-#: package/contents/ui/BatteryItem.qml:186
+#: package/contents/ui/BatteryItem.qml:185
 #, kde-format
 msgid "Time To Full:"
 msgstr "Tempore al plen:"
 
-#: package/contents/ui/BatteryItem.qml:187
+#: package/contents/ui/BatteryItem.qml:186
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Tempore remanente:"
 
-#: package/contents/ui/BatteryItem.qml:192
+#: package/contents/ui/BatteryItem.qml:191
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr "Estimante..."
 
-#: package/contents/ui/BatteryItem.qml:204
+#: package/contents/ui/BatteryItem.qml:203
 #, kde-format
 msgid "Battery Health:"
 msgstr "Sanitate de Batteria:"
 
-#: package/contents/ui/BatteryItem.qml:210
+#: package/contents/ui/BatteryItem.qml:209
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:224
+#: package/contents/ui/BatteryItem.qml:223
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batteria es configurate per cargar usque %1% approximativemente."

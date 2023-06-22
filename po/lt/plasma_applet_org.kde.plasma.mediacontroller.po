@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-12-12 20:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -27,85 +27,85 @@ msgid "No title"
 msgstr "Nėra pavadinimo"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
 msgstr "Nieko neatkuriama"
 
-#: package/contents/ui/ExpandedRepresentation.qml:408
-#: package/contents/ui/ExpandedRepresentation.qml:529
+#: package/contents/ui/ExpandedRepresentation.qml:407
+#: package/contents/ui/ExpandedRepresentation.qml:528
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:558
+#: package/contents/ui/ExpandedRepresentation.qml:557
 #, kde-format
 msgid "Shuffle"
 msgstr "Maišyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:584
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/ExpandedRepresentation.qml:583
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Ankstesnis takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:606
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:606
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/ExpandedRepresentation.qml:605
+#: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Groti"
 
-#: package/contents/ui/ExpandedRepresentation.qml:624
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/ExpandedRepresentation.qml:623
+#: package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Kitas takelis"
 
-#: package/contents/ui/ExpandedRepresentation.qml:647
+#: package/contents/ui/ExpandedRepresentation.qml:646
 #, kde-format
 msgid "Repeat Track"
 msgstr "Kartoti takelį"
 
-#: package/contents/ui/ExpandedRepresentation.qml:647
+#: package/contents/ui/ExpandedRepresentation.qml:646
 #, kde-format
 msgid "Repeat"
 msgstr "Kartoti"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Atverti"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Stabdyti"
 
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Baigti"
 
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Choose player automatically"
 msgstr "Automatiškai parinkti leistuvę"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:295
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti\n"
 "Slinkite, norėdami reguliuoti garsumą"
 
-#: package/contents/ui/main.qml:296
+#: package/contents/ui/main.qml:295
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -129,7 +129,7 @@ msgstr ""
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pristabdyti\n"
 "Slinkite, norėdami reguliuoti garsumą"
 
-#: package/contents/ui/main.qml:310
+#: package/contents/ui/main.qml:309
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -141,7 +141,7 @@ msgstr ""
 "Spustelėkite viduriniuoju pelės mygtuku, norėdami pradėti atkūrimą\n"
 "Slinkite, norėdami reguliuoti garsumą"
 
-#: package/contents/ui/main.qml:310
+#: package/contents/ui/main.qml:309
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""

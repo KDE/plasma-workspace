@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-03 02:04+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2014-10-28 10:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -148,48 +148,48 @@ msgctxt "@label:slider"
 msgid "Size:"
 msgstr "आकार:"
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "शैली काढून टाका"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "शैली काढून टाका"
 
-#: ui/main.qml:228
+#: ui/main.qml:227
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Install Theme File..."
 msgid "Install from File…"
 msgstr "शैली फाईल प्रतिष्ठापीत करा..."
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New Icons…"
 msgstr "नवीन शैली प्राप्त करा..."
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr ""
 
-#: ui/main.qml:284
+#: ui/main.qml:283
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "शैली काढून टाका"
 
-#: ui/main.qml:286
+#: ui/main.qml:285
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

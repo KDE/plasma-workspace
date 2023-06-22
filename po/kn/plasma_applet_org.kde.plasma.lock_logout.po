@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2010-01-03 21:44+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: contents/ui/ConfigGeneral.qml:36
+#: contents/ui/ConfigGeneral.qml:35
 #, fuzzy, kde-format
 #| msgid "Show lock button"
 msgctxt ""
@@ -30,37 +30,37 @@ msgctxt ""
 msgid "Show actions:"
 msgstr "ಲಾಕ್ ಮಾಡುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
 
-#: contents/ui/ConfigGeneral.qml:37
+#: contents/ui/ConfigGeneral.qml:36
 #, kde-format
 msgid "Logout"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:43
+#: contents/ui/ConfigGeneral.qml:42
 #, kde-format
 msgid "Shutdown"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:48
+#: contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Reboot"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:52 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "ಲಾಕ್ ಮಾಡು"
 
-#: contents/ui/ConfigGeneral.qml:58
+#: contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgid "Switch User"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:62 contents/ui/data.js:46
 #, kde-format
 msgid "Hibernate"
 msgstr "ಹೈಬರ್ನೇಟ್"
 
-#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:67 contents/ui/data.js:39
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"

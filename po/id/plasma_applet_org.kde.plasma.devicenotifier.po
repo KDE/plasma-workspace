@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -73,7 +73,7 @@ msgstr "Kaitkan"
 
 # Melepas Perangkat
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr "Lepas Semua"
@@ -93,37 +93,37 @@ msgstr "Tidak ada peranti bisa-dilepas yang tercantol"
 msgid "No disks available"
 msgstr "Tidak ada disk yang tersedia"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Sebagian Besar Peranti Belakangan Ini"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "Tidak ada Peranti Tersedia"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Removable Devices"
 msgstr "Peranti Bisa-dilepas"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Peranti Non Bisa-dilepas"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgid "All Devices"
 msgstr "Semua Peranti"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Tampilkan sembulan ketika peranti baru sudah tercolok"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"

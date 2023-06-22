@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-15 02:13+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2010-12-17 16:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -84,7 +84,7 @@ msgid "Mount"
 msgstr "ทำการเมานท์..."
 
 #: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -107,42 +107,42 @@ msgstr "อุปกรณ์ที่ไม่สามารถถอด/เ�
 msgid "No disks available"
 msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "อุปกรณ์ที่เสียบเข้ามาล่าสุด"
 
-#: package/contents/ui/main.qml:49
+#: package/contents/ui/main.qml:48
 #, kde-format
 msgid "No Devices Available"
 msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
 
-#: package/contents/ui/main.qml:247
+#: package/contents/ui/main.qml:246
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
 
-#: package/contents/ui/main.qml:253
+#: package/contents/ui/main.qml:252
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
 
-#: package/contents/ui/main.qml:259
+#: package/contents/ui/main.qml:258
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "อุปกรณ์ทั้งหมด"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:266
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"

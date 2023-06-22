@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-01 02:34+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-25 16:09+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -32,32 +32,32 @@ msgstr "Configura notificationes "
 msgid "Other Applications"
 msgstr "Altere applicationes"
 
-#: ui/ApplicationConfiguration.qml:63
+#: ui/ApplicationConfiguration.qml:62
 #, kde-format
 msgid "Show popups"
 msgstr "Monstra popups"
 
-#: ui/ApplicationConfiguration.qml:77
+#: ui/ApplicationConfiguration.qml:76
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Monstra in modo de non disturbar"
 
-#: ui/ApplicationConfiguration.qml:90 ui/main.qml:147
+#: ui/ApplicationConfiguration.qml:89 ui/main.qml:147
 #, kde-format
 msgid "Show in history"
 msgstr "Monstra in chronologia"
 
-#: ui/ApplicationConfiguration.qml:101
+#: ui/ApplicationConfiguration.qml:100
 #, kde-format
 msgid "Show notification badges"
 msgstr "Monstra placas (badges) de notification"
 
-#: ui/ApplicationConfiguration.qml:119
+#: ui/ApplicationConfiguration.qml:118
 #, kde-format
 msgid "Configure Events…"
 msgstr "Configura eventos..."
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:129
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -235,32 +235,32 @@ msgstr "Preferentias de application specific"
 msgid "Configure…"
 msgstr "Configura..."
 
-#: ui/PopupPositionPage.qml:15
+#: ui/PopupPositionPage.qml:14
 #, kde-format
 msgid "Popup Position"
 msgstr "Position de popup"
 
-#: ui/SourcesPage.qml:19
+#: ui/SourcesPage.qml:18
 #, kde-format
 msgid "Application Settings"
 msgstr "Preferentias de application"
 
-#: ui/SourcesPage.qml:93
+#: ui/SourcesPage.qml:92
 #, kde-format
 msgid "Applications"
 msgstr "Applicationes"
 
-#: ui/SourcesPage.qml:94
+#: ui/SourcesPage.qml:93
 #, kde-format
 msgid "System Services"
 msgstr "Servicios de systema"
 
-#: ui/SourcesPage.qml:132
+#: ui/SourcesPage.qml:131
 #, kde-format
 msgid "No application or event matches your search term."
 msgstr "Necun application o evento coincide con tu termino de cerca"
 
-#: ui/SourcesPage.qml:152
+#: ui/SourcesPage.qml:151
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
