@@ -107,13 +107,17 @@ ContainmentItem {
 
             flow: vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
-            GridView {
+            Grid {
                 id: tasksGrid
 
+                Layout.maximumWidth: root.vertical ? parent.width : -1
+                Layout.maximumHeight: !root.vertical ? parent.height : -1
                 Layout.alignment: Qt.AlignCenter
 
-                interactive: false //disable features we don't need
-                flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
+                columns: root.vertical ? rowsOrColumns: -1
+                rows: root.vertical ? -1 : rowsOrColumns
+                spacing: 0
+                flow: root.vertical ? Grid.LeftToRight : Grid.TopToBottom
 
                 // The icon size to display when not using the auto-scaling setting
                 readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
@@ -124,30 +128,11 @@ ContainmentItem {
 
                 readonly property int gridThickness: root.vertical ? root.width : root.height
                 // Should change to 2 rows/columns on a 56px panel (in standard DPI)
-                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
+                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(repeater.count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
 
                 // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
                 readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
                 readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
-
-                cellHeight: {
-                    if (root.vertical) {
-                        return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
-                    } else {
-                        return autoSize ? root.height : Math.floor(root.height / rowsOrColumns)
-                    }
-                }
-                cellWidth: {
-                    if (root.vertical) {
-                        return autoSize ? root.width : Math.floor(root.width / rowsOrColumns)
-                    } else {
-                        return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
-                    }
-                }
-
-                //depending on the form factor, we are calculating only one dimension, second is always the same as root/parent
-                implicitHeight: root.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : root.height
-                implicitWidth: !root.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : root.width
 
                 readonly property int itemSize: {
                     if (autoSize) {
@@ -157,57 +142,80 @@ ContainmentItem {
                     }
                 }
 
-                model: PlasmaCore.SortFilterModel {
-                    sourceModel: Plasmoid.systemTrayModel
-                    filterRole: "effectiveStatus"
-                    filterCallback: (source_row, value) => value === PlasmaCore.Types.ActiveStatus
-                }
+                Repeater {
+                    id: repeater
 
-                delegate: ItemLoader {
-                    id: delegate
+                    model: PlasmaCore.SortFilterModel {
+                        sourceModel: Plasmoid.systemTrayModel
+                        filterRole: "effectiveStatus"
+                        filterCallback: (source_row, value) => value === PlasmaCore.Types.ActiveStatus
+                    }
 
-                    width: tasksGrid.cellWidth
-                    height: tasksGrid.cellHeight
-                    minLabelHeight: 0
+                    delegate: ItemLoader {
+                        id: delegate
 
-                    // We need to recalculate the stacking order of the z values due to how keyboard navigation works
-                    // the tab order depends exclusively from this, so we redo it as the position in the list
-                    // ensuring tab navigation focuses the expected items
-                    Component.onCompleted: {
-                        let item = tasksGrid.itemAtIndex(index - 1);
-                        if (item) {
-                            Plasmoid.stackItemBefore(delegate, item)
-                        } else {
-                            item = tasksGrid.itemAtIndex(index + 1);
+                        minLabelHeight: 0
+
+                        // FIXME: for debugging; remove
+                        Rectangle {
+                            color: "red"
+                            opacity: 0.5
+                            anchors.fill: parent
                         }
-                        if (item) {
-                            Plasmoid.stackItemAfter(delegate, item)
+                        width: tasksGrid.autoSize ? root.width : tasksGrid.itemSize
+
+                        // FIXME: In vertical mode, need to fill width so there are no dead click areas,
+                        // while also centering the icon in the rectangle
+                        // Maybe need to make a dummy parent Item and center the ItemLoader inside it?
+                        // FIXME: test and fix horizontal mode; not tested yet
+                        width: {
+                            if (root.vertical) {
+                                return tasksGrid.autoSize ? tasksGrid.itemSize + (tasksGrid.gridThickness < tasksGrid.itemSize ? 0 : tasksGrid.cellSpacing) : tasksGrid.smallSizeCellLength
+                            } else {
+                                return tasksGrid.autoSize ? root.height : Math.floor(root.height / tasksGrid.rowsOrColumns)
+                            }
+                        }
+                        // FIXME: In vertical mode, need to fill width so there are no dead click areas,
+                        // while also centering the icon in the rectangle
+                        // Maybe need to make a dummy parent Item and center the ItemLoader inside it?
+                        // FIXME: test and fix horizontal mode; not tested yet
+                        height: {
+                            if (root.vertical) {
+                                return tasksGrid.autoSize ? root.width : Math.floor(root.width / tasksGrid.rowsOrColumns)
+                            } else {
+                                return tasksGrid.autoSize ? tasksGrid.itemSize + (tasksGrid.gridThickness < tasksGrid.itemSize ? 0 : tasksGrid.cellSpacing) : tasksGrid.smallSizeCellLength
+                            }
+                        }
+
+                        // We need to recalculate the stacking order of the z values due to how keyboard navigation works
+                        // the tab order depends exclusively from this, so we redo it as the position in the list
+                        // ensuring tab navigation focuses the expected items
+                        Component.onCompleted: {
+                            let item = repeater.itemAt(index - 1);
+                            if (item) {
+                                Plasmoid.stackItemBefore(delegate, item)
+                            } else {
+                                item = repeater.itemAt(index + 1);
+                            }
+                            if (item) {
+                                Plasmoid.stackItemAfter(delegate, item)
+                            }
                         }
                     }
                 }
 
-                add: Transition {
-                    enabled: itemSize > 0
-
-                    NumberAnimation {
-                        property: "scale"
-                        from: 0
-                        to: 1
-                        easing.type: Easing.InOutQuad
-                        duration: PlasmaCore.Units.longDuration
-                    }
-                }
-
-                displaced: Transition {
-                    //ensure scale value returns to 1.0
-                    //https://doc.qt.io/qt-5/qml-qtquick-viewtransition.html#handling-interrupted-animations
-                    NumberAnimation {
-                        property: "scale"
-                        to: 1
-                        easing.type: Easing.InOutQuad
-                        duration: PlasmaCore.Units.longDuration
-                    }
-                }
+                // FIXME: This makes a bunch of items be invisible for some reason
+                // add: Transition {
+                //     enabled: itemSize > 0
+                // 
+                //     NumberAnimation {
+                //         property: "scale"
+                //         from: 0
+                //         to: 1
+                //         easing.type: Easing.InOutQuad
+                //         duration: PlasmaCore.Units.longDuration
+                //     }
+                // }
 
                 move: Transition {
                     NumberAnimation {
@@ -222,7 +230,6 @@ ContainmentItem {
                 id: expander
                 Layout.fillWidth: vertical
                 Layout.fillHeight: !vertical
-                Layout.alignment: vertical ? Qt.AlignVCenter : Qt.AlignHCenter
                 iconSize: tasksGrid.itemSize
                 visible: root.hiddenLayout.itemCount > 0
             }
