@@ -56,9 +56,9 @@ void KCMNightColor::save()
 
     bool enableUpdater = (nightColorSettings()->mode() == NightColorMode::Automatic);
 
-    QDBusMessage loadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+    QDBusMessage loadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
                                                           QStringLiteral("/kded"),
-                                                          QStringLiteral("org.kde.kded5"),
+                                                          QStringLiteral("org.kde.kded6"),
                                                           (enableUpdater ? QStringLiteral("loadModule") : QStringLiteral("unloadModule")));
     loadMsg.setArguments({QVariant(QStringLiteral("colorcorrectlocationupdater"))});
     dbus.call(loadMsg, QDBus::NoBlock);

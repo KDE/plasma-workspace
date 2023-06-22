@@ -271,7 +271,7 @@ KDEDInitJob::KDEDInitJob()
 void KDEDInitJob::start()
 {
     qCDebug(PLASMA_SESSION());
-    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
+    org::kde::kded6 kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto pending = kded.loadSecondPhase();
 
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);

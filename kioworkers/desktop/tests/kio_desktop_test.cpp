@@ -44,7 +44,7 @@ private Q_SLOTS:
         m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
         m_testFileName = QLatin1String("kio_desktop_test_file");
         qWarning() << "We will write in the desktop folder" << m_desktopPath;
-        qWarning() << "Starting kded" << QProcess::startDetached(QStringLiteral("kded5"), {});
+        qWarning() << "Starting kded" << QProcess::startDetached(QStringLiteral("kded6"), {});
         cleanupTestCase();
     }
     void cleanupTestCase()

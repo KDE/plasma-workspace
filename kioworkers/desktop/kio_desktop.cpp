@@ -46,7 +46,7 @@ DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &p
 {
     checkLocalInstall();
 
-    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
+    org::kde::kded6 kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto pending = kded.loadModule("desktopnotifier");
     pending.waitForFinished();
 }
@@ -121,7 +121,7 @@ KIO::WorkerResult DesktopProtocol::listDir(const QUrl &url)
     QUrl actual;
     rewriteUrl(url, actual);
 
-    org::kde::DesktopNotifier kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QDBusConnection::sessionBus());
+    org::kde::DesktopNotifier kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/modules/desktopnotifier"), QDBusConnection::sessionBus());
     kded.watchDir(actual.path());
 
     return res;
