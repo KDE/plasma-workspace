@@ -105,7 +105,7 @@ PlasmoidItem {
     // but it should still switch over to full rep once there's enough width (disregarding the limited height)
     switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
 
-    onExpandedChanged: {
+    onExpandedChanged: expanded => {
         if (!expanded) {
             historyModel.lastRead = undefined; // reset to now
             historyModel.collapseAllGroups();
@@ -150,7 +150,7 @@ PlasmoidItem {
             return urgencies;
         }
 
-        onCountChanged: {
+        onCountChanged: count => {
             if (count === 0) {
                 closePlasmoid();
             }
