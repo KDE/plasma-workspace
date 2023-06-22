@@ -322,7 +322,6 @@ SystemTrayModel *SystemTray::systemTrayModel()
 {
     if (!m_systemTrayModel) {
         m_systemTrayModel = new SystemTrayModel(this);
-
         m_plasmoidModel = new PlasmoidModel(m_settings, m_plasmoidRegistry, m_systemTrayModel);
         connect(this, &SystemTray::appletAdded, m_plasmoidModel, &PlasmoidModel::addApplet);
         connect(this, &SystemTray::appletRemoved, m_plasmoidModel, &PlasmoidModel::removeApplet);

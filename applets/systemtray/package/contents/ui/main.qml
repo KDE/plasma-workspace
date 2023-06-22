@@ -8,6 +8,7 @@
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.15
+import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.plasmoid 2.0
@@ -145,10 +146,12 @@ ContainmentItem {
                 Repeater {
                     id: repeater
 
-                    model: PlasmaCore.SortFilterModel {
+                    model: KItemModels.KSortFilterProxyModel {
                         sourceModel: Plasmoid.systemTrayModel
                         filterRole: "effectiveStatus"
-                        filterCallback: (source_row, value) => value === PlasmaCore.Types.ActiveStatus
+                        filterRowCallback: (source_row, parent) => {
+                            return sourceModel.data(sourceModel.index(source_row, 0, parent), Qt.UserRole+6) === PlasmaCore.Types.ActiveStatus
+                        }
                     }
 
                     delegate: ItemLoader {
