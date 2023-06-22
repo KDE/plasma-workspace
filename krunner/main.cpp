@@ -32,9 +32,6 @@ int main(int argc, char **argv)
     QSurfaceFormat::setDefaultFormat(format);
 
     QCommandLineParser parser;
-    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
-        qunsetenv("QT_DEVICE_PIXEL_RATIO");
-    }
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 6, 0)
     bool usingPlasmaShellIntegration = false;
