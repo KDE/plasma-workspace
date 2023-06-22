@@ -9,6 +9,8 @@ import QtQuick 2.0
 Loader {
     id: itemLoader
 
+    property real minLabelHeight: 0
+
     z: x+1 // always be above what it's on top of, even for x==0
     property var itemModel: model
     onActiveFocusChanged: {
@@ -17,6 +19,11 @@ Loader {
         }
     }
 
+    Binding {
+        target: item
+        property: "minLabelHeight"
+        value: itemLoader.minLabelHeight
+    }
     source: {
         if (model.itemType === "Plasmoid" && model.hasApplet) {
             return Qt.resolvedUrl("PlasmoidItem.qml")

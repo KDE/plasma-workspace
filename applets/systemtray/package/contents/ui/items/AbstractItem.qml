@@ -15,9 +15,6 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: inVisibleLayout ? visibleLayout.cellHeight : hiddenTasks.cellHeight
-    width: inVisibleLayout ? visibleLayout.cellWidth : hiddenTasks.cellWidth
-
     property var model: itemModel
 
     property string itemId
@@ -27,6 +24,7 @@ PlasmaCore.ToolTipArea {
     property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     property bool effectivePressed: false
+    property real minLabelHeight: 0
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
@@ -97,7 +95,7 @@ PlasmaCore.ToolTipArea {
             abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
         }
-        onPressAndHold: mouse => { 
+        onPressAndHold: mouse => {
             if (mouse.button === Qt.LeftButton) {
                 abstractItem.contextMenu(mouse)
             }
@@ -165,7 +163,7 @@ PlasmaCore.ToolTipArea {
             //! labels to be aligned properly at all items. At the same time this approach does not
             //! enforce labels with 3 lines at all cases so translations that require only one or two
             //! lines will always look consistent with no too much padding
-            Layout.minimumHeight: abstractItem.inHiddenLayout ? hiddenTasks.minLabelHeight : 0
+            Layout.minimumHeight: abstractItem.inHiddenLayout ? abstractItem.minLabelHeight : 0
             Layout.leftMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
             Layout.rightMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
             Layout.bottomMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0

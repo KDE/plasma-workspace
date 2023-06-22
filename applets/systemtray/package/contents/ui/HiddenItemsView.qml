@@ -69,7 +69,11 @@ PlasmaComponents3.ScrollView {
             filterRole: "effectiveStatus"
             filterCallback: (source_row, value) => value === PlasmaCore.Types.PassiveStatus
         }
-        delegate: ItemLoader {}
+        delegate: ItemLoader {
+            width: hiddenTasks.cellWidth
+            height: hiddenTasks.cellHeight
+            minLabelHeight: hiddenTasks.minLabelHeight
+        }
 
         keyNavigationEnabled: true
         activeFocusOnTab: true
