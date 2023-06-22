@@ -778,6 +778,7 @@ void TaskGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         connect(sourceModel, &QSortFilterProxyModel::modelReset, this, std::bind(&TaskGroupingProxyModel::Private::sourceModelReset, dd));
         connect(sourceModel, &QSortFilterProxyModel::dataChanged, this, std::bind(&TaskGroupingProxyModel::Private::sourceDataChanged, dd, _1, _2, _3));
     } else {
+        qDeleteAll(d->rowMap);
         d->rowMap.clear();
     }
 
