@@ -330,7 +330,7 @@ void setupPlasmaEnvironment()
     qputenv("QT_AUTO_SCREEN_SCALE_FACTOR", "0");
 
     qputenv("KDE_FULL_SESSION", "true");
-    qputenv("KDE_SESSION_VERSION", "5");
+    qputenv("KDE_SESSION_VERSION", "6");
     qputenv("KDE_SESSION_UID", QByteArray::number(getuid()));
     qputenv("XDG_CURRENT_DESKTOP", "KDE");
 
