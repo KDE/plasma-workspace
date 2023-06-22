@@ -110,8 +110,8 @@ ContainmentItem {
             Grid {
                 id: tasksGrid
 
-                Layout.maximumWidth: root.vertical ? parent.width : -1
-                Layout.maximumHeight: !root.vertical ? parent.height : -1
+                //Layout.maximumWidth: root.vertical ? parent.width : -1
+                //Layout.maximumHeight: !root.vertical ? parent.height : -1
                 Layout.alignment: Qt.AlignCenter
 
                 columns: root.vertical ? rowsOrColumns: -1
@@ -128,7 +128,7 @@ ContainmentItem {
 
                 readonly property int gridThickness: root.vertical ? root.width : root.height
                 // Should change to 2 rows/columns on a 56px panel (in standard DPI)
-                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(repeater.count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
+                readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(repeater.count, Math.floor(gridThickness / (smallIconSize + cellSpacing))))
 
                 // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
                 readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
@@ -156,32 +156,17 @@ ContainmentItem {
 
                         minLabelHeight: 0
 
-                        // FIXME: for debugging; remove
-                        Rectangle {
-                            color: "red"
-                            opacity: 0.5
-                            anchors.fill: parent
-                        }
-                        width: tasksGrid.autoSize ? root.width : tasksGrid.itemSize
-
-                        // FIXME: In vertical mode, need to fill width so there are no dead click areas,
-                        // while also centering the icon in the rectangle
-                        // Maybe need to make a dummy parent Item and center the ItemLoader inside it?
-                        // FIXME: test and fix horizontal mode; not tested yet
                         width: {
-                            if (root.vertical) {
+                            if (!root.vertical) {
                                 return tasksGrid.autoSize ? tasksGrid.itemSize + (tasksGrid.gridThickness < tasksGrid.itemSize ? 0 : tasksGrid.cellSpacing) : tasksGrid.smallSizeCellLength
                             } else {
-                                return tasksGrid.autoSize ? root.height : Math.floor(root.height / tasksGrid.rowsOrColumns)
+                                return tasksGrid.autoSize ? root.width : Math.min(tasksGrid.smallSizeCellLength, Math.floor(root.width / tasksGrid.rowsOrColumns))
                             }
                         }
-                        // FIXME: In vertical mode, need to fill width so there are no dead click areas,
-                        // while also centering the icon in the rectangle
-                        // Maybe need to make a dummy parent Item and center the ItemLoader inside it?
-                        // FIXME: test and fix horizontal mode; not tested yet
+
                         height: {
-                            if (root.vertical) {
-                                return tasksGrid.autoSize ? root.width : Math.floor(root.width / tasksGrid.rowsOrColumns)
+                            if (!root.vertical) {
+                                return tasksGrid.autoSize ? root.height : Math.min(tasksGrid.smallSizeCellLength, Math.floor(root.height / tasksGrid.rowsOrColumns))
                             } else {
                                 return tasksGrid.autoSize ? tasksGrid.itemSize + (tasksGrid.gridThickness < tasksGrid.itemSize ? 0 : tasksGrid.cellSpacing) : tasksGrid.smallSizeCellLength
                             }
@@ -206,11 +191,12 @@ ContainmentItem {
 
                 // FIXME: This makes a bunch of items be invisible for some reason
                 // add: Transition {
-                //     enabled: itemSize > 0
-                // 
+                //     //enabled: itemSize > 0
+                //     enabled: true
+                //
                 //     NumberAnimation {
                 //         property: "scale"
-                //         from: 0
+                //         from: 0.5
                 //         to: 1
                 //         easing.type: Easing.InOutQuad
                 //         duration: PlasmaCore.Units.longDuration
