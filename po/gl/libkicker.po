@@ -1,16 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Marce Villarino <mvillarino@kde-espana.es>, 2013, 2014.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-31 03:09+0000\n"
-"PO-Revision-Date: 2019-08-19 20:40+0200\n"
+"PO-Revision-Date: 2023-06-22 08:42+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: plugin/actionlist.cpp:86
 #, kde-format
@@ -46,33 +46,30 @@ msgid "Pin to Task Manager"
 msgstr "Fixar no xestor de tarefas"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "Documentos recentes"
+msgstr "Ficheiros recentes"
 
 #: plugin/actionlist.cpp:317
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Forget Recent Files"
-msgstr "Esquecer os documentos recentes"
+msgstr "Esquecer os ficheiros recentes"
 
 #: plugin/actionlist.cpp:395
-#, fuzzy, kde-format
-#| msgid "Edit Application..."
+#, kde-format
 msgid "Edit Application…"
-msgstr "Editar o aplicativo…"
+msgstr "Editar a aplicación…"
 
 #: plugin/actionlist.cpp:429
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr ""
+msgstr "Desinstalar ou xestionar os complementos…"
 
 #: plugin/appentry.cpp:308
 #, kde-format
 msgid "Hide Application"
-msgstr "Agochar o aplicativo"
+msgstr "Agochar a aplicación"
 
 #: plugin/appentry.cpp:367
 #, kde-format
@@ -91,17 +88,17 @@ msgstr "%1 (%2)"
 #: plugin/recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
-msgstr "Aplicativos"
+msgstr "Aplicacións"
 
 #: plugin/appsmodel.cpp:154
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "Amosar os aplicativos deste submenú"
+msgstr "Amosar as aplicacións deste submenú"
 
 #: plugin/appsmodel.cpp:163
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "Amosar os aplicativos de «%1»"
+msgstr "Amosar as aplicacións de «%1»"
 
 #: plugin/computermodel.cpp:92
 #, kde-format
@@ -128,30 +125,27 @@ msgstr "Favoritos"
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
 msgid "Recently Used"
-msgstr "Empregados recentemente"
+msgstr "Uso recente"
 
 #: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
-#, fuzzy, kde-format
-#| msgctxt "Tab title"
-#| msgid "Files"
+#, kde-format
 msgid "Files"
 msgstr "Ficheiros"
 
 #: plugin/recentusagemodel.cpp:238
 #, kde-format
 msgid "Forget Application"
-msgstr "Esquecer o aplicativo"
+msgstr "Esquecer a aplicación"
 
 #: plugin/recentusagemodel.cpp:332
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Abrir o cartafol contedor"
 
 #: plugin/recentusagemodel.cpp:335
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget File"
-msgstr "Esquecer todo"
+msgstr "Esquecer o ficheiro"
 
 #: plugin/recentusagemodel.cpp:472
 #, kde-format
@@ -161,13 +155,12 @@ msgstr "Esquecer todo"
 #: plugin/recentusagemodel.cpp:474
 #, kde-format
 msgid "Forget All Applications"
-msgstr "Esquecer todos os aplicativos"
+msgstr "Esquecer todas as aplicacións"
 
 #: plugin/recentusagemodel.cpp:477
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget All Files"
-msgstr "Esquecer todo"
+msgstr "Esquecer todos os ficheiros"
 
 #: plugin/rootmodel.cpp:92
 #, kde-format
@@ -177,28 +170,27 @@ msgstr "Agochar %1"
 #: plugin/rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
-msgstr "Todos os aplicativos"
+msgstr "Todas as aplicacións"
 
 #: plugin/rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "Isto non debería verse. Use KICKER_FAVORITES_MODEL."
 
 #: plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Often Used Documents"
+#, kde-format
 msgid "Often Used Files"
-msgstr "Documentos usados habitualmente"
+msgstr "Ficheiros usados habitualmente"
 
 #: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
-msgstr "Aplicativos recentes"
+msgstr "Aplicacións recentes"
 
 #: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
-msgstr "Aplicativos usados habitualmente"
+msgstr "Aplicacións habituais"
 
 #: plugin/rootmodel.cpp:423
 #, kde-format

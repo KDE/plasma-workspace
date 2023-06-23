@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2022-12-16 08:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -35,27 +35,27 @@ msgstr "yurchor@ukr.net"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Налаштувати додаток дій мишею"
 
-#: main.cpp:109
+#: main.cpp:98
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Оболонка Плазми"
 
-#: main.cpp:121
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Увімкнути засіб діагностики Javascript QML"
 
-#: main.cpp:124
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перезапускати оболонку Плазми автоматично після аварії"
 
-#: main.cpp:127
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Примусово завантажити вказаний додаток оболонки"
 
-#: main.cpp:132
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -64,12 +64,12 @@ msgstr ""
 "Завантажити plasmashell як окрему програму. Потребує визначення параметра "
 "додатка оболонки."
 
-#: main.cpp:134
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Замінити наявний екземпляр"
 
-#: main.cpp:137
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -78,22 +78,22 @@ msgstr ""
 "Вмикає режим тестування і вказує файл компонування у форматі javascript для "
 "налаштовування тестового середовища"
 
-#: main.cpp:138
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr "файл"
 
-#: main.cpp:142
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показати доступні варіанти для відгуків користувача"
 
-#: main.cpp:239
+#: main.cpp:228
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не вдалося запустити Плазму"
 
-#: main.cpp:240
+#: main.cpp:229
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

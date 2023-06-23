@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,32 +30,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "okellogg@users.sourceforge.net"
 
-#: main.cpp:79 view.cpp:44
+#: main.cpp:76 view.cpp:44
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:79
+#: main.cpp:76
 #, kde-format
 msgid "Run Command interface"
 msgstr "Lanĉi Komand-Interfacon"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Uzi la enhavon de la tondujo kiel demandon por KRunner"
 
-#: main.cpp:86
+#: main.cpp:83
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Komenci KRunner en la fono, ne montri ĝin."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Anstataŭigi ekzistantan petskribon"
 
-#: main.cpp:92
+#: main.cpp:89
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "La rulota demando, uzata nur se -c ne estas provizita"

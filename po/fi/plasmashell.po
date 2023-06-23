@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2023-03-04 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -34,28 +34,28 @@ msgstr "lasse.liehu@gmail.com,translator@legisign.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
 
-#: main.cpp:109
+#: main.cpp:98
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-kuori"
 
-#: main.cpp:121
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Käytä QML- ja JavaScript-virheenpaikanninta"
 
-#: main.cpp:124
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "Älä käynnistä plasma-shelliä uudelleen automaattisesti kaatumisen jälkeen"
 
-#: main.cpp:127
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Pakota annetun työpöytäkuoren liitännäisen lataaminen"
 
-#: main.cpp:132
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -64,12 +64,12 @@ msgstr ""
 "Lataa plasmashell itsenäisenä sovelluksena; shell-plugin-valitsin tarvitsee "
 "antaa"
 
-#: main.cpp:134
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Korvaa aiempi instanssi"
 
-#: main.cpp:137
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -78,22 +78,22 @@ msgstr ""
 "Ottaa käyttöön testitilan ja valitsee asettelun JavaScript-tiedoston, joka "
 "asettaa testausympäristön"
 
-#: main.cpp:138
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr "tiedosto"
 
-#: main.cpp:142
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Luettelee eri käyttäjäpalautemahdollisuudet"
 
-#: main.cpp:239
+#: main.cpp:228
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasman käynnistyminen epäonnistui"
 
-#: main.cpp:240
+#: main.cpp:229
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

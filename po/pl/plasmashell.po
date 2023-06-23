@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 02:07+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2022-12-29 10:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -33,27 +33,27 @@ msgstr "lukasz.wojnilowicz@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Ustawienia wtyczki działań myszy"
 
-#: main.cpp:109
+#: main.cpp:98
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Powłoka Plazmy"
 
-#: main.cpp:121
+#: main.cpp:110
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Włącz debugger QML Javascript"
 
-#: main.cpp:124
+#: main.cpp:113
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Nie uruchamiaj samoczynnie powłoki plazmy po awarii"
 
-#: main.cpp:127
+#: main.cpp:116
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Wymuś wczytywanie danej wtyczki powłoki"
 
-#: main.cpp:132
+#: main.cpp:121
 #, kde-format
 msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
@@ -62,12 +62,12 @@ msgstr ""
 "Wczytaj powłokę plazmy jako samodzielną aplikację, wymaga podania opcji "
 "shell-plugin"
 
-#: main.cpp:134
+#: main.cpp:123
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Zastąp istniejące wystąpienie"
 
-#: main.cpp:137
+#: main.cpp:126
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
@@ -76,22 +76,22 @@ msgstr ""
 "Włącza tryb testowy i określa układ pliku javascript w celu ustawienia "
 "środowiska testowego"
 
-#: main.cpp:138
+#: main.cpp:127
 #, kde-format
 msgid "file"
 msgstr "plik"
 
-#: main.cpp:142
+#: main.cpp:131
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Wymień dostępne możliwości informacji zwrotnej"
 
-#: main.cpp:239
+#: main.cpp:228
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Nie można uruchomić Plazmy"
 
-#: main.cpp:240
+#: main.cpp:229
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

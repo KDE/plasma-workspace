@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2022-09-15 19:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: main.cpp:79 view.cpp:44
+#: main.cpp:76 view.cpp:44
 #, kde-format
 msgid "KRunner"
 msgstr "கேரன்னர்"
 
-#: main.cpp:79
+#: main.cpp:76
 #, kde-format
 msgid "Run Command interface"
 msgstr "கட்டளைகளை இயக்கும் இடைமுகப்பு"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கத்தை கேரன்னரில் பயன்படுத்து"
 
-#: main.cpp:86
+#: main.cpp:83
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "கேரன்னரை பின்னணியில் தொடக்கி, அதைக் காட்டாதே."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ஏற்கனவே உள்ளதற்கு பதிலாக இது இயங்கட்டும்"
 
-#: main.cpp:92
+#: main.cpp:89
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "இயக்க வேண்டிய வினா, -c வழங்கப்படவில்லையெனில் மட்டும் பயன்படுத்தப்படும்"

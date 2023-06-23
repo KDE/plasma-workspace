@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-23 02:18+0000\n"
 "PO-Revision-Date: 2022-09-15 13:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: main.cpp:79 view.cpp:44
+#: main.cpp:76 view.cpp:44
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:79
+#: main.cpp:76
 #, kde-format
 msgid "Run Command interface"
 msgstr "Commando-interface uitvoeren"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "De inhoud van het klembord gebruiken als zoektekst voor KRunner"
 
-#: main.cpp:86
+#: main.cpp:83
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "KRunner in de achtergrond starten, het niet tonen."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Een bestaand exemplaar vervangen"
 
-#: main.cpp:92
+#: main.cpp:89
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "De uit te voeren zoektekst, alleen gebruikt als -c niet is geleverd"
