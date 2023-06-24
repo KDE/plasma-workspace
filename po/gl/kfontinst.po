@@ -719,7 +719,7 @@ msgstr "Desactivar as fontes no grupo…"
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Isto mostra unha vista previa da fonte seleccionada."
+msgstr "Isto amosa unha vista previa da fonte seleccionada."
 
 #: kcmfontinst/KCmFontInst.cpp:249
 #, fuzzy, kde-format
@@ -778,7 +778,7 @@ msgstr ""
 "<h1>Instalador de tipos de letra</h1><p>Este módulo permítelle instalar "
 "tipos de letra TrueType, Type1 e Bitmap.</p><p>Poderá tamén instalar tipos "
 "de letra usando Konqueror: escriba fonts:/ na barra de enderezos de "
-"Konqueror e mostraranse os tipos de letra instalados. Para instalar un tipo "
+"Konqueror e amosaranse os tipos de letra instalados. Para instalar un tipo "
 "de letra, simplemente cópieo no cartafol.</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:382
@@ -794,7 +794,7 @@ msgstr ""
 "<h1>Instalador de tipos de letra</h1><p>Este módulo permítelle instalar "
 "tipos de letra TrueType, Type1 e Bitmap.</p><p>Poderá tamén instalar tipos "
 "de letra usando Konqueror: escriba fonts:/ na barra de enderezos de "
-"Konqueror e mostraranse os tipos de letra instalados. Para instalar un tipo "
+"Konqueror e amosaranse os tipos de letra instalados. Para instalar un tipo "
 "de letra, simplemente cópieo no cartafol axeitado: «%1» para os seus tipos "
 "de letra, ou «%2» para os tipos de letra do sistema (dispoñíbeis para todos "
 "os usuarios).</p>"

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-13 02:42+0000\n"
-"PO-Revision-Date: 2019-10-19 21:46+0200\n"
+"PO-Revision-Date: 2023-06-23 08:35+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Adrián Chaves Fernández"
+msgstr "Adrian Chaves (Gallaecio)"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -78,8 +78,8 @@ msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
 msgstr ""
-"Activa o modo de probas e indica o ficheiro JavaScript de disposición ara "
-"configurar o ambiente de probas."
+"Activa o modo de probas e indica o ficheiro JavaScript de disposición para "
+"configurar o contorno de probas."
 
 #: main.cpp:117
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "ficheiro"
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "Lista todas as opcións dispoñíbeis de comentarios."
 
 #: main.cpp:221
 #, kde-format
@@ -192,18 +192,18 @@ msgstr "Desactivouse o teclado virtual na pantalla"
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Pantalla interna en %1"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%2 de %1 en %3"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Desconectouse a pantalla %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
@@ -218,7 +218,7 @@ msgstr "Agochar o escritorio"
 #: shellcorona.cpp:193
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "Amosar o cambiador de actividades"
 
 #: shellcorona.cpp:203
 #, kde-format
@@ -226,16 +226,14 @@ msgid "Stop Current Activity"
 msgstr "Deter a actividade actual"
 
 #: shellcorona.cpp:210
-#, fuzzy, kde-format
-#| msgid "Stop Current Activity"
+#, kde-format
 msgid "Switch to Previous Activity"
-msgstr "Deter a actividade actual"
+msgstr "Cambiar á actividade anterior"
 
 #: shellcorona.cpp:217
-#, fuzzy, kde-format
-#| msgid "Stop Current Activity"
+#, kde-format
 msgid "Switch to Next Activity"
-msgstr "Deter a actividade actual"
+msgstr "Cambiar á seguinte actividade"
 
 #: shellcorona.cpp:232
 #, kde-format
@@ -245,12 +243,12 @@ msgstr "Activar a entrada %1 do xestor de tarefas"
 #: shellcorona.cpp:258
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr ""
+msgstr "Xestionar os escritorios e os paneis…"
 
 #: shellcorona.cpp:279
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "Mover o foco do teclado entre paneis"
 
 #: shellcorona.cpp:1919
 #, kde-format
@@ -258,8 +256,7 @@ msgid "Add Panel"
 msgstr "Engadir un panel"
 
 #: shellcorona.cpp:1955
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Baleiro %1"
@@ -289,12 +286,12 @@ msgstr "Non amosar de novo"
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "Número de paneis"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
+msgstr "Conta os paneis."
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Non foi posíbel cargar o ficheiro de script: %1"
