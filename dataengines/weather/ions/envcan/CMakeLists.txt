@@ -7,13 +7,13 @@ ecm_qt_declare_logging_category(ion_envcan_SRCS
     DESCRIPTION "DataEngine ion envcan"
     EXPORT PLASMAWORKSPACE
 )
-add_library(ion_envcan MODULE ${ion_envcan_SRCS})
-target_link_libraries (ion_envcan
+add_library(plasma_engine_envcan MODULE ${ion_envcan_SRCS})
+target_link_libraries (plasma_engine_envcan
     weather_ion
     KF6::KIOCore
     KF6::UnitConversion
     KF6::I18n
 )
 
-install (TARGETS ion_envcan DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
+install (TARGETS plasma_engine_envcan DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

@@ -7,13 +7,13 @@ ecm_qt_declare_logging_category(ion_noaa_SRCS
     DESCRIPTION "DataEngine ion noaa"
     EXPORT PLASMAWORKSPACE
 )
-add_library(ion_noaa MODULE ${ion_noaa_SRCS})
-target_link_libraries (ion_noaa
+add_library(plasma_engine_noaa MODULE ${ion_noaa_SRCS})
+target_link_libraries (plasma_engine_noaa
     weather_ion
     KF6::KIOCore
     KF6::UnitConversion
     KF6::I18n
 )
 
-install (TARGETS ion_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
+install (TARGETS plasma_engine_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

@@ -7,13 +7,13 @@ ecm_qt_declare_logging_category(ion_wettercom_SRCS
     DESCRIPTION "DataEngine ion wettercom"
     EXPORT PLASMAWORKSPACE
 )
-add_library(ion_wettercom MODULE ${ion_wettercom_SRCS})
-target_link_libraries(ion_wettercom
+add_library(plasma_engine_wettercom MODULE ${ion_wettercom_SRCS})
+target_link_libraries(plasma_engine_wettercom
     weather_ion
     KF6::KIOCore
     KF6::UnitConversion
     KF6::I18n
 )
 
-install(TARGETS ion_wettercom DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
+install(TARGETS plasma_engine_wettercom DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

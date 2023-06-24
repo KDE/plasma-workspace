@@ -45,7 +45,6 @@
         "Description[zh_CN]": "加拿大环境部提供的 XML 数据",
         "Description[zh_TW]": "來自 Environment Canada 的 XML 資料",
         "Icon": "noneyet",
-        "Id": "envcan",
         "Name": "Environment Canada",
         "Name[ar]": "بيئة كندا",
         "Name[az]": "Environment Canada",

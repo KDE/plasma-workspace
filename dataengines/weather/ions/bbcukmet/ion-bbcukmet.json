@@ -44,7 +44,6 @@
         "Description[zh_CN]": "BBC 提供的 XML 数据",
         "Description[zh_TW]": "來自英國廣播公司 (BBC) 的 XML 資料",
         "Icon": "noneyet",
-        "Id": "bbcukmet",
         "Name": "BBC Weather",
         "Name[ar]": "الطقس بي بي سي",
         "Name[ast]": "BBC Weather",

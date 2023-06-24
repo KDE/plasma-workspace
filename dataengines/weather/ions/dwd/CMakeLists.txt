@@ -7,13 +7,13 @@ ecm_qt_declare_logging_category(ion_dwd_SRCS
     DESCRIPTION "DataEngine ion dwd"
     EXPORT PLASMAWORKSPACE
 )
-add_library(ion_dwd MODULE ${ion_dwd_SRCS})
-target_link_libraries(ion_dwd
+add_library(plasma_engine_dwd MODULE ${ion_dwd_SRCS})
+target_link_libraries(plasma_engine_dwd
     weather_ion
     KF6::KIOCore
     KF6::UnitConversion
     KF6::I18n
 )
 
-install(TARGETS ion_dwd DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
+install(TARGETS plasma_engine_dwd DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

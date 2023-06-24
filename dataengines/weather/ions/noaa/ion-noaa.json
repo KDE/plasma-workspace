@@ -44,7 +44,6 @@
         "Description[zh_CN]": "NOAA 国家天气服务提供的 XML 数据",
         "Description[zh_TW]": "來自 NOAA 國家天氣服務的 XML 資料",
         "Icon": "noneyet",
-        "Id": "noaa",
         "Name": "NOAA's National Weather Service",
         "Name[ar]": "خدمة الطقس الوطنية NOAA ",
         "Name[az]": "ABŞ Milli Hava Xidməti, NOAA",

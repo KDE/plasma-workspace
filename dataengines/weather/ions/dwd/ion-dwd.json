@@ -44,7 +44,6 @@
         "Description[zh_CN]": "德国天气服务提供的天气预报",
         "Description[zh_TW]": "德國氣象局的氣象預報",
         "Icon": "noneyet",
-        "Id": "dwd",
         "Name": "German Weather Service",
         "Name[ar]": "خدمة الأرصاد الجوية الألمانية",
         "Name[az]": "Almaniya Hava Xidməti",

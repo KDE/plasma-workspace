@@ -46,7 +46,9 @@ void WeatherEngine::updateIonList()
     removeAllData(QStringLiteral("ions"));
     const auto infos = Plasma5Support::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
     for (const KPluginMetaData &info : infos) {
-        const QString data = info.name() + QLatin1Char('|') + info.pluginId();
+        // We want to provide the short ion name, but pluginId is the full plugin library name
+        const QString ionName = info.pluginId().split(QLatin1Char('_')).last();
+        const QString data = QStringLiteral("%1|%2").arg(info.name()).arg(ionName);
         setData(QStringLiteral("ions"), info.pluginId(), data);
     }
 }
@@ -202,7 +204,7 @@ IonInterface *WeatherEngine::ionForSource(const QString &source, QString *ionNam
     IonInterface *result = qobject_cast<IonInterface *>(dataEngine(name));
 
     if (result && ionName) {
-        *ionName = name;
+        *ionName = name.split(QLatin1Char('_')).last();
     }
 
     return result;
