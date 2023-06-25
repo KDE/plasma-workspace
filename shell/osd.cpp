@@ -56,8 +56,12 @@ void Osd::volumeChanged(int percent, int maximumPercent)
         icon = QStringLiteral("audio-volume-low");
     } else if (percent <= 75) {
         icon = QStringLiteral("audio-volume-medium");
-    } else {
+    } else if (percent <= 100) {
         icon = QStringLiteral("audio-volume-high");
+    } else if (percent <= 125) {
+        icon = QStringLiteral("audio-volume-high-warning");
+    } else {
+        icon = QStringLiteral("audio-volume-high-danger");
     }
 
     showProgress(icon, percent, maximumPercent);
