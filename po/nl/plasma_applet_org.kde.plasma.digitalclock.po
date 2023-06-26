@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:08+0000\n"
-"PO-Revision-Date: 2023-01-26 14:34+0100\n"
+"PO-Revision-Date: 2023-06-25 15:12+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Tijdzone tonen:"
 #: package/contents/ui/configAppearance.qml:91
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Alleen wanneer het verschilt va de lokale tijdzone"
+msgstr "Alleen wanneer het verschilt van de lokale tijdzone"
 
 #: package/contents/ui/configAppearance.qml:105
 #, kde-format
