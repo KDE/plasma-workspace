@@ -2,7 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"systemmonitor\")
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
-kcoreaddons_add_plugin(ksysguard SOURCES kdedksysguard.cpp kdedksysguard.h INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(ksysguard SOURCES kdedksysguard.cpp kdedksysguard.h INSTALL_NAMESPACE "kf6/kded")
 
 target_link_libraries(ksysguard
     KF6::CoreAddons

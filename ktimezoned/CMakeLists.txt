@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(ktimezoned SOURCES ktimezoned.cpp ktimezoned.h INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(ktimezoned SOURCES ktimezoned.cpp ktimezoned.h INSTALL_NAMESPACE "kf6/kded")
 
 #qt_add_dbus_adaptor(kded_ktimezoned_SRCS org.kde.KTimeZoned ktimezonedbus.h DBusHandler)
 

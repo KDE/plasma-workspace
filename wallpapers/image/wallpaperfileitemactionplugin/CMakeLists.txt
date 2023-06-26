@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 kcoreaddons_add_plugin(wallpaperfileitemaction
     SOURCES wallpaperfileitemaction.cpp wallpaperfileitemaction.h
-    INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kfileitemaction")
+    INSTALL_NAMESPACE "kf6/kfileitemaction")
 
 target_link_libraries(wallpaperfileitemaction
     KF6::KIOWidgets

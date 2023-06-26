@@ -1,7 +1,7 @@
 ########### next target ###############
 add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver5\")
 
-kcoreaddons_add_plugin(soliduiserver SOURCES soliduiserver.cpp soliduiserver.h INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(soliduiserver SOURCES soliduiserver.cpp soliduiserver.h INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(soliduiserver
     KF6::Solid
     KF6::DBusAddons

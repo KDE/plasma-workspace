@@ -16,8 +16,4 @@ ecm_add_tests(
 )
 
 # Require QX11Info to set window state
-if(QT_MAJOR_VERSION STREQUAL "6")
-    ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::GuiPrivate XCB::XCB KF6::Activities KF6::Service KF6::IconThemes KF6::WindowSystem)
-else()
-    ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::X11Extras XCB::XCB KF6::Activities KF6::IconThemes KF6::Service KF6::WindowSystem)
-endif()
+ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::GuiPrivate XCB::XCB KF6::Activities KF6::Service KF6::IconThemes KF6::WindowSystem)

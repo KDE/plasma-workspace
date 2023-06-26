@@ -57,9 +57,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             LayerShellQt::Interface
                             SharedClientTest
                                      )
-               if (QT_MAJOR_VERSION STREQUAL "6")
-                    target_link_libraries(${_testname} KF6::ConfigQml)
-               endif()
+               target_link_libraries(${_testname} KF6::ConfigQml)
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)
                   target_link_libraries(${_testname} Qt::GuiPrivate)

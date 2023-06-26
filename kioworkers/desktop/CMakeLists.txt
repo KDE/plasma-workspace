@@ -12,13 +12,13 @@ qt_add_dbus_interface( kio_desktop_SRCS ${CMAKE_CURRENT_BINARY_DIR}/desktopnotif
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-kcoreaddons_add_plugin(kio_desktop SOURCES ${kio_desktop_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kio")
+kcoreaddons_add_plugin(kio_desktop SOURCES ${kio_desktop_SRCS} INSTALL_NAMESPACE "kf6/kio")
 target_link_libraries(kio_desktop Qt::DBus Qt::Gui KF6::KIOCore KF6::I18n KF6::ConfigCore Qt::Network)
 set_target_properties(kio_desktop PROPERTIES OUTPUT_NAME "desktop")
 
 ########### next target ###############
 
-kcoreaddons_add_plugin(desktopnotifier SOURCES desktopnotifier.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(desktopnotifier SOURCES desktopnotifier.cpp INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(desktopnotifier KF6::ConfigCore KF6::KIOCore KF6::DBusAddons)
 
 ########### install files ###############
