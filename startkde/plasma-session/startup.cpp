@@ -19,7 +19,6 @@
 #include <unistd.h>
 
 #include "kcminit_interface.h"
-#include "kded_interface.h"
 #include "ksmserver_interface.h"
 
 #include <KCompositeJob>
@@ -117,7 +116,6 @@ public:
     {
         qCDebug(PLASMA_SESSION) << "Phase 2";
         addSubjob(new AutoStartAppsJob(m_autostart, 2));
-        addSubjob(new KDEDInitJob());
     }
 };
 
@@ -257,23 +255,6 @@ void KCMInitJob::start()
     kcminit.setTimeout(10 * 1000);
 
     QDBusPendingReply<void> pending = kcminit.runPhase1();
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
-        emitResult();
-    });
-    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
-}
-
-KDEDInitJob::KDEDInitJob()
-{
-}
-
-void KDEDInitJob::start()
-{
-    qCDebug(PLASMA_SESSION());
-    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
-    auto pending = kded.loadSecondPhase();
-
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
         emitResult();

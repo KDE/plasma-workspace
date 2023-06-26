@@ -19,7 +19,6 @@ set(kcminit_adaptor ${plasma-workspace_SOURCE_DIR}/startkde/kcminit/main.h)
 set(kcminit_xml ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KCMinit.xml)
 qt_generate_dbus_interface( ${kcminit_adaptor} ${kcminit_xml} )
 qt_add_dbus_interface( plasma_session_SRCS ${kcminit_xml} kcminit_interface )
-qt_add_dbus_interface( plasma_session_SRCS ${KDED_DBUS_INTERFACE} kded_interface )
 
 qt_add_dbus_interface( plasma_session_SRCS ../../ksmserver/org.kde.KSMServerInterface.xml ksmserver_interface )
 
