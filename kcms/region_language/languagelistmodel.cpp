@@ -2,6 +2,8 @@
     languagelistmodel.h
     SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
     SPDX-FileCopyrightText: 2019 Kevin Ottens <kevin.ottens@enioka.com>
+    SPDX-FileCopyrightText: 2023 Serenity Cybersecurity, LLC <license@futurecrew.ru>
+                                 Author: Gleb Popov <arrowd@FreeBSD.org>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
@@ -384,10 +386,14 @@ void SelectedLanguageModel::saveLanguages()
                 Q_EMIT unsupportedLanguageChanged();
             }
 
+#ifdef GLIBC_LOCALE
             auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
             if (glibcLang.has_value()) {
                 m_settings->setLang(glibcLang.value());
             }
+#else
+            m_settings->setLang(m_selectedLanguages.front());
+#endif
         }
         QString languages;
         for (auto i = m_selectedLanguages.cbegin(); i != m_selectedLanguages.cend(); i++) {

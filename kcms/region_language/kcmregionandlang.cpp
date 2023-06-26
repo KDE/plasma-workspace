@@ -2,10 +2,11 @@
     kcmregionandlang.cpp
     SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
+    SPDX-FileCopyrightText: 2023 Serenity Cybersecurity, LLC <license@futurecrew.ru>
+                                 Author: Gleb Popov <arrowd@FreeBSD.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "config-workspace.h"
 
 #include "kcmregionandlang.h"
 
@@ -60,6 +61,7 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     qRegisterMetaType<KCM_RegionAndLang::SettingType>();
     qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject, "kcmregionandlang", 1, 0, "SettingType", "Error: SettingType is an enum");
 
+#ifdef GLIBC_LOCALE_GENERATED
     // fedora pre generate locales, fetch available locales from localectl. /usr/share/i18n/locales is empty in fedora
     QDir glibcLocaleDir(localeFileDirPath());
     if (glibcLocaleDir.isEmpty()) {
@@ -80,6 +82,9 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     } else {
         m_enabled = true;
     }
+#else
+    m_enabled = true;
+#endif
 }
 
 QString KCMRegionAndLang::failedFindLocalesMessage()
@@ -124,6 +129,7 @@ void KCMRegionAndLang::save()
     if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
         locales.append(settings()->phoneNumbers());
     }
+#ifdef GLIBC_LOCALE
     if (!settings()->language().isEmpty()) {
         QStringList languages = settings()->language().split(QLatin1Char(':'));
         for (const QString &lang : languages) {
@@ -133,6 +139,7 @@ void KCMRegionAndLang::save()
             }
         }
     }
+#endif
 
     auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
                                                       QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
@@ -214,7 +221,7 @@ bool KCMRegionAndLang::isGlibc()
 {
 #ifdef OS_UBUNTU
     return true;
-#elif GLIBC_LOCALE
+#elif defined(GLIBC_LOCALE)
     return true;
 #else
     return false;
@@ -226,6 +233,7 @@ bool KCMRegionAndLang::enabled() const
     return m_enabled;
 }
 
+#ifdef GLIBC_LOCALE
 std::optional<QString> KCMRegionAndLang::toGlibcLocale(const QString &lang)
 {
     static std::unordered_map<QString, QString> map = constructGlibcLocaleMap();
@@ -235,6 +243,7 @@ std::optional<QString> KCMRegionAndLang::toGlibcLocale(const QString &lang)
     }
     return std::nullopt;
 }
+#endif
 
 QString KCMRegionAndLang::toUTF8Locale(const QString &locale)
 {
@@ -252,6 +261,7 @@ QString KCMRegionAndLang::toUTF8Locale(const QString &locale)
     return locale + QLatin1String(".UTF-8");
 }
 
+#ifdef GLIBC_LOCALE
 std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 {
     std::unordered_map<QString, QString> localeMap;
@@ -338,5 +348,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     }
     return localeMap;
 }
+#endif
+
 #include "kcmregionandlang.moc"
 #include "moc_kcmregionandlang.cpp"

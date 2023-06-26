@@ -2,6 +2,8 @@
     kcmregionandlang.h
     SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
+    SPDX-FileCopyrightText: 2023 Serenity Cybersecurity, LLC <license@futurecrew.ru>
+                                 Author: Gleb Popov <arrowd@FreeBSD.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -11,6 +13,7 @@
 #include <optional>
 #include <unordered_map>
 
+#include "config-workspace.h"
 #include "settingtype.h"
 
 #include <KConfigGroup>
@@ -36,7 +39,9 @@ public:
     OptionsModel *optionsModel() const;
     bool enabled() const;
     static bool isGlibc();
+#ifdef GLIBC_LOCALE
     std::optional<QString> toGlibcLocale(const QString &lang);
+#endif
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting);
     Q_INVOKABLE void reboot();
 Q_SIGNALS:
@@ -53,7 +58,9 @@ private Q_SLOTS:
     void saveToConfigFile();
 
 private:
+#ifdef GLIBC_LOCALE
     std::unordered_map<QString, QString> constructGlibcLocaleMap();
+#endif
     static QString failedFindLocalesMessage();
     static QString localeFileDirPath();
     static QString toUTF8Locale(const QString &locale);

@@ -209,7 +209,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     #
     # For Glibc systems that come with pre-generated locales, such as Fedora and openSUSE
     # a note to let user install fonts themselves if required is displayed
-    # You should enable GLIBC_LOCALE_GENERATED option
+    # You should enable GLIBC_LOCALE_PREGENERATED option
     #
     # For non-glibc systems such as VoidLinux and *BSD
     # A warning of configure locale manually is displayed (although the relevant ENVs are set by Plasma)
@@ -250,18 +250,18 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         message(FATAL_ERROR "UBUNTU_PACKAGEKIT and GLIBC_LOCALE_GEN both enabled, only UBUNTU_PACKEGKIT will be used")
     endif()
     if(GLIBC_LOCALE_GEN)
-        set(GLIBC_LOCALE TRUE)
+        set(GLIBC_LOCALE_AUTO TRUE)
     endif()
     if(UBUNTU_PACKAGEKIT OR GLIBC_LOCALE_GEN)
         set(REGION_LANG_GENERATE_LOCALE_HELPER TRUE)
     endif()
 
-    option(GLIBC_LOCALE_GENERATED "Systems that don't require locale generation. Such as openSUSE or Fedora" OFF)
-    if(GLIBC_LOCALE_GENERATED)
-        set(LOCALE_GENERATED TRUE)
+    option(GLIBC_LOCALE_PREGENERATED "Systems that don't require locale generation. Such as openSUSE or Fedora" OFF)
+    if(GLIBC_LOCALE_PREGENERATED)
+        set(GLIBC_LOCALE_GENERATED TRUE)
     endif()
-    if(REGION_LANG_GENERATE_LOCALE_HELPER AND GLIBC_LOCALE_GENERATED)
-        message(FATAL_ERROR "(UBUNTU_PACKAGEKIT || GLIBC_LOCALE_GEN) and GLIBC_LOCALE_GENERATED both enabled")
+    if(REGION_LANG_GENERATE_LOCALE_HELPER AND GLIBC_LOCALE_PREGENERATED)
+        message(FATAL_ERROR "(UBUNTU_PACKAGEKIT || GLIBC_LOCALE_GEN) and GLIBC_LOCALE_PREGENERATED both enabled")
     endif()
 
     ################## Find libraries ###################

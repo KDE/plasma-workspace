@@ -12,5 +12,9 @@
 #define WORKSPACE_VERSION_STRING "${PROJECT_VERSION}"
 
 #cmakedefine OS_UBUNTU 1
-#cmakedefine GLIBC_LOCALE 1
-#cmakedefine LOCALE_GENERATED 1
+#cmakedefine01 GLIBC_LOCALE_AUTO
+#cmakedefine01 GLIBC_LOCALE_GENERATED
+
+#if defined(GLIBC_LOCALE_AUTO) || defined(GLIBC_LOCALE_GENERATED)
+#define GLIBC_LOCALE
+#endif
