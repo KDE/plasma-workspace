@@ -26,7 +26,7 @@ msgid ""
 "Finds local directories and files, network locations and Internet sites with "
 "paths matching :q:."
 msgstr ""
-"Atopa directorios e ficheiros locais, lugares na rede e sitios de Internet "
+"Atopa cartafoles e ficheiros locais, lugares na rede e sitios de Internet "
 "que teñan rutas que casen con :q:."
 
 #: locationrunner.cpp:59
