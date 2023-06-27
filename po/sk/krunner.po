@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-23 02:18+0000\n"
+"POT-Creation-Date: 2023-06-27 02:17+0000\n"
 "PO-Revision-Date: 2023-04-13 18:12+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com,galko.ferdinand@gmail.com"
 
-#: main.cpp:76 view.cpp:44
+#: main.cpp:76 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
@@ -57,59 +57,59 @@ msgstr "Nahradiť existujúcu inštanciu"
 msgid "The query to run, only used if -c is not provided"
 msgstr "Dotaz na spustenie sa použije, iba ak nie je zadaný -c"
 
-#: qml/RunCommand.qml:78
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "Nastaviť"
 
-#: qml/RunCommand.qml:79
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Nastaviť správanie KRunner"
 
-#: qml/RunCommand.qml:82
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Nastaviť KRunner…"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:109
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Hľadať '%1'…"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Hľadať..."
 
-#: qml/RunCommand.qml:231 qml/RunCommand.qml:232 qml/RunCommand.qml:234
+#: qml/RunCommand.qml:281 qml/RunCommand.qml:282 qml/RunCommand.qml:284
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Zobraziť Pomocníka pre používanie"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:292
 #, kde-format
 msgid "Pin"
 msgstr "Pripnúť"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:293
 #, kde-format
 msgid "Pin Search"
 msgstr "Pripnúť hľadanie"
 
-#: qml/RunCommand.qml:245
+#: qml/RunCommand.qml:295
 #, kde-format
 msgid "Keep Open"
 msgstr "Ponechať otvorené"
 
-#: qml/RunCommand.qml:317 qml/RunCommand.qml:322
+#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nedávne dopyty"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:370
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"

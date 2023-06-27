@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-23 02:18+0000\n"
+"POT-Creation-Date: 2023-06-27 02:17+0000\n"
 "PO-Revision-Date: 2023-02-08 13:48\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
-#: main.cpp:76 view.cpp:44
+#: main.cpp:76 view.cpp:47
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
@@ -63,59 +63,59 @@ msgstr ""
 "Запыт для запуску, выкарыстоўваецца толькі ў тым выпадку, калі не пададзена "
 "\"-c\""
 
-#: qml/RunCommand.qml:78
+#: qml/RunCommand.qml:93
 #, kde-format
 msgid "Configure"
 msgstr "Наладжванне"
 
-#: qml/RunCommand.qml:79
+#: qml/RunCommand.qml:94
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Наладжванне паводзін KRunner"
 
-#: qml/RunCommand.qml:82
+#: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Наладжванне KRunner…"
 
-#: qml/RunCommand.qml:94
+#: qml/RunCommand.qml:109
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "Пошук \"%1\"…"
 
-#: qml/RunCommand.qml:95
+#: qml/RunCommand.qml:110
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Пошук…"
 
-#: qml/RunCommand.qml:231 qml/RunCommand.qml:232 qml/RunCommand.qml:234
+#: qml/RunCommand.qml:281 qml/RunCommand.qml:282 qml/RunCommand.qml:284
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Паказаць даведку па выкарыстанні"
 
-#: qml/RunCommand.qml:242
+#: qml/RunCommand.qml:292
 #, kde-format
 msgid "Pin"
 msgstr "Замацаваць"
 
-#: qml/RunCommand.qml:243
+#: qml/RunCommand.qml:293
 #, kde-format
 msgid "Pin Search"
 msgstr "Замацаваць пошук"
 
-#: qml/RunCommand.qml:245
+#: qml/RunCommand.qml:295
 #, kde-format
 msgid "Keep Open"
 msgstr "Не закрываць"
 
-#: qml/RunCommand.qml:317 qml/RunCommand.qml:322
+#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
 #, kde-format
 msgid "Recent Queries"
 msgstr "Нядаўнія запыты"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:370
 #, kde-format
 msgid "Remove"
 msgstr "Выдаліць"
