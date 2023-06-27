@@ -65,7 +65,7 @@ void FreeSpaceNotifierModule::showConfiguration()
         if (!FreeSpaceNotifierSettings::enableNotification()) {
             // The idea here is to disable ourselves by telling kded to stop autostarting us, and
             // to kill the current running instance.
-            org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
+            org::kde::kded6 kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
             kded.setModuleAutoloading(QStringLiteral("freespacenotifier"), false);
             kded.unloadModule(QStringLiteral("freespacenotifier"));
         }

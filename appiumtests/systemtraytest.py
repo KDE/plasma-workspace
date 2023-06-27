@@ -83,16 +83,16 @@ class SystemTrayTests(unittest.TestCase):
         cls.driver.implicitly_wait = 10
 
     def setUp(self) -> None:
-        self.kded = Popen(['kded5'])
+        self.kded = Popen(['kded6'])
         for _ in range(5):
             proc = Popen(['dbus-send', '--print-reply=literal', '--dest=org.freedesktop.DBus',
-                          '/org/freedesktop/DBus', 'org.freedesktop.DBus.NameHasOwner', 'string:org.kde.kded5'], stdout=PIPE)
+                          '/org/freedesktop/DBus', 'org.freedesktop.DBus.NameHasOwner', 'string:org.kde.kded6'], stdout=PIPE)
             out, err = proc.communicate()
             if 'boolean true' in str(out):
                 break
             print(f"waiting for kded to appear on the dbus session")
             time.sleep(1)
-        Popen(['dbus-send', '--print-reply', '--dest=org.kde.kded5', '/kded', 'org.kde.kded5.loadModule', 'string:statusnotifierwatcher'])
+        Popen(['dbus-send', '--print-reply', '--dest=org.kde.kded6', '/kded', 'org.kde.kded6.loadModule', 'string:statusnotifierwatcher'])
 
     def tearDown(self) -> None:
         """

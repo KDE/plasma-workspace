@@ -222,7 +222,7 @@ bool KCMStyle::gtkConfigKdedModuleLoaded() const
 
 void KCMStyle::checkGtkConfigKdedModuleLoaded()
 {
-    org::kde::kded5 kdedInterface(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
+    org::kde::kded6 kdedInterface(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto call = kdedInterface.loadedModules();
     auto *watcher = new QDBusPendingCallWatcher(call, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {

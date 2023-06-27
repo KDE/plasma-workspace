@@ -52,9 +52,9 @@ void LocationUpdater::sendLocation(double latitude, double longitude)
 void LocationUpdater::disableSelf()
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    QDBusMessage unloadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+    QDBusMessage unloadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
                                                             QStringLiteral("/kded"),
-                                                            QStringLiteral("org.kde.kded5"),
+                                                            QStringLiteral("org.kde.kded6"),
                                                             QStringLiteral("unloadModule"));
     unloadMsg.setArguments({QVariant(QStringLiteral("colorcorrectlocationupdater"))});
     dbus.call(unloadMsg, QDBus::NoBlock);
