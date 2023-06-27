@@ -83,12 +83,12 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return match.isMultiLine();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
-        const QList<QAction *> actions = runnerManager()->actionsForMatch(match);
-        for (QAction *action : actions) {
-            QVariantMap item = Kicker::createActionItem(action->text(), //
-                                                        action->icon().name(),
+        const auto actions = match.actions();
+        for (auto action : actions) {
+            QVariantMap item = Kicker::createActionItem(action.text(), //
+                                                        action.iconSource(),
                                                         QStringLiteral("runnerAction"),
-                                                        QVariant::fromValue<QObject *>(action));
+                                                        QVariant::fromValue(action));
 
             actionList << item;
         }
@@ -187,18 +187,10 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     // BUG 442970: Skip creating KService if there is no actionId, or the action is from a runner.
     if (actionId.isEmpty() || actionId == QLatin1String("runnerAction")) {
         if (!actionId.isEmpty()) {
-            QObject *obj = argument.value<QObject *>();
-
-            if (!obj) {
-                return false;
+            if (auto action = argument.value<KRunner::Action>()) {
+                return runnerManager()->run(match, action);
             }
-
-            QAction *action = qobject_cast<QAction *>(obj);
-
-            if (!action) {
-                return false;
-            }
-            return runnerManager()->run(match, action);
+            return false;
         }
 
         return runnerManager()->run(match);
