@@ -72,7 +72,7 @@ ColumnLayout {
                 readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
                 readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
 
-                bold: isCurrent
+                font.bold: isCurrent
                 fadeContent: isIdenticalToLocal
 
                 // Don't want a highlight effect here because it doesn't look good
