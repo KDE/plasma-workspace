@@ -64,7 +64,7 @@ KCM.ScrollViewKCM {
                         listItem: listItem
                         listView: languageListView
                         visible: languageListView.count > 1
-                        onMoveRequested: {
+                        onMoveRequested: (oldIndex, newIndex) => {
                             languageListModel.selectedLanguageModel.move(oldIndex, newIndex);
                         }
                     }
