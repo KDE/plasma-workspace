@@ -233,6 +233,45 @@ void KCMRegionAndLang::defaults()
     Q_EMIT defaultsClicked();
 }
 
+void KCMRegionAndLang::applyToSystem()
+{
+    QStringList args;
+    if (!settings()->isDefaultSetting(SettingType::Lang)) {
+        args.append(QStringLiteral("LANG=%1").arg(settings()->lang()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::Numeric)) {
+        args.append(QStringLiteral("LC_NUMERIC=%1").arg(settings()->numeric()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::Time)) {
+        args.append(QStringLiteral("LC_TIME=%1").arg(settings()->time()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::Measurement)) {
+        args.append(QStringLiteral("LC_MEASUREMENT=%1").arg(settings()->measurement()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::Currency)) {
+        args.append(QStringLiteral("LC_MONETARY=%1").arg(settings()->monetary()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
+        args.append(QStringLiteral("LC_PAPER=%1").arg(settings()->paperSize()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::Address)) {
+        args.append(QStringLiteral("LC_ADDRESS=%1").arg(settings()->address()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
+        args.append(QStringLiteral("LC_NAME=%1").arg(settings()->nameStyle()));
+    }
+    if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
+        args.append(QStringLiteral("LC_TELEPHONE=%1").arg(settings()->phoneNumbers()));
+    }
+
+    auto setLocaleCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.locale1"),
+                                                        QStringLiteral("/org/freedesktop/locale1"),
+                                                        QStringLiteral("org.freedesktop.locale1"),
+                                                        QStringLiteral("SetLocale"));
+    setLocaleCall.setArguments({args, true});
+    QDBusConnection::systemBus().asyncCall(setLocaleCall);
+}
+
 void KCMRegionAndLang::saveToConfigFile()
 {
     KQuickManagedConfigModule::save();

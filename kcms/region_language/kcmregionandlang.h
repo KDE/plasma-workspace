@@ -47,6 +47,7 @@ public:
 #endif
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting) const;
     Q_INVOKABLE void reboot();
+    Q_INVOKABLE void applyToSystem();
 
 Q_SIGNALS:
     void saveClicked();
