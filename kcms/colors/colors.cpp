@@ -44,7 +44,41 @@
 
 #include "../kcms-common_p.h"
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
+
+#define PROPERTY(name)                                                                                                                                         \
+    Q_PROPERTY(QColor name READ name CONSTANT)                                                                                                                 \
+    QColor name() const                                                                                                                                        \
+    {                                                                                                                                                          \
+        return p.name().color();                                                                                                                               \
+    }
+
+struct QPaletteExtension {
+    Q_GADGET
+    QPalette p;
+    PROPERTY(windowText)
+    PROPERTY(button)
+    PROPERTY(light)
+    PROPERTY(dark)
+    PROPERTY(mid)
+    PROPERTY(text)
+    PROPERTY(base)
+    PROPERTY(alternateBase)
+    PROPERTY(toolTipBase)
+    PROPERTY(toolTipText)
+    PROPERTY(window)
+    PROPERTY(midlight)
+    PROPERTY(brightText)
+    PROPERTY(buttonText)
+    PROPERTY(shadow)
+    PROPERTY(highlight)
+    PROPERTY(highlightedText)
+    PROPERTY(link)
+    PROPERTY(linkVisited)
+    PROPERTY(placeholderText)
+};
 
 KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
@@ -59,6 +93,7 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<ColorsModel>(uri, 1);
     qmlRegisterAnonymousType<FilterProxyModel>(uri, 1);
     qmlRegisterAnonymousType<ColorsSettings>(uri, 1);
+    qmlRegisterExtendedUncreatableType<QPalette, QPaletteExtension>(uri, 1, 0, "paletteextension", u"palettes are read only"_qs);
 
     connect(m_model, &ColorsModel::pendingDeletionsChanged, this, &KCMColors::settingsChanged);
 
