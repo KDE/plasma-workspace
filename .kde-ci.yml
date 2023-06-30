@@ -62,6 +62,7 @@ Dependencies:
     'plasma/plasma5support': '@same'
     'libraries/plasma-wayland-protocols': '@latest-kf6'
     'libraries/kuserfeedback': '@latest-kf6'
+    'libraries/phonon': '@latest-kf6'
     'graphics/libkexiv2': '@latest-kf6'
     'third-party/appstream': '@latest'
     'third-party/wayland': '@latest'
