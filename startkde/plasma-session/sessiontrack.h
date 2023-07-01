@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <vector>
+
 #include <QEventLoopLocker>
 #include <QProcess>
 
@@ -13,10 +15,10 @@ class SessionTrack : public QObject
 {
     Q_OBJECT
 public:
-    SessionTrack(const QVector<QProcess *> &processes);
+    SessionTrack(std::vector<QProcess *> &&processes);
     ~SessionTrack() override;
 
 private:
-    QVector<QProcess *> m_processes;
+    std::vector<QProcess *> m_processes;
     QEventLoopLocker m_lock;
 };

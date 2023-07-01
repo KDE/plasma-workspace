@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include <vector>
+
 #include <KJob>
 #include <QEventLoopLocker>
 #include <QObject>
@@ -39,7 +41,7 @@ public Q_SLOTS:
 private:
     void autoStart(int phase);
 
-    QVector<QProcess *> m_processes;
+    std::vector<QProcess *> m_processes;
     std::unique_ptr<QEventLoopLocker> m_lock;
     static Startup *s_self;
 };

@@ -222,7 +222,7 @@ void Startup::finishStartup()
     upAndRunning(QStringLiteral("ready"));
 
     playStartupSound();
-    new SessionTrack(m_processes);
+    new SessionTrack(std::move(m_processes));
     deleteLater();
 }
 
@@ -237,7 +237,7 @@ bool Startup::startDetached(QProcess *process)
     process->start();
     const bool ret = process->waitForStarted();
     if (ret) {
-        m_processes << process;
+        m_processes.emplace_back(process);
     }
     return ret;
 }
