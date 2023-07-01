@@ -102,7 +102,7 @@ KCM.GridViewKCM {
                 icon.name: "view-preview"
                 tooltip: i18n("Preview Theme")
                 onTriggered: {
-                    previewWindow.url = model.fullScreenPreview
+                    previewWindow.url = "file:/" + model.fullScreenPreview
                     previewWindow.showFullScreen()
                 }
             },
