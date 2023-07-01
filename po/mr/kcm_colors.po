@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-01 02:07+0000\n"
 "PO-Revision-Date: 2013-02-26 13:17+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -33,34 +33,34 @@ msgstr ""
 "sandeep.shedmake@gmail.com, \n"
 "chetan@kompkin.com"
 
-#: colors.cpp:235
+#: colors.cpp:270
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: colors.cpp:248
+#: colors.cpp:283
 #, fuzzy, kde-format
 #| msgid "&Enter a name for the color scheme:"
 msgid "Unable to download the color scheme: %1"
 msgstr "रंग सुत्रयोजना करिता नाव दाखल करा (&E):"
 
-#: colors.cpp:266
+#: colors.cpp:301
 #, fuzzy, kde-format
 #| msgid "Import a color scheme from a file"
 msgid "This file is not a color scheme file."
 msgstr "फाईल पासून रंग सुत्रयोजना आयात करा"
 
-#: colors.cpp:285
+#: colors.cpp:320
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:292
+#: colors.cpp:327
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:309
+#: colors.cpp:344
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr ""

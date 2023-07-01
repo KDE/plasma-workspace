@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-01 02:07+0000\n"
 "PO-Revision-Date: 2023-03-04 18:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -43,32 +43,32 @@ msgstr ""
 "kim.enkovaara@iki.fi,eleknader@phnet.fi,ilpo@iki.fi, mikko.piippo@helsinki."
 "fi,teemu.rytilahti@d5k.net,karvonen.jorma@gmail.com, translator@legisign.org"
 
-#: colors.cpp:235
+#: colors.cpp:270
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Väliaikaistiedostoa ei voida luoda."
 
-#: colors.cpp:248
+#: colors.cpp:283
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Ei voida ladata väriteemaa: %1"
 
-#: colors.cpp:266
+#: colors.cpp:301
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Tämä ei ole väriteematiedosto."
 
-#: colors.cpp:285
+#: colors.cpp:320
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "”color-scheme”-kansion luominen epäonnistui."
 
-#: colors.cpp:292
+#: colors.cpp:327
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Väriteeman kopioiminen ”color-scheme”-kansioon epäonnistui."
 
-#: colors.cpp:309
+#: colors.cpp:344
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Väriteeman asennus onnistui."

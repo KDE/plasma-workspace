@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-01 02:07+0000\n"
 "PO-Revision-Date: 2023-02-07 23:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -38,32 +38,32 @@ msgstr ""
 "shyue@sonoma.com.tw, pesder.liao@msa.hinet.net, s8321414@gmail.com, "
 "pan93412@gmail.com, mail@kisaragi-hiu.com"
 
-#: colors.cpp:235
+#: colors.cpp:270
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "無法建立暫存檔。"
 
-#: colors.cpp:248
+#: colors.cpp:283
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "無法下載配色：%1"
 
-#: colors.cpp:266
+#: colors.cpp:301
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "此檔案不是配色檔。"
 
-#: colors.cpp:285
+#: colors.cpp:320
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' 資料夾建立失敗。"
 
-#: colors.cpp:292
+#: colors.cpp:327
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "複製配色到 'color-scheme' 資料夾失敗。"
 
-#: colors.cpp:309
+#: colors.cpp:344
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "配色順利安裝成功。"

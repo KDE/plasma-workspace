@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-01 02:07+0000\n"
 "PO-Revision-Date: 2023-02-02 12:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,34 +35,34 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "montoro_mde@gva.es,aacid@kde.org"
 
-#: colors.cpp:235
+#: colors.cpp:270
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "No s'ha pogut crear el fitxer temporal."
 
-#: colors.cpp:248
+#: colors.cpp:283
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "No s'ha pogut baixar l'esquema de color: %1"
 
-#: colors.cpp:266
+#: colors.cpp:301
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Este fitxer no és un esquema de color."
 
-#: colors.cpp:285
+#: colors.cpp:320
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "No s'ha pogut crear la carpeta de dades «color-scheme»."
 
-#: colors.cpp:292
+#: colors.cpp:327
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 "No s'ha pogut copiar l'esquema de color a dins de la carpeta de dades «color-"
 "scheme»."
 
-#: colors.cpp:309
+#: colors.cpp:344
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "L'esquema de color s'ha instal·lat correctament."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-01 02:07+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -31,32 +31,32 @@ msgstr ""
 "peter.ani@gmail.com,harivishnu@gmail.com,pravi.a@gmail.com,subins2000@gmail."
 "com"
 
-#: colors.cpp:235
+#: colors.cpp:270
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ഒരു താൽക്കാലിക ഫയൽ നിർമ്മിക്കാനായില്ല."
 
-#: colors.cpp:248
+#: colors.cpp:283
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "നിറക്കൂട്ടു് ഡൗണ്‍ലോഡാൻ കഴിഞില്ല: %1"
 
-#: colors.cpp:266
+#: colors.cpp:301
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "ഈ ഫയൽ ഒരു നിറക്കൂട്ടു് ഫയലല്ല."
 
-#: colors.cpp:285
+#: colors.cpp:320
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' ഡാറ്റ അറ സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു."
 
-#: colors.cpp:292
+#: colors.cpp:327
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "നിറക്കൂട്ടു് 'color-scheme' ഡാറ്റ ഫോൾഡറിലേക്ക് പകർത്തുന്നതിൽ പരാജയപ്പെട്ടു."
 
-#: colors.cpp:309
+#: colors.cpp:344
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "നിറക്കൂട്ടു് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
