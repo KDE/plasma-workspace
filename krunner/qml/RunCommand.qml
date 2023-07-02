@@ -215,12 +215,12 @@ ColumnLayout {
                     queryField.text = fadedTextCompletion.text
                 }
             }
-            Keys.onTabPressed: (e) => {
+            Keys.onTabPressed: event => {
                 if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
                     if (queryField.text !== fadedTextCompletion.text) {
                         queryField.text = fadedTextCompletion.text
                     } else {
-                        e.accepted = false
+                        event.accepted = false
                     }
                 }
             }
@@ -234,8 +234,8 @@ ColumnLayout {
                     results.runCurrentIndex(event)
                 }
             }
-            Keys.onEnterPressed: closeOrRun(event)
-            Keys.onReturnPressed: closeOrRun(event)
+            Keys.onEnterPressed: event => closeOrRun(event)
+            Keys.onReturnPressed: event => closeOrRun(event)
 
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
