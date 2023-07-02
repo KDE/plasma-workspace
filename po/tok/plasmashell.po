@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-23 02:18+0000\n"
+"POT-Creation-Date: 2023-07-02 02:36+0000\n"
 "PO-Revision-Date: 2022-04-06 22:11+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -106,67 +106,67 @@ msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr ""
 
-#: osd.cpp:71
+#: osd.cpp:75
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr ""
 
-#: osd.cpp:87
+#: osd.cpp:91
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr ""
 
-#: osd.cpp:109
+#: osd.cpp:113
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "ilo supa luka li pali"
 
-#: osd.cpp:111
+#: osd.cpp:115
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "ilo supa luka li pali ala"
 
-#: osd.cpp:118
+#: osd.cpp:122
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "linluwi kon Wifi li pali"
 
-#: osd.cpp:120
+#: osd.cpp:124
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "linluwi kon Wifi li pali ala"
 
-#: osd.cpp:127
+#: osd.cpp:131
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "linluwi kon Bluetooth li pali"
 
-#: osd.cpp:129
+#: osd.cpp:133
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "linluwi kon Bluetooth li pali ala"
 
-#: osd.cpp:136
+#: osd.cpp:140
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "linluwi kon pi ilo luka li pali"
 
-#: osd.cpp:138
+#: osd.cpp:142
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "linluwi kon pi ilo luka li pali ala"
 
-#: osd.cpp:146
+#: osd.cpp:150
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -174,7 +174,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "ilo sitelen lon sinpin ilo li pali"
 
-#: osd.cpp:149
+#: osd.cpp:153
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
