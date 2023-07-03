@@ -9,7 +9,7 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012, 2014.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en http://trasno.gpul.org
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:08+0000\n"
-"PO-Revision-Date: 2020-01-12 10:59+0100\n"
+"PO-Revision-Date: 2023-07-02 18:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -29,12 +29,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 non é un arquivo válido de tema de GTK."
 
 #: kcmstyle.cpp:161 kcmstyle.cpp:168
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "Lista despregábel"
 #: stylepreview.ui:96
 #, kde-format
 msgid "Checkbox"
-msgstr "Caixa para marcar"
+msgstr "Caixa para marcar."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
@@ -87,7 +87,7 @@ msgstr "Alternativa"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
@@ -97,38 +97,33 @@ msgstr "Separador 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Application style:"
+#, kde-format
 msgid "Application style"
-msgstr "Estilo do aplicativo:"
+msgstr "Estilo da aplicación"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons in b&uttons:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "&Mostrar iconas nos botóns:"
+msgstr "Amosar iconas nos botóns"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons in b&uttons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "&Mostrar iconas nos botóns:"
+msgstr "Amosar iconas nos menús"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar label:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "Etiqueta da barra de ferramentas principal:"
+msgstr "Etiqueta da barra de ferramentas principal"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar label:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "Etiqueta da barra de ferramentas secundaria:"
+msgstr "Etiqueta da barra de ferramentas secundaria"
 
 #: ui/EffectSettingsPopup.qml:32
 #, kde-format
@@ -176,46 +171,42 @@ msgid "Secondary toolbar label:"
 msgstr "Etiqueta da barra de ferramentas secundaria:"
 
 #: ui/GtkStylePage.qml:17
-#, fuzzy, kde-format
-#| msgid "Application Style"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "Estilo das aplicacións"
+msgstr "Estilo das aplicacións de GNOME ou GTK"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "Tema de GTK:"
 
 #: ui/GtkStylePage.qml:68
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Previsualizar"
+msgstr "Previsualizar…"
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Instalar dun ficheiro…"
 
 #: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgid "Configure Application Style..."
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Configurar o estilo dos aplicativos…"
+msgstr "Obter novos estilos de aplicacións de GNOME ou GTK…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "Seleccione un arquivo de tema de GTK"
 
 #: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Arquivo de tema de GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Configure Style..."
+#, kde-format
 msgid "Configure Style…"
 msgstr "Configurar o estilo…"
 
@@ -225,10 +216,9 @@ msgid "Configure Icons and Toolbars"
 msgstr "Configurar as iconas e as barras de ferramentas"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Configure Application Style..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Configurar o estilo dos aplicativos…"
+msgstr "Configurar o estilo das aplicacións de GNOME ou de GTK…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "
