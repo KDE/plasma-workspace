@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <QtTest>
+#include <QTest>
 #include <exampleutility.h>
 
 class ExampleUtilityTest : public QObject

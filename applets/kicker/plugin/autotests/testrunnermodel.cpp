@@ -10,7 +10,9 @@
 #include <memory>
 
 #include <QAbstractItemModelTester>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 
 #include <KSycoca>
 

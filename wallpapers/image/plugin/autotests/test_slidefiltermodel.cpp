@@ -4,7 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <QtTest>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 
 #include "../slidefiltermodel.h"
 #include "../slidemodel.h"

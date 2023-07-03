@@ -5,7 +5,8 @@
 */
 
 #include <QQmlApplicationEngine>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QTest>
 
 #include "abstracttasksmodel.h" // For enums
 #include "tasksmodel.h"

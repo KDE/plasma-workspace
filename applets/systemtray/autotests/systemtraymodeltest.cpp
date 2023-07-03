@@ -4,8 +4,9 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
+#include <QAbstractItemModelTester>
 #include <QPointer>
-#include <QtTest>
+#include <QTest>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>

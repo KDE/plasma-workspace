@@ -5,7 +5,9 @@
 */
 
 #include <QDebug>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 
 #include "../model/imageproxymodel.h"
 #include "../slidemodel.h"

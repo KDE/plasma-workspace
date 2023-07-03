@@ -10,7 +10,7 @@
 #include "../historyurlitem.h"
 
 #include <QAbstractItemModelTester>
-#include <QtTest>
+#include <QTest>
 
 class HistoryModelTest : public QObject
 {

@@ -7,9 +7,12 @@
 #include <array>
 
 #include <QDateTime>
+#include <QProcess>
 #include <QQmlApplicationEngine>
 #include <QRasterWindow>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 #include <private/qtx11extras_p.h>
 
 #include <KActivities/Consumer>

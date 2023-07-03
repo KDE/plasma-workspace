@@ -6,8 +6,8 @@
 
 #include <QQmlContext>
 #include <QQmlEngine>
+#include <QTest>
 #include <QtQuickTest>
-#include <QtTest>
 
 #include "commontestdata.h"
 

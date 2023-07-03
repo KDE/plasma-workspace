@@ -12,7 +12,8 @@
 #include <KPackage/Package>
 #include <KPackage/PackageJob>
 #include <KSycoca>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QTest>
 
 class KcmTest : public QObject
 {

@@ -7,7 +7,8 @@
 
 #include <QDebug>
 #include <QObject>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QTest>
 
 #include "notification.h"
 #include "notificationsmodel.h"

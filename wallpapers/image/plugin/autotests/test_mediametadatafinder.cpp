@@ -5,7 +5,9 @@
 */
 
 #include <QDir>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QTest>
+#include <QThreadPool>
 
 #include "../finder/mediametadatafinder.h"
 #include "commontestdata.h"

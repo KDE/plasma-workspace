@@ -10,7 +10,9 @@
 #include <QQuickItem>
 #include <QQuickItemGrabResult>
 #include <QQuickView>
-#include <QtTest>
+#include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 
 #include <KPackage/PackageLoader>
 

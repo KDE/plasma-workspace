@@ -7,7 +7,7 @@
 #include "../utils.h"
 
 #include <QObject>
-#include <QtTest>
+#include <QTest>
 
 class UtilsTest : public QObject
 {

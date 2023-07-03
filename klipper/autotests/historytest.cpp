@@ -9,7 +9,7 @@
 // Qt
 #include <QObject>
 #include <QSignalSpy>
-#include <QtTest>
+#include <QTest>
 
 class HistoryTest : public QObject
 {
