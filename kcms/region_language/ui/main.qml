@@ -88,6 +88,26 @@ KCM.ScrollViewKCM {
             type: Kirigami.MessageType.Error
             position: Kirigami.InlineMessage.Position.Header
         }
+
+        Kirigami.InlineMessage {
+            id: applyToSystemMsg
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Information
+
+            text: i18nc("@info", "Do you want to apply settings to system?")
+
+            actions: [
+                Kirigami.Action {
+                    icon.name: "dialog-ok-apply"
+                    text: i18nc("@button", "Apply")
+                    onTriggered: {
+                        kcm.applyToSystem();
+                        applyToSystemMsg.visible = false;
+                    }
+                }
+            ]
+        }
     }
 
     Connections {
@@ -98,18 +118,18 @@ KCM.ScrollViewKCM {
         function onRequireInstallFont() {
             dontShutdownMsg.visible = false;
             installFontMsg.visible = true;
-            applyToSystemDialog.open();
+            applyToSystemMsg.visible = true;
         }
         function onUserHasToGenerateManually(reason) {
             manualInstallMsg.text = reason;
             dontShutdownMsg.visible = false;
             manualInstallMsg.visible = true;
-            applyToSystemDialog.open();
+            applyToSystemMsg.visible = true;
         }
         function onGenerateFinished() {
             dontShutdownMsg.visible = false;
             installSuccessMsg.visible = true;
-            applyToSystemDialog.open();
+            applyToSystemMsg.visible = true;
         }
         function onSaveClicked() {
             // return to first page on save action since all messages are here
@@ -140,18 +160,6 @@ KCM.ScrollViewKCM {
             encountedErrorMsg.text = reason;
             encountedErrorMsg.visible = true;
         }
-    }
-
-    QQC2.Dialog {
-        id: applyToSystemDialog
-        modal: true
-        standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
-        title: i18nc("@title dialog title", "Apply settings to system")
-        Text {
-            text: i18nc("text for dialog", "Do you want to apply settings to system?")
-        }
-
-        onAccepted: kcm.applyToSystem()
     }
 
     view: ListView {
