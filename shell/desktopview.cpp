@@ -190,6 +190,30 @@ void DesktopView::resetAccentColor()
     Q_EMIT accentColorChanged(Qt::transparent);
 }
 
+#if PROJECT_VERSION_PATCH >= 80
+bool DesktopView::showPreviewBanner() const
+{
+    static const bool shouldShowPreviewBanner = !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "General").readEntry("HideDesktopPreviewBanner", false);
+    return shouldShowPreviewBanner;
+}
+
+QString DesktopView::previewBannerTitle() const
+{
+    if constexpr (PROJECT_VERSION_PATCH == 80) {
+        return i18nc("@label %1 version string", "Plasma %1 Development Build", WORKSPACE_VERSION_STRING);
+    } else if constexpr (PROJECT_VERSION_PATCH == 90) {
+        return i18nc("@label %1 version string", "Plasma %1 Beta Build", WORKSPACE_VERSION_STRING);
+    } else {
+        return i18nc("@label %1 version string", "Plasma %1", WORKSPACE_VERSION_STRING);
+    }
+}
+
+QString DesktopView::previewBannerText() const
+{
+    return i18nc("@info:usagetip", "Visit bugs.kde.org to report issues");
+}
+#endif
+
 QVariantMap DesktopView::candidateContainmentsGraphicItems() const
 {
     QVariantMap map;

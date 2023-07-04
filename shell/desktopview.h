@@ -14,6 +14,8 @@
 
 #include <KConfigWatcher>
 
+#include "config-workspace.h"
+
 namespace LayerShellQt
 {
 class Window;
@@ -36,6 +38,12 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor RESET resetAccentColor NOTIFY accentColorChanged)
 
+#if PROJECT_VERSION_PATCH >= 80
+    Q_PROPERTY(bool showPreviewBanner READ showPreviewBanner CONSTANT)
+    Q_PROPERTY(QString previewBannerTitle READ previewBannerTitle CONSTANT)
+    Q_PROPERTY(QString previewBannerText READ previewBannerText CONSTANT)
+#endif
+
 public:
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = nullptr);
     ~DesktopView() override;
@@ -54,6 +62,12 @@ public:
     QColor accentColor() const;
     void setAccentColor(const QColor &);
     void resetAccentColor();
+
+#if PROJECT_VERSION_PATCH >= 80
+    bool showPreviewBanner() const;
+    QString previewBannerTitle() const;
+    QString previewBannerText() const;
+#endif
 
     QVariantMap candidateContainmentsGraphicItems() const;
 
