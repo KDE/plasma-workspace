@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:08+0000\n"
-"PO-Revision-Date: 2023-06-17 04:09\n"
+"PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -281,8 +281,8 @@ msgid ""
 "this list. It will only appear when you change the systemwide time zone to "
 "something else."
 msgstr ""
-"提示：如果您经常旅行，可在此列表中额外添加一个您的主时区。它将只在系统全局时"
-"区发生了变化时显示。"
+"提示：如果您经常旅行，可在下表中额外添加一个您的主时区。它将只在系统全局时区"
+"发生改变时显示。"
 
 #: package/contents/ui/configTimeZones.qml:102
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "与本地时区的城市相同时自动隐藏"
 #: package/contents/ui/configTimeZones.qml:118
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "切换系统全局时区…"
+msgstr "更改系统全局时区…"
 
 #: package/contents/ui/configTimeZones.qml:127
 #, kde-format
@@ -324,8 +324,8 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"添加多个时区后，时钟小程序的悬停信息和下拉面板将显示所有时区的时间。您还可以"
-"让时钟小程序显示其中一个时区的时间。"
+"添加多个时区后，时钟挂件的光标悬停信息、下拉面板将显示全部时区的时间。您还可"
+"以选择钟面显示的时区。"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -335,14 +335,16 @@ msgstr "添加时区…"
 #: package/contents/ui/configTimeZones.qml:166
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr "鼠标滚轮在时钟小程序上方滚动 - 切换显示时区"
+msgstr "鼠标滚轮在时钟挂件上滚动时切换显示的时区"
 
 #: package/contents/ui/configTimeZones.qml:173
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
-msgstr "使用此功能时不会更改系统全局时区。在您旅行时，才需要切换系统全局时区。"
+msgstr ""
+"此功能仅切换当前显示的时区，不会更改系统全局时区。如果您正在旅行，请记得更改"
+"系统全局时区。"
 
 #: package/contents/ui/configTimeZones.qml:201
 #, kde-format
