@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: configdialog.cpp:80
 #, fuzzy, kde-format
@@ -54,6 +54,7 @@ msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " مدخل"
+msgstr[1] ""
 
 #: configdialog.cpp:131 configdialog.cpp:169
 #, fuzzy, kde-format
@@ -126,6 +127,7 @@ msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " ثانیه"
+msgstr[1] ""
 
 #: configdialog.cpp:293
 #, kde-format

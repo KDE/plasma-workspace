@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"POT-Creation-Date: 2023-07-05 02:52+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -31,6 +31,31 @@ msgstr "phu.nguyen@kdemail.net"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Cấu hình phần cài cắm \"Các hành động chuột\""
+
+#: desktopview.cpp:203
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Development Build"
+msgstr ""
+
+#: desktopview.cpp:205
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Beta Build"
+msgstr ""
+
+#: desktopview.cpp:207
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 version string"
+msgid "Plasma %1"
+msgstr "Plasma"
+
+#: desktopview.cpp:213
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr ""
 
 #: main.cpp:98
 #, kde-format
@@ -287,9 +312,6 @@ msgstr "Số lượng bảng"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Đếm số bảng"
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "%1 không rõ"

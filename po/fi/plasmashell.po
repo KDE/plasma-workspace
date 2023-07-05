@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"POT-Creation-Date: 2023-07-05 02:52+0000\n"
 "PO-Revision-Date: 2023-03-04 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,31 @@ msgstr "lasse.liehu@gmail.com,translator@legisign.org"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
+
+#: desktopview.cpp:203
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Development Build"
+msgstr ""
+
+#: desktopview.cpp:205
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Beta Build"
+msgstr ""
+
+#: desktopview.cpp:207
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 version string"
+msgid "Plasma %1"
+msgstr "Plasma"
+
+#: desktopview.cpp:213
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr ""
 
 #: main.cpp:98
 #, kde-format
@@ -289,9 +314,6 @@ msgstr "Paneelien määrä"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Laskee paneelit"
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
 
 #~ msgid "Unknown %1"
 #~ msgstr "Tuntematon %1"

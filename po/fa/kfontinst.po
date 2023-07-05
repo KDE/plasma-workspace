@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -176,6 +176,7 @@ msgstr ""
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "%1 قلم تکراری یافت شد."
+msgstr[1] ""
 
 #: kcmfontinst/DuplicatesDialog.cpp:187
 #, kde-format
@@ -243,6 +244,7 @@ msgstr "نشان برای حذف..."
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "همه %1 قلم در مشاهده‌گر قلم باز شود؟"
+msgstr[1] ""
 
 #: kcmfontinst/FontFilter.cpp:103
 #, kde-format
@@ -805,10 +807,11 @@ msgid "Delete Font"
 msgstr "حذف قلم"
 
 #: kcmfontinst/KCmFontInst.cpp:602
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "واقعاً می‌خواهید این %1 قلم را حذف کنید؟"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:604
 #, kde-format
@@ -857,6 +860,7 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>آیا واقعاً می‌خواهید </p><p>«<b>%1</b>» را حرکت دهید؟</p>"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:651
 #, kde-format
@@ -923,10 +927,11 @@ msgid "No fonts"
 msgstr "بدون قلم"
 
 #: kcmfontinst/KCmFontInst.cpp:863
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "%1 قلم"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:872
 #, kde-format
@@ -1033,19 +1038,21 @@ msgid "Disable Font"
 msgstr "غیرفعال‌سازی قلم"
 
 #: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "واقعاً می‌خواهید این %1 قلم را فعال کنید؟"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1112
-#, kde-format
+#, fuzzy, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "واقعاً می‌خواهید این %1 قلم را غیرفعال کنید؟"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1115
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
 "</p>"
@@ -1054,9 +1061,10 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] ""
 "<p>آیا واقعاً می‌خواهید این %1 قلم شامل در گروه «<b>%2</b>» را فعال کنید؟</p>"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1120
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
 "b>'?</p>"
@@ -1065,6 +1073,7 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] ""
 "<p>واقعاً می‌خواهید این %1 قلم شامل در گروه «<b>%2</b>» را غیرفعال کنید؟</p>"
+msgstr[1] ""
 
 #: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
@@ -1282,10 +1291,11 @@ msgid "ERROR: Could not determine font's name."
 msgstr "خطا: نام قلم را نتوانست تعیین کند."
 
 #: lib/FcEngine.cpp:1472
-#, kde-format
+#, fuzzy, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
 msgstr[0] "%2 [%1 تصویردانه]"
+msgstr[1] ""
 
 #: lib/KfiConstants.h:22
 msgid "Personal"

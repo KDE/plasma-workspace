@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"POT-Creation-Date: 2023-07-05 02:52+0000\n"
 "PO-Revision-Date: 2016-12-13 16:57+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -31,6 +31,31 @@ msgstr "dimkard@gmail.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Διαμόρφωση πρόσθετου ενεργειών ποντικιού"
+
+#: desktopview.cpp:203
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Development Build"
+msgstr ""
+
+#: desktopview.cpp:205
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Beta Build"
+msgstr ""
+
+#: desktopview.cpp:207
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 version string"
+msgid "Plasma %1"
+msgstr "Plasma"
+
+#: desktopview.cpp:213
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr ""
 
 #: main.cpp:98
 #, kde-format
@@ -294,9 +319,6 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
-
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "Αδυναμία φόρτωσης του αρχείου σεναρίου: %1"

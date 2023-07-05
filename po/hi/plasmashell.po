@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-02 02:36+0000\n"
+"POT-Creation-Date: 2023-07-05 02:52+0000\n"
 "PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -31,6 +31,31 @@ msgstr "raghu@raghukamath.com"
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "माउस क्रिया प्लगइन विन्यस्त करें"
+
+#: desktopview.cpp:203
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Development Build"
+msgstr ""
+
+#: desktopview.cpp:205
+#, kde-format
+msgctxt "@label %1 version string"
+msgid "Plasma %1 Beta Build"
+msgstr ""
+
+#: desktopview.cpp:207
+#, fuzzy, kde-format
+#| msgid "Plasma"
+msgctxt "@label %1 version string"
+msgid "Plasma %1"
+msgstr "प्लाज़्मा"
+
+#: desktopview.cpp:213
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr ""
 
 #: main.cpp:98
 #, kde-format
@@ -286,9 +311,6 @@ msgstr "पैनल की गिनती"
 #, kde-format
 msgid "Counts the panels"
 msgstr "पैनलों को गिनेगा"
-
-#~ msgid "Plasma"
-#~ msgstr "प्लाज़्मा"
 
 #~ msgid "Unable to load script file: %1"
 #~ msgstr "स्क्रिप्ट फ़ाइललोड करने में अक्षम : %1"

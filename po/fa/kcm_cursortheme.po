@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -231,6 +231,7 @@ msgstr ""
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: ui/main.qml:84
 #, fuzzy, kde-format
