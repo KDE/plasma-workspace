@@ -13,11 +13,15 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.kirigami 2.20 as Kirigami
 
-import org.kde.kcmutils // KCMLauncher
+import org.kde.kcmutils as KCMUtils
 import org.kde.config // KAuthorized
 
-ColumnLayout {
+KCMUtils.ScrollViewKCM {
     id: timeZonesPage
+
+    // TODO: remove this line once we can make pages truly have zero padding
+    framedView: true
+
 
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
@@ -34,150 +38,139 @@ ColumnLayout {
         }
     }
 
-    QQC2.Label {
-        Layout.fillWidth: true
-        text: i18n("Tip: if you travel frequently, add your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
-        wrapMode: Text.Wrap
-    }
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-    QQC2.ScrollView {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        // Or else the page becomes scrollable when the list has a lot of items,
-        // rather than the list becoming scrollable, which is what we want
-        Layout.maximumHeight: timeZonesPage.parent.height - Kirigami.Units.gridUnit * 7
-
-        Component.onCompleted: {
-            if (background) {
-                background.visible = true // enable frame
-            }
-        }
-
-        ListView {
-            id: configuredTimezoneList
-            clip: true // Avoid visual glitches
-            focus: true // keyboard navigation
-            activeFocusOnTab: true // keyboard navigation
-
-            model: TimeZoneFilterProxy {
-                sourceModel: timeZones
-                onlyShowChecked: true
-            }
-            // We have no concept of selection in this list, so don't pre-select
-            // the first item
-            currentIndex: -1
-
-            delegate: Kirigami.BasicListItem {
-                id: timeZoneListItem
-                readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
-                readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
-
-                font.bold: isCurrent
-                fadeContent: isIdenticalToLocal
-
-                // Don't want a highlight effect here because it doesn't look good
-                hoverEnabled: false
-                activeBackgroundColor: "transparent"
-                activeTextColor: Kirigami.Theme.textColor
-
-                reserveSpaceForSubtitle: true
-                // FIXME: this should have already evaluated to false because
-                // the list item doesn't have an icon
-                reserveSpaceForIcon: false
-
-                // TODO: create Kirigami.MutuallyExclusiveListItem to be the
-                // RadioButton equivalent of Kirigami.CheckableListItem,
-                // and then port to use that in Plasma 5.22
-                leading: QQC2.RadioButton {
-                    id: radioButton
-                    visible: configuredTimezoneList.count > 1
-                    checked: timeZoneListItem.isCurrent
-                    onToggled: clickAction.trigger()
-                }
-
-                label: model.city
-                subtitle: {
-                    if (configuredTimezoneList.count > 1) {
-                        if (isCurrent) {
-                            return i18n("Clock is currently using this time zone");
-                        } else if (isIdenticalToLocal) {
-                            return i18nc("@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the timezone display in the plasmoid's popup", "Hidden while this is the local time zone's city");
-                        }
-                    }
-                    return "";
-                }
-
-                action: Kirigami.Action {
-                    id: clickAction
-                    onTriggered: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
-                }
-
-                trailing: RowLayout {
-                    QQC2.Button {
-                        visible: model.isLocalTimeZone && KAuthorized.authorizeControlModule("kcm_clock.desktop")
-                        text: i18n("Switch Systemwide Time Zone…")
-                        icon.name: "preferences-system-time"
-                        onClicked: KCMLauncher.openSystemSettings("kcm_clock")
-                    }
-                    QQC2.Button {
-                        visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
-                        icon.name: "edit-delete"
-                        onClicked: model.checked = false;
-                        QQC2.ToolTip {
-                            text: i18n("Remove this time zone")
-                        }
-                    }
-                }
-            }
-
-            section {
-                property: "isLocalTimeZone"
-                delegate: Kirigami.ListSectionHeader {
-                    label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
-                }
-            }
-
-            Kirigami.PlaceholderMessage {
-                visible: configuredTimezoneList.count === 1
-                anchors {
-                    top: parent.verticalCenter // Visual offset for system timezone and header
-                    left: parent.left
-                    right: parent.right
-                    leftMargin: Kirigami.Units.largeSpacing * 6
-                    rightMargin: Kirigami.Units.largeSpacing * 6
-                }
-                text: i18n("Add more time zones to display all of them in the applet's pop-up, or use one of them for the clock itself")
-            }
+        QQC2.Label {
+            Layout.fillWidth: true
+            text: i18n("Tip: if you travel frequently, add your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
+            wrapMode: Text.Wrap
         }
     }
 
-    QQC2.Button {
-        Layout.alignment: Qt.AlignLeft // Explicitly set so it gets reversed for LTR mode
-        text: i18n("Add Time Zones…")
-        icon.name: "list-add"
-        onClicked: timezoneSheet.open()
+    view: ListView {
+        id: configuredTimezoneList
+        clip: true // Avoid visual glitches
+        focus: true // keyboard navigation
+        activeFocusOnTab: true // keyboard navigation
+
+        model: TimeZoneFilterProxy {
+            sourceModel: timeZones
+            onlyShowChecked: true
+        }
+        // We have no concept of selection in this list, so don't pre-select
+        // the first item
+        currentIndex: -1
+
+        delegate: Kirigami.BasicListItem {
+            id: timeZoneListItem
+            readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+            readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
+
+            font.bold: isCurrent
+            fadeContent: isIdenticalToLocal
+
+            // Don't want a highlight effect here because it doesn't look good
+            hoverEnabled: false
+            activeBackgroundColor: "transparent"
+            activeTextColor: Kirigami.Theme.textColor
+
+            reserveSpaceForSubtitle: true
+            // FIXME: this should have already evaluated to false because
+            // the list item doesn't have an icon
+            reserveSpaceForIcon: false
+
+            // TODO: create Kirigami.MutuallyExclusiveListItem to be the
+            // RadioButton equivalent of Kirigami.CheckableListItem,
+            // and then port to use that in Plasma 5.22
+            leading: QQC2.RadioButton {
+                id: radioButton
+                visible: configuredTimezoneList.count > 1
+                checked: timeZoneListItem.isCurrent
+                onToggled: clickAction.trigger()
+            }
+
+            label: model.city
+            subtitle: {
+                if (configuredTimezoneList.count > 1) {
+                    if (isCurrent) {
+                        return i18n("Clock is currently using this time zone");
+                    } else if (isIdenticalToLocal) {
+                        return i18nc("@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the timezone display in the plasmoid's popup", "Hidden while this is the local time zone's city");
+                    }
+                }
+                return "";
+            }
+
+            action: Kirigami.Action {
+                id: clickAction
+                onTriggered: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
+            }
+
+            trailing: RowLayout {
+                QQC2.Button {
+                    visible: model.isLocalTimeZone && KAuthorized.authorizeControlModule("kcm_clock.desktop")
+                    text: i18n("Switch Systemwide Time Zone…")
+                    icon.name: "preferences-system-time"
+                    onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
+                }
+                QQC2.Button {
+                    visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1
+                    icon.name: "edit-delete"
+                    onClicked: model.checked = false;
+                    QQC2.ToolTip {
+                        text: i18n("Remove this time zone")
+                    }
+                }
+            }
+        }
+
+        section {
+            property: "isLocalTimeZone"
+            delegate: Kirigami.ListSectionHeader {
+                label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
+            }
+        }
+
+        Kirigami.PlaceholderMessage {
+            visible: configuredTimezoneList.count === 1
+            anchors {
+                top: parent.verticalCenter // Visual offset for system timezone and header
+                left: parent.left
+                right: parent.right
+                leftMargin: Kirigami.Units.largeSpacing * 6
+                rightMargin: Kirigami.Units.largeSpacing * 6
+            }
+            text: i18n("Add more time zones to display all of them in the applet's pop-up, or use one of them for the clock itself")
+        }
     }
 
-    QQC2.CheckBox {
-        id: enableWheelCheckBox
-        enabled: configuredTimezoneList.count > 1
-        Layout.fillWidth: true
-        Layout.topMargin: Kirigami.Units.largeSpacing
-        text: i18n("Switch displayed time zone by scrolling over clock applet")
-    }
+    footer: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-    QQC2.Label {
-        Layout.fillWidth: true
-        Layout.leftMargin: Kirigami.Units.largeSpacing * 2
-        Layout.rightMargin: Kirigami.Units.largeSpacing * 2
-        text: i18n("Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead.")
-        font: Kirigami.Theme.smallFont
-        wrapMode: Text.Wrap
-    }
+        QQC2.Button {
+            Layout.alignment: Qt.AlignLeft // Explicitly set so it gets reversed for LTR mode
+            text: i18n("Add Time Zones…")
+            icon.name: "list-add"
+            onClicked: timezoneSheet.open()
+        }
 
-    Item {
-        // Tighten up the layout
-        Layout.fillHeight: true
+        QQC2.CheckBox {
+            id: enableWheelCheckBox
+            enabled: configuredTimezoneList.count > 1
+            Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            text: i18n("Switch displayed time zone by scrolling over clock applet")
+        }
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
+            text: i18n("Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead.")
+            font: Kirigami.Theme.smallFont
+            wrapMode: Text.Wrap
+        }
     }
 
     Kirigami.OverlaySheet {
