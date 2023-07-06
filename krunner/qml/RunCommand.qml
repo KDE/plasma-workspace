@@ -211,7 +211,11 @@ ColumnLayout {
                     event.accepted = true;
                     focusCurrentListView()
                 }
-                if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion && event.key === Qt.Key_Right) {
+                if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion
+                    && fadedTextCompletion.text.length > 0
+                    && cursorPosition === text.length
+                    && event.key === Qt.Key_Right
+                ) {
                     queryField.text = fadedTextCompletion.text
                 }
             }
