@@ -19,7 +19,7 @@ class ShellPackage : public KPackage::PackageStructure
 public:
     using KPackage::PackageStructure::PackageStructure;
 
-    void initPackage(KPackage::Package *package)
+    void initPackage(KPackage::Package *package) override
     {
         package->setDefaultPackageRoot(QStringLiteral("plasma/shells/"));
 
@@ -58,7 +58,7 @@ public:
         package->addFileDefinition("interactiveconsole", QStringLiteral("InteractiveConsole.qml"));
     }
 
-    void pathChanged(KPackage::Package *package)
+    void pathChanged(KPackage::Package *package) override
     {
         if (!package->metadata().isValid()) {
             return;
