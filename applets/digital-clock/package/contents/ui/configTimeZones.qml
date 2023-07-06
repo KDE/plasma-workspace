@@ -36,7 +36,7 @@ ColumnLayout {
 
     QQC2.Label {
         Layout.fillWidth: true
-        text: i18n("Tip: if you travel frequently, add another entry for your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
+        text: i18n("Tip: if you travel frequently, add your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
         wrapMode: Text.Wrap
     }
 
