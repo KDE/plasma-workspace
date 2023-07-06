@@ -1,16 +1,16 @@
 # Translation of plasmashell.po to Catalan (Valencian)
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2018, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 02:52+0000\n"
-"PO-Revision-Date: 2022-12-16 09:32+0100\n"
+"PO-Revision-Date: 2023-07-05 14:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,26 +40,25 @@ msgstr "Configura el connector d'accions del ratolí"
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Development Build"
-msgstr ""
+msgstr "Plasma %1 construcció de desenvolupament"
 
 #: desktopview.cpp:205
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Beta Build"
-msgstr ""
+msgstr "Plasma %1 construcció Beta"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1"
-msgstr "Intèrpret d'ordres de Plasma"
+msgstr "Plasma %1"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Visiteu bugs.kde.org per a informar de problemes"
 
 #: main.cpp:98
 #, kde-format

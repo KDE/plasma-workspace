@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 02:52+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
+"PO-Revision-Date: 2023-07-05 21:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -39,31 +39,30 @@ msgstr "Kromprogramo por Agordi Musajn Agojn"
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Development Build"
-msgstr ""
+msgstr "Plasma %1 Disvolva Konstruo"
 
 #: desktopview.cpp:205
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Beta Build"
-msgstr ""
+msgstr "Plasma %1 Beta-Konstruo"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgid "Plasma Shell"
+#, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1"
-msgstr "Plasma Ŝelo"
+msgstr "Plasma %1"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Vizitu bugs.kde.org por raporti atentindaĵojn"
 
 #: main.cpp:98
 #, kde-format
 msgid "Plasma Shell"
-msgstr "Plasma Ŝelo"
+msgstr "Plasma-Ŝelo"
 
 #: main.cpp:110
 #, kde-format
