@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-07 02:08+0000\n"
 "PO-Revision-Date: 2023-03-16 20:41+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -274,23 +274,26 @@ msgstr "Fyrsti dagur viku:"
 msgid "Available Plugins:"
 msgstr "Tiltækar tengiviðbætur:"
 
-#: package/contents/ui/configTimeZones.qml:39
-#, kde-format
+#: package/contents/ui/configTimeZones.qml:46
+#, fuzzy, kde-format
+#| msgid ""
+#| "Tip: if you travel frequently, add another entry for your home time zone "
+#| "to this list. It will only appear when you change the systemwide time "
+#| "zone to something else."
 msgid ""
-"Tip: if you travel frequently, add another entry for your home time zone to "
-"this list. It will only appear when you change the systemwide time zone to "
-"something else."
+"Tip: if you travel frequently, add your home time zone to this list. It will "
+"only appear when you change the systemwide time zone to something else."
 msgstr ""
 "Ábending: ef þú ferðast oft geturðu bætt annarri færslu fyrir "
 "heimatímabeltið við þennan lista. Hún birtist bara þegar þú breytir "
 "tímabelti kerfisins í eitthvað annað."
 
-#: package/contents/ui/configTimeZones.qml:102
+#: package/contents/ui/configTimeZones.qml:97
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Klukkan er að nota þetta tímabelti"
 
-#: package/contents/ui/configTimeZones.qml:104
+#: package/contents/ui/configTimeZones.qml:99
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -299,27 +302,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Falið þar sem þetta er borgarheiti staðbundna tímabeltisins"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:113
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Skipta um tímabelti kerfisins…"
 
-#: package/contents/ui/configTimeZones.qml:127
+#: package/contents/ui/configTimeZones.qml:122
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Fjarlægja þetta tímabelti"
 
-#: package/contents/ui/configTimeZones.qml:136
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Tímabelti kerfisins"
 
-#: package/contents/ui/configTimeZones.qml:136
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Viðbótartímabelti"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:144
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -328,17 +331,17 @@ msgstr ""
 "Bættu við fleiri tímabeltum til að birta þau öll í sprettiglugga "
 "smáforritsins, eða notaðu eitt þeirra fyrir klukkuna sjálfa"
 
-#: package/contents/ui/configTimeZones.qml:156
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Bæta við tímabeltum…"
 
-#: package/contents/ui/configTimeZones.qml:166
+#: package/contents/ui/configTimeZones.qml:163
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Skiptu um birt tímabelti með því að fletta yfir klukkuforritið"
 
-#: package/contents/ui/configTimeZones.qml:173
+#: package/contents/ui/configTimeZones.qml:170
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -347,12 +350,12 @@ msgstr ""
 "Ef þessi eiginleiki er notaður breytir það ekki tímabelti kerfisins. Þegar "
 "þú ferðast skaltu breyta tímabelti kerfisins í staðinn."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:194
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Bæta við fleiri tímabeltum"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:205
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -361,12 +364,12 @@ msgstr ""
 "Að minnsta kosti eitt tímabelti þarf að vera virkjað. Staðbundna tímabeltið "
 "þitt var virkjað sjálfkrafa."
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:249
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

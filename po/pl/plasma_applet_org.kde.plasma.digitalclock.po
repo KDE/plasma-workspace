@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-07-07 02:08+0000\n"
 "PO-Revision-Date: 2023-02-04 08:34+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -276,23 +276,26 @@ msgstr "Pierwszy dzień tygodnia:"
 msgid "Available Plugins:"
 msgstr "Dostępne wtyczki:"
 
-#: package/contents/ui/configTimeZones.qml:39
-#, kde-format
+#: package/contents/ui/configTimeZones.qml:46
+#, fuzzy, kde-format
+#| msgid ""
+#| "Tip: if you travel frequently, add another entry for your home time zone "
+#| "to this list. It will only appear when you change the systemwide time "
+#| "zone to something else."
 msgid ""
-"Tip: if you travel frequently, add another entry for your home time zone to "
-"this list. It will only appear when you change the systemwide time zone to "
-"something else."
+"Tip: if you travel frequently, add your home time zone to this list. It will "
+"only appear when you change the systemwide time zone to something else."
 msgstr ""
 "Wskazówka: jeśli często podróżujesz, dodaj dodatkowy wpis dla strefy "
 "czasowej twojego domu do listy. Zmieni się ona tylko gdy zmienisz strefę "
 "czasową w całym systemie na inną."
 
-#: package/contents/ui/configTimeZones.qml:102
+#: package/contents/ui/configTimeZones.qml:97
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Zegar obecnie używa tej strefy czasowej"
 
-#: package/contents/ui/configTimeZones.qml:104
+#: package/contents/ui/configTimeZones.qml:99
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -301,27 +304,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Ukryta, gdy to miejscowa strefa czasowa miasta"
 
-#: package/contents/ui/configTimeZones.qml:118
+#: package/contents/ui/configTimeZones.qml:113
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Przełącz systemową strefę czasową..."
 
-#: package/contents/ui/configTimeZones.qml:127
+#: package/contents/ui/configTimeZones.qml:122
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Usuń tę strefę czasową"
 
-#: package/contents/ui/configTimeZones.qml:136
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Systemowa strefa czasowa"
 
-#: package/contents/ui/configTimeZones.qml:136
+#: package/contents/ui/configTimeZones.qml:131
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Dodatkowe strefy czasowe"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:144
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -330,19 +333,19 @@ msgstr ""
 "Dodaj więcej stref czasowych do wyświetlenia ich wszystkich w oknie wysuwnym "
 "apletu lub używaj jednej z nich dla samego zegara"
 
-#: package/contents/ui/configTimeZones.qml:156
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Dodaj strefy czasowe..."
 
-#: package/contents/ui/configTimeZones.qml:166
+#: package/contents/ui/configTimeZones.qml:163
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Przełącz wyświetlaną strefę czasową przewijając kółkiem myszy na aplecie "
 "zegara"
 
-#: package/contents/ui/configTimeZones.qml:173
+#: package/contents/ui/configTimeZones.qml:170
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -351,12 +354,12 @@ msgstr ""
 "Użycie tego nie zmieni systemowej strefy czasowej. Gdy podróżujesz, to "
 "zamiast tego zmień systemową strefę czasową."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:194
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Dodaj więcej stref czasowych"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:205
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -365,12 +368,12 @@ msgstr ""
 "Należy włączyć co najmniej jedną strefę czasową. Twoja lokalna strefa "
 "czasowa została włączona samoczynnie."
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:249
+#: package/contents/ui/configTimeZones.qml:242
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

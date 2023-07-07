@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-05 02:52+0000\n"
-"PO-Revision-Date: 2022-12-22 09:25+0400\n"
+"PO-Revision-Date: 2023-07-06 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,26 +38,25 @@ msgstr "اضبط ملحقة إجراءات الفأرة"
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Development Build"
-msgstr ""
+msgstr "بلازما %1 إصدارة تطويرية"
 
 #: desktopview.cpp:205
 #, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1 Beta Build"
-msgstr ""
+msgstr "بلازما %1 بيتا"
 
 #: desktopview.cpp:207
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 version string"
 msgid "Plasma %1"
-msgstr "بلازما"
+msgstr "بلازما %1"
 
 #: desktopview.cpp:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "رجاءً استخدم bugs.kde.org للإبلاغ عن العلل"
 
 #: main.cpp:98
 #, kde-format
