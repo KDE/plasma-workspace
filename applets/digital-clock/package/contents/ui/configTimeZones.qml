@@ -70,10 +70,13 @@ KCMUtils.ScrollViewKCM {
             font.bold: isCurrent
             fadeContent: isIdenticalToLocal
 
+            // Stripes help the eye line up the text on the left and the button on the right
+            alternatingBackground: true
+
             // Don't want a highlight effect here because it doesn't look good
+            highlighted: false
             hoverEnabled: false
-            activeBackgroundColor: "transparent"
-            activeTextColor: Kirigami.Theme.textColor
+            down: false
 
             reserveSpaceForSubtitle: true
             // FIXME: this should have already evaluated to false because
