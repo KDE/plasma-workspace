@@ -73,10 +73,11 @@ KCMUtils.ScrollViewKCM {
             // Stripes help the eye line up the text on the left and the button on the right
             alternatingBackground: true
 
-            // Don't want a highlight effect here because it doesn't look good
+            // The standard highlight effect looks bad here because it makes the
+            // radio button disappear, so instead we recycle the hover effect to
+            // serve as a highlight effect.
+            // TODO: remove this line once list item highlight effect looks better!
             highlighted: false
-            hoverEnabled: false
-            down: false
 
             reserveSpaceForSubtitle: true
             // FIXME: this should have already evaluated to false because
