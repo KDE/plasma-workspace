@@ -20,6 +20,7 @@ KCM.SimpleKCM {
     property int error: cA.error
     property bool defaultRequested: false
     property var locator
+    property bool doneLoadingSettings: false
     readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
@@ -58,6 +59,13 @@ KCM.SimpleKCM {
         if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
             startLocator();
         }
+        modeSwitcher.currentIndex = kcm.nightColorSettings.mode + 1;
+        if (!kcm.nightColorSettings.active) {
+            modeSwitcher.currentIndex = 0;
+        } else {
+            modeSwitcher.currentIndex = kcm.nightColorSettings.mode + 1;
+        }
+        root.doneLoadingSettings = true;
     }
 
     header: ColumnLayout{
@@ -119,6 +127,9 @@ KCM.SimpleKCM {
                     }
                 }
                 onCurrentIndexChanged: {
+                    if (! root.doneLoadingSettings) {
+                        return;
+                    }
                     if (currentIndex !== 0) {
                         kcm.nightColorSettings.mode = currentIndex - 1;
                     }
