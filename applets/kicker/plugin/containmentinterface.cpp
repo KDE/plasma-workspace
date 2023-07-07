@@ -133,14 +133,14 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
             QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
         } else {
-            containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << entryPath);
+            containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << QUrl::fromLocalFile(entryPath));
         }
 
         break;
     }
     case Panel: {
         if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
-            containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << entryPath);
+            containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << QUrl::fromLocalFile(entryPath));
         }
 
         break;
