@@ -19,10 +19,6 @@ import org.kde.config // KAuthorized
 KCMUtils.ScrollViewKCM {
     id: timeZonesPage
 
-    // TODO: remove this line once we can make pages truly have zero padding
-    framedView: true
-
-
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
 

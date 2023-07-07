@@ -29,6 +29,7 @@ ConfigModel {
         name: i18n("Time Zones")
         icon: "preferences-system-time"
         source: "configTimeZones.qml"
+        includeMargins: false
     }
 
     property QtObject eventPluginsManager: PlasmaCalendar.EventPluginsManager {
