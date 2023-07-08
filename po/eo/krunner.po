@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-27 02:17+0000\n"
+"POT-Creation-Date: 2023-07-08 02:34+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -87,32 +87,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Serĉi…"
 
-#: qml/RunCommand.qml:281 qml/RunCommand.qml:282 qml/RunCommand.qml:284
+#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Montri Helpon pri Uzado"
 
-#: qml/RunCommand.qml:292
+#: qml/RunCommand.qml:296
 #, kde-format
 msgid "Pin"
 msgstr "Pinglo"
 
-#: qml/RunCommand.qml:293
+#: qml/RunCommand.qml:297
 #, kde-format
 msgid "Pin Search"
 msgstr "Pin Serĉo"
 
-#: qml/RunCommand.qml:295
+#: qml/RunCommand.qml:299
 #, kde-format
 msgid "Keep Open"
 msgstr "Teni Malfermita"
 
-#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
+#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
 #, kde-format
 msgid "Recent Queries"
 msgstr "Lastatempaj Demandoj"
 
-#: qml/RunCommand.qml:370
+#: qml/RunCommand.qml:374
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"

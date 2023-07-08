@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-27 02:17+0000\n"
+"POT-Creation-Date: 2023-07-08 02:34+0000\n"
 "PO-Revision-Date: 2022-10-17 11:55+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -87,32 +87,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Поиск…"
 
-#: qml/RunCommand.qml:281 qml/RunCommand.qml:282 qml/RunCommand.qml:284
+#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Показать справку"
 
-#: qml/RunCommand.qml:292
+#: qml/RunCommand.qml:296
 #, kde-format
 msgid "Pin"
 msgstr "Закрепить"
 
-#: qml/RunCommand.qml:293
+#: qml/RunCommand.qml:297
 #, kde-format
 msgid "Pin Search"
 msgstr "Закрепить поиск"
 
-#: qml/RunCommand.qml:295
+#: qml/RunCommand.qml:299
 #, kde-format
 msgid "Keep Open"
 msgstr "Оставить открытым"
 
-#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
+#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
 #, kde-format
 msgid "Recent Queries"
 msgstr "Последние запросы"
 
-#: qml/RunCommand.qml:370
+#: qml/RunCommand.qml:374
 #, kde-format
 msgid "Remove"
 msgstr "Удалить"

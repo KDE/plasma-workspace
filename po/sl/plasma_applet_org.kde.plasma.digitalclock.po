@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-07 02:08+0000\n"
-"PO-Revision-Date: 2023-01-27 07:21+0100\n"
+"POT-Creation-Date: 2023-07-08 02:34+0000\n"
+"PO-Revision-Date: 2023-07-07 06:20+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -279,25 +279,20 @@ msgid "Available Plugins:"
 msgstr "Razpoložljivi vstavki:"
 
 #: package/contents/ui/configTimeZones.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Namig: Če pogosto potujete, dodajte še en vnos za vaš domači časovni pas v "
-"ta seznam. Prikazan bo samo, kadar spremenite sistemski časovni pas v nekega "
-"drugega."
+"Namig: Če pogosto potujete, dodajte še vaš domači časovni pas v ta seznam. "
+"Prikazan bo samo, kadar spremenite sistemski časovni pas v nekega drugega."
 
-#: package/contents/ui/configTimeZones.qml:97
+#: package/contents/ui/configTimeZones.qml:101
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Ura trenutno uporablja ta časovni pas"
 
-#: package/contents/ui/configTimeZones.qml:99
+#: package/contents/ui/configTimeZones.qml:103
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -306,27 +301,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Skrito, ko je to mesto lokalne časovne cone"
 
-#: package/contents/ui/configTimeZones.qml:113
+#: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Preklopi sistemski časovni pas…"
 
-#: package/contents/ui/configTimeZones.qml:122
+#: package/contents/ui/configTimeZones.qml:126
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Odstrani ta časovni pas"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Sistemski časovni pas"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:135
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Dodatni časovni pasovi"
 
-#: package/contents/ui/configTimeZones.qml:144
+#: package/contents/ui/configTimeZones.qml:148
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -335,18 +330,18 @@ msgstr ""
 "Dodajte več časovnih pasov, če jih želite prikazati v pojavnem oknu "
 "programčka ali uporabite enega izmed njih za samo uro"
 
-#: package/contents/ui/configTimeZones.qml:153
+#: package/contents/ui/configTimeZones.qml:157
 #, kde-format
 msgid "Add Time Zones…"
 msgstr "Dodaj časovne pasove…"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:167
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Prikazani časovni pas preklapljate tako, da se pomaknete nad apletom ure"
 
-#: package/contents/ui/configTimeZones.qml:170
+#: package/contents/ui/configTimeZones.qml:174
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -355,12 +350,12 @@ msgstr ""
 "Uporaba te možnosti ne spremeni sistemskega časovnega pasu. Ko potujete, "
 "namesto tega preklopite sistemski časovni pas."
 
-#: package/contents/ui/configTimeZones.qml:194
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr "Dodaj več časovnih pasov"
 
-#: package/contents/ui/configTimeZones.qml:205
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local timezone was enabled "
@@ -369,12 +364,12 @@ msgstr ""
 "Omogočen mora biti vsaj en časovni pas. Vaš lokalni časovni pas je bil "
 "samodejno omogočen."
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:244
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:242
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

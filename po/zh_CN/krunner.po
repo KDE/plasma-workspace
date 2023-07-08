@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-27 02:17+0000\n"
+"POT-Creation-Date: 2023-07-08 02:34+0000\n"
 "PO-Revision-Date: 2023-07-03 11:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -86,32 +86,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "搜索…"
 
-#: qml/RunCommand.qml:281 qml/RunCommand.qml:282 qml/RunCommand.qml:284
+#: qml/RunCommand.qml:285 qml/RunCommand.qml:286 qml/RunCommand.qml:288
 #, kde-format
 msgid "Show Usage Help"
 msgstr "显示使用方式帮助"
 
-#: qml/RunCommand.qml:292
+#: qml/RunCommand.qml:296
 #, kde-format
 msgid "Pin"
 msgstr "固定"
 
-#: qml/RunCommand.qml:293
+#: qml/RunCommand.qml:297
 #, kde-format
 msgid "Pin Search"
 msgstr "固定搜索"
 
-#: qml/RunCommand.qml:295
+#: qml/RunCommand.qml:299
 #, kde-format
 msgid "Keep Open"
 msgstr "保持打开"
 
-#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
+#: qml/RunCommand.qml:371 qml/RunCommand.qml:376
 #, kde-format
 msgid "Recent Queries"
 msgstr "最近查询"
 
-#: qml/RunCommand.qml:370
+#: qml/RunCommand.qml:374
 #, kde-format
 msgid "Remove"
 msgstr "移除"

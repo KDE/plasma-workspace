@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-07 02:08+0000\n"
+"POT-Creation-Date: 2023-07-08 02:34+0000\n"
 "PO-Revision-Date: 2017-05-16 06:55-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -286,12 +286,12 @@ msgid ""
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:97
+#: package/contents/ui/configTimeZones.qml:101
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:99
+#: package/contents/ui/configTimeZones.qml:103
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -300,61 +300,61 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:113
+#: package/contents/ui/configTimeZones.qml:117
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "Switch Systemwide Time Zone…"
 msgstr "הרא איזור זמן מקומי"
 
-#: package/contents/ui/configTimeZones.qml:122
+#: package/contents/ui/configTimeZones.qml:126
 #, fuzzy, kde-format
 #| msgid "Your system time zone"
 msgid "Remove this time zone"
 msgstr "איזור הזמן של המערכת"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:135
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "Systemwide Time Zone"
 msgstr "הרא איזור זמן מקומי"
 
-#: package/contents/ui/configTimeZones.qml:131
+#: package/contents/ui/configTimeZones.qml:135
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Additional Time Zones"
 msgstr "איזור זמן"
 
-#: package/contents/ui/configTimeZones.qml:144
+#: package/contents/ui/configTimeZones.qml:148
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:153
+#: package/contents/ui/configTimeZones.qml:157
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Add Time Zones…"
 msgstr "איזור זמן"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:167
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:170
+#: package/contents/ui/configTimeZones.qml:174
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:194
+#: package/contents/ui/configTimeZones.qml:198
 #, kde-format
 msgid "Add More Timezones"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:205
+#: package/contents/ui/configTimeZones.qml:209
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. 'Local' was enabled "
@@ -364,12 +364,12 @@ msgid ""
 "automatically."
 msgstr "לפחות איזור זמן אחד צריך להיות מאופשר. \"מקומי\" היה מאופשר אוטומטית."
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:244
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:242
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid "%1, %2"
 msgstr ""
