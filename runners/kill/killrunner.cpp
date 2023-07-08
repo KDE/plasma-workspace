@@ -24,11 +24,11 @@ K_PLUGIN_CLASS_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
     , m_processes(new KSysGuard::Processes(QString(), this))
+    , m_actionList({
+          KRunner::Action(QString::number(15), QStringLiteral("application-exit"), i18n("Send SIGTERM")),
+          KRunner::Action(QString::number(9), QStringLiteral("process-stop"), i18n("Send SIGKILL")),
+      })
 {
-    KRunner::Action sigterm(QString::number(15), QStringLiteral("application-exit"), i18n("Send SIGTERM"));
-    KRunner::Action sigkill(QString::number(9), QStringLiteral("process-stop"), i18n("Send SIGKILL"));
-    m_actionList = {sigterm, sigkill};
-
     connect(this, &KRunner::AbstractRunner::prepare, m_processes, [this]() {
         m_needsRefresh = true;
     });

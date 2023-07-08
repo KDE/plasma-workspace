@@ -7,9 +7,6 @@
 
 #pragma once
 
-#include <QReadWriteLock>
-#include <QTimer>
-
 #include <KRunner/AbstractRunner>
 #include <KRunner/Action>
 
@@ -40,15 +37,9 @@ private:
     Sort m_sorting;
 
     /** process lister */
-    KSysGuard::Processes *m_processes;
+    KSysGuard::Processes *const m_processes;
 
-    /** lock for initializing m_processes */
-    QReadWriteLock m_prepLock;
-
-    /** timer for retrying the cleanup due to lock contention */
-    QTimer m_delayedCleanupTimer;
-
-    KRunner::Actions m_actionList;
+    const KRunner::Actions m_actionList;
 
     /** Reuse value */
     bool m_hasTrigger;
