@@ -48,16 +48,15 @@ void LocationsRunnerTest::initTestCase()
 void LocationsRunnerTest::shouldNotProduceResult()
 {
     QFETCH(QString, query);
-    launchQuery(query);
-    QVERIFY(manager->matches().isEmpty());
+    const auto matches = launchQuery(query);
+    QVERIFY(matches.isEmpty());
 }
 
 void LocationsRunnerTest::shouldProduceResult()
 {
     QFETCH(QString, query);
     QFETCH(QVariant, data);
-    launchQuery(query);
-    const QList<KRunner::QueryMatch> matches = manager->matches();
+    const auto matches = launchQuery(query);
     QCOMPARE(matches.size(), 1);
     QCOMPARE(matches.first().data(), data);
 }

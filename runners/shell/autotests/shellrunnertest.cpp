@@ -39,8 +39,8 @@ void ShellRunnerTest::testShellrunnerQueries()
     QFETCH(QString, expectedCommand);
     QFETCH(QStringList, expectedENVs);
 
-    launchQuery(query);
-    QCOMPARE(manager->matches().count(), matchCount);
+    const auto matches = launchQuery(query);
+    QCOMPARE(matches.count(), matchCount);
     if (matchCount == 1) {
         const QVariantList matchData = manager->matches().constFirst().data().toList();
         QCOMPARE(matchData.first().toString(), expectedCommand);

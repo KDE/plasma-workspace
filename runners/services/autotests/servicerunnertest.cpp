@@ -73,9 +73,7 @@ void ServiceRunnerTest::cleanupTestCase()
 
 void ServiceRunnerTest::testExcutableExactMatch()
 {
-    launchQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
-
-    auto matches = manager->matches();
+    const auto matches = launchQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
     }));
@@ -84,11 +82,10 @@ void ServiceRunnerTest::testExcutableExactMatch()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    launchQuery(QStringLiteral("kons"));
+    const auto matches = launchQuery(QStringLiteral("kons"));
 
     bool konsoleFound = false;
     bool yakuakeFound = false;
-    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
@@ -116,11 +113,10 @@ void ServiceRunnerTest::testSystemSettings()
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
     manager->matchSessionComplete();
-    launchQuery(QStringLiteral("settings"));
+    const auto matches = launchQuery(QStringLiteral("settings"));
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match;
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
@@ -136,11 +132,10 @@ void ServiceRunnerTest::testSystemSettings()
 
 void ServiceRunnerTest::testSystemSettings2()
 {
-    launchQuery(QStringLiteral("sy"));
+    const auto matches = launchQuery(QStringLiteral("sy"));
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
@@ -156,48 +151,41 @@ void ServiceRunnerTest::testSystemSettings2()
 
 void ServiceRunnerTest::testCategories()
 {
-    launchQuery(QStringLiteral("System"));
-    auto matches = manager->matches();
+    auto matches = launchQuery(QStringLiteral("System"));
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
     }));
 
     // Multiple categories, this should still match, but now as relevant
-    launchQuery(QStringLiteral("System KDE TerminalEmulator"));
-    matches = manager->matches();
+    matches = launchQuery(QStringLiteral("System KDE TerminalEmulator"));
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.44;
     }));
 
     // Multiple categories but at least one doesn't match
-    launchQuery(QStringLiteral("System KDE Office"));
-    matches = manager->matches();
+    matches = launchQuery(QStringLiteral("System KDE Office"));
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
 
     // Query too short to match any category
-    launchQuery(QStringLiteral("Dumm"));
-    matches = manager->matches();
+    matches = launchQuery(QStringLiteral("Dumm"));
     QVERIFY(matches.isEmpty());
 }
 
 void ServiceRunnerTest::testJumpListActions()
 {
-    launchQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
-    auto matches = manager->matches();
+    auto matches = launchQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.65;
     }));
 
-    launchQuery(QStringLiteral("new window"));
-    matches = manager->matches();
+    matches = launchQuery(QStringLiteral("new window"));
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.5;
     }));
 
-    launchQuery(QStringLiteral("new windows"));
-    matches = manager->matches();
+    matches = launchQuery(QStringLiteral("new windows"));
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest");
     }));
@@ -225,8 +213,7 @@ void ServiceRunnerTest::testINotifyUsage()
 
 void ServiceRunnerTest::testSpecialArgs()
 {
-    launchQuery(QStringLiteral("kpat"));
-    auto matches = manager->matches();
+    const auto matches = launchQuery(QStringLiteral("kpat"));
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Should have no -qwindowtitle at the end. Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
@@ -235,8 +222,7 @@ void ServiceRunnerTest::testSpecialArgs()
 
 void ServiceRunnerTest::testEnv()
 {
-    launchQuery(QStringLiteral("audacity"));
-    auto matches = manager->matches();
+    const auto matches = launchQuery(QStringLiteral("audacity"));
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         // Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));

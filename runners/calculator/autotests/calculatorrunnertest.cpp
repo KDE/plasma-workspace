@@ -35,8 +35,7 @@ void CalculatorRunnerTest::testQuery()
     QFETCH(QString, query);
     QFETCH(QString, result);
 
-    launchQuery(query);
-    const QList<KRunner::QueryMatch> matches = manager->matches();
+    const auto matches = launchQuery(query);
     QCOMPARE(matches.size(), 1);
     QCOMPARE(matches.first().text(), result);
 }
@@ -73,19 +72,19 @@ void CalculatorRunnerTest::testQuery_data()
 
 void CalculatorRunnerTest::testApproximation()
 {
-    launchQuery("5^1234567");
-    QCOMPARE(manager->matches().size(), 1);
-    QCOMPARE(manager->matches().constFirst().subtext(), "Approximation");
+    const auto matches = launchQuery("5^1234567");
+    QCOMPARE(matches.size(), 1);
+    QCOMPARE(matches.first().subtext(), "Approximation");
 }
 
 void CalculatorRunnerTest::test42()
 {
-    launchQuery("life");
-    QCOMPARE(manager->matches().size(), 1);
-    QCOMPARE(manager->matches().constFirst().text(), "42");
-    launchQuery("universe");
-    QCOMPARE(manager->matches().size(), 1);
-    QCOMPARE(manager->matches().constFirst().text(), "42");
+    auto matches = launchQuery("life");
+    QCOMPARE(matches.size(), 1);
+    QCOMPARE(matches.constFirst().text(), "42");
+    matches = launchQuery("universe");
+    QCOMPARE(matches.size(), 1);
+    QCOMPARE(matches.constFirst().text(), "42");
 }
 
 #if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
