@@ -117,8 +117,9 @@ void LocationsRunnerTest::shouldProduceResult_data()
 
 void LocationsRunnerTest::testMimeData()
 {
-    launchQuery(QDir::homePath());
-    QMimeData *data = manager->mimeDataForMatch(manager->matches().constFirst());
+    const auto matches = launchQuery(QDir::homePath());
+    QVERIFY(!matches.isEmpty());
+    QMimeData *data = manager->mimeDataForMatch(matches.first());
     QVERIFY(data);
     QCOMPARE(data->urls(), QList<QUrl>{QUrl::fromLocalFile(QDir::homePath())});
 }
