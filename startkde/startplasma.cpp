@@ -336,6 +336,8 @@ void setupPlasmaEnvironment()
 
     qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
 
+    qputenv("XDG_MENU_PREFIX", "plasma-");
+
     // Add kdedefaults dir to allow config defaults overriding from a writable location
     QByteArray currentConfigDirs = qgetenv("XDG_CONFIG_DIRS");
     if (currentConfigDirs.isEmpty()) {

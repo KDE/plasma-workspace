@@ -41,3 +41,5 @@
    kf5-utilities-pim.directory
    kf5-utilities-xutils.directory
 DESTINATION  ${KDE_INSTALL_DESKTOPDIR} )
+
+install( FILES plasma-applications.menu  DESTINATION  ${KDE_INSTALL_SYSCONFDIR}/xdg/menus )
