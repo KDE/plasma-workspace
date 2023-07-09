@@ -8,6 +8,7 @@
 
 #include <QAbstractListModel>
 #include <QDir>
+#include <QFileIconProvider>
 
 #include <KService>
 #include <optional>
@@ -69,6 +70,7 @@ private:
     QDir m_xdgConfigPath;
     QDir m_xdgAutoStartPath;
     QVector<AutostartEntry> m_entries;
+    QFileIconProvider m_iconProvider;
 };
 
 struct AutostartEntry {

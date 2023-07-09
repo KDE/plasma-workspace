@@ -590,7 +590,9 @@ static void migrateUserScriptsAutostart()
         }
 
         // Migrate autostart script to a standard .desktop autostart file
-        AutostartScriptDesktopFile desktopFile(scriptName, info.isSymLink() ? info.symLinkTarget() : scriptMovedPath);
+        AutostartScriptDesktopFile desktopFile(scriptName,
+                                               info.isSymLink() ? info.symLinkTarget() : scriptMovedPath,
+                                               QStringLiteral("application-x-executable-script"));
         qCInfo(PLASMA_STARTUP) << "Migrated legacy autostart script" << scriptPath << "to" << desktopFile.fileName();
 
         if (info.isSymLink() && QFile::remove(scriptPath)) {

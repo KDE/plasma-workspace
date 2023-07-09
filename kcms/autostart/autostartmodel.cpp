@@ -17,6 +17,7 @@
 #include <QWindow>
 
 #include <QDirIterator>
+#include <QFileIconProvider>
 #include <QFileInfo>
 #include <QMimeDatabase>
 #include <QRegularExpression>
@@ -88,6 +89,8 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
     return AutostartEntry{name, name, kind, enabled, fileName, onlyInPlasma, iconName};
 }
 
+static const QString FALLBACK_ICON = QStringLiteral("application-x-executable-script");
+
 AutostartModel::AutostartModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_xdgConfigPath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation))
@@ -143,17 +146,22 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
     const auto autostartDirFilesInfo = dir.entryInfoList(QDir::Files);
     for (const QFileInfo &fi : autostartDirFilesInfo) {
         QString targetFileDir = fi.absoluteDir().path();
-        QString targetFilePath = fi.absoluteFilePath();
-        QString fileName = QUrl::fromLocalFile(targetFilePath).fileName();
+        QString fileName = fi.fileName();
+        QString iconName;
         const bool isSymlink = fi.isSymLink();
+
+        // logout scripts are saved as symlinks
         if (isSymlink) {
-            targetFilePath = fi.symLinkTarget();
-            QFileInfo symLinkTarget(targetFilePath);
+            QFileInfo symLinkTarget(fi.symLinkTarget());
+            iconName = m_iconProvider.icon(symLinkTarget).name();
             targetFileDir = symLinkTarget.absoluteDir().path();
             fileName = symLinkTarget.fileName();
+        } else {
+            iconName = m_iconProvider.icon(fi).name();
         }
 
-        m_entries.push_back({fileName, targetFileDir, kind, true, fi.absoluteFilePath(), false, QStringLiteral("dialog-scripts")});
+        iconName = iconName == QString("text-plain") ? FALLBACK_ICON : iconName;
+        m_entries.push_back({fileName, targetFileDir, kind, true, fi.absoluteFilePath(), false, iconName});
     }
 }
 
@@ -254,7 +262,7 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         newDesktopFile->sync();
     }
 
-    const QString iconName = !service->icon().isEmpty() ? service->icon() : QStringLiteral("dialog-scripts");
+    const QString iconName = !service->icon().isEmpty() ? service->icon() : FALLBACK_ICON;
 
     const auto entry = AutostartEntry{service->name(),
                                       service->name(),
@@ -350,6 +358,8 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         // path of the desktop file that is about to be created
         const QString newFilePath = m_xdgAutoStartPath.absoluteFilePath(fileName + QStringLiteral(".desktop"));
 
+        QIcon icon = m_iconProvider.icon(file);
+        QString iconName = icon.name() == QString("text-plain") ? FALLBACK_ICON : icon.name();
         if (QFileInfo::exists(newFilePath)) {
             const QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
             fileName = suggestName(baseUrl, fileName + QStringLiteral(".desktop"));
@@ -357,7 +367,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
             // remove the .desktop part from String
             fileName.chop(8);
         }
-        AutostartScriptDesktopFile desktopFile(fileName, KShell::quoteArg(file.filePath()));
+        AutostartScriptDesktopFile desktopFile(fileName, KShell::quoteArg(file.filePath()), iconName);
         insertScriptEntry(lastLoginScript + 1, file.fileName(), file.absoluteDir().path(), desktopFile.fileName(), kind);
 
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
@@ -394,8 +404,10 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 void AutostartModel::insertScriptEntry(int index, const QString &name, const QString &targetFileDirPath, const QString &path, AutostartEntrySource kind)
 {
     beginInsertRows(QModelIndex(), index, index);
-
-    AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, QStringLiteral("dialog-scripts")};
+    QFileInfo targetFile{QDir(targetFileDirPath).filePath(name)};
+    const QIcon icon = m_iconProvider.icon(targetFile);
+    const QString iconName = icon.name() == QString("text-plain") ? FALLBACK_ICON : icon.name();
+    AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, iconName};
 
     m_entries.insert(index, entry);
 
