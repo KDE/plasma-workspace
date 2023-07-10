@@ -58,7 +58,7 @@ MouseArea {
         } else {
             // Adaptive
             return Plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                main.height <= 2 * Kirigami.Theme.smallestFont.pixelSize &&
+                main.height <= 2 * Kirigami.Theme.smallFont.pixelSize &&
                 (main.showDate || timezoneLabel.visible);
         }
     }

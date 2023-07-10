@@ -25,7 +25,7 @@ MouseArea {
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Units.gridUnit
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2) * Kirigami.Units.gridUnit
 
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton
 

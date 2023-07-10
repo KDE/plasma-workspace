@@ -151,7 +151,7 @@ ContainmentItem {
 
                 readonly property int itemSize: {
                     if (autoSize) {
-                        return Kirigami.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, Kirigami.Units.iconSizes.enormous))
+                        return Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, Kirigami.Units.iconSizes.enormous))
                     } else {
                         return smallIconSize
                     }

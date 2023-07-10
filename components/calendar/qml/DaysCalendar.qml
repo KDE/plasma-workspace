@@ -14,6 +14,7 @@ import org.kde.plasma.workspace.calendar 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: daysCalendar

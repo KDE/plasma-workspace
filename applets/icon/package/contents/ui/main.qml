@@ -80,7 +80,7 @@ PlasmoidItem {
         Accessible.role: Accessible.Button
 
         Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : Kirigami.Units.iconSizes.small
-        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2 * Kirigami.Theme.gridUnit
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (Kirigami.Units.iconSizes.small + 2) * Kirigami.Theme.gridUnit
 
         hoverEnabled: true
         enabled: Plasmoid.valid
